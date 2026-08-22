@@ -62,10 +62,11 @@ PARATHYROID = {
     "pitfall":"A negative sestamibi scan does not rule out primary hyperparathyroidism."},
    {"id":"workup","title":"Workup: quantify end-organ impact","type":"workup",
     "content":[
-      "Assess renal function and stone disease; 24-hour urine calcium can help with stone-risk assessment and the PHPT vs FHH differential.",
+      "Assess renal function and structural renal involvement. Renal imaging (commonly ultrasound as a radiation-free option; CT when clinically appropriate) looks for nephrolithiasis or nephrocalcinosis, including silent disease. A 24-hour urine calcium evaluates hypercalciuria and contributes to the PHPT vs FHH differential.",
       "Assess skeletal effects with DXA; the distal 1/3 radius matters because cortical bone may be prominently affected.",
       "Review medications and secondary causes that can distort calcium/PTH interpretation, including lithium, thiazides, chronic kidney disease, vitamin D deficiency, and malabsorption."
-    ]},
+    ],
+    "pearl":"Use the sequence: confirm the physiology → exclude important mimics → assess kidney/bone target-organ effects → decide whether surgery is indicated → then localize."},
    {"id":"indications","title":"When to operate: current framework","type":"practice_update",
     "content":[
       "Symptomatic primary hyperparathyroidism is a surgical disease in an appropriate operative candidate.",
@@ -122,6 +123,11 @@ QUESTIONS = [
   "choices":["The PTH assay is always unreliable in hypercalcemia","PTH should be suppressed by hypercalcemia, so a normal value can be inappropriately non-suppressed","Primary hyperparathyroidism always produces normal PTH","Albumin raises PTH directly"],
   "answer":1,
   "explanation":"Hypercalcemia should suppress PTH. A PTH that remains measurable in the normal range can therefore be physiologically inappropriate and support PTH-dependent hypercalcemia.",
+  "why_it_matters":"Calcium and PTH must be interpreted as a feedback pair. When calcium is high, a normal parathyroid gland should nearly shut PTH off. A laboratory-normal PTH is therefore physiologically abnormal when calcium is elevated.",
+  "what_to_look_for":"Confirm the calcium abnormality and ask whether PTH is appropriately suppressed.",
+  "management_change":"Suppressed PTH sends you toward non-PTH causes of hypercalcemia. Non-suppressed PTH keeps you in the PTH-dependent pathway: PHPT, FHH, medication effects, and selected renal/tertiary states.",
+  "board_pearl":"Never interpret a PTH value without looking at the calcium beside it.",
+  "attending_followup":"If calcium is 11.2 mg/dL and PTH is 42 pg/mL (normal 15\u201365), is the PTH normal?",
   "why_wrong":["Assay interference exists but is not the core physiology.","Correct.","PTH is often elevated, but the key is appropriateness for the calcium level.","Albumin affects interpretation of total calcium, not PTH secretion this way."]},
  {"id":"q2","concept_id":"inferior_embryology","topic":"parathyroid-disease","kind":"recall",
   "prompt":"Why are inferior parathyroid glands more variable in location than superior glands?",

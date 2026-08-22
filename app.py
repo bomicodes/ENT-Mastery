@@ -69,7 +69,17 @@ def answer():
     choice=int(d.get("choice",-1))
     correct=choice==q["answer"]
     record_attempt(q["id"],q["concept_id"],correct,int(d.get("confidence",3)),d.get("miss_type"))
-    return jsonify({"correct":correct,"answer":q["answer"],"explanation":q["explanation"],"why_wrong":q["why_wrong"]})
+    return jsonify({
+        "correct": correct,
+        "answer": q["answer"],
+        "explanation": q["explanation"],
+        "why_wrong": q["why_wrong"],
+        "why_it_matters": q.get("why_it_matters"),
+        "what_to_look_for": q.get("what_to_look_for"),
+        "management_change": q.get("management_change"),
+        "board_pearl": q.get("board_pearl"),
+        "attending_followup": q.get("attending_followup")
+    })
 
 @app.route("/api/classify-miss", methods=["POST"])
 def classify_miss():
