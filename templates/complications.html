@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">COMPLICATION LAB</div><h1>Recognize → stabilize → diagnose → treat → prevent.</h1>
+{% for c in complications %}<section class="card complication" id="{{c.slug}}"><span class="tag red">EMERGENCY / COMPLICATION</span><h2>{{c.title}}</h2><p class="scenario">{{c.prompt}}</p>
+<details><summary>What do you do?</summary><ol>{% for x in c.framework %}<li>{{x}}</li>{% endfor %}</ol></details></section>{% endfor %}
+{% endblock %}

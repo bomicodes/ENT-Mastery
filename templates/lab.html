@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">IMAGING · PATHOLOGY · TESTING LAB</div><h1>See it. Describe it. Localize it. Act on it.</h1>
+<p class="lede">The lab shell is built for CT/MRI, endoscopy, otoscopy, pathology, audiograms, tympanograms, vestibular studies and PSG.</p>
+<div class="lab-grid">
+{% for x in [("CT / MRI","Describe → localize → differential → management"),("Otoscopy","Identify findings before naming disease"),("Pathology","Pattern → diagnosis → implication"),("Audiology","Test pattern → lesion localization → next step"),("Endoscopy","Anatomy + disease recognition"),("Sleep / Vestibular","Interpret the study, not just the number")] %}
+<div class="card lab-card"><div class="lab-placeholder">＋</div><h3>{{x[0]}}</h3><p>{{x[1]}}</p><span class="muted">Content packs ready to add</span></div>{% endfor %}
+</div>
+{% endblock %}

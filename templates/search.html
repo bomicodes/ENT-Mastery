@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">CLINICAL SEARCH</div><h1>Go straight to what you need.</h1>
+<p class="lede">Search by disease, operation, anatomy, symptom, complication, or a problem such as “PTH won't drop.”</p>
+<form class="big-search" action="/search"><span>⌕</span><input autofocus name="q" value="{{q}}" placeholder="What are you preparing for?"><button>Search</button></form>
+{% if q %}
+<div class="search-meta">{{results|length}} result{{'' if results|length==1 else 's'}} for “{{q}}”</div>
+<div class="results">{% for r in results %}<a class="result card" href="{{r.url}}"><span class="result-type">{{r.type}}</span><div><h3>{{r.title}}</h3><p>{{r.subtitle}}</p></div><b>→</b></a>{% else %}<div class="empty card"><h3>No exact hit yet.</h3><p>The search engine is ready; this topic hasn't been populated into the knowledge base yet.</p></div>{% endfor %}</div>
+{% else %}
+<div class="suggestions"><span>Try:</span>
+{% for x in ["parathyroidectomy","PTH won't drop","hungry bone","recurrent laryngeal nerve","hypercalcemia"] %}<a href="/search?q={{x|urlencode}}">{{x}}</a>{% endfor %}</div>
+{% endif %}
+{% endblock %}

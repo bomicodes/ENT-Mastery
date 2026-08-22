@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">OPERATIVE MASTERY</div><h1>{{op.title}}</h1><p class="lede">{{op.indications}}</p>
+<div class="two-col op-layout"><section>
+<div class="card"><div class="lesson-label">OPERATIVE SEQUENCE</div><ol class="steps">{% for s in op.steps %}<li><span>{{loop.index}}</span><p>{{s}}</p></li>{% endfor %}</ol></div>
+<div class="card mt"><div class="lesson-label">OPERATIVE VIVA</div>{% for v in op.viva %}<details class="rapid"><summary>{{v[0]}}</summary><p>{{v[1]}}</p></details>{% endfor %}</div>
+</section><aside><div class="card sticky"><div class="lesson-label">DANGER STRUCTURES</div>{% for x in op.danger %}<div class="danger-row">⚠ {{x}}</div>{% endfor %}<a class="primary full" href="/case-tomorrow?q={{op.title}}">Morning-of-surgery mode →</a></div></aside></div>
+{% endblock %}

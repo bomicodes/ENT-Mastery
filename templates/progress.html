@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">LEARNING ANALYTICS</div><h1>Board readiness is more than percent correct.</h1>
+<div class="grid metrics"><div class="metric card"><span>Mastery</span><b>{{stats.mastery}}%</b></div><div class="metric card"><span>Accuracy</span><b>{{stats.accuracy}}%</b></div><div class="metric card"><span>Attempts</span><b>{{stats.attempts}}</b></div><div class="metric card"><span>Due</span><b>{{stats.due}}</b></div></div>
+<h2 class="mt">Concept mastery</h2>
+<div class="card">{% for cid,s in strengths.items() %}<div class="progress-row"><span>{{cid|replace('_',' ')|title}}</span><div class="bar large"><i style="width:{{s.strength}}%"></i></div><b>{{s.strength|round|int}}%</b><small>{{s.correct_count}}✓ · {{s.wrong_count}}✕</small></div>{% else %}<p class="muted">Complete your first recall session to populate the mastery map.</p>{% endfor %}</div>
+<h2 class="mt">Full specialty map</h2><div class="domain-grid">{% for d in DOMAINS %}<div class="domain card"><span>{{d.icon}}</span><h3>{{d.name}}</h3><div class="bar"><i style="width:{{stats.mastery if d.name=='Head & Neck' else 0}}%"></i></div><small>{{stats.mastery if d.name=='Head & Neck' else 0}}% populated mastery</small></div>{% endfor %}</div>
+{% endblock %}

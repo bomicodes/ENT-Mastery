@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">PROGRESSIVE CASE</div><h1>{{case.title}}</h1><p class="lede">{{case.summary}}</p>
+<div class="case-flow">{% for s in case.steps %}<section class="card reveal-step"><span class="stepnum">{{loop.index}}</span><h3>{{s.q}}</h3><button class="reveal-btn">Commit mentally → reveal</button><div class="hidden reveal-answer"><p>{{s.a}}</p></div></section>{% endfor %}</div>
+{% endblock %}

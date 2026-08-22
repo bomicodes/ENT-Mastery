@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">ATTENDING MODE</div><h1>How deep does your understanding go?</h1><p class="lede">Answer aloud before revealing. Each question moves one layer deeper.</p>
+<div class="attending-stack">{% for q,a in prompts %}<section class="card attending-q"><span>LEVEL {{loop.index}}</span><h2>{{q}}</h2><button class="reveal-btn">I answered → reveal</button><div class="hidden reveal-answer"><p>{{a}}</p></div></section>{% endfor %}</div>
+{% endblock %}

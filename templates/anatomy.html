@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">ANATOMY LAB</div><h1>Learn anatomy as surgical relationships.</h1><p class="lede">Identify → relationship → function → injury → operation.</p>
+{% for a in anatomy %}<section class="card anatomy-card" id="{{a.slug}}"><span class="tag">{{a.region}}</span><h2>{{a.title}}</h2>{% for p in a.points %}<p>• {{p}}</p>{% endfor %}<div class="anatomy-prompt">Close your eyes: draw the relationship from memory before moving on.</div></section>{% endfor %}
+{% endblock %}

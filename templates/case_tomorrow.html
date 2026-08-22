@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">CASE TOMORROW · RAPID PREP</div><h1>{{operation.title}}</h1>
+<p class="lede">A focused pre-op review that does not replace or reset your daily curriculum.</p>
+<div class="prep-timeline"><span>WHY</span><b>→</b><span>ANATOMY</span><b>→</b><span>STEPS</span><b>→</b><span>DANGER</span><b>→</b><span>COMPLICATIONS</span><b>→</b><span>RAPID FIRE</span></div>
+<section class="card prep"><div class="lesson-label">1 · WHY ARE WE OPERATING?</div><h2>Start with the physiology</h2><p>{{operation.indications}}</p><div class="pearl">Diagnosis is biochemical. Localization is the surgical map.</div></section>
+<section class="card prep"><div class="lesson-label">2 · ANATOMY YOU MUST SEE IN 3-D</div><h2>Embryology predicts location</h2><p>Superior = 4th pouch, shorter migration, more consistent. Inferior = 3rd pouch with thymus, longer migration, more variable.</p><a href="/anatomy">Open Anatomy Lab →</a></section>
+<section class="card prep"><div class="lesson-label">3 · OPERATIVE SEQUENCE</div><ol class="steps">{% for s in operation.steps %}<li><span>{{loop.index}}</span><p>{{s}}</p></li>{% endfor %}</ol></section>
+<section class="card prep"><div class="lesson-label">4 · DANGER STRUCTURES</div><div class="chips">{% for x in operation.danger %}<span>{{x}}</span>{% endfor %}</div></section>
+<section class="card prep"><div class="lesson-label">5 · ATTENDING RAPID FIRE</div>{% for v in operation.viva %}<details class="rapid"><summary>{{v[0]}}</summary><p>{{v[1]}}</p></details>{% endfor %}</section>
+<section class="card prep"><div class="lesson-label">6 · PROVE IT</div><h2>5-question checkpoint</h2></section>
+{% include "_question_list.html" %}
+{% endblock %}

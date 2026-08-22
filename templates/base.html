@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}ENT Mastery{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="/"><span class="brandmark">E</span><span><b>ENT Mastery</b><small>Residency → Boards</small></span></a>
+    <nav>
+      <a href="/" class="navitem">⌂ <span>Today</span></a>
+      <a href="/learn" class="navitem">◫ <span>Learn</span></a>
+      <a href="/search" class="navitem">⌕ <span>Search</span></a>
+      <a href="/cases" class="navitem">🩺 <span>Cases</span></a>
+      <a href="/operate" class="navitem">⌁ <span>Operate</span></a>
+      <a href="/anatomy" class="navitem">◎ <span>Anatomy Lab</span></a>
+      <a href="/lab" class="navitem">◈ <span>Imaging / Path</span></a>
+      <a href="/complications" class="navitem">⚠ <span>Complications</span></a>
+      <a href="/attending" class="navitem">↗ <span>Attending Mode</span></a>
+      <a href="/chief" class="navitem">♟ <span>Chief Mode</span></a>
+      <a href="/mistakes" class="navitem">↻ <span>Mistakes</span></a>
+      <a href="/progress" class="navitem">▥ <span>Progress</span></a>
+    </nav>
+    <div class="sidebar-bottom"><a href="/sources">Sources & evidence</a><small>Educational use only</small></div>
+  </aside>
+  <main>
+    <header class="topbar">
+      <form action="/search" method="get" class="global-search">
+        <span>⌕</span><input name="q" placeholder="Search disease, operation, anatomy, problem…" value="{{ request.args.get('q','') }}">
+        <kbd>/</kbd>
+      </form>
+      <a class="case-btn" href="/case-tomorrow">🩺 Case Tomorrow</a>
+    </header>
+    <div class="page">{% block content %}{% endblock %}</div>
+  </main>
+</div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

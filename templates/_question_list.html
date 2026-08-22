@@ -1,0 +1,21 @@
+<div class="question-list">
+{% for q in questions %}
+<div class="question card" data-qid="{{q.id}}">
+  <div class="question-top"><span class="tag">{{q.kind}}</span><span class="qnum">Q{{loop.index}}</span></div>
+  <h3>{{q.prompt}}</h3>
+  <div class="choices">
+  {% for c in q.choices %}<button class="choice" data-choice="{{loop.index0}}"><span>{{"ABCD"[loop.index0]}}</span>{{c}}</button>{% endfor %}
+  </div>
+  <div class="confidence">
+    <span>Before revealing: confidence?</span>
+    {% for n in [1,2,3,4,5] %}<button data-conf="{{n}}" class="{{'selected' if n==3 else ''}}">{{n}}</button>{% endfor %}
+    <small>1 = guess · 5 = certain</small>
+  </div>
+  <div class="answer-panel hidden"></div>
+  <div class="miss-panel hidden">
+    <span>Why did you miss it?</span>
+    {% for x in ["Forgot fact","Concept gap","Confused diagnoses","Reasoning error","Misread"] %}<button data-miss="{{x}}">{{x}}</button>{% endfor %}
+  </div>
+</div>
+{% endfor %}
+</div>
