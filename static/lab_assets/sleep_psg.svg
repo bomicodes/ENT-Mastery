@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430">
+    <rect width="100%" height="100%" fill="white"/>
+    <text x="380" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700">Pediatric PSG summary</text>
+    <rect x="70" y="70" width="620" height="260" rx="14" fill="#fafafa" stroke="#ddd"/>
+<text x="100" y="112" font-family="Arial" font-size="16">Total sleep time: 412 min</text>
+<text x="100" y="150" font-family="Arial" font-size="16">OAHI: 8.2 events/hr</text>
+<text x="100" y="188" font-family="Arial" font-size="16">Central apnea index: 0.4/hr</text>
+<text x="100" y="226" font-family="Arial" font-size="16">SpO₂ nadir: 83%</text>
+<text x="100" y="264" font-family="Arial" font-size="16">Peak ETCO₂: 49 mmHg</text>
+<text x="100" y="302" font-family="Arial" font-size="16">Arousal index: 13/hr</text>
+    </svg>

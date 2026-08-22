@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440">
+<rect width="100%" height="100%" fill="white"/>
+<text x="380" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700">HNS Candidacy Mental Model</text>
+<rect x="50" y="75" width="125" height="70" rx="10" fill="#eef6f5" stroke="#333"/><text x="112" y="104" text-anchor="middle" font-family="Arial" font-size="13">Predominantly</text><text x="112" y="123" text-anchor="middle" font-family="Arial" font-size="13">obstructive OSA</text>
+<text x="195" y="113" font-family="Arial" font-size="20">→</text>
+<rect x="220" y="75" width="125" height="70" rx="10" fill="#eef6f5" stroke="#333"/><text x="282" y="104" text-anchor="middle" font-family="Arial" font-size="13">PAP failure /</text><text x="282" y="123" text-anchor="middle" font-family="Arial" font-size="13">intolerance</text>
+<text x="365" y="113" font-family="Arial" font-size="20">→</text>
+<rect x="390" y="75" width="125" height="70" rx="10" fill="#eef6f5" stroke="#333"/><text x="452" y="96" text-anchor="middle" font-family="Arial" font-size="13">AHI + event</text><text x="452" y="115" text-anchor="middle" font-family="Arial" font-size="13">type + BMI</text><text x="452" y="134" text-anchor="middle" font-family="Arial" font-size="13">context</text>
+<text x="535" y="113" font-family="Arial" font-size="20">→</text>
+<rect x="560" y="75" width="145" height="70" rx="10" fill="#eef6f5" stroke="#333"/><text x="632" y="104" text-anchor="middle" font-family="Arial" font-size="13">DISE collapse</text><text x="632" y="123" text-anchor="middle" font-family="Arial" font-size="13">phenotype</text>
+<rect x="130" y="205" width="500" height="125" rx="14" fill="#fff8e3" stroke="#caa94e"/>
+<text x="380" y="235" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700">Current Inspire labeling highlights</text>
+<text x="380" y="265" text-anchor="middle" font-family="Arial" font-size="13">AHI 15–100 · PAP failure/intolerance</text>
+<text x="380" y="290" text-anchor="middle" font-family="Arial" font-size="13">No complete concentric palatal collapse</text>
+<text x="380" y="315" text-anchor="middle" font-family="Arial" font-size="13">Central + mixed events &lt;25% of AHI · BMI &gt;40 has limited data</text>
+<text x="380" y="395" text-anchor="middle" font-family="Arial" font-size="11" fill="#666">Always separate FDA labeling from payer criteria and institutional pathways.</text>
+</svg>

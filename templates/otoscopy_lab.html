@@ -1,0 +1,20 @@
+{% extends "base.html" %}{% block title %}Otoscopy Lab · ENT Mastery{% endblock %}{% block content %}
+<div class="breadcrumb"><a href="/lab">Interpretation Lab</a> / Otoscopy</div>
+<div class="oto-hero"><div><div class="eyebrow">VISUAL ROUNDS · OTOSCOPY</div><h1>Describe before you diagnose.</h1><p class="lede">Train the sequence you want in clinic and on boards: <b>localize → describe → diagnose → act.</b></p></div><div class="oto-count"><b>{{cases|length}}</b><span>atlas cases</span></div></div>
+<div class="oto-toolbar"><span>Difficulty</span><a class="{{'active' if level=='all'}}" href="/lab/otoscopy">All</a>{% for n in range(1,6) %}<a class="{{'active' if level==n|string}}" href="/lab/otoscopy?level={{n}}">L{{n}}</a>{% endfor %}<small>L1 recognition → L5 board-level differential</small></div>
+<div class="oto-source-note"><b>Source layer:</b> Images and atlas-derived teaching points come from <i>Color Atlas of Otoscopy: From Diagnosis to Surgery</i> (Sanna et al., 1999). Treatment statements are intentionally labeled atlas-derived until contemporary guideline sources are added.</div>
+<div class="oto-deck" data-oto-deck>
+{% for c in cases %}<article class="oto-case card {{'' if loop.first else 'hidden'}}" data-oto-case data-index="{{loop.index0}}">
+ <div class="oto-case-top"><div><span class="knowledge-badge kb-board">LEVEL {{c.level}}</span><span class="oto-progress">Case {{loop.index}} of {{cases|length}}</span></div><span class="muted">{{c.source}}</span></div>
+ <div class="oto-case-grid"><div class="oto-image-wrap"><img src="{{url_for('static',filename=c.image)}}" alt="Unlabeled otoscopic case"><div class="oto-image-rule">No diagnosis shown until you commit.</div></div>
+ <div class="oto-work"><div class="eyebrow">STEP 1 · OBSERVE</div><h2>{{c.prompt}}</h2><label>Say it aloud or type your description</label><textarea class="oto-notes" placeholder="Canal… TM… middle-ear clues… key abnormality…"></textarea>
+ <div class="oto-checks"><label><input type="checkbox"> I localized the abnormality</label><label><input type="checkbox"> I described it without naming disease</label><label><input type="checkbox"> I committed to a diagnosis</label></div>
+ <button class="oto-reveal">Commit & reveal →</button></div></div>
+ <div class="oto-answer hidden">
+   <div class="oto-diagnosis"><span>DIAGNOSIS</span><h2>{{c.diagnosis}}</h2></div>
+   <div class="oto-answer-grid"><div><h3>What you should see</h3><ul>{% for f in c.findings %}<li>{{f}}</li>{% endfor %}</ul></div><div><h3>Differential</h3><p>{{c.differential}}</p></div><div><h3>Management / next step</h3><p>{{c.management}}</p></div><div class="oto-pearl"><h3>Board / clinic pearl</h3><p>{{c.pearl}}</p></div></div>
+   <div class="oto-follow"><span>ATTENDING FOLLOW-UP</span><h3>{{c.followup}}</h3><p>Answer aloud before moving on.</p></div>
+   <div class="oto-nav"><button class="oto-prev">← Previous</button><button class="oto-next">Next case →</button></div>
+ </div>
+</article>{% else %}<div class="card"><p>No cases at this level yet.</p></div>{% endfor %}
+</div>{% endblock %}

@@ -31,3 +31,7 @@ document.querySelectorAll(".question").forEach(card=>{
   }));
 });
 document.querySelectorAll(".reveal-btn").forEach(b=>b.addEventListener("click",()=>{b.nextElementSibling.classList.remove("hidden");b.style.display="none";}));
+
+
+// Otoscopy Interpretation Lab
+(()=>{const deck=document.querySelector('[data-oto-deck]');if(!deck)return;const cards=[...deck.querySelectorAll('[data-oto-case]')];let idx=0;function show(n){if(!cards.length)return;idx=(n+cards.length)%cards.length;cards.forEach((c,i)=>c.classList.toggle('hidden',i!==idx));cards[idx].scrollIntoView({behavior:'smooth',block:'start'});}cards.forEach((card,i)=>{const reveal=card.querySelector('.oto-reveal'),ans=card.querySelector('.oto-answer');if(reveal)reveal.addEventListener('click',()=>{ans.classList.remove('hidden');reveal.disabled=true;reveal.textContent='Answer revealed';});card.querySelector('.oto-next')?.addEventListener('click',()=>show(i+1));card.querySelector('.oto-prev')?.addEventListener('click',()=>show(i-1));});})();

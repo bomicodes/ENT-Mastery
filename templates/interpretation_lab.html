@@ -1,0 +1,69 @@
+{% extends "base.html" %}{% block content %}
+<div class="breadcrumb"><a href="/lab">Interpretation Lab</a> / {{lab.title}}</div>
+<div class="topic-hero lab-hero">
+ <div><span class="pill green">LIVE LAB</span><h1>{{lab.icon}} {{lab.title}}</h1><p class="lede">{{lab.subtitle}}</p></div>
+ <a class="case-btn" href="/lab">← All labs</a>
+</div>
+
+<section class="card interpretation-framework">
+ <span class="eyebrow">YOUR INTERPRETATION SEQUENCE</span>
+ <div class="framework-flow">{% for step in lab.framework %}<span>{{loop.index}}. {{step}}</span>{% if not loop.last %}<b>→</b>{% endif %}{% endfor %}</div>
+ <p class="source-note">{{lab.source_note}}</p>
+</section>
+
+{% if lab.resources %}
+<section class="resource-strip">
+ {% for r in lab.resources %}
+ <a class="card resource-card" href="{{r.url}}" target="_blank" rel="noopener">
+   <span class="resource-open">↗</span><b>{{r.name}}</b><small>{{r.note}}</small>
+ </a>
+ {% endfor %}
+</section>
+{% endif %}
+
+
+{% if lab.tracks %}
+<div class="track-tabs">
+  <span>Track:</span>
+  <a class="{{'selected' if track=='all' else ''}}" href="/lab/{{slug}}?track=all&level={{level}}">All</a>
+  {% for t in lab.tracks %}
+  <a class="{{'selected' if track==t.id else ''}}" href="/lab/{{slug}}?track={{t.id}}&level={{level}}">{{t.name}}</a>
+  {% endfor %}
+</div>
+{% endif %}
+{% if lab.practice_update %}
+<div class="practice lab-practice"><b>Practice Update</b><p>{{lab.practice_update}}</p></div>
+{% endif %}
+
+<div class="lab-controls">
+ <span>Difficulty:</span>
+ <a class="{{'selected' if level=='all' else ''}}" href="/lab/{{slug}}?track={{track}}">All</a>
+ {% for n in [1,2,3,4,5] %}<a class="{{'selected' if level|string==n|string else ''}}" href="/lab/{{slug}}?track={{track}}&level={{n}}">L{{n}}</a>{% endfor %}
+</div>
+
+<div class="interpretation-cases">
+{% for c in cases %}
+<section class="card interp-case">
+  <div class="interp-case-head"><span class="tag">LEVEL {{c.level}}</span><span>CASE {{loop.index}}</span></div>
+  {% if c.visual %}<img src="{{url_for('static',filename=c.visual)}}" alt="Teaching visual" class="lab-visual">{% endif %}
+  {% if c.external %}
+    <div class="external-visual">
+      <div><span>OPEN SOURCE VISUAL</span><p>Inspect the source image/video first, then return here before revealing the answer.</p></div>
+      <a href="{{c.external}}" target="_blank" rel="noopener">Open source ↗</a>
+    </div>
+  {% endif %}
+  <div class="commit-prompt"><span class="eyebrow">COMMIT BEFORE REVEAL</span><h2>{{c.prompt}}</h2>
+    <textarea rows="3" placeholder="Describe/localize/interpret in your own words…"></textarea>
+  </div>
+  <button class="reveal-btn">I committed → reveal reasoning</button>
+  <div class="hidden reveal-answer layered-reveal">
+    <div><span class="reason-label">INTERPRETATION</span><p>{{c.answer}}</p></div>
+    <div><span class="reason-label">WHY THIS MATTERS</span><p>{{c.why}}</p></div>
+    <div class="followup-box"><span class="reason-label">ATTENDING FOLLOW-UP</span><h4>{{c.follow}}</h4><p>Answer aloud before continuing.</p></div>
+  </div>
+</section>
+{% else %}
+<div class="empty card"><h3>No cases at this level yet.</h3><p>Choose All to return to the available cases.</p></div>
+{% endfor %}
+</div>
+{% endblock %}
