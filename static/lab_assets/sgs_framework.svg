@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440">
+    <rect width="100%" height="100%" fill="white"/>
+    <text x="380" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700">Subglottic Stenosis — Describe More Than the Grade</text>
+<circle cx="380" cy="195" r="125" fill="#f6f6f6" stroke="#333" stroke-width="3"/>
+<circle cx="380" cy="195" r="65" fill="white" stroke="#333" stroke-width="2"/>
+<text x="380" y="200" text-anchor="middle" font-family="Arial" font-size="13">airway lumen</text>
+<text x="115" y="100" font-family="Arial" font-size="13">Location</text>
+<text x="115" y="135" font-family="Arial" font-size="13">Length</text>
+<text x="115" y="170" font-family="Arial" font-size="13">Concentric vs eccentric</text>
+<text x="115" y="205" font-family="Arial" font-size="13">Mature vs inflamed</text>
+<text x="115" y="240" font-family="Arial" font-size="13">Posterior involvement</text>
+<text x="115" y="275" font-family="Arial" font-size="13">Glottic extension</text>
+<text x="115" y="310" font-family="Arial" font-size="13">Tracheal extension</text>
+<text x="490" y="110" font-family="Arial" font-size="13">Cotton-Myer grade</text>
+<text x="490" y="145" font-family="Arial" font-size="13">Prior dilation/reconstruction</text>
+<text x="490" y="180" font-family="Arial" font-size="13">Vocal-fold mobility</text>
+<text x="490" y="215" font-family="Arial" font-size="13">Cartilage framework</text>
+<text x="380" y="390" text-anchor="middle" font-family="Arial" font-size="12">Geometry + biology + previous surgery → treatment strategy</text>
+    </svg>

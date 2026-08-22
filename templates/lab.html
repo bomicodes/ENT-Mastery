@@ -1,8 +1,23 @@
 {% extends "base.html" %}{% block content %}
-<div class="eyebrow">IMAGING · PATHOLOGY · TESTING LAB</div><h1>See it. Describe it. Localize it. Act on it.</h1>
-<p class="lede">The lab shell is built for CT/MRI, endoscopy, otoscopy, pathology, audiograms, tympanograms, vestibular studies and PSG.</p>
+<div class="eyebrow">INTERPRETATION LAB</div>
+<h1>See it. Describe it. Localize it. Act on it.</h1>
+<p class="lede">Every card now opens a working learning pathway. Visual resources are either generated inside ENT Mastery, derived from your uploaded atlas, or launched from open/free teaching sources with attribution.</p>
+
 <div class="lab-grid">
-{% for x in [("CT / MRI","Describe → localize → differential → management"),("Otoscopy","Identify findings before naming disease"),("Pathology","Pattern → diagnosis → implication"),("Audiology","Test pattern → lesion localization → next step"),("Endoscopy","Anatomy + disease recognition"),("Sleep / Vestibular","Interpret the study, not just the number")] %}
-<div class="card lab-card"><div class="lab-placeholder">＋</div><h3>{{x[0]}}</h3><p>{{x[1]}}</p><span class="muted">Content packs ready to add</span></div>{% endfor %}
+<a class="card lab-card live-lab" href="/lab/ct-mri"><div class="lab-icon">🧠</div><h3>CT / MRI</h3><p>Orient → localize by space → differential → surgical map.</p><span class="lab-status">OPEN LAB →</span></a>
+<a class="card lab-card live-lab" href="/lab/otoscopy"><div class="lab-icon">👂</div><h3>Otoscopy</h3><p>Describe before diagnosing → differential → management.</p><span class="lab-status">10 ATLAS CASES →</span></a>
+<a class="card lab-card live-lab" href="/lab/pathology"><div class="lab-icon">🔬</div><h3>Pathology</h3><p>Architecture → cells → diagnosis → what the surgeon needs to know.</p><span class="lab-status">OPEN-ACCESS SLIDES →</span></a>
+<a class="card lab-card live-lab" href="/lab/audiology"><div class="lab-icon">🎧</div><h3>Audiology</h3><p>Audiogram → speech → tymps/reflexes → localization.</p><span class="lab-status">SYNTHETIC CASES →</span></a>
+<a class="card lab-card live-lab" href="/lab/laryngeal-endoscopy"><div class="lab-icon">🎥</div><h3>Laryngeal Endoscopy & Stroboscopy</h3><p>Motion + closure + mucosal wave → diagnosis and physiology.</p><span class="lab-status">VIDEO ATLAS →</span></a>
+<a class="card lab-card live-lab" href="/lab/sinonasal-endoscopy"><div class="lab-icon">👃</div><h3>Sinonasal Endoscopy & FESS</h3><p>Endoscopic view ↔ CT ↔ landmark ↔ danger structure.</p><span class="lab-status">NAVIGATION LAB →</span></a>
+<a class="card lab-card live-lab" href="/lab/airway-bronchoscopy"><div class="lab-icon">🫁</div><h3>Airway & Bronchoscopy</h3><p>Level + geometry + dynamics → endoscopic vs open strategy.</p><span class="lab-status">AIRWAY LAB →</span></a>
+<a class="card lab-card live-lab" href="/lab/sleep"><div class="lab-icon">🌙</div><h3>Sleep / PSG</h3><p>Obstruction + oxygenation + ventilation → ENT decision.</p><span class="lab-status">PSG CASES →</span></a>
+<a class="card lab-card live-lab" href="/lab/vestibular"><div class="lab-icon">🌀</div><h3>Vestibular</h3><p>VNG + calorics + vHIT + VEMP → physiology and localization.</p><span class="lab-status">TEST CASES →</span></a>
+</div>
+
+<div class="card lab-philosophy">
+  <span class="eyebrow">THE RULE</span>
+  <h2>Describe before you diagnose.</h2>
+  <p>ENT Mastery should train the reusable interpretation process, not image memorization. Every lab therefore asks you to localize and describe the finding before revealing the label.</p>
 </div>
 {% endblock %}

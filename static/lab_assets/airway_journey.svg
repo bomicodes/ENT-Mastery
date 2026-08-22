@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440">
+    <rect width="100%" height="100%" fill="white"/>
+    <text x="380" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700">Airway Journey</text>
+<text x="380" y="75" text-anchor="middle" font-family="Arial" font-size="14">Supraglottis</text><text x="380" y="98" text-anchor="middle" font-family="Arial" font-size="20">↓</text>
+<text x="380" y="125" text-anchor="middle" font-family="Arial" font-size="14">Glottis / posterior glottis</text><text x="380" y="148" text-anchor="middle" font-family="Arial" font-size="20">↓</text>
+<text x="380" y="175" text-anchor="middle" font-family="Arial" font-size="14">Subglottis / cricoid</text><text x="380" y="198" text-anchor="middle" font-family="Arial" font-size="20">↓</text>
+<text x="380" y="225" text-anchor="middle" font-family="Arial" font-size="14">Cervical trachea</text><text x="380" y="248" text-anchor="middle" font-family="Arial" font-size="20">↓</text>
+<text x="380" y="275" text-anchor="middle" font-family="Arial" font-size="14">Thoracic trachea</text><text x="380" y="298" text-anchor="middle" font-family="Arial" font-size="20">↓</text>
+<text x="380" y="325" text-anchor="middle" font-family="Arial" font-size="14">Carina → mainstem bronchi</text>
+<rect x="90" y="120" width="180" height="180" rx="12" fill="#fff8e3" stroke="#caa94e"/>
+<text x="180" y="150" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700">At EVERY level ask:</text>
+<text x="180" y="180" text-anchor="middle" font-family="Arial" font-size="12">Fixed or dynamic?</text>
+<text x="180" y="205" text-anchor="middle" font-family="Arial" font-size="12">Focal or long segment?</text>
+<text x="180" y="230" text-anchor="middle" font-family="Arial" font-size="12">Mature or inflamed?</text>
+<text x="180" y="255" text-anchor="middle" font-family="Arial" font-size="12">What is the narrowest point?</text>
+<text x="180" y="280" text-anchor="middle" font-family="Arial" font-size="12">What treatment fits geometry?</text>
+    </svg>

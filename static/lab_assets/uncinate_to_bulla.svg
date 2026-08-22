@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440">
+    <rect width="100%" height="100%" fill="white"/>
+    <text x="380" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700">After Uncinectomy — What Next?</text>
+<rect x="120" y="90" width="170" height="80" rx="12" fill="#eef6f5" stroke="#333"/><text x="205" y="120" text-anchor="middle" font-family="Arial" font-size="13">Natural maxillary ostium</text><text x="205" y="141" text-anchor="middle" font-family="Arial" font-size="13">/ infundibulum</text>
+<rect x="470" y="90" width="170" height="80" rx="12" fill="#eef6f5" stroke="#333"/><text x="555" y="120" text-anchor="middle" font-family="Arial" font-size="13">Ethmoid bulla</text><text x="555" y="141" text-anchor="middle" font-family="Arial" font-size="13">anterior ethmoid pathway</text>
+<line x1="290" y1="130" x2="470" y2="130" stroke="#333" stroke-width="2"/><polygon points="470,130 456,122 456,138" fill="#333"/>
+<rect x="80" y="245" width="230" height="80" rx="12" fill="#fff1f1" stroke="#b85c5c"/><text x="195" y="275" text-anchor="middle" font-family="Arial" font-size="13">LATERAL danger</text><text x="195" y="300" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700">Lamina papyracea / orbit</text>
+<rect x="450" y="245" width="230" height="80" rx="12" fill="#fff1f1" stroke="#b85c5c"/><text x="565" y="275" text-anchor="middle" font-family="Arial" font-size="13">SUPERIOR danger</text><text x="565" y="300" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700">Skull base</text>
+    </svg>

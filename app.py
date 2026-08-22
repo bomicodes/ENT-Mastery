@@ -134,7 +134,38 @@ def complications():
 
 @app.route("/lab")
 def lab():
-    return render_template("lab.html")
+    return render_template("lab.html", labs=INTERPRETATION_LABS)
+
+@app.route("/lab/<slug>")
+def interpretation_lab(slug):
+    if slug == "otoscopy":
+        return redirect(url_for("otoscopy_lab"))
+    lab_data = INTERPRETATION_LABS.get(slug)
+    if not lab_data:
+        return redirect(url_for("lab"))
+    level = request.args.get("level", "all")
+    track = request.args.get("track", "all")
+    cases = lab_data.get("cases", [])
+    if track != "all":
+        cases = [c for c in cases if c.get("track", "all") == track]
+    if level != "all":
+        cases = [c for c in cases if str(c.get("level")) == str(level)]
+    return render_template(
+        "interpretation_lab.html",
+        lab=lab_data,
+        slug=slug,
+        cases=cases,
+        level=level,
+        track=track
+    )
+
+@app.route("/lab/otoscopy")
+def otoscopy_lab():
+    level = request.args.get("level", "all")
+    cases = OTOSCOPY_CASES
+    if level != "all":
+        cases = [c for c in cases if str(c.get("level")) == str(level)]
+    return render_template("otoscopy_lab.html", cases=cases, level=level)
 
 @app.route("/attending")
 def attending():
