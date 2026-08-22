@@ -15,9 +15,10 @@
       <a href="/learn" class="navitem">◫ <span>Learn</span></a>
       <a href="/search" class="navitem">⌕ <span>Search</span></a>
       <a href="/cases" class="navitem">🩺 <span>Cases</span></a>
+      <a href="/integrated" class="navitem">⤢ <span>Integrated Cases</span></a>
       <a href="/operate" class="navitem">⌁ <span>Operate</span></a>
       <a href="/anatomy" class="navitem">◎ <span>Anatomy Lab</span></a>
-      <a href="/lab" class="navitem">◈ <span>Imaging / Path</span></a>
+      <a href="/lab" class="navitem">◈ <span>Interpretation Labs</span></a>
       <a href="/complications" class="navitem">⚠ <span>Complications</span></a>
       <a href="/attending" class="navitem">↗ <span>Attending Mode</span></a>
       <a href="/chief" class="navitem">♟ <span>Chief Mode</span></a>
@@ -37,15 +38,6 @@
     <div class="page">{% block content %}{% endblock %}</div>
   </main>
 </div>
-
-<nav class="mobile-bottom-nav">
-  <a href="/"><span>⌂</span><small>Today</small></a>
-  <a href="/search"><span>⌕</span><small>Search</small></a>
-  <a class="mobile-case" href="/case-tomorrow"><span>🩺</span><small>Case Prep</small></a>
-  <a href="/learn"><span>◫</span><small>Learn</small></a>
-  <a href="/progress"><span>▥</span><small>Progress</small></a>
-</nav>
-
 <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

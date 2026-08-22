@@ -1,0 +1,42 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">ADAPTIVE DAILY PATH</div>
+<div class="adaptive-head">
+ <div><h1>Today's {{total}}-minute curriculum</h1>
+ <p class="lede">Due retrieval first, then the next unmastered step. Rate each item so tomorrow's path changes.</p></div>
+ <form method="get" class="adaptive-controls">
+  <select name="minutes">{% for m in [15,20,30,45,60] %}<option value="{{m}}" {% if m==minutes %}selected{% endif %}>{{m}} min</option>{% endfor %}</select>
+  <select name="focus"><option value="">Mixed ENT</option>{% for d in domains %}<option {% if focus==d %}selected{% endif %}>{{d}}</option>{% endfor %}</select>
+  <button>Build path</button>
+ </form>
+</div>
+<div class="adaptive-list">
+{% for x in plan %}
+<div class="card adaptive-card" data-item="{{x.id}}">
+ <div class="adaptive-meta"><span>{{loop.index}}</span><b>{{x.domain}}</b><em>{{x.reason}}</em><small>~{{x.minutes}} min</small></div>
+ <h2>{{x.topic}}</h2>
+ <div class="stage-pill">Level {{x.level}} · {{x.stage|capitalize}}</div>
+ <p class="adaptive-prompt">{{x.prompt}}</p>
+ <button class="reveal-btn" onclick="this.nextElementSibling.hidden=false;this.hidden=true">Reveal teaching point</button>
+ <div class="adaptive-answer" hidden>
+   <p>{{x.answer}}</p>
+   <div class="rating-row">
+    <button onclick='rateItem(this,0,{{x|tojson}})'>Missed it</button>
+    <button onclick='rateItem(this,1,{{x|tojson}})'>Hard</button>
+    <button onclick='rateItem(this,2,{{x|tojson}})'>Got it</button>
+    <button onclick='rateItem(this,3,{{x|tojson}})'>Easy</button>
+   </div>
+ </div>
+</div>
+{% endfor %}
+</div>
+<script>
+async function rateItem(btn,rating,x){
+ const card=btn.closest('.adaptive-card');
+ const body={rating:rating,concept_id:x.concept_id,item_id:x.id,domain:x.domain,topic:x.topic,stage:x.stage,level:x.level};
+ const r=await fetch('/daily-adaptive/answer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+ const j=await r.json();
+ if(j.ok){card.classList.add('completed'); card.querySelector('.rating-row').innerHTML='<b>Saved · mastery level '+j.mastery_level+'</b>';}
+ else {card.querySelector('.rating-row').insertAdjacentHTML('beforeend','<small> Could not save: '+j.error+'</small>');}
+}
+</script>
+{% endblock %}

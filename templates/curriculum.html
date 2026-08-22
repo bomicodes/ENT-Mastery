@@ -1,0 +1,32 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">ENT MASTERY · LONGITUDINAL CURRICULUM</div>
+<h1>Learn it once. Revisit it at a higher level.</h1>
+<p><a class="button" href="/daily-adaptive">Start today’s adaptive path →</a> &nbsp; <a href="/curriculum/depth">Browse deep curriculum</a></p><p class="lede">The curriculum is sequenced as a spiral: <b>Recognize → Localize → Work up → Manage → Operate → Teach / Boards.</b> Each domain progresses from foundations to independent decision-making.</p>
+
+<div class="spiral-row">
+{% for s in spiral %}
+<div class="spiral-step"><span>{{s.level}}</span><b>{{s.name}}</b><small>{{s.goal}}</small></div>
+{% endfor %}
+</div>
+
+{% for domain, d in curriculum.items() %}
+<section class="card curriculum-v5">
+  <h2>{{domain}}</h2>
+  <div class="competencies">
+  {% for c in d.competencies %}<span>✓ {{c}}</span>{% endfor %}
+  </div>
+  <div class="sequence-grid">
+  {% for phase, topics in d.sequence %}
+    <div class="sequence-phase">
+      <h3>{{loop.index}} · {{phase}}</h3>
+      {% for t in topics %}
+      <div class="sequence-topic">{{t}}
+        {% if t in prerequisites %}<small>Prereq: {{ prerequisites[t]|join(" · ") }}</small>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

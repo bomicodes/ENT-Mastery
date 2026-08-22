@@ -1,0 +1,19 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">DEEP CURRICULUM</div>
+<h1>From pattern recognition to independent reasoning.</h1>
+<p class="lede">These are teaching modules, not one-line flashcards. Every topic returns through six layers: recognition, localization, workup, management, operative reasoning, and teaching.</p>
+{% for domain, mods in modules.items() %}
+<section class="depth-domain"><h2>{{domain}}</h2>
+{% for m in mods %}
+<details class="card depth-card"><summary><b>{{m.topic}}</b><span>6-layer module</span></summary>
+<div class="depth-grid">
+{% for key,label in [('recognize','Recognize'),('localize','Localize'),('workup','Work up'),('manage','Manage'),('operate','Operate'),('teach','Teach / Boards')] %}
+<div><h3>{{label}}</h3><p>{{m[key]}}</p></div>
+{% endfor %}
+</div></details>
+{% endfor %}</section>
+{% endfor %}
+<section class="card evidence-box"><h2>Evidence hierarchy</h2>
+{% for e in evidence %}<div><b>{{e.tier}}</b><p>{{e.use}}</p><small>{{e.examples}}</small></div>{% endfor %}
+</section>
+{% endblock %}

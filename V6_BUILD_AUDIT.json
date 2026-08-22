@@ -1,0 +1,17 @@
+{
+  "mapped_topics": 229,
+  "deep_six_layer_modules": 38,
+  "adaptive_learning_items": 228,
+  "integrated_cases": 30,
+  "interpretation_cases": 142,
+  "or_tomorrow_modules": 13,
+  "attending_prompts": 103,
+  "adaptive_review_intervals": {
+    "1": 1,
+    "2": 3,
+    "3": 7,
+    "4": 14,
+    "5": 30,
+    "6": 60
+  }
+}
