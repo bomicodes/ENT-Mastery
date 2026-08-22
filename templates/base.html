@@ -37,6 +37,15 @@
     <div class="page">{% block content %}{% endblock %}</div>
   </main>
 </div>
+
+<nav class="mobile-bottom-nav">
+  <a href="/"><span>⌂</span><small>Today</small></a>
+  <a href="/search"><span>⌕</span><small>Search</small></a>
+  <a class="mobile-case" href="/case-tomorrow"><span>🩺</span><small>Case Prep</small></a>
+  <a href="/learn"><span>◫</span><small>Learn</small></a>
+  <a href="/progress"><span>▥</span><small>Progress</small></a>
+</nav>
+
 <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

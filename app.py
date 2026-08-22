@@ -58,8 +58,16 @@ def case_tomorrow():
 @app.route("/questions")
 def questions():
     kind = request.args.get("kind")
-    qs = [q for q in QUESTIONS if not kind or q["kind"]==kind]
-    return render_template("questions.html", questions=qs, title="Question Bank")
+    concept = request.args.get("concept")
+    qs = [
+        q for q in QUESTIONS
+        if (not kind or q["kind"] == kind)
+        and (not concept or q["concept_id"] == concept)
+    ]
+    title = "Question Bank"
+    if concept:
+        title = f"Review: {concept.replace('_', ' ').title()}"
+    return render_template("questions.html", questions=qs, title=title, active_concept=concept)
 
 @app.route("/api/answer", methods=["POST"])
 def answer():

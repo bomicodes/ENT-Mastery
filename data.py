@@ -28,6 +28,9 @@ PARATHYROID = {
  },
  "sections":[
    {"id":"embryology","title":"Embryology: predict where the missing gland went","type":"mental_model",
+    "badge":"STOP & RECALL",
+    "recall_prompt":"Without looking: why are inferior parathyroids more variable than superior glands?",
+    "recall_answer":"Inferior glands migrate farther with the thymus from the third pouch; superior glands arise from the fourth pouch and migrate less.",
     "content":[
       "Superior glands arise from the 4th pharyngeal pouch and have a shorter migration, so their location is more consistent.",
       "Inferior glands arise from the 3rd pouch with the thymus and migrate farther; this explains their wider positional variability and potential thymic/mediastinal location.",
@@ -38,6 +41,9 @@ PARATHYROID = {
       ["So what surgically?","If an inferior gland is missing, search the migration pathway—thyrothymic ligament, cervical thymus, and potentially mediastinum—rather than randomly exploring."]
     ]},
    {"id":"anatomy","title":"Surgical anatomy: a 3-D search strategy","type":"anatomy",
+    "badge":"OR PEARL",
+    "recall_prompt":"You cannot find the expected inferior gland. What migration pathway should guide your search?",
+    "recall_answer":"Think lower pole/thyrothymic region \u2192 cervical thymus \u2192 mediastinal pathway when appropriate.",
     "content":[
       "Normal glands are usually posterior to the thyroid, but their relationship to the recurrent laryngeal nerve and embryologic migration pattern is more useful than memorizing a single coordinate.",
       "Superior glands are classically posterior and relatively fixed near the cricothyroid junction / posterior upper-to-mid thyroid region.",
@@ -46,6 +52,9 @@ PARATHYROID = {
     ],
     "pearl":"Before chasing an ectopic gland, ask: superior or inferior embryology? Then search the expected migration pathway."},
    {"id":"physiology","title":"PTH / calcium physiology","type":"mental_model",
+    "badge":"STOP & RECALL",
+    "recall_prompt":"What are the three major target organs of PTH, and what does it do at each?",
+    "recall_answer":"Kidney: retain calcium, waste phosphate, activate vitamin D. Bone: increase turnover. Gut: indirectly increase calcium absorption through calcitriol.",
     "content":[
       "PTH is secreted in response to low ionized calcium detected by the calcium-sensing receptor (CaSR).",
       "Kidney: increases distal calcium reabsorption, decreases proximal phosphate reabsorption, and stimulates 1α-hydroxylase → calcitriol.",
@@ -53,6 +62,9 @@ PARATHYROID = {
       "The biochemical signature of primary hyperparathyroidism is hypercalcemia with PTH that is elevated or inappropriately non-suppressed."
     ]},
    {"id":"diagnosis","title":"Diagnosis: prove the physiology first","type":"decision",
+    "badge":"BOARD",
+    "recall_prompt":"Why can a 'normal' PTH still be abnormal in a hypercalcemic patient?",
+    "recall_answer":"Because hypercalcemia should suppress PTH. A non-suppressed value is physiologically inappropriate.",
     "content":[
       "Confirm hypercalcemia (albumin-adjusted total calcium or ionized calcium when appropriate) and measure intact PTH.",
       "If calcium is high, PTH should be suppressed. A high or 'normal' PTH in that setting is inappropriate and points toward PTH-dependent hypercalcemia.",
@@ -61,6 +73,9 @@ PARATHYROID = {
     ],
     "pitfall":"A negative sestamibi scan does not rule out primary hyperparathyroidism."},
    {"id":"workup","title":"Workup: quantify end-organ impact","type":"workup",
+    "badge":"GUIDELINE",
+    "recall_prompt":"Before localization, what are the three questions your workup must answer?",
+    "recall_answer":"Is this truly PHPT? Is there kidney/bone target-organ involvement? Does the patient meet an indication for surgery?",
     "content":[
       "Assess renal function and structural renal involvement. Renal imaging (commonly ultrasound as a radiation-free option; CT when clinically appropriate) looks for nephrolithiasis or nephrocalcinosis, including silent disease. A 24-hour urine calcium evaluates hypercalciuria and contributes to the PHPT vs FHH differential.",
       "Assess skeletal effects with DXA; the distal 1/3 radius matters because cortical bone may be prominently affected.",
@@ -68,6 +83,9 @@ PARATHYROID = {
     ],
     "pearl":"Use the sequence: confirm the physiology → exclude important mimics → assess kidney/bone target-organ effects → decide whether surgery is indicated → then localize."},
    {"id":"indications","title":"When to operate: current framework","type":"practice_update",
+    "badge":"GUIDELINE",
+    "recall_prompt":"Name the major asymptomatic PHPT surgery buckets without looking.",
+    "recall_answer":"Calcium severity, skeletal involvement, renal involvement, and age <50.",
     "content":[
       "Symptomatic primary hyperparathyroidism is a surgical disease in an appropriate operative candidate.",
       "For asymptomatic disease, the 2022 Fifth International Workshop recommends surgery when any one major criterion is met: serum calcium >1 mg/dL above the upper limit of normal; skeletal involvement (vertebral fracture or T-score ≤−2.5); renal involvement (eGFR/CrCl <60, nephrolithiasis/nephrocalcinosis, or hypercalciuria >250 mg/day in women or >300 mg/day in men); or age <50 years.",
@@ -75,18 +93,27 @@ PARATHYROID = {
     ],
     "practice_update":"Older sources may quote >400 mg/day urinary calcium. The 2022 international workshop uses sex-specific thresholds (>250 mg/day women, >300 mg/day men) as a renal surgical criterion."},
    {"id":"localization","title":"Localization: plan the operation, don't make the diagnosis","type":"decision",
+    "badge":"BOARD",
+    "recall_prompt":"What is the one sentence distinction between diagnosis and localization?",
+    "recall_answer":"Diagnosis proves the disease biochemically; localization helps plan where/how to operate.",
     "content":[
       "First-line localization commonly uses high-resolution neck ultrasound and sestamibi-based imaging.",
       "4D-CT can be especially useful for nonlocalizing, discordant, reoperative, or anatomically complex disease, balanced against radiation and contrast considerations.",
       "Concordant localization can support a focused/selective operation; nonlocalizing imaging does not eliminate the possibility of cure with bilateral exploration by an experienced surgeon."
     ]},
    {"id":"operation","title":"Focused vs bilateral exploration","type":"operative",
+    "badge":"OR PEARL",
+    "recall_prompt":"What finding would make you broaden from a focused operation to bilateral exploration?",
+    "recall_answer":"Discordant/nonlocalizing studies, suspected multigland/hereditary disease, unexpected anatomy, or ioPTH inconsistent with cure.",
     "content":[
       "Focused/selective parathyroidectomy is attractive when biochemical disease is established and localization is convincing.",
       "Bilateral four-gland exploration remains important when imaging is nonlocalizing/discordant, multigland disease is suspected, familial syndromes are present, or intraoperative findings do not fit the preoperative hypothesis.",
       "The operation is a hypothesis test: localization predicts a gland; anatomy and intraoperative physiology tell you whether the hypothesis was correct."
     ]},
    {"id":"iopth","title":"Intraoperative PTH: physiology as navigation","type":"operative",
+    "badge":"ATTENDING",
+    "recall_prompt":"What are the first three categories when ioPTH fails to fall?",
+    "recall_answer":"Sampling/timing issue, wrong tissue removed, or additional hyperfunctioning tissue.",
     "content":[
       "PTH has a short half-life, allowing intraoperative measurements to test whether the dominant hypersecreting tissue has been removed.",
       "A commonly used Miami-style criterion is a >50% fall from the highest pre-incision or pre-excision value at approximately 10 minutes after excision; local protocols vary.",
@@ -94,6 +121,9 @@ PARATHYROID = {
     ],
     "pearl":"Pre-incision and pre-excision baselines protect against a misleading baseline caused by manipulation-induced PTH spikes."},
    {"id":"complications","title":"Complications: understand the mechanism","type":"complication",
+    "badge":"EMERGENCY",
+    "recall_prompt":"Expanding neck swelling with respiratory distress after endocrine neck surgery: what comes before imaging?",
+    "recall_answer":"Airway rescue and immediate wound decompression when the airway is threatened.",
     "content":[
       "Neck hematoma: airway emergency—recognition and immediate decompression take priority over elegant diagnostics when the airway is threatened.",
       "RLN injury: prevention depends on disciplined anatomy and tissue handling; postoperative voice change deserves appropriate evaluation.",
@@ -101,6 +131,9 @@ PARATHYROID = {
       "Persistent hyperparathyroidism suggests disease never cured; recurrent disease means return of hypercalcemia after a period of documented cure."
     ]},
    {"id":"hungry-bone","title":"Hungry bone syndrome","type":"mental_model",
+    "badge":"BOARD",
+    "recall_prompt":"Explain hungry bone syndrome in one phrase.",
+    "recall_answer":"After removal of chronic PTH drive, high-turnover bone becomes an avid calcium sink.",
     "content":[
       "Chronically PTH-stimulated bone has high turnover. After removal of the PTH drive, remineralization can become rapid and calcium fluxes from blood into bone.",
       "The result can be prolonged hypocalcemia, often with hypophosphatemia and hypomagnesemia, despite recovery/removal of the hyperfunctioning gland.",

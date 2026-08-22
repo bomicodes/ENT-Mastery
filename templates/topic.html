@@ -3,8 +3,7 @@
 <div class="topic-hero"><div><span class="pill green">Gold-standard module</span><h1>{{topic.title}}</h1><p class="lede">{{topic.subtitle}}</p></div>
 <div class="topic-actions"><a href="/case-tomorrow?q=parathyroidectomy">⚡ Quick case prep</a><a href="/questions">🧠 Test me</a></div></div>
 <div class="mental-map card">
- <div class="eyebrow">UNDERSTAND THIS IN 60 SECONDS</div>
- <h2>{{topic.one_minute.model}}</h2>
+ <div class="eyebrow">UNDERSTAND THIS IN 60 SECONDS</div><h2>{{topic.one_minute.model}}</h2>
  <div class="chain">{% for x in topic.one_minute.chain %}<span>{{x}}</span>{% if not loop.last %}<b>↓</b>{% endif %}{% endfor %}</div>
  <div class="pearl">💡 {{topic.one_minute.pearl}}</div>
 </div>
@@ -13,15 +12,17 @@
 <div class="lesson-stack">
 {% for s in topic.sections %}
 <section class="lesson card" id="{{s.id}}">
- <div class="lesson-label">{{s.type|replace('_',' ')}}</div><h2>{{loop.index}}. {{s.title}}</h2>
+ <div class="lesson-heading"><div><div class="lesson-label">{{s.type|replace('_',' ')}}</div><h2>{{loop.index}}. {{s.title}}</h2></div>
+ {% if s.badge %}<span class="knowledge-badge kb-{{s.badge|lower|replace(' ','-')|replace('&','and')}}">{{s.badge}}</span>{% endif %}</div>
  {% for p in s.content %}<p>{{p}}</p>{% endfor %}
  {% if s.pearl %}<div class="pearl">💡 <b>Surgical pearl:</b> {{s.pearl}}</div>{% endif %}
  {% if s.pitfall %}<div class="warning">⚠ <b>Pitfall:</b> {{s.pitfall}}</div>{% endif %}
  {% if s.practice_update %}<div class="practice">↻ <b>Practice Update</b><p>{{s.practice_update}}</p></div>{% endif %}
- {% if s.why %}
- <div class="why-box"><b>WHY? drill</b>
- {% for pair in s.why %}<details><summary>{{pair[0]}}</summary><p>{{pair[1]}}</p></details>{% endfor %}
- </div>{% endif %}
+ {% if s.why %}<div class="why-box"><b>WHY? drill</b>{% for pair in s.why %}<details><summary>{{pair[0]}}</summary><p>{{pair[1]}}</p></details>{% endfor %}</div>{% endif %}
+ {% if s.recall_prompt %}
+ <div class="stop-recall"><div class="stop-recall-top"><span>STOP & RECALL</span><small>Don't scroll past this passively.</small></div>
+ <h3>{{s.recall_prompt}}</h3><button class="reveal-btn">I answered → reveal</button><div class="hidden reveal-answer"><p>{{s.recall_answer}}</p></div></div>
+ {% endif %}
 </section>
 {% endfor %}
 <section class="lesson card" id="sources"><div class="lesson-label">SOURCE LAYER</div><h2>Sources & evidence</h2>
