@@ -1,57 +1,8 @@
-{% extends "base.html" %}{% block title %}Today · ENT Mastery{% endblock %}
-{% block content %}
+{% extends "base.html" %}{% block title %}Today · ENT Mastery{% endblock %}{% block content %}
 <div class="eyebrow">YOUR DAILY COMMAND CENTER</div>
-<div class="hero-row">
-  <div><h1>What should I learn today?</h1><p class="lede">Keep your long-term curriculum moving while staying ready for the cases in front of you.</p></div>
-  <div class="mastery-ring"><b>{{ stats.mastery }}%</b><span>Mastery</span></div>
-</div>
-
-<div class="primary-actions">
-  <a class="primary-action resume" href="/today?minutes=20">
-    <span class="action-icon">▶</span><div><small>DAILY CURRICULUM</small><b>Resume Today</b><p>{{ stats.due }} concepts due · adaptive 20-minute session</p></div><strong>→</strong>
-  </a>
-  <a class="primary-action test" href="/questions">
-    <span class="action-icon">🧠</span><div><small>ACTIVE RECALL</small><b>Start Questions</b><p>Board, mechanism, case, and operative questions</p></div><strong>→</strong>
-  </a>
-  <a class="primary-action case" href="/case-tomorrow">
-    <span class="action-icon">🩺</span><div><small>CLINICAL PREP</small><b>Case Tomorrow</b><p>Rapid anatomy + operation + danger structures + viva</p></div><strong>→</strong>
-  </a>
-</div>
-
-<div class="timebar card">
-  <div><b>How much time do you actually have?</b><small>ENT Mastery will fit the session to your day.</small></div>
-  <div class="time-options">{% for m in [10,20,30,45] %}<a href="/today?minutes={{m}}">{{m}} min</a>{% endfor %}</div>
-</div>
-
-<div class="grid metrics">
- <div class="metric card"><span>Due today</span><b>{{ stats.due }}</b><small>spaced-repetition concepts</small></div>
- <div class="metric card"><span>Questions answered</span><b>{{ stats.attempts }}</b><small>{{ stats.accuracy }}% lifetime accuracy</small></div>
- <div class="metric card"><span>Concepts touched</span><b>{{ stats.concepts }}</b><small>across your knowledge graph</small></div>
- <div class="metric card accent"><span>Current curriculum</span><b>Head & Neck</b><small>Parathyroid foundation</small></div>
-</div>
-
-<div class="two-col">
- <section>
-  <div class="section-head"><div><span class="eyebrow">CONTINUE LEARNING</span><h2>{{ topic.title }}</h2></div><span class="pill green">Gold-standard module</span></div>
-  <a class="feature-card" href="/topic/{{topic.slug}}"><div><span class="tag">MENTAL MODEL</span><h3>From calcium physiology to operative rescue</h3><p>{{topic.subtitle}}</p></div><span class="arrow">→</span></a>
-  <h2 class="mt">Choose how you want to train</h2>
-  <div class="mode-grid">
-    <a class="mode card" href="/questions"><b>🧠 Active Recall</b><span>Retrieve before reading</span></a>
-    <a class="mode card" href="/cases"><b>🩺 Case Reasoning</b><span>Progressive clinical decisions</span></a>
-    <a class="mode card" href="/attending"><b>↗ Attending Mode</b><span>Keep drilling deeper</span></a>
-    <a class="mode card" href="/chief"><b>♟ Chief Mode</b><span>Teach it to a junior</span></a>
-  </div>
- </section>
- <aside>
-  <div class="card case-panel"><span class="eyebrow">SCRUBBING TOMORROW?</span><h2>Rapid Case Prep</h2><p>This does not replace your daily curriculum. It prepares you for tomorrow and feeds weak concepts back into future review.</p>
-    <form action="/case-tomorrow"><input name="q" placeholder="e.g. parathyroidectomy"><button>Build my prep →</button></form>
-  </div>
-  <div class="card weakness-card"><div class="section-head"><h3>Weakness radar</h3><a href="/progress">View all</a></div>
-    {% if weak %}{% for cid, s in weak %}
-      <div class="weak-item"><div class="weak-row"><span>{{cid|replace('_',' ')|title}}</span><div class="bar"><i style="width:{{s.strength}}%"></i></div><b>{{s.strength|round|int}}%</b></div>
-      <a class="review-now" href="/questions?concept={{cid}}">Review now →</a></div>
-    {% endfor %}{% else %}<p class="muted">Answer a few questions and this becomes personalized.</p>{% endif %}
-  </div>
- </aside>
-</div>
+<div class="hero-row"><div><h1>Train the weak link, not just the topic.</h1><p class="lede">ENT Mastery now tracks whether you can recognize, localize, reason, work up, manage, operate, and teach—not just whether you saw a card.</p></div><div class="mastery-ring"><b>{{stats.mastery}}%</b><span>Recall mastery</span></div></div>
+<div class="timebar card"><div><b>Build today's adaptive session</b><small>Due review + weak concepts + the next mastery step. Your ratings change what returns tomorrow.</small></div><div class="time-options">{% for m in [15,30,45,60] %}<a href="/daily-adaptive?minutes={{m}}">{{m}} min</a>{% endfor %}</div></div>
+{% if weakest_dimensions %}<div class="dimension-radar card"><span class="eyebrow">WHAT THE ENGINE THINKS YOU NEED</span><h2>Current weak dimensions</h2><div class="dimension-mini-grid">{% for dim,score in weakest_dimensions %}<a href="/progress" class="dimension-mini"><span>{{dim|replace('_',' ')|title}}</span><b>{{score}}%</b><div class="bar"><i style="width:{{score}}%"></i></div></a>{% endfor %}</div></div>{% endif %}
+<div class="grid metrics"><div class="metric card"><span>Due today</span><b>{{stats.due}}</b><small>spaced-repetition concepts</small></div><div class="metric card"><span>Recall attempts</span><b>{{stats.attempts}}</b><small>{{stats.accuracy}}% lifetime accuracy</small></div><div class="metric card"><span>Concepts touched</span><b>{{stats.concepts}}</b><small>knowledge graph</small></div><div class="metric card accent"><span>Chief engine</span><b>7 dimensions</b><small>demonstrated mastery</small></div></div>
+<div class="two-col"><section><div class="section-head"><div><span class="eyebrow">PROGRESSIVE CLINICAL REASONING</span><h2>Integrated cases</h2></div><a href="/integrated">View all</a></div><div class="integrated-grid">{% for c in integrated_cases %}<a class="card integrated-tile" href="/integrated/{{c.id}}"><span class="tag">{{c.domain}}</span><h3>{{c.title}}</h3><p>{{c.summary}}</p><b>Start progressive case →</b></a>{% endfor %}</div><h2 class="mt">Learning modes</h2><div class="mode-grid"><a class="mode card" href="/questions"><b>Active Recall</b><span>Board + mechanism questions</span></a><a class="mode card" href="/lab"><b>Interpretation Atlas</b><span>Adaptive visual/data sessions</span></a><a class="mode card" href="/attending?level=resident"><b>Attending Mode</b><span>PGY-1 → Chief depth</span></a><a class="mode card" href="/integrated"><b>Integrated Cases</b><span>History → test → operation</span></a></div></section><aside><div class="card case-panel"><span class="eyebrow">OR TOMORROW</span><h2>Rapid Case Prep</h2><p>Search the operation. Audited modules give indication, anatomy, sequence, danger structures, complications, and attending questions.</p><form action="/case-tomorrow"><input name="q" placeholder="e.g. parathyroidectomy"><button>Build prep →</button></form></div><div class="card"><div class="section-head"><h3>Recall weakness radar</h3><a href="/progress">Full mastery map</a></div>{% if weak %}{% for cid,s in weak %}<div class="weak-row"><span>{{cid|replace('_',' ')|title}}</span><div class="bar"><i style="width:{{s.strength}}%"></i></div><b>{{s.strength|round|int}}%</b></div>{% endfor %}{% else %}<p class="muted">Answer a few questions and this becomes personalized.</p>{% endif %}</div></aside></div>
 {% endblock %}

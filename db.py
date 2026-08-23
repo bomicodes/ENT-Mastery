@@ -385,57 +385,70 @@ def mastery_misses(limit=100):
 
 
 # =============================================================================
-# v6 adaptive curriculum persistence
+# v6/v9.2 adaptive curriculum persistence
 # =============================================================================
 def ensure_adaptive_schema():
-    conn=get_conn()
-    cur=conn.cursor()
-    cur.execute("""CREATE TABLE IF NOT EXISTS curriculum_mastery (
-        concept_id TEXT PRIMARY KEY,
-        domain TEXT,
-        topic TEXT,
-        mastery_level INTEGER DEFAULT 0,
-        attempts INTEGER DEFAULT 0,
-        correct INTEGER DEFAULT 0,
-        last_seen TIMESTAMP,
-        next_due DATE
-    )""")
-    cur.execute("""CREATE TABLE IF NOT EXISTS daily_path_events (
-        id SERIAL PRIMARY KEY,
-        concept_id TEXT,
-        item_id TEXT,
-        stage TEXT,
-        rating INTEGER,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    )""")
-    conn.commit(); conn.close()
+    c=conn()
+    if USE_POSTGRES:
+        c.execute("""CREATE TABLE IF NOT EXISTS curriculum_mastery (
+            concept_id TEXT PRIMARY KEY, domain TEXT, topic TEXT,
+            mastery_level INTEGER DEFAULT 0, attempts INTEGER DEFAULT 0,
+            correct INTEGER DEFAULT 0, last_seen TIMESTAMP, next_due DATE
+        )""")
+        c.execute("""CREATE TABLE IF NOT EXISTS daily_path_events (
+            id BIGSERIAL PRIMARY KEY, concept_id TEXT, item_id TEXT,
+            stage TEXT, rating INTEGER, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )""")
+    else:
+        c.execute("""CREATE TABLE IF NOT EXISTS curriculum_mastery (
+            concept_id TEXT PRIMARY KEY, domain TEXT, topic TEXT,
+            mastery_level INTEGER DEFAULT 0, attempts INTEGER DEFAULT 0,
+            correct INTEGER DEFAULT 0, last_seen TEXT, next_due TEXT
+        )""")
+        c.execute("""CREATE TABLE IF NOT EXISTS daily_path_events (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, concept_id TEXT, item_id TEXT,
+            stage TEXT, rating INTEGER, created_at TEXT DEFAULT CURRENT_TIMESTAMP
+        )""")
+    c.commit(); c.close()
 
 def adaptive_mastery_map():
     ensure_adaptive_schema()
-    conn=get_conn(); cur=conn.cursor()
-    cur.execute("SELECT concept_id, domain, topic, mastery_level, attempts, correct, last_seen, next_due FROM curriculum_mastery")
-    rows=cur.fetchall(); conn.close()
-    keys=["concept_id","domain","topic","mastery_level","attempts","correct","last_seen","next_due"]
-    return {r[0]:dict(zip(keys,r)) for r in rows}
+    c=conn()
+    rows=_execute(c,"SELECT concept_id, domain, topic, mastery_level, attempts, correct, last_seen, next_due FROM curriculum_mastery").fetchall()
+    c.close()
+    out={}
+    for row in rows:
+        d=dict(row)
+        due=d.get("next_due")
+        if isinstance(due,str) and due:
+            try: due=datetime.fromisoformat(due).date()
+            except Exception:
+                try: due=datetime.strptime(due[:10],"%Y-%m-%d").date()
+                except Exception: due=None
+        elif hasattr(due,"date"):
+            due=due.date()
+        d["next_due"]=due
+        out[d["concept_id"]]=d
+    return out
 
 def record_adaptive_result(concept_id, item_id, domain, topic, stage, level, rating, interval_days):
     ensure_adaptive_schema()
-    conn=get_conn(); cur=conn.cursor()
-    # rating: 0 miss, 1 hard, 2 good, 3 easy
-    cur.execute("""INSERT INTO daily_path_events(concept_id,item_id,stage,rating) VALUES(%s,%s,%s,%s)""",
-                (concept_id,item_id,stage,rating))
-    cur.execute("SELECT mastery_level, attempts, correct FROM curriculum_mastery WHERE concept_id=%s",(concept_id,))
-    row=cur.fetchone()
-    old_level=(row[0] if row else 0); attempts=(row[1] if row else 0)+1; correct=(row[2] if row else 0)+(1 if rating>=2 else 0)
+    c=conn()
+    _execute(c,"INSERT INTO daily_path_events(concept_id,item_id,stage,rating) VALUES(?,?,?,?)",(concept_id,item_id,stage,rating))
+    row=_execute(c,"SELECT mastery_level, attempts, correct FROM curriculum_mastery WHERE concept_id=?",(concept_id,)).fetchone()
+    old_level=(row["mastery_level"] if row else 0)
+    attempts=(row["attempts"] if row else 0)+1
+    correct=(row["correct"] if row else 0)+(1 if rating>=2 else 0)
     if rating==0: new_level=max(0,min(old_level,level)-1); days=1
     elif rating==1: new_level=max(old_level,min(level,6)); days=max(1,interval_days//2)
-    elif rating==2: new_level=max(old_level,min(level,6)); days=interval_days
+    elif rating==2: new_level=max(old_level,min(level,6)); days=max(1,interval_days)
     else: new_level=max(old_level,min(level+1,6)); days=min(90,max(interval_days,1)*2)
-    cur.execute("""INSERT INTO curriculum_mastery(concept_id,domain,topic,mastery_level,attempts,correct,last_seen,next_due)
-                   VALUES(%s,%s,%s,%s,%s,%s,CURRENT_TIMESTAMP,CURRENT_DATE + %s)
-                   ON CONFLICT(concept_id) DO UPDATE SET domain=EXCLUDED.domain,topic=EXCLUDED.topic,
-                   mastery_level=EXCLUDED.mastery_level,attempts=EXCLUDED.attempts,correct=EXCLUDED.correct,
-                   last_seen=CURRENT_TIMESTAMP,next_due=EXCLUDED.next_due""",
-                (concept_id,domain,topic,new_level,attempts,correct,days))
-    conn.commit(); conn.close()
+    now=datetime.now(); due=(now+timedelta(days=days)).date().isoformat()
+    exists=_execute(c,"SELECT concept_id FROM curriculum_mastery WHERE concept_id=?",(concept_id,)).fetchone()
+    if exists:
+        _execute(c,"UPDATE curriculum_mastery SET domain=?, topic=?, mastery_level=?, attempts=?, correct=?, last_seen=?, next_due=? WHERE concept_id=?",(domain,topic,new_level,attempts,correct,now.isoformat(),due,concept_id))
+    else:
+        _execute(c,"INSERT INTO curriculum_mastery (concept_id,domain,topic,mastery_level,attempts,correct,last_seen,next_due) VALUES(?,?,?,?,?,?,?,?)",(concept_id,domain,topic,new_level,attempts,correct,now.isoformat(),due))
+    c.commit(); c.close()
     return new_level
+

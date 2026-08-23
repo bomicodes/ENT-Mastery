@@ -66,24 +66,57 @@ def search():
     else: rows=[]
     return render_template("search.html", q=q, results=rows)
 
+def _norm_or_text(s):
+    import re
+    return " ".join(re.findall(r"[a-z0-9]+", (s or "").lower()))
+
+def _or_rank(q):
+    import difflib
+    nq=_norm_or_text(q)
+    if not nq: return []
+    qt=nq.split()
+    ranked=[]
+    for slug,x in OR_PREP_REGISTRY.items():
+        ns=_norm_or_text(slug)
+        nt=_norm_or_text(x.get("title",""))
+        hay=(ns+" "+nt).strip()
+        score=0
+        if nq==ns or nq==nt: score=100
+        elif nq in nt or nq in ns: score=92
+        elif all(t in hay.split() for t in qt): score=84
+        else:
+            coverage=sum(1 for t in qt if t in hay.split())/max(1,len(qt))
+            phrase=difflib.SequenceMatcher(None,nq,nt).ratio()
+            score=round(65*coverage+35*phrase)
+        ranked.append((score,slug,x))
+    return sorted(ranked,key=lambda z:z[0],reverse=True)
+
 @app.route("/case-tomorrow")
 def case_tomorrow():
-    q=request.args.get("q","").strip().lower()
-    prep=None
+    q=request.args.get("q","").strip()
+    prep=None; or_choices=[]
     if q:
-        for slug,x in OR_PREP_REGISTRY.items():
-            hay=(slug+" "+x["title"]).lower()
-            if q in hay or any(t in hay for t in q.split()):
-                prep=x; break
-    if not prep and q:
+        ranked=_or_rank(q)
+        if ranked:
+            top=ranked[0]
+            margin=top[0]-(ranked[1][0] if len(ranked)>1 else 0)
+            if top[0]>=92 or (top[0]>=82 and margin>=7):
+                prep=top[2]
+            elif top[0]>=60:
+                or_choices=[x[2] for x in ranked[:5] if x[0]>=55]
+    if not prep and q and not or_choices:
         matches=[]
+        nq=_norm_or_text(q)
+        qt=nq.split()
         for r in search_index():
-            hay=(r["title"]+" "+r.get("subtitle","")+" "+r.get("text","")).lower()
-            if any(t in hay for t in q.split()): matches.append(r)
-        return render_template("case_tomorrow.html", q=q, prep=None, matches=matches[:8], questions=[])
+            hay=_norm_or_text(r["title"]+" "+r.get("subtitle","")+" "+r.get("text",""))
+            if all(t in hay.split() for t in qt): matches.append(r)
+        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=[], matches=matches[:8], questions=[], or_directory=OR_PREP_REGISTRY)
+    if not prep and or_choices:
+        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=or_choices, matches=[], questions=[], or_directory=OR_PREP_REGISTRY)
     if not prep: prep=OR_PREP_REGISTRY.get("parathyroidectomy")
     linked_q=[x for x in QUESTIONS if x.get("topic")==prep.get("linked_topic")][:5] if prep else []
-    return render_template("case_tomorrow.html", q=q, prep=prep, matches=[], questions=linked_q)
+    return render_template("case_tomorrow.html", q=q, prep=prep, or_choices=[], matches=[], questions=linked_q, or_directory=OR_PREP_REGISTRY)
 
 @app.route("/questions")
 def questions():
@@ -318,6 +351,10 @@ def evidence():
       {"area":"Audiology","title":"Age-Related Hearing Loss","year":"2024","kind":"AAO-HNSF CPG","status":"current reviewed source"},
       {"area":"Thyroid","title":"2025 ATA Differentiated Thyroid Cancer","year":"2025","kind":"ATA Guideline","status":"current reviewed source"},
       {"area":"Rhinology","title":"ICAR-RS: Rhinosinusitis","year":"2021","kind":"International Consensus Statement","status":"core comprehensive rhinology reference; newer CPGs supersede where applicable"},
+      {"area":"Head & Neck Oncology","title":"NCCN Head and Neck Cancers","year":"2026 v2.2026","kind":"NCCN uploaded guideline","status":"current oncology management/adjuvant/surveillance cross-check; algorithms not reproduced"},
+      {"area":"Cutaneous Oncology","title":"NCCN Melanoma: Cutaneous","year":"2026 v2.2026","kind":"NCCN uploaded guideline","status":"current melanoma management cross-check; algorithms not reproduced"},
+      {"area":"Cutaneous Oncology","title":"NCCN Squamous Cell Skin Cancer","year":"2026 v2.2026","kind":"NCCN uploaded guideline","status":"current cutaneous SCC management cross-check; algorithms not reproduced"},
+      {"area":"Cutaneous Oncology","title":"NCCN Basal Cell Skin Cancer","year":"2026 v2.2026","kind":"NCCN uploaded guideline","status":"current BCC management cross-check; algorithms not reproduced"},
       {"area":"Otology","title":"Color Atlas of Otoscopy: From Diagnosis to Surgery","year":"1999","kind":"Uploaded atlas","status":"visual/anatomic source; management cross-check required"}
     ]
     return render_template("evidence.html", sources=sources)
@@ -328,7 +365,7 @@ def progress():
 
 @app.route("/sources")
 def sources():
-    return render_template("sources.html", sources=PARATHYROID["sources"])
+    return render_template("sources.html", sources=SITE_SOURCES_V92, nccn=NCCN_GUIDELINES_V92)
 
 if __name__ == "__main__":
     app.run(debug=True)
@@ -338,7 +375,7 @@ if __name__ == "__main__":
 # v6 Adaptive Daily Path
 # =============================================================================
 def _adaptive_plan(target_minutes=30, focus=None):
-    from data import ADAPTIVE_ITEMS_V6, REVIEW_INTERVALS_V6
+    from data import ADAPTIVE_ITEMS_V91 as ADAPTIVE_ITEMS_V6, REVIEW_INTERVALS_V6
     try:
         from db import adaptive_mastery_map
         mastery=adaptive_mastery_map()

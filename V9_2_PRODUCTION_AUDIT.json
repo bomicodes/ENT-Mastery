@@ -1,0 +1,15 @@
+{
+  "deep_modules": 203,
+  "adaptive_items": 1218,
+  "integrated_cases": 50,
+  "or_modules": 81,
+  "interpretation_labs_in_menu": 13,
+  "interpretation_cards_plus_otoscopy": 324,
+  "search_rows": 514,
+  "nccn_guidelines_registered": 4,
+  "adaptive_sqlite_smoke": {
+    "saved": true,
+    "level": 1,
+    "next_due": "2026-08-23"
+  }
+}

@@ -1,7 +1,9 @@
 {% extends "base.html" %}{% block content %}
-<div class="eyebrow">SOURCE LAYER</div><h1>Books teach the foundation. Current evidence updates practice.</h1>
-<p class="lede">ENT Mastery separates durable anatomy/physiology from recommendations that can change over time.</p>
-<div class="source-policy card"><h2>Source hierarchy</h2><div class="policy-chain"><span>Cummings<br><small>deep understanding</small></span><b>→</b><span>Surgical Anatomy<br><small>spatial model</small></span><b>→</b><span>Operative texts<br><small>technique</small></span><b>→</b><span>Pasha / K.J. Lee<br><small>board synthesis</small></span><b>→</b><span>Guidelines / literature<br><small>current practice</small></span></div></div>
+<div class="eyebrow">SOURCE LAYER</div><h1>Durable foundations + current practice.</h1>
+<p class="lede">ENT Mastery uses textbooks for anatomy and operative mental models, then layers current specialty guidance over management decisions that can change.</p>
+<div class="source-policy card"><h2>Source hierarchy</h2><div class="policy-chain"><span>Core texts<br><small>anatomy + physiology</small></span><b>→</b><span>Operative references<br><small>landmarks + technique</small></span><b>→</b><span>Visual atlases<br><small>pattern recognition</small></span><b>→</b><span>Guidelines / NCCN<br><small>current management</small></span></div></div>
 {% for s in sources %}<div class="source-row card"><b>{{s.name}}</b><span>{{s.role}}</span></div>{% endfor %}
-<div class="practice"><b>Practice Update rule</b><p>When a newer guideline materially changes a threshold or management recommendation, the lesson should display the updated recommendation rather than silently reproducing an older textbook value.</p></div>
+<div class="card evidence-table"><span class="eyebrow">CURRENT NCCN SET · PRIVATE REFERENCE</span><p>NCCN algorithms and figures are not reproduced. These uploaded guidelines are used to cross-check oncology management content.</p>
+{% for n in nccn %}<div class="evidence-row"><div><h3>{{n.name}}</h3><small>{{n.version}} · {{n.date}}</small></div><b>{{n.role}}</b></div>{% endfor %}</div>
+<div class="practice"><b>Practice Update rule</b><p>When a newer guideline materially changes a threshold, staging-linked decision, systemic option, or surveillance recommendation, the current source layer supersedes an older textbook statement.</p></div>
 {% endblock %}

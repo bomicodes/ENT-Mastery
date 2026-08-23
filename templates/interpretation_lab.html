@@ -1,5 +1,5 @@
 {% extends "base.html" %}{% block content %}
-<div class="breadcrumb"><a href="/lab">Interpretation Lab</a> / {{lab.title}}</div>
+<div class="breadcrumb"><a href="/lab">Interpretation Atlas</a> / {{lab.title}}</div>
 <div class="topic-hero lab-hero">
  <div><span class="pill green">LIVE LAB</span><h1>{{lab.icon}} {{lab.title}}</h1><p class="lede">{{lab.subtitle}}</p></div>
  <a class="case-btn" href="/lab">← All labs</a>
@@ -41,9 +41,16 @@
  {% for n in [1,2,3,4,5] %}<a class="{{'selected' if level|string==n|string else ''}}" href="/lab/{{slug}}?track={{track}}&level={{n}}">L{{n}}</a>{% endfor %}
 </div>
 
+<section class="card adaptive-session-panel">
+ <div><span class="eyebrow">ADAPTIVE PRACTICE</span><h3>{{cases|length}} cards this session <span class="muted">• {{bank_size}} retrieval cards in this lab</span></h3>
+ <p>Weak cards return first, then unseen concepts, then older mastered material. Different retrieval versions of the same concept rotate across sessions.</p></div>
+ <div class="adaptive-stats"><span><b>{{lab_stats.attempted}}</b> seen</span><span><b>{{lab_stats.weak}}</b> weak</span><span><b>{{lab_stats.mastered}}</b> mastered</span></div>
+ <div class="adaptive-actions"><a class="case-btn" href="/lab/{{slug}}?track={{track}}&level={{level}}&mode=session&count={{session_size}}&refresh=1">↻ New session</a><a href="/lab/{{slug}}?track={{track}}&level={{level}}&mode=all">Browse full bank</a></div>
+</section>
+
 <div class="interpretation-cases">
 {% for c in cases %}
-<section class="card interp-case">
+<section class="card interp-case" data-lab="{{slug}}" data-case-id="{{c.id}}" data-concept-id="{{c.concept_id}}" data-variant-type="{{c.variant_type}}" data-domain="{{lab.title}}">
   <div class="interp-case-head"><span class="tag">LEVEL {{c.level}}</span><span>CASE {{loop.index}}</span></div>
   {% if c.visual %}<img src="{{url_for('static',filename=c.visual)}}" alt="Teaching visual" class="lab-visual">{% endif %}
   {% if c.external %}
@@ -59,7 +66,10 @@
   <div class="hidden reveal-answer layered-reveal">
     <div><span class="reason-label">INTERPRETATION</span><p>{{c.answer}}</p></div>
     <div><span class="reason-label">WHY THIS MATTERS</span><p>{{c.why}}</p></div>
-    <div class="followup-box"><span class="reason-label">ATTENDING FOLLOW-UP</span><h4>{{c.follow}}</h4><p>Answer aloud before continuing.</p></div>
+    {% include "_teaching_layers.html" %}
+    <div class="lab-self-rate"><span>How well did you know this?</span>
+      <button type="button" data-rating="0">Again</button><button type="button" data-rating="1">Hard</button><button type="button" data-rating="2">Good</button><button type="button" data-rating="3">Easy</button>
+    </div>
   </div>
 </section>
 {% else %}

@@ -1,12 +1,16 @@
 {% extends "base.html" %}{% block content %}
-<div class="eyebrow">CASE TOMORROW · RAPID PREP</div><h1>{{operation.title}}</h1>
-<p class="lede">A focused pre-op review that does not replace or reset your daily curriculum.</p>
-<div class="prep-timeline"><span>WHY</span><b>→</b><span>ANATOMY</span><b>→</b><span>STEPS</span><b>→</b><span>DANGER</span><b>→</b><span>COMPLICATIONS</span><b>→</b><span>RAPID FIRE</span></div>
-<section class="card prep"><div class="lesson-label">1 · WHY ARE WE OPERATING?</div><h2>Start with the physiology</h2><p>{{operation.indications}}</p><div class="pearl">Diagnosis is biochemical. Localization is the surgical map.</div></section>
-<section class="card prep"><div class="lesson-label">2 · ANATOMY YOU MUST SEE IN 3-D</div><h2>Embryology predicts location</h2><p>Superior = 4th pouch, shorter migration, more consistent. Inferior = 3rd pouch with thymus, longer migration, more variable.</p><a href="/anatomy">Open Anatomy Lab →</a></section>
-<section class="card prep"><div class="lesson-label">3 · OPERATIVE SEQUENCE</div><ol class="steps">{% for s in operation.steps %}<li><span>{{loop.index}}</span><p>{{s}}</p></li>{% endfor %}</ol></section>
-<section class="card prep"><div class="lesson-label">4 · DANGER STRUCTURES</div><div class="chips">{% for x in operation.danger %}<span>{{x}}</span>{% endfor %}</div></section>
-<section class="card prep"><div class="lesson-label">5 · ATTENDING RAPID FIRE</div>{% for v in operation.viva %}<details class="rapid"><summary>{{v[0]}}</summary><p>{{v[1]}}</p></details>{% endfor %}</section>
-<section class="card prep"><div class="lesson-label">6 · PROVE IT</div><h2>5-question checkpoint</h2></section>
-{% include "_question_list.html" %}
+<div class="eyebrow">OR TOMORROW · RAPID PREP</div>
+<details class="card or-module-directory"><summary><b>Browse all {{or_directory|length}} audited modules</b></summary>
+{% for slug, op in or_directory.items() %}<div class="or-module-links"><a href="/case-tomorrow?q={{op.title|urlencode}}">{{op.title}}</a><small>{{op.domain}}</small></div>{% endfor %}
+</details><form action="/case-tomorrow" class="or-search card"><input name="q" value="{{q}}" placeholder="Search an operation, e.g. parathyroidectomy"><button>Build prep →</button></form>
+{% if or_choices %}
+<h1>Which operation did you mean?</h1>
+<p class="lede">I found several close operative modules and won't guess.</p>
+<div class="search-results">
+{% for op in or_choices %}
+<a class="card" href="/case-tomorrow?q={{op.title|urlencode}}"><b>{{op.title}}</b><p>{{op.domain}}</p></a>
+{% endfor %}
+</div>
+{% elif prep %}<h1>{{prep.title}}</h1><p class="lede">Focused operative prep. This does not replace your daily curriculum.</p><div class="prep-timeline"><span>WHY</span><b>→</b><span>STEPS</span><b>→</b><span>DANGER</span><b>→</b><span>ATTENDING</span></div><section class="card prep"><div class="lesson-label">1 · WHY ARE WE OPERATING?</div><p>{{prep.indications}}</p></section><section class="card prep"><div class="lesson-label">2 · OPERATIVE SEQUENCE</div><ol class="steps">{% for s in prep.steps %}<li><span>{{loop.index}}</span><p>{{s}}</p></li>{% endfor %}</ol></section><section class="card prep"><div class="lesson-label">3 · DANGER ZONE</div><div class="chips">{% for x in prep.danger %}<span>{{x}}</span>{% endfor %}</div></section><section class="card prep"><div class="lesson-label">4 · ATTENDING FOLLOW-UP</div>{% for v in prep.attending_followup %}<details class="rapid"><summary>{{v[0]}}</summary><p>{{v[1]}}</p></details>{% endfor %}</section>{% if prep.source_urls %}<section class="card prep"><div class="lesson-label">SOURCE BASIS</div><p class="muted">External operative references used for this study module:</p><ul>{% for u in prep.source_urls %}<li><a href="{{u}}" target="_blank" rel="noopener">{{u}}</a></li>{% endfor %}</ul></section>{% endif %}{% if questions %}<section class="card prep"><div class="lesson-label">5 · PROVE IT</div><h2>Checkpoint</h2></section>{% include "_question_list.html" %}{% endif %}
+{% else %}<h1>No audited OR module yet for “{{q}}”</h1><p class="lede">I’m not going to fabricate a surgical prep sheet from a keyword. Here is what the current curriculum can find while that operation awaits a dedicated evidence audit.</p>{% if matches %}<div class="search-results">{% for r in matches %}<a class="card" href="{{r.url}}"><b>{{r.title}}</b><p>{{r.subtitle}}</p></a>{% endfor %}</div>{% else %}<div class="card empty"><p>No current curriculum match. Add this procedure to the next operative-content audit.</p></div>{% endif %}{% endif %}
 {% endblock %}
