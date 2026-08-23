@@ -1,0 +1,17 @@
+{
+  "interpretation_visual_references": 56,
+  "interpretation_visual_files_shipped": 56,
+  "missing_interpretation_visuals_after_fix": [],
+  "v118_visuals_shipped": 48,
+  "v119_allergy_visuals_shipped": 8,
+  "anatomy_modules_total": 54,
+  "anatomy_status_counts": {
+    "verified_classical_plate": 27,
+    "no_verified_match": 12,
+    "modern_source_needed": 15
+  },
+  "legacy_crude_schematics_used_live": 0,
+  "sleep_surgery_anatomy_modules": 4,
+  "template_parse_errors": {},
+  "python_syntax": "passed"
+}

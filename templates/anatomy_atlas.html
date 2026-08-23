@@ -1,7 +1,7 @@
 {% extends "base.html" %}{% block content %}
 <div class="eyebrow">SURGICAL ANATOMY ATLAS</div>
 <h1>Know where you are before you operate.</h1>
-<p class="lede">Use each map as a quick pre-op orientation exercise: identify the fixed landmarks, name the structures you cannot injure, then connect the anatomy to the related operation.</p>
+<p class="lede">Use each module as a pre-op orientation exercise. Images are shown only when the source actually matches the anatomy; otherwise the module stays text-first rather than displaying a misleading placeholder.</p>
 
 <div class="card anatomy-howto">
   <div>
@@ -42,7 +42,34 @@
           <h3>{{x.topic}}</h3>
         </div>
       </div>
-<div class="anatomy-question">
+{% if x.anatomy_visual_status == 'verified_classical_plate' and x.image_url %}
+      <figure class="anatomy-source-figure">
+        <img src="{{x.image_url}}" alt="{{x.topic}} anatomy source plate" loading="lazy" referrerpolicy="no-referrer"
+             onerror="this.closest('figure').classList.add('image-failed')">
+        <figcaption>
+          <span>{{x.image_credit}}</span>
+          <a href="{{x.image_source}}" target="_blank" rel="noopener">Open source / attribution ↗</a>
+        </figcaption>
+        <div class="anatomy-image-fallback">Source plate could not load in-browser. <a href="{{x.image_source}}" target="_blank" rel="noopener">Open the cited source directly ↗</a></div>
+      </figure>
+      {% elif x.anatomy_visual_status == 'modern_source_needed' %}
+      <div class="anatomy-source-needed">
+        <b>Modern surgical anatomy source recommended</b>
+        <p>This topic is not well represented by the historical public-domain plates currently in the atlas. The app intentionally does not show a mismatched illustration.</p>
+        {% if x.image_source %}<a href="{{x.image_source}}" target="_blank" rel="noopener">Open modern anatomy resource ↗</a>{% endif %}
+      </div>
+      {% else %}
+      <div class="anatomy-source-needed muted-source">
+        <b>No verified anatomic image yet</b>
+        <p>Text teaching is shown without a placeholder drawing until a correctly matched source is added.</p>
+      </div>
+      {% endif %}
+      <div class="anatomy-relationship-strip">
+        <div><b>Orient</b><span>{{x.landmarks[:3]|join(' · ')}}</span></div>
+        <div><b>Protect</b><span>{{x.danger[:2]|join(' · ')}}</span></div>
+      </div>
+
+      <div class="anatomy-question">
         <b>Before you look below:</b>
         <p>What landmarks would you use to orient yourself, and which structure would you be most worried about injuring?</p>
       </div>

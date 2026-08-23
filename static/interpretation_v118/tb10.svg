@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+<rect width="100%" height="100%" fill="#101418"/>
+<rect x="18" y="18" width="864" height="524" rx="18" fill="#171d22" stroke="#56616b" stroke-width="2"/>
+<text x="36" y="48" fill="#dce5ea" font-family="Arial,sans-serif" font-size="22" font-weight="700">Temporal-bone CT case 10</text>
+<text x="864" y="48" text-anchor="end" fill="#88949d" font-family="Arial,sans-serif" font-size="12">TEACHING SCHEMATIC · NOT PATIENT IMAGING</text>
+<circle cx="420" cy="300" r="190" fill="#d9dde0" opacity=".92"/>
+<ellipse cx="420" cy="300" rx="135" ry="115" fill="#30363a"/>
+<circle cx="505" cy="295" r="46" fill="#111619" stroke="#eef2f4" stroke-width="10"/>
+<path d="M265 300 H365" stroke="#111619" stroke-width="28"/>
+<circle cx="370" cy="300" r="28" fill="#111619"/>
+<path d="M375 260 l28 20 l-20 30 l30 20" fill="none" stroke="#f4f6f7" stroke-width="8"/><ellipse cx="370" cy="385" rx="70" ry="30" fill="#557a91" stroke="#fff" stroke-width="3"/><text x="520" y="405" fill="#dbe4e8" font-size="14">high/dehiscent jugular bulb</text></svg>

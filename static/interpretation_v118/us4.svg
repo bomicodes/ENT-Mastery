@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+<rect width="100%" height="100%" fill="#101418"/>
+<rect x="18" y="18" width="864" height="524" rx="18" fill="#171d22" stroke="#56616b" stroke-width="2"/>
+<text x="36" y="48" fill="#dce5ea" font-family="Arial,sans-serif" font-size="22" font-weight="700">Thyroid ultrasound case 4</text>
+<text x="864" y="48" text-anchor="end" fill="#88949d" font-family="Arial,sans-serif" font-size="12">TEACHING SCHEMATIC · NOT PATIENT IMAGING</text>
+<ellipse cx="370" cy="290" rx="135" ry="105" fill="#565e64" opacity=".9"/>
+<ellipse cx="530" cy="290" rx="135" ry="105" fill="#565e64" opacity=".9"/>
+<rect x="438" y="165" width="24" height="250" rx="12" fill="#31383d"/>
+<circle cx="450" cy="300" r="48" fill="#22282c" stroke="#818b92" stroke-width="3"/><ellipse cx="330" cy="280" rx="38" ry="82" fill="#2d3337" stroke="#e7eef2" stroke-width="2"/><path d="M300 405 L360 405" stroke="#e7eef2"/><path d="M385 205 L385 355" stroke="#e7eef2"/><text x="330" y="440" text-anchor="middle" fill="#dbe4e8" font-size="15">taller than wide</text></svg>
