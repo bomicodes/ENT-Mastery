@@ -1,0 +1,55 @@
+{% extends "base.html" %}{% block content %}
+<div class="breadcrumb"><a href="/clinical-challenges">Clinical Challenges</a> / {{q.topic}}</div>
+<div class="topic-hero lab-hero">
+  <div><span class="pill green">{{q.domain}}</span><h1>{{q.topic}}</h1><p class="lede">Choose before revealing. Your response is saved to the mastery system.</p></div>
+  {% if q.concept_id %}<a class="case-btn" href="/concept/id/{{q.concept_id|urlencode}}">Open full topic ↗</a>{% endif %}
+</div>
+
+<section class="card interp-case" id="challenge" data-qid="{{q.id}}" data-answer="{{q.answer}}">
+  <div class="interp-case-head"><span class="tag">{{q.tier or 'Clinical challenge'}}</span><span>{{q.mode or 'Board vignette'}}</span></div>
+  <div class="commit-prompt"><span class="eyebrow">COMMIT BEFORE REVEAL</span><h2>{{q.stem}}</h2></div>
+  <div class="challenge-choices" style="display:grid;gap:.75rem;margin-top:1rem">
+    {% for choice in q.choices %}
+    <button type="button" class="card challenge-choice" data-choice="{{loop.index0}}" style="text-align:left;cursor:pointer"><b>{{'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[loop.index0]}}.</b> {{choice}}</button>
+    {% endfor %}
+  </div>
+
+  <div id="challenge-feedback" class="hidden" style="margin-top:1rem">
+    <div id="challenge-result" class="practice"></div>
+    <div class="card"><span class="reason-label">EXPLANATION</span><p>{{q.explanation}}</p></div>
+    <div class="card"><span class="reason-label">WHY THE OTHER ANSWERS ARE WRONG</span>
+      <div style="display:grid;gap:.6rem">{% for why in q.why_wrong %}<p><b>{{'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[loop.index0]}}.</b> {{why}}</p>{% endfor %}</div>
+    </div>
+    {% if q.board_pearl %}<div class="card"><span class="reason-label">BOARD PEARL</span><p>{{q.board_pearl}}</p></div>{% endif %}
+    {% if q.curveball %}<div class="card"><span class="reason-label">ATTENDING CURVEBALL</span><p>{{q.curveball}}</p></div>{% endif %}
+  </div>
+</section>
+
+<script>
+(()=>{
+ const root=document.getElementById('challenge'); if(!root) return;
+ const buttons=[...root.querySelectorAll('.challenge-choice')];
+ const feedback=document.getElementById('challenge-feedback');
+ const result=document.getElementById('challenge-result');
+ const correct=Number(root.dataset.answer);
+ let answered=false;
+ buttons.forEach(btn=>btn.addEventListener('click',async()=>{
+   if(answered) return; answered=true;
+   const chosen=Number(btn.dataset.choice);
+   buttons.forEach(b=>b.disabled=true);
+   try{
+     const r=await fetch('/api/clinical-challenge',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({qid:root.dataset.qid,chosen})});
+     if(!r.ok) throw new Error('save failed');
+     const isCorrect=chosen===correct;
+     result.innerHTML='<b>'+(isCorrect?'Correct':'Not quite')+'</b><p>'+(isCorrect?'Good discrimination. Review the reasoning below.':'The best answer is '+String.fromCharCode(65+correct)+'. Review why the alternatives fail.')+'</p>';
+     buttons.forEach((b,i)=>{ if(i===correct) b.classList.add('selected-rating'); });
+     if(!isCorrect) btn.classList.add('save-error');
+     feedback.classList.remove('hidden');
+   }catch(err){
+     answered=false; buttons.forEach(b=>b.disabled=false);
+     result.innerHTML='<b>Could not save response.</b><p>Please try again.</p>'; feedback.classList.remove('hidden');
+   }
+ }));
+})();
+</script>
+{% endblock %}
