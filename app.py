@@ -440,9 +440,9 @@ def clinical_challenges():
     if tier: rows=[q for q in rows if q.get("tier")==tier]
     if mode: rows=[q for q in rows if q.get("mode")==mode]
     stats={"questions":len(CLINICAL_CHALLENGES_V119),
-           "topics":len({q.get("concept_id") for q in CLINICAL_CHALLENGES_V111 if q.get("concept_id")}),
-           "curated":sum(1 for q in CLINICAL_CHALLENGES_V111 if q.get("tier")=="Curated board-style"),
-           "coverage":sum(1 for q in CLINICAL_CHALLENGES_V111 if q.get("tier")!="Curated board-style")}
+           "topics":len({q.get("concept_id") for q in CLINICAL_CHALLENGES_V119 if q.get("concept_id")}),
+           "curated":sum(1 for q in CLINICAL_CHALLENGES_V119 if q.get("tier")=="Curated board-style"),
+           "coverage":sum(1 for q in CLINICAL_CHALLENGES_V119 if q.get("tier")!="Curated board-style")}
     return render_template("clinical_challenges.html",questions=rows,domains=CANONICAL_DOMAINS_V94,
                            domain=domain,topic=topic,tier=tier,mode=mode,stats=stats)
 
