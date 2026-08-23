@@ -1,42 +1,124 @@
 {% extends "base.html" %}{% block content %}
 <div class="eyebrow">ADAPTIVE DAILY PATH</div>
+
 <div class="adaptive-head">
- <div><h1>Today's {{total}}-minute curriculum</h1>
- <p class="lede">Due retrieval first, then the next unmastered step. Rate each item so tomorrow's path changes.</p></div>
- <form method="get" class="adaptive-controls">
-  <select name="minutes">{% for m in [15,20,30,45,60] %}<option value="{{m}}" {% if m==minutes %}selected{% endif %}>{{m}} min</option>{% endfor %}</select>
-  <select name="focus"><option value="">Mixed ENT</option>{% for d in domains %}<option {% if focus==d %}selected{% endif %}>{{d}}</option>{% endfor %}</select>
-  <button>Build path</button>
- </form>
+  <div>
+    <h1>Today's {{total}}-minute curriculum</h1>
+    <p class="lede">Answer first, reveal second, then rate yourself. Your rating decides when this concept returns and which mastery level comes next.</p>
+  </div>
+  <form method="get" class="adaptive-controls">
+    <select name="minutes">{% for m in [15,20,30,45,60] %}<option value="{{m}}" {% if m==minutes %}selected{% endif %}>{{m}} min</option>{% endfor %}</select>
+    <select name="focus"><option value="">Mixed ENT</option>{% for d in domains %}<option {% if focus==d %}selected{% endif %}>{{d}}</option>{% endfor %}</select>
+    <button>Build path</button>
+  </form>
 </div>
+
+<div class="session-progress card">
+  <div><b id="session-count">0 / {{plan|length}} completed</b><small>Finish in order or jump around.</small></div>
+  <div class="session-progress-bar"><i id="session-progress-fill" style="width:0%"></i></div>
+</div>
+
+<div class="mastery-key">
+  <span>Mastery path</span>
+  <b>1 Recognize</b><i>→</i><b>2 Localize</b><i>→</i><b>3 Work up</b><i>→</i><b>4 Manage</b><i>→</i><b>5 Operate</b><i>→</i><b>6 Teach</b>
+</div>
+
 <div class="adaptive-list">
 {% for x in plan %}
-<div class="card adaptive-card" data-item="{{x.id}}">
- <div class="adaptive-meta"><span>{{loop.index}}</span><b>{{x.domain}}</b><em>{{x.reason}}</em><small>~{{x.minutes}} min</small></div>
- <h2>{{x.topic}}</h2>
- <div class="stage-pill">Level {{x.level}} · {{x.stage|capitalize}}</div>
- <p class="adaptive-prompt">{{x.prompt}}</p>
- <button class="reveal-btn" onclick="this.nextElementSibling.hidden=false;this.hidden=true">Reveal teaching point</button>
- <div class="adaptive-answer" hidden>
-   <p>{{x.answer}}</p>
-   <div class="rating-row">
-    <button onclick='rateItem(this,0,{{x|tojson}})'>Missed it</button>
-    <button onclick='rateItem(this,1,{{x|tojson}})'>Hard</button>
-    <button onclick='rateItem(this,2,{{x|tojson}})'>Got it</button>
-    <button onclick='rateItem(this,3,{{x|tojson}})'>Easy</button>
-   </div>
- </div>
-</div>
+<article class="card adaptive-card" data-item="{{x.id}}" data-index="{{loop.index}}">
+  <div class="adaptive-meta">
+    <span class="card-number">{{loop.index}}</span>
+    <b>{{x.domain}}</b>
+    <em>{{x.reason}}</em>
+    <small>~{{x.minutes}} min</small>
+  </div>
+
+  <div class="adaptive-title-row">
+    <div>
+      <h2>{{x.topic}}</h2>
+      <p class="mastery-status">Current mastery <b>{{x.mastery_before|default(0)}}/6</b> · Testing <b>Level {{x.level}} — {{x.stage|capitalize}}</b></p>
+    </div>
+  </div>
+
+  <div class="mini-mastery-track" aria-label="Six-level mastery path">
+    {% for stage_name in ['Recognize','Localize','Work up','Manage','Operate','Teach'] %}
+      <div class="{% if loop.index <= x.mastery_before|default(0) %}mastered{% elif loop.index == x.level %}testing{% endif %}">
+        <span>{{loop.index}}</span><small>{{stage_name}}</small>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="active-recall-box">
+    <span class="question-label">ANSWER BEFORE REVEALING</span>
+    <p class="adaptive-prompt">{{x.prompt}}</p>
+  </div>
+
+  <button class="reveal-btn" type="button" onclick="revealAnswer(this)">Reveal answer</button>
+
+  <div class="adaptive-answer" hidden>
+    <span class="answer-label">TEACHING ANSWER</span>
+    <p>{{x.answer}}</p>
+    <div class="self-rate-copy">
+      <b>How well did you know it before revealing?</b>
+      <small>Missed/Hard brings it back sooner. Got it/Easy advances the mastery path.</small>
+    </div>
+    <div class="rating-row">
+      <button type="button" onclick='rateItem(this,0,{{x|tojson}})'>Missed it</button>
+      <button type="button" onclick='rateItem(this,1,{{x|tojson}})'>Hard</button>
+      <button type="button" onclick='rateItem(this,2,{{x|tojson}})'>Got it</button>
+      <button type="button" onclick='rateItem(this,3,{{x|tojson}})'>Easy</button>
+    </div>
+  </div>
+</article>
 {% endfor %}
 </div>
+
 <script>
+let completedCount=0;
+const totalCards={{plan|length}};
+
+function revealAnswer(btn){
+  const answer=btn.nextElementSibling;
+  answer.hidden=false;
+  btn.hidden=true;
+  answer.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function updateSessionProgress(){
+  const pct=totalCards ? Math.round((completedCount/totalCards)*100) : 0;
+  document.getElementById('session-count').textContent=completedCount+' / '+totalCards+' completed';
+  document.getElementById('session-progress-fill').style.width=pct+'%';
+}
+
 async function rateItem(btn,rating,x){
- const card=btn.closest('.adaptive-card');
- const body={rating:rating,concept_id:x.concept_id,item_id:x.id,domain:x.domain,topic:x.topic,stage:x.stage,level:x.level};
- const r=await fetch('/daily-adaptive/answer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
- const j=await r.json();
- if(j.ok){card.classList.add('completed'); card.querySelector('.rating-row').innerHTML='<b>Saved · mastery level '+j.mastery_level+'</b>';}
- else {card.querySelector('.rating-row').insertAdjacentHTML('beforeend','<small> Could not save: '+j.error+'</small>');}
+  const card=btn.closest('.adaptive-card');
+  if(card.classList.contains('completed')) return;
+  const buttons=card.querySelectorAll('.rating-row button');
+  buttons.forEach(b=>b.disabled=true);
+
+  const body={rating:rating,concept_id:x.concept_id,item_id:x.id,domain:x.domain,topic:x.topic,stage:x.stage,level:x.level};
+  const r=await fetch('/daily-adaptive/answer',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(body)
+  });
+  const j=await r.json();
+
+  if(j.ok){
+    card.classList.add('completed');
+    completedCount+=1;
+    updateSessionProgress();
+    const due=j.next_due ? 'Next review: '+j.next_due : '';
+    card.querySelector('.rating-row').innerHTML=
+      '<div class="saved-result"><b>Saved · mastery '+j.mastery_level+'/6</b><small>'+due+'</small></div>';
+
+    const next=[...document.querySelectorAll('.adaptive-card:not(.completed)')].find(c=>Number(c.dataset.index)>Number(card.dataset.index))
+      || document.querySelector('.adaptive-card:not(.completed)');
+    if(next) setTimeout(()=>next.scrollIntoView({behavior:'smooth',block:'start'}),350);
+  } else {
+    buttons.forEach(b=>b.disabled=false);
+    card.querySelector('.rating-row').insertAdjacentHTML('beforeend','<small class="save-error">Could not save: '+j.error+'</small>');
+  }
 }
 </script>
 {% endblock %}

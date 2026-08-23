@@ -1,0 +1,10 @@
+{
+  "app_syntax": true,
+  "daily_path_has_real_questions": true,
+  "daily_path_has_mastery_track": true,
+  "daily_path_returns_next_due": true,
+  "dashboard_integrated_padded": true,
+  "weakness_radar_reformatted": true,
+  "or_search_hotfix_preserved": true,
+  "render_psycopg_hotfix_preserved": true
+}

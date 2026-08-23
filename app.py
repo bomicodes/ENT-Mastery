@@ -79,15 +79,31 @@ def _or_rank(q):
     for slug,x in OR_PREP_REGISTRY.items():
         ns=_norm_or_text(slug)
         nt=_norm_or_text(x.get("title",""))
-        hay=(ns+" "+nt).strip()
+        slug_tokens=ns.split()
+        title_tokens=nt.split()
+        all_tokens=set(slug_tokens+title_tokens)
+
         score=0
-        if nq==ns or nq==nt: score=100
-        elif nq in nt or nq in ns: score=92
-        elif all(t in hay.split() for t in qt): score=84
+        # Exact title/slug is always strongest.
+        if nq==ns or nq==nt:
+            score=100
+        # Exact word/token matching is next. This deliberately prevents
+        # "thyroidectomy" from matching the single word "parathyroidectomy".
+        elif all(t in all_tokens for t in qt):
+            # Prefer a title containing the query words over a slug-only hit.
+            if all(t in title_tokens for t in qt):
+                score=94
+            else:
+                score=88
         else:
-            coverage=sum(1 for t in qt if t in hay.split())/max(1,len(qt))
+            # Fuzzy ranking is only a fallback and is penalized when the query's
+            # core words are not present as whole words.
+            coverage=sum(1 for t in qt if t in all_tokens)/max(1,len(qt))
             phrase=difflib.SequenceMatcher(None,nq,nt).ratio()
-            score=round(65*coverage+35*phrase)
+            score=round(55*coverage+30*phrase)
+            if coverage==0:
+                score=min(score,45)
+
         ranked.append((score,slug,x))
     return sorted(ranked,key=lambda z:z[0],reverse=True)
 
@@ -374,6 +390,19 @@ if __name__ == "__main__":
 # =============================================================================
 # v6 Adaptive Daily Path
 # =============================================================================
+def _adaptive_question(item):
+    topic=item.get("topic","this topic")
+    stage=item.get("stage","recognize")
+    prompts={
+      "recognize":f"What clinical pattern should make you recognize {topic}, and what dangerous alternative or red flag must you not miss?",
+      "localize":f"For {topic}, where is the problem anatomically or physiologically, and what finding best supports that localization?",
+      "workup":f"You suspect {topic}. What is the next useful test or evaluation, and what result would actually change your management?",
+      "manage":f"How would you manage {topic}? Include first-line treatment, when you would escalate, and what follow-up matters.",
+      "operate":f"For {topic}, when is a procedure indicated? Rehearse the key anatomy, danger structures, major steps, complications, and rescue plan.",
+      "teach":f"Teach {topic} to a junior in 60 seconds: recognition, localization, workup, management, and one attending/boards pearl."
+    }
+    return prompts.get(stage, f"Explain the key clinical reasoning for {topic}.")
+
 def _adaptive_plan(target_minutes=30, focus=None):
     from data import ADAPTIVE_ITEMS_V91 as ADAPTIVE_ITEMS_V6, REVIEW_INTERVALS_V6
     try:
@@ -410,7 +439,7 @@ def _adaptive_plan(target_minutes=30, focus=None):
         if used + item["minutes"] > target_minutes+3: continue
         # encourage variety unless focused
         if not focus and item["domain"] in domains and len(chosen)<4: continue
-        chosen.append(dict(item, reason=("Due review" if is_due else "New foundation" if unseen else "Next mastery step")))
+        chosen.append(dict(item, prompt=_adaptive_question(item), mastery_before=level, reason=("Due review" if is_due else "New foundation" if unseen else "Next mastery step")))
         used += item["minutes"]; domains.add(item["domain"])
         if used >= target_minutes-3: break
     # fill if diversity rule undershot
@@ -418,7 +447,7 @@ def _adaptive_plan(target_minutes=30, focus=None):
         ids={x["id"] for x in chosen}
         for _,item,is_due,unseen,level in candidates:
             if item["id"] in ids or used+item["minutes"]>target_minutes+3: continue
-            chosen.append(dict(item, reason=("Due review" if is_due else "Next mastery step")))
+            chosen.append(dict(item, prompt=_adaptive_question(item), mastery_before=level, reason=("Due review" if is_due else "Next mastery step")))
             used+=item["minutes"]; ids.add(item["id"])
             if used>=target_minutes-3: break
     return chosen,used
@@ -445,7 +474,10 @@ def daily_adaptive_answer():
         new_level=record_adaptive_result(payload.get("concept_id"),payload.get("item_id"),
             payload.get("domain"),payload.get("topic"),payload.get("stage"),level,rating,
             REVIEW_INTERVALS_V6.get(level,7))
-        return jsonify({"ok":True,"mastery_level":new_level})
+        from db import adaptive_mastery_map
+        state=adaptive_mastery_map().get(payload.get("concept_id"),{})
+        due=state.get("next_due")
+        return jsonify({"ok":True,"mastery_level":new_level,"next_due":str(due) if due else None})
     except Exception as e:
         return jsonify({"ok":False,"error":str(e)}),500
 
