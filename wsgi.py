@@ -1,8 +1,9 @@
 import re
 import data
 from curveballs_v123 import ORIGINAL_V11_CURVEBALLS_V123
+from vignettes_v124 import VIGNETTES_V124
 
-# ENT Mastery v12.3 production runtime integration.
+# ENT Mastery v12.4 production runtime integration.
 # Build adaptive items from the final topic registry while preserving the schema
 # expected by Daily Path.
 _original_get_adaptive_items_v120 = data.get_adaptive_items_v120
@@ -36,6 +37,21 @@ for _bank_name in ("CLINICAL_CHALLENGES_V11", "CLINICAL_CHALLENGES_V112", "CLINI
         _qid = _q.get("id")
         if _qid in ORIGINAL_V11_CURVEBALLS_V123 and not (_q.get("curveball") or "").strip():
             _q["curveball"] = ORIGINAL_V11_CURVEBALLS_V123[_qid]
+
+# v12.4: weight vignette expansion toward the two domains with the lowest
+# coverage relative to topic count: Otology / Neurotology and Pediatric ENT.
+# Assign concept IDs from the final topic registry, then append only new IDs so
+# repeated process imports cannot duplicate questions.
+_existing_vignette_ids = {q.get("id") for q in data.CLINICAL_CHALLENGES_V119}
+for _q_src in VIGNETTES_V124:
+    if _q_src.get("id") in _existing_vignette_ids:
+        continue
+    _q = dict(_q_src)
+    _q["concept_id"] = data._v6_item_id(_q["domain"], _q["topic"])
+    data.CLINICAL_CHALLENGES_V119.append(_q)
+    _existing_vignette_ids.add(_q["id"])
+# Keep the live direct-lookup index synchronized with the expanded list.
+data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119}
 
 # Do not expose leftover historical atlas links on cards that explicitly require
 # a modern surgical-anatomy source. Keep intentional Open Anatomy links.
