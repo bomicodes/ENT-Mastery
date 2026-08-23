@@ -21,6 +21,9 @@ the live CLINICAL_CHALLENGES_V119 bank and direct-lookup index synchronized.
 
 import data
 from vignettes_v128 import VIGNETTES_V128
+from topic_alias_v129 import apply_topic_alias_v129
+from new_topics_v131 import NEW_TOPICS_V131
+from vignettes_v132 import VIGNETTES_V132
 
 
 def apply_recognize_blind_reveal_v127(items):
@@ -58,4 +61,62 @@ def _merge_v128_clinical_challenges():
     }
 
 
+for _domain, _topics in NEW_TOPICS_V131.items():
+    _existing_topics = {m["topic"] for m in data.DEEP_MODULES_V6[_domain]}
+    for _t in _topics:
+        if _t["topic"] not in _existing_topics:
+            data.DEEP_MODULES_V6[_domain].append(_t)
+
 _merge_v128_clinical_challenges()
+apply_topic_alias_v129(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+
+# Recurrent Respiratory Papillomatosis is tagged under Laryngology in its
+# vignette but the canonical topic currently only lives under Pediatric
+# Otolaryngology - cross-link rather than duplicate the topic.
+for _q in data.CLINICAL_CHALLENGES_V119:
+    if _q.get("topic") == "Recurrent Respiratory Papillomatosis" and _q.get("domain") == "Laryngology / Voice / Swallowing":
+        _q["concept_id"] = data._v6_item_id("Pediatric Otolaryngology", "Recurrent Respiratory Papillomatosis")
+        _q["canonical_topic"] = "Recurrent Respiratory Papillomatosis"
+
+# Bug fix: _generated_chief_prompt_v120/_generated_attending_prompt_v120 in
+# data.py reference an undefined name (_slugify_v94 - the real helper is
+# _v91_slug). This was never triggered because all 312 original topics
+# already had a curated chief/attending prompt, so the dynamic fallback path
+# never actually ran until the 9 new_topics_v131 topics exercised it for the
+# first time. Patch both generators in place with the correct helper.
+def _fixed_generated_chief_prompt_v120(_domain, _m):
+    _id = data._v6_item_id(_domain, _m["topic"])
+    return {
+        "id": "chief-v120-" + data._v91_slug(_domain) + "-" + data._v91_slug(_m["topic"]),
+        "domain": _domain, "topic": _m["topic"], "concept_id": _id,
+        "junior_question": f"I'm trying to understand {_m['topic']}. What is the framework I should use so I do not just memorize a list?",
+        "must_mention": [x for x in [_m.get("recognize", ""), _m.get("localize", ""), _m.get("manage", "")] if x],
+        "model_answer": _m.get("teach") or _m.get("manage", ""),
+        "curveball": _m.get("operate") or _m.get("workup", ""),
+        "source": "dynamic fallback from deep curriculum"
+    }
+
+def _fixed_generated_attending_prompt_v120(_domain, _m):
+    _id = data._v6_item_id(_domain, _m["topic"])
+    return {
+        "id": "attending-v120-" + data._v91_slug(_domain) + "-" + data._v91_slug(_m["topic"]),
+        "domain": _domain, "topic": _m["topic"], "concept_id": _id,
+        "prompt": f"You say this is {_m['topic']}. Convince me: what finding changes your differential or management, and what would make you change course?",
+        "required_points": [x for x in [_m.get("recognize", ""), _m.get("workup", ""), _m.get("manage", ""), _m.get("operate", "")] if x],
+        "model_answer": _m.get("teach") or _m.get("manage", ""),
+        "curveball": _m.get("operate") or _m.get("localize", ""),
+        "source": "dynamic fallback from deep curriculum"
+    }
+
+data._generated_chief_prompt_v120 = _fixed_generated_chief_prompt_v120
+data._generated_attending_prompt_v120 = _fixed_generated_attending_prompt_v120
+
+_existing_ids_v132 = {q.get("id") for q in data.CLINICAL_CHALLENGES_V119}
+for _q_src in VIGNETTES_V132:
+    if _q_src.get("id") in _existing_ids_v132:
+        continue
+    _q = dict(_q_src)
+    _q["concept_id"] = data._v6_item_id(_q["domain"], _q["topic"])
+    data.CLINICAL_CHALLENGES_V119.append(_q)
+    _existing_ids_v132.add(_q.get("id"))
+data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119}
