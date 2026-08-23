@@ -16,16 +16,14 @@ purposes only. The vignette's *displayed* topic label is left as-is (some of
 these, like "SSNHL" or "BPPV"-style short labels, are actually better card
 headings than the full canonical name) - only concept_id resolution changes.
 
-A second list, ORPHANS_WITH_NO_CANONICAL_MATCH, tracks vignettes for real
-clinical entities that have no canonical topic at all yet (e.g. First-Bite
-Syndrome, Frey Syndrome, Lemierre Syndrome, Septal Hematoma, Button Battery
-Ingestion, Epiglottitis). These are not aliasing errors - they are genuine
-curriculum gaps. They are left unmapped here; the honest fix is adding them
-as new DEEP_MODULES_V6 topics, not force-mapping them to an unrelated one.
+v13.5 integration: after canonical topics are registered, merge a cross-domain
+high-yield vignette batch with strict domain/topic validation. This keeps the
+100%-coverage push from reintroducing silent orphan cases.
 """
 
+from vignettes_v135 import VIGNETTES_V135
+
 TOPIC_ALIAS_V129 = {
-    # Otology / Neurotology
     "Cholesteatoma": "Chronic Otitis Media / Cholesteatoma",
     "Facial Nerve Paralysis": "Facial Paralysis",
     "Labyrinthitis": "Labyrinthitis / Infections of the Labyrinth",
@@ -33,8 +31,6 @@ TOPIC_ALIAS_V129 = {
     "SSNHL": "Sudden Sensorineural Hearing Loss",
     "Superior Semicircular Canal Dehiscence": "Superior Canal Dehiscence",
     "Temporal Bone Trauma": "Temporal Bone Fracture",
-
-    # Rhinology / Allergy / Skull Base
     "Acute Invasive Fungal Rhinosinusitis": "Invasive Fungal Rhinosinusitis",
     "Frontal Sinus Mucocele": "Mucocele",
     "Intracranial Complication of Sinusitis": "Intracranial Complications of Sinusitis",
@@ -42,8 +38,6 @@ TOPIC_ALIAS_V129 = {
     "Orbital Cellulitis vs Preseptal Cellulitis": "Orbital Complications of Sinusitis",
     "Orbital Complication of Sinusitis": "Orbital Complications of Sinusitis",
     "Unilateral Nasal Mass": "Unilateral Sinonasal Disease",
-
-    # Head & Neck Oncology
     "Adjuvant Therapy After Head and Neck Cancer Surgery": "Adverse Pathology and Adjuvant Therapy",
     "Adult Neck Mass / HPV OPSCC": "Unknown Primary with Cervical Metastasis",
     "Cutaneous SCC / Parotid Metastasis": "Cutaneous Squamous Cell Carcinoma of the Head & Neck",
@@ -59,16 +53,12 @@ TOPIC_ALIAS_V129 = {
     "Unknown Primary": "Unknown Primary with Cervical Metastasis",
     "Unknown Primary Head and Neck Cancer": "Unknown Primary with Cervical Metastasis",
     "Unknown Primary Squamous Cell Carcinoma": "Unknown Primary with Cervical Metastasis",
-
-    # Thyroid / Parathyroid / Salivary
     "Hungry Bone Syndrome": "Hungry Bone / Post-Thyroid Calcium Management",
     "Medullary Thyroid Carcinoma": "Medullary Thyroid Cancer",
     "Parathyroid Localization": "Primary Hyperparathyroidism",
     "Parotid Malignancy": "Salivary Gland Malignancy",
     "Recurrent Laryngeal Nerve / Thyroidectomy": "Recurrent Laryngeal Nerve Injury During Thyroidectomy",
     "Thyroid Storm / Airway Compression": "Graves Disease / Toxic Goiter",
-
-    # Pediatric Otolaryngology
     "Airway Foreign Body": "Pediatric Airway Foreign Body",
     "Congenital Neck Mass": "Congenital Neck Masses",
     "Congenital Vocal Fold Paralysis": "Pediatric Vocal Fold Immobility",
@@ -77,8 +67,6 @@ TOPIC_ALIAS_V129 = {
     "Retropharyngeal Abscess": "Pediatric Deep Neck Infection",
     "Sleep-Disordered Breathing in Down Syndrome": "Pediatric OSA / Adenotonsillar Disease",
     "Subglottic Stenosis": "Pediatric Subglottic Stenosis",
-
-    # Laryngology / Voice / Swallowing
     "Arytenoid Dislocation vs RLN Paralysis": "Posterior Glottic Stenosis / Arytenoid Fixation",
     "Aspiration after Head and Neck Surgery": "Dysphagia / Aspiration",
     "Bilateral Vocal Fold Paralysis": "Bilateral Vocal Fold Immobility",
@@ -89,16 +77,12 @@ TOPIC_ALIAS_V129 = {
     "Vocal Fold Lesion": "Benign Vocal Fold Lesions",
     "Vocal Fold Nodules, Polyps, and Cysts": "Vocal Fold Polyp / Cyst",
     "Vocal Fold Scar / Sulcus Vocalis": "Vocal Fold Sulcus / Scar",
-
-    # Facial Plastics / Trauma
     "Facial Nerve Laceration": "Facial Nerve Reanimation",
     "Frontal Sinus Posterior Table Fracture": "Frontal Sinus Fracture Decision Model",
     "Nasal Tip Support": "Rhinoplasty Tip Mechanics",
     "Nasal Valve Collapse": "Functional Nasal Obstruction",
     "Orbital Floor Fracture": "ZMC / Orbital Trauma",
     "Zygomaticomaxillary Complex Fracture": "ZMC / Orbital Trauma",
-
-    # Sleep Surgery
     "Adult OSA": "Adult PSG Interpretation",
     "Central Sleep Apnea": "Central Sleep Apnea / Treatment-Emergent CSA",
     "Drug-Induced Sleep Endoscopy": "DISE",
@@ -106,14 +90,10 @@ TOPIC_ALIAS_V129 = {
     "Mandibular Advancement Device": "Oral Appliance Therapy",
     "Pediatric Residual OSA": "Residual OSA After Surgery",
     "Treatment-Emergent Central Sleep Apnea": "Central Sleep Apnea / Treatment-Emergent CSA",
-
-    # General ENT / Emergencies
     "Esophageal Perforation": "Esophageal Perforation / Cervical Mediastinitis",
     "Post-thyroidectomy Neck Hematoma": "Postoperative Neck Hematoma",
     "Posterior Epistaxis": "Epistaxis",
     "Severe Epistaxis": "Epistaxis",
-
-    # Ambiguous single-name alias, resolved via DOMAIN_SPECIFIC_ALIAS_V129 below
     "Laryngeal Cancer": "Laryngeal SCC",
 }
 
@@ -136,14 +116,39 @@ ORPHANS_WITH_NO_CANONICAL_MATCH = [
 ]
 
 
+def _merge_v135_strict(challenges, v6_item_id):
+    import data
+
+    canonical = {
+        (domain, module.get("topic"))
+        for domain, modules in data.DEEP_MODULES_V6.items()
+        for module in modules
+    }
+    existing_ids = {q.get("id") for q in challenges}
+    for source in VIGNETTES_V135:
+        key = (source.get("domain"), source.get("topic"))
+        if key not in canonical:
+            raise RuntimeError(
+                f"v13.5: orphan vignette {source.get('id')!r} targets non-canonical {key!r}"
+            )
+        if source.get("id") in existing_ids:
+            continue
+        q = dict(source)
+        q["concept_id"] = v6_item_id(q["domain"], q["topic"])
+        challenges.append(q)
+        existing_ids.add(q["id"])
+    data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in challenges}
+
+
 def apply_topic_alias_v129(challenges, v6_item_id):
-    """Recomputes concept_id for any vignette whose topic has a known alias.
-    Mutates and returns the list in place. Does not change displayed topic.
-    Domain-specific aliases are checked before the flat topic-only map."""
+    """Recomputes concept_id for any vignette whose topic has a known alias,
+    then merges the strictly validated v13.5 cross-domain depth batch.
+    Mutates and returns the list in place. Does not change displayed topic."""
     for q in challenges:
         key = (q.get("domain"), q.get("topic"))
         alias = DOMAIN_SPECIFIC_ALIAS_V129.get(key) or TOPIC_ALIAS_V129.get(q.get("topic"))
         if alias:
             q["concept_id"] = v6_item_id(q["domain"], alias)
             q["canonical_topic"] = alias
+    _merge_v135_strict(challenges, v6_item_id)
     return challenges
