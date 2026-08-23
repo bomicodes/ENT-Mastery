@@ -283,7 +283,11 @@ def interpretation_lab(slug):
     if level != "all":
         cases = [c for c in cases if str(c.get("level")) == str(level)]
     mode = request.args.get("mode", "session")
-    session_size = max(3, min(12, int(request.args.get("count", 7))))
+    try:
+        session_size=int(request.args.get("count",7))
+    except (TypeError,ValueError):
+        session_size=7
+    session_size=max(3,min(12,session_size))
     if mode == "session":
         cases = _adaptive_lab_session(slug, cases, session_size)
     return render_template(
@@ -371,6 +375,61 @@ def _find_deep_module_v94(domain, topic):
     if best and best[0]>=0.58: return best[1],best[2]
     return None,None
 
+def _concept_context_v1003(dname, mod):
+    cid=_v6_item_id(dname,mod["topic"])
+    try:
+        profiles=unified_mastery_profiles()
+        profile=profiles.get(cid,{})
+    except Exception:
+        profile={}
+    prereqs=PREREQUISITES_V5.get(mod["topic"],[])
+    mtoks=set(_norm_topic_v94(mod["topic"]).split())
+
+    cases=[]
+    try:
+        for c in INTEGRATED_CASES:
+            ctags=set(c.get("tags") or [])
+            overlap=len(mtoks & ctags)
+            if canonical_domain_v94(c.get("domain"))==canonical_domain_v94(dname) or overlap:
+                cases.append((overlap,c))
+        cases=[c for _,c in sorted(cases,key=lambda x:(-x[0],x[1].get("title","")))[:4]]
+    except Exception:
+        cases=[]
+
+    ors=[]
+    try:
+        for slug,op in OR_PREP_REGISTRY.items():
+            if canonical_domain_v94(op.get("domain"))!=canonical_domain_v94(dname):
+                continue
+            overlap=len(mtoks & set(_norm_topic_v94(op.get("title","")).split()))
+            ors.append((overlap,op))
+        ors=[o for _,o in sorted(ors,key=lambda x:(-x[0],x[1].get("title","")))[:4]]
+    except Exception:
+        ors=[]
+
+    labs=[]
+    try:
+        for slug,lab in INTERPRETATION_LABS.items():
+            fw=lab.get("framework") or []
+            text=_norm_topic_v94((lab.get("title") or "")+" "+" ".join(fw))
+            overlap=sum(1 for t in mtoks if t in set(text.split()))
+            if overlap:
+                labs.append((overlap,slug,lab))
+        labs=[(s,l) for _,s,l in sorted(labs,key=lambda x:-x[0])[:4]]
+    except Exception:
+        labs=[]
+
+    return dict(domain=dname, topic=mod["topic"], module=mod,
+                concept_id=cid, profile=profile, prerequisites=prereqs,
+                related_cases=cases, related_or=ors, related_labs=labs)
+
+def _deep_module_by_id_v1003(concept_id):
+    for dname,mods in DEEP_MODULES_V6.items():
+        for mod in mods:
+            if _v6_item_id(dname,mod["topic"])==concept_id:
+                return dname,mod
+    return None,None
+
 @app.route("/concept")
 def concept_hub():
     domain=request.args.get("domain","")
@@ -378,36 +437,14 @@ def concept_hub():
     dname,mod=_find_deep_module_v94(domain,topic)
     if not mod:
         return redirect(url_for("search",q=topic))
-    cid=_v6_item_id(dname,mod["topic"])
-    profiles=unified_mastery_profiles()
-    profile=profiles.get(cid,{})
-    # Prerequisites from the mapped curriculum.
-    prereqs=PREREQUISITES_V5.get(topic, PREREQUISITES_V5.get(mod["topic"],[]))
-    # Related progressive cases by normalized domain + keyword overlap.
-    mtoks=set(_norm_topic_v94(mod["topic"]).split())
-    cases=[]
-    for c in INTEGRATED_CASES:
-        overlap=len(mtoks & set(c.get("tags",[])))
-        if c.get("domain")==canonical_domain_v94(dname) or overlap:
-            cases.append((overlap,c))
-    cases=[c for _,c in sorted(cases,key=lambda x:(-x[0],x[1]["title"]))[:4]]
-    # Related OR modules.
-    ors=[]
-    for slug,op in OR_PREP_REGISTRY.items():
-        if canonical_domain_v94(op.get("domain"))!=canonical_domain_v94(dname): continue
-        overlap=len(mtoks & set(_norm_topic_v94(op["title"]).split()))
-        ors.append((overlap,op))
-    ors=[o for _,o in sorted(ors,key=lambda x:(-x[0],x[1]["title"]))[:4]]
-    # Related interpretation areas.
-    labs=[]
-    for slug,lab in INTERPRETATION_LABS.items():
-        text=_norm_topic_v94(lab.get("title","")+" "+" ".join(lab.get("framework",[])))
-        overlap=sum(1 for t in mtoks if t in text.split())
-        if overlap: labs.append((overlap,slug,lab))
-    labs=[(s,l) for _,s,l in sorted(labs,key=lambda x:-x[0])[:4]]
-    return render_template("concept_hub.html", domain=dname, topic=mod["topic"], module=mod,
-                           concept_id=cid, profile=profile, prerequisites=prereqs,
-                           related_cases=cases, related_or=ors, related_labs=labs)
+    return render_template("concept_hub.html", **_concept_context_v1003(dname,mod))
+
+@app.route("/concept/id/<concept_id>")
+def concept_hub_id(concept_id):
+    dname,mod=_deep_module_by_id_v1003(concept_id)
+    if not mod:
+        return redirect(url_for("search",q=concept_id.replace("-"," ")))
+    return render_template("concept_hub.html", **_concept_context_v1003(dname,mod))
 
 @app.route("/evidence")
 def evidence():

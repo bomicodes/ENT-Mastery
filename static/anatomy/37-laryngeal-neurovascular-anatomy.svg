@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360">
+<style>
+.bg{fill:#f5f9f9} .organ{fill:#dbeeed;stroke:#356f70;stroke-width:3} .accent{fill:none;stroke:#0c766f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.line{fill:none;stroke:#688386;stroke-width:4;stroke-linecap:round;stroke-linejoin:round} .vessel{fill:none;stroke:#b35656;stroke-width:7;stroke-linecap:round}
+.nerve{fill:none;stroke:#d7a63d;stroke-width:6;stroke-linecap:round} .danger{fill:#fff3ee;stroke:#b35656;stroke-width:3}
+.title{font:700 20px system-ui,sans-serif;fill:#172326} .sub{font:600 11px system-ui,sans-serif;fill:#0c766f;letter-spacing:1.5px}
+.label text{font:500 13px system-ui,sans-serif;fill:#314448} .label circle{fill:#0c766f} .label circle+text{fill:white;font-weight:700}
+.note{font:500 11px system-ui,sans-serif;fill:#718083} .dangertext{font:600 12px system-ui,sans-serif;fill:#934d4d}
+</style>
+<rect width="800" height="360" rx="22" class="bg"/>
+<text x="30" y="35" class="sub">ORIENTATION SCHEMATIC · NOT TO SCALE</text>
+<text x="30" y="65" class="title">Laryngeal Neurovascular Anatomy</text>
+<g transform="translate(0,10)"><path d="M214 115 L275 115 L289 162 L275 225 L214 225 L199 162 Z" class="organ"/>
+<path d="M220 145 L268 145 L260 183 L227 183 Z" class="accent"/>
+<path d="M231 225 L231 271 M258 225 L258 271" class="line"/></g>
+<text x="454" y="90" class="sub">FIND THESE LANDMARKS</text>
+<g class="label"><circle cx="468" cy="122" r="13"/><text x="468" y="127" text-anchor="middle">1</text><text x="491" y="127">RLN entry near cricothyroid joint</text></g><g class="label"><circle cx="468" cy="160" r="13"/><text x="468" y="165" text-anchor="middle">2</text><text x="491" y="165">internal/external SLN</text></g><g class="label"><circle cx="468" cy="198" r="13"/><text x="468" y="203" text-anchor="middle">3</text><text x="491" y="203">superior/inferior laryngeal arteries</text></g><g class="label"><circle cx="468" cy="236" r="13"/><text x="468" y="241" text-anchor="middle">4</text><text x="491" y="241">paraglottic space</text></g>
+<text x="454" y="292" class="sub">HIGH-RISK NEIGHBORS</text>
+<text x="454" y="318" class="dangertext">RLN · EBSLN</text>
+<text x="30" y="336" class="note">Use the schematic to orient; use the landmark and danger lists below for the operative mental model.</text>
+</svg>

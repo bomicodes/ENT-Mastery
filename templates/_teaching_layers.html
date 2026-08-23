@@ -1,0 +1,41 @@
+{% if c.follow %}
+<div class="teaching-follow">
+  <span class="reason-label">ATTENDING FOLLOW-UP</span>
+  <p class="follow-question">{{c.follow}}</p>
+  {% if c.follow_answer %}
+  <details>
+    <summary>Reveal follow-up answer</summary>
+    <p>{{c.follow_answer}}</p>
+    {% if c.follow_why %}<small>{{c.follow_why}}</small>{% endif %}
+  </details>
+  {% endif %}
+</div>
+{% endif %}
+
+{% if c.teach_your_junior %}
+<div class="teaching-follow">
+  <span class="reason-label">TEACH YOUR JUNIOR</span>
+  <p>{{c.teach_your_junior}}</p>
+</div>
+{% endif %}
+
+{% if c.management_considerations %}
+<div class="teaching-follow">
+  <span class="reason-label">MANAGEMENT CONSEQUENCE</span>
+  <p>{{c.management_considerations}}</p>
+</div>
+{% endif %}
+
+{% if c.operative_pearl %}
+<div class="teaching-follow">
+  <span class="reason-label">OPERATIVE PEARL</span>
+  <p>{{c.operative_pearl}}</p>
+</div>
+{% endif %}
+
+{% if c.danger_zone %}
+<div class="teaching-follow danger-follow">
+  <span class="reason-label">DANGER ZONE</span>
+  <p>{{c.danger_zone}}</p>
+</div>
+{% endif %}

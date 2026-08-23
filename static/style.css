@@ -337,3 +337,49 @@
   .anatomy-card-actions{padding:0 18px 20px}
   .anatomy-card h3{font-size:21px}
 }
+
+
+/* v10.0.3 — anatomy visuals + runtime UX */
+.anatomy-visual-wrap{
+  margin:0 24px 18px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:#f5f9f9;
+}
+.anatomy-visual{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:300px;
+  object-fit:contain;
+}
+.anatomy-visual-wrap figcaption{
+  padding:8px 12px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:11px;
+  background:#fff;
+}
+.teaching-follow{
+  margin-top:12px;
+  padding:13px 15px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+}
+.teaching-follow p{margin:6px 0 0}
+.teaching-follow details{margin-top:8px}
+.danger-follow{background:#fff8f5}
+
+/* Make a true 0% mastery ring visually empty rather than partially teal. */
+.mastery-ring{
+  background:conic-gradient(
+    var(--teal) 0 calc(var(--mastery-pct,0) * 1%),
+    #e7eeee calc(var(--mastery-pct,0) * 1%) 100%
+  )!important;
+}
+
+@media(max-width:800px){
+  .anatomy-visual-wrap{margin-left:18px;margin-right:18px}
+}

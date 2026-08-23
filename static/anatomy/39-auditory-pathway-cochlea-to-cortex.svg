@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360">
+<style>
+.bg{fill:#f5f9f9} .organ{fill:#dbeeed;stroke:#356f70;stroke-width:3} .accent{fill:none;stroke:#0c766f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.line{fill:none;stroke:#688386;stroke-width:4;stroke-linecap:round;stroke-linejoin:round} .vessel{fill:none;stroke:#b35656;stroke-width:7;stroke-linecap:round}
+.nerve{fill:none;stroke:#d7a63d;stroke-width:6;stroke-linecap:round} .danger{fill:#fff3ee;stroke:#b35656;stroke-width:3}
+.title{font:700 20px system-ui,sans-serif;fill:#172326} .sub{font:600 11px system-ui,sans-serif;fill:#0c766f;letter-spacing:1.5px}
+.label text{font:500 13px system-ui,sans-serif;fill:#314448} .label circle{fill:#0c766f} .label circle+text{fill:white;font-weight:700}
+.note{font:500 11px system-ui,sans-serif;fill:#718083} .dangertext{font:600 12px system-ui,sans-serif;fill:#934d4d}
+</style>
+<rect width="800" height="360" rx="22" class="bg"/>
+<text x="30" y="35" class="sub">ORIENTATION SCHEMATIC · NOT TO SCALE</text>
+<text x="30" y="65" class="title">Auditory Pathway — Cochlea to Cortex</text>
+<g transform="translate(0,10)"><path d="M220 115 C175 125 160 170 171 211 C180 244 207 259 233 259 C257 259 274 245 279 225" class="organ"/>
+<path d="M229 145 C250 145 264 160 264 178 C264 198 248 210 229 209 C214 208 203 198 203 184 C203 169 214 160 228 160" class="accent"/>
+<path d="M260 146 C292 120 313 130 319 151 C326 174 306 185 290 171 C276 159 284 144 300 143" class="line"/>
+<path d="M260 155 C305 185 306 222 280 237" class="line"/></g>
+<text x="454" y="90" class="sub">FIND THESE LANDMARKS</text>
+<g class="label"><circle cx="468" cy="122" r="13"/><text x="468" y="127" text-anchor="middle">1</text><text x="491" y="127">organ of Corti</text></g><g class="label"><circle cx="468" cy="160" r="13"/><text x="468" y="165" text-anchor="middle">2</text><text x="491" y="165">spiral ganglion/CN VIII</text></g><g class="label"><circle cx="468" cy="198" r="13"/><text x="468" y="203" text-anchor="middle">3</text><text x="491" y="203">cochlear nuclei</text></g><g class="label"><circle cx="468" cy="236" r="13"/><text x="468" y="241" text-anchor="middle">4</text><text x="491" y="241">superior olivary complex</text></g>
+<text x="454" y="292" class="sub">HIGH-RISK NEIGHBORS</text>
+<text x="454" y="318" class="dangertext">cochlear nerve deficiency · brainstem pathway injury</text>
+<text x="30" y="336" class="note">Use the schematic to orient; use the landmark and danger lists below for the operative mental model.</text>
+</svg>
