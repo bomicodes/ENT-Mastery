@@ -18,9 +18,12 @@
   <div class="session-progress-bar"><i id="session-progress-fill" style="width:0%"></i></div>
 </div>
 
-<div class="mastery-key">
-  <span>Mastery path</span>
-  <b>1 Recognize</b><i>→</i><b>2 Localize</b><i>→</i><b>3 Evaluate</b><i>→</i><b>4 Manage</b><i>→</i><b>5 Advanced</b><i>→</i><b>6 Teach</b>
+<div class="mastery-key-wrap">
+  <div class="mastery-key">
+    <span>Mastery path</span>
+    <b>1 Recognize</b><i>→</i><b>2 Localize</b><i>→</i><b>3 Evaluate</b><i>→</i><b>4 Manage</b><i>→</i><b>5 Advanced</b><i>→</i><b>6 Teach</b>
+  </div>
+  <p class="mastery-help"><b>How levels advance:</b> Reveal the answer, then rate yourself. <b>Got it</b> or <b>Easy</b> passes the current level and unlocks the next one. Missed/Hard keeps the same level in rotation. After passing, you can continue to the next level immediately.</p>
 </div>
 
 <div class="adaptive-list">
@@ -109,9 +112,16 @@ async function rateItem(btn,rating,x){
     card.classList.add('completed');
     completedCount+=1;
     updateSessionProgress();
-    const due=j.next_due ? 'Next review: '+j.next_due : '';
+    const due=j.next_due ? 'Spaced review: '+j.next_due : '';
+    let next='';
+    if(j.passed && j.next_level){
+      const href='/daily-adaptive?concept='+encodeURIComponent(x.concept_id)+'&minutes=15';
+      next='<a class="continue-level" href="'+href+'">Continue to Level '+j.next_level+' — '+j.next_stage+' →</a>';
+    } else if(j.mastery_level>=6){
+      next='<span class="mastery-complete">All 6 levels demonstrated ✓</span>';
+    }
     card.querySelector('.rating-row').innerHTML=
-      '<div class="saved-result"><b>Saved · mastery '+j.mastery_level+'/6</b><small>'+due+'</small></div>';
+      '<div class="saved-result"><b>Saved · mastery '+j.mastery_level+'/6</b><small>'+due+'</small>'+next+'</div>';
 
     const next=[...document.querySelectorAll('.adaptive-card:not(.completed)')].find(c=>Number(c.dataset.index)>Number(card.dataset.index))
       || document.querySelector('.adaptive-card:not(.completed)');

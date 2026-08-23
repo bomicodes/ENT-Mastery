@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-import os, random, re
+import os, random, re, difflib
 from data import *
 from db import init_db, record_lab_attempt, lab_progress, lab_stats, record_mastery_event, unified_mastery_profiles, unified_stats, unified_dimension_summary, unified_domain_mastery, unified_weak_concepts, unified_mistakes
 
@@ -436,20 +436,42 @@ if __name__ == "__main__":
 # v6 Adaptive Daily Path
 # =============================================================================
 def _adaptive_question(item):
+    """Generate a prompt that matches the *kind* of concept being tested.
+
+    The old generator asked every level-1 item for a "clinical pattern," which made
+    foundational concepts such as Laryngeal Anatomy read nonsensically. Foundation
+    topics now use structure/relationship/mechanism prompts while disease topics keep
+    the clinical-recognition pathway.
+    """
     topic=item.get("topic","this topic")
     stage=item.get("stage","recognize")
-    prompts={
-      "recognize":f"Without looking: what is the key clinical pattern that should make you recognize {topic}?",
-      "localize":f"How do you localize {topic} anatomically or physiologically?",
-      "workup":f"What workup is useful for {topic}, and which findings actually change management?",
-      "manage":f"What is your management framework for {topic}, including when to escalate?",
-      "operate":f"What is the advanced decision for {topic}? Decide whether a procedure has a role; if so, give indication/anatomy/danger/rescue. If not, explain refractory disease, complication, or multidisciplinary escalation.",
-      "teach":f"Teach {topic} to a junior from first principles and give the key attending/boards pearl."
-    }
-    return prompts.get(stage, f"Explain the core clinical reasoning for {topic}.")
+    ntopic=topic.lower()
+    tags={str(x).lower() for x in item.get("tags",[]) }
+    foundation_terms=("anatomy","physiology","neuroanatomy","principles","fundamentals","imaging fundamentals","electrophysiology")
+    is_foundation=any(t in ntopic for t in foundation_terms) or bool(tags & {"anatomy","physiology","fundamentals"})
+
+    if is_foundation:
+        prompts={
+          "recognize":f"Without looking: how would you organize {topic}, and what core structures or mechanisms must you know?",
+          "localize":f"Walk through the key spatial or physiologic relationships in {topic}. What connects to what, and why does it matter?",
+          "workup":f"How do you identify or assess {topic} on exam, testing, imaging, or endoscopy—and which findings or variants matter?",
+          "manage":f"How does {topic} change your clinical or operative decisions? Give the practical consequences of the anatomy/physiology.",
+          "operate":f"Apply {topic} to a procedure: what are the landmarks, danger structures, key relationships, and bailout considerations?",
+          "teach":f"Teach {topic} to a junior from first principles, then give the one attending/boards pearl you would not want them to miss."
+        }
+    else:
+        prompts={
+          "recognize":f"Without looking: what presentation or finding should make you think of {topic}, and what dangerous alternative must you not miss?",
+          "localize":f"How do you localize {topic} anatomically or physiologically, and what localization changes the differential?",
+          "workup":f"What workup is useful for {topic}, and which findings actually change management?",
+          "manage":f"What is your management framework for {topic}, including when to observe, treat, or escalate?",
+          "operate":f"What is the advanced decision for {topic}? If a procedure has a role, give indication, anatomy, danger structures, and rescue plan; if not, explain the refractory/complication pathway.",
+          "teach":f"Teach {topic} to a junior from first principles and give the key attending/boards pearl."
+        }
+    return prompts.get(stage, f"Explain the core reasoning for {topic}.")
 
 
-def _adaptive_plan(target_minutes=30, focus=None):
+def _adaptive_plan(target_minutes=30, focus=None, concept_id=None):
     from data import ADAPTIVE_ITEMS_V99 as ITEMS, PREREQUISITES_V5, CURRICULUM_V5
     try:
         from db import adaptive_mastery_map
@@ -485,6 +507,8 @@ def _adaptive_plan(target_minutes=30, focus=None):
 
     candidates=[]
     for cid,items in concepts.items():
+        if concept_id and cid != concept_id:
+            continue
         base=items[0]
         if focus and base["domain"]!=focus:
             continue
@@ -569,12 +593,14 @@ def _adaptive_plan(target_minutes=30, focus=None):
 @app.route("/daily-adaptive")
 def daily_adaptive():
     focus=request.args.get("focus") or None
+    concept_id=request.args.get("concept") or None
     try: mins=int(request.args.get("minutes","30"))
     except: mins=30
     mins=max(10,min(60,mins))
-    plan,total=_adaptive_plan(mins,focus)
+    plan,total=_adaptive_plan(mins,focus,concept_id)
     from data import DEEP_MODULES_V6
-    return render_template("daily_adaptive.html",plan=plan,total=total,minutes=mins,focus=focus,domains=list(DEEP_MODULES_V6.keys()))
+    return render_template("daily_adaptive.html",plan=plan,total=total,minutes=mins,focus=focus,
+                           concept_id=concept_id,domains=list(DEEP_MODULES_V6.keys()))
 
 @app.route("/daily-adaptive/answer", methods=["POST"])
 def daily_adaptive_answer():
@@ -591,7 +617,10 @@ def daily_adaptive_answer():
         from db import adaptive_mastery_map
         state=adaptive_mastery_map().get(payload.get("concept_id"),{})
         due=state.get("next_due")
-        return jsonify({"ok":True,"mastery_level":new_level,"next_due":str(due) if due else None})
+        next_level=min(6,new_level+1) if new_level < 6 else None
+        next_stage={1:"Recognize",2:"Localize",3:"Evaluate",4:"Manage",5:"Advanced",6:"Teach"}.get(next_level)
+        return jsonify({"ok":True,"mastery_level":new_level,"next_due":str(due) if due else None,
+                        "passed":rating>=2,"next_level":next_level,"next_stage":next_stage})
     except Exception as e:
         return jsonify({"ok":False,"error":str(e)}),500
 
