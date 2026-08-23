@@ -1,0 +1,52 @@
+name: Normalize ENT Mastery source registries
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/normalize_source_v125.py'
+      - '.github/workflows/normalize-source-v125.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Normalize final data registry
+        run: python scripts/normalize_source_v125.py
+      - name: Validate source imports
+        run: |
+          python -m py_compile data.py app.py wsgi.py curveballs_v123.py vignettes_v124.py
+          python - <<'PY'
+          import data
+          assert 'swallowing-imaging' not in data.INTERPRETATION_LABS
+          assert 'swallowing-imaging' not in data.LAB_PARENT_CONCEPT_V98
+          assert all((q.get('curveball') or '').strip() for q in data.CLINICAL_CHALLENGES_V11)
+          ids=[q.get('id') for q in data.CLINICAL_CHALLENGES_V119]
+          assert len(ids)==len(set(ids))
+          assert all(q.get('id') in ids for q in data.VIGNETTES_V124)
+          assert len([q for q in data.CLINICAL_CHALLENGES_V119 if q.get('id') in {x.get('id') for x in data.VIGNETTES_V124}]) == len(data.VIGNETTES_V124)
+          print('source registry validation passed')
+          PY
+      - name: Commit normalized data.py
+        run: |
+          if git diff --quiet -- data.py; then
+            echo 'data.py already normalized'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data.py
+          git commit -m 'Normalize source registries for swallowing and vignette content'
+          git push origin main
