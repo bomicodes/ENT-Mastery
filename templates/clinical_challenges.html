@@ -1,0 +1,32 @@
+{% extends "base.html" %}{% block content %}
+<div class="breadcrumb"><a href="/">Home</a> / Clinical Challenges</div>
+<div class="topic-hero lab-hero">
+  <div><span class="pill green">BOARD-STYLE VIGNETTES</span><h1>Clinical Challenges</h1><p class="lede">Commit to an answer before revealing the reasoning. Filter by domain or study mode, then open any vignette for a full explanation and mastery tracking.</p></div>
+</div>
+
+<section class="card adaptive-session-panel">
+  <div><span class="eyebrow">LIVE BANK</span><h3>{{stats.questions}} questions <span class="muted">• {{stats.topics}} concepts</span></h3><p>{{stats.curated}} curated board-style questions · {{stats.coverage}} coverage questions</p></div>
+</section>
+
+<form method="get" class="card lab-controls" style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:end">
+  <label>Domain<br><select name="domain"><option value="">All domains</option>{% for d in domains %}<option value="{{d}}" {% if domain==d %}selected{% endif %}>{{d}}</option>{% endfor %}</select></label>
+  <label>Topic<br><input name="topic" value="{{topic}}" placeholder="Filter topic"></label>
+  <label>Tier<br><select name="tier"><option value="">All tiers</option><option {% if tier=='Curated board-style' %}selected{% endif %}>Curated board-style</option></select></label>
+  <label>Mode<br><input name="mode" value="{{mode}}" placeholder="Filter mode"></label>
+  <button class="case-btn" type="submit">Apply filters</button>
+  <a href="/clinical-challenges">Clear</a>
+</form>
+
+<div class="interpretation-cases">
+{% for q in questions %}
+<section class="card interp-case">
+  <div class="interp-case-head"><span class="tag">{{q.domain}}</span><span>{{q.tier or 'Clinical challenge'}}</span></div>
+  <h2>{{q.topic}}</h2>
+  <p>{{q.stem}}</p>
+  <div class="adaptive-actions"><a class="case-btn" href="/clinical-challenge/{{q.id}}">Open challenge →</a>{% if q.concept_id %}<a href="/concept/id/{{q.concept_id|urlencode}}">Open full topic ↗</a>{% endif %}</div>
+</section>
+{% else %}
+<div class="empty card"><h3>No challenges match these filters.</h3><p>Clear one or more filters to return to the full bank.</p></div>
+{% endfor %}
+</div>
+{% endblock %}
