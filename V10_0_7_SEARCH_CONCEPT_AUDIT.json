@@ -1,0 +1,6 @@
+{
+  "canonical_search_index_defined": true,
+  "search_fail_safe": true,
+  "concept_module_access_safe": true,
+  "template_parse_errors": {}
+}

@@ -80,20 +80,97 @@ def learn():
 def topic(slug):
     return redirect(url_for("search", q=slug.replace("-"," ")))
 
+def _canonical_search_index():
+    """Build the current searchable index from the modern integrated curriculum only."""
+    from urllib.parse import quote_plus
+    rows=[]
+
+    for domain,mods in DEEP_MODULES_V6.items():
+        for mod in mods:
+            title=mod.get("topic","")
+            cid=_v6_item_id(domain,title)
+            rows.append({
+                "type":"Curriculum concept",
+                "title":title,
+                "subtitle":domain,
+                "url":"/concept/id/"+quote_plus(cid),
+                "text":" ".join(str(mod.get(k,"")) for k in
+                              ["recognize","localize","workup","manage","operate","teach"])
+            })
+
+    for c in INTEGRATED_CASES:
+        rows.append({
+            "type":"Progressive case",
+            "title":c.get("title",""),
+            "subtitle":c.get("domain","ENT"),
+            "url":"/integrated/"+str(c.get("id","")),
+            "text":(c.get("summary","")+" "+" ".join(c.get("tags") or []))
+        })
+
+    for slug,lab in INTERPRETATION_LABS.items():
+        rows.append({
+            "type":"Interpretation Atlas",
+            "title":lab.get("title",slug),
+            "subtitle":"Interpretation Atlas",
+            "url":"/lab/"+slug,
+            "text":" ".join(lab.get("framework") or [])+" "+lab.get("source_note","")
+        })
+
+    rows.append({
+        "type":"Interpretation Atlas",
+        "title":"Otoscopy Atlas",
+        "subtitle":"Otology",
+        "url":"/lab/otoscopy",
+        "text":"otoscopy tympanic membrane ear canal middle ear"
+    })
+
+    for slug,op in OR_PREP_REGISTRY.items():
+        rows.append({
+            "type":"OR Tomorrow",
+            "title":op.get("title",slug),
+            "subtitle":canonical_domain_v94(op.get("domain")),
+            "url":"/case-tomorrow?q="+quote_plus(op.get("title",slug)),
+            "text":" ".join(
+                [str(op.get("indications",""))]
+                + [str(x) for x in (op.get("steps") or [])]
+                + [str(x) for x in (op.get("danger") or [])]
+            )
+        })
+
+    try:
+        for src in CURRENT_EVIDENCE_CATALOG_V98:
+            rows.append({
+                "type":"Evidence",
+                "title":src.get("title",""),
+                "subtitle":src.get("area","Evidence"),
+                "url":"/evidence",
+                "text":" ".join(str(src.get(k,"")) for k in ["kind","year","status"])
+            })
+    except Exception:
+        pass
+
+    return rows
+
+
 @app.route("/search")
 def search():
     q=request.args.get("q","").strip().lower()
-    rows=_canonical_search_index()
-    if q:
-        terms=[x for x in re.split(r"\s+",q) if x]
-        scored=[]
-        for r in rows:
-            hay=(r["title"]+" "+r["subtitle"]+" "+r["text"]).lower()
-            title=r["title"].lower()
-            score=sum((5 if t in title else 1) for t in terms if t in hay)
-            if score: scored.append((score,r))
-        rows=[r for _,r in sorted(scored,key=lambda x:(-x[0],x[1]["title"]))]
-    else:
+    try:
+        rows=_canonical_search_index()
+        if q:
+            terms=[x for x in re.split(r"\s+",q) if x]
+            scored=[]
+            for r in rows:
+                hay=(str(r.get("title",""))+" "+str(r.get("subtitle",""))+" "+str(r.get("text",""))).lower()
+                title=str(r.get("title","")).lower()
+                score=sum((5 if t in title else 1) for t in terms if t in hay)
+                if score:
+                    scored.append((score,r))
+            rows=[r for _,r in sorted(scored,key=lambda x:(-x[0],str(x[1].get("title",""))))]
+        else:
+            rows=[]
+    except Exception:
+        app.logger.exception("Search index failed")
         rows=[]
     return render_template("search.html", q=q, results=rows)
 
