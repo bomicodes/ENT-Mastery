@@ -1,0 +1,37 @@
+{
+  "deep_topics_final": 312,
+  "adaptive_items_final": 1872,
+  "new_allergy_adaptive_items": {
+    "Allergy Testing & Interpretation": 6,
+    "Allergen Immunotherapy \u2014 SCIT / SLIT": 6,
+    "Local Allergic Rhinitis": 6
+  },
+  "chief_prompt_count_final": 312,
+  "new_allergy_chief_prompts": {
+    "Allergy Testing & Interpretation": 1,
+    "Allergen Immunotherapy \u2014 SCIT / SLIT": 1,
+    "Local Allergic Rhinitis": 1
+  },
+  "attending_prompt_count_final": 312,
+  "new_allergy_attending_prompts": {
+    "Allergy Testing & Interpretation": 1,
+    "Allergen Immunotherapy \u2014 SCIT / SLIT": 1,
+    "Local Allergic Rhinitis": 1
+  },
+  "rhinology_curriculum_allergy_strand": [
+    [
+      "Allergy / Immunology",
+      [
+        "Allergy Testing & Interpretation",
+        "Allergen Immunotherapy \u2014 SCIT / SLIT",
+        "Local Allergic Rhinitis"
+      ]
+    ]
+  ],
+  "dynamic_daily_builder_wired": true,
+  "dynamic_teaching_builder_wired": true,
+  "dynamic_curriculum_builder_wired": true,
+  "prerequisite_gating_preserved": true,
+  "python_syntax": "passed",
+  "template_parse_errors": {}
+}

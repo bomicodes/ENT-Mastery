@@ -67,7 +67,7 @@ def dashboard():
                            domain_cards=domain_cards,
                            anatomy_total=len(ANATOMY_ATLAS_V97),
                            or_total=len(OR_PREP_REGISTRY),
-                           lab_total=len(INTERPRETATION_LABS))
+                           lab_total=len(INTERPRETATION_LABS), challenge_total=len(CLINICAL_CHALLENGES_V119), concept_check_total=len(CONCEPT_CHECKS_V112))
 
 @app.route("/today")
 def today():
@@ -134,6 +134,18 @@ def _canonical_search_index():
                 app.logger.exception("Skipping malformed lab search record")
     except Exception:
         app.logger.exception("Interpretation search indexing failed")
+
+    try:
+        for q in CLINICAL_CHALLENGES_V119:
+            rows.append({
+                "type":"Clinical Challenge",
+                "title":q.get("topic",""),
+                "subtitle":q.get("domain",""),
+                "url":"/clinical-challenge/"+q.get("id",""),
+                "text":q.get("stem","")+" "+" ".join(q.get("choices") or [])
+            })
+    except Exception:
+        app.logger.exception("Clinical challenge search indexing failed")
 
     rows.append({
         "type":"Interpretation Atlas",
@@ -414,6 +426,70 @@ def questions():
 
 
 
+@app.route("/clinical-challenges")
+def clinical_challenges():
+    domain=request.args.get("domain","").strip()
+    topic=request.args.get("topic","").strip()
+    tier=request.args.get("tier","").strip()
+    mode=request.args.get("mode","").strip()
+    rows=list(CLINICAL_CHALLENGES_V119)
+    if domain: rows=[q for q in rows if canonical_domain_v94(q.get("domain"))==canonical_domain_v94(domain)]
+    if topic:
+        t=topic.lower()
+        rows=[q for q in rows if t in q.get("topic","").lower() or t in q.get("stem","").lower()]
+    if tier: rows=[q for q in rows if q.get("tier")==tier]
+    if mode: rows=[q for q in rows if q.get("mode")==mode]
+    stats={"questions":len(CLINICAL_CHALLENGES_V119),
+           "topics":len({q.get("concept_id") for q in CLINICAL_CHALLENGES_V111 if q.get("concept_id")}),
+           "curated":sum(1 for q in CLINICAL_CHALLENGES_V111 if q.get("tier")=="Curated board-style"),
+           "coverage":sum(1 for q in CLINICAL_CHALLENGES_V111 if q.get("tier")!="Curated board-style")}
+    return render_template("clinical_challenges.html",questions=rows,domains=CANONICAL_DOMAINS_V94,
+                           domain=domain,topic=topic,tier=tier,mode=mode,stats=stats)
+
+@app.route("/clinical-challenge/<qid>")
+def clinical_challenge(qid):
+    q=CLINICAL_CHALLENGE_BY_ID_V119.get(qid)
+    if not q: return redirect(url_for("clinical_challenges"))
+    return render_template("clinical_challenge.html",q=q)
+
+@app.route("/api/clinical-challenge", methods=["POST"])
+def api_clinical_challenge():
+    payload=request.get_json(force=True) or {}
+    qid=str(payload.get("qid","")); q=CLINICAL_CHALLENGE_BY_ID_V119.get(qid)
+    if not q: return jsonify({"ok":False,"error":"unknown challenge"}),404
+    try: chosen=int(payload.get("chosen",-1))
+    except Exception: chosen=-1
+    correct=(chosen==int(q.get("answer",-2)))
+    dimension="management" if q.get("mode")=="Manage" else "reasoning"
+    try:
+        record_mastery_event(q.get("concept_id") or _v6_item_id(q.get("domain","ENT"),q.get("topic","")),
+                             q.get("domain","ENT"),dimension,3 if correct else 0,
+                             source_type="clinical_challenge",source_id=qid,
+                             miss_type=None if correct else "discrimination")
+    except Exception:
+        app.logger.exception("Clinical challenge mastery recording failed")
+    return jsonify({"ok":True,"correct":correct})
+
+
+
+@app.route("/concept-checks")
+def concept_checks():
+    domain=request.args.get("domain","").strip()
+    topic=request.args.get("topic","").strip()
+    rows=list(CONCEPT_CHECKS_V112)
+    if domain: rows=[q for q in rows if canonical_domain_v94(q.get("domain"))==canonical_domain_v94(domain)]
+    if topic:
+        t=topic.lower()
+        rows=[q for q in rows if t in q.get("topic","").lower()]
+    return render_template("concept_checks.html",questions=rows,domains=CANONICAL_DOMAINS_V94,
+                           domain=domain,topic=topic,total=len(CONCEPT_CHECKS_V112))
+
+@app.route("/concept-check/<qid>")
+def concept_check(qid):
+    q=CONCEPT_CHECK_BY_ID_V112.get(qid)
+    if not q: return redirect(url_for("concept_checks"))
+    return render_template("concept_check.html",q=q)
+
 @app.route("/integrated")
 def integrated_index():
     return render_template("integrated_index.html", cases=INTEGRATED_CASES, profiles=unified_mastery_profiles())
@@ -561,16 +637,20 @@ def lab_rate():
 
 @app.route("/attending")
 def attending():
-    level=request.args.get("level","resident")
-    if level not in ATTENDING_LEVEL_PROMPTS: level="resident"
+    mode=request.args.get("mode","attending")
     domain=request.args.get("domain","all")
-    prompts=ATTENDING_LEVEL_PROMPTS[level]
-    if domain!="all": prompts=[p for p in prompts if p.get("domain")==domain]
-    return render_template("attending.html", prompts=prompts, level=level, levels=ATTENDING_LEVELS, domain=domain)
+    topic=request.args.get("topic","").strip().lower()
+    prompts=list(get_chief_prompts_v120() if mode=="chief" else get_attending_prompts_v120())
+    if domain!="all":
+        prompts=[p for p in prompts if p.get("domain")==domain]
+    if topic:
+        prompts=[p for p in prompts if topic in p.get("topic","").lower()]
+    return render_template("attending.html",prompts=prompts,mode=mode,domain=domain,
+                           domains=CANONICAL_DOMAINS_V94,topic=topic)
 
 @app.route("/chief")
 def chief():
-    return redirect(url_for("attending", level="chief"))
+    return redirect(url_for("attending",mode="chief"))
 
 @app.route("/mistakes")
 def mistakes():
@@ -585,8 +665,9 @@ def mistakes():
 
 @app.route("/curriculum")
 def curriculum():
-    from data import CURRICULUM_V5, PREREQUISITES_V5, SPIRAL_LEVELS_V5
-    return render_template("curriculum.html", curriculum=CURRICULUM_V5, prerequisites=PREREQUISITES_V5, spiral=SPIRAL_LEVELS_V5)
+    return render_template("curriculum.html",curriculum=get_curriculum_v120(),
+                           prerequisites=PREREQUISITES_SUGGESTED_V114,
+                           spiral=SPIRAL_LEVELS_V5)
 
 
 def _norm_topic_v94(s):
@@ -619,7 +700,7 @@ def _concept_context_v1006(dname, mod):
         app.logger.exception("Concept Hub mastery profile failed")
         profile={}
     try:
-        prereqs=PREREQUISITES_V5.get(mod["topic"],[])
+        prereqs=PREREQUISITES_SUGGESTED_V114.get(mod["topic"],[])
     except Exception:
         prereqs=[]
 
@@ -766,7 +847,8 @@ def _adaptive_question(item):
 
 
 def _adaptive_plan(target_minutes=30, focus=None, concept_id=None):
-    from data import ADAPTIVE_ITEMS_V99 as ITEMS, PREREQUISITES_V5, CURRICULUM_V5
+    from data import get_adaptive_items_v120, PREREQUISITES_GATING_V114
+    ITEMS=get_adaptive_items_v120()
     try:
         from db import adaptive_mastery_map
         mastery=adaptive_mastery_map()
@@ -797,7 +879,7 @@ def _adaptive_plan(target_minutes=30, focus=None, concept_id=None):
 
     # Explicit prerequisites only block new progression when the prerequisite concept exists
     # and has not yet been demonstrated at all.
-    prereq_norm={norm(k):[norm(p) for p in v] for k,v in PREREQUISITES_V5.items()}
+    prereq_norm={norm(k):[norm(p) for p in v] for k,v in PREREQUISITES_GATING_V114.items()}
 
     candidates=[]
     for cid,items in concepts.items():
@@ -893,8 +975,14 @@ def daily_adaptive():
     mins=max(10,min(60,mins))
     plan,total=_adaptive_plan(mins,focus,concept_id)
     from data import DEEP_MODULES_V6
+    challenge_pool=[q for q in CLINICAL_CHALLENGES_V119
+                    if (not focus or canonical_domain_v94(q.get("domain"))==canonical_domain_v94(focus))]
+    random.shuffle(challenge_pool)
+    challenge_count=max(1,min(3,mins//15))
+    daily_challenges=challenge_pool[:challenge_count]
     return render_template("daily_adaptive.html",plan=plan,total=total,minutes=mins,focus=focus,
-                           concept_id=concept_id,domains=list(DEEP_MODULES_V6.keys()))
+                           concept_id=concept_id,domains=list(DEEP_MODULES_V6.keys()),
+                           daily_challenges=daily_challenges)
 
 @app.route("/daily-adaptive/answer", methods=["POST"])
 def daily_adaptive_answer():
