@@ -7,6 +7,6 @@
 <div class="results">{% for r in results %}<a class="result card" href="{{r.url}}"><span class="result-type">{{r.type}}</span><div><h3>{{r.title}}</h3><p>{{r.subtitle}}</p></div><b>→</b></a>{% else %}<div class="empty card"><h3>No exact hit yet.</h3><p>The search engine is ready; this topic hasn't been populated into the knowledge base yet.</p></div>{% endfor %}</div>
 {% else %}
 <div class="suggestions"><span>Try:</span>
-{% for x in ["parathyroidectomy","PTH won't drop","hungry bone","recurrent laryngeal nerve","hypercalcemia"] %}<a href="/search?q={{x|urlencode}}">{{x}}</a>{% endfor %}</div>
+{% for x in ["cholesteatoma","thyroidectomy","frontal sinus","neck mass","vocal fold paralysis"] %}<a href="/search?q={{x|urlencode}}">{{x}}</a>{% endfor %}</div>
 {% endif %}
 {% endblock %}

@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">INTEGRATED CASES</div><h1>One patient. Multiple ENT skills.</h1><p class="lede">Cases unfold in stages. Commit before the next piece of information appears; each stage measures a different mastery dimension.</p>
+<div class="integrated-grid wide">{% for c in cases %}<a class="card integrated-tile" href="/integrated/{{c.id}}"><span class="tag">{{c.domain}}</span><h2>{{c.title}}</h2><p>{{c.summary}}</p>{% set p=profiles.get(c.concept_id) %}<div class="case-mastery">{% if p %}<b>{{p.overall}}%</b> demonstrated mastery{% else %}<b>NEW</b> not attempted{% endif %}</div><span class="lab-status">{{c.stages|length}} progressive stages →</span></a>{% endfor %}</div>
+{% endblock %}

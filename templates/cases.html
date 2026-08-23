@@ -1,4 +1,0 @@
-{% extends "base.html" %}{% block content %}
-<div class="eyebrow">CASE REASONING</div><h1>Progressive cases</h1><p class="lede">Information arrives in stages so you have to decide what matters next.</p>
-<div class="card-grid">{% for c in cases %}<a href="/case/{{c.id}}" class="case-card card"><span class="tag">CASE</span><h2>{{c.title}}</h2><p>{{c.summary}}</p><b>Start case →</b></a>{% endfor %}</div>
-{% endblock %}

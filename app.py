@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import os, random, re
 from data import *
-from db import init_db, record_attempt, stats, mistake_rows, concept_strengths, record_lab_attempt, lab_progress, lab_stats, record_mastery_event, mastery_profiles, dimension_summary, domain_mastery, mastery_misses, unified_mastery_profiles, unified_stats, unified_dimension_summary, unified_domain_mastery, unified_weak_concepts, unified_mistakes
+from db import init_db, record_lab_attempt, lab_progress, lab_stats, record_mastery_event, unified_mastery_profiles, unified_stats, unified_dimension_summary, unified_domain_mastery, unified_weak_concepts, unified_mistakes
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "dev-ent-mastery-change-me")
@@ -9,7 +9,7 @@ init_db()
 
 @app.context_processor
 def inject():
-    return {"DOMAINS": DOMAINS}
+    return {"DOMAINS": [{"id":d,"name":d} for d in CANONICAL_DOMAINS_V94]}
 
 @app.route("/")
 def dashboard():
@@ -30,7 +30,7 @@ def dashboard():
         return (domain_bonus, attempted, mastery, c.get("title",""))
     recommended=sorted(INTEGRATED_CASES,key=case_score)[:6]
 
-    return render_template("dashboard.html", stats=st, weak=weak, topic=PARATHYROID,
+    return render_template("dashboard.html", stats=st, weak=weak,
                            dimension_summary=dsum, domain_mastery=domains,
                            weakest_dimensions=weakest_dims,
                            integrated_cases=recommended,
@@ -46,22 +46,23 @@ def learn():
 
 @app.route("/topic/<slug>")
 def topic(slug):
-    if slug != PARATHYROID["slug"]: return redirect(url_for("learn"))
-    return render_template("topic.html", topic=PARATHYROID)
+    return redirect(url_for("search", q=slug.replace("-"," ")))
 
 @app.route("/search")
 def search():
-    q = request.args.get("q","").strip().lower()
-    rows = search_index()
+    q=request.args.get("q","").strip().lower()
+    rows=_canonical_search_index()
     if q:
-        terms = [x for x in re.split(r"\s+",q) if x]
+        terms=[x for x in re.split(r"\s+",q) if x]
         scored=[]
         for r in rows:
             hay=(r["title"]+" "+r["subtitle"]+" "+r["text"]).lower()
-            score=sum(3 if t in r["title"].lower() else 1 for t in terms if t in hay)
+            title=r["title"].lower()
+            score=sum((5 if t in title else 1) for t in terms if t in hay)
             if score: scored.append((score,r))
-        rows=[r for _,r in sorted(scored,key=lambda x:-x[0])]
-    else: rows=[]
+        rows=[r for _,r in sorted(scored,key=lambda x:(-x[0],x[1]["title"]))]
+    else:
+        rows=[]
     return render_template("search.html", q=q, results=rows)
 
 def _norm_or_text(s):
@@ -105,10 +106,45 @@ def _or_rank(q):
         ranked.append((score,slug,x))
     return sorted(ranked,key=lambda z:z[0],reverse=True)
 
+def _canonical_for_or_domain(label):
+    return canonical_domain_v94(label)
+
+def _related_or_gaps(prep, limit=4):
+    if not prep: return []
+    canonical=_canonical_for_or_domain(prep.get("domain"))
+    profiles=unified_mastery_profiles()
+    try:
+        from db import adaptive_mastery_map
+        adaptive=adaptive_mastery_map()
+    except Exception:
+        adaptive={}
+
+    title_tokens=set(_norm_or_text(prep.get("title")).split())
+    candidates=[]
+    for domain,mods in DEEP_MODULES_V6.items():
+        if canonical_domain_v94(domain)!=canonical:
+            continue
+        for idx,mod in enumerate(mods):
+            cid=_v6_item_id(domain,mod["topic"])
+            p=profiles.get(cid,{})
+            meta=adaptive.get(cid,{})
+            mastery=p.get("overall",0)
+            coverage=p.get("coverage",0)
+            attempts=int(meta.get("attempts") or 0)
+            overlap=len(title_tokens & set(_norm_or_text(mod["topic"]).split()))
+            # Same-operation concept first, then foundations that are weak/unseen.
+            score=(-overlap, mastery, coverage, 0 if attempts==0 else 1, idx)
+            candidates.append((score,{
+              "concept_id":cid,"topic":mod["topic"],"domain":domain,
+              "mastery":mastery,"coverage":coverage,"attempts":attempts
+            }))
+    candidates.sort(key=lambda x:x[0])
+    return [x[1] for x in candidates[:limit]]
+
 @app.route("/case-tomorrow")
 def case_tomorrow():
     q=request.args.get("q","").strip()
-    prep=None; or_choices=[]
+    prep=None; or_choices=[]; related=[]
     if q:
         ranked=_or_rank(q)
         if ranked:
@@ -118,63 +154,34 @@ def case_tomorrow():
                 prep=top[2]
             elif top[0]>=60:
                 or_choices=[x[2] for x in ranked[:5] if x[0]>=55]
-    if not prep and q and not or_choices:
+    if prep:
+        related=_related_or_gaps(prep)
+        return render_template("case_tomorrow.html", q=q, prep=prep, or_choices=[], matches=[],
+                               questions=[], or_directory=OR_PREP_REGISTRY, related_gaps=related)
+    if or_choices:
+        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=or_choices,
+                               matches=[], questions=[], or_directory=OR_PREP_REGISTRY, related_gaps=[])
+    if q:
         matches=[]
-        nq=_norm_or_text(q)
-        qt=nq.split()
-        for r in search_index():
+        nq=_norm_or_text(q); qt=nq.split()
+        for r in _canonical_search_index():
             hay=_norm_or_text(r["title"]+" "+r.get("subtitle","")+" "+r.get("text",""))
             if all(t in hay.split() for t in qt): matches.append(r)
-        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=[], matches=matches[:8], questions=[], or_directory=OR_PREP_REGISTRY)
-    if not prep and or_choices:
-        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=or_choices, matches=[], questions=[], or_directory=OR_PREP_REGISTRY)
-    if not prep: prep=OR_PREP_REGISTRY.get("parathyroidectomy")
-    linked_q=[x for x in QUESTIONS if x.get("topic")==prep.get("linked_topic")][:5] if prep else []
-    return render_template("case_tomorrow.html", q=q, prep=prep, or_choices=[], matches=[], questions=linked_q, or_directory=OR_PREP_REGISTRY)
+        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=[], matches=matches[:8],
+                               questions=[], or_directory=OR_PREP_REGISTRY, related_gaps=[])
+    # True empty state: never default to a random operation.
+    return render_template("case_tomorrow.html", q="", prep=None, or_choices=[], matches=[],
+                           questions=[], or_directory=OR_PREP_REGISTRY, related_gaps=[])
 
 @app.route("/questions")
 def questions():
     return redirect(url_for("daily_adaptive"))
 
-@app.route("/api/answer", methods=["POST"])
-def answer():
-    d=request.get_json(force=True)
-    q=next((x for x in QUESTIONS if x["id"]==d.get("question_id")),None)
-    if not q: return jsonify({"error":"not found"}),404
-    choice=int(d.get("choice",-1))
-    correct=choice==q["answer"]
-    record_attempt(q["id"],q["concept_id"],correct,int(d.get("confidence",3)),d.get("miss_type"))
-    return jsonify({
-        "correct": correct,
-        "answer": q["answer"],
-        "explanation": q["explanation"],
-        "why_wrong": q["why_wrong"],
-        "why_it_matters": q.get("why_it_matters"),
-        "what_to_look_for": q.get("what_to_look_for"),
-        "management_change": q.get("management_change"),
-        "board_pearl": q.get("board_pearl"),
-        "attending_followup": q.get("attending_followup")
-    })
-
-@app.route("/api/classify-miss", methods=["POST"])
-def classify_miss():
-    # Classification is intentionally separate from scoring so one missed
-    # question produces one attempt, not a duplicate miss.
-    d=request.get_json(force=True)
-    from db import conn
-    c=conn()
-    row=c.execute("SELECT id FROM attempts WHERE question_id=? AND correct=0 ORDER BY id DESC LIMIT 1",
-                  (d.get("question_id"),)).fetchone()
-    if row:
-        c.execute("UPDATE attempts SET miss_type=? WHERE id=?", (d.get("miss_type"), row["id"]))
-        c.commit()
-    c.close()
-    return jsonify({"ok": True})
 
 
 @app.route("/integrated")
 def integrated_index():
-    return render_template("integrated_index.html", cases=INTEGRATED_CASES, profiles=mastery_profiles())
+    return render_template("integrated_index.html", cases=INTEGRATED_CASES, profiles=unified_mastery_profiles())
 
 @app.route("/integrated/<case_id>")
 def integrated_case(case_id):
@@ -184,13 +191,15 @@ def integrated_case(case_id):
 
 @app.route("/api/mastery-event", methods=["POST"])
 def mastery_event():
-    d=request.get_json(force=True); cid=d.get("concept_id"); dim=d.get("dimension")
-    if not cid or not dim: return jsonify({"error":"concept_id and dimension required"}),400
+    d=request.get_json(force=True); raw=d.get("concept_id"); dim=d.get("dimension")
+    if not raw or not dim: return jsonify({"error":"concept_id and dimension required"}),400
     try: score=int(d.get("score",0))
     except Exception: score=0
     if score not in (0,1,2,3): return jsonify({"error":"score must be 0-3"}),400
-    record_mastery_event(cid,d.get("domain","ENT"),dim,score,d.get("source_type"),d.get("source_id"),d.get("miss_type"))
-    return jsonify({"ok":True,"profile":mastery_profiles().get(cid,{})})
+    cid=canonical_concept_id_v98(raw,d.get("domain","ENT"))
+    domain=canonical_concept_domain_v98(raw,d.get("domain","ENT"))
+    record_mastery_event(cid,domain,dim,score,d.get("source_type"),d.get("source_id"),d.get("miss_type"))
+    return jsonify({"ok":True,"profile":unified_mastery_profiles().get(cid,{})})
 
 @app.route("/api/mastery-miss", methods=["POST"])
 def mastery_miss():
@@ -205,9 +214,7 @@ def cases():
 
 @app.route("/case/<cid>")
 def case(cid):
-    c=next((x for x in CASES if x["id"]==cid),None)
-    if not c: return redirect(url_for("cases"))
-    return render_template("case.html", case=c)
+    return redirect(url_for("integrated_index"))
 
 @app.route("/operate")
 def operate():
@@ -215,13 +222,14 @@ def operate():
 
 @app.route("/operate/<slug>")
 def operation(slug):
-    op=next((x for x in OPERATIONS if x["slug"]==slug),None)
-    if not op: return redirect(url_for("operate"))
-    return render_template("operation.html", op=op)
+    return redirect(url_for("case_tomorrow", q=slug.replace("-"," ")))
 
 @app.route("/anatomy")
 def anatomy():
-    return redirect(url_for("curriculum_depth"))
+    regions={}
+    for x in ANATOMY_ATLAS_V97:
+        regions.setdefault(x["region"],[]).append(x)
+    return render_template("anatomy_atlas.html", regions=regions, total=len(ANATOMY_ATLAS_V97))
 
 @app.route("/complications")
 def complications():
@@ -308,7 +316,8 @@ def lab_rate():
     record_lab_attempt(slug,case_id,concept_id,rating)
     variant=d.get("variant_type","interpret")
     dimension={"interpret":"recognition","reason":"reasoning","teach":"teaching"}.get(variant,"recognition")
-    record_mastery_event(concept_id,d.get("domain",slug),dimension,rating,"interpretation_lab",case_id,d.get("miss_type"))
+    parent=LAB_PARENT_CONCEPT_V98.get(slug,concept_id)
+    record_mastery_event(parent,canonical_concept_domain_v98(parent,d.get("domain",slug)),dimension,rating,"interpretation_atlas",case_id,d.get("miss_type"))
     return jsonify({"ok":True,"stats":lab_stats(slug)})
 
 @app.route("/attending")
@@ -340,29 +349,70 @@ def curriculum():
     from data import CURRICULUM_V5, PREREQUISITES_V5, SPIRAL_LEVELS_V5
     return render_template("curriculum.html", curriculum=CURRICULUM_V5, prerequisites=PREREQUISITES_V5, spiral=SPIRAL_LEVELS_V5)
 
+
+def _norm_topic_v94(s):
+    return re.sub(r"[^a-z0-9]+"," ",(s or "").lower()).strip()
+
+def _find_deep_module_v94(domain, topic):
+    nt=_norm_topic_v94(topic)
+    # Exact topic first, regardless of minor domain taxonomy mismatch.
+    for dname,mods in DEEP_MODULES_V6.items():
+        for mod in mods:
+            if _norm_topic_v94(mod["topic"])==nt:
+                return dname,mod
+    # Fuzzy fallback within requested canonical domain.
+    target_domain=canonical_domain_v94(domain)
+    best=None
+    for dname,mods in DEEP_MODULES_V6.items():
+        if canonical_domain_v94(dname)!=target_domain: continue
+        for mod in mods:
+            ratio=difflib.SequenceMatcher(None,nt,_norm_topic_v94(mod["topic"])).ratio()
+            if best is None or ratio>best[0]: best=(ratio,dname,mod)
+    if best and best[0]>=0.58: return best[1],best[2]
+    return None,None
+
+@app.route("/concept")
+def concept_hub():
+    domain=request.args.get("domain","")
+    topic=request.args.get("topic","")
+    dname,mod=_find_deep_module_v94(domain,topic)
+    if not mod:
+        return redirect(url_for("search",q=topic))
+    cid=_v6_item_id(dname,mod["topic"])
+    profiles=unified_mastery_profiles()
+    profile=profiles.get(cid,{})
+    # Prerequisites from the mapped curriculum.
+    prereqs=PREREQUISITES_V5.get(topic, PREREQUISITES_V5.get(mod["topic"],[]))
+    # Related progressive cases by normalized domain + keyword overlap.
+    mtoks=set(_norm_topic_v94(mod["topic"]).split())
+    cases=[]
+    for c in INTEGRATED_CASES:
+        overlap=len(mtoks & set(c.get("tags",[])))
+        if c.get("domain")==canonical_domain_v94(dname) or overlap:
+            cases.append((overlap,c))
+    cases=[c for _,c in sorted(cases,key=lambda x:(-x[0],x[1]["title"]))[:4]]
+    # Related OR modules.
+    ors=[]
+    for slug,op in OR_PREP_REGISTRY.items():
+        if canonical_domain_v94(op.get("domain"))!=canonical_domain_v94(dname): continue
+        overlap=len(mtoks & set(_norm_topic_v94(op["title"]).split()))
+        ors.append((overlap,op))
+    ors=[o for _,o in sorted(ors,key=lambda x:(-x[0],x[1]["title"]))[:4]]
+    # Related interpretation areas.
+    labs=[]
+    for slug,lab in INTERPRETATION_LABS.items():
+        text=_norm_topic_v94(lab.get("title","")+" "+" ".join(lab.get("framework",[])))
+        overlap=sum(1 for t in mtoks if t in text.split())
+        if overlap: labs.append((overlap,slug,lab))
+    labs=[(s,l) for _,s,l in sorted(labs,key=lambda x:-x[0])[:4]]
+    return render_template("concept_hub.html", domain=dname, topic=mod["topic"], module=mod,
+                           concept_id=cid, profile=profile, prerequisites=prereqs,
+                           related_cases=cases, related_or=ors, related_labs=labs)
+
 @app.route("/evidence")
 def evidence():
-    sources=[
-      {"area":"Otology / Audiology","title":"Sudden Hearing Loss (Update)","year":"2019","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Vestibular","title":"Ménière’s Disease","year":"2020","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Vestibular","title":"BPPV (Update)","year":"2017","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Pediatric Otolaryngology","title":"Tympanostomy Tubes in Children (Update)","year":"2022","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Pediatric Otolaryngology / Sleep","title":"Tonsillectomy in Children (Update)","year":"2019","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Head & Neck Oncology","title":"Evaluation of the Neck Mass in Adults","year":"2017","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Laryngology","title":"Hoarseness (Dysphonia) Update","year":"2018","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Rhinology","title":"Nosebleed (Epistaxis)","year":"2020","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Rhinology","title":"Adult Sinusitis Update","year":"2025","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Rhinology","title":"Surgical Management of Chronic Rhinosinusitis","year":"2025","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Audiology","title":"Age-Related Hearing Loss","year":"2024","kind":"AAO-HNSF CPG","status":"current reviewed source"},
-      {"area":"Thyroid","title":"2025 ATA Differentiated Thyroid Cancer","year":"2025","kind":"ATA Guideline","status":"current reviewed source"},
-      {"area":"Rhinology","title":"ICAR-RS: Rhinosinusitis","year":"2021","kind":"International Consensus Statement","status":"core comprehensive rhinology reference; newer CPGs supersede where applicable"},
-      {"area":"Head & Neck Oncology","title":"NCCN Head and Neck Cancers","year":"2026 v2.2026","kind":"NCCN uploaded guideline","status":"current oncology management/adjuvant/surveillance cross-check; algorithms not reproduced"},
-      {"area":"Cutaneous Oncology","title":"NCCN Melanoma: Cutaneous","year":"2026 v2.2026","kind":"NCCN uploaded guideline","status":"current melanoma management cross-check; algorithms not reproduced"},
-      {"area":"Cutaneous Oncology","title":"NCCN Squamous Cell Skin Cancer","year":"2026 v2.2026","kind":"NCCN uploaded guideline","status":"current cutaneous SCC management cross-check; algorithms not reproduced"},
-      {"area":"Cutaneous Oncology","title":"NCCN Basal Cell Skin Cancer","year":"2026 v2.2026","kind":"NCCN uploaded guideline","status":"current BCC management cross-check; algorithms not reproduced"},
-      {"area":"Otology","title":"Color Atlas of Otoscopy: From Diagnosis to Surgery","year":"1999","kind":"Uploaded atlas","status":"visual/anatomic source; management cross-check required"}
-    ]
-    return render_template("evidence.html", sources=sources)
+    return render_template("evidence.html", sources=CURRENT_EVIDENCE_CATALOG_V98)
+
 
 @app.route("/progress")
 def progress():
@@ -375,7 +425,8 @@ def progress():
                            mastery_dimensions=MASTERY_DIMENSIONS)
 @app.route("/sources")
 def sources():
-    return render_template("sources.html", sources=SITE_SOURCES_V92, nccn=NCCN_GUIDELINES_V92)
+    return redirect(url_for("evidence"))
+
 
 if __name__ == "__main__":
     app.run(debug=True)
@@ -392,14 +443,14 @@ def _adaptive_question(item):
       "localize":f"How do you localize {topic} anatomically or physiologically?",
       "workup":f"What workup is useful for {topic}, and which findings actually change management?",
       "manage":f"What is your management framework for {topic}, including when to escalate?",
-      "operate":f"What is the operative/procedural mental model for {topic}: indication, anatomy, danger structures, key steps, complications, and rescue?",
+      "operate":f"What is the advanced decision for {topic}? Decide whether a procedure has a role; if so, give indication/anatomy/danger/rescue. If not, explain refractory disease, complication, or multidisciplinary escalation.",
       "teach":f"Teach {topic} to a junior from first principles and give the key attending/boards pearl."
     }
     return prompts.get(stage, f"Explain the core clinical reasoning for {topic}.")
 
 
 def _adaptive_plan(target_minutes=30, focus=None):
-    from data import ADAPTIVE_ITEMS_V91 as ITEMS, PREREQUISITES_V5, CURRICULUM_V5
+    from data import ADAPTIVE_ITEMS_V99 as ITEMS, PREREQUISITES_V5, CURRICULUM_V5
     try:
         from db import adaptive_mastery_map
         mastery=adaptive_mastery_map()
@@ -444,7 +495,7 @@ def _adaptive_plan(target_minutes=30, focus=None):
         is_due=bool(due and due<=today)
         unseen=not meta or int(meta.get("attempts") or 0)==0
 
-        target=max(1,min(6, level if is_due and level else level+1))
+        target=max(1,min(6, level+1))
         item=next((i for i in items if i["level"]==target),items[0])
 
         unmet=[]

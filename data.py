@@ -296,7 +296,7 @@ def search_index():
     return rows
 
 
-# Otoscopy Interpretation Lab — source: Sanna et al., Color Atlas of Otoscopy (1999).
+# Otoscopy Interpretation Atlas — source: Sanna et al., Color Atlas of Otoscopy (1999).
 # Management pearls here intentionally stay close to the atlas; current practice should be
 # cross-checked against contemporary guidelines as ENT Mastery adds newer sources.
 OTOSCOPY_CASES = [{'id': 'oto_normal_1',
@@ -872,7 +872,7 @@ except NameError:
     pass
 
 
-# Adaptive Interpretation Lab expansion (v3)
+# Adaptive Interpretation Atlas expansion (v3)
 def expand_lab_case_variants(cases, domain):
     """Create multiple retrieval contexts from each evidence-reviewed seed card.
     Variants reuse the reviewed teaching content rather than inventing new facts.
@@ -908,7 +908,7 @@ def expand_lab_case_variants(cases, domain):
         expanded.append(t)
     return expanded
 
-# Expand every non-otoscopy Interpretation Lab to three retrieval contexts per seed card.
+# Expand every non-otoscopy Interpretation Atlas to three retrieval contexts per seed card.
 # Otoscopy keeps its curated visual cards intact; it participates in adaptive scheduling separately.
 for _adaptive_slug, _adaptive_lab in INTERPRETATION_LABS.items():
     if isinstance(_adaptive_lab, dict) and isinstance(_adaptive_lab.get("cases"), list):
@@ -1435,7 +1435,7 @@ OR_PREP_REGISTRY.update({
 }
 })
 
-# Add more Interpretation Lab content without fabricating new visual images.
+# Add more Interpretation Atlas content without fabricating new visual images.
 # These are text/data interpretation scenarios anchored to the uploaded audiology/operative material.
 _v42_audio = [
 {"id":"aud_mixed_v42","level":3,"track":"all","prompt":"Air and bone thresholds are both elevated, but air thresholds remain >10 dB poorer than bone across several frequencies. Classify the loss.","answer":"Mixed hearing loss: a sensorineural component plus an additional conductive air-bone gap.","why":"Both cochlear sensitivity and sound transmission are impaired.","follow":"Why might surgery improve the air-bone gap without normalizing hearing?","follow_answer":"Because the sensorineural component remains even after the conductive component is corrected.","concept_id":"audiology:mixed_loss","variant_type":"interpret"},
@@ -2464,7 +2464,7 @@ for _slug,(_title,_domain,_steps,_danger) in OR_FINAL_V8.items():
 # =============================================================================
 # ENT Mastery v9 — Interpretation Atlas Expansion
 # =============================================================================
-INTERPRETATION_LABS_V9_NEW = {'thyroid-ultrasound': {'title': 'Thyroid & Neck Ultrasound Lab', 'icon': '🦋', 'subtitle': 'Describe the nodule/node first → risk-stratify → decide whether the image changes surgery.', 'framework': ['Thyroid vs extrathyroidal', 'Composition', 'Echogenicity', 'Shape', 'Margins', 'Echogenic foci', 'Extrathyroidal extension', 'Cervical nodes', 'Risk category', 'FNA / surveillance / surgical consequence'], 'source_note': 'Use the linked ACR TI-RADS material on the ACR site. ENT Mastery does not reproduce the ACR atlas images.', 'resources': [{'name': 'ACR TI-RADS', 'url': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'note': 'Official lexicon, atlas, worksheets and case-based education'}, {'name': 'ACR TI-RADS Worksheet', 'url': 'https://cs.acr.org/-/media/ACR/Files/RADS/TI-RADS/Sonographers-Worksheet-TI-RADS.pdf', 'note': 'Composition, echogenicity, shape, margins and echogenic foci'}], 'cases': [{'id': 'us1', 'level': 1, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'Open the ACR TI-RADS atlas. Before assigning points, name the five sonographic feature categories you must score.', 'answer': 'Composition, echogenicity, shape, margins, and echogenic foci.', 'why': 'A reproducible lexicon prevents jumping from a visual impression directly to biopsy.', 'follow': 'Which features are descriptors versus management decisions?'}, {'id': 'us2', 'level': 2, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'A nodule is purely cystic or almost completely cystic. What is the first risk-stratification move?', 'answer': 'Recognize the benign-leaning composition before allowing dramatic but irrelevant visual details to dominate the assessment.', 'why': 'Composition is the first structured feature in TI-RADS and strongly changes the subsequent risk score.', 'follow': 'Why should a cystic nodule not be managed from size alone?'}, {'id': 'us3', 'level': 2, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'Compare isoechoic, hypoechoic and very hypoechoic nodules in the ACR atlas. What tissue should you use as the reference?', 'answer': 'Compare the nodule with normal thyroid parenchyma; very hypoechoic lesions approach or fall below the echogenicity of adjacent strap muscle.', 'why': 'Echogenicity is relative, so an explicit reference tissue improves consistency.', 'follow': 'How can thyroiditis complicate this comparison?'}, {'id': 'us4', 'level': 3, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'A solid nodule is taller-than-wide on transverse imaging. Why does that matter?', 'answer': 'Taller-than-wide growth is a suspicious shape feature because it suggests growth across rather than along normal tissue planes.', 'why': 'Shape contributes independent malignancy-risk information.', 'follow': 'On which imaging plane should you judge taller-than-wide?'}, {'id': 'us5', 'level': 3, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'Distinguish smooth, ill-defined, lobulated/irregular, and extrathyroidal-extension margins before reading the category.', 'answer': 'The key is whether the interface is merely hard to see versus truly irregular/lobulated or extending beyond the thyroid capsule into adjacent structures.', 'why': 'Ill-defined is not synonymous with infiltrative.', 'follow': 'Which adjacent structures make suspected extrathyroidal extension surgically important?'}, {'id': 'us6', 'level': 3, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'Compare comet-tail artifact, macrocalcification, rim calcification and punctate echogenic foci.', 'answer': 'These echogenic foci carry different risk implications; punctate echogenic foci are more suspicious than benign comet-tail artifact.', 'why': "Calling every bright focus a 'calcification' loses useful risk information.", 'follow': 'How can rim calcification affect FNA targeting?'}, {'id': 'us7', 'level': 4, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'A nodule has suspicious features but is very small. What two variables must be kept separate before recommending FNA?', 'answer': 'Risk category and size threshold. Sonographic suspicion determines the category; size determines whether that category crosses a biopsy or follow-up threshold.', 'why': 'High suspicion does not automatically mean immediate biopsy at every size.', 'follow': 'What patient-specific factors can still modify the conversation?'}, {'id': 'us8', 'level': 4, 'prompt': 'A lateral neck node is rounded, cystic, has punctate echogenic foci and lacks a normal fatty hilum in a patient with papillary thyroid carcinoma. What is the interpretation?', 'answer': 'This is a suspicious metastatic cervical node phenotype and should be mapped by level and confirmed when confirmation will change management.', 'why': 'Nodal morphology—not size alone—drives concern in differentiated thyroid cancer.', 'follow': 'What adjunct can be added to needle sampling in selected thyroid-cancer nodes?'}, {'id': 'us9', 'level': 4, 'prompt': 'A node is oval with a preserved echogenic hilum and hilar vascularity. How should you describe it?', 'answer': 'Those are reassuring/reactive features, though interpretation still depends on the clinical context and the rest of the neck.', 'why': 'A systematic node description prevents overcalling every enlarged node.', 'follow': 'Which morphology changes would make it suspicious?'}, {'id': 'us10', 'level': 5, 'prompt': "Pre-op ultrasound shows a posterior thyroid lesion abutting the tracheoesophageal groove and a suspicious central node. What does the surgeon need from the study beyond 'thyroid cancer present'?", 'answer': 'Side, size, relationship to capsule/trachea/esophagus, possible extrathyroidal extension, central and lateral nodal map, and any finding that changes nerve/airway or compartment-dissection planning.', 'why': 'For the surgeon, ultrasound is an operative map as well as a malignancy-risk test.', 'follow': 'When would cross-sectional imaging add value?'}, {'id': 'us11', 'level': 4, 'prompt': "A hypoechoic structure posterior to the thyroid is suspected to be parathyroid. Why can't grayscale appearance alone prove it?", 'answer': 'Lymph nodes, thyroid nodules and other structures can mimic parathyroid tissue; biochemical disease and localization context are essential.', 'why': 'Parathyroid disease is diagnosed biochemically; imaging localizes it.', 'follow': 'What complementary localization tests might be used when surgery is planned?'}, {'id': 'us12', 'level': 5, 'prompt': 'After thyroidectomy, ultrasound shows a small indeterminate thyroid-bed focus. What is the disciplined next step?', 'answer': 'Integrate morphology, interval change, thyroglobulin/clinical context and nodal findings before assuming recurrent cancer; sample when the result will change management.', 'why': 'Postoperative anatomy creates benign mimics and surveillance should be risk-directed.', 'follow': 'What imaging feature or trend would raise concern?'}]}, 'temporal-bone-imaging': {'title': 'Temporal Bone CT / MRI Lab', 'icon': '🦴', 'subtitle': 'Trace the ear in compartments and convert the scan into a surgical danger map.', 'framework': ['EAC/TM', 'Ossicles', 'Epitympanum', 'Mastoid', 'Facial nerve canal', 'Labyrinth', 'IAC', 'Tegmen', 'Sigmoid/jugular bulb', 'Carotid canal', 'Disease extent', 'Operative consequence'], 'source_note': 'Cases use interpretation prompts and link to open/educational anatomy or radiology resources rather than copying images.', 'resources': [{'name': 'Open Anatomy — Inner Ear / Head & Neck Atlases', 'url': 'https://www.openanatomy.org/atlas-pages/', 'note': 'Open cross-sectional anatomy'}, {'name': 'Iowa Head & Neck Protocols — Radiology', 'url': 'https://iowaprotocols.medicine.uiowa.edu/', 'note': 'Open educational radiology pages and clinical correlations'}], 'cases': [{'id': 'tb1', 'level': 1, 'external': 'https://www.openanatomy.org/atlas-pages/', 'prompt': 'On axial temporal-bone CT, trace EAC → TM region → ossicles → epitympanum → mastoid before looking for disease.', 'answer': 'Use a fixed compartment sequence so subtle disease is not missed and surgical orientation becomes automatic.', 'why': 'Temporal-bone CT is easiest when read as connected compartments.', 'follow': 'Which structures form your medial danger boundary?'}, {'id': 'tb2', 'level': 2, 'external': 'https://www.openanatomy.org/atlas-pages/', 'prompt': 'Identify malleus head and incus body in the epitympanum. What classic axial configuration do they create?', 'answer': "The malleus head and incus body form the familiar 'ice-cream cone' configuration on axial CT.", 'why': 'Ossicular landmarks help detect erosion or discontinuity.', 'follow': 'What chronic ear disease commonly erodes the incus?'}, {'id': 'tb3', 'level': 3, 'prompt': 'CT shows epitympanic soft tissue with scutal and ossicular erosion. What diagnosis rises and what can CT not prove?', 'answer': 'Cholesteatoma rises on the differential; CT maps bone erosion and extent but soft tissue itself is not specific.', 'why': 'CT is a surgical bony roadmap; diffusion MRI can add tissue characterization in selected cases.', 'follow': 'Which hidden recesses matter for residual disease?'}, {'id': 'tb4', 'level': 3, 'prompt': 'After trauma, the ossicular chain has an abnormal incudostapedial relationship with a large conductive gap. Localize the problem.', 'answer': 'Ossicular discontinuity is likely, with the incudostapedial joint a common site of traumatic disruption.', 'why': 'The imaging finding must fit the conductive mechanics.', 'follow': 'What would make you suspect concomitant inner-ear injury?'}, {'id': 'tb5', 'level': 4, 'prompt': 'High-resolution CT suggests superior semicircular canal dehiscence. What prevents you from diagnosing the syndrome from the scan alone?', 'answer': 'Radiographic thinning/dehiscence requires matching symptoms and physiologic testing; imaging alone can overcall clinically irrelevant defects.', 'why': 'Third-window syndrome is a clinicophysiologic diagnosis supported by CT.', 'follow': 'Which symptoms and vestibular test patterns would support it?'}, {'id': 'tb6', 'level': 4, 'prompt': 'A temporal-bone fracture violates the otic capsule. What complications should move up your list immediately?', 'answer': 'Sensorineural hearing loss, facial nerve injury and CSF leak are especially important complications.', 'why': 'Otic-capsule involvement predicts clinically meaningful injury better than the old longitudinal/transverse labels.', 'follow': 'What must be documented about facial weakness timing?'}, {'id': 'tb7', 'level': 4, 'prompt': 'CT shows a tegmen defect and MRI shows herniating tissue into the epitympanum. Interpret the pair.', 'answer': 'The complementary studies support a temporal encephalocele/CSF-leak pathway: CT defines bone; MRI confirms soft-tissue/meningeal contents.', 'why': 'Using the modality for the structure it depicts best improves operative planning.', 'follow': 'What factors influence transmastoid versus middle-fossa/combined repair?'}, {'id': 'tb8', 'level': 4, 'prompt': 'A retrocochlear MRI shows an enhancing IAC/CPA mass centered on CN VIII. What diagnosis is most typical and what pre-op function matters?', 'answer': 'Vestibular schwannoma is typical; hearing level/speech performance and facial nerve status are major planning variables.', 'why': 'Approach selection is tied to tumor anatomy and hearing goals.', 'follow': 'How do retrosigmoid, translabyrinthine and middle-fossa goals differ conceptually?'}, {'id': 'tb9', 'level': 5, 'prompt': 'Pre-CI CT shows abnormal cochlear partition and an atypical facial nerve course. Why is this more than a radiology curiosity?', 'answer': 'Inner-ear malformation changes electrode access, CSF-gusher risk and expected nerve anatomy; the facial nerve may obstruct a routine facial-recess path.', 'why': 'CI imaging is a procedural hazard map.', 'follow': 'What must MRI establish in severe congenital hearing loss?'}, {'id': 'tb10', 'level': 4, 'prompt': 'A jugular bulb is high and dehiscent beneath the middle ear. What procedure-specific danger does that create?', 'answer': 'Unexpected venous injury can occur during middle-ear or hypotympanic work if the bulb is not recognized.', 'why': 'Normal vascular variants become operative hazards when their bony covering is absent.', 'follow': 'What other vascular variant should be checked near the cochlea/Eustachian tube?'}, {'id': 'tb11', 'level': 5, 'prompt': 'A petrous-apex lesion is expansile with characteristic high T1 signal and smooth bony remodeling. What is your reasoning framework?', 'answer': 'Use CT bone behavior plus MRI signal to separate cholesterol granuloma, cholesteatoma, inflammatory disease and neoplasm before choosing observation, drainage or resection.', 'why': 'Petrous-apex lesions are route-selection problems as much as diagnosis problems.', 'follow': 'Why does aeration of surrounding cells matter?'}, {'id': 'tb12', 'level': 5, 'prompt': 'Postoperative MRI after cholesteatoma surgery shows focal diffusion restriction in a hidden recess. Why is that valuable?', 'answer': 'Non-echo-planar diffusion-weighted imaging can support residual/recurrent cholesteatoma detection where direct otoscopy cannot see.', 'why': 'Surveillance strategy depends on the operation and ability to detect hidden disease.', 'follow': 'How might this affect second-look surgery decisions?'}]}, 'head-neck-imaging': {'title': 'Head & Neck CT / MRI Staging Lab', 'icon': '🧠', 'subtitle': 'Epicenter → displacement → invasion → nodes → perineural spread → what changes the operation.', 'framework': ['Modality/sequence', 'Primary site', 'Deep-space epicenter', 'Tumor extent', 'Bone/cartilage invasion', 'Vascular relationship', 'Perineural spread', 'Nodes', 'Distant/second-primary clue', 'T stage implication', 'Surgical consequence'], 'source_note': 'ENT Mastery links to open educational radiology cases. Images remain on the source sites.', 'resources': [{'name': 'Iowa Head & Neck Protocols', 'url': 'https://iowaprotocols.medicine.uiowa.edu/', 'note': 'Open head-and-neck radiology teaching pages'}, {'name': 'Learn Neuroradiology — Head & Neck Cases', 'url': 'https://learnneuroradiology.com/headneck/board-review-cases-head-and-neck/', 'note': 'Image-first board review'}], 'cases': [{'id': 'hn1', 'level': 2, 'external': 'https://learnneuroradiology.com/headneck/board-review-cases-head-and-neck/', 'prompt': 'Before naming a neck mass, identify its epicenter and which spaces/vessels it displaces.', 'answer': 'Space of origin and displacement pattern should come before tumor name.', 'why': 'Deep-neck spaces constrain the differential and predict surgical relationships.', 'follow': 'How does carotid-space origin alter the differential?'}, {'id': 'hn2', 'level': 3, 'external': 'https://iowaprotocols.medicine.uiowa.edu/protocols/squamous-cell-carcinoma-tonsillar-fossa-radiology', 'prompt': 'Review a tonsillar SCC image. What nodal basin is especially important to inspect and why?', 'answer': 'Upper jugular/level II nodes are common drainage sites; cystic nodal metastasis can be a presenting feature of HPV-associated oropharyngeal cancer.', 'why': 'The neck may reveal an otherwise subtle primary.', 'follow': 'Why is an adult cystic level II mass not presumed to be a benign branchial cyst?'}, {'id': 'hn3', 'level': 4, 'external': 'https://iowaprotocols.medicine.uiowa.edu/protocols/oral-tongue-squamous-cell-carcinoma-radiology', 'prompt': 'For oral tongue SCC, what MRI question matters beyond maximal tumor diameter?', 'answer': 'Depth and deep soft-tissue extent, relation to floor of mouth/extrinsic tongue musculature, and nodal disease affect resection and staging decisions.', 'why': 'Surgical morbidity follows three-dimensional extent, not surface size alone.', 'follow': 'How does mandibular proximity differ from true invasion?'}, {'id': 'hn4', 'level': 4, 'prompt': 'A laryngeal tumor extends into the paraglottic space with impaired vocal-fold mobility. What does the imaging contribute?', 'answer': 'It demonstrates deep submucosal spread and framework involvement that may upstage disease and change partial-larynx versus organ-preservation/laryngectomy options.', 'why': 'Laryngeal staging depends on deep spaces and function, not just visible mucosa.', 'follow': 'What imaging finding suggests cartilage invasion?'}, {'id': 'hn5', 'level': 5, 'prompt': 'MRI shows enhancement tracking along V3 toward foramen ovale from a cutaneous facial malignancy. Name the process.', 'answer': 'Perineural tumor spread along the trigeminal pathway.', 'why': 'Perineural spread changes radiation fields, surgical extent and prognosis.', 'follow': 'Which symptoms might have predicted this before imaging?'}, {'id': 'hn6', 'level': 4, 'prompt': 'A parotid mass has ill-defined margins, deep-lobe extension and stylomastoid-foramen/facial-nerve concern. What should the surgeon infer?', 'answer': 'Features raise concern for malignancy and possible facial-nerve involvement; pre-op nerve function, tissue diagnosis, neck staging and reconstructive planning become important.', 'why': 'Imaging should forecast what structures may need to be preserved, sacrificed or reconstructed.', 'follow': 'What does preoperative facial weakness imply?'}, {'id': 'hn7', 'level': 4, 'prompt': 'A carotid-bifurcation mass splays the internal and external carotid arteries and enhances avidly. What lesion pattern is classic?', 'answer': 'Carotid body paraganglioma.', 'why': 'Vascular displacement pattern is a powerful localization clue.', 'follow': 'Why is routine biopsy a poor first step?'}, {'id': 'hn8', 'level': 4, 'external': 'https://iowaprotocols.medicine.uiowa.edu/protocols/jugularjugulotympanic-paraganglioma-radiology', 'prompt': 'Review jugulotympanic paraganglioma imaging. What skull-base relationships must be mapped before treatment?', 'answer': 'Jugular foramen extent, carotid canal, lower cranial nerves, middle ear, intracranial extension and vascular supply.', 'why': 'Treatment morbidity is driven by neurovascular anatomy and tumor extent.', 'follow': 'Which cranial neuropathies should be documented?'}, {'id': 'hn9', 'level': 4, 'prompt': 'Contrast CT shows a rim-enhancing collection in the parapharyngeal space with carotid sheath displacement. What are the two immediate interpretation tasks?', 'answer': 'Confirm drainable abscess versus phlegmon and map airway/vascular/deep-space extension.', 'why': 'The scan guides both urgency and drainage route.', 'follow': 'What finding would make mediastinal imaging important?'}, {'id': 'hn10', 'level': 5, 'prompt': 'Post-treatment neck imaging shows new focal mucosal enhancement and an enlarging necrotic node. How should you approach it?', 'answer': 'Compare with prior treatment field and expected post-radiation change, then treat progressive focal mass/nodal findings as suspicious for recurrence until appropriately evaluated.', 'why': 'Post-treatment anatomy creates false positives, but interval focal progression is consequential.', 'follow': 'How can PET timing and inflammation complicate interpretation?'}, {'id': 'hn11', 'level': 4, 'prompt': 'Thyroid cancer CT shows tumor contacting the trachea and esophagus and bulky central/lateral nodes. What should be explicitly reported for operative planning?', 'answer': 'Degree of airway/esophageal invasion, vascular encasement, retrosternal extent, nodal levels and any likely RLN-course involvement.', 'why': 'Cross-sectional imaging is most useful when it answers questions ultrasound cannot fully map.', 'follow': 'What baseline functional exam matters before invasive thyroid surgery?'}, {'id': 'hn12', 'level': 5, 'prompt': 'A nasopharyngeal mass extends through skull-base foramina with cranial neuropathy. What modality generally best maps this soft-tissue/perineural extent?', 'answer': 'MRI is particularly valuable for skull-base marrow, intracranial and perineural soft-tissue spread, complemented by CT for bone.', 'why': 'Modality choice should match the staging question.', 'follow': 'What neck nodal pattern is common in nasopharyngeal carcinoma?'}]}, 'swallowing-imaging': {'title': 'FEES / MBS Interpretation Lab', 'icon': '🥤', 'subtitle': 'Name the physiologic impairment—not just aspiration—and connect it to the intervention.', 'framework': ['Bolus consistency', 'Oral control', 'Trigger/timing', 'Hyolaryngeal excursion', 'Epiglottic inversion', 'Pharyngeal constriction', 'Residue location', 'Penetration/aspiration timing', 'UES opening', 'Response to maneuver', 'Mechanism', 'Treatment target'], 'source_note': 'These are synthetic data-pattern cases designed to train physiologic interpretation; they do not reproduce patient studies.', 'resources': [], 'cases': [{'id': 'sw1', 'level': 1, 'prompt': 'Thin liquid enters the laryngeal vestibule above the vocal folds and is ejected. Name the event before assigning cause.', 'answer': 'Laryngeal penetration with successful clearance.', 'why': 'Describe what happened before explaining why.', 'follow': 'What additional information determines clinical significance?'}, {'id': 'sw2', 'level': 2, 'prompt': 'Thin liquid passes below the vocal folds during the swallow and the patient coughs it out. What is the event and timing?', 'answer': 'Aspiration during the swallow with an effective protective response.', 'why': 'Timing helps localize the physiologic failure.', 'follow': 'What mechanisms can cause aspiration during the swallow?'}, {'id': 'sw3', 'level': 3, 'prompt': 'Aspiration occurs before the swallow because liquid spills from the vallecula/pyriforms before airway closure begins. Localize the deficit.', 'answer': 'Delayed/inefficient swallow initiation or poor bolus control is contributing to pre-swallow aspiration.', 'why': 'Pre-, during-, and post-swallow aspiration imply different mechanisms.', 'follow': 'Which compensatory strategy might be tested rather than assumed?'}, {'id': 'sw4', 'level': 3, 'prompt': 'There is substantial vallecular residue after puree with reduced tongue-base retraction. What mechanism fits?', 'answer': 'Reduced tongue-base driving force/pharyngeal pressure contributes to vallecular residue.', 'why': 'Residue location can point toward the impaired pressure generator.', 'follow': 'Why can residue become an aspiration risk after the swallow?'}, {'id': 'sw5', 'level': 3, 'prompt': 'Pyriform residue persists with restricted UES opening. What two broad mechanisms must be separated?', 'answer': 'True cricopharyngeal/UES outflow resistance versus inadequate hyolaryngeal traction/pharyngeal propulsion.', 'why': 'A CP bar is not automatically the cause of dysphagia.', 'follow': 'What test can add pressure information when needed?'}, {'id': 'sw6', 'level': 4, 'prompt': 'FEES shows pooled secretions and aspiration of secretions before any test bolus. Why is this high-value information?', 'answer': 'It demonstrates impaired baseline secretion management and airway protection independent of food consistency.', 'why': 'FEES can directly assess secretion burden, which MBS may not capture the same way.', 'follow': 'How should this influence diet-only recommendations?'}, {'id': 'sw7', 'level': 3, 'prompt': "During FEES the bolus disappears during the white-out and material is seen below the folds immediately afterward. What can and can't you say?", 'answer': 'Aspiration likely occurred during the obscured pharyngeal swallow, but FEES cannot directly visualize the exact moment during white-out.', 'why': "Know the modality's blind interval rather than overclaiming timing.", 'follow': 'When might MBS complement this?'}, {'id': 'sw8', 'level': 4, 'prompt': 'A chin-tuck eliminates aspiration in one tested patient. What is the correct interpretation?', 'answer': 'The maneuver was effective for that demonstrated physiology under tested conditions; it should not be prescribed as a universal aspiration maneuver.', 'why': 'Compensatory strategies are hypotheses to test, not reflex recommendations.', 'follow': 'What would make you stop using it?'}, {'id': 'sw9', 'level': 4, 'prompt': 'A patient after head-and-neck radiation has reduced hyolaryngeal excursion, pharyngeal residue and limited UES opening. What unifying mechanism should you consider?', 'answer': 'Radiation-associated fibrosis/weakness can impair multiple linked components of pharyngeal propulsion and traction-mediated UES opening.', 'why': 'Multiple abnormalities may share one treatment-related physiology.', 'follow': 'Why might isolated CP dilation fail?'}, {'id': 'sw10', 'level': 4, 'prompt': 'Unilateral pharyngeal weakness leaves residue predominantly on one side. What maneuver can be tested mechanistically?', 'answer': 'Head rotation toward the weak side can be tested to direct bolus toward the stronger side and alter UES mechanics.', 'why': 'Postural maneuvers should be linked to the demonstrated asymmetry.', 'follow': 'How would you verify benefit?'}, {'id': 'sw11', 'level': 5, 'prompt': "A patient aspirates silently with poor laryngeal sensation after skull-base/vagal injury. What does 'silent' tell you?", 'answer': 'The airway invasion is not triggering an effective cough response, suggesting impaired sensation/protective reflex in addition to the motor swallowing deficit.', 'why': 'Aspiration severity depends on both invasion and response.', 'follow': 'Which cranial nerve pathways are relevant?'}, {'id': 'sw12', 'level': 5, 'prompt': 'MBS shows good airway protection but severe cervical esophageal hold-up below the UES. What is the next reasoning move?', 'answer': 'Do not force a pharyngeal diagnosis; the study points toward an esophageal problem requiring appropriate esophageal evaluation.', 'why': 'A swallow study can redirect localization beyond ENT-managed pharyngeal physiology.', 'follow': 'What symptoms in the history would support esophageal localization?'}]}}
+INTERPRETATION_LABS_V9_NEW = {'thyroid-ultrasound': {'title': 'Thyroid & Neck Ultrasound Lab', 'icon': '🦋', 'subtitle': 'Describe the nodule/node first → risk-stratify → decide whether the image changes surgery.', 'framework': ['Thyroid vs extrathyroidal', 'Composition', 'Echogenicity', 'Shape', 'Margins', 'Echogenic foci', 'Extrathyroidal extension', 'Cervical nodes', 'Risk category', 'FNA / surveillance / surgical consequence'], 'source_note': 'Use the linked ACR TI-RADS material on the ACR site. ENT Mastery does not reproduce the ACR atlas images.', 'resources': [{'name': 'ACR TI-RADS', 'url': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'note': 'Official lexicon, atlas, worksheets and case-based education'}, {'name': 'ACR TI-RADS Worksheet', 'url': 'https://cs.acr.org/-/media/ACR/Files/RADS/TI-RADS/Sonographers-Worksheet-TI-RADS.pdf', 'note': 'Composition, echogenicity, shape, margins and echogenic foci'}], 'cases': [{'id': 'us1', 'level': 1, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'Open the ACR TI-RADS atlas. Before assigning points, name the five sonographic feature categories you must score.', 'answer': 'Composition, echogenicity, shape, margins, and echogenic foci.', 'why': 'A reproducible lexicon prevents jumping from a visual impression directly to biopsy.', 'follow': 'Which features are descriptors versus management decisions?'}, {'id': 'us2', 'level': 2, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'A nodule is purely cystic or almost completely cystic. What is the first risk-stratification move?', 'answer': 'Recognize the benign-leaning composition before allowing dramatic but irrelevant visual details to dominate the assessment.', 'why': 'Composition is the first structured feature in TI-RADS and strongly changes the subsequent risk score.', 'follow': 'Why should a cystic nodule not be managed from size alone?'}, {'id': 'us3', 'level': 2, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'Compare isoechoic, hypoechoic and very hypoechoic nodules in the ACR atlas. What tissue should you use as the reference?', 'answer': 'Compare the nodule with normal thyroid parenchyma; very hypoechoic lesions approach or fall below the echogenicity of adjacent strap muscle.', 'why': 'Echogenicity is relative, so an explicit reference tissue improves consistency.', 'follow': 'How can thyroiditis complicate this comparison?'}, {'id': 'us4', 'level': 3, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'A solid nodule is taller-than-wide on transverse imaging. Why does that matter?', 'answer': 'Taller-than-wide growth is a suspicious shape feature because it suggests growth across rather than along normal tissue planes.', 'why': 'Shape contributes independent malignancy-risk information.', 'follow': 'On which imaging plane should you judge taller-than-wide?'}, {'id': 'us5', 'level': 3, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'Distinguish smooth, ill-defined, lobulated/irregular, and extrathyroidal-extension margins before reading the category.', 'answer': 'The key is whether the interface is merely hard to see versus truly irregular/lobulated or extending beyond the thyroid capsule into adjacent structures.', 'why': 'Ill-defined is not synonymous with infiltrative.', 'follow': 'Which adjacent structures make suspected extrathyroidal extension surgically important?'}, {'id': 'us6', 'level': 3, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'Compare comet-tail artifact, macrocalcification, rim calcification and punctate echogenic foci.', 'answer': 'These echogenic foci carry different risk implications; punctate echogenic foci are more suspicious than benign comet-tail artifact.', 'why': "Calling every bright focus a 'calcification' loses useful risk information.", 'follow': 'How can rim calcification affect FNA targeting?'}, {'id': 'us7', 'level': 4, 'external': 'https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS', 'prompt': 'A nodule has suspicious features but is very small. What two variables must be kept separate before recommending FNA?', 'answer': 'Risk category and size threshold. Sonographic suspicion determines the category; size determines whether that category crosses a biopsy or follow-up threshold.', 'why': 'High suspicion does not automatically mean immediate biopsy at every size.', 'follow': 'What patient-specific factors can still modify the conversation?'}, {'id': 'us8', 'level': 4, 'prompt': 'A lateral neck node is rounded, cystic, has punctate echogenic foci and lacks a normal fatty hilum in a patient with papillary thyroid carcinoma. What is the interpretation?', 'answer': 'This is a suspicious metastatic cervical node phenotype and should be mapped by level and confirmed when confirmation will change management.', 'why': 'Nodal morphology—not size alone—drives concern in differentiated thyroid cancer.', 'follow': 'What adjunct can be added to needle sampling in selected thyroid-cancer nodes?'}, {'id': 'us9', 'level': 4, 'prompt': 'A node is oval with a preserved echogenic hilum and hilar vascularity. How should you describe it?', 'answer': 'Those are reassuring/reactive features, though interpretation still depends on the clinical context and the rest of the neck.', 'why': 'A systematic node description prevents overcalling every enlarged node.', 'follow': 'Which morphology changes would make it suspicious?'}, {'id': 'us10', 'level': 5, 'prompt': "Pre-op ultrasound shows a posterior thyroid lesion abutting the tracheoesophageal groove and a suspicious central node. What does the surgeon need from the study beyond 'thyroid cancer present'?", 'answer': 'Side, size, relationship to capsule/trachea/esophagus, possible extrathyroidal extension, central and lateral nodal map, and any finding that changes nerve/airway or compartment-dissection planning.', 'why': 'For the surgeon, ultrasound is an operative map as well as a malignancy-risk test.', 'follow': 'When would cross-sectional imaging add value?'}, {'id': 'us11', 'level': 4, 'prompt': "A hypoechoic structure posterior to the thyroid is suspected to be parathyroid. Why can't grayscale appearance alone prove it?", 'answer': 'Lymph nodes, thyroid nodules and other structures can mimic parathyroid tissue; biochemical disease and localization context are essential.', 'why': 'Parathyroid disease is diagnosed biochemically; imaging localizes it.', 'follow': 'What complementary localization tests might be used when surgery is planned?'}, {'id': 'us12', 'level': 5, 'prompt': 'After thyroidectomy, ultrasound shows a small indeterminate thyroid-bed focus. What is the disciplined next step?', 'answer': 'Integrate morphology, interval change, thyroglobulin/clinical context and nodal findings before assuming recurrent cancer; sample when the result will change management.', 'why': 'Postoperative anatomy creates benign mimics and surveillance should be risk-directed.', 'follow': 'What imaging feature or trend would raise concern?'}]}, 'temporal-bone-imaging': {'title': 'Temporal Bone CT / MRI Lab', 'icon': '🦴', 'subtitle': 'Trace the ear in compartments and convert the scan into a surgical danger map.', 'framework': ['EAC/TM', 'Ossicles', 'Epitympanum', 'Mastoid', 'Facial nerve canal', 'Labyrinth', 'IAC', 'Tegmen', 'Sigmoid/jugular bulb', 'Carotid canal', 'Disease extent', 'Operative consequence'], 'source_note': 'Cases use interpretation prompts and link to open/educational anatomy or radiology resources rather than copying images.', 'resources': [{'name': 'Open Anatomy — Inner Ear / Head & Neck Atlases', 'url': 'https://www.openanatomy.org/atlas-pages/', 'note': 'Open cross-sectional anatomy'}, {'name': 'Iowa Head & Neck Protocols — Radiology', 'url': 'https://iowaprotocols.medicine.uiowa.edu/', 'note': 'Open educational radiology pages and clinical correlations'}], 'cases': [{'id': 'tb1', 'level': 1, 'external': 'https://www.openanatomy.org/atlas-pages/', 'prompt': 'On axial temporal-bone CT, trace EAC → TM region → ossicles → epitympanum → mastoid before looking for disease.', 'answer': 'Use a fixed compartment sequence so subtle disease is not missed and surgical orientation becomes automatic.', 'why': 'Temporal-bone CT is easiest when read as connected compartments.', 'follow': 'Which structures form your medial danger boundary?'}, {'id': 'tb2', 'level': 2, 'external': 'https://www.openanatomy.org/atlas-pages/', 'prompt': 'Identify malleus head and incus body in the epitympanum. What classic axial configuration do they create?', 'answer': "The malleus head and incus body form the familiar 'ice-cream cone' configuration on axial CT.", 'why': 'Ossicular landmarks help detect erosion or discontinuity.', 'follow': 'What chronic ear disease commonly erodes the incus?'}, {'id': 'tb3', 'level': 3, 'prompt': 'CT shows epitympanic soft tissue with scutal and ossicular erosion. What diagnosis rises and what can CT not prove?', 'answer': 'Cholesteatoma rises on the differential; CT maps bone erosion and extent but soft tissue itself is not specific.', 'why': 'CT is a surgical bony roadmap; diffusion MRI can add tissue characterization in selected cases.', 'follow': 'Which hidden recesses matter for residual disease?'}, {'id': 'tb4', 'level': 3, 'prompt': 'After trauma, the ossicular chain has an abnormal incudostapedial relationship with a large conductive gap. Localize the problem.', 'answer': 'Ossicular discontinuity is likely, with the incudostapedial joint a common site of traumatic disruption.', 'why': 'The imaging finding must fit the conductive mechanics.', 'follow': 'What would make you suspect concomitant inner-ear injury?'}, {'id': 'tb5', 'level': 4, 'prompt': 'High-resolution CT suggests superior semicircular canal dehiscence. What prevents you from diagnosing the syndrome from the scan alone?', 'answer': 'Radiographic thinning/dehiscence requires matching symptoms and physiologic testing; imaging alone can overcall clinically irrelevant defects.', 'why': 'Third-window syndrome is a clinicophysiologic diagnosis supported by CT.', 'follow': 'Which symptoms and vestibular test patterns would support it?'}, {'id': 'tb6', 'level': 4, 'prompt': 'A temporal-bone fracture violates the otic capsule. What complications should move up your list immediately?', 'answer': 'Sensorineural hearing loss, facial nerve injury and CSF leak are especially important complications.', 'why': 'Otic-capsule involvement predicts clinically meaningful injury better than the old longitudinal/transverse labels.', 'follow': 'What must be documented about facial weakness timing?'}, {'id': 'tb7', 'level': 4, 'prompt': 'CT shows a tegmen defect and MRI shows herniating tissue into the epitympanum. Interpret the pair.', 'answer': 'The complementary studies support a temporal encephalocele/CSF-leak pathway: CT defines bone; MRI confirms soft-tissue/meningeal contents.', 'why': 'Using the modality for the structure it depicts best improves operative planning.', 'follow': 'What factors influence transmastoid versus middle-fossa/combined repair?'}, {'id': 'tb8', 'level': 4, 'prompt': 'A retrocochlear MRI shows an enhancing IAC/CPA mass centered on CN VIII. What diagnosis is most typical and what pre-op function matters?', 'answer': 'Vestibular schwannoma is typical; hearing level/speech performance and facial nerve status are major planning variables.', 'why': 'Approach selection is tied to tumor anatomy and hearing goals.', 'follow': 'How do retrosigmoid, translabyrinthine and middle-fossa goals differ conceptually?'}, {'id': 'tb9', 'level': 5, 'prompt': 'Pre-CI CT shows abnormal cochlear partition and an atypical facial nerve course. Why is this more than a radiology curiosity?', 'answer': 'Inner-ear malformation changes electrode access, CSF-gusher risk and expected nerve anatomy; the facial nerve may obstruct a routine facial-recess path.', 'why': 'CI imaging is a procedural hazard map.', 'follow': 'What must MRI establish in severe congenital hearing loss?'}, {'id': 'tb10', 'level': 4, 'prompt': 'A jugular bulb is high and dehiscent beneath the middle ear. What procedure-specific danger does that create?', 'answer': 'Unexpected venous injury can occur during middle-ear or hypotympanic work if the bulb is not recognized.', 'why': 'Normal vascular variants become operative hazards when their bony covering is absent.', 'follow': 'What other vascular variant should be checked near the cochlea/Eustachian tube?'}, {'id': 'tb11', 'level': 5, 'prompt': 'A petrous-apex lesion is expansile with characteristic high T1 signal and smooth bony remodeling. What is your reasoning framework?', 'answer': 'Use CT bone behavior plus MRI signal to separate cholesterol granuloma, cholesteatoma, inflammatory disease and neoplasm before choosing observation, drainage or resection.', 'why': 'Petrous-apex lesions are route-selection problems as much as diagnosis problems.', 'follow': 'Why does aeration of surrounding cells matter?'}, {'id': 'tb12', 'level': 5, 'prompt': 'Postoperative MRI after cholesteatoma surgery shows focal diffusion restriction in a hidden recess. Why is that valuable?', 'answer': 'Non-echo-planar diffusion-weighted imaging can support residual/recurrent cholesteatoma detection where direct otoscopy cannot see.', 'why': 'Surveillance strategy depends on the operation and ability to detect hidden disease.', 'follow': 'How might this affect second-look surgery decisions?'}]}, 'head-neck-imaging': {'title': 'Head & Neck CT / MRI Staging Lab', 'icon': '🧠', 'subtitle': 'Epicenter → displacement → invasion → nodes → perineural spread → what changes the operation.', 'framework': ['Modality/sequence', 'Primary site', 'Deep-space epicenter', 'Tumor extent', 'Bone/cartilage invasion', 'Vascular relationship', 'Perineural spread', 'Nodes', 'Distant/second-primary clue', 'T stage implication', 'Surgical consequence'], 'source_note': 'ENT Mastery links to open educational radiology cases. Images remain on the source sites.', 'resources': [{'name': 'Iowa Head & Neck Protocols', 'url': 'https://iowaprotocols.medicine.uiowa.edu/', 'note': 'Open head-and-neck radiology teaching pages'}, {'name': 'Learn Neuroradiology — Head & Neck Cases', 'url': 'https://learnneuroradiology.com/headneck/board-review-cases-head-and-neck/', 'note': 'Image-first board review'}], 'cases': [{'id': 'hn1', 'level': 2, 'external': 'https://learnneuroradiology.com/headneck/board-review-cases-head-and-neck/', 'prompt': 'Before naming a neck mass, identify its epicenter and which spaces/vessels it displaces.', 'answer': 'Space of origin and displacement pattern should come before tumor name.', 'why': 'Deep-neck spaces constrain the differential and predict surgical relationships.', 'follow': 'How does carotid-space origin alter the differential?'}, {'id': 'hn2', 'level': 3, 'external': 'https://iowaprotocols.medicine.uiowa.edu/protocols/squamous-cell-carcinoma-tonsillar-fossa-radiology', 'prompt': 'Review a tonsillar SCC image. What nodal basin is especially important to inspect and why?', 'answer': 'Upper jugular/level II nodes are common drainage sites; cystic nodal metastasis can be a presenting feature of HPV-associated oropharyngeal cancer.', 'why': 'The neck may reveal an otherwise subtle primary.', 'follow': 'Why is an adult cystic level II mass not presumed to be a benign branchial cyst?'}, {'id': 'hn3', 'level': 4, 'external': 'https://iowaprotocols.medicine.uiowa.edu/protocols/oral-tongue-squamous-cell-carcinoma-radiology', 'prompt': 'For oral tongue SCC, what MRI question matters beyond maximal tumor diameter?', 'answer': 'Depth and deep soft-tissue extent, relation to floor of mouth/extrinsic tongue musculature, and nodal disease affect resection and staging decisions.', 'why': 'Surgical morbidity follows three-dimensional extent, not surface size alone.', 'follow': 'How does mandibular proximity differ from true invasion?'}, {'id': 'hn4', 'level': 4, 'prompt': 'A laryngeal tumor extends into the paraglottic space with impaired vocal-fold mobility. What does the imaging contribute?', 'answer': 'It demonstrates deep submucosal spread and framework involvement that may upstage disease and change partial-larynx versus organ-preservation/laryngectomy options.', 'why': 'Laryngeal staging depends on deep spaces and function, not just visible mucosa.', 'follow': 'What imaging finding suggests cartilage invasion?'}, {'id': 'hn5', 'level': 5, 'prompt': 'MRI shows enhancement tracking along V3 toward foramen ovale from a cutaneous facial malignancy. Name the process.', 'answer': 'Perineural tumor spread along the trigeminal pathway.', 'why': 'Perineural spread changes radiation fields, surgical extent and prognosis.', 'follow': 'Which symptoms might have predicted this before imaging?'}, {'id': 'hn6', 'level': 4, 'prompt': 'A parotid mass has ill-defined margins, deep-lobe extension and stylomastoid-foramen/facial-nerve concern. What should the surgeon infer?', 'answer': 'Features raise concern for malignancy and possible facial-nerve involvement; pre-op nerve function, tissue diagnosis, neck staging and reconstructive planning become important.', 'why': 'Imaging should forecast what structures may need to be preserved, sacrificed or reconstructed.', 'follow': 'What does preoperative facial weakness imply?'}, {'id': 'hn7', 'level': 4, 'prompt': 'A carotid-bifurcation mass splays the internal and external carotid arteries and enhances avidly. What lesion pattern is classic?', 'answer': 'Carotid body paraganglioma.', 'why': 'Vascular displacement pattern is a powerful localization clue.', 'follow': 'Why is routine biopsy a poor first step?'}, {'id': 'hn8', 'level': 4, 'external': 'https://iowaprotocols.medicine.uiowa.edu/protocols/jugularjugulotympanic-paraganglioma-radiology', 'prompt': 'Review jugulotympanic paraganglioma imaging. What skull-base relationships must be mapped before treatment?', 'answer': 'Jugular foramen extent, carotid canal, lower cranial nerves, middle ear, intracranial extension and vascular supply.', 'why': 'Treatment morbidity is driven by neurovascular anatomy and tumor extent.', 'follow': 'Which cranial neuropathies should be documented?'}, {'id': 'hn9', 'level': 4, 'prompt': 'Contrast CT shows a rim-enhancing collection in the parapharyngeal space with carotid sheath displacement. What are the two immediate interpretation tasks?', 'answer': 'Confirm drainable abscess versus phlegmon and map airway/vascular/deep-space extension.', 'why': 'The scan guides both urgency and drainage route.', 'follow': 'What finding would make mediastinal imaging important?'}, {'id': 'hn10', 'level': 5, 'prompt': 'Post-treatment neck imaging shows new focal mucosal enhancement and an enlarging necrotic node. How should you approach it?', 'answer': 'Compare with prior treatment field and expected post-radiation change, then treat progressive focal mass/nodal findings as suspicious for recurrence until appropriately evaluated.', 'why': 'Post-treatment anatomy creates false positives, but interval focal progression is consequential.', 'follow': 'How can PET timing and inflammation complicate interpretation?'}, {'id': 'hn11', 'level': 4, 'prompt': 'Thyroid cancer CT shows tumor contacting the trachea and esophagus and bulky central/lateral nodes. What should be explicitly reported for operative planning?', 'answer': 'Degree of airway/esophageal invasion, vascular encasement, retrosternal extent, nodal levels and any likely RLN-course involvement.', 'why': 'Cross-sectional imaging is most useful when it answers questions ultrasound cannot fully map.', 'follow': 'What baseline functional exam matters before invasive thyroid surgery?'}, {'id': 'hn12', 'level': 5, 'prompt': 'A nasopharyngeal mass extends through skull-base foramina with cranial neuropathy. What modality generally best maps this soft-tissue/perineural extent?', 'answer': 'MRI is particularly valuable for skull-base marrow, intracranial and perineural soft-tissue spread, complemented by CT for bone.', 'why': 'Modality choice should match the staging question.', 'follow': 'What neck nodal pattern is common in nasopharyngeal carcinoma?'}]}, 'swallowing-imaging': {'title': 'FEES / MBS Interpretation Atlas', 'icon': '🥤', 'subtitle': 'Name the physiologic impairment—not just aspiration—and connect it to the intervention.', 'framework': ['Bolus consistency', 'Oral control', 'Trigger/timing', 'Hyolaryngeal excursion', 'Epiglottic inversion', 'Pharyngeal constriction', 'Residue location', 'Penetration/aspiration timing', 'UES opening', 'Response to maneuver', 'Mechanism', 'Treatment target'], 'source_note': 'These are synthetic data-pattern cases designed to train physiologic interpretation; they do not reproduce patient studies.', 'resources': [], 'cases': [{'id': 'sw1', 'level': 1, 'prompt': 'Thin liquid enters the laryngeal vestibule above the vocal folds and is ejected. Name the event before assigning cause.', 'answer': 'Laryngeal penetration with successful clearance.', 'why': 'Describe what happened before explaining why.', 'follow': 'What additional information determines clinical significance?'}, {'id': 'sw2', 'level': 2, 'prompt': 'Thin liquid passes below the vocal folds during the swallow and the patient coughs it out. What is the event and timing?', 'answer': 'Aspiration during the swallow with an effective protective response.', 'why': 'Timing helps localize the physiologic failure.', 'follow': 'What mechanisms can cause aspiration during the swallow?'}, {'id': 'sw3', 'level': 3, 'prompt': 'Aspiration occurs before the swallow because liquid spills from the vallecula/pyriforms before airway closure begins. Localize the deficit.', 'answer': 'Delayed/inefficient swallow initiation or poor bolus control is contributing to pre-swallow aspiration.', 'why': 'Pre-, during-, and post-swallow aspiration imply different mechanisms.', 'follow': 'Which compensatory strategy might be tested rather than assumed?'}, {'id': 'sw4', 'level': 3, 'prompt': 'There is substantial vallecular residue after puree with reduced tongue-base retraction. What mechanism fits?', 'answer': 'Reduced tongue-base driving force/pharyngeal pressure contributes to vallecular residue.', 'why': 'Residue location can point toward the impaired pressure generator.', 'follow': 'Why can residue become an aspiration risk after the swallow?'}, {'id': 'sw5', 'level': 3, 'prompt': 'Pyriform residue persists with restricted UES opening. What two broad mechanisms must be separated?', 'answer': 'True cricopharyngeal/UES outflow resistance versus inadequate hyolaryngeal traction/pharyngeal propulsion.', 'why': 'A CP bar is not automatically the cause of dysphagia.', 'follow': 'What test can add pressure information when needed?'}, {'id': 'sw6', 'level': 4, 'prompt': 'FEES shows pooled secretions and aspiration of secretions before any test bolus. Why is this high-value information?', 'answer': 'It demonstrates impaired baseline secretion management and airway protection independent of food consistency.', 'why': 'FEES can directly assess secretion burden, which MBS may not capture the same way.', 'follow': 'How should this influence diet-only recommendations?'}, {'id': 'sw7', 'level': 3, 'prompt': "During FEES the bolus disappears during the white-out and material is seen below the folds immediately afterward. What can and can't you say?", 'answer': 'Aspiration likely occurred during the obscured pharyngeal swallow, but FEES cannot directly visualize the exact moment during white-out.', 'why': "Know the modality's blind interval rather than overclaiming timing.", 'follow': 'When might MBS complement this?'}, {'id': 'sw8', 'level': 4, 'prompt': 'A chin-tuck eliminates aspiration in one tested patient. What is the correct interpretation?', 'answer': 'The maneuver was effective for that demonstrated physiology under tested conditions; it should not be prescribed as a universal aspiration maneuver.', 'why': 'Compensatory strategies are hypotheses to test, not reflex recommendations.', 'follow': 'What would make you stop using it?'}, {'id': 'sw9', 'level': 4, 'prompt': 'A patient after head-and-neck radiation has reduced hyolaryngeal excursion, pharyngeal residue and limited UES opening. What unifying mechanism should you consider?', 'answer': 'Radiation-associated fibrosis/weakness can impair multiple linked components of pharyngeal propulsion and traction-mediated UES opening.', 'why': 'Multiple abnormalities may share one treatment-related physiology.', 'follow': 'Why might isolated CP dilation fail?'}, {'id': 'sw10', 'level': 4, 'prompt': 'Unilateral pharyngeal weakness leaves residue predominantly on one side. What maneuver can be tested mechanistically?', 'answer': 'Head rotation toward the weak side can be tested to direct bolus toward the stronger side and alter UES mechanics.', 'why': 'Postural maneuvers should be linked to the demonstrated asymmetry.', 'follow': 'How would you verify benefit?'}, {'id': 'sw11', 'level': 5, 'prompt': "A patient aspirates silently with poor laryngeal sensation after skull-base/vagal injury. What does 'silent' tell you?", 'answer': 'The airway invasion is not triggering an effective cough response, suggesting impaired sensation/protective reflex in addition to the motor swallowing deficit.', 'why': 'Aspiration severity depends on both invasion and response.', 'follow': 'Which cranial nerve pathways are relevant?'}, {'id': 'sw12', 'level': 5, 'prompt': 'MBS shows good airway protection but severe cervical esophageal hold-up below the UES. What is the next reasoning move?', 'answer': 'Do not force a pharyngeal diagnosis; the study points toward an esophageal problem requiring appropriate esophageal evaluation.', 'why': 'A swallow study can redirect localization beyond ENT-managed pharyngeal physiology.', 'follow': 'What symptoms in the history would support esophageal localization?'}]}}
 INTERPRETATION_EXTRA_V9 = {'pathology': [('p8', 'Oral cavity SCC: identify keratinization, invasive architecture, depth, PNI/LVI and margin relevance.', "The ENT endpoint is not just 'SCC': extract invasive pattern and adverse features that change neck/adjuvant decisions."), ('p9', 'Oropharyngeal SCC: explain why p16/HPV-related classification changes staging context.', 'Site and HPV-associated biology matter; p16 is interpreted in the correct oropharyngeal context rather than as a universal H&N marker.'), ('p10', 'Papillary thyroid carcinoma: identify nuclear features and then state what pathology details alter risk.', 'Diagnosis plus variant, size, extrathyroidal extension, margins, vascular invasion and nodal disease shape postoperative strategy.'), ('p11', 'Medullary thyroid carcinoma: what pathology/marker pattern should trigger hereditary thinking?', 'Neuroendocrine/C-cell phenotype with calcitonin supports MTC and should connect to RET/MEN2 evaluation.'), ('p12', 'Adenoid cystic carcinoma: identify cribriform/tubular architecture and explain why nerves matter.', 'Perineural invasion is a hallmark clinical concern and can extend far beyond the visible primary.'), ('p13', 'Mucoepidermoid carcinoma: what three cellular components help organize the diagnosis?', 'Mucous, epidermoid and intermediate cells in variable cystic/solid architecture; grade changes behavior.'), ('p14', 'Pleomorphic adenoma: why does the capsule/pseudopod concept matter surgically?', 'Capsular violation/enucleation can leave microscopic extensions and increase recurrence.'), ('p15', 'Extranodal extension in metastatic SCC: why is this not a decorative pathology phrase?', 'ENE is an adverse prognostic feature and can materially affect postoperative treatment recommendations.'), ('p16', 'Cutaneous SCC with PNI: connect microscopic nerve invasion to imaging and adjuvant planning.', 'Clinically significant PNI can require mapping named nerve pathways and can alter surgical/radiation fields.'), ('p17', 'Sinonasal inverted papilloma: distinguish endophytic architecture from invasive carcinoma.', 'Inverted growth itself is not malignant invasion; the surgeon must identify attachment and exclude synchronous carcinoma.')], 'vestibular': [('v8', 'Calorics show unilateral weakness but vHIT is normal. Why is this not automatically contradictory?', 'The tests interrogate vestibulo-ocular reflex function at different stimulus frequencies; disease can affect them differently.'), ('v9', 'vHIT shows low gain with corrective saccades on one horizontal canal. What does that localize?', 'Peripheral hypofunction in the tested canal/nerve pathway is supported when the pattern fits the clinical syndrome.'), ('v10', 'cVEMP is absent on one side. What pathway is primarily being interrogated?', 'cVEMP mainly reflects saccular/inferior vestibular nerve–mediated vestibulocollic physiology, interpreted with age/technical context.'), ('v11', 'oVEMP is abnormally large/low-threshold with third-window symptoms. What syndrome does that support?', 'Enhanced VEMP responses can support third-window physiology such as superior canal dehiscence when paired with symptoms and imaging.'), ('v12', 'Positional testing produces persistent direction-changing gaze-evoked nystagmus rather than a canal-specific fatigable pattern. What changes?', 'Central pathology moves higher on the differential; not all positional dizziness is BPPV.'), ('v13', 'Acute vestibular syndrome with a normal head impulse, direction-changing nystagmus and skew. What is the danger?', 'In the appropriate continuously symptomatic patient, this pattern is concerning for a central process such as posterior-circulation stroke.')], 'audiology': [('a8', 'A child has present OAEs but an abnormal/absent ABR. What disorder pattern should you consider?', 'Auditory neuropathy spectrum is a consideration when outer-hair-cell function is preserved but neural synchrony is abnormal.'), ('a9', 'A CI candidate has severe thresholds but surprisingly good best-aided sentence recognition. Why does that matter?', 'Implant candidacy is based on functional aided speech benefit as well as thresholds; the audiogram alone is insufficient.'), ('a10', 'A patient with unilateral profound SNHL has normal hearing contralaterally. Compare CROS and bone-conduction concepts.', 'Both route sound from the poor side toward the better cochlea; neither restores true binaural hearing in the deaf ear.'), ('a11', 'A flat tympanogram has a very large ear-canal volume. What does that suggest?', 'A patent tympanostomy tube or TM perforation is more likely than an intact TM with effusion.'), ('a12', 'A flat tympanogram has normal ear-canal volume in a child with conductive loss. What fits?', 'Middle-ear effusion is a common fit when otoscopy agrees.'), ('a13', 'Bilateral high-frequency SNHL develops during ototoxic therapy. What matters more than one absolute audiogram?', 'Documented serial threshold change from baseline and exposure context are central to ototoxicity monitoring.')], 'laryngeal-endoscopy': [('e8', 'A broad-based white vocal-fold plaque has focal stiffness and reduced wave. What is your next step?', 'Leukoplakia is a descriptor; concerning stiffness/appearance requires risk assessment and often tissue diagnosis rather than assuming benign keratosis.'), ('e9', 'Both folds move poorly after prolonged intubation. What finding would push you toward posterior glottic stenosis rather than bilateral RLN paralysis?', 'Posterior scar/bridging and impaired arytenoid joint mobility on operative palpation support mechanical fixation.'), ('e10', 'Diffuse polypoid edema of the membranous folds with preserved deeper motion. What phenotype fits?', 'Reinke edema, especially with smoking/irritant history; assess airway burden and preserve vibratory cover during treatment.'), ('e11', 'A unilateral fold is bowed with phase asymmetry and compensatory supraglottic squeeze. What must be separated?', 'True paresis/glottic insufficiency from primary muscle-tension dysphonia; compensation may hide the underlying weakness.'), ('e12', 'Papillomatous lesions recur at multiple laryngeal sites. What is the operative visual goal?', 'Map disease and preserve normal mucosa while maintaining airway/voice; repeated destructive eradication attempts increase scar.'), ('e13', 'Rhythmic oscillation involves palate, pharynx and larynx across tasks. What is more likely than task-specific spasmodic dysphonia?', 'A broader vocal/essential tremor phenotype.')]}
 
 # Add new dedicated labs.
@@ -3038,3 +3038,2329 @@ def search_index():
     for src in NCCN_GUIDELINES_V92:
         rows.append({"type":"Evidence","title":src["name"]+" "+src["version"],"subtitle":"Uploaded current oncology guideline","url":"/evidence","text":_search_blob(src["role"],src["date"],src["access"])})
     return rows
+
+
+# =============================================================================
+# ENT Mastery v9.4 — learner integration / canonical taxonomy
+# =============================================================================
+
+CANONICAL_DOMAINS_V94 = [
+ "Otology / Neurotology",
+ "Rhinology / Allergy / Skull Base",
+ "Head & Neck Oncology",
+ "Thyroid / Parathyroid / Salivary",
+ "Pediatric Otolaryngology",
+ "Laryngology / Voice / Swallowing",
+ "Facial Plastics / Trauma",
+ "Sleep Surgery",
+ "General ENT / Emergencies",
+]
+
+def canonical_domain_v94(label):
+    s=(label or "").lower()
+    if any(k in s for k in ["thyroid","parathyroid","salivary","parotid","submandibular"]):
+        return "Thyroid / Parathyroid / Salivary"
+    if any(k in s for k in ["pediatric","aom","ome","cleft","choanal","microtia"]):
+        return "Pediatric Otolaryngology"
+    if any(k in s for k in ["rhin","sinus","fess","skull base"]) and not any(k in s for k in ["otology","temporal","vestibular"]):
+        return "Rhinology / Allergy / Skull Base"
+    if any(k in s for k in ["sleep","osa","hns","hypoglossal"]):
+        return "Sleep Surgery"
+    if any(k in s for k in ["laryng","voice","swallow","airway"]) and "pediatric" not in s:
+        return "Laryngology / Voice / Swallowing"
+    if any(k in s for k in ["facial plastics","trauma","reconstruction","rhinoplasty","flap"]):
+        return "Facial Plastics / Trauma"
+    if any(k in s for k in ["head & neck","oncology","pathology","oral","orophary","laryngeal cancer"]):
+        return "Head & Neck Oncology"
+    if any(k in s for k in ["otology","audiology","vestib","hearing","temporal"]):
+        return "Otology / Neurotology"
+    if any(k in s for k in ["general ent","emergency","caustic","foreign body","deep neck"]):
+        return "General ENT / Emergencies"
+    return label if label in CANONICAL_DOMAINS_V94 else "General ENT / Emergencies"
+
+def _tags_v94(*parts):
+    import re as _re
+    stop={"and","the","of","to","for","with","after","before","in","a","an","or","vs","from"}
+    toks=[]
+    for p in parts:
+        toks.extend(_re.findall(r"[a-z0-9]+",(p or "").lower()))
+    return sorted({t for t in toks if len(t)>2 and t not in stop})
+
+# Normalize the case library without throwing away the useful display labels.
+for _c in INTEGRATED_CASES:
+    _c["display_domain"]=_c.get("domain","ENT")
+    _c["primary_domain"]=canonical_domain_v94(_c.get("domain"))
+    _c["domain"]=_c["primary_domain"]
+    _c["tags"]=_tags_v94(_c.get("title"),_c.get("summary")," ".join(
+        x.get("title","")+" "+x.get("question","") for x in _c.get("stages",[])
+    ))
+
+# Every attending prompt now says what competency it is actually testing.
+def _attending_dimension_v94(p):
+    q=(p.get("prompt","")+" "+p.get("answer","")).lower()
+    if any(k in q for k in ["operate","operation","surgery","dissection","approach","nerve at risk",
+                              "danger","complication","resection","incision","graft","drill","instrument"]):
+        return "operative"
+    if any(k in q for k in ["workup","test","imaging","ct","mri","ultrasound","psg","audiogram",
+                              "biopsy","lab","evaluation","diagnos"]):
+        return "workup"
+    if any(k in q for k in ["manage","management","treat","therapy","antibiotic","steroid","observe",
+                              "follow-up","surveillance","next step"]):
+        return "management"
+    if any(k in q for k in ["where","localize","space","anatom","landmark","level","nerve","muscle"]):
+        return "localization"
+    if any(k in q for k in ["teach","explain to","why does","why is","mechanism","physiology"]):
+        return "teaching"
+    return "reasoning"
+
+for _level,_prompts in ATTENDING_LEVEL_PROMPTS.items():
+    for _p in _prompts:
+        _p["domain"]=canonical_domain_v94(_p.get("domain"))
+        _p["dimension"]=_attending_dimension_v94(_p)
+        _p["tags"]=_tags_v94(_p.get("prompt"),_p.get("answer"))
+
+# Make all six Daily Path layers genuinely distinct. We keep the original source-derived
+# teaching statement and add a stage-specific clinical objective where v7-v9 duplicated it.
+_STAGE_OBJECTIVES_V94 = {
+ "recognize":"Recognition objective: name the pattern, the defining clue, and the dangerous look-alike if one is clinically relevant.",
+ "localize":"Localization objective: state the involved structure, compartment, nerve, airway level, drainage pathway, or physiologic mechanism that explains the presentation.",
+ "workup":"Evaluation objective: choose only tests or bedside assessments that confirm the localization, define severity, or change the next decision.",
+ "manage":"Management objective: sequence observation/medical therapy, escalation, follow-up, and the trigger for procedural or multidisciplinary care.",
+ "operate":"Advanced-decision objective: decide whether a procedure has a role. If it does, connect indication, anatomy, danger structures, complications, and rescue; if it does not, focus on refractory disease, complication management, or the next multidisciplinary decision.",
+ "teach":"Teaching objective: explain the causal mental model, why the chosen workup/management is appropriate, and one mistake a junior should avoid."
+}
+
+DEEP_MODULES_V94={}
+for _domain,_mods in DEEP_MODULES_V6.items():
+    _out=[]
+    for _m in _mods:
+        _n=dict(_m)
+        seen=set()
+        for _stage in ["recognize","localize","workup","manage","operate","teach"]:
+            txt=(_n.get(_stage) or "").strip()
+            # If the original content is repeated or too generic, preserve it but explicitly
+            # add the unique stage objective. This avoids fake new facts while making the
+            # curriculum step educationally distinct.
+            if txt in seen or len(txt)<55 or (_stage=="operate" and txt.startswith("State whether")):
+                txt=(txt+" "+_STAGE_OBJECTIVES_V94[_stage]).strip()
+            elif _stage in ("workup","manage","operate","teach"):
+                txt=(txt+" "+_STAGE_OBJECTIVES_V94[_stage]).strip()
+            # Guarantee uniqueness without adding unsupported medical claims.
+            if txt in seen:
+                txt=(txt+" "+_STAGE_OBJECTIVES_V94[_stage]).strip()
+            _n[_stage]=txt
+            seen.add(txt)
+        _n["primary_domain"]=canonical_domain_v94(_domain)
+        _n["tags"]=_tags_v94(_n.get("topic"),_domain)
+        _out.append(_n)
+    DEEP_MODULES_V94[_domain]=_out
+
+# Keep the existing public name pointing at the normalized/de-duplicated modules so
+# Deep Curriculum, Concept Hub and search all agree.
+DEEP_MODULES_V6=DEEP_MODULES_V94
+
+ADAPTIVE_ITEMS_V94=[]
+for _domain,_mods in DEEP_MODULES_V94.items():
+    for _m in _mods:
+        _id=_v6_item_id(_domain,_m["topic"])
+        for _stage in ["recognize","localize","workup","manage","operate","teach"]:
+            ADAPTIVE_ITEMS_V94.append({
+              "id":_id+"-"+_stage,"concept_id":_id,"domain":_domain,"topic":_m["topic"],
+              "stage":_stage,
+              "display_stage":"advanced" if _stage=="operate" else _stage,
+              "prompt":{
+                "recognize":"Recognize the pattern.",
+                "localize":"Localize the problem.",
+                "workup":"Evaluate it efficiently.",
+                "manage":"Build the management sequence.",
+                "operate":"Make the advanced decision.",
+                "teach":"Teach the mental model."
+              }[_stage],
+              "answer":_m[_stage],
+              "minutes":{"recognize":3,"localize":3,"workup":4,"manage":4,"operate":6,"teach":4}[_stage],
+              "level":{"recognize":1,"localize":2,"workup":3,"manage":4,"operate":5,"teach":6}[_stage],
+              "tags":_m.get("tags",[])
+            })
+
+# Alias used by older imports/routes.
+ADAPTIVE_ITEMS_V91=ADAPTIVE_ITEMS_V94
+
+
+# =============================================================================
+# ENT Mastery v9.5 — Evidence-Calibrated Depth Pass
+# Public-source calibrated. No restricted guideline text is embedded.
+# =============================================================================
+
+EVIDENCE_UPDATES_V95 = {
+ "Sudden Sensorineural Hearing Loss": {
+   "recognize":"Treat a sudden unilateral sensorineural change as time-sensitive even when the patient describes fullness or a blocked ear. First distinguish SNHL from conductive loss and look for bilateral, recurrent, focal-neurologic or other atypical features.",
+   "localize":"Use otoscopy plus bedside tuning forks and prompt audiometry to separate external/middle-ear conductive disease from cochlear or retrocochlear sensorineural loss; focal neurologic findings broaden localization beyond the cochlea.",
+   "workup":"Obtain audiometry as soon as possible and within 14 days of onset to document SSNHL. Evaluate for retrocochlear pathology with MRI or ABR as appropriate; do not routinely order head CT or indiscriminate laboratory panels for otherwise typical idiopathic SSNHL.",
+   "manage":"Counsel about natural history and treatment uncertainty. Corticosteroids may be offered as initial therapy within 2 weeks. HBOT with steroids may be offered within 2 weeks initially or within 1 month as salvage. Offer intratympanic steroid salvage for incomplete recovery 2–6 weeks after onset. Do not routinely prescribe antivirals, thrombolytics, vasodilators or vasoactive drugs.",
+   "operate":"This is not primarily an operative disorder. The procedural decision is intratympanic steroid delivery for appropriate salvage treatment; discuss TM anesthesia/access, transient vertigo, otalgia and perforation risk while avoiding delay in the treatment window.",
+   "teach":"The board/clinical pearl is timing: recognize SNHL early, document it with audiometry, avoid low-yield shotgun testing, and know the initial-versus-salvage treatment windows. Recheck hearing at treatment completion and within 6 months; address residual hearing loss/tinnitus with rehabilitation."
+ },
+ "Tympanostomy Tube Indications": {
+   "recognize":"Separate AOM (acute inflammatory/infectious syndrome) from OME (middle-ear effusion without acute infection). Tube candidacy depends on current effusion, chronicity, hearing/symptom burden, developmental risk and recurrent-AOM phenotype—not infection count alone.",
+   "localize":"The target problem is persistent or recurrent middle-ear ventilation failure behind an intact TM. Pneumatic otoscopy/tympanometry establish effusion; the functional consequence is usually conductive hearing loss, but at-risk children may experience disproportionate speech/language or learning impact.",
+   "workup":"Do not place tubes for a single OME episode lasting <3 months. Obtain a hearing evaluation when OME persists ≥3 months or before surgery when the child becomes a tube candidate. Identify children at increased developmental risk and determine whether effusion is likely to persist.",
+   "manage":"Offer bilateral tubes for bilateral OME ≥3 months with documented hearing difficulty; tubes may also be considered for chronic OME with attributable symptoms. For recurrent AOM, do not place tubes when no middle-ear effusion is present at candidacy assessment; offer bilateral tubes when recurrent AOM is accompanied by unilateral or bilateral effusion.",
+   "operate":"Before myringotomy, confirm indication, laterality and current ear status. Make a controlled incision in a safe TM quadrant, avoid annulus/ossicles, evacuate fluid when present and seat the tube. For uncomplicated acute tube otorrhea, topical antibiotic drops are preferred to routine oral antibiotics.",
+   "teach":"Ask three questions before recommending tubes: Is fluid present now? How long has it persisted? What functional/developmental risk does it create? That prevents the common error of treating recurrent AOM as a pure infection-count rule."
+ },
+ "AOM / OME / Tympanostomy Decisions": {
+   "recognize":"AOM requires an acute inflammatory middle-ear syndrome; OME is effusion without acute infection. Recurrent AOM, chronic OME and at-risk-child pathways overlap but are not interchangeable.",
+   "localize":"Eustachian-tube dysfunction alters middle-ear pressure and ventilation, producing effusion and conductive hearing effects. The exam should localize disease to the middle ear rather than assuming every ear complaint is infection.",
+   "workup":"Use pneumatic otoscopy and tympanometry when needed to establish effusion. For OME persisting ≥3 months, obtain age-appropriate hearing testing; assess speech/language, school performance and developmental risk when clinically relevant.",
+   "manage":"Most transient OME is observed. Treat AOM according to age/severity and diagnostic certainty. Consider tubes only for guideline-supported chronic OME or recurrent-AOM phenotypes, with special attention to children at increased developmental risk.",
+   "operate":"Tube placement treats middle-ear ventilation, not the child's tendency to acquire every URI. Confirm a present indication, use safe TM anatomy, and counsel regarding otorrhea, extrusion, persistent perforation and follow-up.",
+   "teach":"A useful mental model is disease state → duration → hearing/function → risk. Infection count matters, but the current ear examination and functional consequence determine whether ventilation tubes are likely to help."
+ },
+ "Recurrent Tonsillitis Decision-Making": {
+   "recognize":"Confirm that reported 'strep' or sore-throat episodes were true qualifying tonsillitis episodes. Frequency alone is insufficient without severity features and documentation.",
+   "localize":"This is recurrent tonsillar/oropharyngeal inflammatory disease; distinguish it from chronic throat symptoms, reflux, viral URI burden, PFAPA and peritonsillar infection.",
+   "workup":"Reconstruct the documented episode history. A guideline-supported episode includes sore throat plus qualifying findings such as fever >38.3°C, cervical adenopathy, tonsillar exudate or positive group-A streptococcal testing. PSG is not a recurrent-infection test.",
+   "manage":"Below the usual thresholds, favor watchful waiting: fewer than 7 episodes in 1 year, fewer than 5/year for 2 years, or fewer than 3/year for 3 years. Tonsillectomy may be offered when ≥7 in 1 year, ≥5/year for 2 years, or ≥3/year for 3 years are documented with qualifying features. Consider modifying factors such as PFAPA, multiple antibiotic intolerance/allergy or >1 peritonsillar abscess.",
+   "operate":"When surgery is chosen, the advanced decision includes expected benefit versus postoperative pain, dehydration and hemorrhage risk, plus perioperative OSA/comorbidity considerations when relevant. The indication must survive chart review before the operation starts.",
+   "teach":"The classic error is equating 'seven sore throats' with seven qualifying episodes. Teach the 7/5/3 framework, documentation requirements, and the modifying factors that can change a watchful-waiting recommendation."
+ },
+ "Differentiated Thyroid Cancer": {
+   "recognize":"Differentiate papillary, follicular and oncocytic differentiated thyroid cancers from medullary/anaplastic disease. Most DTC has favorable survival, but local invasion, nodal/distant disease, aggressive pathology and molecular features change recurrence risk and treatment.",
+   "localize":"Map the primary tumor to one or both lobes, assess gross extrathyroidal extension, and define central/lateral nodal disease. Contralateral nodules, RLN/tracheoesophageal involvement and distant disease can change the initial surgical strategy.",
+   "workup":"Use high-quality thyroid/neck ultrasound with nodal mapping, cytology/pathology and selective cross-sectional imaging for invasive/bulky disease. Incorporate contemporary risk assessment and patient factors; small low-risk cancers may be candidates for active surveillance rather than immediate surgery in selected settings.",
+   "manage":"Under 2025 ATA guidance, a cancer confined to one lobe ≤2 cm without extrathyroidal extension or nodal disease should generally be treated with lobectomy when surgery is chosen. For >2 to ≤4 cm similarly confined disease, lobectomy or total thyroidectomy may be appropriate based on tumor features, contralateral nodules and patient preference. Tumors >4 cm, gross extrathyroidal extension, clinically significant nodal disease or distant metastasis generally favor total thyroidectomy with appropriate therapeutic nodal surgery.",
+   "operate":"Match extent to disease rather than treating the word 'cancer' as an automatic total thyroidectomy. Preserve RLN/EBSLN and viable parathyroids while obtaining oncologic clearance. Therapeutic compartment-oriented nodal dissection is performed for clinically involved nodal disease; completion thyroidectomy after initial lobectomy is individualized rather than automatic.",
+   "teach":"The 2025 shift is de-escalation with structure: selected small unilateral low-risk DTC → lobectomy; 2–4 cm low-risk unilateral disease → shared decision between lobectomy and total; advanced local/nodal/distant disease → broader surgery. Then separately decide whether RAI, TSH goals and surveillance intensity are justified by postoperative risk and response."
+ },
+ "Hypoglossal Nerve Stimulation": {
+   "recognize":"HNS is an alternative pathway for selected obstructive-sleep-apnea patients who cannot obtain adequate benefit from PAP, not a first-line replacement for PAP in every patient.",
+   "localize":"The implant recruits protrusor tongue function through selected hypoglossal branches while a respiratory sensor synchronizes stimulation with breathing. DISE is used to characterize collapse because complete concentric palatal collapse predicts poor candidacy for the classic unilateral system.",
+   "workup":"Confirm obstructive rather than predominantly central sleep apnea, current PSG severity, PAP failure/intolerance, anatomy and DISE pattern. Current FDA-expanded adult labeling for Inspire includes AHI up to 100 and extends the BMI warning boundary to 40; payer and local-program criteria may be narrower, so distinguish FDA labeling from coverage criteria.",
+   "manage":"Selection is only the start: implantation is followed by healing, activation, programming/titration and objective longitudinal outcome assessment. Continue weight, positional and other OSA management when relevant rather than treating the device as an isolated cure.",
+   "operate":"Understand inclusion versus exclusion hypoglossal branches, cuff positioning, respiratory-sensor placement and generator routing. Protect hypoglossal/lingual structures and pleura; anticipate infection, tongue weakness/discomfort, stimulation intolerance, pneumothorax and revision/device issues.",
+   "teach":"Teach HNS as a five-step pathway: phenotype → PAP history → PSG/DISE selection → implantation → programming/outcomes. Quote current device labeling with its year and remind learners that payer thresholds may be more restrictive."
+ },
+}
+
+# Curated high-yield new deep modules identified by the v9.4 audit.
+NEW_DEEP_MODULES_V95 = {
+ "Otology / Neurotology":[
+  {"topic":"Age-Related Hearing Loss / Presbycusis",
+   "recognize":"Progressive bilateral hearing difficulty—often speech-in-noise first—in an older adult should trigger formal hearing evaluation rather than being dismissed as normal aging.",
+   "localize":"Usually bilateral sensorineural dysfunction from age-related cochlear/neural changes; asymmetry, conductive findings, sudden change or focal neurologic symptoms require a different localization pathway.",
+   "workup":"Perform otoscopy and audiologic evaluation. Ask about communication goals, tinnitus, falls/cognition and functional impact; pursue additional workup when asymmetry or other atypical findings suggest a non-age-related cause.",
+   "manage":"Counsel on communication strategies and hearing-assistive technology; offer or refer for hearing aids when appropriate. Reassess benefit and escalate to cochlear-implant evaluation when appropriately fitted amplification does not provide adequate speech understanding.",
+   "operate":"The advanced procedural decision is not routine ear surgery; it is recognizing when severe functional hearing loss warrants implant evaluation and when asymmetric or conductive disease needs a different diagnostic pathway.",
+   "teach":"Do not normalize disability because of age. The goal is function: identify hearing loss, treat remediable causes, provide amplification/assistive strategies and recognize when hearing aids are no longer enough."},
+  {"topic":"Acute Mastoiditis / Petrous Apicitis",
+   "recognize":"Postauricular erythema/swelling, auricular protrusion, persistent fever/otalgia or toxic appearance after AOM suggests mastoid complication; deep facial pain or cranial neuropathy raises concern for petrous apical extension.",
+   "localize":"Infection spreads from the middle ear into mastoid air cells; subperiosteal, intracranial, venous-sinus and petrous-apex pathways determine complications.",
+   "workup":"Assess ear and neurologic status, obtain cultures when drainage is available, and use contrast CT and/or MRI when complication, abscess, intracranial extension or atypical course is suspected.",
+   "manage":"Admit complicated disease, start appropriate IV antibiotics, obtain source control and monitor for intracranial/venous complications. Myringotomy/tube and mastoid surgery depend on abscess, coalescence, complications and response.",
+   "operate":"Drain pus and restore ventilation while protecting facial nerve, labyrinth, sigmoid sinus, tegmen and ossicles. Complicated or nonresponding disease requires a deliberate source-control plan rather than repeated antibiotics alone.",
+   "teach":"Mastoiditis is not simply 'bad otitis media.' The resident question is always: uncomplicated inflammation, coalescent bone disease, subperiosteal abscess, or intracranial/petrous complication?"}
+ ],
+ "Rhinology / Allergy / Skull Base":[
+  {"topic":"Nonallergic Rhinitis / Rhinitis Medicamentosa",
+   "recognize":"Chronic congestion/rhinorrhea without a convincing IgE-mediated pattern suggests nonallergic rhinitis; escalating topical decongestant use with rebound obstruction suggests rhinitis medicamentosa.",
+   "localize":"Symptoms arise from dysregulated nasal mucosal vascular/glandular responses rather than allergen-specific inflammation alone; medication rebound perpetuates turbinate congestion.",
+   "workup":"Use history, nasal examination/endoscopy when indicated and targeted allergy testing only when the phenotype is uncertain or results would change management. Look for structural obstruction, CRS and medication triggers.",
+   "manage":"Remove triggers, use saline and phenotype-directed intranasal therapy; stop the offending topical decongestant in rhinitis medicamentosa and support withdrawal with anti-inflammatory therapy as appropriate.",
+   "operate":"Surgery is not first-line for a primarily inflammatory/medication-driven disorder. Consider turbinate or structural procedures only after the inflammatory phenotype and medication dependence are addressed and fixed obstruction remains.",
+   "teach":"Not every chronically congested patient has allergy or sinusitis. Ask what triggers symptoms and exactly what sprays the patient is using before ordering more tests or scheduling surgery."},
+  {"topic":"Unilateral Sinonasal Disease",
+   "recognize":"Unilateral obstruction, bleeding, unilateral polyposis, facial numbness, orbital symptoms or unilateral sinus opacification deserves a different differential than routine bilateral inflammatory CRS.",
+   "localize":"Localize to nasal cavity versus specific sinus, then assess orbit, skull base, pterygopalatine/infratemporal spaces and dental origin based on symptoms and imaging.",
+   "workup":"Perform endoscopy and review dedicated CT; add contrast MRI when tumor, skull-base/orbital extension, perineural spread or indeterminate soft tissue is a concern. Biopsy suspicious accessible lesions when safe, avoiding blind biopsy of potentially vascular or skull-base lesions.",
+   "manage":"Treat the cause: odontogenic/inflammatory disease, fungal disease, benign neoplasm or malignancy each requires a different pathway. Red flags should accelerate tissue diagnosis and multidisciplinary planning.",
+   "operate":"Before endoscopic surgery, know whether the lesion could be vascular, encephalocele/CSF-related or malignant. The advanced decision is often choosing biopsy versus definitive resection and defining the safe surgical corridor.",
+   "teach":"Unilateral disease is a diagnostic category, not a diagnosis. The board pearl is to resist labeling unilateral polyps/opacification as ordinary CRS until neoplasm, odontogenic disease and skull-base pathology are considered."}
+ ],
+ "Laryngology / Voice / Swallowing":[
+  {"topic":"Inducible Laryngeal Obstruction / PVFM",
+   "recognize":"Episodic inspiratory dyspnea/stridor, throat tightness or exercise symptoms with poor response to asthma therapy should raise inducible laryngeal obstruction.",
+   "localize":"Paradoxical or inappropriate laryngeal narrowing occurs at the glottic and/or supraglottic level during symptoms rather than fixed subglottic or pulmonary obstruction.",
+   "workup":"History and flexible laryngoscopy are central; provocation/exercise laryngoscopy may be needed when the resting exam is normal. Evaluate asthma and other mimics rather than assuming they are mutually exclusive.",
+   "manage":"Education, trigger control and respiratory retraining with speech-language pathology are foundational. Treat relevant comorbid airway/reflux/nasal contributors without reflexive escalation of asthma medication.",
+   "operate":"There is usually no operative role. Advanced management is recognizing refractory phenotype, confirming the diagnosis during symptoms and avoiding unnecessary intubation/tracheostomy or airway surgery for a functional episodic disorder.",
+   "teach":"The key distinction is episodic dynamic laryngeal closure versus fixed obstruction. If the patient sounds obstructed but the story and pulmonary response do not fit asthma, visualize the larynx during the event."},
+  {"topic":"Chronic Cough / Laryngeal Hypersensitivity",
+   "recognize":"Chronic cough can persist after common pulmonary, sinonasal and reflux causes are addressed; throat tickle, talking/laughing triggers and sensory symptoms can suggest cough hypersensitivity.",
+   "localize":"The phenotype reflects an exaggerated laryngeal/cough reflex network rather than a single visible lesion; coexisting rhinitis, asthma, reflux or medication effects may still contribute.",
+   "workup":"Exclude red flags and common causes with targeted history/exam and appropriate pulmonary/sinonasal/laryngeal evaluation. Avoid endless empiric treatment when the phenotype and prior response no longer support it.",
+   "manage":"Treat identified contributors and use behavioral cough-suppression/voice therapy for hypersensitivity phenotypes; selected refractory cases may warrant neuromodulatory or multidisciplinary management.",
+   "operate":"Surgery is generally not the treatment. The advanced decision is recognizing when a structural laryngeal lesion, aspiration or airway disorder—not hypersensitivity—requires a procedural pathway.",
+   "teach":"Chronic cough is a syndrome. Once dangerous and common causes are addressed, repeated empiric antibiotics or reflux therapy without evidence can become part of the problem rather than the solution."}
+ ],
+ "Sleep Surgery":[
+  {"topic":"Palatal Surgery Selection for OSA",
+   "recognize":"Palatal obstruction is one component of a multilevel OSA phenotype; tonsil size, lateral-wall collapse and palate configuration matter more than simply labeling a patient 'snorer.'",
+   "localize":"Use awake exam plus DISE when appropriate to distinguish anteroposterior palatal collapse, lateral-wall contribution and multilevel tongue-base/epiglottic obstruction.",
+   "workup":"Confirm OSA severity and PAP history, assess BMI/comorbidity, tonsils, palate and nasal airway, and use DISE when it will change procedure selection or HNS candidacy.",
+   "manage":"Select surgery for the patient's collapse pattern and goals rather than defaulting every patient to classic UPPP. Counsel that surgery may improve rather than normalize AHI and that residual OSA requires reassessment.",
+   "operate":"Know the conceptual differences between tissue-resection and reconstructive/lateral-wall techniques. Preserve velopharyngeal function, control hemorrhage and plan postoperative airway/pain monitoring.",
+   "teach":"Sleep surgery is phenotype surgery: PSG tells you severity; anatomy/DISE tell you where and how the airway collapses; the operation should match that pattern."},
+  {"topic":"Lingual Tonsil / Tongue-Base Obstruction",
+   "recognize":"Persistent OSA after adenotonsillectomy or adult multilevel OSA may include lingual-tonsil or tongue-base obstruction, especially when awake tonsil size does not explain severity.",
+   "localize":"Obstruction can arise from lymphoid tissue, tongue-base bulk or dynamic posterior displacement; distinguish this from epiglottic and palatal collapse.",
+   "workup":"Use PSG for severity and flexible examination/DISE to define the obstructing level. In children, consider syndromic/craniofacial and obesity-related contributors.",
+   "manage":"Address weight/PAP and other levels as appropriate; consider lingual-tonsil reduction or other tongue-base therapy when the phenotype is clearly localized and expected benefit outweighs dysphagia/bleeding risk.",
+   "operate":"Protect lingual artery and tongue-base neurovascular structures, obtain hemostasis and anticipate edema, pain and swallowing effects. The operation should target the demonstrated obstructing tissue rather than a presumed level.",
+   "teach":"Residual OSA is often multilevel. A normal-looking oral tonsillar fossa after adenotonsillectomy does not exclude substantial tongue-base or lingual-tonsil obstruction."}
+ ],
+ "Facial Plastics / Trauma":[
+  {"topic":"Septal Perforation",
+   "recognize":"Crusting, epistaxis, whistling and obstruction with a visible septal defect suggest perforation; symptoms depend on size and location and may be absent.",
+   "localize":"Anterior perforations disrupt laminar nasal airflow and humidification most noticeably. Etiology may be iatrogenic, traumatic, inflammatory/autoimmune, infectious, neoplastic or drug-related.",
+   "workup":"Document size/location and remaining mucosa/support. Investigate systemic/infectious/neoplastic causes when history or exam is atypical rather than assuming every perforation is postoperative.",
+   "manage":"Humidification, saline, emollient care and avoidance of trauma are first-line; septal buttons help selected symptomatic patients. Repair is individualized to symptoms, size, tissue quality, etiology and available vascularized mucosa.",
+   "operate":"Successful closure generally requires tension-free vascularized mucosal coverage, often with an interposition graft, while preserving remaining L-strut/support. Active destructive disease and poor tissue quality predict failure.",
+   "teach":"Treat the patient and cause, not the hole. An asymptomatic stable perforation may need no repair; a symptomatic perforation with uncontrolled inflammatory disease is a poor surgical target."},
+  {"topic":"Facial Synkinesis / Static-Dynamic Rehabilitation",
+   "recognize":"After facial nerve injury, involuntary eye closure with smiling, oral commissure movement with blinking, tightness or asymmetric resting tone suggests synkinetic reinnervation rather than simple flaccid paralysis.",
+   "localize":"Aberrant axonal regeneration and maladaptive neuromuscular recruitment create coupled movements; distinguish this from persistent complete denervation because treatment goals differ.",
+   "workup":"Document duration, etiology, branch-specific movement, ocular protection, smile/oral competence and patient priorities. Electrodiagnostics and imaging are selective based on cause and timing.",
+   "manage":"Neuromuscular retraining and targeted botulinum toxin are core treatments for synkinesis; static procedures address protection/symmetry, while nerve/muscle transfer strategies depend on denervation duration and available donor function.",
+   "operate":"Choose static versus dynamic reconstruction based on time from injury, viable motor endplates, proximal nerve availability and goals. Protect the eye first; do not apply a one-operation algorithm to every facial paralysis patient.",
+   "teach":"Flaccid paralysis and synkinesis are different phases/problems. The treatment question is not simply 'How weak is the face?' but what viable nerve/muscle exists and what functional deficit matters most."}
+ ],
+ "General ENT / Emergencies":[
+  {"topic":"Carotid Blowout Syndrome",
+   "recognize":"Sentinel bleeding from the mouth, pharynx, neck wound or stoma in a previously irradiated, infected, recurrent-cancer or fistula patient can precede catastrophic carotid hemorrhage.",
+   "localize":"Risk involves exposed or threatened carotid system in a hostile neck; distinguish external carotid branch bleeding from common/internal carotid rupture while prioritizing airway and hemorrhage control.",
+   "workup":"This is an emergency: resuscitate, activate ENT/anesthesia/interventional/vascular resources and obtain CTA only when the patient is sufficiently stable and imaging will not delay definitive control.",
+   "manage":"Secure airway with a hemorrhage plan, obtain large-bore access/blood products and proceed to endovascular or operative control based on stability, anatomy and resources. Do not discharge a convincing sentinel bleed.",
+   "operate":"Control may require packing/temporary pressure, endovascular embolization or covered stent, or surgical ligation in selected situations. Anticipate stroke, rebleeding, infection and airway contamination.",
+   "teach":"A small 'sentinel' bleed in the irradiated neck is not reassuring—it may be the warning. The resident priority is airway + massive hemorrhage activation + definitive vascular control, not prolonged bedside diagnosis."},
+  {"topic":"Esophageal Perforation / Cervical Mediastinitis",
+   "recognize":"Neck/chest pain, fever, crepitus, dysphagia, tachycardia or sepsis after instrumentation, foreign body or trauma should trigger concern for esophageal perforation.",
+   "localize":"Cervical leaks may track through deep neck spaces into the mediastinum; location, containment and contamination determine severity and access.",
+   "workup":"Keep the patient NPO, obtain urgent contrast-enhanced cross-sectional imaging and use contrast esophagram/endoscopy selectively with the treating team. Evaluate for pleural/mediastinal contamination and sepsis.",
+   "manage":"Begin IV broad-spectrum antimicrobial therapy, resuscitation and early multidisciplinary surgical/thoracic consultation. Selected contained cervical injuries may be managed nonoperatively with close monitoring; uncontrolled leak, sepsis, necrosis or collections require source control.",
+   "operate":"Drain contaminated spaces, debride nonviable tissue and repair/divert as appropriate to location and tissue quality. Airway, recurrent laryngeal nerves and great vessels are central cervical hazards.",
+   "teach":"Delay kills. The mental model is perforation → contamination → sepsis: define whether the leak is contained, whether source control is adequate, and whether infection is descending into the mediastinum."}
+ ]
+}
+
+# Apply evidence updates to existing deep modules.
+for _domain,_mods in DEEP_MODULES_V6.items():
+    for _m in _mods:
+        if _m.get("topic") in EVIDENCE_UPDATES_V95:
+            _m.update(EVIDENCE_UPDATES_V95[_m["topic"]])
+            _m["evidence_calibrated"]="v9.5"
+
+# Add missing high-yield modules without duplicating titles.
+_existing={m["topic"] for mods in DEEP_MODULES_V6.values() for m in mods}
+for _domain,_mods in NEW_DEEP_MODULES_V95.items():
+    for _m in _mods:
+        if _m["topic"] not in _existing:
+            _m["primary_domain"]=_domain
+            _m["tags"]=_tags_v94(_m["topic"],_domain)
+            _m["evidence_calibrated"]="v9.5"
+            DEEP_MODULES_V6.setdefault(_domain,[]).append(_m)
+            _existing.add(_m["topic"])
+
+# OR Tomorrow: replace the generic indication/follow-up shell for the 30 remaining v8 modules.
+OR_DEPTH_V95 = {
+"ossiculoplasty":("Persistent conductive hearing loss from ossicular discontinuity/fixation after the middle ear is safe and the expected hearing benefit justifies reconstruction.",
+ [["What predicts a better ossiculoplasty result?","A stable, aerated middle ear; intact/mobile stapes superstructure when possible; favorable malleus/TM support; and absence of active disease."],["PORP versus TORP?","PORP couples the TM/malleus to an intact stapes superstructure; TORP is used when the superstructure is absent and reconstruction must couple to the footplate."]]),
+"canalplasty":("Symptomatic external auditory canal stenosis or obstructing exostoses causing conductive loss, recurrent trapping/infection, or inability to access the TM when conservative care is insufficient.",
+ [["What is the major technical risk?","Injury to canal skin/TM, facial nerve or TMJ, with restenosis if skin coverage and canal contour are poor."],["Why leave normal canal skin whenever possible?","Preserved vascularized epithelium improves healing and reduces exposed bone, granulation and restenosis."]]),
+"tegmen-repair":("Confirmed lateral skull-base CSF leak and/or meningoencephalocele requiring durable separation of intracranial contents from the middle ear/mastoid, particularly with recurrent meningitis or persistent leak.",
+ [["Transmastoid versus middle-fossa approach?","Choose based on defect location/size, hearing status, number of defects, need for superior exposure and surgeon-specific access; combined approaches are useful for selected broad or difficult defects."],["Why address intracranial-pressure physiology?","Unrecognized elevated ICP can contribute to spontaneous leaks and recurrence after technically successful closure."]]),
+"vestibular-schwannoma":("Vestibular schwannoma requiring microsurgical management after balancing tumor size/growth, symptoms, hearing, age/comorbidity, observation and radiosurgery.",
+ [["What drives approach selection?","Tumor size/location, serviceable hearing, anatomy and the relative goals of hearing preservation, facial-nerve outcome and tumor control."],["Which approach sacrifices residual hearing?","Translabyrinthine access sacrifices labyrinthine hearing but provides direct IAC/CPA exposure without cerebellar retraction."]]),
+"maxillary-antrostomy":("Maxillary sinus disease requiring surgical drainage/access—typically CRS or focal pathology—after diagnosis, medical management and imaging define the target.",
+ [["Why find the natural ostium?","Opening only an accessory ostium can leave recirculation and fail to address the true drainage pathway."],["What is the classic orbital hazard?","Violation of the lamina/orbit, especially with superior dissection or distorted anatomy."]]),
+"sphenoidotomy":("Sphenoid disease requiring surgical drainage, biopsy or access after CT defines sphenoid pneumatization and optic/carotid/skull-base relationships.",
+ [["Why is pre-op CT unusually important?","Optic nerve and carotid canal may be dehiscent or protrude into a highly variable sphenoid sinus."],["What landmark helps identify the sphenoid ostium?","The superior turbinate and sphenoethmoidal recess orient the surgeon to the natural ostium."]]),
+"draf":("Refractory frontal sinus disease, mucoceles or selected frontal pathology requiring extended frontal drainage after lesser access is inadequate; choose IIa, IIb or III according to disease extent and anatomy.",
+ [["What distinguishes Draf IIa, IIb and III conceptually?","They progressively enlarge frontal access from the drainage pathway between lamina and middle turbinate, to unilateral extension toward the septum, to a common bilateral frontal neo-ostium."],["Why does mucosal preservation matter?","Exposed circumferential bone promotes scarring/neo-osteogenesis and restenosis."]]),
+"csf-nasoseptal":("Endoscopically accessible anterior skull-base CSF leak or defect requiring multilayer closure; vascularized nasoseptal flap is especially useful for larger/high-flow defects.",
+ [["What must be known before raising a nasoseptal flap?","Defect location, prior septal surgery, vascular pedicle availability and whether the flap will reach the target."],["What causes repair failure?","Missed defects, inadequate multilayer support, flap/pedicle compromise, infection and unaddressed elevated intracranial pressure."]]),
+"spa-ligation":("Severe posterior epistaxis refractory to appropriate packing/cautery or recurrent bleeding where definitive endoscopic arterial control is preferred.",
+ [["Where do you look for the SPA?","At the sphenopalatine foramen in the posterior lateral nasal wall; branching can occur before or after the foramen."],["Why control multiple branches?","Failure to identify accessory/branching vessels is a common reason for persistent bleeding."]]),
+"orbital-abscess":("Sinogenic subperiosteal/orbital abscess requiring drainage because of visual compromise, significant collection, intracranial concern or inadequate response to medical therapy.",
+ [["What finding makes this an immediate vision emergency?","Declining acuity/color vision, RAPD, ophthalmoplegia/proptosis progression or other evidence of optic compromise."],["What determines endoscopic versus external access?","Abscess location—medial collections are commonly endoscopically accessible; superior/lateral disease may require external or combined drainage."]]),
+"tors":("Selected accessible oropharyngeal primary tumors where transoral resection can achieve oncologic margins with acceptable functional morbidity after comparison with nonsurgical treatment.",
+ [["What makes TORS inappropriate?","Inadequate exposure or disease whose deep extent/neurovascular involvement prevents a safe oncologic resection."],["What postoperative event is most feared?","Delayed oropharyngeal hemorrhage, which can rapidly threaten both circulation and airway."]]),
+"oral-composite":("Resectable oral-cavity malignancy requiring en bloc primary resection with appropriate mandibular/soft-tissue and neck management to obtain oncologic margins and preserve function when possible.",
+ [["Marginal versus segmental mandibulectomy?","It depends on the pattern/depth of mandibular involvement and whether oncologic clearance can preserve mandibular continuity."],["Why plan reconstruction before resection?","The anticipated mucosal, bony and soft-tissue defect determines access, vessel needs and functional reconstruction."]]),
+"tep":("Voice rehabilitation after total laryngectomy in an appropriate patient with adequate pulmonary support, manual/device ability and a suitable pharyngoesophageal segment; may be primary or secondary.",
+ [["What makes TEP speech work?","Pulmonary air is diverted through a one-way prosthesis into the pharyngoesophageal segment, which becomes the sound source."],["What are common failure modes?","Leak through/around the prosthesis, stenosis, poor PE-segment vibration, granulation and inability to manage the prosthesis."]]),
+"central-neck":("Therapeutic central compartment dissection for clinically involved level VI/VII thyroid cancer nodes; prophylactic dissection is not a routine substitute for disease-specific risk assessment.",
+ [["What are the key structures at risk?","RLNs and parathyroid glands/vascular supply, with trachea/esophagus and thoracic duct on the low left as additional considerations."],["Why is compartment dissection preferred to node plucking?","It treats the nodal basin systematically and reduces fragmented surgery in a scar-prone central neck."]]),
+"reop-thyroid":("Persistent/recurrent thyroid disease requiring reoperation when expected oncologic or compressive benefit outweighs the increased RLN/parathyroid risk of a scarred field.",
+ [["Why is pre-op laryngoscopy essential?","Baseline vocal-fold function changes risk counseling and the consequences of injuring the remaining functional RLN."],["What is the reoperative principle?","Use imaging to target disease and approach through the safest recognizable tissue planes rather than blindly recreating the original dissection."]]),
+"four-gland":("Primary hyperparathyroidism with suspected multigland disease, nonlocalizing/discordant localization, hereditary disease or an intraoperative physiology/anatomy pattern that makes focused excision unreliable.",
+ [["What is the goal of bilateral exploration?","Identify the expected glands systematically and treat the hyperfunctioning pattern while preserving viable parathyroid tissue."],["What makes a gland 'missing'?","Embryologic migration creates predictable ectopic sites; search systematically rather than by color or random dissection."]]),
+"reop-parathyroid":("Persistent/recurrent hyperparathyroidism with a reconfirmed biochemical diagnosis and a sufficiently localized target to justify the higher-risk reoperative neck.",
+ [["What is the first step before reoperation?","Reconfirm the biochemical diagnosis and review the original operative/pathology records; a reoperative neck should not compensate for diagnostic uncertainty."],["Why demand stronger localization?","Scar increases RLN and devascularization risk, so targeted benefit must justify the reoperation."]]),
+"parotid-total":("Parotid malignancy or extensive disease requiring removal of superficial and deep gland; facial nerve sacrifice/reconstruction is reserved for oncologic involvement or unavoidable loss of functional continuity.",
+ [["When should the facial nerve be sacrificed?","When oncologic clearance requires it—not simply because the tumor is close to the nerve."],["If nerve is sacrificed, what determines reconstruction?","Defect length/location, proximal/distal stump availability, denervation duration and the need for immediate cable graft, nerve transfer or later dynamic/static rehabilitation."]]),
+"peds-ltr":("Fixed pediatric laryngotracheal stenosis causing tracheostomy dependence or significant airway limitation when endoscopic options are inadequate and the child is an appropriate reconstructive candidate.",
+ [["Single-stage versus double-stage?","Choice depends on airway severity, comorbidity, pulmonary reserve, aspiration/feeding issues and whether a tracheostomy/stent strategy is needed during healing."],["What determines anterior versus posterior grafting?","The location and geometry of the stenosis and the amount/direction of framework expansion required."]]),
+"ctr":("High-grade subglottic stenosis where resection of the diseased cricoid/subglottic segment offers a better durable airway than expansion alone in an appropriately selected patient.",
+ [["Why is CTR different from LTR?","CTR removes the stenotic segment and reconstructs the airway by anastomosis, whereas LTR expands the existing framework with grafting."],["What threatens the anastomosis?","Tension, devascularization, infection, airway trauma and recurrent stenosis."]]),
+"tracheal-resection":("Short-segment tracheal stenosis or selected tracheal tumor amenable to complete resection and tension-controlled primary anastomosis.",
+ [["What limits resection length?","Anastomotic tension and blood supply; release maneuvers can increase mobility but do not make unlimited resection safe."],["What is the catastrophic complication?","Anastomotic dehiscence, which can cause airway loss and mediastinal contamination."]]),
+"injection-laryngoplasty":("Symptomatic glottic insufficiency—commonly unilateral vocal-fold paresis/paralysis or atrophy—when temporary or durable medialization is expected to improve voice and/or airway protection.",
+ [["Why choose temporary material?","When recovery is possible or the desired degree of permanent medialization is uncertain, temporary augmentation can bridge function and test benefit."],["Where should material be placed conceptually?","Deep/lateral enough to medialize the membranous fold rather than superficially distorting the vibratory cover."]]),
+"arytenoid-adduction":("Unilateral vocal-fold paralysis with persistent posterior glottic gap, vertical-level mismatch or inadequate result from medialization alone.",
+ [["What does arytenoid adduction correct better than a thyroplasty alone?","Posterior glottic closure and arytenoid/vocal-process position, including selected vertical-height mismatch."],["What are important risks?","Airway compromise, over/underrotation, dysphagia and injury to laryngeal framework/neurovascular structures."]]),
+"cordotomy":("Bilateral vocal-fold immobility causing clinically significant airway obstruction when enlarging the posterior glottic airway is favored over tracheostomy or reinnervation options.",
+ [["What is the tradeoff?","A larger airway is purchased at the cost of voice quality and potentially swallowing protection."],["Why can revision be needed?","Scar/granulation can narrow the created airway, while an overly aggressive opening can worsen voice/aspiration."]]),
+"cp-myotomy":("Selected cricopharyngeal/upper-esophageal-sphincter outflow dysfunction causing dysphagia when objective evaluation supports a focal sphincter problem and less invasive treatment is inadequate.",
+ [["Why is manometry/swallow physiology important?","Myotomy helps a restrictive UES but will not correct poor pharyngeal driving force or diffuse esophageal disease."],["What complication is most important?","Perforation/leak with deep neck or mediastinal infection."]]),
+"laryngeal-botox":("Task-specific laryngeal dystonia or selected hyperfunctional laryngeal disorders where targeted chemodenervation is expected to improve symptoms.",
+ [["Why is dosing individualized?","Target muscle, laterality, prior response, breathiness/dysphagia and disease phenotype determine the therapeutic window."],["What should be discussed before injection?","Expected temporary breathiness/weakness, swallowing effects, onset/duration and need for repeat treatment."]]),
+"septorhino":("Persistent nasal obstruction from septal deviation and/or internal/external nasal-valve dysfunction when medical contributors are addressed and structural correction is expected to improve airflow.",
+ [["Why is septoplasty alone sometimes insufficient?","The septum may be only one component; lateral-wall collapse, narrow valve angle or weak cartilage may require structural grafting/support."],["What is the operative goal?","Improve functional airway while preserving or restoring stable nasal support and acceptable appearance."]]),
+"otoplasty":("Prominent-ear deformity causing meaningful patient concern when cartilage shape/position can be corrected with informed expectations and age-appropriate consent.",
+ [["What deformities usually contribute?","Underdeveloped antihelical fold, conchal excess and increased conchomastoid angle—often in combination."],["What causes an unnatural result?","Overcorrection, sharp cartilage edges, asymmetry or failure to preserve a smooth helical contour."]]),
+"forehead-flap":("Large/deep nasal cutaneous defects—especially involving multiple subunits or requiring replacement of skin plus support/lining—where staged vascularized forehead tissue provides the best color/texture match.",
+ [["What must be reconstructed before skin cover?","Internal lining and structural cartilage/bone support when deficient; skin alone cannot prevent collapse or contraction."],["Why respect nasal subunits?","Replacing a substantial subunit to its borders can hide scars and improve contour compared with patching across convex/concave boundaries."]]),
+"deep-neck-drain":("Deep neck-space infection with a drainable abscess, airway compromise, sepsis, descending spread or failure of appropriate medical therapy.",
+ [["What comes before incision?","Airway strategy and imaging-based localization of the involved spaces and carotid sheath/mediastinal relationships."],["What is the danger of incomplete drainage?","Persistent infection can track across connected fascial spaces into the mediastinum or threaten major vessels/airway."]])
+}
+for _slug,(_ind,_qs) in OR_DEPTH_V95.items():
+    if _slug in OR_PREP_REGISTRY:
+        OR_PREP_REGISTRY[_slug]["indications"]=_ind
+        OR_PREP_REGISTRY[_slug]["attending_followup"]=_qs
+        OR_PREP_REGISTRY[_slug]["status"]="depth-audited-v9.5"
+
+# Rebuild adaptive items after the content additions/updates.
+ADAPTIVE_ITEMS_V95=[]
+for _domain,_mods in DEEP_MODULES_V6.items():
+    for _m in _mods:
+        _id=_v6_item_id(_domain,_m["topic"])
+        for _stage in ["recognize","localize","workup","manage","operate","teach"]:
+            ADAPTIVE_ITEMS_V95.append({
+              "id":_id+"-"+_stage,"concept_id":_id,"domain":_domain,"topic":_m["topic"],
+              "stage":_stage,"display_stage":"advanced" if _stage=="operate" else _stage,
+              "prompt":{"recognize":"Recognize the pattern.","localize":"Localize the problem.","workup":"Evaluate it efficiently.","manage":"Build the management sequence.","operate":"Make the advanced decision.","teach":"Teach the mental model."}[_stage],
+              "answer":_m[_stage],"minutes":{"recognize":3,"localize":3,"workup":4,"manage":4,"operate":6,"teach":4}[_stage],
+              "level":{"recognize":1,"localize":2,"workup":3,"manage":4,"operate":5,"teach":6}[_stage],
+              "tags":_m.get("tags",_tags_v94(_m["topic"],_domain))
+            })
+ADAPTIVE_ITEMS_V94=ADAPTIVE_ITEMS_V95
+ADAPTIVE_ITEMS_V91=ADAPTIVE_ITEMS_V95
+
+PUBLIC_EVIDENCE_V95 = [
+ {"topic":"Sudden Sensorineural Hearing Loss","source":"AAO-HNSF Clinical Practice Guideline: Sudden Hearing Loss (Update), 2019","note":"Timing, salvage IT steroid, HBOT and follow-up recommendations."},
+ {"topic":"Tympanostomy Tube Indications","source":"AAO-HNSF Clinical Practice Guideline: Tympanostomy Tubes in Children (Update), 2022","note":"Chronic OME, hearing evaluation and recurrent-AOM/effusion decision points."},
+ {"topic":"Recurrent Tonsillitis Decision-Making","source":"AAO-HNSF Clinical Practice Guideline: Tonsillectomy in Children (Update), 2019","note":"7/5/3 thresholds, qualifying documentation and modifying factors."},
+ {"topic":"Differentiated Thyroid Cancer","source":"American Thyroid Association Management Guidelines for Adult Patients with Differentiated Thyroid Cancer, 2025","note":"Extent of surgery, active surveillance and completion-thyroidectomy framework."},
+ {"topic":"Hypoglossal Nerve Stimulation","source":"FDA PMA P130008/S090, 2023 labeling expansion","note":"Adult AHI expansion to 100 and BMI warning boundary to 40; payer criteria may differ."},
+ {"topic":"Age-Related Hearing Loss / Presbycusis","source":"AAO-HNSF Clinical Practice Guideline: Age-Related Hearing Loss, 2024","note":"Recognition, audiologic evaluation, amplification/assistive technology and implant referral concepts."},
+]
+
+
+import re
+# =============================================================================
+# ENT Mastery v9.6 — True Depth + Oncology Pass
+# =============================================================================
+# Public oncology guidance is synthesized into original educational prose.
+# Cummings is used as a scope/organization benchmark; copyrighted textbook
+# prose is not copied into the application.
+
+PUBLIC_ONCOLOGY_SOURCES_V96 = [
+ {"source":"Cummings Otolaryngology—Head and Neck Surgery, official Elsevier table of contents",
+  "use":"Scope benchmark: tumor biology/immunotherapy, radiation/systemic therapy, free tissue transfer, palliative care, cutaneous melanoma, subsite oncology, swallowing and tracheal neoplasms."},
+ {"source":"American Academy of Dermatology BCC guideline",
+  "use":"Risk-oriented biopsy/treatment framework; surgery as cornerstone; selected nonsurgical therapy; surveillance."},
+ {"source":"American Academy of Dermatology cSCC guideline",
+  "use":"Localized risk stratification, biopsy, surgery, selected nonsurgical therapy and surveillance."},
+ {"source":"American Academy of Dermatology melanoma guideline",
+  "use":"Biopsy, surgery, SLNB staging concepts and risk-adapted follow-up."},
+ {"source":"ASCO Management of the Neck in SCC of the Oral Cavity and Oropharynx",
+  "use":"Elective/therapeutic neck management and post-RT/CRT response-based neck dissection concepts."},
+ {"source":"ASCO Transoral Robotic Surgery in Oropharyngeal SCC guideline, 2025",
+  "use":"Workup, patient selection, surgical approach, adjuvant and salvage considerations."},
+ {"source":"ISOO-MASCC-ASCO Osteoradionecrosis guideline, 2024",
+  "use":"Prevention and management framework for jaw osteoradionecrosis after radiation."},
+ {"source":"NCI PDQ Merkel Cell Carcinoma",
+  "use":"Local-regional surgery/radiation, nodal staging and immunotherapy concepts for advanced disease."},
+]
+
+# ---- Dedicated cutaneous oncology modules ----
+CUTANEOUS_ONCOLOGY_V96 = [
+ {"topic":"Cutaneous Squamous Cell Carcinoma of the Head & Neck",
+  "recognize":"Confirm invasive cSCC with a biopsy that captures enough depth and architecture to identify aggressive features. Head/neck location, recurrence, poor differentiation, rapid growth, neurologic symptoms, immunosuppression and suspected deep invasion should immediately raise the risk level.",
+  "localize":"Map the primary tumor, depth and named-nerve symptoms, then examine the regional nodal basins—especially parotid/periparotid and upper cervical nodes for many facial/scalp primaries. Pain, numbness or weakness may signal clinically important perineural spread.",
+  "workup":"Risk-stratify from clinical and pathologic features rather than diameter alone. Use imaging when deep invasion, bone involvement, significant PNI or nodal disease is suspected; suspicious nodes require tissue diagnosis. The workup should answer whether this remains a local skin problem or has become regional/advanced head-and-neck cancer.",
+  "manage":"Surgery is the cornerstone for resectable disease. Standard excision is appropriate for many lower-risk lesions, while margin-controlled surgery is particularly useful for high-risk tumors, recurrent disease, poorly defined borders or tissue-constrained head/neck sites. Regional nodal or extensive PNI disease should trigger multidisciplinary surgery/radiation/systemic discussion.",
+  "operate":"Do not reconstruct a complex defect until oncologic clearance is understood. For regional disease, think in terms of the involved parotid and cervical nodal basin rather than removing a single palpable node. Preserve function when oncologically safe, but named-nerve invasion may require sacrifice and a simultaneous reanimation plan.",
+  "teach":"Teach cSCC as three linked questions: how risky is the primary, is there nerve/nodal spread, and what margin-control/regional treatment is needed? The common error is treating every facial cSCC as a small dermatologic lesion despite aggressive biology or regional symptoms."},
+ {"topic":"Basal Cell Carcinoma of the Head & Neck",
+  "recognize":"BCC often presents as a slowly enlarging pearly, ulcerated or scar-like lesion, but infiltrative/morpheaform tumors may be clinically subtle. Recurrent disease, ill-defined borders, aggressive histology, prior radiation and high-value facial sites increase management complexity.",
+  "localize":"Define the cutaneous subunit and depth: eyelid/canthus, nose, ear and central face have limited tissue and important cartilage, lacrimal, orbital or nerve relationships. Unlike cSCC, nodal metastasis is rare, so the central problem is usually local destruction and recurrence.",
+  "workup":"Biopsy should establish diagnosis and relevant growth pattern. Image selectively for extensive deep invasion, orbital/skull-base involvement or clinically significant perineural disease rather than routinely staging uncomplicated BCC.",
+  "manage":"Surgery remains the treatment cornerstone. Standard excision works well for many lower-risk lesions; Mohs/margin-controlled excision is favored when tissue preservation and complete margin assessment matter, including recurrent, aggressive or anatomically constrained head/neck disease. Nonsurgical approaches have lower cure rates and are mainly for selected low-risk disease or when surgery is unsuitable.",
+  "operate":"Plan reconstruction after margin status is secure. Reconstruct by defect depth and facial subunit: replace lining/support when necessary before skin cover, avoid distorting free margins and choose local flap, graft or staged regional flap according to the missing tissue.",
+  "teach":"BCC is usually a local-control problem, not a nodal-staging problem. The resident pearl is to match treatment intensity to recurrence risk and anatomy, then reconstruct only after the tumor is cleared."},
+ {"topic":"Cutaneous Melanoma of the Head & Neck",
+  "recognize":"A suspicious pigmented or amelanotic lesion needs biopsy designed to establish Breslow thickness, ulceration and other staging information without compromising definitive surgery. Do not perform a casual superficial shave when invasion depth is clinically important.",
+  "localize":"Head/neck melanoma can drain unpredictably to parotid, cervical and occipital basins. Primary-site anatomy matters for excision/reconstruction, but lymphatic mapping—not assumptions from surface location—guides sentinel-node staging when indicated.",
+  "workup":"Use final pathology to determine local excision and nodal-staging needs. Sentinel lymph node biopsy is a pathologic-staging tool in appropriate patients; imaging and systemic staging intensity depend on stage, symptoms and recurrence risk rather than being routine for every thin melanoma.",
+  "manage":"Wide local excision is the cornerstone for invasive cutaneous melanoma, with margins selected from tumor thickness and anatomy. Consider SLNB when the risk of occult nodal disease justifies staging; advanced or node-positive disease requires multidisciplinary discussion of modern systemic/adjuvant therapy.",
+  "operate":"In the head/neck, balance oncologic margins with eyelid, nasal, auricular and facial-nerve function. If SLNB is planned, lymphatic mapping should precede disruption of drainage pathways. Delay definitive reconstruction only when margin uncertainty would make a complex repair unsafe.",
+  "teach":"Melanoma management starts with the biopsy: depth drives downstream decisions. The head/neck twist is lymphatic unpredictability and reconstructive constraint, not a different cancer biology."},
+ {"topic":"Merkel Cell Carcinoma",
+  "recognize":"MCC is an aggressive cutaneous neuroendocrine carcinoma that may look like a rapidly enlarging painless red-violet dermal nodule. Small primary size does not imply low biologic risk, and immunosuppression increases concern.",
+  "localize":"Stage both the primary and the regional nodal basin. Clinically occult nodal disease is common enough that sentinel-node staging is important in appropriate node-negative patients; in the head/neck, lymphatic drainage may be complex.",
+  "workup":"Confirm histology and perform regional/distant staging appropriate to clinical stage. Sentinel lymph node biopsy is used for pathologic nodal staging in clinically node-negative patients, ideally before wide local surgery disrupts lymphatic channels.",
+  "manage":"Local-regional management commonly combines margin-negative excision with consideration of radiation because MCC is radiosensitive and recurrence-prone. Nodal disease requires definitive regional treatment. For advanced/metastatic disease, immune checkpoint therapy is generally favored over historical chemotherapy because responses can be more durable.",
+  "operate":"Obtain local control while preserving function, coordinate SLNB timing, and avoid treating the primary in isolation when regional management is unresolved. Reconstruction should not obscure the oncologic plan or delay indicated adjuvant therapy unnecessarily.",
+  "teach":"MCC behaves more aggressively than its skin appearance suggests. Teach the triad: local excision, deliberate nodal staging, and early radiation/systemic multidisciplinary thinking."},
+]
+
+# Remove the old combined cutaneous cards and replace them with dedicated disease modules.
+for _i in range(len(DEEP_MODULES_V6.get("Head & Neck Oncology",[]))-1,-1,-1):
+    if DEEP_MODULES_V6["Head & Neck Oncology"][_i].get("topic") in [
+        "Cutaneous SCC / Melanoma of Head & Neck",
+        "Merkel Cell / High-Risk Cutaneous Cancer"
+    ]:
+        DEEP_MODULES_V6["Head & Neck Oncology"].pop(_i)
+for _m in CUTANEOUS_ONCOLOGY_V96:
+    _m["primary_domain"]="Head & Neck Oncology"
+    _m["tags"]=_tags_v94(_m["topic"],"cutaneous oncology skin cancer")
+    _m["evidence_calibrated"]="v9.6"
+    DEEP_MODULES_V6["Head & Neck Oncology"].append(_m)
+
+# ---- Cross-cutting Head & Neck oncology modules ----
+HN_ONCOLOGY_DEPTH_V96 = [
+ {"topic":"Recurrent / Metastatic HNSCC",
+  "recognize":"Recurrence may be local, regional or distant and can present with pain, dysphagia, weight loss, cranial neuropathy, new neck mass or subtle post-treatment imaging change. Distinguish recurrence from treatment effect before committing to salvage.",
+  "localize":"Define the exact recurrent compartment and its relationship to carotid, skull base, prevertebral fascia, mandible, larynx/pharynx and previously treated neck. The key question is whether disease is resectable with acceptable function and whether distant disease changes the goal of care.",
+  "workup":"Obtain tissue confirmation when feasible, high-quality cross-sectional imaging and chest/distant staging. Review prior radiation fields, pathology, HPV status where relevant, performance status and functional reserve; recurrent disease must be discussed in a multidisciplinary setting.",
+  "manage":"Potentially curable isolated recurrence may be treated with salvage surgery and/or carefully selected re-irradiation strategies. Unresectable or metastatic disease shifts toward systemic therapy, trials and symptom-directed care, with immunotherapy now central for many patients.",
+  "operate":"Salvage surgery has higher wound, fistula and vascular risk because tissue is irradiated and planes are distorted. Before operating, define the expected defect, reconstruction, vessel options, carotid risk, feeding/airway plan and whether the functional result is worth the morbidity.",
+  "teach":"Recurrence is not automatically palliative and not automatically operable. Teach three filters: disease extent, prior treatment constraints, and whether salvage can achieve durable control with an acceptable functional endpoint."},
+ {"topic":"Tumor Immunology / Immunotherapy in HNSCC",
+  "recognize":"Checkpoint inhibition matters most in recurrent/metastatic HNSCC and selected perioperative/clinical-trial settings, not as a substitute for definitive local therapy in every new cancer.",
+  "localize":"The therapeutic target is the tumor-immune interaction rather than an anatomic structure; the clinically relevant biology includes PD-1/PD-L1 signaling, immune evasion and HPV-associated tumor immunology.",
+  "workup":"Systemic-treatment planning requires accurate histology, stage, performance status, prior therapy and biomarker testing appropriate to the clinical setting. Biomarkers inform probability and regimen selection but do not replace multidisciplinary assessment of resectability and radiation options.",
+  "manage":"Immune checkpoint inhibitors are a core option in recurrent/metastatic HNSCC. Treatment choice depends on disease tempo, symptoms, biomarker profile, prior platinum exposure and need for rapid cytoreduction; immune-related toxicities require prompt recognition and organ-specific management.",
+  "operate":"For the surgeon, immunotherapy changes timing, salvage options and perioperative planning rather than surgical anatomy itself. Know whether the patient is receiving neoadjuvant/adjuvant therapy, anticipate wound/medical issues and obtain adequate tissue for molecular/pathologic testing.",
+  "teach":"Do not memorize immunotherapy as 'a drug after chemo.' Teach when systemic disease goals dominate, what biomarker information changes decisions, and how immune toxicity differs from cytotoxic chemotherapy toxicity."},
+ {"topic":"Salvage Surgery After Radiation / Chemoradiation",
+  "recognize":"Persistent or recurrent tumor after RT/CRT must be separated from edema, radionecrosis and inflammatory PET uptake. Symptoms, serial imaging and directed biopsy matter more than a single ambiguous post-treatment study.",
+  "localize":"Map recurrence against irradiated tissues and critical structures: carotid, mandible, larynx/pharynx, skull base and prevertebral space. Previously dissected necks and irradiated recipient vessels alter access and reconstruction.",
+  "workup":"Confirm viable tumor, stage for distant disease, review prior dose/fields and assess swallowing, pulmonary, nutritional and performance status. If salvage is contemplated, plan reconstruction and vascular access before resection.",
+  "manage":"Offer salvage when complete resection is realistically achievable and morbidity is acceptable. Otherwise consider re-irradiation, systemic therapy, trials or palliative interventions based on disease distribution and goals.",
+  "operate":"Expect fibrosis, poor tissue perfusion, higher fistula/wound risk and difficult vessel/nerve identification. Bring well-vascularized tissue when needed and plan carotid protection, airway, feeding access and rescue strategy.",
+  "teach":"Salvage surgery is not just the original operation performed later. It is a different biologic and reconstructive problem in irradiated tissue."},
+ {"topic":"Neck Management by Primary Site",
+  "recognize":"The clinically N0 neck can still harbor occult metastasis; treatment depends on primary site, T stage, depth/biology and expected nodal drainage rather than a universal elective neck dissection.",
+  "localize":"Know predictable nodal drainage: oral cavity commonly levels I–III; oropharynx frequently II–IV with retropharyngeal considerations; larynx/hypopharynx patterns depend on subsite and midline involvement.",
+  "workup":"Use high-quality neck examination and imaging; suspicious nodes require tissue diagnosis when it changes treatment. In oral cavity SCC, depth of invasion contributes to the elective-neck decision. After definitive RT/CRT, response imaging guides whether residual nodal surgery is needed.",
+  "manage":"Elective neck treatment may be surgical or radiation-based depending on the primary strategy. Therapeutic neck dissection addresses clinically involved nodal basins; postoperative RT/CRT depends on adverse pathology such as extranodal extension and margins.",
+  "operate":"A selective dissection is oncologic only when the selected levels match the disease pattern. Preserve nonlymphatic structures when safe, but do not compromise nodal clearance to spare a structure invaded by tumor.",
+  "teach":"Neck management starts with the primary site. Ask: what levels are at risk, is the neck clinically positive, and is the primary being treated surgically or nonsurgically?"},
+ {"topic":"Reconstruction Selection After Head & Neck Ablation",
+  "recognize":"Reconstruction begins before resection. The defect may require mucosal lining, skin, soft-tissue bulk, bone, tendon/muscle function or separation of contaminated spaces.",
+  "localize":"Define what is missing and what function must be restored: oral competence, tongue mobility, mandibular continuity, pharyngeal conduit, laryngeal separation, facial contour or skull-base seal.",
+  "workup":"Assess defect estimate, prior radiation/surgery, recipient vessels, nutrition, vascular disease and donor-site limitations. CTA or other vascular imaging is selective when donor/recipient vessel disease is a concern.",
+  "manage":"Choose the simplest reconstruction that reliably restores function and withstands the oncologic environment. Local/regional flaps work for selected defects; free tissue is favored when volume, long reach, bone or robust vascularized tissue is required.",
+  "operate":"Match flap tissue to defect rather than choosing a favorite flap. Plan recipient vessels and backups, inset to restore function before contour, protect the pedicle from compression and monitor for arterial insufficiency or venous congestion.",
+  "teach":"A flap is not the goal; restored function and safe wound healing are. Teach defect analysis first, donor selection second."},
+ {"topic":"Osteoradionecrosis of the Jaw",
+  "recognize":"Exposed bone, pain, drainage, pathologic fracture, fistula or progressive mandibular/maxillary destruction after head/neck radiation raises ORN, but recurrent tumor and dental infection must remain in the differential.",
+  "localize":"Mandibular ORN is common because of dose distribution and vascular/dental factors. Extent ranges from limited exposed bone to full-thickness necrosis with fracture, fistula or inferior-border involvement.",
+  "workup":"Obtain dental/maxillofacial examination and imaging sufficient to define bone involvement and exclude recurrent malignancy when suspicious. Prevention begins before radiation with dental risk assessment and minimizing traumatic extractions in high-dose fields when possible.",
+  "manage":"Treatment is stage/severity driven: meticulous oral care and conservative measures for limited disease, selective debridement for focal necrosis, and vascularized reconstruction for advanced fracture/fistula or refractory full-thickness disease. Hyperbaric oxygen is not a universal solution.",
+  "operate":"Advanced ORN often requires resection back to bleeding viable bone and reconstruction with vascularized tissue, frequently osseous free flap when continuity is lost. Plan vessels carefully in the irradiated neck.",
+  "teach":"ORN is radiation-injured bone plus impaired healing, not simply osteomyelitis. Always exclude recurrent cancer and match treatment intensity to structural failure."},
+ {"topic":"Nonfunctional Larynx / Chronic Aspiration After Cancer Therapy",
+  "recognize":"A cancer survivor may have no recurrent tumor yet remain unsafe because of chronic aspiration, recurrent pneumonias, feeding dependence, airway obstruction or profound fibrosis-related dysphagia.",
+  "localize":"Define whether failure arises from glottic closure, laryngeal sensation, pharyngeal propulsion, UES opening, structural stenosis or global radiation fibrosis. Multiple mechanisms often coexist.",
+  "workup":"Use flexible laryngoscopy plus instrumental swallow evaluation; assess pulmonary complications, nutrition, voice goals and cancer status. The question is not merely whether aspiration occurs, but whether compensatory strategies can make oral intake safe.",
+  "manage":"Begin with rehabilitation, diet/strategy changes and targeted treatment of correctable lesions. Severe refractory aspiration may require feeding modification or aspiration-prevention surgery when quality of life and pulmonary risk justify loss of normal laryngeal function.",
+  "operate":"Procedural options range from vocal-fold augmentation or UES intervention to laryngotracheal separation or functional/total laryngectomy in extreme cases. The operation should target the demonstrated mechanism and the patient's priorities.",
+  "teach":"Cancer control and organ preservation are not the same as functional preservation. A preserved larynx that repeatedly aspirates can be a failed organ."},
+ {"topic":"Head & Neck Cancer Surveillance / Second Primaries",
+  "recognize":"New pain, dysphagia, otalgia, weight loss, bleeding, neck mass, cranial neuropathy or changing endoscopic findings after treatment should not be dismissed as chronic treatment effect.",
+  "localize":"Surveillance targets the treated primary site, nodal basins, lungs and other mucosal/skin sites at risk for recurrence or second primary disease.",
+  "workup":"Use regular symptom-directed examination and endoscopy plus post-treatment imaging according to treatment/site and risk. Thyroid, dental, swallowing, hearing and other late-effect monitoring depend on radiation/surgery exposure.",
+  "manage":"Surveillance is not only recurrence detection: address tobacco/alcohol cessation, nutrition, dental care, hypothyroidism, lymphedema, dysphagia, speech/voice, psychosocial health and second-primary prevention.",
+  "operate":"Surgery enters when surveillance identifies a resectable recurrence, second primary or treatable late complication. Do not schedule invasive biopsies of clearly stable treatment changes without a diagnostic question.",
+  "teach":"Survivorship is active care. The resident should know both what recurrence looks like and what treatment toxicity will harm the patient years later."},
+ {"topic":"Sinonasal Malignancies",
+  "recognize":"Unilateral obstruction, epistaxis, facial numbness, orbital symptoms, cranial neuropathy or destructive unilateral imaging should raise malignancy rather than routine CRS.",
+  "localize":"Define the epicenter—nasal cavity, maxillary, ethmoid, frontal or sphenoid—and extension to orbit, skull base, dura, pterygopalatine/infratemporal spaces and cranial nerves.",
+  "workup":"Perform endoscopy, contrast CT/MRI and safe biopsy. Pathology is heterogeneous, so treatment cannot be planned from location alone; histology and skull-base/orbital involvement drive staging and modality selection.",
+  "manage":"Most resectable epithelial sinonasal cancers require multidisciplinary surgery and radiation consideration; some histologies favor different systemic/radiation strategies. Orbital preservation depends on true soft-tissue/apical invasion rather than proximity alone.",
+  "operate":"Choose endoscopic, open or combined approach based on oncologic access, margins and reconstruction—not on a minimally invasive preference. Plan skull-base reconstruction, orbital management and vascular control before resection.",
+  "teach":"Sinonasal cancer is a histology-plus-anatomy problem. Unilateral 'sinus disease' with red flags should trigger tissue diagnosis before routine FESS."},
+ {"topic":"Tracheal Malignancy",
+  "recognize":"Progressive dyspnea, stridor, hemoptysis or 'refractory asthma' can reflect tracheal tumor, especially when flow-volume loops or imaging show fixed central airway obstruction.",
+  "localize":"Define distance from cricoid/carina, longitudinal length, circumferential involvement, extraluminal extension and relationship to esophagus, thyroid, recurrent laryngeal nerves and great vessels.",
+  "workup":"Secure a safe airway plan before diagnostic bronchoscopy in a critically narrowed airway. Contrast CT defines length and invasion; endoscopy provides histology and dynamic assessment when it can be performed safely.",
+  "manage":"Resectable primary tracheal malignancies may be treated with segmental resection and anastomosis; unresectable disease may require radiation/systemic therapy and airway palliation such as debulking or stenting.",
+  "operate":"Resection length is limited by anastomotic tension and blood supply. Preserve recurrent laryngeal nerves and lateral tracheal vascularity, use release maneuvers selectively and protect the anastomosis from tension/infection.",
+  "teach":"A tracheal tumor is both an oncologic and airway emergency-planning problem. Never biopsy a critically obstructing lesion without a ventilation/rescue strategy."},
+ {"topic":"Palliative / Goals-of-Care Decision-Making in Head & Neck Cancer",
+  "recognize":"Advanced head/neck cancer causes uniquely burdensome symptoms—airway threat, bleeding, pain, dysphagia, secretion burden, disfigurement and communication loss—so palliative care should not be reserved for the final days.",
+  "localize":"Identify which symptom is driving suffering and whether it comes from tumor, treatment toxicity or both. Local anatomy determines whether a small intervention can meaningfully improve breathing, swallowing, bleeding or pain.",
+  "workup":"Clarify prognosis, functional trajectory, decisional capacity, patient priorities and what each proposed intervention can realistically achieve. Avoid diagnostic testing that will not change a goal-concordant plan.",
+  "manage":"Integrate palliative and disease-directed care early. Options may include analgesia, secretion management, nutrition, palliative radiation/systemic therapy, limited surgery, airway procedures, hospice and psychosocial support.",
+  "operate":"A technically possible operation is not automatically beneficial. Before tracheostomy, debulking or major salvage surgery, define the symptom target, likely recovery burden and whether the intervention supports the patient's stated goals.",
+  "teach":"Palliative care is not 'doing nothing.' It is choosing treatments by patient-valued outcomes when cure is impossible or the burden of curative treatment exceeds its benefit."},
+]
+for _m in HN_ONCOLOGY_DEPTH_V96:
+    _m["primary_domain"]="Head & Neck Oncology"
+    _m["tags"]=_tags_v94(_m["topic"],"head neck cancer oncology")
+    _m["evidence_calibrated"]="v9.6"
+    if not any(x["topic"]==_m["topic"] for x in DEEP_MODULES_V6["Head & Neck Oncology"]):
+        DEEP_MODULES_V6["Head & Neck Oncology"].append(_m)
+
+# ---- Remove all generic v9.4 objective scaffolding from the source-derived modules ----
+_V94_SCAFFOLD_PATTERNS = [
+ r"\s*Recognition objective:.*$",
+ r"\s*Localization objective:.*$",
+ r"\s*Evaluation objective:.*$",
+ r"\s*Management objective:.*$",
+ r"\s*Advanced-decision objective:.*$",
+ r"\s*Teaching objective:.*$",
+]
+for _domain,_mods in DEEP_MODULES_V6.items():
+    for _m in _mods:
+        for _stage in ["recognize","localize","workup","manage","operate","teach"]:
+            _txt=_m.get(_stage,"")
+            for _pat in _V94_SCAFFOLD_PATTERNS:
+                _txt=re.sub(_pat,"",_txt).strip()
+            _m[_stage]=_txt
+
+# ---- True-depth rewrites of high-yield existing concepts ----
+TRUE_DEPTH_REWRITES_V96 = {
+"Chronic Otitis Media / Cholesteatoma":{
+ "recognize":"Retraction pocket with keratin, attic/posterosuperior debris, chronic foul otorrhea, conductive loss or granulation suggests cholesteatoma. Facial weakness, vertigo, severe headache or neurologic symptoms imply a complication until proven otherwise.",
+ "localize":"Track disease from pars flaccida/epitympanum or pars tensa into mesotympanum, sinus tympani, facial recess, aditus and mastoid. Hidden recesses, ossicles, facial nerve, lateral semicircular canal, tegmen and sigmoid sinus determine both risk and residual-disease sites.",
+ "workup":"Microscopic/endoscopic ear exam and audiometry are foundational. CT defines bony anatomy, ossicular erosion, fistula and surgical landmarks; non-EPI diffusion MRI is useful for selected residual/recurrent disease questions but does not replace operative judgment in an unsafe ear.",
+ "manage":"An unsafe keratinizing ear generally requires surgery for disease control. Choose canal-wall-up, canal-wall-down or endoscopic-assisted strategies from extent, anatomy, Eustachian function, hearing goals and the patient's ability to undergo reliable surveillance.",
+ "operate":"The priority hierarchy is safe ear → dry/maintainable ear → hearing. Constantly orient to tegmen, sigmoid, EAC, lateral canal, incus/fossa incudis, facial nerve and digastric ridge; reconstruct hearing only after disease clearance and a stable middle-ear environment are achieved.",
+ "teach":"Canal-wall strategy is not a prestige ranking. Explain why cholesteatoma is a three-dimensional disease with hidden recesses and why surveillance strategy is part of the operation."},
+"Otosclerosis / Stapes Fixation":{
+ "recognize":"Progressive conductive or mixed hearing loss with normal otoscopy, absent acoustic reflexes and a characteristic audiogram suggests stapes fixation; a Carhart notch supports but does not prove otosclerosis.",
+ "localize":"The primary mechanical lesion is fixation of the stapes footplate at the oval window. Cochlear otosclerosis can add a sensorineural component, so not every threshold deficit is mechanically reversible.",
+ "workup":"Obtain complete audiometry including speech scores and tympanometry/reflexes. CT is selective—useful for atypical conductive loss, congenital fixation, superior canal dehiscence or revision anatomy rather than mandatory for every classic primary case.",
+ "manage":"Observation, hearing aids and stapes surgery are all reasonable depending on functional burden, cochlear reserve and patient goals. Counsel that surgery targets the conductive component and does not stop age-related/cochlear hearing decline.",
+ "operate":"Create a controlled fenestra, place a prosthesis between incus and vestibule, and avoid excessive vestibular trauma. Know facial nerve position, chorda tympani, incus integrity and the risk of perilymph leak, vertigo, taste change and rare profound SNHL.",
+ "teach":"Before operating on 'otosclerosis,' prove the loss is mechanical and exclude third-window/congenital mimics. The operation improves sound transmission; it does not cure cochlear disease."},
+"Vestibular Schwannoma":{
+ "recognize":"Asymmetric SNHL, unilateral tinnitus or disproportionate word-recognition loss should prompt retrocochlear thinking; larger tumors may cause imbalance, facial/trigeminal symptoms or brainstem/cerebellar effects.",
+ "localize":"Vestibular schwannoma usually arises from vestibular nerve within the IAC and may extend into the CPA. Tumor size, fundal extension, brainstem contact and residual hearing shape management.",
+ "workup":"MRI with IAC protocol is diagnostic. Document pure-tone thresholds, word recognition, vestibular/facial function and tumor growth on serial imaging when observing; broad laboratory testing is not the workup.",
+ "manage":"Observation, stereotactic radiation and microsurgery are all valid in selected patients. Decide from age/comorbidity, size/growth, symptoms, hearing, brainstem effect and patient preference rather than tumor diameter alone.",
+ "operate":"Retrosigmoid, middle-fossa and translabyrinthine approaches trade exposure and hearing goals differently. Facial nerve preservation is a major endpoint; continuous monitoring and careful tumor-nerve dissection matter more than forcing gross-total resection when nerve function is threatened.",
+ "teach":"The treatment question is not 'How do we remove it?' It is 'What outcome matters most—tumor control, hearing, facial function—and which strategy best balances those goals?'"},
+"Ménière Disease":{
+ "recognize":"Episodic spontaneous vertigo with fluctuating unilateral sensorineural hearing symptoms, tinnitus and aural pressure suggests Ménière disease; duration and audiometric documentation matter.",
+ "localize":"The clinical syndrome reflects inner-ear dysfunction associated with endolymphatic hydrops, but hydrops is not synonymous with the diagnosis. Vestibular migraine and other episodic vestibular disorders can mimic it.",
+ "workup":"Obtain audiometry and assess alternative causes based on atypical features. MRI is used when asymmetric SNHL or neurologic features warrant retrocochlear exclusion; vestibular tests support function but are not a single diagnostic gold standard.",
+ "manage":"Educate about episodic disease, hearing rehabilitation and trigger/lifestyle measures; use vestibular suppressants only for acute attacks. Escalate from medical prevention to intratympanic therapy and, in disabling refractory disease, ablative options based on hearing status and goals.",
+ "operate":"Procedural choices intentionally trade vertigo control against hearing/vestibular function. Intratympanic gentamicin, labyrinthectomy and vestibular neurectomy are not equivalent; residual useful hearing and contralateral vestibular reserve matter.",
+ "teach":"Do not label every patient with vertigo+tinnitus as Ménière disease. The syndrome requires a coherent episodic pattern plus hearing evidence, and treatment escalates according to disability and hearing preservation."},
+"Vestibular Migraine":{
+ "recognize":"Recurrent vertigo, motion sensitivity or visually induced dizziness with migraine history/features can represent vestibular migraine even when headache is absent during some attacks.",
+ "localize":"This is a central sensory-network disorder rather than a fixed peripheral vestibular lesion; exam and vestibular testing may be normal between episodes.",
+ "workup":"Diagnosis is clinical after confirming compatible migraine/vestibular episodes and excluding alternative peripheral or central causes when red flags exist. Do not order extensive vestibular imaging/labs solely because dizziness is persistent.",
+ "manage":"Use migraine education, sleep/exercise/trigger management and preventive or acute migraine therapy tailored to attack frequency and comorbidity. Vestibular rehabilitation can help persistent motion/visual sensitivity.",
+ "operate":"There is no operative treatment for vestibular migraine. Advanced decision-making is recognizing comorbid BPPV/Ménière disease or a central red flag rather than escalating to ablative vestibular surgery.",
+ "teach":"The pearl is that normal interictal vestibular testing does not rule out vestibular migraine. Treat the migraine network and avoid forcing every dizzy patient into a peripheral lesion."},
+"BPPV":{
+ "recognize":"Brief vertigo triggered by position change with reproducible canal-specific positional nystagmus is a mechanical otolith disorder. Persistent spontaneous vertigo or atypical neurologic nystagmus should trigger a different differential.",
+ "localize":"Use the nystagmus axis and provocative position to identify posterior, horizontal or anterior canal and side. Geotropic versus apogeotropic horizontal nystagmus changes the suspected mechanism and maneuver.",
+ "workup":"Dix-Hallpike and supine roll testing are the key diagnostic tests. Routine MRI, CT and vestibular testing are unnecessary in classic BPPV but become appropriate when the phenotype is atypical or neurologic signs are present.",
+ "manage":"Use the canal-appropriate repositioning maneuver and avoid chronic vestibular suppressants. Reassess persistent symptoms for wrong-canal localization, recurrence, cupulolithiasis or a central mimic.",
+ "operate":"BPPV almost never needs surgery. In truly intractable well-localized disease, rare occlusion procedures exist, but the advanced decision is usually better localization and repeated appropriate maneuvers rather than an operation.",
+ "teach":"Name the canal before naming the maneuver. If you cannot describe the nystagmus, you have not localized the disease."},
+"Facial Paralysis":{
+ "recognize":"First distinguish upper from lower motor-neuron weakness, complete from incomplete paralysis, immediate from delayed onset, and flaccid paralysis from synkinesis. Ear vesicles, trauma, tumor signs, recurrent episodes or progressive weakness are not routine Bell palsy.",
+ "localize":"Use forehead involvement, taste/lacrimation symptoms, hyperacusis, ear disease and other cranial neuropathies to localize along the facial nerve from brainstem to parotid branches.",
+ "workup":"Typical acute Bell palsy often needs no imaging; atypical, recurrent, progressive, traumatic or tumor-associated palsy requires targeted MRI/CT and etiologic evaluation. Document severity serially with a consistent facial grading system and ocular status.",
+ "manage":"Eye protection is immediate. Treat idiopathic acute palsy promptly with corticosteroids; manage Ramsay Hunt, infection, trauma or neoplasm according to cause. Persistent weakness evolves into rehabilitation, synkinesis treatment and reanimation planning.",
+ "operate":"Timing determines the reconstructive toolbox: primary repair/cable graft when nerve continuity is lost acutely, nerve transfer while native muscle remains viable, and regional/free muscle transfer when chronic denervation has eliminated useful motor endplates.",
+ "teach":"Facial paralysis is not one disease. Every presentation should be classified by lesion level, cause, completeness and time since denervation because those variables determine both prognosis and reconstruction."},
+"Temporal Bone Fracture":{
+ "recognize":"After head trauma, hemotympanum, otorrhea, hearing loss, vertigo or facial weakness should prompt temporal-bone injury assessment. Modern management is driven by functional complications rather than memorizing longitudinal versus transverse labels alone.",
+ "localize":"Determine whether the fracture violates the otic capsule, facial canal, ossicular chain, tegmen or carotid canal. Otic-capsule involvement strongly predicts SNHL/vestibular and CSF complications.",
+ "workup":"Use high-resolution CT when temporal-bone injury is suspected and findings will guide management. Document facial function timing, hearing, vestibular symptoms and CSF leak; vascular imaging is required when carotid-canal injury is concerning.",
+ "manage":"Most fractures are observed with treatment of specific complications. Persistent conductive loss suggests ossicular injury; CSF leak, complete facial paralysis or vascular injury require dedicated pathways.",
+ "operate":"Surgical decisions target complications—not the fracture line itself—such as facial-nerve decompression/repair in selected severe injuries, ossicular reconstruction or CSF-leak repair.",
+ "teach":"Ask what the fracture damaged: nerve, labyrinth, ossicles, dura or carotid. That predicts management better than the old orientation terminology."},
+"Cochlear Implant Candidacy":{
+ "recognize":"Consider CI when appropriately fitted hearing aids no longer provide adequate speech understanding and communication benefit, not only when the audiogram reaches profound thresholds.",
+ "localize":"The implant bypasses damaged cochlear hair-cell transduction and electrically stimulates the cochlear nerve. An absent or severely deficient cochlear nerve changes expected benefit and may redirect toward other technologies.",
+ "workup":"Use aided speech testing, ear-specific audiology, imaging, medical/surgical evaluation and counseling. In children, integrate language development, educational environment and etiology/genetics; in adults, assess duration of deafness and realistic listening goals.",
+ "manage":"Optimize conventional amplification first when appropriate, then refer early when speech performance remains poor. Counseling should cover rehabilitation, residual-hearing tradeoffs, device expectations and lifelong programming.",
+ "operate":"Preoperative imaging must define cochlear patency, congenital malformations and facial-nerve/vascular anatomy. Electrode choice/insertion strategy should match anatomy and hearing-preservation goals while minimizing cochlear trauma.",
+ "teach":"CI candidacy is a functional speech-understanding decision layered onto anatomy and patient goals—not a pure-tone cutoff."},
+"Necrotizing Otitis Externa":{
+ "recognize":"Severe persistent otalgia—often worse at night—with otorrhea/granulation in an older diabetic or immunocompromised patient should raise skull-base osteomyelitis. Cranial neuropathy indicates advanced disease.",
+ "localize":"Infection begins in the external canal and can spread through skull-base soft tissue and bone to multiple cranial nerves. The disease is not simply 'bad swimmer's ear.'",
+ "workup":"Culture canal drainage/tissue when possible, assess inflammatory markers and obtain imaging to define skull-base extension. Biopsy suspicious granulation when malignancy cannot be excluded.",
+ "manage":"Use prolonged culture-directed antipseudomonal therapy with glycemic/immunologic optimization and close clinical/marker follow-up. Surgery is limited mainly to biopsy, drainage or focal debridement rather than radical resection of skull-base infection.",
+ "operate":"Avoid unnecessary aggressive canal/skull-base surgery; identify abscess, necrotic focus or diagnostic uncertainty that actually requires a procedure. Cranial neuropathy or progression despite therapy warrants multidisciplinary escalation.",
+ "teach":"The clue is disproportionate pain in a high-risk patient. Once skull-base osteomyelitis is suspected, treatment duration and follow-up are driven by clinical response—not by a short otitis-externa course."},
+"Allergic Rhinitis":{
+ "recognize":"Sneezing, itching, watery rhinorrhea and congestion linked to exposures support allergic rhinitis; fixed unilateral obstruction, purulence, recurrent epistaxis or anosmia with other features should broaden the diagnosis.",
+ "localize":"IgE-mediated nasal mucosal inflammation produces turbinate vascular engorgement and glandular secretion. Structural septal/valve obstruction may coexist but is mechanistically separate.",
+ "workup":"History and exam usually establish the phenotype. Allergy testing is useful when confirmation changes avoidance, immunotherapy or diagnostic uncertainty; sinus CT is not a routine allergic-rhinitis test.",
+ "manage":"Use allergen/environmental measures plus intranasal corticosteroid and/or intranasal antihistamine according to symptom pattern. Consider immunotherapy for persistent clinically relevant sensitization despite appropriate treatment or when disease modification is desired.",
+ "operate":"Surgery does not treat IgE biology. Septal/turbinate/valve procedures are reserved for persistent structural obstruction after the inflammatory component is treated.",
+ "teach":"A large turbinate is a sign, not an etiology. Separate reversible mucosal inflammation from fixed anatomy before offering surgery."},
+"CRS Phenotyping":{
+ "recognize":"CRS requires ≥12 weeks of compatible symptoms plus objective inflammation; phenotyping by polyps, eosinophilic/type-2 features, asthma/AERD, fungal disease and other modifiers is more useful than treating all CRS as one infection.",
+ "localize":"Map disease by sinus drainage pathways and endoscopic phenotype, but also recognize systemic mucosal inflammation. Polyps, olfactory loss and asthma often signal a different inflammatory biology than isolated odontogenic or localized disease.",
+ "workup":"Confirm with endoscopy and/or CT; reserve cultures for selected refractory purulence and evaluate immune, ciliary, fungal or odontogenic contributors when history suggests them. CT severity alone does not define symptom burden.",
+ "manage":"Saline and topical intranasal corticosteroid therapy are foundational. Add short systemic therapy, biologics or surgery according to phenotype, severity and prior response rather than requiring a rigid 'maximal medical therapy' checklist.",
+ "operate":"Surgery opens diseased drainage pathways and creates access for topical treatment; extent should match disease distribution and goals. Preserve mucosa and landmarks while recognizing that surgery controls disease but does not cure the inflammatory tendency.",
+ "teach":"CRS management is phenotype → objective disease → treatment response → individualized surgery/biologic decision, not repeated antibiotics for a CT scan."},
+"AERD":{
+ "recognize":"Adult-onset asthma, CRSwNP and respiratory reactions to COX-1 inhibitors form AERD. Severe recurrent polyposis and anosmia may precede a clearly recognized NSAID reaction history.",
+ "localize":"This is systemic dysregulated arachidonic-acid/eicosanoid inflammation affecting upper and lower airways, not simply aspirin allergy plus unrelated polyps.",
+ "workup":"Diagnosis is often clinical; aspirin challenge is used when history is uncertain and the result changes management. Evaluate asthma control and objective sinonasal disease before planning surgery/desensitization.",
+ "manage":"Use topical sinonasal therapy, guideline-based asthma care and appropriately selected biologic therapy. Aspirin desensitization followed by maintenance therapy is an option in selected patients; FESS is often coordinated to improve sinus access and disease control.",
+ "operate":"Surgery treats the anatomic burden and improves topical delivery but recurrence risk remains high without longitudinal inflammatory management. Plan postoperative anti-inflammatory strategy before operating.",
+ "teach":"AERD is a chronic upper-and-lower-airway inflammatory syndrome. The operation is one component of a medical-surgical disease-control plan."},
+"CSF Rhinorrhea":{
+ "recognize":"Clear unilateral watery rhinorrhea that increases with dependent position/strain, recurrent meningitis or a skull-base defect history should raise CSF leak. Do not diagnose by taste alone.",
+ "localize":"Leak may arise from cribriform, ethmoid roof, sphenoid or frontal skull base; spontaneous leaks are often associated with elevated intracranial-pressure physiology and may be multifocal.",
+ "workup":"Confirm fluid with beta-2 transferrin or beta-trace protein and localize with thin-cut CT plus MRI when encephalocele/soft tissue is suspected. Avoid indiscriminate bedside glucose testing.",
+ "manage":"Persistent cranial CSF leak generally requires repair because of meningitis risk. Address contributing intracranial-pressure physiology in spontaneous leaks to reduce recurrence.",
+ "operate":"Endoscopic repair uses defect-specific multilayer closure; high-flow/large defects may require vascularized flap support. Identify all defects, preserve flap pedicle and plan postoperative pressure management.",
+ "teach":"Two questions: is it truly CSF, and exactly where is the defect? Repair without recognizing elevated ICP is a setup for recurrence."},
+"Invasive Fungal Rhinosinusitis":{
+ "recognize":"In an immunocompromised, neutropenic or severely uncontrolled diabetic patient, rapidly progressive facial pain, numbness, necrotic mucosa, orbital findings or cranial neuropathy is invasive fungal disease until proven otherwise.",
+ "localize":"Angioinvasion allows rapid spread from sinonasal mucosa to orbit, pterygopalatine/infratemporal spaces, skull base, cavernous sinus and brain; the extent may exceed visible necrosis.",
+ "workup":"Urgent endoscopy with biopsy for histopathology/culture and contrast CT/MRI should proceed in parallel with stabilization. A normal-looking CT does not safely exclude early invasive disease when clinical suspicion is high.",
+ "manage":"Start prompt systemic antifungal therapy, reverse immunosuppression/metabolic derangement when possible and perform serial aggressive-but-goal-directed debridement of nonviable infected tissue.",
+ "operate":"Debride until viable bleeding tissue is reached while balancing orbit/skull-base morbidity; repeat examinations/debridements are often necessary because disease evolves after the first operation.",
+ "teach":"This is an angioinvasive emergency, not a chronic fungal sinusitis variant. Delay in antifungal therapy or tissue diagnosis can be fatal."},
+"Sinonasal Inverted Papilloma":{
+ "recognize":"Unilateral papillomatous nasal mass with focal hyperostosis/attachment on CT suggests inverted papilloma; recurrence and synchronous/metachronous SCC risk make simple debulking inadequate.",
+ "localize":"Identify the attachment site—often lateral nasal wall/maxillary/ethmoid—and map frontal, sphenoid, orbit or skull-base extension. The attachment, not just the visible bulk, determines the resection.",
+ "workup":"Endoscopic biopsy establishes diagnosis after excluding a vascular lesion. CT shows bone/attachment and MRI helps distinguish tumor from retained secretions and assess suspicious malignant transformation.",
+ "manage":"Definitive treatment is complete excision including treatment of the attachment site, followed by long-term endoscopic surveillance. Suspected carcinoma changes staging and oncologic planning.",
+ "operate":"Use an approach that exposes the entire attachment; drill/remove involved underlying bone when appropriate rather than stripping only mucosa. Protect orbit, skull base, nasolacrimal duct and vascular structures according to site.",
+ "teach":"IP recurrence usually reflects residual attachment. The surgical question is 'Where is it attached?' not 'How do I remove the nasal mass?'"},
+"Revision FESS":{
+ "recognize":"Persistent symptoms after prior sinus surgery may reflect residual inflammatory disease, scarring/stenosis, missed cells/ostia, recirculation, odontogenic disease, migraine or a wrong original diagnosis.",
+ "localize":"Reconstruct anatomy from CT and endoscopy before entering the nose. Prior surgery may remove familiar landmarks while leaving dangerous skull-base/orbital relationships unchanged.",
+ "workup":"Confirm active CRS objectively and review prior operative notes, pathology/cultures and treatment adherence. CT should be read as a surgical map for residual partitions, frontal recess, sphenoid, orbit, skull base and neo-ostial stenosis.",
+ "manage":"Optimize inflammatory phenotype and topical delivery; revise only anatomy that contributes to persistent disease. Biologics may be preferable to repeated surgery in selected severe type-2 CRSwNP.",
+ "operate":"Re-establish constant landmarks before crossing scar. Work from known to unknown, preserve viable mucosa and create durable access for postoperative care rather than chasing every radiographic opacity.",
+ "teach":"Revision surgery is diagnostic humility plus anatomy. First ask why the first treatment failed; otherwise you may repeat the same failure with fewer landmarks."},
+"Thyroid Nodule":{
+ "recognize":"A thyroid nodule is a malignancy-risk and symptom problem, not an automatic surgical diagnosis. Suspicious nodes, hoarseness, rapid growth or fixation change urgency.",
+ "localize":"Characterize intrathyroidal lesion(s), contralateral gland and central/lateral neck nodes; assess tracheal/esophageal/RLN relationships when compression or invasion is suspected.",
+ "workup":"Start with TSH and dedicated thyroid/neck ultrasound. Hyperfunctioning nodules follow a functional pathway; euthyroid/hypothyroid nodules use ultrasound risk and size to determine FNA. Indeterminate cytology may require repeat sampling, molecular testing or diagnostic surgery depending on context.",
+ "manage":"Observation, interval ultrasound, ablation in selected benign symptomatic nodules, lobectomy or total thyroidectomy depends on malignancy probability, symptoms, bilateral disease, patient preference and downstream treatment needs.",
+ "operate":"Choose extent before incision and plan RLN/EBSLN, parathyroid and nodal strategy. A nodule with no operative indication should not become thyroidectomy simply because localization or technology is available.",
+ "teach":"Use a sequence: thyroid function → ultrasound risk → FNA when indicated → ask what result would change treatment. That prevents reflex surgery and unnecessary biopsy."},
+"Primary Hyperparathyroidism":{
+ "recognize":"PHPT is a biochemical diagnosis: hypercalcemia with an inappropriately high or non-suppressed PTH after excluding important mimics such as medication effects and familial hypocalciuric hypercalcemia.",
+ "localize":"Localization studies identify abnormal gland(s) for operative planning only after the biochemical diagnosis is secure. Typical inferior/superior glands and embryologic ectopic sites guide the search.",
+ "workup":"Confirm calcium/PTH, renal function and vitamin D; assess urine calcium when FHH is a concern, skeletal density/fracture and renal stone/nephrocalcinosis burden. Ultrasound, sestamibi/SPECT, 4D-CT or other localization is chosen for surgical planning.",
+ "manage":"Parathyroidectomy is definitive for symptomatic disease and for guideline-supported asymptomatic indications; observation is possible in selected patients with structured calcium, renal and skeletal follow-up.",
+ "operate":"Focused excision is reasonable with concordant single-gland localization and appropriate physiology; bilateral exploration is preferred when multigland disease is suspected or localization is unreliable. Identify RLN and preserve viable normal parathyroid tissue.",
+ "teach":"Diagnosis and localization are different questions. A negative sestamibi does not rule out PHPT; it only makes the surgical map less certain."},
+"Salivary Gland Malignancy":{
+ "recognize":"A firm salivary mass with pain, rapid growth, fixation, skin involvement, trismus, facial weakness or cervical nodes is malignant until proven otherwise; painless slow growth does not exclude low-grade cancer.",
+ "localize":"Map superficial/deep parotid or submandibular origin, facial nerve relationship, parapharyngeal extension and cervical nodes. Named-nerve symptoms raise perineural spread toward skull base.",
+ "workup":"Ultrasound-guided FNA/core sampling and contrast imaging define diagnosis and extent; MRI is especially useful for PNI/deep-space relationships. Chest/distant staging depends on histology/grade and stage.",
+ "manage":"Resectable disease is generally managed surgically with adjuvant RT based on grade, stage, margins, PNI and nodal risk. Systemic/targeted options vary by histology and molecular alterations in recurrent/metastatic disease.",
+ "operate":"Preserve a functioning facial nerve unless directly involved; if oncologic clearance requires sacrifice, plan immediate graft/transfer when feasible. Neck management depends on clinical nodes and occult-risk biology.",
+ "teach":"Salivary cancer is histology-driven. The same parotid operation can have very different neck, nerve, radiation and systemic implications depending on grade and subtype."},
+"Medullary Thyroid Cancer":{
+ "recognize":"MTC arises from parafollicular C cells; calcitonin/CEA, family history or MEN2 features distinguish it from differentiated follicular-cell cancers. Always consider hereditary RET-associated disease.",
+ "localize":"Assess both thyroid lobes and central/lateral cervical nodes; hereditary MTC may be multifocal/bilateral. Advanced disease may involve mediastinum or distant liver/lung/bone.",
+ "workup":"Measure calcitonin/CEA, perform neck ultrasound and obtain RET germline testing. Before thyroid surgery in MEN2, exclude pheochromocytoma; cross-sectional/distant staging is risk- and burden-dependent.",
+ "manage":"Total thyroidectomy is the standard primary operation for established MTC, with compartment-oriented nodal surgery based on clinical disease and biochemical/anatomic context. Advanced disease may use RET-targeted/systemic therapy.",
+ "operate":"Do not treat MTC like low-risk papillary microcarcinoma. Plan central/lateral disease deliberately, protect RLNs/parathyroids and resolve pheochromocytoma risk before anesthesia.",
+ "teach":"The board pearl is sequence: MTC → RET testing → look for pheochromocytoma before thyroid surgery → treat nodal disease compartmentally."},
+"Anaplastic Thyroid Cancer":{
+ "recognize":"Rapidly enlarging hard thyroid/neck mass, dyspnea, dysphagia, hoarseness and invasive imaging in an older adult is anaplastic cancer until proven otherwise. Airway deterioration can be rapid.",
+ "localize":"Map trachea, esophagus, carotid, prevertebral fascia and mediastinal extension; many tumors are unresectable because they invade critical structures rather than because of size alone.",
+ "workup":"Obtain rapid tissue diagnosis, airway assessment, staging and urgent molecular testing because actionable alterations can change systemic therapy. Multidisciplinary planning should occur immediately, not after elective clinic workup.",
+ "manage":"Treatment is individualized among targeted therapy, radiation, systemic therapy, surgery in selected resectable responders and symptom-focused care. Airway, swallowing and goals-of-care decisions are central from diagnosis.",
+ "operate":"Avoid heroic incomplete resection that creates morbidity without control. Surgery is reserved for selected resectable disease or converted responders; tracheostomy itself can be technically hazardous in bulky invasive tumor.",
+ "teach":"ATC is an oncologic emergency. Think airway + tissue + molecular testing + multidisciplinary plan simultaneously."},
+"Pediatric OSA / Adenotonsillar Disease":{
+ "recognize":"Habitual snoring plus labored breathing, witnessed apneas, restless sleep, enuresis, behavioral or growth consequences raises pediatric OSA. Tonsil size alone neither diagnoses nor grades OSA.",
+ "localize":"Adenotonsillar hypertrophy is common, but obesity, craniofacial anatomy, neuromuscular disease, nasal obstruction, tongue base and laryngomalacia can create multilevel collapse.",
+ "workup":"History/exam may be sufficient before adenotonsillectomy in straightforward cases, but PSG is important in high-risk comorbidity, discordant exam/severity, uncertainty or when results will change postoperative monitoring/treatment.",
+ "manage":"Adenotonsillectomy is first-line surgery for appropriate adenotonsillar OSA, with postoperative risk stratification and a plan for residual disease. Weight, nasal therapy, PAP, DISE-directed surgery or HNS in selected syndromic patients may enter later.",
+ "operate":"Control tonsillar hemorrhage, protect deep pharyngeal structures and perform adenoidectomy with awareness of velopharyngeal/Eustachian anatomy. High-risk children require appropriate postoperative respiratory monitoring.",
+ "teach":"AT treats a major contributor, not every cause. Always tell families and juniors that residual OSA is common in obesity and complex airway disease."},
+"Laryngomalacia":{
+ "recognize":"Inspiratory stridor beginning in infancy, worse with feeding/supine/agitation and usually improving over time suggests laryngomalacia. Cyanosis, apnea, failure to thrive or significant retractions indicate severe disease.",
+ "localize":"Dynamic supraglottic collapse may involve arytenoid mucosa, short aryepiglottic folds and/or epiglottic prolapse; assess synchronous lesions when symptoms are atypical or severe.",
+ "workup":"Flexible laryngoscopy establishes the diagnosis in most infants. Severe/atypical cases require broader airway and swallowing evaluation based on symptoms; do not attribute every noisy-breathing infant to reflux.",
+ "manage":"Mild disease is observed with feeding/growth monitoring. Severe obstruction, feeding failure, hypoxemia or significant OSA may require supraglottoplasty and evaluation for neurologic/cardiopulmonary contributors.",
+ "operate":"Tailor supraglottoplasty to the collapsing structure and avoid over-resection that can cause scar or aspiration. Account for neurologic disease and multilevel airway problems that predict poorer surgical response.",
+ "teach":"The diagnosis is dynamic collapse, not simply 'floppy epiglottis.' Severity is defined by breathing, growth, feeding and oxygenation—not stridor loudness."},
+"Pediatric Subglottic Stenosis":{
+ "recognize":"Persistent/recurrent croup-like stridor, extubation failure or biphasic stridor suggests subglottic narrowing; acquired disease is often related to prior intubation, while congenital stenosis has different history/anatomy.",
+ "localize":"Define stenosis level, length, circumferential scar, cartilage framework and glottic/posterior involvement. Vocal-fold mobility changes reconstruction strategy.",
+ "workup":"Definitive assessment is endoscopic sizing and characterization, supplemented by history and imaging only when external framework or other airway disease requires it. Grade alone is insufficient without length and scar quality.",
+ "manage":"Mild disease may be observed or treated endoscopically; repeated dilation is less attractive for long mature circumferential scar, cartilage compromise or rapid recurrence. Open LTR/CTR is chosen by anatomy and patient factors.",
+ "operate":"Endoscopic treatment requires controlled radial scar work and dilation without destabilizing cartilage. Open reconstruction must preserve RLNs, restore framework and account for pulmonary/feeding/tracheostomy status.",
+ "teach":"For SGS, say more than the grade: location, length, maturity, framework and glottic involvement determine the operation."},
+"Pediatric Tracheostomy / Decannulation":{
+ "recognize":"Tracheostomy dependence may persist because of upper-airway obstruction, pulmonary need, aspiration, ventilator dependence or neuromuscular weakness. Decannulation is a physiologic milestone, not just tube downsizing.",
+ "localize":"Identify whether the remaining barrier is supraglottic/glottic/subglottic/tracheal airway, lung/ventilation, secretion management or swallowing/aspiration.",
+ "workup":"Use interval airway endoscopy and institution-specific capping/sleep/respiratory assessment when clinically indicated. Confirm the child can maintain airway, ventilation and secretion clearance without the tube.",
+ "manage":"Progress toward speaking valve/capping/downsizing according to the child's airway and respiratory reserve, treating granulation/stenosis and pulmonary/swallow contributors along the way.",
+ "operate":"Before decannulation, correct obstructing suprastomal or airway lesions when necessary and plan rescue. Persistent tracheocutaneous fistula after successful decannulation may require later closure.",
+ "teach":"The question is not 'Is the airway big enough?' It is whether the child can breathe, sleep, clear secretions and protect the lungs without the tracheostomy."},
+"Unilateral Vocal Fold Paralysis":{
+ "recognize":"Breathy dysphonia, weak cough and aspiration symptoms with unilateral immobility require distinction between neurogenic paralysis and cricoarytenoid fixation/scar.",
+ "localize":"Trace the vagus/RLN pathway from skull base through neck/chest according to side and associated cranial findings. Position, bowing, phase asymmetry and glottic gap describe functional consequences but do not by themselves localize the lesion.",
+ "workup":"Flexible laryngoscopy/stroboscopy documents motion and closure; image along the nerve when etiology is unexplained. Laryngeal EMG is selective for prognosis or differentiating neurogenic from mechanical dysfunction.",
+ "manage":"Voice therapy, temporary injection, permanent framework surgery and reinnervation are selected by symptom burden, aspiration, expected nerve recovery and patient goals.",
+ "operate":"Temporary augmentation is useful when recovery remains possible; medialization thyroplasty offers adjustable durable closure, arytenoid adduction addresses posterior gap/height mismatch, and reinnervation restores tone rather than immediate position.",
+ "teach":"Treat glottic insufficiency, not just immobility. The best operation depends on expected recovery and the specific closure defect."},
+"Dysphagia / Aspiration":{
+ "recognize":"Coughing/choking, wet voice, recurrent pneumonia, weight loss or prolonged meals suggest dysphagia, but silent aspiration can occur without cough.",
+ "localize":"Separate oral preparation, pharyngeal timing/propulsion, laryngeal closure/sensation, UES opening and esophageal transit. Residue location and aspiration timing point to different mechanisms.",
+ "workup":"FEES and MBS/VFSS answer complementary questions; choose based on physiology needed, secretion assessment, radiation exposure and patient access. Esophageal testing is added when symptoms/localization extend beyond the pharynx.",
+ "manage":"Treat the mechanism with diet/bolus modification, posture/maneuvers, rehabilitation and targeted procedural therapy. Avoid making permanent diet restrictions from a single observation without testing whether an intervention improves physiology.",
+ "operate":"Procedures are mechanism-specific: augmentation for glottic insufficiency, UES treatment for true outflow dysfunction, diverticulum surgery for Zenker and aspiration-prevention surgery for refractory life-threatening aspiration.",
+ "teach":"Always describe aspiration as before, during or after the swallow and explain why. That converts 'aspiration' from a finding into a treatment plan."},
+"Subglottic / Tracheal Stenosis":{
+ "recognize":"Progressive exertional dyspnea, stridor or 'refractory asthma' with fixed upper-airway obstruction should trigger laryngotracheal stenosis evaluation, especially after intubation/tracheostomy or in autoimmune disease.",
+ "localize":"Define glottic, subglottic and tracheal level, length, circumferential scar, cartilage integrity and distance from vocal folds/carina; posterior glottic fixation changes the diagnosis and surgery.",
+ "workup":"Flexible exam plus operative endoscopy characterize lumen and scar; CT helps long-segment/extrinsic anatomy. Evaluate systemic inflammatory causes when history suggests them.",
+ "manage":"Short soft stenosis may respond to endoscopic incision/dilation/injection; mature long circumferential or framework disease more often needs open reconstruction/resection. Recurrence pattern matters more than the number of prior dilations.",
+ "operate":"Endoscopic treatment should create controlled radial release rather than circumferential mucosal destruction. Resection/reconstruction requires tension control, blood-supply preservation and a postoperative airway/anastomotic plan.",
+ "teach":"Describe stenosis by level, length, grade, scar maturity and framework—not grade alone. Those descriptors predict whether dilation is reasonable."},
+"Bilateral Vocal Fold Immobility":{
+ "recognize":"Biphasic stridor with both folds near midline may be bilateral RLN paralysis or posterior glottic fixation; voice can be deceptively good despite a dangerous airway.",
+ "localize":"Differentiate neurogenic bilateral paralysis from cricoarytenoid fixation/posterior glottic scar. History of intubation, surgery and neurologic disease plus endoscopic joint assessment guides localization.",
+ "workup":"Flexible laryngoscopy documents motion/airway; CT and laryngeal EMG are selective. Operative palpation of arytenoid joints may be needed when fixation remains uncertain.",
+ "manage":"Acute unsafe airway requires secure ventilation/tracheostomy strategy. Longer-term options include observation for recovery, reinnervation/pacing concepts or airway-widening procedures depending on etiology and goals.",
+ "operate":"Posterior cordotomy/arytenoid procedures enlarge the airway at the expense of voice and sometimes swallowing; avoid irreversible widening early when meaningful nerve recovery is likely.",
+ "teach":"The central tradeoff is airway versus voice. First diagnose paralysis versus fixation, then decide how much posterior glottic airway the patient needs."},
+"Zenker Diverticulum":{
+ "recognize":"Older patient with dysphagia, regurgitation of undigested food, halitosis, cough or aspiration may have Zenker diverticulum from pharyngoesophageal outflow dysfunction.",
+ "localize":"The pouch arises through Killian dehiscence above the cricopharyngeus; the functional problem includes a restrictive/noncompliant CP segment, not simply a bag that needs removal.",
+ "workup":"Barium esophagram defines pouch size and anatomy; endoscopy assesses mucosa and alternative pathology when appropriate. Evaluate aspiration/nutrition in frail patients.",
+ "manage":"Symptomatic disease is treated by dividing the common wall/CP muscle through endoscopic stapling, flexible septotomy/Z-POEM-type techniques or open diverticulectomy/diverticulopexy with myotomy based on anatomy and expertise.",
+ "operate":"Endoscopic treatment requires safe exposure and complete-enough septal/CP division without perforation; open surgery exposes recurrent laryngeal nerve and deep-neck structures.",
+ "teach":"If you treat the pouch without addressing the cricopharyngeal dysfunction, you miss the mechanism. Myotomy/septotomy is the key therapeutic principle."},
+"ZMC / Orbital Trauma":{
+ "recognize":"Malar flattening, trismus, infraorbital numbness, diplopia or palpable step-offs after facial trauma suggests ZMC injury. Vision loss, RAPD or severe orbital pain is an emergency before fracture repair.",
+ "localize":"Assess the zygomaticofrontal, infraorbital rim, zygomaticomaxillary buttress and arch plus orbital floor/walls. ZMC displacement changes orbital volume and facial projection in three dimensions.",
+ "workup":"Document acuity, pupils, motility, diplopia, globe position and sensation; CT with multiplanar reconstruction defines displacement, orbital defect and associated fractures.",
+ "manage":"Observe nondisplaced asymptomatic fractures; repair displaced fractures causing malar deformity, trismus, unstable buttress or clinically important orbital dysfunction once urgent ocular injuries are addressed.",
+ "operate":"Restore the zygoma to stable reference points before accepting fixation; verify orbital volume and avoid entrapping tissue. Fixation sequence should reproduce width, projection and rim alignment rather than chasing one CT line.",
+ "teach":"ZMC is a three-dimensional facial-frame injury. Vision comes first, then restore projection and orbital volume."},
+"Mandible Fracture":{
+ "recognize":"Malocclusion, step deformity, mobility, trismus, open gingival wound or V3 numbness after trauma suggests mandibular fracture; anterior blows may also injure one or both condyles.",
+ "localize":"Classify symphysis/parasymphysis, body, angle, ramus and condyle and identify multiple fractures. Dentition and muscle pull determine displacement and fixation biomechanics.",
+ "workup":"Document preinjury/current occlusion, dental/open-fracture status and inferior alveolar function; panoramic imaging and/or CT define pattern and associated facial injury.",
+ "manage":"Closed versus open treatment depends on displacement, stability, occlusion, dentition, fracture location and patient factors. Antibiotic and dental management follow open-fracture principles when appropriate.",
+ "operate":"Re-establish occlusion before final fixation. Choose load-sharing versus load-bearing constructs from fracture complexity and bone quality; protect tooth roots and inferior alveolar nerve.",
+ "teach":"The endpoint is preinjury occlusion and stable biomechanics, not simply a straight postoperative x-ray."},
+"Functional Septorhinoplasty":{
+ "recognize":"Persistent nasal obstruction from septal deviation plus internal/external valve narrowing or lateral-wall collapse should be separated from reversible rhinitis and isolated turbinate hypertrophy.",
+ "localize":"Assess septum, caudal/dorsal support, internal valve angle, upper lateral cartilage, lateral crus/alar rim and dynamic sidewall collapse; each zone requires a different structural solution.",
+ "workup":"History, anterior rhinoscopy/endoscopy, decongestion response and dynamic valve maneuvers define the obstructing components. CT is not routinely needed for isolated functional valve/septal disease.",
+ "manage":"Treat mucosal disease first when significant, then offer structural surgery when fixed obstruction persists and symptoms correlate with exam. Counsel that cosmetic changes may occur when support is modified.",
+ "operate":"Correct septal obstruction while preserving an adequate L-strut, then use spreader, batten, lateral-crural, rim or septal-extension strategies only for a defined mechanical failure. Avoid destabilizing the nose to improve one narrow segment.",
+ "teach":"Name the failed structure before naming the graft. Functional rhinoplasty is biomechanics, not a menu of cartilage pieces."},
+"Facial Nerve Reanimation":{
+ "recognize":"Determine whether the problem is acute nerve discontinuity, recoverable paralysis, chronic flaccid denervation or synkinesis. Eye protection and oral competence may require immediate treatment even while etiology is being defined.",
+ "localize":"Map proximal and distal facial-nerve availability and which facial muscle groups remain viable. Denervation duration predicts whether native mimetic muscles can still respond to reinnervation.",
+ "workup":"Document branch-specific facial function, ocular status, duration and cause; use imaging/electrodiagnostics selectively when they change lesion localization or reconstructive timing.",
+ "manage":"Use eye protection, therapy and botulinum treatment when appropriate. Repair/graft acute discontinuity, nerve-transfer a viable chronic-but-not-endstage native muscle system, and use muscle transfer/static suspension when native motor units are no longer useful.",
+ "operate":"Primary neurorrhaphy should be tension-free; cable graft bridges a gap, masseteric/hypoglossal strategies supply motor input, and free functional muscle transfer restores smile when native muscle is irreversibly denervated.",
+ "teach":"Timing is anatomy. The same patient six weeks versus six years after injury has a completely different reconstructive toolbox."},
+"DISE":{
+ "recognize":"DISE is a dynamic airway-phenotyping tool for selected sleep-surgery planning; it is not a diagnostic substitute for PSG and should answer a specific treatment question.",
+ "localize":"Describe collapse by level and pattern—velum, oropharyngeal lateral wall, tongue base and epiglottis—rather than merely saying 'multilevel obstruction.'",
+ "workup":"Review PSG, awake anatomy, PAP history and planned therapeutic choices before DISE. Sedation should approximate sleep while avoiding excessive depth that creates nonphysiologic collapse.",
+ "manage":"Use DISE findings to choose or avoid targeted surgery and to assess HNS eligibility, especially complete concentric palatal collapse. Do not operate on every observed collapse without considering its clinical importance.",
+ "operate":"During DISE, systematically inspect the airway, document pattern/severity, use maneuvers such as jaw/tongue advancement when relevant and maintain safe sedation/airway control.",
+ "teach":"PSG tells you how severe OSA is; DISE helps explain how the airway collapses. Neither test alone chooses the entire treatment plan."},
+"PAP Troubleshooting":{
+ "recognize":"PAP 'failure' may actually be mask leak, pressure intolerance, nasal obstruction, insomnia, aerophagia, poor education or untreated positional/weight factors rather than physiologic inability to use PAP.",
+ "localize":"Identify whether the limiting problem is interface, upper-airway resistance, pressure delivery, sleep behavior or residual events despite apparently adequate use.",
+ "workup":"Review objective adherence, residual AHI/event type, leak, pressure curves and symptoms. Repeat titration or sleep evaluation when residual physiology is unclear rather than declaring PAP failure from self-report alone.",
+ "manage":"Fix interface and nasal issues, adjust mode/pressure/humidification, use behavioral support and address comorbidity. Only after a real optimization attempt should alternative surgery, oral appliance or other therapy be framed as PAP intolerance/failure.",
+ "operate":"Surgery may reduce anatomic obstruction or create an alternative pathway, but it should not be used to avoid troubleshooting a correctable mask/pressure problem. The operation is phenotype-driven, not frustration-driven.",
+ "teach":"Before sending a patient to sleep surgery, ask to see the PAP data. 'I couldn't tolerate CPAP' is the beginning of the workup, not the end."},
+"Residual OSA After Surgery":{
+ "recognize":"Persistent snoring, daytime symptoms or abnormal postoperative PSG after adenotonsillectomy, palate surgery or multilevel procedures means residual OSA, not automatically failed technique.",
+ "localize":"Residual disease may reflect untreated level(s), weight change, craniofacial structure, tongue-base/epiglottic collapse or nonobstructive events. The residual phenotype can differ from the preoperative phenotype.",
+ "workup":"Use postoperative PSG when clinically indicated, reassess weight/anatomy and consider DISE for additional surgery. Verify whether residual events are obstructive, central or positional before choosing another operation.",
+ "manage":"Options include PAP re-trial, weight management, oral appliance, positional therapy, targeted revision/multilevel surgery, HNS or skeletal surgery depending on residual mechanism.",
+ "operate":"Do not stack procedures blindly. A second operation should have a demonstrated target and a realistic chance of meaningful benefit compared with PAP or other nonsurgical therapy.",
+ "teach":"Residual OSA is a new diagnostic problem. Re-phenotype the patient instead of repeating the original treatment."},
+"Post-Tonsillectomy Hemorrhage":{
+ "recognize":"Any fresh oral bleeding or hematemesis after tonsillectomy is potentially significant even if bleeding has stopped on arrival. Recurrent swallowing, tachycardia or clot in the fossa increases concern.",
+ "localize":"Bleeding usually arises from the tonsillar fossae; secondary hemorrhage occurs when eschar separates during healing. The immediate danger is both blood loss and aspiration/airway contamination.",
+ "workup":"Assess hemodynamics and airway, establish IV access and obtain CBC/type-and-screen/coagulation testing according to severity. Do not repeatedly traumatize an uncooperative bleeding child with prolonged bedside manipulation.",
+ "manage":"Resuscitate, involve anesthesia/OR early for active, recurrent or concerning bleeding and use antifibrinolytic/temporary measures according to local protocol while definitive control is organized.",
+ "operate":"Induce anesthesia with a full-stomach/hemorrhage airway plan, evacuate clot, identify the bleeding point and achieve secure cautery/ligation. Reinspect both fossae and stomach/airway contamination before emergence.",
+ "teach":"A post-tonsil bleed can look deceptively stable between episodes. Treat the history and clot burden seriously because the next bleed may be brisk."},
+"Deep Neck Space Infection":{
+ "recognize":"Fever, odynophagia, trismus, muffled voice, neck swelling, toxic appearance or cranial/airway symptoms can indicate infection beyond a simple tonsillar process. Drooling, stridor and rapidly progressive floor-of-mouth swelling are airway warnings.",
+ "localize":"Localize to peritonsillar, parapharyngeal, retropharyngeal/danger, submandibular, masticator or carotid spaces because spread patterns determine airway, mediastinal and vascular risk.",
+ "workup":"Airway assessment precedes imaging in an unstable patient. Contrast CT defines drainable collection and space involvement; MRI is selective. Obtain cultures from drainage and consider odontogenic source, Lemierre syndrome or mediastinal extension.",
+ "manage":"Start IV antibiotics and supportive care, secure the airway when threatened and drain abscesses that are large, complicated, worsening or not responding. Source-control decisions depend on space, size and clinical course.",
+ "operate":"Choose transoral versus transcervical drainage from location and vascular relationships. Protect carotid sheath/cranial nerves and open all communicating loculations; persistent sepsis should prompt a search for missed spaces or descending infection.",
+ "teach":"Deep neck infection management is airway + antibiotics + source control. If you only name the antibiotic, you have not managed the patient."},
+"Tracheostomy Emergency":{
+ "recognize":"Sudden desaturation, high airway pressures, absent airflow, bleeding or inability to pass suction catheter in a tracheostomy patient is an airway emergency. Determine whether the tract is mature before manipulating it.",
+ "localize":"The problem may be tube obstruction, displacement/false passage, mucus plug, cuff issue, pneumothorax or disease distal/proximal to the tube. Upper-airway patency determines whether oral ventilation is possible.",
+ "workup":"Treat first and diagnose simultaneously: remove inner cannula, suction, assess capnography/air entry and inspect tube position. Bronchoscopy/imaging follows stabilization when obstruction/displacement remains uncertain.",
+ "manage":"Give oxygen to face and stoma, call for airway help and replace/remove the tube according to tract maturity and the patient's upper-airway status. A fresh tract should not be blindly instrumented.",
+ "operate":"If the airway cannot be restored through the stoma, move to the safest alternate ventilation/intubation strategy and obtain endoscopic/surgical control. Significant tracheostomy hemorrhage requires consideration of tracheo-innominate fistula.",
+ "teach":"The first lifesaving question is whether air can move through the tube. If not, remove the obstruction/tube and oxygenate by whichever airway route is actually patent."},
+}
+for _domain,_mods in DEEP_MODULES_V6.items():
+    for _m in _mods:
+        _r=TRUE_DEPTH_REWRITES_V96.get(_m.get("topic"))
+        if _r:
+            _m.update(_r)
+            _m["evidence_calibrated"]="v9.6"
+
+# Rebuild adaptive bank.
+ADAPTIVE_ITEMS_V96=[]
+for _domain,_mods in DEEP_MODULES_V6.items():
+    for _m in _mods:
+        _id=_v6_item_id(_domain,_m["topic"])
+        for _stage in ["recognize","localize","workup","manage","operate","teach"]:
+            ADAPTIVE_ITEMS_V96.append({
+              "id":_id+"-"+_stage,"concept_id":_id,"domain":_domain,"topic":_m["topic"],
+              "stage":_stage,"display_stage":"advanced" if _stage=="operate" else _stage,
+              "prompt":{"recognize":"Recognize the pattern.","localize":"Localize the problem.","workup":"Evaluate it efficiently.","manage":"Build the management sequence.","operate":"Make the advanced decision.","teach":"Teach the mental model."}[_stage],
+              "answer":_m[_stage],
+              "minutes":{"recognize":3,"localize":3,"workup":4,"manage":4,"operate":6,"teach":4}[_stage],
+              "level":{"recognize":1,"localize":2,"workup":3,"manage":4,"operate":5,"teach":6}[_stage],
+              "tags":_m.get("tags",_tags_v94(_m["topic"],_domain))
+            })
+ADAPTIVE_ITEMS_V95=ADAPTIVE_ITEMS_V96
+ADAPTIVE_ITEMS_V94=ADAPTIVE_ITEMS_V96
+ADAPTIVE_ITEMS_V91=ADAPTIVE_ITEMS_V96
+
+
+# =============================================================================
+# ENT Mastery v9.7 — Remaining Depth + Surgical Anatomy Pass
+# =============================================================================
+
+NEW_DEPTH_MODULES_V97 = {
+"Otology / Neurotology":[
+ {"topic":"Persistent Postural-Perceptual Dizziness (PPPD)",
+  "recognize":"Chronic nonspinning dizziness/unsteadiness present most days for months and worsened by upright posture, motion, complex visual environments or busy stores/screens suggests PPPD, often after a vestibular, migraine, anxiety or medical trigger.",
+  "localize":"PPPD is a functional sensory-integration disorder rather than a fixed unilateral vestibular lesion. The problem is maladaptive weighting of visual, vestibular and postural inputs plus heightened threat/vigilance.",
+  "workup":"Confirm the characteristic time course and triggers, then look for active vestibular, neurologic or cardiac disease that would better explain symptoms. Vestibular testing may be normal or may show a prior trigger disorder; abnormal tests do not exclude superimposed PPPD.",
+  "manage":"Education, graded vestibular rehabilitation, treatment of comorbid migraine/anxiety and selected serotonergic medication are commonly combined. Avoid chronic vestibular suppressants, which can reinforce compensation failure.",
+  "operate":"There is no operative treatment for PPPD. The advanced decision is recognizing when persistent symptoms are due to PPPD layered on top of a treated peripheral disorder rather than escalating to destructive vestibular procedures.",
+  "teach":"PPPD is real dizziness without a single damaged end organ. The board/clinic pearl is persistent visually/posturally provoked symptoms after a trigger with no better structural explanation."},
+ {"topic":"Patulous Eustachian Tube Dysfunction",
+  "recognize":"Autophony of voice/breathing, aural fullness and symptoms that improve when supine or worsen with weight loss/dehydration suggest patulous rather than obstructive ET dysfunction.",
+  "localize":"The Eustachian tube remains abnormally open, allowing nasopharyngeal pressure and sound transmission into the middle ear; this is physiologically opposite to obstructive ETD.",
+  "workup":"Look for TM movement with respiration during symptoms, use tympanometry/endoscopy when helpful and distinguish superior canal dehiscence, middle-ear muscle disorders and ordinary occlusion/autophony complaints.",
+  "manage":"Hydration, stopping aggravating decongestants, treating weight-loss or mucosal contributors and selected topical/mechanical therapies are first-line. Procedures are reserved for persistent disabling disease.",
+  "operate":"Procedural strategies attempt to narrow or damp the tube/tympanic membrane system without creating permanent obstructive ETD. Counsel that outcomes are variable and symptoms can fluctuate.",
+  "teach":"Autophony does not always mean superior canal dehiscence. Ask whether the patient hears breathing and whether lying down improves symptoms."},
+ {"topic":"Perilymph Fistula / Inner-Ear Window Leak",
+  "recognize":"Sudden or fluctuating hearing loss, vertigo or disequilibrium after barotrauma, penetrating trauma, surgery or major pressure event can suggest a perilymph leak, but symptoms are nonspecific.",
+  "localize":"Leak is usually conceptualized at the oval or round window, creating abnormal communication between perilymphatic space and middle ear. Third-window disorders can mimic pressure/sound-induced symptoms.",
+  "workup":"Use audiometry and vestibular assessment; CT is useful for trauma/third-window anatomy. There is no single highly reliable bedside test for idiopathic fistula, so diagnosis depends on context and exclusion of better explanations.",
+  "manage":"Activity/pressure precautions and observation are reasonable in selected stable cases; urgent surgical exploration is considered for compelling traumatic leaks, progressive SNHL or severe persistent symptoms.",
+  "operate":"Middle-ear exploration evaluates oval/round-window regions and allows sealing with soft tissue/fascia when a leak is suspected. Avoid excessive manipulation of the stapes/vestibule.",
+  "teach":"Perilymph fistula is a clinical diagnosis with imperfect testing. The strongest cases have a credible pressure/trauma mechanism plus cochleovestibular change."},
+ {"topic":"Cochlear Implant Failure / Revision",
+  "recognize":"Declining performance, intermittency, pain, facial stimulation, loss of lock/telemetry, infection, extrusion or device integrity concerns after CI warrant systematic evaluation rather than immediate reimplantation.",
+  "localize":"Failure may be external hardware/programming, electrode array migration/foldover, receiver-stimulator malfunction, soft failure, infection or biologic cochlear/neural limitation.",
+  "workup":"Start with audiology/device integrity testing, programming review and history of performance change. Use imaging for suspected array migration/position problems and evaluate infection/skin integrity when present.",
+  "manage":"Correct external/programming causes first. Revision/reimplantation is indicated for confirmed hard failure, unacceptable soft-failure phenotype after multidisciplinary review, infection/extrusion or mechanical electrode problems that cannot be corrected nonoperatively.",
+  "operate":"Plan around prior scar, receiver pocket, mastoid/facial-recess anatomy and the possibility of cochlear fibrosis. Preserve cochlear access while removing the old array carefully and have a backup strategy for difficult reinsertion.",
+  "teach":"A poor CI user is not automatically a failed implant. Separate device, electrode, programming and neural/rehabilitation causes before revision."},
+ {"topic":"Congenital Inner-Ear Malformations",
+  "recognize":"Congenital SNHL with characteristic CT/MRI abnormalities may reflect cochlear, vestibular, semicircular-canal, IAC or cochlear-nerve malformation; syndromic clues and CSF-gusher risk matter.",
+  "localize":"Classify the malformation by which embryologic structure failed to develop normally and determine whether a functional cochlear nerve is present. Anatomy predicts both hearing potential and surgical risk.",
+  "workup":"High-resolution temporal-bone CT defines bony labyrinth and IAC; MRI evaluates cochlear nerve and membranous/brain anatomy. Add genetics and syndromic evaluation when clinically appropriate.",
+  "manage":"Amplification, CI or auditory brainstem implantation depends on residual hearing, cochlear anatomy and nerve presence. Early language access remains the functional priority.",
+  "operate":"Expect abnormal facial-nerve course, difficult round-window access and increased CSF leak/gusher risk in selected malformations. Electrode choice and insertion strategy should match the malformed cochlea rather than a routine anatomy template.",
+  "teach":"For congenital deafness, CT tells you the bony map and MRI tells you whether the nerve exists. Both matter before promising CI benefit."}
+],
+"Rhinology / Allergy / Skull Base":[
+ {"topic":"Pediatric Chronic Rhinosinusitis",
+  "recognize":"Persistent nasal obstruction/discharge and cough in a child for ≥12 weeks with objective disease suggests pediatric CRS; adenoid disease, allergy, asthma, reflux symptoms and recurrent viral illness commonly overlap.",
+  "localize":"Disease involves sinonasal mucosa but the adenoid can act as an inflammatory/biofilm reservoir, especially in younger children. CF, PCD and immune deficiency change the phenotype.",
+  "workup":"Confirm persistent symptoms and use nasal exam/endoscopy when feasible. CT is generally reserved for refractory disease or surgical planning; evaluate allergy, CF/PCD or immune disorder when history suggests unusually severe/recurrent disease.",
+  "manage":"Saline and intranasal anti-inflammatory therapy are foundational; prolonged or repeated antibiotics should be phenotype-driven rather than automatic. Adenoidectomy is often the first surgical step in appropriate younger children before full FESS.",
+  "operate":"If disease persists after appropriate medical/adenoid management, limited FESS is tailored to involved sinuses and age/anatomy. Protect orbit/skull base and preserve mucosa for long-term sinus development/function.",
+  "teach":"Pediatric CRS is not simply adult CRS in a small nose. The adenoid and underlying systemic disease matter much more."},
+ {"topic":"CF / Primary Ciliary Dyskinesia Sinonasal Disease",
+  "recognize":"Early severe CRS, nasal polyposis, chronic wet cough, bronchiectasis, recurrent otitis or neonatal respiratory history should raise CF or PCD rather than isolated idiopathic CRS.",
+  "localize":"Abnormal mucus composition or mucociliary clearance creates diffuse upper- and lower-airway disease; sinus disease is part of a systemic airway phenotype.",
+  "workup":"Coordinate sweat/genetic testing for CF or specialized ciliary/nasal nitric oxide/genetic assessment for PCD when suspected. CT/endoscopy define sinonasal burden but do not establish the systemic diagnosis.",
+  "manage":"Use aggressive saline/topical therapy and disease-specific pulmonary management. Antibiotics are culture/phenotype driven. Surgery may improve drainage/topical access but cannot correct the underlying clearance defect.",
+  "operate":"FESS should create durable, maintainable cavities for irrigation while respecting pediatric anatomy; recurrence is common if postoperative topical therapy is not sustained.",
+  "teach":"When CRS starts early and the lungs/ears are involved, think mucociliary disease. The sinus operation treats consequences, not the genetic mechanism."},
+ {"topic":"Immunodeficiency-Associated Chronic Rhinosinusitis",
+  "recognize":"Frequent bacterial sinus infections, pneumonia, unusual organisms, poor vaccine response or refractory CRS despite appropriate therapy should raise humoral or broader immune deficiency.",
+  "localize":"The sinonasal disease is a consequence of impaired host defense rather than purely anatomic ostial obstruction; recurrent bacterial burden may coexist with structural disease.",
+  "workup":"Use infection history to guide quantitative immunoglobulins and functional antibody assessment, with immunology referral when abnormalities or strong suspicion persist. Avoid indiscriminate immune panels in ordinary CRS.",
+  "manage":"Optimize topical CRS therapy, culture-directed antibiotics and immune-specific treatment such as vaccination strategy or immunoglobulin replacement when indicated by immunology.",
+  "operate":"FESS can improve drainage and topical access in refractory objective disease but should be integrated with immune management; surgery alone will not normalize infection susceptibility.",
+  "teach":"Refractory CRS plus recurrent lower-airway infection is an immune-history problem before it is a bigger-surgery problem."},
+ {"topic":"Olfactory Dysfunction",
+  "recognize":"Separate conductive smell loss from inflammatory/neural loss and distinguish anosmia, hyposmia, parosmia and phantosmia. Sudden postviral loss and chronic CRS-associated loss have different trajectories.",
+  "localize":"Conductive loss prevents odorant access to olfactory cleft; sensorineural loss reflects olfactory epithelium, bulb/tract or central pathways. Unilateral loss with neurologic or sinonasal red flags deserves targeted imaging.",
+  "workup":"Use validated smell testing when diagnosis/severity matters, endoscopy for olfactory-cleft obstruction and imaging selectively for unilateral, traumatic, neurologic or tumor concern. Do not rely only on self-rated smell.",
+  "manage":"Treat reversible sinonasal inflammation, counsel safety and use olfactory training for persistent postviral and other appropriate sensorineural loss. Steroid use should match an inflammatory phenotype rather than be universal.",
+  "operate":"Surgery is appropriate only for a defined conductive/anatomic cause such as CRS/polyps or tumor; avoid sacrificing olfactory mucosa during skull-base/sinonasal procedures when smell preservation matters.",
+  "teach":"Smell loss is localization: can odorant reach the cleft, and if it can, is the neuroepithelium/pathway working?"}
+],
+"Pediatric Otolaryngology":[
+ {"topic":"Congenital Hearing Loss Genetics",
+  "recognize":"Permanent congenital/early-onset SNHL should trigger etiologic thinking early because genetic diagnosis can predict progression, syndromic risks and cochlear-implant considerations.",
+  "localize":"Genetic hearing loss may affect cochlear ion homeostasis, hair cells, synapses, auditory nerve or syndromic organ systems; phenotype and inheritance pattern guide testing.",
+  "workup":"After diagnostic audiology, use comprehensive genetic testing with counseling as a high-yield etiologic tool; add CMV evaluation when age/timing permits and imaging selectively for anatomy/implant planning or syndromic clues.",
+  "manage":"Ensure early language access through amplification, CI evaluation and educational support while the etiologic workup proceeds. A genetic result can guide surveillance of vision, thyroid, renal, cardiac or neurologic disease in syndromic conditions.",
+  "operate":"Genetic diagnosis can affect CI prognosis—for example, disorders upstream of the cochlear nerve may respond differently than synaptopathy/nerve deficiency—so integrate genetics with imaging rather than using either alone.",
+  "teach":"The goal of genetics is not just naming a mutation; it can predict progression, syndromic surveillance and expected auditory rehabilitation."},
+ {"topic":"Cleft / Craniofacial Otologic-Airway Care",
+  "recognize":"Children with cleft palate/craniofacial syndromes commonly have chronic OME/hearing loss, velopharyngeal dysfunction, nasal obstruction and sleep-disordered breathing that evolve with growth and reconstruction.",
+  "localize":"Palatal muscle dysfunction impairs Eustachian-tube opening; craniofacial skeletal relationships affect nasal and pharyngeal airway; prior repairs alter surgical anatomy.",
+  "workup":"Use serial audiology/otoscopy, speech/resonance assessment and sleep evaluation when symptoms warrant. Coordinate with cleft/craniofacial teams because ear, speech and airway decisions interact.",
+  "manage":"Treat hearing loss proactively, use tubes when indicated, and coordinate VPI/airway treatment with speech outcomes. Avoid fixing one problem in a way that predictably worsens another.",
+  "operate":"Adenoid surgery, pharyngeal flap/sphincter procedures and airway interventions require special attention to velopharyngeal competence and OSA risk. Ear surgery should anticipate chronic ET dysfunction.",
+  "teach":"Cleft care is longitudinal systems care: ears, speech and sleep share the same altered anatomy."},
+ {"topic":"Juvenile Recurrent Parotitis",
+  "recognize":"Recurrent painful unilateral or bilateral parotid swelling in a child, often beginning in early childhood and resolving by adolescence, suggests juvenile recurrent parotitis after excluding suppurative infection, stones and autoimmune disease.",
+  "localize":"The disorder affects intraparotid ductal/acinar function and can show sialectatic change; recurrent episodes do not necessarily imply a fixed obstructing stone.",
+  "workup":"Ultrasound is useful to confirm parotid changes and exclude abscess/stone. Broader autoimmune/immunologic testing is selective for atypical, severe or systemic presentations.",
+  "manage":"Acute episodes are treated with hydration, massage, analgesia and antibiotics only when bacterial infection is suspected. Recurrent severe disease may benefit from sialendoscopy with irrigation/dilation.",
+  "operate":"Sialendoscopy is gland-preserving and favored over parotidectomy for refractory disease; identify stenotic/inflammatory ducts and avoid unnecessary gland sacrifice.",
+  "teach":"Most children improve with age. The management goal is reducing morbidity while preserving the gland, not escalating every recurrence to surgery."},
+ {"topic":"Pediatric Head & Neck Tumors",
+  "recognize":"A persistent pediatric neck mass is more often inflammatory/congenital than malignant, but hard/fixed nodes, supraclavicular location, B symptoms, cranial neuropathy or progressive growth require oncologic evaluation.",
+  "localize":"Use age and anatomic compartment to frame the differential: congenital tract/cyst, nodal disease, salivary/thyroid, vascular malformation, neural tumor or sarcoma.",
+  "workup":"Ultrasound is often first-line for superficial masses; CT/MRI and tissue sampling are selected by depth/vascularity and malignancy risk. Avoid open biopsy before appropriate imaging and oncology planning when lymphoma/sarcoma is possible.",
+  "manage":"Treatment is histology-specific and often multidisciplinary. Preserve long-term growth, cranial nerve, swallowing, hearing and endocrine function whenever oncologically safe.",
+  "operate":"Plan biopsy/resection so the incision and tissue planes do not compromise definitive oncologic surgery; vascular lesions and skull-base tumors demand diagnosis before casual excision.",
+  "teach":"In children, the wrong biopsy can complicate the right cancer operation. Diagnose the compartment and histology before cutting."}
+],
+"Laryngology / Voice / Swallowing":[
+ {"topic":"Vocal Fold Sulcus / Scar",
+  "recognize":"Persistent dysphonia with reduced mucosal wave, stiffness, spindle gap or a linear furrow despite otherwise normal mobility suggests sulcus/scar.",
+  "localize":"The lesion disrupts the superficial lamina propria/vocal-ligament interface, impairing pliability even when gross glottic closure is acceptable.",
+  "workup":"High-quality stroboscopy is essential to characterize mucosal-wave loss, closure and contralateral compensation. Voice assessment defines functional burden; imaging rarely diagnoses superficial scar.",
+  "manage":"Voice therapy addresses compensatory hyperfunction but does not restore missing lamina propria. Injection/augmentation or scar-directed phonosurgery is individualized because predictable restoration of normal mucosal wave is difficult.",
+  "operate":"Set realistic goals: improve closure and/or pliability without creating additional scar. Avoid repeated aggressive epithelial manipulation in a stiff fold.",
+  "teach":"Scar is a material-property problem, not simply a gap. A perfectly medialized stiff fold may still vibrate poorly."},
+ {"topic":"Vocal Process Granuloma",
+  "recognize":"Posterior glottic granuloma on the vocal process often follows intubation, phonotrauma/throat clearing or laryngeal irritation and can cause throat discomfort, cough or dysphonia.",
+  "localize":"The lesion forms over the cartilaginous posterior glottis where mechanical contact pressure is high; this differs from a membranous vocal-fold mass.",
+  "workup":"Laryngoscopy establishes location; biopsy is reserved for atypical, progressive or suspicious lesions. Identify intubation history, hyperfunctional voice/cough and reflux-related symptoms without assuming reflux is always causal.",
+  "manage":"Reduce mechanical trauma with voice/cough therapy and treat relevant inflammatory contributors. Many lesions regress without surgery; recurrence is common when the inciting behavior persists.",
+  "operate":"Excision is reserved for airway compromise, diagnostic uncertainty or refractory symptomatic disease and should minimize further perichondrial trauma; adjunct botulinum toxin may be considered in selected recurrent contact lesions.",
+  "teach":"If you remove the granuloma but leave the collision force, you have treated the consequence and preserved the cause."},
+ {"topic":"Radiation-Associated Dysphagia",
+  "recognize":"Progressive solid/liquid dysphagia, aspiration, residue, weight loss or recurrent pneumonia months to years after H&N RT can reflect fibrosis, neuropathy, xerostomia, stenosis or laryngeal dysfunction.",
+  "localize":"Common mechanisms include reduced tongue-base drive, pharyngeal constrictor fibrosis, impaired hyolaryngeal excursion, reduced sensation and UES/cervical-esophageal stenosis.",
+  "workup":"Use FEES/MBS to define swallow physiology and endoscopy/imaging when recurrence or structural stenosis is possible. Nutritional and pulmonary consequences are part of the severity assessment.",
+  "manage":"Swallow therapy, diet/strategy modification, xerostomia/dental care and targeted dilation or glottic/UES intervention are selected by mechanism. Preventive/maintenance swallowing activity during treatment may reduce disuse but does not eliminate fibrosis risk.",
+  "operate":"Dilation treats a stenotic segment but not global radiation fibrosis; aspiration-prevention surgery or functional laryngectomy is reserved for severe refractory pulmonary-threatening dysfunction after cancer control is confirmed.",
+  "teach":"Post-radiation dysphagia is usually multimechanistic. Treat the demonstrated physiologic failure rather than repeatedly dilating every patient with trouble swallowing."},
+ {"topic":"Aspiration-Prevention Surgery",
+  "recognize":"Recurrent aspiration pneumonia, inability to protect the airway and failure of rehabilitation/less invasive procedures can make separation of airway and alimentary tract the primary goal.",
+  "localize":"Determine whether aspiration is driven by sensory loss, glottic incompetence, global pharyngeal failure or an irreversibly nonfunctional larynx; this determines whether limited or definitive separation is needed.",
+  "workup":"Confirm severity with instrumental swallowing assessment, pulmonary history, nutritional status and goals. Exclude recurrent cancer and correctable focal lesions before irreversible surgery.",
+  "manage":"Maximize therapy, diet strategies, feeding modification and targeted procedures first when feasible. In life-threatening refractory aspiration, laryngotracheal separation, diversion or functional/total laryngectomy may provide pulmonary protection.",
+  "operate":"These procedures intentionally sacrifice or bypass normal laryngeal airflow/voice to protect lungs. Preoperative counseling must include permanent stoma/voice rehabilitation implications and fistula/wound risk in irradiated patients.",
+  "teach":"The endpoint is not a prettier swallow study; it is preventing pulmonary injury when the native larynx can no longer protect the airway."}
+],
+"Facial Plastics / Trauma":[
+ {"topic":"Periocular Reconstruction",
+  "recognize":"Eyelid defects threaten corneal protection, lid apposition, lacrimal drainage and cosmesis. The reconstruction is determined by lamella, horizontal extent and canthal involvement—not skin size alone.",
+  "localize":"Separate anterior lamella (skin/orbicularis) from posterior lamella (tarsus/conjunctiva) and identify medial/lateral canthal or canalicular injury.",
+  "workup":"Document visual function, globe injury, lid-margin loss, canthal tendon and lacrimal system before reconstruction. In oncologic defects, confirm margin strategy first.",
+  "manage":"Small partial-thickness defects may close primarily; larger full-thickness defects require lamellar reconstruction using local flaps/grafts and stable canthal/lid-margin support.",
+  "operate":"At least one reconstructed lamella should generally provide vascularized support when both are replaced. Avoid vertical tension that causes ectropion and restore a smooth margin against the cornea.",
+  "teach":"Eyelid reconstruction is function first: protect the globe, restore margin/canthus, then optimize appearance."},
+ {"topic":"Auricular Reconstruction",
+  "recognize":"Auricular defects vary from skin-only loss to exposed cartilage, rim loss or composite framework injury; the ear's thin skin and three-dimensional cartilage contour limit simple closure.",
+  "localize":"Identify helical rim, antihelix, concha, tragus and lobule involvement and whether cartilage support is missing. Posterior auricular skin provides useful local tissue.",
+  "workup":"For trauma, assess avulsion viability and canal injury; for oncologic defects, establish margin control. Defect size, cartilage loss and subunit determine reconstruction.",
+  "manage":"Options include secondary healing for selected concavities, full-thickness graft, local advancement/rotation flaps, Antia-Buch-type rim advancement and staged cartilage/framework reconstruction.",
+  "operate":"Restore the cartilage framework before skin coverage when structural support is lost and avoid flattening the sulcus or narrowing the EAC.",
+  "teach":"The ear is cartilage sculpture covered by thin skin. If you reconstruct skin without framework, the contour will fail."},
+ {"topic":"Alar Retraction / Nasal Vestibular Stenosis",
+  "recognize":"Alar notching/retraction or scar-related vestibular narrowing can cause visible deformity and external-valve obstruction, often after prior rhinoplasty, trauma or skin-cancer reconstruction.",
+  "localize":"Determine whether the problem is missing lining, weak/retracted lateral crus, scar contracture, rim support loss or true vestibular skin deficiency.",
+  "workup":"Examine at rest and inspiration, assess scar and cartilage support, and determine whether intranasal lining is deficient. Decongestion will not correct a fixed scar/structural narrowing.",
+  "manage":"Mild dynamic collapse may respond to support strategies; fixed stenosis/retraction often requires scar release plus lining and/or cartilage support with prolonged stenting in selected cases.",
+  "operate":"Recreate a patent vestibular lumen and stable alar margin using the tissue actually missing—lining graft/flap, rim/batten cartilage or lateral-crural repositioning—while avoiding overbulking.",
+  "teach":"Alar retraction is not one deformity. Ask whether you lack lining, cartilage support or both before choosing the graft."},
+ {"topic":"Static Facial Reanimation",
+  "recognize":"When dynamic reinnervation is unavailable, delayed or insufficient, static procedures can improve eye protection, oral competence, nasal airflow and resting symmetry without restoring spontaneous movement.",
+  "localize":"Target the functional deficit: upper-lid weight/eyelid tightening, brow ptosis, nasal-valve collapse or oral commissure descent.",
+  "workup":"Document facial zones, corneal exposure, oral leakage/speech, nasal obstruction and patient priorities; dynamic options should still be considered based on denervation duration and donor availability.",
+  "manage":"Combine therapy/eye care with targeted static support; procedures can complement rather than replace dynamic nerve/muscle reconstruction.",
+  "operate":"Choose vectors that restore resting position without excessive tension. Common concepts include eyelid loading/canthoplasty, brow lift and fascia/tendon sling for oral/nasal support.",
+  "teach":"Static reanimation does not make the face move—it makes the paralyzed face safer and more functional at rest."}
+],
+"Sleep Surgery":[
+ {"topic":"HNS Troubleshooting / Nonresponse",
+  "recognize":"Persistent symptoms, high residual AHI, discomfort, tongue deviation, poor nightly use or loss of benefit after HNS implantation requires troubleshooting before labeling the device a failure.",
+  "localize":"Failure can reflect adherence/activation, programming, stimulation pattern, cuff/lead position, residual palatal/lateral-wall collapse, weight change or nonobstructive sleep events.",
+  "workup":"Review objective device usage/settings and postoperative sleep testing, examine tongue motion and reassess airway phenotype; DISE with stimulation or imaging is selective for unexplained nonresponse.",
+  "manage":"Optimize amplitude, electrode configuration, timing and comfort, address weight/nasal/PAP-combination needs and treat residual anatomic collapse. Revision is reserved for a defined hardware/anatomic problem.",
+  "operate":"Before lead revision or repositioning, prove that programming and phenotype optimization cannot solve the problem. Revision carries hypoglossal, pleural, scar and device risks.",
+  "teach":"HNS nonresponse is a systems problem: patient use + programming + anatomy + device integrity. Do not jump directly to revision."},
+ {"topic":"Down Syndrome Pediatric HNS",
+  "recognize":"Adolescents with Down syndrome may have severe persistent OSA after adenotonsillar treatment and poor PAP tolerance because of multilevel hypotonia/anatomic collapse.",
+  "localize":"HNS targets tongue-base neuromuscular collapse; DISE is required to exclude complete concentric palatal collapse and identify whether the phenotype is appropriate.",
+  "workup":"Current FDA labeling includes selected patients age 13–18 years with Down syndrome and severe OSA with AHI 10–50 who are not effectively treated by/are not candidates for adenotonsillectomy, cannot tolerate/effectively use PAP despite attempts, lack complete concentric palatal collapse, and have considered standard alternatives.",
+  "manage":"Selection must occur in an experienced multidisciplinary pediatric sleep/airway program. Implantation is followed by healing, activation, titration and objective outcome assessment rather than immediate therapeutic effect.",
+  "operate":"Technical principles mirror HNS implantation but require pediatric/anatomic consideration and careful branch selection, cuff placement and respiratory-sensing lead placement. Counsel regarding tongue weakness, discomfort, infection and revision.",
+  "teach":"Pediatric Down-syndrome HNS is a narrow FDA-labeled rescue pathway for persistent severe OSA—not a replacement for adenotonsillectomy or PAP in routine pediatric OSA."},
+ {"topic":"Central Sleep Apnea / Treatment-Emergent CSA",
+  "recognize":"Central apnea is cessation/reduction of airflow with absent or reduced respiratory effort; it occurs in several phenotypes including heart failure/Cheyne-Stokes, opioid-related, medical-condition, high-altitude, primary and treatment-emergent CSA.",
+  "localize":"Most CSA reflects unstable ventilatory control around the CO2 apneic threshold rather than upper-airway collapse. Hypoventilation disorders are mechanistically distinct and should not be mislabeled CSA.",
+  "workup":"Use PSG pattern, medication/opioid history, cardiac/neurologic context and gas-exchange data to classify the cause. Persistent hypercapnia points toward hypoventilation rather than classic post-hyperventilation CSA.",
+  "manage":"Treat the underlying condition and choose PAP/oxygen/acetazolamide/ASV or other therapy according to CSA phenotype and comorbidity. Current AASM guidance also includes transvenous phrenic-nerve stimulation as an option for selected persistent CSA.",
+  "operate":"This is usually medical sleep management, not upper-airway surgery. The procedural advanced decision is recognizing when implantable phrenic-nerve stimulation is appropriate after phenotype-specific noninvasive therapy.",
+  "teach":"Do not send central apnea to airway surgery. First ask whether respiratory effort is absent, why ventilatory control is unstable, and whether hypercapnia suggests a different hypoventilation disorder."},
+ {"topic":"Sleep-Related Hypoventilation",
+  "recognize":"Sustained nocturnal hypoventilation produces prolonged CO2 elevation/hypoxemia rather than discrete obstructive or central apneas and occurs with obesity hypoventilation, neuromuscular weakness, chest-wall disease or medication effects.",
+  "localize":"The failure is inadequate alveolar ventilation from reduced drive or ventilatory pump capacity, not primarily pharyngeal collapse.",
+  "workup":"Use PSG with CO2 monitoring when indicated, awake bicarbonate/ABG or other gas-exchange assessment, pulmonary/neuromuscular evaluation and medication review to identify the mechanism.",
+  "manage":"Treat the underlying disorder, optimize weight/respiratory disease and use bilevel/noninvasive ventilation when ventilatory support is needed; supplemental oxygen alone can fail to correct hypoventilation and may worsen hypercapnia in susceptible patients.",
+  "operate":"Upper-airway surgery has limited value when the dominant problem is ventilatory pump failure. Tracheostomy/ventilation or other procedures are reserved for selected severe airway/ventilation situations rather than routine OSA logic.",
+  "teach":"Apnea is episodic; hypoventilation is sustained inadequate ventilation. CO2 is the clue that prevents misclassifying a pump problem as an obstructive throat problem."}
+]}
+
+_existing_v97={m["topic"] for mods in DEEP_MODULES_V6.values() for m in mods}
+for _domain,_mods in NEW_DEPTH_MODULES_V97.items():
+    for _m in _mods:
+        if _m["topic"] not in _existing_v97:
+            _m["primary_domain"]=_domain
+            _m["tags"]=_tags_v94(_m["topic"],_domain)
+            _m["evidence_calibrated"]="v9.7"
+            DEEP_MODULES_V6.setdefault(_domain,[]).append(_m)
+            _existing_v97.add(_m["topic"])
+
+# -----------------------------------------------------------------------------
+# Surgical Anatomy Atlas
+# -----------------------------------------------------------------------------
+ANATOMY_ATLAS_V97 = [
+ {"region":"Otology / Neurotology","topic":"Temporal Bone Surgical Map","landmarks":["tegmen","sigmoid sinus","external auditory canal","digastric ridge","mastoid antrum","lateral semicircular canal","incus/fossa incudis","facial recess"],"danger":["facial nerve","labyrinth","dura/CSF","sigmoid sinus","jugular bulb"],"or_link":"Mastoidectomy","pearl":"Use constant boundaries—tegmen, sigmoid and EAC—before relying on variable air-cell anatomy."},
+ {"region":"Otology / Neurotology","topic":"Middle Ear / Ossicular Anatomy","landmarks":["malleus","incus","stapes","oval window","round window","tensor tympani","pyramidal eminence","sinus tympani","facial recess"],"danger":["facial nerve","chorda tympani","stapes footplate/vestibule"],"or_link":"Ossiculoplasty","pearl":"The sinus tympani and facial recess are classic hidden disease spaces."},
+ {"region":"Otology / Neurotology","topic":"Facial Nerve — Intratemporal Course","landmarks":["IAC","labyrinthine segment","geniculate ganglion","tympanic segment","second genu","mastoid segment","stylomastoid foramen"],"danger":["geniculate/labyrinthine narrow segment","dehiscent tympanic segment","mastoid segment during posterior tympanotomy"],"or_link":"Mastoidectomy","pearl":"At the second genu the nerve turns inferiorly just posterior to the oval-window region."},
+ {"region":"Rhinology / Skull Base","topic":"Sinonasal Lateral Wall / Ostiomeatal Complex","landmarks":["uncinate","ethmoid bulla","hiatus semilunaris","natural maxillary ostium","middle turbinate basal lamella","lamina papyracea"],"danger":["orbit","nasolacrimal duct","skull base"],"or_link":"FESS","pearl":"Find the natural ostium rather than creating an accessory opening and recirculation."},
+ {"region":"Rhinology / Skull Base","topic":"Frontal Recess Anatomy","landmarks":["agger nasi","frontal cells","uncinate insertion","ethmoid bulla","middle turbinate","lamina papyracea","frontal beak"],"danger":["anterior ethmoid artery","orbit","cribriform/lateral lamella"],"or_link":"Draf","pearl":"Frontal drainage is a three-dimensional pathway bounded by variable cells, not a single tube."},
+ {"region":"Rhinology / Skull Base","topic":"Sphenoid / Central Skull Base","landmarks":["sphenoid ostium","superior turbinate","opticocarotid recess","sellar bulge","clival recess","vidian canal"],"danger":["optic nerve","internal carotid artery","cavernous sinus"],"or_link":"Sphenoidotomy","pearl":"CT defines whether optic nerve or carotid protrudes/dehisces into the sinus."},
+ {"region":"Rhinology / Skull Base","topic":"Pterygopalatine / Infratemporal Spaces","landmarks":["sphenopalatine foramen","pterygopalatine fossa","foramen rotundum/V2","vidian canal","internal maxillary artery branches"],"danger":["V2","vidian nerve","maxillary artery","cavernous/skull-base extension pathways"],"or_link":"JNA","pearl":"The PPF is a neurovascular crossroads and a route of tumor/perineural spread."},
+ {"region":"Head & Neck Oncology","topic":"Neck Levels / Fascial Compartments","landmarks":["levels I–VII","SCM","digastric","omohyoid","carotid sheath","prevertebral fascia"],"danger":["CN XI","hypoglossal","vagus","phrenic","sympathetic chain","thoracic duct"],"or_link":"Neck Dissection","pearl":"Nodal levels are oncologic maps laid over fascial and neurovascular anatomy."},
+ {"region":"Head & Neck Oncology","topic":"Parapharyngeal / Retropharyngeal Spaces","landmarks":["styloid diaphragm","prestyloid fat","carotid space","retropharyngeal space","danger space"],"danger":["ICA","IJV","CN IX–XII","sympathetic chain","mediastinal spread"],"or_link":"Deep Neck Drainage","pearl":"Prestyloid versus poststyloid displacement patterns help identify tumor origin."},
+ {"region":"Thyroid / Parathyroid / Salivary","topic":"Thyroid / RLN / EBSLN Anatomy","landmarks":["Berry ligament","tracheoesophageal groove","inferior thyroid artery","cricothyroid joint","superior pole vessels","tubercle of Zuckerkandl"],"danger":["RLN","EBSLN","parathyroid vascular supply"],"or_link":"Total Thyroidectomy","pearl":"The RLN's relationship to the inferior thyroid artery is variable; identify the nerve rather than relying on a single vessel rule."},
+ {"region":"Thyroid / Parathyroid / Salivary","topic":"Parathyroid Embryology / Ectopic Map","landmarks":["superior glands from 4th pouch","inferior glands from 3rd pouch with thymus","thyrothymic ligament","tracheoesophageal groove","retroesophageal region"],"danger":["RLN","recurrent scar plane","mediastinal ectopia"],"or_link":"Parathyroidectomy","pearl":"Inferior glands migrate farther and therefore have more variable ectopic locations."},
+ {"region":"Thyroid / Parathyroid / Salivary","topic":"Parotid / Facial Nerve Anatomy","landmarks":["tragal pointer","posterior belly digastric","tympanomastoid suture","stylomastoid foramen","pes anserinus","retromandibular vein"],"danger":["facial nerve branches","great auricular nerve","external carotid system"],"or_link":"Parotidectomy","pearl":"Use multiple landmarks to find the main trunk; no single surface landmark is perfectly reliable."},
+ {"region":"Thyroid / Parathyroid / Salivary","topic":"Submandibular Triangle / Floor of Mouth","landmarks":["mylohyoid","hyoglossus","Wharton duct","lingual nerve","hypoglossal nerve","facial artery"],"danger":["lingual nerve","hypoglossal nerve","marginal mandibular nerve"],"or_link":"Submandibular Gland Excision","pearl":"The lingual nerve loops around the submandibular duct; the hypoglossal nerve lies deep to mylohyoid on hyoglossus."},
+ {"region":"Laryngology / Voice / Swallowing","topic":"Laryngeal Framework / Intrinsic Muscles","landmarks":["thyroid cartilage","cricoid","arytenoids","cricothyroid joint","thyroarytenoid","PCA","LCA","interarytenoid","cricothyroid"],"danger":["RLN","EBSLN","posterior glottis"],"or_link":"Thyroplasty","pearl":"PCA is the sole true vocal-fold abductor; cricothyroid is primarily supplied by EBSLN."},
+ {"region":"Laryngology / Voice / Swallowing","topic":"Pharynx / UES / Cervical Esophagus","landmarks":["superior/middle/inferior constrictors","Killian dehiscence","cricopharyngeus","cervical esophagus","tracheoesophageal party wall"],"danger":["RLN","deep neck/mediastinal contamination"],"or_link":"CP Myotomy","pearl":"Zenker arises above the cricopharyngeus through Killian dehiscence."},
+ {"region":"Pediatric Otolaryngology","topic":"Pediatric Laryngotracheal Airway","landmarks":["supraglottis","posterior glottis","subglottis","cricoid","first tracheal rings","thyroid isthmus"],"danger":["RLNs","innominate artery","thin pediatric tracheal wall"],"or_link":"Pediatric LTR","pearl":"In children the cricoid is the complete cartilaginous ring governing fixed subglottic caliber."},
+ {"region":"Facial Plastics / Trauma","topic":"Facial Buttresses / Midface Trauma","landmarks":["nasomaxillary buttress","zygomaticomaxillary buttress","pterygomaxillary buttress","frontozygomatic region","orbital rims"],"danger":["orbit","infraorbital nerve","lacrimal system","skull base"],"or_link":"ZMC ORIF","pearl":"Restoring facial projection requires three-dimensional buttress alignment, not just one visible fracture line."},
+ {"region":"Facial Plastics / Trauma","topic":"Nasal Support / Valve Anatomy","landmarks":["septal L-strut","upper lateral cartilages","lower lateral cartilages","internal valve","external valve","piriform aperture"],"danger":["loss of dorsal/caudal support","alar retraction","valve collapse"],"or_link":"Functional Septorhinoplasty","pearl":"Name the structural failure before choosing spreader, batten, rim or septal-extension grafting."},
+ {"region":"General ENT / Emergencies","topic":"Tracheostomy / Cervical Trachea Anatomy","landmarks":["cricoid","tracheal rings","thyroid isthmus","strap muscles","pretracheal fascia","innominate artery"],"danger":["posterior tracheal wall/esophagus","innominate artery","RLNs","pleura low in neck"],"or_link":"Tracheostomy","pearl":"A low tracheostomy increases proximity to the innominate artery; a fresh tract is not a safe blind pathway."},
+ {"region":"Head & Neck Oncology","topic":"Oral Tongue / Floor of Mouth","landmarks":["intrinsic/extrinsic tongue muscles","lingual artery","hypoglossal nerve","lingual nerve","submandibular duct","mylohyoid"],"danger":["lingual artery","CN XII","mandibular periosteum","deep margin"],"or_link":"Oral Composite Resection","pearl":"Depth and deep-muscle involvement drive both oncologic margin and functional reconstruction."},
+]
+
+PUBLIC_EVIDENCE_V97 = [
+ {"topic":"Down Syndrome Pediatric HNS","source":"FDA Inspire UAS P130008/S089 (2023; current device record updated 2026)","note":"Ages 13–18 with Down syndrome and severe OSA AHI 10–50 plus specific selection requirements."},
+ {"topic":"Central Sleep Apnea / Treatment-Emergent CSA","source":"AASM Clinical Practice Guideline: Treatment of Central Sleep Apnea in Adults (2025)","note":"Phenotype-specific treatment and inclusion of transvenous phrenic nerve stimulation for selected CSA."},
+]
+
+# Rebuild Daily Path after v9.7 additions.
+ADAPTIVE_ITEMS_V97=[]
+for _domain,_mods in DEEP_MODULES_V6.items():
+    for _m in _mods:
+        _id=_v6_item_id(_domain,_m["topic"])
+        for _stage in ["recognize","localize","workup","manage","operate","teach"]:
+            ADAPTIVE_ITEMS_V97.append({
+              "id":_id+"-"+_stage,"concept_id":_id,"domain":_domain,"topic":_m["topic"],
+              "stage":_stage,"display_stage":"advanced" if _stage=="operate" else _stage,
+              "prompt":{"recognize":"Recognize the pattern.","localize":"Localize the problem.","workup":"Evaluate it efficiently.","manage":"Build the management sequence.","operate":"Make the advanced decision.","teach":"Teach the mental model."}[_stage],
+              "answer":_m[_stage],
+              "minutes":{"recognize":3,"localize":3,"workup":4,"manage":4,"operate":6,"teach":4}[_stage],
+              "level":{"recognize":1,"localize":2,"workup":3,"manage":4,"operate":5,"teach":6}[_stage],
+              "tags":_m.get("tags",_tags_v94(_m["topic"],_domain))
+            })
+ADAPTIVE_ITEMS_V96=ADAPTIVE_ITEMS_V97
+ADAPTIVE_ITEMS_V95=ADAPTIVE_ITEMS_V97
+ADAPTIVE_ITEMS_V94=ADAPTIVE_ITEMS_V97
+ADAPTIVE_ITEMS_V91=ADAPTIVE_ITEMS_V97
+
+
+# =============================================================================
+# ENT Mastery v9.8 — Legacy-Free Integration
+# =============================================================================
+
+# Canonical concept mapping for older case/attending identifiers so all modern
+# learning modes write into the same deep-curriculum concept graph.
+CONCEPT_ALIAS_TOPIC_V98 = {
+ "primary_hyperparathyroidism":"Primary Hyperparathyroidism",
+ "phpt_diagnosis":"Primary Hyperparathyroidism",
+ "phpt_localization":"Primary Hyperparathyroidism",
+ "phpt_operation":"Primary Hyperparathyroidism",
+ "phpt_teaching":"Primary Hyperparathyroidism",
+ "adult_osa_hns":"Hypoglossal Nerve Stimulation",
+ "hns_selection":"Hypoglossal Nerve Stimulation",
+ "hns_framework":"Hypoglossal Nerve Stimulation",
+ "v5:hns":"Hypoglossal Nerve Stimulation",
+ "airway_stenosis":"Subglottic / Tracheal Stenosis",
+ "airway_strategy":"Subglottic / Tracheal Stenosis",
+ "airway_teaching":"Subglottic / Tracheal Stenosis",
+ "stenosis_description":"Subglottic / Tracheal Stenosis",
+ "ssnhl":"Sudden Sensorineural Hearing Loss",
+ "v5:ssnhl":"Sudden Sensorineural Hearing Loss",
+ "meniere":"Ménière Disease",
+ "v5:ménière_disease":"Ménière Disease",
+ "bppv":"BPPV",
+ "v5:bppv":"BPPV",
+ "tympanostomy_tubes":"Tympanostomy Tube Indications",
+ "cholesteatoma":"Chronic Otitis Media / Cholesteatoma",
+ "v5:cholesteatoma":"Chronic Otitis Media / Cholesteatoma",
+ "retrotympanic_mass":"Tinnitus",
+ "adult_neck_mass":"Unknown Primary with Cervical Metastasis",
+ "v5:adult_neck_mass":"Unknown Primary with Cervical Metastasis",
+ "dysphonia":"Stroboscopy Interpretation",
+ "epistaxis":"Epistaxis Surgical Control",
+ "v5:epistaxis":"Epistaxis Surgical Control",
+ "pediatric_tonsillectomy":"Pediatric OSA / Adenotonsillar Disease",
+ "crs_fess":"CRS Phenotyping",
+ "tympanoplasty":"Tympanic Membrane Perforation",
+ "laryngomalacia":"Laryngomalacia",
+ "pediatric_sgs":"Pediatric Subglottic Stenosis",
+ "age_related_hearing_loss":"Age-Related Hearing Loss / Presbycusis",
+ "salivary_gland_mass":"Pleomorphic Adenoma / Warthin Tumor",
+ "thyroid_nodule":"Thyroid Nodule",
+ "thyroidectomy":"Differentiated Thyroid Cancer",
+ "thyroid_nodal_disease":"Central Neck Dissection",
+ "afrs":"AFRS",
+ "crs_biologics":"CRSwNP",
+ "oral_cavity_scc":"Oral Tongue SCC",
+ "parotidectomy":"Salivary Gland Malignancy",
+ "mastoidectomy":"Chronic Otitis Media / Cholesteatoma",
+ "septoplasty":"Functional Nasal Obstruction",
+ "deep_neck_infection":"Deep Neck Space Infection",
+ "tracheostomy":"Tracheostomy Emergency",
+ "fess_landmarks":"Ethmoidectomy",
+ "glottic_insufficiency":"Unilateral Vocal Fold Paralysis",
+ "v5:hearing_physiology":"Audiogram Interpretation",
+ "v5:tympanometry":"Tympanometry / Acoustic Reflexes",
+ "v5:otosclerosis":"Otosclerosis / Stapes Fixation",
+ "v5:facial_nerve":"Facial Paralysis",
+ "v5:allergic_rhinitis":"Allergic Rhinitis",
+ "v5:ars":"Acute Bacterial Rhinosinusitis",
+ "v5:crs":"CRS Phenotyping",
+ "v5:aerd":"AERD",
+ "v5:csf_rhinorrhea":"CSF Rhinorrhea",
+ "v5:oral_cavity_scc":"Oral Tongue SCC",
+ "v5:neck_dissection":"Neck Dissection",
+ "v5:laryngomalacia":"Laryngomalacia",
+ "v5:injection_augmentation":"Injection Laryngoplasty",
+ "v5:orbital_floor_fracture":"ZMC / Orbital Trauma",
+ "v5:local_flap":"Local Flap Reconstruction",
+ "v5:post-tonsil_bleed":"Post-Tonsillectomy Hemorrhage",
+ "v5:deep_neck_infection":"Deep Neck Space Infection",
+ "v5:tracheostomy_displacement":"Tracheostomy Emergency",
+ "otoscopy_normal":"Audiogram Interpretation",
+ "stroboscopy_basics":"Stroboscopy Interpretation",
+}
+
+# Explicit mapping for the 20 later progressive cases that were previously
+# dumped into General ENT / Emergencies and disconnected from the concept graph.
+INTEGRATED_CASE_TOPIC_V98 = {
+ "v8-case-001":"Cochlear Implant Candidacy",
+ "v8-case-002":"Temporal Bone Fracture",
+ "v8-case-003":"Chronic Otitis Media / Cholesteatoma",
+ "v8-case-004":"Revision FESS",
+ "v8-case-005":"Invasive Fungal Rhinosinusitis",
+ "v8-case-006":"Unknown Primary with Cervical Metastasis",
+ "v8-case-007":"Laryngeal Preservation Decision",
+ "v8-case-008":"Differentiated Thyroid Cancer",
+ "v8-case-009":"Reoperative Hyperparathyroidism",
+ "v8-case-010":"Salivary Gland Malignancy",
+ "v8-case-011":"Pediatric Tracheostomy / Decannulation",
+ "v8-case-012":"Recurrent Respiratory Papillomatosis",
+ "v8-case-013":"Le Fort / Panfacial Trauma",
+ "v8-case-014":"Post-Tonsillectomy Hemorrhage",
+ "v8-case-015":"Deep Neck Space Infection",
+ "v8-case-016":"Bilateral Vocal Fold Immobility",
+ "v8-case-017":"Zenker Diverticulum",
+ "v8-case-018":"Residual OSA After Surgery",
+ "v8-case-019":"Functional Nasal Obstruction",
+ "v8-case-020":"Orbital Complications of Sinusitis",
+}
+
+def _deep_concept_lookup_v98():
+    out={}
+    for _domain,_mods in DEEP_MODULES_V6.items():
+        for _m in _mods:
+            out[_m["topic"]]=(_v6_item_id(_domain,_m["topic"]),_domain)
+    return out
+
+def canonical_concept_id_v98(raw_id=None, domain=None, topic=None):
+    lookup=_deep_concept_lookup_v98()
+    target=topic or CONCEPT_ALIAS_TOPIC_V98.get(raw_id)
+    if target in lookup:
+        return lookup[target][0]
+    # Already canonical.
+    if raw_id in {x[0] for x in lookup.values()}:
+        return raw_id
+    return raw_id
+
+def canonical_concept_domain_v98(raw_id=None, domain=None, topic=None):
+    lookup=_deep_concept_lookup_v98()
+    target=topic or CONCEPT_ALIAS_TOPIC_V98.get(raw_id)
+    if target in lookup:
+        return lookup[target][1]
+    return canonical_domain_v94(domain)
+
+# Normalize all progressive cases into real curriculum concepts/domains.
+for _c in INTEGRATED_CASES:
+    _topic=INTEGRATED_CASE_TOPIC_V98.get(_c.get("id")) or CONCEPT_ALIAS_TOPIC_V98.get(_c.get("concept_id"))
+    if _topic:
+        _c["legacy_concept_id"]=_c.get("concept_id")
+        _c["concept_id"]=canonical_concept_id_v98(_c.get("concept_id"),_c.get("domain"),_topic)
+        _c["domain"]=canonical_concept_domain_v98(_c.get("legacy_concept_id"),_c.get("domain"),_topic)
+        _c["primary_domain"]=_c["domain"]
+
+# Normalize Attending/Chief prompts too, so future mastery events join the same graph.
+for _level,_prompts in ATTENDING_LEVEL_PROMPTS.items():
+    for _p in _prompts:
+        _old=_p.get("concept_id")
+        _new=canonical_concept_id_v98(_old,_p.get("domain"))
+        if _new!=_old:
+            _p["legacy_concept_id"]=_old
+            _p["concept_id"]=_new
+            _p["domain"]=canonical_concept_domain_v98(_old,_p.get("domain"))
+
+# Interpretation Atlas remains granular, but each lab gets a canonical parent concept
+# used for unified learner analytics.
+LAB_PARENT_TOPIC_V98 = {
+ "audiology":"Audiogram Interpretation",
+ "pathology":"Adverse Pathology and Adjuvant Therapy",
+ "ct-mri":"Head & Neck Cancer Surveillance / Second Primaries",
+ "laryngeal-endoscopy":"Stroboscopy Interpretation",
+ "sinonasal-endoscopy":"Nasal Anatomy for Endoscopy",
+ "airway-bronchoscopy":"Subglottic / Tracheal Stenosis",
+ "sleep":"Adult PSG Interpretation",
+ "vestibular":"Vestibular Test Battery",
+ "thyroid-ultrasound":"Thyroid Nodule",
+ "temporal-bone-imaging":"Temporal Bone Anatomy",
+ "head-neck-imaging":"Unknown Primary with Cervical Metastasis",
+ "swallowing-imaging":"Dysphagia / Aspiration",
+ "otoscopy":"Audiogram Interpretation",
+}
+LAB_PARENT_CONCEPT_V98 = {
+    _slug:canonical_concept_id_v98(topic=_topic)
+    for _slug,_topic in LAB_PARENT_TOPIC_V98.items()
+}
+
+CURRENT_EVIDENCE_CATALOG_V98 = [
+ {"area":"Otology / Audiology","title":"AAO-HNSF Sudden Hearing Loss (Update)","year":"2019","kind":"CPG","status":"active management source"},
+ {"area":"Otology / Audiology","title":"AAO-HNSF Age-Related Hearing Loss","year":"2024","kind":"CPG","status":"active management source"},
+ {"area":"Pediatric Otolaryngology","title":"AAO-HNSF Tympanostomy Tubes in Children (Update)","year":"2022","kind":"CPG","status":"active management source"},
+ {"area":"Pediatric Otolaryngology","title":"AAO-HNSF Tonsillectomy in Children (Update)","year":"2019","kind":"CPG","status":"active management source"},
+ {"area":"Rhinology","title":"AAO-HNSF Adult Sinusitis (Update)","year":"2025","kind":"CPG","status":"active management source"},
+ {"area":"Rhinology","title":"AAO-HNSF Surgical Management of Chronic Rhinosinusitis","year":"2025","kind":"CPG","status":"active management source"},
+ {"area":"Thyroid","title":"American Thyroid Association Differentiated Thyroid Cancer Guideline","year":"2025","kind":"Guideline","status":"active management source"},
+ {"area":"Sleep","title":"AASM Treatment of Central Sleep Apnea in Adults","year":"2025","kind":"CPG","status":"active management source"},
+ {"area":"Sleep","title":"FDA Inspire UAS labeling / expansions","year":"2023–2026","kind":"Regulatory labeling","status":"device-criteria source; payer rules may differ"},
+ {"area":"Head & Neck Oncology","title":"ASCO Management of the Neck in Oral Cavity/Oropharyngeal SCC","year":"2019","kind":"Guideline","status":"active management source"},
+ {"area":"Head & Neck Oncology","title":"ASCO Transoral Robotic Surgery in Oropharyngeal SCC","year":"2025","kind":"Guideline","status":"active management source"},
+ {"area":"Head & Neck Oncology","title":"ISOO-MASCC-ASCO Osteoradionecrosis Guideline","year":"2024","kind":"Guideline","status":"active management source"},
+ {"area":"Cutaneous Oncology","title":"American Academy of Dermatology skin cancer guidelines","year":"current public guidance","kind":"Guideline set","status":"BCC/cSCC/melanoma framework"},
+ {"area":"Cutaneous Oncology","title":"NCI PDQ Merkel Cell Carcinoma","year":"current public guidance","kind":"Evidence summary","status":"Merkel treatment framework"},
+ {"area":"Trauma","title":"AO Surgery Reference — CMF Trauma","year":"living reference","kind":"Surgical reference","status":"fracture mechanics / approach framework"},
+ {"area":"Core / Operative","title":"Cummings Otolaryngology—Head and Neck Surgery","year":"7th ed.","kind":"Core textbook","status":"scope/anatomy/operative reference; content incorporated only from user-provided material or permitted sources"},
+ {"area":"Interpretation","title":"Color Atlas of Otoscopy + permitted open atlases","year":"various","kind":"Visual references","status":"pattern-recognition source layer"},
+]
+
+
+# =============================================================================
+# ENT Mastery v9.9 — Pre-Cummings Textbook Saturation + Anatomy Expansion
+# =============================================================================
+# Sources used for scope/depth in this pass:
+# - K.J. Lee's Essential Otolaryngology, 12th ed.
+# - Pasha: Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6th ed.
+# - Bluestone & Stool's Pediatric Otolaryngology, 5th ed.
+# - Operative Otolaryngology—Head and Neck Surgery, 3rd ed.
+# - Operative Techniques in Laryngology, 2nd ed. (2024)
+# - Surgical Anatomy of the Head and Neck (Janfaza et al.)
+# - Atlas of Head & Neck Surgery
+# - Atlas of Endoscopic Sinus and Skull Base Surgery, 2nd ed.
+#
+# The prose below is original educational synthesis. Textbook wording is not copied.
+
+FOUNDATION_MODULES_V99 = [
+ {"topic":"ENT Perioperative Anesthesia / Difficult Airway Planning",
+  "recognize":"ENT surgery often shares the airway with anesthesia, so the operative plan must account for anticipated difficult mask ventilation/intubation, airway tumor/stenosis, bleeding, aspiration risk, prior radiation and whether the surgeon needs unobstructed access to the larynx/pharynx.",
+  "localize":"Define the threatened level—oral cavity/oropharynx, supraglottis, glottis, subglottis, trachea or extrinsic neck compression—and whether obstruction is fixed, dynamic or distorted by positioning/sedation.",
+  "workup":"Review prior airway records, flexible examination/imaging when relevant, mouth opening/neck mobility, oxygenation/ventilation reserve and the planned surgical exposure. A difficult airway plan should include primary technique, backup device/route and front-of-neck rescue before induction.",
+  "manage":"Coordinate awake versus asleep airway strategy, spontaneous versus controlled ventilation, neuromuscular blockade and extubation plan with anesthesia. High-risk extubation is a second difficult-airway event and may require staged extubation, ICU monitoring or temporary tracheostomy.",
+  "operate":"The surgeon must be prepared for emergency surgical airway and understand how suspension laryngoscopy, laser, rigid bronchoscopy, tracheostomy and head/neck tumors change ventilation options. Never let the surgical position or drapes eliminate rescue access.",
+  "teach":"The key OR question is not simply 'Can anesthesia intubate?' It is: where is the obstruction, what happens after sedation/paralysis, and what is the mutually agreed rescue sequence?"},
+ {"topic":"Hemostasis / Coagulopathy / Antithrombotic Management in ENT",
+  "recognize":"Mucosal ENT procedures can bleed substantially even when routine laboratory values are normal. Medication history, inherited bleeding disorders, liver/renal disease and prior surgical bleeding history can matter more than an isolated screening test.",
+  "localize":"Hemostasis depends on platelet function, coagulation factors, fibrin stability and local vessel control. Different operations carry very different consequences of bleeding: tonsillar fossa, neck hematoma, intracranial/skull base and airway bleeding are especially high stakes.",
+  "workup":"Take a focused bleeding and antithrombotic history and order testing when history, disease or planned procedure warrants it. Do not reflexively obtain broad coagulation panels in every healthy patient with no bleeding history.",
+  "manage":"Balance thrombosis risk against procedural bleeding risk when holding or restarting anticoagulant/antiplatelet therapy; involve the prescribing service for high-risk indications. Correct clinically important coagulopathy and ensure blood products/reversal strategy are available when needed.",
+  "operate":"Meticulous local control includes exposure, bipolar/monopolar/ligature/clips/topical adjuncts chosen for anatomy and thermal risk. In the neck or airway, secure hemostasis before closure and recognize that postoperative bleeding can rapidly become an airway emergency.",
+  "teach":"A normal INR is not a complete bleeding assessment, and 'stop all blood thinners' is not a safe universal rule. Match the hemostatic plan to patient thrombosis risk and the consequence of bleeding in that operation."},
+ {"topic":"ENT Fluids / Electrolytes / Nutrition",
+  "recognize":"Major head/neck patients are vulnerable to dehydration, malnutrition, refeeding problems, electrolyte derangement and aspiration-related nutritional failure. Pediatric tonsillectomy, cancer surgery and prolonged dysphagia create very different fluid/nutrition problems.",
+  "localize":"Identify whether the deficit is intake failure, swallowing dysfunction, GI access problem, renal/endocrine loss or catabolic demand. Calcium disturbance after thyroid/parathyroid surgery and sodium abnormalities after skull-base surgery require operation-specific thinking.",
+  "workup":"Assess weight trend, oral intake, swallowing safety, basic electrolytes/renal function and targeted calcium/magnesium/phosphate or nutrition labs when clinically indicated. Severe malnutrition should be recognized before major oncologic reconstruction.",
+  "manage":"Use enteral nutrition when the GI tract is functional, choose NG/PEG/other access according to expected duration and aspiration/anatomy, replace electrolytes deliberately and monitor for refeeding in high-risk patients.",
+  "operate":"Feeding access, salivary diversion and reconstruction should be planned with anticipated postoperative swallow rather than added reactively after failure. In endocrine surgery, calcium/PTH strategy is part of discharge planning.",
+  "teach":"Nutrition is not supportive trivia in ENT—it changes wound healing, pulmonary complications, treatment tolerance and readiness for reconstruction."},
+ {"topic":"Antimicrobial Stewardship in Otolaryngology",
+  "recognize":"Many ENT complaints are viral, inflammatory or obstructive rather than bacterial. Purulence alone does not automatically require systemic antibiotics, and chronic disease often needs source control or topical therapy rather than repeated empiric courses.",
+  "localize":"Match drug delivery to the infected compartment: external canal, middle ear, sinus, deep neck space, salivary gland, postoperative wound or skull base. Topical therapy can achieve high local concentrations in selected accessible sites.",
+  "workup":"Use diagnosis and severity first; obtain culture when disease is severe, recurrent, unusual, immunocompromised, postoperative or failing appropriate empiric therapy. Imaging is for suspected complications/source control, not to prove every uncomplicated infection.",
+  "manage":"Choose the narrowest reasonable empiric coverage, adjust to culture and local resistance, and define duration by syndrome and source control. Avoid antibiotics for uncomplicated viral URI, uncomplicated OME or noninfectious CRS phenotypes.",
+  "operate":"Drain abscesses and remove infected foreign material or devitalized tissue when antibiotics cannot achieve source control. The antibiotic plan after drainage should reflect organism, residual infection and host factors rather than a fixed ritual duration.",
+  "teach":"The stewardship question is: what bacterial syndrome am I treating, what compartment is it in, and do I need source control? If those are unclear, the antibiotic choice is premature."},
+ {"topic":"Cranial Nerve Examination / Skull Base Localization",
+  "recognize":"Multiple cranial neuropathies, progressive unilateral sensory/motor deficits, dysphagia/dysphonia or tongue/shoulder weakness can localize head-and-neck pathology before imaging is reviewed.",
+  "localize":"Use patterns: cavernous sinus/orbital apex (III, IV, V1/V2, VI), jugular foramen (IX–XI), hypoglossal canal (XII), parapharyngeal/carotid space (IX–XII and sympathetic chain), IAC/CPA (VII/VIII), and skull-base foraminal pathways.",
+  "workup":"Perform and document a complete directed cranial-nerve exam, then choose imaging that follows the suspected nerve course from brainstem/skull base through neck. Audiometry, laryngoscopy or swallow testing may provide objective end-organ function.",
+  "manage":"Treat the underlying lesion, but protect function immediately—cornea, airway/swallow, shoulder and nutrition may require intervention while the diagnostic workup proceeds.",
+  "operate":"Preoperative deficits must be documented before skull-base, parotid, neck-dissection and vagal/sympathetic-space surgery because postoperative examination determines whether a deficit is new and may affect reconstruction.",
+  "teach":"Cranial nerves are a localization map. A resident should be able to turn the pattern of deficits into a predicted skull-base or neck compartment before opening the MRI."},
+ {"topic":"ENT Imaging Fundamentals",
+  "recognize":"CT and MRI answer different anatomic questions. CT excels at bone, air spaces, calcification and acute fracture; MRI is superior for soft tissue, marrow, intracranial extension, perineural spread and many skull-base lesions.",
+  "localize":"Interpret studies by compartments and surgical boundaries rather than by radiology vocabulary alone: orbit, skull base, carotid space, parapharyngeal space, deep neck spaces, temporal bone, sinonasal drainage pathways and nodal levels.",
+  "workup":"Order the study that answers a clinical question: temporal-bone CT for bony labyrinth/ossicles, contrast MRI for nerve/skull-base spread, CTA for vascular injury or relationship, ultrasound for superficial thyroid/salivary/nodal questions.",
+  "manage":"Imaging should change diagnosis, staging, operative access or surveillance. Avoid redundant studies when prior imaging already answers the question, but obtain dedicated protocols when general head CT/MRI is inadequate for surgical planning.",
+  "operate":"Before entering the OR, personally review side, extent, vascular variants, skull-base height, orbit, carotid/jugular relationships and any anatomy that changes exposure or bailout strategy.",
+  "teach":"Do not ask 'What does the scan show?' Ask 'What decision am I trying to make, and which imaging characteristic answers it?'"},
+ {"topic":"Wound Healing / Scar Biology in Head & Neck Surgery",
+  "recognize":"Wound failure can result from tension, ischemia, infection, radiation injury, salivary contamination, malnutrition, hematoma/seroma or poor patient factors; hypertrophic scar and keloid are distinct excessive-healing phenotypes.",
+  "localize":"Healing proceeds through inflammatory, proliferative and remodeling phases. Tissue vascularity and mechanical tension determine whether a closure, graft or flap is likely to survive.",
+  "workup":"Before revision, identify why the wound/scar failed: infection, exposed hardware, fistula, recurrent tumor, radiation damage, tension vector or patient predisposition. Do not treat every widened scar as a surface problem.",
+  "manage":"Optimize moisture/clean care, infection control, nutrition and tension; use silicone, steroid, laser or other scar treatments selectively. Delay elective scar revision until remodeling and the underlying mechanical problem are understood.",
+  "operate":"Use atraumatic handling, appropriate layered closure and everted tension-controlled skin edges. In hostile beds, import vascularized tissue rather than repeatedly closing ischemic irradiated tissue under tension.",
+  "teach":"Good scar treatment starts before the incision: incision placement, blood supply and tension matter more than a late cosmetic rescue."},
+ {"topic":"Grafts / Implants / Biomaterials in ENT",
+  "recognize":"ENT reconstruction uses autograft, allograft and synthetic materials for support, lining, volume, ossicular conduction and implants. Material choice should match mechanical demand, infection risk and long-term biologic behavior.",
+  "localize":"Cartilage, fascia, bone, skin, nerve graft, vascularized flap and prosthetic implants each behave differently in mucosal, cutaneous, middle-ear and irradiated environments.",
+  "workup":"Define what is missing—structure, lining, cover, conductivity, nerve continuity or volume—and the quality of the recipient bed. Prior infection/radiation and contamination may make permanent foreign material less attractive.",
+  "manage":"Prefer the simplest durable material that restores function with acceptable donor morbidity. Counsel about resorption, extrusion, infection, calcification, warping and revision according to material/site.",
+  "operate":"Prepare a well-vascularized, tension-free recipient bed; avoid exposed implant edges and dead space. In contaminated or irradiated fields, vascularized autologous tissue often has a biologic advantage.",
+  "teach":"Choose a material by the job it must perform, not by habit. Support, lining, conduction and soft-tissue replacement are different reconstructive problems."},
+ {"topic":"Systemic / Granulomatous Disease Manifestations in ENT",
+  "recognize":"Persistent crusting, septal perforation, subglottic stenosis, salivary enlargement, chronic otitis, facial paralysis, oral lesions or cervical adenopathy can be the presenting manifestation of systemic autoimmune, granulomatous, infectious or infiltrative disease.",
+  "localize":"Patterns such as destructive sinonasal disease plus airway stenosis, multisite glandular disease or multiple cranial neuropathies suggest a systemic process rather than isolated local pathology.",
+  "workup":"Use history/exam to target serology, chest/renal evaluation, biopsy and infectious testing rather than ordering broad panels indiscriminately. Biopsy the safest active site when tissue diagnosis is needed.",
+  "manage":"Coordinate disease-specific immunologic/infectious/oncologic therapy while treating local functional consequences. Avoid irreversible local surgery during uncontrolled destructive inflammatory disease unless airway or other urgent function requires it.",
+  "operate":"Surgery is often reconstructive or rescue rather than curative; active vasculitis/granulomatous disease increases restenosis and wound-failure risk. Time elective reconstruction to disease control when possible.",
+  "teach":"When ENT disease appears in multiple unrelated sites, stop creating separate diagnoses and ask whether one systemic process connects them."},
+ {"topic":"Laser / Energy Safety in Otolaryngology",
+  "recognize":"Laser and electrosurgical energy introduce specific risks: airway fire, eye injury, tissue penetration/thermal spread, plume and ignition of drapes/tubes/oxygen-rich environments.",
+  "localize":"Risk depends on wavelength/tissue absorption and where energy is delivered—laryngeal airway, skin, sinonasal/skull base or vascular mucosa. Nearby nerves, vessels and cartilage can be injured without direct contact.",
+  "workup":"Before use, confirm indication, wavelength/device settings, eye protection, smoke evacuation and airway-fire plan. In airway laser surgery, coordinate inspired oxygen concentration and laser-safe tube/technique with anesthesia.",
+  "manage":"Use the lowest effective energy, intermittent activation and visible target control. If airway fire occurs: stop gas/laser, remove burning material/tube, extinguish, re-establish ventilation and evaluate airway injury.",
+  "operate":"Understand line-of-sight, backstop and thermal penetration before activation. Keep wet pledgets/appropriate protection where indicated and never activate an unvisualized energy device near critical structures.",
+  "teach":"Energy is a surgical instrument with invisible injury potential. The resident should know both the tissue effect and the emergency response before stepping on the pedal."},
+ {"topic":"Common ENT Consult Triage / Disposition",
+  "recognize":"ENT consultation is often about urgency rather than diagnosis alone: airway compromise, uncontrolled hemorrhage, orbital/vision threat, intracranial spread, deep-space infection, sudden hearing loss and postoperative complications demand different timelines.",
+  "localize":"First identify the threatened function—airway, vision, brain/skull base, major vessel, hearing, swallowing/nutrition or facial nerve—then localize the responsible compartment.",
+  "workup":"Obtain only studies that influence immediate disposition and treatment. Stable outpatient problems, urgent same-day evaluation and true OR/ICU emergencies should not be managed with the same diagnostic tempo.",
+  "manage":"Stabilize first, call the correct services early and decide admission/OR/transfer based on physiologic threat, not merely a named diagnosis. Clear return precautions are part of disposition for patients managed outpatient.",
+  "operate":"When definitive treatment may be needed, avoid temporizing steps that complicate later surgery—for example casual incision of an undiagnosed neck mass, repeated traumatic airway manipulation or uncontrolled biopsy of vascular lesions.",
+  "teach":"Every consult answer should include three things: what is it, what can deteriorate, and what happens next if the patient worsens."},
+]
+
+_existing={m["topic"] for mods in DEEP_MODULES_V6.values() for m in mods}
+for _m in FOUNDATION_MODULES_V99:
+    if _m["topic"] not in _existing:
+        _m["primary_domain"]="General ENT / Emergencies"
+        _m["tags"]=_tags_v94(_m["topic"],"general otolaryngology perioperative resident foundations")
+        _m["evidence_calibrated"]="v9.9-textbook-saturation"
+        DEEP_MODULES_V6["General ENT / Emergencies"].append(_m)
+        _existing.add(_m["topic"])
+
+TRUE_DEPTH_REWRITES_V99 = {
+"Tympanometry / Acoustic Reflexes":{
+ "recognize":"Type A tympanogram reflects near-normal middle-ear pressure/compliance; type B is flat and requires ear-canal volume interpretation; type C indicates negative middle-ear pressure. Acoustic reflex presence/absence adds information about the conductive pathway, cochlea, CN VIII, brainstem and CN VII.",
+ "localize":"A conductive lesion can abolish measured reflexes by preventing stimulus delivery or recording of stapedius contraction. Retrocochlear/facial-nerve patterns depend on which ear is stimulated and which ear records the response.",
+ "workup":"Interpret tympanometry with otoscopy and audiogram. For a type B tracing, normal canal volume suggests middle-ear effusion while large volume suggests a patent tube/perforation; small volume suggests probe obstruction or canal occlusion.",
+ "manage":"Use immittance to refine diagnosis rather than treating the tracing itself. It can confirm effusion, support ossicular/tympanic pathology and identify when additional retrocochlear/facial evaluation is needed.",
+ "operate":"Preoperative middle-ear assessment helps determine whether a conductive hearing deficit is due to effusion, TM, ossicles or ventilation. After tube placement, a large-volume flat tympanogram can confirm a patent pathway.",
+ "teach":"Never say 'type B equals fluid' without checking canal volume. Tympanometry measures mechanics; reflex testing interrogates a neural-mechanical arc."},
+"Ossicular Discontinuity":{
+ "recognize":"Large conductive air-bone gap after trauma, chronic ear disease or surgery with relatively normal TM/pressure suggests ossicular discontinuity; hypercompliant tympanometry can support but does not prove it.",
+ "localize":"Common disruptions involve incudostapedial joint, long process of incus, malleus/incus fixation or erosion around cholesteatoma. Stapes superstructure and footplate status determine reconstruction options.",
+ "workup":"Use otoscopy and complete audiometry; temporal-bone CT may show gross discontinuity but small joint defects can be missed. Definitive diagnosis is sometimes operative.",
+ "manage":"Observe or amplify if functional burden is acceptable; reconstruct when hearing benefit is expected and the middle ear is safe/aerated enough for durable mechanics.",
+ "operate":"Reconstruction depends on malleus, stapes superstructure, footplate mobility, TM position and middle-ear space. PORP/TORP, cartilage and autologous ossicle techniques should create stable coupling without excessive pressure on the stapes.",
+ "teach":"Ossiculoplasty succeeds when mechanics and middle-ear environment are favorable. A technically perfect prosthesis in a poorly ventilated scarred ear may fail."},
+"Superior Canal Dehiscence":{
+ "recognize":"Sound- or pressure-induced vertigo/oscillopsia, autophony, internal body-sound amplification and an apparent low-frequency conductive gap with intact middle ear suggest a third-window syndrome.",
+ "localize":"Dehiscence of the superior semicircular canal creates an additional compliant inner-ear window, altering cochlear and vestibular mechanics despite normal ossicles/TM.",
+ "workup":"Use audiometry, VEMP physiology and high-resolution reformatted temporal-bone CT aligned to the superior canal. Imaging alone is insufficient because thin bone/dehiscence can be incidental.",
+ "manage":"Observe mild symptoms and counsel trigger avoidance; consider surgical plugging/resurfacing for disabling, physiologically confirmed syndrome after excluding mimics such as patulous ET and ossicular disease.",
+ "operate":"Approach can be middle fossa or transmastoid depending on anatomy and goals. Protect membranous labyrinth and recognize the risk of hearing/vestibular change after repair.",
+ "teach":"Third-window disease can mimic conductive hearing loss with a normal middle ear. Symptoms + physiology + dedicated CT must agree before surgery."},
+"Vestibular Neuritis":{
+ "recognize":"Acute prolonged spontaneous vertigo lasting days with nausea, gait imbalance and no new hearing loss or focal neurologic deficit suggests vestibular neuritis, but posterior-circulation stroke is the dangerous mimic.",
+ "localize":"The disorder is an acute unilateral vestibular hypofunction, often affecting superior vestibular-nerve pathways. Hearing loss points toward labyrinthitis or another cochleovestibular process rather than pure neuritis.",
+ "workup":"Use bedside ocular-motor/head-impulse examination in an appropriate acute vestibular syndrome and obtain MRI/neurologic evaluation when central features, vascular risk or examination uncertainty exists.",
+ "manage":"Short-course vestibular suppressants/antiemetics are for the severe initial period only; begin early mobilization and vestibular rehabilitation. Prolonged suppressants delay central compensation.",
+ "operate":"There is no operative role. Advanced management is recognizing failure to compensate, recurrent symptoms suggesting another diagnosis, or central red flags rather than escalating to vestibular ablation.",
+ "teach":"Acute vestibular syndrome is a stroke-localization problem first and a symptom-control problem second. Hearing should remain intact in classic neuritis."},
+"Tinnitus":{
+ "recognize":"Classify tinnitus as pulsatile versus nonpulsatile, unilateral versus bilateral and bothersome versus incidental. Unilateral pulsatile tinnitus, objective bruit, asymmetric hearing loss or focal neurologic findings deserve focused evaluation.",
+ "localize":"Nonpulsatile tinnitus usually reflects auditory-system activity associated with hearing loss; pulsatile tinnitus can arise from arterial, venous, middle-ear or intracranial pressure mechanisms.",
+ "workup":"Obtain audiometry for persistent unilateral/bothersome tinnitus. Pulsatile tinnitus requires exam and targeted vascular/temporal-bone/intracranial imaging based on phenotype; routine imaging is unnecessary for symmetric nonpulsatile tinnitus with symmetric hearing.",
+ "manage":"Treat remediable ear/hearing disease, provide hearing aids when indicated and use education/sound strategies/cognitive-behavioral approaches for bothersome chronic tinnitus. Avoid unsupported supplements as routine therapy.",
+ "operate":"Surgery/endovascular treatment is reserved for a demonstrated structural vascular or middle-ear cause, not for primary subjective tinnitus.",
+ "teach":"The first branch point is pulsatile or not. That single distinction radically changes the differential and imaging strategy."},
+"Vestibular Test Battery":{
+ "recognize":"Vestibular testing should answer a localization/functional question rather than be ordered as a fixed panel for every dizzy patient.",
+ "localize":"VNG/calorics emphasize low-frequency horizontal canal/superior nerve function, vHIT evaluates high-frequency semicircular-canal VOR, VEMP assesses otolith pathways and posturography reflects integrated balance rather than a single end organ.",
+ "workup":"Choose tests from the suspected disorder and interpret discordant findings physiologically. Normal testing does not exclude vestibular migraine/PPPD, and an abnormal test may represent a compensated old lesion rather than the current symptom generator.",
+ "manage":"Use results to guide rehabilitation, document unilateral/bilateral loss, support third-window/otolith diagnoses or decide whether destructive vestibular treatment is safe.",
+ "operate":"Before vestibular-ablative surgery, confirm the target ear and contralateral reserve; before CI/skull-base surgery, baseline function can help counsel about postoperative imbalance.",
+ "teach":"Know what frequency and organ each test interrogates. 'Abnormal VNG' is not a diagnosis."},
+"CRSsNP":{
+ "recognize":"CRS without polyps is ≥12 weeks of compatible symptoms plus objective sinonasal inflammation without visible polyposis. Facial pressure alone or an abnormal CT without symptoms is not sufficient.",
+ "localize":"Disease may be diffuse inflammatory, odontogenic, anatomic/recurrent or associated with immune/ciliary disorders. Localized unilateral disease deserves a separate differential.",
+ "workup":"Use endoscopy and/or CT to confirm objective disease; evaluate odontogenic, immune, ciliary or fungal contributors when phenotype suggests them. Culture is selective for refractory purulence.",
+ "manage":"Saline irrigation and topical intranasal corticosteroid therapy are foundational; additional medical therapy is individualized. Surgery is considered when symptoms/objective disease persist and expected benefit outweighs alternatives.",
+ "operate":"FESS should open the involved natural drainage pathways and create access for topical therapy while preserving mucosa. Extent is individualized rather than defined by a mandatory maximal-surgery template.",
+ "teach":"CRSsNP is a chronic inflammatory diagnosis with objective evidence. Repeated antibiotics without confirming phenotype is not a longitudinal plan."},
+"CRSwNP":{
+ "recognize":"Bilateral inflammatory nasal polyps with congestion, smell loss and objective CRS define CRSwNP; asthma/AERD and type-2 inflammatory features predict recurrence and influence biologic discussions.",
+ "localize":"Polyps arise from chronically inflamed sinonasal mucosa, often ethmoid-predominant, and can obstruct multiple drainage pathways. Unilateral 'polyp' is a different diagnostic problem until proven benign.",
+ "workup":"Document endoscopic/CT burden, smell and quality-of-life effects, prior systemic steroid/surgery history and comorbid asthma/AERD. Evaluate atypical unilateral, bleeding or destructive lesions for neoplasm.",
+ "manage":"Topical corticosteroid irrigation/spray is foundational; short systemic steroid courses are selective. Surgery and biologic therapy are chosen from disease burden, recurrence, systemic comorbidity and prior treatment rather than as mutually exclusive pathways.",
+ "operate":"Surgery removes obstructing inflammatory tissue and creates durable topical access; preserve landmarks/mucosa and plan postoperative anti-inflammatory maintenance because surgery does not eliminate the type-2 tendency.",
+ "teach":"The long-term question is disease control, not whether polyps can be removed. Always pair the operation with a postoperative inflammatory strategy."},
+"AFRS":{
+ "recognize":"Young atopic patient with severe polyposis, thick eosinophilic allergic mucin and expansile heterogeneous sinus opacification suggests allergic fungal rhinosinusitis rather than invasive fungal disease.",
+ "localize":"AFRS is an inflammatory hypersensitivity phenotype with noninvasive fungal elements in allergic mucin; expansion can remodel bone and displace orbit/skull base without tissue invasion.",
+ "workup":"Use endoscopy/CT, pathology of allergic mucin/fungal elements and atopic context. Bone erosion does not automatically mean invasive fungal infection; tissue invasion defines invasive disease.",
+ "manage":"Surgery clears obstructing allergic mucin and establishes topical access, followed by intensive topical corticosteroid therapy and selective systemic/allergy-directed treatment.",
+ "operate":"Open involved sinuses widely enough to remove dense mucin and permit surveillance/irrigation while protecting thinned orbit/skull base from expansile remodeling.",
+ "teach":"AFRS is fungal-associated inflammation without invasion. Do not confuse dramatic bone remodeling with angioinvasive fungal sinusitis."},
+"Mucocele":{
+ "recognize":"Expansile obstructed sinus lesion causing pressure, proptosis, diplopia, frontal headache or bony remodeling suggests mucocele, often after prior surgery/trauma or chronic frontal disease.",
+ "localize":"A mucocele is a mucus-filled epithelium-lined expanded sinus behind an obstructed drainage pathway; frontal/ethmoid lesions can threaten orbit and skull base.",
+ "workup":"CT defines bony expansion and drainage anatomy; MRI is useful when lesion contents, intracranial/orbital soft tissue or tumor differential is uncertain.",
+ "manage":"Symptomatic/expansile mucoceles are generally treated by surgical marsupialization and restoration of drainage rather than complete stripping of sinus mucosa.",
+ "operate":"Create a durable opening into the nasal cavity, preserve orbit/skull base and address the cause of obstruction. Frontal anatomy may require extended approaches for a stable neo-ostium.",
+ "teach":"The operation is drainage and durable marsupialization, not cyst enucleation from a thin skull-base/orbital shell."},
+"Sinonasal Malignancy":{
+ "recognize":"Unilateral obstruction/bleeding, facial numbness, loose teeth, orbital symptoms, cranial neuropathy or destructive unilateral imaging should be considered malignant until tissue diagnosis proves otherwise.",
+ "localize":"Define the epicenter and extension to orbit, skull base/dura, pterygopalatine/infratemporal fossae, cranial nerves and cervical nodes. These compartments determine resectability and approach.",
+ "workup":"Perform endoscopy, contrast CT/MRI and safe biopsy after considering vascular/skull-base lesions. Histology is essential because treatment differs substantially among SCC, adenocarcinoma, melanoma, esthesioneuroblastoma and other entities.",
+ "manage":"Use multidisciplinary treatment based on histology/stage: surgery plus radiation is common for resectable epithelial disease, while some histologies favor different systemic/radiation strategies.",
+ "operate":"Select endoscopic, open or combined approach for oncologic access and margin control, with skull-base/orbital reconstruction planned before resection. Minimally invasive access is not a reason to compromise oncologic boundaries.",
+ "teach":"Sinonasal oncology is anatomy plus histology. Never let 'sinus mass' become a treatment plan before biopsy and compartmental staging."},
+"Neck Dissection":{
+ "recognize":"Neck dissection is a compartment-oriented oncologic operation used for clinically involved nodes, selected elective nodal risk or salvage—not simply removal of palpable lymph nodes.",
+ "localize":"Know nodal levels I–VII and boundaries plus relationships to SCM, carotid sheath, CN XI, hypoglossal/vagus/phrenic/sympathetic chain, brachial plexus and thoracic duct.",
+ "workup":"Map nodal burden with examination/imaging and define which levels are at risk from the primary site. Prior radiation/surgery, carotid involvement and contralateral disease alter operative planning.",
+ "manage":"Choose selective versus more comprehensive dissection based on primary, nodal stage and treatment context; postoperative RT/CRT depends on pathology such as extranodal extension and margins.",
+ "operate":"Preserve CN XI, IJV and SCM when oncologically safe; protect hypoglossal, vagus, phrenic, sympathetic chain and thoracic duct. En bloc compartmental clearance is preferred to nodal 'plucking.'",
+ "teach":"A selective neck dissection is still oncologic when the selected levels match the disease. The resident must know every level boundary and what nerve/vessel is endangered there."},
+"HPV-Associated Oropharyngeal SCC":{
+ "recognize":"Adult neck mass may be the first presentation of HPV-associated tonsil/base-of-tongue SCC; the primary can be small or occult. Cystic level II nodes in an adult are metastatic until proven otherwise.",
+ "localize":"Primary sites are palatine tonsil and lingual tonsil/base of tongue with characteristic cervical nodal spread. HPV-mediated staging is biologically distinct from HPV-negative disease.",
+ "workup":"Obtain tissue diagnosis with p16/HPV-appropriate testing, contrast imaging and chest/distant staging as indicated; evaluate the oropharynx thoroughly and assess swallowing, dental and treatment-related functional issues.",
+ "manage":"Curative therapy may be radiation-based or surgery/TORS-based depending on stage, anatomy, exposure and expected functional/adjuvant burden. Avoid assuming transoral surgery automatically reduces treatment intensity.",
+ "operate":"TORS requires safe exposure and ability to obtain meaningful margins without unacceptable neurovascular/functional morbidity; neck management and hemorrhage planning are part of the operation.",
+ "teach":"In an adult with a cystic neck node, do not perform 'branchial cyst excision' before excluding HPV-associated oropharyngeal SCC."},
+"Laryngeal SCC":{
+ "recognize":"Persistent dysphonia, odynophagia, dysphagia, hemoptysis, otalgia or airway symptoms require laryngeal visualization; glottic cancers often present earlier with voice change than supraglottic disease.",
+ "localize":"Stage by subsite, vocal-fold mobility, paraglottic/pre-epiglottic space, cartilage invasion and extralaryngeal extension; nodal risk differs greatly by glottic versus supraglottic lymphatics.",
+ "workup":"Flexible exam plus direct laryngoscopy/biopsy and contrast imaging define primary extent; chest staging, nutrition and swallow/airway assessment are added according to stage.",
+ "manage":"Early disease can often be treated with single-modality transoral surgery or radiation; advanced disease requires larynx-preservation CRT versus total laryngectomy/surgery based on resectability, cartilage/function and patient factors.",
+ "operate":"Surgical choices range from transoral laser/partial laryngeal procedures to total laryngectomy with neck treatment and reconstruction. Oncologic control must be balanced against a realistic functional larynx.",
+ "teach":"Organ preservation is not the same as functional preservation. A tumor-free but chronically aspirating obstructed larynx may be an unsuccessful organ outcome."},
+"Unknown Primary with Cervical Metastasis":{
+ "recognize":"Metastatic SCC in a cervical node without obvious mucosal primary requires a structured search, especially for HPV-associated oropharynx and EBV-associated nasopharynx based on pathology and nodal pattern.",
+ "localize":"Nodal level and viral markers guide the likely primary site; cystic upper-jugular nodes strongly suggest oropharynx while retropharyngeal/posterior patterns may suggest nasopharynx or other sites.",
+ "workup":"Obtain FNA/core with appropriate p16/HPV/EBV assessment, high-quality mucosal exam and cross-sectional/PET imaging as appropriate. Directed examination under anesthesia with tonsillar/lingual-tonsil evaluation can identify occult primaries.",
+ "manage":"Treatment fields and surgery depend on whether a primary is found, nodal burden and viral status. Identifying the primary can reduce unnecessary mucosal treatment and tailor surgery/radiation.",
+ "operate":"Neck dissection and transoral diagnostic/therapeutic procedures should be coordinated rather than performed as unrelated steps. Avoid open excisional node biopsy before proper workup when possible.",
+ "teach":"The goal is not merely to prove the neck node is SCC—it is to find the primary or narrow the likely mucosal source enough to treat intelligently."},
+"Oral Tongue SCC":{
+ "recognize":"Persistent ulcer, induration, pain, bleeding, tongue dysfunction or ipsilateral otalgia warrants biopsy. Depth of invasion and deep-muscle involvement influence nodal risk and treatment.",
+ "localize":"Map lateral/ventral oral tongue, floor-of-mouth proximity, intrinsic/extrinsic muscle involvement, mandible and neurovascular structures; oral tongue is distinct from base of tongue/oropharynx.",
+ "workup":"Biopsy, contrast imaging for deeper disease and careful neck staging are central. Pathology should include depth, margins, PNI/LVI and nodal features that drive adjuvant therapy.",
+ "manage":"Resectable oral-cavity SCC is commonly treated surgically with appropriate elective/therapeutic neck management; adjuvant RT/CRT is selected from adverse pathologic features.",
+ "operate":"Obtain a three-dimensional deep margin while preserving function when oncologically safe; anticipate defect/reconstruction and neck recipient-vessel needs before resection.",
+ "teach":"For oral tongue cancer, depth and deep margin matter. A superficial-looking ulcer can have meaningful occult nodal risk."},
+"Central Neck Dissection":{
+ "recognize":"Central compartment dissection is therapeutic for clinically involved level VI/VII thyroid-cancer nodes; it is not automatically required for every papillary thyroid carcinoma.",
+ "localize":"Level VI lies between carotids from hyoid to innominate/suprasternal region and contains prelaryngeal, pretracheal and paratracheal nodes alongside RLNs and parathyroid blood supply.",
+ "workup":"Use preoperative neck ultrasound and selective CT for bulky/retrotracheal/mediastinal disease; document vocal-fold function when nerve involvement or reoperation is a concern.",
+ "manage":"Treat clinically involved central disease compartmentally and coordinate lateral-neck disease separately. Prophylactic dissection is individualized rather than a default response to microscopic risk.",
+ "operate":"Identify and preserve RLN and viable parathyroid glands/vascular supply while clearing the nodal compartment; avoid isolated node plucking in a scar-prone central neck.",
+ "teach":"The morbidity is hypoparathyroidism and RLN injury, so the indication must be oncologically meaningful—not simply 'there might be microscopic nodes.'"},
+"Submandibular Sialolithiasis":{
+ "recognize":"Meal-related submandibular pain/swelling strongly suggests obstructive sialolithiasis, especially with a palpable floor-of-mouth stone or reduced ductal saliva.",
+ "localize":"Wharton duct runs from deep gland around posterior mylohyoid into floor of mouth, closely related to lingual nerve; stones may be distal palpable ductal, hilar or intraglandular.",
+ "workup":"Ultrasound or noncontrast CT can localize radiopaque stones; sialendoscopy provides direct intraductal assessment. Consider stricture or chronic sialadenitis when no stone is found.",
+ "manage":"Hydration, massage and sialogogues help mild episodes; antibiotics are for superimposed infection. Gland-preserving transoral or endoscopic stone removal is favored when feasible.",
+ "operate":"Distal stones can be removed transorally; hilar/proximal stones may need combined sialendoscopic/transoral techniques. Protect lingual nerve and avoid gland excision when a duct-preserving solution is realistic.",
+ "teach":"Stone location determines the operation. A palpable anterior duct stone should not automatically become submandibular-gland excision."},
+"Graves Disease / Toxic Goiter":{
+ "recognize":"Hyperthyroid symptoms with diffuse goiter, ophthalmopathy or toxic multinodular disease create a thyroid problem where endocrine control and airway/compressive anatomy both matter.",
+ "localize":"Diffuse hypervascular gland or multinodular enlargement can distort RLN/parathyroid relationships and compress/deviate trachea; substernal extension changes exposure.",
+ "workup":"Confirm thyroid function and etiology, assess goiter size/nodules and laryngeal/airway symptoms, and obtain imaging when substernal/compressive anatomy requires it.",
+ "manage":"Antithyroid medication, radioiodine and surgery are chosen by etiology, gland size, ophthalmopathy, pregnancy considerations, compressive symptoms, malignancy concern and patient preference.",
+ "operate":"Achieve safe thyroidectomy after adequate medical preparation, control hypervascular superior/inferior pedicles and preserve RLN/EBSLN/parathyroids. Large/substernal glands require careful airway and thoracic-access planning.",
+ "teach":"Do not take an uncontrolled thyrotoxic patient electively to thyroidectomy. The surgery starts with endocrine preparation."},
+"Recurrent Respiratory Papillomatosis":{
+ "recognize":"Recurrent exophytic papillomatous laryngeal lesions causing dysphonia and sometimes airway symptoms suggest HPV-related RRP; juvenile disease can be especially aggressive.",
+ "localize":"Disease commonly affects true/false folds and can involve multiple aerodigestive sites. Repeated surgery can create scar/web and worsen voice independent of papilloma burden.",
+ "workup":"Flexible/endoscopic examination defines burden and airway; biopsy confirms pathology and excludes dysplasia/malignant change when atypical. Track disease course and prior procedures rather than treating each recurrence as isolated.",
+ "manage":"Goal is functional disease control, not complete mucosal eradication at any cost. Repeated endoscopic debulking and selected adjuvant therapy are individualized for aggressive/high-burden disease.",
+ "operate":"Use microdebrider/laser or other precise techniques while preserving normal epithelium/commissure and minimizing thermal injury. Treat airway-threatening disease first and avoid bilateral opposing raw surfaces that promote web.",
+ "teach":"RRP is chronic disease management. An aggressive 'remove every last lesion' operation can trade papilloma for permanent scar."},
+"Velopharyngeal Insufficiency":{
+ "recognize":"Hypernasality, nasal air emission and reduced oral pressure after cleft/palatal or neuromuscular disease suggests velopharyngeal dysfunction; distinguish structural insufficiency from mislearning/articulation errors.",
+ "localize":"Closure depends on palate length/motion, lateral pharyngeal-wall motion and posterior wall; gap pattern and size determine procedure selection.",
+ "workup":"Perceptual speech evaluation plus nasendoscopy and/or videofluoroscopy defines closure pattern. Sleep history matters because pharyngeal surgery can worsen OSA.",
+ "manage":"Speech therapy treats articulation/mislearning but not a structural gap. Surgery or prosthetic management is selected for persistent structural dysfunction according to closure pattern and airway risk.",
+ "operate":"Pharyngeal flap, sphincter pharyngoplasty, palatal lengthening/Furlow-type procedures and augmentation solve different patterns. Preserve an airway appropriate to the patient's baseline OSA risk.",
+ "teach":"Treat the closure pattern, not just the word 'hypernasal.' A good speech operation can be a bad sleep operation if airway risk is ignored."},
+"Spasmodic Dysphonia":{
+ "recognize":"Task-specific strained/strangled voice breaks on voiced speech suggest adductor laryngeal dystonia; breathy breaks on voiceless contexts suggest abductor phenotype. Tremor and muscle-tension dysphonia are common mimics/comorbidities.",
+ "localize":"This is focal neurologic dystonia affecting task-specific laryngeal motor control rather than a structural vocal-fold lesion.",
+ "workup":"Diagnosis is clinical with expert voice evaluation and laryngoscopy during provocative speech; no single imaging or EMG test confirms typical disease, but atypical neurologic findings warrant broader assessment.",
+ "manage":"Botulinum toxin injection is standard symptomatic treatment for many patients, with dose/muscle/laterality individualized over repeated cycles; voice therapy helps compensatory behaviors but does not cure dystonia.",
+ "operate":"Targeted chemodenervation requires accurate muscle selection and counseling about transient breathiness, dysphagia and variable duration. Surgical denervation procedures are uncommon/selective.",
+ "teach":"Spasmodic dysphonia is task-specific. Listen to the phonetic context of the break instead of diagnosing every strained voice as dystonia."},
+"Medialization Thyroplasty":{
+ "recognize":"Persistent symptomatic glottic insufficiency from unilateral paralysis, atrophy or selected defects can be treated with permanent framework medialization when recovery and symptom trajectory justify it.",
+ "localize":"The implant moves the membranous vocal fold medially through a thyroid-cartilage window; posterior gap or vertical mismatch may require arytenoid adduction in addition.",
+ "workup":"Stroboscopy/voice and swallow assessment define closure pattern; establish etiology and expected nerve recovery. Temporary injection is often preferable early when spontaneous recovery remains likely.",
+ "manage":"Choose therapy, injection, thyroplasty, arytenoid procedure or reinnervation based on gap, aspiration, vocal demand, time course and patient goals.",
+ "operate":"Perform under local/light sedation when possible to permit voice tuning, create a safe window without violating inner perichondrium excessively and shape the implant to correct the actual gap without airway compromise.",
+ "teach":"Thyroplasty moves a fold; it does not restore nerve tone. If the posterior glottis is the main problem, a larger implant is not always the answer."},
+"Posterior Glottic Stenosis / Arytenoid Fixation":{
+ "recognize":"Bilateral vocal-fold immobility after prolonged intubation with posterior commissure scar or fused cricoarytenoid joints suggests posterior glottic stenosis, which can mimic bilateral RLN paralysis.",
+ "localize":"Scar can bridge the interarytenoid/posterior commissure and progress to cricoarytenoid fixation. The pathology is mechanical restriction rather than absent motor input.",
+ "workup":"Flexible laryngoscopy documents motion; history and CT/EMG are selective. Direct laryngoscopy with palpation of arytenoid joints may be required to distinguish fixation from paralysis.",
+ "manage":"Mild scar may be treated endoscopically; more advanced fixation may require posterior scar release, dilation, grafting, cordotomy/arytenoid procedures or open reconstruction according to airway and voice goals.",
+ "operate":"Avoid repeated traumatic posterior glottic injury. During reconstruction, create stable posterior airway while minimizing new opposing raw surfaces and balancing aspiration/voice tradeoffs.",
+ "teach":"Before calling bilateral immobility 'bilateral paralysis,' palpate the joints if the history suggests posterior scar."},
+"Cricopharyngeal Dysfunction":{
+ "recognize":"Cervical solid/liquid dysphagia, residue at the UES, regurgitation or aspiration can result from impaired cricopharyngeal opening, but poor pharyngeal propulsion can create a similar radiographic appearance.",
+ "localize":"The UES is a high-pressure zone centered on cricopharyngeus with contributions from adjacent inferior constrictor/cervical esophagus; opening depends on relaxation plus hyolaryngeal excursion and bolus-driving pressure.",
+ "workup":"MBS/VFSS defines opening and pharyngeal physiology; endoscopy and manometry are selective. Diagnose true outflow restriction before cutting a sphincter in a patient whose main problem is weak propulsion.",
+ "manage":"Dilation, botulinum toxin or myotomy can be used in selected focal UES dysfunction; treatment of neurologic/global pharyngeal disease and rehabilitation may be more important when restriction is secondary.",
+ "operate":"Endoscopic/open myotomy must divide the dysfunctional muscle sufficiently while avoiding esophageal perforation, mediastinitis and RLN injury.",
+ "teach":"A cricopharyngeal bar is a radiographic sign, not automatically the cause of dysphagia. Treat physiology, not the image."},
+"Nasal Fracture":{
+ "recognize":"Post-traumatic deformity, obstruction, epistaxis and tenderness suggest nasal fracture, but the immediate must-not-miss finding is septal hematoma.",
+ "localize":"Assess nasal bones, upper lateral cartilages, septum and caudal support; associated NOE/orbital/midface injury changes management.",
+ "workup":"Diagnosis is primarily clinical. CT is reserved for suspected complex facial fractures rather than isolated simple nasal injury. Document preinjury appearance/airway when possible.",
+ "manage":"Drain septal hematoma urgently. Observe nondisplaced fractures; perform closed reduction within an appropriate edema/timing window when displaced and function/cosmesis warrant it.",
+ "operate":"Mobilize the bony/cartilaginous framework without creating new support injury and stabilize internally/externally as needed. Recognize fractures unlikely to be corrected by closed reduction alone.",
+ "teach":"If you remember only one emergency pearl: look for a septal hematoma before sending a nasal-fracture patient home."},
+"NOE Fracture":{
+ "recognize":"Flattened/widened nasal bridge, telecanthus, severe midface injury or epiphora after central facial trauma suggests naso-orbito-ethmoid fracture.",
+ "localize":"The key structure is the medial canthal tendon attachment to the central fragment; injury also involves medial orbital walls, nasal bones/frontal process and lacrimal system.",
+ "workup":"Thin-cut CT defines comminution and central fragment; document globe/vision, intercanthal distance and lacrimal injury. Classify by medial canthal tendon attachment because it guides reconstruction.",
+ "manage":"Displaced unstable fractures require open reduction/fixation and restoration of medial canthal position; associated frontal sinus/skull-base and orbital injuries are managed concurrently.",
+ "operate":"Rebuild central facial projection and intercanthal width with stable bony fixation; repair/resuspend the medial canthal tendon when its bony attachment is disrupted.",
+ "teach":"NOE surgery is about the medial canthus and central facial framework. A good-looking nasal bone reduction with persistent telecanthus is a failed repair."},
+"Frontal Sinus Fracture":{
+ "recognize":"Frontal impact with anterior-table deformity, posterior-table injury, CSF leak or nasofrontal drainage-tract injury requires a decision based on each component rather than fracture presence alone.",
+ "localize":"Evaluate anterior table, posterior table/dura and frontal sinus outflow tract. The long-term risks are contour deformity, mucocele and intracranial infection/CSF complications.",
+ "workup":"High-resolution CT defines displacement, posterior-table comminution and drainage pathway; assess for CSF leak and associated intracranial/orbital injuries.",
+ "manage":"Observe selected nondisplaced injuries with intact drainage; repair contour deformity when needed and choose sinus-preserving, obliteration or cranialization strategies according to outflow/posterior-table/dural injury.",
+ "operate":"The operation must create a durable future: restore contour, eliminate unsafe mucosa when obliterating/cranializing and establish or intentionally remove the drainage pathway.",
+ "teach":"Frontal sinus fracture is three decisions: anterior table, posterior table and outflow tract. Treat those, not the CT label."},
+"Adult PSG Interpretation":{
+ "recognize":"Read the study as physiology, not only AHI: sleep time/stages, obstructive versus central events, oxygen burden, arousals, position/REM dependence, CO2 when measured and cardiac/limb findings.",
+ "localize":"PSG quantifies sleep-disordered breathing but does not directly localize anatomic collapse. Obstructive events imply continued respiratory effort; central events have absent/reduced effort.",
+ "workup":"Confirm study quality and total sleep time before accepting indices. Distinguish OSA severity from hypoventilation and central apnea, and note REM/positional clustering that can affect treatment choice.",
+ "manage":"Use PSG with symptoms/comorbidity to select PAP, oral appliance, weight/positional therapy or surgical evaluation. Residual study interpretation should determine whether remaining events are obstructive, central or due to inadequate use/settings.",
+ "operate":"Sleep-surgery planning requires anatomy/DISE in addition to PSG. The AHI does not tell you whether the palate, tongue base, lateral wall or epiglottis is the surgical target.",
+ "teach":"AHI is one column, not the whole sleep study. Always tell me event type, oxygen burden and whether disease is positional/REM dependent."},
+"Palatal Surgery":{
+ "recognize":"Palatal surgery is considered for selected OSA when retropalatal/lateral-wall anatomy contributes to collapse and nonoperative options are inadequate or undesired.",
+ "localize":"Differentiate anteroposterior velar collapse, tonsillar crowding and lateral pharyngeal-wall collapse; these phenotypes are not corrected equally by tissue-resection versus reconstructive techniques.",
+ "workup":"Review PSG, tonsils/palate anatomy, BMI/comorbidity, PAP history and DISE when it changes procedure selection or HNS candidacy.",
+ "manage":"Choose a procedure that matches collapse pattern and counsel that improvement rather than cure may be realistic; postoperative PSG is appropriate when residual disease risk remains.",
+ "operate":"Protect velopharyngeal function and major vessels, control tonsillar/pharyngeal bleeding and avoid excessive scar/nasopharyngeal narrowing. Reconstructive lateral-wall techniques differ conceptually from classic ablative UPPP.",
+ "teach":"Sleep surgery is phenotype surgery. 'UPPP' should not be a reflex answer for every retropalatal obstruction."},
+"Oral Appliance Therapy":{
+ "recognize":"Mandibular-advancement oral appliances are a non-PAP treatment option for selected OSA/snoring patients, especially when PAP is not tolerated or an alternative is preferred.",
+ "localize":"Advancing the mandible/tongue increases retrolingual/retropalatal airway dimensions but does not correct every collapse phenotype.",
+ "workup":"Confirm OSA with sleep testing, evaluate dentition/TMJ and use a qualified dental sleep provider for fitting/titration. Objective follow-up sleep testing is needed because symptom improvement alone does not prove control.",
+ "manage":"Titrate to efficacy/tolerance and monitor dental occlusion, TMJ symptoms and adherence. Severe disease or persistent hypoxemia may require PAP, surgery or combined therapy.",
+ "operate":"No surgery is inherent to oral-appliance therapy; the advanced decision is recognizing when craniofacial anatomy makes MMA or another definitive skeletal strategy more appropriate than indefinite appliance advancement.",
+ "teach":"An oral appliance is prescribed therapy, not an over-the-counter snoring device. It needs dental assessment, titration and objective efficacy testing."},
+"Peritonsillar Abscess":{
+ "recognize":"Severe unilateral sore throat, trismus, muffled voice, drooling and soft-palate/peritonsillar bulge suggest PTA; uvular deviation supports but is not required.",
+ "localize":"Infection lies in the peritonsillar space between tonsillar capsule and superior constrictor; deeper parapharyngeal spread or airway symptoms change urgency.",
+ "workup":"Diagnosis is usually clinical; ultrasound or CT is useful when exam is equivocal, deep-space complication is suspected or the patient cannot be examined adequately.",
+ "manage":"Provide drainage when a drainable abscess is present, antibiotics covering common aerobic/anaerobic flora, hydration/analgesia and airway assessment. Selected patients can be managed outpatient if stable and tolerating intake.",
+ "operate":"Needle aspiration or incision/drainage should respect carotid depth/lateral direction; avoid blindly directing instruments laterally. Quinsy tonsillectomy is selective rather than routine.",
+ "teach":"Trismus plus unilateral peritonsillar swelling is the pattern. Before draining, know where the carotid is relative to your instrument."},
+"Ludwig Angina":{
+ "recognize":"Rapidly progressive bilateral submandibular/floor-of-mouth swelling, tongue elevation, drooling and muffled voice—often odontogenic—suggest Ludwig angina and can deteriorate into airway obstruction quickly.",
+ "localize":"Cellulitis spreads through sublingual/submandibular spaces across the midline, elevating the tongue; early disease may be diffuse without a discrete abscess.",
+ "workup":"Airway assessment is first. Contrast CT is obtained only if the patient is stable enough and helps identify drainable abscess, dental source and deeper spread.",
+ "manage":"Secure the airway early when threatened, start IV broad-spectrum antibiotics and obtain dental/source control. Observation in an unmonitored setting is inappropriate for progressive airway signs.",
+ "operate":"Drain discrete collections and address odontogenic source; airway may require awake intubation or surgical airway depending on anatomy and expertise. Avoid repeated traumatic oral attempts in a critically narrowed floor-of-mouth airway.",
+ "teach":"Ludwig angina is an airway diagnosis before it is an antibiotic diagnosis."},
+"Angioedema":{
+ "recognize":"Rapid tongue/lip/oropharyngeal swelling with or without urticaria can be histaminergic or bradykinin-mediated; stridor, voice change, drooling and progressive tongue/floor-of-mouth involvement signal airway risk.",
+ "localize":"Flexible laryngoscopy helps determine whether edema is limited anteriorly or involves tongue base, supraglottis/larynx. Mechanism matters because bradykinin-mediated disease responds poorly to epinephrine/antihistamines/steroids.",
+ "workup":"Treat clinically while identifying medication exposure (ACE inhibitor), allergy/anaphylaxis features, hereditary history and airway progression. Do not delay airway management for laboratory confirmation.",
+ "manage":"Histaminergic/anaphylactic disease requires IM epinephrine plus appropriate adjuncts; bradykinin-mediated disease uses mechanism-specific therapy when available and discontinuation of culprit medication. Monitor based on airway level/progression.",
+ "operate":"Prepare an awake airway or surgical airway when progression threatens oral intubation. Swollen distorted anatomy makes late rescue more difficult, so timing is critical.",
+ "teach":"The airway and mechanism are the two questions: how far has edema spread, and is this histamine or bradykinin biology?"},
+"Caustic Ingestion":{
+ "recognize":"Caustic ingestion can produce severe esophageal/gastric or laryngeal injury despite limited oral burns. Drooling, dysphagia, chest/abdominal pain, stridor or respiratory distress indicate significant risk.",
+ "localize":"Assess airway/larynx and GI tract separately; alkali and acid injury patterns differ but both can cause transmural necrosis, perforation and later stricture.",
+ "workup":"Stabilize airway/hemodynamics and use endoscopic/cross-sectional assessment according to symptoms and local protocol. Do not induce emesis or attempt neutralization, which can cause additional injury.",
+ "manage":"NPO/supportive care, analgesia and multidisciplinary GI/surgical/ENT involvement depend on severity; perforation/mediastinitis requires urgent source control. Long-term follow-up addresses esophageal stricture and swallowing/nutrition.",
+ "operate":"ENT involvement focuses on threatened laryngeal airway; GI/thoracic/general surgery manage deeper perforation/necrosis. Airway manipulation should anticipate friable edematous tissue.",
+ "teach":"A normal mouth does not clear the esophagus. The must-not-miss problems are airway injury and transmural perforation."},
+"Postoperative Neck Hematoma":{
+ "recognize":"Neck swelling/tightness, dysphagia, voice change, stridor, anxiety or rapidly increasing drain output after thyroid/parathyroid/neck surgery can represent expanding hematoma and airway compression.",
+ "localize":"Bleeding accumulates beneath platysma/strap or deeper fascial layers and can impair venous/lymphatic drainage, causing progressive laryngeal edema even before direct tracheal compression is dramatic.",
+ "workup":"This is primarily a bedside clinical diagnosis; do not send an unstable expanding hematoma to CT. Assess airway and incision while mobilizing OR/anesthesia resources.",
+ "manage":"For airway compromise or rapid expansion, open the incision immediately at bedside if necessary to decompress while preparing definitive operative hemostasis. Oxygen/intubation attempts must not delay life-saving decompression.",
+ "operate":"Evacuate clot, identify/secure bleeding source and reassess airway edema before extubation. Common sources include thyroid pedicles, muscle/skin vessels or slipped ligature/clips.",
+ "teach":"Post-thyroid neck hematoma is a 'cut the sutures' emergency when the airway is threatened. Imaging is not the next step."},
+}
+for _domain,_mods in DEEP_MODULES_V6.items():
+    for _m in _mods:
+        _r=TRUE_DEPTH_REWRITES_V99.get(_m.get("topic"))
+        if _r:
+            _m.update(_r)
+            _m["evidence_calibrated"]="v9.9-textbook-saturation"
+
+# Expanded anatomy atlas based on regional organization emphasized in Janfaza and operative atlases.
+ANATOMY_EXPANSION_V99 = [
+ {"region":"Facial Plastics / Trauma","topic":"Superficial Face — Vessels / Facial Nerve / SMAS","landmarks":["facial artery/vein","superficial temporal vessels","parotid duct","SMAS","facial nerve temporal/zygomatic/buccal/marginal mandibular/cervical branches"],"danger":["facial nerve branches","parotid duct","angular/facial vessels"],"or_link":"Cervicofacial Flap","pearl":"Know whether your flap plane is superficial or deep to the facial nerve/SMAS system before lifting it."},
+ {"region":"Facial Plastics / Trauma","topic":"Scalp / Forehead Surgical Layers","landmarks":["skin","dense connective tissue","galea","loose areolar plane","pericranium","supraorbital/supratrochlear bundles","frontal branch facial nerve"],"danger":["frontal branch","supraorbital neurovascular bundles","pericranial blood supply"],"or_link":"Forehead Flap","pearl":"The loose areolar plane permits scalp mobility; the frontal facial-nerve branch is vulnerable in temporal dissection."},
+ {"region":"Facial Plastics / Trauma","topic":"Orbit — Compartments / Canthi / Lacrimal System","landmarks":["orbital septum","medial/lateral canthal tendons","lamina papyracea","orbital floor","inferior orbital fissure","lacrimal sac/duct","optic canal"],"danger":["optic nerve","globe","medial rectus","inferior rectus","lacrimal drainage"],"or_link":"Orbital Floor Repair","pearl":"Vision and globe integrity are assessed before fracture reconstruction; medial canthal and lacrimal injuries change the plan."},
+ {"region":"Facial Plastics / Trauma","topic":"Mandible / TMJ / Masticator Space","landmarks":["condyle","coronoid","ramus","angle/body/symphysis","inferior alveolar canal","TMJ capsule","masseter","medial/lateral pterygoids"],"danger":["inferior alveolar nerve","facial artery","maxillary artery","facial nerve branches"],"or_link":"Mandible ORIF","pearl":"Occlusion is the functional reference frame; fracture fixation restores biomechanics around dental and muscle forces."},
+ {"region":"Rhinology / Skull Base","topic":"Ethmoid Skull Base / Lateral Lamella / AEA","landmarks":["cribriform plate","lateral lamella","fovea ethmoidalis","anterior ethmoid artery","posterior ethmoid artery","lamina papyracea"],"danger":["dura/CSF","olfactory fibers","orbit","AEA retraction into orbit"],"or_link":"Ethmoidectomy","pearl":"The lateral lamella is a thin vulnerable skull-base segment; asymmetry in skull-base height must be read on CT before dissection."},
+ {"region":"Rhinology / Skull Base","topic":"Pterygopalatine Fossa / Autonomic Pathways","landmarks":["sphenopalatine foramen","V2/foramen rotundum","vidian canal","pterygopalatine ganglion","descending palatine canal","internal maxillary artery"],"danger":["V2","vidian nerve","maxillary artery","orbital/skull-base extension pathways"],"or_link":"SPA Ligation","pearl":"The PPF connects nasal cavity, orbit, middle cranial fossa, palate and infratemporal fossa—making it a major spread corridor."},
+ {"region":"Rhinology / Skull Base","topic":"Infratemporal Fossa / Internal Maxillary Artery","landmarks":["lateral/medial pterygoid","mandibular nerve V3","foramen ovale","middle meningeal artery","internal maxillary artery","pterygoid plexus"],"danger":["V3 branches","middle meningeal artery","pterygoid venous plexus","ICA at skull base"],"or_link":"JNA","pearl":"Bleeding can be venous as well as arterial; understand the pterygoid plexus and maxillary artery branches before deep lateral skull-base dissection."},
+ {"region":"Rhinology / Skull Base","topic":"Anterior / Central Cranial Base Foramina","landmarks":["cribriform","optic canal","superior orbital fissure","foramen rotundum","foramen ovale","foramen spinosum","foramen lacerum","carotid canal"],"danger":["CN I–VI pathways","ICA","cavernous sinus","middle meningeal artery"],"or_link":"CSF Leak Repair","pearl":"Foraminal anatomy predicts which cranial neuropathy should accompany a skull-base lesion."},
+ {"region":"Otology / Neurotology","topic":"Jugular Foramen / Hypoglossal Canal / Lower Cranial Nerves","landmarks":["jugular bulb","sigmoid sinus","pars nervosa/vascularis concepts","CN IX/X/XI","hypoglossal canal/CN XII","ICA"],"danger":["lower cranial nerves","jugular bulb/IJV","ICA"],"or_link":"Vestibular Schwannoma","pearl":"Multiple IX–XII deficits localize to the lower skull base even before imaging."},
+ {"region":"Otology / Neurotology","topic":"IAC / CPA / Labyrinth Relationships","landmarks":["IAC fundus","facial nerve","cochlear nerve","superior/inferior vestibular nerves","labyrinth","porus acousticus","CPA"],"danger":["facial nerve","cochlear nerve","brainstem/cerebellum","labyrinth"],"or_link":"Vestibular Schwannoma","pearl":"Approach selection is inseparable from hearing goals and the course of the facial/cochlear nerves in the IAC."},
+ {"region":"Head & Neck Oncology","topic":"External Carotid Artery Branches / Major Hemorrhage Anatomy","landmarks":["superior thyroid","lingual","facial","occipital","posterior auricular","maxillary","superficial temporal arteries"],"danger":["hypoglossal nerve","superior laryngeal nerve","facial nerve","major collateral pathways"],"or_link":"Neck Dissection","pearl":"Know the branch pattern before ligation; tumor/radiation can distort relationships and collateral flow."},
+ {"region":"Head & Neck Oncology","topic":"Lateral Neck Triangles / CN XI / Brachial Plexus","landmarks":["SCM","posterior triangle","CN XI","Erb point","brachial plexus","phrenic nerve on anterior scalene","transverse cervical vessels"],"danger":["CN XI","phrenic nerve","brachial plexus","thoracic duct low left"],"or_link":"Neck Dissection","pearl":"CN XI becomes particularly superficial in the posterior triangle and is vulnerable during level V dissection."},
+ {"region":"Head & Neck Oncology","topic":"Thoracic Inlet / Root of Neck","landmarks":["subclavian artery/vein","brachiocephalic vessels","phrenic/vagus","recurrent laryngeal nerves","thoracic duct","lung apex/pleura"],"danger":["thoracic duct","phrenic nerve","pleura","subclavian vessels","RLNs"],"or_link":"Reoperative Thyroid","pearl":"Low left-neck surgery approaches the thoracic duct; low neck dissection also risks pleura and phrenic nerve."},
+ {"region":"General ENT / Emergencies","topic":"Mediastinal Continuity of Deep Neck Spaces","landmarks":["retropharyngeal space","danger space","prevertebral fascia","visceral/pretracheal spaces","superior mediastinum"],"danger":["descending necrotizing mediastinitis","great vessels","airway/esophagus"],"or_link":"Deep Neck Drainage","pearl":"A deep neck infection can descend below the clavicles through fascial planes even when the original dental/pharyngeal source seems localized."},
+ {"region":"Head & Neck Oncology","topic":"Vagus / Sympathetic Chain / Carotid Space","landmarks":["ICA/CCA","IJV","vagus within sheath","sympathetic chain posterior medial","CN IX/XI/XII relationships","carotid bifurcation"],"danger":["vagus","sympathetic chain","hypoglossal","carotid vessels"],"or_link":"Parapharyngeal Tumor","pearl":"Displacement of carotid/IJV and postoperative deficits can identify whether a parapharyngeal tumor arose from vagus, sympathetic chain or prestyloid structures."},
+ {"region":"Thyroid / Parathyroid / Salivary","topic":"Superior Laryngeal Nerve / Cricothyroid Space","landmarks":["internal SLN with superior laryngeal artery","thyrohyoid membrane","external SLN","cricothyroid muscle","superior thyroid pole"],"danger":["EBSLN during superior pole ligation","internal SLN during transhyoid work"],"or_link":"Total Thyroidectomy","pearl":"EBSLN injury may preserve gross vocal-fold mobility while impairing pitch projection and high-frequency control."},
+ {"region":"Laryngology / Voice / Swallowing","topic":"Laryngeal Neurovascular Anatomy","landmarks":["RLN entry near cricothyroid joint","internal/external SLN","superior/inferior laryngeal arteries","paraglottic space","pre-epiglottic space"],"danger":["RLN","EBSLN","laryngeal vessels"],"or_link":"Microlaryngoscopy","pearl":"The paraglottic and pre-epiglottic spaces are tumor-spread compartments, not merely surgical dead space."},
+ {"region":"Head & Neck Oncology","topic":"Free-Flap Recipient Vessels / Reconstructive Neck","landmarks":["facial artery/vein","superior thyroid artery","lingual artery","transverse cervical vessels","external jugular/IJV branches"],"danger":["vagus/hypoglossal/phrenic","scarred/radiated carotid sheath","pedicle compression"],"or_link":"Free Flap","pearl":"Recipient-vessel planning starts before ablation, especially in the vessel-depleted or irradiated neck."},
+]
+
+_existing_anat={x["topic"] for x in ANATOMY_ATLAS_V97}
+for _x in ANATOMY_EXPANSION_V99:
+    if _x["topic"] not in _existing_anat:
+        ANATOMY_ATLAS_V97.append(_x)
+        _existing_anat.add(_x["topic"])
+
+# Rebuild Daily Path.
+ADAPTIVE_ITEMS_V99=[]
+for _domain,_mods in DEEP_MODULES_V6.items():
+    for _m in _mods:
+        _id=_v6_item_id(_domain,_m["topic"])
+        for _stage in ["recognize","localize","workup","manage","operate","teach"]:
+            ADAPTIVE_ITEMS_V99.append({
+              "id":_id+"-"+_stage,"concept_id":_id,"domain":_domain,"topic":_m["topic"],
+              "stage":_stage,"display_stage":"advanced" if _stage=="operate" else _stage,
+              "prompt":{"recognize":"Recognize the pattern.","localize":"Localize the problem.","workup":"Evaluate it efficiently.","manage":"Build the management sequence.","operate":"Make the advanced decision.","teach":"Teach the mental model."}[_stage],
+              "answer":_m[_stage],
+              "minutes":{"recognize":3,"localize":3,"workup":4,"manage":4,"operate":6,"teach":4}[_stage],
+              "level":{"recognize":1,"localize":2,"workup":3,"manage":4,"operate":5,"teach":6}[_stage],
+              "tags":_m.get("tags",_tags_v94(_m["topic"],_domain))
+            })
+ADAPTIVE_ITEMS_V97=ADAPTIVE_ITEMS_V99
+ADAPTIVE_ITEMS_V96=ADAPTIVE_ITEMS_V99
+ADAPTIVE_ITEMS_V95=ADAPTIVE_ITEMS_V99
+ADAPTIVE_ITEMS_V94=ADAPTIVE_ITEMS_V99
+ADAPTIVE_ITEMS_V91=ADAPTIVE_ITEMS_V99
+
+TEXTBOOK_SOURCE_SET_V99 = [
+ {"title":"K.J. Lee's Essential Otolaryngology","edition":"12th","role":"breadth, board-relevant fundamentals and general otolaryngology"},
+ {"title":"Otolaryngology—Head and Neck Surgery Clinical Reference Guide (Pasha)","edition":"6th","role":"resident workup, management, consults and practical pearls"},
+ {"title":"Bluestone & Stool's Pediatric Otolaryngology","edition":"5th","role":"pediatric subspecialty depth"},
+ {"title":"Operative Otolaryngology—Head and Neck Surgery","edition":"3rd","role":"broad operative indications, exposure, sequence and complications"},
+ {"title":"Operative Techniques in Laryngology","edition":"2nd, 2024","role":"modern voice, airway and swallowing procedures"},
+ {"title":"Surgical Anatomy of the Head and Neck","edition":"Janfaza et al.","role":"regional surgical anatomy and danger structures"},
+ {"title":"Atlas of Head & Neck Surgery","edition":"Cohen/Clayman","role":"head-and-neck operative anatomy and procedural sequence"},
+ {"title":"Atlas of Endoscopic Sinus and Skull Base Surgery","edition":"2nd","role":"endoscopic rhinology/skull-base anatomy and technique"},
+]
+
+
+
+# =============================================================================
+# ENT Mastery v10.0 — Cummings 7e Reconciliation Pass
+# Durable anatomy/pathophysiology/procedural framing is reconciled to Cummings 7e.
+# Management that changes over time remains subordinate to current society/NCCN guidance.
+# =============================================================================
+
+def _v10_module(topic, recognize, localize, workup, manage, operate, teach, sources):
+    return {"topic":topic,"recognize":recognize,"localize":localize,"workup":workup,
+            "manage":manage,"operate":operate,"teach":teach,"source_basis":sources,"v10":True}
+
+CUMMINGS_RECONCILIATION_V10 = {
+"General ENT / Emergencies":[
+_v10_module("Evidence Interpretation / Outcomes Research",
+"A paper can be statistically positive yet clinically unimportant, or clinically important yet underpowered. First identify the question, population, comparator, outcome and study design before trusting a P value.",
+"Localize the inference problem: diagnosis, prognosis, treatment effect, harm, or time-to-event. Match the data type and study design to the claim being made.",
+"Read absolute event rates, effect size and confidence intervals before P values. Look for selection bias, confounding, loss to follow-up, inappropriate comparison groups, multiplicity and whether the study is powered for its claimed conclusion.",
+"Translate evidence into action by combining magnitude/certainty of benefit, harms, patient values and applicability. Distinguish guideline recommendation strength from evidence level and recognize when observational data are the best feasible evidence for surgical questions.",
+"For operative literature, ask whether technique, surgeon experience, selection criteria and follow-up make the result transportable to your practice. Surgical case series can teach feasibility but rarely establish superiority.",
+"Teach: effect size + uncertainty + applicability beats 'P < .05.' A negative study without adequate power does not prove equivalence.",
+["Cummings 7e: Outcomes Research; Interpreting Medical Data; Evidence-Based Performance Measurement"]),
+_v10_module("Pain Management in the Head & Neck Patient",
+"Separate acute postoperative nociceptive pain, cancer pain, neuropathic pain and referred craniofacial pain; severe new pain can also be a clue to infection, perineural spread or recurrence.",
+"Localize pain by tissue and nerve territory: mucosal/somatic, myofascial, trigeminal, glossopharyngeal/vagal, cervical plexus or treatment-related neuropathy.",
+"Use focused history/exam to identify red flags, opioid exposure, renal/hepatic constraints, sleep-disordered breathing, neuropathic features and the structural cause that still needs treatment.",
+"Use multimodal analgesia when safe; treat the cause, not only the score. Escalate cancer/neuropathic pain with multidisciplinary support and avoid reflex chronic opioid escalation without a defined plan.",
+"Perioperative analgesia should anticipate the procedure's pain phenotype, airway/sedation risk, nausea, swallowing and discharge needs. Rescue plans belong in the preoperative plan.",
+"Teach the resident to ask: what is generating the pain, what dangerous diagnosis am I missing, and what modality targets that mechanism with the least collateral harm?",
+["Cummings 7e: Pain Management in the Head and Neck Patient"]),
+_v10_module("Geriatric Otolaryngology / Frailty",
+"Older adults often present with interacting hearing, balance, voice, swallowing, cognition, frailty and polypharmacy issues rather than one isolated organ problem.",
+"Localize functional failure across sensory, motor and reserve systems: hearing/vestibular, laryngeal, pharyngeal, salivary, airway and reconstructive capacity.",
+"Assess baseline function, cognition, falls, nutrition, aspiration risk, medications, social support and goals in addition to disease-specific testing.",
+"Treat reversible disease while aligning intensity with physiologic reserve and goals. Hearing rehabilitation, swallowing safety, fall prevention and communication access can be as consequential as surgery.",
+"Age alone is not an operative contraindication; frailty, comorbidity, functional reserve and the expected recovery burden are more useful. Plan delirium, aspiration, rehabilitation and caregiver needs.",
+"Teach: the geriatric ENT patient is not 'the same case but older'—reserve, recovery and competing risks change the decision.",
+["Cummings 7e: Otolaryngology in the Elderly"]),
+_v10_module("Immunocompromised Host in Otolaryngology",
+"Immune suppression changes both the differential and the tempo: ordinary infections can be aggressive and opportunistic infection, PTLD/lymphoma, unusual cutaneous disease and invasive fungal disease become more plausible.",
+"Localize by compartment—sinonasal, oral, salivary, neck, laryngeal, otologic—and by immune defect/transplant context rather than using one generic 'immunocompromised' differential.",
+"Clarify transplant/HIV/hematologic status, neutropenia, medications and timing. Obtain targeted cultures/pathology/imaging early when invasive disease is possible; biopsy persistent masses or atypical mucosal/skin lesions.",
+"Coordinate antimicrobial, oncologic and immunosuppression decisions with the relevant teams. Escalate rapidly when invasive fungal disease, airway compromise or PTLD is possible.",
+"Surgery may be diagnostic, source-control, airway-protective or oncologic. Tissue handling must anticipate cultures, stains, flow cytometry and permanent pathology when the differential is broad.",
+"Teach: immune status changes the prior probability. A common-looking ENT problem can require an uncommon workup when the host is uncommon.",
+["Cummings 7e: Head and Neck Manifestations in the Immunocompromised Host"]),
+_v10_module("Oral Manifestations of Systemic Disease",
+"Oral ulceration, bullae, white/red lesions, xerostomia, periodontal change and exposed necrotic bone can reflect systemic autoimmune, infectious, hematologic, metabolic or medication-related disease.",
+"Describe the exact oral subsite, mucosal layer/pattern, salivary status, dental/alveolar involvement and whether disease is localized or multisite.",
+"Medication review, systemic review, dental evaluation and appropriately handled biopsy are central. Suspected immunobullous disease requires the correct perilesional specimen strategy; MRONJ requires exposure history and jaw assessment.",
+"Treat the underlying disorder with the appropriate specialty while addressing pain, infection, oral hygiene, xerostomia and nutrition. Persistent or suspicious red/white/ulcerative lesions still need malignancy exclusion.",
+"Operative intervention is selective: biopsy, debridement/source control or management of complications rather than reflex excision of inflammatory disease.",
+"Teach: oral mucosa is a window into systemic disease, but a systemic explanation never excuses failure to exclude cancer when the lesion is persistent or atypical.",
+["Cummings 7e: Oral Manifestations of Systemic Diseases"]),
+],
+"Facial Plastics / Trauma":[
+_v10_module("Aesthetic Facial Analysis",
+"Aesthetic analysis is structured description, not 'looks good/bad': facial thirds/fifths, symmetry, profile, skin envelope, nasal projection/rotation and chin-lip relationships.",
+"Localize an aesthetic concern to skeletal framework, cartilage, soft tissue, skin or dynamic muscle and distinguish regional imbalance from an isolated nasal or eyelid problem.",
+"Use standardized photography and reproducible measurements/views. Functional nasal, ocular and facial-nerve issues are assessed separately but integrated into the plan.",
+"Match intervention to a defined structural objective and patient goal; avoid chasing isolated measurements without considering whole-face balance.",
+"Every maneuver should have a predicted vector/volume/support effect and an anticipated tradeoff. Preoperative analysis should be traceable to the operative plan.",
+"Teach: describe first, diagnose the structural imbalance second, choose a maneuver third.",
+["Cummings 7e: Aesthetic Facial Analysis"]),
+_v10_module("Facial Soft-Tissue Lacerations / Burns",
+"Prioritize airway, vision, facial nerve, lacrimal system, salivary duct, cartilage exposure and tissue viability before cosmetic closure.",
+"Localize injury by facial subunit and deep structure: eyelid/canthus, cheek/parotid duct, lip/vermilion, ear cartilage, nose, brow/frontal branch and scalp.",
+"Irrigate/explore enough to define depth and contamination; assess tetanus, foreign body, bite/contamination, associated fracture and specialty-threatening injury.",
+"Early meticulous repair restores alignment and function. Devitalized tissue is handled conservatively on the face when viability is uncertain; burns require depth/airway assessment and staged wound strategy.",
+"Repair landmarks first—vermilion, lid margin, brow, alar rim—then layered tension-free closure. Repair duct/nerve/canalicular injury when indicated rather than closing over it.",
+"Teach: the scar is often determined by what you align and what deep injury you recognize, not by the brand of suture.",
+["Cummings 7e: Facial Trauma—Soft Tissue Lacerations and Burns"]),
+_v10_module("Aging Face / Injectables / Resurfacing",
+"Separate volume loss, skin texture/dyschromia, static rhytids, dynamic rhytids, ptosis/laxity and skeletal support; each requires a different treatment mechanism.",
+"Localize aging change by tissue plane and facial danger zones, especially vascular territories and motor-nerve relationships.",
+"Standardized photos, medication/bleeding history, prior filler/device history and ocular/facial-nerve function guide safe planning.",
+"Neuromodulators address dynamic muscle activity; fillers restore selected volume/support; resurfacing targets skin; surgery repositions deeper tissues. Combine only when the anatomy and goals justify it.",
+"Know vascular occlusion, ocular ischemia, skin necrosis, ectropion, nerve injury and pigment/scar complications and have a rescue plan before treatment.",
+"Teach: match the aging layer to the treatment layer—muscle, volume, skin and ptosis are not interchangeable problems.",
+["Cummings 7e: facial rejuvenation chapters / Facial Plastic and Reconstructive Surgery section"]),
+_v10_module("Hair Restoration Fundamentals",
+"Patterned androgenetic alopecia differs from scarring/inflammatory alopecia and diffuse shedding; restoration planning begins with a stable diagnosis and realistic donor supply.",
+"Localize durable donor hair and understand hairline/temporal framing, density, caliber, curl and direction rather than counting grafts alone.",
+"History/exam should identify medical/scarring causes, medication options, progression risk and donor-site quality before surgery.",
+"Medical stabilization and camouflage may be appropriate; transplantation redistributes finite donor follicles and must anticipate future loss.",
+"Follicular-unit extraction and strip-harvest strategies have different donor/scar tradeoffs. Hairline design, angle and graft handling determine natural appearance.",
+"Teach: transplantation cannot create unlimited hair—long-term design protects the patient from a good one-year result and a bad ten-year result.",
+["Cummings 7e: Hair Restoration—Medical and Surgical Techniques"]),
+],
+"Rhinology / Allergy / Skull Base":[
+_v10_module("Objective Assessment of Nasal Function",
+"Nasal obstruction is subjective; objective tests measure different components of airflow/geometry and do not perfectly substitute for symptoms.",
+"Separate mucosal reversibility from fixed septal, valve or bony narrowing and from sensory mismatch where measured resistance is not the whole symptom.",
+"Use validated symptom measures and exam/endoscopy first. Rhinomanometry, acoustic rhinometry or peak nasal inspiratory flow can answer selected physiologic/research questions, especially pre/post decongestion or intervention.",
+"Treat the identified mechanism and use objective testing when it resolves a real question rather than as a routine prerequisite for every obstructed patient.",
+"Surgical planning remains anatomy-driven; a number from an airflow test does not tell you which structure to modify.",
+"Teach: symptom, anatomy and physiology are related but not identical. Concordance is useful; discordance is information.",
+["Cummings 7e: Objective Assessment of Nasal Function"]),
+_v10_module("Facial Pain / Headache vs Rhinogenic Disease",
+"Most facial pressure/headache is not automatically sinus disease. Migraine and other primary headache disorders commonly mimic 'sinus headache.'",
+"Localize pain by time course, autonomic/migrainous features, triggers, neurologic findings and objective sinonasal inflammation rather than pain location alone.",
+"Endoscopy and CT are used when sinus disease is clinically plausible, but incidental mucosal thickening does not prove causality. Red flags may require neurologic/dental/ophthalmic workup.",
+"Treat proven sinonasal inflammation when present and route primary headache/TMJ/neuralgia to the correct pathway. Avoid antibiotics or ESS for imaging findings that do not fit the syndrome.",
+"Surgery is appropriate when a defined sinonasal disease process and symptom relationship support it—not as an empiric headache procedure.",
+"Teach: 'pain over the sinus' is anatomy, not etiology.",
+["Cummings 7e: Facial Pain"]),
+_v10_module("Benign Sinonasal Tumor Framework",
+"Unilateral mass, recurrent epistaxis, remodeling/erosion, cranial neuropathy or atypical 'polyps' should trigger a tumor framework rather than routine CRS assumptions.",
+"Localize the epicenter and spread through nasal cavity, sinuses, orbit, skull base, pterygopalatine/infratemporal fossae; infer vascular, neural or epithelial origin from pattern.",
+"Endoscopy plus contrast CT/MRI as indicated defines attachment, vascularity and critical extension. Do not biopsy a potentially hypervascular lesion until safety is understood.",
+"Management ranges from surveillance to endoscopic/open resection based on histology, growth, attachment, symptoms and skull-base/orbital involvement.",
+"Plan the route around attachment and danger structures, with vascular control and reconstruction strategy when needed.",
+"Teach: unilateral disease is a diagnostic category. Ask 'what is this?' before treating it as inflammation.",
+["Cummings 7e: Benign Tumors of the Sinonasal Tract"]),
+_v10_module("Systemic Disease of the Nose / Sinuses",
+"Crusting, septal perforation, destructive lesions, refractory inflammation or multisystem symptoms can reflect vasculitis, granulomatous, autoimmune, infectious or toxic disease.",
+"Localize destructive disease to septum, turbinates, lateral wall, palate and skull-base/orbital structures, while looking for systemic sites such as lung, kidney, skin and eye.",
+"Biopsy viable edge tissue when needed and pair pathology with targeted serology/culture/systemic evaluation; avoid nonspecific panels without a phenotype.",
+"Treat the systemic driver with the appropriate specialty while controlling local infection, crusting, bleeding and structural complications.",
+"Delay elective reconstruction until destructive activity is controlled when possible; active disease can defeat an otherwise technically sound repair.",
+"Teach: a septal perforation is a finding, not a diagnosis.",
+["Cummings 7e: Systemic Disease of the Nose and Sinuses"]),
+],
+"Laryngology / Voice / Swallowing":[
+_v10_module("Professional Voice",
+"A professional voice user may be disabled by subtle change that would be acceptable to a casual voice user; occupational demand is part of disease severity.",
+"Localize limitation to mucosal vibration, glottic closure, motor control, respiratory support, resonance and compensatory muscle tension.",
+"Stroboscopy, perceptual/acoustic assessment and task-specific evaluation should reproduce the professional demand when possible.",
+"Voice therapy, load modification, amplification, medical treatment and surgery are selected to restore function while protecting the vibratory cover.",
+"Microsurgery must minimize epithelial/lamina propria trauma; return-to-performance planning is part of the procedure, not an afterthought.",
+"Teach: 'normal speaking voice' does not equal normal occupational function.",
+["Cummings 7e: The Professional Voice"]),
+_v10_module("Acute / Chronic Laryngopharyngitis",
+"Hoarseness/throat symptoms may be infectious, inflammatory, irritant, phonotraumatic or systemic; chronic symptoms should not be reflexively labeled reflux.",
+"Localize by laryngeal/pharyngeal exam and distinguish diffuse inflammation from focal lesion, impaired motion or malignancy.",
+"Use laryngoscopy when symptoms persist or red flags exist. Target testing to suspected infection/systemic disease; avoid indiscriminate reflux testing or antibiotics.",
+"Hydration, voice conservation/therapy and cause-specific treatment are foundational. Address smoking/irritants and treat proven infection/systemic disease.",
+"Operative biopsy is reserved for suspicious or persistent focal pathology rather than diffuse uncomplicated inflammation.",
+"Teach: inflammation is a phenotype; define the cause before prescribing a chronic label.",
+["Cummings 7e: Acute and Chronic Laryngopharyngitis"]),
+_v10_module("Esophageal Disease for the Otolaryngologist",
+"Differentiate oropharyngeal initiation/airway-protection problems from cervical or distal esophageal dysphagia, regurgitation and motility disease.",
+"Localize symptoms above, at or below the UES and recognize that perceived neck sticking can still originate distally.",
+"Choose FEES/MBS for pharyngeal physiology, esophagram/endoscopy for structural questions and GI motility evaluation when dysmotility is suspected.",
+"Treat ENT-manageable pharyngoesophageal problems while referring distal inflammatory, motility and neoplastic disease appropriately.",
+"Endoscopic procedures require perforation awareness and anatomic understanding of UES/cervical esophagus; do not force an instrument against unexplained resistance.",
+"Teach: first localize the phase of swallowing failure; then choose the test.",
+["Cummings 7e: Diseases of the Esophagus"]),
+_v10_module("Transnasal Esophagoscopy",
+"TNE provides unsedated office evaluation of selected pharyngeal/esophageal complaints and surveillance questions but is not a universal replacement for conventional endoscopy.",
+"Understand nasal passage, hypopharynx, UES and esophageal landmarks while recognizing the limits of office visualization and intervention.",
+"Select patients based on the diagnostic question, anatomy, tolerance and need for biopsy/therapy or deeper GI evaluation.",
+"Use TNE when it answers the question efficiently; escalate to sedated EGD, imaging or motility testing when the problem exceeds its scope.",
+"Topical anesthesia, controlled passage and recognition of resistance/perforation risk are central. Do not let office convenience override safety.",
+"Teach: choose TNE for the question it can answer, not because the scope is available.",
+["Cummings 7e: Transnasal Esophagoscopy"]),
+_v10_module("Tracheobronchial Endoscopy Principles",
+"Rigid and flexible bronchoscopy answer different airway questions and provide different control of ventilation, foreign bodies and intervention.",
+"Localize lesions by subglottis, cervical/intrathoracic trachea, carina and main bronchi; describe fixed vs dynamic obstruction and length/circumference.",
+"Preoperative imaging and airway plan are driven by obstruction severity and suspected pathology. Coordinate ventilation strategy before instrumenting a critical airway.",
+"Use flexible bronchoscopy for selected diagnosis/surveillance and rigid bronchoscopy when airway control, foreign-body removal or therapeutic instrumentation requires it.",
+"Know teeth/larynx injury, bleeding, hypoxia, pneumothorax, airway fire/laser issues and loss-of-airway rescue. Surgeon-anesthesia communication is the procedure.",
+"Teach: airway endoscopy is both visualization and ventilation strategy.",
+["Cummings 7e: Tracheobronchial Endoscopy"]),
+],
+"Head & Neck Oncology":[
+_v10_module("Radiation Therapy Principles for Head & Neck Surgeons",
+"Radiation is a spatial dose treatment with acute and late toxicity; definitive, adjuvant and palliative intent answer different oncologic questions.",
+"Localize target volumes and organs at risk conceptually: primary bed, nodal basins, spinal cord/brainstem, salivary glands, mandible, larynx/pharyngeal constrictors and carotid/skin in salvage contexts.",
+"For surgical decision-making, know prior dose/fields, interval, response and late effects. Post-treatment imaging must be interpreted in the context of edema/fibrosis and expected tissue change.",
+"Use multidisciplinary stage/risk-based indications. Modern management balances control with swallowing, salivary, mandibular, endocrine and vascular late effects.",
+"Prior radiation changes wound healing, vessel quality and reconstructive risk; salvage surgery requires tissue/reconstruction planning beyond the resection itself.",
+"Teach: 'the patient had radiation' is incomplete—ask where, how much, when, and what tissue consequence remains.",
+["Cummings 7e: Radiotherapy for Head and Neck Cancer—Physics, Radiobiology, Clinical Principles","Current NCCN H&N guidance for treatment selection"]),
+_v10_module("Systemic Therapy Foundations in Head & Neck Cancer",
+"Cytotoxic chemotherapy, targeted therapy and immunotherapy have different goals, biomarkers and toxicity patterns; systemic treatment may be radiosensitizing, definitive, neoadjuvant, adjuvant or palliative.",
+"Localize the treatment decision to tumor biology, disease burden and site rather than using one regimen framework for every HNSCC or salivary/thyroid cancer.",
+"Review pathology/viral biomarkers, performance status, renal/hearing/neurologic function and prior treatment when systemic therapy is contemplated.",
+"Multidisciplinary selection follows disease state and current guidelines. Surgeons should understand why systemic therapy is chosen, major toxicities and what response/progression means for salvageability.",
+"Systemic therapy can change tissue planes, nutrition, cytopenias and timing. Operative planning after therapy should include wound, airway and reconstruction implications.",
+"Teach: know the intent of systemic therapy before memorizing the drug.",
+["Cummings 7e: Chemotherapy and Targeted Biologic Agents for Head and Neck Cancer","Current NCCN H&N guidance"]),
+_v10_module("Free-Flap Monitoring / Compromise / Salvage",
+"Venous congestion and arterial insufficiency have different bedside phenotypes, but either is a time-critical threat to a free flap.",
+"Think from pedicle macrocirculation to microcirculation and tissue metabolism; identify whether the problem is thrombosis, kinking/compression, hematoma, recipient-vessel issue or systemic perfusion.",
+"Serial clinical examination is foundational; Doppler/implantable or perfusion adjuncts support but do not replace it. A concerning trend matters more than waiting for complete necrosis.",
+"Correct systemic contributors while activating urgent surgical evaluation. Mechanical/pedicle causes usually require early exploration rather than prolonged observation.",
+"Take-back sequence: release compression/hematoma, inspect pedicle and anastomoses, restore inflow/outflow, clear thrombosis as appropriate and reassess tissue viability. Selected venous-congestion rescue may use leech therapy when surgically appropriate and after infection planning.",
+"Teach: the best flap-salvage test is early recognition followed by decisive action.",
+["Cummings 7e: Skin Flap Physiology and Wound Healing; Free Tissue Transfer"]),
+_v10_module("Open Partial / Conservation Laryngectomy",
+"Conservation surgery is oncologic resection designed to preserve a functional larynx in carefully selected disease—not a smaller total laryngectomy.",
+"Localize tumor relative to true/false cords, ventricle, paraglottic/pre-epiglottic spaces, arytenoids/cricoarytenoid joints, subglottis and cartilage.",
+"Endoscopy plus imaging define extent and mobility. Patient pulmonary/swallowing reserve and ability to rehabilitate are part of candidacy.",
+"Select transoral, open partial, radiation-based or total-laryngectomy strategies by oncologic extent and expected function. Functional preservation without safe swallowing/airway is not success.",
+"Know supraglottic and supracricoid principles, arytenoid preservation, pexy/reconstruction and the major complications of aspiration, edema/stenosis and delayed decannulation.",
+"Teach: conservation surgery preserves function only when both tumor anatomy and patient physiology permit it.",
+["Cummings 7e: Conservation Laryngeal Surgery"]),
+_v10_module("Transoral Laser Microsurgery for Laryngeal Cancer",
+"TLM is an exposure- and margin-dependent oncologic technique; the laser is a tool, not the indication.",
+"Map the lesion in three dimensions through the laryngeal subsites and deep spaces; exposure determines whether precise transoral resection is feasible.",
+"Preoperative endoscopy/imaging define cartilage/deep-space disease and neck treatment needs. Intraoperative orientation and specimen mapping are essential when resection is piecemeal.",
+"Use TLM for appropriately selected tumors when oncologic access and functional goals are favorable; choose radiation/open surgery/total laryngectomy when exposure or extent defeats safe margins.",
+"Laser safety, airway fire prevention, depth control, margin mapping and preservation of uninvolved functional tissue are core technique principles.",
+"Teach: TLM is not 'burning out a tumor'—it is controlled oncologic resection under magnified exposure.",
+["Cummings 7e: Transoral Laser Microresection of Advanced Laryngeal Tumors"]),
+_v10_module("Complications of Neck Surgery",
+"A postoperative neck problem must be triaged by airway, hemorrhage, neurologic deficit, lymphatic/chyle leak, wound/fistula and vascular catastrophe.",
+"Localize deficits by CN XI, vagus/RLN, hypoglossal, sympathetic chain, phrenic nerve, brachial plexus, thoracic duct and carotid/IJV anatomy.",
+"Use exam and targeted imaging/labs based on the complication; do not delay airway/hematoma treatment for a complete diagnostic workup.",
+"Treat time-critical airway/bleeding immediately, then use cause-specific rehabilitation or repair for nerve, chyle, wound and vascular complications.",
+"Prevention begins with anatomy and intraoperative recognition. Rescue may require re-exploration, vessel control, flap coverage, drain/nutrition strategy or multidisciplinary endovascular support.",
+"Teach: know the expected deficit pattern of each structure before you operate so you can recognize it immediately after.",
+["Cummings 7e: Complications of Neck Surgery"]),
+],
+"Thyroid / Parathyroid / Salivary":[
+_v10_module("Thyroid Eye Disease / Graves Ophthalmopathy",
+"TED severity and inflammatory activity are different axes; proptosis, diplopia/exposure and optic neuropathy do not all require the same treatment.",
+"Localize disease to extraocular muscles and orbital fat within a fixed bony orbit; apical crowding threatens the optic nerve while inferior/medial rectus enlargement drives common motility patterns.",
+"Assess visual acuity/color, pupils, cornea, motility/diplopia, proptosis and optic-nerve risk with ophthalmology; CT helps define muscle/apical anatomy when decompression is considered.",
+"Coordinate thyroid control, smoking cessation and activity/severity-directed medical/ophthalmic therapy. Urgent vision-threatening disease is different from rehabilitative surgery after inactive disease.",
+"Orbital decompression is wall/fat-selective and anatomy-specific; balance decompression against new/worsened diplopia and protect orbit/skull base/sinuses.",
+"Teach: active inflammation determines timing; severity determines urgency and the functional problem to solve.",
+["Cummings 7e: Management of Thyroid Eye Disease"]),
+],
+"Otology / Neurotology":[
+_v10_module("Auditory Neuroanatomy / Cochlear Physiology",
+"Sound becomes neural code through middle-ear transmission, cochlear traveling-wave mechanics, hair-cell transduction and tonotopic auditory pathways.",
+"Localize from outer/middle ear to cochlea, spiral ganglion/CN VIII, cochlear nuclei, superior olivary complex, lateral lemniscus, inferior colliculus, medial geniculate and auditory cortex.",
+"Use the pattern of audiometry, speech testing, OAEs and electrophysiology to decide whether the deficit is conductive, cochlear, neural or central.",
+"Management follows localization: amplify or implant when peripheral access is the problem; pursue neurologic/retrocochlear evaluation when neural/central patterns are discordant.",
+"Operative hearing procedures succeed only if the downstream neural pathway can use the delivered signal; counsel accordingly in malformation/neural deficiency.",
+"Teach: audiology becomes easier when every test is tied to the structure that generates the response.",
+["Cummings 7e: Neuroanatomy of the Auditory System; Physiology of the Auditory System; Cochlear Transduction"]),
+_v10_module("Audiologic Electrophysiology / ABR-OAE-ECoG",
+"OAEs test outer-hair-cell/cochlear function; ABR tests synchronized neural transmission through the auditory nerve/brainstem; ECoG interrogates cochlear/auditory-nerve potentials near the cochlea.",
+"Localize an abnormal pattern by asking what generator is present or absent rather than memorizing 'positive tests.'",
+"Interpret thresholds, waveform presence/latency/interaural asymmetry and technical factors in context. Present OAEs with absent/abnormal ABR suggests auditory-neural dyssynchrony when the clinical setting fits.",
+"Use electrophysiology for infant/behaviorally limited assessment, neural localization and selected intraoperative/diagnostic questions; do not substitute it blindly for behavioral hearing when reliable behavior is available.",
+"Intraoperative monitoring requires baseline signal quality, anesthetic/technical awareness and trend interpretation; a waveform change is a communication event, not an isolated number.",
+"Teach: ask 'what tissue made this waveform?' before interpreting it.",
+["Cummings 7e: Diagnostic Audiology and Electrophysiologic Assessment of Hearing"]),
+_v10_module("Cortical Neuroplasticity in Hearing Loss",
+"Auditory deprivation changes central processing; duration and developmental timing influence how effectively restored peripheral input can be used.",
+"Localize the problem beyond the cochlea: brainstem/cortical networks adapt to altered sensory input and may reorganize with prolonged deprivation.",
+"Integrate duration of loss, age at onset, language development and hearing-device use with standard audiology when counseling rehabilitation.",
+"Provide timely hearing access in children and avoid unnecessary prolonged deprivation in implant candidates; pair devices with auditory/language rehabilitation.",
+"Surgery restores access, not learned auditory meaning. Postoperative programming and rehabilitation are part of the biologic treatment.",
+"Teach: a cochlear implant delivers signal; the brain still has to learn to use it.",
+["Cummings 7e: Cortical Neuroplasticity in Hearing Loss"]),
+_v10_module("Otologic Manifestations of Systemic Disease",
+"Systemic autoimmune, infectious, metabolic, hematologic and skeletal disease can present with hearing loss, vestibular symptoms, middle-ear disease or temporal-bone findings.",
+"Localize the audiovestibular phenotype first, then connect it to systemic disease rather than attributing every symptom to the known diagnosis.",
+"Use targeted labs/imaging based on phenotype and systemic clues; audiometry documents pattern and trajectory.",
+"Treat the systemic driver with the relevant team plus symptom-specific hearing/vestibular rehabilitation; urgent sudden or rapidly progressive deficits keep their time-sensitive pathways.",
+"Surgery is selective and anatomy-driven; systemic disease can alter healing, bone quality and recurrence risk.",
+"Teach: a systemic diagnosis changes context, not the need to localize the ear problem.",
+["Cummings 7e: Otologic Manifestations of Systemic Disease"]),
+_v10_module("Hyperacusis / Decreased Sound Tolerance",
+"Hyperacusis is abnormal intolerance of ordinary sound and differs from loudness recruitment, misophonia and phonophobia despite overlap.",
+"Localize the complaint to auditory gain/central processing after excluding active ear disease, third-window symptoms and neurologic/migraine context.",
+"Audiometry and loudness-tolerance testing may support assessment; history should characterize triggers, pain, fear/avoidance, tinnitus and functional impairment.",
+"Education, gradual sound desensitization and treatment of comorbid tinnitus/migraine/anxiety mechanisms are more useful than excessive sound avoidance in many patients.",
+"Surgery has no routine role unless a specific structural disorder such as a third-window lesion explains the phenotype.",
+"Teach: sound intolerance is a symptom family—name the phenotype before treating it.",
+["Cummings 7e: Tinnitus and Hyperacusis"]),
+_v10_module("Labyrinthitis / Infections of the Labyrinth",
+"Acute vestibular syndrome with hearing loss suggests labyrinthine involvement rather than isolated vestibular neuritis; bacterial extension from otitis/mastoid disease can be destructive.",
+"Localize to cochlea + vestibular labyrinth and determine whether spread is viral/inflammatory, meningogenic or tympanogenic.",
+"Audiometry and otologic/neurologic exam are essential; imaging and infectious workup are driven by meningitis, mastoiditis, cholesteatoma or intracranial concern.",
+"Treat the underlying infection/inflammation urgently when bacterial disease is possible, manage vertigo briefly when needed and begin hearing/vestibular rehabilitation as the acute phase resolves.",
+"Source control may require mastoid/middle-ear surgery when suppurative disease or cholesteatoma drives labyrinthine infection.",
+"Teach: vestibular neuritis should not cause a new cochlear hearing loss; that clue changes localization.",
+["Cummings 7e: Infections of the Labyrinth"]),
+_v10_module("Central Vestibular Disorders",
+"Direction-changing gaze-evoked nystagmus, skew, impaired smooth pursuit/saccades, severe truncal ataxia or neurologic deficits push dizziness toward a central process.",
+"Localize by ocular-motor pattern to brainstem/cerebellar pathways rather than relying on the patient's word 'vertigo.'",
+"In acute vestibular syndrome, bedside eye movements are interpreted only in the correct clinical context; imaging/neurologic evaluation is urgent when a central pattern is suspected.",
+"Treat the underlying neurologic disease and use vestibular rehabilitation selectively; chronic central compensation may still improve with therapy.",
+"ENT surgery has no role for most central vestibular disease; the advanced decision is knowing when not to operate and when to escalate to stroke/neurology pathways.",
+"Teach: central versus peripheral is an eye-movement/localization problem, not a symptom adjective.",
+["Cummings 7e: Central Vestibular Disorders"]),
+_v10_module("Vestibular Rehabilitation",
+"Persistent imbalance after unilateral or bilateral vestibular loss often reflects incomplete compensation rather than persistent dangerous disease.",
+"Identify gaze-instability, motion sensitivity, balance/gait and positional components; different deficits require different exercises.",
+"Document vestibular diagnosis, fall risk, vision/proprioception, neuropathy and functional goals before prescribing therapy.",
+"Use adaptation, habituation, substitution and balance/gait training tailored to the deficit; prolonged vestibular suppressants can impede compensation in many chronic peripheral cases.",
+"Surgery may remove the offending vestibular input but rehabilitation converts that stable deficit into usable function.",
+"Teach: vestibular rehab is targeted neuroplastic training, not generic balance exercise.",
+["Cummings 7e: Vestibular and Balance Rehabilitation Therapy"]),
+_v10_module("Neurotologic Intraoperative Cranial-Nerve Monitoring",
+"Monitoring is an adjunct to anatomy and surgical judgment; EMG/evoked-potential changes warn of nerve irritation or loss of pathway function but do not replace direct visualization.",
+"Map recording targets to CN V motor, VII, VIII, IX-XII and understand that latency/amplitude depend on stimulation site and pathway length.",
+"Establish reliable baselines and recognize anesthetic, electrode and stimulation artifacts before interpreting a change as injury.",
+"When a meaningful signal change occurs, stop/reassess the maneuver, irrigate/release traction, verify technical integrity and communicate explicitly with anesthesia/monitoring.",
+"Use facial EMG/MEP, cochlear monitoring and lower-CN techniques according to the skull-base operation. ETT electrode position is especially important for vagal/RLN monitoring.",
+"Teach: monitoring is a closed-loop communication system attached to anatomy—not a noise machine in the corner.",
+["Cummings 7e: Intraoperative Monitoring of Cranial Nerves in Neurotologic Surgery"]),
+_v10_module("Lateral Skull-Base Tumor Framework",
+"A lateral skull-base mass is approached by epicenter, hearing status, cranial-nerve deficits, vascularity and growth—not by a single generic 'skull-base tumor' algorithm.",
+"Differentiate IAC/CPA, jugular foramen, facial nerve, temporal bone, endolymphatic-sac/petrous and paraganglionic corridors by displacement and nerve pattern.",
+"High-resolution CT and contrast MRI are complementary; audiometry, facial/lower-CN exam and vascular evaluation are selected by lesion type.",
+"Observation, radiation and surgery depend on natural history, size/growth, symptoms, age, hearing and morbidity of the involved cranial nerves.",
+"Approach selection—middle fossa, retrosigmoid, translabyrinthine, infratemporal/jugular-foramen variants—follows tumor corridor and functional goals.",
+"Teach: first name the epicenter and the function you are trying to preserve; the approach usually follows.",
+["Cummings 7e: Surgical Anatomy of the Lateral Skull Base; Temporal Bone Neoplasms and Lateral Cranial Base Surgery; Neoplasms of the Posterior Fossa"]),
+],
+"Pediatric Otolaryngology":[
+_v10_module("Pediatric Speech Disorders",
+"Differentiate articulation/phonologic disorder, motor speech disorder, resonance/VPI, hearing-related language effects and voice disorder before assigning an ENT cause.",
+"Localize communication failure to hearing input, oral articulators, palate/velopharynx, motor planning/control or language development.",
+"Audiology and speech-language evaluation are foundational; nasendoscopy/fluoroscopy is reserved for suspected resonance/velopharyngeal physiology.",
+"Treat the mechanism with speech therapy, hearing access, structural surgery or neurologic/developmental support as appropriate.",
+"ENT surgery corrects anatomic contributors but cannot replace motor/language learning; operative decisions should be made with the speech team.",
+"Teach: 'speech delay' is a symptom—first decide whether the bottleneck is hearing, language, articulation, motor control or resonance.",
+["Cummings 7e: Pediatric Speech Disorders"]),
+_v10_module("Nonobstructive Pediatric Sleep Disorders",
+"Not every sleepy, restless or poorly sleeping child has obstructive sleep apnea; insomnia, parasomnias, circadian disorders, restless sleep and central disorders enter the differential.",
+"Localize the sleep complaint to initiation/maintenance, breathing, movement, arousal/parasomnia or excessive sleepiness.",
+"History, sleep schedule and targeted PSG/labs are selected by phenotype; iron evaluation may be relevant in movement/restless-sleep syndromes.",
+"Use behavioral/sleep-medicine pathways for nonobstructive disorders and avoid adenotonsillectomy when the physiology is not obstructive.",
+"The surgical decision is often 'do not operate' until obstructive anatomy is demonstrated.",
+"Teach: snoring surgery treats obstruction, not every form of poor sleep.",
+["Cummings 7e: Nonobstructive Pediatric Sleep Disorders"]),
+_v10_module("Cleft Lip / Palate — ENT Surgical Fundamentals",
+"Cleft palate affects feeding, speech/resonance and Eustachian-tube function; the problem is a muscular/anatomic system, not only a visible gap.",
+"Localize orbicularis/lip, hard/soft palate, levator sling, tensor/ET relationship and velopharyngeal closure pattern.",
+"Coordinate feeding, hearing/OME, speech and craniofacial assessment longitudinally; procedure timing is team-based and developmentally informed.",
+"Repair aims to create functional palatal continuity and muscle orientation while anticipating middle-ear and speech outcomes.",
+"Palatoplasty technique centers on tension-free closure and levator reconstruction/lengthening concepts while protecting growth and fistula risk.",
+"Teach: successful cleft care is longitudinal—hearing and speech outcomes matter as much as closure of the cleft.",
+["Cummings 7e: Cleft Lip and Palate"]),
+_v10_module("Microtia Reconstruction",
+"Microtia management integrates auricular form, hearing status, canal anatomy, craniofacial symmetry and patient/family goals.",
+"Localize reconstructive needs to auricular framework/skin envelope while separately assessing canal/middle-ear and facial-nerve anatomy.",
+"Audiology is mandatory; CT for atresia surgical candidacy is timed to the treatment question. Coordinate reconstruction choice with any canal surgery to preserve tissue planes.",
+"Options include observation/prosthesis, implant-retained prosthesis, autologous rib framework or alloplastic reconstruction, with hearing rehabilitation in parallel.",
+"Autologous reconstruction requires framework design, pocket/skin management and staged projection concepts; alloplastic approaches carry different exposure/infection tradeoffs.",
+"Teach: ear shape and hearing are two related but separate treatment tracks that must be sequenced together.",
+["Cummings 7e: Microtia Reconstruction"]),
+_v10_module("Pediatric Vestibular Disorders",
+"Children may present with falls, delayed motor milestones, episodic vertigo, motion intolerance or school/sports difficulty rather than a precise dizziness history.",
+"Localize peripheral vestibular, migraine, central, visual/proprioceptive and developmental contributors while considering hearing loss and congenital inner-ear disease.",
+"Age-appropriate vestibular testing, audiology and neurologic/developmental assessment are selected by phenotype; interpret norms with age/attention limitations.",
+"Treat the cause and use vestibular/balance rehabilitation when deficits affect development or safety.",
+"Surgery is reserved for specific structural disease; most pediatric vestibular care is diagnostic and rehabilitative.",
+"Teach: a child who 'is clumsy' may be describing vestibular dysfunction with the vocabulary available to them.",
+["Cummings 7e: Evaluation and Management of Pediatric Vestibular Disorders"]),
+_v10_module("Ankyloglossia / Maxillary Frenulum",
+"A visible frenulum is not itself an indication for surgery; functional breastfeeding, tongue mobility/speech and dental issues must be demonstrated in context.",
+"Localize restriction to the lingual frenulum and distinguish true functional tethering from feeding mechanics, neuromuscular or craniofacial causes.",
+"Use feeding/lactation or speech assessment when relevant; avoid anatomy-only scoring as the sole decision maker.",
+"Support feeding first and reserve frenotomy/frenuloplasty for selected functionally significant cases after shared decision-making.",
+"Procedure planning considers age, bleeding, salivary ducts, tongue musculature and need for simple release versus formal frenuloplasty.",
+"Teach: treat function, not a photograph of a frenulum.",
+["Cummings 7e: Ankyloglossia and Tight Maxillary Frenula"]),
+_v10_module("Pediatric Reflux / Eosinophilic Esophagitis",
+"Feeding difficulty, dysphagia, chronic cough/airway symptoms and aspiration may involve reflux or EoE, but nonspecific laryngeal symptoms alone do not establish either diagnosis.",
+"Localize symptoms to pharyngeal swallow, esophagus, airway protection and GI inflammatory disease.",
+"Use MBS/FEES for aspiration physiology and GI-directed endoscopy/biopsy when EoE or esophageal disease is suspected; avoid empiric diagnostic labels from laryngeal erythema alone.",
+"Treat confirmed disease with GI/aerodigestive collaboration while addressing aspiration safety and nutrition.",
+"Airway or swallowing surgery should correct a defined structural/functional problem rather than substitute for diagnosis of GI inflammation.",
+"Teach: reflux is common and symptoms are nonspecific—prove the mechanism you intend to treat.",
+["Cummings 7e: Pediatric Swallowing, LPR/GERD, Eosinophilic Esophagitis, and Aspiration"]),
+_v10_module("Laryngotracheal Cleft",
+"Recurrent aspiration, cough/choking, pneumonia or feeding-related respiratory symptoms with otherwise unexplained findings should raise concern for a posterior laryngeal/tracheal cleft.",
+"Localize the defect along the posterior interarytenoid/cricoid/tracheal wall and distinguish shallow interarytenoid deficiency from deeper cleft extension.",
+"Instrumental swallow evaluation defines functional aspiration, but definitive anatomic diagnosis usually requires careful operative palpation/inspection under anesthesia.",
+"Conservative feeding/aspiration strategies may suit selected minor defects; injection augmentation or endoscopic/open repair is selected by cleft depth, symptoms and comorbidity.",
+"Endoscopic repair requires precise posterior exposure, mucosal preparation/closure and avoidance of injury to adjacent laryngeal structures; deeper defects may require open approaches.",
+"Teach: swallowing tests show the consequence; endoscopy defines the cleft anatomy.",
+["Cummings 7e: Laryngotracheal Clefts"]),
+],
+"Sleep Surgery":[
+_v10_module("Narcolepsy / Central Hypersomnolence Recognition",
+"Excessive daytime sleepiness with cataplexy, sleep paralysis or hypnagogic phenomena points beyond obstructive snoring and toward central hypersomnolence.",
+"Localize the problem to sleep-wake regulation rather than upper-airway collapse.",
+"Confirm adequate sleep and exclude untreated OSA/medications before sleep-medicine testing such as PSG followed by MSLT when indicated.",
+"Refer/manage through sleep medicine; ENT surgery does not treat narcolepsy, though coexisting OSA may still need independent treatment.",
+"The operative decision is to avoid attributing hypersomnolence to anatomy when the physiology is central.",
+"Teach: sleepiness is not synonymous with OSA.",
+["Cummings 7e: Sleep Apnea and Sleep Disorders"]),
+_v10_module("Restless Legs / Periodic Limb Movement Disorders",
+"RLS is an urge to move the legs with uncomfortable sensations, worse at rest/evening and relieved by movement; PLMS are repetitive movements during sleep and are not the same diagnosis.",
+"Localize symptoms to sensorimotor/sleep physiology rather than airway obstruction.",
+"Review medications, renal/neurologic contributors and iron status when clinically appropriate; PSG is useful for PLMS but RLS is primarily clinical.",
+"Treat reversible contributors and coordinate sleep/neurology management. Avoid surgical OSA pathways unless independent obstruction is present.",
+"No ENT operation treats RLS/PLMD; the advanced skill is recognizing the alternate source of disrupted sleep.",
+"Teach: a restless sleeper may need iron/sleep-neurology evaluation, not a bigger airway operation.",
+["Cummings 7e: Sleep Apnea and Sleep Disorders"]),
+_v10_module("Circadian Rhythm Sleep-Wake Disorders",
+"Sleep difficulty caused by misalignment of biologic timing differs from insomnia caused by inability to sleep despite appropriate timing.",
+"Localize the issue to circadian phase and work/school/light schedule rather than pharyngeal anatomy.",
+"Use sleep logs/actigraphy and schedule history; distinguish delayed/advanced phase, shift-work and jet-lag patterns.",
+"Behavioral timing, light and melatonin-based strategies belong in sleep medicine; treat coexisting OSA independently.",
+"ENT surgery does not correct circadian misalignment.",
+"Teach: ask when the patient can sleep normally—not only whether they can sleep.",
+["Cummings 7e: Sleep Apnea and Sleep Disorders"]),
+],
+}
+
+# Add only genuinely new topic titles; when a nearby existing module exists, the new module supplies the missing Cummings dimension.
+_existing_v10={m['topic'] for mods in DEEP_MODULES_V6.values() for m in mods}
+for _domain,_mods in CUMMINGS_RECONCILIATION_V10.items():
+    _bucket=DEEP_MODULES_V6.setdefault(_domain,[])
+    for _m in _mods:
+        if _m['topic'] not in _existing_v10:
+            _bucket.append(_m); _existing_v10.add(_m['topic'])
+
+# ---------- Surgical anatomy: regional -> surgical -> approach anatomy ----------
+ANATOMY_EXPANSION_V10 = [
+{"region":"Otology / Neurotology","topic":"Auditory Pathway — Cochlea to Cortex","landmarks":["organ of Corti","spiral ganglion/CN VIII","cochlear nuclei","superior olivary complex","lateral lemniscus","inferior colliculus","medial geniculate","auditory cortex"],"danger":["cochlear nerve deficiency","brainstem pathway injury","central auditory processing limitation"],"or_link":"Cochlear Implantation","pearl":"Tie every auditory test to the structure that generates it; hearing restoration depends on an intact usable downstream pathway."},
+{"region":"Otology / Neurotology","topic":"Vestibular End Organs / Nerve Divisions / Central Pathways","landmarks":["utricle","saccule","horizontal/superior/posterior canals","Scarpa ganglion","superior/inferior vestibular nerves","vestibular nuclei","cerebellum"],"danger":["vestibular nerve injury","labyrinthine injury","central compensation failure"],"or_link":"Vestibular Schwannoma","pearl":"Canal/otolith anatomy explains why vHIT, calorics and VEMPs can disagree without being contradictory."},
+{"region":"Otology / Neurotology","topic":"Eustachian Tube / Tensor–Levator Relationships","landmarks":["bony ET","cartilaginous ET","torus tubarius","tensor veli palatini","levator veli palatini","pterygoid plates"],"danger":["ICA near skull base","palatal muscles","nasopharyngeal mucosa"],"or_link":"Eustachian Tube Dilation","pearl":"The pediatric cleft-palate/OME relationship makes sense only when you understand muscular opening of the cartilaginous tube."},
+{"region":"Otology / Neurotology","topic":"Cochlea / Vestibule / Semicircular Canal Microanatomy","landmarks":["basal turn","round window","oval window","vestibule","ampullae","superior canal arcuate eminence","facial nerve labyrinthine segment"],"danger":["cochlea","vestibule","facial nerve","IAC"],"or_link":"Stapedotomy","pearl":"Small millimeters matter: oval/round windows, facial nerve and labyrinth form the inner boundary of middle-ear surgery."},
+{"region":"Otology / Neurotology","topic":"Middle Cranial Fossa Approach Corridor","landmarks":["zygomatic root","middle meningeal artery","GSPN","arcuate eminence","IAC","petrous ICA"],"danger":["facial nerve","cochlea","labyrinth","temporal lobe","ICA"],"or_link":"Middle Fossa Skull Base Approach","pearl":"Use multiple landmarks to find the IAC—arcuate eminence alone is not a reliable compass in every patient."},
+{"region":"Otology / Neurotology","topic":"Retrosigmoid / CPA Approach Corridor","landmarks":["transverse-sigmoid junction","sigmoid sinus","CPA cistern","CN VII/VIII complex","lower cranial nerves","IAC porus"],"danger":["sigmoid/transverse sinus","brainstem","CN VII/VIII","CN IX-XI","AICA/PICA"],"or_link":"Retrosigmoid Skull Base Approach","pearl":"The corridor preserves the labyrinth but trades for cerebellar/CPA working anatomy and variable hearing preservation."},
+{"region":"Otology / Neurotology","topic":"Translabyrinthine Approach Corridor","landmarks":["mastoid","labyrinth","IAC","facial nerve","sigmoid sinus","middle/posterior fossa dura"],"danger":["facial nerve","sigmoid sinus","jugular bulb","ICA","CSF leak"],"or_link":"Translabyrinthine Skull Base Approach","pearl":"Sacrificing labyrinthine hearing creates a direct IAC/CPA corridor when useful hearing is not being preserved."},
+{"region":"Otology / Neurotology","topic":"Jugular Foramen / Infratemporal Approach Corridor","landmarks":["jugular bulb","carotid canal","styloid complex","facial nerve mastoid segment","CN IX-XI","hypoglossal canal"],"danger":["ICA","IJV/jugular bulb","facial nerve","lower cranial nerves","CN XII"],"or_link":"Jugular Foramen Tumor Approach","pearl":"Lower-cranial-nerve function often drives morbidity more than the size of the tumor itself."},
+{"region":"Laryngology / Voice / Swallowing","topic":"Pharyngeal Constrictors / Superior Laryngeal Neurovascular Relationships","landmarks":["superior/middle/inferior constrictors","thyrohyoid membrane","internal SLN","external SLN","superior laryngeal artery","piriform sinus"],"danger":["internal SLN","EBSLN","superior laryngeal vessels","pharyngeal mucosa"],"or_link":"Conservation Laryngectomy","pearl":"The thyrohyoid membrane is a gateway for internal SLN/vessels and an oncologic boundary around the supraglottis/piriform region."},
+{"region":"Facial Plastics / Trauma","topic":"TMJ / Occlusion / Infratemporal Functional Anatomy","landmarks":["condyle","glenoid fossa","articular disc","lateral pterygoid","masseter","medial pterygoid","dental occlusion"],"danger":["auriculotemporal nerve","maxillary artery","facial nerve branches","EAC"],"or_link":"Mandible ORIF","pearl":"Occlusion is the functional readout of the mandibular-TMJ system; referred otalgia often starts here."},
+{"region":"Pediatric Otolaryngology","topic":"Cleft Palate Levator Sling / Tensor / Eustachian Tube","landmarks":["levator veli palatini","tensor veli palatini","palatal aponeurosis","hamulus","cartilaginous ET","posterior hard palate"],"danger":["greater palatine neurovascular bundle","ET function","velopharyngeal closure"],"or_link":"Palatoplasty / Cleft Palate Repair","pearl":"Palatoplasty is muscular reconstruction as much as mucosal closure; the same anatomy helps explain chronic middle-ear disease."},
+{"region":"Pediatric Otolaryngology","topic":"Auricular Framework / Microtia Reconstruction Anatomy","landmarks":["helix","antihelix","concha","tragus","lobule","temporoparietal fascia","mastoid skin envelope"],"danger":["superficial temporal vessels","facial nerve branches","skin/flap vascularity"],"or_link":"Microtia Reconstruction","pearl":"Framework shape is only half the operation—the vascularized skin/fascial envelope determines whether the reconstruction survives."},
+]
+_existing_anat={x['topic'] for x in ANATOMY_ATLAS_V97}
+for _x in ANATOMY_EXPANSION_V10:
+    if _x['topic'] not in _existing_anat:
+        ANATOMY_ATLAS_V97.append(_x); _existing_anat.add(_x['topic'])
+
+# ---------- Audiologic electrophysiology Interpretation Lab ----------
+INTERPRETATION_LABS['audiologic-electrophysiology']={
+ 'title':'Audiologic Electrophysiology Lab','icon':'〰️',
+ 'subtitle':'Waveform generator → technical validity → localization → clinical consequence.',
+ 'framework':['Question','Signal generator','Technical quality','Threshold/latency/amplitude','Side-to-side pattern','Cochlear vs neural','Clinical consequence'],
+ 'source_note':'Original teaching cases reconciled to Cummings 7e diagnostic audiology/electrophysiology concepts; waveform examples are schematic/text-based unless an open visual is linked.',
+ 'resources':[],
+ 'cases':[
+  {'id':'ae1','concept_id':'ae-oae-abr','level':1,'prompt':'OAEs are present but the ABR is absent or grossly abnormal in an infant. What localization pattern should you consider?','answer':'Outer-hair-cell function is present while synchronized neural transmission is abnormal; auditory neuropathy spectrum is a key consideration when the clinical context and technical quality fit.','why':'The tests have different generators, so the discordance is localizing rather than contradictory.','follow':'What technical or middle-ear factors could falsely alter either test?'},
+  {'id':'ae2','concept_id':'ae-abr-latency','level':2,'prompt':'One ear has reproducibly prolonged interpeak latency compared with the other despite similar peripheral hearing thresholds. What question does that raise?','answer':'A retrocochlear/brainstem conduction abnormality becomes more plausible and should be interpreted with the full waveform, audiogram and clinical context.','why':'Interpeak timing reflects neural conduction beyond simple audibility.','follow':'Why is a single poorly formed waveform insufficient?'},
+  {'id':'ae3','concept_id':'ae-threshold','level':2,'prompt':'A sleeping infant cannot provide reliable behavioral thresholds. What role can frequency-specific electrophysiology play?','answer':'Electrophysiologic threshold estimation can approximate auditory sensitivity and guide early amplification while behavioral confirmation is pursued as development allows.','why':'The goal is timely auditory access without pretending the physiologic estimate is identical to later behavioral hearing.','follow':'What additional cochlear/middle-ear tests make the interpretation stronger?'},
+  {'id':'ae4','concept_id':'ae-oae','level':2,'prompt':'OAEs are absent bilaterally. Can you conclude the child has auditory neuropathy?','answer':'No. Absent OAEs can result from cochlear outer-hair-cell dysfunction or conductive/middle-ear factors; auditory neuropathy classically requires evidence of preserved cochlear outer-hair-cell function with abnormal neural synchrony, though OAEs can evolve.','why':'One absent test does not uniquely identify the lesion.','follow':'What middle-ear assessment should accompany OAE interpretation?'},
+  {'id':'ae5','concept_id':'ae-ecog','level':3,'prompt':'What is the conceptual difference between ECoG and a far-field ABR?','answer':'ECoG records cochlear/auditory-nerve potentials close to the cochlea, while ABR summarizes synchronized neural activity through auditory nerve and brainstem generators.','why':'Knowing the generator tells you what each test can and cannot localize.','follow':'Why should ECoG never be interpreted in isolation?'},
+  {'id':'ae6','concept_id':'ae-io-monitor','level':4,'prompt':'During skull-base surgery the auditory monitoring signal deteriorates abruptly. What is the first reasoning sequence?','answer':'Confirm technical integrity and physiologic/anesthetic factors, communicate the change immediately, stop or reverse the provoking maneuver when appropriate, and reassess the auditory pathway before continuing.','why':'Monitoring is useful only when signal changes trigger rapid, structured communication and action.','follow':'What makes trend more useful than one isolated amplitude?'},
+  {'id':'ae7','concept_id':'ae-newborn','level':3,'prompt':'A newborn screen is referred in one ear. What common systems error must you avoid?','answer':'Do not treat a failed screen as a final diagnosis or allow follow-up to disappear; diagnostic audiology and timely tracking are required.','why':'Screening identifies risk; it does not define type/severity of hearing loss.','follow':'Why does developmental timing make follow-up urgent?'},
+  {'id':'ae8','concept_id':'ae-integrate','level':5,'prompt':'Behavioral audiometry suggests severe SNHL, OAEs are absent, ABR morphology is appropriate for the degree of loss, and MRI shows an intact cochlear nerve. What is the integrated localization?','answer':'The data are concordant with severe peripheral/cochlear sensorineural loss rather than a primary neural dyssynchrony syndrome.','why':'The strongest interpretation integrates independent tests instead of allowing one modality to dominate.','follow':'How does this inform hearing-device counseling?'}
+ ]
+}
+
+# ---------- OR Tomorrow additions ----------
+def _v10_or(slug,title,domain,indications,steps,danger,follow,linked):
+    OR_PREP_REGISTRY[slug]={"slug":slug,"title":title,"domain":domain,"indications":indications,"steps":steps,
+        "danger":danger,"attending_followup":follow,"linked_topic":linked,"status":"v10-cummings-reconciled",
+        "source_basis":["Cummings Otolaryngology—Head and Neck Surgery, 7th ed."]}
+
+_v10_or('conservation-laryngectomy','Open Partial / Conservation Laryngectomy','Head & Neck Oncology',
+'Selected laryngeal cancers where complete oncologic resection is compatible with preservation of a functional larynx and the patient has adequate pulmonary/swallowing reserve.',
+['Confirm exposure, tumor extent, mobility and reconstruction plan before incision.','Expose laryngeal framework and perform neck treatment when indicated.','Enter away from tumor and define intralaryngeal extent under direct visualization.','Resect the planned supraglottic/supracricoid or other conservation specimen with oncologic margins and preserve required functional units.','Perform pexy/reconstruction with precise alignment and tension.','Establish postoperative airway/nutrition plan and anticipate aspiration rehabilitation.'],
+['tumor violation/margin failure','arytenoid/cricoarytenoid function','RLN','aspiration','airway edema/stenosis','chondronecrosis'],
+[['What makes someone a bad conservation candidate?','Tumor extent that cannot be cleared while preserving required functional units, poor pulmonary/swallowing reserve, or inability to rehabilitate safely.'],['Why is one functioning arytenoid so important?','It contributes critically to airway protection and neoglottic function after major partial laryngeal resection.']],
+'Open Partial / Conservation Laryngectomy')
+_v10_or('transoral-laser-laryngeal-cancer','Transoral Laser Microsurgery — Laryngeal Cancer','Head & Neck Oncology',
+'Selected laryngeal tumors with adequate transoral exposure and a resection path that can achieve oncologic control while preserving function.',
+['Confirm laser airway/fire protocol and protective setup.','Expose the entire lesion and define deep/anatomic limits.','Map specimen orientation and anticipated margins.','Perform controlled laser incision/resection, using tumor transection only when it improves 3-D mapping and margin assessment.','Orient/send margins deliberately and obtain hemostasis.','Reassess airway, functional tissue preservation and postoperative swallowing/voice needs.'],
+['airway fire','deep-space/cartilage extension','anterior commissure orientation','thermal injury','bleeding','margin confusion'],
+[['Why can piecemeal resection still be oncologic?','When the surgeon preserves 3-D orientation and maps deep and peripheral margins deliberately rather than treating fragments as unoriented debris.'],['What defeats TLM?','Inadequate exposure or extent that prevents safe visualization/control of margins and critical structures.']],
+'Transoral Laser Microsurgery for Laryngeal Cancer')
+_v10_or('microtia-reconstruction','Microtia Reconstruction','Pediatric Otolaryngology',
+'Patient-selected auricular reconstruction after coordinated counseling on hearing rehabilitation, reconstructive options, timing, donor site and expected staging.',
+['Confirm ear position/symmetry plan and coordinate any atresia surgery sequence.','Design/harvest framework material when using autologous reconstruction.','Create precise skin pocket while protecting vascularized envelope.','Assemble/place framework with stable position and projection plan.','Close without compromising skin perfusion and manage drains/bolsters as appropriate.','Stage elevation/projection or revisions according to technique.'],
+['skin necrosis/framework exposure','temporoparietal fascia/superficial temporal vessels','facial nerve branches','donor-site morbidity','framework malposition'],
+[['Why coordinate with atresia surgery?','Canal surgery can scar or alter the vascularized skin/fascial envelope needed for auricular reconstruction.'],['What is the reconstructive endpoint?','A durable symmetric auricular framework with viable coverage—not simply a technically perfect cartilage sculpture.']],
+'Microtia Reconstruction')
+_v10_or('palatoplasty','Palatoplasty / Cleft Palate Repair','Pediatric Otolaryngology',
+'Cleft palate repair to restore separation of oral/nasal cavities and reconstruct functional palatal musculature for feeding/speech while minimizing fistula and growth burden.',
+['Mark cleft anatomy and planned mucosal/muscular flaps.','Elevate oral/nasal layers while preserving vascular pedicles.','Release abnormal levator orientation and reconstruct the levator sling/length as planned.','Close nasal layer without tension.','Complete muscle repair and oral closure.','Check hemostasis, airway and postoperative feeding plan.'],
+['greater palatine neurovascular bundle','levator/tensor injury','fistula','velopharyngeal insufficiency','airway obstruction','bleeding'],
+[['Why is muscle reconstruction central?','Cleft palate is a maloriented muscular problem as well as a mucosal gap; speech/velopharyngeal function depends on the reconstructed sling.'],['Why does ENT care continue after repair?','OME/hearing and speech/resonance require longitudinal surveillance.']],
+'Cleft Lip / Palate — ENT Surgical Fundamentals')
+_v10_or('laryngotracheal-cleft-repair','Laryngotracheal Cleft Repair','Pediatric Otolaryngology',
+'Symptomatic posterior laryngeal/tracheal cleft with aspiration/respiratory burden that persists despite appropriate conservative strategy or has anatomy requiring repair.',
+['Perform complete airway assessment and palpate the posterior interarytenoid/cricoid defect.','Optimize exposure and ventilation plan.','Define the inferior extent of the cleft.','Freshen/separate mucosal edges as required by technique.','Close the defect in precise layers while protecting laryngeal framework/mucosa.','Reassess airway and establish postoperative feeding/swallow plan.'],
+['airway loss','posterior glottic scar/stenosis','repair dehiscence','persistent aspiration','RLN-related structures','esophageal injury'],
+[['Why is swallow imaging not enough to classify the cleft?','It demonstrates aspiration physiology but not the exact posterior anatomic depth; operative inspection/palpation defines the lesion.'],['When might injection augmentation be considered?','Selected shallow interarytenoid deficiency can be treated diagnostically/therapeutically with augmentation depending on symptoms and center practice.']],
+'Laryngotracheal Cleft')
+_v10_or('transnasal-esophagoscopy','Transnasal Esophagoscopy','Laryngology / Voice / Swallowing',
+'Office evaluation of selected pharyngeal/esophageal symptoms, surveillance or biopsy questions in a patient who can tolerate unsedated transnasal endoscopy.',
+['Topicalize/decongest the selected nasal passage.','Advance under continuous visualization through nasopharynx/hypopharynx.','Pass the UES gently with patient cooperation; never force against resistance.','Survey esophageal mucosa and landmarks systematically.','Perform selected biopsy/intervention only within the scope of office safety.','Document findings and decide whether conventional EGD/imaging/motility evaluation is still required.'],
+['epistaxis','laryngeal spasm','perforation','missed distal disease','inadequate visualization'],
+[['What is TNE best at?','Efficient office evaluation when the question is within its visualization/biopsy limits and sedation can be avoided.'],['When should you stop and escalate?','Unexpected resistance, poor tolerance, inadequate visualization or a problem requiring therapeutic GI endoscopy.']],
+'Transnasal Esophagoscopy')
+_v10_or('rigid-tracheobronchoscopy','Rigid Tracheobronchoscopy','Laryngology / Voice / Swallowing',
+'Diagnostic/therapeutic central-airway evaluation where rigid instrumentation provides superior airway control, foreign-body access, dilation/debridement or large-channel suction.',
+['Agree on ventilation plan and backup airway with anesthesia.','Protect teeth/lips and obtain laryngeal exposure.','Pass the rigid scope under direct visualization without levering on laryngeal structures.','Inspect subglottis, trachea, carina and both main bronchi systematically.','Perform planned foreign-body/interventional work while maintaining oxygenation and hemostasis.','Reinspect for trauma/residual lesion and plan postoperative airway monitoring.'],
+['hypoxia','airway loss','dental/laryngeal injury','bleeding','pneumothorax','airway fire with laser'],
+[['Why use rigid instead of flexible bronchoscopy?','It offers airway control, ventilation options, large working channel and strong instrumentation for selected central-airway problems.'],['What is the key nontechnical step?','Continuous closed-loop communication with anesthesia about ventilation and oxygenation.']],
+'Tracheobronchial Endoscopy Principles')
+_v10_or('free-flap-takeback','Free-Flap Compromise — Take-Back / Salvage','Head & Neck Oncology',
+'Clinical or monitoring evidence of threatened free-flap perfusion where a mechanical/pedicle cause is possible and salvage depends on rapid restoration of flow.',
+['Activate the reconstructive team and correct major systemic perfusion/oxygenation issues while preparing the OR.','Open the inset/neck enough to release hematoma or pedicle compression and inspect the entire pedicle.','Determine arterial inflow versus venous outflow problem and identify kinking/thrombosis/anastomotic failure.','Revise/clear the compromised segment according to intraoperative findings and restore flow.','Confirm tissue reperfusion clinically and with available adjuncts.','Re-inset without compression and intensify postoperative monitoring.'],
+['delay to re-exploration','carotid/recipient-vessel injury','reperfusion injury','recurrent thrombosis','hematoma','nonviable tissue'],
+[['Why is venous congestion time-sensitive?','Progressive stasis leads to microcirculatory failure and thrombosis, making delayed salvage progressively less likely.'],['Can a Doppler replace the exam?','No. Monitoring devices support serial clinical assessment and trend recognition.']],
+'Free-Flap Monitoring / Compromise / Salvage')
+_v10_or('middle-fossa-skull-base','Middle Fossa Skull-Base Approach','Otology / Neurotology',
+'Selected IAC/superior canal/petrous lesions where a superior corridor and potential hearing preservation are appropriate.',
+['Position and perform temporal craniotomy with neurotology-neurosurgery coordination.','Elevate middle-fossa dura and identify reliable landmarks including middle meningeal/GSPN and petrous ridge/arcuate region.','Localize the IAC or target corridor using multiple anatomic references.','Drill with constant awareness of cochlea, labyrinth, facial nerve and petrous ICA.','Address the lesion while preserving neural structures according to indication.','Obtain watertight closure and manage CSF/temporal-lobe risks.'],
+['facial nerve','cochlea/labyrinth','petrous ICA','temporal lobe','CSF leak','middle meningeal artery'],
+[['Why not rely on the arcuate eminence alone?','Its relationship to the superior canal varies; multiple landmarks improve IAC localization.'],['What functional goal often favors this approach?','Selected hearing-preservation access to lateral IAC/superior petrous targets.']],
+'Lateral Skull-Base Tumor Framework')
+_v10_or('retrosigmoid-skull-base','Retrosigmoid Skull-Base Approach','Otology / Neurotology',
+'Selected CPA/posterior-fossa lesions where a posterior corridor provides access while preserving the labyrinth and potentially hearing.',
+['Position and identify transverse-sigmoid junction.','Create retrosigmoid craniotomy/craniectomy and open dura with venous-sinus protection.','Release CSF and expose CPA under minimal cerebellar retraction.','Identify tumor relative to CN VII/VIII, lower cranial nerves and vessels; drill posterior IAC when needed.','Resect/decompress according to functional goals and monitoring.','Close dura/mastoid air cells meticulously to reduce CSF leak.'],
+['sigmoid/transverse sinus','CN VII/VIII','CN IX-XI','AICA/PICA','brainstem/cerebellum','CSF leak'],
+[['What does this approach preserve anatomically?','The labyrinth is preserved, so hearing preservation may be possible depending on tumor and cochlear-nerve function.'],['What is the tradeoff?','Posterior-fossa/cerebellar working anatomy and variable access to the far lateral IAC fundus.']],
+'Lateral Skull-Base Tumor Framework')
+_v10_or('translabyrinthine-skull-base','Translabyrinthine Skull-Base Approach','Otology / Neurotology',
+'IAC/CPA lesions when useful hearing is absent or intentionally sacrificed to obtain direct lateral access and early facial-nerve identification.',
+['Perform mastoidectomy and identify sigmoid, tegmen, facial nerve and labyrinth.','Exenterate labyrinth systematically while protecting facial nerve and critical vascular structures.','Skeletonize/open IAC with broad exposure from fundus to porus.','Identify facial nerve and tumor relationships, then perform resection with monitoring.','Obliterate air-cell tracts and reconstruct the defect to prevent CSF leak.','Close with attention to wound and CSF-pressure management.'],
+['facial nerve','jugular bulb/sigmoid','petrous ICA','CSF leak','lower cranial nerves/brainstem'],
+[['Why choose translabyrinthine?','It provides a direct IAC/CPA corridor without cerebellar retraction when hearing is not being preserved.'],['What must be accepted?','Ipsilateral labyrinthine hearing is sacrificed.']],
+'Lateral Skull-Base Tumor Framework')
+_v10_or('jugular-foramen-tumor','Jugular Foramen Tumor Approach','Otology / Neurotology',
+'Selected jugular-foramen/lower-skull-base tumors requiring surgery after balancing growth, hearing, lower-CN function, vascularity and radiotherapy/observation alternatives.',
+['Document baseline IX-XII, facial and hearing function and vascular anatomy.','Plan exposure based on tumor extension and carotid/jugular relationships.','Obtain proximal/distal vascular control strategy before deep dissection.','Identify/preserve or deliberately manage lower cranial nerves according to tumor involvement and goals.','Resect/debulk with strict carotid/jugular/facial-nerve awareness.','Reconstruct skull base and plan swallowing/voice rehabilitation proactively.'],
+['ICA','jugular bulb/IJV','CN IX-XII','facial nerve','aspiration','CSF leak'],
+[['What predicts morbidity?','Baseline and postoperative lower-cranial-nerve function often drive swallowing/voice morbidity more than tumor size alone.'],['Why might surgery not be first choice?','Some paragangliomas/other lesions can be observed or treated with radiation depending on age, growth and functional risk.']],
+'Lateral Skull-Base Tumor Framework')
+
+# Rebuild adaptive items so every v10 topic participates in the same six-level longitudinal path.
+ADAPTIVE_ITEMS_V99=[]
+for _domain,_mods in DEEP_MODULES_V6.items():
+    for _m in _mods:
+        _id=_v6_item_id(_domain,_m['topic'])
+        for _stage in ['recognize','localize','workup','manage','operate','teach']:
+            ADAPTIVE_ITEMS_V99.append({
+              'id':_id+'-'+_stage,'concept_id':_id,'domain':_domain,'topic':_m['topic'],
+              'stage':_stage,'display_stage':'advanced' if _stage=='operate' else _stage,
+              'prompt':{'recognize':'Recognize the pattern.','localize':'Localize the problem.','workup':'Evaluate it efficiently.','manage':'Build the management sequence.','operate':'Make the advanced decision.','teach':'Teach the mental model.'}[_stage],
+              'answer':_m[_stage],
+              'minutes':{'recognize':3,'localize':3,'workup':4,'manage':4,'operate':6,'teach':4}[_stage],
+              'level':{'recognize':1,'localize':2,'workup':3,'manage':4,'operate':5,'teach':6}[_stage],
+              'tags':_m.get('tags',_tags_v94(_m['topic'],_domain))})
+ADAPTIVE_ITEMS_V97=ADAPTIVE_ITEMS_V99; ADAPTIVE_ITEMS_V96=ADAPTIVE_ITEMS_V99; ADAPTIVE_ITEMS_V95=ADAPTIVE_ITEMS_V99; ADAPTIVE_ITEMS_V94=ADAPTIVE_ITEMS_V99; ADAPTIVE_ITEMS_V91=ADAPTIVE_ITEMS_V99
+
+TEXTBOOK_SOURCE_SET_V10 = TEXTBOOK_SOURCE_SET_V99 + [
+ {"title":"Cummings Otolaryngology—Head and Neck Surgery","edition":"7th (2021)","role":"full-volume reconciliation for breadth, durable anatomy/pathophysiology, diagnostic frameworks and operative depth; current management is calibrated to newer guidelines where applicable"}
+]
+

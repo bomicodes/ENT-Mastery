@@ -20,7 +20,7 @@
 
 <div class="mastery-key">
   <span>Mastery path</span>
-  <b>1 Recognize</b><i>→</i><b>2 Localize</b><i>→</i><b>3 Work up</b><i>→</i><b>4 Manage</b><i>→</i><b>5 Operate</b><i>→</i><b>6 Teach</b>
+  <b>1 Recognize</b><i>→</i><b>2 Localize</b><i>→</i><b>3 Evaluate</b><i>→</i><b>4 Manage</b><i>→</i><b>5 Advanced</b><i>→</i><b>6 Teach</b>
 </div>
 
 <div class="adaptive-list">
@@ -36,12 +36,13 @@
   <div class="adaptive-title-row">
     <div>
       <h2>{{x.topic}}</h2>
-      <p class="mastery-status">Current mastery <b>{{x.mastery_before|default(0)}}/6</b> · Testing <b>Level {{x.level}} — {{x.stage|capitalize}}</b></p>
+      <a class="topic-deep-link" href="/concept?domain={{x.domain|urlencode}}&topic={{x.topic|urlencode}}">Open full topic ↗</a>
+      <p class="mastery-status">Current mastery <b>{{x.mastery_before|default(0)}}/6</b> · Testing <b>Level {{x.level}} — {% if x.stage=='operate' %}Advanced decisions{% elif x.stage=='workup' %}Evaluate{% else %}{{x.stage|capitalize}}{% endif %}</b></p>
     </div>
   </div>
 
   <div class="mini-mastery-track" aria-label="Six-level mastery path">
-    {% for stage_name in ['Recognize','Localize','Work up','Manage','Operate','Teach'] %}
+    {% for stage_name in ['Recognize','Localize','Evaluate','Manage','Advanced','Teach'] %}
       <div class="{% if loop.index <= x.mastery_before|default(0) %}mastered{% elif loop.index == x.level %}testing{% endif %}">
         <span>{{loop.index}}</span><small>{{stage_name}}</small>
       </div>
@@ -60,7 +61,7 @@
     <p>{{x.answer}}</p>
     <div class="self-rate-copy">
       <b>How well did you know it before revealing?</b>
-      <small>Missed/Hard brings it back sooner. Got it/Easy advances the mastery path.</small>
+      <small>Missed/Hard keeps this stage in rotation. Got it/Easy passes this stage; Easy simply waits longer before the next one.</small>
     </div>
     <div class="rating-row">
       <button type="button" onclick='rateItem(this,0,{{x|tojson}})'>Missed it</button>

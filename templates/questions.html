@@ -1,6 +1,0 @@
-{% extends "base.html" %}{% block content %}
-<div class="eyebrow">ACTIVE RECALL</div><h1>{{title}}</h1><p class="lede">Commit first. Then connect the answer to physiology, management, and the follow-up an attending might ask.</p>
-<div class="filterbar"><a href="/questions">All</a><a href="/questions?kind=board">Board</a><a href="/questions?kind=operative">Operative</a><a href="/questions?kind=mechanism">Mechanism</a><a href="/questions?kind=case">Cases</a></div>
-{% if active_concept %}<div class="concept-review-banner"><span>FOCUSED REVIEW</span><b>{{active_concept|replace('_',' ')|title}}</b><a href="/questions">Return to all questions</a></div>{% endif %}
-{% include "_question_list.html" %}
-{% endblock %}

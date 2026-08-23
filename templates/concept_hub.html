@@ -1,0 +1,42 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">CONCEPT HUB · {{domain}}</div>
+<div class="concept-hero">
+  <div><h1>{{topic}}</h1><p class="lede">One place to learn it, test it, see it in context, and connect it to the OR when relevant.</p></div>
+  <div class="concept-score card"><b>{{profile.get('overall',0)}}%</b><span>Mastery</span><small>{{profile.get('coverage_count',0)}}/7 dimensions demonstrated</small></div>
+</div>
+
+{% if prerequisites %}
+<div class="card concept-prereqs"><b>Prerequisites</b>{% for p in prerequisites %}<a href="/concept?domain={{domain|urlencode}}&topic={{p|urlencode}}">{{p}}</a>{% endfor %}</div>
+{% endif %}
+
+{% if module.source_basis %}<div class="card concept-source"><b>Source basis</b>{% for s in module.source_basis %}<span>{{s}}</span>{% endfor %}</div>{% endif %}
+
+<div class="concept-actions">
+  <a class="button" href="/daily-adaptive?focus={{domain|urlencode}}">Test me in Daily Path →</a>
+  <a href="/curriculum/depth">Browse deep curriculum</a>
+</div>
+
+<div class="concept-layers">
+{% for key,label in [('recognize','1 · Recognize'),('localize','2 · Localize'),('workup','3 · Evaluate'),('manage','4 · Manage'),('operate','5 · Advanced decisions'),('teach','6 · Teach')] %}
+<section class="card"><span class="lesson-label">{{label}}</span><p>{{module[key]}}</p></section>
+{% endfor %}
+</div>
+
+<div class="concept-related-grid">
+<section class="card">
+  <div class="section-head"><h2>Progressive cases</h2><a href="/integrated">All cases</a></div>
+  {% if related_cases %}{% for c in related_cases %}<a class="related-row" href="/integrated/{{c.id}}"><b>{{c.title}}</b><small>{{c.domain}}</small></a>{% endfor %}
+  {% else %}<p class="muted">No tightly linked progressive case yet.</p>{% endif %}
+</section>
+<section class="card">
+  <div class="section-head"><h2>Interpretation Atlas</h2><a href="/lab">All interpretation areas</a></div>
+  {% if related_labs %}{% for slug,l in related_labs %}<a class="related-row" href="/lab/{{slug}}"><b>{{l.title}}</b><small>{{l.get('subtitle','')}}</small></a>{% endfor %}
+  {% else %}<p class="muted">No tightly linked interpretation area yet.</p>{% endif %}
+</section>
+<section class="card">
+  <div class="section-head"><h2>OR Tomorrow</h2><a href="/case-tomorrow">Browse operations</a></div>
+  {% if related_or %}{% for op in related_or %}<a class="related-row" href="/case-tomorrow?q={{op.title|urlencode}}"><b>{{op.title}}</b><small>{{op.domain}}</small></a>{% endfor %}
+  {% else %}<p class="muted">This concept does not currently require a dedicated operative module.</p>{% endif %}
+</section>
+</div>
+{% endblock %}

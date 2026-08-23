@@ -1,7 +1,7 @@
 {% extends "base.html" %}{% block content %}
 <div class="eyebrow">ENT MASTERY · LONGITUDINAL CURRICULUM</div>
 <h1>Learn it once. Revisit it at a higher level.</h1>
-<p><a class="button" href="/daily-adaptive">Start today’s adaptive path →</a> &nbsp; <a href="/curriculum/depth">Browse deep curriculum</a></p><p class="lede">The curriculum is sequenced as a spiral: <b>Recognize → Localize → Work up → Manage → Operate → Teach / Boards.</b> Each domain progresses from foundations to independent decision-making.</p>
+<p><a class="button" href="/daily-adaptive">Start today’s adaptive path →</a> &nbsp; <a href="/curriculum/depth">Browse deep curriculum</a></p><p class="lede">The curriculum is sequenced as a spiral: <b>Recognize → Localize → Evaluate → Manage → Advanced Decisions → Teach / Boards.</b> Each domain progresses from foundations to independent decision-making.</p>
 
 <div class="spiral-row">
 {% for s in spiral %}
@@ -20,9 +20,10 @@
     <div class="sequence-phase">
       <h3>{{loop.index}} · {{phase}}</h3>
       {% for t in topics %}
-      <div class="sequence-topic">{{t}}
+      <a class="sequence-topic concept-link" href="/concept?domain={{domain|urlencode}}&topic={{t|urlencode}}">
+        <b>{{t}}</b><span>Open concept →</span>
         {% if t in prerequisites %}<small>Prereq: {{ prerequisites[t]|join(" · ") }}</small>{% endif %}
-      </div>
+      </a>
       {% endfor %}
     </div>
   {% endfor %}

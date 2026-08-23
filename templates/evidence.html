@@ -1,0 +1,20 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">EVIDENCE & SOURCES</div>
+<h1>One source layer for the whole curriculum.</h1>
+<p class="lede">Current public guidelines and regulatory sources calibrate management-changing recommendations. Core texts support durable anatomy, physiology and operative mental models. Visual atlases are used for pattern recognition where permitted.</p>
+<div class="card source-policy">
+  <h2>How sources are used</h2>
+  <p><b>Current guideline / regulatory source</b> → thresholds, candidacy, treatment sequencing and surveillance that can change.</p>
+  <p><b>Core textbook / operative reference</b> → anatomy, physiology, pathology framework and durable surgical principles.</p>
+  <p><b>Visual atlas</b> → recognition and interpretation. Older treatment recommendations are not assumed to be current.</p>
+</div>
+<div class="card evidence-table">
+{% for s in sources %}
+<div class="evidence-row">
+  <div><span class="tag">{{s.area}}</span><h3>{{s.title}}</h3><small>{{s.kind}} · {{s.year}}</small></div>
+  <b>{{s.status}}</b>
+</div>
+{% endfor %}
+</div>
+<div class="practice"><b>Source-integrity rule</b><p>ENT Mastery does not reproduce restricted guideline algorithms or textbook prose. Management content is written in original educational language and is recalibrated when newer permitted guidance changes practice.</p></div>
+{% endblock %}

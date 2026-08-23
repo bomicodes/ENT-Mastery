@@ -439,10 +439,15 @@ def record_adaptive_result(concept_id, item_id, domain, topic, stage, level, rat
     old_level=(row["mastery_level"] if row else 0)
     attempts=(row["attempts"] if row else 0)+1
     correct=(row["correct"] if row else 0)+(1 if rating>=2 else 0)
-    if rating==0: new_level=max(0,min(old_level,level)-1); days=1
-    elif rating==1: new_level=max(old_level,min(level,6)); days=max(1,interval_days//2)
-    elif rating==2: new_level=max(old_level,min(level,6)); days=max(1,interval_days)
-    else: new_level=max(old_level,min(level+1,6)); days=min(90,max(interval_days,1)*2)
+    # Missed/Hard do not pass the stage. Got it/Easy pass exactly one stage.
+    if rating==0:
+        new_level=max(0,old_level-1 if old_level>=level else old_level); days=1
+    elif rating==1:
+        new_level=old_level; days=max(1,interval_days//2)
+    elif rating==2:
+        new_level=max(old_level,min(level,6)); days=max(1,interval_days)
+    else:
+        new_level=max(old_level,min(level,6)); days=min(90,max(interval_days,1)*2)
     now=datetime.now(); due=(now+timedelta(days=days)).date().isoformat()
     exists=_execute(c,"SELECT concept_id FROM curriculum_mastery WHERE concept_id=?",(concept_id,)).fetchone()
     if exists:
@@ -483,9 +488,11 @@ def unified_mastery_profiles():
     # Integrated cases / attending mode / atlas variants already write here.
     try:
         rows=_execute(c,"SELECT * FROM mastery_events ORDER BY id").fetchall()
+        from data import canonical_concept_id_v98, canonical_concept_domain_v98
         for r in rows:
+            cid=canonical_concept_id_v98(r["concept_id"],r["domain"])
             events.append({
-                "concept_id":r["concept_id"],"domain":r["domain"] or "ENT",
+                "concept_id":cid,"domain":canonical_concept_domain_v98(r["concept_id"],r["domain"]),
                 "topic":None,"dimension":r["dimension"],"score":int(r["score"]),
                 "created_at":r["created_at"],"source":r["source_type"] or "mastery"
             })
@@ -505,17 +512,8 @@ def unified_mastery_profiles():
     except Exception:
         pass
 
-    # Interpretation Atlas raw ratings, including cards that predate mastery_events.
-    try:
-        rows=_execute(c,"SELECT * FROM lab_attempts ORDER BY id").fetchall()
-        for r in rows:
-            events.append({
-                "concept_id":r["concept_id"],"domain":r["lab_slug"].replace("-"," ").title(),
-                "topic":None,"dimension":"recognition","score":int(r["rating"]),
-                "created_at":r["created_at"],"source":"interpretation_atlas"
-            })
-    except Exception:
-        pass
+    # Interpretation Atlas ratings are already represented in mastery_events.
+    # Do not ingest lab_attempts again or every Atlas interaction is double-counted.
     c.close()
 
     profiles={}

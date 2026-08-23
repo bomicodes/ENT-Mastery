@@ -1,4 +1,0 @@
-{% extends "base.html" %}{% block content %}
-<div class="eyebrow">OPERATIVE MASTERY</div><h1>Know the operation before you know the steps.</h1><p class="lede">Indication → anatomy → sequence → danger → decision points → complications → attending questions.</p>
-{% for op in operations %}<a class="feature-card" href="/operate/{{op.slug}}"><div><span class="tag">OPERATION</span><h2>{{op.title}}</h2><p>{{op.indications}}</p></div><span class="arrow">→</span></a>{% endfor %}
-{% endblock %}

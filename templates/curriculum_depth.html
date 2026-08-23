@@ -1,19 +1,20 @@
 {% extends "base.html" %}{% block content %}
-<div class="eyebrow">DEEP CURRICULUM</div>
-<h1>From pattern recognition to independent reasoning.</h1>
-<p class="lede">These are teaching modules, not one-line flashcards. Every topic returns through six layers: recognition, localization, workup, management, operative reasoning, and teaching.</p>
+<div class="eyebrow">DEEP CURRICULUM · v10 CUMMINGS RECONCILED</div>
+<div class="depth-hero-row"><div><h1>Learn the whole specialty without getting lost in it.</h1><p class="lede">Use this as your reference shelf; use Daily Path for sequencing. Search or filter here, then open a Concept Hub to connect the topic to cases, interpretation and the OR.</p></div><a class="button" href="/daily-adaptive">Start today’s path →</a></div>
+<div class="card depth-toolbar"><input id="depthSearch" placeholder="Filter topics… e.g. jugular, pain, cleft, ABR"><select id="depthDomain"><option value="">All domains</option>{% for domain in modules %}<option value="{{domain}}">{{domain}}</option>{% endfor %}</select><span id="depthCount"></span></div>
+<div class="depth-domain-nav">{% for domain,mods in modules.items() %}<a href="#{{domain|replace(' ','-')|replace('/','-')|lower}}">{{domain}} <small>{{mods|length}}</small></a>{% endfor %}</div>
 {% for domain, mods in modules.items() %}
-<section class="depth-domain"><h2>{{domain}}</h2>
-{% for m in mods %}
-<details class="card depth-card"><summary><b>{{m.topic}}</b><span>6-layer module</span></summary>
-<div class="depth-grid">
-{% for key,label in [('recognize','Recognize'),('localize','Localize'),('workup','Work up'),('manage','Manage'),('operate','Operate'),('teach','Teach / Boards')] %}
-<div><h3>{{label}}</h3><p>{{m[key]}}</p></div>
-{% endfor %}
-</div></details>
-{% endfor %}</section>
-{% endfor %}
-<section class="card evidence-box"><h2>Evidence hierarchy</h2>
-{% for e in evidence %}<div><b>{{e.tier}}</b><p>{{e.use}}</p><small>{{e.examples}}</small></div>{% endfor %}
-</section>
+<section class="depth-domain" data-domain="{{domain}}" id="{{domain|replace(' ','-')|replace('/','-')|lower}}"><div class="section-head"><h2>{{domain}}</h2><span>{{mods|length}} topics</span></div>
+<div class="depth-card-stack">{% for m in mods %}
+<details class="card depth-card" data-topic="{{m.topic|lower}}" data-domain="{{domain}}"><summary><div><b>{{m.topic}}</b>{% if m.v10 %}<span class="pill green">v10 · Cummings gap closed</span>{% else %}<span>6-layer module</span>{% endif %}</div><i>＋</i></summary>
+<div class="depth-actions"><a href="/concept?domain={{domain|urlencode}}&topic={{m.topic|urlencode}}">Open Concept Hub →</a><a href="/daily-adaptive?focus={{domain|urlencode}}">Practice this domain</a><a href="/case-tomorrow?q={{m.topic|urlencode}}">Check OR link</a></div>
+<div class="depth-grid">{% for key,label in [('recognize','1 · Recognize'),('localize','2 · Localize'),('workup','3 · Evaluate'),('manage','4 · Manage'),('operate','5 · Advanced / Operate'),('teach','6 · Teach / Boards')] %}<div><h3>{{label}}</h3><p>{{m[key]}}</p></div>{% endfor %}</div>
+{% if m.source_basis %}<div class="source-basis"><b>Source basis</b>{% for s in m.source_basis %}<span>{{s}}</span>{% endfor %}</div>{% endif %}
+</details>{% endfor %}</div></section>{% endfor %}
+<section class="card evidence-box"><h2>Evidence hierarchy</h2>{% for e in evidence %}<div><b>{{e.tier}}</b><p>{{e.use}}</p><small>{{e.examples}}</small></div>{% endfor %}</section>
+<script>
+const cards=[...document.querySelectorAll('.depth-card')], domains=[...document.querySelectorAll('.depth-domain')], q=document.getElementById('depthSearch'), d=document.getElementById('depthDomain'), count=document.getElementById('depthCount');
+function filterDepth(){let n=0; const term=q.value.toLowerCase().trim(), dom=d.value; cards.forEach(c=>{const show=(!term||c.dataset.topic.includes(term))&&(!dom||c.dataset.domain===dom);c.hidden=!show;if(show)n++;});domains.forEach(s=>{s.hidden=![...s.querySelectorAll('.depth-card')].some(c=>!c.hidden)});count.textContent=n+' topics shown';}
+q.addEventListener('input',filterDepth); d.addEventListener('change',filterDepth); filterDepth();
+</script>
 {% endblock %}

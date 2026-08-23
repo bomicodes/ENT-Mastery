@@ -1,0 +1,28 @@
+{
+  "deep_topics": 309,
+  "adaptive_items": 1854,
+  "anatomy_maps": 50,
+  "or_modules": 93,
+  "interpretation_labs": 13,
+  "v10_topics": 46,
+  "route_smoke": {
+    "/": "static-check",
+    "/daily-adaptive": "static-check",
+    "/curriculum/depth": "static-check",
+    "/anatomy": "static-check",
+    "/lab/audiologic-electrophysiology": "static-check",
+    "/case-tomorrow": "static-check",
+    "/concept": "static-check",
+    "/search": "static-check"
+  },
+  "template_parse_errors": {},
+  "ux_integration_pass": {
+    "dashboard_template_repaired": true,
+    "deep_curriculum_filter": true,
+    "anatomy_filter": true,
+    "or_directory_filter": true,
+    "concept_source_basis": true,
+    "daily_path_full_topic_link": true,
+    "card_border_spacing_pass": true
+  }
+}

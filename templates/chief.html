@@ -1,6 +1,0 @@
-{% extends "base.html" %}{% block content %}
-<div class="eyebrow">CHIEF MODE · TEACH IT</div><h1>If you can teach it simply, you own it.</h1>
-{% for p in prompts %}<section class="card chief-card"><span class="tag">TEACH A JUNIOR</span><h2>{{p.prompt}}</h2>
-<textarea rows="5" placeholder="Explain it in your own words before checking the model answer…"></textarea>
-<details><summary>Show teaching targets + model</summary><div class="chips">{% for m in p.must %}<span>{{m}}</span>{% endfor %}</div><p>{{p.model}}</p></details></section>{% endfor %}
-{% endblock %}
