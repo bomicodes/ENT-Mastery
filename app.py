@@ -81,40 +81,59 @@ def topic(slug):
     return redirect(url_for("search", q=slug.replace("-"," ")))
 
 def _canonical_search_index():
-    """Build the current searchable index from the modern integrated curriculum only."""
+    """Build the searchable index without allowing one bad source record to blank the entire search."""
     from urllib.parse import quote_plus
     rows=[]
 
-    for domain,mods in DEEP_MODULES_V6.items():
-        for mod in mods:
-            title=mod.get("topic","")
-            cid=_v6_item_id(domain,title)
-            rows.append({
-                "type":"Curriculum concept",
-                "title":title,
-                "subtitle":domain,
-                "url":"/concept/id/"+quote_plus(cid),
-                "text":" ".join(str(mod.get(k,"")) for k in
-                              ["recognize","localize","workup","manage","operate","teach"])
-            })
+    # Deep Curriculum is the canonical backbone and is indexed first.
+    for domain,mods in (DEEP_MODULES_V6 or {}).items():
+        for mod in (mods or []):
+            try:
+                title=str(mod.get("topic","") or "")
+                if not title:
+                    continue
+                cid=_v6_item_id(domain,title)
+                rows.append({
+                    "type":"Curriculum concept",
+                    "title":title,
+                    "subtitle":str(domain),
+                    "url":"/concept/id/"+quote_plus(cid),
+                    "text":" ".join(str(mod.get(k,"") or "") for k in
+                                  ["recognize","localize","workup","manage","operate","teach"])
+                })
+            except Exception:
+                app.logger.exception("Skipping malformed curriculum search record")
 
-    for c in INTEGRATED_CASES:
-        rows.append({
-            "type":"Progressive case",
-            "title":c.get("title",""),
-            "subtitle":c.get("domain","ENT"),
-            "url":"/integrated/"+str(c.get("id","")),
-            "text":(c.get("summary","")+" "+" ".join(c.get("tags") or []))
-        })
+    # Additional site surfaces enrich search, but cannot erase the curriculum index.
+    try:
+        for c in (INTEGRATED_CASES or []):
+            try:
+                rows.append({
+                    "type":"Progressive case",
+                    "title":str(c.get("title","") or ""),
+                    "subtitle":str(c.get("domain","ENT") or "ENT"),
+                    "url":"/integrated/"+str(c.get("id","") or ""),
+                    "text":str(c.get("summary","") or "")+" "+" ".join(str(x) for x in (c.get("tags") or []))
+                })
+            except Exception:
+                app.logger.exception("Skipping malformed case search record")
+    except Exception:
+        app.logger.exception("Integrated case search indexing failed")
 
-    for slug,lab in INTERPRETATION_LABS.items():
-        rows.append({
-            "type":"Interpretation Atlas",
-            "title":lab.get("title",slug),
-            "subtitle":"Interpretation Atlas",
-            "url":"/lab/"+slug,
-            "text":" ".join(lab.get("framework") or [])+" "+lab.get("source_note","")
-        })
+    try:
+        for slug,lab in (INTERPRETATION_LABS or {}).items():
+            try:
+                rows.append({
+                    "type":"Interpretation Atlas",
+                    "title":str(lab.get("title",slug) or slug),
+                    "subtitle":"Interpretation Atlas",
+                    "url":"/lab/"+str(slug),
+                    "text":" ".join(str(x) for x in (lab.get("framework") or []))+" "+str(lab.get("source_note","") or "")
+                })
+            except Exception:
+                app.logger.exception("Skipping malformed lab search record")
+    except Exception:
+        app.logger.exception("Interpretation search indexing failed")
 
     rows.append({
         "type":"Interpretation Atlas",
@@ -124,131 +143,133 @@ def _canonical_search_index():
         "text":"otoscopy tympanic membrane ear canal middle ear"
     })
 
-    for slug,op in OR_PREP_REGISTRY.items():
-        rows.append({
-            "type":"OR Tomorrow",
-            "title":op.get("title",slug),
-            "subtitle":canonical_domain_v94(op.get("domain")),
-            "url":"/case-tomorrow?q="+quote_plus(op.get("title",slug)),
-            "text":" ".join(
-                [str(op.get("indications",""))]
-                + [str(x) for x in (op.get("steps") or [])]
-                + [str(x) for x in (op.get("danger") or [])]
-            )
-        })
+    try:
+        for slug,op in (OR_PREP_REGISTRY or {}).items():
+            try:
+                title=str(op.get("title",slug) or slug)
+                rows.append({
+                    "type":"OR Tomorrow",
+                    "title":title,
+                    "subtitle":str(canonical_domain_v94(op.get("domain")) or ""),
+                    "url":"/case-tomorrow?q="+quote_plus(title),
+                    "text":" ".join(
+                        [str(op.get("indications","") or "")]
+                        + [str(x) for x in (op.get("steps") or [])]
+                        + [str(x) for x in (op.get("danger") or [])]
+                    )
+                })
+            except Exception:
+                app.logger.exception("Skipping malformed OR search record")
+    except Exception:
+        app.logger.exception("OR search indexing failed")
 
     try:
-        for src in CURRENT_EVIDENCE_CATALOG_V98:
-            rows.append({
-                "type":"Evidence",
-                "title":src.get("title",""),
-                "subtitle":src.get("area","Evidence"),
-                "url":"/evidence",
-                "text":" ".join(str(src.get(k,"")) for k in ["kind","year","status"])
-            })
+        for src in (CURRENT_EVIDENCE_CATALOG_V98 or []):
+            try:
+                rows.append({
+                    "type":"Evidence",
+                    "title":str(src.get("title","") or ""),
+                    "subtitle":str(src.get("area","Evidence") or "Evidence"),
+                    "url":"/evidence",
+                    "text":" ".join(str(src.get(k,"") or "") for k in ["kind","year","status"])
+                })
+            except Exception:
+                app.logger.exception("Skipping malformed evidence search record")
     except Exception:
         pass
 
     return rows
 
 
+_SEARCH_ALIASES_V1008 = {
+    "scc":["squamous cell carcinoma"],
+    "squamous cell carcinoma":["scc"],
+    "hnscc":["head neck squamous cell carcinoma","head and neck squamous cell carcinoma"],
+    "osa":["obstructive sleep apnea"],
+    "ssnhl":["sudden sensorineural hearing loss"],
+    "bppv":["benign paroxysmal positional vertigo"],
+    "aom":["acute otitis media"],
+    "ome":["otitis media with effusion"],
+    "crs":["chronic rhinosinusitis"],
+    "crswnp":["chronic rhinosinusitis with nasal polyps"],
+    "crssnp":["chronic rhinosinusitis without nasal polyps"],
+    "fess":["functional endoscopic sinus surgery","endoscopic sinus surgery"],
+    "rln":["recurrent laryngeal nerve"],
+    "ebsln":["external branch superior laryngeal nerve"],
+    "hns":["hypoglossal nerve stimulation","hypoglossal nerve stimulator"],
+    "ci":["cochlear implant","cochlear implantation"],
+    "tmj":["temporomandibular joint"],
+    "pt a":["peritonsillar abscess"],
+    "pta":["peritonsillar abscess"],
+}
+
+def _search_terms_v1008(q):
+    q=(q or "").strip().lower()
+    terms=[x for x in re.split(r"\s+",q) if x]
+    phrases=[q]
+    for key,vals in _SEARCH_ALIASES_V1008.items():
+        if key in q or key in terms:
+            phrases.extend(vals)
+    return terms,phrases
+
+def _search_score_v1008(row,q):
+    title=str(row.get("title","") or "").lower()
+    subtitle=str(row.get("subtitle","") or "").lower()
+    text=str(row.get("text","") or "").lower()
+    hay=title+" "+subtitle+" "+text
+    terms,phrases=_search_terms_v1008(q)
+
+    score=0
+    if q == title:
+        score += 100
+    elif q and q in title:
+        score += 55
+    elif q and q in hay:
+        score += 30
+
+    # Original query terms: title hits are weighted heavily.
+    for t in terms:
+        if t in title:
+            score += 12
+        elif t in hay:
+            score += 3
+
+    # Acronym/synonym phrases.
+    for phrase in phrases[1:]:
+        if phrase in title:
+            score += 35
+        elif phrase in hay:
+            score += 12
+
+    # Modest fuzzy title boost so typos/expanded names still surface.
+    try:
+        import difflib
+        ratio=difflib.SequenceMatcher(None,q,title).ratio()
+        if ratio >= .82:
+            score += int(ratio*25)
+    except Exception:
+        pass
+
+    return score
+
+
 @app.route("/search")
 def search():
     q=request.args.get("q","").strip().lower()
+    rows=[]
     try:
-        rows=_canonical_search_index()
+        index=_canonical_search_index()
         if q:
-            terms=[x for x in re.split(r"\s+",q) if x]
             scored=[]
-            for r in rows:
-                hay=(str(r.get("title",""))+" "+str(r.get("subtitle",""))+" "+str(r.get("text",""))).lower()
-                title=str(r.get("title","")).lower()
-                score=sum((5 if t in title else 1) for t in terms if t in hay)
-                if score:
+            for r in index:
+                score=_search_score_v1008(r,q)
+                if score>0:
                     scored.append((score,r))
-            rows=[r for _,r in sorted(scored,key=lambda x:(-x[0],str(x[1].get("title",""))))]
-        else:
-            rows=[]
+            rows=[r for _,r in sorted(scored,key=lambda x:(-x[0],str(x[1].get("title",""))))[:80]]
     except Exception:
-        app.logger.exception("Search index failed")
+        app.logger.exception("Search failed")
         rows=[]
     return render_template("search.html", q=q, results=rows)
-
-def _norm_or_text(s):
-    import re
-    return " ".join(re.findall(r"[a-z0-9]+", (s or "").lower()))
-
-def _or_rank(q):
-    import difflib
-    nq=_norm_or_text(q)
-    if not nq: return []
-    qt=nq.split()
-    ranked=[]
-    for slug,x in OR_PREP_REGISTRY.items():
-        ns=_norm_or_text(slug)
-        nt=_norm_or_text(x.get("title",""))
-        slug_tokens=ns.split()
-        title_tokens=nt.split()
-        all_tokens=set(slug_tokens+title_tokens)
-
-        score=0
-        # Exact title/slug is always strongest.
-        if nq==ns or nq==nt:
-            score=100
-        # Exact word/token matching is next. This deliberately prevents
-        # "thyroidectomy" from matching the single word "parathyroidectomy".
-        elif all(t in all_tokens for t in qt):
-            # Prefer a title containing the query words over a slug-only hit.
-            if all(t in title_tokens for t in qt):
-                score=94
-            else:
-                score=88
-        else:
-            # Fuzzy ranking is only a fallback and is penalized when the query's
-            # core words are not present as whole words.
-            coverage=sum(1 for t in qt if t in all_tokens)/max(1,len(qt))
-            phrase=difflib.SequenceMatcher(None,nq,nt).ratio()
-            score=round(55*coverage+30*phrase)
-            if coverage==0:
-                score=min(score,45)
-
-        ranked.append((score,slug,x))
-    return sorted(ranked,key=lambda z:z[0],reverse=True)
-
-def _canonical_for_or_domain(label):
-    return canonical_domain_v94(label)
-
-def _related_or_gaps(prep, limit=4):
-    if not prep: return []
-    canonical=_canonical_for_or_domain(prep.get("domain"))
-    profiles=unified_mastery_profiles()
-    try:
-        from db import adaptive_mastery_map
-        adaptive=adaptive_mastery_map()
-    except Exception:
-        adaptive={}
-
-    title_tokens=set(_norm_or_text(prep.get("title")).split())
-    candidates=[]
-    for domain,mods in DEEP_MODULES_V6.items():
-        if canonical_domain_v94(domain)!=canonical:
-            continue
-        for idx,mod in enumerate(mods):
-            cid=_v6_item_id(domain,mod["topic"])
-            p=profiles.get(cid,{})
-            meta=adaptive.get(cid,{})
-            mastery=p.get("overall",0)
-            coverage=p.get("coverage",0)
-            attempts=int(meta.get("attempts") or 0)
-            overlap=len(title_tokens & set(_norm_or_text(mod["topic"]).split()))
-            # Same-operation concept first, then foundations that are weak/unseen.
-            score=(-overlap, mastery, coverage, 0 if attempts==0 else 1, idx)
-            candidates.append((score,{
-              "concept_id":cid,"topic":mod["topic"],"domain":domain,
-              "mastery":mastery,"coverage":coverage,"attempts":attempts
-            }))
-    candidates.sort(key=lambda x:x[0])
-    return [x[1] for x in candidates[:limit]]
 
 @app.route("/case-tomorrow")
 def case_tomorrow():
