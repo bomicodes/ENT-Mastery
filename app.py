@@ -420,14 +420,19 @@ def _find_deep_module_v94(domain, topic):
     if best and best[0]>=0.58: return best[1],best[2]
     return None,None
 
-def _concept_context_v1003(dname, mod):
+def _concept_context_v1006(dname, mod):
     cid=_v6_item_id(dname,mod["topic"])
     try:
         profiles=unified_mastery_profiles()
         profile=profiles.get(cid,{})
     except Exception:
+        app.logger.exception("Concept Hub mastery profile failed")
         profile={}
-    prereqs=PREREQUISITES_V5.get(mod["topic"],[])
+    try:
+        prereqs=PREREQUISITES_V5.get(mod["topic"],[])
+    except Exception:
+        prereqs=[]
+
     mtoks=set(_norm_topic_v94(mod["topic"]).split())
 
     cases=[]
@@ -439,6 +444,7 @@ def _concept_context_v1003(dname, mod):
                 cases.append((overlap,c))
         cases=[c for _,c in sorted(cases,key=lambda x:(-x[0],x[1].get("title","")))[:4]]
     except Exception:
+        app.logger.exception("Concept Hub related cases failed")
         cases=[]
 
     ors=[]
@@ -450,6 +456,7 @@ def _concept_context_v1003(dname, mod):
             ors.append((overlap,op))
         ors=[o for _,o in sorted(ors,key=lambda x:(-x[0],x[1].get("title","")))[:4]]
     except Exception:
+        app.logger.exception("Concept Hub related OR failed")
         ors=[]
 
     labs=[]
@@ -462,13 +469,14 @@ def _concept_context_v1003(dname, mod):
                 labs.append((overlap,slug,lab))
         labs=[(s,l) for _,s,l in sorted(labs,key=lambda x:-x[0])[:4]]
     except Exception:
+        app.logger.exception("Concept Hub related labs failed")
         labs=[]
 
     return dict(domain=dname, topic=mod["topic"], module=mod,
                 concept_id=cid, profile=profile, prerequisites=prereqs,
                 related_cases=cases, related_or=ors, related_labs=labs)
 
-def _deep_module_by_id_v1003(concept_id):
+def _deep_module_by_id_v1006(concept_id):
     for dname,mods in DEEP_MODULES_V6.items():
         for mod in mods:
             if _v6_item_id(dname,mod["topic"])==concept_id:
@@ -479,17 +487,25 @@ def _deep_module_by_id_v1003(concept_id):
 def concept_hub():
     domain=request.args.get("domain","")
     topic=request.args.get("topic","")
-    dname,mod=_find_deep_module_v94(domain,topic)
-    if not mod:
-        return redirect(url_for("search",q=topic))
-    return render_template("concept_hub.html", **_concept_context_v1003(dname,mod))
+    try:
+        dname,mod=_find_deep_module_v94(domain,topic)
+        if not mod:
+            return redirect(url_for("search",q=topic))
+        return render_template("concept_hub.html", **_concept_context_v1006(dname,mod))
+    except Exception:
+        app.logger.exception("Concept Hub route failed")
+        return redirect(url_for("search",q=topic or domain))
 
 @app.route("/concept/id/<concept_id>")
 def concept_hub_id(concept_id):
-    dname,mod=_deep_module_by_id_v1003(concept_id)
-    if not mod:
+    try:
+        dname,mod=_deep_module_by_id_v1006(concept_id)
+        if not mod:
+            return redirect(url_for("search",q=concept_id.replace("-"," ")))
+        return render_template("concept_hub.html", **_concept_context_v1006(dname,mod))
+    except Exception:
+        app.logger.exception("Concept Hub ID route failed")
         return redirect(url_for("search",q=concept_id.replace("-"," ")))
-    return render_template("concept_hub.html", **_concept_context_v1003(dname,mod))
 
 @app.route("/evidence")
 def evidence():

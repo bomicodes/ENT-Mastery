@@ -632,3 +632,17 @@ button,input,select{font-family:inherit}
   .anatomy-real-figure{margin-left:18px;margin-right:18px}
   .anatomy-real-figure img{height:250px}
 }
+
+/* v10.0.6 concept + anatomy reliability */
+.anatomy-real-figure{min-height:220px}
+.anatomy-real-figure img{min-height:200px}
+.anatomy-real-figure .image-fallback{
+  display:none;
+  min-height:180px;
+  place-items:center;
+  align-content:center;
+  gap:8px;
+  text-align:center;
+}
+.anatomy-real-figure.image-failed .image-fallback{display:grid}
+.anatomy-real-figure.image-failed{min-height:220px}

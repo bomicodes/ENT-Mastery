@@ -1,0 +1,8 @@
+{
+  "template_parse_errors": {},
+  "concept_route_hardened": true,
+  "concept_template_safe_gets": true,
+  "anatomy_cards": 50,
+  "anatomy_image_metadata_missing": [],
+  "remote_image_urls_no_query_params": true
+}
