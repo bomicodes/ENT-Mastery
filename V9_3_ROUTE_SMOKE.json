@@ -1,0 +1,3 @@
+{
+  "exception": "Traceback (most recent call last):\n  File \"/tmp/ipykernel_310/3662902085.py\", line 26, in <module>\n    import app as appmod\n  File \"/mnt/data/ENT_Mastery_v9_3_Coherence_Integration/app.py\", line 1, in <module>\n    from flask import Flask, render_template, request, redirect, url_for, jsonify\nModuleNotFoundError: No module named 'flask'\n"
+}

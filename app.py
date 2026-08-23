@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import os, random, re
 from data import *
-from db import init_db, record_attempt, stats, mistake_rows, concept_strengths, record_lab_attempt, lab_progress, lab_stats, record_mastery_event, mastery_profiles, dimension_summary, domain_mastery, mastery_misses
+from db import init_db, record_attempt, stats, mistake_rows, concept_strengths, record_lab_attempt, lab_progress, lab_stats, record_mastery_event, mastery_profiles, dimension_summary, domain_mastery, mastery_misses, unified_mastery_profiles, unified_stats, unified_dimension_summary, unified_domain_mastery, unified_weak_concepts, unified_mistakes
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "dev-ent-mastery-change-me")
@@ -13,38 +13,36 @@ def inject():
 
 @app.route("/")
 def dashboard():
-    st = stats()
-    strengths = concept_strengths()
-    weak = sorted(strengths.items(), key=lambda x: x[1].get("strength",0))[:4]
-    profiles=mastery_profiles()
-    dsum=dimension_summary()
-    domains=domain_mastery()
+    st=unified_stats()
+    profiles=unified_mastery_profiles()
+    weak=unified_weak_concepts(4)
+    dsum=unified_dimension_summary()
+    domains=unified_domain_mastery()
     weakest_dims=sorted(dsum.items(), key=lambda x:x[1])[:3]
+
+    # Homepage shows a small recommended set, not the entire case library.
+    weak_domains=[x["domain"] for x in weak]
+    def case_score(c):
+        p=profiles.get(c.get("concept_id"),{})
+        domain_bonus=0 if c.get("domain") in weak_domains else 1
+        attempted=1 if p else 0
+        mastery=p.get("overall",0)
+        return (domain_bonus, attempted, mastery, c.get("title",""))
+    recommended=sorted(INTEGRATED_CASES,key=case_score)[:6]
+
     return render_template("dashboard.html", stats=st, weak=weak, topic=PARATHYROID,
                            dimension_summary=dsum, domain_mastery=domains,
                            weakest_dimensions=weakest_dims,
-                           integrated_cases=INTEGRATED_CASES)
+                           integrated_cases=recommended,
+                           integrated_total=len(INTEGRATED_CASES))
 
 @app.route("/today")
 def today():
-    mins=max(10,min(45,int(request.args.get("minutes",20))))
-    strengths=concept_strengths(); profiles=mastery_profiles()
-    qs=sorted(QUESTIONS,key=lambda q:(strengths.get(q["concept_id"],{}).get("strength",0),random.random()))
-    q_count={10:3,20:4,30:6,45:8}.get(mins,4)
-    def case_score(c):
-        p=profiles.get(c["concept_id"])
-        return (p["overall"] if p else -1, random.random())
-    integrated=sorted(INTEGRATED_CASES,key=case_score)[0]
-    dims=dimension_summary()
-    weak_dim=min(dims,key=dims.get) if dims else "reasoning"
-    prompt_pool=ATTENDING_LEVEL_PROMPTS["resident"] + ATTENDING_LEVEL_PROMPTS["senior"]
-    attending_prompt=random.choice(prompt_pool)
-    plan={"recall_count":q_count,"integrated_case":integrated,"weak_dimension":weak_dim,"attending_prompt":attending_prompt}
-    return render_template("today.html", minutes=mins, questions=qs[:q_count], topic=PARATHYROID, plan=plan, dimension_summary=dims)
+    return redirect(url_for("daily_adaptive", minutes=request.args.get("minutes",30)))
 
 @app.route("/learn")
 def learn():
-    return render_template("learn.html", topic=PARATHYROID)
+    return redirect(url_for("curriculum"))
 
 @app.route("/topic/<slug>")
 def topic(slug):
@@ -136,17 +134,7 @@ def case_tomorrow():
 
 @app.route("/questions")
 def questions():
-    kind = request.args.get("kind")
-    concept = request.args.get("concept")
-    qs = [
-        q for q in QUESTIONS
-        if (not kind or q["kind"] == kind)
-        and (not concept or q["concept_id"] == concept)
-    ]
-    title = "Question Bank"
-    if concept:
-        title = f"Review: {concept.replace('_', ' ').title()}"
-    return render_template("questions.html", questions=qs, title=title, active_concept=concept)
+    return redirect(url_for("daily_adaptive"))
 
 @app.route("/api/answer", methods=["POST"])
 def answer():
@@ -213,7 +201,7 @@ def mastery_miss():
 
 @app.route("/cases")
 def cases():
-    return render_template("cases.html", cases=CASES)
+    return redirect(url_for("integrated_index"))
 
 @app.route("/case/<cid>")
 def case(cid):
@@ -223,7 +211,7 @@ def case(cid):
 
 @app.route("/operate")
 def operate():
-    return render_template("operate_index.html", operations=OPERATIONS)
+    return redirect(url_for("case_tomorrow"))
 
 @app.route("/operate/<slug>")
 def operation(slug):
@@ -233,12 +221,11 @@ def operation(slug):
 
 @app.route("/anatomy")
 def anatomy():
-    return render_template("anatomy.html", anatomy=ANATOMY)
+    return redirect(url_for("curriculum_depth"))
 
 @app.route("/complications")
 def complications():
-    return render_template("complications.html", complications=COMPLICATIONS)
-
+    return redirect(url_for("curriculum_depth"))
 
 
 def _adaptive_lab_session(slug, cases, count=7):
@@ -335,15 +322,17 @@ def attending():
 
 @app.route("/chief")
 def chief():
-    return render_template("chief.html", prompts=CHIEF_PROMPTS)
+    return redirect(url_for("attending", level="chief"))
 
 @app.route("/mistakes")
 def mistakes():
-    rows=mistake_rows()
-    byid={q["id"]:q for q in QUESTIONS}
-    data=[{"row":dict(r),"q":byid.get(r["question_id"])} for r in rows if byid.get(r["question_id"])]
-    return render_template("mistakes.html", mistakes=data)
-
+    profiles=unified_mastery_profiles()
+    misses=unified_mistakes(100)
+    for x in misses:
+        p=profiles.get(x["concept_id"],{})
+        x["name"]=x.get("name") or p.get("name") or x["concept_id"].replace("-"," ").title()
+        x["domain"]=x.get("domain") or p.get("domain") or "ENT"
+    return render_template("mistakes.html", mistakes=misses)
 
 
 @app.route("/curriculum")
@@ -377,8 +366,13 @@ def evidence():
 
 @app.route("/progress")
 def progress():
-    return render_template("progress.html", stats=stats(), strengths=concept_strengths(), profiles=mastery_profiles(), dimensions=dimension_summary(), domains=domain_mastery(), mastery_dimensions=MASTERY_DIMENSIONS)
-
+    profiles=unified_mastery_profiles()
+    return render_template("progress.html",
+                           stats=unified_stats(),
+                           profiles=profiles,
+                           dimensions=unified_dimension_summary(),
+                           domains=unified_domain_mastery(),
+                           mastery_dimensions=MASTERY_DIMENSIONS)
 @app.route("/sources")
 def sources():
     return render_template("sources.html", sources=SITE_SOURCES_V92, nccn=NCCN_GUIDELINES_V92)
@@ -394,62 +388,131 @@ def _adaptive_question(item):
     topic=item.get("topic","this topic")
     stage=item.get("stage","recognize")
     prompts={
-      "recognize":f"What clinical pattern should make you recognize {topic}, and what dangerous alternative or red flag must you not miss?",
-      "localize":f"For {topic}, where is the problem anatomically or physiologically, and what finding best supports that localization?",
-      "workup":f"You suspect {topic}. What is the next useful test or evaluation, and what result would actually change your management?",
-      "manage":f"How would you manage {topic}? Include first-line treatment, when you would escalate, and what follow-up matters.",
-      "operate":f"For {topic}, when is a procedure indicated? Rehearse the key anatomy, danger structures, major steps, complications, and rescue plan.",
-      "teach":f"Teach {topic} to a junior in 60 seconds: recognition, localization, workup, management, and one attending/boards pearl."
+      "recognize":f"Without looking: what is the key clinical pattern that should make you recognize {topic}?",
+      "localize":f"How do you localize {topic} anatomically or physiologically?",
+      "workup":f"What workup is useful for {topic}, and which findings actually change management?",
+      "manage":f"What is your management framework for {topic}, including when to escalate?",
+      "operate":f"What is the operative/procedural mental model for {topic}: indication, anatomy, danger structures, key steps, complications, and rescue?",
+      "teach":f"Teach {topic} to a junior from first principles and give the key attending/boards pearl."
     }
-    return prompts.get(stage, f"Explain the key clinical reasoning for {topic}.")
+    return prompts.get(stage, f"Explain the core clinical reasoning for {topic}.")
+
 
 def _adaptive_plan(target_minutes=30, focus=None):
-    from data import ADAPTIVE_ITEMS_V91 as ADAPTIVE_ITEMS_V6, REVIEW_INTERVALS_V6
+    from data import ADAPTIVE_ITEMS_V91 as ITEMS, PREREQUISITES_V5, CURRICULUM_V5
     try:
         from db import adaptive_mastery_map
         mastery=adaptive_mastery_map()
     except Exception:
         mastery={}
-    import datetime, random
+
+    import datetime
     today=datetime.date.today()
+
+    def norm(s):
+        return re.sub(r"[^a-z0-9]+"," ",(s or "").lower()).strip()
+
+    # Curriculum rank makes unseen material move from foundations toward chief-level content.
+    curriculum_rank={}
+    for domain,blob in CURRICULUM_V5.items():
+        rank=0
+        for section,topics in blob.get("sequence",[]):
+            for t in topics:
+                curriculum_rank[(domain,norm(t))]=rank
+                rank+=1
+
+    # Deep items grouped by concept.
     concepts={}
-    for x in ADAPTIVE_ITEMS_V6:
+    topic_lookup={}
+    for x in ITEMS:
         concepts.setdefault(x["concept_id"],[]).append(x)
+        topic_lookup[(x["domain"],norm(x["topic"]))]=x["concept_id"]
+
+    # Explicit prerequisites only block new progression when the prerequisite concept exists
+    # and has not yet been demonstrated at all.
+    prereq_norm={norm(k):[norm(p) for p in v] for k,v in PREREQUISITES_V5.items()}
 
     candidates=[]
-    for cid, items in concepts.items():
-        meta=mastery.get(cid,{})
-        if focus and items[0]["domain"] != focus:
+    for cid,items in concepts.items():
+        base=items[0]
+        if focus and base["domain"]!=focus:
             continue
+        meta=mastery.get(cid,{})
         level=int(meta.get("mastery_level") or 0)
         due=meta.get("next_due")
         if hasattr(due,"date"): due=due.date()
-        is_due=(due is not None and due <= today)
-        unseen=(not meta)
-        # Choose next stage, or one stage lower for due review.
-        target=max(1,min(6, level if is_due and level else level+1))
-        stage_item=next((i for i in items if i["level"]==target),items[0])
-        priority=(100 if is_due else 80 if unseen else 40-level*3)
-        candidates.append((priority,stage_item,is_due,unseen,level))
-    random.shuffle(candidates); candidates.sort(key=lambda z:z[0],reverse=True)
+        is_due=bool(due and due<=today)
+        unseen=not meta or int(meta.get("attempts") or 0)==0
 
-    # Session recipe: ~40% due review, ~40% progression/new, ~20% operative/interpretive depth.
-    chosen=[]; used=0; domains=set()
-    for pri,item,is_due,unseen,level in candidates:
-        if used + item["minutes"] > target_minutes+3: continue
-        # encourage variety unless focused
-        if not focus and item["domain"] in domains and len(chosen)<4: continue
-        chosen.append(dict(item, prompt=_adaptive_question(item), mastery_before=level, reason=("Due review" if is_due else "New foundation" if unseen else "Next mastery step")))
-        used += item["minutes"]; domains.add(item["domain"])
-        if used >= target_minutes-3: break
-    # fill if diversity rule undershot
-    if used < target_minutes-5:
-        ids={x["id"] for x in chosen}
-        for _,item,is_due,unseen,level in candidates:
-            if item["id"] in ids or used+item["minutes"]>target_minutes+3: continue
-            chosen.append(dict(item, prompt=_adaptive_question(item), mastery_before=level, reason=("Due review" if is_due else "Next mastery step")))
-            used+=item["minutes"]; ids.add(item["id"])
-            if used>=target_minutes-3: break
+        target=max(1,min(6, level if is_due and level else level+1))
+        item=next((i for i in items if i["level"]==target),items[0])
+
+        unmet=[]
+        for pre in prereq_norm.get(norm(base["topic"]),[]):
+            pcid=topic_lookup.get((base["domain"],pre))
+            if pcid and int(mastery.get(pcid,{}).get("attempts") or 0)==0:
+                unmet.append(pre)
+
+        # Don't introduce an advanced concept before a mapped prerequisite;
+        # due review is still allowed so existing learning isn't hidden.
+        if unmet and unseen and not is_due:
+            continue
+
+        rank=curriculum_rank.get((base["domain"],norm(base["topic"])),999)
+        reason="Due review" if is_due else ("New foundation" if unseen and rank<5 else "New curriculum step" if unseen else "Next mastery step")
+        priority=(0 if is_due else 1, rank if unseen else 500+level, level)
+        candidates.append({"priority":priority,"item":item,"due":is_due,"unseen":unseen,
+                           "level":level,"rank":rank,"reason":reason})
+
+    if not candidates:
+        return [],0
+    candidates.sort(key=lambda z:z["priority"])
+
+    # Mixed sessions still have one anchor domain so the experience feels curricular,
+    # with due reviews from elsewhere allowed first.
+    if focus:
+        anchor=focus
+    else:
+        domain_scores={}
+        for z in candidates:
+            d=z["item"]["domain"]
+            s=domain_scores.setdefault(d,{"due":0,"rank":999,"mastery":[]})
+            s["due"]+=1 if z["due"] else 0
+            s["rank"]=min(s["rank"],z["rank"])
+            s["mastery"].append(z["level"])
+        anchor=min(domain_scores, key=lambda d:(
+            -domain_scores[d]["due"],
+            sum(domain_scores[d]["mastery"])/len(domain_scores[d]["mastery"]),
+            domain_scores[d]["rank"],
+            d
+        ))
+
+    chosen=[]; used=0; used_ids=set()
+    due_budget=max(4,round(target_minutes*.30))
+
+    def add(z):
+        nonlocal used
+        item=z["item"]
+        if item["id"] in used_ids or used+item["minutes"]>target_minutes+3:
+            return False
+        chosen.append(dict(item,prompt=_adaptive_question(item),mastery_before=z["level"],reason=z["reason"]))
+        used+=item["minutes"]; used_ids.add(item["id"]); return True
+
+    # 1) due reviews, limited so they don't fragment the whole session.
+    for z in [x for x in candidates if x["due"]]:
+        if used>=due_budget: break
+        add(z)
+
+    # 2) coherent progression in anchor domain.
+    for z in [x for x in candidates if x["item"]["domain"]==anchor and not x["due"]]:
+        if used>=target_minutes-3: break
+        add(z)
+
+    # 3) fill remaining time with the best next items from other domains.
+    for z in candidates:
+        if used>=target_minutes-3: break
+        add(z)
+
     return chosen,used
 
 @app.route("/daily-adaptive")

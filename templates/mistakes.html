@@ -1,6 +1,22 @@
 {% extends "base.html" %}{% block content %}
-<div class="eyebrow">MISTAKE NOTEBOOK</div><h1>Your misses are curriculum data.</h1>
-<p class="lede">Confidently wrong concepts are deliberately resurfaced faster.</p>
-{% if mistakes %}{% for m in mistakes %}<div class="card mistake"><span class="tag red">MISSED</span><h3>{{m.q.prompt}}</h3><p><b>Concept:</b> {{m.row.concept_id|replace('_',' ')|title}}</p><p><b>Last miss type:</b> {{m.row.miss_type or 'Not classified'}}</p><a href="/questions">Retrieve it again →</a></div>{% endfor %}
-{% else %}<div class="empty card"><h3>No misses logged yet.</h3><p>Your mistakes will automatically appear here after question sessions.</p></div>{% endif %}
+<div class="eyebrow">MISTAKES</div>
+<h1>Your misses are curriculum data.</h1>
+<p class="lede">This combines misses from Daily Path, progressive cases, Attending Mode, and the Interpretation Atlas.</p>
+{% if mistakes %}
+<div class="mistake-list">
+{% for m in mistakes %}
+<div class="card mistake-card">
+  <div class="mistake-meta"><b>{{m.domain}}</b><span>{{m.dimension|replace('_',' ')|title}}</span><small>{{m.source|replace('_',' ')|title}}</small></div>
+  <h3>{{m.name}}</h3>
+  {% if m.miss_type %}<p>Miss type: <b>{{m.miss_type|replace('_',' ')|title}}</b></p>{% endif %}
+  <div class="mistake-actions">
+    <a href="/daily-adaptive">Review in Daily Path →</a>
+    <a href="/search?q={{m.name|urlencode}}">Find related content</a>
+  </div>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<div class="card empty-state"><h2>No modern misses yet.</h2><p>Daily Path, cases, Attending Mode, and Interpretation Atlas ratings will populate this page.</p></div>
+{% endif %}
 {% endblock %}

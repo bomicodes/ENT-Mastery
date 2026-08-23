@@ -1,6 +1,40 @@
 {% extends "base.html" %}{% block content %}
-<div class="eyebrow">LEARNING ANALYTICS</div><h1>What can you actually do with the knowledge?</h1><div class="grid metrics"><div class="metric card"><span>Recall mastery</span><b>{{stats.mastery}}%</b></div><div class="metric card"><span>Accuracy</span><b>{{stats.accuracy}}%</b></div><div class="metric card"><span>Attempts</span><b>{{stats.attempts}}</b></div><div class="metric card"><span>Due</span><b>{{stats.due}}</b></div></div>
-<h2 class="mt">Demonstrated mastery dimensions</h2><div class="dimension-grid">{% for d in mastery_dimensions %}{% set score=dimensions.get(d.id,0) %}<div class="card dimension-card"><span>{{d.icon}}</span><div><b>{{d.name}}</b><small>{{d.description}}</small></div><strong>{{score}}%</strong><div class="bar large"><i style="width:{{score}}%"></i></div></div>{% endfor %}</div>
-<h2 class="mt">Concept profiles</h2><div class="card">{% for cid,p in profiles.items() %}<div class="concept-profile"><div><b>{{cid|replace('_',' ')|replace(':',' · ')|title}}</b><small>{{p.domain}}</small></div><strong>{{p.overall}}%</strong><div class="dimension-pills">{% for dim,x in p.dimensions.items() %}<span>{{dim|title}} {{x.score}}%</span>{% endfor %}</div></div>{% else %}<p class="muted">Work through an Integrated Case, Attending Mode, or Interpretation Atlas to populate demonstrated mastery.</p>{% endfor %}</div>
-<h2 class="mt">Recall concept strength</h2><div class="card">{% for cid,s in strengths.items() %}<div class="progress-row"><span>{{cid|replace('_',' ')|title}}</span><div class="bar large"><i style="width:{{s.strength}}%"></i></div><b>{{s.strength|round|int}}%</b><small>{{s.correct_count}}✓ · {{s.wrong_count}}✕</small></div>{% else %}<p class="muted">Complete your first recall session to populate the recall map.</p>{% endfor %}</div>
+<div class="eyebrow">UNIFIED PROGRESS</div>
+<h1>What you can do — and what you have actually demonstrated.</h1>
+<p class="lede">Mastery is conservative: untested dimensions do not count as mastered. Coverage shows how much of the seven-part competency model you have demonstrated.</p>
+
+<div class="progress-summary-grid">
+  <div class="card metric-card"><b>{{stats.mastery}}%</b><span>Overall mastery</span></div>
+  <div class="card metric-card"><b>{{stats.coverage}}%</b><span>Coverage</span></div>
+  <div class="card metric-card"><b>{{stats.concepts}}</b><span>Concepts touched</span></div>
+  <div class="card metric-card"><b>{{stats.due}}</b><span>Due today</span></div>
+</div>
+
+<section>
+<div class="section-head"><h2>Competency dimensions</h2><span>Across Daily Path + Cases + Atlas + Attending</span></div>
+<div class="dimension-grid">
+{% for d in mastery_dimensions %}
+<div class="card dimension-card"><span>{{d.icon}}</span><h3>{{d.name}}</h3><div class="bar large"><i style="width:{{dimensions.get(d.id,0)}}%"></i></div><b>{{dimensions.get(d.id,0)}}%</b><p>{{d.description}}</p></div>
+{% endfor %}
+</div>
+</section>
+
+<section>
+<div class="section-head"><h2>Concept mastery map</h2><span>{{profiles|length}} touched concepts</span></div>
+<div class="mastery-table card">
+  <div class="mastery-row mastery-header"><span>Concept</span><span>Mastery</span><span>Coverage</span><span>Dimensions</span></div>
+  {% for cid,p in profiles|dictsort(by='value', attribute='overall') %}
+  <div class="mastery-row">
+    <div><b>{{p.name}}</b><small>{{p.domain}}</small></div>
+    <strong>{{p.overall}}%</strong>
+    <div><b>{{p.coverage_count}}/7</b><small>{{p.coverage}}%</small></div>
+    <div class="dimension-dots">
+      {% for d in mastery_dimensions %}
+      <span class="{% if d.id in p.dimensions %}seen{% endif %}" title="{{d.name}}">{{d.icon}}</span>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</section>
 {% endblock %}

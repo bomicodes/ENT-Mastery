@@ -1,0 +1,13 @@
+{
+  "legacy_today_redirects_to_daily": true,
+  "learn_redirects_curriculum": true,
+  "cases_redirect_integrated": true,
+  "operate_redirect_or_tomorrow": true,
+  "chief_redirect_attending_chief": true,
+  "unified_mastery_model": true,
+  "unified_mistakes": true,
+  "prerequisite_aware_daily": true,
+  "dashboard_recommends_six_cases": true,
+  "nav_simplified": true,
+  "no_viva_user_facing": false
+}

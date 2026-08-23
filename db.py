@@ -452,3 +452,183 @@ def record_adaptive_result(concept_id, item_id, domain, topic, stage, level, rat
     c.commit(); c.close()
     return new_level
 
+
+
+# =============================================================================
+# v9.3 unified learner model
+# =============================================================================
+UNIFIED_DIMENSIONS = ["recognition","localization","reasoning","workup","management","operative","teaching"]
+_STAGE_TO_DIMENSION = {
+    "recognize":"recognition","localize":"localization","workup":"workup",
+    "manage":"management","operate":"operative","teach":"teaching"
+}
+
+def unified_mastery_profiles():
+    """One read model for Dashboard, Progress, Daily Path, Atlas and Cases.
+
+    It does not delete the legacy tables. It combines the modern learning streams
+    and scores unattempted dimensions as unmastered so a single successful task
+    cannot make a concept appear fully mastered.
+    """
+    c=conn()
+    # Current adaptive concept metadata.
+    try:
+        cm_rows=_execute(c,"SELECT * FROM curriculum_mastery").fetchall()
+    except Exception:
+        cm_rows=[]
+    cm={r["concept_id"]:dict(r) for r in cm_rows}
+
+    events=[]
+
+    # Integrated cases / attending mode / atlas variants already write here.
+    try:
+        rows=_execute(c,"SELECT * FROM mastery_events ORDER BY id").fetchall()
+        for r in rows:
+            events.append({
+                "concept_id":r["concept_id"],"domain":r["domain"] or "ENT",
+                "topic":None,"dimension":r["dimension"],"score":int(r["score"]),
+                "created_at":r["created_at"],"source":r["source_type"] or "mastery"
+            })
+    except Exception:
+        pass
+
+    # Daily Path ratings.
+    try:
+        rows=_execute(c,"SELECT * FROM daily_path_events ORDER BY id").fetchall()
+        for r in rows:
+            meta=cm.get(r["concept_id"],{})
+            events.append({
+                "concept_id":r["concept_id"],"domain":meta.get("domain") or "ENT",
+                "topic":meta.get("topic"),"dimension":_STAGE_TO_DIMENSION.get(r["stage"],"reasoning"),
+                "score":int(r["rating"]),"created_at":r["created_at"],"source":"daily_path"
+            })
+    except Exception:
+        pass
+
+    # Interpretation Atlas raw ratings, including cards that predate mastery_events.
+    try:
+        rows=_execute(c,"SELECT * FROM lab_attempts ORDER BY id").fetchall()
+        for r in rows:
+            events.append({
+                "concept_id":r["concept_id"],"domain":r["lab_slug"].replace("-"," ").title(),
+                "topic":None,"dimension":"recognition","score":int(r["rating"]),
+                "created_at":r["created_at"],"source":"interpretation_atlas"
+            })
+    except Exception:
+        pass
+    c.close()
+
+    profiles={}
+    for e in events:
+        cid=e["concept_id"]
+        x=profiles.setdefault(cid,{
+            "concept_id":cid,
+            "name":e.get("topic") or cm.get(cid,{}).get("topic") or cid.replace("v6-","").replace("-"," ").title(),
+            "domain":e.get("domain") or cm.get(cid,{}).get("domain") or "ENT",
+            "dimensions":{},"events":0,"overall":0,"coverage":0,"last_seen":None,
+        })
+        if e.get("topic"): x["name"]=e["topic"]
+        if e.get("domain"): x["domain"]=e["domain"]
+        dim=e["dimension"]
+        d=x["dimensions"].setdefault(dim,{"scores":[],"score":0,"events":0,"last":None})
+        s=max(0,min(3,int(e["score"])))
+        d["scores"].append(s); d["events"]+=1; d["last"]=e["created_at"]
+        recent=d["scores"][-4:]
+        weights=list(range(1,len(recent)+1))
+        d["score"]=round(100*sum(a*w for a,w in zip(recent,weights))/(3*sum(weights))) if weights else 0
+        x["events"]+=1
+        if not x["last_seen"] or str(e["created_at"])>str(x["last_seen"]):
+            x["last_seen"]=e["created_at"]
+
+    # Add adaptive concepts with saved mastery even if an older database has no events.
+    for cid,meta in cm.items():
+        if cid not in profiles and int(meta.get("attempts") or 0)>0:
+            profiles[cid]={
+                "concept_id":cid,"name":meta.get("topic") or cid,"domain":meta.get("domain") or "ENT",
+                "dimensions":{},"events":int(meta.get("attempts") or 0),"overall":0,"coverage":0,
+                "last_seen":meta.get("last_seen")
+            }
+
+    for x in profiles.values():
+        # Missing dimensions intentionally count as zero.
+        scores=[x["dimensions"].get(dim,{}).get("score",0) for dim in UNIFIED_DIMENSIONS]
+        x["overall"]=round(sum(scores)/len(UNIFIED_DIMENSIONS))
+        x["coverage_count"]=sum(1 for dim in UNIFIED_DIMENSIONS if dim in x["dimensions"])
+        x["coverage"]=round(100*x["coverage_count"]/len(UNIFIED_DIMENSIONS))
+    return profiles
+
+def unified_stats():
+    profiles=unified_mastery_profiles()
+    try:
+        mastery=adaptive_mastery_map()
+    except Exception:
+        mastery={}
+    today=datetime.now().date()
+    due=0
+    for x in mastery.values():
+        d=x.get("next_due")
+        if d and d<=today: due+=1
+    attempts=sum(p["events"] for p in profiles.values())
+    avg=round(sum(p["overall"] for p in profiles.values())/len(profiles)) if profiles else 0
+    coverage=round(sum(p["coverage"] for p in profiles.values())/len(profiles)) if profiles else 0
+    return {"attempts":attempts,"concepts":len(profiles),"mastery":avg,"coverage":coverage,"due":due}
+
+def unified_dimension_summary():
+    profiles=unified_mastery_profiles()
+    out={}
+    for dim in UNIFIED_DIMENSIONS:
+        vals=[p["dimensions"][dim]["score"] for p in profiles.values() if dim in p["dimensions"]]
+        out[dim]=round(sum(vals)/len(vals)) if vals else 0
+    return out
+
+def unified_domain_mastery():
+    profiles=unified_mastery_profiles(); by={}
+    for p in profiles.values():
+        by.setdefault(p["domain"],[]).append(p["overall"])
+    return {k:round(sum(v)/len(v)) if v else 0 for k,v in by.items()}
+
+def unified_weak_concepts(limit=6):
+    profiles=unified_mastery_profiles()
+    touched=[p for p in profiles.values() if p["events"]>0]
+    return sorted(touched,key=lambda p:(p["overall"],p["coverage"],-p["events"]))[:limit]
+
+def unified_mistakes(limit=100):
+    """Recent weak interactions from modern learning streams."""
+    c=conn(); out=[]
+    try:
+        rows=_execute(c,"""SELECT concept_id,domain,dimension,score,source_type,source_id,miss_type,created_at
+                           FROM mastery_events WHERE score<=1 OR miss_type IS NOT NULL
+                           ORDER BY id DESC LIMIT ?""",(limit,)).fetchall()
+        for r in rows:
+            out.append({"concept_id":r["concept_id"],"domain":r["domain"] or "ENT",
+                        "dimension":r["dimension"],"score":int(r["score"]),
+                        "source":r["source_type"] or "case","source_id":r["source_id"],
+                        "miss_type":r["miss_type"],"created_at":r["created_at"]})
+    except Exception: pass
+    try:
+        rows=_execute(c,"""SELECT e.*, m.domain, m.topic FROM daily_path_events e
+                           LEFT JOIN curriculum_mastery m ON m.concept_id=e.concept_id
+                           WHERE e.rating<=1 ORDER BY e.id DESC LIMIT ?""",(limit,)).fetchall()
+        for r in rows:
+            out.append({"concept_id":r["concept_id"],"name":r["topic"],
+                        "domain":r["domain"] or "ENT","dimension":_STAGE_TO_DIMENSION.get(r["stage"],"reasoning"),
+                        "score":int(r["rating"]),"source":"daily_path","source_id":r["item_id"],
+                        "miss_type":None,"created_at":r["created_at"]})
+    except Exception: pass
+    try:
+        rows=_execute(c,"""SELECT * FROM lab_attempts WHERE rating<=1 ORDER BY id DESC LIMIT ?""",(limit,)).fetchall()
+        for r in rows:
+            out.append({"concept_id":r["concept_id"],"domain":r["lab_slug"].replace("-"," ").title(),
+                        "dimension":"recognition","score":int(r["rating"]),"source":"interpretation_atlas",
+                        "source_id":r["case_id"],"miss_type":None,"created_at":r["created_at"]})
+    except Exception: pass
+    c.close()
+    # Deduplicate most-recent by concept/dimension/source.
+    out.sort(key=lambda x:str(x.get("created_at") or ""),reverse=True)
+    seen=set(); dedup=[]
+    for x in out:
+        key=(x["concept_id"],x["dimension"],x["source"])
+        if key in seen: continue
+        seen.add(key); dedup.append(x)
+        if len(dedup)>=limit: break
+    return dedup
