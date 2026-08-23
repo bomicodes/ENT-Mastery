@@ -2,6 +2,7 @@ import re
 import data
 from curveballs_v123 import ORIGINAL_V11_CURVEBALLS_V123
 from vignettes_v124 import VIGNETTES_V124
+from recognize_stage_v127 import apply_recognize_blind_reveal_v127
 
 # ENT Mastery v12.4 production runtime integration.
 # Build adaptive items from the final topic registry while preserving the schema
@@ -14,6 +15,7 @@ def _get_adaptive_items_v123():
     for item in items:
         item.setdefault("level", stage_level.get(item.get("stage"), 1))
         item.setdefault("tags", sorted(set(re.findall(r"[a-z0-9]+", ((item.get("domain") or "") + " " + (item.get("topic") or "")).lower()))))
+    apply_recognize_blind_reveal_v127(items)
     return items
 
 data.get_adaptive_items_v120 = _get_adaptive_items_v123
