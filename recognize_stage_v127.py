@@ -12,7 +12,15 @@ existing pattern-description text into an actual question stem instead of a
 static instruction, and move the diagnosis name into the revealed answer.
 Localize/Workup/Manage/Operate/Teach are unchanged — those stages legitimately
 proceed from a known diagnosis, so showing the topic name there is fine.
+
+v12.8 runtime integration: this module is already imported by wsgi.py before
+Flask imports app.py, so it also performs the small idempotent V128 vignette
+merge. This avoids replacing the generated multi-megabyte data.py while keeping
+the live CLINICAL_CHALLENGES_V119 bank and direct-lookup index synchronized.
 """
+
+import data
+from vignettes_v128 import VIGNETTES_V128
 
 
 def apply_recognize_blind_reveal_v127(items):
@@ -34,3 +42,20 @@ def apply_recognize_blind_reveal_v127(items):
         item["blind_reveal"] = True
         item["blind_display_domain"] = item.get("domain", "")
     return items
+
+
+def _merge_v128_clinical_challenges():
+    existing = {q.get("id") for q in data.CLINICAL_CHALLENGES_V119}
+    for source in VIGNETTES_V128:
+        if source.get("id") in existing:
+            continue
+        q = dict(source)
+        q["concept_id"] = data._v6_item_id(q["domain"], q["topic"])
+        data.CLINICAL_CHALLENGES_V119.append(q)
+        existing.add(q["id"])
+    data.CLINICAL_CHALLENGE_BY_ID_V119 = {
+        q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
+    }
+
+
+_merge_v128_clinical_challenges()
