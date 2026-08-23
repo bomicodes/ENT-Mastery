@@ -1,0 +1,20 @@
+{
+  "explicit_underscore_helper_import": true,
+  "target_concepts": {
+    "Acute Otitis Externa": {
+      "domain": "Otology / Neurotology",
+      "id": "v6-otology-neurotology-acute-otitis-externa"
+    },
+    "Laryngeal SCC": {
+      "domain": "Head & Neck Oncology",
+      "id": "v6-head-neck-oncology-laryngeal-scc"
+    }
+  },
+  "or_helpers_restored": {
+    "_norm_or_text": true,
+    "_or_rank": true,
+    "_related_or_gaps": true
+  },
+  "template_parse_errors": {},
+  "python_syntax": "passed"
+}

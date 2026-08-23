@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import os, random, re, difflib
 from data import *
+from data import _v6_item_id
 from db import init_db, record_lab_attempt, lab_progress, lab_stats, record_mastery_event, unified_mastery_profiles, unified_stats, unified_dimension_summary, unified_domain_mastery, unified_weak_concepts, unified_mistakes
 
 app = Flask(__name__)
@@ -81,11 +82,11 @@ def topic(slug):
     return redirect(url_for("search", q=slug.replace("-"," ")))
 
 def _canonical_search_index():
-    """Build the searchable index without allowing one bad source record to blank the entire search."""
+    """Build the searchable index without allowing one bad source record to blank the whole search."""
     from urllib.parse import quote_plus
     rows=[]
 
-    # Deep Curriculum is the canonical backbone and is indexed first.
+    # Deep Curriculum is canonical. Always retain it even if an optional source has malformed data.
     for domain,mods in (DEEP_MODULES_V6 or {}).items():
         for mod in (mods or []):
             try:
@@ -104,7 +105,6 @@ def _canonical_search_index():
             except Exception:
                 app.logger.exception("Skipping malformed curriculum search record")
 
-    # Additional site surfaces enrich search, but cannot erase the curriculum index.
     try:
         for c in (INTEGRATED_CASES or []):
             try:
@@ -140,7 +140,7 @@ def _canonical_search_index():
         "title":"Otoscopy Atlas",
         "subtitle":"Otology",
         "url":"/lab/otoscopy",
-        "text":"otoscopy tympanic membrane ear canal middle ear"
+        "text":"otoscopy tympanic membrane external auditory canal middle ear"
     })
 
     try:
@@ -181,10 +181,11 @@ def _canonical_search_index():
     return rows
 
 
-_SEARCH_ALIASES_V1008 = {
+_SEARCH_ALIASES_V1009 = {
     "scc":["squamous cell carcinoma"],
     "squamous cell carcinoma":["scc"],
-    "hnscc":["head neck squamous cell carcinoma","head and neck squamous cell carcinoma"],
+    "aoe":["acute otitis externa"],
+    "otitis externa":["acute otitis externa"],
     "osa":["obstructive sleep apnea"],
     "ssnhl":["sudden sensorineural hearing loss"],
     "bppv":["benign paroxysmal positional vertigo"],
@@ -199,56 +200,66 @@ _SEARCH_ALIASES_V1008 = {
     "hns":["hypoglossal nerve stimulation","hypoglossal nerve stimulator"],
     "ci":["cochlear implant","cochlear implantation"],
     "tmj":["temporomandibular joint"],
-    "pt a":["peritonsillar abscess"],
     "pta":["peritonsillar abscess"],
 }
 
-def _search_terms_v1008(q):
+def _search_terms_v1009(q):
     q=(q or "").strip().lower()
     terms=[x for x in re.split(r"\s+",q) if x]
-    phrases=[q]
-    for key,vals in _SEARCH_ALIASES_V1008.items():
-        if key in q or key in terms:
-            phrases.extend(vals)
-    return terms,phrases
+    aliases=[]
+    for key,vals in _SEARCH_ALIASES_V1009.items():
+        if key == q or key in terms or key in q:
+            aliases.extend(vals)
+    return terms,aliases
 
-def _search_score_v1008(row,q):
+def _search_score_v1009(row,q):
     title=str(row.get("title","") or "").lower()
     subtitle=str(row.get("subtitle","") or "").lower()
     text=str(row.get("text","") or "").lower()
     hay=title+" "+subtitle+" "+text
-    terms,phrases=_search_terms_v1008(q)
+    terms,aliases=_search_terms_v1009(q)
 
     score=0
     if q == title:
-        score += 100
+        score += 1000
     elif q and q in title:
-        score += 55
+        score += 300
     elif q and q in hay:
-        score += 30
+        score += 100
 
-    # Original query terms: title hits are weighted heavily.
+    # Require meaningful token overlap for non-exact results.
+    matched_terms=0
     for t in terms:
         if t in title:
-            score += 12
+            score += 40
+            matched_terms += 1
         elif t in hay:
-            score += 3
+            score += 8
+            matched_terms += 1
 
-    # Acronym/synonym phrases.
-    for phrase in phrases[1:]:
-        if phrase in title:
-            score += 35
-        elif phrase in hay:
-            score += 12
+    for alias in aliases:
+        if alias == title:
+            score += 600
+        elif alias in title:
+            score += 200
+        elif alias in hay:
+            score += 50
 
-    # Modest fuzzy title boost so typos/expanded names still surface.
+    # Fuzzy match titles only; don't let unrelated long text outrank a concept.
     try:
-        import difflib
         ratio=difflib.SequenceMatcher(None,q,title).ratio()
-        if ratio >= .82:
-            score += int(ratio*25)
+        if ratio >= .84:
+            score += int(ratio*100)
     except Exception:
         pass
+
+    # Curriculum concepts should win when relevance is comparable.
+    if row.get("type")=="Curriculum concept" and score>0:
+        score += 75
+
+    # If this was a multi-word query and zero query tokens matched, discard it.
+    if terms and matched_terms==0 and not aliases:
+        return 0
 
     return score
 
@@ -262,14 +273,95 @@ def search():
         if q:
             scored=[]
             for r in index:
-                score=_search_score_v1008(r,q)
+                score=_search_score_v1009(r,q)
                 if score>0:
                     scored.append((score,r))
-            rows=[r for _,r in sorted(scored,key=lambda x:(-x[0],str(x[1].get("title",""))))[:80]]
+            rows=[r for _,r in sorted(
+                scored,
+                key=lambda x:(-x[0], 0 if x[1].get("type")=="Curriculum concept" else 1,
+                              str(x[1].get("title","")))
+            )[:80]]
     except Exception:
         app.logger.exception("Search failed")
         rows=[]
     return render_template("search.html", q=q, results=rows)
+
+
+def _norm_or_text(s):
+    import re
+    return " ".join(re.findall(r"[a-z0-9]+", (s or "").lower()))
+
+def _or_rank(q):
+    import difflib
+    nq=_norm_or_text(q)
+    if not nq: return []
+    qt=nq.split()
+    ranked=[]
+    for slug,x in OR_PREP_REGISTRY.items():
+        ns=_norm_or_text(slug)
+        nt=_norm_or_text(x.get("title",""))
+        slug_tokens=ns.split()
+        title_tokens=nt.split()
+        all_tokens=set(slug_tokens+title_tokens)
+
+        score=0
+        # Exact title/slug is always strongest.
+        if nq==ns or nq==nt:
+            score=100
+        # Exact word/token matching is next. This deliberately prevents
+        # "thyroidectomy" from matching the single word "parathyroidectomy".
+        elif all(t in all_tokens for t in qt):
+            # Prefer a title containing the query words over a slug-only hit.
+            if all(t in title_tokens for t in qt):
+                score=94
+            else:
+                score=88
+        else:
+            # Fuzzy ranking is only a fallback and is penalized when the query's
+            # core words are not present as whole words.
+            coverage=sum(1 for t in qt if t in all_tokens)/max(1,len(qt))
+            phrase=difflib.SequenceMatcher(None,nq,nt).ratio()
+            score=round(55*coverage+30*phrase)
+            if coverage==0:
+                score=min(score,45)
+
+        ranked.append((score,slug,x))
+    return sorted(ranked,key=lambda z:z[0],reverse=True)
+
+def _canonical_for_or_domain(label):
+    return canonical_domain_v94(label)
+
+def _related_or_gaps(prep, limit=4):
+    if not prep: return []
+    canonical=_canonical_for_or_domain(prep.get("domain"))
+    profiles=unified_mastery_profiles()
+    try:
+        from db import adaptive_mastery_map
+        adaptive=adaptive_mastery_map()
+    except Exception:
+        adaptive={}
+
+    title_tokens=set(_norm_or_text(prep.get("title")).split())
+    candidates=[]
+    for domain,mods in DEEP_MODULES_V6.items():
+        if canonical_domain_v94(domain)!=canonical:
+            continue
+        for idx,mod in enumerate(mods):
+            cid=_v6_item_id(domain,mod["topic"])
+            p=profiles.get(cid,{})
+            meta=adaptive.get(cid,{})
+            mastery=p.get("overall",0)
+            coverage=p.get("coverage",0)
+            attempts=int(meta.get("attempts") or 0)
+            overlap=len(title_tokens & set(_norm_or_text(mod["topic"]).split()))
+            # Same-operation concept first, then foundations that are weak/unseen.
+            score=(-overlap, mastery, coverage, 0 if attempts==0 else 1, idx)
+            candidates.append((score,{
+              "concept_id":cid,"topic":mod["topic"],"domain":domain,
+              "mastery":mastery,"coverage":coverage,"attempts":attempts
+            }))
+    candidates.sort(key=lambda x:x[0])
+    return [x[1] for x in candidates[:limit]]
 
 @app.route("/case-tomorrow")
 def case_tomorrow():
