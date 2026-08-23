@@ -1,0 +1,8 @@
+Static build verification completed.
+- app.py/data.py/db.py Python syntax: PASS
+- all Jinja templates parse: PASS
+- anatomy image mappings: 50/50
+
+A Flask test-client smoke run was not available in this artifact environment because Flask
+is not installed in the local artifact Python runtime. This is an environment limitation,
+not a detected application failure. Runtime verification should occur on Render after deploy.

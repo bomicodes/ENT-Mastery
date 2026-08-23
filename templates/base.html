@@ -7,35 +7,68 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-<div class="app-shell">
-  <aside class="sidebar">
-    <a class="brand" href="/"><span class="brandmark">E</span><span><b>ENT Mastery</b><small>Residency → Boards</small></span></a>
-    <nav>
-      <a href="/" class="navitem">⌂ <span>Today</span></a>
-      <a href="/daily-adaptive" class="navitem">🧭 <span>Daily Path</span></a>
-      <a href="/curriculum" class="navitem">🗺 <span>Curriculum</span></a>
-      <a href="/anatomy" class="navitem">⌖ <span>Anatomy Atlas</span></a>
-      <a href="/integrated" class="navitem">🩺 <span>Cases</span></a>
-      <a href="/lab" class="navitem">◈ <span>Interpretation Atlas</span></a>
-      <a href="/case-tomorrow" class="navitem">⌁ <span>OR Tomorrow</span></a>
-      <a href="/progress" class="navitem">▥ <span>Progress</span></a>
-      <div class="nav-divider"></div>
-      <a href="/attending" class="navitem">↗ <span>Attending / Chief</span></a>
-      <a href="/mistakes" class="navitem">↻ <span>Mistakes</span></a>
-      <a href="/search" class="navitem">⌕ <span>Search</span></a>
-      <a href="/evidence" class="navitem">✓ <span>Evidence & Sources</span></a>
+<div class="app-shell modern-shell">
+  <aside class="sidebar modern-sidebar">
+    <a class="modern-brand" href="/">
+      <span class="modern-brand-ent">ENT</span>
+      <span>MASTERY</span>
+    </a>
+
+    <div class="resident-summary">
+      <b>Resident workspace</b>
+      <small>Longitudinal mastery</small>
+      <div class="resident-mastery">
+        <div class="mini-ring" style="--mastery-pct:{{shell_stats.mastery|default(0)}}">
+          <span>{{shell_stats.mastery|default(0)}}%</span>
+        </div>
+        <div>
+          <span>Overall mastery</span>
+          <small>{{shell_stats.concepts|default(0)}} concepts touched</small>
+        </div>
+      </div>
+      <div class="resident-due">◆ <b>{{shell_stats.due|default(0)}}</b> due today</div>
+    </div>
+
+    <nav class="modern-nav">
+      <a href="/" class="navitem {% if request.path=='/' %}active{% endif %}">⌂ <span>Dashboard</span></a>
+      <a href="/daily-adaptive" class="navitem {% if request.path.startswith('/daily-adaptive') %}active{% endif %}">◇ <span>Daily Path</span>{% if shell_stats.due %}<em>{{shell_stats.due}}</em>{% endif %}</a>
+
+      <div class="nav-section-label">Curriculum</div>
+      <a href="/curriculum" class="navitem {% if request.path.startswith('/curriculum') %}active{% endif %}">▦ <span>All Topics</span></a>
+      <div class="domain-mini-nav">
+        {% for d in shell_domains %}
+          <a href="/curriculum/depth#{{d|lower|replace(' ','-')|replace('/','-')}}">{{d}}</a>
+        {% endfor %}
+      </div>
+
+      <div class="nav-section-label">Practice</div>
+      <a href="/integrated" class="navitem {% if request.path.startswith('/integrated') %}active{% endif %}">◌ <span>Cases</span></a>
+      <a href="/case-tomorrow" class="navitem {% if request.path.startswith('/case-tomorrow') %}active{% endif %}">⌁ <span>OR Tomorrow</span></a>
+      <a href="/lab" class="navitem {% if request.path.startswith('/lab') %}active{% endif %}">◈ <span>Interpretation Atlas</span></a>
+      <a href="/anatomy" class="navitem {% if request.path.startswith('/anatomy') %}active{% endif %}">⌖ <span>Anatomy Atlas</span></a>
+
+      <div class="nav-section-label">Review</div>
+      <a href="/progress" class="navitem {% if request.path.startswith('/progress') %}active{% endif %}">▥ <span>My Progress</span></a>
+      <a href="/attending" class="navitem {% if request.path.startswith('/attending') %}active{% endif %}">↗ <span>Attending / Chief</span></a>
+      <a href="/mistakes" class="navitem {% if request.path.startswith('/mistakes') %}active{% endif %}">↻ <span>Mistakes</span></a>
     </nav>
-    <div class="sidebar-bottom"><a href="/sources">Sources & evidence</a><small>Educational use only</small></div>
+
+    <div class="sidebar-bottom">
+      <a href="/evidence">Evidence & sources</a>
+      <small>Educational use only</small>
+    </div>
   </aside>
-  <main>
-    <header class="topbar">
+
+  <main class="modern-main">
+    <header class="topbar modern-topbar">
       <form action="/search" method="get" class="global-search">
-        <span>⌕</span><input name="q" placeholder="Search disease, operation, anatomy, problem…" value="{{ request.args.get('q','') }}">
+        <span>⌕</span>
+        <input name="q" placeholder="Search disease, operation, anatomy, problem…" value="{{ request.args.get('q','') }}">
         <kbd>/</kbd>
       </form>
-      <a class="case-btn" href="/case-tomorrow">🩺 Case Tomorrow</a>
+      <a class="case-btn" href="/case-tomorrow">⌁ OR Tomorrow</a>
     </header>
-    <div class="page">{% block content %}{% endblock %}</div>
+    <div class="page modern-page">{% block content %}{% endblock %}</div>
   </main>
 </div>
 <script src="{{ url_for('static', filename='app.js') }}"></script>

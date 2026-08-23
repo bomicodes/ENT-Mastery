@@ -1,0 +1,9 @@
+{
+  "anatomy_cards": 50,
+  "anatomy_cards_with_real_image_metadata": 50,
+  "missing_anatomy_images": [],
+  "template_parse_errors": {},
+  "python_syntax_check": "passed",
+  "runtime_stability_base": "v10.0.4",
+  "note": "Full Flask route smoke could not run in the artifact environment because Flask is not installed there; Render deployment remains the runtime check."
+}

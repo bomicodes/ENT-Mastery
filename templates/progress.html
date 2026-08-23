@@ -23,7 +23,7 @@
 <div class="section-head"><h2>Concept mastery map</h2><span>{{profiles|length}} touched concepts</span></div>
 <div class="mastery-table card">
   <div class="mastery-row mastery-header"><span>Concept</span><span>Mastery</span><span>Coverage</span><span>Dimensions</span></div>
-  {% for cid,p in profiles|dictsort(by='value', attribute='overall') %}
+  {% for p in profile_rows %}
   <div class="mastery-row">
     <div><b>{{p.name}}</b><small>{{p.domain}}</small></div>
     <strong>{{p.overall}}%</strong>

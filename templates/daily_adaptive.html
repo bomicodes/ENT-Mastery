@@ -28,7 +28,9 @@
 
 <div class="adaptive-list">
 {% for x in plan %}
-<article class="card adaptive-card" data-item="{{x.id}}" data-index="{{loop.index}}">
+<article class="card adaptive-card" data-item="{{x.id}}" data-index="{{loop.index}}"
+  data-concept-id="{{x.concept_id}}" data-domain="{{x.domain|e}}" data-topic="{{x.topic|e}}"
+  data-stage="{{x.stage}}" data-level="{{x.level}}">
   <div class="adaptive-meta">
     <span class="card-number">{{loop.index}}</span>
     <b>{{x.domain}}</b>
@@ -57,22 +59,23 @@
     <p class="adaptive-prompt">{{x.prompt}}</p>
   </div>
 
-  <button class="reveal-btn" type="button" onclick="revealAnswer(this)">Reveal answer</button>
-
-  <div class="adaptive-answer" hidden>
-    <span class="answer-label">TEACHING ANSWER</span>
-    <p>{{x.answer}}</p>
-    <div class="self-rate-copy">
-      <b>How well did you know it before revealing?</b>
-      <small>Missed/Hard keeps this stage in rotation. Got it/Easy passes this stage; Easy simply waits longer before the next one.</small>
+  <details class="adaptive-reveal">
+    <summary>Reveal answer</summary>
+    <div class="adaptive-answer">
+      <span class="answer-label">TEACHING ANSWER</span>
+      <p>{{x.answer}}</p>
+      <div class="self-rate-copy">
+        <b>How well did you know it before revealing?</b>
+        <small>Missed/Hard keeps this stage in rotation. Got it/Easy passes this stage; Easy simply waits longer before the next one.</small>
+      </div>
+      <div class="rating-row">
+        <button type="button" data-rating="0">Missed it</button>
+        <button type="button" data-rating="1">Hard</button>
+        <button type="button" data-rating="2">Got it</button>
+        <button type="button" data-rating="3">Easy</button>
+      </div>
     </div>
-    <div class="rating-row">
-      <button type="button" onclick='rateItem(this,0,{{x|tojson}})'>Missed it</button>
-      <button type="button" onclick='rateItem(this,1,{{x|tojson}})'>Hard</button>
-      <button type="button" onclick='rateItem(this,2,{{x|tojson}})'>Got it</button>
-      <button type="button" onclick='rateItem(this,3,{{x|tojson}})'>Easy</button>
-    </div>
-  </div>
+  </details>
 </article>
 {% endfor %}
 </div>
@@ -81,12 +84,6 @@
 let completedCount=0;
 const totalCards={{plan|length}};
 
-function revealAnswer(btn){
-  const answer=btn.nextElementSibling;
-  answer.hidden=false;
-  btn.hidden=true;
-  answer.scrollIntoView({behavior:'smooth',block:'nearest'});
-}
 
 function updateSessionProgress(){
   const pct=totalCards ? Math.round((completedCount/totalCards)*100) : 0;
@@ -94,8 +91,16 @@ function updateSessionProgress(){
   document.getElementById('session-progress-fill').style.width=pct+'%';
 }
 
-async function rateItem(btn,rating,x){
+async function rateItem(btn,rating){
   const card=btn.closest('.adaptive-card');
+  const x={
+    concept_id:card.dataset.conceptId,
+    id:card.dataset.item,
+    domain:card.dataset.domain,
+    topic:card.dataset.topic,
+    stage:card.dataset.stage,
+    level:Number(card.dataset.level)
+  };
   if(card.classList.contains('completed')) return;
   const buttons=card.querySelectorAll('.rating-row button');
   buttons.forEach(b=>b.disabled=true);
@@ -131,5 +136,9 @@ async function rateItem(btn,rating,x){
     card.querySelector('.rating-row').insertAdjacentHTML('beforeend','<small class="save-error">Could not save: '+j.error+'</small>');
   }
 }
+document.addEventListener('click', (e)=>{
+  const b=e.target.closest('.rating-row button[data-rating]');
+  if(b) rateItem(b,Number(b.dataset.rating));
+});
 </script>
 {% endblock %}

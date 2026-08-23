@@ -42,15 +42,7 @@
           <h3>{{x.topic}}</h3>
         </div>
       </div>
-
-      {% if x.visual %}
-      <figure class="anatomy-visual-wrap">
-        <img src="{{url_for('static', filename=x.visual)}}" alt="{{x.topic}} orientation schematic" class="anatomy-visual">
-        <figcaption>Orientation schematic · not to scale · use with the landmark list below</figcaption>
-      </figure>
-      {% endif %}
-
-      <div class="anatomy-question">
+<div class="anatomy-question">
         <b>Before you look below:</b>
         <p>What landmarks would you use to orient yourself, and which structure would you be most worried about injuring?</p>
       </div>

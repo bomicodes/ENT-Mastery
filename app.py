@@ -9,7 +9,15 @@ init_db()
 
 @app.context_processor
 def inject():
-    return {"DOMAINS": [{"id":d,"name":d} for d in CANONICAL_DOMAINS_V94]}
+    try:
+        shell_stats=unified_stats()
+    except Exception:
+        shell_stats={"mastery":0,"due":0,"concepts":0,"attempts":0,"coverage":0}
+    return {
+        "DOMAINS":[{"id":d,"name":d} for d in CANONICAL_DOMAINS_V94],
+        "shell_stats":shell_stats,
+        "shell_domains":CANONICAL_DOMAINS_V94
+    }
 
 @app.route("/")
 def dashboard():
@@ -30,11 +38,35 @@ def dashboard():
         return (domain_bonus, attempted, mastery, c.get("title",""))
     recommended=sorted(INTEGRATED_CASES,key=case_score)[:6]
 
+    domain_icons={
+      "Otology / Neurotology":"◉",
+      "Rhinology / Allergy / Skull Base":"⌁",
+      "Head & Neck Oncology":"◇",
+      "Thyroid / Parathyroid / Salivary":"♢",
+      "Pediatric Otolaryngology":"○",
+      "Laryngology / Voice / Swallowing":"◫",
+      "Facial Plastics / Trauma":"△",
+      "Sleep Surgery":"☾",
+      "General ENT / Emergencies":"+",
+    }
+    domain_cards=[]
+    for dname in CANONICAL_DOMAINS_V94:
+        domain_cards.append({
+          "name":dname,
+          "mastery":domains.get(dname,0),
+          "topics":len(DEEP_MODULES_V6.get(dname,[])),
+          "icon":domain_icons.get(dname,"•")
+        })
+
     return render_template("dashboard.html", stats=st, weak=weak,
                            dimension_summary=dsum, domain_mastery=domains,
                            weakest_dimensions=weakest_dims,
                            integrated_cases=recommended,
-                           integrated_total=len(INTEGRATED_CASES))
+                           integrated_total=len(INTEGRATED_CASES),
+                           domain_cards=domain_cards,
+                           anatomy_total=len(ANATOMY_ATLAS_V97),
+                           or_total=len(OR_PREP_REGISTRY),
+                           lab_total=len(INTERPRETATION_LABS))
 
 @app.route("/today")
 def today():
@@ -144,34 +176,47 @@ def _related_or_gaps(prep, limit=4):
 @app.route("/case-tomorrow")
 def case_tomorrow():
     q=request.args.get("q","").strip()
-    prep=None; or_choices=[]; related=[]
-    if q:
-        ranked=_or_rank(q)
-        if ranked:
-            top=ranked[0]
-            margin=top[0]-(ranked[1][0] if len(ranked)>1 else 0)
-            if top[0]>=92 or (top[0]>=82 and margin>=7):
-                prep=top[2]
-            elif top[0]>=60:
-                or_choices=[x[2] for x in ranked[:5] if x[0]>=55]
-    if prep:
-        related=_related_or_gaps(prep)
-        return render_template("case_tomorrow.html", q=q, prep=prep, or_choices=[], matches=[],
-                               questions=[], or_directory=OR_PREP_REGISTRY, related_gaps=related)
-    if or_choices:
-        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=or_choices,
-                               matches=[], questions=[], or_directory=OR_PREP_REGISTRY, related_gaps=[])
-    if q:
-        matches=[]
-        nq=_norm_or_text(q); qt=nq.split()
-        for r in _canonical_search_index():
-            hay=_norm_or_text(r["title"]+" "+r.get("subtitle","")+" "+r.get("text",""))
-            if all(t in hay.split() for t in qt): matches.append(r)
-        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=[], matches=matches[:8],
-                               questions=[], or_directory=OR_PREP_REGISTRY, related_gaps=[])
-    # True empty state: never default to a random operation.
-    return render_template("case_tomorrow.html", q="", prep=None, or_choices=[], matches=[],
-                           questions=[], or_directory=OR_PREP_REGISTRY, related_gaps=[])
+    directory=OR_PREP_REGISTRY or {}
+    prep=None; or_choices=[]; related=[]; matches=[]
+    try:
+        if q:
+            ranked=_or_rank(q)
+            if ranked:
+                top=ranked[0]
+                margin=top[0]-(ranked[1][0] if len(ranked)>1 else 0)
+                if top[0]>=92 or (top[0]>=82 and margin>=7):
+                    prep=top[2]
+                elif top[0]>=60:
+                    or_choices=[x[2] for x in ranked[:5] if x[0]>=55]
+
+        if prep:
+            try:
+                related=_related_or_gaps(prep)
+            except Exception:
+                related=[]
+            return render_template("case_tomorrow.html", q=q, prep=prep, or_choices=[],
+                                   matches=[], questions=[], or_directory=directory, related_gaps=related)
+
+        if or_choices:
+            return render_template("case_tomorrow.html", q=q, prep=None, or_choices=or_choices,
+                                   matches=[], questions=[], or_directory=directory, related_gaps=[])
+
+        if q:
+            nq=_norm_or_text(q); qt=nq.split()
+            for r in _canonical_search_index():
+                hay=_norm_or_text(r.get("title","")+" "+r.get("subtitle","")+" "+r.get("text",""))
+                if all(t in hay.split() for t in qt):
+                    matches.append(r)
+
+        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=[],
+                               matches=matches[:8], questions=[], or_directory=directory,
+                               related_gaps=[])
+    except Exception as e:
+        app.logger.exception("OR Tomorrow failed")
+        # A route failure should degrade to the searchable operation directory, not a 500.
+        return render_template("case_tomorrow.html", q=q, prep=None, or_choices=[],
+                               matches=[], questions=[], or_directory=directory,
+                               related_gaps=[], runtime_warning="Some personalized OR recommendations could not load; the audited procedure directory is still available.")
 
 @app.route("/questions")
 def questions():
@@ -454,12 +499,18 @@ def evidence():
 @app.route("/progress")
 def progress():
     profiles=unified_mastery_profiles()
+    profile_rows=sorted(
+        profiles.values(),
+        key=lambda p: (p.get("overall",0), p.get("coverage",0), p.get("name","").lower())
+    )
     return render_template("progress.html",
                            stats=unified_stats(),
                            profiles=profiles,
+                           profile_rows=profile_rows,
                            dimensions=unified_dimension_summary(),
                            domains=unified_domain_mastery(),
                            mastery_dimensions=MASTERY_DIMENSIONS)
+
 @app.route("/sources")
 def sources():
     return redirect(url_for("evidence"))
