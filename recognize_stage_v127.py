@@ -17,6 +17,11 @@ v12.8 runtime integration: this module is already imported by wsgi.py before
 Flask imports app.py, so it also performs the small idempotent V128 vignette
 merge. This avoids replacing the generated multi-megabyte data.py while keeping
 the live CLINICAL_CHALLENGES_V119 bank and direct-lookup index synchronized.
+
+v13.3-v13.4 depth integration: adds decision-heavy thyroid/parathyroid/salivary
+and head-and-neck oncology topics, then validates every new vignette against the
+live canonical curriculum before merging. A future typo now fails loudly at
+startup instead of silently creating an orphaned case.
 """
 
 import data
@@ -24,6 +29,8 @@ from vignettes_v128 import VIGNETTES_V128
 from topic_alias_v129 import apply_topic_alias_v129
 from new_topics_v131 import NEW_TOPICS_V131
 from vignettes_v132 import VIGNETTES_V132
+from new_topics_v133 import NEW_TOPICS_V133
+from vignettes_v134 import VIGNETTES_V134
 
 
 def apply_recognize_blind_reveal_v127(items):
@@ -61,11 +68,49 @@ def _merge_v128_clinical_challenges():
     }
 
 
-for _domain, _topics in NEW_TOPICS_V131.items():
-    _existing_topics = {m["topic"] for m in data.DEEP_MODULES_V6[_domain]}
-    for _t in _topics:
-        if _t["topic"] not in _existing_topics:
-            data.DEEP_MODULES_V6[_domain].append(_t)
+def _merge_depth_topics(patch, patch_name):
+    """Idempotently merge exact canonical topics, failing on a bad domain."""
+    for domain, topics in patch.items():
+        if domain not in data.DEEP_MODULES_V6:
+            raise RuntimeError(
+                f"{patch_name}: unknown curriculum domain {domain!r}; "
+                "refusing to create detached topics"
+            )
+        existing_topics = {m["topic"] for m in data.DEEP_MODULES_V6[domain]}
+        for topic in topics:
+            if topic["topic"] not in existing_topics:
+                data.DEEP_MODULES_V6[domain].append(topic)
+                existing_topics.add(topic["topic"])
+
+
+def _merge_validated_challenges(batch, patch_name):
+    """Merge cases only when domain/topic resolves to the live curriculum."""
+    canonical = {
+        (domain, module.get("topic"))
+        for domain, modules in data.DEEP_MODULES_V6.items()
+        for module in modules
+    }
+    existing_ids = {q.get("id") for q in data.CLINICAL_CHALLENGES_V119}
+    for source in batch:
+        key = (source.get("domain"), source.get("topic"))
+        if key not in canonical:
+            raise RuntimeError(
+                f"{patch_name}: orphan vignette {source.get('id')!r} targets "
+                f"non-canonical {key!r}; add/alias the curriculum topic first"
+            )
+        if source.get("id") in existing_ids:
+            continue
+        q = dict(source)
+        q["concept_id"] = data._v6_item_id(q["domain"], q["topic"])
+        data.CLINICAL_CHALLENGES_V119.append(q)
+        existing_ids.add(q["id"])
+    data.CLINICAL_CHALLENGE_BY_ID_V119 = {
+        q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
+    }
+
+
+_merge_depth_topics(NEW_TOPICS_V131, "v13.1")
+_merge_depth_topics(NEW_TOPICS_V133, "v13.3")
 
 _merge_v128_clinical_challenges()
 apply_topic_alias_v129(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
@@ -96,6 +141,7 @@ def _fixed_generated_chief_prompt_v120(_domain, _m):
         "source": "dynamic fallback from deep curriculum"
     }
 
+
 def _fixed_generated_attending_prompt_v120(_domain, _m):
     _id = data._v6_item_id(_domain, _m["topic"])
     return {
@@ -107,6 +153,7 @@ def _fixed_generated_attending_prompt_v120(_domain, _m):
         "curveball": _m.get("operate") or _m.get("localize", ""),
         "source": "dynamic fallback from deep curriculum"
     }
+
 
 data._generated_chief_prompt_v120 = _fixed_generated_chief_prompt_v120
 data._generated_attending_prompt_v120 = _fixed_generated_attending_prompt_v120
@@ -120,3 +167,6 @@ for _q_src in VIGNETTES_V132:
     data.CLINICAL_CHALLENGES_V119.append(_q)
     _existing_ids_v132.add(_q.get("id"))
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119}
+
+# v13.4 is the first case batch with strict canonical-link validation.
+_merge_validated_challenges(VIGNETTES_V134, "v13.4")
