@@ -18,8 +18,8 @@ Flask imports app.py, so it also performs the small idempotent V128 vignette
 merge. This avoids replacing the generated multi-megabyte data.py while keeping
 the live CLINICAL_CHALLENGES_V119 bank and direct-lookup index synchronized.
 
-v13.3-v14.0 depth integration: canonical coverage batches are strictly checked
-against the live curriculum; v14.0 starts the second-pass call/OR depth audit.
+v13.3-v14.1 depth integration: canonical coverage batches are strictly checked
+against the live curriculum; v14.x is the second-pass board/call/OR depth audit.
 """
 
 import data
@@ -34,6 +34,7 @@ from vignettes_v137 import VIGNETTES_V137
 from vignettes_v138 import VIGNETTES_V138
 from vignettes_v139 import VIGNETTES_V139
 from vignettes_v140 import VIGNETTES_V140
+from vignettes_v141 import VIGNETTES_V141
 
 
 def apply_recognize_blind_reveal_v127(items):
@@ -150,3 +151,4 @@ _merge_validated_challenges(VIGNETTES_V137, "v13.7")
 _merge_validated_challenges(VIGNETTES_V138, "v13.8")
 _merge_validated_challenges(VIGNETTES_V139, "v13.9")
 _merge_validated_challenges(VIGNETTES_V140, "v14.0")
+_merge_validated_challenges(VIGNETTES_V141, "v14.1")
