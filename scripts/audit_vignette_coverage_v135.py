@@ -1,16 +1,16 @@
-"""ENT Mastery v13.5 canonical vignette coverage audit.
+"""ENT Mastery canonical vignette coverage + depth audit.
 
 Reports exact per-domain coverage against the live runtime curriculum after all
 runtime patches have been applied. Integrity defects (orphans, duplicate IDs,
-malformed cases) fail the process; incomplete coverage is reported but does not
-fail so this script can guide staged expansion toward 100%.
+malformed cases) fail the process. It also reports a depth proxy: canonical
+topics with at least two independently linked vignettes. This is intentionally
+separate from the 100% canonical-coverage milestone so shallow one-case topics
+remain visible for the board/call/OR depth pass.
 """
 from collections import Counter, defaultdict
 from pathlib import Path
 import sys
 
-# GitHub Actions executes this file from scripts/, so ensure the repository root
-# is importable before loading the runtime patch chain through wsgi.
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -36,28 +36,48 @@ def main():
     }
     covered_ids = {q.get("concept_id") for q in cases if q.get("concept_id")}
 
-    print("=== ENT MASTERY CANONICAL VIGNETTE COVERAGE v13.5 ===")
+    by_concept = defaultdict(list)
+    for q in cases:
+        by_concept[q.get("concept_id")].append(q)
+
+    print("=== ENT MASTERY CANONICAL VIGNETTE COVERAGE + DEPTH ===")
     print(f"Total curriculum topics: {sum(len(x) for x in canonical_by_domain.values())}")
     print(f"Total vignettes: {len(cases)}")
     print()
 
     total_topics = 0
     total_covered = 0
+    total_depth2 = 0
     missing_all = []
+    singleton = []
     for domain, topics in canonical_by_domain.items():
         covered = sorted(t for t in topics if data._v6_item_id(domain, t) in covered_ids)
         missing = sorted(topics - set(covered))
+        depth2 = sorted(
+            t for t in topics
+            if len(by_concept.get(data._v6_item_id(domain, t), [])) >= 2
+        )
+        domain_singletons = sorted(
+            t for t in topics
+            if len(by_concept.get(data._v6_item_id(domain, t), [])) == 1
+        )
         total_topics += len(topics)
         total_covered += len(covered)
+        total_depth2 += len(depth2)
         pct = 100.0 * len(covered) / len(topics) if topics else 100.0
+        depth_pct = 100.0 * len(depth2) / len(topics) if topics else 100.0
         print(f"DOMAIN|{domain}|{len(covered)}|{len(topics)}|{pct:.1f}%")
+        print(f"DEPTH2_DOMAIN|{domain}|{len(depth2)}|{len(topics)}|{depth_pct:.1f}%")
         for topic in missing:
             print(f"MISSING|{domain}|{topic}")
             missing_all.append((domain, topic))
+        singleton.extend((domain, topic) for topic in domain_singletons)
 
     print()
     overall = 100.0 * total_covered / total_topics if total_topics else 100.0
+    depth_overall = 100.0 * total_depth2 / total_topics if total_topics else 100.0
     print(f"OVERALL|{total_covered}|{total_topics}|{overall:.1f}%")
+    print(f"DEPTH2_OVERALL|{total_depth2}|{total_topics}|{depth_overall:.1f}%")
     print(f"MISSING_TOTAL|{len(missing_all)}")
 
     ids = [q.get("id") for q in cases]
@@ -82,16 +102,16 @@ def main():
     for qid, absent in malformed:
         print(f"BAD_SCHEMA|{qid}|missing={','.join(absent)}")
 
-    by_concept = defaultdict(list)
-    for q in cases:
-        by_concept[q.get("concept_id")].append(q)
-    singleton = []
-    for concept_id, key in canonical_ids.items():
-        if len(by_concept.get(concept_id, [])) == 1:
-            singleton.append(key)
     print(f"SINGLETON_TOPICS|{len(singleton)}")
     for domain, topic in sorted(singleton):
         print(f"SINGLETON|{domain}|{topic}")
+
+    # Focus-tag visibility for second-pass call/OR content. Older cases predate
+    # the field, so zero here means "not explicitly tagged," not necessarily
+    # absent content; this guides future curation rather than acting as failure.
+    focus_counts = Counter(q.get("focus") for q in cases if q.get("focus"))
+    for focus, count in sorted(focus_counts.items()):
+        print(f"FOCUS|{focus}|{count}")
 
     if orphaned or duplicate_ids or malformed:
         raise SystemExit(2)
