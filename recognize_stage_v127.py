@@ -18,10 +18,9 @@ Flask imports app.py, so it also performs the small idempotent V128 vignette
 merge. This avoids replacing the generated multi-megabyte data.py while keeping
 the live CLINICAL_CHALLENGES_V119 bank and direct-lookup index synchronized.
 
-v13.3-v13.4 depth integration: adds decision-heavy thyroid/parathyroid/salivary
-and head-and-neck oncology topics, then validates every new vignette against the
-live canonical curriculum before merging. A future typo now fails loudly at
-startup instead of silently creating an orphaned case.
+v13.3-v13.6 depth integration: adds decision-heavy cross-domain topics/cases,
+then validates every new vignette against the live canonical curriculum. A
+future typo fails loudly at startup instead of silently creating an orphan.
 """
 
 import data
@@ -31,6 +30,7 @@ from new_topics_v131 import NEW_TOPICS_V131
 from vignettes_v132 import VIGNETTES_V132
 from new_topics_v133 import NEW_TOPICS_V133
 from vignettes_v134 import VIGNETTES_V134
+from vignettes_v136 import VIGNETTES_V136
 
 
 def apply_recognize_blind_reveal_v127(items):
@@ -39,7 +39,7 @@ def apply_recognize_blind_reveal_v127(items):
         if item.get("stage") != "recognize":
             continue
         if item.get("blind_reveal"):
-            continue  # already patched
+            continue
         original_pattern = item.get("answer", "").strip()
         if not original_pattern:
             continue
@@ -123,12 +123,8 @@ for _q in data.CLINICAL_CHALLENGES_V119:
         _q["concept_id"] = data._v6_item_id("Pediatric Otolaryngology", "Recurrent Respiratory Papillomatosis")
         _q["canonical_topic"] = "Recurrent Respiratory Papillomatosis"
 
-# Bug fix: _generated_chief_prompt_v120/_generated_attending_prompt_v120 in
-# data.py reference an undefined name (_slugify_v94 - the real helper is
-# _v91_slug). This was never triggered because all 312 original topics
-# already had a curated chief/attending prompt, so the dynamic fallback path
-# never actually ran until the 9 new_topics_v131 topics exercised it for the
-# first time. Patch both generators in place with the correct helper.
+# Fix dynamic chief/attending prompt generators: data.py historically referred
+# to undefined _slugify_v94; _v91_slug is the real helper.
 def _fixed_generated_chief_prompt_v120(_domain, _m):
     _id = data._v6_item_id(_domain, _m["topic"])
     return {
@@ -168,5 +164,5 @@ for _q_src in VIGNETTES_V132:
     _existing_ids_v132.add(_q.get("id"))
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119}
 
-# v13.4 is the first case batch with strict canonical-link validation.
 _merge_validated_challenges(VIGNETTES_V134, "v13.4")
+_merge_validated_challenges(VIGNETTES_V136, "v13.6")
