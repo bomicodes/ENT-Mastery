@@ -1,5 +1,305 @@
-Traceback (most recent call last):
-  File "/home/runner/work/ENT-Mastery/ENT-Mastery/scripts/audit_vignette_coverage_v135.py", line 10, in <module>
-    import wsgi
-ModuleNotFoundError: No module named 'wsgi'
-AUDIT_EXIT_STATUS|1
+=== ENT MASTERY CANONICAL VIGNETTE COVERAGE v13.5 ===
+Total curriculum topics: 334
+Total vignettes: 231
+
+DOMAIN|Otology / Neurotology|24|46|52.2%
+MISSING|Otology / Neurotology|Acute Otitis Externa
+MISSING|Otology / Neurotology|Age-Related Hearing Loss / Presbycusis
+MISSING|Otology / Neurotology|Audiologic Electrophysiology / ABR-OAE-ECoG
+MISSING|Otology / Neurotology|Auditory Neuroanatomy / Cochlear Physiology
+MISSING|Otology / Neurotology|Cochlear Implant Failure / Revision
+MISSING|Otology / Neurotology|Cochlear Implant Surgery
+MISSING|Otology / Neurotology|Congenital Inner-Ear Malformations
+MISSING|Otology / Neurotology|Cortical Neuroplasticity in Hearing Loss
+MISSING|Otology / Neurotology|Eustachian Tube Dysfunction
+MISSING|Otology / Neurotology|Hearing Aids and Bone-Conduction Devices
+MISSING|Otology / Neurotology|Hyperacusis / Decreased Sound Tolerance
+MISSING|Otology / Neurotology|Lateral Skull-Base Tumor Framework
+MISSING|Otology / Neurotology|Neurotologic Intraoperative Cranial-Nerve Monitoring
+MISSING|Otology / Neurotology|Otologic Manifestations of Systemic Disease
+MISSING|Otology / Neurotology|Otosclerosis / Stapes Fixation
+MISSING|Otology / Neurotology|Ototoxic / Noise-Induced Hearing Loss
+MISSING|Otology / Neurotology|Persistent Postural-Perceptual Dizziness (PPPD)
+MISSING|Otology / Neurotology|Petrous Apex Lesions
+MISSING|Otology / Neurotology|Temporal Bone Anatomy
+MISSING|Otology / Neurotology|Tympanic Membrane Perforation
+MISSING|Otology / Neurotology|Vestibular Rehabilitation
+MISSING|Otology / Neurotology|Vestibular Test Battery
+DOMAIN|Rhinology / Allergy / Skull Base|15|42|35.7%
+MISSING|Rhinology / Allergy / Skull Base|AFRS
+MISSING|Rhinology / Allergy / Skull Base|Acute Bacterial Rhinosinusitis
+MISSING|Rhinology / Allergy / Skull Base|Benign Sinonasal Tumor Framework
+MISSING|Rhinology / Allergy / Skull Base|CF / Primary Ciliary Dyskinesia Sinonasal Disease
+MISSING|Rhinology / Allergy / Skull Base|CRS Phenotyping
+MISSING|Rhinology / Allergy / Skull Base|CRSsNP
+MISSING|Rhinology / Allergy / Skull Base|CRSwNP
+MISSING|Rhinology / Allergy / Skull Base|Endoscopic CSF Leak Repair / Nasoseptal Flap
+MISSING|Rhinology / Allergy / Skull Base|Endoscopic Maxillary Antrostomy
+MISSING|Rhinology / Allergy / Skull Base|Ethmoidectomy
+MISSING|Rhinology / Allergy / Skull Base|Facial Pain / Headache vs Rhinogenic Disease
+MISSING|Rhinology / Allergy / Skull Base|Frontal Recess / Frontal Sinus
+MISSING|Rhinology / Allergy / Skull Base|Frontal Sinusotomy / Draf Procedures
+MISSING|Rhinology / Allergy / Skull Base|Fungal Ball
+MISSING|Rhinology / Allergy / Skull Base|Immunodeficiency-Associated Chronic Rhinosinusitis
+MISSING|Rhinology / Allergy / Skull Base|Inferior Turbinate Hypertrophy
+MISSING|Rhinology / Allergy / Skull Base|Nasal Anatomy for Endoscopy
+MISSING|Rhinology / Allergy / Skull Base|Objective Assessment of Nasal Function
+MISSING|Rhinology / Allergy / Skull Base|Odontogenic Sinusitis
+MISSING|Rhinology / Allergy / Skull Base|Olfactory Dysfunction
+MISSING|Rhinology / Allergy / Skull Base|Pediatric Chronic Rhinosinusitis
+MISSING|Rhinology / Allergy / Skull Base|Recurrent Acute Rhinosinusitis
+MISSING|Rhinology / Allergy / Skull Base|Revision FESS
+MISSING|Rhinology / Allergy / Skull Base|Septal Deviation
+MISSING|Rhinology / Allergy / Skull Base|Sinonasal Malignancy
+MISSING|Rhinology / Allergy / Skull Base|Sphenoidotomy
+MISSING|Rhinology / Allergy / Skull Base|Systemic Disease of the Nose / Sinuses
+DOMAIN|Head & Neck Oncology|19|47|40.4%
+MISSING|Head & Neck Oncology|Basal Cell Carcinoma of the Head & Neck
+MISSING|Head & Neck Oncology|Base of Tongue SCC
+MISSING|Head & Neck Oncology|Carotid Body Paraganglioma
+MISSING|Head & Neck Oncology|Complications of Neck Surgery
+MISSING|Head & Neck Oncology|Cutaneous Melanoma of the Head & Neck
+MISSING|Head & Neck Oncology|Floor of Mouth SCC
+MISSING|Head & Neck Oncology|Free-Flap Monitoring / Compromise / Salvage
+MISSING|Head & Neck Oncology|Glottic Cancer
+MISSING|Head & Neck Oncology|Head & Neck Cancer Surveillance / Second Primaries
+MISSING|Head & Neck Oncology|Head & Neck Radiation Toxicity / Survivorship
+MISSING|Head & Neck Oncology|Hypopharyngeal Cancer
+MISSING|Head & Neck Oncology|Merkel Cell Carcinoma
+MISSING|Head & Neck Oncology|Neck Lymphoma
+MISSING|Head & Neck Oncology|Neck Management by Primary Site
+MISSING|Head & Neck Oncology|Nonfunctional Larynx / Chronic Aspiration After Cancer Therapy
+MISSING|Head & Neck Oncology|Open Partial / Conservation Laryngectomy
+MISSING|Head & Neck Oncology|Palliative / Goals-of-Care Decision-Making in Head & Neck Cancer
+MISSING|Head & Neck Oncology|Parapharyngeal Space Tumor
+MISSING|Head & Neck Oncology|Radiation Therapy Principles for Head & Neck Surgeons
+MISSING|Head & Neck Oncology|Reconstruction Selection After Head & Neck Ablation
+MISSING|Head & Neck Oncology|Recurrent / Metastatic HNSCC
+MISSING|Head & Neck Oncology|Systemic Therapy Foundations in Head & Neck Cancer
+MISSING|Head & Neck Oncology|TEP and Alaryngeal Speech
+MISSING|Head & Neck Oncology|Tonsil SCC
+MISSING|Head & Neck Oncology|Total Laryngectomy
+MISSING|Head & Neck Oncology|Tracheal Malignancy
+MISSING|Head & Neck Oncology|Transoral Laser Microsurgery for Laryngeal Cancer
+MISSING|Head & Neck Oncology|Tumor Immunology / Immunotherapy in HNSCC
+DOMAIN|Thyroid / Parathyroid / Salivary|17|33|51.5%
+MISSING|Thyroid / Parathyroid / Salivary|Acute Sialadenitis / Sjögren
+MISSING|Thyroid / Parathyroid / Salivary|Anaplastic Thyroid Cancer
+MISSING|Thyroid / Parathyroid / Salivary|Central Neck Dissection
+MISSING|Thyroid / Parathyroid / Salivary|Differentiated Thyroid Cancer
+MISSING|Thyroid / Parathyroid / Salivary|Four-Gland Parathyroid Exploration
+MISSING|Thyroid / Parathyroid / Salivary|Indeterminate Thyroid Cytology / Molecular Testing
+MISSING|Thyroid / Parathyroid / Salivary|MEN2 / RET
+MISSING|Thyroid / Parathyroid / Salivary|Parathyroid Carcinoma
+MISSING|Thyroid / Parathyroid / Salivary|Pleomorphic Adenoma / Warthin Tumor
+MISSING|Thyroid / Parathyroid / Salivary|Ranula
+MISSING|Thyroid / Parathyroid / Salivary|Reoperative Hyperparathyroidism
+MISSING|Thyroid / Parathyroid / Salivary|Reoperative Thyroid Surgery
+MISSING|Thyroid / Parathyroid / Salivary|Secondary / Tertiary Hyperparathyroidism
+MISSING|Thyroid / Parathyroid / Salivary|Sialendoscopy
+MISSING|Thyroid / Parathyroid / Salivary|Submandibular Gland Excision
+MISSING|Thyroid / Parathyroid / Salivary|Thyroid Eye Disease / Graves Ophthalmopathy
+DOMAIN|Pediatric Otolaryngology|18|40|45.0%
+MISSING|Pediatric Otolaryngology|Ankyloglossia / Maxillary Frenulum
+MISSING|Pediatric Otolaryngology|Choanal Atresia
+MISSING|Pediatric Otolaryngology|Cleft / Craniofacial Otologic-Airway Care
+MISSING|Pediatric Otolaryngology|Cleft Lip / Palate — ENT Surgical Fundamentals
+MISSING|Pediatric Otolaryngology|Congenital Hearing Loss Genetics
+MISSING|Pediatric Otolaryngology|Juvenile Recurrent Parotitis
+MISSING|Pediatric Otolaryngology|Laryngotracheal Reconstruction
+MISSING|Pediatric Otolaryngology|Lymphatic Malformation
+MISSING|Pediatric Otolaryngology|Microtia / Aural Atresia
+MISSING|Pediatric Otolaryngology|Microtia Reconstruction
+MISSING|Pediatric Otolaryngology|Nonobstructive Pediatric Sleep Disorders
+MISSING|Pediatric Otolaryngology|Pediatric Aspiration
+MISSING|Pediatric Otolaryngology|Pediatric Head & Neck Tumors
+MISSING|Pediatric Otolaryngology|Pediatric Reflux / Eosinophilic Esophagitis
+MISSING|Pediatric Otolaryngology|Pediatric Speech Disorders
+MISSING|Pediatric Otolaryngology|Pediatric Vestibular Disorders
+MISSING|Pediatric Otolaryngology|Recurrent Tonsillitis Decision-Making
+MISSING|Pediatric Otolaryngology|Supraglottoplasty
+MISSING|Pediatric Otolaryngology|Thyroglossal Duct Cyst
+MISSING|Pediatric Otolaryngology|Tracheomalacia / Bronchomalacia
+MISSING|Pediatric Otolaryngology|Tympanostomy Tube Indications
+MISSING|Pediatric Otolaryngology|Velopharyngeal Insufficiency
+DOMAIN|Laryngology / Voice / Swallowing|16|36|44.4%
+MISSING|Laryngology / Voice / Swallowing|Acute / Chronic Laryngopharyngitis
+MISSING|Laryngology / Voice / Swallowing|Arytenoid Adduction / Reinnervation
+MISSING|Laryngology / Voice / Swallowing|Aspiration-Prevention Surgery
+MISSING|Laryngology / Voice / Swallowing|Chronic Cough / Laryngeal Hypersensitivity
+MISSING|Laryngology / Voice / Swallowing|Esophageal Disease for the Otolaryngologist
+MISSING|Laryngology / Voice / Swallowing|FEES
+MISSING|Laryngology / Voice / Swallowing|Injection Laryngoplasty
+MISSING|Laryngology / Voice / Swallowing|Laryngeal Anatomy
+MISSING|Laryngology / Voice / Swallowing|Leukoplakia / Laryngeal Dysplasia
+MISSING|Laryngology / Voice / Swallowing|Medialization Thyroplasty
+MISSING|Laryngology / Voice / Swallowing|Microlaryngoscopy
+MISSING|Laryngology / Voice / Swallowing|Modified Barium Swallow
+MISSING|Laryngology / Voice / Swallowing|Posterior Cordotomy / Arytenoidectomy
+MISSING|Laryngology / Voice / Swallowing|Professional Voice
+MISSING|Laryngology / Voice / Swallowing|Radiation-Associated Dysphagia
+MISSING|Laryngology / Voice / Swallowing|Stroboscopy Interpretation
+MISSING|Laryngology / Voice / Swallowing|Tracheobronchial Endoscopy Principles
+MISSING|Laryngology / Voice / Swallowing|Transnasal Esophagoscopy
+MISSING|Laryngology / Voice / Swallowing|Vocal Fold Nodules
+MISSING|Laryngology / Voice / Swallowing|Vocal Tremor
+DOMAIN|Facial Plastics / Trauma|21|36|58.3%
+MISSING|Facial Plastics / Trauma|Aesthetic Facial Analysis
+MISSING|Facial Plastics / Trauma|Aging Face / Injectables / Resurfacing
+MISSING|Facial Plastics / Trauma|Alar Retraction / Nasal Vestibular Stenosis
+MISSING|Facial Plastics / Trauma|Bilobed Flap
+MISSING|Facial Plastics / Trauma|Cervicofacial Flap
+MISSING|Facial Plastics / Trauma|Dynamic Facial Reanimation
+MISSING|Facial Plastics / Trauma|Facial Synkinesis / Static-Dynamic Rehabilitation
+MISSING|Facial Plastics / Trauma|Forehead Flap / Nasal Reconstruction
+MISSING|Facial Plastics / Trauma|Hair Restoration Fundamentals
+MISSING|Facial Plastics / Trauma|Mohs Defect Reconstruction
+MISSING|Facial Plastics / Trauma|Open Rhinoplasty Fundamentals
+MISSING|Facial Plastics / Trauma|Otoplasty
+MISSING|Facial Plastics / Trauma|Periocular Reconstruction
+MISSING|Facial Plastics / Trauma|Rhinoplasty Graft Selection
+MISSING|Facial Plastics / Trauma|Scar Management
+DOMAIN|Sleep Surgery|9|22|40.9%
+MISSING|Sleep Surgery|Central Events / Hypoventilation
+MISSING|Sleep Surgery|Circadian Rhythm Sleep-Wake Disorders
+MISSING|Sleep Surgery|Down Syndrome Pediatric HNS
+MISSING|Sleep Surgery|HNS Activation / Programming
+MISSING|Sleep Surgery|HNS Troubleshooting / Nonresponse
+MISSING|Sleep Surgery|Lingual Tonsil / Tongue-Base Obstruction
+MISSING|Sleep Surgery|Narcolepsy / Central Hypersomnolence Recognition
+MISSING|Sleep Surgery|PAP Troubleshooting
+MISSING|Sleep Surgery|Palatal Surgery
+MISSING|Sleep Surgery|Palatal Surgery Selection for OSA
+MISSING|Sleep Surgery|Pediatric PSG Interpretation
+MISSING|Sleep Surgery|Restless Legs / Periodic Limb Movement Disorders
+MISSING|Sleep Surgery|Tongue Base Surgery
+DOMAIN|General ENT / Emergencies|12|32|37.5%
+MISSING|General ENT / Emergencies|Airway Foreign Body
+MISSING|General ENT / Emergencies|Antimicrobial Stewardship in Otolaryngology
+MISSING|General ENT / Emergencies|Chyle Leak
+MISSING|General ENT / Emergencies|Common ENT Consult Triage / Disposition
+MISSING|General ENT / Emergencies|Cranial Nerve Examination / Skull Base Localization
+MISSING|General ENT / Emergencies|Deep Neck Abscess Drainage
+MISSING|General ENT / Emergencies|ENT Fluids / Electrolytes / Nutrition
+MISSING|General ENT / Emergencies|ENT Imaging Fundamentals
+MISSING|General ENT / Emergencies|ENT Perioperative Anesthesia / Difficult Airway Planning
+MISSING|General ENT / Emergencies|Esophageal Foreign Body
+MISSING|General ENT / Emergencies|Evidence Interpretation / Outcomes Research
+MISSING|General ENT / Emergencies|Geriatric Otolaryngology / Frailty
+MISSING|General ENT / Emergencies|Grafts / Implants / Biomaterials in ENT
+MISSING|General ENT / Emergencies|Hemostasis / Coagulopathy / Antithrombotic Management in ENT
+MISSING|General ENT / Emergencies|Immunocompromised Host in Otolaryngology
+MISSING|General ENT / Emergencies|Laser / Energy Safety in Otolaryngology
+MISSING|General ENT / Emergencies|Oral Manifestations of Systemic Disease
+MISSING|General ENT / Emergencies|Pain Management in the Head & Neck Patient
+MISSING|General ENT / Emergencies|Systemic / Granulomatous Disease Manifestations in ENT
+MISSING|General ENT / Emergencies|Wound Healing / Scar Biology in Head & Neck Surgery
+
+OVERALL|151|334|45.2%
+MISSING_TOTAL|183
+ORPHANED|0
+DUPLICATE_IDS|0
+MALFORMED|0
+SINGLETON_TOPICS|101
+SINGLETON|Facial Plastics / Trauma|Auricular Reconstruction
+SINGLETON|Facial Plastics / Trauma|Facial Soft-Tissue Lacerations / Burns
+SINGLETON|Facial Plastics / Trauma|Frontal Sinus Fracture
+SINGLETON|Facial Plastics / Trauma|Frontal Sinus Fracture Decision Model
+SINGLETON|Facial Plastics / Trauma|Functional Septorhinoplasty
+SINGLETON|Facial Plastics / Trauma|Le Fort / Panfacial Trauma
+SINGLETON|Facial Plastics / Trauma|Local Flap Reconstruction
+SINGLETON|Facial Plastics / Trauma|Mandible Fracture
+SINGLETON|Facial Plastics / Trauma|Mandibular Biomechanics and Occlusion
+SINGLETON|Facial Plastics / Trauma|NOE Fracture Mechanics
+SINGLETON|Facial Plastics / Trauma|Nasal Fracture
+SINGLETON|Facial Plastics / Trauma|Rhinoplasty Tip Mechanics
+SINGLETON|Facial Plastics / Trauma|Septal Perforation
+SINGLETON|Facial Plastics / Trauma|Skin Graft Selection
+SINGLETON|Facial Plastics / Trauma|Static Facial Reanimation
+SINGLETON|Facial Plastics / Trauma|Structured Facial Trauma Examination
+SINGLETON|General ENT / Emergencies|Angioedema
+SINGLETON|General ENT / Emergencies|Carotid Blowout Syndrome
+SINGLETON|General ENT / Emergencies|Caustic Ingestion
+SINGLETON|General ENT / Emergencies|Deep Neck Space Infection
+SINGLETON|General ENT / Emergencies|Lemierre Syndrome
+SINGLETON|General ENT / Emergencies|Peritonsillar Abscess
+SINGLETON|General ENT / Emergencies|Post-Tonsillectomy Hemorrhage
+SINGLETON|General ENT / Emergencies|Tracheostomy Emergency
+SINGLETON|Head & Neck Oncology|Adverse Pathology and Adjuvant Therapy
+SINGLETON|Head & Neck Oncology|Carotid Blowout Syndrome
+SINGLETON|Head & Neck Oncology|HPV-Associated Oropharyngeal SCC
+SINGLETON|Head & Neck Oncology|Laryngeal Preservation Decision
+SINGLETON|Head & Neck Oncology|Neck Dissection
+SINGLETON|Head & Neck Oncology|Nonfunctional Larynx and Intractable Aspiration
+SINGLETON|Head & Neck Oncology|Oral Tongue SCC
+SINGLETON|Head & Neck Oncology|Palliative Decision-Making in Head and Neck Cancer
+SINGLETON|Head & Neck Oncology|Sinonasal Malignancies
+SINGLETON|Head & Neck Oncology|Supraglottic Cancer
+SINGLETON|Laryngology / Voice / Swallowing|Benign Vocal Fold Lesions
+SINGLETON|Laryngology / Voice / Swallowing|Cricopharyngeal Dysfunction
+SINGLETON|Laryngology / Voice / Swallowing|Dysphagia / Aspiration
+SINGLETON|Laryngology / Voice / Swallowing|Muscle Tension Dysphonia
+SINGLETON|Laryngology / Voice / Swallowing|Presbyphonia
+SINGLETON|Laryngology / Voice / Swallowing|Reinke Edema
+SINGLETON|Laryngology / Voice / Swallowing|Spasmodic Dysphonia
+SINGLETON|Laryngology / Voice / Swallowing|Subglottic / Tracheal Stenosis
+SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Sulcus / Scar
+SINGLETON|Laryngology / Voice / Swallowing|Vocal Process Granuloma
+SINGLETON|Otology / Neurotology|Acute Mastoiditis / Petrous Apicitis
+SINGLETON|Otology / Neurotology|Audiogram Interpretation
+SINGLETON|Otology / Neurotology|Autoimmune Inner Ear Disease
+SINGLETON|Otology / Neurotology|BPPV
+SINGLETON|Otology / Neurotology|CSF Otorrhea / Temporal Encephalocele
+SINGLETON|Otology / Neurotology|Central Vestibular Disorders
+SINGLETON|Otology / Neurotology|Cochlear Implant Candidacy
+SINGLETON|Otology / Neurotology|Labyrinthitis / Infections of the Labyrinth
+SINGLETON|Otology / Neurotology|Ménière Disease
+SINGLETON|Otology / Neurotology|Necrotizing Otitis Externa
+SINGLETON|Otology / Neurotology|Ossicular Discontinuity
+SINGLETON|Otology / Neurotology|Otosclerosis
+SINGLETON|Otology / Neurotology|Patulous Eustachian Tube Dysfunction
+SINGLETON|Otology / Neurotology|Superior Canal Dehiscence
+SINGLETON|Otology / Neurotology|Tinnitus
+SINGLETON|Otology / Neurotology|Tympanometry / Acoustic Reflexes
+SINGLETON|Otology / Neurotology|Vestibular Migraine
+SINGLETON|Otology / Neurotology|Vestibular Neuritis
+SINGLETON|Otology / Neurotology|Vestibular Schwannoma
+SINGLETON|Pediatric Otolaryngology|Branchial Cleft Anomalies
+SINGLETON|Pediatric Otolaryngology|Button Battery Ingestion
+SINGLETON|Pediatric Otolaryngology|Congenital CMV Hearing Loss
+SINGLETON|Pediatric Otolaryngology|Croup vs Epiglottitis
+SINGLETON|Pediatric Otolaryngology|Epiglottitis
+SINGLETON|Pediatric Otolaryngology|Laryngomalacia
+SINGLETON|Pediatric Otolaryngology|Laryngotracheal Cleft
+SINGLETON|Pediatric Otolaryngology|Pediatric Hearing Loss Workup
+SINGLETON|Pediatric Otolaryngology|Pediatric Subglottic Stenosis
+SINGLETON|Pediatric Otolaryngology|Pediatric Tracheostomy / Decannulation
+SINGLETON|Pediatric Otolaryngology|Pediatric Vocal Fold Immobility
+SINGLETON|Pediatric Otolaryngology|Recurrent Respiratory Papillomatosis
+SINGLETON|Pediatric Otolaryngology|Subglottic Hemangioma
+SINGLETON|Rhinology / Allergy / Skull Base|Allergen Immunotherapy — SCIT / SLIT
+SINGLETON|Rhinology / Allergy / Skull Base|Allergic Rhinitis
+SINGLETON|Rhinology / Allergy / Skull Base|Allergy Testing & Interpretation
+SINGLETON|Rhinology / Allergy / Skull Base|Intracranial Complications of Sinusitis
+SINGLETON|Rhinology / Allergy / Skull Base|Juvenile Nasopharyngeal Angiofibroma
+SINGLETON|Rhinology / Allergy / Skull Base|Local Allergic Rhinitis
+SINGLETON|Rhinology / Allergy / Skull Base|Mucocele
+SINGLETON|Rhinology / Allergy / Skull Base|Nonallergic Rhinitis / Rhinitis Medicamentosa
+SINGLETON|Rhinology / Allergy / Skull Base|Sinonasal Inverted Papilloma
+SINGLETON|Rhinology / Allergy / Skull Base|Unilateral Sinonasal Disease
+SINGLETON|Sleep Surgery|Adult PSG Interpretation
+SINGLETON|Sleep Surgery|Maxillomandibular Advancement
+SINGLETON|Sleep Surgery|Positional OSA
+SINGLETON|Sleep Surgery|Sleep-Related Hypoventilation
+SINGLETON|Thyroid / Parathyroid / Salivary|Completion Thyroidectomy
+SINGLETON|Thyroid / Parathyroid / Salivary|Differentiated Thyroid Cancer: Active Surveillance
+SINGLETON|Thyroid / Parathyroid / Salivary|Familial Hyperparathyroidism and Parathyromatosis
+SINGLETON|Thyroid / Parathyroid / Salivary|Graves Disease / Toxic Goiter
+SINGLETON|Thyroid / Parathyroid / Salivary|Hungry Bone / Post-Thyroid Calcium Management
+SINGLETON|Thyroid / Parathyroid / Salivary|Medullary Thyroid Cancer
+SINGLETON|Thyroid / Parathyroid / Salivary|Primary Thyroid Lymphoma
+SINGLETON|Thyroid / Parathyroid / Salivary|Radioactive Iodine and TSH Suppression in DTC
+SINGLETON|Thyroid / Parathyroid / Salivary|Radioiodine-Refractory Differentiated Thyroid Cancer
+SINGLETON|Thyroid / Parathyroid / Salivary|Salivary Adenoid Cystic Carcinoma and Perineural Spread
+SINGLETON|Thyroid / Parathyroid / Salivary|Salivary Gland Malignancy
+AUDIT_EXIT_STATUS|0
