@@ -1,11 +1,11 @@
 === ENT MASTERY CANONICAL VIGNETTE COVERAGE + DEPTH ===
 Total curriculum topics: 334
-Total vignettes: 543
+Total vignettes: 593
 
 DOMAIN|Otology / Neurotology|46|46|100.0%
-DEPTH2_DOMAIN|Otology / Neurotology|19|46|41.3%
+DEPTH2_DOMAIN|Otology / Neurotology|46|46|100.0%
 DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
-DEPTH2_DOMAIN|Rhinology / Allergy / Skull Base|19|42|45.2%
+DEPTH2_DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
 DOMAIN|Head & Neck Oncology|47|47|100.0%
 DEPTH2_DOMAIN|Head & Neck Oncology|24|47|51.1%
 DOMAIN|Thyroid / Parathyroid / Salivary|33|33|100.0%
@@ -22,12 +22,12 @@ DOMAIN|General ENT / Emergencies|32|32|100.0%
 DEPTH2_DOMAIN|General ENT / Emergencies|19|32|59.4%
 
 OVERALL|334|334|100.0%
-DEPTH2_OVERALL|176|334|52.7%
+DEPTH2_OVERALL|226|334|67.7%
 MISSING_TOTAL|0
 ORPHANED|0
 DUPLICATE_IDS|0
 MALFORMED|0
-SINGLETON_TOPICS|158
+SINGLETON_TOPICS|108
 SINGLETON|Facial Plastics / Trauma|Aesthetic Facial Analysis
 SINGLETON|Facial Plastics / Trauma|Aging Face / Injectables / Resurfacing
 SINGLETON|Facial Plastics / Trauma|Alar Retraction / Nasal Vestibular Stenosis
@@ -97,33 +97,6 @@ SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Nodules
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Sulcus / Scar
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Process Granuloma
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Tremor
-SINGLETON|Otology / Neurotology|Age-Related Hearing Loss / Presbycusis
-SINGLETON|Otology / Neurotology|Audiologic Electrophysiology / ABR-OAE-ECoG
-SINGLETON|Otology / Neurotology|Auditory Neuroanatomy / Cochlear Physiology
-SINGLETON|Otology / Neurotology|Autoimmune Inner Ear Disease
-SINGLETON|Otology / Neurotology|Central Vestibular Disorders
-SINGLETON|Otology / Neurotology|Cochlear Implant Failure / Revision
-SINGLETON|Otology / Neurotology|Congenital Inner-Ear Malformations
-SINGLETON|Otology / Neurotology|Cortical Neuroplasticity in Hearing Loss
-SINGLETON|Otology / Neurotology|Eustachian Tube Dysfunction
-SINGLETON|Otology / Neurotology|Hearing Aids and Bone-Conduction Devices
-SINGLETON|Otology / Neurotology|Hyperacusis / Decreased Sound Tolerance
-SINGLETON|Otology / Neurotology|Labyrinthitis / Infections of the Labyrinth
-SINGLETON|Otology / Neurotology|Lateral Skull-Base Tumor Framework
-SINGLETON|Otology / Neurotology|Neurotologic Intraoperative Cranial-Nerve Monitoring
-SINGLETON|Otology / Neurotology|Ossicular Discontinuity
-SINGLETON|Otology / Neurotology|Otologic Manifestations of Systemic Disease
-SINGLETON|Otology / Neurotology|Otosclerosis
-SINGLETON|Otology / Neurotology|Ototoxic / Noise-Induced Hearing Loss
-SINGLETON|Otology / Neurotology|Patulous Eustachian Tube Dysfunction
-SINGLETON|Otology / Neurotology|Persistent Postural-Perceptual Dizziness (PPPD)
-SINGLETON|Otology / Neurotology|Petrous Apex Lesions
-SINGLETON|Otology / Neurotology|Tinnitus
-SINGLETON|Otology / Neurotology|Tympanic Membrane Perforation
-SINGLETON|Otology / Neurotology|Tympanometry / Acoustic Reflexes
-SINGLETON|Otology / Neurotology|Vestibular Neuritis
-SINGLETON|Otology / Neurotology|Vestibular Rehabilitation
-SINGLETON|Otology / Neurotology|Vestibular Test Battery
 SINGLETON|Pediatric Otolaryngology|Ankyloglossia / Maxillary Frenulum
 SINGLETON|Pediatric Otolaryngology|Cleft / Craniofacial Otologic-Airway Care
 SINGLETON|Pediatric Otolaryngology|Cleft Lip / Palate — ENT Surgical Fundamentals
@@ -144,29 +117,6 @@ SINGLETON|Pediatric Otolaryngology|Recurrent Tonsillitis Decision-Making
 SINGLETON|Pediatric Otolaryngology|Thyroglossal Duct Cyst
 SINGLETON|Pediatric Otolaryngology|Tracheomalacia / Bronchomalacia
 SINGLETON|Pediatric Otolaryngology|Velopharyngeal Insufficiency
-SINGLETON|Rhinology / Allergy / Skull Base|Allergy Testing & Interpretation
-SINGLETON|Rhinology / Allergy / Skull Base|Benign Sinonasal Tumor Framework
-SINGLETON|Rhinology / Allergy / Skull Base|CF / Primary Ciliary Dyskinesia Sinonasal Disease
-SINGLETON|Rhinology / Allergy / Skull Base|CRS Phenotyping
-SINGLETON|Rhinology / Allergy / Skull Base|CRSsNP
-SINGLETON|Rhinology / Allergy / Skull Base|Facial Pain / Headache vs Rhinogenic Disease
-SINGLETON|Rhinology / Allergy / Skull Base|Frontal Recess / Frontal Sinus
-SINGLETON|Rhinology / Allergy / Skull Base|Fungal Ball
-SINGLETON|Rhinology / Allergy / Skull Base|Immunodeficiency-Associated Chronic Rhinosinusitis
-SINGLETON|Rhinology / Allergy / Skull Base|Inferior Turbinate Hypertrophy
-SINGLETON|Rhinology / Allergy / Skull Base|Local Allergic Rhinitis
-SINGLETON|Rhinology / Allergy / Skull Base|Mucocele
-SINGLETON|Rhinology / Allergy / Skull Base|Nasal Anatomy for Endoscopy
-SINGLETON|Rhinology / Allergy / Skull Base|Nonallergic Rhinitis / Rhinitis Medicamentosa
-SINGLETON|Rhinology / Allergy / Skull Base|Objective Assessment of Nasal Function
-SINGLETON|Rhinology / Allergy / Skull Base|Olfactory Dysfunction
-SINGLETON|Rhinology / Allergy / Skull Base|Pediatric Chronic Rhinosinusitis
-SINGLETON|Rhinology / Allergy / Skull Base|Recurrent Acute Rhinosinusitis
-SINGLETON|Rhinology / Allergy / Skull Base|Septal Deviation
-SINGLETON|Rhinology / Allergy / Skull Base|Sinonasal Malignancy
-SINGLETON|Rhinology / Allergy / Skull Base|Sphenoidotomy
-SINGLETON|Rhinology / Allergy / Skull Base|Systemic Disease of the Nose / Sinuses
-SINGLETON|Rhinology / Allergy / Skull Base|Unilateral Sinonasal Disease
 SINGLETON|Sleep Surgery|Circadian Rhythm Sleep-Wake Disorders
 SINGLETON|Sleep Surgery|Down Syndrome Pediatric HNS
 SINGLETON|Sleep Surgery|Narcolepsy / Central Hypersomnolence Recognition
@@ -186,8 +136,8 @@ SINGLETON|Thyroid / Parathyroid / Salivary|Salivary Adenoid Cystic Carcinoma and
 SINGLETON|Thyroid / Parathyroid / Salivary|Secondary / Tertiary Hyperparathyroidism
 SINGLETON|Thyroid / Parathyroid / Salivary|Submandibular Gland Excision
 SINGLETON|Thyroid / Parathyroid / Salivary|Thyroid Eye Disease / Graves Ophthalmopathy
-FOCUS|OR_prep|54
-FOCUS|boards|44
-FOCUS|overnight_call|28
+FOCUS|OR_prep|70
+FOCUS|boards|74
+FOCUS|overnight_call|32
 FOCUS|postoperative_call|3
 AUDIT_EXIT_STATUS|0
