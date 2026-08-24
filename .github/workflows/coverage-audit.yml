@@ -1,0 +1,31 @@
+name: ENT Mastery coverage audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'audit_coverage_v135.py'
+      - 'data.py'
+      - 'recognize_stage_v127.py'
+      - 'new_topics_v*.py'
+      - 'vignettes_v*.py'
+      - '.github/workflows/coverage-audit.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Canonical coverage and depth report
+        run: python audit_coverage_v135.py --depth
+
+# Deliberately informational: do not use --strict here. The repository is in an
+# active coverage-expansion phase, so missing topics belong in the report rather
+# than generating recurring "job failed" alerts. Use --strict only when 100%
+# canonical coverage becomes the release gate.
