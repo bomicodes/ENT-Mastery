@@ -7,6 +7,7 @@ All v13.4+ vignette batches are validated against the live canonical curriculum
 before merge so a typo fails loudly instead of creating an orphaned case.
 """
 
+import hashlib
 import data
 from vignettes_v128 import VIGNETTES_V128
 from topic_alias_v129 import apply_topic_alias_v129
@@ -204,3 +205,42 @@ for _batch, _name in (
     (VIGNETTES_V148, "v14.8"),
 ):
     _merge_validated_challenges(_batch, _name)
+
+
+def _rebalance_vignette_answer_positions_v150(challenges):
+    """Remove exploitable answer-position bias without changing question content.
+
+    The target answer slot is deterministic from the stable question id so the
+    bank stays reproducible across workers/deploys. choices and why_wrong move
+    together, preserving their alignment.
+    """
+    for q in challenges:
+        choices = list(q.get("choices") or [])
+        why_wrong = list(q.get("why_wrong") or [])
+        if len(choices) < 2:
+            continue
+        try:
+            answer = int(q.get("answer"))
+        except (TypeError, ValueError):
+            continue
+        if answer < 0 or answer >= len(choices):
+            continue
+        digest = hashlib.sha256(str(q.get("id", "")).encode("utf-8")).digest()
+        target = int.from_bytes(digest[:4], "big") % len(choices)
+        if target == answer:
+            continue
+        correct_choice = choices.pop(answer)
+        choices.insert(target, correct_choice)
+        if len(why_wrong) == len(choices):
+            correct_reason = why_wrong.pop(answer)
+            why_wrong.insert(target, correct_reason)
+            q["why_wrong"] = why_wrong
+        q["choices"] = choices
+        q["answer"] = target
+    return challenges
+
+
+_rebalance_vignette_answer_positions_v150(data.CLINICAL_CHALLENGES_V119)
+data.CLINICAL_CHALLENGE_BY_ID_V119 = {
+    q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
+}
