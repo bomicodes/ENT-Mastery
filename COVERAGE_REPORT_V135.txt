@@ -1,19 +1,19 @@
 === ENT MASTERY CANONICAL VIGNETTE COVERAGE + DEPTH ===
 Total curriculum topics: 334
-Total vignettes: 593
+Total vignettes: 632
 
 DOMAIN|Otology / Neurotology|46|46|100.0%
 DEPTH2_DOMAIN|Otology / Neurotology|46|46|100.0%
 DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
 DEPTH2_DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
 DOMAIN|Head & Neck Oncology|47|47|100.0%
-DEPTH2_DOMAIN|Head & Neck Oncology|24|47|51.1%
+DEPTH2_DOMAIN|Head & Neck Oncology|47|47|100.0%
 DOMAIN|Thyroid / Parathyroid / Salivary|33|33|100.0%
 DEPTH2_DOMAIN|Thyroid / Parathyroid / Salivary|20|33|60.6%
 DOMAIN|Pediatric Otolaryngology|40|40|100.0%
 DEPTH2_DOMAIN|Pediatric Otolaryngology|20|40|50.0%
 DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
-DEPTH2_DOMAIN|Laryngology / Voice / Swallowing|20|36|55.6%
+DEPTH2_DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
 DOMAIN|Facial Plastics / Trauma|36|36|100.0%
 DEPTH2_DOMAIN|Facial Plastics / Trauma|19|36|52.8%
 DOMAIN|Sleep Surgery|22|22|100.0%
@@ -22,12 +22,12 @@ DOMAIN|General ENT / Emergencies|32|32|100.0%
 DEPTH2_DOMAIN|General ENT / Emergencies|19|32|59.4%
 
 OVERALL|334|334|100.0%
-DEPTH2_OVERALL|226|334|67.7%
+DEPTH2_OVERALL|265|334|79.3%
 MISSING_TOTAL|0
 ORPHANED|0
 DUPLICATE_IDS|0
 MALFORMED|0
-SINGLETON_TOPICS|108
+SINGLETON_TOPICS|69
 SINGLETON|Facial Plastics / Trauma|Aesthetic Facial Analysis
 SINGLETON|Facial Plastics / Trauma|Aging Face / Injectables / Resurfacing
 SINGLETON|Facial Plastics / Trauma|Alar Retraction / Nasal Vestibular Stenosis
@@ -58,45 +58,6 @@ SINGLETON|General ENT / Emergencies|Oral Manifestations of Systemic Disease
 SINGLETON|General ENT / Emergencies|Pain Management in the Head & Neck Patient
 SINGLETON|General ENT / Emergencies|Systemic / Granulomatous Disease Manifestations in ENT
 SINGLETON|General ENT / Emergencies|Wound Healing / Scar Biology in Head & Neck Surgery
-SINGLETON|Head & Neck Oncology|Basal Cell Carcinoma of the Head & Neck
-SINGLETON|Head & Neck Oncology|Base of Tongue SCC
-SINGLETON|Head & Neck Oncology|Carotid Body Paraganglioma
-SINGLETON|Head & Neck Oncology|Complications of Neck Surgery
-SINGLETON|Head & Neck Oncology|Floor of Mouth SCC
-SINGLETON|Head & Neck Oncology|Head & Neck Cancer Surveillance / Second Primaries
-SINGLETON|Head & Neck Oncology|Head & Neck Radiation Toxicity / Survivorship
-SINGLETON|Head & Neck Oncology|Hypopharyngeal Cancer
-SINGLETON|Head & Neck Oncology|Merkel Cell Carcinoma
-SINGLETON|Head & Neck Oncology|Neck Lymphoma
-SINGLETON|Head & Neck Oncology|Nonfunctional Larynx and Intractable Aspiration
-SINGLETON|Head & Neck Oncology|Open Partial / Conservation Laryngectomy
-SINGLETON|Head & Neck Oncology|Palliative / Goals-of-Care Decision-Making in Head & Neck Cancer
-SINGLETON|Head & Neck Oncology|Palliative Decision-Making in Head and Neck Cancer
-SINGLETON|Head & Neck Oncology|Radiation Therapy Principles for Head & Neck Surgeons
-SINGLETON|Head & Neck Oncology|Recurrent / Metastatic HNSCC
-SINGLETON|Head & Neck Oncology|Sinonasal Malignancies
-SINGLETON|Head & Neck Oncology|Systemic Therapy Foundations in Head & Neck Cancer
-SINGLETON|Head & Neck Oncology|TEP and Alaryngeal Speech
-SINGLETON|Head & Neck Oncology|Tonsil SCC
-SINGLETON|Head & Neck Oncology|Tracheal Malignancy
-SINGLETON|Head & Neck Oncology|Transoral Laser Microsurgery for Laryngeal Cancer
-SINGLETON|Head & Neck Oncology|Tumor Immunology / Immunotherapy in HNSCC
-SINGLETON|Laryngology / Voice / Swallowing|Acute / Chronic Laryngopharyngitis
-SINGLETON|Laryngology / Voice / Swallowing|Arytenoid Adduction / Reinnervation
-SINGLETON|Laryngology / Voice / Swallowing|Aspiration-Prevention Surgery
-SINGLETON|Laryngology / Voice / Swallowing|Chronic Cough / Laryngeal Hypersensitivity
-SINGLETON|Laryngology / Voice / Swallowing|Esophageal Disease for the Otolaryngologist
-SINGLETON|Laryngology / Voice / Swallowing|Laryngeal Anatomy
-SINGLETON|Laryngology / Voice / Swallowing|Modified Barium Swallow
-SINGLETON|Laryngology / Voice / Swallowing|Muscle Tension Dysphonia
-SINGLETON|Laryngology / Voice / Swallowing|Presbyphonia
-SINGLETON|Laryngology / Voice / Swallowing|Professional Voice
-SINGLETON|Laryngology / Voice / Swallowing|Tracheobronchial Endoscopy Principles
-SINGLETON|Laryngology / Voice / Swallowing|Transnasal Esophagoscopy
-SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Nodules
-SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Sulcus / Scar
-SINGLETON|Laryngology / Voice / Swallowing|Vocal Process Granuloma
-SINGLETON|Laryngology / Voice / Swallowing|Vocal Tremor
 SINGLETON|Pediatric Otolaryngology|Ankyloglossia / Maxillary Frenulum
 SINGLETON|Pediatric Otolaryngology|Cleft / Craniofacial Otologic-Airway Care
 SINGLETON|Pediatric Otolaryngology|Cleft Lip / Palate — ENT Surgical Fundamentals
@@ -136,8 +97,8 @@ SINGLETON|Thyroid / Parathyroid / Salivary|Salivary Adenoid Cystic Carcinoma and
 SINGLETON|Thyroid / Parathyroid / Salivary|Secondary / Tertiary Hyperparathyroidism
 SINGLETON|Thyroid / Parathyroid / Salivary|Submandibular Gland Excision
 SINGLETON|Thyroid / Parathyroid / Salivary|Thyroid Eye Disease / Graves Ophthalmopathy
-FOCUS|OR_prep|70
-FOCUS|boards|74
+FOCUS|OR_prep|85
+FOCUS|boards|97
 FOCUS|overnight_call|32
-FOCUS|postoperative_call|3
+FOCUS|postoperative_call|4
 AUDIT_EXIT_STATUS|0
