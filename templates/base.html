@@ -42,6 +42,8 @@
       </div>
 
       <div class="nav-section-label">Practice</div>
+      <a href="/clinical-challenges" class="navitem {% if request.path.startswith('/clinical-challenge') %}active{% endif %}">◆ <span>Clinical Challenges</span></a>
+      <a href="/concept-checks" class="navitem {% if request.path.startswith('/concept-check') %}active{% endif %}">✓ <span>Concept Checks</span></a>
       <a href="/integrated" class="navitem {% if request.path.startswith('/integrated') %}active{% endif %}">◌ <span>Cases</span></a>
       <a href="/case-tomorrow" class="navitem {% if request.path.startswith('/case-tomorrow') %}active{% endif %}">⌁ <span>OR Tomorrow</span></a>
       <a href="/lab" class="navitem {% if request.path.startswith('/lab') %}active{% endif %}">◈ <span>Interpretation Atlas</span></a>
