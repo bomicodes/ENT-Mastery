@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/runner/work/ENT-Mastery/ENT-Mastery/scripts/audit_vignette_coverage_v135.py", line 10, in <module>
+    import wsgi
+ModuleNotFoundError: No module named 'wsgi'
+AUDIT_EXIT_STATUS|1
