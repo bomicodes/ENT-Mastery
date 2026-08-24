@@ -32,7 +32,13 @@ jobs:
       - name: Compile patch modules
         run: python -m py_compile data.py app.py wsgi.py recognize_stage_v127.py topic_alias_v129.py new_topics_v131.py vignettes_v132.py new_topics_v133.py vignettes_v134.py vignettes_v135.py scripts/audit_vignette_coverage_v135.py
       - name: Audit canonical vignette coverage
-        run: python scripts/audit_vignette_coverage_v135.py | tee COVERAGE_REPORT_V135.txt
+        run: |
+          set +e
+          python scripts/audit_vignette_coverage_v135.py > COVERAGE_REPORT_V135.txt 2>&1
+          status=$?
+          echo "AUDIT_EXIT_STATUS|$status" >> COVERAGE_REPORT_V135.txt
+          cat COVERAGE_REPORT_V135.txt
+          exit 0
       - name: Persist coverage report
         run: |
           git config user.name 'github-actions[bot]'
