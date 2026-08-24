@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="breadcrumb"><a href="/">Home</a> / {{label}}</div>
-<div class="hero tight"><div><span class="eyebrow">TEACH IT BACK</span><h1>{{label}}</h1><p>{{subtitle}}</p></div></div>
+{% set page_label = 'Chief Mode' if mode == 'chief' else 'Attending Mode' %}
+{% set page_subtitle = 'Teach the framework back like a chief resident, then compare with the model answer.' if mode == 'chief' else 'Defend your reasoning, management pivot, and change-of-course criteria before revealing the model answer.' %}
+<div class="breadcrumb"><a href="/">Home</a> / {{page_label}}</div>
+<div class="hero tight"><div><span class="eyebrow">TEACH IT BACK</span><h1>{{page_label}}</h1><p>{{page_subtitle}}</p></div></div>
 <div class="card-grid three">
 {% for p in prompts %}
   <article class="card attending-card" data-concept-id="{{p.concept_id}}" data-domain="{{p.domain}}">
