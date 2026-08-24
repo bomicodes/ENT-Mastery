@@ -32,4 +32,28 @@ FOCUS|OR_prep|114
 FOCUS|boards|127
 FOCUS|overnight_call|41
 FOCUS|postoperative_call|5
-AUDIT_EXIT_STATUS|0
+FOCUS_DOMAIN|Otology / Neurotology|boards=23|OR_prep=11|overnight_call=7|postoperative_call=0
+FOCUS_DOMAIN|Rhinology / Allergy / Skull Base|boards=19|OR_prep=16|overnight_call=2|postoperative_call=0
+FOCUS_DOMAIN|Head & Neck Oncology|boards=21|OR_prep=14|overnight_call=1|postoperative_call=2
+FOCUS_DOMAIN|Thyroid / Parathyroid / Salivary|boards=8|OR_prep=12|overnight_call=6|postoperative_call=1
+FOCUS_DOMAIN|Pediatric Otolaryngology|boards=15|OR_prep=14|overnight_call=8|postoperative_call=1
+FOCUS_DOMAIN|Laryngology / Voice / Swallowing|boards=18|OR_prep=12|overnight_call=0|postoperative_call=0
+FOCUS_DOMAIN|Facial Plastics / Trauma|boards=6|OR_prep=23|overnight_call=2|postoperative_call=0
+FOCUS_DOMAIN|Sleep Surgery|boards=11|OR_prep=6|overnight_call=0|postoperative_call=0
+FOCUS_DOMAIN|General ENT / Emergencies|boards=6|OR_prep=6|overnight_call=15|postoperative_call=1
+MATERIAL_GAPS|14
+MATERIAL_GAP|Rhinology / Allergy / Skull Base: overnight_call 2<3
+MATERIAL_GAP|Head & Neck Oncology: overnight_call 1<3
+MATERIAL_GAP|Laryngology / Voice / Swallowing: overnight_call 0<3
+MATERIAL_GAP|critical overnight_call untagged: Head & Neck Oncology / Total Laryngectomy
+MATERIAL_GAP|critical overnight_call untagged: Rhinology / Allergy / Skull Base / Invasive Fungal Rhinosinusitis
+MATERIAL_GAP|critical overnight_call untagged: Rhinology / Allergy / Skull Base / Orbital Complications of Sinusitis
+MATERIAL_GAP|critical overnight_call untagged: Rhinology / Allergy / Skull Base / Epistaxis Surgical Control
+MATERIAL_GAP|critical overnight_call untagged: Otology / Neurotology / Sudden Sensorineural Hearing Loss
+MATERIAL_GAP|critical overnight_call untagged: Facial Plastics / Trauma / Septal Hematoma
+MATERIAL_GAP|critical OR_prep untagged: Otology / Neurotology / Chronic Otitis Media / Cholesteatoma
+MATERIAL_GAP|critical OR_prep untagged: Rhinology / Allergy / Skull Base / Epistaxis Surgical Control
+MATERIAL_GAP|critical OR_prep untagged: Head & Neck Oncology / Total Laryngectomy
+MATERIAL_GAP|critical OR_prep untagged: Head & Neck Oncology / Free-Flap Monitoring / Compromise / Salvage
+MATERIAL_GAP|critical OR_prep untagged: Facial Plastics / Trauma / Mandibular Biomechanics and Occlusion
+AUDIT_EXIT_STATUS|3
