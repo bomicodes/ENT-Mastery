@@ -1,14 +1,45 @@
-Traceback (most recent call last):
-  File "/home/runner/work/ENT-Mastery/ENT-Mastery/scripts/audit_vignette_coverage_v135.py", line 21, in <module>
-    import wsgi
-  File "/home/runner/work/ENT-Mastery/ENT-Mastery/wsgi.py", line 5, in <module>
-    from recognize_stage_v127 import apply_recognize_blind_reveal_v127
-  File "/home/runner/work/ENT-Mastery/ENT-Mastery/recognize_stage_v127.py", line 241, in <module>
-    QUALITY_REPAIR_V151 = apply_quality_repair_v151(data.CLINICAL_CHALLENGES_V119)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/ENT-Mastery/ENT-Mastery/quality_repair_v151.py", line 77, in apply_quality_repair_v151
-    _merge_late_batch(VIGNETTES_V153, "v15.3")
-  File "/home/runner/work/ENT-Mastery/ENT-Mastery/quality_repair_v151.py", line 37, in _merge_late_batch
-    raise RuntimeError(
-RuntimeError: v15.3: orphan vignette 'v153_tps_01' targets non-canonical ('Thyroid / Parathyroid / Salivary', 'Post-thyroidectomy Hematoma / Airway')
-AUDIT_EXIT_STATUS|1
+=== ENT MASTERY CANONICAL VIGNETTE COVERAGE + DEPTH ===
+Total curriculum topics: 334
+Total vignettes: 761
+
+DOMAIN|Otology / Neurotology|46|46|100.0%
+DEPTH2_DOMAIN|Otology / Neurotology|46|46|100.0%
+DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
+DEPTH2_DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
+DOMAIN|Head & Neck Oncology|47|47|100.0%
+DEPTH2_DOMAIN|Head & Neck Oncology|47|47|100.0%
+DOMAIN|Thyroid / Parathyroid / Salivary|33|33|100.0%
+DEPTH2_DOMAIN|Thyroid / Parathyroid / Salivary|33|33|100.0%
+DOMAIN|Pediatric Otolaryngology|40|40|100.0%
+DEPTH2_DOMAIN|Pediatric Otolaryngology|40|40|100.0%
+DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
+DEPTH2_DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
+DOMAIN|Facial Plastics / Trauma|36|36|100.0%
+DEPTH2_DOMAIN|Facial Plastics / Trauma|36|36|100.0%
+DOMAIN|Sleep Surgery|22|22|100.0%
+DEPTH2_DOMAIN|Sleep Surgery|22|22|100.0%
+DOMAIN|General ENT / Emergencies|32|32|100.0%
+DEPTH2_DOMAIN|General ENT / Emergencies|32|32|100.0%
+
+OVERALL|334|334|100.0%
+DEPTH2_OVERALL|334|334|100.0%
+MISSING_TOTAL|0
+ORPHANED|0
+DUPLICATE_IDS|0
+MALFORMED|0
+SINGLETON_TOPICS|0
+FOCUS|OR_prep|132
+FOCUS|boards|144
+FOCUS|overnight_call|63
+FOCUS|postoperative_call|8
+FOCUS_DOMAIN|Otology / Neurotology|boards=27|OR_prep=13|overnight_call=8|postoperative_call=0
+FOCUS_DOMAIN|Rhinology / Allergy / Skull Base|boards=20|OR_prep=19|overnight_call=6|postoperative_call=1
+FOCUS_DOMAIN|Head & Neck Oncology|boards=22|OR_prep=17|overnight_call=4|postoperative_call=3
+FOCUS_DOMAIN|Thyroid / Parathyroid / Salivary|boards=10|OR_prep=14|overnight_call=6|postoperative_call=1
+FOCUS_DOMAIN|Pediatric Otolaryngology|boards=16|OR_prep=14|overnight_call=11|postoperative_call=1
+FOCUS_DOMAIN|Laryngology / Voice / Swallowing|boards=19|OR_prep=15|overnight_call=3|postoperative_call=0
+FOCUS_DOMAIN|Facial Plastics / Trauma|boards=7|OR_prep=27|overnight_call=4|postoperative_call=0
+FOCUS_DOMAIN|Sleep Surgery|boards=15|OR_prep=7|overnight_call=0|postoperative_call=0
+FOCUS_DOMAIN|General ENT / Emergencies|boards=8|OR_prep=6|overnight_call=21|postoperative_call=2
+MATERIAL_GAPS|0
+AUDIT_EXIT_STATUS|0
