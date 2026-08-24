@@ -1,0 +1,30 @@
+{% extends "base.html" %}{% block content %}
+<div class="breadcrumb"><a href="/">Home</a> / Concept Checks</div>
+<div class="topic-hero lab-hero">
+  <div><span class="pill green">RECALL TIER</span><h1>Concept Checks</h1><p class="lede">Fast active-recall prompts for core ENT knowledge. These are intentionally different from Clinical Challenges: retrieve the concept first, then use the linked topic for deeper reasoning.</p></div>
+</div>
+
+<section class="card adaptive-session-panel">
+  <div><span class="eyebrow">LIVE BANK</span><h3>{{total}} concept checks</h3><p>Use these for rapid recall, then move to Clinical Challenges when you want vignette-level discrimination.</p></div>
+</section>
+
+<form method="get" class="card lab-controls" style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:end">
+  <label>Domain<br><select name="domain"><option value="">All domains</option>{% for d in domains %}<option value="{{d}}" {% if domain==d %}selected{% endif %}>{{d}}</option>{% endfor %}</select></label>
+  <label>Topic<br><input name="topic" value="{{topic}}" placeholder="Filter topic"></label>
+  <button class="case-btn" type="submit">Apply filters</button>
+  <a href="/concept-checks">Clear</a>
+</form>
+
+<div class="interpretation-cases">
+{% for q in questions %}
+<section class="card interp-case">
+  <div class="interp-case-head"><span class="tag">{{q.domain}}</span><span>CONCEPT CHECK</span></div>
+  <h2>{{q.topic}}</h2>
+  <p>{{q.prompt or q.question or q.stem}}</p>
+  <div class="adaptive-actions"><a class="case-btn" href="/concept-check/{{q.id}}">Open check →</a>{% if q.concept_id %}<a href="/concept/id/{{q.concept_id|urlencode}}">Open full topic ↗</a>{% endif %}</div>
+</section>
+{% else %}
+<div class="empty card"><h3>No concept checks match these filters.</h3><p>Clear one or more filters to return to the full recall bank.</p></div>
+{% endfor %}
+</div>
+{% endblock %}
