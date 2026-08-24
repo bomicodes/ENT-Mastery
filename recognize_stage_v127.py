@@ -13,6 +13,7 @@ from quality_repair_v151 import apply_quality_repair_v151
 from vignettes_v128 import VIGNETTES_V128
 from topic_alias_v129 import apply_topic_alias_v129
 from new_topics_v131 import NEW_TOPICS_V131
+from vignette_upgrades_v156 import apply_vignette_upgrades_v156, apply_new_foundation_vignettes_v156
 from vignettes_v132 import VIGNETTES_V132
 from new_topics_v133 import NEW_TOPICS_V133
 from vignettes_v134 import VIGNETTES_V134
@@ -239,6 +240,13 @@ def _rebalance_vignette_answer_positions_v150(challenges):
 # Repair legacy placeholder distractor teaching before the deterministic shuffle,
 # so each explanation remains attached to its intended option after reordering.
 QUALITY_REPAIR_V151 = apply_quality_repair_v151(data.CLINICAL_CHALLENGES_V119)
+
+# v15.6 — first installment of duplicate-upgrade / gap-fill work from the
+# v15.5 content-depth audit. Applied before rebalancing so new/changed
+# content is included in the uniform answer-position shuffle below.
+apply_vignette_upgrades_v156(data.CLINICAL_CHALLENGES_V119)
+apply_new_foundation_vignettes_v156(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+
 _rebalance_vignette_answer_positions_v150(data.CLINICAL_CHALLENGES_V119)
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {
     q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
