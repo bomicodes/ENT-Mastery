@@ -19,6 +19,8 @@
 
 <div class="dashboard-tabs">
   <a class="active" href="/curriculum">Topics</a>
+  <a href="/clinical-challenges">Challenges <span>{{challenge_total}}</span></a>
+  <a href="/concept-checks">Recall <span>{{concept_check_total}}</span></a>
   <a href="/integrated">Cases <span>{{integrated_total}}</span></a>
   <a href="/case-tomorrow">OR Atlas <span>{{or_total}}</span></a>
   <a href="/lab">Labs <span>{{lab_total}}</span></a>
@@ -37,7 +39,7 @@
 
       <div class="specialty-grid">
         {% for d in domain_cards %}
-        <a class="specialty-card" href="/curriculum/depth">
+        <a class="specialty-card" href="/curriculum/depth#{{d.name|lower|replace(' ','-')|replace('/','-')}}">
           <div class="specialty-icon">{{d.icon}}</div>
           <div class="specialty-title">{{d.name}}</div>
           <div class="specialty-meta">
@@ -67,6 +69,19 @@
           <div class="bar"><i style="width:{{score}}%"></i></div>
         </a>
         {% endfor %}
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head dashboard-section-head">
+        <div>
+          <span class="eyebrow">PRACTICE BANKS</span>
+          <h2>Test discrimination and recall</h2>
+        </div>
+      </div>
+      <div class="dashboard-case-grid">
+        <a class="dashboard-case" href="/clinical-challenges"><span>Board-style reasoning</span><b>Clinical Challenges</b><p>{{challenge_total}} vignettes with explanations, pearls, curveballs, and call/OR focus tags.</p></a>
+        <a class="dashboard-case" href="/concept-checks"><span>Active recall</span><b>Concept Checks</b><p>{{concept_check_total}} focused recall items for fast knowledge checks between deeper cases.</p></a>
       </div>
     </section>
 
@@ -112,6 +127,8 @@
     <section class="dashboard-side-card">
       <div class="side-card-heading"><span>⌘</span><b>Quick actions</b></div>
       <a class="quick-action" href="/daily-adaptive"><span>Start Daily Path</span><b>{{stats.due}} due</b></a>
+      <a class="quick-action" href="/clinical-challenges"><span>Clinical Challenges</span><b>{{challenge_total}}</b></a>
+      <a class="quick-action" href="/concept-checks"><span>Concept Checks</span><b>{{concept_check_total}}</b></a>
       <a class="quick-action" href="/integrated"><span>Browse Cases</span><b>{{integrated_total}}</b></a>
       <a class="quick-action" href="/case-tomorrow"><span>OR Tomorrow</span><b>{{or_total}}</b></a>
       <a class="quick-action" href="/anatomy"><span>Anatomy Atlas</span><b>{{anatomy_total}}</b></a>
