@@ -1,25 +1,10 @@
 """
-v12.7 — Recognize-stage blind reveal fix.
+ENT Mastery runtime patch integration.
 
-Problem: Daily Path level-1 "Recognize" cards showed the topic name as the
-card's H2 title, then asked the resident to "Recognize the pattern." for a
-diagnosis already printed above the question. That tests recall of a named
-diagnosis, not recognition of an undifferentiated pattern.
-
-Fix (data layer only — template must also honor `blind_reveal`, see
-daily_adaptive.html): for every stage=="recognize" adaptive item, turn the
-existing pattern-description text into an actual question stem instead of a
-static instruction, and move the diagnosis name into the revealed answer.
-Localize/Workup/Manage/Operate/Teach are unchanged — those stages legitimately
-proceed from a known diagnosis, so showing the topic name there is fine.
-
-v12.8 runtime integration: this module is already imported by wsgi.py before
-Flask imports app.py, so it also performs the small idempotent V128 vignette
-merge. This avoids replacing the generated multi-megabyte data.py while keeping
-the live CLINICAL_CHALLENGES_V119 bank and direct-lookup index synchronized.
-
-v13.3-v14.2 depth integration: canonical coverage batches are strictly checked
-against the live curriculum; v14.x is the second-pass board/call/OR depth audit.
+v12.7 recognize-stage blind reveal; v12.8+ vignette merges; v13.1+ canonical
+topic additions and alias repair; v14.x second-pass board/call/OR depth.
+All v13.4+ vignette batches are validated against the live canonical curriculum
+before merge so a typo fails loudly instead of creating an orphaned case.
 """
 
 import data
@@ -36,14 +21,13 @@ from vignettes_v139 import VIGNETTES_V139
 from vignettes_v140 import VIGNETTES_V140
 from vignettes_v141 import VIGNETTES_V141
 from vignettes_v142 import VIGNETTES_V142
+from vignettes_v143 import VIGNETTES_V143
 
 
 def apply_recognize_blind_reveal_v127(items):
     """Mutates and returns the adaptive-items list in place."""
     for item in items:
-        if item.get("stage") != "recognize":
-            continue
-        if item.get("blind_reveal"):
+        if item.get("stage") != "recognize" or item.get("blind_reveal"):
             continue
         original_pattern = item.get("answer", "").strip()
         if not original_pattern:
@@ -68,13 +52,19 @@ def _merge_v128_clinical_challenges():
         q["concept_id"] = data._v6_item_id(q["domain"], q["topic"])
         data.CLINICAL_CHALLENGES_V119.append(q)
         existing.add(q["id"])
-    data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119}
+    data.CLINICAL_CHALLENGE_BY_ID_V119 = {
+        q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
+    }
 
 
 def _merge_depth_topics(patch, patch_name):
+    """Idempotently add exact canonical topics; reject unknown domains."""
     for domain, topics in patch.items():
         if domain not in data.DEEP_MODULES_V6:
-            raise RuntimeError(f"{patch_name}: unknown curriculum domain {domain!r}; refusing detached topics")
+            raise RuntimeError(
+                f"{patch_name}: unknown curriculum domain {domain!r}; "
+                "refusing detached topics"
+            )
         existing_topics = {m["topic"] for m in data.DEEP_MODULES_V6[domain]}
         for topic in topics:
             if topic["topic"] not in existing_topics:
@@ -83,19 +73,29 @@ def _merge_depth_topics(patch, patch_name):
 
 
 def _merge_validated_challenges(batch, patch_name):
-    canonical = {(domain, module.get("topic")) for domain, modules in data.DEEP_MODULES_V6.items() for module in modules}
+    """Merge only cases whose domain/topic resolves to the live curriculum."""
+    canonical = {
+        (domain, module.get("topic"))
+        for domain, modules in data.DEEP_MODULES_V6.items()
+        for module in modules
+    }
     existing_ids = {q.get("id") for q in data.CLINICAL_CHALLENGES_V119}
     for source in batch:
         key = (source.get("domain"), source.get("topic"))
         if key not in canonical:
-            raise RuntimeError(f"{patch_name}: orphan vignette {source.get('id')!r} targets non-canonical {key!r}")
+            raise RuntimeError(
+                f"{patch_name}: orphan vignette {source.get('id')!r} "
+                f"targets non-canonical {key!r}"
+            )
         if source.get("id") in existing_ids:
             continue
         q = dict(source)
         q["concept_id"] = data._v6_item_id(q["domain"], q["topic"])
         data.CLINICAL_CHALLENGES_V119.append(q)
         existing_ids.add(q["id"])
-    data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119}
+    data.CLINICAL_CHALLENGE_BY_ID_V119 = {
+        q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
+    }
 
 
 _merge_depth_topics(NEW_TOPICS_V131, "v13.1")
@@ -103,21 +103,41 @@ _merge_depth_topics(NEW_TOPICS_V133, "v13.3")
 _merge_v128_clinical_challenges()
 apply_topic_alias_v129(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
+# RRP's canonical curriculum home is Pediatric ENT even for the laryngology-tagged
+# legacy vignette; bridge it without duplicating the curriculum topic.
 for _q in data.CLINICAL_CHALLENGES_V119:
-    if _q.get("topic") == "Recurrent Respiratory Papillomatosis" and _q.get("domain") == "Laryngology / Voice / Swallowing":
-        _q["concept_id"] = data._v6_item_id("Pediatric Otolaryngology", "Recurrent Respiratory Papillomatosis")
+    if (
+        _q.get("topic") == "Recurrent Respiratory Papillomatosis"
+        and _q.get("domain") == "Laryngology / Voice / Swallowing"
+    ):
+        _q["concept_id"] = data._v6_item_id(
+            "Pediatric Otolaryngology", "Recurrent Respiratory Papillomatosis"
+        )
         _q["canonical_topic"] = "Recurrent Respiratory Papillomatosis"
 
 
+# data.py's dynamic fallback historically referenced a stale slug helper.
 def _fixed_generated_chief_prompt_v120(_domain, _m):
     _id = data._v6_item_id(_domain, _m["topic"])
     return {
         "id": "chief-v120-" + data._v91_slug(_domain) + "-" + data._v91_slug(_m["topic"]),
-        "domain": _domain, "topic": _m["topic"], "concept_id": _id,
-        "junior_question": f"I'm trying to understand {_m['topic']}. What is the framework I should use so I do not just memorize a list?",
-        "must_mention": [x for x in [_m.get("recognize", ""), _m.get("localize", ""), _m.get("manage", "")] if x],
+        "domain": _domain,
+        "topic": _m["topic"],
+        "concept_id": _id,
+        "junior_question": (
+            f"I'm trying to understand {_m['topic']}. What is the framework "
+            "I should use so I do not just memorize a list?"
+        ),
+        "must_mention": [
+            x for x in (
+                _m.get("recognize", ""),
+                _m.get("localize", ""),
+                _m.get("manage", ""),
+            ) if x
+        ],
         "model_answer": _m.get("teach") or _m.get("manage", ""),
-        "curveball": _m.get("operate") or _m.get("workup", ""), "source": "dynamic fallback from deep curriculum"
+        "curveball": _m.get("operate") or _m.get("workup", ""),
+        "source": "dynamic fallback from deep curriculum",
     }
 
 
@@ -125,17 +145,31 @@ def _fixed_generated_attending_prompt_v120(_domain, _m):
     _id = data._v6_item_id(_domain, _m["topic"])
     return {
         "id": "attending-v120-" + data._v91_slug(_domain) + "-" + data._v91_slug(_m["topic"]),
-        "domain": _domain, "topic": _m["topic"], "concept_id": _id,
-        "prompt": f"You say this is {_m['topic']}. Convince me: what finding changes your differential or management, and what would make you change course?",
-        "required_points": [x for x in [_m.get("recognize", ""), _m.get("workup", ""), _m.get("manage", ""), _m.get("operate", "")] if x],
+        "domain": _domain,
+        "topic": _m["topic"],
+        "concept_id": _id,
+        "prompt": (
+            f"You say this is {_m['topic']}. Convince me: what finding changes "
+            "your differential or management, and what would make you change course?"
+        ),
+        "required_points": [
+            x for x in (
+                _m.get("recognize", ""),
+                _m.get("workup", ""),
+                _m.get("manage", ""),
+                _m.get("operate", ""),
+            ) if x
+        ],
         "model_answer": _m.get("teach") or _m.get("manage", ""),
-        "curveball": _m.get("operate") or _m.get("localize", ""), "source": "dynamic fallback from deep curriculum"
+        "curveball": _m.get("operate") or _m.get("localize", ""),
+        "source": "dynamic fallback from deep curriculum",
     }
 
 
 data._generated_chief_prompt_v120 = _fixed_generated_chief_prompt_v120
 data._generated_attending_prompt_v120 = _fixed_generated_attending_prompt_v120
 
+# v13.2 predates strict validator; keep its idempotent merge unchanged.
 _existing_ids_v132 = {q.get("id") for q in data.CLINICAL_CHALLENGES_V119}
 for _q_src in VIGNETTES_V132:
     if _q_src.get("id") in _existing_ids_v132:
@@ -144,13 +178,19 @@ for _q_src in VIGNETTES_V132:
     _q["concept_id"] = data._v6_item_id(_q["domain"], _q["topic"])
     data.CLINICAL_CHALLENGES_V119.append(_q)
     _existing_ids_v132.add(_q.get("id"))
-data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119}
+data.CLINICAL_CHALLENGE_BY_ID_V119 = {
+    q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
+}
 
-_merge_validated_challenges(VIGNETTES_V134, "v13.4")
-_merge_validated_challenges(VIGNETTES_V136, "v13.6")
-_merge_validated_challenges(VIGNETTES_V137, "v13.7")
-_merge_validated_challenges(VIGNETTES_V138, "v13.8")
-_merge_validated_challenges(VIGNETTES_V139, "v13.9")
-_merge_validated_challenges(VIGNETTES_V140, "v14.0")
-_merge_validated_challenges(VIGNETTES_V141, "v14.1")
-_merge_validated_challenges(VIGNETTES_V142, "v14.2")
+for _batch, _name in (
+    (VIGNETTES_V134, "v13.4"),
+    (VIGNETTES_V136, "v13.6"),
+    (VIGNETTES_V137, "v13.7"),
+    (VIGNETTES_V138, "v13.8"),
+    (VIGNETTES_V139, "v13.9"),
+    (VIGNETTES_V140, "v14.0"),
+    (VIGNETTES_V141, "v14.1"),
+    (VIGNETTES_V142, "v14.2"),
+    (VIGNETTES_V143, "v14.3"),
+):
+    _merge_validated_challenges(_batch, _name)
