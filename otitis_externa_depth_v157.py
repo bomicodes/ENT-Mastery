@@ -44,12 +44,21 @@ AOE_DEPTH_V157 = {
 
 
 def apply_aoe_depth_v157(deep_modules):
-    """Enrich the existing AOE module in place and fail loudly if absent."""
+    """Enrich the existing AOE module in place and fail loudly if absent.
+
+    v15.8's focused Otology enrichment is deliberately chained here because
+    recognize_stage_v127 already calls this function during the production
+    runtime patch sequence. Keeping the hook in one place avoids another
+    fragile startup-path edit while still failing loudly if a canonical topic
+    disappears or is renamed.
+    """
     domain = "Otology / Neurotology"
     modules = deep_modules.get(domain, [])
     for module in modules:
         if module.get("topic") in AOE_TOPIC_CANDIDATES_V157:
             module.update(AOE_DEPTH_V157)
+            from otology_depth_v158 import apply_otology_depth_v158
+            apply_otology_depth_v158(deep_modules)
             return module.get("topic")
     raise RuntimeError(
         "v15.7: could not find the existing Acute Otitis Externa/Furunculosis "
