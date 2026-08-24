@@ -23,6 +23,7 @@ from vignettes_v141 import VIGNETTES_V141
 from vignettes_v142 import VIGNETTES_V142
 from vignettes_v143 import VIGNETTES_V143
 from vignettes_v144 import VIGNETTES_V144
+from vignettes_v145 import VIGNETTES_V145
 
 
 def apply_recognize_blind_reveal_v127(items):
@@ -194,5 +195,6 @@ for _batch, _name in (
     (VIGNETTES_V142, "v14.2"),
     (VIGNETTES_V143, "v14.3"),
     (VIGNETTES_V144, "v14.4"),
+    (VIGNETTES_V145, "v14.5"),
 ):
     _merge_validated_challenges(_batch, _name)
