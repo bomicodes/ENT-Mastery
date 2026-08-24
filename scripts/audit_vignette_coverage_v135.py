@@ -6,6 +6,14 @@ malformed cases) fail the process; incomplete coverage is reported but does not
 fail so this script can guide staged expansion toward 100%.
 """
 from collections import Counter, defaultdict
+from pathlib import Path
+import sys
+
+# GitHub Actions executes this file from scripts/, so ensure the repository root
+# is importable before loading the runtime patch chain through wsgi.
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 import wsgi
 
@@ -74,8 +82,6 @@ def main():
     for qid, absent in malformed:
         print(f"BAD_SCHEMA|{qid}|missing={','.join(absent)}")
 
-    # Density report: topics with only one linked case deserve a later depth pass
-    # even after canonical coverage reaches 100%.
     by_concept = defaultdict(list)
     for q in cases:
         by_concept[q.get("concept_id")].append(q)
