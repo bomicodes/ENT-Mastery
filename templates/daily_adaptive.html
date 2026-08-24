@@ -88,6 +88,25 @@
 {% endfor %}
 </div>
 
+{% if daily_challenges %}
+<section style="margin-top:2rem">
+  <div class="section-head">
+    <div><span class="eyebrow">CHALLENGE ROUND</span><h2>Apply today's knowledge</h2></div>
+    <a href="/clinical-challenges{% if focus %}?domain={{focus|urlencode}}{% endif %}">Browse the full bank →</a>
+  </div>
+  <p class="lede">These board-style vignettes are separate from the six-level path: commit to an answer, then review the discrimination logic.</p>
+  <div class="dashboard-case-grid">
+  {% for q in daily_challenges %}
+    <a class="dashboard-case" href="/clinical-challenge/{{q.id}}">
+      <span>{{q.domain}}{% if q.focus %} · {{q.focus|replace('_',' ')|title}}{% endif %}</span>
+      <b>{{q.topic}}</b>
+      <p>{{q.stem}}</p>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <script>
 let completedCount=0;
 const totalCards={{plan|length}};
