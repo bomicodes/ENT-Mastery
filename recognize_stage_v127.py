@@ -18,7 +18,7 @@ Flask imports app.py, so it also performs the small idempotent V128 vignette
 merge. This avoids replacing the generated multi-megabyte data.py while keeping
 the live CLINICAL_CHALLENGES_V119 bank and direct-lookup index synchronized.
 
-v13.3-v13.6 depth integration: adds decision-heavy cross-domain topics/cases,
+v13.3-v13.7 depth integration: adds decision-heavy cross-domain topics/cases,
 then validates every new vignette against the live canonical curriculum. A
 future typo fails loudly at startup instead of silently creating an orphan.
 """
@@ -31,6 +31,7 @@ from vignettes_v132 import VIGNETTES_V132
 from new_topics_v133 import NEW_TOPICS_V133
 from vignettes_v134 import VIGNETTES_V134
 from vignettes_v136 import VIGNETTES_V136
+from vignettes_v137 import VIGNETTES_V137
 
 
 def apply_recognize_blind_reveal_v127(items):
@@ -63,19 +64,13 @@ def _merge_v128_clinical_challenges():
         q["concept_id"] = data._v6_item_id(q["domain"], q["topic"])
         data.CLINICAL_CHALLENGES_V119.append(q)
         existing.add(q["id"])
-    data.CLINICAL_CHALLENGE_BY_ID_V119 = {
-        q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
-    }
+    data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119}
 
 
 def _merge_depth_topics(patch, patch_name):
-    """Idempotently merge exact canonical topics, failing on a bad domain."""
     for domain, topics in patch.items():
         if domain not in data.DEEP_MODULES_V6:
-            raise RuntimeError(
-                f"{patch_name}: unknown curriculum domain {domain!r}; "
-                "refusing to create detached topics"
-            )
+            raise RuntimeError(f"{patch_name}: unknown curriculum domain {domain!r}; refusing detached topics")
         existing_topics = {m["topic"] for m in data.DEEP_MODULES_V6[domain]}
         for topic in topics:
             if topic["topic"] not in existing_topics:
@@ -84,47 +79,32 @@ def _merge_depth_topics(patch, patch_name):
 
 
 def _merge_validated_challenges(batch, patch_name):
-    """Merge cases only when domain/topic resolves to the live curriculum."""
-    canonical = {
-        (domain, module.get("topic"))
-        for domain, modules in data.DEEP_MODULES_V6.items()
-        for module in modules
-    }
+    canonical = {(domain, module.get("topic")) for domain, modules in data.DEEP_MODULES_V6.items() for module in modules}
     existing_ids = {q.get("id") for q in data.CLINICAL_CHALLENGES_V119}
     for source in batch:
         key = (source.get("domain"), source.get("topic"))
         if key not in canonical:
-            raise RuntimeError(
-                f"{patch_name}: orphan vignette {source.get('id')!r} targets "
-                f"non-canonical {key!r}; add/alias the curriculum topic first"
-            )
+            raise RuntimeError(f"{patch_name}: orphan vignette {source.get('id')!r} targets non-canonical {key!r}")
         if source.get("id") in existing_ids:
             continue
         q = dict(source)
         q["concept_id"] = data._v6_item_id(q["domain"], q["topic"])
         data.CLINICAL_CHALLENGES_V119.append(q)
         existing_ids.add(q["id"])
-    data.CLINICAL_CHALLENGE_BY_ID_V119 = {
-        q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
-    }
+    data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119}
 
 
 _merge_depth_topics(NEW_TOPICS_V131, "v13.1")
 _merge_depth_topics(NEW_TOPICS_V133, "v13.3")
-
 _merge_v128_clinical_challenges()
 apply_topic_alias_v129(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
-# Recurrent Respiratory Papillomatosis is tagged under Laryngology in its
-# vignette but the canonical topic currently only lives under Pediatric
-# Otolaryngology - cross-link rather than duplicate the topic.
 for _q in data.CLINICAL_CHALLENGES_V119:
     if _q.get("topic") == "Recurrent Respiratory Papillomatosis" and _q.get("domain") == "Laryngology / Voice / Swallowing":
         _q["concept_id"] = data._v6_item_id("Pediatric Otolaryngology", "Recurrent Respiratory Papillomatosis")
         _q["canonical_topic"] = "Recurrent Respiratory Papillomatosis"
 
-# Fix dynamic chief/attending prompt generators: data.py historically referred
-# to undefined _slugify_v94; _v91_slug is the real helper.
+
 def _fixed_generated_chief_prompt_v120(_domain, _m):
     _id = data._v6_item_id(_domain, _m["topic"])
     return {
@@ -133,8 +113,7 @@ def _fixed_generated_chief_prompt_v120(_domain, _m):
         "junior_question": f"I'm trying to understand {_m['topic']}. What is the framework I should use so I do not just memorize a list?",
         "must_mention": [x for x in [_m.get("recognize", ""), _m.get("localize", ""), _m.get("manage", "")] if x],
         "model_answer": _m.get("teach") or _m.get("manage", ""),
-        "curveball": _m.get("operate") or _m.get("workup", ""),
-        "source": "dynamic fallback from deep curriculum"
+        "curveball": _m.get("operate") or _m.get("workup", ""), "source": "dynamic fallback from deep curriculum"
     }
 
 
@@ -146,8 +125,7 @@ def _fixed_generated_attending_prompt_v120(_domain, _m):
         "prompt": f"You say this is {_m['topic']}. Convince me: what finding changes your differential or management, and what would make you change course?",
         "required_points": [x for x in [_m.get("recognize", ""), _m.get("workup", ""), _m.get("manage", ""), _m.get("operate", "")] if x],
         "model_answer": _m.get("teach") or _m.get("manage", ""),
-        "curveball": _m.get("operate") or _m.get("localize", ""),
-        "source": "dynamic fallback from deep curriculum"
+        "curveball": _m.get("operate") or _m.get("localize", ""), "source": "dynamic fallback from deep curriculum"
     }
 
 
@@ -166,3 +144,4 @@ data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENG
 
 _merge_validated_challenges(VIGNETTES_V134, "v13.4")
 _merge_validated_challenges(VIGNETTES_V136, "v13.6")
+_merge_validated_challenges(VIGNETTES_V137, "v13.7")
