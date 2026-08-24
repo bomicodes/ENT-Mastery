@@ -1,113 +1,23 @@
 === ENT MASTERY CANONICAL VIGNETTE COVERAGE v13.5 ===
 Total curriculum topics: 334
-Total vignettes: 324
+Total vignettes: 414
 
 DOMAIN|Otology / Neurotology|46|46|100.0%
 DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
-DOMAIN|Head & Neck Oncology|19|47|40.4%
-MISSING|Head & Neck Oncology|Basal Cell Carcinoma of the Head & Neck
-MISSING|Head & Neck Oncology|Base of Tongue SCC
-MISSING|Head & Neck Oncology|Carotid Body Paraganglioma
-MISSING|Head & Neck Oncology|Complications of Neck Surgery
-MISSING|Head & Neck Oncology|Cutaneous Melanoma of the Head & Neck
-MISSING|Head & Neck Oncology|Floor of Mouth SCC
-MISSING|Head & Neck Oncology|Free-Flap Monitoring / Compromise / Salvage
-MISSING|Head & Neck Oncology|Glottic Cancer
-MISSING|Head & Neck Oncology|Head & Neck Cancer Surveillance / Second Primaries
-MISSING|Head & Neck Oncology|Head & Neck Radiation Toxicity / Survivorship
-MISSING|Head & Neck Oncology|Hypopharyngeal Cancer
-MISSING|Head & Neck Oncology|Merkel Cell Carcinoma
-MISSING|Head & Neck Oncology|Neck Lymphoma
-MISSING|Head & Neck Oncology|Neck Management by Primary Site
-MISSING|Head & Neck Oncology|Nonfunctional Larynx / Chronic Aspiration After Cancer Therapy
-MISSING|Head & Neck Oncology|Open Partial / Conservation Laryngectomy
-MISSING|Head & Neck Oncology|Palliative / Goals-of-Care Decision-Making in Head & Neck Cancer
-MISSING|Head & Neck Oncology|Parapharyngeal Space Tumor
-MISSING|Head & Neck Oncology|Radiation Therapy Principles for Head & Neck Surgeons
-MISSING|Head & Neck Oncology|Reconstruction Selection After Head & Neck Ablation
-MISSING|Head & Neck Oncology|Recurrent / Metastatic HNSCC
-MISSING|Head & Neck Oncology|Systemic Therapy Foundations in Head & Neck Cancer
-MISSING|Head & Neck Oncology|TEP and Alaryngeal Speech
-MISSING|Head & Neck Oncology|Tonsil SCC
-MISSING|Head & Neck Oncology|Total Laryngectomy
-MISSING|Head & Neck Oncology|Tracheal Malignancy
-MISSING|Head & Neck Oncology|Transoral Laser Microsurgery for Laryngeal Cancer
-MISSING|Head & Neck Oncology|Tumor Immunology / Immunotherapy in HNSCC
+DOMAIN|Head & Neck Oncology|47|47|100.0%
 DOMAIN|Thyroid / Parathyroid / Salivary|33|33|100.0%
-DOMAIN|Pediatric Otolaryngology|18|40|45.0%
-MISSING|Pediatric Otolaryngology|Ankyloglossia / Maxillary Frenulum
-MISSING|Pediatric Otolaryngology|Choanal Atresia
-MISSING|Pediatric Otolaryngology|Cleft / Craniofacial Otologic-Airway Care
-MISSING|Pediatric Otolaryngology|Cleft Lip / Palate — ENT Surgical Fundamentals
-MISSING|Pediatric Otolaryngology|Congenital Hearing Loss Genetics
-MISSING|Pediatric Otolaryngology|Juvenile Recurrent Parotitis
-MISSING|Pediatric Otolaryngology|Laryngotracheal Reconstruction
-MISSING|Pediatric Otolaryngology|Lymphatic Malformation
-MISSING|Pediatric Otolaryngology|Microtia / Aural Atresia
-MISSING|Pediatric Otolaryngology|Microtia Reconstruction
-MISSING|Pediatric Otolaryngology|Nonobstructive Pediatric Sleep Disorders
-MISSING|Pediatric Otolaryngology|Pediatric Aspiration
-MISSING|Pediatric Otolaryngology|Pediatric Head & Neck Tumors
-MISSING|Pediatric Otolaryngology|Pediatric Reflux / Eosinophilic Esophagitis
-MISSING|Pediatric Otolaryngology|Pediatric Speech Disorders
-MISSING|Pediatric Otolaryngology|Pediatric Vestibular Disorders
-MISSING|Pediatric Otolaryngology|Recurrent Tonsillitis Decision-Making
-MISSING|Pediatric Otolaryngology|Supraglottoplasty
-MISSING|Pediatric Otolaryngology|Thyroglossal Duct Cyst
-MISSING|Pediatric Otolaryngology|Tracheomalacia / Bronchomalacia
-MISSING|Pediatric Otolaryngology|Tympanostomy Tube Indications
-MISSING|Pediatric Otolaryngology|Velopharyngeal Insufficiency
-DOMAIN|Laryngology / Voice / Swallowing|16|36|44.4%
-MISSING|Laryngology / Voice / Swallowing|Acute / Chronic Laryngopharyngitis
-MISSING|Laryngology / Voice / Swallowing|Arytenoid Adduction / Reinnervation
-MISSING|Laryngology / Voice / Swallowing|Aspiration-Prevention Surgery
-MISSING|Laryngology / Voice / Swallowing|Chronic Cough / Laryngeal Hypersensitivity
-MISSING|Laryngology / Voice / Swallowing|Esophageal Disease for the Otolaryngologist
-MISSING|Laryngology / Voice / Swallowing|FEES
-MISSING|Laryngology / Voice / Swallowing|Injection Laryngoplasty
-MISSING|Laryngology / Voice / Swallowing|Laryngeal Anatomy
-MISSING|Laryngology / Voice / Swallowing|Leukoplakia / Laryngeal Dysplasia
-MISSING|Laryngology / Voice / Swallowing|Medialization Thyroplasty
-MISSING|Laryngology / Voice / Swallowing|Microlaryngoscopy
-MISSING|Laryngology / Voice / Swallowing|Modified Barium Swallow
-MISSING|Laryngology / Voice / Swallowing|Posterior Cordotomy / Arytenoidectomy
-MISSING|Laryngology / Voice / Swallowing|Professional Voice
-MISSING|Laryngology / Voice / Swallowing|Radiation-Associated Dysphagia
-MISSING|Laryngology / Voice / Swallowing|Stroboscopy Interpretation
-MISSING|Laryngology / Voice / Swallowing|Tracheobronchial Endoscopy Principles
-MISSING|Laryngology / Voice / Swallowing|Transnasal Esophagoscopy
-MISSING|Laryngology / Voice / Swallowing|Vocal Fold Nodules
-MISSING|Laryngology / Voice / Swallowing|Vocal Tremor
+DOMAIN|Pediatric Otolaryngology|40|40|100.0%
+DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
 DOMAIN|Facial Plastics / Trauma|36|36|100.0%
 DOMAIN|Sleep Surgery|22|22|100.0%
-DOMAIN|General ENT / Emergencies|12|32|37.5%
-MISSING|General ENT / Emergencies|Airway Foreign Body
-MISSING|General ENT / Emergencies|Antimicrobial Stewardship in Otolaryngology
-MISSING|General ENT / Emergencies|Chyle Leak
-MISSING|General ENT / Emergencies|Common ENT Consult Triage / Disposition
-MISSING|General ENT / Emergencies|Cranial Nerve Examination / Skull Base Localization
-MISSING|General ENT / Emergencies|Deep Neck Abscess Drainage
-MISSING|General ENT / Emergencies|ENT Fluids / Electrolytes / Nutrition
-MISSING|General ENT / Emergencies|ENT Imaging Fundamentals
-MISSING|General ENT / Emergencies|ENT Perioperative Anesthesia / Difficult Airway Planning
-MISSING|General ENT / Emergencies|Esophageal Foreign Body
-MISSING|General ENT / Emergencies|Evidence Interpretation / Outcomes Research
-MISSING|General ENT / Emergencies|Geriatric Otolaryngology / Frailty
-MISSING|General ENT / Emergencies|Grafts / Implants / Biomaterials in ENT
-MISSING|General ENT / Emergencies|Hemostasis / Coagulopathy / Antithrombotic Management in ENT
-MISSING|General ENT / Emergencies|Immunocompromised Host in Otolaryngology
-MISSING|General ENT / Emergencies|Laser / Energy Safety in Otolaryngology
-MISSING|General ENT / Emergencies|Oral Manifestations of Systemic Disease
-MISSING|General ENT / Emergencies|Pain Management in the Head & Neck Patient
-MISSING|General ENT / Emergencies|Systemic / Granulomatous Disease Manifestations in ENT
-MISSING|General ENT / Emergencies|Wound Healing / Scar Biology in Head & Neck Surgery
+DOMAIN|General ENT / Emergencies|32|32|100.0%
 
-OVERALL|244|334|73.1%
-MISSING_TOTAL|90
+OVERALL|334|334|100.0%
+MISSING_TOTAL|0
 ORPHANED|0
 DUPLICATE_IDS|0
 MALFORMED|0
-SINGLETON_TOPICS|194
+SINGLETON_TOPICS|284
 SINGLETON|Facial Plastics / Trauma|Aesthetic Facial Analysis
 SINGLETON|Facial Plastics / Trauma|Aging Face / Injectables / Resurfacing
 SINGLETON|Facial Plastics / Trauma|Alar Retraction / Nasal Vestibular Stenosis
@@ -139,34 +49,102 @@ SINGLETON|Facial Plastics / Trauma|Septal Perforation
 SINGLETON|Facial Plastics / Trauma|Skin Graft Selection
 SINGLETON|Facial Plastics / Trauma|Static Facial Reanimation
 SINGLETON|Facial Plastics / Trauma|Structured Facial Trauma Examination
+SINGLETON|General ENT / Emergencies|Airway Foreign Body
 SINGLETON|General ENT / Emergencies|Angioedema
+SINGLETON|General ENT / Emergencies|Antimicrobial Stewardship in Otolaryngology
 SINGLETON|General ENT / Emergencies|Carotid Blowout Syndrome
 SINGLETON|General ENT / Emergencies|Caustic Ingestion
+SINGLETON|General ENT / Emergencies|Chyle Leak
+SINGLETON|General ENT / Emergencies|Common ENT Consult Triage / Disposition
+SINGLETON|General ENT / Emergencies|Cranial Nerve Examination / Skull Base Localization
+SINGLETON|General ENT / Emergencies|Deep Neck Abscess Drainage
 SINGLETON|General ENT / Emergencies|Deep Neck Space Infection
+SINGLETON|General ENT / Emergencies|ENT Fluids / Electrolytes / Nutrition
+SINGLETON|General ENT / Emergencies|ENT Imaging Fundamentals
+SINGLETON|General ENT / Emergencies|ENT Perioperative Anesthesia / Difficult Airway Planning
+SINGLETON|General ENT / Emergencies|Esophageal Foreign Body
+SINGLETON|General ENT / Emergencies|Evidence Interpretation / Outcomes Research
+SINGLETON|General ENT / Emergencies|Geriatric Otolaryngology / Frailty
+SINGLETON|General ENT / Emergencies|Grafts / Implants / Biomaterials in ENT
+SINGLETON|General ENT / Emergencies|Hemostasis / Coagulopathy / Antithrombotic Management in ENT
+SINGLETON|General ENT / Emergencies|Immunocompromised Host in Otolaryngology
+SINGLETON|General ENT / Emergencies|Laser / Energy Safety in Otolaryngology
 SINGLETON|General ENT / Emergencies|Lemierre Syndrome
+SINGLETON|General ENT / Emergencies|Oral Manifestations of Systemic Disease
+SINGLETON|General ENT / Emergencies|Pain Management in the Head & Neck Patient
 SINGLETON|General ENT / Emergencies|Peritonsillar Abscess
 SINGLETON|General ENT / Emergencies|Post-Tonsillectomy Hemorrhage
+SINGLETON|General ENT / Emergencies|Systemic / Granulomatous Disease Manifestations in ENT
 SINGLETON|General ENT / Emergencies|Tracheostomy Emergency
+SINGLETON|General ENT / Emergencies|Wound Healing / Scar Biology in Head & Neck Surgery
 SINGLETON|Head & Neck Oncology|Adverse Pathology and Adjuvant Therapy
+SINGLETON|Head & Neck Oncology|Basal Cell Carcinoma of the Head & Neck
+SINGLETON|Head & Neck Oncology|Base of Tongue SCC
 SINGLETON|Head & Neck Oncology|Carotid Blowout Syndrome
+SINGLETON|Head & Neck Oncology|Carotid Body Paraganglioma
+SINGLETON|Head & Neck Oncology|Complications of Neck Surgery
+SINGLETON|Head & Neck Oncology|Cutaneous Melanoma of the Head & Neck
+SINGLETON|Head & Neck Oncology|Floor of Mouth SCC
+SINGLETON|Head & Neck Oncology|Free-Flap Monitoring / Compromise / Salvage
+SINGLETON|Head & Neck Oncology|Glottic Cancer
 SINGLETON|Head & Neck Oncology|HPV-Associated Oropharyngeal SCC
+SINGLETON|Head & Neck Oncology|Head & Neck Cancer Surveillance / Second Primaries
+SINGLETON|Head & Neck Oncology|Head & Neck Radiation Toxicity / Survivorship
+SINGLETON|Head & Neck Oncology|Hypopharyngeal Cancer
 SINGLETON|Head & Neck Oncology|Laryngeal Preservation Decision
+SINGLETON|Head & Neck Oncology|Merkel Cell Carcinoma
 SINGLETON|Head & Neck Oncology|Neck Dissection
+SINGLETON|Head & Neck Oncology|Neck Lymphoma
+SINGLETON|Head & Neck Oncology|Neck Management by Primary Site
+SINGLETON|Head & Neck Oncology|Nonfunctional Larynx / Chronic Aspiration After Cancer Therapy
 SINGLETON|Head & Neck Oncology|Nonfunctional Larynx and Intractable Aspiration
+SINGLETON|Head & Neck Oncology|Open Partial / Conservation Laryngectomy
 SINGLETON|Head & Neck Oncology|Oral Tongue SCC
+SINGLETON|Head & Neck Oncology|Palliative / Goals-of-Care Decision-Making in Head & Neck Cancer
 SINGLETON|Head & Neck Oncology|Palliative Decision-Making in Head and Neck Cancer
+SINGLETON|Head & Neck Oncology|Parapharyngeal Space Tumor
+SINGLETON|Head & Neck Oncology|Radiation Therapy Principles for Head & Neck Surgeons
+SINGLETON|Head & Neck Oncology|Reconstruction Selection After Head & Neck Ablation
+SINGLETON|Head & Neck Oncology|Recurrent / Metastatic HNSCC
 SINGLETON|Head & Neck Oncology|Sinonasal Malignancies
 SINGLETON|Head & Neck Oncology|Supraglottic Cancer
+SINGLETON|Head & Neck Oncology|Systemic Therapy Foundations in Head & Neck Cancer
+SINGLETON|Head & Neck Oncology|TEP and Alaryngeal Speech
+SINGLETON|Head & Neck Oncology|Tonsil SCC
+SINGLETON|Head & Neck Oncology|Total Laryngectomy
+SINGLETON|Head & Neck Oncology|Tracheal Malignancy
+SINGLETON|Head & Neck Oncology|Transoral Laser Microsurgery for Laryngeal Cancer
+SINGLETON|Head & Neck Oncology|Tumor Immunology / Immunotherapy in HNSCC
+SINGLETON|Laryngology / Voice / Swallowing|Acute / Chronic Laryngopharyngitis
+SINGLETON|Laryngology / Voice / Swallowing|Arytenoid Adduction / Reinnervation
+SINGLETON|Laryngology / Voice / Swallowing|Aspiration-Prevention Surgery
 SINGLETON|Laryngology / Voice / Swallowing|Benign Vocal Fold Lesions
+SINGLETON|Laryngology / Voice / Swallowing|Chronic Cough / Laryngeal Hypersensitivity
 SINGLETON|Laryngology / Voice / Swallowing|Cricopharyngeal Dysfunction
 SINGLETON|Laryngology / Voice / Swallowing|Dysphagia / Aspiration
+SINGLETON|Laryngology / Voice / Swallowing|Esophageal Disease for the Otolaryngologist
+SINGLETON|Laryngology / Voice / Swallowing|FEES
+SINGLETON|Laryngology / Voice / Swallowing|Injection Laryngoplasty
+SINGLETON|Laryngology / Voice / Swallowing|Laryngeal Anatomy
+SINGLETON|Laryngology / Voice / Swallowing|Leukoplakia / Laryngeal Dysplasia
+SINGLETON|Laryngology / Voice / Swallowing|Medialization Thyroplasty
+SINGLETON|Laryngology / Voice / Swallowing|Microlaryngoscopy
+SINGLETON|Laryngology / Voice / Swallowing|Modified Barium Swallow
 SINGLETON|Laryngology / Voice / Swallowing|Muscle Tension Dysphonia
+SINGLETON|Laryngology / Voice / Swallowing|Posterior Cordotomy / Arytenoidectomy
 SINGLETON|Laryngology / Voice / Swallowing|Presbyphonia
+SINGLETON|Laryngology / Voice / Swallowing|Professional Voice
+SINGLETON|Laryngology / Voice / Swallowing|Radiation-Associated Dysphagia
 SINGLETON|Laryngology / Voice / Swallowing|Reinke Edema
 SINGLETON|Laryngology / Voice / Swallowing|Spasmodic Dysphonia
+SINGLETON|Laryngology / Voice / Swallowing|Stroboscopy Interpretation
 SINGLETON|Laryngology / Voice / Swallowing|Subglottic / Tracheal Stenosis
+SINGLETON|Laryngology / Voice / Swallowing|Tracheobronchial Endoscopy Principles
+SINGLETON|Laryngology / Voice / Swallowing|Transnasal Esophagoscopy
+SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Nodules
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Sulcus / Scar
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Process Granuloma
+SINGLETON|Laryngology / Voice / Swallowing|Vocal Tremor
 SINGLETON|Otology / Neurotology|Acute Mastoiditis / Petrous Apicitis
 SINGLETON|Otology / Neurotology|Acute Otitis Externa
 SINGLETON|Otology / Neurotology|Age-Related Hearing Loss / Presbycusis
@@ -208,19 +186,41 @@ SINGLETON|Otology / Neurotology|Vestibular Neuritis
 SINGLETON|Otology / Neurotology|Vestibular Rehabilitation
 SINGLETON|Otology / Neurotology|Vestibular Schwannoma
 SINGLETON|Otology / Neurotology|Vestibular Test Battery
+SINGLETON|Pediatric Otolaryngology|Ankyloglossia / Maxillary Frenulum
 SINGLETON|Pediatric Otolaryngology|Branchial Cleft Anomalies
 SINGLETON|Pediatric Otolaryngology|Button Battery Ingestion
+SINGLETON|Pediatric Otolaryngology|Choanal Atresia
+SINGLETON|Pediatric Otolaryngology|Cleft / Craniofacial Otologic-Airway Care
+SINGLETON|Pediatric Otolaryngology|Cleft Lip / Palate — ENT Surgical Fundamentals
 SINGLETON|Pediatric Otolaryngology|Congenital CMV Hearing Loss
+SINGLETON|Pediatric Otolaryngology|Congenital Hearing Loss Genetics
 SINGLETON|Pediatric Otolaryngology|Croup vs Epiglottitis
 SINGLETON|Pediatric Otolaryngology|Epiglottitis
+SINGLETON|Pediatric Otolaryngology|Juvenile Recurrent Parotitis
 SINGLETON|Pediatric Otolaryngology|Laryngomalacia
 SINGLETON|Pediatric Otolaryngology|Laryngotracheal Cleft
+SINGLETON|Pediatric Otolaryngology|Laryngotracheal Reconstruction
+SINGLETON|Pediatric Otolaryngology|Lymphatic Malformation
+SINGLETON|Pediatric Otolaryngology|Microtia / Aural Atresia
+SINGLETON|Pediatric Otolaryngology|Microtia Reconstruction
+SINGLETON|Pediatric Otolaryngology|Nonobstructive Pediatric Sleep Disorders
+SINGLETON|Pediatric Otolaryngology|Pediatric Aspiration
+SINGLETON|Pediatric Otolaryngology|Pediatric Head & Neck Tumors
 SINGLETON|Pediatric Otolaryngology|Pediatric Hearing Loss Workup
+SINGLETON|Pediatric Otolaryngology|Pediatric Reflux / Eosinophilic Esophagitis
+SINGLETON|Pediatric Otolaryngology|Pediatric Speech Disorders
 SINGLETON|Pediatric Otolaryngology|Pediatric Subglottic Stenosis
 SINGLETON|Pediatric Otolaryngology|Pediatric Tracheostomy / Decannulation
+SINGLETON|Pediatric Otolaryngology|Pediatric Vestibular Disorders
 SINGLETON|Pediatric Otolaryngology|Pediatric Vocal Fold Immobility
 SINGLETON|Pediatric Otolaryngology|Recurrent Respiratory Papillomatosis
+SINGLETON|Pediatric Otolaryngology|Recurrent Tonsillitis Decision-Making
 SINGLETON|Pediatric Otolaryngology|Subglottic Hemangioma
+SINGLETON|Pediatric Otolaryngology|Supraglottoplasty
+SINGLETON|Pediatric Otolaryngology|Thyroglossal Duct Cyst
+SINGLETON|Pediatric Otolaryngology|Tracheomalacia / Bronchomalacia
+SINGLETON|Pediatric Otolaryngology|Tympanostomy Tube Indications
+SINGLETON|Pediatric Otolaryngology|Velopharyngeal Insufficiency
 SINGLETON|Rhinology / Allergy / Skull Base|AFRS
 SINGLETON|Rhinology / Allergy / Skull Base|Acute Bacterial Rhinosinusitis
 SINGLETON|Rhinology / Allergy / Skull Base|Allergen Immunotherapy — SCIT / SLIT
