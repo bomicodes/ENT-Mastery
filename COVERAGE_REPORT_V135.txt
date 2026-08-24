@@ -1,58 +1,9 @@
 === ENT MASTERY CANONICAL VIGNETTE COVERAGE v13.5 ===
 Total curriculum topics: 334
-Total vignettes: 231
+Total vignettes: 280
 
-DOMAIN|Otology / Neurotology|24|46|52.2%
-MISSING|Otology / Neurotology|Acute Otitis Externa
-MISSING|Otology / Neurotology|Age-Related Hearing Loss / Presbycusis
-MISSING|Otology / Neurotology|Audiologic Electrophysiology / ABR-OAE-ECoG
-MISSING|Otology / Neurotology|Auditory Neuroanatomy / Cochlear Physiology
-MISSING|Otology / Neurotology|Cochlear Implant Failure / Revision
-MISSING|Otology / Neurotology|Cochlear Implant Surgery
-MISSING|Otology / Neurotology|Congenital Inner-Ear Malformations
-MISSING|Otology / Neurotology|Cortical Neuroplasticity in Hearing Loss
-MISSING|Otology / Neurotology|Eustachian Tube Dysfunction
-MISSING|Otology / Neurotology|Hearing Aids and Bone-Conduction Devices
-MISSING|Otology / Neurotology|Hyperacusis / Decreased Sound Tolerance
-MISSING|Otology / Neurotology|Lateral Skull-Base Tumor Framework
-MISSING|Otology / Neurotology|Neurotologic Intraoperative Cranial-Nerve Monitoring
-MISSING|Otology / Neurotology|Otologic Manifestations of Systemic Disease
-MISSING|Otology / Neurotology|Otosclerosis / Stapes Fixation
-MISSING|Otology / Neurotology|Ototoxic / Noise-Induced Hearing Loss
-MISSING|Otology / Neurotology|Persistent Postural-Perceptual Dizziness (PPPD)
-MISSING|Otology / Neurotology|Petrous Apex Lesions
-MISSING|Otology / Neurotology|Temporal Bone Anatomy
-MISSING|Otology / Neurotology|Tympanic Membrane Perforation
-MISSING|Otology / Neurotology|Vestibular Rehabilitation
-MISSING|Otology / Neurotology|Vestibular Test Battery
-DOMAIN|Rhinology / Allergy / Skull Base|15|42|35.7%
-MISSING|Rhinology / Allergy / Skull Base|AFRS
-MISSING|Rhinology / Allergy / Skull Base|Acute Bacterial Rhinosinusitis
-MISSING|Rhinology / Allergy / Skull Base|Benign Sinonasal Tumor Framework
-MISSING|Rhinology / Allergy / Skull Base|CF / Primary Ciliary Dyskinesia Sinonasal Disease
-MISSING|Rhinology / Allergy / Skull Base|CRS Phenotyping
-MISSING|Rhinology / Allergy / Skull Base|CRSsNP
-MISSING|Rhinology / Allergy / Skull Base|CRSwNP
-MISSING|Rhinology / Allergy / Skull Base|Endoscopic CSF Leak Repair / Nasoseptal Flap
-MISSING|Rhinology / Allergy / Skull Base|Endoscopic Maxillary Antrostomy
-MISSING|Rhinology / Allergy / Skull Base|Ethmoidectomy
-MISSING|Rhinology / Allergy / Skull Base|Facial Pain / Headache vs Rhinogenic Disease
-MISSING|Rhinology / Allergy / Skull Base|Frontal Recess / Frontal Sinus
-MISSING|Rhinology / Allergy / Skull Base|Frontal Sinusotomy / Draf Procedures
-MISSING|Rhinology / Allergy / Skull Base|Fungal Ball
-MISSING|Rhinology / Allergy / Skull Base|Immunodeficiency-Associated Chronic Rhinosinusitis
-MISSING|Rhinology / Allergy / Skull Base|Inferior Turbinate Hypertrophy
-MISSING|Rhinology / Allergy / Skull Base|Nasal Anatomy for Endoscopy
-MISSING|Rhinology / Allergy / Skull Base|Objective Assessment of Nasal Function
-MISSING|Rhinology / Allergy / Skull Base|Odontogenic Sinusitis
-MISSING|Rhinology / Allergy / Skull Base|Olfactory Dysfunction
-MISSING|Rhinology / Allergy / Skull Base|Pediatric Chronic Rhinosinusitis
-MISSING|Rhinology / Allergy / Skull Base|Recurrent Acute Rhinosinusitis
-MISSING|Rhinology / Allergy / Skull Base|Revision FESS
-MISSING|Rhinology / Allergy / Skull Base|Septal Deviation
-MISSING|Rhinology / Allergy / Skull Base|Sinonasal Malignancy
-MISSING|Rhinology / Allergy / Skull Base|Sphenoidotomy
-MISSING|Rhinology / Allergy / Skull Base|Systemic Disease of the Nose / Sinuses
+DOMAIN|Otology / Neurotology|46|46|100.0%
+DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
 DOMAIN|Head & Neck Oncology|19|47|40.4%
 MISSING|Head & Neck Oncology|Basal Cell Carcinoma of the Head & Neck
 MISSING|Head & Neck Oncology|Base of Tongue SCC
@@ -195,12 +146,12 @@ MISSING|General ENT / Emergencies|Pain Management in the Head & Neck Patient
 MISSING|General ENT / Emergencies|Systemic / Granulomatous Disease Manifestations in ENT
 MISSING|General ENT / Emergencies|Wound Healing / Scar Biology in Head & Neck Surgery
 
-OVERALL|151|334|45.2%
-MISSING_TOTAL|183
+OVERALL|200|334|59.9%
+MISSING_TOTAL|134
 ORPHANED|0
 DUPLICATE_IDS|0
 MALFORMED|0
-SINGLETON_TOPICS|101
+SINGLETON_TOPICS|150
 SINGLETON|Facial Plastics / Trauma|Auricular Reconstruction
 SINGLETON|Facial Plastics / Trauma|Facial Soft-Tissue Lacerations / Burns
 SINGLETON|Facial Plastics / Trauma|Frontal Sinus Fracture
@@ -246,24 +197,46 @@ SINGLETON|Laryngology / Voice / Swallowing|Subglottic / Tracheal Stenosis
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Sulcus / Scar
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Process Granuloma
 SINGLETON|Otology / Neurotology|Acute Mastoiditis / Petrous Apicitis
+SINGLETON|Otology / Neurotology|Acute Otitis Externa
+SINGLETON|Otology / Neurotology|Age-Related Hearing Loss / Presbycusis
 SINGLETON|Otology / Neurotology|Audiogram Interpretation
+SINGLETON|Otology / Neurotology|Audiologic Electrophysiology / ABR-OAE-ECoG
+SINGLETON|Otology / Neurotology|Auditory Neuroanatomy / Cochlear Physiology
 SINGLETON|Otology / Neurotology|Autoimmune Inner Ear Disease
 SINGLETON|Otology / Neurotology|BPPV
 SINGLETON|Otology / Neurotology|CSF Otorrhea / Temporal Encephalocele
 SINGLETON|Otology / Neurotology|Central Vestibular Disorders
 SINGLETON|Otology / Neurotology|Cochlear Implant Candidacy
+SINGLETON|Otology / Neurotology|Cochlear Implant Failure / Revision
+SINGLETON|Otology / Neurotology|Cochlear Implant Surgery
+SINGLETON|Otology / Neurotology|Congenital Inner-Ear Malformations
+SINGLETON|Otology / Neurotology|Cortical Neuroplasticity in Hearing Loss
+SINGLETON|Otology / Neurotology|Eustachian Tube Dysfunction
+SINGLETON|Otology / Neurotology|Hearing Aids and Bone-Conduction Devices
+SINGLETON|Otology / Neurotology|Hyperacusis / Decreased Sound Tolerance
 SINGLETON|Otology / Neurotology|Labyrinthitis / Infections of the Labyrinth
+SINGLETON|Otology / Neurotology|Lateral Skull-Base Tumor Framework
 SINGLETON|Otology / Neurotology|Ménière Disease
 SINGLETON|Otology / Neurotology|Necrotizing Otitis Externa
+SINGLETON|Otology / Neurotology|Neurotologic Intraoperative Cranial-Nerve Monitoring
 SINGLETON|Otology / Neurotology|Ossicular Discontinuity
+SINGLETON|Otology / Neurotology|Otologic Manifestations of Systemic Disease
 SINGLETON|Otology / Neurotology|Otosclerosis
+SINGLETON|Otology / Neurotology|Otosclerosis / Stapes Fixation
+SINGLETON|Otology / Neurotology|Ototoxic / Noise-Induced Hearing Loss
 SINGLETON|Otology / Neurotology|Patulous Eustachian Tube Dysfunction
+SINGLETON|Otology / Neurotology|Persistent Postural-Perceptual Dizziness (PPPD)
+SINGLETON|Otology / Neurotology|Petrous Apex Lesions
 SINGLETON|Otology / Neurotology|Superior Canal Dehiscence
+SINGLETON|Otology / Neurotology|Temporal Bone Anatomy
 SINGLETON|Otology / Neurotology|Tinnitus
+SINGLETON|Otology / Neurotology|Tympanic Membrane Perforation
 SINGLETON|Otology / Neurotology|Tympanometry / Acoustic Reflexes
 SINGLETON|Otology / Neurotology|Vestibular Migraine
 SINGLETON|Otology / Neurotology|Vestibular Neuritis
+SINGLETON|Otology / Neurotology|Vestibular Rehabilitation
 SINGLETON|Otology / Neurotology|Vestibular Schwannoma
+SINGLETON|Otology / Neurotology|Vestibular Test Battery
 SINGLETON|Pediatric Otolaryngology|Branchial Cleft Anomalies
 SINGLETON|Pediatric Otolaryngology|Button Battery Ingestion
 SINGLETON|Pediatric Otolaryngology|Congenital CMV Hearing Loss
@@ -277,15 +250,42 @@ SINGLETON|Pediatric Otolaryngology|Pediatric Tracheostomy / Decannulation
 SINGLETON|Pediatric Otolaryngology|Pediatric Vocal Fold Immobility
 SINGLETON|Pediatric Otolaryngology|Recurrent Respiratory Papillomatosis
 SINGLETON|Pediatric Otolaryngology|Subglottic Hemangioma
+SINGLETON|Rhinology / Allergy / Skull Base|AFRS
+SINGLETON|Rhinology / Allergy / Skull Base|Acute Bacterial Rhinosinusitis
 SINGLETON|Rhinology / Allergy / Skull Base|Allergen Immunotherapy — SCIT / SLIT
 SINGLETON|Rhinology / Allergy / Skull Base|Allergic Rhinitis
 SINGLETON|Rhinology / Allergy / Skull Base|Allergy Testing & Interpretation
+SINGLETON|Rhinology / Allergy / Skull Base|Benign Sinonasal Tumor Framework
+SINGLETON|Rhinology / Allergy / Skull Base|CF / Primary Ciliary Dyskinesia Sinonasal Disease
+SINGLETON|Rhinology / Allergy / Skull Base|CRS Phenotyping
+SINGLETON|Rhinology / Allergy / Skull Base|CRSsNP
+SINGLETON|Rhinology / Allergy / Skull Base|CRSwNP
+SINGLETON|Rhinology / Allergy / Skull Base|Endoscopic CSF Leak Repair / Nasoseptal Flap
+SINGLETON|Rhinology / Allergy / Skull Base|Endoscopic Maxillary Antrostomy
+SINGLETON|Rhinology / Allergy / Skull Base|Ethmoidectomy
+SINGLETON|Rhinology / Allergy / Skull Base|Facial Pain / Headache vs Rhinogenic Disease
+SINGLETON|Rhinology / Allergy / Skull Base|Frontal Recess / Frontal Sinus
+SINGLETON|Rhinology / Allergy / Skull Base|Frontal Sinusotomy / Draf Procedures
+SINGLETON|Rhinology / Allergy / Skull Base|Fungal Ball
+SINGLETON|Rhinology / Allergy / Skull Base|Immunodeficiency-Associated Chronic Rhinosinusitis
+SINGLETON|Rhinology / Allergy / Skull Base|Inferior Turbinate Hypertrophy
 SINGLETON|Rhinology / Allergy / Skull Base|Intracranial Complications of Sinusitis
 SINGLETON|Rhinology / Allergy / Skull Base|Juvenile Nasopharyngeal Angiofibroma
 SINGLETON|Rhinology / Allergy / Skull Base|Local Allergic Rhinitis
 SINGLETON|Rhinology / Allergy / Skull Base|Mucocele
+SINGLETON|Rhinology / Allergy / Skull Base|Nasal Anatomy for Endoscopy
 SINGLETON|Rhinology / Allergy / Skull Base|Nonallergic Rhinitis / Rhinitis Medicamentosa
+SINGLETON|Rhinology / Allergy / Skull Base|Objective Assessment of Nasal Function
+SINGLETON|Rhinology / Allergy / Skull Base|Odontogenic Sinusitis
+SINGLETON|Rhinology / Allergy / Skull Base|Olfactory Dysfunction
+SINGLETON|Rhinology / Allergy / Skull Base|Pediatric Chronic Rhinosinusitis
+SINGLETON|Rhinology / Allergy / Skull Base|Recurrent Acute Rhinosinusitis
+SINGLETON|Rhinology / Allergy / Skull Base|Revision FESS
+SINGLETON|Rhinology / Allergy / Skull Base|Septal Deviation
 SINGLETON|Rhinology / Allergy / Skull Base|Sinonasal Inverted Papilloma
+SINGLETON|Rhinology / Allergy / Skull Base|Sinonasal Malignancy
+SINGLETON|Rhinology / Allergy / Skull Base|Sphenoidotomy
+SINGLETON|Rhinology / Allergy / Skull Base|Systemic Disease of the Nose / Sinuses
 SINGLETON|Rhinology / Allergy / Skull Base|Unilateral Sinonasal Disease
 SINGLETON|Sleep Surgery|Adult PSG Interpretation
 SINGLETON|Sleep Surgery|Maxillomandibular Advancement
