@@ -10,8 +10,28 @@ document.querySelectorAll(".reveal-btn").forEach(b=>b.addEventListener("click",(
 (()=>{const deck=document.querySelector('[data-oto-deck]');if(!deck)return;const cards=[...deck.querySelectorAll('[data-oto-case]')];let idx=0;function show(n){if(!cards.length)return;idx=(n+cards.length)%cards.length;cards.forEach((c,i)=>c.classList.toggle('hidden',i!==idx));cards[idx].scrollIntoView({behavior:'smooth',block:'start'});}cards.forEach((card,i)=>{const reveal=card.querySelector('.oto-reveal'),ans=card.querySelector('.oto-answer');if(reveal)reveal.addEventListener('click',()=>{ans.classList.remove('hidden');reveal.disabled=true;reveal.textContent='Answer revealed';});card.querySelector('.oto-next')?.addEventListener('click',()=>show(i+1));card.querySelector('.oto-prev')?.addEventListener('click',()=>show(i-1));});})();
 
 
-// Adaptive Interpretation Lab self-rating
+// Adaptive Interpretation Lab stage navigation, reveal, and self-rating
 window.addEventListener('click', async (e) => {
+  const tab=e.target.closest('.interp-stage-tab');
+  if(tab){
+    const card=tab.closest('.interp-case');
+    if(!card) return;
+    const stageName=tab.dataset.stage;
+    card.querySelectorAll('.interp-stage-tab').forEach(x=>x.classList.toggle('active',x===tab));
+    card.querySelectorAll('.interp-stage').forEach(panel=>panel.classList.toggle('active',panel.dataset.stagePanel===stageName));
+    return;
+  }
+
+  const reveal=e.target.closest('.stage-reveal-btn');
+  if(reveal){
+    const stage=reveal.closest('.interp-stage');
+    if(!stage) return;
+    stage.querySelector('.stage-reveal-content')?.classList.remove('hidden');
+    reveal.disabled=true;
+    reveal.hidden=true;
+    return;
+  }
+
   const b=e.target.closest('.lab-self-rate button');
   if(!b) return;
   const card=b.closest('.interp-case');
@@ -42,5 +62,5 @@ document.addEventListener('click', async (e) => {
   const miss=e.target.closest('.miss-classifier button[data-miss]');
   if(miss){const stage=miss.closest('.progressive-stage');const shell=stage.closest('.progressive-case');try{await fetch('/api/mastery-miss',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({concept_id:shell.dataset.conceptId,domain:shell.dataset.domain,dimension:stage.dataset.dimension,miss_type:miss.dataset.miss,source_type:'integrated_case',source_id:shell.dataset.caseId+':'+stage.dataset.stage})});miss.parentElement.querySelectorAll('button').forEach(x=>x.disabled=true);miss.classList.add('selected-rating');}catch(err){}return;}
   const ar=e.target.closest('button[data-attending-score]');
-  if(ar){const card=ar.closest('.attending-card');ar.parentElement.querySelectorAll('button').forEach(x=>x.disabled=true);try{await fetch('/api/mastery-event',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({concept_id:card.dataset.conceptId,domain:card.dataset.domain,dimension:'reasoning',score:Number(ar.dataset.attendingScore),source_type:'attending_mode',source_id:location.search||'resident'})});ar.classList.add('selected-rating');}catch(err){ar.parentElement.querySelectorAll('button').forEach(x=>x.disabled=false);}}
+  if(ar){const card=ar.closest('.attending-card');if(!card)return;ar.parentElement.querySelectorAll('button').forEach(x=>x.disabled=true);try{const r=await fetch('/api/mastery-event',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({concept_id:card.dataset.conceptId,domain:card.dataset.domain,dimension:'reasoning',score:Number(ar.dataset.attendingScore),source_type:'attending_mode',source_id:location.search||'resident'})});if(!r.ok)throw new Error();ar.classList.add('selected-rating');}catch(err){ar.parentElement.querySelectorAll('button').forEach(x=>x.disabled=false);}}
 });
