@@ -1,0 +1,35 @@
+name: Audit ENT Mastery vignette coverage
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_vignette_coverage_v135.py'
+      - '.github/workflows/vignette-coverage-v135.yml'
+      - 'recognize_stage_v127.py'
+      - 'topic_alias_v129.py'
+      - 'new_topics_v131.py'
+      - 'vignettes_v132.py'
+      - 'new_topics_v133.py'
+      - 'vignettes_v134.py'
+      - 'new_topics_v*.py'
+      - 'vignettes_v*.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install runtime dependencies
+        run: pip install -r requirements.txt
+      - name: Compile patch modules
+        run: python -m py_compile data.py app.py wsgi.py recognize_stage_v127.py topic_alias_v129.py new_topics_v131.py vignettes_v132.py new_topics_v133.py vignettes_v134.py scripts/audit_vignette_coverage_v135.py
+      - name: Audit canonical vignette coverage
+        run: python scripts/audit_vignette_coverage_v135.py
