@@ -1,7 +1,7 @@
 {% extends "base.html" %}{% block content %}
 <div class="breadcrumb"><a href="/">Home</a> / Clinical Challenges</div>
 <div class="topic-hero lab-hero">
-  <div><span class="pill green">BOARD-STYLE VIGNETTES</span><h1>Clinical Challenges</h1><p class="lede">Commit to an answer before revealing the reasoning. Filter by domain or study mode, then open any vignette for a full explanation and mastery tracking.</p></div>
+  <div><span class="pill green">BOARD-STYLE VIGNETTES</span><h1>Clinical Challenges</h1><p class="lede">Commit to an answer before revealing the reasoning. Filter by domain, study mode, or clinical focus, then open any vignette for a full explanation and mastery tracking.</p></div>
 </div>
 
 <section class="card adaptive-session-panel">
@@ -13,14 +13,27 @@
   <label>Topic<br><input name="topic" value="{{topic}}" placeholder="Filter topic"></label>
   <label>Tier<br><select name="tier"><option value="">All tiers</option><option {% if tier=='Curated board-style' %}selected{% endif %}>Curated board-style</option></select></label>
   <label>Mode<br><input name="mode" value="{{mode}}" placeholder="Filter mode"></label>
+  <label>Focus<br>
+    <select name="focus" id="focus-filter">
+      <option value="">All focuses</option>
+      <option value="boards" {% if request.args.get('focus','')=='boards' %}selected{% endif %}>Boards</option>
+      <option value="overnight_call" {% if request.args.get('focus','')=='overnight_call' %}selected{% endif %}>Overnight call</option>
+      <option value="postoperative_call" {% if request.args.get('focus','')=='postoperative_call' %}selected{% endif %}>Postoperative call</option>
+      <option value="OR_prep" {% if request.args.get('focus','')=='OR_prep' %}selected{% endif %}>OR prep</option>
+    </select>
+  </label>
   <button class="case-btn" type="submit">Apply filters</button>
   <a href="/clinical-challenges">Clear</a>
 </form>
 
-<div class="interpretation-cases">
+<div class="interpretation-cases" id="clinical-challenge-list">
 {% for q in questions %}
-<section class="card interp-case">
-  <div class="interp-case-head"><span class="tag">{{q.domain}}</span><span>{{q.tier or 'Clinical challenge'}}</span></div>
+<section class="card interp-case clinical-challenge-card" data-focus="{{q.focus or ''}}">
+  <div class="interp-case-head">
+    <span class="tag">{{q.domain}}</span>
+    <span>{{q.tier or 'Clinical challenge'}}</span>
+    {% if q.focus %}<span class="tag focus-tag">{% if q.focus=='OR_prep' %}OR prep{% elif q.focus=='overnight_call' %}Overnight call{% elif q.focus=='postoperative_call' %}Postoperative call{% elif q.focus=='boards' %}Boards{% else %}{{q.focus|replace('_',' ')|title}}{% endif %}</span>{% endif %}
+  </div>
   <h2>{{q.topic}}</h2>
   <p>{{q.stem}}</p>
   <div class="adaptive-actions"><a class="case-btn" href="/clinical-challenge/{{q.id}}">Open challenge →</a>{% if q.concept_id %}<a href="/concept/id/{{q.concept_id|urlencode}}">Open full topic ↗</a>{% endif %}</div>
@@ -29,4 +42,28 @@
 <div class="empty card"><h3>No challenges match these filters.</h3><p>Clear one or more filters to return to the full bank.</p></div>
 {% endfor %}
 </div>
+
+<div class="empty card" id="focus-empty" style="display:none"><h3>No challenges match this focus.</h3><p>Choose a different focus or clear one or more filters to return to the full bank.</p></div>
+
+<script>
+(function(){
+  const select = document.getElementById('focus-filter');
+  const cards = Array.from(document.querySelectorAll('.clinical-challenge-card'));
+  const empty = document.getElementById('focus-empty');
+  if (!select || !cards.length) return;
+
+  function applyFocus(){
+    const focus = select.value;
+    let visible = 0;
+    cards.forEach(card => {
+      const show = !focus || card.dataset.focus === focus;
+      card.style.display = show ? '' : 'none';
+      if (show) visible += 1;
+    });
+    if (empty) empty.style.display = visible === 0 ? '' : 'none';
+  }
+
+  applyFocus();
+})();
+</script>
 {% endblock %}
