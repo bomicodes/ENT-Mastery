@@ -1,13 +1,14 @@
-"""v15.1/v15.2 — resident-level distractor repair + depth integration.
+"""v15.1-v15.3 — resident-level quality repair + late depth integration.
 
 Earlier second-pass banks used placeholder why-wrong text. This repair replaces
-those placeholders with choice-specific teaching. v15.2 also adds a deliberately
-small cross-domain chief-level batch. Its merge is deferred until the repair
+those placeholders with choice-specific teaching. v15.2 and v15.3 add small,
+high-consequence chief-level batches. Their merges are deferred until this
 function runs, after recognize_stage_v127 has registered all canonical topics.
 """
 
 import data
 from vignettes_v152 import VIGNETTES_V152
+from vignettes_v153 import VIGNETTES_V153
 
 _GENERIC_MARKERS = (
     "use the mechanism, anatomy, and management priority in the explanation",
@@ -22,18 +23,18 @@ _GENERIC_MARKERS = (
 )
 
 
-def _merge_v152():
+def _merge_late_batch(batch, patch_name):
     canonical = {
         (domain, module.get("topic"))
         for domain, modules in data.DEEP_MODULES_V6.items()
         for module in modules
     }
     existing = {q.get("id") for q in data.CLINICAL_CHALLENGES_V119}
-    for source in VIGNETTES_V152:
+    for source in batch:
         key = (source.get("domain"), source.get("topic"))
         if key not in canonical:
             raise RuntimeError(
-                f"v15.2: orphan vignette {source.get('id')!r} targets non-canonical {key!r}"
+                f"{patch_name}: orphan vignette {source.get('id')!r} targets non-canonical {key!r}"
             )
         if source.get("id") in existing:
             continue
@@ -70,8 +71,9 @@ def _choice_specific_reason(choice, explanation, pearl):
 
 def apply_quality_repair_v151(challenges):
     # Called late in recognize_stage_v127, after v13.1/v13.3 topic registration.
-    # Merge v15.2 here so canonical validation sees the final curriculum.
-    _merge_v152()
+    # Keep late batches here so strict canonical validation sees the final curriculum.
+    _merge_late_batch(VIGNETTES_V152, "v15.2")
+    _merge_late_batch(VIGNETTES_V153, "v15.3")
     repaired_cases = 0
     repaired_reasons = 0
     for q in challenges:
