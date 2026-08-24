@@ -1,6 +1,6 @@
 === ENT MASTERY CANONICAL VIGNETTE COVERAGE + DEPTH ===
 Total curriculum topics: 334
-Total vignettes: 671
+Total vignettes: 701
 
 DOMAIN|Otology / Neurotology|46|46|100.0%
 DEPTH2_DOMAIN|Otology / Neurotology|46|46|100.0%
@@ -15,51 +15,21 @@ DEPTH2_DOMAIN|Pediatric Otolaryngology|40|40|100.0%
 DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
 DEPTH2_DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
 DOMAIN|Facial Plastics / Trauma|36|36|100.0%
-DEPTH2_DOMAIN|Facial Plastics / Trauma|19|36|52.8%
+DEPTH2_DOMAIN|Facial Plastics / Trauma|36|36|100.0%
 DOMAIN|Sleep Surgery|22|22|100.0%
 DEPTH2_DOMAIN|Sleep Surgery|22|22|100.0%
 DOMAIN|General ENT / Emergencies|32|32|100.0%
-DEPTH2_DOMAIN|General ENT / Emergencies|19|32|59.4%
+DEPTH2_DOMAIN|General ENT / Emergencies|32|32|100.0%
 
 OVERALL|334|334|100.0%
-DEPTH2_OVERALL|304|334|91.0%
+DEPTH2_OVERALL|334|334|100.0%
 MISSING_TOTAL|0
 ORPHANED|0
 DUPLICATE_IDS|0
 MALFORMED|0
-SINGLETON_TOPICS|30
-SINGLETON|Facial Plastics / Trauma|Aesthetic Facial Analysis
-SINGLETON|Facial Plastics / Trauma|Aging Face / Injectables / Resurfacing
-SINGLETON|Facial Plastics / Trauma|Alar Retraction / Nasal Vestibular Stenosis
-SINGLETON|Facial Plastics / Trauma|Auricular Reconstruction
-SINGLETON|Facial Plastics / Trauma|Bilobed Flap
-SINGLETON|Facial Plastics / Trauma|Cervicofacial Flap
-SINGLETON|Facial Plastics / Trauma|Facial Synkinesis / Static-Dynamic Rehabilitation
-SINGLETON|Facial Plastics / Trauma|Hair Restoration Fundamentals
-SINGLETON|Facial Plastics / Trauma|Local Flap Reconstruction
-SINGLETON|Facial Plastics / Trauma|Mandibular Biomechanics and Occlusion
-SINGLETON|Facial Plastics / Trauma|Mohs Defect Reconstruction
-SINGLETON|Facial Plastics / Trauma|Otoplasty
-SINGLETON|Facial Plastics / Trauma|Rhinoplasty Tip Mechanics
-SINGLETON|Facial Plastics / Trauma|Scar Management
-SINGLETON|Facial Plastics / Trauma|Skin Graft Selection
-SINGLETON|Facial Plastics / Trauma|Static Facial Reanimation
-SINGLETON|Facial Plastics / Trauma|Structured Facial Trauma Examination
-SINGLETON|General ENT / Emergencies|Antimicrobial Stewardship in Otolaryngology
-SINGLETON|General ENT / Emergencies|Cranial Nerve Examination / Skull Base Localization
-SINGLETON|General ENT / Emergencies|ENT Fluids / Electrolytes / Nutrition
-SINGLETON|General ENT / Emergencies|ENT Imaging Fundamentals
-SINGLETON|General ENT / Emergencies|Evidence Interpretation / Outcomes Research
-SINGLETON|General ENT / Emergencies|Geriatric Otolaryngology / Frailty
-SINGLETON|General ENT / Emergencies|Grafts / Implants / Biomaterials in ENT
-SINGLETON|General ENT / Emergencies|Immunocompromised Host in Otolaryngology
-SINGLETON|General ENT / Emergencies|Laser / Energy Safety in Otolaryngology
-SINGLETON|General ENT / Emergencies|Oral Manifestations of Systemic Disease
-SINGLETON|General ENT / Emergencies|Pain Management in the Head & Neck Patient
-SINGLETON|General ENT / Emergencies|Systemic / Granulomatous Disease Manifestations in ENT
-SINGLETON|General ENT / Emergencies|Wound Healing / Scar Biology in Head & Neck Surgery
-FOCUS|OR_prep|100
-FOCUS|boards|116
-FOCUS|overnight_call|37
-FOCUS|postoperative_call|4
+SINGLETON_TOPICS|0
+FOCUS|OR_prep|114
+FOCUS|boards|127
+FOCUS|overnight_call|41
+FOCUS|postoperative_call|5
 AUDIT_EXIT_STATUS|0
