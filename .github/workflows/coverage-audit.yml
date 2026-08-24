@@ -1,4 +1,4 @@
-name: ENT Mastery coverage audit
+name: ENT Mastery coverage and quality audit
 
 on:
   workflow_dispatch:
@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'audit_coverage_v135.py'
+      - 'audit_quality_v149.py'
       - 'data.py'
       - 'recognize_stage_v127.py'
       - 'new_topics_v*.py'
@@ -22,10 +23,12 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Canonical coverage and depth report
-        run: python audit_coverage_v135.py --depth
+      - name: Canonical coverage release gate
+        run: python audit_coverage_v135.py --depth --strict
+      - name: Resident-level quality audit
+        run: python audit_quality_v149.py
 
-# Deliberately informational: do not use --strict here. The repository is in an
-# active coverage-expansion phase, so missing topics belong in the report rather
-# than generating recurring "job failed" alerts. Use --strict only when 100%
-# canonical coverage becomes the release gate.
+# Canonical topic coverage is now a release gate and must stay at 100%.
+# The v14.9 quality audit is deliberately informational while the first true
+# chief/boards/call/OR quality pass is being reviewed. Once its flagged debt is
+# closed, switch that step to `python audit_quality_v149.py --strict-quality`.
