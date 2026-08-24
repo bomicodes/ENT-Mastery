@@ -1,6 +1,6 @@
 === ENT MASTERY CANONICAL VIGNETTE COVERAGE + DEPTH ===
 Total curriculum topics: 334
-Total vignettes: 632
+Total vignettes: 671
 
 DOMAIN|Otology / Neurotology|46|46|100.0%
 DEPTH2_DOMAIN|Otology / Neurotology|46|46|100.0%
@@ -9,25 +9,25 @@ DEPTH2_DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
 DOMAIN|Head & Neck Oncology|47|47|100.0%
 DEPTH2_DOMAIN|Head & Neck Oncology|47|47|100.0%
 DOMAIN|Thyroid / Parathyroid / Salivary|33|33|100.0%
-DEPTH2_DOMAIN|Thyroid / Parathyroid / Salivary|20|33|60.6%
+DEPTH2_DOMAIN|Thyroid / Parathyroid / Salivary|33|33|100.0%
 DOMAIN|Pediatric Otolaryngology|40|40|100.0%
-DEPTH2_DOMAIN|Pediatric Otolaryngology|20|40|50.0%
+DEPTH2_DOMAIN|Pediatric Otolaryngology|40|40|100.0%
 DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
 DEPTH2_DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
 DOMAIN|Facial Plastics / Trauma|36|36|100.0%
 DEPTH2_DOMAIN|Facial Plastics / Trauma|19|36|52.8%
 DOMAIN|Sleep Surgery|22|22|100.0%
-DEPTH2_DOMAIN|Sleep Surgery|16|22|72.7%
+DEPTH2_DOMAIN|Sleep Surgery|22|22|100.0%
 DOMAIN|General ENT / Emergencies|32|32|100.0%
 DEPTH2_DOMAIN|General ENT / Emergencies|19|32|59.4%
 
 OVERALL|334|334|100.0%
-DEPTH2_OVERALL|265|334|79.3%
+DEPTH2_OVERALL|304|334|91.0%
 MISSING_TOTAL|0
 ORPHANED|0
 DUPLICATE_IDS|0
 MALFORMED|0
-SINGLETON_TOPICS|69
+SINGLETON_TOPICS|30
 SINGLETON|Facial Plastics / Trauma|Aesthetic Facial Analysis
 SINGLETON|Facial Plastics / Trauma|Aging Face / Injectables / Resurfacing
 SINGLETON|Facial Plastics / Trauma|Alar Retraction / Nasal Vestibular Stenosis
@@ -58,47 +58,8 @@ SINGLETON|General ENT / Emergencies|Oral Manifestations of Systemic Disease
 SINGLETON|General ENT / Emergencies|Pain Management in the Head & Neck Patient
 SINGLETON|General ENT / Emergencies|Systemic / Granulomatous Disease Manifestations in ENT
 SINGLETON|General ENT / Emergencies|Wound Healing / Scar Biology in Head & Neck Surgery
-SINGLETON|Pediatric Otolaryngology|Ankyloglossia / Maxillary Frenulum
-SINGLETON|Pediatric Otolaryngology|Cleft / Craniofacial Otologic-Airway Care
-SINGLETON|Pediatric Otolaryngology|Cleft Lip / Palate — ENT Surgical Fundamentals
-SINGLETON|Pediatric Otolaryngology|Congenital Hearing Loss Genetics
-SINGLETON|Pediatric Otolaryngology|Croup vs Epiglottitis
-SINGLETON|Pediatric Otolaryngology|Juvenile Recurrent Parotitis
-SINGLETON|Pediatric Otolaryngology|Lymphatic Malformation
-SINGLETON|Pediatric Otolaryngology|Microtia / Aural Atresia
-SINGLETON|Pediatric Otolaryngology|Microtia Reconstruction
-SINGLETON|Pediatric Otolaryngology|Nonobstructive Pediatric Sleep Disorders
-SINGLETON|Pediatric Otolaryngology|Pediatric Head & Neck Tumors
-SINGLETON|Pediatric Otolaryngology|Pediatric Hearing Loss Workup
-SINGLETON|Pediatric Otolaryngology|Pediatric Reflux / Eosinophilic Esophagitis
-SINGLETON|Pediatric Otolaryngology|Pediatric Speech Disorders
-SINGLETON|Pediatric Otolaryngology|Pediatric Vestibular Disorders
-SINGLETON|Pediatric Otolaryngology|Pediatric Vocal Fold Immobility
-SINGLETON|Pediatric Otolaryngology|Recurrent Tonsillitis Decision-Making
-SINGLETON|Pediatric Otolaryngology|Thyroglossal Duct Cyst
-SINGLETON|Pediatric Otolaryngology|Tracheomalacia / Bronchomalacia
-SINGLETON|Pediatric Otolaryngology|Velopharyngeal Insufficiency
-SINGLETON|Sleep Surgery|Circadian Rhythm Sleep-Wake Disorders
-SINGLETON|Sleep Surgery|Down Syndrome Pediatric HNS
-SINGLETON|Sleep Surgery|Narcolepsy / Central Hypersomnolence Recognition
-SINGLETON|Sleep Surgery|Palatal Surgery
-SINGLETON|Sleep Surgery|Restless Legs / Periodic Limb Movement Disorders
-SINGLETON|Sleep Surgery|Tongue Base Surgery
-SINGLETON|Thyroid / Parathyroid / Salivary|Acute Sialadenitis / Sjögren
-SINGLETON|Thyroid / Parathyroid / Salivary|Differentiated Thyroid Cancer: Active Surveillance
-SINGLETON|Thyroid / Parathyroid / Salivary|Familial Hyperparathyroidism and Parathyromatosis
-SINGLETON|Thyroid / Parathyroid / Salivary|Four-Gland Parathyroid Exploration
-SINGLETON|Thyroid / Parathyroid / Salivary|Pleomorphic Adenoma / Warthin Tumor
-SINGLETON|Thyroid / Parathyroid / Salivary|Radioactive Iodine and TSH Suppression in DTC
-SINGLETON|Thyroid / Parathyroid / Salivary|Radioiodine-Refractory Differentiated Thyroid Cancer
-SINGLETON|Thyroid / Parathyroid / Salivary|Ranula
-SINGLETON|Thyroid / Parathyroid / Salivary|Reoperative Thyroid Surgery
-SINGLETON|Thyroid / Parathyroid / Salivary|Salivary Adenoid Cystic Carcinoma and Perineural Spread
-SINGLETON|Thyroid / Parathyroid / Salivary|Secondary / Tertiary Hyperparathyroidism
-SINGLETON|Thyroid / Parathyroid / Salivary|Submandibular Gland Excision
-SINGLETON|Thyroid / Parathyroid / Salivary|Thyroid Eye Disease / Graves Ophthalmopathy
-FOCUS|OR_prep|85
-FOCUS|boards|97
-FOCUS|overnight_call|32
+FOCUS|OR_prep|100
+FOCUS|boards|116
+FOCUS|overnight_call|37
 FOCUS|postoperative_call|4
 AUDIT_EXIT_STATUS|0
