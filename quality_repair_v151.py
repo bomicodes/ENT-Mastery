@@ -2,9 +2,8 @@
 
 Earlier second-pass banks used placeholder why-wrong text. This repair replaces
 those placeholders with choice-specific teaching. v15.2 also adds a deliberately
-small cross-domain chief-level batch; it is merged here because this module is
-loaded before the final answer-position rebalance, keeping all audits and runtime
-entrypoints on the same assembled bank.
+small cross-domain chief-level batch. Its merge is deferred until the repair
+function runs, after recognize_stage_v127 has registered all canonical topics.
 """
 
 import data
@@ -57,7 +56,6 @@ def _is_placeholder(reason):
 
 
 def _choice_specific_reason(choice, explanation, pearl):
-    """Create a case-specific teaching contrast without inventing new management."""
     choice = str(choice or "").strip()
     explanation = str(explanation or "").strip()
     pearl = str(pearl or "").strip()
@@ -71,6 +69,9 @@ def _choice_specific_reason(choice, explanation, pearl):
 
 
 def apply_quality_repair_v151(challenges):
+    # Called late in recognize_stage_v127, after v13.1/v13.3 topic registration.
+    # Merge v15.2 here so canonical validation sees the final curriculum.
+    _merge_v152()
     repaired_cases = 0
     repaired_reasons = 0
     for q in challenges:
@@ -101,6 +102,3 @@ def apply_quality_repair_v151(challenges):
             q["why_wrong"] = reasons
             repaired_cases += 1
     return {"cases": repaired_cases, "reasons": repaired_reasons}
-
-
-_merge_v152()
