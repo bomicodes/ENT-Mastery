@@ -1,10 +1,14 @@
-"""v15.1 — resident-level distractor quality repair.
+"""v15.1/v15.2 — resident-level distractor repair + depth integration.
 
-Earlier second-pass banks were deliberately rich in stems/explanations but used
-placeholder why-wrong text. This runtime repair replaces those placeholders with
-choice-specific teaching tied to each case's own explanation. It is intentionally
-content-preserving: stems, answers, pearls, and curveballs are unchanged.
+Earlier second-pass banks used placeholder why-wrong text. This repair replaces
+those placeholders with choice-specific teaching. v15.2 also adds a deliberately
+small cross-domain chief-level batch; it is merged here because this module is
+loaded before the final answer-position rebalance, keeping all audits and runtime
+entrypoints on the same assembled bank.
 """
+
+import data
+from vignettes_v152 import VIGNETTES_V152
 
 _GENERIC_MARKERS = (
     "use the mechanism, anatomy, and management priority in the explanation",
@@ -17,6 +21,30 @@ _GENERIC_MARKERS = (
     "does not best address the management discriminator in this scenario",
     "pending distractor-specific review",
 )
+
+
+def _merge_v152():
+    canonical = {
+        (domain, module.get("topic"))
+        for domain, modules in data.DEEP_MODULES_V6.items()
+        for module in modules
+    }
+    existing = {q.get("id") for q in data.CLINICAL_CHALLENGES_V119}
+    for source in VIGNETTES_V152:
+        key = (source.get("domain"), source.get("topic"))
+        if key not in canonical:
+            raise RuntimeError(
+                f"v15.2: orphan vignette {source.get('id')!r} targets non-canonical {key!r}"
+            )
+        if source.get("id") in existing:
+            continue
+        q = dict(source)
+        q["concept_id"] = data._v6_item_id(q["domain"], q["topic"])
+        data.CLINICAL_CHALLENGES_V119.append(q)
+        existing.add(q["id"])
+    data.CLINICAL_CHALLENGE_BY_ID_V119 = {
+        q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
+    }
 
 
 def _norm(value):
@@ -73,3 +101,6 @@ def apply_quality_repair_v151(challenges):
             q["why_wrong"] = reasons
             repaired_cases += 1
     return {"cases": repaired_cases, "reasons": repaired_reasons}
+
+
+_merge_v152()
