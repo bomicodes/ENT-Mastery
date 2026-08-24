@@ -1,54 +1,48 @@
 === ENT MASTERY CANONICAL VIGNETTE COVERAGE + DEPTH ===
 Total curriculum topics: 334
-Total vignettes: 444
+Total vignettes: 480
 
 DOMAIN|Otology / Neurotology|46|46|100.0%
-DEPTH2_DOMAIN|Otology / Neurotology|5|46|10.9%
+DEPTH2_DOMAIN|Otology / Neurotology|11|46|23.9%
 DOMAIN|Rhinology / Allergy / Skull Base|42|42|100.0%
-DEPTH2_DOMAIN|Rhinology / Allergy / Skull Base|5|42|11.9%
+DEPTH2_DOMAIN|Rhinology / Allergy / Skull Base|11|42|26.2%
 DOMAIN|Head & Neck Oncology|47|47|100.0%
 DEPTH2_DOMAIN|Head & Neck Oncology|19|47|40.4%
 DOMAIN|Thyroid / Parathyroid / Salivary|33|33|100.0%
-DEPTH2_DOMAIN|Thyroid / Parathyroid / Salivary|6|33|18.2%
+DEPTH2_DOMAIN|Thyroid / Parathyroid / Salivary|12|33|36.4%
 DOMAIN|Pediatric Otolaryngology|40|40|100.0%
 DEPTH2_DOMAIN|Pediatric Otolaryngology|12|40|30.0%
 DOMAIN|Laryngology / Voice / Swallowing|36|36|100.0%
-DEPTH2_DOMAIN|Laryngology / Voice / Swallowing|6|36|16.7%
+DEPTH2_DOMAIN|Laryngology / Voice / Swallowing|12|36|33.3%
 DOMAIN|Facial Plastics / Trauma|36|36|100.0%
-DEPTH2_DOMAIN|Facial Plastics / Trauma|5|36|13.9%
+DEPTH2_DOMAIN|Facial Plastics / Trauma|11|36|30.6%
 DOMAIN|Sleep Surgery|22|22|100.0%
-DEPTH2_DOMAIN|Sleep Surgery|5|22|22.7%
+DEPTH2_DOMAIN|Sleep Surgery|11|22|50.0%
 DOMAIN|General ENT / Emergencies|32|32|100.0%
 DEPTH2_DOMAIN|General ENT / Emergencies|14|32|43.8%
 
 OVERALL|334|334|100.0%
-DEPTH2_OVERALL|77|334|23.1%
+DEPTH2_OVERALL|113|334|33.8%
 MISSING_TOTAL|0
 ORPHANED|0
 DUPLICATE_IDS|0
 MALFORMED|0
-SINGLETON_TOPICS|257
+SINGLETON_TOPICS|221
 SINGLETON|Facial Plastics / Trauma|Aesthetic Facial Analysis
 SINGLETON|Facial Plastics / Trauma|Aging Face / Injectables / Resurfacing
 SINGLETON|Facial Plastics / Trauma|Alar Retraction / Nasal Vestibular Stenosis
 SINGLETON|Facial Plastics / Trauma|Auricular Reconstruction
 SINGLETON|Facial Plastics / Trauma|Bilobed Flap
 SINGLETON|Facial Plastics / Trauma|Cervicofacial Flap
-SINGLETON|Facial Plastics / Trauma|Dynamic Facial Reanimation
 SINGLETON|Facial Plastics / Trauma|Facial Soft-Tissue Lacerations / Burns
 SINGLETON|Facial Plastics / Trauma|Facial Synkinesis / Static-Dynamic Rehabilitation
-SINGLETON|Facial Plastics / Trauma|Forehead Flap / Nasal Reconstruction
 SINGLETON|Facial Plastics / Trauma|Frontal Sinus Fracture
-SINGLETON|Facial Plastics / Trauma|Frontal Sinus Fracture Decision Model
-SINGLETON|Facial Plastics / Trauma|Functional Septorhinoplasty
 SINGLETON|Facial Plastics / Trauma|Hair Restoration Fundamentals
 SINGLETON|Facial Plastics / Trauma|Le Fort / Panfacial Trauma
 SINGLETON|Facial Plastics / Trauma|Local Flap Reconstruction
-SINGLETON|Facial Plastics / Trauma|Mandible Fracture
 SINGLETON|Facial Plastics / Trauma|Mandibular Biomechanics and Occlusion
 SINGLETON|Facial Plastics / Trauma|Mohs Defect Reconstruction
 SINGLETON|Facial Plastics / Trauma|NOE Fracture Mechanics
-SINGLETON|Facial Plastics / Trauma|Nasal Fracture
 SINGLETON|Facial Plastics / Trauma|Open Rhinoplasty Fundamentals
 SINGLETON|Facial Plastics / Trauma|Otoplasty
 SINGLETON|Facial Plastics / Trauma|Periocular Reconstruction
@@ -108,10 +102,7 @@ SINGLETON|Head & Neck Oncology|Tumor Immunology / Immunotherapy in HNSCC
 SINGLETON|Laryngology / Voice / Swallowing|Acute / Chronic Laryngopharyngitis
 SINGLETON|Laryngology / Voice / Swallowing|Arytenoid Adduction / Reinnervation
 SINGLETON|Laryngology / Voice / Swallowing|Aspiration-Prevention Surgery
-SINGLETON|Laryngology / Voice / Swallowing|Benign Vocal Fold Lesions
 SINGLETON|Laryngology / Voice / Swallowing|Chronic Cough / Laryngeal Hypersensitivity
-SINGLETON|Laryngology / Voice / Swallowing|Cricopharyngeal Dysfunction
-SINGLETON|Laryngology / Voice / Swallowing|Dysphagia / Aspiration
 SINGLETON|Laryngology / Voice / Swallowing|Esophageal Disease for the Otolaryngologist
 SINGLETON|Laryngology / Voice / Swallowing|FEES
 SINGLETON|Laryngology / Voice / Swallowing|Injection Laryngoplasty
@@ -125,27 +116,20 @@ SINGLETON|Laryngology / Voice / Swallowing|Posterior Cordotomy / Arytenoidectomy
 SINGLETON|Laryngology / Voice / Swallowing|Presbyphonia
 SINGLETON|Laryngology / Voice / Swallowing|Professional Voice
 SINGLETON|Laryngology / Voice / Swallowing|Radiation-Associated Dysphagia
-SINGLETON|Laryngology / Voice / Swallowing|Reinke Edema
-SINGLETON|Laryngology / Voice / Swallowing|Spasmodic Dysphonia
 SINGLETON|Laryngology / Voice / Swallowing|Stroboscopy Interpretation
-SINGLETON|Laryngology / Voice / Swallowing|Subglottic / Tracheal Stenosis
 SINGLETON|Laryngology / Voice / Swallowing|Tracheobronchial Endoscopy Principles
 SINGLETON|Laryngology / Voice / Swallowing|Transnasal Esophagoscopy
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Nodules
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Fold Sulcus / Scar
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Process Granuloma
 SINGLETON|Laryngology / Voice / Swallowing|Vocal Tremor
-SINGLETON|Otology / Neurotology|Acute Mastoiditis / Petrous Apicitis
 SINGLETON|Otology / Neurotology|Acute Otitis Externa
 SINGLETON|Otology / Neurotology|Age-Related Hearing Loss / Presbycusis
 SINGLETON|Otology / Neurotology|Audiogram Interpretation
 SINGLETON|Otology / Neurotology|Audiologic Electrophysiology / ABR-OAE-ECoG
 SINGLETON|Otology / Neurotology|Auditory Neuroanatomy / Cochlear Physiology
 SINGLETON|Otology / Neurotology|Autoimmune Inner Ear Disease
-SINGLETON|Otology / Neurotology|BPPV
-SINGLETON|Otology / Neurotology|CSF Otorrhea / Temporal Encephalocele
 SINGLETON|Otology / Neurotology|Central Vestibular Disorders
-SINGLETON|Otology / Neurotology|Cochlear Implant Candidacy
 SINGLETON|Otology / Neurotology|Cochlear Implant Failure / Revision
 SINGLETON|Otology / Neurotology|Cochlear Implant Surgery
 SINGLETON|Otology / Neurotology|Congenital Inner-Ear Malformations
@@ -155,7 +139,6 @@ SINGLETON|Otology / Neurotology|Hearing Aids and Bone-Conduction Devices
 SINGLETON|Otology / Neurotology|Hyperacusis / Decreased Sound Tolerance
 SINGLETON|Otology / Neurotology|Labyrinthitis / Infections of the Labyrinth
 SINGLETON|Otology / Neurotology|Lateral Skull-Base Tumor Framework
-SINGLETON|Otology / Neurotology|Ménière Disease
 SINGLETON|Otology / Neurotology|Necrotizing Otitis Externa
 SINGLETON|Otology / Neurotology|Neurotologic Intraoperative Cranial-Nerve Monitoring
 SINGLETON|Otology / Neurotology|Ossicular Discontinuity
@@ -174,7 +157,6 @@ SINGLETON|Otology / Neurotology|Tympanometry / Acoustic Reflexes
 SINGLETON|Otology / Neurotology|Vestibular Migraine
 SINGLETON|Otology / Neurotology|Vestibular Neuritis
 SINGLETON|Otology / Neurotology|Vestibular Rehabilitation
-SINGLETON|Otology / Neurotology|Vestibular Schwannoma
 SINGLETON|Otology / Neurotology|Vestibular Test Battery
 SINGLETON|Pediatric Otolaryngology|Ankyloglossia / Maxillary Frenulum
 SINGLETON|Pediatric Otolaryngology|Branchial Cleft Anomalies
@@ -206,14 +188,11 @@ SINGLETON|Pediatric Otolaryngology|Tracheomalacia / Bronchomalacia
 SINGLETON|Pediatric Otolaryngology|Velopharyngeal Insufficiency
 SINGLETON|Rhinology / Allergy / Skull Base|AFRS
 SINGLETON|Rhinology / Allergy / Skull Base|Acute Bacterial Rhinosinusitis
-SINGLETON|Rhinology / Allergy / Skull Base|Allergen Immunotherapy — SCIT / SLIT
-SINGLETON|Rhinology / Allergy / Skull Base|Allergic Rhinitis
 SINGLETON|Rhinology / Allergy / Skull Base|Allergy Testing & Interpretation
 SINGLETON|Rhinology / Allergy / Skull Base|Benign Sinonasal Tumor Framework
 SINGLETON|Rhinology / Allergy / Skull Base|CF / Primary Ciliary Dyskinesia Sinonasal Disease
 SINGLETON|Rhinology / Allergy / Skull Base|CRS Phenotyping
 SINGLETON|Rhinology / Allergy / Skull Base|CRSsNP
-SINGLETON|Rhinology / Allergy / Skull Base|CRSwNP
 SINGLETON|Rhinology / Allergy / Skull Base|Endoscopic CSF Leak Repair / Nasoseptal Flap
 SINGLETON|Rhinology / Allergy / Skull Base|Endoscopic Maxillary Antrostomy
 SINGLETON|Rhinology / Allergy / Skull Base|Ethmoidectomy
@@ -223,8 +202,6 @@ SINGLETON|Rhinology / Allergy / Skull Base|Frontal Sinusotomy / Draf Procedures
 SINGLETON|Rhinology / Allergy / Skull Base|Fungal Ball
 SINGLETON|Rhinology / Allergy / Skull Base|Immunodeficiency-Associated Chronic Rhinosinusitis
 SINGLETON|Rhinology / Allergy / Skull Base|Inferior Turbinate Hypertrophy
-SINGLETON|Rhinology / Allergy / Skull Base|Intracranial Complications of Sinusitis
-SINGLETON|Rhinology / Allergy / Skull Base|Juvenile Nasopharyngeal Angiofibroma
 SINGLETON|Rhinology / Allergy / Skull Base|Local Allergic Rhinitis
 SINGLETON|Rhinology / Allergy / Skull Base|Mucocele
 SINGLETON|Rhinology / Allergy / Skull Base|Nasal Anatomy for Endoscopy
@@ -236,57 +213,44 @@ SINGLETON|Rhinology / Allergy / Skull Base|Pediatric Chronic Rhinosinusitis
 SINGLETON|Rhinology / Allergy / Skull Base|Recurrent Acute Rhinosinusitis
 SINGLETON|Rhinology / Allergy / Skull Base|Revision FESS
 SINGLETON|Rhinology / Allergy / Skull Base|Septal Deviation
-SINGLETON|Rhinology / Allergy / Skull Base|Sinonasal Inverted Papilloma
 SINGLETON|Rhinology / Allergy / Skull Base|Sinonasal Malignancy
 SINGLETON|Rhinology / Allergy / Skull Base|Sphenoidotomy
 SINGLETON|Rhinology / Allergy / Skull Base|Systemic Disease of the Nose / Sinuses
 SINGLETON|Rhinology / Allergy / Skull Base|Unilateral Sinonasal Disease
-SINGLETON|Sleep Surgery|Adult PSG Interpretation
 SINGLETON|Sleep Surgery|Central Events / Hypoventilation
 SINGLETON|Sleep Surgery|Circadian Rhythm Sleep-Wake Disorders
 SINGLETON|Sleep Surgery|Down Syndrome Pediatric HNS
-SINGLETON|Sleep Surgery|HNS Activation / Programming
 SINGLETON|Sleep Surgery|HNS Troubleshooting / Nonresponse
 SINGLETON|Sleep Surgery|Lingual Tonsil / Tongue-Base Obstruction
-SINGLETON|Sleep Surgery|Maxillomandibular Advancement
 SINGLETON|Sleep Surgery|Narcolepsy / Central Hypersomnolence Recognition
-SINGLETON|Sleep Surgery|PAP Troubleshooting
 SINGLETON|Sleep Surgery|Palatal Surgery
 SINGLETON|Sleep Surgery|Palatal Surgery Selection for OSA
 SINGLETON|Sleep Surgery|Pediatric PSG Interpretation
-SINGLETON|Sleep Surgery|Positional OSA
 SINGLETON|Sleep Surgery|Restless Legs / Periodic Limb Movement Disorders
-SINGLETON|Sleep Surgery|Sleep-Related Hypoventilation
 SINGLETON|Sleep Surgery|Tongue Base Surgery
 SINGLETON|Thyroid / Parathyroid / Salivary|Acute Sialadenitis / Sjögren
 SINGLETON|Thyroid / Parathyroid / Salivary|Anaplastic Thyroid Cancer
 SINGLETON|Thyroid / Parathyroid / Salivary|Central Neck Dissection
-SINGLETON|Thyroid / Parathyroid / Salivary|Completion Thyroidectomy
 SINGLETON|Thyroid / Parathyroid / Salivary|Differentiated Thyroid Cancer
 SINGLETON|Thyroid / Parathyroid / Salivary|Differentiated Thyroid Cancer: Active Surveillance
 SINGLETON|Thyroid / Parathyroid / Salivary|Familial Hyperparathyroidism and Parathyromatosis
 SINGLETON|Thyroid / Parathyroid / Salivary|Four-Gland Parathyroid Exploration
-SINGLETON|Thyroid / Parathyroid / Salivary|Graves Disease / Toxic Goiter
-SINGLETON|Thyroid / Parathyroid / Salivary|Hungry Bone / Post-Thyroid Calcium Management
 SINGLETON|Thyroid / Parathyroid / Salivary|Indeterminate Thyroid Cytology / Molecular Testing
 SINGLETON|Thyroid / Parathyroid / Salivary|MEN2 / RET
-SINGLETON|Thyroid / Parathyroid / Salivary|Medullary Thyroid Cancer
 SINGLETON|Thyroid / Parathyroid / Salivary|Parathyroid Carcinoma
 SINGLETON|Thyroid / Parathyroid / Salivary|Pleomorphic Adenoma / Warthin Tumor
-SINGLETON|Thyroid / Parathyroid / Salivary|Primary Thyroid Lymphoma
 SINGLETON|Thyroid / Parathyroid / Salivary|Radioactive Iodine and TSH Suppression in DTC
 SINGLETON|Thyroid / Parathyroid / Salivary|Radioiodine-Refractory Differentiated Thyroid Cancer
 SINGLETON|Thyroid / Parathyroid / Salivary|Ranula
 SINGLETON|Thyroid / Parathyroid / Salivary|Reoperative Hyperparathyroidism
 SINGLETON|Thyroid / Parathyroid / Salivary|Reoperative Thyroid Surgery
 SINGLETON|Thyroid / Parathyroid / Salivary|Salivary Adenoid Cystic Carcinoma and Perineural Spread
-SINGLETON|Thyroid / Parathyroid / Salivary|Salivary Gland Malignancy
 SINGLETON|Thyroid / Parathyroid / Salivary|Secondary / Tertiary Hyperparathyroidism
 SINGLETON|Thyroid / Parathyroid / Salivary|Sialendoscopy
 SINGLETON|Thyroid / Parathyroid / Salivary|Submandibular Gland Excision
 SINGLETON|Thyroid / Parathyroid / Salivary|Thyroid Eye Disease / Graves Ophthalmopathy
-FOCUS|OR_prep|10
-FOCUS|boards|6
-FOCUS|overnight_call|12
-FOCUS|postoperative_call|2
+FOCUS|OR_prep|22
+FOCUS|boards|25
+FOCUS|overnight_call|16
+FOCUS|postoperative_call|3
 AUDIT_EXIT_STATUS|0
