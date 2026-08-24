@@ -9,6 +9,7 @@ before merge so a typo fails loudly instead of creating an orphaned case.
 
 import hashlib
 import data
+from quality_repair_v151 import apply_quality_repair_v151
 from vignettes_v128 import VIGNETTES_V128
 from topic_alias_v129 import apply_topic_alias_v129
 from new_topics_v131 import NEW_TOPICS_V131
@@ -208,12 +209,7 @@ for _batch, _name in (
 
 
 def _rebalance_vignette_answer_positions_v150(challenges):
-    """Remove exploitable answer-position bias without changing question content.
-
-    The target answer slot is deterministic from the stable question id so the
-    bank stays reproducible across workers/deploys. choices and why_wrong move
-    together, preserving their alignment.
-    """
+    """Deterministically distribute keyed answers while preserving alignment."""
     for q in challenges:
         choices = list(q.get("choices") or [])
         why_wrong = list(q.get("why_wrong") or [])
@@ -240,6 +236,9 @@ def _rebalance_vignette_answer_positions_v150(challenges):
     return challenges
 
 
+# Repair legacy placeholder distractor teaching before the deterministic shuffle,
+# so each explanation remains attached to its intended option after reordering.
+QUALITY_REPAIR_V151 = apply_quality_repair_v151(data.CLINICAL_CHALLENGES_V119)
 _rebalance_vignette_answer_positions_v150(data.CLINICAL_CHALLENGES_V119)
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {
     q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
