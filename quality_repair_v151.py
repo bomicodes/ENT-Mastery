@@ -1,15 +1,17 @@
-"""v15.1-v15.4 — resident-level quality repair + late depth integration.
+"""v15.1-v15.3 — resident-level quality repair + late depth integration.
 
 Earlier second-pass banks used placeholder why-wrong text. This repair replaces
-those placeholders with choice-specific teaching. v15.2-v15.4 add deliberately
-small, high-consequence batches; v15.4 also introduces explicit learning-stage
-metadata. Late merging preserves strict canonical validation after all topics load.
+those placeholders with choice-specific teaching. v15.2 and v15.3 add small,
+high-consequence chief-level batches. Their merges are deferred until this
+function runs, after recognize_stage_v127 has registered all canonical topics.
+
+v15.4 remains preserved in vignettes_v154.py and on content/v154-escalation-depth,
+but its runtime merge is temporarily disabled while production startup is verified.
 """
 
 import data
 from vignettes_v152 import VIGNETTES_V152
 from vignettes_v153 import VIGNETTES_V153
-from vignettes_v154 import VIGNETTES_V154
 
 _GENERIC_MARKERS = (
     "use the mechanism, anatomy, and management priority in the explanation",
@@ -71,11 +73,8 @@ def _choice_specific_reason(choice, explanation, pearl):
 
 
 def apply_quality_repair_v151(challenges):
-    # Called late in recognize_stage_v127, after v13.1/v13.3 topic registration.
-    # Keep late batches here so strict canonical validation sees the final curriculum.
     _merge_late_batch(VIGNETTES_V152, "v15.2")
     _merge_late_batch(VIGNETTES_V153, "v15.3")
-    _merge_late_batch(VIGNETTES_V154, "v15.4")
     repaired_cases = 0
     repaired_reasons = 0
     for q in challenges:
