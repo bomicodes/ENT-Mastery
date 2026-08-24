@@ -6,7 +6,7 @@
 </div>
 
 <section class="card interp-case" id="challenge" data-qid="{{q.id}}" data-answer="{{q.answer}}">
-  <div class="interp-case-head"><span class="tag">{{q.tier or 'Clinical challenge'}}</span><span>{{q.mode or 'Board vignette'}}</span></div>
+  <div class="interp-case-head"><span class="tag">{{q.tier or 'Clinical challenge'}}</span><span>{{q.mode or 'Board vignette'}}</span>{% if q.focus %}<span class="tag">{{q.focus|replace('_',' ')|title}}</span>{% endif %}</div>
   <div class="commit-prompt"><span class="eyebrow">COMMIT BEFORE REVEAL</span><h2>{{q.stem}}</h2></div>
   <div class="challenge-choices" style="display:grid;gap:.75rem;margin-top:1rem">
     {% for choice in q.choices %}
@@ -17,8 +17,12 @@
   <div id="challenge-feedback" class="hidden" style="margin-top:1rem">
     <div id="challenge-result" class="practice"></div>
     <div class="card"><span class="reason-label">EXPLANATION</span><p>{{q.explanation}}</p></div>
-    <div class="card"><span class="reason-label">WHY THE OTHER ANSWERS ARE WRONG</span>
-      <div style="display:grid;gap:.6rem">{% for why in q.why_wrong %}<p><b>{{'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[loop.index0]}}.</b> {{why}}</p>{% endfor %}</div>
+    <div class="card"><span class="reason-label">WHY THE ALTERNATIVES ARE WRONG</span>
+      <div style="display:grid;gap:.6rem">
+      {% for why in q.why_wrong %}
+        {% if loop.index0 != q.answer|int %}<p><b>{{'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[loop.index0]}}.</b> {{why}}</p>{% endif %}
+      {% endfor %}
+      </div>
     </div>
     {% if q.board_pearl %}<div class="card"><span class="reason-label">BOARD PEARL</span><p>{{q.board_pearl}}</p></div>{% endif %}
     {% if q.curveball %}<div class="card"><span class="reason-label">ATTENDING CURVEBALL</span><p>{{q.curveball}}</p></div>{% endif %}
