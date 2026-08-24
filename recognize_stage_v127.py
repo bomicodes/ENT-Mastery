@@ -18,7 +18,7 @@ Flask imports app.py, so it also performs the small idempotent V128 vignette
 merge. This avoids replacing the generated multi-megabyte data.py while keeping
 the live CLINICAL_CHALLENGES_V119 bank and direct-lookup index synchronized.
 
-v13.3-v13.7 depth integration: adds decision-heavy cross-domain topics/cases,
+v13.3-v13.9 depth integration: adds decision-heavy cross-domain topics/cases,
 then validates every new vignette against the live canonical curriculum. A
 future typo fails loudly at startup instead of silently creating an orphan.
 """
@@ -32,6 +32,8 @@ from new_topics_v133 import NEW_TOPICS_V133
 from vignettes_v134 import VIGNETTES_V134
 from vignettes_v136 import VIGNETTES_V136
 from vignettes_v137 import VIGNETTES_V137
+from vignettes_v138 import VIGNETTES_V138
+from vignettes_v139 import VIGNETTES_V139
 
 
 def apply_recognize_blind_reveal_v127(items):
@@ -145,3 +147,5 @@ data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENG
 _merge_validated_challenges(VIGNETTES_V134, "v13.4")
 _merge_validated_challenges(VIGNETTES_V136, "v13.6")
 _merge_validated_challenges(VIGNETTES_V137, "v13.7")
+_merge_validated_challenges(VIGNETTES_V138, "v13.8")
+_merge_validated_challenges(VIGNETTES_V139, "v13.9")
