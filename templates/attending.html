@@ -1,4 +1,21 @@
-{% extends "base.html" %}{% block content %}
-<div class="eyebrow">ATTENDING MODE</div><h1>Choose the depth of questioning.</h1><div class="level-tabs">{% for l in levels %}<a class="{{'selected' if level==l.id else ''}}" href="/attending?level={{l.id}}"><b>{{l.name}}</b><span>{{l.description}}</span></a>{% endfor %}</div><p class="lede">Answer aloud first. Reveal only after you commit.</p>
-<div class="attending-stack">{% for p in prompts %}<section class="card attending-card" data-concept-id="{{p.concept_id}}" data-domain="{{p.domain}}"><div class="stage-head"><span>{{p.domain}}</span><span>{{level|upper}}</span></div><h2>{{p.prompt}}</h2><textarea rows="3" placeholder="Answer as if your attending asked you in the OR…"></textarea><details class="rapid attending-reveal"><summary>Reveal Answer</summary><p>{{p.answer}}</p></details><div class="demonstrated-rating compact"><span>Performance</span><button data-attending-score="0">Missed</button><button data-attending-score="1">Partial</button><button data-attending-score="2">Good</button><button data-attending-score="3">Automatic</button></div></section>{% endfor %}</div>
+{% extends "base.html" %}
+{% block content %}
+<div class="breadcrumb"><a href="/">Home</a> / {{label}}</div>
+<div class="hero tight"><div><span class="eyebrow">TEACH IT BACK</span><h1>{{label}}</h1><p>{{subtitle}}</p></div></div>
+<div class="card-grid three">
+{% for p in prompts %}
+  <article class="card">
+    <span class="pill">{{p.domain}}</span>
+    <h2>{{p.topic}}</h2>
+    <div class="callout question"><strong>Prompt</strong><br>{{p.prompt or p.junior_question}}</div>
+    {% if p.must_mention or p.required_points %}
+      <div class="callout"><strong>Must mention</strong><ul>{% for x in p.must_mention or p.required_points %}<li>{{x}}</li>{% endfor %}</ul></div>
+    {% endif %}
+    <details><summary>Reveal answer</summary><p>{{p.model_answer}}</p></details>
+    {% if p.curveball %}<div class="callout"><strong>Curveball</strong><br>{{p.curveball}}</div>{% endif %}
+    <div class="rate-row" data-attending-score data-prompt-id="{{p.id}}"><button data-score="1">Missed it</button><button data-score="2">Partial</button><button data-score="3">Solid</button></div>
+    {% if p.concept_id %}<p><a href="/concept/id/{{p.concept_id|urlencode}}">Open concept hub ↗</a></p>{% endif %}
+  </article>
+{% endfor %}
+</div>
 {% endblock %}
