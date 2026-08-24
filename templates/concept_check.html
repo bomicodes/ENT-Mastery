@@ -1,0 +1,49 @@
+{% extends "base.html" %}{% block content %}
+<div class="breadcrumb"><a href="/concept-checks">Concept Checks</a> / {{q.topic}}</div>
+<section class="card progressive-case concept-check-card" data-concept-id="{{q.concept_id}}" data-domain="{{q.domain}}" data-check-id="{{q.id}}">
+  <div class="interp-case-head"><span class="tag">{{q.domain}}</span><span>RECALL TIER</span></div>
+  <h1>{{q.topic}}</h1>
+  <div class="callout question"><strong>Retrieve before revealing</strong><br>{{q.prompt or q.question or q.stem}}</div>
+
+  {% if q.choices %}
+  <div class="choice-list">
+    {% for choice in q.choices %}<div class="choice-row"><span>{{loop.index}}.</span> {{choice}}</div>{% endfor %}
+  </div>
+  {% endif %}
+
+  <textarea rows="4" placeholder="Say or type your answer before revealing…"></textarea>
+  <p><button type="button" class="reveal-btn case-btn">Reveal answer</button></p>
+  <div class="hidden concept-check-answer">
+    <div class="callout"><strong>Answer</strong><br>{{q.answer_text or q.model_answer or q.answer}}</div>
+    {% if q.explanation %}<div class="callout"><strong>Why</strong><br>{{q.explanation}}</div>{% endif %}
+    {% if q.board_pearl %}<div class="practice"><b>Board Pearl</b><p>{{q.board_pearl}}</p></div>{% endif %}
+    {% if q.curveball %}<div class="callout"><strong>Curveball</strong><br>{{q.curveball}}</div>{% endif %}
+    <div class="rate-row concept-check-rating"><span>How well did you retrieve it?</span><button type="button" data-concept-check-score="0">Again</button><button type="button" data-concept-check-score="1">Hard</button><button type="button" data-concept-check-score="2">Good</button><button type="button" data-concept-check-score="3">Easy</button></div>
+  </div>
+
+  {% if q.concept_id %}<p><a href="/concept/id/{{q.concept_id|urlencode}}">Open full concept hub ↗</a></p>{% endif %}
+</section>
+
+<script>
+document.addEventListener('click', async (e) => {
+  const b=e.target.closest('button[data-concept-check-score]');
+  if(!b) return;
+  const card=b.closest('.concept-check-card');
+  if(!card) return;
+  const row=b.closest('.concept-check-rating');
+  row.querySelectorAll('button').forEach(x=>x.disabled=true);
+  try{
+    const r=await fetch('/api/mastery-event',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+      concept_id:card.dataset.conceptId, domain:card.dataset.domain, dimension:'recall', score:Number(b.dataset.conceptCheckScore),
+      source_type:'concept_check', source_id:card.dataset.checkId
+    })});
+    if(!r.ok) throw new Error('save failed');
+    b.classList.add('selected-rating');
+    const label=row.querySelector('span'); if(label) label.textContent='Saved — this recall result now contributes to mastery.';
+  }catch(err){
+    row.querySelectorAll('button').forEach(x=>x.disabled=false);
+    const label=row.querySelector('span'); if(label) label.textContent='Could not save rating — try again.';
+  }
+});
+</script>
+{% endblock %}
