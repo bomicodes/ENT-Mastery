@@ -93,3 +93,10 @@ def _canonical_search_index_v150():
 
 
 app_mod._canonical_search_index = _canonical_search_index_v150
+
+# v16.8: final reliability pass after all curriculum and practice-bank mutation is
+# complete. This is intentionally last so persistence aliases and route guards see
+# the exact production registry.
+from reliability_v168 import apply_reliability_v168
+
+RELIABILITY_V168 = apply_reliability_v168(app, data, app_mod)
