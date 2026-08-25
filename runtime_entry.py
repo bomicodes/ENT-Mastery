@@ -19,10 +19,18 @@ LEARNING_LADDERS_V169 = apply_learning_ladders_v169(
 )
 
 # v17.0: continue the deliberate Otology pass with the next five concepts.
-# Run after v16.9 and before the final reliability snapshot.
 from vignette_ladders_v170 import apply_learning_ladders_v170
 
 LEARNING_LADDERS_V170 = apply_learning_ladders_v170(
+    data.CLINICAL_CHALLENGES_V119,
+    data._v6_item_id,
+)
+
+# v17.1: third Otology ladder batch. Keep all ladder mutation ahead of concept-check
+# repair and the final reliability snapshot so production aliases see final data.
+from vignette_ladders_v171 import apply_learning_ladders_v171
+
+LEARNING_LADDERS_V171 = apply_learning_ladders_v171(
     data.CLINICAL_CHALLENGES_V119,
     data._v6_item_id,
 )
