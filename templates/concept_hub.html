@@ -9,6 +9,28 @@
 <div class="card concept-prereqs"><b>Prerequisites</b>{% for p in prerequisites %}<a href="/concept?domain={{domain|urlencode}}&topic={{p|urlencode}}">{{p}}</a>{% endfor %}</div>
 {% endif %}
 
+{% if clinical_relationship or clinical_children %}
+<div class="card concept-relationship">
+  <b>Clinical relationship</b>
+  {% if clinical_relationship %}
+    <span class="relation-role">{{clinical_relationship.get('role','related')}}</span>
+    {% if clinical_relationship.get('parents') %}
+      <span>Builds on
+      {% for p in clinical_relationship.get('parents',[]) %}
+        <a href="/concept?domain={{domain|urlencode}}&topic={{p|urlencode}}">{{p}}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}</span>
+    {% endif %}
+  {% endif %}
+  {% if clinical_children %}
+  <div class="concept-children">
+    {% for child in clinical_children %}
+      <a href="/concept?domain={{domain|urlencode}}&topic={{child.topic|urlencode}}"><span>{{child.role}}</span><b>{{child.topic}}</b></a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+
 {% if module.source_basis %}<div class="card concept-source"><b>Source basis</b>{% for s in module.source_basis %}<span>{{s}}</span>{% endfor %}</div>{% endif %}
 
 <div class="concept-actions">
