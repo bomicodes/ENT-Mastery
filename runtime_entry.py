@@ -17,7 +17,6 @@ def _canonical_search_index_v150():
     rows = list(_original_search_index())
     seen = {(r.get("type"), r.get("url")) for r in rows}
 
-    # Bank-level navigation results make the two major practice modes discoverable.
     bank_rows = [
         {
             "type": "Practice bank",
@@ -40,7 +39,6 @@ def _canonical_search_index_v150():
             rows.append(row)
             seen.add(key)
 
-    # Individual concept checks should be searchable by topic/question wording.
     for q in data.CONCEPT_CHECKS_V112:
         qid = str(q.get("id", ""))
         if not qid:
@@ -63,3 +61,13 @@ def _canonical_search_index_v150():
 
 
 app_mod._canonical_search_index = _canonical_search_index_v150
+
+# Temporary v15.9 audit emission: lets the content audit inspect the real
+# post-merge production curriculum. Removed after the audit log is captured.
+try:
+    import audit_deep_curriculum_v159
+    print("V159_RUNTIME_AUDIT_BEGIN")
+    audit_deep_curriculum_v159.main()
+    print("V159_RUNTIME_AUDIT_END")
+except Exception as _audit_exc:
+    print(f"V159_RUNTIME_AUDIT_ERROR|{type(_audit_exc).__name__}|{_audit_exc}")
