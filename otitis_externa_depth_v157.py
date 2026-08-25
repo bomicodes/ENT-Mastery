@@ -65,6 +65,8 @@ def apply_aoe_depth_v157(deep_modules):
             apply_cross_domain_depth_v161(deep_modules)
             from deep_curriculum_v162 import apply_cross_domain_depth_v162
             apply_cross_domain_depth_v162(deep_modules)
+            from deep_curriculum_v163 import apply_cross_domain_depth_v163
+            apply_cross_domain_depth_v163(deep_modules)
             return module.get("topic")
     raise RuntimeError(
         "v15.7: could not find the existing Acute Otitis Externa/Furunculosis "
