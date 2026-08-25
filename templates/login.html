@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ENT Mastery · Sign in</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='reliability_v168.css') }}">
+</head>
+<body class="access-page">
+  <main class="access-shell">
+    <section class="card access-card">
+      <div class="modern-brand access-brand"><span class="modern-brand-ent">ENT</span><span>MASTERY</span></div>
+      <h1>Resident workspace</h1>
+      <p class="muted">Enter the private access password to continue. Progress in this workspace belongs to one learner.</p>
+      {% if error %}<div class="access-error" role="alert">{{ error }}</div>{% endif %}
+      <form method="post" class="access-form">
+        <label for="password">Access password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+        <button class="primary" type="submit">Continue</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
