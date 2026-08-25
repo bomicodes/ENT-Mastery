@@ -8,6 +8,7 @@ on:
       - 'preflight_boot_check_v155.py'
       - 'audit_content_depth_v155.py'
       - 'audit_learning_ladders_v154.py'
+      - 'audit_deep_curriculum_v159.py'
       - 'audit_coverage_v135.py'
       - 'audit_quality_v149.py'
       - 'data.py'
@@ -15,6 +16,7 @@ on:
       - 'runtime_entry.py'
       - 'new_topics_v*.py'
       - 'vignettes_v*.py'
+      - '*_depth_v*.py'
       - '.github/workflows/coverage-audit.yml'
 
 jobs:
@@ -37,9 +39,12 @@ jobs:
         run: python audit_learning_ladders_v154.py
       - name: Content-depth audit
         run: python audit_content_depth_v155.py
+      - name: Deep Curriculum six-layer audit
+        run: python audit_deep_curriculum_v159.py
 
 # Boot health is the first hard gate: if runtime_entry cannot import or the
 # homepage cannot render 200, stop immediately and do not trust later audits.
 # Canonical topic coverage remains a strict release gate at 100%.
-# The v14.9/v15.4/v15.5 content-quality audits remain informational while the
-# foundation -> application -> senior-decision curation pass is still active.
+# The v14.9/v15.4/v15.5/v15.9 content-quality audits remain informational while
+# the foundation -> application -> senior-decision and six-layer curation passes
+# are still active.
