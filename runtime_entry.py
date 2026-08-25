@@ -43,6 +43,22 @@ LEARNING_LADDERS_V172 = apply_learning_ladders_v172(
     data._v6_item_id,
 )
 
+# v17.3: fifth Otology ladder batch.
+from vignette_ladders_v173 import apply_learning_ladders_v173
+
+LEARNING_LADDERS_V173 = apply_learning_ladders_v173(
+    data.CLINICAL_CHALLENGES_V119,
+    data._v6_item_id,
+)
+
+# v17.4: sixth Otology ladder batch.
+from vignette_ladders_v174 import apply_learning_ladders_v174
+
+LEARNING_LADDERS_V174 = apply_learning_ladders_v174(
+    data.CLINICAL_CHALLENGES_V119,
+    data._v6_item_id,
+)
+
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {
     q["id"]: q for q in data.CLINICAL_CHALLENGES_V119 if q.get("id")
 }
