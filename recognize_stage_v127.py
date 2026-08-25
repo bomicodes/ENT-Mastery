@@ -17,6 +17,7 @@ from vignette_upgrades_v156 import apply_vignette_upgrades_v156, apply_new_found
 from otitis_externa_depth_v157 import apply_aoe_depth_v157
 from depth_enrichment_v158 import apply_depth_enrichment_v158
 from vignette_upgrades_v159 import apply_vignette_upgrades_v159
+from deep_curriculum_canonicalize_v166 import apply_deep_curriculum_canonicalization_v166
 from vignettes_v132 import VIGNETTES_V132
 from new_topics_v133 import NEW_TOPICS_V133
 from vignettes_v134 import VIGNETTES_V134
@@ -254,6 +255,12 @@ QUALITY_REPAIR_V151 = apply_quality_repair_v151(data.CLINICAL_CHALLENGES_V119)
 apply_vignette_upgrades_v156(data.CLINICAL_CHALLENGES_V119)
 apply_new_foundation_vignettes_v156(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 apply_vignette_upgrades_v159(data.CLINICAL_CHALLENGES_V119)
+
+# v16.6 — collapse only high-confidence duplicate/over-fragmented curriculum
+# nodes after all legacy vignette batches have been validated and merged.
+# Unique six-layer teaching is preserved in the surviving canonical module,
+# and linked question banks are repointed to its concept_id.
+DEEP_CURRICULUM_CANONICALIZATION_V166 = apply_deep_curriculum_canonicalization_v166(data)
 
 _rebalance_vignette_answer_positions_v150(data.CLINICAL_CHALLENGES_V119)
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {
