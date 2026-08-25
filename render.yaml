@@ -4,6 +4,13 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn runtime_entry:app
+    healthCheckPath: /health
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
       - key: SECRET_KEY
         generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: ENT_MASTERY_ACCESS_PASSWORD
+        sync: false
