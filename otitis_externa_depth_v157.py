@@ -44,13 +44,13 @@ AOE_DEPTH_V157 = {
 
 
 def apply_aoe_depth_v157(deep_modules):
-    """Enrich AOE, then run the focused v15.8/v16.0 curriculum enrichments.
+    """Enrich AOE, then run the focused v15.8/v16.x curriculum enrichments.
 
     The existing production integration already calls this function early in
-    startup, so chaining the later in-place curriculum enrichments here avoids
-    another fragile entrypoint dependency. v15.8 remains strict for its known
-    Otology targets; v16.0 is conservative and reports unmatched non-Otology
-    titles rather than taking down the application.
+    startup, so chaining later in-place curriculum enrichments here avoids
+    another fragile entrypoint dependency. v15.8 remains strict for known
+    Otology targets; the cross-domain passes are conservative and report
+    unmatched titles rather than taking down the application.
     """
     domain = "Otology / Neurotology"
     modules = deep_modules.get(domain, [])
@@ -61,6 +61,8 @@ def apply_aoe_depth_v157(deep_modules):
             apply_otology_depth_v158(deep_modules)
             from deep_curriculum_v160 import apply_cross_domain_depth_v160
             apply_cross_domain_depth_v160(deep_modules)
+            from deep_curriculum_v161 import apply_cross_domain_depth_v161
+            apply_cross_domain_depth_v161(deep_modules)
             return module.get("topic")
     raise RuntimeError(
         "v15.7: could not find the existing Acute Otitis Externa/Furunculosis "
