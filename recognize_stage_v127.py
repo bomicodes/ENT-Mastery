@@ -15,6 +15,8 @@ from topic_alias_v129 import apply_topic_alias_v129
 from new_topics_v131 import NEW_TOPICS_V131
 from vignette_upgrades_v156 import apply_vignette_upgrades_v156, apply_new_foundation_vignettes_v156
 from otitis_externa_depth_v157 import apply_aoe_depth_v157
+from depth_enrichment_v158 import apply_depth_enrichment_v158
+from vignette_upgrades_v159 import apply_vignette_upgrades_v159
 from vignettes_v132 import VIGNETTES_V132
 from new_topics_v133 import NEW_TOPICS_V133
 from vignettes_v134 import VIGNETTES_V134
@@ -112,6 +114,7 @@ _merge_depth_topics(NEW_TOPICS_V133, "v13.3")
 # v15.7 enriches the existing AOE module in place rather than creating a
 # duplicate canonical topic. It fails loudly if the expected module is absent.
 apply_aoe_depth_v157(data.DEEP_MODULES_V6)
+apply_depth_enrichment_v158(data.DEEP_MODULES_V6)
 _merge_v128_clinical_challenges()
 apply_topic_alias_v129(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
@@ -250,6 +253,7 @@ QUALITY_REPAIR_V151 = apply_quality_repair_v151(data.CLINICAL_CHALLENGES_V119)
 # content is included in the uniform answer-position shuffle below.
 apply_vignette_upgrades_v156(data.CLINICAL_CHALLENGES_V119)
 apply_new_foundation_vignettes_v156(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+apply_vignette_upgrades_v159(data.CLINICAL_CHALLENGES_V119)
 
 _rebalance_vignette_answer_positions_v150(data.CLINICAL_CHALLENGES_V119)
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {
