@@ -13,12 +13,25 @@ on:
       - 'audit_concept_checks_v161.py'
       - 'audit_coverage_v135.py'
       - 'audit_quality_v149.py'
+      - 'audit_reliability_v168.py'
       - 'data.py'
-      - 'recognize_stage_v127.py'
+      - 'app.py'
+      - 'db.py'
+      - 'wsgi.py'
       - 'runtime_entry.py'
+      - 'reliability_v*.py'
+      - 'clinical_hierarchy_v*.py'
+      - 'deep_curriculum_canonicalize_v*.py'
+      - 'recognize_stage_v127.py'
       - 'new_topics_v*.py'
       - 'vignettes_v*.py'
       - '*_depth_v*.py'
+      - 'templates/**'
+      - 'static/*.css'
+      - 'static/*.js'
+      - 'render.yaml'
+      - 'requirements.txt'
+      - '.python-version'
       - '.github/workflows/coverage-audit.yml'
 
 jobs:
@@ -33,6 +46,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Pre-flight boot gate
         run: python preflight_boot_check_v155.py
+      - name: v16.8 runtime reliability and route smoke gate
+        run: python audit_reliability_v168.py
       - name: Canonical coverage release gate
         run: python audit_coverage_v135.py --depth --strict
       - name: Resident-level quality audit
@@ -48,6 +63,6 @@ jobs:
       - name: Concept Checks full-bank audit
         run: python audit_concept_checks_v161.py
 
-# Boot health is the first hard gate. Canonical coverage remains strict.
-# Duplicate architecture remains informational while explicit canonical merges
-# are reviewed; CI stays read-only so concurrent pushes cannot create conflicts.
+# Boot health and runtime route integrity are hard gates. Canonical coverage remains strict.
+# Duplicate architecture remains informational while explicit canonical merges are reviewed;
+# CI stays read-only against production and uses an isolated SQLite database for route smoke tests.
