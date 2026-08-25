@@ -28,17 +28,17 @@ ORPHANED|0
 DUPLICATE_IDS|0
 MALFORMED|0
 SINGLETON_TOPICS|0
-FOCUS|OR_prep|132
-FOCUS|boards|146
-FOCUS|overnight_call|62
+FOCUS|OR_prep|134
+FOCUS|boards|147
+FOCUS|overnight_call|61
 FOCUS|postoperative_call|8
 FOCUS_DOMAIN|Otology / Neurotology|boards=28|OR_prep=13|overnight_call=7|postoperative_call=0
-FOCUS_DOMAIN|Rhinology / Allergy / Skull Base|boards=20|OR_prep=19|overnight_call=6|postoperative_call=1
+FOCUS_DOMAIN|Rhinology / Allergy / Skull Base|boards=21|OR_prep=19|overnight_call=5|postoperative_call=1
 FOCUS_DOMAIN|Head & Neck Oncology|boards=22|OR_prep=17|overnight_call=4|postoperative_call=3
 FOCUS_DOMAIN|Thyroid / Parathyroid / Salivary|boards=11|OR_prep=14|overnight_call=6|postoperative_call=1
-FOCUS_DOMAIN|Pediatric Otolaryngology|boards=16|OR_prep=14|overnight_call=11|postoperative_call=1
+FOCUS_DOMAIN|Pediatric Otolaryngology|boards=16|OR_prep=15|overnight_call=11|postoperative_call=1
 FOCUS_DOMAIN|Laryngology / Voice / Swallowing|boards=19|OR_prep=15|overnight_call=3|postoperative_call=0
-FOCUS_DOMAIN|Facial Plastics / Trauma|boards=7|OR_prep=27|overnight_call=4|postoperative_call=0
+FOCUS_DOMAIN|Facial Plastics / Trauma|boards=7|OR_prep=28|overnight_call=4|postoperative_call=0
 FOCUS_DOMAIN|Sleep Surgery|boards=15|OR_prep=7|overnight_call=0|postoperative_call=0
 FOCUS_DOMAIN|General ENT / Emergencies|boards=8|OR_prep=6|overnight_call=21|postoperative_call=2
 MATERIAL_GAPS|1
