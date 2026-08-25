@@ -10,6 +10,36 @@ app = wsgi.app
 data = wsgi.data
 app_mod = wsgi._app_module
 
+# v16.2: repair the full Concept Check bank after all Deep Curriculum runtime
+# enrichments have loaded, so repaired recall answers come from the final live
+# canonical curriculum rather than stale source text.
+from concept_check_repair_v162 import apply_concept_check_repair_v162
+
+CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(
+    data.CONCEPT_CHECKS_V112,
+    data.DEEP_MODULES_V6,
+    data._v6_item_id,
+)
+
+# Keep direct lookup objects synchronized without breaking references imported
+# into app.py via ``from data import *``.
+_rebuilt_concept_checks_v162 = {
+    q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")
+}
+if isinstance(getattr(data, "CONCEPT_CHECK_BY_ID_V112", None), dict):
+    data.CONCEPT_CHECK_BY_ID_V112.clear()
+    data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v162)
+else:
+    data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v162
+
+# app.py may hold the original dict object from its star import; update that
+# object too if needed so /concept-check/<qid> resolves the repaired records.
+if isinstance(getattr(app_mod, "CONCEPT_CHECK_BY_ID_V112", None), dict):
+    app_mod.CONCEPT_CHECK_BY_ID_V112.clear()
+    app_mod.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v162)
+else:
+    app_mod.CONCEPT_CHECK_BY_ID_V112 = data.CONCEPT_CHECK_BY_ID_V112
+
 _original_search_index = app_mod._canonical_search_index
 
 
