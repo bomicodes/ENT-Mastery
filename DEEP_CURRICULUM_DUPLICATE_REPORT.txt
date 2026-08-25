@@ -1,0 +1,44 @@
+DEEP_DUP_AUDIT|topics=334
+EXACT_NORMALIZED_DUP_GROUPS|0
+FUZZY_TITLE_PAIRS|39
+FUZZY_TITLE|Otology / Neurotology|Eustachian Tube Dysfunction|Patulous Eustachian Tube Dysfunction|ratio=0.86|containment=1.00
+FUZZY_TITLE|Rhinology / Allergy / Skull Base|Allergic Rhinitis|Local Allergic Rhinitis|ratio=0.85|containment=1.00
+FUZZY_TITLE|Head & Neck Oncology|Neck Dissection|Neck Dissection Complications|ratio=0.68|containment=1.00
+FUZZY_TITLE|Head & Neck Oncology|Salvage Surgery After Radiation / Chemoradiation|Salvage Surgery After Chemoradiation|ratio=0.86|containment=1.00
+FUZZY_TITLE|Head & Neck Oncology|Palliative / Goals-of-Care Decision-Making in Head & Neck Cancer|Palliative Decision-Making in Head and Neck Cancer|ratio=0.89|containment=1.00
+FUZZY_TITLE|Head & Neck Oncology|Free-Flap Monitoring / Compromise / Salvage|Free Flap Monitoring and Salvage|ratio=0.84|containment=1.00
+FUZZY_TITLE|Thyroid / Parathyroid / Salivary|Differentiated Thyroid Cancer|Differentiated Thyroid Cancer: Active Surveillance|ratio=0.74|containment=1.00
+FUZZY_TITLE|Thyroid / Parathyroid / Salivary|Differentiated Thyroid Cancer|Radioiodine-Refractory Differentiated Thyroid Cancer|ratio=0.72|containment=1.00
+FUZZY_TITLE|Pediatric Otolaryngology|Croup vs Epiglottitis|Epiglottitis|ratio=0.73|containment=1.00
+FUZZY_TITLE|Facial Plastics / Trauma|NOE Fracture|NOE Fracture Mechanics|ratio=0.71|containment=1.00
+FUZZY_TITLE|Facial Plastics / Trauma|Frontal Sinus Fracture|Frontal Sinus Fracture Decision Model|ratio=0.75|containment=1.00
+FUZZY_TITLE|Sleep Surgery|Palatal Surgery|Palatal Surgery Selection for OSA|ratio=0.68|containment=1.00
+FUZZY_TITLE|Facial Plastics / Trauma|Periocular Reconstruction|Auricular Reconstruction|ratio=0.90|containment=0.50
+FUZZY_TITLE|Facial Plastics / Trauma|Dynamic Facial Reanimation|Static Facial Reanimation|ratio=0.86|containment=0.67
+FUZZY_TITLE|Head & Neck Oncology|Supraglottic Cancer|Glottic Cancer|ratio=0.85|containment=0.50
+FUZZY_TITLE|Rhinology / Allergy / Skull Base|Orbital Complications of Sinusitis|Intracranial Complications of Sinusitis|ratio=0.84|containment=0.67
+FUZZY_TITLE|Rhinology / Allergy / Skull Base|CRSsNP|CRSwNP|ratio=0.83|containment=0.00
+FUZZY_TITLE|Sleep Surgery|Adult PSG Interpretation|Pediatric PSG Interpretation|ratio=0.81|containment=0.67
+FUZZY_TITLE|Head & Neck Oncology|Oral Tongue SCC|Base of Tongue SCC|ratio=0.80|containment=0.67
+FUZZY_TITLE|Head & Neck Oncology|Cutaneous Squamous Cell Carcinoma of the Head & Neck|Basal Cell Carcinoma of the Head & Neck|ratio=0.77|containment=0.80
+FUZZY_TITLE|Thyroid / Parathyroid / Salivary|Primary Hyperparathyroidism|Reoperative Hyperparathyroidism|ratio=0.79|containment=0.50
+FUZZY_TITLE|Head & Neck Oncology|Cutaneous Squamous Cell Carcinoma of the Head & Neck|Cutaneous Melanoma of the Head & Neck|ratio=0.79|containment=0.75
+FUZZY_TITLE|Pediatric Otolaryngology|Congenital CMV Hearing Loss|Congenital Hearing Loss Genetics|ratio=0.78|containment=0.75
+FUZZY_TITLE|Thyroid / Parathyroid / Salivary|Primary Hyperparathyroidism|Secondary / Tertiary Hyperparathyroidism|ratio=0.77|containment=0.50
+FUZZY_TITLE|Facial Plastics / Trauma|Nasal Fracture|NOE Fracture|ratio=0.77|containment=0.50
+FUZZY_TITLE|Facial Plastics / Trauma|Rhinoplasty Graft Selection|Skin Graft Selection|ratio=0.77|containment=0.67
+FUZZY_TITLE|Facial Plastics / Trauma|Local Flap Reconstruction|Periocular Reconstruction|ratio=0.76|containment=0.50
+FUZZY_TITLE|Facial Plastics / Trauma|Mandible Fracture|NOE Fracture|ratio=0.76|containment=0.50
+FUZZY_TITLE|Thyroid / Parathyroid / Salivary|Secondary / Tertiary Hyperparathyroidism|Reoperative Hyperparathyroidism|ratio=0.75|containment=0.50
+FUZZY_TITLE|Thyroid / Parathyroid / Salivary|First-Bite Syndrome|Frey Syndrome|ratio=0.75|containment=0.50
+FUZZY_TITLE|Pediatric Otolaryngology|Pediatric Speech Disorders|Pediatric Vestibular Disorders|ratio=0.75|containment=0.67
+FUZZY_TITLE|Facial Plastics / Trauma|Local Flap Reconstruction|Forehead Flap / Nasal Reconstruction|ratio=0.75|containment=0.67
+FUZZY_TITLE|Otology / Neurotology|Temporal Bone Anatomy|Temporal Bone Fracture|ratio=0.74|containment=0.67
+FUZZY_TITLE|Otology / Neurotology|Acute Otitis Externa|Necrotizing Otitis Externa|ratio=0.74|containment=0.67
+FUZZY_TITLE|Otology / Neurotology|Cochlear Implant Surgery|Cochlear Implant Failure / Revision|ratio=0.74|containment=0.67
+FUZZY_TITLE|Facial Plastics / Trauma|Local Flap Reconstruction|Auricular Reconstruction|ratio=0.73|containment=0.50
+FUZZY_TITLE|Facial Plastics / Trauma|Facial Nerve Reanimation|Static Facial Reanimation|ratio=0.73|containment=0.67
+FUZZY_TITLE|Otology / Neurotology|Cochlear Implant Candidacy|Cochlear Implant Surgery|ratio=0.72|containment=0.67
+FUZZY_TITLE|Facial Plastics / Trauma|Facial Nerve Reanimation|Dynamic Facial Reanimation|ratio=0.72|containment=0.67
+NEAR_IDENTICAL_CONTENT_PAIRS|0
+DEEP_DUP_AUDIT_MODE|informational
