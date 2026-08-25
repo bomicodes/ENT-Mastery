@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{% block title %}ENT Mastery{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='reliability_v168.css') }}">
 </head>
 <body>
 <div class="app-shell modern-shell">
@@ -57,6 +58,7 @@
 
     <div class="sidebar-bottom">
       <a href="/evidence">Evidence & sources</a>
+      {% if request.endpoint != 'login_v168' %}<a href="/logout">Sign out</a>{% endif %}
       <small>Educational use only</small>
     </div>
   </aside>
