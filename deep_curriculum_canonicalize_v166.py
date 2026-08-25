@@ -1,4 +1,4 @@
-"""v16.6 — Deep Curriculum canonicalization pass.
+"""v16.6/v16.7 — Deep Curriculum canonicalization + clinical hierarchy pass.
 
 Removes high-confidence duplicate/over-fragmented curriculum nodes only after
 all historical enrichment patches have run. Unique teaching from the retiring
@@ -7,11 +7,14 @@ linked content is repointed to the canonical concept_id.
 
 This deliberately does NOT auto-merge every fuzzy-title pair. Closely related
 but clinically distinct topics (e.g. ETD vs patulous ETD, CRSsNP vs CRSwNP,
-oral tongue vs base-of-tongue SCC) remain separate.
+oral tongue vs base-of-tongue SCC) remain separate and are instead related by
+the v16.7 clinical hierarchy when appropriate.
 """
 
 from difflib import SequenceMatcher
 import re
+
+from clinical_hierarchy_v167 import apply_clinical_hierarchy_v167
 
 
 # domain -> canonical topic -> retiring duplicate/over-fragmented topics
@@ -20,6 +23,9 @@ CANONICAL_MERGES_V166 = {
         # NOE is already taught as the invasive escalation branch inside the
         # enriched Acute Otitis Externa module, including NOE vs SBO.
         "Acute Otitis Externa": ["Necrotizing Otitis Externa"],
+        # Same disease node: keep the more explicit title that connects the
+        # diagnosis to the stapes-fixation operative pathway.
+        "Otosclerosis / Stapes Fixation": ["Otosclerosis"],
     },
     "Head & Neck Oncology": {
         "Salvage Surgery After Radiation / Chemoradiation": [
@@ -180,9 +186,14 @@ def apply_deep_curriculum_canonicalization_v166(data):
             q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")
         }
 
+    # v16.7: preserve distinct clinical concepts, but make their hierarchy
+    # explicit and keep historical mastery attached to retired canonical IDs.
+    hierarchy = apply_clinical_hierarchy_v167(data, id_map, topic_map)
+
     return {
         "applied": applied,
         "missing": missing,
         "id_map": id_map,
         "topic_map": topic_map,
+        "hierarchy": hierarchy,
     }
