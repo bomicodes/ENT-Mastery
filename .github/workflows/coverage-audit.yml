@@ -21,6 +21,9 @@ on:
       - '*_depth_v*.py'
       - '.github/workflows/coverage-audit.yml'
 
+permissions:
+  contents: write
+
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -44,13 +47,18 @@ jobs:
       - name: Deep Curriculum six-layer audit
         run: python audit_deep_curriculum_v159.py
       - name: Deep Curriculum duplicate architecture audit
-        run: python audit_deep_curriculum_duplicates_v163.py
+        run: python audit_deep_curriculum_duplicates_v163.py | tee DEEP_CURRICULUM_DUPLICATE_REPORT.txt
       - name: Concept Checks full-bank audit
         run: python audit_concept_checks_v161.py
+      - name: Persist Deep Curriculum duplicate report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DEEP_CURRICULUM_DUPLICATE_REPORT.txt
+          git diff --cached --quiet && exit 0
+          git commit -m "update deep curriculum duplicate audit report"
+          git push
 
-# Boot health is the first hard gate: if runtime_entry cannot import or the
-# homepage cannot render 200, stop immediately and do not trust later audits.
-# Canonical topic coverage remains a strict release gate at 100%.
-# Content-quality and duplicate-architecture audits remain informational while
-# the curriculum is being curated; explicit canonical merges are reviewed
-# rather than deleting topics heuristically.
+# Boot health is the first hard gate. Canonical coverage remains strict.
+# Duplicate architecture is informational until an explicit canonical merge
+# has been reviewed; the persisted report makes every candidate inspectable.
