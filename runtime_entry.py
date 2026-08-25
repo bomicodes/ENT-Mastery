@@ -10,6 +10,21 @@ app = wsgi.app
 data = wsgi.data
 app_mod = wsgi._app_module
 
+# v16.9: deliberate learning-ladder curation begins with five Otology concepts.
+# Keep this in the production entry layer so it runs after all legacy vignette
+# merges/canonicalization and before the final reliability snapshot.
+from vignette_ladders_v169 import apply_learning_ladders_v169
+
+LEARNING_LADDERS_V169 = apply_learning_ladders_v169(
+    data.CLINICAL_CHALLENGES_V119,
+    data._v6_item_id,
+)
+data.CLINICAL_CHALLENGE_BY_ID_V119 = {
+    q["id"]: q for q in data.CLINICAL_CHALLENGES_V119 if q.get("id")
+}
+app_mod.CLINICAL_CHALLENGES_V119 = data.CLINICAL_CHALLENGES_V119
+app_mod.CLINICAL_CHALLENGE_BY_ID_V119 = data.CLINICAL_CHALLENGE_BY_ID_V119
+
 # v16.2: repair the full Concept Check bank after all Deep Curriculum runtime
 # enrichments have loaded, so repaired recall answers come from the final live
 # canonical curriculum rather than stale source text.
