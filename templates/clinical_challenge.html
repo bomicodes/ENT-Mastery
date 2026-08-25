@@ -25,7 +25,9 @@
       </div>
     </div>
     {% if q.board_pearl %}<div class="card"><span class="reason-label">BOARD PEARL</span><p>{{q.board_pearl}}</p></div>{% endif %}
-    {% if q.curveball %}<div class="card"><span class="reason-label">ATTENDING CURVEBALL</span><p>{{q.curveball}}</p></div>{% endif %}
+    {% if q.curveball %}<div class="card"><span class="reason-label">ATTENDING CURVEBALL</span><p>{{q.curveball}}</p>
+      {% if q.curveball_answer %}<details><summary>Reveal reasoning</summary><p>{{q.curveball_answer}}</p></details>{% endif %}
+    </div>{% endif %}
   </div>
 </section>
 
