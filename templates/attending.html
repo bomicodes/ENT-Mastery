@@ -14,7 +14,9 @@
       <div class="callout"><strong>Must mention</strong><ul>{% for x in p.must_mention or p.required_points %}<li>{{x}}</li>{% endfor %}</ul></div>
     {% endif %}
     <details><summary>Reveal answer</summary><p>{{p.model_answer}}</p></details>
-    {% if p.curveball %}<div class="callout"><strong>Curveball</strong><br>{{p.curveball}}</div>{% endif %}
+    {% if p.curveball %}<div class="callout"><strong>Curveball</strong><br>{{p.curveball}}</div>
+      {% if p.curveball_answer %}<details><summary>Reveal reasoning</summary><p>{{p.curveball_answer}}</p></details>{% endif %}
+    {% endif %}
     <div class="rate-row"><button type="button" data-attending-score="1">Missed it</button><button type="button" data-attending-score="2">Partial</button><button type="button" data-attending-score="3">Solid</button></div>
     {% if p.concept_id %}<p><a href="/concept/id/{{p.concept_id|urlencode}}">Open concept hub ↗</a></p>{% endif %}
   </article>
