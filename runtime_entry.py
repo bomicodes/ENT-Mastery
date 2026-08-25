@@ -12,60 +12,35 @@ app_mod = wsgi._app_module
 
 # v16.9: deliberate learning-ladder curation begins with five Otology concepts.
 from vignette_ladders_v169 import apply_learning_ladders_v169
+LEARNING_LADDERS_V169 = apply_learning_ladders_v169(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
-LEARNING_LADDERS_V169 = apply_learning_ladders_v169(
-    data.CLINICAL_CHALLENGES_V119,
-    data._v6_item_id,
-)
-
-# v17.0: continue the deliberate Otology pass with the next five concepts.
+# v17.0: second Otology ladder batch.
 from vignette_ladders_v170 import apply_learning_ladders_v170
+LEARNING_LADDERS_V170 = apply_learning_ladders_v170(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
-LEARNING_LADDERS_V170 = apply_learning_ladders_v170(
-    data.CLINICAL_CHALLENGES_V119,
-    data._v6_item_id,
-)
-
-# v17.1: third Otology ladder batch. Keep all ladder mutation ahead of concept-check
-# repair and the final reliability snapshot so production aliases see final data.
+# v17.1: third Otology ladder batch.
 from vignette_ladders_v171 import apply_learning_ladders_v171
-
-LEARNING_LADDERS_V171 = apply_learning_ladders_v171(
-    data.CLINICAL_CHALLENGES_V119,
-    data._v6_item_id,
-)
+LEARNING_LADDERS_V171 = apply_learning_ladders_v171(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
 # v17.2: fourth Otology ladder batch.
 from vignette_ladders_v172 import apply_learning_ladders_v172
-
-LEARNING_LADDERS_V172 = apply_learning_ladders_v172(
-    data.CLINICAL_CHALLENGES_V119,
-    data._v6_item_id,
-)
+LEARNING_LADDERS_V172 = apply_learning_ladders_v172(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
 # v17.3: fifth Otology ladder batch.
 from vignette_ladders_v173 import apply_learning_ladders_v173
-
-LEARNING_LADDERS_V173 = apply_learning_ladders_v173(
-    data.CLINICAL_CHALLENGES_V119,
-    data._v6_item_id,
-)
+LEARNING_LADDERS_V173 = apply_learning_ladders_v173(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
 # v17.4: sixth Otology ladder batch.
 from vignette_ladders_v174 import apply_learning_ladders_v174
-
-LEARNING_LADDERS_V174 = apply_learning_ladders_v174(
-    data.CLINICAL_CHALLENGES_V119,
-    data._v6_item_id,
-)
+LEARNING_LADDERS_V174 = apply_learning_ladders_v174(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
 # v17.5: seventh Otology ladder batch.
 from vignette_ladders_v175 import apply_learning_ladders_v175
+LEARNING_LADDERS_V175 = apply_learning_ladders_v175(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
-LEARNING_LADDERS_V175 = apply_learning_ladders_v175(
-    data.CLINICAL_CHALLENGES_V119,
-    data._v6_item_id,
-)
+# v17.6: finish the remaining v13.6 Otology foundations.
+from vignette_ladders_v176 import apply_learning_ladders_v176
+LEARNING_LADDERS_V176 = apply_learning_ladders_v176(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {
     q["id"]: q for q in data.CLINICAL_CHALLENGES_V119 if q.get("id")
