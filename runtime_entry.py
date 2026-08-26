@@ -42,6 +42,12 @@ LEARNING_LADDERS_V175 = apply_learning_ladders_v175(data.CLINICAL_CHALLENGES_V11
 from vignette_ladders_v176 import apply_learning_ladders_v176
 LEARNING_LADDERS_V176 = apply_learning_ladders_v176(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
+# v20.4: runtime reconciliation proved SSCD lacked a separate foundation layer.
+from otology_foundation_gap_v204 import apply_otology_foundation_gap_v204
+OTOLOGY_FOUNDATION_GAP_V204 = apply_otology_foundation_gap_v204(
+    data.CLINICAL_CHALLENGES_V119, data._v6_item_id
+)
+
 # v20.4: reconcile the final seven canonical Otology topics and rebalance all
 # deliberately reviewed ladder answers after runtime ladder mutation.
 from vignette_ladders_v204 import apply_learning_ladders_v204
