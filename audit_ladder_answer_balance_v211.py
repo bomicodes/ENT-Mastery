@@ -1,8 +1,8 @@
-"""v21.1 regression gate for batch-local learning-ladder answer diversity."""
+"""v21.1+ regression gate for batch-local learning-ladder answer diversity."""
 from collections import Counter, defaultdict
 import runtime_entry as rt
 
-PREFIXES = ("v209_", "v210_")
+PREFIXES = ("v209_", "v210_", "v212_")
 failures=[]
 groups=defaultdict(list)
 for q in rt.data.CLINICAL_CHALLENGES_V119:
@@ -38,7 +38,7 @@ for prefix in PREFIXES:
     print(f"LADDER_BATCH_ANSWER_POSITIONS|{prefix}|{dict(sorted(counts.items()))}")
 
 if failures:
-    print("LADDER v21.1 ANSWER-BALANCE FAILURES")
+    print("LADDER ANSWER-BALANCE FAILURES")
     print("\n".join(failures))
     raise SystemExit(1)
 print("PASS: post-v20.8 ladder batches retain aligned rationales and diverse answer positions")
