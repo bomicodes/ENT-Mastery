@@ -27,6 +27,7 @@ on:
       - 'audit_or_postop_safety_v210.py'
       - 'audit_or_preop_decision_v212.py'
       - 'audit_or_otology_management_v217.py'
+      - 'audit_or_laryngology_management_v218.py'
       - 'or_tomorrow_overhaul_v190.py'
       - 'or_concept_link_fix_v191.py'
       - 'or_procedure_sequences_v200.py'
@@ -37,6 +38,7 @@ on:
       - 'or_postop_safety_v210.py'
       - 'or_preop_decision_v212.py'
       - 'or_otology_management_v217.py'
+      - 'or_laryngology_management_v218.py'
       - 'or_landmarks_v*.py'
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
@@ -104,6 +106,8 @@ jobs:
         run: python audit_or_preop_decision_v212.py
       - name: v21.7 otology OR planning and postoperative management gate
         run: python audit_or_otology_management_v217.py
+      - name: v21.8 laryngology/swallowing OR management gate
+        run: python audit_or_laryngology_management_v218.py
       - name: v19.0 OR Tomorrow structural + postoperative gate
         run: python audit_or_tomorrow_v190.py
       - name: v16.8 runtime reliability and route smoke gate
