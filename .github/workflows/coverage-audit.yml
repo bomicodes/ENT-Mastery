@@ -18,6 +18,7 @@ on:
       - 'audit_or_tomorrow_v190.py'
       - 'audit_or_inventory_v200.py'
       - 'or_tomorrow_overhaul_v190.py'
+      - 'or_concept_link_fix_v191.py'
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
       - 'deep_curriculum_distinct_entities_v178.py'
