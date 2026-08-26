@@ -10,6 +10,11 @@ app = wsgi.app
 data = wsgi.data
 app_mod = wsgi._app_module
 
+# v21.6: add two genuinely missing external-canal keratinizing disease concepts
+# before ladder curation so canonical linking/audits see the expanded Otology set.
+from otology_eac_keratin_v216 import apply_otology_eac_keratin_v216
+OTOLOGY_EAC_KERATIN_V216 = apply_otology_eac_keratin_v216(data)
+
 from vignette_ladders_v169 import apply_learning_ladders_v169
 LEARNING_LADDERS_V169 = apply_learning_ladders_v169(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from vignette_ladders_v170 import apply_learning_ladders_v170
