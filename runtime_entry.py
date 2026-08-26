@@ -38,9 +38,11 @@ from vignette_ladders_v207 import apply_learning_ladders_v207
 LEARNING_LADDERS_V207 = apply_learning_ladders_v207(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from vignette_ladders_v208 import apply_learning_ladders_v208
 LEARNING_LADDERS_V208 = apply_learning_ladders_v208(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-# v20.9: fifth Rhinology batch; reuse established second-pass applications.
 from vignette_ladders_v209 import apply_learning_ladders_v209
 LEARNING_LADDERS_V209 = apply_learning_ladders_v209(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+# v21.0: close five high-consequence Rhinology ladder concepts.
+from vignette_ladders_v210 import apply_learning_ladders_v210
+LEARNING_LADDERS_V210 = apply_learning_ladders_v210(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119 if q.get("id")}
 app_mod.CLINICAL_CHALLENGES_V119 = data.CLINICAL_CHALLENGES_V119
