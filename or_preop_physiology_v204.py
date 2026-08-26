@@ -1,8 +1,8 @@
-"""v20.4 procedure-specific preoperative physiology/optimization for OR Tomorrow.
+"""v20.4/v20.8 procedure-specific physiology and safety priorities for OR Tomorrow.
 
 Adds high-yield patient-state checks that materially affect perioperative risk and
-postoperative disposition. These are deliberately targeted rather than a blanket
-'order labs' layer.
+postoperative disposition, plus a small number of high-consequence postoperative
+failure-mode reminders. These are deliberately targeted rather than blanket boilerplate.
 """
 
 TARGETED_SETUP = {
@@ -25,7 +25,8 @@ TARGETED_SETUP = {
         "Confirm current OSA physiology and candidacy: review the diagnostic sleep study, central-versus-obstructive event burden, PAP intolerance, body habitus and DISE/anatomic findings rather than relying on anatomy alone."
     ],
     "free-flap-basics": [
-        "Assess physiologic reserve before major reconstruction: screen for recent weight loss/malnutrition and anemia, review cardiopulmonary status and functional capacity, and identify tobacco/alcohol use or other modifiable factors that affect wound healing and flap recovery."
+        "Assess physiologic reserve before major reconstruction: screen for recent weight loss/malnutrition and anemia, review cardiopulmonary status and functional capacity, and identify tobacco/alcohol use or other modifiable factors that affect wound healing and flap recovery.",
+        "For lower-extremity donor sites or patients with vascular disease, assess donor-site perfusion and relevant peripheral vascular history; also optimize diabetes, renal dysfunction, anemia and nutrition because these affect wound and flap recovery."
     ],
     "oral-composite": [
         "Before major ablative head-and-neck surgery, assess nutritional status/recent weight loss, anemia, cardiopulmonary reserve, aspiration risk and tobacco/alcohol use; coordinate airway and feeding access with the reconstructive plan."
@@ -36,24 +37,64 @@ TARGETED_SETUP = {
     "cochlear-implant": [
         "Confirm implant candidacy from current audiology and aided speech testing, review imaging for cochlear/nerve anatomy and prior ear disease, and verify age-appropriate pneumococcal vaccination status before implantation."
     ],
+    "tracheal-resection": [
+        "Quantify airway physiology as well as anatomy: review stenosis length/location and prior airway interventions, assess pulmonary reserve and active respiratory infection, and identify prior radiation, chronic steroid exposure or other factors that may impair anastomotic healing."
+    ],
+    "peds-ltr": [
+        "Before reconstruction, review pulmonary status, aspiration/swallow history, reflux control, tracheostomy dependence/secretions and recent airway infection; these factors influence graft healing, postoperative intubation strategy and ICU planning."
+    ],
 }
+
+TARGETED_POSTOP = {
+    "tracheal-resection": [
+        "Protect the fresh tracheal anastomosis: maintain the planned neck-flexion strategy, avoid unnecessary positive-pressure ventilation/coughing strain, and treat new subcutaneous emphysema, air leak, respiratory distress or wound crepitus as possible anastomotic failure requiring urgent surgical review."
+    ],
+    "peds-ltr": [
+        "Make the postoperative airway plan explicit: tube/stent size and position, sedation/extubation timing, secretion clearance and criteria for urgent endoscopy if ventilation worsens or the reconstructed airway is threatened."
+    ],
+    "total-laryngectomy": [
+        "A total-laryngectomy patient is a permanent neck breather: all oxygenation, bag-mask ventilation and emergency intubation must occur through the tracheal stoma; oral or nasal intubation cannot ventilate the lungs."
+    ],
+    "neck-dissection": [
+        "After low-neck dissection, inspect drain character and output for chyle leak—especially on the left and after enteral feeding—and document shoulder function/CN XI status early so new deficits are recognized rather than attributed to routine postoperative pain."
+    ],
+    "free-flap-basics": [
+        "Treat a new change in flap color, turgor, temperature, capillary refill or Doppler signal as time-critical vascular compromise; venous congestion or arterial insufficiency requires immediate flap-team assessment and a low threshold for operative exploration."
+    ],
+    "cochlear-implant": [
+        "Document immediate facial-nerve function and vestibular symptoms; new facial weakness, severe/progressive vertigo, CSF-like drainage, meningitic symptoms or wound/device infection warrants urgent otologic evaluation."
+    ],
+}
+
+
+def _prepend_unique(values, additions):
+    out = list(values or [])
+    changed = False
+    for text in reversed(additions):
+        marker = text[:48].lower()
+        if not any(marker in str(x).lower() for x in out):
+            out.insert(0, text)
+            changed = True
+    return out, changed
 
 
 def apply_or_preop_physiology_v204(registry):
     changed = []
-    for slug, additions in TARGETED_SETUP.items():
+    slugs = set(TARGETED_SETUP) | set(TARGETED_POSTOP)
+    for slug in sorted(slugs):
         op = registry.get(slug)
         if not op:
             continue
-        setup = list(op.get("setup") or [])
         did_change = False
-        for text in reversed(additions):
-            marker = text[:48].lower()
-            if not any(marker in str(x).lower() for x in setup):
-                setup.insert(0, text)
-                did_change = True
+        if slug in TARGETED_SETUP:
+            op["setup"], section_changed = _prepend_unique(op.get("setup"), TARGETED_SETUP[slug])
+            did_change = did_change or section_changed
+        if slug in TARGETED_POSTOP:
+            op["postop"], section_changed = _prepend_unique(op.get("postop"), TARGETED_POSTOP[slug])
+            did_change = did_change or section_changed
         if did_change:
-            op["setup"] = setup
             changed.append(slug)
         op["preop_physiology_v204"] = True
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETED_SETUP)}
+        if slug in TARGETED_POSTOP:
+            op["safety_priorities_v208"] = True
+    return {"changed": changed, "count": len(changed), "targets": len(slugs)}
