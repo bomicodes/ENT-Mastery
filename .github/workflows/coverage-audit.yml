@@ -10,6 +10,7 @@ on:
       - 'audit_learning_ladders_v154.py'
       - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_rhinology_v209.py'
+      - 'audit_ladder_answer_balance_v211.py'
       - 'audit_deep_curriculum_v159.py'
       - 'audit_deep_curriculum_duplicates_v163.py'
       - 'audit_concept_checks_v161.py'
@@ -50,6 +51,7 @@ on:
       - 'new_topics_v*.py'
       - 'vignettes_v*.py'
       - 'vignette_ladders_v*.py'
+      - 'ladder_answer_balance_v*.py'
       - 'otology_foundation_gap_v*.py'
       - '*_depth_v*.py'
       - 'templates/**'
@@ -77,6 +79,8 @@ jobs:
         run: python audit_learning_ladders_runtime_v204.py
       - name: v20.9 Rhinology answer-pattern regression gate
         run: python audit_rhinology_v209.py
+      - name: v21.1 ladder answer-balance regression gate
+        run: python audit_ladder_answer_balance_v211.py
       - name: v20 OR registry inventory
         run: python audit_or_inventory_v200.py
       - name: v20.x procedure-specific OR sequence hard gate
