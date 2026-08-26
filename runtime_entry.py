@@ -48,143 +48,81 @@ data.CLINICAL_CHALLENGE_BY_ID_V119 = {
 app_mod.CLINICAL_CHALLENGES_V119 = data.CLINICAL_CHALLENGES_V119
 app_mod.CLINICAL_CHALLENGE_BY_ID_V119 = data.CLINICAL_CHALLENGE_BY_ID_V119
 
-# v17.8: restore clinically distinct disease entities that historical
-# canonicalization may have collapsed into comparison nodes.
 from deep_curriculum_distinct_entities_v178 import apply_distinct_entities_v178
-
 DISTINCT_ENTITIES_V178 = apply_distinct_entities_v178(data)
 
-# v16.2: repair the full Concept Check bank after all Deep Curriculum runtime
-# enrichments have loaded, so repaired recall answers come from the final live
-# canonical curriculum rather than stale source text.
 from concept_check_repair_v162 import apply_concept_check_repair_v162
+CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 
-CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(
-    data.CONCEPT_CHECKS_V112,
-    data.DEEP_MODULES_V6,
-    data._v6_item_id,
-)
-
-# v17.7: replace generic framework-retrieval prompts with clinical board-style
-# questions. Existing credible clinical MCQs are preserved, while nonclinical
-# prompts become patient vignettes with an explicit canonical reveal answer.
 from concept_check_board_repair_v177 import apply_concept_check_board_repair_v177
+CONCEPT_CHECK_BOARD_REPAIR_V177 = apply_concept_check_board_repair_v177(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 
-CONCEPT_CHECK_BOARD_REPAIR_V177 = apply_concept_check_board_repair_v177(
-    data.CONCEPT_CHECKS_V112,
-    data.DEEP_MODULES_V6,
-    data._v6_item_id,
-)
-
-# v17.8: second-pass curation across every ENT domain. All live Concept Checks
-# are reviewed against a domain-specific clinical standard. Structurally weak
-# MCQs are converted to focused oral-board vignettes rather than retaining
-# mismatched distractor levels.
 from concept_check_domain_curation_v178 import apply_concept_check_domain_curation_v178
+CONCEPT_CHECK_DOMAIN_CURATION_V178 = apply_concept_check_domain_curation_v178(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 
-CONCEPT_CHECK_DOMAIN_CURATION_V178 = apply_concept_check_domain_curation_v178(
-    data.CONCEPT_CHECKS_V112,
-    data.DEEP_MODULES_V6,
-    data._v6_item_id,
-)
-
-# v17.9: use word-boundary clinical markers to catch any false-positive that
-# slipped through v17.8's heuristic (for example "ct " embedded in "tract").
 from concept_check_final_clinical_gate_v179 import apply_final_clinical_gate_v179
+CONCEPT_CHECK_FINAL_CLINICAL_GATE_V179 = apply_final_clinical_gate_v179(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 
-CONCEPT_CHECK_FINAL_CLINICAL_GATE_V179 = apply_final_clinical_gate_v179(
-    data.CONCEPT_CHECKS_V112,
-    data.DEEP_MODULES_V6,
-    data._v6_item_id,
-)
-
-_rebuilt_concept_checks_v179 = {
-    q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")
-}
+_rebuilt_concept_checks_v179 = {q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")}
 if isinstance(getattr(data, "CONCEPT_CHECK_BY_ID_V112", None), dict):
-    data.CONCEPT_CHECK_BY_ID_V112.clear()
-    data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
+    data.CONCEPT_CHECK_BY_ID_V112.clear(); data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
 else:
     data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v179
-
 if isinstance(getattr(app_mod, "CONCEPT_CHECK_BY_ID_V112", None), dict):
-    app_mod.CONCEPT_CHECK_BY_ID_V112.clear()
-    app_mod.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
+    app_mod.CONCEPT_CHECK_BY_ID_V112.clear(); app_mod.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
 else:
     app_mod.CONCEPT_CHECK_BY_ID_V112 = data.CONCEPT_CHECK_BY_ID_V112
 
 _original_search_index = app_mod._canonical_search_index
 
-
 def _canonical_search_index_v150():
     rows = list(_original_search_index())
     seen = {(r.get("type"), r.get("url")) for r in rows}
     bank_rows = [
-        {"type": "Practice bank", "title": "Clinical Challenges", "subtitle": f"{len(data.CLINICAL_CHALLENGES_V119)} board-style vignettes", "url": "/clinical-challenges", "text": "clinical challenges board vignettes overnight call OR prep postoperative call clinical reasoning"},
-        {"type": "Practice bank", "title": "Concept Checks", "subtitle": f"{len(data.CONCEPT_CHECKS_V112)} board-recall questions", "url": "/concept-checks", "text": "concept checks board recall questions clinical vignettes active recall knowledge checks boards"},
+        {"type":"Practice bank","title":"Clinical Challenges","subtitle":f"{len(data.CLINICAL_CHALLENGES_V119)} board-style vignettes","url":"/clinical-challenges","text":"clinical challenges board vignettes overnight call OR prep postoperative call clinical reasoning"},
+        {"type":"Practice bank","title":"Concept Checks","subtitle":f"{len(data.CONCEPT_CHECKS_V112)} board-recall questions","url":"/concept-checks","text":"concept checks board recall questions clinical vignettes active recall knowledge checks boards"},
     ]
     for row in bank_rows:
-        key = (row["type"], row["url"])
-        if key not in seen:
-            rows.append(row)
-            seen.add(key)
+        key=(row["type"],row["url"])
+        if key not in seen: rows.append(row); seen.add(key)
     for q in data.CONCEPT_CHECKS_V112:
-        qid = str(q.get("id", ""))
-        if not qid:
-            continue
-        url = "/concept-check/" + qid
-        key = ("Concept Check", url)
-        if key in seen:
-            continue
-        choices = q.get("choices") or []
-        prompt = q.get("question") or q.get("prompt") or q.get("stem") or ""
-        rows.append({"type": "Concept Check", "title": str(q.get("topic") or "Concept Check"), "subtitle": str(q.get("domain") or "ENT"), "url": url, "text": str(prompt) + " " + " ".join(str(x) for x in choices)})
-        seen.add(key)
+        qid=str(q.get("id", ""))
+        if not qid: continue
+        url="/concept-check/"+qid; key=("Concept Check",url)
+        if key in seen: continue
+        choices=q.get("choices") or []; prompt=q.get("question") or q.get("prompt") or q.get("stem") or ""
+        rows.append({"type":"Concept Check","title":str(q.get("topic") or "Concept Check"),"subtitle":str(q.get("domain") or "ENT"),"url":url,"text":str(prompt)+" "+" ".join(str(x) for x in choices)}); seen.add(key)
     return rows
-
-
 app_mod._canonical_search_index = _canonical_search_index_v150
 
-# v16.8: final reliability pass after all curriculum and practice-bank mutation is complete.
 from reliability_v168 import apply_reliability_v168
-
 RELIABILITY_V168 = apply_reliability_v168(app, data, app_mod)
 
-# v19.0: enrich every live OR Tomorrow case with setup, landmarks, a safer
-# procedure sequence, exit checks, postoperative priorities and early/late
-# complications. This runs after all source registry merges so no case escapes it.
 from or_tomorrow_overhaul_v190 import apply_or_overhaul_v190
 OR_TOMORROW_OVERHAUL_V190 = apply_or_overhaul_v190(data.OR_PREP_REGISTRY)
 app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 
-# v19.1: normalize legacy OR -> Concept topic slugs after the full registry exists.
 from or_concept_link_fix_v191 import apply_or_concept_link_fix_v191
 OR_CONCEPT_LINK_FIX_V191 = apply_or_concept_link_fix_v191(data.OR_PREP_REGISTRY)
 app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 
-# v20.0: replace generic/family-level operative choreography with explicit,
-# procedure-specific resident night-before sequences. This deliberately runs
-# after v19 so the v19 setup/postop/complication layer is retained while its
-# generic step filler is superseded.
 from or_procedure_sequences_v200 import apply_or_procedure_sequences_v200
 OR_PROCEDURE_SEQUENCES_V200 = apply_or_procedure_sequences_v200(data.OR_PREP_REGISTRY)
 app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 
-# v20.1: exact catch-up for procedures whose slugs/titles do not map cleanly to
-# family text patterns, plus combined operations that require their own full
-# choreography rather than one component's sequence.
 from or_procedure_sequences_v201 import apply_or_procedure_sequences_v201
 OR_PROCEDURE_SEQUENCES_V201 = apply_or_procedure_sequences_v201(data.OR_PREP_REGISTRY)
 app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 
-# v20.2: close the final exact-title matcher gaps found by the 93-case CI inventory.
 from or_procedure_sequences_v202 import apply_or_procedure_sequences_v202
 OR_PROCEDURE_SEQUENCES_V202 = apply_or_procedure_sequences_v202(data.OR_PREP_REGISTRY)
 app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 
-# v18.5: register Pasha Review on the primary production runtime itself.
-# This makes /pasha-review available even when Render is still configured to
-# start gunicorn runtime_entry:app rather than the newer wrapper entrypoint.
+# v20.3: thyroid surgery setup must explicitly establish endocrine functional status.
+from or_preop_endocrine_v203 import apply_or_preop_endocrine_v203
+OR_PREOP_ENDOCRINE_V203 = apply_or_preop_endocrine_v203(data.OR_PREP_REGISTRY)
+app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
+
 from pasha_routes import bp as pasha_review_blueprint
 if "pasha_review" not in app.blueprints:
     app.register_blueprint(pasha_review_blueprint)
