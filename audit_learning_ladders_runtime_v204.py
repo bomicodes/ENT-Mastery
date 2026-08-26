@@ -272,7 +272,7 @@ def has_failures(report):
         or report["bad_links"]
         or report["reviewed_errors"]
         or report["reviewed_ladder_gaps"]
-        or report["otology_topic_count"] != 45
+        or report["otology_topic_count"] != 47
         or report["otology_gaps"]
         or report["answer_bias"]
     )
