@@ -51,6 +51,9 @@ from vignette_ladders_v212 import apply_learning_ladders_v212
 LEARNING_LADDERS_V212 = apply_learning_ladders_v212(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from vignette_ladders_v213 import apply_learning_ladders_v213
 LEARNING_LADDERS_V213 = apply_learning_ladders_v213(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+# v21.8: close the final two canonical Rhinology concepts identified by the live inventory.
+from vignette_ladders_v218 import apply_learning_ladders_v218
+LEARNING_LADDERS_V218 = apply_learning_ladders_v218(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 # v21.1+: eliminate batch-local answer-position clustering without changing content.
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
