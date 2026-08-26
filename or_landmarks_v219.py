@@ -1,8 +1,12 @@
-"""v21.9 procedure-specific anatomy for selected laryngology/swallowing OR cases.
+"""v21.9+ procedure-specific anatomy for selected laryngology/swallowing OR cases.
 
 Replaces the broad laryngology family landmark list where the operative corridor is
 framework, injection, or pharyngoesophageal rather than generic endolaryngeal work.
+Later pediatric-airway anatomy is chained here so the existing runtime hook remains
+atomic.
 """
+
+from or_landmarks_v221 import apply_or_landmarks_v221
 
 TARGETS = [
     {
@@ -80,4 +84,5 @@ def apply_or_landmarks_v219(registry):
             changed.append(slug)
         op["landmarks_v219"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v221 = apply_or_landmarks_v221(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v221": v221}
