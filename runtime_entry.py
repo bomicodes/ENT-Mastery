@@ -59,18 +59,29 @@ CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(
     data._v6_item_id,
 )
 
-_rebuilt_concept_checks_v162 = {
+# v17.7: replace generic framework-retrieval prompts with clinical board-style
+# questions. Existing credible clinical MCQs are preserved, while nonclinical
+# prompts become patient vignettes with an explicit canonical reveal answer.
+from concept_check_board_repair_v177 import apply_concept_check_board_repair_v177
+
+CONCEPT_CHECK_BOARD_REPAIR_V177 = apply_concept_check_board_repair_v177(
+    data.CONCEPT_CHECKS_V112,
+    data.DEEP_MODULES_V6,
+    data._v6_item_id,
+)
+
+_rebuilt_concept_checks_v177 = {
     q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")
 }
 if isinstance(getattr(data, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     data.CONCEPT_CHECK_BY_ID_V112.clear()
-    data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v162)
+    data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v177)
 else:
-    data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v162
+    data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v177
 
 if isinstance(getattr(app_mod, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     app_mod.CONCEPT_CHECK_BY_ID_V112.clear()
-    app_mod.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v162)
+    app_mod.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v177)
 else:
     app_mod.CONCEPT_CHECK_BY_ID_V112 = data.CONCEPT_CHECK_BY_ID_V112
 
@@ -82,7 +93,7 @@ def _canonical_search_index_v150():
     seen = {(r.get("type"), r.get("url")) for r in rows}
     bank_rows = [
         {"type": "Practice bank", "title": "Clinical Challenges", "subtitle": f"{len(data.CLINICAL_CHALLENGES_V119)} board-style vignettes", "url": "/clinical-challenges", "text": "clinical challenges board vignettes overnight call OR prep postoperative call clinical reasoning"},
-        {"type": "Practice bank", "title": "Concept Checks", "subtitle": f"{len(data.CONCEPT_CHECKS_V112)} recall questions", "url": "/concept-checks", "text": "concept checks recall questions active recall knowledge checks boards"},
+        {"type": "Practice bank", "title": "Concept Checks", "subtitle": f"{len(data.CONCEPT_CHECKS_V112)} board-recall questions", "url": "/concept-checks", "text": "concept checks board recall questions clinical vignettes active recall knowledge checks boards"},
     ]
     for row in bank_rows:
         key = (row["type"], row["url"])
