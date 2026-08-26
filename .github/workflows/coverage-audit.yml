@@ -8,6 +8,7 @@ on:
       - 'preflight_boot_check_v155.py'
       - 'audit_content_depth_v155.py'
       - 'audit_learning_ladders_v154.py'
+      - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_deep_curriculum_v159.py'
       - 'audit_deep_curriculum_duplicates_v163.py'
       - 'audit_concept_checks_v161.py'
@@ -42,6 +43,7 @@ on:
       - 'recognize_stage_v127.py'
       - 'new_topics_v*.py'
       - 'vignettes_v*.py'
+      - 'vignette_ladders_v*.py'
       - '*_depth_v*.py'
       - 'templates/**'
       - 'static/*.css'
@@ -80,8 +82,10 @@ jobs:
         run: python audit_coverage_v135.py --depth --strict
       - name: Resident-level quality audit
         run: python audit_quality_v149.py
-      - name: Learning-ladder audit
+      - name: Historical learning-ladder audit
         run: python audit_learning_ladders_v154.py
+      - name: v20.4 runtime learning-ladder hard gate
+        run: python audit_learning_ladders_runtime_v204.py
       - name: Content-depth audit
         run: python audit_content_depth_v155.py
       - name: Deep Curriculum six-layer audit
@@ -103,6 +107,6 @@ jobs:
           if-no-files-found: warn
 
 # Boot health, exhaustive navigation integrity, Pasha review, OR Tomorrow depth,
-# procedure-specific OR choreography, canonical coverage, and the v17.8 Concept
-# Check contract are hard gates. CI uses an isolated SQLite database and does not
-# mutate production state.
+# procedure-specific OR choreography, canonical coverage, the runtime learning-
+# ladder contract, and the v17.8 Concept Check contract are hard gates. CI uses
+# an isolated SQLite database and does not mutate production state.
