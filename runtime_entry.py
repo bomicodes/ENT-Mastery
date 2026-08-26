@@ -150,6 +150,13 @@ from reliability_v168 import apply_reliability_v168
 
 RELIABILITY_V168 = apply_reliability_v168(app, data, app_mod)
 
+# v19.0: enrich every live OR Tomorrow case with setup, landmarks, a safer
+# procedure sequence, exit checks, postoperative priorities and early/late
+# complications. This runs after all source registry merges so no case escapes it.
+from or_tomorrow_overhaul_v190 import apply_or_overhaul_v190
+OR_TOMORROW_OVERHAUL_V190 = apply_or_overhaul_v190(data.OR_PREP_REGISTRY)
+app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
+
 # v18.5: register Pasha Review on the primary production runtime itself.
 # This makes /pasha-review available even when Render is still configured to
 # start gunicorn runtime_entry:app rather than the newer wrapper entrypoint.
