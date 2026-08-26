@@ -16,8 +16,6 @@ import hashlib
 
 DOMAIN = "Otology / Neurotology"
 
-# These are the strongest existing application/management cases already in the
-# live bank. They are upgraded in place rather than duplicated.
 APPLICATION_IDS_V204 = {
     "BPPV": "v141_oto_01",
     "Ménière Disease": "v141_oto_02",
@@ -187,7 +185,7 @@ VIGNETTES_V204 = [
             "Fascia can support tympanic-membrane repair but does not by itself restore an interrupted ossicular linkage.",
             "Correct. Reconstruction should use the best remaining stable native structures rather than applying one prosthesis to every defect.",
         ],
-        "PORP versus TORP is an anatomy question: is there a usable stapes superstructure to couple to?","
+        "PORP versus TORP is an anatomy question: is there a usable stapes superstructure to couple to?",
         "How would absent stapes superstructure, poor Eustachian-tube function, active infection, or a lateralized tympanic membrane change reconstruction choice or staging?",
         "OR_prep",
     ),
@@ -253,9 +251,6 @@ def apply_learning_ladders_v204(challenges, id_factory):
         app["ladder_reviewed"] = True
         staged_applications += 1
 
-        # The selected v14.1-v14.4 cases were authored as second-pass depth cases.
-        # Preserve the pre-existing first linked case as the foundation rather than
-        # generating a duplicate recall question merely to satisfy the ladder.
         candidates = [
             q for q in by_topic.get(topic, [])
             if q.get("id") != app_id and q.get("learning_stage") not in {"application", "senior_decision"}
