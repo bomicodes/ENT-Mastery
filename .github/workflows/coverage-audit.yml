@@ -47,6 +47,7 @@ on:
       - 'new_topics_v*.py'
       - 'vignettes_v*.py'
       - 'vignette_ladders_v*.py'
+      - 'otology_foundation_gap_v*.py'
       - '*_depth_v*.py'
       - 'templates/**'
       - 'static/*.css'
