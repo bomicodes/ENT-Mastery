@@ -1,8 +1,12 @@
-"""v22.2 procedure-specific anatomy for selected rhinology OR Tomorrow cases.
+"""v22.2+ procedure-specific anatomy for selected rhinology OR Tomorrow cases.
 
 Replaces the broad sinus-family danger-structure list where the operative corridor
 is septal, maxillary, or medial orbital rather than a generic endoscopic sinus case.
+Later reviewed facial-trauma anatomy is chained here so the runtime anatomy hook
+remains atomic.
 """
+
+from or_landmarks_v223 import apply_or_landmarks_v223
 
 TARGETS = [
     {
@@ -68,4 +72,5 @@ def apply_or_landmarks_v222(registry):
             changed.append(slug)
         op["landmarks_v222"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v223 = apply_or_landmarks_v223(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v223": v223}
