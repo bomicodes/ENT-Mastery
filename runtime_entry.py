@@ -42,7 +42,10 @@ from vignette_ladders_v209 import apply_learning_ladders_v209
 LEARNING_LADDERS_V209 = apply_learning_ladders_v209(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from vignette_ladders_v210 import apply_learning_ladders_v210
 LEARNING_LADDERS_V210 = apply_learning_ladders_v210(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-# v21.1: eliminate batch-local answer-position clustering without changing content.
+# v21.2: allergy/rhinitis ladder closure before post-curation answer balancing.
+from vignette_ladders_v212 import apply_learning_ladders_v212
+LEARNING_LADDERS_V212 = apply_learning_ladders_v212(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+# v21.1+: eliminate batch-local answer-position clustering without changing content.
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
 
