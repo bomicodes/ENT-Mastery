@@ -1,8 +1,8 @@
 """v21.7 — explicit all-domain learning-ladder inventory.
 
 Prints the exact canonical topics that have not yet been deliberately reviewed.
-This is informational rather than a release gate; completed-domain hard gates
-remain in audit_learning_ladders_runtime_v204.py.
+Review accounting follows canonical concept_id linkage rather than display-topic
+strings so intentional aliases do not create false unreviewed rows.
 """
 from collections import defaultdict
 import runtime_entry as rt
@@ -19,23 +19,19 @@ def main():
         if cid:
             by_cid[cid].append(q)
 
-    reviewed_pairs = {
-        (q.get("domain"), q.get("topic"))
-        for q in cases if q.get("ladder_reviewed")
-    }
-
     for domain, modules in data.DEEP_MODULES_V6.items():
         topics = [m.get("topic") for m in modules if m.get("topic")]
         unreviewed = []
         incomplete = []
         for topic in topics:
-            pair = (domain, topic)
             cid = data._v6_item_id(domain, topic)
+            linked = by_cid.get(cid, [])
             stages = {
-                q.get("learning_stage") for q in by_cid.get(cid, [])
+                q.get("learning_stage") for q in linked
                 if q.get("learning_stage") in STAGES
             }
-            if pair not in reviewed_pairs:
+            reviewed = any(q.get("ladder_reviewed") for q in linked)
+            if not reviewed:
                 unreviewed.append(topic)
             elif stages != STAGES:
                 incomplete.append((topic, sorted(STAGES - stages)))
