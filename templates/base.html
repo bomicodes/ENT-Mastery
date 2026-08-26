@@ -10,6 +10,42 @@
 </head>
 <body>
 <div class="mobile-nav-backdrop" data-mobile-nav-backdrop></div>
+<aside class="mobile-nav-panel" data-mobile-nav-panel aria-label="Mobile navigation">
+  <div class="mobile-nav-head">
+    <a class="mobile-nav-brand" href="/"><b>ENT</b> MASTERY</a>
+    <button type="button" class="mobile-nav-close" aria-label="Close navigation" data-mobile-nav-close>×</button>
+  </div>
+  <div class="mobile-nav-summary">
+    <b>{{shell_stats.mastery|default(0)}}% mastery</b>
+    <span>{{shell_stats.concepts|default(0)}} concepts · {{shell_stats.due|default(0)}} due today</span>
+  </div>
+  <nav class="mobile-nav-links">
+    <a href="/">⌂ <span>Dashboard</span></a>
+    <a href="/daily-adaptive">◇ <span>Daily Path</span></a>
+
+    <div class="mobile-nav-section">Curriculum</div>
+    <a href="/curriculum">▦ <span>All Topics</span></a>
+    <a href="/curriculum/depth">≡ <span>Deep Curriculum</span></a>
+
+    <div class="mobile-nav-section">Practice</div>
+    <a href="/clinical-challenges">◆ <span>Clinical Challenges</span></a>
+    <a href="/concept-checks">✓ <span>Concept Checks</span></a>
+    <a href="/integrated">◌ <span>Cases</span></a>
+    <a href="/case-tomorrow">⌁ <span>OR Tomorrow</span></a>
+    <a href="/lab">◈ <span>Interpretation Atlas</span></a>
+    <a href="/anatomy">⌖ <span>Anatomy Atlas</span></a>
+
+    <div class="mobile-nav-section">Book Review</div>
+    <a href="/pasha-review" class="mobile-nav-feature">▤ <span>Pasha Review</span></a>
+
+    <div class="mobile-nav-section">Review</div>
+    <a href="/progress">▥ <span>My Progress</span></a>
+    <a href="/attending">↗ <span>Attending / Chief</span></a>
+    <a href="/mistakes">↻ <span>Mistakes</span></a>
+    <a href="/evidence">◫ <span>Evidence & Sources</span></a>
+  </nav>
+</aside>
+
 <div class="app-shell modern-shell">
   <aside class="sidebar modern-sidebar">
     <a class="modern-brand" href="/">
