@@ -1,4 +1,4 @@
-"""v20.4-v20.9 procedure-specific physiology and safety priorities for OR Tomorrow.
+"""v20.4-v21.1 procedure-specific physiology and safety priorities for OR Tomorrow.
 
 Adds high-yield patient-state checks that materially affect perioperative risk and
 postoperative disposition, plus high-consequence postoperative failure-mode reminders.
@@ -7,13 +7,16 @@ These are deliberately targeted rather than blanket boilerplate.
 
 TARGETED_SETUP = {
     "parathyroidectomy": [
-        "Review renal function and vitamin D status in context of the calcium/PTH disorder; identify severe bone disease or high bone-turnover features that increase postoperative hypocalcemia/hungry-bone risk."
+        "Review renal function and vitamin D status in context of the calcium/PTH disorder; identify severe bone disease or high bone-turnover features that increase postoperative hypocalcemia/hungry-bone risk.",
+        "Interpret intraoperative PTH in light of renal clearance: if the expected >50% fall is not yet achieved at the standard early time point, advanced renal dysfunction can slow PTH clearance and delay the decline. Follow the institution's ioPTH protocol and consider a later sample (commonly around 20 minutes) before assuming failure, while still evaluating for missed or multigland hyperfunction rather than attributing an inadequate fall to renal disease alone."
     ],
     "four-gland": [
-        "Review renal function and vitamin D status in context of the calcium/PTH disorder; identify severe bone disease or high bone-turnover features that increase postoperative hypocalcemia/hungry-bone risk."
+        "Review renal function and vitamin D status in context of the calcium/PTH disorder; identify severe bone disease or high bone-turnover features that increase postoperative hypocalcemia/hungry-bone risk.",
+        "Interpret intraoperative PTH in light of renal clearance: if the expected >50% fall is not yet achieved at the standard early time point, advanced renal dysfunction can slow PTH clearance and delay the decline. Follow the institution's ioPTH protocol and consider a later sample (commonly around 20 minutes) before assuming failure, while still evaluating for residual hyperfunctioning tissue or the expected multigland disease pattern rather than attributing an inadequate fall to renal disease alone."
     ],
     "reop-parathyroid": [
-        "Review renal function, vitamin D status, prior pathology/operative records and the biochemical pattern; define whether persistent/recurrent disease and high postoperative hypocalcemia risk are present before re-exploration."
+        "Review renal function, vitamin D status, prior pathology/operative records and the biochemical pattern; define whether persistent/recurrent disease and high postoperative hypocalcemia risk are present before re-exploration.",
+        "Interpret intraoperative PTH in light of renal clearance: an incomplete early >50% decline can reflect slower clearance in advanced renal dysfunction, so use protocol-consistent delayed sampling when appropriate before extending a scarred reoperative exploration. Renal dysfunction is not an automatic explanation for a failed criterion—persistent/missed or multigland hyperfunction still must be considered."
     ],
     "tonsillectomy": [
         "Define physiologic airway risk before surgery: review OSA severity and sleep-study data when available, age, obesity, craniofacial/neuromuscular disease, cardiopulmonary comorbidity and any prior postoperative respiratory events; use these factors to plan postoperative disposition."
