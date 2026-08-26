@@ -19,11 +19,14 @@ on:
       - 'audit_or_tomorrow_v190.py'
       - 'audit_or_inventory_v200.py'
       - 'audit_or_procedure_sequences_v200.py'
+      - 'audit_or_preop_physiology_v204.py'
       - 'or_tomorrow_overhaul_v190.py'
       - 'or_concept_link_fix_v191.py'
       - 'or_procedure_sequences_v200.py'
       - 'or_procedure_sequences_v201.py'
       - 'or_procedure_sequences_v202.py'
+      - 'or_preop_endocrine_v203.py'
+      - 'or_preop_physiology_v204.py'
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
       - 'deep_curriculum_distinct_entities_v178.py'
@@ -70,6 +73,8 @@ jobs:
         run: python audit_or_inventory_v200.py
       - name: v20.x procedure-specific OR sequence hard gate
         run: python audit_or_procedure_sequences_v200.py
+      - name: v20.4 OR preoperative physiology hard gate
+        run: python audit_or_preop_physiology_v204.py
       - name: v19.0 OR Tomorrow structural + postoperative gate
         run: python audit_or_tomorrow_v190.py
       - name: v16.8 runtime reliability and route smoke gate
@@ -107,6 +112,7 @@ jobs:
           if-no-files-found: warn
 
 # Boot health, exhaustive navigation integrity, Pasha review, OR Tomorrow depth,
-# procedure-specific OR choreography, canonical coverage, the runtime learning-
-# ladder contract, and the v17.8 Concept Check contract are hard gates. CI uses
-# an isolated SQLite database and does not mutate production state.
+# procedure-specific OR choreography, targeted preoperative physiology, canonical
+# coverage, the runtime learning-ladder contract, and the v17.8 Concept Check
+# contract are hard gates. CI uses an isolated SQLite database and does not mutate
+# production state.
