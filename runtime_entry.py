@@ -10,8 +10,6 @@ app = wsgi.app
 data = wsgi.data
 app_mod = wsgi._app_module
 
-# v21.6: add two genuinely missing external-canal keratinizing disease concepts
-# before ladder curation so canonical linking/audits see the expanded Otology set.
 from otology_eac_keratin_v216 import apply_otology_eac_keratin_v216
 OTOLOGY_EAC_KERATIN_V216 = apply_otology_eac_keratin_v216(data)
 
@@ -51,21 +49,19 @@ from vignette_ladders_v212 import apply_learning_ladders_v212
 LEARNING_LADDERS_V212 = apply_learning_ladders_v212(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from vignette_ladders_v213 import apply_learning_ladders_v213
 LEARNING_LADDERS_V213 = apply_learning_ladders_v213(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-# v21.8: close the final two canonical Rhinology concepts identified by the live inventory.
 from vignette_ladders_v218 import apply_learning_ladders_v218
 LEARNING_LADDERS_V218 = apply_learning_ladders_v218(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-# v21.9: begin deliberate Head & Neck Oncology review with reuse-first staging.
 from vignette_ladders_v219 import apply_learning_ladders_v219
 LEARNING_LADDERS_V219 = apply_learning_ladders_v219(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from ladder_reuse_alignment_v219 import apply_ladder_reuse_alignment_v219
 LADDER_REUSE_ALIGNMENT_V219 = apply_ladder_reuse_alignment_v219(data.CLINICAL_CHALLENGES_V119)
-# v22.0: Head & Neck Oncology pass 2, topics 6-10.
 from vignette_ladders_v220 import apply_learning_ladders_v220
 LEARNING_LADDERS_V220 = apply_learning_ladders_v220(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-# v22.1: Head & Neck Oncology pass 3, topics 11-15.
 from vignette_ladders_v221 import apply_learning_ladders_v221
 LEARNING_LADDERS_V221 = apply_learning_ladders_v221(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-# v21.1+: eliminate batch-local answer-position clustering without changing content.
+# v22.2: Head & Neck Oncology pass 4, live-inventory topics 16-20.
+from vignette_ladders_v222 import apply_learning_ladders_v222
+LEARNING_LADDERS_V222 = apply_learning_ladders_v222(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
 
