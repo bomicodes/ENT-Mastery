@@ -149,3 +149,10 @@ app_mod._canonical_search_index = _canonical_search_index_v150
 from reliability_v168 import apply_reliability_v168
 
 RELIABILITY_V168 = apply_reliability_v168(app, data, app_mod)
+
+# v18.5: register Pasha Review on the primary production runtime itself.
+# This makes /pasha-review available even when Render is still configured to
+# start gunicorn runtime_entry:app rather than the newer wrapper entrypoint.
+from pasha_routes import bp as pasha_review_blueprint
+if "pasha_review" not in app.blueprints:
+    app.register_blueprint(pasha_review_blueprint)
