@@ -70,6 +70,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Pre-flight boot gate
         run: python preflight_boot_check_v155.py
+      - name: v20.4 runtime learning-ladder hard gate
+        run: python audit_learning_ladders_runtime_v204.py
       - name: v20 OR registry inventory
         run: python audit_or_inventory_v200.py
       - name: v20.x procedure-specific OR sequence hard gate
@@ -90,8 +92,6 @@ jobs:
         run: python audit_quality_v149.py
       - name: Historical learning-ladder audit
         run: python audit_learning_ladders_v154.py
-      - name: v20.4 runtime learning-ladder hard gate
-        run: python audit_learning_ladders_runtime_v204.py
       - name: Content-depth audit
         run: python audit_content_depth_v155.py
       - name: Deep Curriculum six-layer audit
@@ -112,8 +112,7 @@ jobs:
           path: V178_ALL_DOMAIN_AUDIT.json
           if-no-files-found: warn
 
-# Boot health, exhaustive navigation integrity, Pasha review, OR Tomorrow depth,
-# procedure-specific OR choreography, targeted preoperative physiology, canonical
-# coverage, the runtime learning-ladder contract, and the v17.8 Concept Check
-# contract are hard gates. CI uses an isolated SQLite database and does not mutate
-# production state.
+# Boot health and the runtime ladder contract run first so content-integrity
+# failures are not masked by unrelated subsystem gates. All OR, route, coverage,
+# Deep Curriculum, and Concept Check hard gates remain in force afterward. CI
+# uses an isolated SQLite database and does not mutate production state.
