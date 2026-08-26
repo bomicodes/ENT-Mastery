@@ -157,6 +157,11 @@ from or_tomorrow_overhaul_v190 import apply_or_overhaul_v190
 OR_TOMORROW_OVERHAUL_V190 = apply_or_overhaul_v190(data.OR_PREP_REGISTRY)
 app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 
+# v19.1: normalize legacy OR -> Concept topic slugs after the full registry exists.
+from or_concept_link_fix_v191 import apply_or_concept_link_fix_v191
+OR_CONCEPT_LINK_FIX_V191 = apply_or_concept_link_fix_v191(data.OR_PREP_REGISTRY)
+app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
+
 # v18.5: register Pasha Review on the primary production runtime itself.
 # This makes /pasha-review available even when Render is still configured to
 # start gunicorn runtime_entry:app rather than the newer wrapper entrypoint.
