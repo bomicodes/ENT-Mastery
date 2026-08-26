@@ -62,6 +62,9 @@ LADDER_REUSE_ALIGNMENT_V219 = apply_ladder_reuse_alignment_v219(data.CLINICAL_CH
 # v22.0: Head & Neck Oncology pass 2, topics 6-10.
 from vignette_ladders_v220 import apply_learning_ladders_v220
 LEARNING_LADDERS_V220 = apply_learning_ladders_v220(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+# v22.1: Head & Neck Oncology pass 3, topics 11-15.
+from vignette_ladders_v221 import apply_learning_ladders_v221
+LEARNING_LADDERS_V221 = apply_learning_ladders_v221(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 # v21.1+: eliminate batch-local answer-position clustering without changing content.
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
