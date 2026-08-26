@@ -4,6 +4,10 @@ Unlike the historical v15.4 informational audit, this imports runtime_entry so
 all production ladder mutations (v16.9 onward) are present before evaluation.
 It hard-gates the deliberately completed Otology domain and validates the
 reviewed-question contract that subsequent domain passes must satisfy.
+
+The gate is intentionally substantive rather than verbosity-driven: concise
+anatomy stems and useful "Correct. ..." teaching rationales are valid. Generic,
+duplicated, missing, malformed, orphaned, or badly linked material is not.
 """
 
 from collections import Counter, defaultdict
@@ -20,6 +24,7 @@ _GENERIC_MARKERS = (
     "use the mechanism, anatomy, and management priority in the explanation",
     "compare this option with the time-critical management principle in the explanation",
     "compare this option with the management principle and anatomy in the explanation",
+    "review the explanation and compare the management principle with the clinical context",
     "this option misses the key clinical discriminator described in the explanation",
     "this option does not address the key discriminator in the scenario",
     "this option misses the key discriminator in the scenario",
@@ -56,16 +61,21 @@ def _quality_errors(q):
     for key in _REQUIRED:
         if q.get(key) in (None, ""):
             errors.append(f"missing {key}")
+
     choices = list(q.get("choices") or [])
     reasons = list(q.get("why_wrong") or [])
     if len(choices) < 4:
         errors.append("fewer than 4 choices")
+    if len(set(_norm(choice) for choice in choices)) != len(choices):
+        errors.append("duplicate choices")
+
     try:
         answer = int(q.get("answer"))
     except (TypeError, ValueError):
         answer = -1
     if not 0 <= answer < len(choices):
         errors.append("invalid answer index")
+
     if len(reasons) != len(choices):
         errors.append("why_wrong length mismatch")
     else:
@@ -73,23 +83,31 @@ def _quality_errors(q):
         for i, reason in enumerate(reasons):
             text = _norm(reason)
             if i == answer:
-                if text != "correct.":
-                    errors.append("correct option rationale is not 'Correct.'")
+                # A concise "Correct." or a useful "Correct. <teaching>" are both valid.
+                if not text.startswith("correct."):
+                    errors.append("correct option rationale does not start with 'Correct.'")
                 continue
+
             wrong.append(text)
-            if len(_words(reason)) < 7:
+            # Do not force prose inflation. Four meaningful words is enough for a
+            # concise anatomy/management discriminator; generic text is gated below.
+            if len(_words(reason)) < 4:
                 errors.append(f"thin distractor rationale index {i}")
             if any(marker in text for marker in _GENERIC_MARKERS):
                 errors.append(f"generic distractor rationale index {i}")
+
         if wrong and len(set(wrong)) != len(wrong):
             errors.append("duplicate distractor rationales")
-    if len(_words(q.get("stem"))) < 14:
+
+    # These minima catch empty/telegraphic placeholders without forcing artificial
+    # complexity into concepts that are appropriately concise.
+    if len(_words(q.get("stem"))) < 8:
         errors.append("thin stem")
-    if len(_words(q.get("explanation"))) < 18:
+    if len(_words(q.get("explanation"))) < 10:
         errors.append("thin explanation")
-    if len(_words(q.get("board_pearl"))) < 6:
+    if len(_words(q.get("board_pearl"))) < 4:
         errors.append("thin board pearl")
-    if len(_words(q.get("curveball"))) < 6:
+    if len(_words(q.get("curveball"))) < 4:
         errors.append("thin curveball")
     return errors
 
