@@ -1,10 +1,11 @@
-"""v21.4 procedure-specific anatomy landmarks for salivary OR Tomorrow cases.
+"""v21.4+ procedure-specific anatomy landmarks for reviewed OR Tomorrow cases.
 
-The v19 family profile intentionally provided broad salivary anatomy, but that leaves
-parotid and submandibular cases displaying each other's landmarks. This layer replaces
-that family list only for reviewed salivary procedures so the night-before anatomy is
-case-specific rather than additive boilerplate.
+The v19 family profiles intentionally provided broad anatomy. This layer replaces
+that family list for reviewed salivary cases and chains later procedure-specific
+head-and-neck landmark curation so the existing runtime hook remains atomic.
 """
+
+from or_landmarks_v215 import apply_or_landmarks_v215
 
 TARGETS = [
     {
@@ -81,4 +82,5 @@ def apply_or_landmarks_v214(registry):
             changed.append(slug)
         op["landmarks_v214"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v215 = apply_or_landmarks_v215(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v215": v215}
