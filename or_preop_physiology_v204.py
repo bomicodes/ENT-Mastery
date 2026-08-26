@@ -1,8 +1,8 @@
-"""v20.4/v20.8 procedure-specific physiology and safety priorities for OR Tomorrow.
+"""v20.4-v20.9 procedure-specific physiology and safety priorities for OR Tomorrow.
 
 Adds high-yield patient-state checks that materially affect perioperative risk and
-postoperative disposition, plus a small number of high-consequence postoperative
-failure-mode reminders. These are deliberately targeted rather than blanket boilerplate.
+postoperative disposition, plus high-consequence postoperative failure-mode reminders.
+These are deliberately targeted rather than blanket boilerplate.
 """
 
 TARGETED_SETUP = {
@@ -63,6 +63,30 @@ TARGETED_POSTOP = {
     ],
     "cochlear-implant": [
         "Document immediate facial-nerve function and vestibular symptoms; new facial weakness, severe/progressive vertigo, CSF-like drainage, meningitic symptoms or wound/device infection warrants urgent otologic evaluation."
+    ],
+    "tonsillectomy": [
+        "Treat fresh or recurrent oral bleeding, repeated swallowing/hematemesis, tachycardia, pallor or hemodynamic change as possible post-tonsillectomy hemorrhage; secure airway/resuscitation resources and obtain urgent ENT assessment rather than relying on a normal-appearing momentary oropharyngeal exam."
+    ],
+    "tonsillectomy-adenoidectomy": [
+        "Treat fresh or recurrent oral/nasal bleeding, repeated swallowing/hematemesis, tachycardia, pallor or hemodynamic change as possible post-tonsillectomy/adenoid hemorrhage; secure airway/resuscitation resources and obtain urgent ENT assessment."
+    ],
+    "button-battery": [
+        "After esophageal button-battery removal, ongoing injury can progress despite extraction: new hematemesis, sentinel bleeding, chest pain, fever, respiratory symptoms or neurologic change raises concern for delayed perforation, tracheoesophageal fistula or aorto-esophageal fistula and requires emergency multidisciplinary evaluation."
+    ],
+    "esophageal-fb": [
+        "After esophageal foreign-body extraction, escalating neck/chest pain, fever, crepitus, tachycardia, dyspnea or inability to handle secretions should trigger concern for occult esophageal perforation rather than routine post-instrumentation discomfort."
+    ],
+    "pharyngocutaneous-fistula": [
+        "In a pharyngocutaneous fistula or irradiated open neck, sentinel hemorrhage or new bleeding near an exposed carotid is a carotid-blowout warning; activate emergency airway/hemorrhage control and vascular/interventional support rather than performing blind bedside probing or packing against the vessel."
+    ],
+    "translabyrinthine-skull-base": [
+        "After translabyrinthine skull-base surgery, clear wound/nasal drainage, enlarging pseudomeningocele, meningitic symptoms, worsening facial weakness or new lower-cranial-nerve dysfunction requires prompt skull-base evaluation for CSF leak or neurologic complication."
+    ],
+    "retrosigmoid-skull-base": [
+        "After retrosigmoid skull-base surgery, new severe headache, declining mental status, focal neurologic deficit, lower-cranial-nerve dysfunction/aspiration, wound CSF leak or pseudomeningocele warrants urgent neurologic and skull-base reassessment."
+    ],
+    "middle-fossa-skull-base": [
+        "After middle-fossa skull-base surgery, new aphasia/confusion, focal neurologic deficit, seizure, worsening facial function or CSF-like otorrhea/rhinorrhea should prompt urgent evaluation for temporal-lobe, hematoma or CSF-leak complication."
     ],
 }
 
