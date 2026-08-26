@@ -1,9 +1,12 @@
-"""v21.5 procedure-specific anatomy for selected head-and-neck OR Tomorrow cases.
+"""v21.5+ procedure-specific anatomy for selected head-and-neck OR Tomorrow cases.
 
 The v19 head-and-neck family profile intentionally supplies broad landmarks. For
 major operations with very different dissection planes, replace that family list
-with anatomy that directly governs the planned operation.
+with anatomy that directly governs the planned operation. Later reviewed otology
+landmarks are chained here so the existing runtime anatomy hook remains atomic.
 """
+
+from or_landmarks_v216 import apply_or_landmarks_v216
 
 TARGETS = [
     {
@@ -81,4 +84,5 @@ def apply_or_landmarks_v215(registry):
             changed.append(slug)
         op["landmarks_v215"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v216 = apply_or_landmarks_v216(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v216": v216}
