@@ -1,8 +1,12 @@
-"""v21.6 procedure-specific anatomy for selected otology OR Tomorrow cases.
+"""v21.6+ procedure-specific anatomy for selected otology OR Tomorrow cases.
 
 Replaces the broad otology family landmark list for operations where the operative
 corridor and danger structures differ enough that a generic ear list is misleading.
+Later reviewed laryngology/swallowing landmarks are chained here so the existing
+runtime anatomy hook remains atomic.
 """
+
+from or_landmarks_v219 import apply_or_landmarks_v219
 
 TARGETS = [
     {
@@ -68,4 +72,5 @@ def apply_or_landmarks_v216(registry):
             changed.append(slug)
         op["landmarks_v216"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v219 = apply_or_landmarks_v219(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v219": v219}
