@@ -1,8 +1,8 @@
-"""Hard gate for v20.3-v20.8 OR Tomorrow physiology and safety content."""
+"""Hard gate for v20.3-v20.9 OR Tomorrow physiology and safety content."""
 import os
 import tempfile
 
-fd, db = tempfile.mkstemp(prefix="ent_or_preop_v208_", suffix=".db")
+fd, db = tempfile.mkstemp(prefix="ent_or_preop_v209_", suffix=".db")
 os.close(fd)
 os.environ.pop("DATABASE_URL", None)
 os.environ["SQLITE_PATH"] = db
@@ -33,6 +33,14 @@ POSTOP_REQUIRED = {
     "neck-dissection": ("chyle leak", "left", "cn xi"),
     "free-flap-basics": ("doppler", "venous congestion", "operative exploration"),
     "cochlear-implant": ("facial-nerve", "vertigo", "meningitic"),
+    "tonsillectomy": ("post-tonsillectomy hemorrhage", "hematemesis", "urgent ent"),
+    "tonsillectomy-adenoidectomy": ("post-tonsillectomy/adenoid hemorrhage", "hematemesis", "urgent ent"),
+    "button-battery": ("sentinel bleeding", "tracheoesophageal fistula", "aorto-esophageal fistula"),
+    "esophageal-fb": ("chest pain", "crepitus", "esophageal perforation"),
+    "pharyngocutaneous-fistula": ("sentinel hemorrhage", "carotid-blowout", "blind bedside probing"),
+    "translabyrinthine-skull-base": ("pseudomeningocele", "meningitic", "csf leak"),
+    "retrosigmoid-skull-base": ("declining mental status", "aspiration", "pseudomeningocele"),
+    "middle-fossa-skull-base": ("seizure", "focal neurologic deficit", "csf-like"),
 }
 
 try:
@@ -70,7 +78,7 @@ try:
             failures.append(f"{slug}: rendered /case-tomorrow HTTP {r.status_code}")
 
     if failures:
-        print("OR PHYSIOLOGY/SAFETY v20.8 FAILURES")
+        print("OR PHYSIOLOGY/SAFETY v20.9 FAILURES")
         print("\n".join(failures))
         raise SystemExit(1)
 
