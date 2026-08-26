@@ -22,7 +22,7 @@ BANNED = (
 
 SENTINELS = [
     (("total thyroidectomy",), (("superior pole", "superior thyroid"), ("recurrent laryngeal", "rln"), ("parathyroid",), ("berry",), ("contralateral", "opposite side"))),
-    (("maxillary antrostomy",), (("uncinate",), ("natural ostium",), ("nasolacrimal",), ("orbit", "orbital"))),
+    (("maxillary antrostomy",), (("uncinate",), ("natural maxillary ostium", "natural ostium"), ("nasolacrimal",), ("orbit", "orbital"))),
     (("stapedotomy", "stapedectomy"), (("incus",), ("footplate",), ("fenestra",), ("prosthesis",))),
     (("cochlear implant",), (("facial recess",), ("round-window", "round window"), ("electrode",), ("receiver",))),
     (("neck dissection",), (("cn xi", "accessory nerve"), ("ijv", "jugular"), ("carotid",), ("thoracic duct", "lymphatic"))),
@@ -32,7 +32,7 @@ SENTINELS = [
     (("laryngotracheal reconstruction",), (("cricoid",), ("cartilage graft", "rib cartilage"), ("stent", "ett"), ("airway",))),
     (("orbital floor",), (("forced duction",), ("implant",), ("infraorbital",), ("vision", "visual"))),
     (("hypoglossal",), (("hypoglossal",), ("cuff",), ("sensing",), ("tongue protrusion", "protrus"))),
-    (("free-flap", "free flap"), (("pedicle",), ("anastom",), ("recipient",), ("perfusion", "doppler"))),
+    (("free-flap-basics", "head & neck free-flap reconstruction"), (("pedicle",), ("anastom",), ("recipient",), ("perfusion", "doppler"))),
 ]
 
 try:
