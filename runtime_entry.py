@@ -10,102 +10,64 @@ app = wsgi.app
 data = wsgi.data
 app_mod = wsgi._app_module
 
-# v16.9: deliberate learning-ladder curation begins with five Otology concepts.
 from vignette_ladders_v169 import apply_learning_ladders_v169
 LEARNING_LADDERS_V169 = apply_learning_ladders_v169(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v17.0: second Otology ladder batch.
 from vignette_ladders_v170 import apply_learning_ladders_v170
 LEARNING_LADDERS_V170 = apply_learning_ladders_v170(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v17.1: third Otology ladder batch.
 from vignette_ladders_v171 import apply_learning_ladders_v171
 LEARNING_LADDERS_V171 = apply_learning_ladders_v171(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v17.2: fourth Otology ladder batch.
 from vignette_ladders_v172 import apply_learning_ladders_v172
 LEARNING_LADDERS_V172 = apply_learning_ladders_v172(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v17.3: fifth Otology ladder batch.
 from vignette_ladders_v173 import apply_learning_ladders_v173
 LEARNING_LADDERS_V173 = apply_learning_ladders_v173(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v17.4: sixth Otology ladder batch.
 from vignette_ladders_v174 import apply_learning_ladders_v174
 LEARNING_LADDERS_V174 = apply_learning_ladders_v174(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v17.5: seventh Otology ladder batch.
 from vignette_ladders_v175 import apply_learning_ladders_v175
 LEARNING_LADDERS_V175 = apply_learning_ladders_v175(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v17.6: finish the remaining v13.6 Otology foundations.
 from vignette_ladders_v176 import apply_learning_ladders_v176
 LEARNING_LADDERS_V176 = apply_learning_ladders_v176(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v20.4: runtime reconciliation proved SSCD and labyrinthitis lacked separate
-# foundation layers; add only those proven gaps before final reconciliation.
 from otology_foundation_gap_v204 import apply_otology_foundation_gap_v204
-OTOLOGY_FOUNDATION_GAP_V204 = apply_otology_foundation_gap_v204(
-    data.CLINICAL_CHALLENGES_V119, data._v6_item_id
-)
-
-# v20.4: reconcile the final seven canonical Otology topics and rebalance all
-# deliberately reviewed ladder answers after runtime ladder mutation.
+OTOLOGY_FOUNDATION_GAP_V204 = apply_otology_foundation_gap_v204(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from vignette_ladders_v204 import apply_learning_ladders_v204
 LEARNING_LADDERS_V204 = apply_learning_ladders_v204(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v20.5: begin systematic Rhinology / Allergy / Skull Base ladder curation.
 from vignette_ladders_v205 import apply_learning_ladders_v205
 LEARNING_LADDERS_V205 = apply_learning_ladders_v205(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v20.6: second Rhinology batch; reuse strong v14.x application cases when present.
 from vignette_ladders_v206 import apply_learning_ladders_v206
 LEARNING_LADDERS_V206 = apply_learning_ladders_v206(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-
-# v20.7: third Rhinology batch; continue reuse-first curation.
 from vignette_ladders_v207 import apply_learning_ladders_v207
 LEARNING_LADDERS_V207 = apply_learning_ladders_v207(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+# v20.8: reuse five strong v14.4 applications and add only missing senior decisions.
+from vignette_ladders_v208 import apply_learning_ladders_v208
+LEARNING_LADDERS_V208 = apply_learning_ladders_v208(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
-data.CLINICAL_CHALLENGE_BY_ID_V119 = {
-    q["id"]: q for q in data.CLINICAL_CHALLENGES_V119 if q.get("id")
-}
+data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119 if q.get("id")}
 app_mod.CLINICAL_CHALLENGES_V119 = data.CLINICAL_CHALLENGES_V119
 app_mod.CLINICAL_CHALLENGE_BY_ID_V119 = data.CLINICAL_CHALLENGE_BY_ID_V119
 
 from deep_curriculum_distinct_entities_v178 import apply_distinct_entities_v178
 DISTINCT_ENTITIES_V178 = apply_distinct_entities_v178(data)
-
 from concept_check_repair_v162 import apply_concept_check_repair_v162
 CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
-
 from concept_check_board_repair_v177 import apply_concept_check_board_repair_v177
 CONCEPT_CHECK_BOARD_REPAIR_V177 = apply_concept_check_board_repair_v177(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
-
 from concept_check_domain_curation_v178 import apply_concept_check_domain_curation_v178
 CONCEPT_CHECK_DOMAIN_CURATION_V178 = apply_concept_check_domain_curation_v178(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
-
 from concept_check_final_clinical_gate_v179 import apply_final_clinical_gate_v179
 CONCEPT_CHECK_FINAL_CLINICAL_GATE_V179 = apply_final_clinical_gate_v179(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
-
 _rebuilt_concept_checks_v179 = {q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")}
 if isinstance(getattr(data, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     data.CONCEPT_CHECK_BY_ID_V112.clear(); data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
-else:
-    data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v179
+else: data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v179
 if isinstance(getattr(app_mod, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     app_mod.CONCEPT_CHECK_BY_ID_V112.clear(); app_mod.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
-else:
-    app_mod.CONCEPT_CHECK_BY_ID_V112 = data.CONCEPT_CHECK_BY_ID_V112
+else: app_mod.CONCEPT_CHECK_BY_ID_V112 = data.CONCEPT_CHECK_BY_ID_V112
 
 _original_search_index = app_mod._canonical_search_index
-
 def _canonical_search_index_v150():
-    rows = list(_original_search_index())
-    seen = {(r.get("type"), r.get("url")) for r in rows}
+    rows = list(_original_search_index()); seen = {(r.get("type"), r.get("url")) for r in rows}
     bank_rows = [
         {"type":"Practice bank","title":"Clinical Challenges","subtitle":f"{len(data.CLINICAL_CHALLENGES_V119)} board-style vignettes","url":"/clinical-challenges","text":"clinical challenges board vignettes overnight call OR prep postoperative call clinical reasoning"},
-        {"type":"Practice bank","title":"Concept Checks","subtitle":f"{len(data.CONCEPT_CHECKS_V112)} board-recall questions","url":"/concept-checks","text":"concept checks board recall questions clinical vignettes active recall knowledge checks boards"},
-    ]
+        {"type":"Practice bank","title":"Concept Checks","subtitle":f"{len(data.CONCEPT_CHECKS_V112)} board-recall questions","url":"/concept-checks","text":"concept checks board recall questions clinical vignettes active recall knowledge checks boards"},]
     for row in bank_rows:
         key=(row["type"],row["url"])
         if key not in seen: rows.append(row); seen.add(key)
@@ -121,37 +83,19 @@ app_mod._canonical_search_index = _canonical_search_index_v150
 
 from reliability_v168 import apply_reliability_v168
 RELIABILITY_V168 = apply_reliability_v168(app, data, app_mod)
-
 from or_tomorrow_overhaul_v190 import apply_or_overhaul_v190
-OR_TOMORROW_OVERHAUL_V190 = apply_or_overhaul_v190(data.OR_PREP_REGISTRY)
-app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
-
+OR_TOMORROW_OVERHAUL_V190 = apply_or_overhaul_v190(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from or_concept_link_fix_v191 import apply_or_concept_link_fix_v191
-OR_CONCEPT_LINK_FIX_V191 = apply_or_concept_link_fix_v191(data.OR_PREP_REGISTRY)
-app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
-
+OR_CONCEPT_LINK_FIX_V191 = apply_or_concept_link_fix_v191(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from or_procedure_sequences_v200 import apply_or_procedure_sequences_v200
-OR_PROCEDURE_SEQUENCES_V200 = apply_or_procedure_sequences_v200(data.OR_PREP_REGISTRY)
-app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
-
+OR_PROCEDURE_SEQUENCES_V200 = apply_or_procedure_sequences_v200(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from or_procedure_sequences_v201 import apply_or_procedure_sequences_v201
-OR_PROCEDURE_SEQUENCES_V201 = apply_or_procedure_sequences_v201(data.OR_PREP_REGISTRY)
-app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
-
+OR_PROCEDURE_SEQUENCES_V201 = apply_or_procedure_sequences_v201(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from or_procedure_sequences_v202 import apply_or_procedure_sequences_v202
-OR_PROCEDURE_SEQUENCES_V202 = apply_or_procedure_sequences_v202(data.OR_PREP_REGISTRY)
-app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
-
-# v20.3: thyroid surgery setup must explicitly establish endocrine functional status.
+OR_PROCEDURE_SEQUENCES_V202 = apply_or_procedure_sequences_v202(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from or_preop_endocrine_v203 import apply_or_preop_endocrine_v203
-OR_PREOP_ENDOCRINE_V203 = apply_or_preop_endocrine_v203(data.OR_PREP_REGISTRY)
-app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
-
-# v20.4: targeted physiology/optimization checks for high-risk OR Tomorrow cases.
+OR_PREOP_ENDOCRINE_V203 = apply_or_preop_endocrine_v203(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from or_preop_physiology_v204 import apply_or_preop_physiology_v204
-OR_PREOP_PHYSIOLOGY_V204 = apply_or_preop_physiology_v204(data.OR_PREP_REGISTRY)
-app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
-
+OR_PREOP_PHYSIOLOGY_V204 = apply_or_preop_physiology_v204(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from pasha_routes import bp as pasha_review_blueprint
-if "pasha_review" not in app.blueprints:
-    app.register_blueprint(pasha_review_blueprint)
+if "pasha_review" not in app.blueprints: app.register_blueprint(pasha_review_blueprint)
