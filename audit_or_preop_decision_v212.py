@@ -1,8 +1,8 @@
-"""Hard gate for v21.2-v21.3 OR Tomorrow procedure-specific preoperative decisions."""
+"""Hard gate for v21.2-v21.4 OR Tomorrow decisions and salivary anatomy."""
 import os
 import tempfile
 
-fd, db = tempfile.mkstemp(prefix="ent_or_preop_decision_v213_", suffix=".db")
+fd, db = tempfile.mkstemp(prefix="ent_or_preop_decision_v214_", suffix=".db")
 os.close(fd)
 os.environ.pop("DATABASE_URL", None)
 os.environ["SQLITE_PATH"] = db
@@ -23,6 +23,13 @@ CHECKS = [
     (("laryngotracheal", "cleft"), ("cleft type/length", "aspiration physiology", "open-versus-endoscopic"), "preop_decision_v213"),
     (("direct laryngoscopy", "bronch"), ("spontaneous versus controlled ventilation", "rescue strategy", "critical stenosis"), "preop_decision_v213"),
     (("tracheal", "resection"), ("tension-free resection", "innominate", "release maneuvers", "backup airway"), "preop_decision_v213"),
+]
+
+LANDMARK_CHECKS = [
+    (("superficial parotid",), ("facial nerve trunk", "tragal pointer", "tympanomastoid", "posterior belly of digastric", "retromandibular vein"), ("lingual nerve", "hypoglossal nerve", "wharton")),
+    (("total parotid",), ("facial nerve trunk", "pes anserinus", "retromandibular vein", "deep lobe/parapharyngeal"), ("lingual nerve", "hypoglossal nerve", "wharton")),
+    (("submandibular gland",), ("marginal mandibular", "facial artery", "lingual nerve", "wharton duct", "hypoglossal nerve"), ("retromandibular vein", "stensen duct")),
+    (("sialendosc",), ("duct papilla", "branch-point", "wharton duct", "stensen duct"), ()),
 ]
 
 
@@ -55,12 +62,28 @@ try:
         if r.status_code >= 500:
             failures.append(f"{slug}: /case-tomorrow HTTP {r.status_code}")
 
+    for title_terms, required, forbidden in LANDMARK_CHECKS:
+        slug, op = _find(reg, title_terms)
+        label = "/".join(title_terms)
+        if not op:
+            failures.append(f"{label}: landmark module not found")
+            continue
+        if op.get("landmarks_v214") != "procedure-specific":
+            failures.append(f"{slug}: procedure-specific landmark marker missing")
+        landmarks = " ".join(str(x) for x in (op.get("landmarks") or [])).lower()
+        for term in required:
+            if term not in landmarks:
+                failures.append(f"{slug}: landmarks missing {term!r}")
+        for term in forbidden:
+            if term in landmarks:
+                failures.append(f"{slug}: landmarks retain irrelevant family anatomy {term!r}")
+
     if failures:
-        print("OR PREOP DECISION v21.2-v21.3 FAILURES")
+        print("OR DECISION/ANATOMY v21.2-v21.4 FAILURES")
         print("\n".join(failures))
         raise SystemExit(1)
 
-    print(f"PASS: {len(CHECKS)} procedure-specific preoperative decision modules are live and render")
+    print(f"PASS: {len(CHECKS)} decision modules and {len(LANDMARK_CHECKS)} procedure-specific salivary anatomy modules are live")
 finally:
     try:
         os.remove(db)
