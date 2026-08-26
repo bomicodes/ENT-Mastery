@@ -2,7 +2,7 @@
 from collections import Counter, defaultdict
 import runtime_entry as rt
 
-PREFIXES = ("v209_", "v210_", "v212_", "v213_", "v216_", "v218_", "v219_", "v220_")
+PREFIXES = ("v209_", "v210_", "v212_", "v213_", "v216_", "v218_", "v219_", "v220_", "v221_")
 failures=[]
 groups=defaultdict(list)
 for q in rt.data.CLINICAL_CHALLENGES_V119:
