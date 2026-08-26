@@ -162,6 +162,14 @@ from or_concept_link_fix_v191 import apply_or_concept_link_fix_v191
 OR_CONCEPT_LINK_FIX_V191 = apply_or_concept_link_fix_v191(data.OR_PREP_REGISTRY)
 app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 
+# v20.0: replace generic/family-level operative choreography with explicit,
+# procedure-specific resident night-before sequences. This deliberately runs
+# after v19 so the v19 setup/postop/complication layer is retained while its
+# generic step filler is superseded.
+from or_procedure_sequences_v200 import apply_or_procedure_sequences_v200
+OR_PROCEDURE_SEQUENCES_V200 = apply_or_procedure_sequences_v200(data.OR_PREP_REGISTRY)
+app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
+
 # v18.5: register Pasha Review on the primary production runtime itself.
 # This makes /pasha-review available even when Render is still configured to
 # start gunicorn runtime_entry:app rather than the newer wrapper entrypoint.
