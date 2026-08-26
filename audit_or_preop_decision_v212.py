@@ -1,8 +1,8 @@
-"""Hard gate for v21.2-v21.4 OR Tomorrow decisions and salivary anatomy."""
+"""Hard gate for v21.2-v21.5 OR Tomorrow decisions and procedure-specific anatomy."""
 import os
 import tempfile
 
-fd, db = tempfile.mkstemp(prefix="ent_or_preop_decision_v214_", suffix=".db")
+fd, db = tempfile.mkstemp(prefix="ent_or_preop_decision_v215_", suffix=".db")
 os.close(fd)
 os.environ.pop("DATABASE_URL", None)
 os.environ["SQLITE_PATH"] = db
@@ -26,10 +26,14 @@ CHECKS = [
 ]
 
 LANDMARK_CHECKS = [
-    (("superficial parotid",), ("facial nerve trunk", "tragal pointer", "tympanomastoid", "posterior belly of digastric", "retromandibular vein"), ("lingual nerve", "hypoglossal nerve", "wharton")),
-    (("total parotid",), ("facial nerve trunk", "pes anserinus", "retromandibular vein", "deep lobe/parapharyngeal"), ("lingual nerve", "hypoglossal nerve", "wharton")),
-    (("submandibular gland",), ("marginal mandibular", "facial artery", "lingual nerve", "wharton duct", "hypoglossal nerve"), ("retromandibular vein", "stensen duct")),
-    (("sialendosc",), ("duct papilla", "branch-point", "wharton duct", "stensen duct"), ()),
+    (("superficial parotid",), "landmarks_v214", ("facial nerve trunk", "tragal pointer", "tympanomastoid", "posterior belly of digastric", "retromandibular vein"), ("lingual nerve", "hypoglossal nerve", "wharton")),
+    (("total parotid",), "landmarks_v214", ("facial nerve trunk", "pes anserinus", "retromandibular vein", "deep lobe/parapharyngeal"), ("lingual nerve", "hypoglossal nerve", "wharton")),
+    (("submandibular gland",), "landmarks_v214", ("marginal mandibular", "facial artery", "lingual nerve", "wharton duct", "hypoglossal nerve"), ("retromandibular vein", "stensen duct")),
+    (("sialendosc",), "landmarks_v214", ("duct papilla", "branch-point", "wharton duct", "stensen duct"), ()),
+    (("total", "laryngectomy"), "landmarks_v215", ("hyoid", "pyriform", "permanent tracheal stoma", "carotid sheath"), ("thoracic duct", "marginal mandibular")),
+    (("neck", "dissection"), "landmarks_v215", ("spinal accessory", "internal jugular", "hypoglossal", "phrenic", "thoracic duct"), ("pre-epiglottic", "wharton")),
+    (("oral", "composite"), "landmarks_v215", ("lingual nerve", "hypoglossal", "lingual artery", "wharton", "mylohyoid"), ("thoracic duct", "tragal pointer")),
+    (("conservation", "laryng"), "landmarks_v215", ("anterior commissure", "pre-epiglottic", "paraglottic", "cricoarytenoid", "pyriform"), ("thoracic duct", "marginal mandibular")),
 ]
 
 
@@ -62,14 +66,14 @@ try:
         if r.status_code >= 500:
             failures.append(f"{slug}: /case-tomorrow HTTP {r.status_code}")
 
-    for title_terms, required, forbidden in LANDMARK_CHECKS:
+    for title_terms, marker, required, forbidden in LANDMARK_CHECKS:
         slug, op = _find(reg, title_terms)
         label = "/".join(title_terms)
         if not op:
             failures.append(f"{label}: landmark module not found")
             continue
-        if op.get("landmarks_v214") != "procedure-specific":
-            failures.append(f"{slug}: procedure-specific landmark marker missing")
+        if op.get(marker) != "procedure-specific":
+            failures.append(f"{slug}: {marker} procedure-specific landmark marker missing")
         landmarks = " ".join(str(x) for x in (op.get("landmarks") or [])).lower()
         for term in required:
             if term not in landmarks:
@@ -77,13 +81,16 @@ try:
         for term in forbidden:
             if term in landmarks:
                 failures.append(f"{slug}: landmarks retain irrelevant family anatomy {term!r}")
+        r = client.get("/case-tomorrow", query_string={"q": op.get("title", slug)}, follow_redirects=True)
+        if r.status_code >= 500:
+            failures.append(f"{slug}: landmark page /case-tomorrow HTTP {r.status_code}")
 
     if failures:
-        print("OR DECISION/ANATOMY v21.2-v21.4 FAILURES")
+        print("OR DECISION/ANATOMY v21.2-v21.5 FAILURES")
         print("\n".join(failures))
         raise SystemExit(1)
 
-    print(f"PASS: {len(CHECKS)} decision modules and {len(LANDMARK_CHECKS)} procedure-specific salivary anatomy modules are live")
+    print(f"PASS: {len(CHECKS)} decision modules and {len(LANDMARK_CHECKS)} procedure-specific anatomy modules are live")
 finally:
     try:
         os.remove(db)
