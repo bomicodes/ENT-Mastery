@@ -177,6 +177,11 @@ from or_procedure_sequences_v201 import apply_or_procedure_sequences_v201
 OR_PROCEDURE_SEQUENCES_V201 = apply_or_procedure_sequences_v201(data.OR_PREP_REGISTRY)
 app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 
+# v20.2: close the final exact-title matcher gaps found by the 93-case CI inventory.
+from or_procedure_sequences_v202 import apply_or_procedure_sequences_v202
+OR_PROCEDURE_SEQUENCES_V202 = apply_or_procedure_sequences_v202(data.OR_PREP_REGISTRY)
+app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
+
 # v18.5: register Pasha Review on the primary production runtime itself.
 # This makes /pasha-review available even when Render is still configured to
 # start gunicorn runtime_entry:app rather than the newer wrapper entrypoint.
