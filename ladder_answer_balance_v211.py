@@ -7,7 +7,7 @@ to a deterministic target position, grouped by ladder batch prefix.
 """
 from collections import defaultdict
 
-TARGET_PREFIXES = ("v209_", "v210_", "v212_")
+TARGET_PREFIXES = ("v209_", "v210_", "v212_", "v213_")
 
 
 def _prefix(qid):
