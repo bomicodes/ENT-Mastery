@@ -58,6 +58,10 @@ LEARNING_LADDERS_V204 = apply_learning_ladders_v204(data.CLINICAL_CHALLENGES_V11
 from vignette_ladders_v205 import apply_learning_ladders_v205
 LEARNING_LADDERS_V205 = apply_learning_ladders_v205(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
+# v20.6: second Rhinology batch; reuse strong v14.x application cases when present.
+from vignette_ladders_v206 import apply_learning_ladders_v206
+LEARNING_LADDERS_V206 = apply_learning_ladders_v206(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {
     q["id"]: q for q in data.CLINICAL_CHALLENGES_V119 if q.get("id")
 }
