@@ -1,8 +1,8 @@
-"""Hard gate for v20.3-v20.9 OR Tomorrow physiology and safety content."""
+"""Hard gate for v20.3-v21.1 OR Tomorrow physiology and safety content."""
 import os
 import tempfile
 
-fd, db = tempfile.mkstemp(prefix="ent_or_preop_v209_", suffix=".db")
+fd, db = tempfile.mkstemp(prefix="ent_or_preop_v211_", suffix=".db")
 os.close(fd)
 os.environ.pop("DATABASE_URL", None)
 os.environ["SQLITE_PATH"] = db
@@ -12,9 +12,9 @@ SETUP_REQUIRED = {
     "thyroid-lobectomy": ("thyroid functional status", "tsh", "free t4"),
     "total-thyroidectomy": ("thyroid functional status", "tsh", "free t4"),
     "reop-thyroid": ("thyroid functional status", "tsh", "free t4"),
-    "parathyroidectomy": ("renal function", "vitamin d", "hungry-bone"),
-    "four-gland": ("renal function", "vitamin d", "hungry-bone"),
-    "reop-parathyroid": ("renal function", "vitamin d", "biochemical"),
+    "parathyroidectomy": ("renal function", "vitamin d", "hungry-bone", ">50% fall", "20 minutes", "multigland"),
+    "four-gland": ("renal function", "vitamin d", "hungry-bone", ">50% fall", "20 minutes", "renal disease alone"),
+    "reop-parathyroid": ("renal function", "vitamin d", "biochemical", ">50% decline", "delayed sampling", "multigland"),
     "tonsillectomy": ("osa severity", "obesity", "postoperative disposition"),
     "tonsillectomy-adenoidectomy": ("osa severity", "obesity", "postoperative disposition"),
     "hypoglossal-stimulator": ("central-versus-obstructive", "pap intolerance", "dise"),
@@ -78,7 +78,7 @@ try:
             failures.append(f"{slug}: rendered /case-tomorrow HTTP {r.status_code}")
 
     if failures:
-        print("OR PHYSIOLOGY/SAFETY v20.9 FAILURES")
+        print("OR PHYSIOLOGY/SAFETY v21.1 FAILURES")
         print("\n".join(failures))
         raise SystemExit(1)
 
