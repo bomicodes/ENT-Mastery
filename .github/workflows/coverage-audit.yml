@@ -13,6 +13,7 @@ on:
       - 'audit_concept_checks_v161.py'
       - 'audit_board_curriculum_v177.py'
       - 'audit_concept_checks_all_domains_v178.py'
+      - 'audit_all_user_routes_v180.py'
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
       - 'deep_curriculum_distinct_entities_v178.py'
@@ -53,6 +54,8 @@ jobs:
         run: python preflight_boot_check_v155.py
       - name: v16.8 runtime reliability and route smoke gate
         run: python audit_reliability_v168.py
+      - name: v18.0 exhaustive user-route backend gate
+        run: python audit_all_user_routes_v180.py
       - name: Canonical coverage release gate
         run: python audit_coverage_v135.py --depth --strict
       - name: Resident-level quality audit
@@ -79,7 +82,6 @@ jobs:
           path: V178_ALL_DOMAIN_AUDIT.json
           if-no-files-found: warn
 
-# Boot health, runtime route integrity, canonical coverage, and the v17.8 all-domain
-# Concept Check contract are hard gates. The older board/deep-content audits remain
-# informational repair queues. CI stays read-only against production and uses an
-# isolated SQLite database for route smoke tests.
+# Boot health, exhaustive navigation integrity, canonical coverage, and the v17.8
+# Concept Check contract are hard gates. CI uses an isolated SQLite database and
+# does not mutate production state.
