@@ -1,13 +1,13 @@
 """v21.1+ — deterministic answer-position balancing for newly curated ladders.
 
-The content and rationale order are authored together, but sequential Rhinology
+The content and rationale order are authored together, but sequential curated
 batches can naturally cluster on one answer position. This runtime pass changes
 no clinical content: it moves the correct choice and its aligned rationale together
 to a deterministic target position, grouped by ladder batch prefix.
 """
 from collections import defaultdict
 
-TARGET_PREFIXES = ("v209_", "v210_", "v212_", "v213_")
+TARGET_PREFIXES = ("v209_", "v210_", "v212_", "v213_", "v216_")
 
 
 def _prefix(qid):
