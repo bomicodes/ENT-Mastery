@@ -48,6 +48,12 @@ data.CLINICAL_CHALLENGE_BY_ID_V119 = {
 app_mod.CLINICAL_CHALLENGES_V119 = data.CLINICAL_CHALLENGES_V119
 app_mod.CLINICAL_CHALLENGE_BY_ID_V119 = data.CLINICAL_CHALLENGE_BY_ID_V119
 
+# v17.8: restore clinically distinct disease entities that historical
+# canonicalization may have collapsed into comparison nodes.
+from deep_curriculum_distinct_entities_v178 import apply_distinct_entities_v178
+
+DISTINCT_ENTITIES_V178 = apply_distinct_entities_v178(data)
+
 # v16.2: repair the full Concept Check bank after all Deep Curriculum runtime
 # enrichments have loaded, so repaired recall answers come from the final live
 # canonical curriculum rather than stale source text.
