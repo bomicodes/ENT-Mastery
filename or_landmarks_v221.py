@@ -1,8 +1,11 @@
-"""v22.1 procedure-specific anatomy for selected pediatric-airway OR Tomorrow cases.
+"""v22.1+ procedure-specific anatomy for selected pediatric-airway OR Tomorrow cases.
 
 Replaces broad pediatric-airway family landmarks where the operative corridor is
-supraglottic, posterior laryngotracheal, or full diagnostic airway endoscopy.
+supraglottic, posterior laryngotracheal, or full diagnostic airway endoscopy. Later
+reviewed rhinology anatomy is chained here so the runtime anatomy hook remains atomic.
 """
+
+from or_landmarks_v222 import apply_or_landmarks_v222
 
 TARGETS = [
     {
@@ -80,4 +83,5 @@ def apply_or_landmarks_v221(registry):
             changed.append(slug)
         op["landmarks_v221"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v222 = apply_or_landmarks_v222(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v222": v222}
