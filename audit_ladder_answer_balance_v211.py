@@ -2,7 +2,7 @@
 from collections import Counter, defaultdict
 import runtime_entry as rt
 
-PREFIXES = ("v209_", "v210_", "v212_", "v213_")
+PREFIXES = ("v209_", "v210_", "v212_", "v213_", "v216_")
 failures=[]
 groups=defaultdict(list)
 for q in rt.data.CLINICAL_CHALLENGES_V119:
@@ -41,4 +41,4 @@ if failures:
     print("LADDER ANSWER-BALANCE FAILURES")
     print("\n".join(failures))
     raise SystemExit(1)
-print("PASS: post-v20.8 ladder batches retain aligned rationales and diverse answer positions")
+print("PASS: curated ladder batches retain aligned rationales and diverse answer positions")
