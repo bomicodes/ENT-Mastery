@@ -54,6 +54,9 @@ LEARNING_LADDERS_V213 = apply_learning_ladders_v213(data.CLINICAL_CHALLENGES_V11
 # v21.8: close the final two canonical Rhinology concepts identified by the live inventory.
 from vignette_ladders_v218 import apply_learning_ladders_v218
 LEARNING_LADDERS_V218 = apply_learning_ladders_v218(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+# v21.9: begin deliberate Head & Neck Oncology review with reuse-first staging.
+from vignette_ladders_v219 import apply_learning_ladders_v219
+LEARNING_LADDERS_V219 = apply_learning_ladders_v219(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 # v21.1+: eliminate batch-local answer-position clustering without changing content.
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
