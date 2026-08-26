@@ -1,12 +1,13 @@
-"""v21.2+ focused preoperative decision points for OR Tomorrow.
+"""v21.2+ focused OR Tomorrow decision and anatomy enrichments.
 
 Targets cases where the operative sequence is already procedure-specific but the
 night-before plan should explicitly include findings that can change approach,
-extent, counseling, or multidisciplinary preparation. v21.3 is chained here so
-runtime integration remains atomic with the existing OR decision layer.
+extent, counseling, or multidisciplinary preparation. Later reviewed OR enrichments
+are chained here so runtime integration remains atomic with the existing planner hook.
 """
 
 from or_preop_decision_v213 import apply_or_preop_decision_v213
+from or_landmarks_v214 import apply_or_landmarks_v214
 
 TARGETS = [
     {
@@ -85,6 +86,7 @@ def apply_or_preop_decision_v212(registry):
         if did_change:
             changed.append(slug)
     v213 = apply_or_preop_decision_v213(registry)
+    v214 = apply_or_landmarks_v214(registry)
     return {
         "changed": changed,
         "count": len(changed),
@@ -92,4 +94,5 @@ def apply_or_preop_decision_v212(registry):
         "resolved": resolved,
         "missing": missing,
         "v213": v213,
+        "v214": v214,
     }
