@@ -25,7 +25,9 @@ SENTINELS = [
     (("maxillary antrostomy",), (("uncinate",), ("natural maxillary ostium", "natural ostium"), ("nasolacrimal",), ("orbit", "orbital"))),
     (("stapedotomy", "stapedectomy"), (("incus",), ("footplate",), ("fenestra",), ("prosthesis",))),
     (("cochlear implant",), (("facial recess",), ("round-window", "round window"), ("electrode",), ("receiver",))),
-    (("neck dissection",), (("cn xi", "accessory nerve"), ("ijv", "jugular"), ("carotid",), ("thoracic duct", "lymphatic"))),
+    # Lateral/selective neck dissection only. Central compartment dissection has
+    # a different risk map and should not be forced to contain CN XI/IJV/thoracic-duct language.
+    (("selective neck dissection",), (("cn xi", "accessory nerve"), ("ijv", "jugular"), ("carotid",), ("thoracic duct", "lymphatic"))),
     (("total laryngectomy",), (("trachea",), ("phary",), ("specimen",), ("stoma",))),
     (("microflap",), (("superficial lamina propria",), ("microflap",), ("vocal ligament",), ("redrape",))),
     (("medialization", "thyroplasty"), (("thyroid cartilage",), ("window",), ("implant",), ("airway", "laryngoscopy", "phonat"))),
