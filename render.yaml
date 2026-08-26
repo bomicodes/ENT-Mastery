@@ -3,7 +3,7 @@ services:
     name: ent-mastery
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn runtime_entry:app
+    startCommand: gunicorn runtime_entry_pasha:app
     healthCheckPath: /health
     envVars:
       - key: PYTHON_VERSION
