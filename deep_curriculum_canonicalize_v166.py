@@ -6,9 +6,10 @@ node is merged into the canonical six-layer module sentence-by-sentence, then
 linked content is repointed to the canonical concept_id.
 
 This deliberately does NOT auto-merge every fuzzy-title pair. Closely related
-but clinically distinct topics (e.g. ETD vs patulous ETD, CRSsNP vs CRSwNP,
-oral tongue vs base-of-tongue SCC) remain separate and are instead related by
-the v16.7 clinical hierarchy when appropriate.
+but clinically distinct topics (e.g. ETD vs patulous ETD, acute diffuse otitis
+externa vs necrotizing otitis externa, CRSsNP vs CRSwNP, oral tongue vs
+base-of-tongue SCC) remain separate and are instead related by the v16.7
+clinical hierarchy when appropriate.
 
 v17.7 expands this cleanup in two ways:
 1) adds a second set of manually reviewed over-fragmented nodes; and
@@ -25,9 +26,11 @@ from clinical_hierarchy_v167 import apply_clinical_hierarchy_v167
 
 
 # domain -> canonical topic -> retiring duplicate/over-fragmented topics
+# IMPORTANT: only true duplicates/naming variants belong here. Disease entities
+# that are clinically differentiated on boards (for example uncomplicated AOE
+# versus necrotizing OE) must remain separate nodes.
 CANONICAL_MERGES_V166 = {
     "Otology / Neurotology": {
-        "Acute Otitis Externa": ["Necrotizing Otitis Externa"],
         "Otosclerosis / Stapes Fixation": ["Otosclerosis"],
     },
     "Head & Neck Oncology": {
