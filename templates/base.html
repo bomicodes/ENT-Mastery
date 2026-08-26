@@ -6,8 +6,10 @@
   <title>{% block title %}ENT Mastery{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='reliability_v168.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='mobile_nav_v183.css') }}">
 </head>
 <body>
+<div class="mobile-nav-backdrop" data-mobile-nav-backdrop></div>
 <div class="app-shell modern-shell">
   <aside class="sidebar modern-sidebar">
     <a class="modern-brand" href="/">
@@ -68,6 +70,7 @@
 
   <main class="modern-main">
     <header class="topbar modern-topbar">
+      <button class="mobile-nav-toggle" type="button" aria-label="Open navigation" data-mobile-nav-toggle>☰</button>
       <form action="/search" method="get" class="global-search">
         <span>⌕</span>
         <input name="q" placeholder="Search disease, operation, anatomy, problem…" value="{{ request.args.get('q','') }}">
@@ -79,5 +82,6 @@
   </main>
 </div>
 <script src="{{ url_for('static', filename='app.js') }}"></script>
+<script src="{{ url_for('static', filename='mobile_nav_v183.js') }}"></script>
 </body>
 </html>
