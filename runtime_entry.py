@@ -42,7 +42,8 @@ LEARNING_LADDERS_V175 = apply_learning_ladders_v175(data.CLINICAL_CHALLENGES_V11
 from vignette_ladders_v176 import apply_learning_ladders_v176
 LEARNING_LADDERS_V176 = apply_learning_ladders_v176(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 
-# v20.4: runtime reconciliation proved SSCD lacked a separate foundation layer.
+# v20.4: runtime reconciliation proved SSCD and labyrinthitis lacked separate
+# foundation layers; add only those proven gaps before final reconciliation.
 from otology_foundation_gap_v204 import apply_otology_foundation_gap_v204
 OTOLOGY_FOUNDATION_GAP_V204 = apply_otology_foundation_gap_v204(
     data.CLINICAL_CHALLENGES_V119, data._v6_item_id
