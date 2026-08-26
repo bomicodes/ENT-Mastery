@@ -1,9 +1,12 @@
-"""v21.2 focused preoperative decision points for OR Tomorrow.
+"""v21.2+ focused preoperative decision points for OR Tomorrow.
 
 Targets cases where the operative sequence is already procedure-specific but the
 night-before plan should explicitly include findings that can change approach,
-extent, counseling, or multidisciplinary preparation.
+extent, counseling, or multidisciplinary preparation. v21.3 is chained here so
+runtime integration remains atomic with the existing OR decision layer.
 """
+
+from or_preop_decision_v213 import apply_or_preop_decision_v213
 
 TARGETS = [
     {
@@ -81,10 +84,12 @@ def apply_or_preop_decision_v212(registry):
         resolved.append(slug)
         if did_change:
             changed.append(slug)
+    v213 = apply_or_preop_decision_v213(registry)
     return {
         "changed": changed,
         "count": len(changed),
         "targets": len(TARGETS),
         "resolved": resolved,
         "missing": missing,
+        "v213": v213,
     }
