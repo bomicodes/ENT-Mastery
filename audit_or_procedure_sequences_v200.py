@@ -1,8 +1,7 @@
-"""Hard gate for v20.0 procedure-specific OR Tomorrow choreography.
+"""Hard gate for v20.x procedure-specific OR Tomorrow choreography.
 
 Fails if any live OR module still depends on v19 generic filler or lacks a deliberate
-procedure-level sequence. Sentinel operations also require their defining landmarks
-and irreversible steps to appear in the sequence itself.
+procedure-level sequence after both the broad v20.0 and exact v20.1 layers run.
 """
 import os
 import tempfile
@@ -21,10 +20,9 @@ BANNED = (
     "reinspect the operative field for hemostasis, anatomic integrity",
 )
 
-# Match by title/slug token; require each concept group somewhere across the sequence.
 SENTINELS = [
     (("total thyroidectomy",), (("superior pole", "superior thyroid"), ("recurrent laryngeal", "rln"), ("parathyroid",), ("berry",), ("contralateral", "opposite side"))),
-    (("maxillary antrostomy",), (("uncinate",), ("natural", "ostium"), ("nasolacrimal",), ("orbit", "orbital"))),
+    (("maxillary antrostomy",), (("uncinate",), ("natural ostium",), ("nasolacrimal",), ("orbit", "orbital"))),
     (("stapedotomy", "stapedectomy"), (("incus",), ("footplate",), ("fenestra",), ("prosthesis",))),
     (("cochlear implant",), (("facial recess",), ("round-window", "round window"), ("electrode",), ("receiver",))),
     (("neck dissection",), (("cn xi", "accessory nerve"), ("ijv", "jugular"), ("carotid",), ("thoracic duct", "lymphatic"))),
@@ -34,7 +32,7 @@ SENTINELS = [
     (("laryngotracheal reconstruction",), (("cricoid",), ("cartilage graft", "rib cartilage"), ("stent", "ett"), ("airway",))),
     (("orbital floor",), (("forced duction",), ("implant",), ("infraorbital",), ("vision", "visual"))),
     (("hypoglossal",), (("hypoglossal",), ("cuff",), ("sensing",), ("tongue protrusion", "protrus"))),
-    (("free flap",), (("pedicle",), ("anastom",), ("recipient",), ("perfusion", "doppler"))),
+    (("free-flap", "free flap"), (("pedicle",), ("anastom",), ("recipient",), ("perfusion", "doppler"))),
 ]
 
 try:
@@ -43,12 +41,11 @@ try:
     reg = rt.data.OR_PREP_REGISTRY
     assert reg, "OR_PREP_REGISTRY is empty"
     failures = []
+    broad = getattr(rt, "OR_PROCEDURE_SEQUENCES_V200", {}) or {}
+    exact = getattr(rt, "OR_PROCEDURE_SEQUENCES_V201", {}) or {}
 
-    report = getattr(rt, "OR_PROCEDURE_SEQUENCES_V200", {}) or {}
-    if report.get("unmatched"):
-        failures.append("UNMATCHED PROCEDURES:\n" + "\n".join(
-            f"  {x.get('slug')}: {x.get('title')}" for x in report["unmatched"]
-        ))
+    if exact.get("missing_registry_slugs"):
+        failures.append(f"v20.1 exact table references missing registry slugs: {exact['missing_registry_slugs']}")
 
     for slug, op in reg.items():
         title = str(op.get("title") or slug)
@@ -56,7 +53,7 @@ try:
         joined = " ".join(steps).lower()
 
         if op.get("sequence_status_v200") != "procedure-specific":
-            failures.append(f"{slug}: sequence_status_v200={op.get('sequence_status_v200')!r}")
+            failures.append(f"{slug}: no final procedure-specific sequence")
         if len(steps) < 7:
             failures.append(f"{slug}: only {len(steps)} operative steps; need >=7")
         if len(set(s.lower() for s in steps)) != len(steps):
@@ -65,7 +62,6 @@ try:
             if phrase in joined:
                 failures.append(f"{slug}: banned generic filler remains: {phrase!r}")
 
-        # A useful step should usually contain an action plus an anatomic/object noun.
         too_short = [s for s in steps if len(s.split()) < 8]
         if too_short:
             failures.append(f"{slug}: underspecified steps: {too_short[:3]}")
@@ -74,14 +70,9 @@ try:
         for triggers, groups in SENTINELS:
             if any(trig in label for trig in triggers):
                 for group in groups:
-                    # For two-word concepts represented as separate tokens, require
-                    # at least one listed alternative string; group is OR semantics.
                     if not any(term in joined for term in group):
-                        failures.append(
-                            f"{slug}: sentinel {triggers[0]!r} missing one of {group!r}"
-                        )
+                        failures.append(f"{slug}: sentinel {triggers[0]!r} missing one of {group!r}")
 
-    # Render every OR case through the actual resident-facing page.
     client = rt.app.test_client()
     for slug, op in reg.items():
         r = client.get("/case-tomorrow", query_string={"q": op.get("title", slug)}, follow_redirects=True)
@@ -94,13 +85,14 @@ try:
                 failures.append(f"{slug}: rendered page leaked generic filler {phrase!r}")
 
     if failures:
-        print("OR v20.0 PROCEDURE-SEQUENCE FAILURES")
+        print("OR v20.x PROCEDURE-SEQUENCE FAILURES")
         print("\n".join(failures[:300]))
         raise SystemExit(1)
 
     print(
-        f"PASS: {len(reg)} OR modules have procedure-specific v20 sequences; "
-        f"replaced={report.get('replaced')} generic_removed={report.get('generic_removed')}"
+        f"PASS: {len(reg)} OR modules have procedure-specific v20.x sequences; "
+        f"broad_replaced={broad.get('replaced')} exact_overrides={exact.get('count')} "
+        f"generic_removed={broad.get('generic_removed')}"
     )
 finally:
     try:
