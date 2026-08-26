@@ -57,6 +57,8 @@ LEARNING_LADDERS_V218 = apply_learning_ladders_v218(data.CLINICAL_CHALLENGES_V11
 # v21.9: begin deliberate Head & Neck Oncology review with reuse-first staging.
 from vignette_ladders_v219 import apply_learning_ladders_v219
 LEARNING_LADDERS_V219 = apply_learning_ladders_v219(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+from ladder_reuse_alignment_v219 import apply_ladder_reuse_alignment_v219
+LADDER_REUSE_ALIGNMENT_V219 = apply_ladder_reuse_alignment_v219(data.CLINICAL_CHALLENGES_V119)
 # v21.1+: eliminate batch-local answer-position clustering without changing content.
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
