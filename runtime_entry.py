@@ -40,9 +40,11 @@ from vignette_ladders_v208 import apply_learning_ladders_v208
 LEARNING_LADDERS_V208 = apply_learning_ladders_v208(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from vignette_ladders_v209 import apply_learning_ladders_v209
 LEARNING_LADDERS_V209 = apply_learning_ladders_v209(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-# v21.0: close five high-consequence Rhinology ladder concepts.
 from vignette_ladders_v210 import apply_learning_ladders_v210
 LEARNING_LADDERS_V210 = apply_learning_ladders_v210(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+# v21.1: eliminate batch-local answer-position clustering without changing content.
+from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
+LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
 
 data.CLINICAL_CHALLENGE_BY_ID_V119 = {q["id"]: q for q in data.CLINICAL_CHALLENGES_V119 if q.get("id")}
 app_mod.CLINICAL_CHALLENGES_V119 = data.CLINICAL_CHALLENGES_V119
