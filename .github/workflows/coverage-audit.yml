@@ -15,6 +15,7 @@ on:
       - 'audit_concept_checks_all_domains_v178.py'
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
+      - 'deep_curriculum_distinct_entities_v178.py'
       - 'audit_coverage_v135.py'
       - 'audit_quality_v149.py'
       - 'audit_reliability_v168.py'
@@ -70,6 +71,13 @@ jobs:
         run: python audit_board_curriculum_v177.py
       - name: v17.8 hard all-domain Concept Check curation gate
         run: python audit_concept_checks_all_domains_v178.py
+      - name: Upload v17.8 audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v178-all-domain-audit
+          path: V178_ALL_DOMAIN_AUDIT.json
+          if-no-files-found: warn
 
 # Boot health, runtime route integrity, canonical coverage, and the v17.8 all-domain
 # Concept Check contract are hard gates. The older board/deep-content audits remain
