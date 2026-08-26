@@ -30,6 +30,7 @@ on:
       - 'audit_or_laryngology_management_v218.py'
       - 'audit_or_pediatric_airway_v220.py'
       - 'audit_or_rhinology_anatomy_v222.py'
+      - 'audit_or_facial_trauma_v223.py'
       - 'or_tomorrow_overhaul_v190.py'
       - 'or_concept_link_fix_v191.py'
       - 'or_procedure_sequences_v200.py'
@@ -115,6 +116,8 @@ jobs:
         run: python audit_or_pediatric_airway_v220.py
       - name: v22.2 rhinology OR procedure-specific anatomy gate
         run: python audit_or_rhinology_anatomy_v222.py
+      - name: v22.3 facial trauma OR procedure-specific anatomy gate
+        run: python audit_or_facial_trauma_v223.py
       - name: v19.0 OR Tomorrow structural + postoperative gate
         run: python audit_or_tomorrow_v190.py
       - name: v16.8 runtime reliability and route smoke gate
