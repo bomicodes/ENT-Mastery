@@ -1,4 +1,4 @@
-"""v20.2 final exact matcher-gap closures for the 93-case OR registry."""
+"""v20.2/v20.8 final exact matcher-gap closures for the 93-case OR registry."""
 
 EXACT = {
     "direct-laryngoscopy-bronchoscopy": [
@@ -20,6 +20,16 @@ EXACT = {
         "Open the causative sinus drainage pathways adequately so persistent infected sinus disease cannot immediately re-seed the orbit.",
         "Reinspect the orbit/sinus interface for decompression and hemostasis and avoid tight nasal packing that transmits pressure to the orbit.",
         "Repeat and document postoperative vision, pupils, color vision, and extraocular movement immediately; any deterioration triggers urgent orbital-compartment reassessment.",
+    ],
+    "bilobed-flap": [
+        "Measure the defect and design the first and second lobes around a pivot point that recruits lax adjacent skin while respecting nasal aesthetic subunits.",
+        "Incise the flap and elevate it in a plane thick enough to preserve the subdermal vascular plexus throughout both lobes and the common base.",
+        "Undermine the surrounding recipient and donor skin sufficiently to distribute tension and reduce pincushioning or alar distortion after rotation.",
+        "Rotate the first lobe into the primary defect and the second lobe into the first-lobe donor defect without excessive torsion or narrowing at the pivot.",
+        "Trim standing cutaneous deformities conservatively only after the flap is seated and perfusion is confirmed, preserving enough tissue to avoid overcorrection.",
+        "Place deep dermal sutures to offload skin tension, align the nasal contour, and prevent the flap from retracting away from the defect.",
+        "Close the epidermis with precise edge eversion while avoiding strangulation of the flap base or excessive tension across the alar margin.",
+        "Recheck flap color, capillary refill, inset tension, standing deformity, and final nasal contour before applying a noncompressive dressing.",
     ],
 }
 
