@@ -1,8 +1,8 @@
-"""Hard gate for v21.2-v21.5 OR Tomorrow decisions and procedure-specific anatomy."""
+"""Hard gate for v21.2-v21.6 OR Tomorrow decisions and procedure-specific anatomy."""
 import os
 import tempfile
 
-fd, db = tempfile.mkstemp(prefix="ent_or_preop_decision_v215_", suffix=".db")
+fd, db = tempfile.mkstemp(prefix="ent_or_preop_decision_v216_", suffix=".db")
 os.close(fd)
 os.environ.pop("DATABASE_URL", None)
 os.environ["SQLITE_PATH"] = db
@@ -34,6 +34,9 @@ LANDMARK_CHECKS = [
     (("neck", "dissection"), "landmarks_v215", ("spinal accessory", "internal jugular", "hypoglossal", "phrenic", "thoracic duct"), ("pre-epiglottic", "wharton")),
     (("oral", "composite"), "landmarks_v215", ("lingual nerve", "hypoglossal", "lingual artery", "wharton", "mylohyoid"), ("thoracic duct", "tragal pointer")),
     (("conservation", "laryng"), "landmarks_v215", ("anterior commissure", "pre-epiglottic", "paraglottic", "cricoarytenoid", "pyriform"), ("thoracic duct", "marginal mandibular")),
+    (("staped",), "landmarks_v216", ("lenticular", "footplate", "pyramidal eminence", "tympanic segment of the facial nerve", "chorda tympani"), ("sigmoid sinus", "tegmen")),
+    (("cochlear", "implant"), "landmarks_v216", ("sigmoid sinus", "lateral semicircular canal", "incus", "mastoid segment of the facial nerve", "chorda tympani", "round-window"), ("stapes head", "pyramidal eminence")),
+    (("cholesteat",), "landmarks_v216", ("tegmen", "sigmoid sinus", "lateral semicircular canal", "facial nerve", "antrum", "sinus tympani"), ("wharton", "tragal pointer")),
 ]
 
 
@@ -86,7 +89,7 @@ try:
             failures.append(f"{slug}: landmark page /case-tomorrow HTTP {r.status_code}")
 
     if failures:
-        print("OR DECISION/ANATOMY v21.2-v21.5 FAILURES")
+        print("OR DECISION/ANATOMY v21.2-v21.6 FAILURES")
         print("\n".join(failures))
         raise SystemExit(1)
 
