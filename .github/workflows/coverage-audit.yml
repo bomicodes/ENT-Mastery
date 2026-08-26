@@ -9,6 +9,7 @@ on:
       - 'audit_content_depth_v155.py'
       - 'audit_learning_ladders_v154.py'
       - 'audit_learning_ladders_runtime_v204.py'
+      - 'audit_rhinology_v209.py'
       - 'audit_deep_curriculum_v159.py'
       - 'audit_deep_curriculum_duplicates_v163.py'
       - 'audit_concept_checks_v161.py'
@@ -72,6 +73,8 @@ jobs:
         run: python preflight_boot_check_v155.py
       - name: v20.4 runtime learning-ladder hard gate
         run: python audit_learning_ladders_runtime_v204.py
+      - name: v20.9 Rhinology answer-pattern regression gate
+        run: python audit_rhinology_v209.py
       - name: v20 OR registry inventory
         run: python audit_or_inventory_v200.py
       - name: v20.x procedure-specific OR sequence hard gate
@@ -114,5 +117,5 @@ jobs:
 
 # Boot health and the runtime ladder contract run first so content-integrity
 # failures are not masked by unrelated subsystem gates. All OR, route, coverage,
-# Deep Curriculum, and Concept Check hard gates remain in force afterward. CI
+# Deep Curriculum, Concept Check, and reviewed ladder quality gates remain in force afterward. CI
 # uses an isolated SQLite database and does not mutate production state.
