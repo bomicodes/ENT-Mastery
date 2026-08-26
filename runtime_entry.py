@@ -128,6 +128,11 @@ from or_preop_endocrine_v203 import apply_or_preop_endocrine_v203
 OR_PREOP_ENDOCRINE_V203 = apply_or_preop_endocrine_v203(data.OR_PREP_REGISTRY)
 app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 
+# v20.4: targeted physiology/optimization checks for high-risk OR Tomorrow cases.
+from or_preop_physiology_v204 import apply_or_preop_physiology_v204
+OR_PREOP_PHYSIOLOGY_V204 = apply_or_preop_physiology_v204(data.OR_PREP_REGISTRY)
+app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
+
 from pasha_routes import bp as pasha_review_blueprint
 if "pasha_review" not in app.blueprints:
     app.register_blueprint(pasha_review_blueprint)
