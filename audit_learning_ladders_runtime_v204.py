@@ -1,13 +1,13 @@
-"""v20.4 runtime-aware learning-ladder hard gate.
+"""v20.5 runtime-aware learning-ladder hard gate.
 
-Unlike the historical v15.4 informational audit, this imports runtime_entry so
-all production ladder mutations (v16.9 onward) are present before evaluation.
-It hard-gates the deliberately completed Otology domain and validates the
-reviewed-question contract that subsequent domain passes must satisfy.
+Imports runtime_entry so all production ladder mutations are present before
+evaluation. The completed Otology domain remains a full-domain hard gate, while
+every concept deliberately reviewed in any domain must independently carry a
+complete foundation -> application -> senior_decision ladder.
 
-The gate is intentionally substantive rather than verbosity-driven: concise
-anatomy stems and useful "Correct. ..." teaching rationales are valid. Generic,
-duplicated, missing, malformed, orphaned, or badly linked material is not.
+The gate is substantive rather than verbosity-driven: concise anatomy stems and
+useful "Correct. ..." teaching rationales are valid. Generic, duplicated,
+missing, malformed, orphaned, badly linked, or incomplete reviewed material is not.
 """
 
 from collections import Counter, defaultdict
@@ -83,24 +83,17 @@ def _quality_errors(q):
         for i, reason in enumerate(reasons):
             text = _norm(reason)
             if i == answer:
-                # A concise "Correct." or a useful "Correct. <teaching>" are both valid.
                 if not text.startswith("correct."):
                     errors.append("correct option rationale does not start with 'Correct.'")
                 continue
-
             wrong.append(text)
-            # Do not force prose inflation. Four meaningful words is enough for a
-            # concise anatomy/management discriminator; generic text is gated below.
             if len(_words(reason)) < 4:
                 errors.append(f"thin distractor rationale index {i}")
             if any(marker in text for marker in _GENERIC_MARKERS):
                 errors.append(f"generic distractor rationale index {i}")
-
         if wrong and len(set(wrong)) != len(wrong):
             errors.append("duplicate distractor rationales")
 
-    # These minima catch empty/telegraphic placeholders without forcing artificial
-    # complexity into concepts that are appropriately concise.
     if len(_words(q.get("stem"))) < 8:
         errors.append("thin stem")
     if len(_words(q.get("explanation"))) < 10:
@@ -110,6 +103,22 @@ def _quality_errors(q):
     if len(_words(q.get("curveball"))) < 4:
         errors.append("thin curveball")
     return errors
+
+
+def _stage_row(domain, topic, linked):
+    counts = Counter(
+        q.get("learning_stage")
+        for q in linked
+        if q.get("learning_stage") in STAGES
+    )
+    missing = [stage for stage in STAGES if counts[stage] == 0]
+    return {
+        "domain": domain,
+        "topic": topic,
+        "cases": len(linked),
+        "stages": {stage: counts[stage] for stage in STAGES},
+        "missing": missing,
+    }
 
 
 def build_report():
@@ -122,8 +131,10 @@ def build_report():
     reviewed_errors = {}
     orphan_reviewed = []
     bad_links = []
+    reviewed_pairs = set()
     for q in reviewed:
         key = (q.get("domain"), q.get("topic"))
+        reviewed_pairs.add(key)
         if key not in canonical:
             orphan_reviewed.append(q.get("id"))
         expected = data._v6_item_id(q.get("domain"), q.get("topic"))
@@ -139,6 +150,35 @@ def build_report():
         if cid:
             by_cid[cid].append(q)
 
+    reviewed_rows = []
+    reviewed_ladder_gaps = []
+    for domain, topic in sorted(reviewed_pairs):
+        if (domain, topic) not in canonical:
+            continue
+        cid = data._v6_item_id(domain, topic)
+        row = _stage_row(domain, topic, by_cid.get(cid, []))
+        reviewed_rows.append(row)
+        if row["missing"]:
+            reviewed_ladder_gaps.append(row)
+
+    domain_progress = []
+    for domain, modules in data.DEEP_MODULES_V6.items():
+        topics = [m.get("topic") for m in modules if m.get("topic")]
+        reviewed_topics = {
+            topic for d, topic in reviewed_pairs if d == domain and (d, topic) in canonical
+        }
+        complete = 0
+        for topic in reviewed_topics:
+            cid = data._v6_item_id(domain, topic)
+            if not _stage_row(domain, topic, by_cid.get(cid, []))["missing"]:
+                complete += 1
+        domain_progress.append({
+            "domain": domain,
+            "canonical": len(topics),
+            "reviewed": len(reviewed_topics),
+            "complete": complete,
+        })
+
     otology_rows = []
     otology_gaps = []
     modules = data.DEEP_MODULES_V6.get(OTOLOGY, [])
@@ -147,21 +187,9 @@ def build_report():
         if not topic:
             continue
         cid = data._v6_item_id(OTOLOGY, topic)
-        linked = by_cid.get(cid, [])
-        counts = Counter(
-            q.get("learning_stage")
-            for q in linked
-            if q.get("learning_stage") in STAGES
-        )
-        missing = [stage for stage in STAGES if counts[stage] == 0]
-        row = {
-            "topic": topic,
-            "cases": len(linked),
-            "stages": {stage: counts[stage] for stage in STAGES},
-            "missing": missing,
-        }
+        row = _stage_row(OTOLOGY, topic, by_cid.get(cid, []))
         otology_rows.append(row)
-        if missing:
+        if row["missing"]:
             otology_gaps.append(row)
 
     reviewed_answer_counts = Counter()
@@ -184,6 +212,9 @@ def build_report():
         "orphan_reviewed": orphan_reviewed,
         "bad_links": bad_links,
         "reviewed_errors": reviewed_errors,
+        "reviewed_rows": reviewed_rows,
+        "reviewed_ladder_gaps": reviewed_ladder_gaps,
+        "domain_progress": domain_progress,
         "otology_topic_count": len(otology_rows),
         "otology_rows": otology_rows,
         "otology_gaps": otology_gaps,
@@ -194,7 +225,7 @@ def build_report():
 
 
 def print_report(report):
-    print("=== ENT MASTERY v20.4 RUNTIME LEARNING-LADDER GATE ===")
+    print("=== ENT MASTERY v20.5 RUNTIME LEARNING-LADDER GATE ===")
     print(f"TOTAL_CASES|{report['total_cases']}")
     print(f"REVIEWED_CASES|{report['reviewed_cases']}")
     print(f"DUPLICATE_IDS|{len(report['duplicate_ids'])}")
@@ -210,13 +241,24 @@ def print_report(report):
     for qid, errors in sorted(report["reviewed_errors"].items()):
         print(f"REVIEWED_QUALITY_ERROR|{qid}|{' ; '.join(errors)}")
 
+    print(f"REVIEWED_LADDER_GAPS|{len(report['reviewed_ladder_gaps'])}")
+    for row in report["reviewed_ladder_gaps"]:
+        print(
+            f"REVIEWED_LADDER_GAP|{row['domain']}|{row['topic']}|"
+            f"missing={','.join(row['missing'])}"
+        )
+
+    for row in report["domain_progress"]:
+        print(
+            f"DOMAIN_REVIEW_PROGRESS|{row['domain']}|"
+            f"canonical={row['canonical']}|reviewed={row['reviewed']}|complete={row['complete']}"
+        )
+
     print(f"OTOLOGY_CANONICAL_TOPICS|{report['otology_topic_count']}")
     for row in report["otology_rows"]:
         stage_text = ",".join(f"{s}={row['stages'][s]}" for s in STAGES)
         print(f"OTOLOGY_LADDER|{row['topic']}|cases={row['cases']}|{stage_text}")
     print(f"OTOLOGY_LADDER_GAPS|{len(report['otology_gaps'])}")
-    for row in report["otology_gaps"]:
-        print(f"OTOLOGY_LADDER_GAP|{row['topic']}|missing={','.join(row['missing'])}")
 
     counts = ",".join(f"{k}={v}" for k, v in report["answer_counts"].items())
     print(f"REVIEWED_ANSWER_POSITIONS|{counts}|max_share={report['max_answer_share']}")
@@ -229,6 +271,7 @@ def has_failures(report):
         or report["orphan_reviewed"]
         or report["bad_links"]
         or report["reviewed_errors"]
+        or report["reviewed_ladder_gaps"]
         or report["otology_topic_count"] != 45
         or report["otology_gaps"]
         or report["answer_bias"]
