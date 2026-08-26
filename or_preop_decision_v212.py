@@ -8,6 +8,7 @@ are chained here so runtime integration remains atomic with the existing planner
 
 from or_preop_decision_v213 import apply_or_preop_decision_v213
 from or_landmarks_v214 import apply_or_landmarks_v214
+from or_otology_management_v217 import apply_or_otology_management_v217
 
 TARGETS = [
     {
@@ -87,6 +88,7 @@ def apply_or_preop_decision_v212(registry):
             changed.append(slug)
     v213 = apply_or_preop_decision_v213(registry)
     v214 = apply_or_landmarks_v214(registry)
+    v217 = apply_or_otology_management_v217(registry)
     return {
         "changed": changed,
         "count": len(changed),
@@ -95,4 +97,5 @@ def apply_or_preop_decision_v212(registry):
         "missing": missing,
         "v213": v213,
         "v214": v214,
+        "v217": v217,
     }
