@@ -1,0 +1,133 @@
+"""Pasha 6e companion metadata.
+
+This file stores only chapter/section organization and original synthesis prompts.
+It does not reproduce textbook prose or proprietary review questions.
+"""
+
+PASHA_CHAPTERS = [
+    {"id":1,"title":"Allergy and Rhinology","domain":"Rhinology / Allergy / Skull Base","sections":[
+        ("nose-sinus-anatomy","Anatomy of the Nose and Paranasal Sinuses",["nasal anatomy","sinus anatomy","ostiomeatal","frontal recess","sphenoid","ethmoid","nasal valve","septum","turbinate"]),
+        ("nose-sinus-physiology","Physiology of the Nose and Paranasal Sinuses",["mucociliary","nasal cycle","olfaction","sinus physiology"]),
+        ("nasal-obstruction","Evaluation of Nasal Obstruction",["nasal obstruction","septal deviation","nasal valve","turbinate hypertrophy","choanal"]),
+        ("nasal-diseases","Nasal Diseases",["epistaxis","septal perforation","nasal mass","granulomatosis","cocaine","rhinitis medicamentosa"]),
+        ("allergy-rhinitis","Allergy and Rhinitis",["allergic rhinitis","nonallergic rhinitis","immunotherapy","antihistamine","intranasal steroid"]),
+        ("sinus-disease","Paranasal Sinus Disease",["acute sinusitis","chronic rhinosinusitis","nasal polyps","fungal sinusitis","orbital complication","pott"]),
+        ("sinus-surgery","Sinus Surgery",["endoscopic sinus surgery","FESS","lamina papyracea","skull base","frontal sinus","sphenoid surgery"]),
+        ("immunology","Immunology",["immunology","hypersensitivity","IgE","eosinophil","immune deficiency"]),
+    ],"must":["Localize obstruction before treating it.","Know sinonasal drainage pathways and skull-base/orbital danger anatomy.","Separate allergic, nonallergic, infectious, inflammatory, structural, and neoplastic disease.","Connect symptoms, endoscopy, CT, medical therapy, and surgical indications."]},
+    {"id":2,"title":"Laryngology","domain":"Laryngology / Voice / Swallowing","sections":[
+        ("laryngeal-anatomy","Laryngeal Anatomy and Physiology",["laryngeal anatomy","recurrent laryngeal nerve","superior laryngeal nerve","cricothyroid","posterior cricoarytenoid","vocal fold anatomy"]),
+        ("dysphonia","The Hoarse (Dysphonic) Patient",["dysphonia","hoarseness","stroboscopy","vocal fold lesion","laryngoscopy"]),
+        ("upper-airway-obstruction","Upper Airway Obstruction",["stridor","upper airway obstruction","bilateral vocal fold","airway compromise"]),
+        ("benign-larynx","Benign Laryngeal Pathology",["vocal fold nodule","polyp","cyst","reinke","papilloma","granuloma"]),
+        ("neurogenic-voice","Neurogenic and Other Vocal Pathologies",["vocal fold paralysis","spasmodic dysphonia","vocal tremor","laryngeal dystonia"]),
+        ("swallowing","Esophageal and Swallowing Disorders",["dysphagia","aspiration","FEES","modified barium","zenker","cricopharyngeal"]),
+    ],"must":["Localize dysphonia before naming a disease.","Know vagal, RLN, and SLN deficits and intrinsic muscle actions.","Airway safety precedes diagnostic elegance.","Separate oropharyngeal from esophageal dysphagia and identify aspiration risk."]},
+    {"id":3,"title":"Otolaryngologic Endocrinology","domain":"Thyroid / Parathyroid / Salivary","sections":[
+        ("thyroid","Thyroid",["thyroid nodule","thyroid cancer","thyroidectomy","recurrent laryngeal nerve","Bethesda","TI-RADS","Graves"]),
+        ("parathyroid","Parathyroids",["hyperparathyroidism","parathyroidectomy","PTH","hungry bone","parathyroid localization","thyrothymic"]),
+    ],"must":["Use ultrasound, cytology, symptoms, and patient context to risk-stratify thyroid disease.","Know RLN, EBSLN, parathyroid, and vascular anatomy.","Hyperparathyroidism is diagnosed biochemically; imaging localizes.","Recognize hematoma, nerve injury, and hypocalcemia early."]},
+    {"id":4,"title":"Sleep Medicine","domain":"Sleep Surgery","sections":[
+        ("sleep-physiology","Sleep Physiology",["sleep physiology","REM","NREM","upper airway muscle tone"]),
+        ("psg","Polysomnography (PSG)",["polysomnography","AHI","RDI","oxygen desaturation","arousal","central apnea"]),
+        ("sdb","Sleep-Disordered Breathing (SDB)",["obstructive sleep apnea","OSA","CPAP","DISE","hypoglossal nerve stimulation","palatal surgery","tonsillectomy"]),
+        ("other-sleep","Other Sleep-Related Disorders",["parasomnia","narcolepsy","insomnia","restless legs","central sleep apnea"]),
+    ],"must":["Interpret PSG physiology rather than an AHI in isolation.","Separate obstructive, central, and mixed events.","Match treatment to anatomy, severity, symptoms, comorbidity, and PAP tolerance.","Know where ENT surgery fits within multimodal OSA care."]},
+    {"id":5,"title":"General Otolaryngology","domain":"General ENT / Emergencies","sections":[
+        ("oral-benign","Oral and Oropharyngeal Benign Disorders",["oral lesion","aphthous","leukoplakia","oral ulcer","peritonsillar"]),
+        ("salivary-anatomy","Salivary Gland Anatomy and Physiology",["parotid anatomy","submandibular","Wharton duct","Stensen duct","facial nerve parotid"]),
+        ("salivary-pathology","General Salivary Gland Pathology",["sialadenitis","sialolithiasis","xerostomia","sialadenosis"]),
+        ("benign-salivary","Benign Salivary Gland Tumors",["pleomorphic adenoma","Warthin","benign salivary"]),
+        ("salivary-malignancy","Salivary Gland Malignancy",["mucoepidermoid","adenoid cystic","salivary malignancy","facial weakness parotid"]),
+        ("salivary-surgery","Salivary Gland Surgery",["parotidectomy","submandibular gland excision","facial nerve monitoring"]),
+        ("jaw-bone","Odontogenic, Jaw, and Bone Pathology",["odontogenic","ameloblastoma","osteomyelitis jaw","mandibular lesion"]),
+        ("neck-masses","Neck Masses",["adult neck mass","branchial cleft","thyroglossal","cervical lymphadenopathy"]),
+        ("deep-neck","Neck Planes, Spaces, and Infection",["deep neck infection","Ludwig","retropharyngeal","parapharyngeal","danger space"]),
+        ("systemic","Head and Neck Manifestations of Systemic Diseases",["sarcoid","granulomatosis","amyloid","systemic disease ENT"]),
+    ],"must":["Treat a persistent adult neck mass as potentially malignant until proven otherwise.","Use salivary anatomy and symptom pattern to separate obstruction, inflammation, and neoplasm.","Deep-neck infection complications follow fascial-space anatomy.","Biopsy persistent or suspicious oral lesions rather than repeatedly treating empirically."]},
+    {"id":6,"title":"Head and Neck Cancer","domain":"Head & Neck Oncology","sections":[
+        ("staging","Cancer Staging Index",["TNM","staging","AJCC","ENE","nodal staging"]),
+        ("hnc-intro","Introduction to Head and Neck Cancer",["head and neck squamous cell","tobacco","HPV","field cancerization"]),
+        ("chemoradiation","Chemotherapy and Radiation Therapy",["radiation","chemoradiation","cisplatin","xerostomia","osteoradionecrosis"]),
+        ("neck-cancer","Cancer of the Neck",["unknown primary","neck dissection","cervical metastasis","level II node"]),
+        ("oral-cancer","Oral Cancer",["oral cavity cancer","tongue SCC","floor of mouth"]),
+        ("oropharynx","Oropharyngeal Cancer",["oropharyngeal cancer","HPV","tonsil cancer","base of tongue"]),
+        ("hypopharynx","Hypopharyngeal Cancer",["hypopharynx","pyriform sinus"]),
+        ("larynx-cancer","Laryngeal Cancer",["laryngeal cancer","glottic cancer","supraglottic cancer","laryngectomy"]),
+        ("nasopharynx","Nasopharyngeal Cancer",["nasopharyngeal carcinoma","EBV"]),
+        ("sinonasal-cancer","Nasal and Paranasal Cancer",["sinonasal cancer","esthesioneuroblastoma","skull base tumor"]),
+        ("cutaneous","Cutaneous Malignancies",["cutaneous SCC","melanoma","basal cell","perineural invasion"]),
+        ("other-neoplasms","Other Head and Neck Neoplasms",["sarcoma","paraganglioma","lymphoma head neck"]),
+        ("robotic","Robotic Surgery",["TORS","transoral robotic"]),
+    ],"must":["Stage by site-specific T, N, and M rules.","HPV-associated oropharyngeal cancer is biologically and staging-wise distinct.","Unknown-primary workup should be systematic and treatment-preserving.","Balance oncologic control with airway, voice, swallowing, and reconstruction."]},
+    {"id":7,"title":"Otology and Neurotology","domain":"Otology / Neurotology","sections":[
+        ("hearing-balance-anatomy","Anatomy, Embryology, and Physiology of Hearing and Balance",["ear anatomy","cochlea","vestibular anatomy","facial recess","round window","ossicles"]),
+        ("audiology","Audiology and Hearing Devices",["audiogram","tympanogram","speech discrimination","hearing aid","cochlear implant","BAHA"]),
+        ("hearing-loss-tinnitus","Approach to Hearing Loss and Tinnitus",["conductive hearing loss","sensorineural hearing loss","sudden hearing loss","tinnitus","otosclerosis"]),
+        ("ear-infection","Infections of the Ear and Temporal Bone",["otitis externa","necrotizing otitis externa","acute otitis media","mastoiditis","petrous apicitis"]),
+        ("noninfectious-ear","Noninfectious Disorders of the Ear and Temporal Bone",["cholesteatoma","otosclerosis","superior canal dehiscence","Meniere","perilymph fistula"]),
+        ("otologic-visualization","Visualization Tools in Otologic/Neurotologic Surgery",["microscope","endoscopic ear surgery","otologic visualization"]),
+        ("vestibular","Vestibular Pathology",["BPPV","vestibular neuritis","Meniere","vestibular schwannoma","central vertigo"]),
+        ("facial-nerve","The Facial Nerve",["facial nerve","Bell palsy","facial paralysis","geniculate","stapedius","chorda tympani"]),
+    ],"must":["Use audiometry to localize loss before naming the disease.","Separate uncomplicated ear infection from invasive temporal-bone disease.","For dizziness, define timing/triggers and localize peripheral versus central pathology.","Know facial nerve anatomy from brainstem to distal branches."]},
+    {"id":8,"title":"Reconstructive and Facial Plastic Surgery","domain":"Facial Plastics / Trauma","sections":[
+        ("wound-healing","Fundamentals of Wound Healing",["wound healing","scar","keloid","hypertrophic scar"]),
+        ("flaps","Head and Neck Reconstructive Flaps",["free flap","regional flap","ALT","radial forearm","fibula"]),
+        ("grafts","Grafts, Implants, and Expanders",["skin graft","cartilage graft","implant","tissue expander"]),
+        ("facial-reconstruction","Facial Reconstruction Techniques",["local flap","nasal reconstruction","facial defect"]),
+        ("facial-aesthetics","Facial Aesthetic Surgery",["facial aesthetic","cosmetic surgery"]),
+        ("rhinoplasty","Rhinoplasty",["rhinoplasty","nasal valve","septorhinoplasty","tip support"]),
+        ("otoplasty","Otoplasty",["otoplasty","prominent ear"]),
+        ("blepharoplasty","Blepharoplasty",["blepharoplasty","eyelid surgery"]),
+        ("rhytidoplasty","Rhytidoplasty (Rhytidectomy, Facelift)",["facelift","rhytidectomy","SMAS"]),
+        ("brow","Forehead Lift and Brow Lift",["brow lift","forehead lift"]),
+        ("lipo","Liposurgery",["liposuction","liposurgery"]),
+        ("facelift-complications","Complications of Rhytidectomy, Brow Lift, Liposurgery",["facelift complication","hematoma facelift","facial nerve facelift"]),
+        ("augmentation","Chin and Malar Augmentation",["chin augmentation","malar implant","genioplasty"]),
+        ("resurfacing","Facial Resurfacing",["laser resurfacing","chemical peel","dermabrasion"]),
+        ("fillers","Fillers, Skin Substitutes, and Injections",["filler","botulinum","skin substitute"]),
+        ("alopecia","Alopecia",["alopecia","hair restoration"]),
+        ("scar-revision","Incision/Excision Planning and Scar Revisions",["scar revision","relaxed skin tension","Z-plasty"]),
+    ],"must":["Reconstruct lining, support, cover, contour, and function—not just the hole.","Choose the least complex reconstruction that reliably meets the defect's needs.","Anatomy and complication prevention are central to facial aesthetic surgery.","Rhinoplasty must preserve or improve airway function while changing structure."]},
+    {"id":9,"title":"Pediatric Otolaryngology","domain":"Pediatric Otolaryngology","sections":[
+        ("peds-encounter","The Pediatric Encounter",["pediatric airway","pediatric exam","child ENT"]),
+        ("peds-general-sleep","General Pediatric Otolaryngology and Pediatric Sleep",["pediatric OSA","tonsillectomy","adenoidectomy","sleep-disordered breathing child"]),
+        ("peds-rhinology","Pediatric Rhinology",["choanal atresia","pediatric sinusitis","nasal foreign body"]),
+        ("peds-laryngoesoph","Pediatric Laryngoesophagology",["laryngomalacia","subglottic stenosis","croup","epiglottitis","foreign body airway","pediatric dysphagia"]),
+        ("peds-salivary","Pediatric Salivary Glands",["pediatric salivary","juvenile recurrent parotitis"]),
+        ("peds-otology","Pediatric Otology",["acute otitis media","otitis media effusion","ear tubes","pediatric hearing loss","cochlear implant child"]),
+        ("peds-syndromes","Pediatric Syndromes and Congenital Disorders",["Treacher Collins","Pierre Robin","Down syndrome ENT","22q","branchiootorenal"]),
+        ("peds-hn-surgery","Pediatric Head and Neck Surgery",["thyroglossal duct cyst","branchial cleft","pediatric neck mass"]),
+        ("peds-reconstruction","Pediatric Reconstructive and Facial Plastic Surgery",["cleft","microtia","pediatric reconstruction"]),
+        ("peds-trauma","Pediatric Head and Neck Trauma",["pediatric facial trauma","orbital trapdoor"]),
+    ],"must":["Age changes the differential, physiology, airway risk, and treatment threshold.","Separate congenital, infectious, inflammatory, neurologic, and acquired airway disease.","Hearing disease matters because development is time-sensitive.","Know syndromic associations that predict airway, hearing, and craniofacial problems."]},
+    {"id":10,"title":"Head and Neck Trauma","domain":"Facial Plastics / Trauma","sections":[
+        ("trauma-eval","Evaluation of the Head and Neck Trauma Patient",["facial trauma airway","ATLS ENT","head neck trauma evaluation"]),
+        ("mandible","Mandibular Fractures",["mandible fracture","malocclusion","inferior alveolar nerve"]),
+        ("maxilla","Maxillary Fractures",["Le Fort","maxillary fracture"]),
+        ("zmc-orbit","Zygomaticomaxillary and Orbital Fractures",["ZMC","orbital floor","diplopia","entrapment"]),
+        ("frontal-noe","Frontal Sinus and Naso-Orbitoethmoid Fractures",["frontal sinus fracture","NOE fracture","nasofrontal outflow"]),
+        ("nasal-fracture","Nasal Fractures",["nasal fracture","septal hematoma"]),
+        ("temporal-trauma","Temporal Bone and Otologic Trauma",["temporal bone fracture","facial paralysis trauma","CSF otorrhea"]),
+        ("penetrating","Penetrating Head and Neck Trauma",["penetrating neck trauma","vascular injury","aerodigestive injury"]),
+        ("laryngeal-trauma","Laryngeal Trauma",["laryngeal trauma","blunt neck trauma","Schaefer"]),
+        ("soft-tissue","Soft Tissue Trauma",["facial laceration","soft tissue trauma","parotid duct injury"]),
+    ],"must":["Airway and hemorrhage control precede fracture classification.","Occlusion is a functional vital sign in mandible and midface trauma.","Recognize vision-threatening orbital emergencies and muscle entrapment.","Use anatomy to evaluate vascular and aerodigestive injury in penetrating/laryngeal trauma."]},
+]
+
+PASHA_CHAPTER_BY_ID = {c["id"]: c for c in PASHA_CHAPTERS}
+
+# A small original seed layer guarantees every chapter has at least some book-specific
+# questions even when canonical-bank keyword matching is sparse.
+PASHA_SEED_QUESTIONS = {
+    1:[("Progressive unilateral nasal obstruction with recurrent epistaxis should first raise concern for:",["A neoplasm or other unilateral structural lesion","Simple allergic rhinitis","Physiologic nasal cycling","Viral rhinitis only"],0,"Progressive unilateral symptoms plus bleeding are red flags that deserve direct evaluation rather than empiric allergy treatment.","nasal-diseases")],
+    2:[("A patient develops inspiratory stridor from bilateral vocal-fold immobility. What comes first?",["Airway assessment and stabilization","Empiric reflux treatment","Voice therapy","Esophageal dilation"],0,"Bilateral immobility can critically narrow the glottic airway; airway safety precedes voice rehabilitation.","upper-airway-obstruction")],
+    3:[("Elevated calcium with an inappropriately elevated PTH establishes:",["Biochemical primary hyperparathyroidism","A specific adenoma location","Parathyroid carcinoma","A mandatory four-gland exploration"],0,"The disease is diagnosed biochemically; imaging is for localization.","parathyroid")],
+    4:[("An obstructive apnea differs from a central apnea because obstructive events show:",["Continued respiratory effort despite absent/reduced airflow","No respiratory effort","Normal airflow","Only limb movements"],0,"Persistent effort against an occluded airway defines an obstructive event.","psg")],
+    5:[("A persistent lateral neck mass in an adult should be approached as:",["Potential malignancy until adequately evaluated","A branchial cleft cyst by default","An indication for empiric antibiotics indefinitely","A lesion that never requires imaging"],0,"Persistent adult neck masses require malignancy-focused evaluation.","neck-masses")],
+    6:[("A cystic level II node in an adult is a classic presentation of metastatic:",["HPV-associated oropharyngeal SCC","Glomus tympanicum","Papilloma of the nasal vestibule","Pleomorphic adenoma"],0,"HPV-associated oropharyngeal cancers commonly present with cystic upper-neck nodal disease.","oropharynx")],
+    7:[("An air-bone gap with preserved bone thresholds localizes hearing loss to:",["Conductive mechanisms","Sensorineural mechanisms","Central auditory processing only","The vestibular nerve"],0,"An air-bone gap reflects impaired external or middle-ear sound conduction.","hearing-loss-tinnitus")],
+    8:[("A through-and-through cheek defect requires which reconstructive principle?",["Restore each missing tissue layer needed for function","Use a skin graft alone regardless of depth","Ignore oral lining","Close under maximal tension"],0,"Composite defects require restoration of lining, bulk/support, and external cover as needed.","facial-reconstruction")],
+    9:[("A toxic child with drooling, dysphagia, and tripod positioning should make you prioritize:",["A potentially unstable supraglottic airway","Routine outpatient allergy testing","Isolated otitis externa","Elective septoplasty"],0,"This is a classic high-risk supraglottic infectious presentation; airway planning is central.","peds-laryngoesoph")],
+    10:[("After nasal trauma, which finding requires prompt drainage to prevent cartilage necrosis?",["Septal hematoma","Mild ecchymosis","A small abrasion","Resolved epistaxis"],0,"A septal hematoma separates perichondrium from cartilage and threatens septal viability.","nasal-fracture")],
+}
