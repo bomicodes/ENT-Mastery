@@ -15,6 +15,7 @@ _GENERIC_MARKERS = (
     "use the mechanism, anatomy, and management priority in the explanation",
     "compare this option with the time-critical management principle in the explanation",
     "compare this option with the management principle and anatomy in the explanation",
+    "review the explanation and compare the management principle with the clinical context",
     "this option misses the key clinical discriminator described in the explanation",
     "this option does not address the key discriminator in the scenario",
     "this option misses the key discriminator in the scenario",
