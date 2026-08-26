@@ -11,6 +11,8 @@ on:
       - 'audit_deep_curriculum_v159.py'
       - 'audit_deep_curriculum_duplicates_v163.py'
       - 'audit_concept_checks_v161.py'
+      - 'audit_board_curriculum_v177.py'
+      - 'concept_check_board_repair_v177.py'
       - 'audit_coverage_v135.py'
       - 'audit_quality_v149.py'
       - 'audit_reliability_v168.py'
@@ -62,7 +64,9 @@ jobs:
         run: python audit_deep_curriculum_duplicates_v163.py
       - name: Concept Checks full-bank audit
         run: python audit_concept_checks_v161.py
+      - name: v17.7 board-style Concept Check + Deep Curriculum audit
+        run: python audit_board_curriculum_v177.py
 
 # Boot health and runtime route integrity are hard gates. Canonical coverage remains strict.
-# Duplicate architecture remains informational while explicit canonical merges are reviewed;
-# CI stays read-only against production and uses an isolated SQLite database for route smoke tests.
+# Board/deep-content audits are informational repair queues; CI stays read-only against
+# production and uses an isolated SQLite database for route smoke tests.
