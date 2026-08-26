@@ -1,6 +1,7 @@
 """v17.8 — hard all-domain Concept Check curation audit."""
 
 from collections import Counter
+import json
 import re
 
 import runtime_entry
@@ -46,6 +47,7 @@ def main():
     checks = list(data.CONCEPT_CHECKS_V112)
     failures = []
     domains = Counter()
+    item_rows = []
 
     if result.get("unresolved"):
         failures.append("runtime_unresolved=" + ",".join(str(x) for x in result["unresolved"]))
@@ -55,41 +57,70 @@ def main():
         domain = q.get("domain")
         domains[domain] += 1
         prompt = text(q)
+        item_failures = []
+
+        def fail(reason):
+            failures.append(f"{qid}:{reason}")
+            item_failures.append(reason)
 
         if not q.get("reviewed_all_domains_v178"):
-            failures.append(f"{qid}:not_reviewed_v178")
+            fail("not_reviewed_v178")
         if domain not in EXPECTED_DOMAINS:
-            failures.append(f"{qid}:unknown_domain:{domain}")
+            fail(f"unknown_domain:{domain}")
         if "?" not in prompt or not CLINICAL.search(prompt):
-            failures.append(f"{qid}:not_clinical_board_stem")
+            fail("not_clinical_board_stem")
         if not answer_present(q):
-            failures.append(f"{qid}:missing_reveal_answer")
+            fail("missing_reveal_answer")
         if not str(q.get("explanation") or "").strip():
-            failures.append(f"{qid}:missing_explanation")
+            fail("missing_explanation")
         if not q.get("review_basis_v178"):
-            failures.append(f"{qid}:missing_review_basis")
+            fail("missing_review_basis")
 
         choices = list(q.get("choices") or [])
         if choices:
             if len(choices) != 4:
-                failures.append(f"{qid}:mcq_not_four_choices")
+                fail("mcq_not_four_choices")
             why = list(q.get("why_wrong") or [])
             if len(why) != len(choices):
-                failures.append(f"{qid}:why_wrong_misaligned")
+                fail("why_wrong_misaligned")
             try:
                 a = int(q.get("answer"))
             except (TypeError, ValueError):
                 a = -1
             for i, reason in enumerate(why):
                 if i != a and len(str(reason).split()) < 5:
-                    failures.append(f"{qid}:weak_why_wrong:{i}")
+                    fail(f"weak_why_wrong:{i}")
 
         if str(q.get("curveball") or "").strip() and not str(q.get("curveball_answer") or "").strip():
-            failures.append(f"{qid}:curveball_without_answer")
+            fail("curveball_without_answer")
+
+        item_rows.append({
+            "id": qid,
+            "domain": domain,
+            "topic": q.get("topic"),
+            "prompt": prompt,
+            "choices": choices,
+            "answer": q.get("answer"),
+            "answer_text": q.get("answer_text"),
+            "converted": bool(q.get("converted_to_oral_board_v178")),
+            "curated": q.get("curated_v177"),
+            "failures": item_failures,
+        })
 
     missing_domains = EXPECTED_DOMAINS - set(domains)
     if missing_domains:
         failures.append("missing_domains=" + ",".join(sorted(missing_domains)))
+
+    report = {
+        "total": len(checks),
+        "domains": dict(domains),
+        "runtime_result": result,
+        "failures": failures,
+        "items": item_rows,
+        "distinct_entities": getattr(runtime_entry, "DISTINCT_ENTITIES_V178", {}),
+    }
+    with open("V178_ALL_DOMAIN_AUDIT.json", "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
 
     print(f"V178_TOTAL|{len(checks)}")
     for domain in sorted(domains):
