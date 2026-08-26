@@ -1,1 +1,1 @@
-web: gunicorn runtime_entry:app
+web: gunicorn runtime_entry_pasha:app
