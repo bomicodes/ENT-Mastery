@@ -70,18 +70,30 @@ CONCEPT_CHECK_BOARD_REPAIR_V177 = apply_concept_check_board_repair_v177(
     data._v6_item_id,
 )
 
-_rebuilt_concept_checks_v177 = {
+# v17.8: second-pass curation across every ENT domain. All live Concept Checks
+# are reviewed against a domain-specific clinical standard. Structurally weak
+# MCQs are converted to focused oral-board vignettes rather than retaining
+# mismatched distractor levels.
+from concept_check_domain_curation_v178 import apply_concept_check_domain_curation_v178
+
+CONCEPT_CHECK_DOMAIN_CURATION_V178 = apply_concept_check_domain_curation_v178(
+    data.CONCEPT_CHECKS_V112,
+    data.DEEP_MODULES_V6,
+    data._v6_item_id,
+)
+
+_rebuilt_concept_checks_v178 = {
     q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")
 }
 if isinstance(getattr(data, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     data.CONCEPT_CHECK_BY_ID_V112.clear()
-    data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v177)
+    data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v178)
 else:
-    data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v177
+    data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v178
 
 if isinstance(getattr(app_mod, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     app_mod.CONCEPT_CHECK_BY_ID_V112.clear()
-    app_mod.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v177)
+    app_mod.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v178)
 else:
     app_mod.CONCEPT_CHECK_BY_ID_V112 = data.CONCEPT_CHECK_BY_ID_V112
 
