@@ -12,7 +12,9 @@ on:
       - 'audit_deep_curriculum_duplicates_v163.py'
       - 'audit_concept_checks_v161.py'
       - 'audit_board_curriculum_v177.py'
+      - 'audit_concept_checks_all_domains_v178.py'
       - 'concept_check_board_repair_v177.py'
+      - 'concept_check_domain_curation_v178.py'
       - 'audit_coverage_v135.py'
       - 'audit_quality_v149.py'
       - 'audit_reliability_v168.py'
@@ -66,7 +68,10 @@ jobs:
         run: python audit_concept_checks_v161.py
       - name: v17.7 board-style Concept Check + Deep Curriculum audit
         run: python audit_board_curriculum_v177.py
+      - name: v17.8 hard all-domain Concept Check curation gate
+        run: python audit_concept_checks_all_domains_v178.py
 
-# Boot health and runtime route integrity are hard gates. Canonical coverage remains strict.
-# Board/deep-content audits are informational repair queues; CI stays read-only against
-# production and uses an isolated SQLite database for route smoke tests.
+# Boot health, runtime route integrity, canonical coverage, and the v17.8 all-domain
+# Concept Check contract are hard gates. The older board/deep-content audits remain
+# informational repair queues. CI stays read-only against production and uses an
+# isolated SQLite database for route smoke tests.
