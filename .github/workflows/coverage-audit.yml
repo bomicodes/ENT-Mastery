@@ -16,6 +16,7 @@ on:
       - 'audit_all_user_routes_v180.py'
       - 'audit_pasha_review_v182.py'
       - 'audit_or_tomorrow_v190.py'
+      - 'audit_or_inventory_v200.py'
       - 'or_tomorrow_overhaul_v190.py'
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
@@ -66,6 +67,8 @@ jobs:
         run: python audit_pasha_review_v182.py
       - name: v19.0 OR Tomorrow operative + postoperative depth gate
         run: python audit_or_tomorrow_v190.py
+      - name: v20 OR registry inventory
+        run: python audit_or_inventory_v200.py
       - name: Canonical coverage release gate
         run: python audit_coverage_v135.py --depth --strict
       - name: Resident-level quality audit
