@@ -1,13 +1,13 @@
 {% extends "base.html" %}{% block content %}
 <div class="breadcrumb"><a href="/concept-checks">Concept Checks</a> / {{q.topic}}</div>
 <section class="card progressive-case concept-check-card" data-concept-id="{{q.concept_id}}" data-domain="{{q.domain}}" data-check-id="{{q.id}}">
-  <div class="interp-case-head"><span class="tag">{{q.domain}}</span><span>RECALL TIER</span></div>
+  <div class="interp-case-head"><span class="tag">{{q.domain}}</span><span>BOARD RECALL</span></div>
   <h1>{{q.topic}}</h1>
-  <div class="callout question"><strong>Retrieve before revealing</strong><br>{{q.prompt or q.question or q.stem}}</div>
+  <div class="callout question"><strong>Commit before revealing</strong><br>{{q.prompt or q.question or q.stem}}</div>
 
   {% if q.choices %}
   <div class="choice-list">
-    {% for choice in q.choices %}<div class="choice-row"><span>{{loop.index}}.</span> {{choice}}</div>{% endfor %}
+    {% for choice in q.choices %}<div class="choice-row"><span>{{'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[loop.index0]}}.</span> {{choice}}</div>{% endfor %}
   </div>
   {% endif %}
 
@@ -16,8 +16,13 @@
   <div class="hidden concept-check-answer">
     <div class="callout"><strong>Answer</strong><br>{% if q.answer_text %}{{q.answer_text}}{% elif q.model_answer %}{{q.model_answer}}{% elif q.correct_answer %}{{q.correct_answer}}{% elif q.choices and q.answer is number and q.answer >= 0 and q.answer < q.choices|length %}{{q.choices[q.answer]}}{% else %}{{q.answer}}{% endif %}</div>
     {% if q.explanation %}<div class="callout"><strong>Why</strong><br>{{q.explanation}}</div>{% endif %}
+    {% if q.why_wrong and q.choices %}<div class="practice"><b>Why the alternatives are wrong</b>
+      {% for why in q.why_wrong %}{% if loop.index0 != q.answer|int %}<p><b>{{'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[loop.index0]}}.</b> {{why}}</p>{% endif %}{% endfor %}
+    </div>{% endif %}
     {% if q.board_pearl %}<div class="practice"><b>Board Pearl</b><p>{{q.board_pearl}}</p></div>{% endif %}
-    {% if q.curveball %}<div class="callout"><strong>Curveball</strong><br>{{q.curveball}}</div>{% endif %}
+    {% if q.curveball %}<div class="callout"><strong>Attending Curveball</strong><br>{{q.curveball}}
+      {% if q.curveball_answer %}<details style="margin-top:.7rem"><summary>Reveal attending answer</summary><p>{{q.curveball_answer}}</p></details>{% else %}<p><em>Answer pending clinical curation.</em></p>{% endif %}
+    </div>{% endif %}
     <div class="rate-row concept-check-rating"><span>How well did you retrieve it?</span><button type="button" data-concept-check-score="0">Again</button><button type="button" data-concept-check-score="1">Hard</button><button type="button" data-concept-check-score="2">Good</button><button type="button" data-concept-check-score="3">Easy</button></div>
   </div>
 
@@ -39,7 +44,7 @@ document.addEventListener('click', async (e) => {
     })});
     if(!r.ok) throw new Error('save failed');
     b.classList.add('selected-rating');
-    const label=row.querySelector('span'); if(label) label.textContent='Saved — this recall result now contributes to mastery.';
+    const label=row.querySelector('span'); if(label) label.textContent='Saved — this board-recall result now contributes to mastery.';
   }catch(err){
     row.querySelectorAll('button').forEach(x=>x.disabled=false);
     const label=row.querySelector('span'); if(label) label.textContent='Could not save rating — try again.';
