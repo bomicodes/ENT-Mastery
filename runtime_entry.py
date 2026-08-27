@@ -69,6 +69,8 @@ from vignette_ladders_v225 import apply_learning_ladders_v225
 LEARNING_LADDERS_V225 = apply_learning_ladders_v225(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from ladder_quality_stem_repair_v226 import apply_ladder_quality_stem_repair_v226
 LADDER_QUALITY_STEM_REPAIR_V226 = apply_ladder_quality_stem_repair_v226(data.CLINICAL_CHALLENGES_V119)
+from vignette_ladders_v227 import apply_learning_ladders_v227
+LEARNING_LADDERS_V227 = apply_learning_ladders_v227(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
 
@@ -143,7 +145,7 @@ OR_PREOP_PHYSIOLOGY_V204 = apply_or_preop_physiology_v204(data.OR_PREP_REGISTRY)
 from or_postop_safety_v210 import apply_or_postop_safety_v210
 OR_POSTOP_SAFETY_V210 = apply_or_postop_safety_v210(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from or_preop_decision_v212 import apply_or_preop_decision_v212
-OR_PREOP_DECISION_V212 = apply_or_preop_decision_v212(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
+OR_PREOP_DECISION_FIX_V212 = apply_or_preop_decision_v212(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from pasha_routes import bp as pasha_review_blueprint
 if "pasha_review" not in app.blueprints:
     app.register_blueprint(pasha_review_blueprint)
