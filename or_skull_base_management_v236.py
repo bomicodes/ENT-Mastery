@@ -1,8 +1,12 @@
-"""v23.6 skull-base OR Tomorrow planning and postoperative rescue.
+"""v23.6+ skull-base OR Tomorrow planning and postoperative rescue.
 
 Adds high-confidence perioperative decision points for lateral skull-base operations
 whose approach selection and operative choreography are already procedure-specific.
+Later arytenoid-adduction management is chained here so the existing decision hook
+remains atomic.
 """
+
+from or_arytenoid_adduction_management_v237 import apply_or_arytenoid_adduction_management_v237
 
 TARGETS = [
     {
@@ -88,4 +92,5 @@ def apply_or_skull_base_management_v236(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v237 = apply_or_arytenoid_adduction_management_v237(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v237": v237}
