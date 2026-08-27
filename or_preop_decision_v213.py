@@ -5,6 +5,8 @@ planning, or postoperative disposition. The operative choreography remains in th
 existing procedure-sequence layers.
 """
 
+TRACHEAL_RESECTION_TEXT = "In addition to stenosis length, determine whether a tension-free resection is anatomically feasible: review distance from the cricoid and thoracic inlet/innominate region, prior tracheostomy or resection, neck/chest radiation and need for release maneuvers; coordinate the intraoperative ventilation strategy and backup airway before induction rather than discovering an unresectable or unsafe airway after exposure."
+
 TARGETS = [
     {
         "slug": "conservation-laryngectomy",
@@ -34,7 +36,12 @@ TARGETS = [
     {
         "slug": "tracheal-resection",
         "title_terms": ("tracheal", "resection"),
-        "text": "In addition to stenosis length, determine whether a tension-free resection is anatomically feasible: review distance from the cricoid and thoracic inlet/innominate region, prior tracheostomy or resection, neck/chest radiation and need for release maneuvers; coordinate the intraoperative ventilation strategy and backup airway before induction rather than discovering an unresectable or unsafe airway after exposure.",
+        "text": TRACHEAL_RESECTION_TEXT,
+    },
+    {
+        "slug": "ctr",
+        "title_terms": ("cricotracheal", "resection"),
+        "text": TRACHEAL_RESECTION_TEXT,
     },
 ]
 
