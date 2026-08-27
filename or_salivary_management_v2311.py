@@ -1,9 +1,12 @@
-"""v23.11 salivary OR Tomorrow planning and postoperative rescue.
+"""v23.11+ salivary OR Tomorrow planning and postoperative rescue.
 
 Adds procedure-specific perioperative decisions and postoperative failure recognition
-for parotid, submandibular-gland, and sialendoscopic surgery. Operative choreography
-and anatomy remain in the existing reviewed layers.
+for parotid, submandibular-gland, and sialendoscopic surgery. Later reviewed thyroid
+management is chained here so the existing decision hook remains atomic. Operative
+choreography and anatomy remain in the existing reviewed layers.
 """
+
+from or_thyroid_management_v2312 import apply_or_thyroid_management_v2312
 
 TARGETS = [
     {
@@ -94,4 +97,5 @@ def apply_or_salivary_management_v2311(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2312 = apply_or_thyroid_management_v2312(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2312": v2312}
