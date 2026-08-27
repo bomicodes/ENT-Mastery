@@ -42,6 +42,7 @@ on:
       - 'audit_or_salivary_anatomy_v230.py'
       - 'audit_or_thyroid_parathyroid_anatomy_v231.py'
       - 'audit_or_reoperative_endocrine_v232.py'
+      - 'audit_or_laryngectomy_management_v233.py'
       - 'or_tomorrow_overhaul_v190.py'
       - 'or_concept_link_fix_v191.py'
       - 'or_procedure_sequences_v200.py'
@@ -56,6 +57,7 @@ on:
       - 'or_pediatric_airway_management_v220.py'
       - 'or_reconstruction_management_v225.py'
       - 'or_sleep_management_v229.py'
+      - 'or_laryngectomy_management_v233.py'
       - 'or_landmarks_v*.py'
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
@@ -153,6 +155,8 @@ jobs:
         run: python audit_or_thyroid_parathyroid_anatomy_v231.py
       - name: v23.2 reoperative endocrine OR procedure-specific anatomy gate
         run: python audit_or_reoperative_endocrine_v232.py
+      - name: v23.3 total laryngectomy OR planning and postoperative rescue gate
+        run: python audit_or_laryngectomy_management_v233.py
       - name: v19.0 OR Tomorrow structural + postoperative gate
         run: python audit_or_tomorrow_v190.py
       - name: v16.8 runtime reliability and route smoke gate
