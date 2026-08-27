@@ -71,6 +71,8 @@ from ladder_quality_stem_repair_v226 import apply_ladder_quality_stem_repair_v22
 LADDER_QUALITY_STEM_REPAIR_V226 = apply_ladder_quality_stem_repair_v226(data.CLINICAL_CHALLENGES_V119)
 from vignette_ladders_v227 import apply_learning_ladders_v227
 LEARNING_LADDERS_V227 = apply_learning_ladders_v227(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+from vignette_ladders_v228 import apply_learning_ladders_v228
+LEARNING_LADDERS_V228 = apply_learning_ladders_v228(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
 
