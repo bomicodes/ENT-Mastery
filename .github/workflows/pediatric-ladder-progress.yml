@@ -1,0 +1,36 @@
+name: Pediatric ladder progress gate
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'audit_pediatric_ladder_progress_v246.py'
+      - 'vignette_ladders_v241.py'
+      - 'vignette_ladders_v242.py'
+      - 'vignette_ladders_v243.py'
+      - 'vignette_ladders_v244.py'
+      - 'vignette_ladders_v245.py'
+      - 'vignette_ladders_v*.py'
+      - 'runtime_entry.py'
+      - 'data.py'
+      - 'ladder_answer_balance_v*.py'
+      - 'deep_curriculum_canonicalize_v*.py'
+      - 'clinical_hierarchy_v*.py'
+
+jobs:
+  pediatric-progress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Runtime learning-ladder gate
+        run: python audit_learning_ladders_runtime_v204.py
+      - name: Pediatric 25-topic progress hard gate
+        run: python audit_pediatric_ladder_progress_v246.py
+      - name: Ladder answer-balance regression gate
+        run: python audit_ladder_answer_balance_v211.py
