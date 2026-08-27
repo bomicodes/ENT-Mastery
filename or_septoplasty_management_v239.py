@@ -1,8 +1,12 @@
-"""v23.9 septoplasty OR Tomorrow planning and postoperative rescue.
+"""v23.9+ septoplasty OR Tomorrow planning and postoperative rescue.
 
 Adds procedure-specific decision-making and high-consequence postoperative recognition
-for septoplasty. Operative choreography and anatomy remain in existing reviewed layers.
+for septoplasty. Later reviewed cochlear-implant management is chained here so the
+existing decision hook remains atomic. Operative choreography and anatomy remain in
+existing reviewed layers.
 """
+
+from or_cochlear_implant_management_v2310 import apply_or_cochlear_implant_management_v2310
 
 TARGETS = [
     {
@@ -55,4 +59,5 @@ def apply_or_septoplasty_management_v239(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2310 = apply_or_cochlear_implant_management_v2310(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2310": v2310}
