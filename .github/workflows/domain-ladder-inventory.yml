@@ -1,0 +1,35 @@
+name: CI - Canonical Ladder Inventory
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'audit_domain_ladder_inventory_v217.py'
+      - 'runtime_entry.py'
+      - 'data.py'
+      - 'deep_curriculum_*.py'
+      - 'clinical_hierarchy_v*.py'
+      - 'vignette_ladders_v*.py'
+      - 'ladder_answer_balance_v*.py'
+      - '.github/workflows/domain-ladder-inventory.yml'
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Runtime ladder integrity
+        run: python audit_learning_ladders_runtime_v204.py
+      - name: Exact canonical domain inventory
+        run: python audit_domain_ladder_inventory_v217.py
+
+# This fast workflow intentionally duplicates the two canonical ladder checks at
+# the front of the global quality suite. It exists so curriculum work can select
+# the next exact canonical gap without waiting for the long route/Deep Curriculum/
+# Concept Check chain to finish. It does not replace or weaken the global gates.
