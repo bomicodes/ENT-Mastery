@@ -148,6 +148,10 @@ from or_postop_safety_v210 import apply_or_postop_safety_v210
 OR_POSTOP_SAFETY_V210 = apply_or_postop_safety_v210(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from or_preop_decision_v212 import apply_or_preop_decision_v212
 OR_PREOP_DECISION_FIX_V212 = apply_or_preop_decision_v212(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
+
+from interpretation_labs_cleanup_v250 import apply_interpretation_labs_cleanup_v250
+INTERPRETATION_LABS_CLEANUP_V250 = apply_interpretation_labs_cleanup_v250(data, app_mod)
+
 from pasha_routes import bp as pasha_review_blueprint
 if "pasha_review" not in app.blueprints:
     app.register_blueprint(pasha_review_blueprint)
