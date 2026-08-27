@@ -4,8 +4,8 @@ v23.1 chains the final H&N closure immediately before balancing. v23.2 then
 reconciles six Otology topics whose three-stage coverage already existed but
 lacked deliberate-review metadata; only structurally sound reusable cases are
 marked reviewed. v23.3-v23.9 complete deliberate Thyroid/Parathyroid/Salivary
-review, v24.0 aligns final TPS aliases, and v24.1-v24.3 advance deliberate
-Pediatric Otolaryngology review with high-yield airway/OSA/ear topics.
+review, v24.0 aligns final TPS aliases, and v24.1-v24.4 advance deliberate
+Pediatric Otolaryngology review with high-yield airway/OSA/ear/neck topics.
 """
 from collections import defaultdict
 from vignette_ladders_v231 import apply_learning_ladders_v231
@@ -22,8 +22,9 @@ from tps_final_alignment_v240 import apply_tps_final_alignment_v240
 from vignette_ladders_v241 import apply_learning_ladders_v241
 from vignette_ladders_v242 import apply_learning_ladders_v242
 from vignette_ladders_v243 import apply_learning_ladders_v243
+from vignette_ladders_v244 import apply_learning_ladders_v244
 
-TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_")
+TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_")
 
 def _prefix(qid):
     text=str(qid or "")
@@ -70,6 +71,7 @@ def apply_ladder_answer_balance_v211(challenges):
     apply_learning_ladders_v241(challenges, data._v6_item_id)
     apply_learning_ladders_v242(challenges, data._v6_item_id)
     apply_learning_ladders_v243(challenges, data._v6_item_id)
+    apply_learning_ladders_v244(challenges, data._v6_item_id)
 
     groups=defaultdict(list)
     for q in challenges:
