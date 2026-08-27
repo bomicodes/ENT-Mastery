@@ -11,6 +11,8 @@ on:
       - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_domain_ladder_inventory_v217.py'
       - 'audit_rhinology_ladder_complete_v218.py'
+      - 'audit_otology_ladder_complete_v232.py'
+      - 'audit_hn_ladder_complete_v231.py'
       - 'audit_rhinology_v209.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_deep_curriculum_v159.py'
@@ -101,8 +103,12 @@ jobs:
         run: python audit_learning_ladders_runtime_v204.py
       - name: v21.7 explicit domain ladder inventory
         run: python audit_domain_ladder_inventory_v217.py
+      - name: v23.2 full Otology ladder hard gate
+        run: python audit_otology_ladder_complete_v232.py
       - name: v21.8 full Rhinology ladder hard gate
         run: python audit_rhinology_ladder_complete_v218.py
+      - name: v23.1 full Head and Neck Oncology ladder hard gate
+        run: python audit_hn_ladder_complete_v231.py
       - name: v20.9 Rhinology answer-pattern regression gate
         run: python audit_rhinology_v209.py
       - name: v21.1 ladder answer-balance regression gate
@@ -176,8 +182,8 @@ jobs:
           if-no-files-found: warn
 
 # Boot health and the runtime ladder contract run first so content-integrity
-# failures are not masked by unrelated subsystem gates. Completed Otology and
-# Rhinology domains are both hard-gated before unrelated OR subsystems. All OR,
-# route, coverage, Deep Curriculum, Concept Check, and reviewed ladder quality
-# gates remain in force afterward. CI uses an isolated SQLite database and does
-# not mutate production state.
+# failures are not masked by unrelated subsystem gates. Completed Otology,
+# Rhinology, and Head & Neck Oncology domains are hard-gated before unrelated OR
+# subsystems. All OR, route, coverage, Deep Curriculum, Concept Check, and
+# reviewed ladder quality gates remain in force afterward. CI uses an isolated
+# SQLite database and does not mutate production state.
