@@ -1,9 +1,12 @@
-"""v22.6 procedure-specific anatomy for pediatric adenotonsillar OR Tomorrow cases.
+"""v22.6+ procedure-specific anatomy for pediatric adenotonsillar OR Tomorrow cases.
 
 Replaces the broad pediatric-family landmark list for tonsillectomy, adenoidectomy,
 and combined adenotonsillectomy with the structures that actually govern exposure,
-bleeding risk, velopharyngeal safety, and Eustachian-tube preservation.
+bleeding risk, velopharyngeal safety, and Eustachian-tube preservation. Later reviewed
+tracheostomy anatomy is chained here so the runtime anatomy hook remains atomic.
 """
+
+from or_landmarks_v227 import apply_or_landmarks_v227
 
 TARGETS = [
     {
@@ -75,4 +78,5 @@ def apply_or_landmarks_v226(registry):
             changed.append(slug)
         op["landmarks_v226"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v227 = apply_or_landmarks_v227(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v227": v227}
