@@ -1,8 +1,12 @@
-"""v23.4 neck-dissection OR Tomorrow planning and postoperative rescue.
+"""v23.4+ neck-dissection OR Tomorrow planning and postoperative rescue.
 
 Adds procedure-specific perioperative decisions and postoperative failure-mode teaching
-without replacing the reviewed operative sequence or anatomy layers.
+without replacing the reviewed operative sequence or anatomy layers. Later major
+oncologic-resection management is chained here so the existing decision hook remains
+atomic.
 """
+
+from or_major_oncologic_resection_management_v235 import apply_or_major_oncologic_resection_management_v235
 
 TARGETS = [
     {
@@ -56,4 +60,5 @@ def apply_or_neck_dissection_management_v234(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v235 = apply_or_major_oncologic_resection_management_v235(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v235": v235}
