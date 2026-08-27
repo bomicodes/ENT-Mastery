@@ -34,6 +34,8 @@ on:
       - 'audit_or_reconstruction_v224.py'
       - 'audit_or_reconstruction_management_v225.py'
       - 'audit_or_adenotonsillar_anatomy_v226.py'
+      - 'audit_or_tracheostomy_anatomy_v227.py'
+      - 'audit_or_sleep_anatomy_v228.py'
       - 'or_tomorrow_overhaul_v190.py'
       - 'or_concept_link_fix_v191.py'
       - 'or_procedure_sequences_v200.py'
@@ -128,6 +130,10 @@ jobs:
         run: python audit_or_reconstruction_management_v225.py
       - name: v22.6 pediatric adenotonsillar OR procedure-specific anatomy gate
         run: python audit_or_adenotonsillar_anatomy_v226.py
+      - name: v22.7 tracheostomy OR procedure-specific anatomy gate
+        run: python audit_or_tracheostomy_anatomy_v227.py
+      - name: v22.8 sleep surgery OR procedure-specific anatomy gate
+        run: python audit_or_sleep_anatomy_v228.py
       - name: v19.0 OR Tomorrow structural + postoperative gate
         run: python audit_or_tomorrow_v190.py
       - name: v16.8 runtime reliability and route smoke gate
