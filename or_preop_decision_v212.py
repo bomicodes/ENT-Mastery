@@ -15,17 +15,17 @@ from or_reconstruction_management_v225 import apply_or_reconstruction_management
 
 TARGETS = [
     {
-        "slug": "superficial-parotidectomy",
-        "title_terms": ("superficial parotid",),
+        "slug": "parotidectomy",
+        "title_terms": ("parotidectomy",),
         "text": "Define tumor location relative to the facial nerve/deep lobe from imaging and exam, document baseline facial function, and review cytology/pathology when available; facial weakness, fixation, skin involvement, nodal disease, or deep-lobe/parapharyngeal extension should change oncologic planning rather than being treated as a routine superficial parotidectomy.",
     },
     {
-        "slug": "total-parotidectomy",
+        "slug": "parotid-total",
         "title_terms": ("total parotid",),
         "text": "Document baseline facial-nerve function and map tumor relationship to the nerve, deep lobe/parapharyngeal space, skull base and neck nodes; if nerve invasion is suspected, plan proximal/distal control, possible nerve sacrifice/reconstruction, and the required neck/reconstructive exposure before incision.",
     },
     {
-        "slug": "submandibular-gland-excision",
+        "slug": "submandibular-gland",
         "title_terms": ("submandibular gland",),
         "text": "Clarify inflammatory/stone disease versus neoplasm before surgery and review imaging for floor-of-mouth/duct, mandibular and nodal relationships; document baseline tongue mobility/sensation when disease is extensive and plan oncologic neck management rather than simple gland excision when malignancy is suspected.",
     },
