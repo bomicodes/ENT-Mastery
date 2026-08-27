@@ -1,9 +1,12 @@
-"""v22.8 procedure-specific anatomy for selected sleep-surgery OR Tomorrow cases.
+"""v22.8+ procedure-specific anatomy for selected sleep-surgery OR Tomorrow cases.
 
 Replaces broad sleep/airway family landmarks for hypoglossal-nerve stimulation and
 hyoid/genioglossus procedures with the structures that govern nerve selection,
-implant placement, airway-vector surgery, and donor-site safety.
+implant placement, airway-vector surgery, and donor-site safety. Later reviewed
+salivary anatomy is chained here so the runtime anatomy hook remains atomic.
 """
+
+from or_landmarks_v230 import apply_or_landmarks_v230
 
 TARGETS = [
     {
@@ -62,4 +65,5 @@ def apply_or_landmarks_v228(registry):
             changed.append(slug)
         op["landmarks_v228"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v230 = apply_or_landmarks_v230(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v230": v230}
