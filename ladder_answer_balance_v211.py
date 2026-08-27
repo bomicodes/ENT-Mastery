@@ -11,6 +11,7 @@ from otology_review_alignment_v232 import apply_otology_review_alignment_v232
 from vignette_ladders_v233 import apply_learning_ladders_v233
 from vignette_ladders_v234 import apply_learning_ladders_v234
 from vignette_ladders_v235 import apply_learning_ladders_v235
+from vignette_ladders_v235_fix import apply_learning_ladders_v235_fix
 
 TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_")
 
@@ -40,6 +41,7 @@ def apply_ladder_answer_balance_v211(challenges):
     apply_learning_ladders_v233(challenges, data._v6_item_id)
     apply_learning_ladders_v234(challenges, data._v6_item_id)
     apply_learning_ladders_v235(challenges, data._v6_item_id)
+    apply_learning_ladders_v235_fix(challenges, data._v6_item_id)
 
     groups=defaultdict(list)
     for q in challenges:
