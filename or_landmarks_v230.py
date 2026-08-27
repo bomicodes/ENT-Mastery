@@ -1,4 +1,10 @@
-"""v23.0 procedure-specific anatomy for salivary OR Tomorrow cases."""
+"""v23.0+ procedure-specific anatomy for selected salivary OR Tomorrow cases.
+
+Later reviewed thyroid/parathyroid anatomy is chained here so the runtime anatomy
+hook remains atomic.
+"""
+
+from or_landmarks_v231 import apply_or_landmarks_v231
 
 TARGETS = [
     {
@@ -76,4 +82,5 @@ def apply_or_landmarks_v230(registry):
             changed.append(slug)
         op["landmarks_v230"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v231 = apply_or_landmarks_v231(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v231": v231}
