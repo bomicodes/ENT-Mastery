@@ -1,6 +1,6 @@
 """v24.6 — Pediatric Otolaryngology deliberate ladder progress hard gate.
 
-Protects the 25 exact canonical Pediatric topics deliberately curated in v24.1-v24.5
+Protects the 30 exact canonical Pediatric topics deliberately curated in v24.1-v24.6
 while the remaining domain inventory is closed. This is intentionally a progress gate,
 not a claim that the full 40-topic Pediatric domain is complete.
 """
@@ -35,6 +35,11 @@ EXPECTED_TOPICS = [
     "Congenital Neck Masses",
     "Button Battery Ingestion",
     "Microtia / Aural Atresia",
+    "Tympanostomy Tube Indications",
+    "Velopharyngeal Insufficiency",
+    "Cleft / Craniofacial Otologic-Airway Care",
+    "Croup vs Epiglottitis",
+    "Epiglottitis",
 ]
 
 
