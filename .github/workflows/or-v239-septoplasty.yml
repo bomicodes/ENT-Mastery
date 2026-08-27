@@ -1,0 +1,28 @@
+name: v23.9 septoplasty OR management gate
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'or_septoplasty_management_v239.py'
+      - 'or_adenotonsillar_management_v238.py'
+      - 'audit_or_septoplasty_management_v239.py'
+      - 'runtime_entry.py'
+      - 'data.py'
+      - '.github/workflows/or-v239-septoplasty.yml'
+
+jobs:
+  septoplasty-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: v23.9 septoplasty planning and postoperative rescue gate
+        run: python audit_or_septoplasty_management_v239.py
