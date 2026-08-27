@@ -10,7 +10,8 @@ os.environ.pop("ENT_MASTERY_ACCESS_PASSWORD", None)
 
 CHECKS = [
     (("tonsillectomy",), ("severe osa", "intracapsular", "extracapsular"), ("possible tonsillar hemorrhage", "npo", "dehydration"), ("adenoid", "lingual")),
-    (("adenoidectomy",), ("submucous cleft", "velopharyngeal", "hypernasality"), ("velopharyngeal insufficiency", "neck pain", "bleeding"), ("tonsillar hemorrhage",)),
+    # Keep the adenoidectomy-only check from resolving to the combined T&A module.
+    (("adenoidectomy",), ("submucous cleft", "velopharyngeal", "hypernasality"), ("velopharyngeal insufficiency", "neck pain", "bleeding"), ("tonsil",)),
     (("tonsillectomy", "adenoid"), ("polysomnographic", "postoperative disposition", "velopharyngeal"), ("post-tonsillectomy hemorrhage", "desaturation", "objective osa follow-up"), ()),
 ]
 
