@@ -1,9 +1,13 @@
-"""v22.9 sleep-surgery OR Tomorrow planning and postoperative management.
+"""v22.9+ sleep-surgery OR Tomorrow planning and postoperative management.
 
 Adds procedure-specific candidacy/optimization and postoperative rescue priorities
 for hypoglossal-nerve stimulation and hyoid/genioglossus airway surgery without
 hard-coding payer- or device-specific numeric eligibility thresholds that can change.
+Later reviewed total-laryngectomy management is chained here so the existing decision
+hook remains atomic.
 """
+
+from or_laryngectomy_management_v233 import apply_or_laryngectomy_management_v233
 
 TARGETS = [
     {
@@ -73,4 +77,5 @@ def apply_or_sleep_management_v229(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v233 = apply_or_laryngectomy_management_v233(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v233": v233}
