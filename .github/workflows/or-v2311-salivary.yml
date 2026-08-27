@@ -1,0 +1,29 @@
+name: OR v23.11 salivary management
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'or_salivary_management_v2311.py'
+      - 'or_cochlear_implant_management_v2310.py'
+      - 'audit_or_salivary_management_v2311.py'
+      - 'or_preop_decision_v212.py'
+      - 'runtime_entry.py'
+      - 'data.py'
+      - '.github/workflows/or-v2311-salivary.yml'
+
+jobs:
+  salivary-management:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: v23.11 salivary OR planning and postoperative rescue gate
+        run: python audit_or_salivary_management_v2311.py
