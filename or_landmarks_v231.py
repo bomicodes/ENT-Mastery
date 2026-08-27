@@ -38,8 +38,8 @@ TARGETS = [
         ],
     },
     {
-        "slug": "bilateral-parathyroid-exploration",
-        "title_terms": ("bilateral", "parathyroid"),
+        "slug": "four-gland",
+        "title_terms": ("four-gland", "parathyroid"),
         "landmarks": [
             "both recurrent laryngeal nerves and bilateral tracheoesophageal grooves",
             "expected superior parathyroid positions posterior to each upper/mid thyroid lobe",
