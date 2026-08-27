@@ -1,9 +1,12 @@
-"""v23.5 major oncologic-resection OR Tomorrow planning and postoperative rescue.
+"""v23.5+ major oncologic-resection OR Tomorrow planning and postoperative rescue.
 
 Adds high-confidence perioperative decision points for oral composite resection and
 conservation laryngectomy. Their operative choreography and procedure-specific anatomy
-remain in the existing reviewed layers.
+remain in the existing reviewed layers. Later skull-base management is chained here
+so the existing decision hook remains atomic.
 """
+
+from or_skull_base_management_v236 import apply_or_skull_base_management_v236
 
 TARGETS = [
     {
@@ -72,4 +75,5 @@ def apply_or_major_oncologic_resection_management_v235(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v236 = apply_or_skull_base_management_v236(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v236": v236}
