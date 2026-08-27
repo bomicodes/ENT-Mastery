@@ -3,6 +3,10 @@
 This is intentionally read-only. It derives remaining topics from the live canonical
 DEEP_MODULES_V6 registry and runtime concept-id linkage, using the same deliberate
 review/stage contract as the all-domain ladder inventory.
+
+The audit emits both completed and remaining canonical topic names so CI logs can be
+used as the source of truth for the next curation batch instead of relying on aliases
+or stale hand-maintained inventories.
 """
 from collections import defaultdict
 import runtime_entry as rt
@@ -38,6 +42,8 @@ def main():
             remaining.append(topic)
 
     print(f"PEDIATRIC_LADDER_INVENTORY|canonical={len(topics)}|complete={len(complete)}|remaining={len(remaining)}|incomplete={len(incomplete)}")
+    for topic in complete:
+        print(f"PEDIATRIC_COMPLETE_CANONICAL_TOPIC|{topic}")
     for topic in remaining:
         print(f"PEDIATRIC_REMAINING_CANONICAL_TOPIC|{topic}")
     for topic, missing in incomplete:
