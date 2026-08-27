@@ -1,8 +1,12 @@
-"""v22.5 reconstruction OR Tomorrow planning and postoperative management.
+"""v22.5+ reconstruction OR Tomorrow planning and postoperative management.
 
 Adds high-confidence decision points and rescue priorities for reconstruction cases
-whose operative choreography and anatomy are already procedure-specific.
+whose operative choreography and anatomy are already procedure-specific. Later
+reviewed sleep-surgery management is chained here so the existing decision hook
+remains atomic.
 """
+
+from or_sleep_management_v229 import apply_or_sleep_management_v229
 
 TARGETS = [
     {
@@ -80,12 +84,11 @@ def apply_or_reconstruction_management_v225(registry):
         if not op:
             missing.append(target["slug"])
             continue
-        did_change = False
         op["setup"], c1 = _prepend_unique(op.get("setup"), target.get("setup", []))
         op["postop"], c2 = _prepend_unique(op.get("postop"), target.get("postop", []))
-        did_change = c1 or c2
         op["reconstruction_management_v225"] = True
         resolved.append(slug)
-        if did_change:
+        if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v229 = apply_or_sleep_management_v229(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v229": v229}
