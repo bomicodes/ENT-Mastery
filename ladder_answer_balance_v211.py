@@ -1,11 +1,13 @@
 """v21.1+ — deterministic answer-position balancing for newly curated ladders.
 
-v23.1 also chains the final H&N closure immediately before balancing so the
-runtime entrypoint remains stable while all reviewed rows still receive the same
-answer-position regression treatment.
+v23.1 chains the final H&N closure immediately before balancing. v23.2 then
+reconciles six Otology topics whose three-stage coverage already existed but
+lacked deliberate-review metadata; only structurally sound reusable cases are
+marked reviewed.
 """
 from collections import defaultdict
 from vignette_ladders_v231 import apply_learning_ladders_v231
+from otology_review_alignment_v232 import apply_otology_review_alignment_v232
 
 TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_")
 
@@ -32,6 +34,7 @@ def apply_ladder_answer_balance_v211(challenges):
     # data.py is already fully initialized by runtime_entry before this hook.
     import data
     apply_learning_ladders_v231(challenges, data._v6_item_id)
+    apply_otology_review_alignment_v232(challenges, data._v6_item_id)
 
     groups=defaultdict(list)
     for q in challenges:
