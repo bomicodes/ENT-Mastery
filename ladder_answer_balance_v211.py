@@ -1,6 +1,6 @@
 """v21.1+ — deterministic answer-position balancing for newly curated ladders."""
 from collections import defaultdict
-TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_")
+TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_")
 def _prefix(qid):
     text=str(qid or "")
     for prefix in TARGET_PREFIXES:
