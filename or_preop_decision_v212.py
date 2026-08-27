@@ -11,6 +11,7 @@ from or_landmarks_v214 import apply_or_landmarks_v214
 from or_otology_management_v217 import apply_or_otology_management_v217
 from or_laryngology_management_v218 import apply_or_laryngology_management_v218
 from or_pediatric_airway_management_v220 import apply_or_pediatric_airway_management_v220
+from or_reconstruction_management_v225 import apply_or_reconstruction_management_v225
 
 TARGETS = [
     {
@@ -93,6 +94,7 @@ def apply_or_preop_decision_v212(registry):
     v217 = apply_or_otology_management_v217(registry)
     v218 = apply_or_laryngology_management_v218(registry)
     v220 = apply_or_pediatric_airway_management_v220(registry)
+    v225 = apply_or_reconstruction_management_v225(registry)
     return {
         "changed": changed,
         "count": len(changed),
@@ -104,4 +106,5 @@ def apply_or_preop_decision_v212(registry):
         "v217": v217,
         "v218": v218,
         "v220": v220,
+        "v225": v225,
     }
