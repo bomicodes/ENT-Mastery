@@ -21,7 +21,6 @@
 </section>
 {% endif %}
 
-
 {% if lab.tracks %}
 <div class="track-tabs">
   <span>Track:</span>
@@ -52,6 +51,16 @@
 {% for c in cases %}
 <section class="card interp-case" data-lab="{{slug}}" data-case-id="{{c.id}}" data-concept-id="{{c.concept_id}}" data-variant-type="{{c.variant_type}}" data-domain="{{lab.title}}">
   <div class="interp-case-head"><span class="tag">LEVEL {{c.level}}</span><span>CASE {{loop.index}}</span></div>
+  {% if c.study_summary %}
+  <div class="psg-study-summary">
+    <span class="eyebrow">STUDY DATA</span>
+    <div class="psg-study-grid">
+      {% for row in c.study_summary %}
+      <div class="psg-study-item"><small>{{row[0]}}</small><b>{{row[1]}}</b></div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
   {% if c.visual %}
   <figure class="lab-visual-frame">
     <img src="{{url_for('static',filename=c.visual)}}" alt="Teaching visual for {{c.id}}" class="lab-visual"
