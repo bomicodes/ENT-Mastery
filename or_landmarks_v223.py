@@ -1,8 +1,12 @@
-"""v22.3 procedure-specific anatomy for selected facial-trauma OR Tomorrow cases.
+"""v22.3+ procedure-specific anatomy for selected facial-trauma OR Tomorrow cases.
 
 Replaces broad facial-trauma family landmarks where orbital-floor and frontal-sinus
 operations depend on different danger structures and reconstructive boundaries.
+Later reviewed reconstruction anatomy is chained here so the runtime anatomy hook
+remains atomic.
 """
+
+from or_landmarks_v224 import apply_or_landmarks_v224
 
 TARGETS = [
     {
@@ -56,4 +60,5 @@ def apply_or_landmarks_v223(registry):
             changed.append(slug)
         op["landmarks_v223"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v224 = apply_or_landmarks_v224(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v224": v224}
