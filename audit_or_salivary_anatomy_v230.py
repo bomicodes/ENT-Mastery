@@ -9,7 +9,7 @@ os.environ["SQLITE_PATH"] = db
 os.environ.pop("ENT_MASTERY_ACCESS_PASSWORD", None)
 
 CHECKS = [
-    (("superficial", "parotid"), ("facial nerve", "tragal pointer", "retromandibular", "stensen", "greater auricular"), ("lingual nerve", "wharton")),
+    (("parotidectomy",), ("facial nerve", "tragal pointer", "retromandibular", "stensen", "greater auricular"), ("lingual nerve", "wharton")),
     (("total", "parotid"), ("facial nerve", "deep lobe", "retromandibular", "external carotid", "parapharyngeal"), ("wharton", "hypoglossal nerve deep/inferior")),
     (("submandibular", "gland"), ("marginal mandibular", "facial artery", "mylohyoid", "lingual nerve", "wharton", "hypoglossal"), ("tragal pointer", "retromandibular")),
     (("sialendosc",), ("papilla", "wharton", "stensen", "branch points", "lingual nerve"), ("facial nerve main trunk", "retromandibular vein")),
@@ -17,6 +17,8 @@ CHECKS = [
 
 
 def _find(reg, terms):
+    if len(terms)==1 and terms[0] in reg:
+        return terms[0], reg[terms[0]]
     for slug, op in reg.items():
         hay = (str(slug) + " " + str((op or {}).get("title", ""))).lower()
         if all(term in hay for term in terms):
