@@ -1,9 +1,12 @@
-"""v23.10 cochlear-implant OR Tomorrow planning and postoperative rescue.
+"""v23.10+ cochlear-implant OR Tomorrow planning and postoperative rescue.
 
 Adds procedure-specific candidacy, imaging/device planning, and postoperative red flags
-for cochlear implantation. Operative choreography and anatomy remain in existing
-reviewed layers.
+for cochlear implantation. Later reviewed salivary management is chained here so the
+existing decision hook remains atomic. Operative choreography and anatomy remain in
+existing reviewed layers.
 """
+
+from or_salivary_management_v2311 import apply_or_salivary_management_v2311
 
 TARGETS = [
     {
@@ -58,4 +61,5 @@ def apply_or_cochlear_implant_management_v2310(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2311 = apply_or_salivary_management_v2311(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2311": v2311}
