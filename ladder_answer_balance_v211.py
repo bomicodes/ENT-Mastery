@@ -3,13 +3,14 @@
 v23.1 chains the final H&N closure immediately before balancing. v23.2 then
 reconciles six Otology topics whose three-stage coverage already existed but
 lacked deliberate-review metadata; only structurally sound reusable cases are
-marked reviewed.
+marked reviewed. v23.3 begins deliberate Thyroid/Parathyroid/Salivary review.
 """
 from collections import defaultdict
 from vignette_ladders_v231 import apply_learning_ladders_v231
 from otology_review_alignment_v232 import apply_otology_review_alignment_v232
+from vignette_ladders_v233 import apply_learning_ladders_v233
 
-TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_")
+TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_")
 
 def _prefix(qid):
     text=str(qid or "")
@@ -35,6 +36,7 @@ def apply_ladder_answer_balance_v211(challenges):
     import data
     apply_learning_ladders_v231(challenges, data._v6_item_id)
     apply_otology_review_alignment_v232(challenges, data._v6_item_id)
+    apply_learning_ladders_v233(challenges, data._v6_item_id)
 
     groups=defaultdict(list)
     for q in challenges:
