@@ -1,4 +1,10 @@
-"""v23.7 arytenoid-adduction OR Tomorrow planning and postoperative rescue."""
+"""v23.7+ arytenoid-adduction OR Tomorrow planning and postoperative rescue.
+
+Later pediatric adenotonsillar management is chained here so the existing decision
+hook remains atomic.
+"""
+
+from or_adenotonsillar_management_v238 import apply_or_adenotonsillar_management_v238
 
 TARGETS = [
     {
@@ -51,4 +57,5 @@ def apply_or_arytenoid_adduction_management_v237(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v238 = apply_or_adenotonsillar_management_v238(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v238": v238}
