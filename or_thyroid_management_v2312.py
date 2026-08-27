@@ -1,9 +1,13 @@
-"""v23.12 thyroid OR Tomorrow planning and postoperative rescue.
+"""v23.12+ thyroid OR Tomorrow planning and postoperative rescue.
 
 Adds procedure-specific perioperative decisions and postoperative failure recognition
-for lobectomy, total thyroidectomy, and reoperative thyroid surgery. Existing exact
-operative choreography, endocrine physiology, and reviewed anatomy remain unchanged.
+for lobectomy, total thyroidectomy, and reoperative thyroid surgery. Later reviewed
+parathyroid management is chained here so the existing decision hook remains atomic.
+Existing exact operative choreography, endocrine physiology, and reviewed anatomy
+remain unchanged.
 """
+
+from or_parathyroid_management_v2313 import apply_or_parathyroid_management_v2313
 
 TARGETS = [
     {
@@ -81,4 +85,5 @@ def apply_or_thyroid_management_v2312(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2313 = apply_or_parathyroid_management_v2313(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2313": v2313}
