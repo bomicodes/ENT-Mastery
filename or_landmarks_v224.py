@@ -1,9 +1,12 @@
-"""v22.4 procedure-specific anatomy for selected reconstruction OR Tomorrow cases.
+"""v22.4+ procedure-specific anatomy for selected reconstruction OR Tomorrow cases.
 
 Replaces broad reconstruction-family landmarks where microsurgical transfer, local
 nasal flap design, facial reanimation, and auricular framework reconstruction depend
-on different operative structures and danger zones.
+on different operative structures and danger zones. Later reviewed pediatric
+adenotonsillar anatomy is chained here so the runtime anatomy hook remains atomic.
 """
+
+from or_landmarks_v226 import apply_or_landmarks_v226
 
 TARGETS = [
     {
@@ -81,4 +84,5 @@ def apply_or_landmarks_v224(registry):
             changed.append(slug)
         op["landmarks_v224"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v226 = apply_or_landmarks_v226(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v226": v226}
