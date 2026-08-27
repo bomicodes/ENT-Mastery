@@ -49,6 +49,8 @@ on:
       - 'audit_or_skull_base_management_v236.py'
       - 'audit_or_arytenoid_adduction_v237.py'
       - 'audit_or_adenotonsillar_management_v238.py'
+      - 'audit_or_septoplasty_management_v239.py'
+      - 'audit_or_cochlear_implant_management_v2310.py'
       - 'or_tomorrow_overhaul_v190.py'
       - 'or_concept_link_fix_v191.py'
       - 'or_procedure_sequences_v200.py'
@@ -69,6 +71,8 @@ on:
       - 'or_skull_base_management_v236.py'
       - 'or_arytenoid_adduction_management_v237.py'
       - 'or_adenotonsillar_management_v238.py'
+      - 'or_septoplasty_management_v239.py'
+      - 'or_cochlear_implant_management_v2310.py'
       - 'or_landmarks_v*.py'
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
@@ -180,6 +184,10 @@ jobs:
         run: python audit_or_arytenoid_adduction_v237.py
       - name: v23.8 pediatric adenotonsillar OR management gate
         run: python audit_or_adenotonsillar_management_v238.py
+      - name: v23.9 septoplasty OR planning and postoperative rescue gate
+        run: python audit_or_septoplasty_management_v239.py
+      - name: v23.10 cochlear implant OR planning and postoperative rescue gate
+        run: python audit_or_cochlear_implant_management_v2310.py
       - name: v19.0 OR Tomorrow structural + postoperative gate
         run: python audit_or_tomorrow_v190.py
       - name: v16.8 runtime reliability and route smoke gate
