@@ -9,8 +9,8 @@ from or_landmarks_v215 import apply_or_landmarks_v215
 
 TARGETS = [
     {
-        "slug": "superficial-parotidectomy",
-        "title_terms": ("superficial parotid",),
+        "slug": "parotidectomy",
+        "title_terms": ("parotidectomy",),
         "landmarks": [
             "facial nerve trunk and upper/lower divisions",
             "tragal pointer and tympanomastoid suture",
@@ -21,7 +21,7 @@ TARGETS = [
         ],
     },
     {
-        "slug": "total-parotidectomy",
+        "slug": "parotid-total",
         "title_terms": ("total parotid",),
         "landmarks": [
             "facial nerve trunk, pes anserinus, and peripheral branches",
@@ -33,7 +33,7 @@ TARGETS = [
         ],
     },
     {
-        "slug": "submandibular-gland-excision",
+        "slug": "submandibular-gland",
         "title_terms": ("submandibular gland",),
         "landmarks": [
             "marginal mandibular nerve",
