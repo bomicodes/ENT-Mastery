@@ -1,8 +1,12 @@
-"""v22.7 procedure-specific anatomy for surgical tracheostomy OR Tomorrow.
+"""v22.7+ procedure-specific anatomy for surgical tracheostomy OR Tomorrow.
 
 Replaces broad airway-family landmarks with the anterior cervical structures that
 actually govern safe tracheal exposure, tube placement, hemorrhage risk, and rescue.
+Later reviewed sleep-surgery anatomy is chained here so the runtime anatomy hook
+remains atomic.
 """
+
+from or_landmarks_v228 import apply_or_landmarks_v228
 
 TARGETS = [
     {
@@ -48,4 +52,5 @@ def apply_or_landmarks_v227(registry):
             changed.append(slug)
         op["landmarks_v227"] = "procedure-specific"
         resolved.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v228 = apply_or_landmarks_v228(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v228": v228}
