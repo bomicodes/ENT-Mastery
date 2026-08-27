@@ -12,7 +12,7 @@ CHECKS = [
     (("total", "thyroidectomy"), ("external branch", "recurrent laryngeal", "parathyroid", "berry ligament", "tracheoesophageal"), ("wharton", "facial nerve")),
     (("thyroid", "lobectomy"), ("middle thyroid vein", "recurrent laryngeal", "parathyroid", "berry ligament", "isthmus"), ("wharton", "carina")),
     (("parathyroidectomy",), ("recurrent laryngeal", "thyrothymic", "retroesophageal", "carotid sheath", "vascular pedicle"), ("stensen", "aryepiglottic")),
-    (("bilateral", "parathyroid"), ("both recurrent", "superior parathyroid", "inferior parathyroid", "thyrothymic", "mediastinal"), ("stensen", "carina")),
+    (("four-gland", "parathyroid"), ("both recurrent", "superior parathyroid", "inferior parathyroid", "thyrothymic", "mediastinal"), ("stensen", "carina")),
 ]
 
 
