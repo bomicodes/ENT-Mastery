@@ -9,7 +9,7 @@ os.environ["SQLITE_PATH"] = db
 os.environ.pop("ENT_MASTERY_ACCESS_PASSWORD", None)
 
 CHECKS = [
-    (("superficial parotid",), ("baseline facial", "deep-lobe/parapharyngeal", "nodal disease"), "preop_decision_v212"),
+    (("parotidectomy",), ("baseline facial", "deep-lobe/parapharyngeal", "nodal disease"), "preop_decision_v212"),
     (("total parotid",), ("baseline facial-nerve", "nerve sacrifice/reconstruction", "deep lobe/parapharyngeal"), "preop_decision_v212"),
     (("submandibular gland",), ("inflammatory/stone disease versus neoplasm", "tongue mobility/sensation", "oncologic neck"), "preop_decision_v212"),
     (("sialendosc",), ("stone size", "combined approach", "lingual-nerve risk"), "preop_decision_v212"),
@@ -22,11 +22,11 @@ CHECKS = [
     (("supraglottoplasty",), ("feeding/aspiration history", "synchronous lesions", "postoperative level of care"), "preop_decision_v213"),
     (("laryngotracheal", "cleft"), ("cleft type/length", "aspiration physiology", "open-versus-endoscopic"), "preop_decision_v213"),
     (("direct laryngoscopy", "bronch"), ("spontaneous versus controlled ventilation", "rescue strategy", "critical stenosis"), "preop_decision_v213"),
-    (("tracheal", "resection"), ("tension-free resection", "innominate", "release maneuvers", "backup airway"), "preop_decision_v213"),
+    (("ctr",), ("tension-free resection", "innominate", "release maneuvers", "backup airway"), "preop_decision_v213"),
 ]
 
 LANDMARK_CHECKS = [
-    (("superficial parotid",), "landmarks_v214", ("facial nerve trunk", "tragal pointer", "tympanomastoid", "posterior belly of digastric", "retromandibular vein"), ("lingual nerve", "hypoglossal nerve", "wharton")),
+    (("parotidectomy",), "landmarks_v214", ("facial nerve trunk", "tragal pointer", "tympanomastoid", "posterior belly of digastric", "retromandibular vein"), ("lingual nerve", "hypoglossal nerve", "wharton")),
     (("total parotid",), "landmarks_v214", ("facial nerve trunk", "pes anserinus", "retromandibular vein", "deep lobe/parapharyngeal"), ("lingual nerve", "hypoglossal nerve", "wharton")),
     (("submandibular gland",), "landmarks_v214", ("marginal mandibular", "facial artery", "lingual nerve", "wharton duct", "hypoglossal nerve"), ("retromandibular vein", "stensen duct")),
     (("sialendosc",), "landmarks_v214", ("duct papilla", "branch-point", "wharton duct", "stensen duct"), ()),
@@ -41,6 +41,8 @@ LANDMARK_CHECKS = [
 
 
 def _find(reg, terms):
+    if len(terms) == 1 and terms[0] in reg:
+        return terms[0], reg[terms[0]]
     for slug, op in reg.items():
         hay = (str(slug) + " " + str((op or {}).get("title", ""))).lower()
         if all(term in hay for term in terms):
