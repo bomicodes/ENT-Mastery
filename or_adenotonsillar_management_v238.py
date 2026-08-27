@@ -1,9 +1,12 @@
-"""v23.8 pediatric adenotonsillar OR Tomorrow planning and postoperative rescue.
+"""v23.8+ pediatric adenotonsillar OR Tomorrow planning and postoperative rescue.
 
 Adds procedure-specific perioperative decisions and high-consequence postoperative
 failure modes for tonsillectomy, adenoidectomy, and combined adenotonsillectomy.
-Operative choreography and anatomy remain in their existing reviewed layers.
+Later reviewed septoplasty management is chained here so the decision hook remains
+atomic. Operative choreography and anatomy remain in their existing reviewed layers.
 """
+
+from or_septoplasty_management_v239 import apply_or_septoplasty_management_v239
 
 TARGETS = [
     {
@@ -86,4 +89,5 @@ def apply_or_adenotonsillar_management_v238(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v239 = apply_or_septoplasty_management_v239(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v239": v239}
