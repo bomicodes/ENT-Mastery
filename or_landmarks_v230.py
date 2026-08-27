@@ -2,8 +2,8 @@
 
 TARGETS = [
     {
-        "slug": "superficial-parotidectomy",
-        "title_terms": ("superficial", "parotid"),
+        "slug": "parotidectomy",
+        "title_terms": ("parotidectomy",),
         "landmarks": [
             "tragal pointer, tympanomastoid suture, and posterior belly of digastric as complementary facial nerve trunk landmarks",
             "facial nerve trunk at the stylomastoid foramen, pes anserinus, and upper/lower divisions within the gland",
@@ -14,7 +14,7 @@ TARGETS = [
         ],
     },
     {
-        "slug": "total-parotidectomy",
+        "slug": "parotid-total",
         "title_terms": ("total", "parotid"),
         "landmarks": [
             "facial nerve trunk, pes anserinus, and complete intraparotid branching pattern",
@@ -26,7 +26,7 @@ TARGETS = [
         ],
     },
     {
-        "slug": "submandibular-gland-excision",
+        "slug": "submandibular-gland",
         "title_terms": ("submandibular", "gland"),
         "landmarks": [
             "marginal mandibular branch superficial to the submandibular fascia near the mandibular border",
@@ -44,7 +44,7 @@ TARGETS = [
             "submandibular or parotid duct papilla and main duct lumen selected for endoscopic entry",
             "Wharton duct relationship to the lingual nerve in the posterior floor of mouth for submandibular work",
             "Stensen duct course over the masseter and through buccinator for parotid work",
-            "duct branch-point anatomy, stenotic segments, and stone location relative to the hilum and intraparenchymal ducts",
+            "duct branch-point anatomy and branch points, stenotic segments, and stone location relative to the hilum and intraparenchymal ducts",
             "floor-of-mouth mucosa and sublingual gland during combined transoral submandibular stone approaches",
             "adjacent lingual nerve territory as the key neural structure at risk during posterior ductotomy",
         ],
