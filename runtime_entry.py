@@ -59,9 +59,12 @@ from vignette_ladders_v220 import apply_learning_ladders_v220
 LEARNING_LADDERS_V220 = apply_learning_ladders_v220(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from vignette_ladders_v221 import apply_learning_ladders_v221
 LEARNING_LADDERS_V221 = apply_learning_ladders_v221(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
-# v22.2: Head & Neck Oncology pass 4, live-inventory topics 16-20.
 from vignette_ladders_v222 import apply_learning_ladders_v222
 LEARNING_LADDERS_V222 = apply_learning_ladders_v222(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+from vignette_ladders_v223 import apply_learning_ladders_v223
+LEARNING_LADDERS_V223 = apply_learning_ladders_v223(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
+from csf_rhinorrhea_depth_v224 import apply_csf_rhinorrhea_depth_v224
+CSF_RHINORRHEA_DEPTH_V224 = apply_csf_rhinorrhea_depth_v224(data)
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
 
@@ -82,28 +85,39 @@ CONCEPT_CHECK_FINAL_CLINICAL_GATE_V179 = apply_final_clinical_gate_v179(data.CON
 _rebuilt_concept_checks_v179 = {q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")}
 if isinstance(getattr(data, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     data.CONCEPT_CHECK_BY_ID_V112.clear(); data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
-else: data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v179
+else:
+    data.CONCEPT_CHECK_BY_ID_V112 = _rebuilt_concept_checks_v179
 if isinstance(getattr(app_mod, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     app_mod.CONCEPT_CHECK_BY_ID_V112.clear(); app_mod.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
-else: app_mod.CONCEPT_CHECK_BY_ID_V112 = data.CONCEPT_CHECK_BY_ID_V112
+else:
+    app_mod.CONCEPT_CHECK_BY_ID_V112 = data.CONCEPT_CHECK_BY_ID_V112
 
 _original_search_index = app_mod._canonical_search_index
+
 def _canonical_search_index_v150():
-    rows = list(_original_search_index()); seen = {(r.get("type"), r.get("url")) for r in rows}
+    rows = list(_original_search_index())
+    seen = {(r.get("type"), r.get("url")) for r in rows}
     bank_rows = [
         {"type":"Practice bank","title":"Clinical Challenges","subtitle":f"{len(data.CLINICAL_CHALLENGES_V119)} board-style vignettes","url":"/clinical-challenges","text":"clinical challenges board vignettes overnight call OR prep postoperative call clinical reasoning"},
-        {"type":"Practice bank","title":"Concept Checks","subtitle":f"{len(data.CONCEPT_CHECKS_V112)} board-recall questions","url":"/concept-checks","text":"concept checks board recall questions clinical vignettes active recall knowledge checks boards"},]
+        {"type":"Practice bank","title":"Concept Checks","subtitle":f"{len(data.CONCEPT_CHECKS_V112)} board-recall questions","url":"/concept-checks","text":"concept checks board recall questions clinical vignettes active recall knowledge checks boards"},
+    ]
     for row in bank_rows:
         key=(row["type"],row["url"])
-        if key not in seen: rows.append(row); seen.add(key)
+        if key not in seen:
+            rows.append(row); seen.add(key)
     for q in data.CONCEPT_CHECKS_V112:
         qid=str(q.get("id", ""))
-        if not qid: continue
+        if not qid:
+            continue
         url="/concept-check/"+qid; key=("Concept Check",url)
-        if key in seen: continue
-        choices=q.get("choices") or []; prompt=q.get("question") or q.get("prompt") or q.get("stem") or ""
-        rows.append({"type":"Concept Check","title":str(q.get("topic") or "Concept Check"),"subtitle":str(q.get("domain") or "ENT"),"url":url,"text":str(prompt)+" "+" ".join(str(x) for x in choices)}); seen.add(key)
+        if key in seen:
+            continue
+        choices=q.get("choices") or []
+        prompt=q.get("question") or q.get("prompt") or q.get("stem") or ""
+        rows.append({"type":"Concept Check","title":str(q.get("topic") or "Concept Check"),"subtitle":str(q.get("domain") or "ENT"),"url":url,"text":str(prompt)+" "+" ".join(str(x) for x in choices)})
+        seen.add(key)
     return rows
+
 app_mod._canonical_search_index = _canonical_search_index_v150
 
 from reliability_v168 import apply_reliability_v168
@@ -127,4 +141,5 @@ OR_POSTOP_SAFETY_V210 = apply_or_postop_safety_v210(data.OR_PREP_REGISTRY); app_
 from or_preop_decision_v212 import apply_or_preop_decision_v212
 OR_PREOP_DECISION_V212 = apply_or_preop_decision_v212(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from pasha_routes import bp as pasha_review_blueprint
-if "pasha_review" not in app.blueprints: app.register_blueprint(pasha_review_blueprint)
+if "pasha_review" not in app.blueprints:
+    app.register_blueprint(pasha_review_blueprint)
