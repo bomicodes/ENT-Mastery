@@ -29,14 +29,24 @@ def _prefix(qid):
         if text.startswith(prefix): return prefix
     return None
 
+def _normalize_correct_rationale(reasons, answer):
+    """Preserve individualized rationale text while enforcing the reviewed-case contract."""
+    if not 0 <= answer < len(reasons): return
+    text=str(reasons[answer] or "")
+    if text.startswith("Correct:"):
+        reasons[answer]="Correct."+text[len("Correct:"):]
+
 def _move_answer(q,target):
     choices=list(q.get("choices") or []); reasons=list(q.get("why_wrong") or [])
     if len(choices)<2 or len(reasons)!=len(choices): return False
     try: answer=int(q.get("answer"))
     except (TypeError,ValueError): return False
     if not 0<=answer<len(choices): return False
+    _normalize_correct_rationale(reasons, answer)
     target%=len(choices)
-    if answer==target: return False
+    if answer==target:
+        q["why_wrong"]=reasons
+        return False
     choice=choices.pop(answer); reason=reasons.pop(answer)
     choices.insert(target,choice); reasons.insert(target,reason)
     q["choices"]=choices; q["why_wrong"]=reasons; q["answer"]=target
