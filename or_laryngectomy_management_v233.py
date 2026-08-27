@@ -1,9 +1,12 @@
-"""v23.3 total-laryngectomy OR Tomorrow planning and postoperative rescue.
+"""v23.3+ total-laryngectomy OR Tomorrow planning and postoperative rescue.
 
 Adds high-consequence perioperative decisions that are not adequately conveyed by a
 generic head-and-neck profile. Operative choreography and procedure-specific anatomy
-remain in the existing reviewed layers.
+remain in the existing reviewed layers. Later reviewed neck-dissection management is
+chained here so the existing decision hook remains atomic.
 """
+
+from or_neck_dissection_management_v234 import apply_or_neck_dissection_management_v234
 
 TARGETS = [
     {
@@ -58,4 +61,5 @@ def apply_or_laryngectomy_management_v233(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v234 = apply_or_neck_dissection_management_v234(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v234": v234}
