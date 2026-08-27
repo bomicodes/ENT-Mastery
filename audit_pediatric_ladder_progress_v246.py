@@ -1,6 +1,6 @@
-"""v24.6 — Pediatric Otolaryngology deliberate ladder progress hard gate.
+"""v24.7 — Pediatric Otolaryngology deliberate ladder progress hard gate.
 
-Protects the 30 exact canonical Pediatric topics deliberately curated in v24.1-v24.6
+Protects the 35 exact canonical Pediatric topics deliberately curated in v24.1-v24.7
 while the remaining domain inventory is closed. This is intentionally a progress gate,
 not a claim that the full 40-topic Pediatric domain is complete.
 """
@@ -40,6 +40,11 @@ EXPECTED_TOPICS = [
     "Cleft / Craniofacial Otologic-Airway Care",
     "Croup vs Epiglottitis",
     "Epiglottitis",
+    "Congenital Hearing Loss Genetics",
+    "Cleft Lip / Palate — ENT Surgical Fundamentals",
+    "Pediatric Head & Neck Tumors",
+    "Microtia Reconstruction",
+    "Ankyloglossia / Maxillary Frenulum",
 ]
 
 
