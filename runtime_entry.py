@@ -65,6 +65,8 @@ from vignette_ladders_v223 import apply_learning_ladders_v223
 LEARNING_LADDERS_V223 = apply_learning_ladders_v223(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from csf_rhinorrhea_depth_v224 import apply_csf_rhinorrhea_depth_v224
 CSF_RHINORRHEA_DEPTH_V224 = apply_csf_rhinorrhea_depth_v224(data)
+from vignette_ladders_v225 import apply_learning_ladders_v225
+LEARNING_LADDERS_V225 = apply_learning_ladders_v225(data.CLINICAL_CHALLENGES_V119, data._v6_item_id)
 from ladder_answer_balance_v211 import apply_ladder_answer_balance_v211
 LADDER_ANSWER_BALANCE_V211 = apply_ladder_answer_balance_v211(data.CLINICAL_CHALLENGES_V119)
 
