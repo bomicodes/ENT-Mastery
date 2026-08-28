@@ -11,7 +11,7 @@ TARGETS = {
     "closed-nasal-reduction": ("closed_nasal_reduction_management_v2318", ("septal hematoma", "consolidation"), ("saddle", "valve")),
     "frontal-sinus-trauma": ("frontal_sinus_trauma_management_v2318", ("posterior-table", "outflow"), ("csf", "mucocele")),
     "mandible-orif": ("mandible_orif_management_v2318", ("occlusion", "inferior-alveolar"), ("malocclusion", "hardware")),
-    "noe-orif": ("noe_orif_management_v2318", ("medial canthal", "lacrimal"), ("telecanthus", "epiphora")),
+    "noe-orif": ("noe_orif_management_v2318", ("medial canthal", "lacrimal"), ("intercanthal", "epiphora")),
     "orbital-floor": ("orbital_floor_management_v2318", ("visual acuity", "entrapment"), ("rapd", "compartment")),
     "zmc-orif": ("zmc_orif_management_v2318", ("malar", "occlusion"), ("visual", "v2")),
 }
