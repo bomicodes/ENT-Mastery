@@ -2,8 +2,11 @@
 
 Adds reconstruction selection and postoperative flap/graft rescue to seven facial-plastic
 procedures that remained generic-only after the full OR audit. Existing design anatomy
-and operative sequences remain intact.
+and operative sequences remain intact. The v23.20 general/emergency review is chained
+through this tail to preserve one ordered runtime mutation path.
 """
+
+from or_general_emergency_management_v2320 import apply_or_general_emergency_management_v2320
 
 TARGETS = [
     {
@@ -121,4 +124,5 @@ def apply_or_facial_plastics_management_v2319(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2320 = apply_or_general_emergency_management_v2320(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2320": v2320}
