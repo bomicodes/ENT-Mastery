@@ -1,4 +1,4 @@
-"""v18.3 — deterministic post-completion Concept Check depth backlog audit.
+"""v18.3+ — deterministic post-completion Concept Check depth backlog audit.
 
 All nine canonical learning-ladder domains are hard-gated complete. The next safe
 unit of work is therefore not a guessed topic alias: it is the weakest reviewed
@@ -34,6 +34,7 @@ DEEPENED_MARKERS = (
     "task_alignment_v181",
     "task_alignment_v182",
     "task_alignment_v183",
+    "task_alignment_v184",
 )
 
 # Stable clinical-priority terms. They score the exact live canonical topic and
@@ -138,7 +139,7 @@ def main():
 
     # Resolve reviewed questions once with the production resolver. This validates
     # exact canonical linkage and records which canonical concepts have already
-    # received at least one deliberate v18.0-v18.3 depth repair.
+    # received at least one deliberate v18.0-v18.4 depth repair.
     resolved = []
     deepened_concept_ids = set()
     for q in checks:
@@ -202,13 +203,13 @@ def main():
         "canonical_count": len(canonical),
         "concept_check_count": len(checks),
         "reviewed_free_response_count": reviewed_free_response,
-        "deepened_v180_v183_concept_count": len(deepened_concept_ids),
+        "deepened_v180_v184_concept_count": len(deepened_concept_ids),
         "questions_on_deepened_concepts_under_75_words": questions_on_deepened_concepts,
         "individually_deepened_questions_under_75_words": individually_deepened_questions,
         "candidate_count": len(candidates),
         "untouched_candidate_count": len(candidates),
         "residual_candidate_count": len(residual_candidates),
-        "selection_contract": "primary queue: exact live canonical concept_id not yet deepened in v18.0-v18.3; secondary residual queue: unmarked weak questions on already-deepened concepts; both priority desc, answer words asc, prompt words asc, concept_id, question id",
+        "selection_contract": "primary queue: exact live canonical concept_id not yet deepened in v18.0-v18.4; secondary residual queue: unmarked weak questions on already-deepened concepts; both priority desc, answer words asc, prompt words asc, concept_id, question id",
         "failures": failures,
         "candidates": candidates,
         "residual_candidates": residual_candidates,
