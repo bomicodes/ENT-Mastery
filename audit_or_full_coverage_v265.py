@@ -27,6 +27,8 @@ try:
         'arytenoid_adduction_management_v237','adenotonsillar_management_v238',
         'septoplasty_management_v239','cochlear_implant_management_v2310',
         'salivary_management_v2311','thyroid_management_v2312','parathyroid_management_v2313',
+        'tors_management_v2314','tracheostomy_management_v2314',
+        'csf_nasoseptal_management_v2314','vestibular_schwannoma_management_v2314',
     )
     print('OR_FULL_COVERAGE_BEGIN')
     for slug, op in sorted(reg.items()):
