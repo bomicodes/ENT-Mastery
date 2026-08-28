@@ -6,7 +6,7 @@ from concept_check_depth_v185 import COHORT
 
 TASK_TERMS = {
 "cc-v112-rec-head-neck-oncology-head-neck-radiation-toxicity-survivorship":["osteoradionecrosis","thyroid","aspiration","recurrence"],
-"cc-v112-rec-head-neck-oncology-carotid-body-paraganglioma":["biopsy","cranial","vascular","genetic"],
+"cc-v112-rec-head-neck-oncology-carotid-body-paraganglioma":["biops","cranial","vascular","genetic"],
 "cc-v112-rec-pediatric-otolaryngology-subglottic-hemangioma":["propranolol","biphasic","bronchoscopy","airway"],
 "cc-v112-mgt-general-ent-emergencies-airway-foreign-body":["rigid bronchoscopy","normal","complete obstruction","ventilation"],
 "cc-v112-rec-otology-neurotology-temporal-bone-anatomy":["tegmen","sigmoid","facial nerve","lateral semicircular"],
