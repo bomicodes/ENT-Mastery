@@ -1,10 +1,17 @@
-"""v17.8 — hard all-domain Concept Check curation audit."""
+"""v17.8 — hard all-domain Concept Check curation audit.
+
+Post-completion hardening: in addition to clinical-board quality, verify that every
+reviewed Concept Check resolves back to the live canonical Deep Curriculum and
+that any persisted canonical_topic/concept_id agrees exactly with that live
+canonical target. Duplicate Concept Check IDs are forbidden.
+"""
 
 from collections import Counter
 import json
 import re
 
 import runtime_entry
+from concept_check_board_repair_v177 import _find_module
 
 
 data = runtime_entry.data
@@ -47,10 +54,22 @@ def main():
     checks = list(data.CONCEPT_CHECKS_V112)
     failures = []
     domains = Counter()
+    ids = Counter(str(q.get("id") or "") for q in checks)
     item_rows = []
 
     if result.get("unresolved"):
         failures.append("runtime_unresolved=" + ",".join(str(x) for x in result["unresolved"]))
+
+    for qid, count in ids.items():
+        if not qid:
+            failures.append("missing_id")
+        elif count > 1:
+            failures.append(f"duplicate_id:{qid}:count={count}")
+
+    canonical_topics = {
+        domain: {m.get("topic") for m in modules if m.get("topic")}
+        for domain, modules in data.DEEP_MODULES_V6.items()
+    }
 
     for q in checks:
         qid = q.get("id")
@@ -76,6 +95,23 @@ def main():
         if not q.get("review_basis_v178"):
             fail("missing_review_basis")
 
+        # Resolve through the same live canonical Deep Curriculum used by the
+        # curation layer, then require all persisted linkage metadata to agree
+        # exactly with that canonical target. This catches reviewed orphans and
+        # stale aliases without guessing canonical IDs in the audit itself.
+        module = _find_module(q, data.DEEP_MODULES_V6, data._v6_item_id)
+        canonical_topic = module.get("topic") if module else None
+        expected_cid = data._v6_item_id(domain, canonical_topic) if module and domain else None
+        if not module or canonical_topic not in canonical_topics.get(domain, set()):
+            fail("reviewed_orphan_no_canonical_module")
+        else:
+            persisted_topic = q.get("canonical_topic")
+            persisted_cid = q.get("concept_id")
+            if persisted_topic is not None and persisted_topic != canonical_topic:
+                fail(f"canonical_topic_mismatch:{persisted_topic!r}!={canonical_topic!r}")
+            if persisted_cid is not None and persisted_cid != expected_cid:
+                fail(f"concept_id_mismatch:{persisted_cid!r}!={expected_cid!r}")
+
         choices = list(q.get("choices") or [])
         if choices:
             if len(choices) != 4:
@@ -98,6 +134,9 @@ def main():
             "id": qid,
             "domain": domain,
             "topic": q.get("topic"),
+            "canonical_topic": canonical_topic,
+            "concept_id": q.get("concept_id"),
+            "expected_concept_id": expected_cid,
             "prompt": prompt,
             "choices": choices,
             "answer": q.get("answer"),
@@ -115,6 +154,7 @@ def main():
         "total": len(checks),
         "domains": dict(domains),
         "runtime_result": result,
+        "duplicate_ids": {qid: n for qid, n in ids.items() if qid and n > 1},
         "failures": failures,
         "items": item_rows,
         "distinct_entities": getattr(runtime_entry, "DISTINCT_ENTITIES_V178", {}),
@@ -127,6 +167,7 @@ def main():
         print(f"V178_DOMAIN|{domain}|{domains[domain]}")
     for k, v in sorted(result.get("stats", {}).items()):
         print(f"V178_STAT|{k}|{v}")
+    print(f"V178_DUPLICATE_IDS|{sum(1 for qid, n in ids.items() if qid and n > 1)}")
     print(f"V178_FAILURES|{len(failures)}")
     for f in failures[:200]:
         print("FAIL|" + f)
