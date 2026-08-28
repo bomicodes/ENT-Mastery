@@ -16,7 +16,7 @@ TASK_TERMS = {
     "cc-v112-rec-facial-plastics-trauma-structured-facial-trauma-examination": ["visual acuity", "afferent", "occlusion", "csf"],
     "cc-v112-mgt-facial-plastics-trauma-cervicofacial-flap": ["ectropion", "tension", "radiation", "vascularity"],
     "cc-v112-rec-facial-plastics-trauma-septal-perforation": ["autoimmune", "biopsy", "septal button", "vascularized mucosa"],
-    "cc-v112-rec-head-neck-oncology-base-of-tongue-scc": ["hpv", "lingual artery", "margins", "trimodality"],
+    "cc-v112-rec-head-neck-oncology-base-of-tongue-scc": ["hpv", "lingual artery", "margins", "adjuvant therapy"],
     "cc-v112-rec-laryngology-voice-swallowing-injection-laryngoplasty": ["paraglottic", "overinjection", "posterior gap", "arytenoid adduction"],
 }
 
