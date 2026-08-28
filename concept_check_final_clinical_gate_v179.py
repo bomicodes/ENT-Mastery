@@ -7,12 +7,17 @@ Prevention Surgery prompt to be mistaken for a clinical CT-based vignette.
 This pass uses word-boundary clinical markers identical in spirit to the hard
 CI audit and converts any remaining nonclinical item to the domain-specific
 oral-board format. It is deliberately small and idempotent.
+
+Post-completion depth hardening also applies the focused v18.0 manual
+answer/task-alignment repairs after generic normalization so they cannot be
+silently overwritten by the fallback converter.
 """
 
 import re
 
 from concept_check_board_repair_v177 import _find_module
 from concept_check_domain_curation_v178 import _convert_to_domain_oral_board
+from concept_check_task_alignment_v180 import apply_concept_check_task_alignment_v180
 
 
 CLINICAL_STEM_RE = re.compile(
@@ -35,4 +40,10 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
             converted.append(q.get("id"))
         else:
             unresolved.append(q.get("id"))
-    return {"converted": converted, "unresolved": unresolved}
+
+    alignment = apply_concept_check_task_alignment_v180(checks)
+    return {
+        "converted": converted,
+        "unresolved": unresolved,
+        "task_alignment_v180": alignment,
+    }
