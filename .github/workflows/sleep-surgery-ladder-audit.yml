@@ -28,11 +28,25 @@ jobs:
         run: python audit_learning_ladders_runtime_v204.py
       - name: Exact canonical domain inventory
         run: python audit_domain_ladder_inventory_v217.py
+      - name: Preserve Otology full-domain hard gate
+        run: python audit_otology_ladder_complete_v232.py
+      - name: Preserve Rhinology full-domain hard gate
+        run: python audit_rhinology_ladder_complete_v218.py
+      - name: Preserve Head and Neck Oncology full-domain hard gate
+        run: python audit_hn_ladder_complete_v231.py
+      - name: Preserve Thyroid Parathyroid Salivary full-domain hard gate
+        run: python audit_tps_ladder_complete_v240.py
+      - name: Preserve Pediatric Otolaryngology full-domain hard gate
+        run: python audit_pediatric_ladder_complete_v248.py
+      - name: Preserve Laryngology full-domain hard gate
+        run: python audit_laryngology_ladder_complete_v256.py
+      - name: Preserve Facial Plastics full-domain hard gate
+        run: python audit_facial_plastics_full_domain_v262.py
       - name: v26.3 Sleep Surgery 5-topic hard gate
         run: python audit_sleep_surgery_progress_v263.py
       - name: Answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
 
-# Progress hard gate: these exact Sleep Surgery canonical topics must retain
-# reviewed foundation/application/senior-decision ladders while later batches
-# extend the domain toward full completion.
+# Sleep Surgery progress CI intentionally re-runs every completed-domain hard
+# gate before accepting a new Sleep batch. This closes the protection gap in the
+# broad workflow without weakening or replacing any existing dedicated gate.
