@@ -1,5 +1,6 @@
 """v18.0 hard gate for manually repaired Concept Check task/answer alignment."""
 
+import json
 import re
 
 import runtime_entry
@@ -34,6 +35,7 @@ def main():
     checks = list(runtime_entry.data.CONCEPT_CHECKS_V112)
     by_id = {str(q.get("id") or ""): q for q in checks}
     failures = []
+    rows = []
 
     runtime_result = getattr(runtime_entry, "CONCEPT_CHECK_FINAL_CLINICAL_GATE_V179", {})
     align_result = runtime_result.get("task_alignment_v180") or {}
@@ -48,31 +50,47 @@ def main():
         q = by_id.get(qid)
         if not q:
             continue
+        item_failures = []
+
+        def fail(reason):
+            failures.append(f"{qid}:{reason}")
+            item_failures.append(reason)
+
         prompt = str(q.get("prompt") or "")
         answer = str(q.get("answer_text") or "")
         if not q.get("task_alignment_v180"):
-            failures.append(f"{qid}:missing_task_alignment_marker")
+            fail("missing_task_alignment_marker")
         if len(words(prompt)) < 28 or "?" not in prompt:
-            failures.append(f"{qid}:weak_prompt:{len(words(prompt))}")
+            fail(f"weak_prompt:{len(words(prompt))}")
         if len(words(answer)) < 35:
-            failures.append(f"{qid}:weak_answer:{len(words(answer))}")
+            fail(f"weak_answer:{len(words(answer))}")
         if q.get("choices"):
-            failures.append(f"{qid}:unexpected_choices")
+            fail("unexpected_choices")
         if q.get("answer") is not None:
-            failures.append(f"{qid}:unexpected_answer_index")
+            fail("unexpected_answer_index")
         if not DECISION_WORDS.search(answer):
-            failures.append(f"{qid}:answer_lacks_decision_content")
+            fail("answer_lacks_decision_content")
         if not str(q.get("explanation") or "").strip():
-            failures.append(f"{qid}:missing_explanation")
+            fail("missing_explanation")
         if not str(q.get("board_pearl") or "").strip():
-            failures.append(f"{qid}:missing_board_pearl")
+            fail("missing_board_pearl")
 
         # Existing all-domain canonical metadata must survive the repair exactly;
         # this gate does not invent or substitute aliases.
         if not q.get("reviewed_all_domains_v178"):
-            failures.append(f"{qid}:lost_v178_review_metadata")
+            fail("lost_v178_review_metadata")
         if not q.get("review_basis_v178"):
-            failures.append(f"{qid}:lost_review_basis")
+            fail("lost_review_basis")
+
+        rows.append({
+            "id": qid,
+            "prompt_words": len(words(prompt)),
+            "answer_words": len(words(answer)),
+            "decision_content": bool(DECISION_WORDS.search(answer)),
+            "task_alignment_v180": bool(q.get("task_alignment_v180")),
+            "post_alignment_clinical_frame_v181": bool(q.get("post_alignment_clinical_frame_v181")),
+            "failures": item_failures,
+        })
 
     repaired = set(align_result.get("repaired") or [])
     if repaired != EXPECTED_IDS:
@@ -82,6 +100,16 @@ def main():
             + "|extra="
             + ",".join(sorted(repaired - EXPECTED_IDS))
         )
+
+    report = {
+        "expected_ids": sorted(EXPECTED_IDS),
+        "runtime_alignment": align_result,
+        "runtime_post_alignment_reframed_v181": runtime_result.get("post_alignment_reframed_v181") or [],
+        "failures": failures,
+        "items": rows,
+    }
+    with open("V180_TASK_ALIGNMENT_AUDIT.json", "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
 
     print(f"V180_EXPECTED|{len(EXPECTED_IDS)}")
     print(f"V180_REPAIRED|{len(repaired)}")
