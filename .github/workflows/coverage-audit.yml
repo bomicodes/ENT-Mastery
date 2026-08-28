@@ -26,6 +26,8 @@ on:
       - 'audit_concept_checks_v161.py'
       - 'audit_board_curriculum_v177.py'
       - 'audit_concept_checks_all_domains_v178.py'
+      - 'audit_concept_check_task_alignment_v*.py'
+      - 'audit_concept_check_depth_backlog_v*.py'
       - 'audit_all_user_routes_v180.py'
       - 'audit_pasha_review_v182.py'
       - 'audit_or_tomorrow_v190.py'
@@ -87,6 +89,7 @@ on:
       - 'or_landmarks_v*.py'
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
+      - 'concept_check_final_clinical_gate_v179.py'
       - 'deep_curriculum_distinct_entities_v178.py'
       - 'audit_coverage_v135.py'
       - 'audit_quality_v149.py'
@@ -241,6 +244,18 @@ jobs:
         run: python audit_board_curriculum_v177.py
       - name: v17.8 hard all-domain Concept Check curation gate
         run: python audit_concept_checks_all_domains_v178.py
+      - name: v18.0 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v180.py
+      - name: v18.1 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v181.py
+      - name: v18.2 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v182.py
+      - name: v18.3 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v183.py
+      - name: v18.4 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v184.py
+      - name: Post-completion live-canonical Concept Check backlog gate
+        run: python audit_concept_check_depth_backlog_v183.py
       - name: Upload v17.8 audit report
         if: always()
         uses: actions/upload-artifact@v4
@@ -248,9 +263,16 @@ jobs:
           name: v178-all-domain-audit
           path: V178_ALL_DOMAIN_AUDIT.json
           if-no-files-found: warn
+      - name: Upload post-completion Concept Check backlog
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: concept-check-depth-backlog
+          path: V183_DEPTH_BACKLOG_AUDIT.json
+          if-no-files-found: warn
 
 # Boot health and the runtime ladder contract run first so content-integrity
 # failures are not masked by unrelated subsystem gates. All nine completed
 # canonical domains are explicitly hard-gated before unrelated OR subsystems.
-# All OR, route, coverage, Deep Curriculum, Concept Check, and reviewed ladder
-# quality gates remain in force afterward.
+# All OR, route, coverage, Deep Curriculum, Concept Check, reviewed ladder, and
+# post-completion depth gates remain in force afterward.
