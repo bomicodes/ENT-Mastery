@@ -7,7 +7,7 @@ Concept Check attached to a live canonical Deep Curriculum ID.
 This audit is intentionally read-only.  It:
 - rebuilds the canonical ID inventory from DEEP_MODULES_V6 + _v6_item_id;
 - rejects duplicate Concept Check IDs and reviewed canonical-link orphans;
-- excludes the already hand-deepened v18.0-v18.2 cohorts;
+- excludes the already hand-deepened v18.0-v18.3 cohorts;
 - considers only reviewed free-response reveals whose answers remain <75 words;
 - ranks candidates deterministically by resident/chief clinical priority, then
   answer depth, prompt depth, canonical ID, and question ID;
@@ -31,6 +31,7 @@ DEEPENED_MARKERS = (
     "task_alignment_v180",
     "task_alignment_v181",
     "task_alignment_v182",
+    "task_alignment_v183",
 )
 
 # Stable clinical-priority terms.  They score the exact live canonical topic and
@@ -171,7 +172,7 @@ def main():
         "canonical_count": len(canonical),
         "concept_check_count": len(checks),
         "reviewed_free_response_count": reviewed_free_response,
-        "excluded_v180_v182_count": excluded_deepened,
+        "excluded_v180_v183_count": excluded_deepened,
         "candidate_count": len(candidates),
         "selection_contract": "exact live canonical concept_id; priority desc; answer words asc; prompt words asc; concept_id; question id",
         "failures": failures,
