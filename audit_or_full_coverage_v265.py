@@ -47,6 +47,8 @@ try:
         'button_battery_management_v2320','esophageal_fb_management_v2320',
         'deep_neck_abscess_management_v2320','pta_management_v2320',
         'rigid_tracheobronchoscopy_management_v2320','transnasal_esophagoscopy_management_v2320',
+        'canalplasty_management_v2321','central_neck_management_v2321','ctr_management_v2321',
+        'maxillary_antrostomy_management_v2321','tegmen_repair_management_v2321',
     )
     print('OR_FULL_COVERAGE_BEGIN')
     for slug, op in sorted(reg.items()):
