@@ -9,9 +9,10 @@ on:
       - 'vignette_ladders_v258.py'
       - 'vignette_ladders_v259.py'
       - 'vignette_ladders_v260.py'
+      - 'vignette_ladders_v261.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
-      - 'audit_facial_plastics_ladder_progress_v260.py'
+      - 'audit_facial_plastics_ladder_progress_v261.py'
       - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_domain_ladder_inventory_v217.py'
       - 'runtime_entry.py'
@@ -31,8 +32,8 @@ jobs:
         run: python audit_learning_ladders_runtime_v204.py
       - name: Exact canonical domain inventory
         run: python audit_domain_ladder_inventory_v217.py
-      - name: v26.0 Facial Plastics 20-topic progress hard gate
-        run: python audit_facial_plastics_ladder_progress_v260.py
+      - name: v26.1 Facial Plastics 25-topic progress hard gate
+        run: python audit_facial_plastics_ladder_progress_v261.py
       - name: Answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
 
