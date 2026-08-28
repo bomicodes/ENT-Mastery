@@ -181,49 +181,65 @@ jobs:
         run: python audit_or_thyroid_parathyroid_anatomy_v231.py
       - name: v23.2 reoperative endocrine OR procedure-specific anatomy gate
         run: python audit_or_reoperative_endocrine_v232.py
-      - name: v23.3 laryngectomy OR management hard gate
+      - name: v23.3 total laryngectomy OR planning and postoperative rescue gate
         run: python audit_or_laryngectomy_management_v233.py
-      - name: v23.4 neck dissection OR management hard gate
+      - name: v23.4 neck dissection OR planning and postoperative rescue gate
         run: python audit_or_neck_dissection_management_v234.py
-      - name: v23.5 major oncologic resection OR management hard gate
+      - name: v23.5 major oncologic resection OR planning and postoperative rescue gate
         run: python audit_or_major_oncologic_resection_management_v235.py
-      - name: v23.6 skull-base OR management hard gate
+      - name: v23.6 skull base OR planning and postoperative rescue gate
         run: python audit_or_skull_base_management_v236.py
-      - name: v23.7 arytenoid adduction OR management hard gate
+      - name: v23.7 arytenoid adduction OR anatomy and management gate
         run: python audit_or_arytenoid_adduction_v237.py
-      - name: v23.8 adenotonsillar OR management hard gate
+      - name: v23.8 pediatric adenotonsillar OR management gate
         run: python audit_or_adenotonsillar_management_v238.py
-      - name: v23.9 septoplasty OR management hard gate
+      - name: v23.9 septoplasty OR planning and postoperative rescue gate
         run: python audit_or_septoplasty_management_v239.py
-      - name: v23.10 cochlear implant OR management hard gate
+      - name: v23.10 cochlear implant OR planning and postoperative rescue gate
         run: python audit_or_cochlear_implant_management_v2310.py
-      - name: v23.11 salivary OR management hard gate
+      - name: v23.11 salivary OR planning and postoperative rescue gate
         run: python audit_or_salivary_management_v2311.py
-      - name: v23.12 thyroid OR management hard gate
+      - name: v23.12 thyroid OR planning and postoperative rescue gate
         run: python audit_or_thyroid_management_v2312.py
-      - name: v23.13 parathyroid OR management hard gate
+      - name: v23.13 parathyroid OR planning and postoperative rescue gate
         run: python audit_or_parathyroid_management_v2313.py
-      - name: v18.2 Pasha review persistence gate
-        run: python audit_pasha_review_v182.py
-      - name: v18.0 all user routes smoke gate
-        run: python audit_all_user_routes_v180.py
-      - name: v16.8 reliability hard gate
+      - name: v19.0 OR Tomorrow structural + postoperative gate
+        run: python audit_or_tomorrow_v190.py
+      - name: v16.8 runtime reliability and route smoke gate
         run: python audit_reliability_v168.py
-      - name: v13.5-v15.5 coverage gate
-        run: python audit_coverage_v135.py
-      - name: v14.9 resident-level quality gate
+      - name: v18.0 exhaustive user-route backend gate
+        run: python audit_all_user_routes_v180.py
+      - name: v18.2 Pasha review backend and persistence gate
+        run: python audit_pasha_review_v182.py
+      - name: Canonical coverage release gate
+        run: python audit_coverage_v135.py --depth --strict
+      - name: Resident-level quality audit
         run: python audit_quality_v149.py
-      - name: v15.4 learning-ladder regression gate
+      - name: Historical learning-ladder audit
         run: python audit_learning_ladders_v154.py
-      - name: v15.5 content-depth gate
+      - name: Content-depth audit
         run: python audit_content_depth_v155.py
-      - name: v15.9-v16.5 six-layer deep curriculum gate
+      - name: Deep Curriculum six-layer audit
         run: python audit_deep_curriculum_v159.py
-      - name: v16.3 deep-curriculum duplicate architecture gate
+      - name: Deep Curriculum duplicate architecture audit
         run: python audit_deep_curriculum_duplicates_v163.py
-      - name: v17.7 board curriculum hard gate
-        run: python audit_board_curriculum_v177.py
-      - name: v16.1 concept-check gate
+      - name: Concept Checks full-bank audit
         run: python audit_concept_checks_v161.py
-      - name: v17.8 all-domain concept-check curation gate
+      - name: v17.7 board-style Concept Check + Deep Curriculum audit
+        run: python audit_board_curriculum_v177.py
+      - name: v17.8 hard all-domain Concept Check curation gate
         run: python audit_concept_checks_all_domains_v178.py
+      - name: Upload v17.8 audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v178-all-domain-audit
+          path: V178_ALL_DOMAIN_AUDIT.json
+          if-no-files-found: warn
+
+# Boot health and the runtime ladder contract run first so content-integrity
+# failures are not masked by unrelated subsystem gates. Completed Otology,
+# Rhinology, Head & Neck Oncology, Thyroid/Parathyroid/Salivary, Pediatric
+# Otolaryngology, and Laryngology / Voice / Swallowing domains remain hard-gated
+# before unrelated OR subsystems. All OR, route, coverage, Deep Curriculum,
+# Concept Check, and reviewed ladder quality gates remain in force afterward.
