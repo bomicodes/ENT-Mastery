@@ -10,9 +10,9 @@ oral-board format. It is deliberately small and idempotent.
 
 Post-completion depth hardening applies the focused v18.0-v18.3 manual
 answer/task-alignment repairs after generic normalization so they cannot be
-silently overwritten by the fallback converter. The v18.3 cohort resolves
-through the same live canonical resolver used by v17.8 rather than requiring an
-optional denormalized canonical_topic field.
+silently overwritten by the fallback converter. The v18.3 production runtime
+lives in a ``*_depth_v*.py`` module so exact canonical resolution changes are
+covered by the repository-wide audit watch.
 """
 
 import re
@@ -22,7 +22,7 @@ from concept_check_domain_curation_v178 import _convert_to_domain_oral_board
 from concept_check_task_alignment_v180 import apply_concept_check_task_alignment_v180
 from concept_check_task_alignment_v181 import apply_concept_check_task_alignment_v181
 from concept_check_task_alignment_v182 import apply_concept_check_task_alignment_v182
-from concept_check_task_alignment_v183_runtime import apply_concept_check_task_alignment_v183
+from concept_check_runtime_depth_v183 import apply_concept_check_task_alignment_v183
 
 CLINICAL_STEM_RE = re.compile(r"\b(patient|child|infant|adult|man|woman|boy|girl|presents|returns|develops|postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b", re.I)
 
