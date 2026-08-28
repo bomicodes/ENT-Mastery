@@ -7,10 +7,12 @@ on:
       - 'vignette_ladders_v269.py'
       - 'vignette_ladders_v270.py'
       - 'vignette_ladders_v270_fix.py'
+      - 'vignette_ladders_v271.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_general_ent_progress_v269.py'
       - 'audit_general_ent_progress_v270.py'
+      - 'audit_general_ent_progress_v271.py'
       - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_domain_ladder_inventory_v217.py'
       - 'data.py'
@@ -52,9 +54,11 @@ jobs:
         run: python audit_general_ent_progress_v269.py
       - name: General ENT 10-topic hard gate
         run: python audit_general_ent_progress_v270.py
+      - name: General ENT 15-topic hard gate
+        run: python audit_general_ent_progress_v271.py
       - name: Answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
 
 # General ENT progress is accepted only after the live canonical inventory and
-# every completed-domain hard gate remain green. The v27.0 gate is a strict
-# superset of pass 1 and preserves exact canonical links plus complete ladders.
+# every completed-domain hard gate remain green. The v27.1 gate is a strict
+# superset of v27.0 and preserves exact canonical links plus complete ladders.
