@@ -11,7 +11,7 @@ TARGETS = {
     "laryngeal-botox": ("laryngeal_botox_management_v2322", ("adductor", "abductor", "emg"), ("aspiration", "dyspnea")),
     "lingual-tonsillectomy": ("lingual_tonsillectomy_management_v2322", ("dise", "multilevel", "osa"), ("airway", "hemorrhage")),
     "pharyngocutaneous-fistula": ("pharyngocutaneous_fistula_management_v2322", ("radiation", "carotid", "nutrition"), ("carotid blowout", "sentinel")),
-    "reconstructive-palate": ("reconstructive_palate_management_v2322", ("pap", "retropalatal", "multilevel"), ("velopharyngeal", "objective")),
+    "reconstructive-palate": ("reconstructive_palate_management_v2322", ("pap", "retropalatal", "multilevel"), ("hypernasality", "objective")),
     "tep": ("tep_management_v2322", ("primary", "secondary", "speech-language"), ("leakage through", "dislodged", "aspiration")),
 }
 
