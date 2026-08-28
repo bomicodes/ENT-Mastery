@@ -1,0 +1,28 @@
+name: OR Tomorrow full coverage v26.5
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'audit_or_full_coverage_v265.py'
+      - '.github/workflows/or-full-coverage-v265.yml'
+      - 'or_*.py'
+      - 'runtime_entry.py'
+      - 'data.py'
+      - 'app.py'
+
+jobs:
+  full-or-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Full OR Tomorrow structural and route inventory
+        run: python audit_or_full_coverage_v265.py
