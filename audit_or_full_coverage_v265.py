@@ -49,6 +49,9 @@ try:
         'rigid_tracheobronchoscopy_management_v2320','transnasal_esophagoscopy_management_v2320',
         'canalplasty_management_v2321','central_neck_management_v2321','ctr_management_v2321',
         'maxillary_antrostomy_management_v2321','tegmen_repair_management_v2321',
+        'laryngeal_botox_management_v2322','lingual_tonsillectomy_management_v2322',
+        'pharyngocutaneous_fistula_management_v2322','reconstructive_palate_management_v2322',
+        'tep_management_v2322',
     )
     print('OR_FULL_COVERAGE_BEGIN')
     for slug, op in sorted(reg.items()):
@@ -72,11 +75,13 @@ try:
     print('DOMAIN_COUNTS', dict(sorted(domains.items())))
     print('SPECIFIC_REVIEWED', len(specific))
     print('GENERIC_ONLY', len(generic_only), ','.join(generic_only))
+    if generic_only:
+        failures.append('generic-only modules remain: ' + ','.join(generic_only))
     if failures:
         print('OR_FULL_COVERAGE_FAILURES')
         print('\n'.join(failures))
         raise SystemExit(1)
-    print(f'PASS: {len(reg)} live OR Tomorrow modules satisfy structural, canonical-link, and route contract')
+    print(f'PASS: {len(reg)} live OR Tomorrow modules satisfy structural, canonical-link, route, and procedure-specific review contract')
 finally:
     try: os.remove(db)
     except OSError: pass
