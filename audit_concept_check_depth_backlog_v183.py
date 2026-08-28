@@ -2,16 +2,16 @@
 
 All nine canonical learning-ladder domains are hard-gated complete. The next safe
 unit of work is therefore not a guessed topic alias: it is the weakest reviewed
-Concept Check attached to a live canonical Deep Curriculum ID that has not
-already received a v18.0-v18.3 depth pass on another question.
+Concept Check attached to a live canonical Deep Curriculum ID.
 
 This audit is intentionally read-only. It:
 - rebuilds the canonical ID inventory from DEEP_MODULES_V6 + _v6_item_id;
 - rejects duplicate Concept Check IDs and reviewed canonical-link orphans;
-- excludes every live canonical concept already hand-deepened in v18.0-v18.3,
-  not merely the individual question carrying the marker;
+- prioritizes untouched canonical concepts before revisiting already-deepened ones;
+- retains a secondary residual queue so a strong repair cannot hide a weak sibling
+  question under the same canonical concept;
 - considers only reviewed free-response reveals whose answers remain <75 words;
-- ranks candidates deterministically by resident/chief clinical priority, then
+- ranks both queues deterministically by resident/chief clinical priority, then
   answer depth, prompt depth, canonical ID, and question ID;
 - writes the exact current prompt/answer/canonical module material to an artifact
   so the next content patch can reuse strong material before adding anything.
@@ -71,6 +71,46 @@ def _priority(topic, prompt):
     return score, sorted(set(hits))
 
 
+def _candidate_row(q, module, expected_cid, canonical, answer):
+    qid = str(q.get("id") or "")
+    domain = str(q.get("domain") or "")
+    topic = str(module.get("topic") or "")
+    prompt = _prompt(q)
+    priority_score, priority_hits = _priority(topic, prompt)
+    canonical_module = canonical[expected_cid]["module"]
+    return {
+        "id": qid,
+        "concept_id": expected_cid,
+        "domain": domain,
+        "canonical_topic": topic,
+        "board_dimension": q.get("board_dimension_v178"),
+        "prompt_words": _words(prompt),
+        "answer_words": _words(answer),
+        "priority_score": priority_score,
+        "priority_hits": priority_hits,
+        "prompt": prompt,
+        "answer_text": answer,
+        "explanation": q.get("explanation"),
+        "board_pearl": q.get("board_pearl"),
+        "review_basis": q.get("review_basis_v178"),
+        "canonical_layers": {
+            key: canonical_module.get(key)
+            for key in ("recognize", "localize", "workup", "manage", "operate", "teach", "source_basis")
+            if canonical_module.get(key) is not None
+        },
+    }
+
+
+def _sort_key(row):
+    return (
+        -row["priority_score"],
+        row["answer_words"],
+        row["prompt_words"],
+        row["concept_id"],
+        row["id"],
+    )
+
+
 def main():
     checks = list(data.CONCEPT_CHECKS_V112)
     failures = []
@@ -96,9 +136,9 @@ def main():
     if duplicate_canonical_ids:
         failures.extend(f"duplicate_canonical_id:{cid}" for cid in sorted(set(duplicate_canonical_ids)))
 
-    # Resolve reviewed questions once with the production resolver. This both
-    # validates exact canonical linkage and lets us exclude an already-deepened
-    # concept even when another question under that concept has no marker.
+    # Resolve reviewed questions once with the production resolver. This validates
+    # exact canonical linkage and records which canonical concepts have already
+    # received at least one deliberate v18.0-v18.3 depth repair.
     resolved = []
     deepened_concept_ids = set()
     for q in checks:
@@ -124,8 +164,10 @@ def main():
             deepened_concept_ids.add(expected_cid)
 
     candidates = []
+    residual_candidates = []
     reviewed_free_response = 0
-    excluded_deepened_concept_questions = 0
+    questions_on_deepened_concepts = 0
+    individually_deepened_questions = 0
 
     for q, module, expected_cid in resolved:
         if q.get("choices"):
@@ -134,62 +176,42 @@ def main():
         if not answer:
             continue
         reviewed_free_response += 1
-        if expected_cid in deepened_concept_ids:
-            excluded_deepened_concept_questions += 1
-            continue
-
         answer_words = _words(answer)
         if answer_words >= 75:
             continue
 
-        qid = str(q.get("id") or "")
-        domain = str(q.get("domain") or "")
-        topic = str(module.get("topic") or "")
-        prompt = _prompt(q)
-        priority_score, priority_hits = _priority(topic, prompt)
-        canonical_module = canonical[expected_cid]["module"]
-        candidates.append({
-            "id": qid,
-            "concept_id": expected_cid,
-            "domain": domain,
-            "canonical_topic": topic,
-            "board_dimension": q.get("board_dimension_v178"),
-            "prompt_words": _words(prompt),
-            "answer_words": answer_words,
-            "priority_score": priority_score,
-            "priority_hits": priority_hits,
-            "prompt": prompt,
-            "answer_text": answer,
-            "explanation": q.get("explanation"),
-            "board_pearl": q.get("board_pearl"),
-            "review_basis": q.get("review_basis_v178"),
-            "canonical_layers": {
-                key: canonical_module.get(key)
-                for key in ("recognize", "localize", "workup", "manage", "operate", "teach", "source_basis")
-                if canonical_module.get(key) is not None
-            },
-        })
+        has_depth_marker = any(q.get(marker) for marker in DEEPENED_MARKERS)
+        if expected_cid in deepened_concept_ids:
+            questions_on_deepened_concepts += 1
+            if has_depth_marker:
+                individually_deepened_questions += 1
+                continue
+            residual_candidates.append(_candidate_row(q, module, expected_cid, canonical, answer))
+            continue
 
-    candidates.sort(key=lambda row: (
-        -row["priority_score"],
-        row["answer_words"],
-        row["prompt_words"],
-        row["concept_id"],
-        row["id"],
-    ))
+        candidates.append(_candidate_row(q, module, expected_cid, canonical, answer))
+
+    candidates.sort(key=_sort_key)
+    residual_candidates.sort(key=_sort_key)
     for rank, row in enumerate(candidates, 1):
         row["rank"] = rank
+    for rank, row in enumerate(residual_candidates, 1):
+        row["residual_rank"] = rank
 
     report = {
         "canonical_count": len(canonical),
         "concept_check_count": len(checks),
         "reviewed_free_response_count": reviewed_free_response,
         "deepened_v180_v183_concept_count": len(deepened_concept_ids),
-        "excluded_questions_on_deepened_concepts": excluded_deepened_concept_questions,
+        "questions_on_deepened_concepts_under_75_words": questions_on_deepened_concepts,
+        "individually_deepened_questions_under_75_words": individually_deepened_questions,
         "candidate_count": len(candidates),
-        "selection_contract": "exact live canonical concept_id; exclude concepts already deepened in v18.0-v18.3; priority desc; answer words asc; prompt words asc; concept_id; question id",
+        "untouched_candidate_count": len(candidates),
+        "residual_candidate_count": len(residual_candidates),
+        "selection_contract": "primary queue: exact live canonical concept_id not yet deepened in v18.0-v18.3; secondary residual queue: unmarked weak questions on already-deepened concepts; both priority desc, answer words asc, prompt words asc, concept_id, question id",
         "failures": failures,
         "candidates": candidates,
+        "residual_candidates": residual_candidates,
     }
     with open("V183_DEPTH_BACKLOG_AUDIT.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
@@ -198,13 +220,18 @@ def main():
     print(f"V183_CONCEPT_CHECKS|{len(checks)}")
     print(f"V183_REVIEWED_FREE_RESPONSE|{reviewed_free_response}")
     print(f"V183_DEEPENED_CONCEPTS|{len(deepened_concept_ids)}")
-    print(f"V183_EXCLUDED_QUESTIONS_ON_DEEPENED_CONCEPTS|{excluded_deepened_concept_questions}")
     print(f"V183_CANDIDATES_UNDER_75_WORDS|{len(candidates)}")
     for row in candidates[:12]:
         print(
             "V183_CANDIDATE|{rank}|priority={priority_score}|answer={answer_words}|prompt={prompt_words}|{domain}|{canonical_topic}|{id}|{concept_id}".format(**row)
         )
         print("V183_EXISTING_ANSWER|" + row["id"] + "|" + " ".join(row["answer_text"].split()))
+    print(f"V183_RESIDUAL_CANDIDATES_UNDER_75_WORDS|{len(residual_candidates)}")
+    for row in residual_candidates[:8]:
+        print(
+            "V183_RESIDUAL_CANDIDATE|{residual_rank}|priority={priority_score}|answer={answer_words}|prompt={prompt_words}|{domain}|{canonical_topic}|{id}|{concept_id}".format(**row)
+        )
+        print("V183_RESIDUAL_EXISTING_ANSWER|" + row["id"] + "|" + " ".join(row["answer_text"].split()))
     print(f"V183_FAILURES|{len(failures)}")
     for failure in failures[:200]:
         print("FAIL|" + failure)
