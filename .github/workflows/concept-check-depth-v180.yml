@@ -8,6 +8,7 @@ on:
       - 'concept_check_task_alignment_v180.py'
       - 'concept_check_task_alignment_v181.py'
       - 'concept_check_depth_v180.py'
+      - 'concept_check_depth_v181.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_concept_check_task_alignment_v180.py'
       - 'audit_concept_check_task_alignment_v181.py'
