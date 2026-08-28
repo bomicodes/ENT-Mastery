@@ -1,10 +1,10 @@
-"""v18.3 Concept Check depth-selection entrypoint.
+"""v18.3 Concept Check depth layer entrypoint.
 
-The post-completion curriculum has no incomplete canonical ladder domain.  This
-stable depth filename keeps the deterministic live-canonical backlog audit under
-the repository-wide ``*_depth_v*.py`` CI watch without mutating content.
+The cohort is selected by the live-canonical backlog audit and implemented in a
+separate task-alignment layer. This stable depth filename keeps every v18.3
+change under the repository-wide ``*_depth_v*.py`` CI watch.
 """
 
-from audit_concept_check_depth_backlog_v183 import main
+from concept_check_task_alignment_v183 import apply_concept_check_task_alignment_v183
 
-__all__ = ["main"]
+__all__ = ["apply_concept_check_task_alignment_v183"]
