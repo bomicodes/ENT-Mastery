@@ -7,10 +7,12 @@ on:
     paths:
       - 'vignette_ladders_v263.py'
       - 'vignette_ladders_v264.py'
+      - 'vignette_ladders_v266.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_sleep_surgery_progress_v263.py'
       - 'audit_sleep_surgery_progress_v264.py'
+      - 'audit_sleep_surgery_progress_v266.py'
       - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_domain_ladder_inventory_v217.py'
       - 'runtime_entry.py'
@@ -44,8 +46,8 @@ jobs:
         run: python audit_laryngology_ladder_complete_v256.py
       - name: Preserve Facial Plastics full-domain hard gate
         run: python audit_facial_plastics_full_domain_v262.py
-      - name: v26.4 Sleep Surgery 10-topic hard gate
-        run: python audit_sleep_surgery_progress_v264.py
+      - name: v26.6 Sleep Surgery 15-topic hard gate
+        run: python audit_sleep_surgery_progress_v266.py
       - name: Answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
 
