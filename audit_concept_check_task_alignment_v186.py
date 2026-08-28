@@ -10,7 +10,7 @@ TASK_TERMS={
 "cc-v112-rec-head-neck-oncology-tracheal-malignancy":["critical","bronchoscopy","tension-free","obstruction"],
 "cc-v112-rec-general-ent-emergencies-laser-energy-safety-in-otolaryngology":["oxygen","remove the burning tube","bronchoscopy","wavelength"],
 "cc-v112-rec-pediatric-otolaryngology-pediatric-vocal-fold-immobility":["fixation","aspiration","reinnervation","bilateral"],
-"cc-v112-rec-general-ent-emergencies-antimicrobial-stewardship-in-otolaryngology":["source control","de-escalate","drainage","broadening"],
+"cc-v112-rec-general-ent-emergencies-antimicrobial-stewardship-in-otolaryngology":["source control","de-escalate","drainage","phenotype supports it"],
 "cc-v112-rec-rhinology-allergy-skull-base-intracranial-complications-of-sinusitis":["mri","neurosurgery","lumbar puncture","mass effect"],
 }
 def words(v): return re.findall(r"\b\w+[\w'-]*\b",str(v or ""))
