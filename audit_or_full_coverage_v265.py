@@ -29,6 +29,8 @@ try:
         'salivary_management_v2311','thyroid_management_v2312','parathyroid_management_v2313',
         'tors_management_v2314','tracheostomy_management_v2314',
         'csf_nasoseptal_management_v2314','vestibular_schwannoma_management_v2314',
+        'fess_management_v2315','draf_management_v2315','sphenoidotomy_management_v2315',
+        'spa_management_v2315','orbital_abscess_management_v2315',
     )
     print('OR_FULL_COVERAGE_BEGIN')
     for slug, op in sorted(reg.items()):
