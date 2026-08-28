@@ -31,6 +31,9 @@ try:
         'csf_nasoseptal_management_v2314','vestibular_schwannoma_management_v2314',
         'fess_management_v2315','draf_management_v2315','sphenoidotomy_management_v2315',
         'spa_management_v2315','orbital_abscess_management_v2315',
+        'tracheal_resection_management_v2316','airway_dilation_management_v2316',
+        'cordotomy_management_v2316','microflap_management_v2316','rrp_management_v2316',
+        'laryngeal_fracture_management_v2316','tlm_laryngeal_cancer_management_v2316',
     )
     print('OR_FULL_COVERAGE_BEGIN')
     for slug, op in sorted(reg.items()):
