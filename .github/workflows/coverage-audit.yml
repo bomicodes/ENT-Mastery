@@ -254,8 +254,10 @@ jobs:
         run: python audit_concept_check_task_alignment_v183.py
       - name: v18.4 Concept Check task-answer alignment gate
         run: python audit_concept_check_task_alignment_v184.py
-      - name: Post-completion live-canonical Concept Check backlog gate
-        run: python audit_concept_check_depth_backlog_v183.py
+      - name: v18.5 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v185.py
+      - name: Post-completion live-canonical Concept Check backlog gate v18.5
+        run: python audit_concept_check_depth_backlog_v185.py
       - name: Upload v17.8 audit report
         if: always()
         uses: actions/upload-artifact@v4
@@ -268,7 +270,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: concept-check-depth-backlog
-          path: V183_DEPTH_BACKLOG_AUDIT.json
+          path: V185_DEPTH_BACKLOG_AUDIT.json
           if-no-files-found: warn
 
 # Boot health and the runtime ladder contract run first so content-integrity
