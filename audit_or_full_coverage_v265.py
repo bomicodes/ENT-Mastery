@@ -37,6 +37,9 @@ try:
         'pediatric_dlb_management_v2317','pediatric_airway_fb_management_v2317',
         'branchial_management_v2317','sistrunk_management_v2317',
         'palatoplasty_management_v2317','tympanostomy_tube_management_v2317',
+        'closed_nasal_reduction_management_v2318','frontal_sinus_trauma_management_v2318',
+        'mandible_orif_management_v2318','noe_orif_management_v2318',
+        'orbital_floor_management_v2318','zmc_orif_management_v2318',
     )
     print('OR_FULL_COVERAGE_BEGIN')
     for slug, op in sorted(reg.items()):
