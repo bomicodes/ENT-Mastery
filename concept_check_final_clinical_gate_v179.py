@@ -8,11 +8,10 @@ This pass uses word-boundary clinical markers identical in spirit to the hard
 CI audit and converts any remaining nonclinical item to the domain-specific
 oral-board format. It is deliberately small and idempotent.
 
-Post-completion depth hardening applies the focused v18.0-v18.3 manual
+Post-completion depth hardening applies the focused v18.0-v18.4 manual
 answer/task-alignment repairs after generic normalization so they cannot be
-silently overwritten by the fallback converter. The v18.3 production runtime
-lives in a ``*_depth_v*.py`` module so exact canonical resolution changes are
-covered by the repository-wide audit watch.
+silently overwritten by the fallback converter. Watched ``*_depth_v*.py``
+runtime modules keep exact canonical-resolution changes under full CI.
 """
 
 import re
@@ -23,6 +22,7 @@ from concept_check_task_alignment_v180 import apply_concept_check_task_alignment
 from concept_check_task_alignment_v181 import apply_concept_check_task_alignment_v181
 from concept_check_task_alignment_v182 import apply_concept_check_task_alignment_v182
 from concept_check_runtime_depth_v183 import apply_concept_check_task_alignment_v183
+from concept_check_depth_v184 import apply_concept_check_task_alignment_v184
 
 CLINICAL_STEM_RE = re.compile(r"\b(patient|child|infant|adult|man|woman|boy|girl|presents|returns|develops|postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b", re.I)
 
@@ -69,6 +69,8 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     reframed_v182 = _reassert_clinical_contract(checks, alignment_v182.get("repaired", []), unresolved, "post_alignment_clinical_frame_v182")
     alignment_v183 = apply_concept_check_task_alignment_v183(checks, deep_modules, v6_item_id)
     reframed_v183 = _reassert_clinical_contract(checks, alignment_v183.get("repaired", []), unresolved, "post_alignment_clinical_frame_v183")
+    alignment_v184 = apply_concept_check_task_alignment_v184(checks, deep_modules, v6_item_id)
+    reframed_v184 = _reassert_clinical_contract(checks, alignment_v184.get("repaired", []), unresolved, "post_alignment_clinical_frame_v184")
 
     return {
         "converted": converted,
@@ -81,4 +83,6 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         "post_alignment_reframed_v182": reframed_v182,
         "task_alignment_v183": alignment_v183,
         "post_alignment_reframed_v183": reframed_v183,
+        "task_alignment_v184": alignment_v184,
+        "post_alignment_reframed_v184": reframed_v184,
     }
