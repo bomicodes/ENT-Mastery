@@ -3,8 +3,11 @@
 Adds procedure-specific decision points and postoperative calcium/airway rescue for
 focused parathyroidectomy, bilateral four-gland exploration, and reoperative
 parathyroid surgery. Existing ioPTH renal-clearance nuance, operative choreography,
-and reviewed endocrine anatomy remain unchanged.
+and reviewed endocrine anatomy remain unchanged. Later high-risk generic-only OR
+management review is chained here so the existing decision hook remains atomic.
 """
+
+from or_high_risk_management_v2314 import apply_or_high_risk_management_v2314
 
 TARGETS = [
     {
@@ -83,4 +86,5 @@ def apply_or_parathyroid_management_v2313(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2314 = apply_or_high_risk_management_v2314(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2314": v2314}
