@@ -1,4 +1,4 @@
-name: CI - Facial Plastics Ladder Progress
+name: CI - Facial Plastics Full Domain
 
 on:
   workflow_dispatch:
@@ -10,9 +10,10 @@ on:
       - 'vignette_ladders_v259.py'
       - 'vignette_ladders_v260.py'
       - 'vignette_ladders_v261.py'
+      - 'vignette_ladders_v262.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
-      - 'audit_facial_plastics_ladder_progress_v261.py'
+      - 'audit_facial_plastics_full_domain_v262.py'
       - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_domain_ladder_inventory_v217.py'
       - 'runtime_entry.py'
@@ -32,11 +33,10 @@ jobs:
         run: python audit_learning_ladders_runtime_v204.py
       - name: Exact canonical domain inventory
         run: python audit_domain_ladder_inventory_v217.py
-      - name: v26.1 Facial Plastics 25-topic progress hard gate
-        run: python audit_facial_plastics_ladder_progress_v261.py
+      - name: v26.2 Facial Plastics 32-topic full-domain hard gate
+        run: python audit_facial_plastics_full_domain_v262.py
       - name: Answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
 
-# This workflow protects deliberate-review progress while Facial Plastics / Trauma
-# is being completed. It must grow with each canonical batch and eventually be
-# replaced by a full-domain completion gate.
+# Completed-domain hard gate: all 32 exact Facial Plastics / Trauma canonical
+# topics must retain reviewed foundation/application/senior-decision ladders.
