@@ -15,12 +15,14 @@ on:
       - 'concept_check_depth_v182.py'
       - 'concept_check_depth_v183.py'
       - 'concept_check_depth_v184.py'
+      - 'concept_check_depth_v185.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_concept_check_task_alignment_v180.py'
       - 'audit_concept_check_task_alignment_v181.py'
       - 'audit_concept_check_task_alignment_v182.py'
       - 'audit_concept_check_task_alignment_v183.py'
       - 'audit_concept_check_task_alignment_v184.py'
+      - 'audit_concept_check_task_alignment_v185.py'
       - 'audit_concept_check_depth_backlog_v183.py'
       - 'audit_concept_check_depth_backlog_v184.py'
       - '.github/workflows/concept-check-depth-v180.yml'
@@ -73,6 +75,8 @@ jobs:
         run: python audit_concept_check_task_alignment_v183.py
       - name: v18.4 task-answer alignment gate
         run: python audit_concept_check_task_alignment_v184.py
+      - name: v18.5 task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v185.py
       - name: v18.3 live-canonical depth backlog gate
         run: python audit_concept_check_depth_backlog_v183.py
       - name: v18.4 live-canonical depth backlog gate
@@ -111,6 +115,13 @@ jobs:
         with:
           name: v184-task-alignment-audit
           path: V184_TASK_ALIGNMENT_AUDIT.json
+          if-no-files-found: warn
+      - name: Upload v18.5 task-alignment audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v185-task-alignment-audit
+          path: V185_TASK_ALIGNMENT_AUDIT.json
           if-no-files-found: warn
       - name: Upload v18.3 live-canonical depth backlog
         if: always()
