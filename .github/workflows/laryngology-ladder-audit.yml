@@ -1,4 +1,4 @@
-name: CI - Laryngology Ladder Progress
+name: CI - Laryngology Ladder Complete
 
 on:
   workflow_dispatch:
@@ -11,15 +11,11 @@ on:
       - 'vignette_ladders_v253.py'
       - 'vignette_ladders_v254.py'
       - 'vignette_ladders_v255.py'
+      - 'vignette_ladders_v256.py'
       - 'laryngology_foundation_alignment_v252.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
-      - 'audit_laryngology_ladder_progress_v249.py'
-      - 'audit_laryngology_ladder_progress_v251.py'
-      - 'audit_laryngology_ladder_progress_v252.py'
-      - 'audit_laryngology_ladder_progress_v253.py'
-      - 'audit_laryngology_ladder_progress_v254.py'
-      - 'audit_laryngology_ladder_progress_v255.py'
+      - 'audit_laryngology_ladder_complete_v256.py'
       - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_domain_ladder_inventory_v217.py'
       - 'runtime_entry.py'
@@ -39,11 +35,11 @@ jobs:
         run: python audit_learning_ladders_runtime_v204.py
       - name: Exact canonical domain inventory
         run: python audit_domain_ladder_inventory_v217.py
-      - name: v25.5 Laryngology 30-topic progress hard gate
-        run: python audit_laryngology_ladder_progress_v255.py
+      - name: v25.6 Laryngology 36-topic full-domain hard gate
+        run: python audit_laryngology_ladder_complete_v256.py
       - name: Answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
 
-# This workflow protects deliberate-review progress while Laryngology is being
-# completed. It must grow with each canonical batch and eventually be replaced
-# by a full-domain completion gate; it does not weaken the global quality suite.
+# Laryngology is a completed canonical domain. This workflow protects the full
+# 36-topic foundation/application/senior-decision contract and must not regress
+# to a partial progress threshold.
