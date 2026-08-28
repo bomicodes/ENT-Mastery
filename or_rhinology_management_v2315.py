@@ -2,8 +2,11 @@
 
 Adds end-to-end planning and postoperative rescue to five generic-only high-yield
 rhinology procedures identified by the full live OR registry audit. Existing exact
-operative sequences and reviewed anatomy remain unchanged.
+operative sequences and reviewed anatomy remain unchanged. Later reviewed airway and
+laryngology management is chained here to keep the runtime mutation path atomic.
 """
+
+from or_airway_laryngology_management_v2316 import apply_or_airway_laryngology_management_v2316
 
 TARGETS = [
     {
@@ -104,4 +107,5 @@ def apply_or_rhinology_management_v2315(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2316 = apply_or_airway_laryngology_management_v2316(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2316": v2316}
