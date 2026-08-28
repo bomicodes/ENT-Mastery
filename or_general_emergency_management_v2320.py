@@ -3,8 +3,11 @@
 Adds procedure-specific preoperative decision-making and postoperative rescue to six
 remaining general/emergency endoscopic and neck-infection modules. Existing v20.x
 button-battery, esophageal-perforation and airway safety warnings are intentionally
-preserved and complemented rather than duplicated.
+preserved and complemented rather than duplicated. The v23.21 specialty review is
+chained through this tail to preserve one ordered runtime mutation path.
 """
+
+from or_specialty_management_v2321 import apply_or_specialty_management_v2321
 
 TARGETS = [
     {
@@ -116,4 +119,5 @@ def apply_or_general_emergency_management_v2320(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2321 = apply_or_specialty_management_v2321(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2321": v2321}
