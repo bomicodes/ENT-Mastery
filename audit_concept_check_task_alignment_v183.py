@@ -16,7 +16,7 @@ TASK_TERMS = {
     "cc-v112-rec-head-neck-oncology-reconstruction-selection-after-head-neck-ablation": ["recipient-vessel", "vascularized", "flap monitoring", "salvage"],
     "cc-v112-rec-general-ent-emergencies-ent-perioperative-anesthesia-difficult-airway-planning": ["spontaneous ventilation", "awake", "front-of-neck", "repeated"],
     "cc-v112-rec-rhinology-allergy-skull-base-sphenoidotomy": ["superior turbinate", "carotid", "optic", "septation"],
-    "cc-v112-rec-general-ent-emergencies-postoperative-neck-hematoma": ["decompression", "venous", "lymphatic", "ct"],
+    "cc-v112-rec-general-ent-emergencies-postoperative-neck-hematoma": ["decompress", "venous", "lymphatic", "ct"],
     "cc-v112-mgt-laryngology-voice-swallowing-posterior-cordotomy-arytenoidectomy": ["cordotomy", "arytenoidectomy", "aspiration", "tracheostomy"],
 }
 
