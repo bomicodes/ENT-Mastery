@@ -51,3 +51,10 @@ jobs:
         run: python audit_concept_checks_all_domains_v178.py
       - name: v18.0 task-answer alignment gate
         run: python audit_concept_check_task_alignment_v180.py
+      - name: Upload v18.0 task-alignment audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v180-task-alignment-audit
+          path: V180_TASK_ALIGNMENT_AUDIT.json
+          if-no-files-found: warn
