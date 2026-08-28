@@ -1,0 +1,32 @@
+name: OR v23.20 general emergency management
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'or_general_emergency_management_v2320.py'
+      - 'or_facial_plastics_management_v2319.py'
+      - 'audit_or_general_emergency_management_v2320.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/or-v2320-general-emergency-management.yml'
+  pull_request:
+    paths:
+      - 'or_general_emergency_management_v2320.py'
+      - 'or_facial_plastics_management_v2319.py'
+      - 'audit_or_general_emergency_management_v2320.py'
+      - 'runtime_entry.py'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: OR v23.20 runtime and route gate
+        run: python audit_or_general_emergency_management_v2320.py
