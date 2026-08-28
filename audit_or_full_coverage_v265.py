@@ -40,6 +40,10 @@ try:
         'closed_nasal_reduction_management_v2318','frontal_sinus_trauma_management_v2318',
         'mandible_orif_management_v2318','noe_orif_management_v2318',
         'orbital_floor_management_v2318','zmc_orif_management_v2318',
+        'bilobed_flap_management_v2319','cervicofacial_flap_management_v2319',
+        'forehead_flap_management_v2319','melolabial_flap_management_v2319',
+        'otoplasty_management_v2319','septorhinoplasty_management_v2319',
+        'facial_skin_graft_management_v2319',
     )
     print('OR_FULL_COVERAGE_BEGIN')
     for slug, op in sorted(reg.items()):
