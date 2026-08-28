@@ -4,6 +4,7 @@ import json
 import re
 
 import runtime_entry
+from concept_check_board_repair_v177 import _find_module
 from concept_check_task_alignment_v183 import COHORT
 
 TASK_TERMS = {
@@ -25,7 +26,8 @@ def words(value):
 
 
 def main():
-    checks = list(runtime_entry.data.CONCEPT_CHECKS_V112)
+    data = runtime_entry.data
+    checks = list(data.CONCEPT_CHECKS_V112)
     by_id = {str(q.get("id") or ""): q for q in checks}
     failures = []
     rows = []
@@ -44,18 +46,25 @@ def main():
             failures.append(f"{qid}:missing")
             continue
         item_failures = []
+
         def fail(reason):
             failures.append(f"{qid}:{reason}")
             item_failures.append(reason)
 
         payload = COHORT[qid]
+        module = _find_module(q, data.DEEP_MODULES_V6, data._v6_item_id)
+        resolved_topic = str(module.get("topic") or "") if module else ""
+        resolved_cid = data._v6_item_id(q.get("domain"), resolved_topic) if module and q.get("domain") else None
+        if not module:
+            fail("no_live_canonical_module")
+        if resolved_topic != payload["canonical_topic"]:
+            fail(f"resolved_topic_mismatch:{resolved_topic!r}")
+        if resolved_cid != payload["concept_id"] or q.get("concept_id") != resolved_cid:
+            fail("concept_id_changed_or_unresolved")
+
         prompt = str(q.get("prompt") or "")
         answer = str(q.get("answer_text") or "")
         answer_lower = answer.lower()
-        if q.get("concept_id") != payload["concept_id"]:
-            fail("concept_id_changed")
-        if q.get("canonical_topic") != payload["canonical_topic"]:
-            fail("canonical_topic_changed")
         if not q.get("task_alignment_v183"):
             fail("missing_v183_marker")
         if len(words(prompt)) < 45 or "?" not in prompt:
@@ -81,7 +90,15 @@ def main():
         missing_terms = [term for term in TASK_TERMS[qid] if term not in answer_lower]
         if missing_terms:
             fail("missing_task_terms:" + ",".join(missing_terms))
-        rows.append({"id": qid, "concept_id": q.get("concept_id"), "canonical_topic": q.get("canonical_topic"), "prompt_words": len(words(prompt)), "answer_words": len(words(answer)), "trap_count": len(traps), "failures": item_failures})
+        rows.append({
+            "id": qid,
+            "concept_id": q.get("concept_id"),
+            "resolved_topic": resolved_topic,
+            "prompt_words": len(words(prompt)),
+            "answer_words": len(words(answer)),
+            "trap_count": len(traps),
+            "failures": item_failures,
+        })
 
     repaired = set(alignment.get("repaired") or [])
     if repaired != expected:
@@ -95,7 +112,7 @@ def main():
     print(f"V183_DEPTH_REPAIRED|{len(repaired)}")
     print(f"V183_DEPTH_FAILURES|{len(failures)}")
     for row in rows:
-        print(f"V183_DEPTH_ITEM|{row['id']}|prompt={row['prompt_words']}|answer={row['answer_words']}|traps={row['trap_count']}")
+        print(f"V183_DEPTH_ITEM|{row['id']}|prompt={row['prompt_words']}|answer={row['answer_words']}|traps={row['trap_count']}|topic={row['resolved_topic']}")
     for failure in failures:
         print("FAIL|" + failure)
     if failures:

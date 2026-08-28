@@ -9,6 +9,7 @@ on:
       - 'concept_check_task_alignment_v181.py'
       - 'concept_check_task_alignment_v182.py'
       - 'concept_check_task_alignment_v183.py'
+      - 'concept_check_task_alignment_v183_runtime.py'
       - 'concept_check_depth_v180.py'
       - 'concept_check_depth_v181.py'
       - 'concept_check_depth_v182.py'
