@@ -19,10 +19,15 @@ EXPECTED_IDS = {
     "cc-v112-rec-thyroid-parathyroid-salivary-sialendoscopy",
 }
 
+# Broad enough to recognize real resident/chief decisions across ENT without
+# counting generic explanatory prose as management content. In particular,
+# oncologic extent/margin/nodal/nerve planning is decision content even when an
+# answer does not literally contain the word "surgery".
 DECISION_WORDS = re.compile(
-    r"\b(airway|escalat|surg|operat|drain|source.control|biopsy|malignan|"
+    r"\b(airway|escalat|surg|operat|drain|source.control|biopsy|malignan|oncolog|"
     r"complication|protect|stage|imaging|monitor|reconstruct|therapy|treatment|"
-    r"pheochromocytoma|hypocalc|csf|orbital|mediastin|multigland)\b",
+    r"plan|extent|margin|nodal|nerve|resect|convert|pheochromocytoma|hypocalc|"
+    r"csf|orbital|mediastin|multigland)\b",
     re.I,
 )
 
