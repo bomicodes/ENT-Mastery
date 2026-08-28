@@ -3,8 +3,11 @@
 Adds procedure-specific planning and postoperative rescue to five remaining specialty
 modules: canalplasty/exostosis, central neck dissection, cricotracheal resection,
 maxillary antrostomy, and tegmen CSF leak/encephalocele repair. Existing anatomy,
-operative sequence and prior high-consequence safety content remain intact.
+operative sequence and prior high-consequence safety content remain intact. The v23.22
+final review is chained through this tail to preserve one ordered runtime mutation path.
 """
+
+from or_final_management_v2322 import apply_or_final_management_v2322
 
 TARGETS = [
     {
@@ -110,4 +113,5 @@ def apply_or_specialty_management_v2321(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2322 = apply_or_final_management_v2322(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2322": v2322}
