@@ -1,0 +1,32 @@
+name: OR v23.16 airway laryngology management
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'or_airway_laryngology_management_v2316.py'
+      - 'or_rhinology_management_v2315.py'
+      - 'audit_or_airway_laryngology_management_v2316.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/or-v2316-airway-laryngology-management.yml'
+  pull_request:
+    paths:
+      - 'or_airway_laryngology_management_v2316.py'
+      - 'or_rhinology_management_v2315.py'
+      - 'audit_or_airway_laryngology_management_v2316.py'
+      - 'runtime_entry.py'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: OR v23.16 runtime and route gate
+        run: python audit_or_airway_laryngology_management_v2316.py
