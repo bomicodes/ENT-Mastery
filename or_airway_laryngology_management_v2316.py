@@ -2,8 +2,11 @@
 
 Adds resident-level planning and postoperative rescue to seven high-yield procedures
 that remained generic-only after the full live OR audit. Existing operative sequence,
-anatomy and danger-structure content remains authoritative.
+anatomy and danger-structure content remains authoritative. The v23.17 pediatric core
+review is chained through this tail to keep runtime mutation ordering atomic.
 """
+
+from or_pediatric_core_management_v2317 import apply_or_pediatric_core_management_v2317
 
 TARGETS = [
     {
@@ -125,4 +128,5 @@ def apply_or_airway_laryngology_management_v2316(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2317 = apply_or_pediatric_core_management_v2317(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2317": v2317}
