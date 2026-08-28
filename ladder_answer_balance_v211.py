@@ -1,7 +1,7 @@
 """v21.1+ — deterministic answer-position balancing for newly curated ladders.
 
-Completed domains are chained immediately before balancing. v26.3-v26.8 close
-canonical Sleep Surgery review, with v26.8 adding final Oral Appliance Therapy.
+Completed domains are chained immediately before balancing. v26.8 completes
+Sleep Surgery; v26.9 begins exact-canonical General ENT / Emergencies review.
 """
 from collections import defaultdict
 from vignette_ladders_v231 import apply_learning_ladders_v231
@@ -41,8 +41,9 @@ from vignette_ladders_v264 import apply_learning_ladders_v264
 from vignette_ladders_v266 import apply_learning_ladders_v266
 from vignette_ladders_v267 import apply_learning_ladders_v267
 from vignette_ladders_v268 import apply_learning_ladders_v268
+from vignette_ladders_v269 import apply_learning_ladders_v269
 from laryngology_foundation_alignment_v252 import apply_laryngology_foundation_alignment_v252
-TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_","v267_","v268_")
+TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_","v267_","v268_","v269_")
 def _prefix(qid):
  text=str(qid or "")
  for prefix in TARGET_PREFIXES:
@@ -68,7 +69,7 @@ def apply_ladder_answer_balance_v211(challenges):
  apply_otology_review_alignment_v232(challenges,data._v6_item_id); apply_tps_final_alignment_v240(challenges,data._v6_item_id)
  for fn in (apply_learning_ladders_v241,apply_learning_ladders_v242,apply_learning_ladders_v243,apply_learning_ladders_v244,apply_learning_ladders_v245,apply_learning_ladders_v246,apply_learning_ladders_v247,apply_learning_ladders_v248,apply_learning_ladders_v249,apply_learning_ladders_v251,apply_learning_ladders_v252): fn(challenges,data._v6_item_id)
  apply_laryngology_foundation_alignment_v252(challenges,data._v6_item_id)
- for fn in (apply_learning_ladders_v253,apply_learning_ladders_v254,apply_learning_ladders_v255,apply_learning_ladders_v256,apply_learning_ladders_v257,apply_learning_ladders_v258,apply_learning_ladders_v259,apply_learning_ladders_v260,apply_learning_ladders_v261,apply_learning_ladders_v262,apply_learning_ladders_v263,apply_learning_ladders_v264,apply_learning_ladders_v266,apply_learning_ladders_v267,apply_learning_ladders_v268): fn(challenges,data._v6_item_id)
+ for fn in (apply_learning_ladders_v253,apply_learning_ladders_v254,apply_learning_ladders_v255,apply_learning_ladders_v256,apply_learning_ladders_v257,apply_learning_ladders_v258,apply_learning_ladders_v259,apply_learning_ladders_v260,apply_learning_ladders_v261,apply_learning_ladders_v262,apply_learning_ladders_v263,apply_learning_ladders_v264,apply_learning_ladders_v266,apply_learning_ladders_v267,apply_learning_ladders_v268,apply_learning_ladders_v269): fn(challenges,data._v6_item_id)
  groups=defaultdict(list)
  for q in challenges:
   if not q.get("ladder_reviewed"): continue
