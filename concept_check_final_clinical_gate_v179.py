@@ -23,6 +23,7 @@ from concept_check_task_alignment_v181 import apply_concept_check_task_alignment
 from concept_check_task_alignment_v182 import apply_concept_check_task_alignment_v182
 from concept_check_runtime_depth_v183 import apply_concept_check_task_alignment_v183
 from concept_check_depth_v184 import apply_concept_check_task_alignment_v184
+from concept_check_trimodality_depth_v184 import apply_bot_trimodality_depth_v184
 
 CLINICAL_STEM_RE = re.compile(r"\b(patient|child|infant|adult|man|woman|boy|girl|presents|returns|develops|postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b", re.I)
 
@@ -69,6 +70,7 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     reframed_v182 = _reassert_clinical_contract(checks, alignment_v182.get("repaired", []), unresolved, "post_alignment_clinical_frame_v182")
     alignment_v183 = apply_concept_check_task_alignment_v183(checks, deep_modules, v6_item_id)
     reframed_v183 = _reassert_clinical_contract(checks, alignment_v183.get("repaired", []), unresolved, "post_alignment_clinical_frame_v183")
+    v184_content_fix = apply_bot_trimodality_depth_v184()
     alignment_v184 = apply_concept_check_task_alignment_v184(checks, deep_modules, v6_item_id)
     reframed_v184 = _reassert_clinical_contract(checks, alignment_v184.get("repaired", []), unresolved, "post_alignment_clinical_frame_v184")
 
@@ -83,6 +85,7 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         "post_alignment_reframed_v182": reframed_v182,
         "task_alignment_v183": alignment_v183,
         "post_alignment_reframed_v183": reframed_v183,
+        "v184_content_fix": v184_content_fix,
         "task_alignment_v184": alignment_v184,
         "post_alignment_reframed_v184": reframed_v184,
     }
