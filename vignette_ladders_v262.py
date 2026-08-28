@@ -1,0 +1,191 @@
+"""v26.2 — Facial Plastics / Trauma deliberate ladder closure.
+
+Adds the seven remaining exact canonical topics with complete foundation ->
+application -> senior-decision ladders. Focuses on operative anatomy, airway/
+functional tradeoffs, complication recognition, and resident/chief decisions.
+"""
+DOMAIN = "Facial Plastics / Trauma"
+
+
+def _q(qid, topic, stage, stem, choices, answer, explanation, reasons, pearl,
+       curveball, focus="boards"):
+    return {
+        "id": qid, "domain": DOMAIN, "topic": topic, "learning_stage": stage,
+        "stem": stem, "choices": choices, "answer": answer,
+        "explanation": explanation, "why_wrong": reasons,
+        "board_pearl": pearl, "curveball": curveball,
+        "tier": "Curated learning ladder", "mode": "Vignette", "focus": focus,
+        "ladder_reviewed": True, "_coverage_reviewed_v211": True,
+    }
+
+
+VIGNETTES_V262 = [
+    _q("v262_fpt_otoplasty_fnd", "Otoplasty", "foundation",
+       "An adolescent has prominent ears from an underdeveloped antihelical fold with otherwise adequate conchal depth. Which anatomic correction most directly addresses the deformity?",
+       ["Create or strengthen the antihelical fold with controlled cartilage reshaping or mattress sutures", "Resect the entire conchal bowl", "Excise the lobule", "Shorten the external auditory canal"], 0,
+       "Prominent-ear analysis separates antihelical underfolding, conchal excess, lobular prominence, and asymmetry because each requires a different correction.",
+       ["Correct. The absent antihelical fold is the dominant deformity here.", "Conchal reduction targets true conchal hypertrophy and can overcorrect an ear whose concha is already appropriate.", "Lobular excision does not restore the missing antihelical fold.", "The canal is not the structural cause of typical auricular prominence."],
+       "Otoplasty starts with deformity analysis, not a single cookbook operation.",
+       "How does conchal hypertrophy change the operative plan compared with isolated antihelical underfolding?"),
+    _q("v262_fpt_otoplasty_app", "Otoplasty", "application",
+       "During Mustarde-type antihelical fold creation, which technical error most increases the risk of an unnatural sharp ridge or cartilage cut-through?",
+       ["Overtightening narrowly spaced sutures without broad cartilage purchase", "Using symmetric preoperative measurements", "Preserving posterior skin", "Checking the frontal and oblique views before closure"], 0,
+       "Mattress sutures should distribute force broadly and recreate a smooth antihelical contour. Excessive focal tension can produce sharp edges, suture extrusion, or cartilage injury.",
+       ["Correct. Focal high tension creates both contour and material complications.", "Measurement helps avoid asymmetry rather than causing ridging.", "Preserving viable skin protects coverage.", "Multiview reassessment is protective because small contour errors are easier to correct before closure."],
+       "The goal is a natural fold, not maximal pinning of the ear to the scalp.",
+       "What postoperative findings suggest hematoma or perichondrial compromise and require urgent evaluation?", "OR_prep"),
+    _q("v262_fpt_otoplasty_snr", "Otoplasty", "senior_decision",
+       "Hours after bilateral otoplasty, one ear becomes progressively painful, tense, and swollen beneath the dressing. What is the best next step?",
+       ["Urgently remove the dressing, evaluate for auricular hematoma, and evacuate/control bleeding if present", "Wait until the one-week visit", "Add oral narcotics without examining the ear", "Apply a tighter circumferential dressing"], 0,
+       "Postoperative auricular hematoma threatens skin and cartilage viability and can lead to infection or cauliflower deformity. Disproportionate pain and tense swelling require immediate inspection and source control.",
+       ["Correct. A hematoma is a time-sensitive complication, not a routine pain-management problem.", "Delay permits cartilage ischemia and organization of the collection.", "Analgesia can mask progression without treating the cause.", "Additional compression over an unrecognized hematoma may worsen ischemia."],
+       "After otoplasty, escalating unilateral pain under a dressing is a hematoma until proven otherwise.",
+       "How does perichondritis differ from an acute hematoma in timing and management priorities?", "senior_management"),
+
+    _q("v262_fpt_septalperf_fnd", "Septal Perforation", "foundation",
+       "A patient with prior septoplasty has crusting, epistaxis, and a whistling anterior septal defect. What is the best initial management principle?",
+       ["Identify etiology and optimize humidification, saline care, and mucosal health before considering closure", "Proceed directly to surgery without evaluating inflammatory or drug causes", "Aggressively debride healthy margins daily", "Assume every perforation requires a septal button"], 0,
+       "Septal perforation symptoms depend on size, location, airflow, and mucosal health. Conservative care and etiologic evaluation are foundational before reconstruction.",
+       ["Correct. Dryness and turbulence can improve substantially with medical optimization, and active causes must be addressed.", "Autoimmune disease, cocaine/vasoconstrictor injury, infection, or persistent trauma can undermine any repair.", "Repeated traumatic debridement enlarges epithelial injury.", "Buttons are an option for selected symptomatic patients, not a universal requirement."],
+       "Treat the nose that created the perforation before asking it to heal a repair.",
+       "Which historical clues should trigger evaluation for systemic inflammatory disease or intranasal drug injury?"),
+    _q("v262_fpt_septalperf_app", "Septal Perforation", "application",
+       "A healthy patient has a symptomatic moderate anterior septal perforation despite optimized medical care and desires definitive repair. Which operative principle best improves the chance of durable closure?",
+       ["Obtain well-vascularized bilateral mucosal coverage when feasible, minimize tension, and interpose a graft or scaffold between repaired layers", "Close only one friable mucosal edge under maximal tension", "Enlarge the defect to make closure easier", "Rely on exposed cartilage to remucosalize without support"], 0,
+       "Successful repair depends on vascularized mucosal advancement, low-tension closure, and separation of opposing suture lines with an interposition layer when possible.",
+       ["Correct. Vascularity and tension control are central to closure biology.", "A single tenuous layer under tension has a high risk of breakdown.", "Unnecessary enlargement sacrifices tissue needed for reconstruction.", "Exposed graft or cartilage without reliable mucosal coverage is prone to crusting and failure."],
+       "Perforation repair is a mucosal reconstruction problem more than a hole-plugging problem.",
+       "How do perforation size and anterior location change exposure, flap design, and expected success?", "OR_prep"),
+    _q("v262_fpt_septalperf_snr", "Septal Perforation", "senior_decision",
+       "A patient with an enlarging perforation, saddle deformity, chronic crusting, and active intranasal cocaine use requests immediate closure. What is the best senior decision?",
+       ["Defer elective closure, address ongoing destructive exposure and evaluate for additional inflammatory/infectious causes before reconstruction", "Repair immediately because a larger defect makes active injury irrelevant", "Place a rigid implant into poorly vascularized tissue", "Ignore the saddle deformity because perforation and support are unrelated"], 0,
+       "Active destructive disease makes closure predictably unreliable and may endanger grafts. Structural support and lining often need staged reassessment after the injurious process is controlled.",
+       ["Correct. Durable reconstruction requires disease control and a viable recipient bed.", "Persistent cocaine injury can cause progressive ischemic necrosis despite technically sound repair.", "Foreign material in compromised tissue increases extrusion/infection risk.", "Loss of septal support can directly contribute to saddle collapse and must be incorporated into reconstruction."],
+       "Know when not to operate: active destructive mucosal disease is a contraindication to elective perforation closure.",
+       "When would a septal button or continued observation be preferable to a high-risk surgical repair?", "senior_management"),
+
+    _q("v262_fpt_auricular_fnd", "Auricular Reconstruction", "foundation",
+       "After partial auricular loss, what are the key reconstructive determinants before choosing local tissue, cartilage grafting, or staged framework reconstruction?",
+       ["Defect size/location, skin and perichondrial viability, remaining cartilage support, and the need to preserve the helical contour and canal", "Hair color alone", "Patient age alone", "Whether the contralateral ear is pierced"], 0,
+       "Auricular reconstruction must restore a thin skin envelope over a stable three-dimensional framework while preserving landmarks and the external auditory canal.",
+       ["Correct. Coverage and framework requirements follow the actual defect.", "Hair color does not determine structural needs.", "Age matters in selected staged reconstructions but cannot replace defect analysis.", "Piercing status is not a primary reconstructive determinant."],
+       "The ear is a framework problem covered by very thin soft tissue.",
+       "Which auricular subunits tolerate wedge closure, and when does wedge excision distort ear height or contour?"),
+    _q("v262_fpt_auricular_app", "Auricular Reconstruction", "application",
+       "A full-thickness superior helical defect is too large for tension-free wedge closure but surrounding skin is viable. What principle should guide reconstruction?",
+       ["Preserve ear size and contour using appropriately designed local flap/cartilage support rather than forcing a large wedge closure", "Remove additional normal helix until primary closure becomes possible", "Close only the anterior skin and leave cartilage exposed", "Accept marked vertical shortening because function is unaffected"], 0,
+       "Larger helical defects often require local advancement/interpolation strategies with structural support. Excessive wedge closure can cup or shorten the auricle.",
+       ["Correct. Reconstruction should preserve the three-dimensional rim and overall ear dimensions.", "Sacrificing normal tissue converts a reconstructable defect into an avoidable deformity.", "Exposed cartilage is vulnerable to desiccation, infection, and necrosis.", "Major shortening creates obvious asymmetry and can distort the superior pole."],
+       "Do not solve a large auricular defect by creating a smaller ear unless that tradeoff is deliberate and acceptable.",
+       "When is postauricular tissue particularly useful for helical or conchal reconstruction?", "OR_prep"),
+    _q("v262_fpt_auricular_snr", "Auricular Reconstruction", "senior_decision",
+       "After complex auricular reconstruction, the flap becomes dusky with brisk dark bleeding and increasing edema. What is the best senior response?",
+       ["Treat as threatened venous outflow, urgently release external compression or hematoma and evaluate the pedicle before irreversible congestion develops", "Tighten the bolster immediately", "Wait several days for spontaneous necrosis to declare itself", "Apply topical vasoconstrictor to the entire flap"], 0,
+       "Venous congestion can rapidly compromise thin auricular flaps. Mechanical causes such as tight dressings, hematoma, or pedicle kinking should be corrected promptly.",
+       ["Correct. Early mechanical rescue can salvage congested tissue.", "More pressure can worsen venous obstruction.", "Waiting forfeits the window for flap salvage.", "Diffuse vasoconstriction reduces perfusion and does not correct venous obstruction."],
+       "A purple swollen auricular flap is a circulation problem until proven otherwise.",
+       "How do venous congestion and arterial insufficiency differ on exam and in immediate salvage priorities?", "senior_management"),
+
+    _q("v262_fpt_alarstenosis_fnd", "Alar Retraction / Nasal Vestibular Stenosis", "foundation",
+       "A patient develops inspiratory collapse and notching of the alar rim after prior rhinoplasty. Which structural problem is most likely?",
+       ["Loss or malposition of lateral-wall/alar support with scar contracture causing external valve compromise", "Isolated adenoid hypertrophy", "Middle-ear effusion", "Hypertrophic lingual tonsils"], 0,
+       "Alar retraction and vestibular stenosis are structural airway problems involving rim position, lateral crural support, lining, and scar contracture.",
+       ["Correct. External valve competence depends on both soft-tissue lining and cartilaginous support.", "Adenoids do not explain focal postoperative alar collapse.", "Middle-ear disease does not cause nasal valve stenosis.", "Lingual tonsils affect the pharyngeal airway, not the nasal vestibule."],
+       "A narrowed vestibule may be a lining problem, a framework problem, or both.",
+       "Which bedside maneuvers help distinguish internal from external nasal valve collapse?"),
+    _q("v262_fpt_alarstenosis_app", "Alar Retraction / Nasal Vestibular Stenosis", "application",
+       "A revision rhinoplasty patient has scarred vestibular lining, alar rim retraction, and dynamic external valve collapse. Which reconstructive principle is most appropriate?",
+       ["Release scar contracture, restore lining as needed, and add targeted structural support such as alar rim or lateral-crural grafting", "Perform further cephalic trim of the lateral crus", "Remove remaining vestibular lining", "Use septoplasty alone despite isolated external valve collapse"], 0,
+       "Durable correction requires treatment of each deficient layer. Scar release without support can recontract, while support grafting without adequate lining may leave persistent stenosis.",
+       ["Correct. Layer-specific reconstruction addresses the actual mechanism of obstruction.", "Additional cartilage removal can worsen alar weakness and retraction.", "Lining loss increases scar contracture.", "Septoplasty does not correct an isolated external valve/lateral-wall failure."],
+       "Revision nasal airway surgery often means adding back what prior surgery removed: lining, support, or both.",
+       "When are composite grafts useful around the alar rim and vestibule, and what limits their size?", "OR_prep"),
+    _q("v262_fpt_alarstenosis_snr", "Alar Retraction / Nasal Vestibular Stenosis", "senior_decision",
+       "A patient with severe circumferential vestibular stenosis has already failed one scar-release procedure because the airway rapidly recontracted. What is the best next principle?",
+       ["Plan durable lining and structural reconstruction plus postoperative stenting/splinting when appropriate rather than repeating scar release alone", "Repeat the same release without changing the reconstruction", "Remove more alar cartilage to enlarge the opening", "Avoid postoperative support because any stent guarantees necrosis"], 0,
+       "Recurrent stenosis reflects wound contraction against inadequate lining/support. Revision strategy must change the biology and mechanics of healing, often including prolonged splinting when safely tolerated.",
+       ["Correct. Repeating the same incomplete operation predictably repeats the same failure mode.", "Scar release alone leaves the same contractile forces unopposed.", "Further cartilage removal destabilizes the valve.", "Appropriately designed stents can help maintain a reconstructed lumen; they require monitoring rather than blanket avoidance."],
+       "When a stenosis recurs, identify what was missing from the first reconstruction before operating again.",
+       "What skin or composite lining options can be used when native vestibular mucosa is insufficient?", "senior_management"),
+
+    _q("v262_fpt_analysis_fnd", "Aesthetic Facial Analysis", "foundation",
+       "Before elective facial aesthetic surgery, which assessment is most important for a reproducible plan?",
+       ["Standardized frontal, oblique, profile, and dynamic analysis that separates proportions, asymmetries, soft-tissue quality, and patient-specific goals", "Choose a procedure from age alone", "Correct every measured asymmetry whether or not the patient perceives it", "Use a single profile photograph without facial animation"], 0,
+       "Aesthetic planning integrates standardized photography, facial thirds/fifths and profile relationships, skin/soft-tissue quality, dynamic function, and the patient's priorities.",
+       ["Correct. A structured analysis prevents procedure-first planning.", "Chronologic age does not define anatomy or goals.", "Normal faces are asymmetric; treatment should target meaningful, shared priorities rather than every measurement.", "Single-view analysis misses three-dimensional and dynamic problems."],
+       "Measure first, but operate on the patient's problem—not on the ruler.",
+       "Which profile relationships are useful when evaluating nasal projection, chin projection, and cervicomental balance?"),
+    _q("v262_fpt_analysis_app", "Aesthetic Facial Analysis", "application",
+       "A patient requests a smaller nose, but standardized profile analysis shows substantial microgenia driving the perceived nasal prominence. What is the best counseling approach?",
+       ["Explain how nasal and chin projection interact and discuss isolated versus combined correction before committing to aggressive nasal reduction", "Perform maximal dorsal reduction because the nose is the only structure that matters", "Ignore the chin because it is outside rhinoplasty", "Promise that one operation will create perfect facial symmetry"], 0,
+       "Facial aesthetics are relational. Treating one feature in isolation can overcorrect it when an adjacent deficiency is driving the perceived imbalance.",
+       ["Correct. Shared analysis allows proportionate planning and informed tradeoffs.", "Aggressive reduction can create an overresected nose when facial balance is the true issue.", "Chin projection materially affects profile interpretation.", "Perfect symmetry is unrealistic and should not be promised."],
+       "Aesthetic surgery is often about relationships between features, not isolated measurements.",
+       "How can standardized morphing help counseling without becoming a guarantee of outcome?", "OR_prep"),
+    _q("v262_fpt_analysis_snr", "Aesthetic Facial Analysis", "senior_decision",
+       "A patient with minimal objective deformity requests serial revisions, describes catastrophic distress over tiny asymmetries, and rejects realistic limitations. What is the best senior decision?",
+       ["Pause elective surgery, reassess expectations and psychosocial risk, and decline or defer an operation when goals are not safely achievable", "Operate because dissatisfaction proves the deformity is severe", "Promise exact photographic replication", "Add multiple procedures to demonstrate commitment"], 0,
+       "Safe aesthetic practice includes patient selection. Disproportionate preoccupation, unstable goals, and inability to accept normal limitations predict poor outcomes even after technically sound surgery.",
+       ["Correct. The surgeon must protect the patient from an elective procedure unlikely to meet the stated goals.", "Subjective distress alone does not establish a surgically correctable deformity.", "Exact replication cannot be guaranteed biologically or technically.", "More procedures compound risk when the underlying expectation problem is unresolved."],
+       "The ability to say no is a core aesthetic-surgery skill.",
+       "What expectation and behavioral features should prompt screening for body dysmorphic disorder or other psychosocial contraindications?", "senior_management"),
+
+    _q("v262_fpt_aging_fnd", "Aging Face / Injectables / Resurfacing", "foundation",
+       "A patient asks what causes the aging-face appearance. Which answer is most complete?",
+       ["It reflects combined skin change, fat-compartment redistribution/atrophy, ligamentous laxity, muscle activity, and skeletal remodeling", "Skin wrinkles alone", "Bone loss alone", "Gravity alone"], 0,
+       "Facial aging is multilayered. Treatment choice should match the dominant layer rather than applying one modality to every complaint.",
+       ["Correct. Aging affects surface, volume, support, and dynamics simultaneously.", "Skin-only treatment cannot correct major ptosis or skeletal/volume change.", "Bone remodeling matters but is only one layer.", "Gravity contributes to descent but does not explain pigment, texture, volume loss, or dynamic rhytids."],
+       "Diagnose the aging layer before choosing toxin, filler, resurfacing, or surgery.",
+       "Which problems are best treated by neuromodulation versus volumization versus resurfacing?"),
+    _q("v262_fpt_aging_app", "Aging Face / Injectables / Resurfacing", "application",
+       "Immediately after filler injection near the glabella, a patient develops severe pain, blanching, and livedoid discoloration. What is the best response?",
+       ["Treat as vascular compromise immediately, stop injection, assess vision/neurologic symptoms, and initiate product-appropriate emergency management", "Massage vigorously and send the patient home", "Reassure that blanching is expected for several days", "Add more filler to camouflage the discoloration"], 0,
+       "Pain and blanching after filler can signal arterial occlusion. Rapid recognition and immediate protocol-based management are essential; any visual symptoms require emergency ophthalmologic/stroke-level escalation because retinal ischemia is time critical.",
+       ["Correct. This is a complication-rescue scenario, not a cosmetic touch-up.", "Unstructured massage and discharge can delay reperfusion treatment and specialty escalation.", "Persistent blanching with severe pain is not routine postinjection change.", "Additional filler can worsen vascular compromise."],
+       "Know filler danger zones and have a vascular-occlusion rescue plan before the syringe touches the patient.",
+       "How does management differ for hyaluronic-acid filler occlusion versus non-HA products, and what symptoms mandate immediate emergency transfer?", "OR_prep"),
+    _q("v262_fpt_aging_snr", "Aging Face / Injectables / Resurfacing", "senior_decision",
+       "A patient with deep rhytids and significant lower-face laxity requests laser resurfacing alone to avoid surgery. What is the best senior counseling?",
+       ["Explain that resurfacing improves epidermal/dermal texture and fine rhytids but cannot reliably correct major jowling or deep structural laxity; match treatment to anatomy and goals", "Promise resurfacing will reproduce a facelift", "Use progressively deeper injury until the jowls tighten", "Ignore skin type and pigment history"], 0,
+       "Resurfacing treats surface quality, while major descent and laxity often require structural lifting or acceptance of a limited result. Depth and modality also must account for pigment risk, healing capacity, and prior treatments.",
+       ["Correct. Modality selection should follow the anatomic layer responsible for the complaint.", "A resurfacing procedure is not a substitute for structural repositioning when laxity dominates.", "Excess thermal or chemical injury increases scarring and pigment complications without reliably correcting deep ptosis.", "Skin type and dyschromia history materially affect resurfacing risk and counseling."],
+       "Do not escalate treatment depth to solve a problem that lives in a different tissue layer.",
+       "Which patient factors increase risk for postinflammatory hyperpigmentation or delayed healing after resurfacing?", "senior_management"),
+
+    _q("v262_fpt_hair_fnd", "Hair Restoration Fundamentals", "foundation",
+       "A man with patterned frontotemporal recession asks why donor hair from the occipital scalp is used for transplantation. What is the key principle?",
+       ["Follicles from the permanent donor zone generally retain their relative androgen resistance after transplantation", "Transplanted follicles lose all genetic characteristics", "Frontal scalp follicles are more resistant than occipital follicles", "Hair direction is irrelevant after transplantation"], 0,
+       "Modern hair transplantation relies on donor dominance: appropriately selected occipital/parietal follicles preserve much of their native growth behavior in the recipient site.",
+       ["Correct. Donor-zone biology is fundamental to durable transplantation.", "Follicles retain biologic characteristics rather than becoming identical to recipient scalp follicles.", "The frontal scalp is usually the more androgen-sensitive region in patterned loss.", "Direction, angle, and curl strongly affect a natural result."],
+       "A durable transplant borrows from a finite permanent donor supply.",
+       "How do follicular-unit extraction and strip harvest differ in donor scarring and graft acquisition?"),
+    _q("v262_fpt_hair_app", "Hair Restoration Fundamentals", "application",
+       "A young patient with rapidly progressive androgenetic alopecia requests a very low dense juvenile hairline. What is the best planning principle?",
+       ["Design a conservative age-appropriate hairline and preserve donor supply while addressing ongoing native-hair loss medically when appropriate", "Use nearly all donor follicles in the first session", "Lower the hairline as much as technically possible because future loss is irrelevant", "Ignore family pattern and miniaturization outside the planned graft zone"], 0,
+       "Hair restoration is a lifetime donor-management problem. A low dense hairline can look unnatural later if surrounding native hair continues to miniaturize and the finite donor reserve has been exhausted.",
+       ["Correct. Long-term pattern prediction and donor conservation are central to planning.", "Overharvesting can create visible donor depletion and leave no reserve for future loss.", "Future progression is highly relevant in younger patients.", "Family history and miniaturization help estimate the likely eventual pattern."],
+       "Plan the patient's last transplant when designing the first one.",
+       "How does stabilization with medical therapy affect timing and graft-number decisions?", "OR_prep"),
+    _q("v262_fpt_hair_snr", "Hair Restoration Fundamentals", "senior_decision",
+       "A patient with extensive Norwood-pattern loss has a visibly thinned donor zone after multiple prior FUE sessions and requests another very dense transplant. What is the best senior decision?",
+       ["Quantify remaining donor capacity, counsel that coverage and density goals may be limited, and avoid further overharvesting that would create donor-site deformity", "Harvest aggressively from the already depleted permanent zone", "Promise native density across the entire bald scalp", "Ignore donor miniaturization because only recipient density matters"], 0,
+       "The donor supply is finite. Revision planning must balance cosmetic recipient benefit against irreversible donor depletion and may require reduced goals, alternative styling, or nontransplant options.",
+       ["Correct. Ethical planning protects both recipient appearance and donor integrity.", "Further aggressive harvesting can create moth-eaten donor alopecia and still fail to achieve requested coverage.", "Native density across extensive loss is usually impossible with limited donor supply.", "Donor miniaturization directly reduces the number and durability of usable grafts."],
+       "Hair restoration is constrained by arithmetic: finite donor follicles cannot recreate infinite recipient density.",
+       "What findings make body or beard hair a possible adjunct, and why should it not be treated as equivalent to scalp donor hair?", "senior_management"),
+]
+
+
+def apply_learning_ladders_v262(challenges, concept_id_fn):
+    """Append only missing v26.2 cases and attach exact canonical concept IDs."""
+    existing = {str(q.get("id")) for q in challenges}
+    added = 0
+    for source in VIGNETTES_V262:
+        if source["id"] in existing:
+            continue
+        q = dict(source)
+        q["concept_id"] = concept_id_fn(DOMAIN, q["topic"])
+        challenges.append(q)
+        existing.add(q["id"])
+        added += 1
+    return added
