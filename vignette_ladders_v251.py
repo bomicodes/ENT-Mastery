@@ -54,7 +54,7 @@ _q("v251_lar_micro_snr","Microlaryngoscopy","senior_decision",
 "A chief knows when exposure has made the planned operation unsafe.","What preoperative dental, cervical-spine, mandibular, and prior-radiation features should make difficult suspension more likely?","senior_management"),
 
 _q("v251_lar_inj_fnd","Injection Laryngoplasty","foundation",
-"What problem does injection laryngoplasty primarily treat?",
+"A patient with unilateral vocal-fold paresis has a breathy voice, weak cough, and incomplete glottic closure on laryngoscopy. Which functional problem is injection laryngoplasty designed to correct?",
 ["Glottic insufficiency by adding bulk and medializing an underclosed vocal fold","Bilateral fixed midline vocal folds by widening the posterior glottis","Cricopharyngeal hypertonicity by cutting the sphincter","Subglottic stenosis by expanding the cricoid framework"],0,
 "Injection augmentation improves glottic closure in conditions such as unilateral paresis/paralysis or selected atrophy by adding volume lateral to the vibratory edge.",
 ["Correct. The goal is improved glottic competence for voice, cough and sometimes swallowing.","Posterior airway widening is the opposite mechanical goal.","Cricopharyngeal dysfunction is an upper-esophageal-sphincter problem.","Subglottic stenosis is not treated by vocal-fold augmentation."],
