@@ -15,6 +15,7 @@ on:
       - 'audit_hn_ladder_complete_v231.py'
       - 'audit_tps_ladder_complete_v240.py'
       - 'audit_laryngology_ladder_complete_v256.py'
+      - 'audit_sleep_surgery_progress_v266.py'
       - 'audit_rhinology_v209.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_deep_curriculum_v159.py'
@@ -139,6 +140,8 @@ jobs:
         run: python audit_tps_ladder_complete_v240.py
       - name: v25.6 full Laryngology Voice Swallowing ladder hard gate
         run: python audit_laryngology_ladder_complete_v256.py
+      - name: v26.7 full Sleep Surgery ladder hard gate
+        run: python audit_sleep_surgery_progress_v266.py
       - name: v20.9 Rhinology answer-pattern regression gate
         run: python audit_rhinology_v209.py
       - name: v21.1 ladder answer-balance regression gate
@@ -240,6 +243,7 @@ jobs:
 # Boot health and the runtime ladder contract run first so content-integrity
 # failures are not masked by unrelated subsystem gates. Completed Otology,
 # Rhinology, Head & Neck Oncology, Thyroid/Parathyroid/Salivary, Pediatric
-# Otolaryngology, and Laryngology / Voice / Swallowing domains remain hard-gated
-# before unrelated OR subsystems. All OR, route, coverage, Deep Curriculum,
+# Otolaryngology, Laryngology / Voice / Swallowing, Facial Plastics / Trauma,
+# and Sleep Surgery domains remain protected by domain and/or ladder quality
+# gates before unrelated OR subsystems. All OR, route, coverage, Deep Curriculum,
 # Concept Check, and reviewed ladder quality gates remain in force afterward.
