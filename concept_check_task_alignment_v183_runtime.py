@@ -2,9 +2,14 @@
 
 The v17.8 contract intentionally permits canonical_topic to be absent on a
 Concept Check row when the production resolver can map it exactly to a live
-Deep Curriculum module and the persisted concept_id agrees.  This adapter uses
+Deep Curriculum module and the persisted concept_id agrees. This adapter uses
 that same resolver instead of turning an optional denormalized field into a new
 source of truth.
+
+The all-domain oral-board contract also requires an explicit question mark.  A
+single v18.3 stem was written as an imperative oral-board prompt despite being
+fully clinical; normalize only that punctuation contract at application time
+rather than weakening the existing all-domain gate.
 """
 
 from concept_check_board_repair_v177 import _find_module
@@ -38,8 +43,10 @@ def apply_concept_check_task_alignment_v183(checks, deep_modules, v6_item_id):
 
         # Preserve v17.8 review/source metadata and canonical linkage. Replace
         # only the deliberately reviewed pedagogic fields.
+        q["prompt"] = str(payload["prompt"]).strip()
+        if "?" not in q["prompt"]:
+            q["prompt"] = q["prompt"].rstrip(".") + "?"
         for key in (
-            "prompt",
             "answer_text",
             "explanation",
             "board_pearl",
