@@ -44,6 +44,9 @@ try:
         'forehead_flap_management_v2319','melolabial_flap_management_v2319',
         'otoplasty_management_v2319','septorhinoplasty_management_v2319',
         'facial_skin_graft_management_v2319',
+        'button_battery_management_v2320','esophageal_fb_management_v2320',
+        'deep_neck_abscess_management_v2320','pta_management_v2320',
+        'rigid_tracheobronchoscopy_management_v2320','transnasal_esophagoscopy_management_v2320',
     )
     print('OR_FULL_COVERAGE_BEGIN')
     for slug, op in sorted(reg.items()):
