@@ -1,0 +1,32 @@
+name: OR v23.19 facial plastics management
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'or_facial_plastics_management_v2319.py'
+      - 'or_facial_trauma_management_v2318.py'
+      - 'audit_or_facial_plastics_management_v2319.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/or-v2319-facial-plastics-management.yml'
+  pull_request:
+    paths:
+      - 'or_facial_plastics_management_v2319.py'
+      - 'or_facial_trauma_management_v2318.py'
+      - 'audit_or_facial_plastics_management_v2319.py'
+      - 'runtime_entry.py'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: OR v23.19 runtime and route gate
+        run: python audit_or_facial_plastics_management_v2319.py
