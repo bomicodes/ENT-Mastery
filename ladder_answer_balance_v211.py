@@ -1,7 +1,7 @@
 """v21.1+ — deterministic answer-position balancing for newly curated ladders.
 
 Completed domains are chained immediately before balancing. v26.8 completes
-Sleep Surgery; v26.9-v27.2 advance exact-canonical General ENT / Emergencies review.
+Sleep Surgery; v26.9-v27.3 advance exact-canonical General ENT / Emergencies review.
 """
 from collections import defaultdict
 from vignette_ladders_v231 import apply_learning_ladders_v231
@@ -46,8 +46,9 @@ from vignette_ladders_v270 import apply_learning_ladders_v270
 from vignette_ladders_v270_fix import apply_general_ent_v270_quality_fix
 from vignette_ladders_v271 import apply_learning_ladders_v271
 from vignette_ladders_v272 import apply_learning_ladders_v272
+from vignette_ladders_v273 import apply_learning_ladders_v273
 from laryngology_foundation_alignment_v252 import apply_laryngology_foundation_alignment_v252
-TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_","v267_","v268_","v269_","v270_","v271_","v272_")
+TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_","v267_","v268_","v269_","v270_","v271_","v272_","v273_")
 def _prefix(qid):
  text=str(qid or "")
  for prefix in TARGET_PREFIXES:
@@ -77,6 +78,7 @@ def apply_ladder_answer_balance_v211(challenges):
  apply_general_ent_v270_quality_fix(challenges)
  apply_learning_ladders_v271(challenges,data._v6_item_id)
  apply_learning_ladders_v272(challenges,data._v6_item_id)
+ apply_learning_ladders_v273(challenges,data._v6_item_id)
  groups=defaultdict(list)
  for q in challenges:
   if not q.get("ladder_reviewed"): continue
