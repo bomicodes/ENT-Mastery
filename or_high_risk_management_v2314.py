@@ -4,8 +4,11 @@ Closes four high-yield generic-only perioperative gaps identified by the full li
 OR registry audit: TORS, surgical tracheostomy, endoscopic CSF leak repair with
 nasoseptal-flap reconstruction, and vestibular-schwannoma approach planning.
 Existing procedure-specific operative sequences, anatomy, and danger structures
-remain authoritative and are not replaced.
+remain authoritative and are not replaced. Later reviewed rhinology management is
+chained here to keep the runtime mutation path atomic.
 """
+
+from or_rhinology_management_v2315 import apply_or_rhinology_management_v2315
 
 TARGETS = [
     {
@@ -98,4 +101,5 @@ def apply_or_high_risk_management_v2314(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2315 = apply_or_rhinology_management_v2315(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2315": v2315}
