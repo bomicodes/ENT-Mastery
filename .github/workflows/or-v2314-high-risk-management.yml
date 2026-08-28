@@ -1,0 +1,30 @@
+name: OR v23.14 high-risk management
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'or_high_risk_management_v2314.py'
+      - 'or_parathyroid_management_v2313.py'
+      - 'audit_or_high_risk_management_v2314.py'
+      - 'runtime_entry.py'
+      - 'data.py'
+      - 'app.py'
+      - 'templates/case_tomorrow.html'
+      - '.github/workflows/or-v2314-high-risk-management.yml'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: OR v23.14 runtime and route gate
+        run: python audit_or_high_risk_management_v2314.py
