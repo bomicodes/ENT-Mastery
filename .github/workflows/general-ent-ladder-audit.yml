@@ -1,0 +1,31 @@
+name: General ENT ladder audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'vignette_ladders_v269.py'
+      - 'ladder_answer_balance_v211.py'
+      - 'audit_ladder_answer_balance_v211.py'
+      - 'audit_general_ent_progress_v269.py'
+      - 'data.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/general-ent-ladder-audit.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Runtime learning-ladder hard gate
+        run: python audit_learning_ladders_runtime_v204.py
+      - name: General ENT pass 1 hard gate
+        run: python audit_general_ent_progress_v269.py
+      - name: Answer-balance regression gate
+        run: python audit_ladder_answer_balance_v211.py
