@@ -34,6 +34,9 @@ try:
         'tracheal_resection_management_v2316','airway_dilation_management_v2316',
         'cordotomy_management_v2316','microflap_management_v2316','rrp_management_v2316',
         'laryngeal_fracture_management_v2316','tlm_laryngeal_cancer_management_v2316',
+        'pediatric_dlb_management_v2317','pediatric_airway_fb_management_v2317',
+        'branchial_management_v2317','sistrunk_management_v2317',
+        'palatoplasty_management_v2317','tympanostomy_tube_management_v2317',
     )
     print('OR_FULL_COVERAGE_BEGIN')
     for slug, op in sorted(reg.items()):
