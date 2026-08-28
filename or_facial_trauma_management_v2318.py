@@ -2,8 +2,10 @@
 
 Adds procedure-selection logic and postoperative rescue to six facial-trauma modules
 that remained generic-only. Existing fracture anatomy and operative choreography are
-left intact.
+left intact. The v23.19 facial-plastics review is chained through this tail.
 """
+
+from or_facial_plastics_management_v2319 import apply_or_facial_plastics_management_v2319
 
 TARGETS = [
     {
@@ -110,4 +112,5 @@ def apply_or_facial_trauma_management_v2318(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2319 = apply_or_facial_plastics_management_v2319(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2319": v2319}
