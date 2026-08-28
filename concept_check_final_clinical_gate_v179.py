@@ -8,10 +8,10 @@ This pass uses word-boundary clinical markers identical in spirit to the hard
 CI audit and converts any remaining nonclinical item to the domain-specific
 oral-board format. It is deliberately small and idempotent.
 
-Post-completion depth hardening applies the focused v18.0 and v18.1 manual
-answer/task-alignment repairs after generic normalization so they cannot be
-silently overwritten by the fallback converter. The clinical-stem contract is
-then rechecked after every manual cohort; a hand-curated depth repair therefore
+Post-completion depth hardening applies the focused v18.0, v18.1, and v18.2
+manual answer/task-alignment repairs after generic normalization so they cannot
+be silently overwritten by the fallback converter. The clinical-stem contract
+is then rechecked after every manual cohort; a hand-curated depth repair therefore
 cannot reintroduce a didactic/nonclinical stem after normalization has run.
 """
 
@@ -21,6 +21,7 @@ from concept_check_board_repair_v177 import _find_module
 from concept_check_domain_curation_v178 import _convert_to_domain_oral_board
 from concept_check_task_alignment_v180 import apply_concept_check_task_alignment_v180
 from concept_check_task_alignment_v181 import apply_concept_check_task_alignment_v181
+from concept_check_task_alignment_v182 import apply_concept_check_task_alignment_v182
 
 
 CLINICAL_STEM_RE = re.compile(
@@ -83,6 +84,14 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         "post_alignment_clinical_frame_v181_cohort2",
     )
 
+    alignment_v182 = apply_concept_check_task_alignment_v182(checks)
+    reframed_v182 = _reassert_clinical_contract(
+        checks,
+        alignment_v182.get("repaired", []),
+        unresolved,
+        "post_alignment_clinical_frame_v182",
+    )
+
     return {
         "converted": converted,
         "unresolved": unresolved,
@@ -90,4 +99,6 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         "post_alignment_reframed_v181": reframed_v180,
         "task_alignment_v181": alignment_v181,
         "post_alignment_reframed_v181_cohort2": reframed_v181,
+        "task_alignment_v182": alignment_v182,
+        "post_alignment_reframed_v182": reframed_v182,
     }
