@@ -4,7 +4,10 @@ Adds resident-level selection, perioperative planning and postoperative rescue t
 pediatric procedures that remained generic-only after the live OR coverage audit.
 The two DLB registry entries are reviewed deliberately because they serve different
 linked curricular contexts but share the same airway-endoscopy safety principles.
+The v23.18 facial-trauma review is chained through this tail.
 """
+
+from or_facial_trauma_management_v2318 import apply_or_facial_trauma_management_v2318
 
 DLB_SETUP = [
     "Before pediatric direct laryngoscopy/bronchoscopy, define the question the endoscopy must answer—dynamic obstruction, stenosis sizing, recurrent croup/stridor, aspiration/foreign body, tracheostomy planning, or surveillance after reconstruction—because this determines whether spontaneous ventilation, controlled ventilation or a secured airway best preserves the physiology being examined. Review prior airway grade, difficult-intubation history, current respiratory infection, oxygen requirement and cardiopulmonary comorbidity with anesthesia before induction.",
@@ -130,4 +133,5 @@ def apply_or_pediatric_core_management_v2317(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
+    v2318 = apply_or_facial_trauma_management_v2318(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2318": v2318}
