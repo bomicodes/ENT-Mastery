@@ -1,13 +1,15 @@
 """v18.3 — deterministic post-completion Concept Check depth backlog audit.
 
-All nine canonical learning-ladder domains are hard-gated complete.  The next safe
+All nine canonical learning-ladder domains are hard-gated complete. The next safe
 unit of work is therefore not a guessed topic alias: it is the weakest reviewed
-Concept Check attached to a live canonical Deep Curriculum ID.
+Concept Check attached to a live canonical Deep Curriculum ID that has not
+already received a v18.0-v18.3 depth pass on another question.
 
-This audit is intentionally read-only.  It:
+This audit is intentionally read-only. It:
 - rebuilds the canonical ID inventory from DEEP_MODULES_V6 + _v6_item_id;
 - rejects duplicate Concept Check IDs and reviewed canonical-link orphans;
-- excludes the already hand-deepened v18.0-v18.3 cohorts;
+- excludes every live canonical concept already hand-deepened in v18.0-v18.3,
+  not merely the individual question carrying the marker;
 - considers only reviewed free-response reveals whose answers remain <75 words;
 - ranks candidates deterministically by resident/chief clinical priority, then
   answer depth, prompt depth, canonical ID, and question ID;
@@ -34,7 +36,7 @@ DEEPENED_MARKERS = (
     "task_alignment_v183",
 )
 
-# Stable clinical-priority terms.  They score the exact live canonical topic and
+# Stable clinical-priority terms. They score the exact live canonical topic and
 # prompt; they do not resolve aliases or substitute for concept_id linkage.
 PRIORITY_GROUPS = (
     (5, ("airway", "hemorrhage", "bleed", "hematoma", "carotid", "epistaxis", "foreign body", "deep neck", "abscess")),
@@ -94,17 +96,15 @@ def main():
     if duplicate_canonical_ids:
         failures.extend(f"duplicate_canonical_id:{cid}" for cid in sorted(set(duplicate_canonical_ids)))
 
-    candidates = []
-    reviewed_free_response = 0
-    excluded_deepened = 0
-
+    # Resolve reviewed questions once with the production resolver. This both
+    # validates exact canonical linkage and lets us exclude an already-deepened
+    # concept even when another question under that concept has no marker.
+    resolved = []
+    deepened_concept_ids = set()
     for q in checks:
         qid = str(q.get("id") or "")
         if not q.get("reviewed_all_domains_v178"):
             continue
-
-        # Resolve with the production canonical resolver first, then insist that
-        # persisted concept_id agrees with the exact live canonical target.
         module = _find_module(q, data.DEEP_MODULES_V6, data._v6_item_id)
         if not module:
             failures.append(f"reviewed_orphan:{qid}:no_canonical_module")
@@ -119,20 +119,32 @@ def main():
         if expected_cid not in canonical:
             failures.append(f"reviewed_orphan:{qid}:expected_id_not_live:{expected_cid}")
             continue
+        resolved.append((q, module, expected_cid))
+        if any(q.get(marker) for marker in DEEPENED_MARKERS):
+            deepened_concept_ids.add(expected_cid)
 
+    candidates = []
+    reviewed_free_response = 0
+    excluded_deepened_concept_questions = 0
+
+    for q, module, expected_cid in resolved:
         if q.get("choices"):
             continue
         answer = _answer(q)
         if not answer:
             continue
         reviewed_free_response += 1
-        if any(q.get(marker) for marker in DEEPENED_MARKERS):
-            excluded_deepened += 1
+        if expected_cid in deepened_concept_ids:
+            excluded_deepened_concept_questions += 1
             continue
+
         answer_words = _words(answer)
         if answer_words >= 75:
             continue
 
+        qid = str(q.get("id") or "")
+        domain = str(q.get("domain") or "")
+        topic = str(module.get("topic") or "")
         prompt = _prompt(q)
         priority_score, priority_hits = _priority(topic, prompt)
         canonical_module = canonical[expected_cid]["module"]
@@ -172,9 +184,10 @@ def main():
         "canonical_count": len(canonical),
         "concept_check_count": len(checks),
         "reviewed_free_response_count": reviewed_free_response,
-        "excluded_v180_v183_count": excluded_deepened,
+        "deepened_v180_v183_concept_count": len(deepened_concept_ids),
+        "excluded_questions_on_deepened_concepts": excluded_deepened_concept_questions,
         "candidate_count": len(candidates),
-        "selection_contract": "exact live canonical concept_id; priority desc; answer words asc; prompt words asc; concept_id; question id",
+        "selection_contract": "exact live canonical concept_id; exclude concepts already deepened in v18.0-v18.3; priority desc; answer words asc; prompt words asc; concept_id; question id",
         "failures": failures,
         "candidates": candidates,
     }
@@ -184,7 +197,8 @@ def main():
     print(f"V183_CANONICAL|{len(canonical)}")
     print(f"V183_CONCEPT_CHECKS|{len(checks)}")
     print(f"V183_REVIEWED_FREE_RESPONSE|{reviewed_free_response}")
-    print(f"V183_EXCLUDED_ALREADY_DEEPENED|{excluded_deepened}")
+    print(f"V183_DEEPENED_CONCEPTS|{len(deepened_concept_ids)}")
+    print(f"V183_EXCLUDED_QUESTIONS_ON_DEEPENED_CONCEPTS|{excluded_deepened_concept_questions}")
     print(f"V183_CANDIDATES_UNDER_75_WORDS|{len(candidates)}")
     for row in candidates[:12]:
         print(
