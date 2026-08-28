@@ -6,8 +6,8 @@ lacked deliberate-review metadata; only structurally sound reusable cases are
 marked reviewed. v23.3-v23.9 complete deliberate Thyroid/Parathyroid/Salivary
 review, v24.0 aligns final TPS aliases, v24.1-v24.8 complete deliberate Pediatric
 review, v24.9/v25.1-v25.6 complete Laryngology / Voice / Swallowing closure,
-v25.7-v26.2 complete deliberate Facial Plastics / Trauma review, and v26.3-v26.6
-advance canonical Sleep Surgery review.
+v25.7-v26.2 complete deliberate Facial Plastics / Trauma review, and v26.3-v26.7
+complete canonical Sleep Surgery review.
 """
 from collections import defaultdict
 from vignette_ladders_v231 import apply_learning_ladders_v231
@@ -45,9 +45,10 @@ from vignette_ladders_v262 import apply_learning_ladders_v262
 from vignette_ladders_v263 import apply_learning_ladders_v263
 from vignette_ladders_v264 import apply_learning_ladders_v264
 from vignette_ladders_v266 import apply_learning_ladders_v266
+from vignette_ladders_v267 import apply_learning_ladders_v267
 from laryngology_foundation_alignment_v252 import apply_laryngology_foundation_alignment_v252
 
-TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_")
+TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_","v267_")
 
 def _prefix(qid):
     text=str(qid or "")
@@ -115,6 +116,7 @@ def apply_ladder_answer_balance_v211(challenges):
     apply_learning_ladders_v263(challenges, data._v6_item_id)
     apply_learning_ladders_v264(challenges, data._v6_item_id)
     apply_learning_ladders_v266(challenges, data._v6_item_id)
+    apply_learning_ladders_v267(challenges, data._v6_item_id)
 
     groups=defaultdict(list)
     for q in challenges:
