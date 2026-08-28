@@ -1,10 +1,9 @@
-"""v26.7 — Sleep Surgery deliberate ladder pass 4.
+"""v26.7/v26.8 — Sleep Surgery deliberate ladder pass 4.
 
 Closes five exact canonical nonoperative/pediatric residual-sleep concepts.
 Strong v13.7 cases are preserved with explicit stage metadata and individualized
-rationales; only missing stages are added. Palatal Surgery Selection is not a
-canonical node and is intentionally left historical because its teaching was
-merged into canonical Palatal Surgery by v16.6.
+rationales. Reused rationale text is keyed to choice text rather than historical
+option position so deterministic answer balancing cannot misalign explanations.
 """
 DOMAIN="Sleep Surgery"
 REUSED={
@@ -14,12 +13,32 @@ REUSED={
  "v137_slp_07":("Narcolepsy / Central Hypersomnolence Recognition","foundation"),
  "v137_slp_12":("Restless Legs / Periodic Limb Movement Disorders","foundation"),
 }
-REUSED_REASONS={
- "v137_slp_02":["Correct. Normal restorative sleep at a consistently delayed clock time fits delayed sleep-wake phase physiology.","OSA requires an obstructive sleep-breathing phenotype, not delayed timing alone.","Narcolepsy causes central hypersomnolence/REM phenomena rather than a stable late sleep window.","Central apnea is a respiratory-event disorder and does not explain reproducible delayed sleep timing."],
- "v137_slp_03":["Correct. Pediatric HNS is phenotype-selected: residual OSA, anatomy, DISE, comorbidity and current candidacy criteria all matter.","Implantation without confirming current physiology and anatomy risks treating the wrong mechanism.","Residual OSA after adenotonsillectomy does not exclude other evidence-based therapies.","Adult palatal surgery is not a default answer to the multilevel hypotonia/tongue-base phenotype of Down syndrome."],
- "v137_slp_06":["Correct. Lingual tonsillectomy directly treats documented lingual-tonsil obstruction when it is a meaningful residual site.","Repeat adenoid surgery does not address a tongue-base target without significant adenoid regrowth.","Septoplasty does not remove vallecular obstruction from hypertrophic lingual tonsil tissue.","A demonstrated surgically addressable residual site exists; treatment choice depends on expected benefit and airway/swallow risk."],
- "v137_slp_07":["Correct. Cataplexy plus irresistible sleep episodes should trigger central-hypersomnolence evaluation with appropriately prepared PSG/MSLT when indicated.","Palatal surgery treats obstruction, not narcolepsy.","Daytime sleepiness is nonspecific; cataplexy strongly redirects the differential.","Nasal steroids do not treat cataplexy or central hypersomnolence."],
- "v137_slp_12":["Correct. Evening rest-induced urge to move relieved by movement is classic restless legs syndrome; iron and medication contributors are actionable.","UPPP has no role in a sensorimotor leg disorder without an obstructive target.","HNS treats selected OSA, not restless legs syndrome.","Insomnia may coexist, but the specific urge-to-move phenotype should not be relabeled as generic insomnia."],
+REUSED_REASON_BY_CHOICE={
+ "v137_slp_02":{
+  "Delayed sleep-wake phase disorder managed with schedule/light timing rather than airway surgery":"Correct. Normal restorative sleep at a consistently delayed clock time fits delayed sleep-wake phase physiology.",
+  "Severe OSA by history alone":"OSA requires an obstructive sleep-breathing phenotype, not delayed timing alone.",
+  "Narcolepsy":"Narcolepsy causes central hypersomnolence/REM phenomena rather than a stable late sleep window.",
+  "Central apnea":"Central apnea is a respiratory-event disorder and does not explain reproducible delayed sleep timing."},
+ "v137_slp_03":{
+  "Confirm candidacy with age/size criteria, PSG severity and DISE pattern while evaluating multilevel obstruction":"Correct. Pediatric HNS is phenotype-selected: residual OSA, anatomy, DISE, comorbidity and current candidacy criteria all matter.",
+  "Implant without PSG":"Implantation without confirming current physiology and anatomy risks treating the wrong mechanism.",
+  "Assume adenotonsillectomy failure excludes all surgery":"Residual OSA after adenotonsillectomy does not exclude other evidence-based therapies.",
+  "Perform adult UPPP routinely":"Adult palatal surgery is not a default answer to the multilevel hypotonia/tongue-base phenotype of Down syndrome."},
+ "v137_slp_06":{
+  "Lingual tonsillectomy":"Correct. Lingual tonsillectomy directly treats documented lingual-tonsil obstruction when it is a meaningful residual site.",
+  "Repeat adenoidectomy despite no adenoid regrowth":"Repeat adenoid surgery does not address a tongue-base target without significant adenoid regrowth.",
+  "Septoplasty alone":"Septoplasty does not remove vallecular obstruction from hypertrophic lingual tonsil tissue.",
+  "No surgical option":"A demonstrated surgically addressable residual site exists; treatment choice depends on expected benefit and airway/swallow risk."},
+ "v137_slp_07":{
+  "Refer for sleep-medicine evaluation with PSG followed by MSLT when appropriate":"Correct. Cataplexy plus irresistible sleep episodes should trigger central-hypersomnolence evaluation with appropriately prepared PSG/MSLT when indicated.",
+  "Offer palatal surgery":"Palatal surgery treats obstruction, not narcolepsy.",
+  "Diagnose OSA without testing":"Daytime sleepiness is nonspecific; cataplexy strongly redirects the differential away from assuming OSA.",
+  "Treat with nasal steroids only":"Nasal steroids do not treat cataplexy or central hypersomnolence."},
+ "v137_slp_12":{
+  "Evaluate for restless legs syndrome, including iron status and medication contributors":"Correct. Evening rest-induced urge to move relieved by movement is classic restless legs syndrome; iron and medication contributors are actionable.",
+  "Offer UPPP":"UPPP has no role in a sensorimotor leg disorder without an obstructive target.",
+  "Implant HNS":"HNS treats selected OSA, not restless legs syndrome.",
+  "Diagnose insomnia only":"Insomnia may coexist, but the specific urge-to-move phenotype should not be relabeled as generic insomnia."},
 }
 def _q(qid,topic,stage,stem,choices,answer,explanation,reasons,pearl,curveball,focus="boards"):
  return {"id":qid,"domain":DOMAIN,"topic":topic,"learning_stage":stage,"stem":stem,"choices":choices,"answer":answer,"explanation":explanation,"why_wrong":reasons,"board_pearl":pearl,"curveball":curveball,"tier":"Curated learning ladder","mode":"Vignette","focus":focus,"ladder_reviewed":True,"_coverage_reviewed_v211":True}
@@ -40,8 +59,10 @@ def apply_learning_ladders_v267(challenges,item_id_fn):
  for qid,(topic,stage) in REUSED.items():
   row=by_id.get(qid)
   if row is None: raise RuntimeError(f"v267 missing reusable case {qid}")
-  reasons=list(REUSED_REASONS[qid]); choices=list(row.get("choices") or [])
-  if len(reasons)!=len(choices): raise RuntimeError(f"v267 rationale mismatch for {qid}")
+  choices=list(row.get("choices") or []); mapping=REUSED_REASON_BY_CHOICE[qid]
+  unknown=[c for c in choices if c not in mapping]
+  if unknown: raise RuntimeError(f"v267 unknown reused choices for {qid}: {unknown}")
+  reasons=[mapping[c] for c in choices]
   cid=item_id_fn(DOMAIN,topic)
   if not cid: raise RuntimeError(f"v267 orphan reusable topic {topic}")
   row.update({"domain":DOMAIN,"topic":topic,"concept_id":cid,"learning_stage":stage,"why_wrong":reasons,"ladder_reviewed":True,"_coverage_reviewed_v211":True}); reused+=1
