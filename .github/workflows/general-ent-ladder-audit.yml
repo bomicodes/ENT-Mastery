@@ -6,6 +6,7 @@ on:
     paths:
       - 'vignette_ladders_v269.py'
       - 'vignette_ladders_v270.py'
+      - 'vignette_ladders_v270_fix.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_general_ent_progress_v269.py'
