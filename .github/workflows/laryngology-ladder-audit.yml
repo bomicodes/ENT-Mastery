@@ -8,6 +8,7 @@ on:
       - 'vignette_ladders_v249.py'
       - 'vignette_ladders_v251.py'
       - 'vignette_ladders_v252.py'
+      - 'laryngology_foundation_alignment_v252.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_laryngology_ladder_progress_v249.py'
