@@ -5,7 +5,7 @@ centering confirmation of failure, review of the index operation, high-confidenc
 localization, risk-selected re-exploration, and scarred-neck operative strategy.
 
 Production compatibility note: runtime_entry.py already imports and executes this module.
-Until the generated production entrypoint is next consolidated, v28.4-v28.8 are
+Until the generated production entrypoint is next consolidated, v28.4-v28.9 are
 deliberately chained here so the later source-grounded rebuilds cannot remain orphan
 source files on Render.
 """
@@ -16,6 +16,7 @@ from deep_curriculum_rhinology_v285 import apply_rhinology_rhinitis_rebuild_v285
 from deep_curriculum_headneck_v286 import apply_headneck_neck_dissection_rebuild_v286
 from deep_curriculum_headneck_v287 import apply_headneck_salvage_rebuild_v287
 from deep_curriculum_headneck_v288 import apply_headneck_palliative_rebuild_v288
+from deep_curriculum_headneck_v289 import apply_headneck_free_flap_rebuild_v289
 
 DOMAIN = "Thyroid / Parathyroid / Salivary"
 FIELDS = ("recognize", "localize", "workup", "manage", "operate", "teach")
@@ -87,6 +88,7 @@ def apply_reoperative_parathyroid_rebuild_v283(data_module, app_module=None):
     neck_dissection_result = apply_headneck_neck_dissection_rebuild_v286(data_module, app_module)
     salvage_result = apply_headneck_salvage_rebuild_v287(data_module, app_module)
     palliative_result = apply_headneck_palliative_rebuild_v288(data_module, app_module)
+    free_flap_result = apply_headneck_free_flap_rebuild_v289(data_module, app_module)
     return {
         "patched": patched,
         "count": len(patched),
@@ -95,4 +97,5 @@ def apply_reoperative_parathyroid_rebuild_v283(data_module, app_module=None):
         "v286_neck_dissection": neck_dissection_result,
         "v287_salvage": salvage_result,
         "v288_palliative": palliative_result,
+        "v289_free_flap": free_flap_result,
     }
