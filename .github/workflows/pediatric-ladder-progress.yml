@@ -7,6 +7,8 @@ on:
     paths:
       - 'audit_pediatric_ladder_complete_v248.py'
       - 'audit_pediatric_remaining_v247.py'
+      - 'audit_pediatric_ear_semantic_v289.py'
+      - 'pediatric_ear_semantic_alignment_v289.py'
       - 'vignette_ladders_v*.py'
       - 'runtime_entry.py'
       - 'data.py'
@@ -31,5 +33,7 @@ jobs:
         run: python audit_pediatric_remaining_v247.py
       - name: Pediatric 40-topic full-domain hard gate
         run: python audit_pediatric_ladder_complete_v248.py
+      - name: Pediatric otitis versus tube semantic gate
+        run: python audit_pediatric_ear_semantic_v289.py
       - name: Ladder answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
