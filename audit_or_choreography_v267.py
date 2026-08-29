@@ -1,8 +1,8 @@
 """v26.7 adversarial OR Tomorrow operative-choreography audit.
 
 Checks high-consequence operations for clinically meaningful ordering, points of no
-return, and rescue-aware end states. This is intentionally semantic: every checkpoint
-accepts several equivalent phrases and reports the live step snapshot on failure.
+return, and rescue-aware end states. Each checkpoint is an AND of semantic groups;
+terms within a group are acceptable alternatives. Failures print the live sequence.
 """
 import os, re, tempfile
 
@@ -12,64 +12,64 @@ os.environ.pop("DATABASE_URL", None)
 os.environ["SQLITE_PATH"] = db
 os.environ.pop("ENT_MASTERY_ACCESS_PASSWORD", None)
 
-# Each tuple is (label, acceptable substrings). Checkpoints must appear in listed order.
+# checkpoint = (label, ((alternative, alternative), (next-required-group,...)))
 CHECKS = {
     "total-thyroidectomy": [
-        ("superior-pole control", ("superior pole", "superior thyroid")),
-        ("RLN identification", ("recurrent laryngeal", " rln ", "rln ")),
-        ("Berry release", ("berry",)),
-        ("contralateral commitment check", ("opposite side", "contralateral", "staged completion", "loss of signal")),
-        ("final hemostasis", ("hemostasis", "valsalva")),
+        ("superior-pole control", (("superior pole", "superior thyroid"),)),
+        ("RLN identification", (("recurrent laryngeal", "rln"),)),
+        ("Berry release", (("berry",),)),
+        ("contralateral commitment check", (("opposite side", "contralateral", "staged completion", "loss of signal"),)),
+        ("final hemostasis", (("hemostasis", "valsalva"),)),
     ],
     "parathyroidectomy": [
-        ("nerve-safe localization", ("recurrent", "rln", "nerve-safe")),
-        ("gland dissection", ("gland", "parathyroid")),
-        ("pedicle/excision", ("pedicle", "remove", "excision")),
-        ("ioPTH assessment", ("pth",)),
-        ("failed-drop reassessment", ("fails to fall", "inadequate", "multigland", "broader exploration")),
+        ("nerve-safe localization", (("recurrent", "rln", "nerve-safe"),)),
+        ("gland dissection", (("gland", "parathyroid"),)),
+        ("pedicle/excision", (("pedicle", "remove", "excision"),)),
+        ("ioPTH assessment", (("pth",),)),
+        ("failed-drop reassessment", (("fails to fall", "inadequate", "multigland", "broader exploration"),)),
     ],
     "tracheal-resection": [
-        ("define/resect diseased segment", ("resect", "diseased segment", "stenotic segment")),
-        ("mobilization/tension strategy", ("mobil", "release maneuver", "tension")),
-        ("posterior anastomosis", ("posterior", "anastom")),
-        ("anterior anastomosis", ("anterior", "anastom")),
-        ("leak/tension check", ("leak", "tension", "anastomosis")),
-        ("neck-position protection", ("flex", "guardian", "chin", "neck position")),
+        ("mobilization/tension strategy", (("mobil", "release maneuver"), ("tension", "low tension"))),
+        ("resect diseased segment", (("resect",), ("diseased", "stenotic"))),
+        ("posterior anastomosis", (("posterior",), ("anastom", "suture"))),
+        ("anterior completion", (("anterior",), ("suture", "anastom"))),
+        ("leak check", (("saline", "positive pressure", "leak"),)),
+        ("neck-position protection", (("flex", "guardian", "chin", "neck position", "anti extension"),)),
     ],
     "free-flap-takeback": [
-        ("prompt exposure", ("prompt", "time-critical", "reopen", "expose the pedicle")),
-        ("release mechanical causes", ("hematoma", "kink", "twist", "compression")),
-        ("localize arterial/venous failure", ("arterial", "venous")),
-        ("revise thrombosed anastomosis", ("thromb", "take down", "revise")),
-        ("confirm sustained reperfusion", ("reperf", "sustained", "confirm")),
+        ("prompt exposure", (("prompt", "time critical", "reopen", "expose the pedicle"),)),
+        ("release mechanical causes", (("hematoma", "kink", "twist", "compression"),)),
+        ("localize arterial/venous failure", (("arterial",), ("venous",))),
+        ("revise thrombosed anastomosis", (("thromb", "take down", "revise"), ("anastom", "vessel"))),
+        ("confirm sustained reperfusion", (("reperf", "sustained", "confirm"),)),
     ],
     "endoscopic-sinus-surgery": [
-        ("orient before dissection", ("middle turbinate", "uncinate", "orientation", "landmark")),
-        ("open drainage pathway", ("uncinate", "maxillary", "ethmoid")),
-        ("posterior/superior progression", ("basal lamella", "posterior ethmoid", "skull base")),
-        ("danger-boundary control", ("lamina", "orbit", "skull base")),
-        ("final hemostasis/patency", ("hemostasis", "patent", "patency")),
+        ("orient before dissection", (("middle turbinate", "uncinate", "orientation", "landmark"),)),
+        ("open drainage pathway", (("uncinate", "maxillary", "ethmoid"),)),
+        ("posterior/superior progression", (("basal lamella", "posterior ethmoid", "skull base"),)),
+        ("danger-boundary control", (("lamina", "orbit", "skull base"),)),
+        ("final hemostasis/patency", (("hemostasis", "patent", "patency"),)),
     ],
     "tors": [
-        ("exposure/localization", ("exposure", "mouth gag", "robot", "tumor")),
-        ("define margins", ("margin", "tumor")),
-        ("controlled deep dissection", ("constrictor", "deep", "lingual", "carotid", "pharyngeal")),
-        ("specimen/margin assessment", ("specimen", "margin", "frozen")),
-        ("hemostasis before exit", ("hemostasis", "bleeding", "vessel")),
+        ("exposure/localization", (("exposure", "mouth gag", "robot", "tumor"),)),
+        ("define margins", (("margin",),)),
+        ("controlled deep dissection", (("constrictor", "deep", "lingual", "carotid", "pharyngeal"),)),
+        ("specimen/margin assessment", (("specimen",), ("margin", "frozen"))),
+        ("hemostasis before exit", (("hemostasis", "bleeding", "vessel"),)),
     ],
     "laryngotracheal-cleft-repair": [
-        ("define full cleft", ("cleft", "extent", "entire posterior")),
-        ("separate tissue planes", ("separate", "esophageal", "laryngotracheal")),
-        ("esophageal closure", ("esophageal layer",)),
-        ("airway closure", ("laryngotracheal", "airway surface")),
-        ("inspect airway before exit", ("inspect", "airway", "lumen")),
+        ("define full cleft", (("cleft",), ("extent", "entire posterior"))),
+        ("separate tissue planes", (("separate",), ("esophageal",), ("laryngotracheal",))),
+        ("esophageal closure", (("esophageal layer",),)),
+        ("airway closure", (("laryngotracheal", "airway surface"),)),
+        ("inspect airway before exit", (("inspect",), ("airway", "lumen"))),
     ],
     "free-flap-basics": [
-        ("prepare recipient bed", ("recipient", "vessel")),
-        ("pedicle division after readiness", ("divide", "recipient bed", "ready")),
-        ("microvascular anastomosis", ("anastom",)),
-        ("reperfusion assessment", ("release clamps", "inflow", "outflow", "doppler")),
-        ("inset protects pedicle", ("inset", "pedicle", "compression", "kink")),
+        ("prepare recipient bed", (("recipient",), ("vessel",))),
+        ("pedicle division after readiness", (("divide",), ("recipient bed", "recipient", "ready"))),
+        ("microvascular anastomosis", (("anastom",),)),
+        ("reperfusion assessment", (("release clamps", "inflow", "outflow", "doppler"),)),
+        ("inset protects pedicle", (("inset",), ("pedicle",), ("compression", "kink", "twist"))),
     ],
 }
 
@@ -78,10 +78,14 @@ def norm(s):
     return re.sub(r"[^a-z0-9]+", " ", str(s).lower()).strip()
 
 
-def find_after(steps, aliases, start):
+def checkpoint_match(step, groups):
+    txt = norm(step)
+    return all(any(norm(term) in txt for term in group) for group in groups)
+
+
+def find_after(steps, groups, start):
     for i in range(start, len(steps)):
-        txt = " " + norm(steps[i]) + " "
-        if any(norm(a) in txt for a in aliases):
+        if checkpoint_match(steps[i], groups):
             return i
     return None
 
@@ -97,8 +101,8 @@ try:
             continue
         steps=[str(x) for x in (op.get("steps") or [])]
         cursor=0
-        for label, aliases in checkpoints:
-            idx=find_after(steps, aliases, cursor)
+        for label, groups in checkpoints:
+            idx=find_after(steps, groups, cursor)
             if idx is None:
                 failures.append(f"{slug}: missing/out-of-order checkpoint {label!r} after step {cursor}")
                 snapshots[slug]=steps
