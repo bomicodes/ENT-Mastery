@@ -106,6 +106,8 @@ from deep_curriculum_thyroid_v281 import apply_thyroid_rair_rebuild_v281
 THYROID_RAIR_REBUILD_V281 = apply_thyroid_rair_rebuild_v281(data, app_mod)
 from deep_curriculum_parathyroid_v282 import apply_parathyroid_rebuild_v282
 PARATHYROID_REBUILD_V282 = apply_parathyroid_rebuild_v282(data, app_mod)
+from deep_curriculum_parathyroid_v283 import apply_reoperative_parathyroid_rebuild_v283
+REOPERATIVE_PARATHYROID_REBUILD_V283 = apply_reoperative_parathyroid_rebuild_v283(data, app_mod)
 
 from concept_check_repair_v162 import apply_concept_check_repair_v162
 CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
