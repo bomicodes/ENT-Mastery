@@ -16,6 +16,15 @@ CHECKS = [
         ("footplate bailout", (("floating", "mobile"), ("stop", "stabil", "seal", "hearing preservation"))),
         ("gusher changes plan", (("gusher", "high flow", "csf"), ("seal", "leak management", "do not"))),
     ]),
+    ("cochlear-implant", ("cochlear implant",), [
+        ("resistance stops force", (("resistance", "does not advance"), ("stop", "reassess", "inspect"), ("force", "push"), ("fold", "false passage", "translocation"))),
+        ("gusher/anomaly changes plan", (("gusher", "clear fluid", "malformation"), ("seal", "leak"), ("reassess", "alternative"))),
+        ("placement checked before closure", (("telemetry", "fold over", "malposition"), ("before closing", "field is still accessible"), ("revise", "recheck"))),
+    ]),
+    ("cholesteatoma", ("cholesteatoma",), [
+        ("disease control can change canal-wall plan", (("disease clearance", "known keratinizing disease"), ("canal wall",), ("convert", "canal wall down", "staged"))),
+        ("critical structure changes dissection", (("labyrinthine fistula", "facial nerve", "tegmen", "dural", "venous sinus"), ("stop blind", "direct magnified"), ("protect hearing", "facial function", "csf", "venous"))),
+    ]),
     ("parotidectomy", ("parotidectomy",), [
         ("facial nerve commitment", (("facial nerve",), ("gross", "invasion"), ("preserv", "sacrifice"), ("reconstruct", "graft"))),
     ]),
