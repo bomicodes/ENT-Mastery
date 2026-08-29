@@ -13,7 +13,8 @@ os.environ["SQLITE_PATH"] = db
 os.environ.pop("ENT_MASTERY_ACCESS_PASSWORD", None)
 
 # target = (preferred slug, title/slug aliases, checks). Every group in a check must
-# be represented somewhere in setup + steps + postop.
+# be represented somewhere in setup + steps + postop. The specificity checks below
+# intentionally distinguish recognition-only warnings from an executable rescue plan.
 CHECKS = [
     ("total-thyroidectomy", ("total thyroidectomy",), [
         ("nerve-loss commitment rescue", (("loss of signal", "unexplained loss", "nerve signal"), ("staged", "opposite side", "contralateral"))),
@@ -21,8 +22,9 @@ CHECKS = [
     ("parathyroidectomy", ("parathyroidectomy", "focused parathyroid"), [
         ("failed ioPTH rescue", (("pth",), ("fails to fall", "inadequate", "failed", "multigland"), ("reassess", "localization", "exploration", "ectopic"))),
     ]),
-    ("tracheal-resection", ("tracheal resection",), [
+    ("tracheal-resection", ("tracheal resection", "cricotracheal resection"), [
         ("anastomosis protection", (("anastom",), ("flex", "anti extension", "neck"))),
+        ("dehiscence airway rescue", (("dehisc", "disruption"), ("bronchoscop", "direct visualization"), ("distal", "beyond the anastomosis"), ("avoid repeated blind", "avoid blind", "traumatic instrumentation"))),
     ]),
     ("free-flap-takeback", ("free flap takeback", "flap takeback"), [
         ("mechanical rescue first", (("kink", "twist", "compression", "hematoma"), ("release", "correct", "reopen"))),
@@ -31,9 +33,15 @@ CHECKS = [
     ("endoscopic-sinus-surgery", ("endoscopic sinus surgery", "fess"), [
         ("orbit danger recognition", (("orbit", "lamina"),)),
         ("skull-base danger recognition", (("skull base", "csf", "dura"),)),
+        ("vision-threatening orbital rescue", (("visual decline", "visual loss", "vision is threatened"), ("compartment syndrome", "tense orbit"), ("canthotomy", "cantholysis", "orbital decompression"), ("rather than waiting", "without delaying", "must not substitute"))),
     ]),
     ("tors", ("transoral robotic", "tors"), [
         ("hemorrhage rescue awareness", (("bleed", "hemorrhage", "hemostasis"), ("vessel", "airway", "control"))),
+        ("catastrophic hemorrhage choreography", (("anesthesia", "airway"), ("operative", "re-exploration", "or"), ("suction", "pressure", "packing"), ("blind", "clamping"))),
+    ]),
+    ("tracheostomy", ("tracheostomy",), [
+        ("fresh tract false-passage rescue", (("fresh", "immature"), ("false passage",), ("upper airway", "oral endotracheal", "bag-mask"), ("blind", "force"))),
+        ("laryngectomy distinction", (("laryngectomy",), ("stoma",), ("mouth", "nose"))),
     ]),
     ("stapedotomy", ("stapedotomy", "stapedectomy"), [
         ("inner-ear rescue escalation", (("vertigo",), ("hearing", "sensorineural"), ("urgent", "reassess", "evaluation"))),
