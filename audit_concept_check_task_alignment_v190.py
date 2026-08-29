@@ -6,7 +6,7 @@ from concept_check_depth_v190 import COHORT
 TASK_TERMS={
 "cc-v112-rec-head-neck-oncology-palliative-goals-of-care-decision-making-in-head-neck-cancer":["tracheostomy","feeding","bleeding","proportionality"],
 "cc-v112-rec-pediatric-otolaryngology-pediatric-deep-neck-infection":["spontaneous ventilation","drainage","vascular","mediastinitis"],
-"cc-v112-rec-general-ent-emergencies-angioedema":["histamine","bradykinin","epinephrine","surgical-airway"],
+"cc-v112-rec-general-ent-emergencies-angioedema":["histamine","bradykinin","epinephrine","cricothyrotomy"],
 "cc-v112-rec-pediatric-otolaryngology-pediatric-aspiration":["modified barium swallow","fees","laryngeal cleft","feeding tube"],
 "cc-v112-rec-thyroid-parathyroid-salivary-reoperative-thyroid-surgery":["structural target","recurrent laryngeal nerve","parathyroid","gross invasion"],
 }
