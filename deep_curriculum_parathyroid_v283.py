@@ -3,9 +3,14 @@
 Keeps reoperative hyperparathyroidism distinct from the primary and renal HPT cards by
 centering confirmation of failure, review of the index operation, high-confidence
 localization, risk-selected re-exploration, and scarred-neck operative strategy.
+
+Production compatibility note: runtime_entry.py already imports and executes this module.
+Until the generated production entrypoint is next consolidated, v28.4 is deliberately
+chained here so the ETD rebuild cannot remain an orphan source file on Render.
 """
 
 import re
+from deep_curriculum_otology_v284 import apply_otology_etd_rebuild_v284
 
 DOMAIN = "Thyroid / Parathyroid / Salivary"
 FIELDS = ("recognize", "localize", "workup", "manage", "operate", "teach")
@@ -68,4 +73,8 @@ def apply_reoperative_parathyroid_rebuild_v283(data_module, app_module=None):
         patched.append(module.get("topic"))
     if app_module is not None:
         app_module.DEEP_MODULES_V6 = data_module.DEEP_MODULES_V6
-    return {"patched": patched, "count": len(patched)}
+
+    # v28.4 production chain: runtime_entry.py already invokes this function, so apply
+    # the next otology rebuild to the same live curriculum object before Concept Checks.
+    etd_result = apply_otology_etd_rebuild_v284(data_module, app_module)
+    return {"patched": patched, "count": len(patched), "v284_etd": etd_result}
