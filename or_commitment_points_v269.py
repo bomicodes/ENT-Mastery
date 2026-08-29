@@ -51,6 +51,26 @@ TARGETS = [
         "postop": [],
     },
     {
+        "slug": "neck-dissection",
+        "title_terms": ("neck", "dissection"),
+        "setup": [
+            "Treat unexpected carotid involvement or major carotid injury as a change-of-plan event, not a cue for blind clamping or continued traction. Obtain direct proximal and distal control when feasible, use pressure for immediate hemorrhage control while experienced vascular/reconstructive help is mobilized, and reassess whether safe oncologic resection with vessel preservation or planned reconstruction is achievable. Unplanned carotid sacrifice carries major neurologic risk and should not be treated as a routine extension of neck dissection.",
+            "Make internal-jugular-vein and major-nerve sacrifice deliberate oncologic decisions. A single IJV may be sacrificed when required for oncologic clearance, but known or threatened contralateral jugular loss changes the cerebral-venous problem and should trigger reassessment rather than automatic bilateral sacrifice. Preserve CN XI, vagus, hypoglossal and phrenic function when the nerves are not oncologically involved; when gross invasion requires sacrifice, define the functional consequence and reconstructive/rehabilitative plan instead of converting difficult dissection into casual nerve loss.",
+            "A lymphatic leak recognized during low-neck dissection should be controlled before closure rather than deferred to the drain. Clip, ligate or otherwise seal the identified thoracic-duct/lymphatic source under direct visualization, then challenge the repair with increased intrathoracic pressure/Valsalva as appropriate and re-inspect the venous angle; persistent high-volume leakage is a reason to obtain better exposure and definitive control before leaving the operating room.",
+        ],
+        "postop": [],
+    },
+    {
+        "slug": "total-laryngectomy",
+        "title_terms": ("total", "laryngectomy"),
+        "setup": [
+            "Before committing to pharyngeal closure, make margin adequacy and remaining mucosal geometry explicit. If an intraoperative margin is inadequate and additional oncologically meaningful resection is feasible, extend the resection before reconstruction rather than knowingly closing around a compromised margin; if further resection would fundamentally change resectability or reconstruction, pause and re-plan rather than letting the original closure dictate the cancer operation.",
+            "Do not force primary pharyngeal closure when the residual mucosal strip or tissue quality would create a narrow, ischemic or high-tension repair. Let defect size, circumferential involvement, prior radiation, tissue quality and expected swallowing lumen determine primary closure versus vascularized onlay/patch or free-tissue reconstruction; a more complex reconstruction is an appropriate bailout when tension-free durable closure cannot be achieved.",
+            "If the final resection leaves carotid or other great-vessel exposure in a contaminated, irradiated or salivary-risk field, make durable vascularized coverage part of the reconstructive commitment before closure. Tenuous skin or scar alone is not an adequate endpoint over an exposed major vessel, particularly when a pharyngeal leak would place the vessel at risk.",
+        ],
+        "postop": [],
+    },
+    {
         "slug": "transoral-laser-laryngeal-cancer",
         "title_terms": ("transoral", "laser", "laryngeal"),
         "setup": [
