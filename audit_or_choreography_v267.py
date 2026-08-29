@@ -12,7 +12,6 @@ os.environ.pop("DATABASE_URL", None)
 os.environ["SQLITE_PATH"] = db
 os.environ.pop("ENT_MASTERY_ACCESS_PASSWORD", None)
 
-# checkpoint = (label, ((alternative, alternative), (next-required-group,...)))
 CHECKS = {
     "total-thyroidectomy": [
         ("superior-pole control", (("superior pole", "superior thyroid"),)),
@@ -31,8 +30,7 @@ CHECKS = {
     "tracheal-resection": [
         ("mobilization/tension strategy", (("mobil", "release maneuver"), ("tension", "low tension"))),
         ("resect diseased segment", (("resect",), ("diseased", "stenotic"))),
-        ("posterior anastomosis", (("posterior",), ("anastom", "suture"))),
-        ("anterior completion", (("anterior",), ("suture", "anastom"))),
+        ("posterior-before-anterior anastomosis", (("posterior",), ("anterior",), ("first", "then"), ("suture", "anastom"))),
         ("leak check", (("saline", "positive pressure", "leak"),)),
         ("neck-position protection", (("flex", "guardian", "chin", "neck position", "anti extension"),)),
     ],
