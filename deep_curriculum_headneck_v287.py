@@ -1,10 +1,13 @@
 """v28.7 — source-grounded salvage head & neck oncology Concept Hub rebuild.
 
-Separates the two overlapping salvage cards into distinct clinical jobs:
-1) broad salvage surgery after prior radiation/chemoradiation = candidacy, risk, operative planning,
-   reconstruction, and complication mitigation in the previously treated field;
-2) salvage surgery after definitive chemoradiation = response assessment, confirmation of residual/
-   recurrent disease, neck-management logic, and selection of surgery versus nonsurgical salvage.
+The live canonical inventory has one salvage card, "Salvage Surgery After Radiation / Chemoradiation".
+This rebuild therefore teaches two distinct clinical jobs inside that one canonical Hub:
+1) broad salvage candidacy, irradiated-field operative planning, reconstruction, and complication mitigation;
+2) the post-definitive-CRT response branch: response assessment, confirmation of residual/recurrent disease,
+   PET-directed neck management, and selection of surgery versus nonsurgical salvage.
+
+A second payload key is retained as a reusable post-CRT sublayer, but when no separate live canonical module
+exists it is folded into the broad salvage Hub rather than remaining unreachable source content.
 """
 
 import re
@@ -15,6 +18,14 @@ FIELDS = ("recognize", "localize", "workup", "manage", "operate", "teach")
 
 def _norm(value):
     return re.sub(r"[^a-z0-9]+", " ", str(value or "").lower()).strip()
+
+
+def _append_unique(existing, addition, heading):
+    existing = str(existing or "").strip()
+    addition = str(addition or "").strip()
+    if not addition or addition in existing:
+        return existing
+    return existing + f"\n\n{heading}: " + addition
 
 
 SALVAGE_REBUILD_V287 = {
@@ -35,7 +46,7 @@ SALVAGE_REBUILD_V287 = {
             "Operate with a SALVAGE FIELD mindset. Expect obliterated planes and devascularized tissue; identify major vessels and nerves deliberately rather than relying on familiar primary-surgery planes. Resect to oncologically sound margins while minimizing unnecessary devascularization. In heavily irradiated defects, bring in WELL-VASCULARIZED NONIRRADIATED TISSUE early—often free tissue transfer or a robust regional flap—to separate the pharynx from great vessels, protect exposed carotid, reconstruct mucosa/skin, and reduce fistula or wound breakdown risk. Anticipate difficult airway management, pharyngocutaneous fistula, infection, carotid exposure/blowout, poor bone healing, and flap-vessel challenges. Vessel-depleted neck planning may require preoperative review of recipient vessels and alternate recipient sites. The reconstructive plan is part of the cancer operation, not a secondary cosmetic step."
         ),
         "teach": (
-            "Chief/boards framework: SALVAGE = CONFIRM DISEASE → EXCLUDE UNCURABLE EXTENT/DISTANT SPREAD → RECONSTRUCT PRIOR TREATMENT → ASK WHETHER COMPLETE RESECTION IS WORTH THE MORBIDITY → BRING HEALTHY VASCULARIZED TISSUE INTO THE IRRADIATED FIELD. Prior radiation changes everything: fibrosis obscures planes, vessels and mucosa heal poorly, fistula and carotid complications are more dangerous, and reconstruction frequently becomes mandatory. The broad salvage card is about CANDIDACY, FIELD RISK, and RECONSTRUCTION. Do not use it to memorize PET timing or post-CRT response algorithms; those belong in the companion 'Salvage Surgery After Chemoradiation' card."
+            "Chief/boards framework: SALVAGE = CONFIRM DISEASE → EXCLUDE UNCURABLE EXTENT/DISTANT SPREAD → RECONSTRUCT PRIOR TREATMENT → ASK WHETHER COMPLETE RESECTION IS WORTH THE MORBIDITY → BRING HEALTHY VASCULARIZED TISSUE INTO THE IRRADIATED FIELD. Prior radiation changes everything: fibrosis obscures planes, vessels and mucosa heal poorly, fistula and carotid complications are more dangerous, and reconstruction frequently becomes mandatory. The broad salvage framework is about CANDIDACY, FIELD RISK, and RECONSTRUCTION; after definitive CRT, add the response-directed neck-management branch rather than reflexively operating on the pretreatment nodal stage."
         ),
         "tags": [
             "salvage surgery", "recurrent head and neck cancer", "irradiated neck", "reirradiation",
@@ -52,7 +63,7 @@ SALVAGE_REBUILD_V287 = {
     },
     "salvage surgery after chemoradiation": {
         "recognize": (
-            "Recognize this card as the POST-DEFINITIVE-CHEMORADIATION problem: has the patient achieved a complete response, or is there biopsy/imaging/endoscopic evidence of RESIDUAL or later RECURRENT locoregional disease that now needs salvage? This is deliberately narrower than the general salvage card. After organ-preservation CRT, persistent primary-site disease, a persistently abnormal node, new progressive focal uptake/mass, worsening ulceration, pain, bleeding, cranial neuropathy, or progressive dysphagia/airway symptoms should trigger recurrence evaluation. A post-treatment neck mass alone is not proof of viable tumor because fibrosis and treatment-related change can persist."
+            "Recognize the POST-DEFINITIVE-CHEMORADIATION problem: has the patient achieved a complete response, or is there biopsy/imaging/endoscopic evidence of RESIDUAL or later RECURRENT locoregional disease that now needs salvage? After organ-preservation CRT, persistent primary-site disease, a persistently abnormal node, new progressive focal uptake/mass, worsening ulceration, pain, bleeding, cranial neuropathy, or progressive dysphagia/airway symptoms should trigger recurrence evaluation. A post-treatment neck mass alone is not proof of viable tumor because fibrosis and treatment-related change can persist."
         ),
         "localize": (
             "Localize the suspected failure as PRIMARY-SITE residual/recurrent disease, NODAL residual/recurrent disease, BOTH, or DISTANT progression. Then distinguish a persistent abnormality soon after CRT from a true later recurrence after an interval response. At the primary site, correlate endoscopic mucosal findings with deep-space imaging because submucosal recurrence may be occult. In the neck, ask whether the suspicious node is metabolically active/progressive and whether it threatens carotid, skin, cranial nerves, or deep musculature. This localization determines whether salvage is transoral/local, open composite, laryngectomy/pharyngectomy, neck dissection, combined primary-plus-neck surgery, or not surgically curable."
@@ -67,7 +78,7 @@ SALVAGE_REBUILD_V287 = {
             "Tailor the operation to the FAILURE PATTERN rather than repeating the pretreatment plan. Salvage neck dissection after CRT is performed through fibrotic tissue with increased risk to carotid, vagus, hypoglossal nerve, phrenic nerve, CN XI, thoracic duct, skin, and wound healing; preserve uninvolved structures when oncologically safe but prioritize complete gross resection. Primary-site salvage may require transoral resection, open partial surgery, total laryngectomy, pharyngolaryngectomy, or composite resection depending on site/extent. Anticipate the need for vascularized tissue reinforcement—particularly around pharyngeal closure or exposed great vessels—to reduce fistula and catastrophic wound complications. A salvage laryngectomy patient with heavily irradiated tissue should have the reconstructive strategy discussed before incision."
         ),
         "teach": (
-            "Chief/boards framework: after definitive CRT, DO NOT DO A PLANNED NECK DISSECTION JUST BECAUSE A NODE USED TO BE POSITIVE. Assess response first. A reassuring examination plus complete metabolic response on appropriately timed PET/CT supports surveillance; persistent/progressive or biopsy-proven locoregional disease triggers salvage evaluation. The key distinction from the broad salvage card is that this concept owns the POST-CRT DECISION TREE: response assessment → confirm viable disease when needed → restage → salvage only the persistent/recurrent site that remains curably resectable. PET is a decision aid, not pathology, and early inflammatory uptake can mislead."
+            "Chief/boards post-CRT decision tree: DO NOT DO A PLANNED NECK DISSECTION JUST BECAUSE A NODE USED TO BE POSITIVE. Assess response first. A reassuring examination plus complete metabolic response on appropriately timed PET/CT supports surveillance; persistent/progressive or biopsy-proven locoregional disease triggers salvage evaluation. Response assessment → confirm viable disease when needed → restage → salvage only the persistent/recurrent site that remains curably resectable. PET is a decision aid, not pathology, and early inflammatory uptake can mislead."
         ),
         "tags": [
             "salvage after chemoradiation", "post treatment PET CT", "planned neck dissection",
@@ -89,8 +100,11 @@ SALVAGE_REBUILD_V287 = {
 def apply_headneck_salvage_rebuild_v287(data_module, app_module=None):
     modules = (getattr(data_module, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, [])
     patched = []
+    broad_module = None
+    narrow_module = None
     for module in modules:
-        payload = SALVAGE_REBUILD_V287.get(_norm(module.get("topic")))
+        key = _norm(module.get("topic"))
+        payload = SALVAGE_REBUILD_V287.get(key)
         if not payload:
             continue
         for field in FIELDS:
@@ -99,6 +113,31 @@ def apply_headneck_salvage_rebuild_v287(data_module, app_module=None):
         module["source_basis"] = list(payload["source_basis"])
         module["source_grounded_v287"] = True
         patched.append(module.get("topic"))
+        if key == "salvage surgery after radiation chemoradiation":
+            broad_module = module
+        elif key == "salvage surgery after chemoradiation":
+            narrow_module = module
+
+    folded_post_crt = False
+    if broad_module is not None and narrow_module is None:
+        post = SALVAGE_REBUILD_V287["salvage surgery after chemoradiation"]
+        broad_module["workup"] = _append_unique(broad_module.get("workup"), post["workup"], "POST-CRT RESPONSE ASSESSMENT")
+        broad_module["manage"] = _append_unique(broad_module.get("manage"), post["manage"], "POST-CRT RESPONSE-DIRECTED MANAGEMENT")
+        broad_module["operate"] = _append_unique(broad_module.get("operate"), post["operate"], "POST-CRT SALVAGE OPERATIVE BRANCH")
+        broad_module["teach"] = _append_unique(broad_module.get("teach"), post["teach"], "POST-CRT BOARD DECISION TREE")
+        tags = list(broad_module.get("tags") or [])
+        for tag in post.get("tags") or []:
+            if tag not in tags:
+                tags.append(tag)
+        broad_module["tags"] = tags
+        sources = list(broad_module.get("source_basis") or [])
+        for source in post.get("source_basis") or []:
+            if source not in sources:
+                sources.append(source)
+        broad_module["source_basis"] = sources
+        broad_module["post_crt_response_sublayer_v287"] = True
+        folded_post_crt = True
+
     if app_module is not None:
         app_module.DEEP_MODULES_V6 = data_module.DEEP_MODULES_V6
-    return {"patched": patched, "count": len(patched)}
+    return {"patched": patched, "count": len(patched), "post_crt_folded_into_live_salvage": folded_post_crt}
