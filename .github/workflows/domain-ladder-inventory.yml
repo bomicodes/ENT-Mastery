@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'audit_domain_ladder_inventory_v217.py'
+      - 'audit_hn_salvage_ladder_distinction_v288.py'
       - 'runtime_entry.py'
       - 'data.py'
       - 'deep_curriculum_*.py'
@@ -28,8 +29,12 @@ jobs:
         run: python audit_learning_ladders_runtime_v204.py
       - name: Exact canonical domain inventory
         run: python audit_domain_ladder_inventory_v217.py
+      - name: Head and Neck salvage ladder semantic distinction
+        run: python audit_hn_salvage_ladder_distinction_v288.py
 
-# This fast workflow intentionally duplicates the two canonical ladder checks at
-# the front of the global quality suite. It exists so curriculum work can select
-# the next exact canonical gap without waiting for the long route/Deep Curriculum/
-# Concept Check chain to finish. It does not replace or weaken the global gates.
+# This fast workflow intentionally duplicates the canonical ladder checks at the
+# front of the global quality suite. It exists so curriculum work can select and
+# protect exact canonical gaps without waiting for the long route/Deep Curriculum/
+# Concept Check chain to finish. The salvage semantic check additionally prevents
+# the two adjacent H&N salvage concepts from collapsing into generic duplicate
+# question sets. It does not replace or weaken the global gates.
