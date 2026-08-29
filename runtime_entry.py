@@ -98,12 +98,14 @@ SALIVARY_ACC_REBUILD_V278 = apply_salivary_acc_rebuild_v278(data, app_mod)
 from deep_curriculum_salivary_v279 import apply_salivary_benign_rebuild_v279
 SALIVARY_BENIGN_REBUILD_V279 = apply_salivary_benign_rebuild_v279(data, app_mod)
 
-# Source-grounded thyroid rebuilds continue the same audit standard while keeping
-# overlapping canonical cards clinically distinct.
+# Source-grounded thyroid/parathyroid rebuilds continue the same audit standard
+# while keeping overlapping canonical cards clinically distinct.
 from deep_curriculum_thyroid_v280 import apply_thyroid_dtc_rebuild_v280
 THYROID_DTC_REBUILD_V280 = apply_thyroid_dtc_rebuild_v280(data, app_mod)
 from deep_curriculum_thyroid_v281 import apply_thyroid_rair_rebuild_v281
 THYROID_RAIR_REBUILD_V281 = apply_thyroid_rair_rebuild_v281(data, app_mod)
+from deep_curriculum_parathyroid_v282 import apply_parathyroid_rebuild_v282
+PARATHYROID_REBUILD_V282 = apply_parathyroid_rebuild_v282(data, app_mod)
 
 from concept_check_repair_v162 import apply_concept_check_repair_v162
 CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
