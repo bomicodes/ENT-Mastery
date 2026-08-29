@@ -1,0 +1,36 @@
+name: HN neck semantic v29.4
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'hn_neck_semantic_alignment_v294.py'
+      - 'audit_hn_neck_semantic_v294.py'
+      - 'vignette_ladders_v219.py'
+      - 'vignette_ladders_v231.py'
+      - 'vignettes_v128.py'
+      - 'ladder_answer_balance_v211.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/hn-neck-semantic-v294.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Runtime learning-ladder integrity
+        run: python audit_learning_ladders_runtime_v204.py
+      - name: Head and Neck Oncology canonical hard gate
+        run: python audit_hn_ladder_complete_v231.py
+      - name: Neck dissection versus complication semantic gate
+        run: python audit_hn_neck_semantic_v294.py
+      - name: Reviewed-ladder answer-balance regression
+        run: python audit_ladder_answer_balance_v211.py
