@@ -4,7 +4,7 @@ import runtime_entry
 from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v189 import COHORT
 TASK_TERMS={
-"cc-v112-rec-facial-plastics-trauma-alar-retraction-nasal-vestibular-stenosis":["lining","cartilage","stenting","restenosis"],
+"cc-v112-rec-facial-plastics-trauma-alar-retraction-nasal-vestibular-stenosis":["lining","cartilage","stenting","restenos"],
 "cc-v112-rec-facial-plastics-trauma-functional-septorhinoplasty":["internal-valve","spreader","caudal septal","revision"],
 "cc-v112-rec-facial-plastics-trauma-nasal-fracture":["septal hematoma","routine ct","closed reduction","csf"],
 "cc-v112-rec-head-neck-oncology-nonfunctional-larynx-chronic-aspiration-after-cancer-therapy":["secretions","feeding-tube","functional total laryngectomy","recurrent aspiration pneumonia"],
