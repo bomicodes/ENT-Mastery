@@ -28,6 +28,16 @@ CHECKS = [
     ("parotidectomy", ("parotidectomy",), [
         ("facial nerve commitment", (("facial nerve",), ("gross", "invasion"), ("preserv", "sacrifice"), ("reconstruct", "graft"))),
     ]),
+    ("neck-dissection", ("neck dissection",), [
+        ("carotid injury changes plan", (("carotid",), ("proximal", "distal", "pressure"), ("blind clamping", "unplanned carotid sacrifice"), ("vascular", "reconstruct"))),
+        ("jugular and nerve sacrifice is deliberate", (("internal jugular", "ijv"), ("contralateral", "bilateral"), ("cn xi", "vagus", "hypoglossal", "phrenic"), ("oncologic", "invasion"))),
+        ("lymphatic leak controlled before closure", (("thoracic duct", "lymphatic"), ("clip", "ligate", "seal"), ("valsalva", "intrathoracic pressure"), ("before closure", "before leaving"))),
+    ]),
+    ("total-laryngectomy", ("total laryngectomy",), [
+        ("margin controls closure", (("margin",), ("extend", "additional"), ("before reconstruction", "before committing", "before closure"))),
+        ("defect controls reconstruction", (("primary pharyngeal closure", "primary closure"), ("tension", "mucosal"), ("vascularized", "free tissue", "patch", "onlay"))),
+        ("great vessels receive durable coverage", (("carotid", "great vessel"), ("vascularized coverage", "vascularized"), ("contaminated", "irradiated", "salivary"))),
+    ]),
     ("transoral-laser-laryngeal-cancer", ("transoral laser", "laser laryngeal"), [
         ("inadequate margin conversion", (("inadequate exposure", "deep margin"), ("convert", "abort", "alternate", "open"))),
     ]),
