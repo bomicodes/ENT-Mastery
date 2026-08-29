@@ -52,6 +52,7 @@ def main():
         for m in data.DEEP_MODULES_V6.get(DOMAIN, [])
         if str(m.get("topic") or "").strip()
     }
+    cases = list(data.CLINICAL_CHALLENGES_V119)
 
     target_cases = {}
     actual_topics = {}
@@ -65,7 +66,7 @@ def main():
         actual_topics[semantic_topic] = actual_topic
         cid = data._v6_item_id(DOMAIN, actual_topic)
         linked = [
-            q for q in data.VIGNETTES_V7
+            q for q in cases
             if q.get("domain") == DOMAIN
             and q.get("concept_id") == cid
             and q.get("ladder_reviewed")
@@ -76,8 +77,6 @@ def main():
         if missing:
             failures.append(f"{semantic_topic}:missing_stages:{','.join(sorted(missing))}")
         for q in linked:
-            if q.get("concept_id") != cid:
-                failures.append(f"{semantic_topic}:{q.get('id')}:bad_concept_link")
             print(
                 "HN_SALVAGE_CASE|{}|actual_topic={}|{}|{}|{}".format(
                     semantic_topic,
