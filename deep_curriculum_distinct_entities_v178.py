@@ -7,7 +7,9 @@ that necrotizing otitis externa remains distinct from uncomplicated AOE.
 
 v27.5 invokes the source-grounded sialadenitis/Sjögren Concept Hub repair after
 the historical deep-curriculum loaders have finished. v27.6 extends that
-source-grounded salivary pass to First-Bite Syndrome and Frey Syndrome.
+source-grounded salivary pass to First-Bite Syndrome and Frey Syndrome. v27.7
+rebuilds Submandibular Sialolithiasis and Sialendoscopy around a gland-preserving
+obstruction pathway.
 """
 
 
@@ -83,9 +85,13 @@ def apply_distinct_entities_v178(data):
     from deep_curriculum_salivary_v276 import apply_salivary_complication_rebuild_v276
     salivary_complications = apply_salivary_complication_rebuild_v276(data)
 
+    from deep_curriculum_salivary_v277 import apply_salivary_obstruction_rebuild_v277
+    salivary_obstruction = apply_salivary_obstruction_rebuild_v277(data)
+
     return {
         "restored": restored,
         "verified": verified,
         "salivary_v275": salivary,
         "salivary_complications_v276": salivary_complications,
+        "salivary_obstruction_v277": salivary_obstruction,
     }
