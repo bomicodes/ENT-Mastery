@@ -12,35 +12,36 @@ os.environ.pop("DATABASE_URL", None)
 os.environ["SQLITE_PATH"] = db
 os.environ.pop("ENT_MASTERY_ACCESS_PASSWORD", None)
 
-# Every group must be represented somewhere in setup + steps + postop.
-CHECKS = {
-    "total-thyroidectomy": [
+# target = (preferred slug, title/slug aliases, checks). Every group in a check must
+# be represented somewhere in setup + steps + postop.
+CHECKS = [
+    ("total-thyroidectomy", ("total thyroidectomy",), [
         ("nerve-loss commitment rescue", (("loss of signal", "unexplained loss", "nerve signal"), ("staged", "opposite side", "contralateral"))),
-    ],
-    "parathyroidectomy": [
+    ]),
+    ("parathyroidectomy", ("parathyroidectomy", "focused parathyroid"), [
         ("failed ioPTH rescue", (("pth",), ("fails to fall", "inadequate", "failed", "multigland"), ("reassess", "localization", "exploration", "ectopic"))),
-    ],
-    "tracheal-resection": [
+    ]),
+    ("tracheal-resection", ("tracheal resection",), [
         ("anastomosis protection", (("anastom",), ("flex", "anti extension", "neck"))),
-    ],
-    "free-flap-takeback": [
+    ]),
+    ("free-flap-takeback", ("free flap takeback", "flap takeback"), [
         ("mechanical rescue first", (("kink", "twist", "compression", "hematoma"), ("release", "correct", "reopen"))),
         ("thrombosis revision", (("thromb",), ("revise", "take down", "thrombectomy"))),
-    ],
-    "endoscopic-sinus-surgery": [
+    ]),
+    ("endoscopic-sinus-surgery", ("endoscopic sinus surgery", "fess"), [
         ("orbit danger recognition", (("orbit", "lamina"),)),
         ("skull-base danger recognition", (("skull base", "csf", "dura"),)),
-    ],
-    "tors": [
+    ]),
+    ("tors", ("transoral robotic", "tors"), [
         ("hemorrhage rescue awareness", (("bleed", "hemorrhage", "hemostasis"), ("vessel", "airway", "control"))),
-    ],
-    "stapedotomy": [
+    ]),
+    ("stapedotomy", ("stapedotomy", "stapedectomy"), [
         ("inner-ear rescue escalation", (("vertigo",), ("hearing", "sensorineural"), ("urgent", "reassess", "evaluation"))),
-    ],
-    "cholesteatoma": [
+    ]),
+    ("cholesteatoma", ("cholesteatoma", "mastoidectomy"), [
         ("major otologic complication escalation", (("facial", "vertigo", "csf", "sensorineural"), ("urgent", "reassess", "evaluation"))),
-    ],
-}
+    ]),
+]
 
 
 def norm(s):
@@ -51,15 +52,25 @@ def has_groups(text, groups):
     t = norm(text)
     return all(any(norm(term) in t for term in group) for group in groups)
 
+
+def resolve(reg, preferred, aliases):
+    if preferred in reg:
+        return preferred, reg[preferred]
+    for slug, op in reg.items():
+        hay = norm(str(slug) + " " + str((op or {}).get("title", "")))
+        if any(norm(alias) in hay for alias in aliases):
+            return slug, op
+    return None, None
+
 try:
     import runtime_entry as rt
     reg = rt.data.OR_PREP_REGISTRY
     client = rt.app.test_client()
     failures=[]; snapshots={}
-    for slug, checks in CHECKS.items():
-        op = reg.get(slug)
+    for preferred, aliases, checks in CHECKS:
+        slug, op = resolve(reg, preferred, aliases)
         if not op:
-            failures.append(f"{slug}: missing from live OR registry")
+            failures.append(f"{preferred}: no live OR case resolved from aliases {aliases!r}")
             continue
         sections = []
         for key in ("setup", "steps", "postop"):
