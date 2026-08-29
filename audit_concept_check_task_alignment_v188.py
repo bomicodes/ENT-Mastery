@@ -7,7 +7,7 @@ TASK_TERMS={
 "cc-v112-rec-laryngology-voice-swallowing-unilateral-vocal-fold-paralysis":["temporary injection","arytenoid adduction","reinnervation","aspiration"],
 "cc-v112-rec-sleep-surgery-maxillomandibular-advancement":["retropalatal","retroglossal","occlusion","objective postoperative sleep testing"],
 "cc-v112-rec-laryngology-voice-swallowing-bilateral-vocal-fold-immobility":["arytenoid palpation","tracheostomy","cordotomy","voice"],
-"cc-v112-rec-laryngology-voice-swallowing-posterior-glottic-stenosis-arytenoid-fixation":["arytenoid palpation","cricoarytenoid","mucosal flap","diminishing"],
+"cc-v112-rec-laryngology-voice-swallowing-posterior-glottic-stenosis-arytenoid-fixation":["palpation of each arytenoid","cricoarytenoid","mucosal flap","shorter benefit"],
 }
 def words(v): return re.findall(r"\b\w+[\w'-]*\b",str(v or ""))
 def main():
