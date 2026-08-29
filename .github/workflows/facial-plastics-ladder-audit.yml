@@ -12,11 +12,13 @@ on:
       - 'vignette_ladders_v261.py'
       - 'vignette_ladders_v262.py'
       - 'facial_frontal_sinus_management_v295.py'
+      - 'facial_noe_management_alignment_v298.py'
       - 'hn_neck_semantic_alignment_v294.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_facial_plastics_full_domain_v262.py'
       - 'audit_facial_frontal_sinus_management_v295.py'
+      - 'audit_facial_noe_management_v298.py'
       - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_domain_ladder_inventory_v217.py'
       - 'runtime_entry.py'
@@ -40,12 +42,15 @@ jobs:
         run: python audit_facial_plastics_full_domain_v262.py
       - name: v29.5 Frontal sinus outflow management hard gate
         run: python audit_facial_frontal_sinus_management_v295.py
+      - name: v29.8 NOE type II versus III management hard gate
+        run: python audit_facial_noe_management_v298.py
       - name: Answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
 
 # Completed-domain hard gate: all 32 exact Facial Plastics / Trauma canonical
 # topics must retain reviewed foundation/application/senior-decision ladders.
-# v29.5 additionally protects the distinct frontal-sinus outflow-tract management
-# axis while preserving the original observation and skull-base escalation cases.
+# v29.5 protects the distinct frontal-sinus outflow-tract management axis.
+# v29.8 protects NOE type II tendon-bearing fragment fixation versus true type III
+# medial-canthal-tendon avulsion/canthopexy reasoning without adding a duplicate card.
 # Cross-domain semantic modules imported by ladder_answer_balance are watched here
 # because they can alter live rationale alignment before this domain gate executes.
