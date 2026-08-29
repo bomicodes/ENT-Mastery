@@ -1,24 +1,21 @@
-"""v28.8 — semantic ladder gate for the two Head & Neck salvage concepts.
+"""v28.8 — semantic hard gate for the live Head & Neck salvage ladder.
 
-The canonical curriculum intentionally contains two adjacent but non-interchangeable
-salvage concepts:
-  * Salvage Surgery After Radiation/Chemoradiation — broad salvage candidacy,
-    irradiated-field operative planning, reconstruction, and complication rescue.
-  * Salvage Surgery After Chemoradiation — post-definitive-CRT response assessment,
-    PET-directed neck management, and selection for site-specific salvage.
+The canonical inventory has one salvage concept: "Salvage Surgery After Radiation / Chemoradiation".
+This gate protects two clinically distinct jobs inside that one card:
+1) broad salvage candidacy, irradiated-field planning/reconstruction, and complication risk;
+2) post-definitive-CRT response-directed neck management, including PET timing and avoidance of
+   routine planned neck dissection after complete response.
 
-The ordinary ladder-completeness gate validates links/stages/schema. This gate adds
-semantic separation so three generic "salvage" questions cannot satisfy both cards.
-Topic lookup uses the same punctuation-insensitive normalization used by the v28.7
-Concept Hub rebuild so historical slash spacing cannot create a false orphan.
+The ordinary ladder-completeness gate validates links/stages/schema. This gate ensures the actual
+question set teaches both jobs rather than satisfying coverage with generic salvage questions.
 """
 
 import re
 import runtime_entry
 
 DOMAIN = "Head & Neck Oncology"
-BROAD = "Salvage Surgery After Radiation/Chemoradiation"
-POST_CRT = "Salvage Surgery After Chemoradiation"
+TOPIC = "Salvage Surgery After Radiation / Chemoradiation"
+POST_CRT_QID = "v225_hn_salv_postcrt_app"
 
 
 def norm(value):
@@ -26,11 +23,8 @@ def norm(value):
 
 
 def case_text(q):
-    parts = [
-        q.get("stem"), q.get("prompt"), q.get("question"), q.get("explanation"),
-        q.get("board_pearl"), q.get("curveball"), " ".join(q.get("choices") or []),
-        " ".join(q.get("why_wrong") or []),
-    ]
+    parts = [q.get("stem"), q.get("explanation"), q.get("board_pearl"), q.get("curveball"),
+             " ".join(q.get("choices") or []), " ".join(q.get("why_wrong") or [])]
     return norm(" ".join(str(x or "") for x in parts))
 
 
@@ -38,87 +32,70 @@ def has_any(text, terms):
     return any(norm(term) in text for term in terms)
 
 
-def require_groups(topic, text, groups, failures):
-    for label, terms in groups:
+def require_groups(label, text, groups, failures):
+    for group, terms in groups:
         if not has_any(text, terms):
-            failures.append(f"{topic}:missing_semantic_group:{label}")
+            failures.append(f"{label}:missing_semantic_group:{group}")
 
 
 def main():
     data = runtime_entry.data
     failures = []
-    canonical_by_norm = {
-        norm(m.get("topic")): m
-        for m in data.DEEP_MODULES_V6.get(DOMAIN, [])
-        if str(m.get("topic") or "").strip()
-    }
-    cases = list(data.CLINICAL_CHALLENGES_V119)
-
-    target_cases = {}
-    actual_topics = {}
-    for semantic_topic in (BROAD, POST_CRT):
-        module = canonical_by_norm.get(norm(semantic_topic))
-        if not module:
-            failures.append(f"missing_canonical_topic:{semantic_topic}")
-            target_cases[semantic_topic] = []
-            continue
-        actual_topic = str(module.get("topic") or "").strip()
-        actual_topics[semantic_topic] = actual_topic
+    modules = [m for m in data.DEEP_MODULES_V6.get(DOMAIN, []) if m.get("topic")]
+    module = next((m for m in modules if norm(m.get("topic")) == norm(TOPIC)), None)
+    if module is None:
+        failures.append("missing_live_salvage_canonical")
+        linked = []
+    else:
+        actual_topic = str(module.get("topic"))
         cid = data._v6_item_id(DOMAIN, actual_topic)
-        linked = [
-            q for q in cases
-            if q.get("domain") == DOMAIN
-            and q.get("concept_id") == cid
-            and q.get("ladder_reviewed")
-        ]
-        target_cases[semantic_topic] = linked
+        linked = [q for q in data.CLINICAL_CHALLENGES_V119
+                  if q.get("domain") == DOMAIN and q.get("concept_id") == cid and q.get("ladder_reviewed")]
         stages = {q.get("learning_stage") for q in linked}
         missing = {"foundation", "application", "senior_decision"} - stages
         if missing:
-            failures.append(f"{semantic_topic}:missing_stages:{','.join(sorted(missing))}")
-        for q in linked:
-            print(
-                "HN_SALVAGE_CASE|{}|actual_topic={}|{}|{}|{}".format(
-                    semantic_topic,
-                    actual_topic,
-                    q.get("learning_stage"),
-                    q.get("id"),
-                    norm(q.get("stem") or q.get("prompt") or q.get("question")),
-                )
-            )
+            failures.append("missing_stages:" + ",".join(sorted(missing)))
+        if not module.get("post_crt_response_sublayer_v287"):
+            failures.append("concept_hub_missing_post_crt_response_sublayer_v287")
 
-    broad_text = " ".join(case_text(q) for q in target_cases.get(BROAD, []))
-    post_text = " ".join(case_text(q) for q in target_cases.get(POST_CRT, []))
+    for q in linked:
+        print("HN_SALVAGE_CASE|{}|{}|{}".format(q.get("learning_stage"), q.get("id"), norm(q.get("stem"))))
 
-    require_groups(BROAD, broad_text, (
-        ("prior_irradiated_field", ("irradiated", "prior radiation", "full-dose chemoradiation", "previous radiation")),
-        ("salvage_candidacy", ("resectable", "distant staging", "metastatic", "functional reserve")),
-        ("vascularized_reconstruction", ("vascularized", "reconstruct", "flap", "outside the irradiated field")),
-        ("major_salvage_complication", ("fistula", "carotid", "recipient vessel", "vessel mapping", "flap compromise")),
+    text = " ".join(case_text(q) for q in linked)
+    require_groups("broad_salvage", text, (
+        ("irradiated_field", ("irradiated", "prior radiation", "chemoradiation")),
+        ("candidacy", ("resectable", "oncologic benefit", "distant metastases", "functional outcome")),
+        ("reconstruction_or_wound_risk", ("reconstruction", "vascularized", "fistula", "wound")),
+    ), failures)
+    require_groups("post_crt_management", text, (
+        ("response_assessment", ("metabolic response", "pet ct", "pet")),
+        ("timing", ("12 weeks", "12 week", "approximately 12")),
+        ("avoid_planned_neck_dissection", ("planned neck dissection", "surveillance", "complete response")),
+        ("equivocal_or_persistent_workup", ("equivocal", "persistent", "progressive", "biopsy", "re imaging")),
+        ("selected_salvage", ("salvage", "resectable")),
     ), failures)
 
-    require_groups(POST_CRT, post_text, (
-        ("response_assessment", ("response assessment", "metabolic response", "pet/ct", "pet")),
-        ("timing_after_crt", ("12 week", "12-week", "10-12 week", "approximately 12", "about 12")),
-        ("avoid_routine_planned_neck_dissection", ("planned neck dissection", "routine neck dissection", "complete response", "surveillance")),
-        ("equivocal_or_residual_workup", ("equivocal", "residual", "persistent", "biopsy", "reimage", "re-imag")),
-        ("selected_salvage", ("salvage neck dissection", "salvage surgery", "curably resectable", "resectable")),
-    ), failures)
+    post_case = next((q for q in linked if q.get("id") == POST_CRT_QID), None)
+    if not post_case:
+        failures.append("missing_post_crt_management_case")
+    else:
+        if post_case.get("learning_stage") != "application":
+            failures.append("post_crt_case_wrong_stage")
+        if not post_case.get("management_layer_v288"):
+            failures.append("post_crt_case_missing_review_marker")
+        reasons = list(post_case.get("why_wrong") or [])
+        choices = list(post_case.get("choices") or [])
+        if len(reasons) != len(choices):
+            failures.append("post_crt_case_rationale_alignment_error")
 
-    distinctive_terms = ("pet", "metabolic response", "planned neck dissection", "complete response", "equivocal")
-    distinctive_hits = sum(1 for term in distinctive_terms if norm(term) in post_text)
-    if distinctive_hits < 3:
-        failures.append(f"{POST_CRT}:insufficient_post_crt_distinction:hits={distinctive_hits}")
-
-    print(f"HN_SALVAGE_BROAD_CANONICAL|{actual_topics.get(BROAD, 'MISSING')}")
-    print(f"HN_SALVAGE_POST_CRT_CANONICAL|{actual_topics.get(POST_CRT, 'MISSING')}")
-    print(f"HN_SALVAGE_BROAD_REVIEWED|{len(target_cases.get(BROAD, []))}")
-    print(f"HN_SALVAGE_POST_CRT_REVIEWED|{len(target_cases.get(POST_CRT, []))}")
-    print(f"HN_SALVAGE_DISTINCTION_FAILURES|{len(failures)}")
+    print(f"HN_SALVAGE_REVIEWED|{len(linked)}")
+    print(f"HN_SALVAGE_POST_CRT_CASE|{int(post_case is not None)}")
+    print(f"HN_SALVAGE_SEMANTIC_FAILURES|{len(failures)}")
     for failure in failures:
         print("FAIL|" + failure)
     if failures:
         raise SystemExit(1)
+    print("PASS: live salvage ladder preserves broad irradiated-field reasoning and adds a distinct post-CRT response-management layer")
 
 
 if __name__ == "__main__":
