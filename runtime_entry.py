@@ -95,6 +95,8 @@ SALIVARY_OBSTRUCTION_REBUILD_V277 = apply_salivary_obstruction_rebuild_v277(data
 app_mod.DEEP_MODULES_V6 = data.DEEP_MODULES_V6
 from deep_curriculum_salivary_v278 import apply_salivary_acc_rebuild_v278
 SALIVARY_ACC_REBUILD_V278 = apply_salivary_acc_rebuild_v278(data, app_mod)
+from deep_curriculum_salivary_v279 import apply_salivary_benign_rebuild_v279
+SALIVARY_BENIGN_REBUILD_V279 = apply_salivary_benign_rebuild_v279(data, app_mod)
 
 from concept_check_repair_v162 import apply_concept_check_repair_v162
 CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
