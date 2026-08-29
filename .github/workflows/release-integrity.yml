@@ -9,6 +9,7 @@ on:
       - 'audit_concept_check_task_alignment_v*.py'
       - 'audit_concept_check_depth_backlog_v*.py'
       - 'concept_check_depth_v*.py'
+      - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_or_rescue_v*.py'
       - 'or_*.py'
       - 'audit_ladder_answer_balance_v211.py'
@@ -40,7 +41,7 @@ jobs:
       - name: Pre-flight boot gate
         run: python preflight_boot_check_v155.py
       - name: Fail-closed global release manifest
-        run: python audit_global_release_integrity_v296.py
+        run: python audit_global_release_integrity_v297.py
       - name: Strict 325-topic canonical coverage contract
         run: python audit_coverage_v135.py --depth --strict
       - name: Full Rhinology ladder hard gate
