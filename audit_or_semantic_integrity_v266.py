@@ -44,19 +44,21 @@ CHECKS = {
     },
     "stapedotomy": {
         "required": [("stapes", "footplate"), ("oval window",), ("incus",)],
-        "forbidden": ("round window niche", "basal turn", "facial recess"),
+        # The promontory/round-window niche can be a legitimate inferior orientation
+        # reference in stapes surgery; facial-recess/basal-turn anatomy is the true CI leak.
+        "forbidden": ("basal turn", "facial recess"),
     },
     "cochlear-implant": {
         "required": [("round window",), ("facial recess",), ("basal turn", "cochlea")],
         "forbidden": ("stapes footplate", "pyramidal eminence", "stapedius tendon"),
     },
     "septoplasty": {
-        "required": [("l-strut", "l strut"), ("keystone",), ("quadrangular cartilage",)],
+        "required": [("l strut",), ("keystone",), ("quadrangular cartilage",)],
         "forbidden": ("natural maxillary ostium", "uncinate process", "lamina papyracea"),
     },
     "maxillary-antrostomy": {
         "required": [("natural ostium",), ("uncinate",), ("nasolacrimal", "nld")],
-        "forbidden": ("l-strut", "keystone area", "anterior nasal spine"),
+        "forbidden": ("l strut", "keystone area", "anterior nasal spine"),
     },
     "total-laryngectomy": {
         "required": [("trache", "stoma"), ("hypopharyn", "pharyngeal"), ("laryng",)],
@@ -67,6 +69,11 @@ CHECKS = {
         "forbidden": ("oval window", "facial recess", "keystone area"),
     },
 }
+
+
+def _normalize(text):
+    return str(text).lower().replace("-", " ").replace("/", " ")
+
 
 try:
     import runtime_entry as rt
@@ -82,13 +89,13 @@ try:
             failures.append(f"{slug}: missing from live OR registry")
             continue
         landmark_items = [str(x) for x in (op.get("landmarks") or [])]
-        landmarks = " ".join(x.lower() for x in landmark_items)
+        landmarks = " ".join(_normalize(x) for x in landmark_items)
         start_failure_count = len(failures)
         for group in spec["required"]:
-            if not any(term in landmarks for term in group):
+            if not any(_normalize(term) in landmarks for term in group):
                 failures.append(f"{slug}: missing defining landmark group {group!r}")
         for term in spec["forbidden"]:
-            if term in landmarks:
+            if _normalize(term) in landmarks:
                 failures.append(f"{slug}: cross-procedure landmark contamination {term!r}")
         if len(failures) > start_failure_count:
             snapshots[slug] = landmark_items
