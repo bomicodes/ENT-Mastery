@@ -35,22 +35,22 @@ def _foundation_rationale(choice, is_correct):
         )
     elif "omohyoid" in lower or "level iv" in lower:
         reason = (
-            "Dividing the omohyoid in level IV is inferior to the level-IIb accessory-nerve danger zone; "
+            "Dividing the omohyoid in level IV is inferior to the level IIb accessory-nerve danger zone; "
             "its key nearby concerns are lower-neck lymphatic and vascular anatomy rather than direct IIb CN XI manipulation."
         )
     elif "facial artery" in lower or "level i" in lower or "submandibular" in lower:
         reason = (
             "Identifying the facial artery in level I is part of submandibular-triangle dissection and does not "
-            "directly expose the level-IIb segment of the spinal accessory nerve."
+            "directly expose the level IIb segment of the spinal accessory nerve."
         )
     elif "superior thyroid" in lower:
         reason = (
             "Ligation of the superior thyroid artery is thyroid/superior-pole vascular work and is anatomically "
-            "unrelated to clearing level-IIb nodal tissue around CN XI."
+            "unrelated to clearing level IIb nodal tissue around CN XI."
         )
     else:
         reason = (
-            "This maneuver does not represent the level-IIb dissection around the spinal accessory nerve; "
+            "This maneuver does not represent the level IIb dissection around the spinal accessory nerve; "
             "localize the nodal level and the structure actually being manipulated before assigning the morbidity risk."
         )
     return ("Correct. " if is_correct else "") + reason
