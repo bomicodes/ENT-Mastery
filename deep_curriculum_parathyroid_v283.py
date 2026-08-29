@@ -5,7 +5,7 @@ centering confirmation of failure, review of the index operation, high-confidenc
 localization, risk-selected re-exploration, and scarred-neck operative strategy.
 
 Production compatibility note: runtime_entry.py already imports and executes this module.
-Until the generated production entrypoint is next consolidated, v28.4-v28.6 are
+Until the generated production entrypoint is next consolidated, v28.4-v28.7 are
 deliberately chained here so the later source-grounded rebuilds cannot remain orphan
 source files on Render.
 """
@@ -14,6 +14,7 @@ import re
 from deep_curriculum_otology_v284 import apply_otology_etd_rebuild_v284
 from deep_curriculum_rhinology_v285 import apply_rhinology_rhinitis_rebuild_v285
 from deep_curriculum_headneck_v286 import apply_headneck_neck_dissection_rebuild_v286
+from deep_curriculum_headneck_v287 import apply_headneck_salvage_rebuild_v287
 
 DOMAIN = "Thyroid / Parathyroid / Salivary"
 FIELDS = ("recognize", "localize", "workup", "manage", "operate", "teach")
@@ -83,10 +84,12 @@ def apply_reoperative_parathyroid_rebuild_v283(data_module, app_module=None):
     etd_result = apply_otology_etd_rebuild_v284(data_module, app_module)
     rhinitis_result = apply_rhinology_rhinitis_rebuild_v285(data_module, app_module)
     neck_dissection_result = apply_headneck_neck_dissection_rebuild_v286(data_module, app_module)
+    salvage_result = apply_headneck_salvage_rebuild_v287(data_module, app_module)
     return {
         "patched": patched,
         "count": len(patched),
         "v284_etd": etd_result,
         "v285_rhinitis": rhinitis_result,
         "v286_neck_dissection": neck_dissection_result,
+        "v287_salvage": salvage_result,
     }
