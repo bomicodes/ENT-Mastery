@@ -16,10 +16,13 @@ STAGES = {"foundation", "application", "senior_decision"}
 
 
 def _text(q):
-    return " ".join(
+    prose = " ".join(
         str(q.get(k) or "")
         for k in ("stem", "explanation", "board_pearl", "curveball")
-    ).lower() + " " + " ".join(str(x).lower() for x in (q.get("choices") or []))
+    )
+    choices = " ".join(str(x) for x in (q.get("choices") or []))
+    reasons = " ".join(str(x) for x in (q.get("why_wrong") or []))
+    return f"{prose} {choices} {reasons}".lower()
 
 
 def main():
