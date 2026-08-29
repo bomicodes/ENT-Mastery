@@ -9,8 +9,10 @@ from collections import Counter,defaultdict
 import re
 import runtime_entry as rt
 
-PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_","v267_","v268_","v269_","v270_","v271_","v272_","v273_","v274_")
-MIN_ROWS={"v224_":2,"v268_":3}
+PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_","v267_","v268_","v269_","v270_","v271_","v272_","v273_","v274_","v295_")
+MIN_ROWS={"v224_":2,"v268_":3,"v295_":1}
+REQUIRED_POSITIONS={"v224_":2,"v295_":1}
+CONCENTRATION_EXEMPT={"v224_","v268_","v295_"}
 VERSION_PREFIX_RE=re.compile(r"^(v(\d+)_)")
 failures=[]; groups=defaultdict(list); discovered=set()
 
@@ -45,9 +47,9 @@ for prefix in PREFIXES:
   if len(reasons)!=len(choices): failures.append(f"{q.get('id')}: rationale length mismatch"); continue
   if not str(reasons[answer]).strip().lower().startswith("correct."): failures.append(f"{q.get('id')}: correct rationale misaligned after balancing")
   counts[answer]+=1
- required_positions=2 if prefix=="v224_" else 3
+ required_positions=REQUIRED_POSITIONS.get(prefix,3)
  if len(counts)<required_positions: failures.append(f"{prefix}: only {len(counts)} answer positions used: {dict(counts)}")
- if prefix not in {"v224_","v268_"} and counts and max(counts.values())>(len(rows)+1)//2: failures.append(f"{prefix}: excessive answer-position concentration: {dict(counts)}")
+ if prefix not in CONCENTRATION_EXEMPT and counts and max(counts.values())>(len(rows)+1)//2: failures.append(f"{prefix}: excessive answer-position concentration: {dict(counts)}")
  print(f"LADDER_BATCH_ANSWER_POSITIONS|{prefix}|{dict(sorted(counts.items()))}")
 if failures:
  print("LADDER ANSWER-BALANCE FAILURES"); print("\n".join(failures)); raise SystemExit(1)
