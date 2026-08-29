@@ -35,6 +35,11 @@ CHECKS = [
         ("skull-base danger recognition", (("skull base", "csf", "dura"),)),
         ("vision-threatening orbital rescue", (("visual decline", "visual loss", "vision is threatened"), ("compartment syndrome", "tense orbit"), ("canthotomy", "cantholysis", "orbital decompression"), ("rather than waiting", "without delaying", "must not substitute"))),
     ]),
+    ("csf-nasoseptal", ("csf leak", "nasoseptal flap", "skull base repair"), [
+        ("flow-based reconstruction decision", (("low flow", "high flow", "flow character"), ("multilayer",), ("vascularized", "pedicled flap", "nasoseptal flap"))),
+        ("selective lumbar-drain logic", (("lumbar drain",), ("selective", "not automatic", "not routinely"), ("sound closure", "mechanically sound", "substitute"))),
+        ("major-vessel bailout", (("arterial", "carotid", "major vessel"), ("vascular", "vascular injury"), ("blind",), ("cautery", "instrumentation"))),
+    ]),
     ("tors", ("transoral robotic", "tors"), [
         ("hemorrhage rescue awareness", (("bleed", "hemorrhage", "hemostasis"), ("vessel", "airway", "control"))),
         ("catastrophic hemorrhage choreography", (("anesthesia", "airway"), ("operative", "re-exploration", "or"), ("suction", "pressure", "packing"), ("blind", "clamping"))),
