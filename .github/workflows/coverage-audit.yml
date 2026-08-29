@@ -278,8 +278,10 @@ jobs:
         run: python audit_concept_check_task_alignment_v190.py
       - name: v19.1 Concept Check task-answer alignment gate
         run: python audit_concept_check_task_alignment_v191.py
-      - name: Post-completion live-canonical Concept Check backlog gate v19.1
-        run: python audit_concept_check_depth_backlog_v191.py
+      - name: v19.2 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v192.py
+      - name: Post-completion live-canonical Concept Check backlog gate v19.2
+        run: python audit_concept_check_depth_backlog_v192.py
       - name: Upload v17.8 audit report
         if: always()
         uses: actions/upload-artifact@v4
@@ -291,12 +293,12 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: concept-check-depth-backlog-v191
-          path: V191_DEPTH_BACKLOG_AUDIT.json
+          name: concept-check-depth-backlog-v192
+          path: V192_DEPTH_BACKLOG_AUDIT.json
           if-no-files-found: warn
 
 # Boot health and the runtime ladder contract run first so content-integrity
 # failures are not masked by unrelated subsystem gates. All nine completed
 # canonical domains are explicitly hard-gated before unrelated OR subsystems.
 # Current OR semantic integrity and post-completion Concept Check depth through
-# v19.1 are explicit global release gates rather than delegated to side workflows.
+# v19.2 are explicit global release gates rather than delegated to side workflows.
