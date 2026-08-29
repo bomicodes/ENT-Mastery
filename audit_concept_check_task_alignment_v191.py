@@ -10,6 +10,10 @@ TASK_TERMS={
 "cc-v112-rec-laryngology-voice-swallowing-stroboscopy-interpretation":["mucosal wave","periodicity","high-speed","biopsy"],
 }
 def words(v): return re.findall(r"\b\w+[\w'-]*\b",str(v or ""))
+def semantic_text(v):
+ s=str(v or '').lower()
+ s=re.sub(r"[-–—/]", " ", s)
+ return re.sub(r"\s+", " ", s).strip()
 def main():
  d=runtime_entry.data; checks=list(d.CONCEPT_CHECKS_V112); by={str(q.get('id') or ''):q for q in checks}; failures=[]; rows=[]; expected=set(COHORT); rr=getattr(runtime_entry,'CONCEPT_CHECK_FINAL_CLINICAL_GATE_V179',{}); align=rr.get('task_alignment_v191') or {}
  if align.get('missing'): failures.append('runtime_missing='+','.join(align['missing']))
@@ -23,7 +27,7 @@ def main():
   if not m: fail('no_live_canonical_module')
   if topic!=p['canonical_topic']: fail('resolved_topic_mismatch:'+repr(topic))
   if cid!=p['concept_id'] or q.get('concept_id')!=cid: fail('concept_id_changed_or_unresolved')
-  prompt=str(q.get('prompt') or ''); ans=str(q.get('answer_text') or ''); low=ans.lower()
+  prompt=str(q.get('prompt') or ''); ans=str(q.get('answer_text') or ''); sem=semantic_text(ans)
   if not q.get('task_alignment_v191'): fail('missing_v191_marker')
   if len(words(prompt))<35 or '?' not in prompt: fail('weak_prompt:'+str(len(words(prompt))))
   if len(words(ans))<120: fail('weak_answer:'+str(len(words(ans))))
@@ -33,7 +37,7 @@ def main():
   traps=q.get('common_traps_v191') or []
   if len(traps)<2 or any(len(words(x))<10 for x in traps): fail('weak_individualized_trap_reasoning')
   if not str(q.get('deliberate_review_v191') or '').strip(): fail('missing_deliberate_review_metadata')
-  miss=[t for t in TASK_TERMS[qid] if t not in low]
+  miss=[t for t in TASK_TERMS[qid] if semantic_text(t) not in sem]
   if miss: fail('missing_task_terms:'+','.join(miss))
   rows.append({'id':qid,'concept_id':q.get('concept_id'),'resolved_topic':topic,'prompt_words':len(words(prompt)),'answer_words':len(words(ans)),'trap_count':len(traps),'failures':local})
  repaired=set(align.get('repaired') or [])
