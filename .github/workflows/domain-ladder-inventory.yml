@@ -7,6 +7,7 @@ on:
     paths:
       - 'audit_domain_ladder_inventory_v217.py'
       - 'audit_hn_salvage_ladder_distinction_v288.py'
+      - 'hn_salvage_ladder_alignment_v*.py'
       - 'runtime_entry.py'
       - 'data.py'
       - 'deep_curriculum_*.py'
@@ -31,10 +32,14 @@ jobs:
         run: python audit_domain_ladder_inventory_v217.py
       - name: Head and Neck salvage ladder semantic distinction
         run: python audit_hn_salvage_ladder_distinction_v288.py
+      - name: Reviewed ladder answer-balance regression
+        run: python audit_ladder_answer_balance_v211.py
 
 # This fast workflow intentionally duplicates the canonical ladder checks at the
 # front of the global quality suite. It exists so curriculum work can select and
 # protect exact canonical gaps without waiting for the long route/Deep Curriculum/
-# Concept Check chain to finish. The salvage semantic check additionally prevents
-# the two adjacent H&N salvage concepts from collapsing into generic duplicate
-# question sets. It does not replace or weaken the global gates.
+# Concept Check chain to finish. The salvage semantic check protects the broad
+# irradiated-field reasoning and the distinct post-CRT response-management layer
+# inside the single live salvage canonical concept. The answer-balance gate also
+# protects individualized rationale alignment after deterministic choice movement.
+# This workflow does not replace or weaken the global gates.
