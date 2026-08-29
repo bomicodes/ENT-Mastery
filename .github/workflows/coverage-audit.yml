@@ -61,6 +61,9 @@ on:
       - 'audit_or_salivary_management_v2311.py'
       - 'audit_or_thyroid_management_v2312.py'
       - 'audit_or_parathyroid_management_v2313.py'
+      - 'audit_or_full_coverage_v265.py'
+      - 'audit_or_final_management_v2322.py'
+      - 'audit_or_semantic_integrity_v266.py'
       - 'or_tomorrow_overhaul_v190.py'
       - 'or_concept_link_fix_v191.py'
       - 'or_procedure_sequences_v200.py'
@@ -90,6 +93,7 @@ on:
       - 'concept_check_board_repair_v177.py'
       - 'concept_check_domain_curation_v178.py'
       - 'concept_check_final_clinical_gate_v179.py'
+      - 'concept_check_depth_v*.py'
       - 'deep_curriculum_distinct_entities_v178.py'
       - 'audit_coverage_v135.py'
       - 'audit_quality_v149.py'
@@ -158,6 +162,12 @@ jobs:
         run: python audit_rhinology_v209.py
       - name: v21.1 ladder answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
+      - name: Current OR 93-module reviewed hard gate
+        run: python audit_or_full_coverage_v265.py
+      - name: Current final OR management hard gate
+        run: python audit_or_final_management_v2322.py
+      - name: OR semantic-integrity adversarial gate
+        run: python audit_or_semantic_integrity_v266.py
       - name: v20 OR registry inventory
         run: python audit_or_inventory_v200.py
       - name: v20.x procedure-specific OR sequence hard gate
@@ -256,8 +266,18 @@ jobs:
         run: python audit_concept_check_task_alignment_v184.py
       - name: v18.5 Concept Check task-answer alignment gate
         run: python audit_concept_check_task_alignment_v185.py
-      - name: Post-completion live-canonical Concept Check backlog gate v18.5
-        run: python audit_concept_check_depth_backlog_v185.py
+      - name: v18.6 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v186.py
+      - name: v18.7 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v187.py
+      - name: v18.8 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v188.py
+      - name: v18.9 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v189.py
+      - name: v19.0 Concept Check task-answer alignment gate
+        run: python audit_concept_check_task_alignment_v190.py
+      - name: Post-completion live-canonical Concept Check backlog gate v19.0
+        run: python audit_concept_check_depth_backlog_v190.py
       - name: Upload v17.8 audit report
         if: always()
         uses: actions/upload-artifact@v4
@@ -270,11 +290,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: concept-check-depth-backlog
-          path: V185_DEPTH_BACKLOG_AUDIT.json
+          path: V190_DEPTH_BACKLOG_AUDIT.json
           if-no-files-found: warn
 
 # Boot health and the runtime ladder contract run first so content-integrity
 # failures are not masked by unrelated subsystem gates. All nine completed
 # canonical domains are explicitly hard-gated before unrelated OR subsystems.
-# All OR, route, coverage, Deep Curriculum, Concept Check, reviewed ladder, and
-# post-completion depth gates remain in force afterward.
+# Current OR semantic integrity and post-completion Concept Check depth through
+# v19.0 are explicit global release gates rather than delegated to side workflows.
