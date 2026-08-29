@@ -12,6 +12,7 @@ on:
       - 'vignette_ladders_v261.py'
       - 'vignette_ladders_v262.py'
       - 'facial_frontal_sinus_management_v295.py'
+      - 'hn_neck_semantic_alignment_v294.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_facial_plastics_full_domain_v262.py'
@@ -46,3 +47,5 @@ jobs:
 # topics must retain reviewed foundation/application/senior-decision ladders.
 # v29.5 additionally protects the distinct frontal-sinus outflow-tract management
 # axis while preserving the original observation and skull-base escalation cases.
+# Cross-domain semantic modules imported by ladder_answer_balance are watched here
+# because they can alter live rationale alignment before this domain gate executes.
