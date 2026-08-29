@@ -5,8 +5,9 @@ safeguard restores a standalone pediatric Epiglottitis module if a historical
 canonicalization pass collapsed it into "Croup vs Epiglottitis", and verifies
 that necrotizing otitis externa remains distinct from uncomplicated AOE.
 
-v27.5 also invokes the source-grounded salivary Concept Hub repair after the
-historical deep-curriculum loaders have finished.
+v27.5 invokes the source-grounded sialadenitis/Sjögren Concept Hub repair after
+the historical deep-curriculum loaders have finished. v27.6 extends that
+source-grounded salivary pass to First-Bite Syndrome and Frey Syndrome.
 """
 
 
@@ -76,9 +77,15 @@ def apply_distinct_entities_v178(data):
     if aoe is not None and noe is not None and aoe is not noe:
         verified.append(("Otology / Neurotology", "AOE_and_NOE_distinct"))
 
-    # Source-ground the legacy salivary card at the same post-canonicalization
-    # point.  Keeping this call here avoids another production-entrypoint shim.
     from deep_curriculum_salivary_v275 import apply_salivary_concept_rebuild_v275
     salivary = apply_salivary_concept_rebuild_v275(data)
 
-    return {"restored": restored, "verified": verified, "salivary_v275": salivary}
+    from deep_curriculum_salivary_v276 import apply_salivary_complication_rebuild_v276
+    salivary_complications = apply_salivary_complication_rebuild_v276(data)
+
+    return {
+        "restored": restored,
+        "verified": verified,
+        "salivary_v275": salivary,
+        "salivary_complications_v276": salivary_complications,
+    }
