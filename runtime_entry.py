@@ -82,6 +82,20 @@ app_mod.CLINICAL_CHALLENGE_BY_ID_V119 = data.CLINICAL_CHALLENGE_BY_ID_V119
 
 from deep_curriculum_distinct_entities_v178 import apply_distinct_entities_v178
 DISTINCT_ENTITIES_V178 = apply_distinct_entities_v178(data)
+
+# Source-grounded salivary Concept Hub rebuilds. These must run in the actual
+# production entrypoint (Render launches runtime_entry:app) after the generated
+# curriculum has loaded and before Concept Hub requests are served.
+from deep_curriculum_salivary_v275 import apply_salivary_concept_rebuild_v275
+SALIVARY_CONCEPT_REBUILD_V275 = apply_salivary_concept_rebuild_v275(data, app_mod)
+from deep_curriculum_salivary_v276 import apply_salivary_complication_rebuild_v276
+SALIVARY_COMPLICATION_REBUILD_V276 = apply_salivary_complication_rebuild_v276(data, app_mod)
+from deep_curriculum_salivary_v277 import apply_salivary_obstruction_rebuild_v277
+SALIVARY_OBSTRUCTION_REBUILD_V277 = apply_salivary_obstruction_rebuild_v277(data)
+app_mod.DEEP_MODULES_V6 = data.DEEP_MODULES_V6
+from deep_curriculum_salivary_v278 import apply_salivary_acc_rebuild_v278
+SALIVARY_ACC_REBUILD_V278 = apply_salivary_acc_rebuild_v278(data, app_mod)
+
 from concept_check_repair_v162 import apply_concept_check_repair_v162
 CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 from concept_check_board_repair_v177 import apply_concept_check_board_repair_v177
