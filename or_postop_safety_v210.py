@@ -5,6 +5,8 @@ modes that are not adequately conveyed by family-level complication boilerplate.
 The matcher is title/slug based so the layer remains robust to canonical slug naming.
 """
 
+from or_csf_rescue_v269 import apply_or_csf_rescue_v269
+
 TARGETS = [
     {
         "name": "tracheostomy",
@@ -89,4 +91,5 @@ def apply_or_postop_safety_v210(registry):
             op["postop_safety_v210"] = True
             matches.append({"slug": slug, "changed": changed})
         applied[target["name"]] = matches
-    return {"targets": len(TARGETS), "applied": applied}
+    v269 = apply_or_csf_rescue_v269(registry)
+    return {"targets": len(TARGETS), "applied": applied, "v269": v269}
