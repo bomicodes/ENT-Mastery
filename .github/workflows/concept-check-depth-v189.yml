@@ -10,6 +10,7 @@ on:
       - 'audit_concept_check_task_alignment_v189.py'
       - 'audit_concept_check_depth_backlog_v189.py'
       - 'audit_or_semantic_integrity_v266.py'
+      - 'or_cochlear_implant_management_v2310.py'
       - '.github/workflows/concept-check-depth-v189.yml'
 
 jobs:
