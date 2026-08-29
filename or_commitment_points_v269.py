@@ -16,6 +16,25 @@ TARGETS = [
         ],
     },
     {
+        "slug": "cochlear-implant",
+        "title_terms": ("cochlear", "implant"),
+        "setup": [
+            "Make electrode resistance a stop-and-reassess point, not a cue to push harder. If the array does not advance with expected low resistance, withdraw enough to inspect the round-window/cochleostomy exposure and insertion vector, confirm that the opening is adequate and the electrode has not folded or entered a false passage, and redirect or revise access under direct visualization. Repeated force risks basilar-membrane/osseous-spiral-lamina trauma, scalar translocation, tip fold-over and loss of residual hearing; an incomplete but atraumatic insertion is preferable to blindly forcing the array to the planned depth.",
+            "Unexpected brisk clear-fluid egress or anatomy suggesting a cochlear malformation changes the operation to controlled CSF/perilymph-leak management. Maintain control of the access site, insert only as safely permitted by the anatomy, obtain a secure soft-tissue seal around the electrode, and reassess the planned insertion rather than repeatedly enlarging or instrumenting the cochlea. If the facial nerve or another critical structure makes the usual facial-recess/round-window trajectory unsafe, widen exposure or choose a deliberate alternative access strategy rather than working blindly around the nerve.",
+            "Before closing, treat abnormal telemetry or concern for tip fold-over/malposition as a reason to investigate while the field is still accessible. Recheck electrode position and device integrity with the available intraoperative tools and revise when a correctable placement problem is demonstrated; do not close simply because the array is physically inside the cochlea.",
+        ],
+        "postop": [],
+    },
+    {
+        "slug": "cholesteatoma",
+        "title_terms": ("cholesteat",),
+        "setup": [
+            "Let disease clearance determine the final mastoid strategy. If epitympanic, retrofacial, sinus-tympani, anterior-epitympanic or other hidden disease cannot be safely and reliably cleared with the canal wall intact, convert the plan rather than leaving known keratinizing disease merely to preserve canal-wall anatomy; canal-wall-down or staged disease-control strategies are legitimate bailouts when complete clearance and dependable surveillance cannot otherwise be achieved.",
+            "A labyrinthine fistula, dehiscent/exposed facial nerve, tegmen/dural defect or major venous-sinus exposure changes the dissection from routine matrix removal to structure-preservation choreography. Stop blind traction and powered instrumentation at the danger zone, define the involved structure, work under direct magnified visualization, and modify the extent/timing of matrix removal and reconstruction to protect hearing, facial function, dura/CSF containment and venous control. The goal remains safe disease eradication, not mechanically stripping matrix from a critical structure at any cost.",
+        ],
+        "postop": [],
+    },
+    {
         "slug": "parotidectomy",
         "title_terms": ("parotidectomy",),
         "setup": [
