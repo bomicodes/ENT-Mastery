@@ -73,6 +73,7 @@ try:
 
     reg = rt.data.OR_PREP_REGISTRY
     failures = []
+    snapshots = {}
     client = rt.app.test_client()
 
     for slug, spec in CHECKS.items():
@@ -80,13 +81,17 @@ try:
         if not op:
             failures.append(f"{slug}: missing from live OR registry")
             continue
-        landmarks = " ".join(str(x).lower() for x in (op.get("landmarks") or []))
+        landmark_items = [str(x) for x in (op.get("landmarks") or [])]
+        landmarks = " ".join(x.lower() for x in landmark_items)
+        start_failure_count = len(failures)
         for group in spec["required"]:
             if not any(term in landmarks for term in group):
                 failures.append(f"{slug}: missing defining landmark group {group!r}")
         for term in spec["forbidden"]:
             if term in landmarks:
                 failures.append(f"{slug}: cross-procedure landmark contamination {term!r}")
+        if len(failures) > start_failure_count:
+            snapshots[slug] = landmark_items
         r = client.get("/case-tomorrow", query_string={"q": op.get("title", slug)}, follow_redirects=True)
         if r.status_code >= 500:
             failures.append(f"{slug}: /case-tomorrow HTTP {r.status_code}")
@@ -94,6 +99,8 @@ try:
     if failures:
         print("OR v26.6 SEMANTIC-INTEGRITY FAILURES")
         print("\n".join(failures))
+        for slug, items in snapshots.items():
+            print(f"LANDMARK_SNAPSHOT {slug}: {items!r}")
         raise SystemExit(1)
 
     print(f"PASS: {len(CHECKS)} collision-prone OR modules preserve procedure-defining anatomy without cross-family landmark leakage")
