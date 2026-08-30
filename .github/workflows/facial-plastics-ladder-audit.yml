@@ -13,12 +13,16 @@ on:
       - 'vignette_ladders_v262.py'
       - 'facial_frontal_sinus_management_v295.py'
       - 'facial_noe_management_alignment_v298.py'
+      - 'deep_curriculum_facial_v300.py'
+      - 'deep_curriculum_facial_v300_base.py'
+      - 'deep_curriculum_facial_v301.py'
       - 'hn_neck_semantic_alignment_v294.py'
       - 'ladder_answer_balance_v211.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_facial_plastics_full_domain_v262.py'
       - 'audit_facial_frontal_sinus_management_v295.py'
       - 'audit_facial_noe_management_v298.py'
+      - 'audit_facial_deep_semantic_boundaries_v302.py'
       - 'audit_learning_ladders_runtime_v204.py'
       - 'audit_domain_ladder_inventory_v217.py'
       - 'runtime_entry.py'
@@ -44,6 +48,8 @@ jobs:
         run: python audit_facial_frontal_sinus_management_v295.py
       - name: v29.8 NOE type II versus III management hard gate
         run: python audit_facial_noe_management_v298.py
+      - name: v30.2 Facial trauma Concept Hub semantic-boundary gate
+        run: python audit_facial_deep_semantic_boundaries_v302.py
       - name: Answer-balance regression gate
         run: python audit_ladder_answer_balance_v211.py
 
@@ -52,5 +58,8 @@ jobs:
 # v29.5 protects the distinct frontal-sinus outflow-tract management axis.
 # v29.8 protects NOE type II tendon-bearing fragment fixation versus true type III
 # medial-canthal-tendon avulsion/canthopexy reasoning without adding a duplicate card.
+# v30.2 prevents subordinate NOE mechanics / frontal-sinus decision-model teaching
+# from silently becoming duplicate canonical cards while requiring those high-yield
+# distinctions to remain present in the exact canonical parent modules.
 # Cross-domain semantic modules imported by ladder_answer_balance are watched here
 # because they can alter live rationale alignment before this domain gate executes.
