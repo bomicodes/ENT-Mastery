@@ -1,19 +1,19 @@
-"""v20.1 hard gate for exact-canonical RRP decision depth and source provenance."""
+"""v20.1 hard gate for exact-canonical Pediatric RRP decision depth and source provenance."""
 import json
 import re
 import runtime_entry
 from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v201 import COHORT
 
-QID = "cc-v112-rec-laryngology-voice-swallowing-recurrent-respiratory-papillomatosis"
+QID = "cc-v112-rec-pediatric-otolaryngology-recurrent-respiratory-papillomatosis"
 TERM_GROUPS = {
     "biology_goal": ("HPV 6 and 11", "safe airway and useful voice", "least iatrogenic injury"),
     "mucosal_preservation": ("anterior commissure", "bilateral opposing raw surfaces", "web"),
     "airway_boundary": ("tracheostomy is not routine", "distal tracheobronchial spread", "lifesaving airway"),
+    "pediatric_systemic": ("systemic bevacizumab", "juvenile-onset", "2026 systematic review"),
     "adult_papzimeos": ("August 14, 2025", "PAPZIMEOS", "adults with RRP"),
     "trial_label_boundary": ("three surgeries per year", "false label restriction", "FDA indication is adults with RRP"),
     "adult_guidance": ("2026 RRP Foundation adult position statement", "discussed early", "position statement"),
-    "bevacizumab": ("systemic bevacizumab", "second-line medical therapy", "2024 consensus"),
     "pediatric_boundary": ("adult FDA indication", "do not silently extrapolate", "child"),
     "pulmonary": ("HPV typing", "chest CT", "biopsy", "pulmonary"),
     "fire_rescue": ("airway fire", "stop ventilation and oxidizer flow", "remove the burning"),
@@ -60,6 +60,8 @@ def main():
             fail("resolved_topic_mismatch:" + repr(topic))
         if cid != p["concept_id"] or q.get("concept_id") != cid:
             fail("concept_id_changed_or_unresolved")
+        if str(q.get("domain") or "") != "Pediatric Otolaryngology":
+            fail("live_domain_changed:" + repr(q.get("domain")))
 
         prompt, ans = str(q.get("prompt") or ""), str(q.get("answer_text") or "")
         text = sem(ans)
@@ -81,7 +83,7 @@ def main():
             fail("weak_individualized_trap_reasoning")
         refs = q.get("source_refs_v201") or []
         types = [x.get("type") for x in refs]
-        if len(refs) < 8 or types.count("textbook") < 3 or "regulatory" not in types or "position_statement" not in types or "consensus" not in types:
+        if len(refs) < 8 or types.count("textbook") < 3 or "regulatory" not in types or "position_statement" not in types or types.count("consensus") < 2 or "evidence" not in types:
             fail("missing_traceable_source_mix")
         if not str(q.get("deliberate_review_v201") or "").strip():
             fail("missing_deliberate_review_metadata")
@@ -98,11 +100,14 @@ def main():
             fail("missing_medical_vs_airway_rescue_boundary")
         if "influential contemporary guidance, not a substitute" not in ans:
             fail("missing_position_statement_evidence_boundary")
+        if "tailor radiation exposure and surveillance intervals" not in ans:
+            fail("missing_pediatric_ct_risk_boundary")
 
         rows.append({
             "id": qid,
             "concept_id": q.get("concept_id"),
             "resolved_topic": topic,
+            "domain": q.get("domain"),
             "prompt_words": len(words(prompt)),
             "answer_words": len(words(ans)),
             "trap_count": len(traps),
@@ -120,7 +125,7 @@ def main():
     print(f"V201_REPAIRED|{len(repaired)}")
     print(f"V201_FAILURES|{len(failures)}")
     for r in rows:
-        print("V201_DEPTH_ITEM|{id}|prompt={prompt_words}|answer={answer_words}|traps={trap_count}|sources={source_count}|topic={resolved_topic}".format(**r))
+        print("V201_DEPTH_ITEM|{id}|domain={domain}|prompt={prompt_words}|answer={answer_words}|traps={trap_count}|sources={source_count}|topic={resolved_topic}".format(**r))
     for x in failures:
         print("FAIL|" + x)
     if failures:

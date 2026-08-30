@@ -16,7 +16,7 @@ def main():
     if "task_alignment_v201" not in markers:
         failures.append("missing_dynamic_depth_marker:task_alignment_v201")
 
-    target_id = "cc-v112-rec-laryngology-voice-swallowing-recurrent-respiratory-papillomatosis"
+    target_id = "cc-v112-rec-pediatric-otolaryngology-recurrent-respiratory-papillomatosis"
     untouched_ids = {str(x.get("id") or "") for x in report.get("candidates") or []}
     residual_ids = {str(x.get("id") or "") for x in report.get("residual_candidates") or []}
     if target_id in untouched_ids:
