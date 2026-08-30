@@ -82,11 +82,25 @@ try:
         )
         if not _has_groups(setup, invaded_rln_groups):
             failures.append(f"{slug}: missing function- and invasion-aware RLN preservation-versus-resection strategy")
+        last_nerve_groups = (
+            ("preoperative unilateral vocal fold paralysis", "preoperative unilateral vocal-fold paralysis"),
+            ("last functioning nerve", "last-functioning-nerve", "last functioning rln"),
+            ("bilateral vocal fold paralysis", "bilateral vocal-fold paralysis"),
+            ("respiratory distress", "tracheostomy", "airway"),
+            ("preservation", "preserve"),
+            ("oncologic",),
+            ("reinnervation", "reconstruction"),
+            ("immediate", "postoperative airway"),
+        )
+        if not _has_groups(setup, last_nerve_groups):
+            failures.append(f"{slug}: missing last-functioning-RLN planning when the opposite cord is already paralyzed")
         sources = "\n".join(str(x) for x in (total.get("sources") or []))
         source_groups = (
             ("cummings",),
             ("k j lee", "essential otolaryngology"),
             ("pasha", "clinical reference guide"),
+            ("2025 american thyroid association", "2025 ata"),
+            ("improving voice outcomes", "aao hnsf"),
             ("international neural monitoring study group", "inmsg"),
             ("invasive thyroid cancer",),
         )
@@ -98,13 +112,24 @@ try:
         setup = "\n".join(str(x) for x in (lob.get("setup") or []))
         if not _has_groups(setup, (("invading", "invades", "adherent"), ("functioning nerve", "nerve function"), ("shaved", "shave", "partial"), ("en bloc", "resection"), ("reinnervation", "rehabilitation"))):
             failures.append(f"{slug}: lobectomy case missing invasive-RLN commitment logic")
+        if not _has_groups(setup, (("opposite vocal fold", "contralateral"), ("last functioning rln", "last functioning nerve"), ("airway", "bilateral paralysis"), ("reinnervation", "reconstruction"), ("immediate abduction", "immediate"))):
+            failures.append(f"{slug}: lobectomy case missing opposite-paralysis/last-functioning-RLN strategy")
+
+    slug, reop = _find(reg, ("reop", "thyroid"))
+    if reop:
+        setup = "\n".join(str(x) for x in (reop.get("setup") or []))
+        if not _has_groups(setup, (("already paralyzed", "paralyzed"), ("last functioning rln", "last functioning nerve"), ("blind traction", "energy in scar"), ("oncologic", "recurrent cancer"), ("airway", "bilateral vocal fold paralysis"), ("reinnervation", "reconstruction"))):
+            failures.append(f"{slug}: reoperative case missing last-functioning-RLN scar/airway commitment logic")
+        sources = "\n".join(str(x) for x in (reop.get("sources") or []))
+        if not _has_groups(sources, (("cummings",), ("k j lee", "essential otolaryngology"), ("pasha",), ("2025 american thyroid association",), ("international neural monitoring study group",))):
+            failures.append(f"{slug}: reoperative thyroid source provenance incomplete")
 
     if failures:
         print("THYROID OR v23.12 FAILURES")
         print("\n".join(failures))
         raise SystemExit(1)
 
-    print(f"PASS: {len(CHECKS)} thyroid procedures retain reviewed planning/postoperative management plus source-grounded LOS and invasive-RLN commitment strategy")
+    print(f"PASS: {len(CHECKS)} thyroid procedures retain reviewed planning/postoperative management plus source-grounded LOS, invasive-RLN, and last-functioning-RLN commitment strategy")
 finally:
     try:
         os.remove(db)
