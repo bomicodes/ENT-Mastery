@@ -27,10 +27,18 @@ TARGETS = [
         "exclude_terms": (),
         "setup": [
             "Before total thyroidectomy, review disease-specific factors that change technical or postoperative risk: Graves/hypervascular disease, large or substernal goiter, invasive malignancy, prior neck treatment, baseline voice/vocal-fold function when indicated, and the anticipated need for central/lateral nodal surgery. Define the intraoperative nerve-monitoring/staging strategy if used and the postoperative calcium/PTH pathway before surgery rather than reacting only after symptoms develop.",
+            "When intraoperative neural monitoring is used, a reproducible loss of signal after completing the first side of a planned bilateral operation is a commitment point before contralateral dissection. First exclude a false loss by checking the stimulation/recording circuit, endotracheal-electrode contact, anesthetic/neuromuscular factors, and repeat vagus/RLN stimulation as appropriate; distinguish a true persistent loss from a transient or technical event. If true first-side loss persists, explicitly reassess the indication for immediate bilateral completion and strongly consider staging/deferment of the second side to reduce the risk of bilateral vocal-fold paralysis. This is not an automatic rule: invasive or otherwise urgent malignancy can justify carefully selected continuation when the oncologic cost of delay outweighs the airway risk, but that decision should be deliberate and documented rather than proceeding routinely.",
         ],
         "postop": [
             "After total thyroidectomy, assess the airway and neck first, then evaluate voice and calcium physiology. Perioral/acral paresthesias, cramps, carpopedal spasm or other neuromuscular irritability should trigger prompt calcium assessment/treatment according to the local pathway; a low early PTH identifies patients who may need closer calcium/vitamin-D supplementation and follow-up rather than waiting for severe symptoms.",
             "New stridor or respiratory distress after bilateral thyroid dissection requires urgent evaluation for neck hematoma, edema and bilateral vocal-fold dysfunction. When unexplained intraoperative loss of nerve signal occurred, the postoperative airway plan should explicitly reflect that risk rather than relying on routine recovery-room observation.",
+        ],
+        "sources": [
+            "Cummings Otolaryngology—Head and Neck Surgery, 7th ed.",
+            "K. J. Lee's Essential Otolaryngology, 12th ed.",
+            "Pasha: Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6th ed.",
+            "International Neural Monitoring Study Group guideline: staging bilateral thyroid surgery with monitoring loss of signal (Laryngoscope, 2018)",
+            "International Neural Monitoring Study Group survey on first-side loss-of-signal management during planned bilateral thyroid surgery (Surgery, 2024)",
         ],
     },
     {
@@ -81,9 +89,10 @@ def apply_or_thyroid_management_v2312(registry):
             continue
         op["setup"], c1 = _prepend_unique(op.get("setup"), target.get("setup", []))
         op["postop"], c2 = _prepend_unique(op.get("postop"), target.get("postop", []))
+        op["sources"], c3 = _prepend_unique(op.get("sources"), target.get("sources", []))
         op["thyroid_management_v2312"] = True
         resolved.append(slug)
-        if c1 or c2:
+        if c1 or c2 or c3:
             changed.append(slug)
     v2313 = apply_or_parathyroid_management_v2313(registry)
     return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2313": v2313}
