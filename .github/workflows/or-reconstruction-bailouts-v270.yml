@@ -1,0 +1,28 @@
+name: OR Tomorrow reconstruction bailouts v27.0
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'audit_or_reconstruction_bailouts_v270.py'
+      - 'or_reconstruction_bailouts_v270.py'
+      - 'or_reconstruction_management_v225.py'
+      - 'runtime_entry.py'
+      - 'app.py'
+      - '.github/workflows/or-reconstruction-bailouts-v270.yml'
+  workflow_dispatch:
+
+jobs:
+  reconstruction-bailouts:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Free-flap reconstruction bailout gate
+        run: python audit_or_reconstruction_bailouts_v270.py
