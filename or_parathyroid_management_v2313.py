@@ -52,9 +52,21 @@ TARGETS = [
         "exclude_terms": (),
         "setup": [
             "Before reoperative parathyroid surgery, verify persistent versus recurrent biochemical disease, review every prior operative/pathology report and current localization study, and require a convincing target before entering a scarred neck whenever possible. Document preoperative vocal-fold mobility because an unrecognized pre-existing unilateral recurrent-laryngeal-nerve deficit materially changes the risk of re-exploration, and define the least-scarred route to the suspected gland rather than planning a routine bilateral redissection.",
+            "Build localization as an escalation ladder rather than using scar exploration as a diagnostic test. Re-review expert ultrasound and prior sestamibi/SPECT-CT when useful, then use cross-sectional localization such as 4D-CT when it can clarify a reoperative target; fluorocholine PET/CT can be valuable in difficult persistent/recurrent disease where available. If high-quality noninvasive studies remain discordant or nonlocalizing and reoperation is still justified, selective parathyroid venous sampling is an invasive problem-solving option at experienced centers—not a substitute for confirming the biochemical diagnosis or an automatic next test for every patient.",
+            "Translate localization into a target-specific corridor before incision. A tracheoesophageal-groove/retroesophageal target, carotid-sheath lesion, intrathyroidal gland, thyrothymic/cervical-thymic focus, or mediastinal target should change where dissection begins and which scarred planes can be avoided; do not default to bilateral central-neck scar stripping simply because the prior operation failed. Confirm that the planned approach can safely address the predicted ectopic compartment and involve an appropriate endocrine/mediastinal team when the target lies outside a reasonable cervical corridor.",
+            "Make loss of a safe anatomic endpoint a stop point. If the predicted target cannot be corroborated and progressive scar dissection is approaching the recurrent laryngeal nerve, trachea, esophagus, or major vessels without a defined plane or lesion, do not convert a target-directed reoperation into blind bilateral exploration. Re-establish landmarks if possible; otherwise stop and re-localize rather than trading an uncertain biochemical benefit for nerve, aerodigestive, or vascular injury.",
         ],
         "postop": [
             "After reoperative parathyroid surgery, have a lower threshold to evaluate new dysphonia, dysphagia, stridor, expanding neck swelling, or hypocalcemic symptoms because scarred anatomy increases the consequences of recurrent-nerve injury, bleeding, and devascularization of remaining parathyroid tissue. Calcium surveillance should reflect both the preoperative skeletal/renal risk and how much viable parathyroid tissue remains after re-exploration.",
+        ],
+        "sources": [
+            "Cummings Otolaryngology—Head and Neck Surgery, 7th ed.",
+            "K. J. Lee's Essential Otolaryngology, 12th ed.",
+            "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6th ed. (2022)",
+            "Wilhelm et al. American Association of Endocrine Surgeons Guidelines for Definitive Management of Primary Hyperparathyroidism. JAMA Surg. 2016.",
+            "ACR Appropriateness Criteria: Parathyroid Adenoma. J Am Coll Radiol. 2021.",
+            "Pavlidis & Pavlidis. Update on the Current Management of Persistent and Recurrent Primary Hyperparathyroidism After Parathyroidectomy. World J Clin Cases. 2023.",
+            "Alnajmi et al. Persistence and Recurrence of Primary Hyperparathyroidism. Best Pract Res Clin Endocrinol Metab. 2025.",
         ],
     },
 ]
