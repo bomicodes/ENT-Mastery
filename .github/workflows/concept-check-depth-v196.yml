@@ -1,31 +1,23 @@
-name: Concept Check depth v19.5 compatibility gate
+name: Concept Check depth v19.6
 
 on:
   workflow_dispatch:
   pull_request:
     paths:
-      - 'concept_check_depth_v195.py'
       - 'concept_check_depth_v196.py'
       - 'concept_check_final_clinical_gate_v179.py'
-      - 'audit_concept_check_task_alignment_v195.py'
       - 'audit_concept_check_task_alignment_v196.py'
-      - 'audit_concept_check_depth_backlog_v195.py'
       - 'audit_concept_check_depth_backlog_v196.py'
       - '.github/workflows/release-integrity.yml'
-      - '.github/workflows/concept-check-depth-v195.yml'
       - '.github/workflows/concept-check-depth-v196.yml'
   push:
     branches: [main]
     paths:
-      - 'concept_check_depth_v195.py'
       - 'concept_check_depth_v196.py'
       - 'concept_check_final_clinical_gate_v179.py'
-      - 'audit_concept_check_task_alignment_v195.py'
       - 'audit_concept_check_task_alignment_v196.py'
-      - 'audit_concept_check_depth_backlog_v195.py'
       - 'audit_concept_check_depth_backlog_v196.py'
       - '.github/workflows/release-integrity.yml'
-      - '.github/workflows/concept-check-depth-v195.yml'
       - '.github/workflows/concept-check-depth-v196.yml'
 
 jobs:
@@ -65,10 +57,6 @@ jobs:
         run: python audit_general_ent_complete_v274.py
       - name: Answer-balance regression
         run: python audit_ladder_answer_balance_v211.py
-      - name: v19.5 task-answer alignment regression
-        run: python audit_concept_check_task_alignment_v195.py
-      - name: v19.5 backlog regression
-        run: python audit_concept_check_depth_backlog_v195.py
       - name: v19.6 task-answer alignment
         run: python audit_concept_check_task_alignment_v196.py
       - name: v19.6 live-canonical depth backlog
@@ -83,13 +71,13 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: v196-task-alignment-audit-compat
+          name: v196-task-alignment-audit
           path: V196_TASK_ALIGNMENT_AUDIT.json
           if-no-files-found: warn
       - name: Upload v19.6 live-canonical depth backlog
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: v196-depth-backlog-audit-compat
+          name: v196-depth-backlog-audit
           path: V196_DEPTH_BACKLOG_AUDIT.json
           if-no-files-found: warn
