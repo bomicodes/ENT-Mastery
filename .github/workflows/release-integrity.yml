@@ -11,6 +11,7 @@ on:
       - 'concept_check_depth_v*.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_or_rescue_v*.py'
+      - 'audit_or_commitment_v*.py'
       - 'or_*.py'
       - 'deep_curriculum_*.py'
       - 'audit_ladder_answer_balance_v211.py'
@@ -42,7 +43,7 @@ jobs:
       - name: Pre-flight boot gate
         run: python preflight_boot_check_v155.py
       - name: Fail-closed global release manifest
-        run: python audit_global_release_integrity_v297.py
+        run: python audit_global_release_integrity_v301.py
       - name: Strict 325-topic canonical coverage contract
         run: python audit_coverage_v135.py --depth --strict
       - name: Full Rhinology ladder hard gate
@@ -71,6 +72,8 @@ jobs:
         run: python audit_concept_check_depth_backlog_v193.py
       - name: Current adversarial OR danger-zone and rescue gate
         run: python audit_or_rescue_v268.py
+      - name: Current OR commitment and bailout gate
+        run: python audit_or_commitment_v269.py
       - name: Upload current Concept Check depth backlog
         if: always()
         uses: actions/upload-artifact@v4
