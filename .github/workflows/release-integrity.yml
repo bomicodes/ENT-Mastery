@@ -34,6 +34,38 @@ on:
       - 'data.py'
       - 'app.py'
       - '.github/workflows/release-integrity.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'audit_global_release_integrity_v*.py'
+      - 'audit_concept_check_task_alignment_v*.py'
+      - 'audit_concept_check_depth_backlog_v*.py'
+      - 'concept_check_depth_v*.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_or_rescue_v*.py'
+      - 'audit_or_commitment_v*.py'
+      - 'audit_or_reconstruction_bailouts_v*.py'
+      - 'audit_or_airway_bailouts_v*.py'
+      - 'audit_*semantic*.py'
+      - 'audit_*management_v*.py'
+      - 'audit_*ladder_distinction_v*.py'
+      - 'or_*.py'
+      - 'deep_curriculum_*.py'
+      - 'audit_ladder_answer_balance_v211.py'
+      - 'audit_coverage_v135.py'
+      - 'audit_rhinology_ladder_complete_v218.py'
+      - 'audit_otology_ladder_complete_v232.py'
+      - 'audit_hn_ladder_complete_v231.py'
+      - 'audit_tps_ladder_complete_v240.py'
+      - 'audit_pediatric_ladder_complete_v248.py'
+      - 'audit_laryngology_ladder_complete_v256.py'
+      - 'audit_facial_plastics_full_domain_v262.py'
+      - 'audit_sleep_surgery_progress_v266.py'
+      - 'audit_general_ent_complete_v274.py'
+      - 'runtime_entry.py'
+      - 'data.py'
+      - 'app.py'
+      - '.github/workflows/release-integrity.yml'
 
 jobs:
   release-integrity:
