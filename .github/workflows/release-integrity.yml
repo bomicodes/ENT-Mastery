@@ -80,7 +80,7 @@ jobs:
       - name: Pre-flight boot gate
         run: python preflight_boot_check_v155.py
       - name: Fail-closed global release manifest
-        run: python audit_global_release_integrity_v308.py
+        run: python audit_global_release_integrity_v309.py
       - name: Strict 325-topic canonical coverage contract
         run: python audit_coverage_v135.py --depth --strict
       - name: Full Rhinology ladder hard gate
@@ -123,6 +123,8 @@ jobs:
         run: python audit_hn_tongue_site_semantic_v307.py
       - name: Cross-domain late-radiation aspiration semantic gate
         run: python audit_cross_domain_aspiration_semantic_v308.py
+      - name: Cutaneous SCC versus BCC semantic gate
+        run: python audit_hn_cutaneous_site_semantic_v309.py
       - name: Reviewed-ladder answer-balance regression
         run: python audit_ladder_answer_balance_v211.py
       - name: Current Concept Check task-answer alignment
