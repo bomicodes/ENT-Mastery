@@ -1,8 +1,9 @@
 """ENT Mastery v13.5 canonical coverage audit.
 
-Audits the live, runtime-patched curriculum rather than raw source fragments.
-Default mode is informational and exits 0 so routine audits do not create
-failure-alert noise. Use --strict when a CI gate should fail below 100%.
+Audits the live, production-patched curriculum rather than a historical runtime
+slice. Default mode is informational and exits 0 so routine audits do not create
+failure-alert noise. Use --strict when a CI gate should fail below 100% or when
+the live canonical registry drifts away from the protected 325-topic contract.
 
 Coverage milestone 1: every canonical DEEP_MODULES_V6 concept has at least one
 linked clinical vignette by concept_id. A separate depth report flags concepts
@@ -14,10 +15,15 @@ import argparse
 import json
 from collections import Counter, defaultdict
 
-# Importing the runtime integration applies v13.x topic/vignette merges before
-# we inspect the registries.
-import recognize_stage_v127  # noqa: F401
-import data
+# Import the real production entrypoint so every curriculum patch that the live
+# app applies is present before the strict canonical contract is counted. The
+# historical recognize_stage_v127 import used here previously stopped at 322
+# topics while production had already advanced to 325.
+import runtime_entry
+
+data = runtime_entry.data
+
+STRICT_CANONICAL_TOPIC_COUNT = 325
 
 
 def build_report():
@@ -73,6 +79,7 @@ def build_report():
     return {
         "total_topics": total_topics,
         "total_covered": total_covered,
+        "strict_expected_topics": STRICT_CANONICAL_TOPIC_COUNT,
         "overall_coverage_pct": round(100.0 * total_covered / total_topics, 1) if total_topics else 100.0,
         "domains": domains,
     }
@@ -81,6 +88,7 @@ def build_report():
 def print_text(report, show_depth=False):
     print(f"ENT Mastery canonical vignette coverage: {report['total_covered']}/{report['total_topics']} "
           f"({report['overall_coverage_pct']:.1f}%)")
+    print(f"ENT Mastery strict canonical topic contract: {report['total_topics']}/{STRICT_CANONICAL_TOPIC_COUNT}")
     for domain, item in report["domains"].items():
         print(f"\n{domain}: {item['covered']}/{item['topics']} ({item['coverage_pct']:.1f}%)")
         if item["missing"]:
@@ -103,7 +111,7 @@ def main():
     parser.add_argument("--json", action="store_true", dest="as_json")
     parser.add_argument("--depth", action="store_true")
     parser.add_argument("--strict", action="store_true",
-                        help="Exit 1 unless every canonical topic has a vignette")
+                        help="Exit 1 unless all 325 canonical topics have a vignette")
     args = parser.parse_args()
 
     report = build_report()
@@ -112,8 +120,13 @@ def main():
     else:
         print_text(report, show_depth=args.depth)
 
-    if args.strict and report["total_covered"] != report["total_topics"]:
-        raise SystemExit(1)
+    if args.strict:
+        if report["total_topics"] != STRICT_CANONICAL_TOPIC_COUNT:
+            raise SystemExit(
+                f"STRICT_CANONICAL_COUNT_FAIL|expected={STRICT_CANONICAL_TOPIC_COUNT}|actual={report['total_topics']}"
+            )
+        if report["total_covered"] != report["total_topics"]:
+            raise SystemExit(1)
 
 
 if __name__ == "__main__":
