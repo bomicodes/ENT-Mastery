@@ -6,6 +6,7 @@ on:
     paths:
       - 'sleep_peds_psg_management_v299.py'
       - 'audit_sleep_peds_psg_management_v299.py'
+      - 'audit_sleep_surgery_progress_v266.py'
       - 'ladder_answer_balance_v211.py'
       - '.github/workflows/sleep-peds-psg-v299-validation.yml'
   workflow_dispatch:
