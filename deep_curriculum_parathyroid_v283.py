@@ -26,6 +26,7 @@ from deep_curriculum_headneck_v306 import apply_tongue_site_rebuild_v306
 from deep_curriculum_thyroid_v307 import apply_thyroid_dtc_rebuild_v307
 from deep_curriculum_headneck_v308 import apply_cutaneous_oncology_rebuild_v308
 from deep_curriculum_headneck_v309 import apply_cutaneous_melanoma_rebuild_v309
+from deep_curriculum_otology_v311 import apply_otitis_externa_rebuild_v311
 
 DOMAIN = "Thyroid / Parathyroid / Salivary"
 FIELDS = ("recognize", "localize", "workup", "manage", "operate", "teach")
@@ -108,6 +109,7 @@ def apply_reoperative_parathyroid_rebuild_v283(data_module, app_module=None):
     thyroid_dtc_result = apply_thyroid_dtc_rebuild_v307(data_module, app_module)
     cutaneous_oncology_result = apply_cutaneous_oncology_rebuild_v308(data_module, app_module)
     cutaneous_melanoma_result = apply_cutaneous_melanoma_rebuild_v309(data_module, app_module)
+    otitis_externa_result = apply_otitis_externa_rebuild_v311(data_module, app_module)
     return {
         "patched": patched,
         "count": len(patched),
@@ -127,4 +129,5 @@ def apply_reoperative_parathyroid_rebuild_v283(data_module, app_module=None):
         "v307_thyroid_dtc": thyroid_dtc_result,
         "v308_cutaneous_oncology": cutaneous_oncology_result,
         "v309_cutaneous_melanoma": cutaneous_melanoma_result,
+        "v311_otitis_externa": otitis_externa_result,
     }
