@@ -94,12 +94,25 @@ try:
         )
         if not _has_groups(setup, last_nerve_groups):
             failures.append(f"{slug}: missing last-functioning-RLN planning when the opposite cord is already paralyzed")
+        parathyroid_groups = (
+            ("preserve normal glands in situ", "preserve normal glands"),
+            ("native blood supply", "pedicle"),
+            ("inadvertently excised", "ischemic", "devascularized"),
+            ("selective autotransplantation", "autotransplantation"),
+            ("do not sacrifice", "do not routinely autotransplant", "normally perfused"),
+            ("rescue", "compromised tissue"),
+        )
+        if not _has_groups(setup, parathyroid_groups):
+            failures.append(f"{slug}: missing in-situ-first/selective parathyroid autotransplant commitment strategy")
         sources = "\n".join(str(x) for x in (total.get("sources") or []))
         source_groups = (
             ("cummings",),
             ("k j lee", "essential otolaryngology"),
             ("pasha", "clinical reference guide"),
             ("2025 american thyroid association", "2025 ata"),
+            ("postoperative hypoparathyroidism",),
+            ("kasmirski", "does parathyroid autotransplantation prevent"),
+            ("jiang", "devascularized glands"),
             ("improving voice outcomes", "aao hnsf"),
             ("international neural monitoring study group", "inmsg"),
             ("invasive thyroid cancer",),
@@ -129,7 +142,7 @@ try:
         print("\n".join(failures))
         raise SystemExit(1)
 
-    print(f"PASS: {len(CHECKS)} thyroid procedures retain reviewed planning/postoperative management plus source-grounded LOS, invasive-RLN, and last-functioning-RLN commitment strategy")
+    print(f"PASS: {len(CHECKS)} thyroid procedures retain source-grounded LOS, invasive-RLN, last-functioning-RLN, and selective parathyroid-preservation/autotransplant commitment strategy")
 finally:
     try:
         os.remove(db)
