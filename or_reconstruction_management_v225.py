@@ -6,6 +6,7 @@ reviewed sleep-surgery management is chained here so the existing decision hook
 remains atomic.
 """
 
+from or_reconstruction_bailouts_v270 import apply_or_reconstruction_bailouts_v270
 from or_sleep_management_v229 import apply_or_sleep_management_v229
 
 TARGETS = [
@@ -90,5 +91,6 @@ def apply_or_reconstruction_management_v225(registry):
         resolved.append(slug)
         if c1 or c2:
             changed.append(slug)
+    v270 = apply_or_reconstruction_bailouts_v270(registry)
     v229 = apply_or_sleep_management_v229(registry)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v229": v229}
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v270": v270, "v229": v229}
