@@ -1,5 +1,6 @@
-"""Hard gate for v23.12 thyroid OR Tomorrow planning and postoperative rescue."""
+"""Hard gate for v23.12 thyroid OR Tomorrow planning, commitment, and postoperative rescue."""
 import os
+import re
 import tempfile
 
 fd, db = tempfile.mkstemp(prefix="ent_or_thyroid_v2312_", suffix=".db")
@@ -21,6 +22,15 @@ def _find(reg, terms):
         if all(term in hay for term in terms):
             return slug, op
     return None, None
+
+
+def _norm(text):
+    return re.sub(r"[^a-z0-9]+", " ", str(text).lower()).strip()
+
+
+def _has_groups(text, groups):
+    t = _norm(text)
+    return all(any(_norm(term) in t for term in group) for group in groups)
 
 try:
     import runtime_entry as rt
@@ -48,12 +58,36 @@ try:
         if r.status_code >= 500:
             failures.append(f"{slug}: /case-tomorrow HTTP {r.status_code}")
 
+    slug, total = _find(reg, ("total", "thyroidectomy"))
+    if total:
+        setup = "\n".join(str(x) for x in (total.get("setup") or []))
+        los_groups = (
+            ("loss of signal", "nerve signal"),
+            ("false loss", "technical event", "technical"),
+            ("vagus", "rln stimulation", "repeat"),
+            ("staging", "stage", "deferment", "defer"),
+            ("bilateral vocal fold", "bilateral vocal-fold"),
+            ("malignancy", "oncologic"),
+            ("deliberate", "documented", "reassess"),
+        )
+        if not _has_groups(setup, los_groups):
+            failures.append(f"{slug}: missing true first-side LOS troubleshooting/stage-versus-continue decision")
+        sources = "\n".join(str(x) for x in (total.get("sources") or []))
+        source_groups = (
+            ("cummings",),
+            ("k j lee", "essential otolaryngology"),
+            ("pasha", "clinical reference guide"),
+            ("international neural monitoring study group", "inmsg"),
+        )
+        if not _has_groups(sources, source_groups):
+            failures.append(f"{slug}: thyroid commitment source provenance incomplete")
+
     if failures:
         print("THYROID OR v23.12 FAILURES")
         print("\n".join(failures))
         raise SystemExit(1)
 
-    print(f"PASS: {len(CHECKS)} thyroid procedures have reviewed v23.12 planning/postoperative management and render successfully")
+    print(f"PASS: {len(CHECKS)} thyroid procedures retain reviewed planning/postoperative management; total thyroidectomy also preserves source-grounded first-side LOS staging logic")
 finally:
     try:
         os.remove(db)
