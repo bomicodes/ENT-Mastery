@@ -16,9 +16,16 @@ TARGETS = [
         "exclude_terms": ("total", "reop", "reoperative"),
         "setup": [
             "Before thyroid lobectomy, confirm the indication and intended unilateral extent from cytology/pathology, imaging and contralateral-lobe findings, and document baseline voice with vocal-fold examination when there is dysphonia, prior neck surgery, invasive disease or another reason to suspect pre-existing laryngeal nerve dysfunction. Review whether the operation could reasonably require conversion or future completion surgery so that consent and oncologic planning match the actual disease rather than the word 'lobectomy' alone.",
+            "If thyroid cancer is found adherent to or invading the recurrent laryngeal nerve, make nerve function and oncologic extent explicit before committing to sacrifice. A functioning nerve with limited superficial involvement may be carefully shaved/partially resected when gross disease can be cleared while preserving function; a preoperatively nonfunctioning nerve or nerve with destructive full-thickness/gross invasion may require en bloc resection for oncologic control. When sacrifice is necessary, plan immediate reinnervation or other voice-rehabilitation strategy when feasible rather than treating nerve loss as an unplanned endpoint.",
         ],
         "postop": [
             "After thyroid lobectomy, an expanding central-neck swelling, stridor, respiratory distress, dysphagia with neck pressure or rapidly increasing wound tension is a postoperative hematoma/airway emergency and requires immediate bedside assessment with a low threshold for urgent decompression and operative control. New persistent dysphonia should prompt vocal-fold assessment rather than being attributed indefinitely to intubation alone.",
+        ],
+        "sources": [
+            "Cummings Otolaryngology—Head and Neck Surgery, 7th ed.",
+            "K. J. Lee's Essential Otolaryngology, 12th ed.",
+            "Pasha: Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6th ed.",
+            "International Neural Monitoring Study Group guideline: optimal recurrent laryngeal nerve management for invasive thyroid cancer (Laryngoscope, 2018)",
         ],
     },
     {
@@ -28,6 +35,7 @@ TARGETS = [
         "setup": [
             "Before total thyroidectomy, review disease-specific factors that change technical or postoperative risk: Graves/hypervascular disease, large or substernal goiter, invasive malignancy, prior neck treatment, baseline voice/vocal-fold function when indicated, and the anticipated need for central/lateral nodal surgery. Define the intraoperative nerve-monitoring/staging strategy if used and the postoperative calcium/PTH pathway before surgery rather than reacting only after symptoms develop.",
             "When intraoperative neural monitoring is used, a reproducible loss of signal after completing the first side of a planned bilateral operation is a commitment point before contralateral dissection. First exclude a false loss by checking the stimulation/recording circuit, endotracheal-electrode contact, anesthetic/neuromuscular factors, and repeat vagus/RLN stimulation as appropriate; distinguish a true persistent loss from a transient or technical event. If true first-side loss persists, explicitly reassess the indication for immediate bilateral completion and strongly consider staging/deferment of the second side to reduce the risk of bilateral vocal-fold paralysis. This is not an automatic rule: invasive or otherwise urgent malignancy can justify carefully selected continuation when the oncologic cost of delay outweighs the airway risk, but that decision should be deliberate and documented rather than proceeding routinely.",
+            "When malignancy is adherent to or invades an RLN, integrate preoperative vocal-fold mobility, intraoperative nerve function when available, and gross depth of invasion before choosing preservation versus sacrifice. Preserve a functioning nerve when gross tumor can be cleared with a deliberate shave/partial-layer resection without leaving unacceptable macroscopic disease; destructive full-thickness invasion or a preoperatively paralyzed, grossly invaded nerve can justify en bloc resection. If resection is required, consider immediate RLN reconstruction/reinnervation or another rehabilitation plan when technically feasible, while protecting the contralateral functional nerve from avoidable injury.",
         ],
         "postop": [
             "After total thyroidectomy, assess the airway and neck first, then evaluate voice and calcium physiology. Perioral/acral paresthesias, cramps, carpopedal spasm or other neuromuscular irritability should trigger prompt calcium assessment/treatment according to the local pathway; a low early PTH identifies patients who may need closer calcium/vitamin-D supplementation and follow-up rather than waiting for severe symptoms.",
@@ -38,6 +46,7 @@ TARGETS = [
             "K. J. Lee's Essential Otolaryngology, 12th ed.",
             "Pasha: Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6th ed.",
             "International Neural Monitoring Study Group guideline: staging bilateral thyroid surgery with monitoring loss of signal (Laryngoscope, 2018)",
+            "International Neural Monitoring Study Group guideline: optimal recurrent laryngeal nerve management for invasive thyroid cancer (Laryngoscope, 2018)",
             "International Neural Monitoring Study Group survey on first-side loss-of-signal management during planned bilateral thyroid surgery (Surgery, 2024)",
         ],
     },
