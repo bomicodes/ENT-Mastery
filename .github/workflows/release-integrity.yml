@@ -12,6 +12,7 @@ on:
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_or_rescue_v*.py'
       - 'or_*.py'
+      - 'deep_curriculum_*.py'
       - 'audit_ladder_answer_balance_v211.py'
       - 'audit_coverage_v135.py'
       - 'audit_rhinology_ladder_complete_v218.py'
