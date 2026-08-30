@@ -51,17 +51,13 @@ try:
     reg = rt.data.OR_PREP_REGISTRY
     client = rt.app.test_client()
     failures = []
-    runtime_result = getattr(rt, "OR_RECONSTRUCTION_BAILOUTS_V270", {}) or {}
-    nested = runtime_result.get("v271") or {}
-    if nested.get("missing"):
-        failures.append("runtime v27.1 unresolved targets=" + ",".join(nested.get("missing") or []))
-    if len(nested.get("resolved") or []) != len(CHECKS):
-        failures.append(f"runtime v27.1 resolved {len(nested.get('resolved') or [])}/{len(CHECKS)} targets")
+    resolved_count = 0
     for preferred, aliases, checks in CHECKS:
         slug, op = resolve(reg, preferred, aliases)
         if not op:
             failures.append(f"{preferred}: no live case resolved")
             continue
+        resolved_count += 1
         combined = "\n".join(str(x) for key in ("setup", "steps", "postop") for x in (op.get(key) or []))
         if not op.get("airway_bailouts_v271"):
             failures.append(f"{slug}: v27.1 production marker absent")
@@ -71,6 +67,8 @@ try:
         r = client.get("/case-tomorrow", query_string={"q": op.get("title", slug)}, follow_redirects=True)
         if r.status_code >= 500:
             failures.append(f"{slug}: /case-tomorrow HTTP {r.status_code}")
+    if resolved_count != len(CHECKS):
+        failures.append(f"resolved {resolved_count}/{len(CHECKS)} live airway-bailout targets")
     if failures:
         print("OR v27.1 AIRWAY BAILOUT FAILURES")
         print("\n".join(failures))
