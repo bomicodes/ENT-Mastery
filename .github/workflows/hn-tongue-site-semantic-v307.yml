@@ -1,0 +1,44 @@
+name: HN tongue-site semantic v30.7
+
+on:
+  push:
+    paths:
+      - 'deep_curriculum_headneck_v306.py'
+      - 'vignette_ladders_v219.py'
+      - 'vignette_ladders_v220.py'
+      - 'audit_hn_tongue_site_semantic_v307.py'
+      - 'audit_hn_ladder_complete_v231.py'
+      - 'audit_ladder_answer_balance_v211.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/hn-tongue-site-semantic-v307.yml'
+  pull_request:
+    paths:
+      - 'deep_curriculum_headneck_v306.py'
+      - 'vignette_ladders_v219.py'
+      - 'vignette_ladders_v220.py'
+      - 'audit_hn_tongue_site_semantic_v307.py'
+      - 'audit_hn_ladder_complete_v231.py'
+      - 'audit_ladder_answer_balance_v211.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/hn-tongue-site-semantic-v307.yml'
+
+jobs:
+  tongue-site-semantic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Preflight boot
+        run: python preflight_boot_check_v155.py
+      - name: Runtime learning-ladder integrity
+        run: python audit_learning_ladders_runtime_v204.py
+      - name: Full Head and Neck canonical ladder gate
+        run: python audit_hn_ladder_complete_v231.py
+      - name: Oral tongue versus base-of-tongue semantic gate
+        run: python audit_hn_tongue_site_semantic_v307.py
+      - name: Reviewed-ladder answer balance
+        run: python audit_ladder_answer_balance_v211.py
