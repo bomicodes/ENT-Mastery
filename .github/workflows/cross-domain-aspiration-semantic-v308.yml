@@ -1,0 +1,46 @@
+name: Cross-domain aspiration semantic v30.8
+
+on:
+  push:
+    paths:
+      - 'vignette_ladders_v231.py'
+      - 'vignette_ladders_v256.py'
+      - 'audit_cross_domain_aspiration_semantic_v308.py'
+      - 'audit_hn_ladder_complete_v231.py'
+      - 'audit_laryngology_ladder_complete_v256.py'
+      - 'audit_ladder_answer_balance_v211.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/cross-domain-aspiration-semantic-v308.yml'
+  pull_request:
+    paths:
+      - 'vignette_ladders_v231.py'
+      - 'vignette_ladders_v256.py'
+      - 'audit_cross_domain_aspiration_semantic_v308.py'
+      - 'audit_hn_ladder_complete_v231.py'
+      - 'audit_laryngology_ladder_complete_v256.py'
+      - 'audit_ladder_answer_balance_v211.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/cross-domain-aspiration-semantic-v308.yml'
+
+jobs:
+  aspiration-semantic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Preflight boot
+        run: python preflight_boot_check_v155.py
+      - name: Runtime learning-ladder integrity
+        run: python audit_learning_ladders_runtime_v204.py
+      - name: Full Head and Neck canonical ladder gate
+        run: python audit_hn_ladder_complete_v231.py
+      - name: Full Laryngology canonical ladder gate
+        run: python audit_laryngology_ladder_complete_v256.py
+      - name: Cross-domain late-radiation aspiration semantic gate
+        run: python audit_cross_domain_aspiration_semantic_v308.py
+      - name: Reviewed-ladder answer balance
+        run: python audit_ladder_answer_balance_v211.py
