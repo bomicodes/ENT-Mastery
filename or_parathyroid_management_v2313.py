@@ -28,10 +28,22 @@ TARGETS = [
         "exclude_terms": (),
         "setup": [
             "Before bilateral four-gland exploration, define why multigland disease is expected—such as familial/MEN-pattern disease, lithium-associated disease, or renal hyperparathyroidism—and clarify the planned extent of resection and strategy for preserving viable functioning parathyroid tissue. Because bilateral exploration is an anatomic operation, intraoperative PTH should complement rather than replace systematic identification of the expected glands and ectopic pathways.",
+            "Treat the extent of four-gland surgery as an etiology-specific commitment decision, not a universal recipe. In MEN1, subtotal parathyroidectomy remains a standard initial strategy, while total parathyroidectomy with forearm autotransplantation is a reasonable alternative in selected extensive or recurrent disease; less-than-subtotal approaches may reduce permanent hypoparathyroidism in selected patients but trade that benefit against a higher risk of persistent disease. Before the first irreversible gland division, make the intended endpoint explicit and account for supernumerary/ectopic glands and the likelihood that this young patient may need another operation later.",
+            "For renal secondary hyperparathyroidism that has failed medical therapy, subtotal parathyroidectomy and total parathyroidectomy with autotransplantation are both established operations; evidence does not support pretending that one is universally superior. Choose the remnant-versus-graft strategy deliberately by balancing recurrence/persistence risk, permanent hypoparathyroidism, expected kidney-transplant trajectory, local follow-up, and ease of future reoperation. If an autograft is used, place and document it in an accessible site so recurrent graft-dependent disease can be evaluated or revised without another scarred-neck exploration.",
+            "When MEN1 is the indication, deliberately inspect the cervical thymic/supernumerary-gland pathway and decide whether transcervical thymectomy belongs in the planned operation rather than discovering an ectopic mediastinal gland only after persistent disease. The purpose is not indiscriminate tissue removal: it is to reduce missed supernumerary disease while preserving enough reliable parathyroid function to avoid permanent hypoparathyroidism.",
         ],
         "postop": [
             "After bilateral parathyroid exploration, use a planned calcium/PTH surveillance and replacement strategy that reflects the larger reduction in functioning parathyroid mass. Symptomatic or progressive hypocalcemia, particularly with high preoperative bone turnover or renal hyperparathyroidism, should raise concern for hungry-bone syndrome and may require sustained calcium plus active-vitamin-D replacement rather than repeated isolated rescue doses.",
             "Document postoperative voice and inspect the neck for hematoma after bilateral exploration; bilateral dissection increases the importance of recognizing recurrent-laryngeal-nerve dysfunction or airway compromise early rather than waiting for routine follow-up.",
+        ],
+        "sources": [
+            "Cummings Otolaryngology—Head and Neck Surgery, 7th ed.",
+            "K. J. Lee's Essential Otolaryngology, 12th ed.",
+            "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6th ed. (2022)",
+            "Thakker et al. Clinical Practice Guidelines for Multiple Endocrine Neoplasia Type 1. JCEM. 2012.",
+            "KDIGO Clinical Practice Guideline Update for CKD-MBD. Kidney Int Suppl. 2017.",
+            "Goudet et al. Recurrence After Surgery for Primary Hyperparathyroidism in MEN1. Ann Surg. 2024.",
+            "Nilubol et al. Less Than Subtotal Parathyroidectomy for MEN1 Primary Hyperparathyroidism: Systematic Review and Meta-analysis. 2022.",
         ],
     },
     {
@@ -82,9 +94,10 @@ def apply_or_parathyroid_management_v2313(registry):
             continue
         op["setup"], c1 = _prepend_unique(op.get("setup"), target.get("setup", []))
         op["postop"], c2 = _prepend_unique(op.get("postop"), target.get("postop", []))
+        op["sources"], c3 = _prepend_unique(op.get("sources"), target.get("sources", []))
         op["parathyroid_management_v2313"] = True
         resolved.append(slug)
-        if c1 or c2:
+        if c1 or c2 or c3:
             changed.append(slug)
     v2314 = apply_or_high_risk_management_v2314(registry)
     return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2314": v2314}
