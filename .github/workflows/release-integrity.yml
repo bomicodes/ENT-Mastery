@@ -12,6 +12,9 @@ on:
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_or_rescue_v*.py'
       - 'audit_or_commitment_v*.py'
+      - 'audit_*semantic*.py'
+      - 'audit_*management_v*.py'
+      - 'audit_*ladder_distinction_v*.py'
       - 'or_*.py'
       - 'deep_curriculum_*.py'
       - 'audit_ladder_answer_balance_v211.py'
@@ -43,7 +46,7 @@ jobs:
       - name: Pre-flight boot gate
         run: python preflight_boot_check_v155.py
       - name: Fail-closed global release manifest
-        run: python audit_global_release_integrity_v301.py
+        run: python audit_global_release_integrity_v303.py
       - name: Strict 325-topic canonical coverage contract
         run: python audit_coverage_v135.py --depth --strict
       - name: Full Rhinology ladder hard gate
@@ -64,6 +67,22 @@ jobs:
         run: python audit_sleep_surgery_progress_v266.py
       - name: Full General ENT Emergencies ladder hard gate
         run: python audit_general_ent_complete_v274.py
+      - name: Pediatric ear semantic distinction gate
+        run: python audit_pediatric_ear_semantic_v289.py
+      - name: Head and Neck salvage ladder distinction gate
+        run: python audit_hn_salvage_ladder_distinction_v288.py
+      - name: Neck dissection versus complications semantic gate
+        run: python audit_hn_neck_semantic_v294.py
+      - name: Frontal sinus management semantic gate
+        run: python audit_facial_frontal_sinus_management_v295.py
+      - name: NOE management semantic gate
+        run: python audit_facial_noe_management_v298.py
+      - name: Allergic rhinitis versus local allergic rhinitis semantic gate
+        run: python audit_rhinology_rhinitis_semantic_v297.py
+      - name: Pediatric PSG management semantic gate
+        run: python audit_sleep_peds_psg_management_v299.py
+      - name: Facial trauma deep semantic-boundary gate
+        run: python audit_facial_deep_semantic_boundaries_v302.py
       - name: Reviewed-ladder answer-balance regression
         run: python audit_ladder_answer_balance_v211.py
       - name: Current Concept Check task-answer alignment
