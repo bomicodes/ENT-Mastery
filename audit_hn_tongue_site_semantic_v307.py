@@ -9,8 +9,10 @@ production form.
 """
 
 import sys
-import runtime_entry as data
+import runtime_entry
 
+
+data = runtime_entry.data
 DOMAIN = "Head & Neck Oncology"
 ORAL = "Oral Tongue SCC"
 BOT = "Base of Tongue SCC"
