@@ -44,6 +44,20 @@ CHECKS = [
         "setup": ("persistent", "recurrent", "vocal-fold mobility", "least-scarred"),
         "postop": ("dysphonia", "stridor", "hypocalcemic", "calcium surveillance"),
         "renal": (">50%", "renal", "delayed sampling"),
+        "commitment": (
+            "localization as an escalation ladder",
+            "4D-CT",
+            "fluorocholine PET/CT",
+            "selective parathyroid venous sampling",
+            "target-specific corridor",
+            "retroesophageal",
+            "carotid-sheath",
+            "mediastinal",
+            "loss of a safe anatomic endpoint",
+            "do not convert a target-directed reoperation into blind bilateral exploration",
+            "stop and re-localize",
+        ),
+        "sources": ("Cummings", "K. J. Lee", "Pasha", "American Association of Endocrine Surgeons", "ACR", "Pavlidis", "Alnajmi"),
     },
 ]
 
@@ -88,7 +102,7 @@ try:
                 failures.append(f"{slug}: renal/ioPTH planning nuance missing {term!r}")
         for term in check.get("commitment", ()):
             if term.lower() not in setup:
-                failures.append(f"{slug}: four-gland commitment strategy missing {term!r}")
+                failures.append(f"{slug}: operative commitment strategy missing {term!r}")
         for term in check.get("sources", ()):
             if term.lower() not in sources:
                 failures.append(f"{slug}: source provenance missing {term!r}")
@@ -101,7 +115,7 @@ try:
         print("\n".join(failures))
         raise SystemExit(1)
 
-    print("PASS: focused, four-gland, and reoperative parathyroid modules retain renal/ioPTH nuance, etiology-specific four-gland commitment strategy, source provenance, and route integrity")
+    print("PASS: focused, four-gland, and reoperative parathyroid modules retain renal/ioPTH nuance, source-grounded commitment strategy, rescue stop rules, source provenance, and route integrity")
 finally:
     try:
         os.remove(db)
