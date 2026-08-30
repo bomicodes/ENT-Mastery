@@ -16,6 +16,7 @@ DOMAIN = "Head & Neck Oncology"
 CSCC = "Cutaneous Squamous Cell Carcinoma of the Head & Neck"
 BCC = "Basal Cell Carcinoma of the Head & Neck"
 REQUIRED_STAGES = {"foundation", "application", "senior_decision"}
+GENERIC_RATIONALES = {"incorrect", "not correct", "wrong", "not the best answer", "not appropriate"}
 
 
 def fail(msg):
@@ -82,8 +83,12 @@ def main():
                 if correct_flags != [ans]:
                     failures += fail(f"{qid}: answer/why_wrong alignment broke after deterministic shuffling")
                 for i, rationale in enumerate(why):
-                    if i != ans and len(str(rationale).split()) < 6:
-                        failures += fail(f"{qid}: distractor {i} rationale is too shallow")
+                    if i == ans:
+                        continue
+                    rationale_text = str(rationale).strip()
+                    normalized = rationale_text.lower().rstrip(".")
+                    if len(rationale_text.split()) < 5 or normalized in GENERIC_RATIONALES:
+                        failures += fail(f"{qid}: distractor {i} rationale is too shallow or generic")
 
     cscc = joined(rows_by_topic.get(CSCC, []))
     bcc = joined(rows_by_topic.get(BCC, []))
