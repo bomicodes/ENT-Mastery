@@ -1,0 +1,32 @@
+name: Sleep Pediatric PSG v29.9 Validation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sleep_peds_psg_management_v299.py'
+      - 'audit_sleep_peds_psg_management_v299.py'
+      - 'ladder_answer_balance_v211.py'
+      - '.github/workflows/sleep-peds-psg-v299-validation.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Runtime learning-ladder hard gate
+        run: python audit_learning_ladders_runtime_v204.py
+      - name: Full Sleep Surgery canonical ladder gate
+        run: python audit_sleep_surgery_progress_v266.py
+      - name: Pediatric PSG perioperative semantic gate
+        run: python audit_sleep_peds_psg_management_v299.py
+      - name: Reviewed ladder answer-balance regression
+        run: python audit_ladder_answer_balance_v211.py
