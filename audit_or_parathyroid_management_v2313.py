@@ -24,6 +24,18 @@ CHECKS = [
         "setup": ("multigland", "renal hyperparathyroidism", "intraoperative PTH"),
         "postop": ("calcium/PTH", "hungry-bone", "active-vitamin-D", "voice"),
         "renal": (">50%", "renal", "later sample"),
+        "commitment": (
+            "etiology-specific commitment decision",
+            "subtotal parathyroidectomy remains a standard initial strategy",
+            "less-than-subtotal",
+            "persistent disease",
+            "total parathyroidectomy with autotransplantation",
+            "future reoperation",
+            "transcervical thymectomy",
+            "supernumerary",
+            "accessible site",
+        ),
+        "sources": ("Cummings", "K. J. Lee", "Pasha", "MEN1", "KDIGO", "Goudet"),
     },
     {
         "slug": "reop-parathyroid",
@@ -64,6 +76,7 @@ try:
             failures.append(f"{slug}: parathyroid_management_v2313 marker missing")
         setup = " ".join(str(x) for x in (op.get("setup") or [])).lower()
         postop = " ".join(str(x) for x in (op.get("postop") or [])).lower()
+        sources = " ".join(str(x) for x in (op.get("sources") or [])).lower()
         for term in check["setup"]:
             if term.lower() not in setup:
                 failures.append(f"{slug}: setup missing {term!r}")
@@ -73,6 +86,12 @@ try:
         for term in check["renal"]:
             if term.lower() not in setup:
                 failures.append(f"{slug}: renal/ioPTH planning nuance missing {term!r}")
+        for term in check.get("commitment", ()):
+            if term.lower() not in setup:
+                failures.append(f"{slug}: four-gland commitment strategy missing {term!r}")
+        for term in check.get("sources", ()):
+            if term.lower() not in sources:
+                failures.append(f"{slug}: source provenance missing {term!r}")
         r = client.get("/case-tomorrow", query_string={"q": op.get("title", slug)}, follow_redirects=True)
         if r.status_code >= 500:
             failures.append(f"{slug}: /case-tomorrow HTTP {r.status_code}")
@@ -82,7 +101,7 @@ try:
         print("\n".join(failures))
         raise SystemExit(1)
 
-    print("PASS: focused, four-gland, and reoperative parathyroid modules retain renal/ioPTH nuance, v23.13 management, and route integrity")
+    print("PASS: focused, four-gland, and reoperative parathyroid modules retain renal/ioPTH nuance, etiology-specific four-gland commitment strategy, source provenance, and route integrity")
 finally:
     try:
         os.remove(db)
