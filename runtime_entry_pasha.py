@@ -7,11 +7,20 @@ import runtime_entry
 from interpretation_labs_cleanup_v250 import apply_interpretation_labs_cleanup_v250
 from pasha_routes import bp as pasha_review_blueprint
 from deep_curriculum_otology_v284 import apply_otology_etd_rebuild_v284
+from deep_curriculum_production_chain_v314 import apply_deep_curriculum_production_chain_v314
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
-# curriculum. Procfile launches runtime_entry_pasha:app, so this is the final production
-# wiring point and prevents the v28.4 source module from being orphaned.
+# curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
+# production wiring point.
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+# Restore and execute the cumulative source-grounded Concept Hub audit chain added
+# after v28.4. This intentionally runs before the app begins serving and includes the
+# current v31.4 goals-of-care/palliative-intervention distinction.
+DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
