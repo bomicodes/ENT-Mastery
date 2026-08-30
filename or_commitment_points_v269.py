@@ -81,6 +81,15 @@ TARGETS = [
         "postop": [],
     },
     {
+        "slug": "vestibular-schwannoma",
+        "title_terms": ("vestibular", "schwannoma"),
+        "setup": [
+            "Make extent of resection subordinate to preservation of the facial nerve, brainstem and other critical neurovascular structures. When tumor is densely adherent to the facial nerve, brainstem or a critical vessel and a safe dissection plane cannot be developed, planned near-total or subtotal residual is an appropriate bailout rather than pursuing gross-total removal at the cost of major neurologic injury. Document the residual deliberately and plan postoperative imaging surveillance and, when indicated, staged stereotactic treatment rather than treating a small intentional remnant as an operative failure.",
+            "A sudden reproducible deterioration in facial-nerve monitoring or hearing-preservation signals is a stop-and-reassess point. Release traction/retraction, irrigate and inspect the field, verify monitoring leads and anesthetic/physiologic factors, and identify the last maneuver associated with the change before resuming dissection. Persistent signal loss should change the aggressiveness and direction of further tumor removal; do not keep dissecting along the same plane simply to achieve the preoperative extent-of-resection goal.",
+        ],
+        "postop": [],
+    },
+    {
         "slug": "transoral-laser-laryngeal-cancer",
         "title_terms": ("transoral", "laser", "laryngeal"),
         "setup": [
