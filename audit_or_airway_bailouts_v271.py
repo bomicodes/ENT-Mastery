@@ -24,7 +24,20 @@ CHECKS = [
         ("cross-field failure pauses resection", (("cross-field", "distal airway"), ("pause", "stop"), ("re-establish", "oxygenation", "ventilation"))),
         ("anastomotic tension changes resection", (("tension",), ("well-perfused", "devascularized"), ("change", "limit resection", "release"), ("anastomosis",))),
     ]),
+    ("airway-fb", ("airway foreign body", "foreign body"), [
+        ("hypoxemia interrupts extraction", (("oxygenation", "saturation", "ventilation"), ("stop traction", "re-establish ventilation", "restore"), ("direct", "endoscopic control"))),
+        ("central obstruction has a controlled rescue", (("trachea", "carina", "central"), ("mainstem", "opposite lung"), ("direct visualization", "direct endoscopic"), ("temporizing", "rescue"))),
+        ("upper-airway impaction changes extraction route", (("glottis", "subglottis"), ("do not repeatedly", "repeated traumatic"), ("orientation", "retrieval instrument", "controlled"), ("tracheotomy", "open extraction"))),
+        ("fragmentation mandates second look", (("fragment", "friable"), ("reinspect", "second look", "second-look"), ("both main bronchi", "trachea"), ("retained",))),
+    ]),
+    ("direct-laryngoscopy-bronchoscopy", ("direct laryngoscopy bronchoscopy", "laryngoscopy bronchoscopy"), [
+        ("diagnostic exam stops for physiology", (("oxygenation", "ventilation"), ("stop point", "withdraw"), ("re-establish",), ("smaller instrument", "secured airway", "controlled ventilation"))),
+        ("stenosis sizing is atraumatic", (("stenosis",), ("do not", "forcing", "force"), ("atraumatic",), ("cannot be crossed", "inability to traverse"))),
+    ]),
 ]
+
+PEDIATRIC_SOURCE_TARGETS = {"airway-fb", "direct-laryngoscopy-bronchoscopy"}
+SOURCE_GROUPS = (("cummings",), ("k j lee", "lee's essential"), ("pasha",), ("ers statement", "pediatric airway endoscopy"))
 
 
 def norm(s):
@@ -64,6 +77,10 @@ try:
         for label, groups in checks:
             if not has_groups(combined, groups):
                 failures.append(f"{slug}: missing airway bailout concept {label!r}")
+        if preferred in PEDIATRIC_SOURCE_TARGETS:
+            source_text = "\n".join(str(x) for x in (op.get("sources") or []))
+            if not has_groups(source_text, SOURCE_GROUPS):
+                failures.append(f"{slug}: pediatric airway source provenance incomplete")
         r = client.get("/case-tomorrow", query_string={"q": op.get("title", slug)}, follow_redirects=True)
         if r.status_code >= 500:
             failures.append(f"{slug}: /case-tomorrow HTTP {r.status_code}")
@@ -73,7 +90,7 @@ try:
         print("OR v27.1 AIRWAY BAILOUT FAILURES")
         print("\n".join(failures))
         raise SystemExit(1)
-    print(f"PASS: {len(CHECKS)} shared-airway modules preserve explicit exposure, ventilation, fire-safety, and anastomotic bailout logic")
+    print(f"PASS: {len(CHECKS)} shared-airway modules preserve explicit exposure, ventilation, fire-safety, pediatric extraction, and source-grounded bailout logic")
 finally:
     try: os.remove(db)
     except OSError: pass
