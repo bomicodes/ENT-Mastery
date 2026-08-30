@@ -4,7 +4,7 @@ import runtime_entry
 from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v194 import COHORT
 TASK_TERMS={
-"cc-v112-rec-laryngology-voice-swallowing-transnasal-esophagoscopy":["conventional egd","mucosal","biopsy","perforation","do not force"],
+"cc-v112-rec-laryngology-voice-swallowing-transnasal-esophagoscopy":["conventional egd","mucosal","biopsy","perforation","should not be forced"],
 "cc-v112-rec-laryngology-voice-swallowing-esophageal-disease-for-the-otolaryngologist":["oropharyngeal","esophagram","manometry","weight loss","inability to handle secretions"],
 }
 def words(v): return re.findall(r"\b\w+[\w'-]*\b",str(v or ""))
