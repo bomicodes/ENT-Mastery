@@ -91,7 +91,7 @@ def main():
             fail("missing_posterior_pack_airway_boundary")
         if "repeated bedside repacking without a stop rule" not in text:
             fail("missing_repacking_stop_rule")
-        if "life-threatening" not in text or "thromboembolic indication" not in text:
+        if sem("life-threatening") not in text or "thromboembolic indication" not in text:
             fail("missing_antithrombotic_risk_balance")
         if "neurologic or ophthalmic ischemic complications" not in text:
             fail("missing_embolization_harm_boundary")
