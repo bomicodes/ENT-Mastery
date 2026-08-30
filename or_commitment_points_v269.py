@@ -61,6 +61,16 @@ TARGETS = [
         "postop": [],
     },
     {
+        "slug": "oral-composite",
+        "title_terms": ("oral", "composite"),
+        "setup": [
+            "Let oncologic bone clearance—not preservation of mandibular continuity—determine the final mandibular resection. If the operation was planned as a marginal mandibulectomy but direct findings demonstrate gross cortical/medullary involvement or the required bony and soft-tissue margin cannot be obtained while preserving an oncologically sound residual mandible, extend to a segmental resection with the appropriate reconstructive plan rather than stripping or curetting obviously involved bone simply to keep continuity.",
+            "Make irreversible mandibular cuts only after re-confirming the three-dimensional tumor extent, intended specimen/margins, dental and occlusal consequences, remaining mandibular stock, and how the resulting soft-tissue and bony defect will be reconstructed. An unexpected larger defect should trigger reassessment of fixation, vascularized bone/soft-tissue needs and recipient-vessel strategy before completing cuts that commit the patient to an inadequate reconstruction.",
+            "If deep extension reaches an unsafe or obliterated neurovascular plane, stop blind traction, clamping or cautery and obtain direct exposure sufficient to define the involved structure. Unexpected major-vessel involvement that was not part of the preoperative ablative/reconstructive plan is a change-of-plan event requiring controlled vascular strategy and reassessment of resectability rather than casual sacrifice to complete the original composite resection.",
+        ],
+        "postop": [],
+    },
+    {
         "slug": "total-laryngectomy",
         "title_terms": ("total", "laryngectomy"),
         "setup": [
