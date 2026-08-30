@@ -72,22 +72,39 @@ try:
         )
         if not _has_groups(setup, los_groups):
             failures.append(f"{slug}: missing true first-side LOS troubleshooting/stage-versus-continue decision")
+        invaded_rln_groups = (
+            ("adherent", "invades", "invasion"),
+            ("preoperative vocal fold", "preoperative vocal-fold", "vocal-fold mobility"),
+            ("preserve", "shave", "partial layer", "partial-layer"),
+            ("full thickness", "full-thickness", "gross invasion", "destructive"),
+            ("en bloc", "resection", "sacrifice"),
+            ("reconstruction", "reinnervation", "rehabilitation"),
+        )
+        if not _has_groups(setup, invaded_rln_groups):
+            failures.append(f"{slug}: missing function- and invasion-aware RLN preservation-versus-resection strategy")
         sources = "\n".join(str(x) for x in (total.get("sources") or []))
         source_groups = (
             ("cummings",),
             ("k j lee", "essential otolaryngology"),
             ("pasha", "clinical reference guide"),
             ("international neural monitoring study group", "inmsg"),
+            ("invasive thyroid cancer",),
         )
         if not _has_groups(sources, source_groups):
             failures.append(f"{slug}: thyroid commitment source provenance incomplete")
+
+    slug, lob = _find(reg, ("thyroid", "lobectomy"))
+    if lob:
+        setup = "\n".join(str(x) for x in (lob.get("setup") or []))
+        if not _has_groups(setup, (("invading", "invades", "adherent"), ("functioning nerve", "nerve function"), ("shaved", "shave", "partial"), ("en bloc", "resection"), ("reinnervation", "rehabilitation"))):
+            failures.append(f"{slug}: lobectomy case missing invasive-RLN commitment logic")
 
     if failures:
         print("THYROID OR v23.12 FAILURES")
         print("\n".join(failures))
         raise SystemExit(1)
 
-    print(f"PASS: {len(CHECKS)} thyroid procedures retain reviewed planning/postoperative management; total thyroidectomy also preserves source-grounded first-side LOS staging logic")
+    print(f"PASS: {len(CHECKS)} thyroid procedures retain reviewed planning/postoperative management plus source-grounded LOS and invasive-RLN commitment strategy")
 finally:
     try:
         os.remove(db)
