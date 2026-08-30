@@ -43,6 +43,10 @@ CHECKS = [
         ("defect controls reconstruction", (("primary pharyngeal closure", "primary closure"), ("tension", "mucosal"), ("vascularized", "free tissue", "patch", "onlay"))),
         ("great vessels receive durable coverage", (("carotid", "great vessel"), ("vascularized coverage", "vascularized"), ("contaminated", "irradiated", "salivary"))),
     ]),
+    ("vestibular-schwannoma", ("vestibular schwannoma",), [
+        ("critical adherence limits resection", (("facial nerve",), ("brainstem", "critical vessel"), ("near total", "subtotal", "residual"), ("neurologic injury", "preservation"))),
+        ("monitoring change stops dissection", (("monitoring", "signal"), ("stop", "reassess"), ("traction", "retraction"), ("persistent", "aggressiveness", "direction"))),
+    ]),
     ("transoral-laser-laryngeal-cancer", ("transoral laser", "laser laryngeal"), [
         ("inadequate margin conversion", (("inadequate exposure", "deep margin"), ("convert", "abort", "alternate", "open"))),
     ]),
