@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Runtime ladder integrity
-        run: python audit_runtime_ladder_integrity_v175.py
+        run: python audit_learning_ladders_runtime_v204.py
       - name: Full Sleep Surgery canonical ladder gate
         run: python audit_sleep_surgery_progress_v266.py
       - name: Pediatric PSG perioperative semantic gate
