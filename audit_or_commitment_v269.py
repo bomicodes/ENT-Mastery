@@ -47,6 +47,10 @@ CHECKS = [
         ("critical adherence limits resection", (("facial nerve",), ("brainstem", "critical vessel"), ("near total", "subtotal", "residual"), ("neurologic injury", "preservation"))),
         ("monitoring change stops dissection", (("monitoring", "signal"), ("stop", "reassess"), ("traction", "retraction"), ("persistent", "aggressiveness", "direction"))),
     ]),
+    ("jugular-foramen-tumor", ("jugular foramen",), [
+        ("critical neurovascular adherence limits resection", (("internal carotid", "carotid"), ("brainstem", "lower cranial"), ("stop", "reassess", "intentional residual"), ("staged radiation", "surveillance", "gross total"))),
+        ("venous injury changes plan", (("jugular bulb", "sigmoid sinus"), ("direct compression", "packing"), ("blind deep clamping",), ("dominant venous outflow", "collateral drainage"))),
+    ]),
     ("transoral-laser-laryngeal-cancer", ("transoral laser", "laser laryngeal"), [
         ("inadequate margin conversion", (("inadequate exposure", "deep margin"), ("convert", "abort", "alternate", "open"))),
     ]),
