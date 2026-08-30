@@ -33,6 +33,11 @@ CHECKS = [
         ("jugular and nerve sacrifice is deliberate", (("internal jugular", "ijv"), ("contralateral", "bilateral"), ("cn xi", "vagus", "hypoglossal", "phrenic"), ("oncologic", "invasion"))),
         ("lymphatic leak controlled before closure", (("thoracic duct", "lymphatic"), ("clip", "ligate", "seal"), ("valsalva", "intrathoracic pressure"), ("before closure", "before leaving"))),
     ]),
+    ("oral-composite", ("oral composite",), [
+        ("mandibular clearance can change resection", (("marginal mandibulectomy", "marginal"), ("segmental",), ("cortical", "medullary", "bone"), ("oncologic", "margin", "clearance"))),
+        ("reconstruction considered before irreversible cuts", (("irreversible", "mandibular cuts"), ("occlus", "dental"), ("reconstruct", "vascularized bone", "fixation"))),
+        ("unsafe deep plane stops blind dissection", (("neurovascular", "major vessel"), ("stop blind", "direct exposure"), ("change of plan", "reassess"), ("sacrifice", "vascular strategy"))),
+    ]),
     ("total-laryngectomy", ("total laryngectomy",), [
         ("margin controls closure", (("margin",), ("extend", "additional"), ("before reconstruction", "before committing", "before closure"))),
         ("defect controls reconstruction", (("primary pharyngeal closure", "primary closure"), ("tension", "mucosal"), ("vascularized", "free tissue", "patch", "onlay"))),
