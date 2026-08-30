@@ -55,7 +55,8 @@ from hn_neck_semantic_alignment_v294 import apply_hn_neck_semantic_alignment_v29
 from facial_frontal_sinus_management_v295 import apply_facial_frontal_sinus_management_v295
 from rhinology_rhinitis_semantic_alignment_v297 import apply_rhinology_rhinitis_semantic_alignment_v297
 from facial_noe_management_alignment_v298 import apply_facial_noe_management_alignment_v298
-TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_","v267_","v268_","v269_","v270_","v271_","v272_","v273_","v274_","v295_")
+from sleep_peds_psg_management_v299 import apply_sleep_peds_psg_management_v299
+TARGET_PREFIXES=("v209_","v210_","v212_","v213_","v216_","v218_","v219_","v220_","v221_","v222_","v223_","v224_","v225_","v227_","v228_","v231_","v233_","v234_","v235_","v236_","v237_","v238_","v239_","v241_","v242_","v243_","v244_","v245_","v246_","v247_","v248_","v249_","v251_","v252_","v253_","v254_","v255_","v256_","v257_","v258_","v259_","v260_","v261_","v262_","v263_","v264_","v266_","v267_","v268_","v269_","v270_","v271_","v272_","v273_","v274_","v295_","v299_")
 def _prefix(qid):
  text=str(qid or "")
  for prefix in TARGET_PREFIXES:
@@ -94,11 +95,12 @@ def apply_ladder_answer_balance_v211(challenges):
  apply_facial_frontal_sinus_management_v295(challenges,data._v6_item_id)
  apply_rhinology_rhinitis_semantic_alignment_v297(challenges,data._v6_item_id)
  apply_facial_noe_management_alignment_v298(challenges,data._v6_item_id)
+ apply_sleep_peds_psg_management_v299(challenges,data._v6_item_id)
  groups=defaultdict(list)
  for q in challenges:
   if not q.get("ladder_reviewed"): continue
   prefix=_prefix(q.get("id"))
-  if prefix and q.get("learning_stage") in {"foundation","application","senior_decision"}: groups[prefix].append(q)
+  if prefix and q.get("learning_stage") in {"foundation","application","management","senior_decision"}: groups[prefix].append(q)
  moved=0; summary={}
  for prefix,rows in sorted(groups.items()):
   rows.sort(key=lambda q:str(q.get("id")))
