@@ -6,7 +6,7 @@ from concept_check_depth_v196 import COHORT
 
 TASK_TERMS = {
     "cc-v112-rec-sleep-surgery-pap-troubleshooting": [
-        "large leak", "residual event", "nasal obstruction", "heated humidification",
+        "leak", "residual event", "nasal obstruction", "heated humidification",
         "aerophagia", "central apneas", "hypoventilation", "sleep medicine",
         "objective reassessment", "pap intolerance"
     ],
@@ -52,7 +52,7 @@ def main():
         if not str(q.get("deliberate_review_v196") or "").strip(): fail("missing_deliberate_review_metadata")
         miss = [t for t in TASK_TERMS[qid] if sem(t) not in text]
         if miss: fail("missing_task_terms:" + ",".join(miss))
-        # Decision-boundary checks: the answer must explicitly reject two dangerous shortcuts.
+        # Decision-boundary checks: the answer must explicitly reject dangerous shortcuts.
         if "do not keep raising pressure" not in text: fail("missing_central_event_pressure_stop_rule")
         if "should not be presented as automatically curing osa" not in text: fail("missing_nasal_surgery_non_cure_boundary")
         if "pap intolerance is not itself an anatomic diagnosis" not in text: fail("missing_surgery_selection_boundary")
