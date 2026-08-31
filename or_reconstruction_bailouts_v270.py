@@ -5,8 +5,9 @@ OR Tomorrow reconstruction cases without replacing the established planning or
 postoperative flap-rescue content. The v27.1 airway bailout, v27.2 neck-dissection
 chyle rescue, v27.3 venous-outflow rescue, v27.4 carotid danger-zone, v27.5
 aerodigestive injury/contamination, v27.6 venous-air-embolism rescue, v27.7
-spinal-accessory-nerve preservation/rescue, v27.8 critical non-XI nerve, and v27.9
-deep-plane sympathetic-chain/brachial-plexus rescue layers are chained through this tail.
+spinal-accessory-nerve preservation/rescue, v27.8 critical non-XI nerve, v27.9
+deep-plane sympathetic-chain/brachial-plexus rescue, and v28.0 parotid facial-nerve
+commitment/reconstruction layers are chained through this tail.
 """
 
 from or_airway_bailouts_v271 import apply_or_airway_bailouts_v271
@@ -18,6 +19,7 @@ from or_neck_dissection_air_embolism_rescue_v276 import apply_or_neck_dissection
 from or_neck_dissection_accessory_nerve_rescue_v277 import apply_or_neck_dissection_accessory_nerve_rescue_v277
 from or_neck_dissection_critical_nerve_rescue_v278 import apply_or_neck_dissection_critical_nerve_rescue_v278
 from or_neck_dissection_deep_plane_rescue_v279 import apply_or_neck_dissection_deep_plane_rescue_v279
+from or_parotid_facial_nerve_rescue_v280 import apply_or_parotid_facial_nerve_rescue_v280
 
 TARGETS = [
     {
@@ -85,4 +87,5 @@ def apply_or_reconstruction_bailouts_v270(registry):
     v277 = apply_or_neck_dissection_accessory_nerve_rescue_v277(registry)
     v278 = apply_or_neck_dissection_critical_nerve_rescue_v278(registry)
     v279 = apply_or_neck_dissection_deep_plane_rescue_v279(registry)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v271": v271, "v272": v272, "v273": v273, "v274": v274, "v275": v275, "v276": v276, "v277": v277, "v278": v278, "v279": v279}
+    v280 = apply_or_parotid_facial_nerve_rescue_v280(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v271": v271, "v272": v272, "v273": v273, "v274": v274, "v275": v275, "v276": v276, "v277": v277, "v278": v278, "v279": v279, "v280": v280}
