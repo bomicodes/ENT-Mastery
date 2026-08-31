@@ -1,0 +1,27 @@
+name: OR neck deep-plane rescue v27.9
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'or_neck_dissection_deep_plane_rescue_v279.py'
+      - 'or_reconstruction_bailouts_v270.py'
+      - 'audit_or_neck_dissection_deep_plane_rescue_v279.py'
+      - 'runtime_entry.py'
+      - 'app.py'
+      - '.github/workflows/or-neck-deep-plane-v279.yml'
+  workflow_dispatch:
+jobs:
+  deep-plane-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Preflight boot
+        run: python -m py_compile or_neck_dissection_deep_plane_rescue_v279.py or_reconstruction_bailouts_v270.py audit_or_neck_dissection_deep_plane_rescue_v279.py && python -c "import runtime_entry; print('preflight ok')"
+      - name: Deep-plane semantic and route gate
+        run: python audit_or_neck_dissection_deep_plane_rescue_v279.py
