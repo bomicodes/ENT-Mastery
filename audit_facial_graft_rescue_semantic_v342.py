@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """v34.2 — hard-gate facial-plastics graft semantic split and bailout choreography.
 
-Checks the assembled production Concept Hub rather than the patch source so future
+Checks the final Render production assembly rather than the patch source so future
 rebuilds cannot silently collapse structural rhinoplasty grafting into skin-graft
 coverage or remove the chief-resident rescue actions added in v34.2.
 """
 
 import sys
-import runtime_entry
+import runtime_entry_pasha
 
 
-data = runtime_entry.data
+data = runtime_entry_pasha.runtime_entry.data
 DOMAIN = "Facial Plastics / Trauma"
 RHINO = "Rhinoplasty Graft Selection"
 SKIN = "Skin Graft Selection"
@@ -100,7 +100,7 @@ def main():
         print(f"\nFacial graft rescue semantic gate FAILED with {failures} issue(s).")
         return 1
 
-    print("PASS: facial-plastics graft selection remains semantically distinct and rescue-ready.")
+    print("PASS: facial-plastics graft selection remains semantically distinct and rescue-ready in the final Render assembly.")
     print("  Rhinoplasty: framework/force -> graft geometry/material -> rib-harvest pleural bailout.")
     print("  Skin graft: vascular bed -> FTSG/STSG/take physiology -> hematoma/seroma/shear rescue.")
     print("  Cummings/K.J. Lee/Pasha provenance remains attached; costal donor-site literature is retained.")
