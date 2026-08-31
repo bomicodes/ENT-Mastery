@@ -54,9 +54,9 @@ def apply_facialplastics_eyelid_ocs_rescue_v346(data_module, app_module=None):
             "Cummings Otolaryngology—Head and Neck Surgery, 7e — eyelid/periocular reconstruction and orbital emergency principles",
             "K.J. Lee's Essential Otolaryngology, 12e — orbital/facial trauma anatomy and vision-threatening complication framework",
             "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6e — facial reconstruction and orbital trauma principles",
-            "Papadiochos I et al. Acute orbital compartment syndrome due to traumatic hemorrhage: case series and literature review. J Craniomaxillofac Surg. 2022 — clinical diagnosis, prompt lateral canthotomy/inferior cantholysis, and CT after emergency decompression when indicated",
-            "Mei F et al. Orbital Compartment Syndrome After Primary Scleral Buckle Surgery. Retin Cases Brief Rep. 2025 — postoperative OCS successfully treated with canthotomy/cantholysis",
-            "Marginal Full Thickness Blepharotomy for Management of Orbital Compartment Syndrome. Ophthalmic Plast Reconstr Surg. 2024 — OCS as a time-sensitive vision-threatening emergency and escalation when standard decompression is inadequate"
+            "Papadiochos I et al. Acute orbital compartment syndrome due to traumatic hemorrhage: 4-year case series and relevant literature review with emphasis on its management. Oral Maxillofac Surg. 2023;27(1):101-116 (online 2022) — prompt clinical recognition, emergency decompression, and imaging without delaying indicated treatment",
+            "Mei F et al. Orbital Compartment Syndrome After Primary Scleral Buckle Surgery. Retin Cases Brief Rep. 2025;19(2):240-243 — postoperative OCS successfully treated with canthotomy/cantholysis",
+            "Dryden S et al. Marginal Full Thickness Blepharotomy for Management of Orbital Compartment Syndrome. Ophthalmic Plast Reconstr Surg. 2024;40(4):408-410 — OCS as a time-sensitive vision-threatening emergency and an escalation option when standard canthotomy/cantholysis is inadequate or cannot be performed"
         ])
         module["facialplastics_eyelid_ocs_rescue_v346"] = True
         module["semantic_role_v346"] = "postoperative orbital-compartment recognition, immediate decompression, reassessment, and escalation"
