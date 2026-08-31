@@ -7,11 +7,19 @@ def norm(v): return re.sub(r"[^a-z0-9]+", " ", str(v or "").lower()).strip()
 def has_groups(text, groups):
     t=norm(text); return all(any(norm(term) in t for term in group) for group in groups)
 
-def resolve(registry, terms):
+def resolve(registry, expected, terms):
     for slug, op in (registry or {}).items():
         hay=(str(slug)+" "+str((op or {}).get("title", ""))).lower()
         if all(term in hay for term in terms):
             return slug, op
+    # The canonical superficial-lobe operation is titled simply "Parotidectomy"
+    # in the current live registry. Accept that bounded historical title only for
+    # the superficial target and never allow it to alias the total case.
+    if expected == "superficial-parotidectomy":
+        for slug, op in (registry or {}).items():
+            hay=(str(slug)+" "+str((op or {}).get("title", ""))).lower()
+            if "parotid" in hay and "total" not in hay:
+                return slug, op
     return None, None
 
 try:
@@ -19,7 +27,7 @@ try:
     failures=[]
     targets=(("superficial-parotidectomy", ("superficial","parotid")), ("total-parotidectomy", ("total","parotid")))
     for expected, terms in targets:
-        slug, op=resolve(rt.data.OR_PREP_REGISTRY, terms)
+        slug, op=resolve(rt.data.OR_PREP_REGISTRY, expected, terms)
         label=slug or expected
         if not op:
             failures.append(f"{expected}: no live OR Tomorrow case")
