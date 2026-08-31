@@ -19,7 +19,7 @@ def _norm(value):
 FREE_FLAP_REBUILD_V323 = {
     "free flap monitoring compromise salvage": {
         "recognize": (
-            "Use this card for POSTOPERATIVE FLAP SURVEILLANCE AND RECOGNITION—not for the technical take-back operation. Establish a documented baseline immediately after inset and follow serial clinical change. A healthy accessible skin/mucosal paddle is warm and appropriately colored/turgid with prompt capillary refill, reproducible Doppler signal, and bright-red dermal bleeding when pinprick is used. VENOUSE CONGESTION tends toward dusky/blue-purple color, swelling/turgor, brisk refill and brisk dark bleeding. ARTERIAL INSUFFICIENCY tends toward pallor/coolness, poor or absent refill, weak/absent arterial signal and little or no bright-red pinprick bleeding. Trend matters more than one isolated finding."
+            "Use this card for POSTOPERATIVE FLAP SURVEILLANCE AND RECOGNITION—not for the technical take-back operation. Establish a documented baseline immediately after inset and follow serial clinical change. A healthy accessible skin/mucosal paddle is warm and appropriately colored/turgid with prompt capillary refill, reproducible Doppler signal, and bright-red dermal bleeding when pinprick is used. VENOUS CONGESTION tends toward dusky/blue-purple color, swelling/turgor, brisk refill and brisk dark bleeding. ARTERIAL INSUFFICIENCY tends toward pallor/coolness, poor or absent refill, weak/absent arterial signal and little or no bright-red pinprick bleeding. Trend matters more than one isolated finding."
         ),
         "localize": (
             "Translate the bedside phenotype into a vascular problem. Venous compromise = outflow obstruction from venous thrombosis, pedicle kink/twist, compression, tight inset/closure, hematoma, or recipient-vein problem. Arterial compromise = inflow failure from arterial thrombosis, spasm, kink, compression, anastomotic problem, or systemic low-flow state. A flap can have an audible arterial signal despite clinically important venous obstruction, so Doppler is an adjunct rather than a substitute for examination. For buried flaps, know what is actually being monitored: an externalized/sentinel paddle when present, implantable Doppler, tissue oximetry or other institutional adjuncts; a reassuring device should not overrule a deteriorating patient/flap."
@@ -70,8 +70,8 @@ FREE_FLAP_REBUILD_V323 = {
             "K.J. Lee's Essential Otolaryngology, 12e — microvascular reconstruction complications and revision concepts",
             "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6e — early free-flap failure, arterial/venous compromise and urgent revision framework",
             "Abdelwahab et al., Curr Opin Otolaryngol Head Neck Surg 2021 — head-and-neck free-flap salvage review emphasizing prompt identification/intervention and surgical microvascular revision",
-            "Haughey et al./multi-institutional Head Neck 2021 (PMID 32844522) — better salvage with early compromise, venous versus arterial compromise, and thrombectomy",
-            "Momeni et al., J Clin Med 2024 systematic review (PMID 39201992) — fibrinolytic salvage evidence remains heterogeneous with no prospective randomized trials",
+            "Multi-institutional Head Neck study (PMID 32844522) — better salvage with early compromise, venous versus arterial compromise, and thrombectomy",
+            "Mandal et al., Journal of Personalized Medicine 2024 (PMID 39201992) — systematic review showing fibrinolytic salvage evidence remains heterogeneous with no prospective randomized trials",
         ],
     },
 }
