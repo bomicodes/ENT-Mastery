@@ -1,4 +1,4 @@
-"""Cumulative Concept Hub production bridge through v34.3.
+"""Cumulative Concept Hub production bridge through v34.4.
 
 The final Render entrypoint imports runtime_entry_pasha, so source-grounded Concept Hub
 rebuilds added after v28.4 must be applied there. This bridge intentionally applies the
@@ -6,7 +6,7 @@ bounded deep-curriculum modules in version order; each patch is idempotent and l
 rebuilds win when a concept is intentionally revisited.
 
 The historical filename/function remain v314 for compatibility with the production
-entrypoint, but the module registry below is authoritative and now runs through v34.3.
+entrypoint, but the module registry below is authoritative and now runs through v34.4.
 """
 
 import importlib
@@ -64,6 +64,7 @@ MODULES_V314 = [
     "deep_curriculum_facialplastics_v341",
     "deep_curriculum_facialplastics_v342",
     "deep_curriculum_facialplastics_v343",
+    "deep_curriculum_facialplastics_v344",
 ]
 
 
