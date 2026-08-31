@@ -8,7 +8,7 @@ This pass uses word-boundary clinical markers identical in spirit to the hard
 CI audit and converts any remaining nonclinical item to the domain-specific
 oral-board format. It is deliberately small and idempotent.
 
-Post-completion depth hardening applies the focused v18.0-v20.1 manual
+Post-completion depth hardening applies the focused v18.0-v20.2 manual
 answer/task-alignment repairs after generic normalization so they cannot be
 silently overwritten by the fallback converter. Watched ``*_depth_v*.py``
 runtime modules keep exact canonical-resolution changes under full CI.
@@ -41,6 +41,7 @@ from concept_check_depth_v198 import apply_concept_check_task_alignment_v198
 from concept_check_depth_v199 import apply_concept_check_task_alignment_v199
 from concept_check_depth_v200 import apply_concept_check_task_alignment_v200
 from concept_check_depth_v201 import apply_concept_check_task_alignment_v201
+from concept_check_depth_v202 import apply_concept_check_task_alignment_v202
 
 CLINICAL_STEM_RE = re.compile(r"\b(patient|child|infant|adult|man|woman|boy|girl|presents|returns|develops|postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b", re.I)
 
@@ -127,53 +128,33 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     reframed_v200 = _reassert_clinical_contract(checks, alignment_v200.get("repaired", []), unresolved, "post_alignment_clinical_frame_v200")
     alignment_v201 = apply_concept_check_task_alignment_v201(checks, deep_modules, v6_item_id)
     reframed_v201 = _reassert_clinical_contract(checks, alignment_v201.get("repaired", []), unresolved, "post_alignment_clinical_frame_v201")
+    alignment_v202 = apply_concept_check_task_alignment_v202(checks, deep_modules, v6_item_id)
+    reframed_v202 = _reassert_clinical_contract(checks, alignment_v202.get("repaired", []), unresolved, "post_alignment_clinical_frame_v202")
 
     return {
-        "converted": converted,
-        "unresolved": unresolved,
-        "task_alignment_v180": alignment_v180,
-        "post_alignment_reframed_v181": reframed_v180,
-        "task_alignment_v181": alignment_v181,
-        "post_alignment_reframed_v181_cohort2": reframed_v181,
-        "task_alignment_v182": alignment_v182,
-        "post_alignment_reframed_v182": reframed_v182,
-        "task_alignment_v183": alignment_v183,
-        "post_alignment_reframed_v183": reframed_v183,
+        "converted": converted, "unresolved": unresolved,
+        "task_alignment_v180": alignment_v180, "post_alignment_reframed_v181": reframed_v180,
+        "task_alignment_v181": alignment_v181, "post_alignment_reframed_v181_cohort2": reframed_v181,
+        "task_alignment_v182": alignment_v182, "post_alignment_reframed_v182": reframed_v182,
+        "task_alignment_v183": alignment_v183, "post_alignment_reframed_v183": reframed_v183,
         "v184_content_fix": v184_content_fix,
-        "task_alignment_v184": alignment_v184,
-        "post_alignment_reframed_v184": reframed_v184,
-        "task_alignment_v185": alignment_v185,
-        "post_alignment_reframed_v185": reframed_v185,
-        "task_alignment_v186": alignment_v186,
-        "post_alignment_reframed_v186": reframed_v186,
-        "task_alignment_v187": alignment_v187,
-        "post_alignment_reframed_v187": reframed_v187,
-        "task_alignment_v188": alignment_v188,
-        "post_alignment_reframed_v188": reframed_v188,
-        "task_alignment_v189": alignment_v189,
-        "post_alignment_reframed_v189": reframed_v189,
-        "task_alignment_v190": alignment_v190,
-        "post_alignment_reframed_v190": reframed_v190,
-        "task_alignment_v191": alignment_v191,
-        "post_alignment_reframed_v191": reframed_v191,
-        "task_alignment_v192": alignment_v192,
-        "post_alignment_reframed_v192": reframed_v192,
-        "task_alignment_v193": alignment_v193,
-        "post_alignment_reframed_v193": reframed_v193,
-        "task_alignment_v194": alignment_v194,
-        "post_alignment_reframed_v194": reframed_v194,
-        "task_alignment_v195": alignment_v195,
-        "post_alignment_reframed_v195": reframed_v195,
-        "task_alignment_v196": alignment_v196,
-        "post_alignment_reframed_v196": reframed_v196,
-        "task_alignment_v197": alignment_v197,
-        "post_alignment_reframed_v197": reframed_v197,
-        "task_alignment_v198": alignment_v198,
-        "post_alignment_reframed_v198": reframed_v198,
-        "task_alignment_v199": alignment_v199,
-        "post_alignment_reframed_v199": reframed_v199,
-        "task_alignment_v200": alignment_v200,
-        "post_alignment_reframed_v200": reframed_v200,
-        "task_alignment_v201": alignment_v201,
-        "post_alignment_reframed_v201": reframed_v201,
+        "task_alignment_v184": alignment_v184, "post_alignment_reframed_v184": reframed_v184,
+        "task_alignment_v185": alignment_v185, "post_alignment_reframed_v185": reframed_v185,
+        "task_alignment_v186": alignment_v186, "post_alignment_reframed_v186": reframed_v186,
+        "task_alignment_v187": alignment_v187, "post_alignment_reframed_v187": reframed_v187,
+        "task_alignment_v188": alignment_v188, "post_alignment_reframed_v188": reframed_v188,
+        "task_alignment_v189": alignment_v189, "post_alignment_reframed_v189": reframed_v189,
+        "task_alignment_v190": alignment_v190, "post_alignment_reframed_v190": reframed_v190,
+        "task_alignment_v191": alignment_v191, "post_alignment_reframed_v191": reframed_v191,
+        "task_alignment_v192": alignment_v192, "post_alignment_reframed_v192": reframed_v192,
+        "task_alignment_v193": alignment_v193, "post_alignment_reframed_v193": reframed_v193,
+        "task_alignment_v194": alignment_v194, "post_alignment_reframed_v194": reframed_v194,
+        "task_alignment_v195": alignment_v195, "post_alignment_reframed_v195": reframed_v195,
+        "task_alignment_v196": alignment_v196, "post_alignment_reframed_v196": reframed_v196,
+        "task_alignment_v197": alignment_v197, "post_alignment_reframed_v197": reframed_v197,
+        "task_alignment_v198": alignment_v198, "post_alignment_reframed_v198": reframed_v198,
+        "task_alignment_v199": alignment_v199, "post_alignment_reframed_v199": reframed_v199,
+        "task_alignment_v200": alignment_v200, "post_alignment_reframed_v200": reframed_v200,
+        "task_alignment_v201": alignment_v201, "post_alignment_reframed_v201": reframed_v201,
+        "task_alignment_v202": alignment_v202, "post_alignment_reframed_v202": reframed_v202,
     }
