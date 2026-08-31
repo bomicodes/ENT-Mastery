@@ -1,0 +1,35 @@
+name: HN oncology source saturation v34.8
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'deep_curriculum_headneck_v348.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_hn_source_saturation_v348.py'
+      - '.github/workflows/hn-source-saturation-v348.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'deep_curriculum_headneck_v348.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_hn_source_saturation_v348.py'
+      - '.github/workflows/hn-source-saturation-v348.yml'
+
+jobs:
+  hn-source-saturation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Preflight boot
+        run: python preflight_boot_check_v155.py
+      - name: Full Head and Neck Oncology canonical ladder
+        run: python audit_hn_ladder_complete_v231.py
+      - name: Phenotype-specific oncology source trail gate
+        run: python audit_hn_source_saturation_v348.py
