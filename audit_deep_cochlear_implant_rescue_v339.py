@@ -11,9 +11,13 @@ def has_all(text, groups):
     return all(any(norm(term) in t for term in group) for group in groups)
 
 try:
-    import runtime_entry as rt
+    # Audit the same final production assembly Render imports. Later curriculum
+    # layers are chained through runtime_entry_pasha, so inspecting bare
+    # runtime_entry can falsely report a missing earlier mutation.
+    import runtime_entry_pasha
+    data = runtime_entry_pasha.runtime_entry.data
     target = None
-    for _domain, modules in (getattr(rt.data, "DEEP_MODULES_V6", {}) or {}).items():
+    for _domain, modules in (getattr(data, "DEEP_MODULES_V6", {}) or {}).items():
         for module in modules or []:
             if norm(module.get("topic")) == "cochlear implant surgery":
                 target = module
@@ -40,7 +44,7 @@ try:
             failures.append("source trail incomplete")
     if failures:
         print("CI v33.9 RESCUE FAILURES\n" + "\n".join(failures)); raise SystemExit(1)
-    print("PASS: live Cochlear Implant Surgery card protects malformed-cochlea gusher bailout, electrode stop/verify, misplacement rescue, postoperative recognition, and provenance")
+    print("PASS: final Render assembly Cochlear Implant Surgery card protects malformed-cochlea gusher bailout, electrode stop/verify, misplacement rescue, postoperative recognition, and provenance")
 finally:
     try: os.remove(db)
     except OSError: pass
