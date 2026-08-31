@@ -1,0 +1,46 @@
+name: Facial graft vascular semantics v34.3
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'deep_curriculum_facialplastics_v341.py'
+      - 'deep_curriculum_facialplastics_v342.py'
+      - 'deep_curriculum_facialplastics_v343.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_facial_graft_vascular_semantics_v343.py'
+      - 'audit_facial_graft_rescue_semantic_v342.py'
+      - 'audit_facial_plastics_full_domain_v262.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/facial-graft-vascular-semantics-v343.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'deep_curriculum_facialplastics_v341.py'
+      - 'deep_curriculum_facialplastics_v342.py'
+      - 'deep_curriculum_facialplastics_v343.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_facial_graft_vascular_semantics_v343.py'
+      - 'audit_facial_graft_rescue_semantic_v342.py'
+      - 'audit_facial_plastics_full_domain_v262.py'
+      - 'runtime_entry.py'
+      - '.github/workflows/facial-graft-vascular-semantics-v343.yml'
+
+jobs:
+  facial-graft-vascular-semantics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Preflight boot
+        run: python preflight_boot_check_v155.py
+      - name: Full Facial Plastics canonical ladder gate
+        run: python audit_facial_plastics_full_domain_v262.py
+      - name: Existing graft semantic/rescue regression
+        run: python audit_facial_graft_rescue_semantic_v342.py
+      - name: Skin-graft vascularity semantic gate
+        run: python audit_facial_graft_vascular_semantics_v343.py
