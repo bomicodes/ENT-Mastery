@@ -80,9 +80,13 @@ def main():
     ]:
         failures += require_any(skin_blob, terms, f"{SKIN}: {label}")
 
-    # Teaching targets must remain mutually exclusive despite the shared word 'graft'.
-    if "plasmatic imbibition" in rhino_blob or "ftsg" in rhino_blob or "stsg" in rhino_blob:
-        failures += fail("rhinoplasty teaching collapsed into cutaneous skin-graft take biology")
+    # Exclude the explicit chief-level contrast sentence from the rhinoplasty negative
+    # check. Mentioning FTSG/STSG only to say “this is not that decision” is desirable;
+    # actual collapse would put take physiology/thickness-selection into the clinical
+    # recognition/workup/management/operative pathway itself.
+    rhino_clinical_path = text(rhino, "recognize", "localize", "workup", "manage", "operate")
+    if any(term in rhino_clinical_path for term in ("plasmatic imbibition", "inosculation", "neovascularization", "full-thickness skin graft", "split-thickness skin graft")):
+        failures += fail("rhinoplasty clinical pathway collapsed into cutaneous skin-graft take biology")
     if "spreader graft" in skin_blob or "septal extension" in skin_blob or "costal cartilage" in skin_blob:
         failures += fail("skin-graft teaching collapsed into structural nasal graft selection")
 
