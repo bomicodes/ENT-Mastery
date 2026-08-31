@@ -1,13 +1,13 @@
-"""v34.6 — eyelid/periocular reconstruction orbital-compartment rescue.
+"""v34.6 — periocular reconstruction orbital-compartment rescue.
 
 Bounded follow-on to v34.5. Adds a sight-threatening postoperative commitment/rescue layer
-to the canonical Eyelid Reconstruction card without changing facial-plastics taxonomy.
+to the canonical Periocular Reconstruction card without changing facial-plastics taxonomy.
 """
 
 import re
 
 DOMAIN = "Facial Plastics / Trauma"
-TOPIC = "eyelid reconstruction"
+TOPIC = "periocular reconstruction"
 
 
 def _norm(value):
