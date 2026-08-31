@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""v34.3 — fail closed on skin-graft vascularity semantics in assembled production data."""
+"""v34.3 — fail closed on skin-graft vascularity semantics in the final Render assembly."""
 
 import sys
-import runtime_entry
+import runtime_entry_pasha
 
+
+data = runtime_entry_pasha.runtime_entry.data
 DOMAIN = "Facial Plastics / Trauma"
 TOPIC = "Skin Graft Selection"
 
@@ -14,7 +16,7 @@ def fail(msg):
 
 
 def main():
-    rows = (getattr(runtime_entry.data, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
+    rows = (getattr(data, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
     matches = [row for row in rows if str(row.get("topic", "")).strip().lower() == TOPIC.lower()]
     if len(matches) != 1:
         return fail(f"expected exactly one live {TOPIC!r} record, found {len(matches)}")
@@ -44,7 +46,7 @@ def main():
     if failures:
         print(f"\nSkin-graft vascularity semantic gate FAILED with {failures} issue(s).")
         return 1
-    print("PASS: skin graft is correctly defined as nonvascularized transfer onto a vascularized recipient bed, distinct from flap perfusion.")
+    print("PASS: final Render assembly defines skin graft as nonvascularized transfer onto a vascularized recipient bed, distinct from flap perfusion.")
     return 0
 
 
