@@ -30,6 +30,22 @@ CORE_TEXTS = [
 def _guideline_sources(topic):
     key = _norm(topic)
 
+    # Mucosal melanoma is biologically and clinically distinct from cutaneous melanoma and
+    # belongs in the head-and-neck mucosal/sinonasal treatment framework. Keep this branch
+    # before the generic melanoma branch so a sinonasal/oral mucosal melanoma card can never
+    # inherit a cutaneous-melanoma source trail merely because both contain "melanoma".
+    if "mucosal melanoma" in key or ("melanoma" in key and ("sinonasal" in key or "nasal" in key or "oral" in key or "mucosal" in key)):
+        return [
+            "NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers v2.2026 — disease-specific mucosal melanoma staging, local-regional treatment, adjuvant/systemic, and surveillance cross-check",
+            "Moya-Plana A et al. Sinonasal mucosal melanoma: REFCOR guidelines for diagnosis, treatment and follow-up. Eur Ann Otorhinolaryngol Head Neck Dis. 2026;143(3):207-211 — contemporary disease-specific diagnosis/treatment/follow-up guidance",
+            "Thariat J et al. REFCOR good practice guidelines for radiotherapy in sinonasal carcinomas and mucosal melanomas. Eur Ann Otorhinolaryngol Head Neck Dis. 2026;143(2):123-127 — contemporary radiotherapy indications and multidisciplinary guidance",
+        ]
+    if "merkel" in key:
+        return [
+            "NCCN Clinical Practice Guidelines in Oncology: Merkel Cell Carcinoma — disease-specific staging, sentinel-node, radiation, systemic-therapy, and surveillance cross-check",
+            "Lugowska J et al. Merkel-cell carcinoma: ESMO-EURACAN Clinical Practice Guideline for diagnosis, treatment and follow-up. ESMO Open. 2024;9(5):102977 — disease-specific multidisciplinary guideline",
+            "Kimball KM et al. Updates for Management of Merkel Cell Carcinoma of the Head and Neck: A Systematic Review. Dermatol Surg. 2026;52(6):513-520 — contemporary head-and-neck management review",
+        ]
     if "melanoma" in key:
         return [
             "NCCN Clinical Practice Guidelines in Oncology: Cutaneous Melanoma, 2026 — current staging, excision, nodal, adjuvant/systemic, and surveillance cross-check",
@@ -37,12 +53,6 @@ def _guideline_sources(topic):
     if "basal cell" in key or key == "bcc" or " bcc " in f" {key} ":
         return [
             "NCCN Clinical Practice Guidelines in Oncology: Basal Cell Skin Cancer, 2026 — current risk stratification, margin-control, advanced-disease, and surveillance cross-check",
-        ]
-    if "merkel" in key:
-        return [
-            "NCCN Clinical Practice Guidelines in Oncology: Merkel Cell Carcinoma — disease-specific staging, sentinel-node, radiation, systemic-therapy, and surveillance cross-check",
-            "Lugowska J et al. Merkel-cell carcinoma: ESMO-EURACAN Clinical Practice Guideline for diagnosis, treatment and follow-up. ESMO Open. 2024;9(5):102977 — disease-specific multidisciplinary guideline",
-            "Kimball KM et al. Updates for Management of Merkel Cell Carcinoma of the Head and Neck: A Systematic Review. Dermatol Surg. 2026;52(6):513-520 — contemporary head-and-neck management review",
         ]
     if "cutaneous" in key or "skin" in key:
         return [
