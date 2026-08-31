@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """v34.5 — fail closed on forehead-flap vascular compromise rescue in final Render assembly."""
 
+import re
 import sys
 import runtime_entry_pasha
 
 
 data = runtime_entry_pasha.runtime_entry.data
 DOMAIN = "Facial Plastics / Trauma"
-TOPIC = "Forehead Flap Nasal Reconstruction"
+TOPIC_NORM = "forehead flap nasal reconstruction"
+
+
+def norm(value):
+    return re.sub(r"[^a-z0-9]+", " ", str(value or "").lower()).strip()
 
 
 def fail(msg):
@@ -17,9 +22,9 @@ def fail(msg):
 
 def main():
     rows = (getattr(data, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
-    matches = [row for row in rows if str(row.get("topic", "")).strip().lower() == TOPIC.lower()]
+    matches = [row for row in rows if norm(row.get("topic")) == TOPIC_NORM]
     if len(matches) != 1:
-        return fail(f"expected exactly one live {TOPIC!r} record, found {len(matches)}")
+        return fail(f"expected exactly one live normalized {TOPIC_NORM!r} record, found {len(matches)}")
 
     row = matches[0]
     blob = " ".join(str(row.get(k, "")) for k in ("recognize", "localize", "workup", "manage", "operate", "teach")).lower()
@@ -43,7 +48,7 @@ def main():
         failures += fail("v34.5 live marker missing")
 
     sources = " ".join(str(x) for x in row.get("source_basis") or []).lower()
-    for token in ("cummings", "k.j. lee", "pasha", "boissiere", "herlin", "moubayed", "gates"):
+    for token in ("cummings", "k.j. lee", "pasha", "boissiere", "herlin", "wiener", "gates"):
         if token not in sources:
             failures += fail(f"missing provenance token {token!r}")
 
