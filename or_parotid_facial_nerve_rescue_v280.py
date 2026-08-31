@@ -44,6 +44,15 @@ def _resolve(registry, target):
         hay = (str(slug) + " " + str((op or {}).get("title", ""))).lower()
         if all(term in hay for term in target["terms"]):
             return slug, op
+    # The live canonical superficial-lobe card is historically titled simply
+    # "Parotidectomy" in some registry generations. Resolve that card only for the
+    # superficial target, while explicitly excluding the distinct total-parotidectomy
+    # case so the two commitment/rescue layers remain independently protected.
+    if target["name"] == "superficial-parotidectomy":
+        for slug, op in reg.items():
+            hay = (str(slug) + " " + str((op or {}).get("title", ""))).lower()
+            if "parotid" in hay and "total" not in hay:
+                return slug, op
     return None, None
 
 
