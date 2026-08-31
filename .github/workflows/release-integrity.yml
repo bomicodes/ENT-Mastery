@@ -21,6 +21,8 @@ on:
       - 'audit_or_neck_dissection_air_embolism_rescue_v*.py'
       - 'audit_or_neck_dissection_accessory_nerve_rescue_v*.py'
       - 'audit_or_neck_dissection_critical_nerve_rescue_v*.py'
+      - 'audit_or_neck_dissection_deep_plane_rescue_v*.py'
+      - 'audit_or_parotid_facial_nerve_rescue_v*.py'
       - 'audit_*semantic*.py'
       - 'audit_*management_v*.py'
       - 'audit_*ladder_distinction_v*.py'
@@ -60,6 +62,8 @@ on:
       - 'audit_or_neck_dissection_air_embolism_rescue_v*.py'
       - 'audit_or_neck_dissection_accessory_nerve_rescue_v*.py'
       - 'audit_or_neck_dissection_critical_nerve_rescue_v*.py'
+      - 'audit_or_neck_dissection_deep_plane_rescue_v*.py'
+      - 'audit_or_parotid_facial_nerve_rescue_v*.py'
       - 'audit_*semantic*.py'
       - 'audit_*management_v*.py'
       - 'audit_*ladder_distinction_v*.py'
@@ -167,6 +171,10 @@ jobs:
         run: python audit_or_neck_dissection_accessory_nerve_rescue_v277.py
       - name: Current neck-dissection critical-nerve rescue gate
         run: python audit_or_neck_dissection_critical_nerve_rescue_v278.py
+      - name: Current neck-dissection deep-plane rescue gate
+        run: python audit_or_neck_dissection_deep_plane_rescue_v279.py
+      - name: Current parotid facial-nerve commitment and rescue gate
+        run: python audit_or_parotid_facial_nerve_rescue_v280.py
       - name: Upload current Concept Check depth backlog
         if: always()
         uses: actions/upload-artifact@v4
