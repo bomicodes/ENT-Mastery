@@ -1,0 +1,40 @@
+name: Facial forehead flap rescue v34.5
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'deep_curriculum_facialplastics_v344.py'
+      - 'deep_curriculum_facialplastics_v345.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_facial_forehead_flap_rescue_v345.py'
+      - 'audit_facial_plastics_full_domain_v262.py'
+      - 'runtime_entry_pasha.py'
+      - '.github/workflows/facial-forehead-flap-rescue-v345.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'deep_curriculum_facialplastics_v344.py'
+      - 'deep_curriculum_facialplastics_v345.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_facial_forehead_flap_rescue_v345.py'
+      - 'audit_facial_plastics_full_domain_v262.py'
+      - 'runtime_entry_pasha.py'
+      - '.github/workflows/facial-forehead-flap-rescue-v345.yml'
+
+jobs:
+  facial-forehead-flap-rescue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Preflight boot
+        run: python preflight_boot_check_v155.py
+      - name: Full Facial Plastics canonical ladder gate
+        run: python audit_facial_plastics_full_domain_v262.py
+      - name: Forehead-flap vascular compromise rescue gate
+        run: python audit_facial_forehead_flap_rescue_v345.py
