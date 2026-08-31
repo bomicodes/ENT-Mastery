@@ -55,8 +55,8 @@ def apply_facialplastics_facelift_hematoma_rescue_v347(data_module, app_module=N
             "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6e, Ch 8 — Rhytidoplasty (Rhytidectomy, Facelift) and Complications of Rhytidectomy/Brow Lift/Liposurgery",
             "Azzi JL et al. Prevention of Hematoma in Patients Undergoing Facelift (Rhytidectomy): A Systematic Review and Meta-Analysis. Facial Plast Surg Aesthet Med. 2026;28(3):260-266 — contemporary hematoma incidence and prevention evidence",
             "Stewart CM et al. Evidence of Hematoma Prevention After Facelift. Aesthet Surg J. 2024;44(2):134-143 — perioperative hematoma risk factors and prevention framework",
-            "Baker DC. Expanding hematoma in face-lift surgery: literature review, case presentations, and caveats. Dermatol Surg. 2005;31(9 Pt 2):1139-1144 — prompt recognition/treatment of expanding hematoma and flap-ischemia risk",
-            "Ramanadham SR et al. Evolution of hypertension management in face lifting in 1089 patients: optimizing safety and outcomes. Plast Reconstr Surg. 2015;135(6):1037e-1043e — perioperative hypertension as a modifiable hematoma risk factor"
+            "Niamtu J 3rd. Expanding hematoma in face-lift surgery: literature review, case presentations, and caveats. Dermatol Surg. 2005;31(9 Pt 1):1134-1144 — prompt recognition/treatment of expanding hematoma and flap-ischemia risk",
+            "Ramanadham SR et al. Evolution of hypertension management in face lifting in 1089 patients: optimizing safety and outcomes. Plast Reconstr Surg. 2015;135(4):1037-1043 — perioperative hypertension as a modifiable hematoma risk factor"
         ])
         module["facialplastics_facelift_hematoma_rescue_v347"] = True
         module["semantic_role_v347"] = "post-rhytidectomy expanding-hematoma recognition, decompression, definitive hemostasis, and flap rescue"
