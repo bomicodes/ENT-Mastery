@@ -2,7 +2,7 @@
 
 This is intentionally conservative: it does not overwrite already source-rich oncology cards.
 It fills missing/weak source_basis trails with the connected core ENT texts and the current
-2026 guideline family appropriate to the tumor phenotype. Later bounded content rebuilds can
+guideline family appropriate to the tumor phenotype. Later bounded content rebuilds can
 still supersede individual cards; this pass ensures cancer concepts are no longer displayed
 without a defensible source trail while that deeper work proceeds.
 """
@@ -38,7 +38,13 @@ def _guideline_sources(topic):
         return [
             "NCCN Clinical Practice Guidelines in Oncology: Basal Cell Skin Cancer, 2026 — current risk stratification, margin-control, advanced-disease, and surveillance cross-check",
         ]
-    if "cutaneous" in key or "merkel" in key or "skin" in key:
+    if "merkel" in key:
+        return [
+            "NCCN Clinical Practice Guidelines in Oncology: Merkel Cell Carcinoma — disease-specific staging, sentinel-node, radiation, systemic-therapy, and surveillance cross-check",
+            "Lugowska J et al. Merkel-cell carcinoma: ESMO-EURACAN Clinical Practice Guideline for diagnosis, treatment and follow-up. ESMO Open. 2024;9(5):102977 — disease-specific multidisciplinary guideline",
+            "Kimball KM et al. Updates for Management of Merkel Cell Carcinoma of the Head and Neck: A Systematic Review. Dermatol Surg. 2026;52(6):513-520 — contemporary head-and-neck management review",
+        ]
+    if "cutaneous" in key or "skin" in key:
         return [
             "NCCN Clinical Practice Guidelines in Oncology: Squamous Cell Skin Cancer, 2026 — current risk, nodal, perineural, adjuvant/systemic, and surveillance cross-check",
         ]
