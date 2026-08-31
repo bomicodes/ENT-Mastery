@@ -48,7 +48,7 @@ def main():
         failures += fail("v34.7 live marker missing")
 
     sources = " ".join(str(x) for x in row.get("source_basis") or []).lower()
-    for token in ("cummings", "k.j. lee", "pasha", "azzi", "stewart", "baker", "ramanadham"):
+    for token in ("cummings", "k.j. lee", "pasha", "azzi", "stewart", "niamtu", "ramanadham"):
         if token not in sources:
             failures += fail(f"missing provenance token {token!r}")
 
