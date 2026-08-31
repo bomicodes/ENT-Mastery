@@ -16,8 +16,8 @@ SOURCES = [
 ]
 
 TARGETS = (
-    "superficial-parotidectomy",
-    "total-parotidectomy",
+    {"name": "superficial-parotidectomy", "terms": ("superficial", "parotid")},
+    {"name": "total-parotidectomy", "terms": ("total", "parotid")},
 )
 
 SETUP = [
@@ -34,6 +34,17 @@ POSTOP = [
     "Document facial function immediately after surgery by region, including forehead movement, eye closure/corneal protection, midface, oral commissure excursion, and oral competence; do not record only 'facial nerve intact.' Unexpected weakness after an anatomically preserved nerve warrants serial focused examination and review of the intraoperative event/monitoring rather than an automatic assumption of transection, because traction, edema, ischemia, and neurapraxia can produce early dysfunction.",
     "Incomplete eye closure is an OCULAR-SURFACE PROBLEM now, not a later cosmetic issue: institute lubrication and nighttime closure/moisture protection immediately, escalate to ophthalmology when exposure symptoms, corneal findings, poor Bell phenomenon, impaired corneal sensation, or severe paralysis increases risk, and use temporary/procedural eyelid protection when conservative measures are insufficient. After planned sacrifice or a recognized major injury, arrange early facial-nerve/reanimation follow-up so eye protection, oral competence, reinnervation strategy, and adjuvant oncologic therapy proceed in parallel.",
 ]
+
+
+def _resolve(registry, target):
+    reg = registry or {}
+    if target["name"] in reg:
+        return target["name"], reg[target["name"]]
+    for slug, op in reg.items():
+        hay = (str(slug) + " " + str((op or {}).get("title", ""))).lower()
+        if all(term in hay for term in target["terms"]):
+            return slug, op
+    return None, None
 
 
 def _prepend_unique(values, additions):
@@ -58,12 +69,13 @@ def _append_unique(values, additions):
 
 
 def apply_or_parotid_facial_nerve_rescue_v280(registry):
-    changed, missing = [], []
-    for slug in TARGETS:
-        op = (registry or {}).get(slug)
+    changed, resolved, missing = [], [], []
+    for target in TARGETS:
+        slug, op = _resolve(registry, target)
         if not op:
-            missing.append(slug)
+            missing.append(target["name"])
             continue
+        resolved.append(slug)
         op["setup"], c1 = _prepend_unique(op.get("setup"), SETUP)
         op["steps"], c2 = _prepend_unique(op.get("steps"), STEPS)
         op["postop"], c3 = _prepend_unique(op.get("postop"), POSTOP)
@@ -71,4 +83,4 @@ def apply_or_parotid_facial_nerve_rescue_v280(registry):
         op["parotid_facial_nerve_rescue_v280"] = True
         if c1 or c2 or c3 or c4:
             changed.append(slug)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "missing": missing}
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing}
