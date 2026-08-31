@@ -1,14 +1,20 @@
 """v23.14 OR Tomorrow high-risk end-to-end management review.
 
-Closes four high-yield generic-only perioperative gaps identified by the full live
-OR registry audit: TORS, surgical tracheostomy, endoscopic CSF leak repair with
-nasoseptal-flap reconstruction, and vestibular-schwannoma approach planning.
-Existing procedure-specific operative sequences, anatomy, and danger structures
-remain authoritative and are not replaced. Later reviewed rhinology management is
-chained here to keep the runtime mutation path atomic.
+Closes high-yield perioperative gaps identified by the full live OR registry audit.
+Existing procedure-specific operative sequences, anatomy, and danger structures remain
+authoritative and are not replaced. Later reviewed rhinology management is chained here
+to keep the runtime mutation path atomic.
 """
 
 from or_rhinology_management_v2315 import apply_or_rhinology_management_v2315
+
+LARYNGECTOMY_SOURCES = [
+    "Cummings Otolaryngology—Head and Neck Surgery, 7th ed.",
+    "K. J. Lee's Essential Otolaryngology—Head and Neck Surgery, 12th ed.",
+    "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6th ed.",
+    "National Tracheostomy Safety Project adult laryngectomy emergency algorithm (current algorithm reviewed fit for purpose through 2026)",
+    "IFOS Consensus on Prevention, Diagnosis, and Management of Pharyngocutaneous Fistula After Total Laryngectomy (2026)",
+]
 
 TARGETS = [
     {
@@ -51,6 +57,21 @@ TARGETS = [
         "marker": "csf_nasoseptal_management_v2314",
     },
     {
+        "slug": "total-laryngectomy",
+        "title_terms": ("total", "laryngectomy"),
+        "setup": [
+            "Treat total laryngectomy as creation of a permanently separated airway, not as a tracheostomy. Once the trachea is divided, ventilation is through the distal trachea/stoma, and after reconstruction the mouth and nose no longer communicate with the lungs. Make that neck-breather anatomy explicit in the operative handoff, bedside signage, oxygen plan and emergency-airway plan so a future responder does not waste critical time attempting oral or nasal intubation.",
+            "Before closure, identify fistula risk and plan the pharyngeal reconstruction accordingly. Prior radiation/chemoradiation, salvage surgery, poor nutrition, hypothyroidism, diabetes, extensive pharyngeal resection and tenuous tissue should lower the threshold for deliberate vascularized-tissue reinforcement when appropriate. Optimize nutrition and define postoperative enteral-feeding and fistula-surveillance plans rather than relying on a fixed oral-feeding date for every patient.",
+        ],
+        "postop": [
+            "In a total-laryngectomy patient with respiratory distress, direct oxygen to the stoma immediately and assess the stoma/airway for removable obstruction, crust, mucus plug, displaced appliance or tube, and inability to pass suction. If ventilation is required, ventilate through the stoma and place a cuffed tracheal tube through the stoma when necessary and feasible. Oral or nasal mask ventilation/intubation cannot ventilate the lungs after a completed total laryngectomy because the upper airway is anatomically disconnected from the trachea.",
+            "Suspect pharyngocutaneous fistula when salivary drainage appears in the neck or drain, the wound becomes erythematous/swollen or breaks down, fever/infection develops, or swallowing/feeding is followed by concerning cervical leakage. Stop oral intake when a leak is suspected, maintain enteral nutritional support by the planned route, obtain drainage/source control and assess the extent of tissue breakdown. Persistent or complex fistula, especially in irradiated tissue, may require operative revision with vascularized tissue rather than indefinite local care.",
+            "Treat exposed great vessels, sentinel bleeding or brisk hemorrhage in a fistula-infected laryngectomy wound as a carotid-blowout danger state. Escalate immediately for hemorrhage control and airway/stoma management; do not probe, debride or pack a friable wound casually when the carotid may be exposed.",
+        ],
+        "marker": "total_laryngectomy_rescue_v2314",
+        "sources": LARYNGECTOMY_SOURCES,
+    },
+    {
         "slug": "vestibular-schwannoma",
         "title_terms": ("vestibular", "schwannoma"),
         "setup": [
@@ -88,6 +109,19 @@ def _prepend_unique(values, additions):
     return out, changed
 
 
+def _merge_sources(values, additions):
+    out = list(values or [])
+    seen = {str(x).strip().lower() for x in out}
+    changed = False
+    for source in additions or []:
+        key = str(source).strip().lower()
+        if key and key not in seen:
+            out.append(source)
+            seen.add(key)
+            changed = True
+    return out, changed
+
+
 def apply_or_high_risk_management_v2314(registry):
     changed, resolved, missing = [], [], []
     for target in TARGETS:
@@ -97,9 +131,10 @@ def apply_or_high_risk_management_v2314(registry):
             continue
         op["setup"], c1 = _prepend_unique(op.get("setup"), target["setup"])
         op["postop"], c2 = _prepend_unique(op.get("postop"), target["postop"])
+        op["sources"], c3 = _merge_sources(op.get("sources"), target.get("sources", []))
         op[target["marker"]] = True
         resolved.append(slug)
-        if c1 or c2:
+        if c1 or c2 or c3:
             changed.append(slug)
     v2315 = apply_or_rhinology_management_v2315(registry)
     return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v2315": v2315}
