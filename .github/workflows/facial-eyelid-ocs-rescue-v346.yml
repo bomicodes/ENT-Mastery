@@ -1,0 +1,38 @@
+name: Facial eyelid OCS rescue v34.6
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'deep_curriculum_facialplastics_v346.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_facial_eyelid_ocs_rescue_v346.py'
+      - 'audit_facial_plastics_full_domain_v262.py'
+      - 'runtime_entry_pasha.py'
+      - '.github/workflows/facial-eyelid-ocs-rescue-v346.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'deep_curriculum_facialplastics_v346.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_facial_eyelid_ocs_rescue_v346.py'
+      - 'audit_facial_plastics_full_domain_v262.py'
+      - 'runtime_entry_pasha.py'
+      - '.github/workflows/facial-eyelid-ocs-rescue-v346.yml'
+
+jobs:
+  facial-eyelid-ocs-rescue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Preflight boot
+        run: python preflight_boot_check_v155.py
+      - name: Full Facial Plastics canonical ladder gate
+        run: python audit_facial_plastics_full_domain_v262.py
+      - name: Eyelid orbital-compartment rescue gate
+        run: python audit_facial_eyelid_ocs_rescue_v346.py
