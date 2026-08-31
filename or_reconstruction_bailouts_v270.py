@@ -4,7 +4,8 @@ Adds intraoperative recipient-vessel and repeated-thrombosis decisions to the li
 OR Tomorrow reconstruction cases without replacing the established planning or
 postoperative flap-rescue content. The v27.1 airway bailout, v27.2 neck-dissection
 chyle rescue, v27.3 venous-outflow rescue, v27.4 carotid danger-zone, v27.5
-aerodigestive injury/contamination, and v27.6 venous-air-embolism rescue layers are chained through this tail.
+aerodigestive injury/contamination, v27.6 venous-air-embolism rescue, and v27.7
+spinal-accessory-nerve preservation/rescue layers are chained through this tail.
 """
 
 from or_airway_bailouts_v271 import apply_or_airway_bailouts_v271
@@ -13,6 +14,7 @@ from or_neck_dissection_venous_outflow_v273 import apply_or_neck_dissection_veno
 from or_neck_dissection_carotid_danger_v274 import apply_or_neck_dissection_carotid_danger_v274
 from or_neck_dissection_aerodigestive_rescue_v275 import apply_or_neck_dissection_aerodigestive_rescue_v275
 from or_neck_dissection_air_embolism_rescue_v276 import apply_or_neck_dissection_air_embolism_rescue_v276
+from or_neck_dissection_accessory_nerve_rescue_v277 import apply_or_neck_dissection_accessory_nerve_rescue_v277
 
 TARGETS = [
     {
@@ -77,4 +79,5 @@ def apply_or_reconstruction_bailouts_v270(registry):
     v274 = apply_or_neck_dissection_carotid_danger_v274(registry)
     v275 = apply_or_neck_dissection_aerodigestive_rescue_v275(registry)
     v276 = apply_or_neck_dissection_air_embolism_rescue_v276(registry)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v271": v271, "v272": v272, "v273": v273, "v274": v274, "v275": v275, "v276": v276}
+    v277 = apply_or_neck_dissection_accessory_nerve_rescue_v277(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v271": v271, "v272": v272, "v273": v273, "v274": v274, "v275": v275, "v276": v276, "v277": v277}
