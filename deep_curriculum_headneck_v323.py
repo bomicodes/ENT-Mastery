@@ -69,7 +69,7 @@ FREE_FLAP_REBUILD_V323 = {
             "Cummings Otolaryngology—Head and Neck Surgery, 7e — microvascular compromise, pedicle/anastomotic failure, take-back, and reconstructive salvage principles",
             "K.J. Lee's Essential Otolaryngology, 12e — microvascular reconstruction complications and revision concepts",
             "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6e — early free-flap failure, arterial/venous compromise and urgent revision framework",
-            "Abdelwahab et al., Curr Opin Otolaryngol Head Neck Surg 2021 — head-and-neck free-flap salvage review emphasizing prompt identification/intervention and surgical microvascular revision",
+            "Olinde, Farber & Kain, Curr Opin Otolaryngol Head Neck Surg 2021 (PMID 34459800) — prompt identification/intervention and surgical microvascular revision in head-and-neck free-flap salvage",
             "Multi-institutional Head Neck study (PMID 32844522) — better salvage with early compromise, venous versus arterial compromise, and thrombectomy",
             "Mandal et al., Journal of Personalized Medicine 2024 (PMID 39201992) — systematic review showing fibrinolytic salvage evidence remains heterogeneous with no prospective randomized trials",
         ],
