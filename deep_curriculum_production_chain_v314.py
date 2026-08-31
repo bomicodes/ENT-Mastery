@@ -55,6 +55,7 @@ MODULES_V314 = [
     "deep_curriculum_peds_v333",
     "deep_curriculum_thyroid_v334",
     "deep_curriculum_headneck_v335",
+    "deep_curriculum_reconstruction_v335",
 ]
 
 
