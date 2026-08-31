@@ -26,6 +26,7 @@ on:
       - 'audit_deep_cochlear_implant_rescue_v*.py'
       - 'audit_facial_forehead_flap_rescue_v*.py'
       - 'audit_facial_eyelid_ocs_rescue_v*.py'
+      - 'audit_facial_facelift_hematoma_rescue_v*.py'
       - 'audit_*semantic*.py'
       - 'audit_*management_v*.py'
       - 'audit_*ladder_distinction_v*.py'
@@ -70,6 +71,7 @@ on:
       - 'audit_deep_cochlear_implant_rescue_v*.py'
       - 'audit_facial_forehead_flap_rescue_v*.py'
       - 'audit_facial_eyelid_ocs_rescue_v*.py'
+      - 'audit_facial_facelift_hematoma_rescue_v*.py'
       - 'audit_*semantic*.py'
       - 'audit_*management_v*.py'
       - 'audit_*ladder_distinction_v*.py'
@@ -157,6 +159,8 @@ jobs:
         run: python audit_facial_forehead_flap_rescue_v345.py
       - name: Eyelid orbital-compartment rescue gate
         run: python audit_facial_eyelid_ocs_rescue_v346.py
+      - name: Facelift expanding-hematoma rescue gate
+        run: python audit_facial_facelift_hematoma_rescue_v347.py
       - name: Reviewed-ladder answer-balance regression
         run: python audit_ladder_answer_balance_v211.py
       - name: Current Concept Check task-answer alignment
