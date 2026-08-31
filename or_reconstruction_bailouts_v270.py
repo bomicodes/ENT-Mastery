@@ -5,8 +5,8 @@ OR Tomorrow reconstruction cases without replacing the established planning or
 postoperative flap-rescue content. The v27.1 airway bailout, v27.2 neck-dissection
 chyle rescue, v27.3 venous-outflow rescue, v27.4 carotid danger-zone, v27.5
 aerodigestive injury/contamination, v27.6 venous-air-embolism rescue, v27.7
-spinal-accessory-nerve preservation/rescue, and v27.8 critical non-XI nerve
-commitment/rescue layers are chained through this tail.
+spinal-accessory-nerve preservation/rescue, v27.8 critical non-XI nerve, and v27.9
+deep-plane sympathetic-chain/brachial-plexus rescue layers are chained through this tail.
 """
 
 from or_airway_bailouts_v271 import apply_or_airway_bailouts_v271
@@ -17,6 +17,7 @@ from or_neck_dissection_aerodigestive_rescue_v275 import apply_or_neck_dissectio
 from or_neck_dissection_air_embolism_rescue_v276 import apply_or_neck_dissection_air_embolism_rescue_v276
 from or_neck_dissection_accessory_nerve_rescue_v277 import apply_or_neck_dissection_accessory_nerve_rescue_v277
 from or_neck_dissection_critical_nerve_rescue_v278 import apply_or_neck_dissection_critical_nerve_rescue_v278
+from or_neck_dissection_deep_plane_rescue_v279 import apply_or_neck_dissection_deep_plane_rescue_v279
 
 TARGETS = [
     {
@@ -83,4 +84,5 @@ def apply_or_reconstruction_bailouts_v270(registry):
     v276 = apply_or_neck_dissection_air_embolism_rescue_v276(registry)
     v277 = apply_or_neck_dissection_accessory_nerve_rescue_v277(registry)
     v278 = apply_or_neck_dissection_critical_nerve_rescue_v278(registry)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v271": v271, "v272": v272, "v273": v273, "v274": v274, "v275": v275, "v276": v276, "v277": v277, "v278": v278}
+    v279 = apply_or_neck_dissection_deep_plane_rescue_v279(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v271": v271, "v272": v272, "v273": v273, "v274": v274, "v275": v275, "v276": v276, "v277": v277, "v278": v278, "v279": v279}
