@@ -68,6 +68,7 @@ MODULES_V314 = [
     "deep_curriculum_facialplastics_v345",
     "deep_curriculum_facialplastics_v346",
     "deep_curriculum_facialplastics_v347",
+    "deep_curriculum_reconstruction_v347",
 ]
 
 
