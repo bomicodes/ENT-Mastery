@@ -2,11 +2,12 @@
 
 Adds intraoperative recipient-vessel and repeated-thrombosis decisions to the live
 OR Tomorrow reconstruction cases without replacing the established planning or
-postoperative flap-rescue content. The v27.1 airway bailout layer is chained through
-this tail so both remain part of the production mutation path.
+postoperative flap-rescue content. The v27.1 airway bailout and v27.2 neck-dissection
+chyle-rescue layers are chained through this tail so all remain in production.
 """
 
 from or_airway_bailouts_v271 import apply_or_airway_bailouts_v271
+from or_neck_dissection_rescue_v272 import apply_or_neck_dissection_rescue_v272
 
 TARGETS = [
     {
@@ -66,4 +67,5 @@ def apply_or_reconstruction_bailouts_v270(registry):
         if c1 or c2:
             changed.append(slug)
     v271 = apply_or_airway_bailouts_v271(registry)
-    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v271": v271}
+    v272 = apply_or_neck_dissection_rescue_v272(registry)
+    return {"changed": changed, "count": len(changed), "targets": len(TARGETS), "resolved": resolved, "missing": missing, "v271": v271, "v272": v272}
