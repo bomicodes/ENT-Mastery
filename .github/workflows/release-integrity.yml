@@ -17,6 +17,7 @@ on:
       - 'audit_or_neck_dissection_rescue_v*.py'
       - 'audit_or_neck_dissection_venous_outflow_v*.py'
       - 'audit_or_neck_dissection_carotid_danger_v*.py'
+      - 'audit_or_neck_dissection_aerodigestive_rescue_v*.py'
       - 'audit_*semantic*.py'
       - 'audit_*management_v*.py'
       - 'audit_*ladder_distinction_v*.py'
@@ -52,6 +53,7 @@ on:
       - 'audit_or_neck_dissection_rescue_v*.py'
       - 'audit_or_neck_dissection_venous_outflow_v*.py'
       - 'audit_or_neck_dissection_carotid_danger_v*.py'
+      - 'audit_or_neck_dissection_aerodigestive_rescue_v*.py'
       - 'audit_*semantic*.py'
       - 'audit_*management_v*.py'
       - 'audit_*ladder_distinction_v*.py'
@@ -151,6 +153,8 @@ jobs:
         run: python audit_or_neck_dissection_venous_outflow_v273.py
       - name: Current neck-dissection carotid-danger rescue gate
         run: python audit_or_neck_dissection_carotid_danger_v274.py
+      - name: Current neck-dissection aerodigestive-rescue gate
+        run: python audit_or_neck_dissection_aerodigestive_rescue_v275.py
       - name: Upload current Concept Check depth backlog
         if: always()
         uses: actions/upload-artifact@v4
