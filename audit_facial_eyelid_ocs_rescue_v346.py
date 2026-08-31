@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""v34.6 — fail closed on eyelid/periocular OCS rescue in final Render assembly."""
+"""v34.6 — fail closed on periocular OCS rescue in final Render assembly."""
 
 import re
 import sys
@@ -8,7 +8,7 @@ import runtime_entry_pasha
 
 data = runtime_entry_pasha.runtime_entry.data
 DOMAIN = "Facial Plastics / Trauma"
-TOPIC = "eyelid reconstruction"
+TOPIC = "periocular reconstruction"
 
 
 def norm(value):
@@ -24,7 +24,7 @@ def main():
     rows = (getattr(data, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
     matches = [row for row in rows if norm(row.get("topic")) == TOPIC]
     if len(matches) != 1:
-        return fail(f"expected exactly one live canonical eyelid reconstruction record, found {len(matches)}")
+        return fail(f"expected exactly one live canonical periocular reconstruction record, found {len(matches)}")
 
     row = matches[0]
     blob = " ".join(str(row.get(k, "")) for k in ("recognize", "localize", "workup", "manage", "operate", "teach")).lower()
@@ -48,14 +48,14 @@ def main():
         failures += fail("v34.6 live marker missing")
 
     sources = " ".join(str(x) for x in row.get("source_basis") or []).lower()
-    for token in ("cummings", "k.j. lee", "pasha", "papadiochos", "mei"):
+    for token in ("cummings", "k.j. lee", "pasha", "papadiochos", "mei", "dryden"):
         if token not in sources:
             failures += fail(f"missing provenance token {token!r}")
 
     if failures:
-        print(f"\nEyelid OCS rescue gate FAILED with {failures} issue(s).")
+        print(f"\nPeriocular OCS rescue gate FAILED with {failures} issue(s).")
         return 1
-    print("PASS: final Render assembly contains explicit eyelid/periocular OCS recognition, immediate decompression, reassessment, escalation, and source trail.")
+    print("PASS: final Render assembly contains explicit periocular OCS recognition, immediate decompression, reassessment, escalation, and source trail.")
     return 0
 
 
