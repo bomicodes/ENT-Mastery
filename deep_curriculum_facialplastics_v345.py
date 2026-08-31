@@ -55,7 +55,7 @@ def apply_facialplastics_forehead_rescue_v345(data_module, app_module=None):
             "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6e, Ch 8 — Facial Reconstruction Techniques",
             "Boissiere F et al. Flap Venous Congestion and Salvage Techniques: A Systematic Literature Review. Plast Reconstr Surg Glob Open. 2021 — early recognition, correction of mechanical causes, and evidence for leech salvage",
             "Herlin C et al. Leech therapy in flap salvage: systematic review and practical recommendations. Ann Chir Plast Esthet. 2017 — venous-congestion salvage and monitoring considerations",
-            "Moubayed SP et al. A New Approach to an Old Flap: A Technique to Augment Venous Drainage from the Paramedian Forehead Flap. Facial Plast Surg Aesthet Med. 2019 — superficial venous drainage and congestion mechanism",
+            "Wiener M et al. A New Approach to an Old Flap: A Technique to Augment Venous Drainage from the Paramedian Forehead Flap. Plast Reconstr Surg. 2019 — superficial venous drainage and congestion mechanism",
             "Gates CK et al. Repurposing the PMFF Pedicle Before Final Division: Distal Necrosis Salvage With Long-Term Success. Laryngoscope. 2026 — contemporary salvage example emphasizing preservation of reconstructive options"
         ])
         module["facialplastics_forehead_rescue_v345"] = True
