@@ -11,6 +11,7 @@ from deep_curriculum_production_chain_v314 import apply_deep_curriculum_producti
 from or_tonsil_hemorrhage_rescue_v281 import apply_or_tonsil_hemorrhage_rescue_v281
 from or_thyroid_hematoma_rescue_v282 import apply_or_thyroid_hematoma_rescue_v282
 from or_tracheostomy_hemorrhage_rescue_v283 import apply_or_tracheostomy_hemorrhage_rescue_v283
+from or_septal_hematoma_rescue_v284 import apply_or_septal_hematoma_rescue_v284
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -47,6 +48,12 @@ OR_THYROID_HEMATOMA_RESCUE_V282 = apply_or_thyroid_hematoma_rescue_v282(
 # cuff/digital temporary control and definitive vascular escalation after all older OR
 # layers have assembled the live registry.
 OR_TRACHEOSTOMY_HEMORRHAGE_RESCUE_V283 = apply_or_tracheostomy_hemorrhage_rescue_v283(
+    runtime_entry.data.OR_PREP_REGISTRY,
+)
+
+# Extend the recognition-only septoplasty warning into an executable septal
+# hematoma/abscess rescue after all historical postoperative layers have run.
+OR_SEPTAL_HEMATOMA_RESCUE_V284 = apply_or_septal_hematoma_rescue_v284(
     runtime_entry.data.OR_PREP_REGISTRY,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
