@@ -1,18 +1,20 @@
-"""Fail-closed global release integrity bridge through the v34.8 oncology source gate.
+"""Fail-closed global release integrity bridge through current source/rescue gates.
 
 Historical filename remains v30.9 for workflow compatibility. In addition to the
-existing chained release-manifest checks, the global release now executes the current
-phenotype-specific Head & Neck Oncology source-trail gate so disease-specific source
-routing cannot regress while the overall release still appears green.
+existing chained release-manifest checks, the global release executes the current
+phenotype-specific Head & Neck Oncology source-trail gate and the high-consequence
+post-tonsillectomy hemorrhage rescue gate.
 """
 from pathlib import Path
 from audit_global_release_integrity_v308 import main as _v308_main
 from audit_hn_source_saturation_v348 import main as _v348_source_main
+from audit_or_tonsil_hemorrhage_rescue_v281 import main as _v281_tonsil_main
 
 ROOT = Path(__file__).resolve().parent
 WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
 GATE = "audit_hn_cutaneous_site_semantic_v309.py"
 SOURCE_GATE = "audit_hn_source_saturation_v348.py"
+TONSIL_GATE = "audit_or_tonsil_hemorrhage_rescue_v281.py"
 
 
 def main():
@@ -23,6 +25,8 @@ def main():
         failures.append("global workflow missing H&N cutaneous-site semantic gate:" + GATE)
     if "audit_*semantic*.py" not in text:
         failures.append("global workflow missing semantic-audit path trigger")
+    if "audit_or_rescue_v*.py" not in text and "or_*.py" not in text:
+        failures.append("global workflow missing OR rescue path trigger")
 
     print("GLOBAL_RELEASE_HN_CUTANEOUS_SITE_GATE|" + GATE)
     print(f"GLOBAL_RELEASE_V309_FAILURES|{len(failures)}")
@@ -37,6 +41,12 @@ def main():
     if source_rc:
         raise SystemExit(source_rc)
     print("PASS: global release protects phenotype-specific Head & Neck Oncology source routing")
+
+    print("GLOBAL_RELEASE_TONSIL_HEMORRHAGE_RESCUE_GATE|" + TONSIL_GATE)
+    tonsil_rc = _v281_tonsil_main()
+    if tonsil_rc:
+        raise SystemExit(tonsil_rc)
+    print("PASS: global release protects post-tonsillectomy hemorrhage rescue choreography")
 
 
 if __name__ == "__main__":
