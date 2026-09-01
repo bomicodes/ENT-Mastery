@@ -1,0 +1,30 @@
+name: OR tracheostomy hemorrhage rescue v28.3
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'or_tracheostomy_hemorrhage_rescue_v283.py'
+      - 'audit_or_tracheostomy_hemorrhage_rescue_v283.py'
+      - 'runtime_entry_pasha.py'
+      - 'or_landmarks_v227.py'
+      - 'audit_or_rescue_v268.py'
+      - '.github/workflows/or-tracheostomy-hemorrhage-rescue-v283.yml'
+  workflow_dispatch:
+
+jobs:
+  tracheostomy-hemorrhage-rescue:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Existing OR danger-zone/rescue gate
+        run: python audit_or_rescue_v268.py
+      - name: Tracheostomy hemorrhage/TIF rescue gate
+        run: python audit_or_tracheostomy_hemorrhage_rescue_v283.py
