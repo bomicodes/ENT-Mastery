@@ -1,0 +1,30 @@
+name: OR tonsil hemorrhage rescue v28.1
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'or_tonsil_hemorrhage_rescue_v281.py'
+      - 'audit_or_tonsil_hemorrhage_rescue_v281.py'
+      - 'runtime_entry_pasha.py'
+      - 'or_procedure_sequences_v200.py'
+      - 'or_postop_safety_v210.py'
+      - '.github/workflows/or-tonsil-hemorrhage-rescue-v281.yml'
+  workflow_dispatch:
+
+jobs:
+  tonsil-hemorrhage-rescue:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Current OR choreography gate
+        run: python audit_or_choreography_v267.py
+      - name: Post-tonsillectomy hemorrhage rescue gate
+        run: python audit_or_tonsil_hemorrhage_rescue_v281.py
