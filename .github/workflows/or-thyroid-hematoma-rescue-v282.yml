@@ -1,0 +1,29 @@
+name: OR thyroid hematoma rescue v28.2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'or_thyroid_hematoma_rescue_v282.py'
+      - 'audit_or_thyroid_hematoma_rescue_v282.py'
+      - 'runtime_entry_pasha.py'
+      - 'or_thyroid_management_v2312.py'
+      - '.github/workflows/or-thyroid-hematoma-rescue-v282.yml'
+  workflow_dispatch:
+
+jobs:
+  thyroid-hematoma-rescue:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Current OR choreography gate
+        run: python audit_or_choreography_v267.py
+      - name: Post-thyroidectomy hematoma rescue gate
+        run: python audit_or_thyroid_hematoma_rescue_v282.py
