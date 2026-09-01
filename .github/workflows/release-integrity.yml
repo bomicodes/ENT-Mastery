@@ -14,6 +14,7 @@ on:
       - 'audit_or_commitment_v*.py'
       - 'audit_or_reconstruction_bailouts_v*.py'
       - 'audit_or_airway_bailouts_v*.py'
+      - 'audit_or_*rescue_v*.py'
       - 'audit_or_neck_dissection_rescue_v*.py'
       - 'audit_or_neck_dissection_venous_outflow_v*.py'
       - 'audit_or_neck_dissection_carotid_danger_v*.py'
@@ -60,6 +61,7 @@ on:
       - 'audit_or_commitment_v*.py'
       - 'audit_or_reconstruction_bailouts_v*.py'
       - 'audit_or_airway_bailouts_v*.py'
+      - 'audit_or_*rescue_v*.py'
       - 'audit_or_neck_dissection_rescue_v*.py'
       - 'audit_or_neck_dissection_venous_outflow_v*.py'
       - 'audit_or_neck_dissection_carotid_danger_v*.py'
@@ -199,6 +201,18 @@ jobs:
         run: python audit_or_parotid_facial_nerve_rescue_v280.py
       - name: Current cochlear-implant malformed-ear rescue gate
         run: python audit_deep_cochlear_implant_rescue_v339.py
+      - name: Current post-tonsillectomy hemorrhage rescue gate
+        run: python audit_or_tonsil_hemorrhage_rescue_v281.py
+      - name: Current post-thyroidectomy hematoma rescue gate
+        run: python audit_or_thyroid_hematoma_rescue_v282.py
+      - name: Current tracheostomy hemorrhage/TIF rescue gate
+        run: python audit_or_tracheostomy_hemorrhage_rescue_v283.py
+      - name: Current post-septoplasty septal hematoma/abscess rescue gate
+        run: python audit_or_septal_hematoma_rescue_v284.py
+      - name: Current post-esophagoscopy cervical esophageal perforation rescue gate
+        run: python audit_or_esophageal_perforation_rescue_v285.py
+      - name: Current post-laryngectomy pharyngocutaneous-fistula rescue gate
+        run: python audit_or_laryngectomy_fistula_rescue_v287.py
       - name: Upload current Concept Check depth backlog
         if: always()
         uses: actions/upload-artifact@v4
