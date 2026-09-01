@@ -4,11 +4,11 @@ Historical filename remains v30.9 for workflow compatibility. In addition to the
 existing chained release-manifest checks, the global release executes the current
 phenotype-specific Head & Neck Oncology source-trail gate and the high-consequence
 post-tonsillectomy hemorrhage, post-thyroidectomy hematoma, tracheostomy
-hemorrhage/TIF, post-septoplasty septal hematoma/abscess, and post-esophagoscopy
-esophageal-perforation rescue gates. The manifest also verifies that edits to
-source-saturation audit families themselves trigger this global release workflow and
-that the newest validated Concept Check alignment/backlog cohort cannot be silently
-omitted from release validation.
+hemorrhage/TIF, post-septoplasty septal hematoma/abscess, post-esophagoscopy
+esophageal-perforation, and post-laryngectomy pharyngocutaneous-fistula rescue gates.
+The manifest also verifies that edits to source-saturation audit families themselves
+trigger this global release workflow and that the newest validated Concept Check
+alignment/backlog cohort cannot be silently omitted from release validation.
 """
 from pathlib import Path
 from audit_global_release_integrity_v308 import main as _v308_main
@@ -18,6 +18,7 @@ from audit_or_thyroid_hematoma_rescue_v282 import main as _v282_thyroid_main
 from audit_or_tracheostomy_hemorrhage_rescue_v283 import main as _v283_trach_main
 from audit_or_septal_hematoma_rescue_v284 import main as _v284_septal_main
 from audit_or_esophageal_perforation_rescue_v285 import main as _v285_esophageal_main
+from audit_or_laryngectomy_fistula_rescue_v287 import main as _v287_laryngectomy_main
 
 ROOT = Path(__file__).resolve().parent
 WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
@@ -29,6 +30,7 @@ THYROID_GATE = "audit_or_thyroid_hematoma_rescue_v282.py"
 TRACHEOSTOMY_GATE = "audit_or_tracheostomy_hemorrhage_rescue_v283.py"
 SEPTAL_GATE = "audit_or_septal_hematoma_rescue_v284.py"
 ESOPHAGEAL_GATE = "audit_or_esophageal_perforation_rescue_v285.py"
+LARYNGECTOMY_GATE = "audit_or_laryngectomy_fistula_rescue_v287.py"
 CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v203.py"
 CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v203.py"
 
@@ -98,6 +100,12 @@ def main():
     if esophageal_rc:
         raise SystemExit(esophageal_rc)
     print("PASS: global release protects post-esophagoscopy cervical esophageal perforation rescue choreography")
+
+    print("GLOBAL_RELEASE_LARYNGECTOMY_FISTULA_RESCUE_GATE|" + LARYNGECTOMY_GATE)
+    laryngectomy_rc = _v287_laryngectomy_main()
+    if laryngectomy_rc:
+        raise SystemExit(laryngectomy_rc)
+    print("PASS: global release protects post-laryngectomy PCF/salivary-leak rescue, vessel safety, and revision decisions")
 
 
 if __name__ == "__main__":
