@@ -3,16 +3,18 @@
 Historical filename remains v30.9 for workflow compatibility. In addition to the
 existing chained release-manifest checks, the global release executes the current
 phenotype-specific Head & Neck Oncology source-trail gate and the high-consequence
-post-tonsillectomy hemorrhage and post-thyroidectomy hematoma rescue gates. The
-manifest also verifies that edits to source-saturation audit families themselves
-trigger this global release workflow and that the newest validated Concept Check
-alignment/backlog cohort cannot be silently omitted from release validation.
+post-tonsillectomy hemorrhage, post-thyroidectomy hematoma, and tracheostomy
+hemorrhage/TIF rescue gates. The manifest also verifies that edits to source-saturation
+audit families themselves trigger this global release workflow and that the newest
+validated Concept Check alignment/backlog cohort cannot be silently omitted from
+release validation.
 """
 from pathlib import Path
 from audit_global_release_integrity_v308 import main as _v308_main
 from audit_hn_source_saturation_v348 import main as _v348_source_main
 from audit_or_tonsil_hemorrhage_rescue_v281 import main as _v281_tonsil_main
 from audit_or_thyroid_hematoma_rescue_v282 import main as _v282_thyroid_main
+from audit_or_tracheostomy_hemorrhage_rescue_v283 import main as _v283_trach_main
 
 ROOT = Path(__file__).resolve().parent
 WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
@@ -21,6 +23,7 @@ SOURCE_GATE = "audit_hn_source_saturation_v348.py"
 SOURCE_TRIGGER = "audit_*source_saturation_v*.py"
 TONSIL_GATE = "audit_or_tonsil_hemorrhage_rescue_v281.py"
 THYROID_GATE = "audit_or_thyroid_hematoma_rescue_v282.py"
+TRACHEOSTOMY_GATE = "audit_or_tracheostomy_hemorrhage_rescue_v283.py"
 CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v203.py"
 CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v203.py"
 
@@ -72,6 +75,12 @@ def main():
     if thyroid_rc:
         raise SystemExit(thyroid_rc)
     print("PASS: global release protects post-thyroidectomy hematoma airway rescue choreography")
+
+    print("GLOBAL_RELEASE_TRACHEOSTOMY_HEMORRHAGE_RESCUE_GATE|" + TRACHEOSTOMY_GATE)
+    trach_rc = _v283_trach_main()
+    if trach_rc:
+        raise SystemExit(trach_rc)
+    print("PASS: global release protects tracheostomy hemorrhage/TIF rescue choreography")
 
 
 if __name__ == "__main__":
