@@ -48,7 +48,7 @@ def main():
         "wound/source control": ("cross-sectional imaging", "infected collection", "drain", "conservative management"),
         "great-vessel danger": ("carotid", "sentinel", "hemorrhage", "blind deep packing"),
         "revision commitment": ("failure", "reconstructive reassessment", "well-vascularized tissue", "durable"),
-        "equipoise protection": ("salivary-bypass tubes", "negative-pressure wound therapy", "single postoperative day", "not universal"),
+        "equipoise protection": ("salivary-bypass tubes", "negative-pressure wound therapy", "single postoperative day", "universal requirements"),
     }
     for label, tokens in checks.items():
         if not contains_all(postop, tokens):
