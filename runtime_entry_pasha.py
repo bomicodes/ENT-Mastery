@@ -12,6 +12,7 @@ from or_tonsil_hemorrhage_rescue_v281 import apply_or_tonsil_hemorrhage_rescue_v
 from or_thyroid_hematoma_rescue_v282 import apply_or_thyroid_hematoma_rescue_v282
 from or_tracheostomy_hemorrhage_rescue_v283 import apply_or_tracheostomy_hemorrhage_rescue_v283
 from or_septal_hematoma_rescue_v284 import apply_or_septal_hematoma_rescue_v284
+from or_esophageal_perforation_rescue_v285 import apply_or_esophageal_perforation_rescue_v285
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -54,6 +55,12 @@ OR_TRACHEOSTOMY_HEMORRHAGE_RESCUE_V283 = apply_or_tracheostomy_hemorrhage_rescue
 # Extend the recognition-only septoplasty warning into an executable septal
 # hematoma/abscess rescue after all historical postoperative layers have run.
 OR_SEPTAL_HEMATOMA_RESCUE_V284 = apply_or_septal_hematoma_rescue_v284(
+    runtime_entry.data.OR_PREP_REGISTRY,
+)
+
+# Convert recognition-only post-esophagoscopy perforation warnings into an executable
+# cervical esophageal leak pathway after every historical OR management layer has run.
+OR_ESOPHAGEAL_PERFORATION_RESCUE_V285 = apply_or_esophageal_perforation_rescue_v285(
     runtime_entry.data.OR_PREP_REGISTRY,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
