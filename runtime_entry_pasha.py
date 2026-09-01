@@ -10,6 +10,7 @@ from deep_curriculum_otology_v284 import apply_otology_etd_rebuild_v284
 from deep_curriculum_production_chain_v314 import apply_deep_curriculum_production_chain_v314
 from or_tonsil_hemorrhage_rescue_v281 import apply_or_tonsil_hemorrhage_rescue_v281
 from or_thyroid_hematoma_rescue_v282 import apply_or_thyroid_hematoma_rescue_v282
+from or_tracheostomy_hemorrhage_rescue_v283 import apply_or_tracheostomy_hemorrhage_rescue_v283
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -38,6 +39,14 @@ OR_TONSIL_HEMORRHAGE_RESCUE_V281 = apply_or_tonsil_hemorrhage_rescue_v281(
 # This deliberately runs after the historical thyroid/OR assembly so bedside SCOOP
 # choreography and its source trail cannot be overwritten by an older generic layer.
 OR_THYROID_HEMATOMA_RESCUE_V282 = apply_or_thyroid_hematoma_rescue_v282(
+    runtime_entry.data.OR_PREP_REGISTRY,
+)
+
+# Apply tracheostomy hemorrhage/TIF rescue at the final OR boundary as well. This keeps
+# the established fresh-tract rescue intact while adding sentinel-bleed recognition,
+# cuff/digital temporary control and definitive vascular escalation after all older OR
+# layers have assembled the live registry.
+OR_TRACHEOSTOMY_HEMORRHAGE_RESCUE_V283 = apply_or_tracheostomy_hemorrhage_rescue_v283(
     runtime_entry.data.OR_PREP_REGISTRY,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
