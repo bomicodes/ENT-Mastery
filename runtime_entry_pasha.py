@@ -8,6 +8,7 @@ from interpretation_labs_cleanup_v250 import apply_interpretation_labs_cleanup_v
 from pasha_routes import bp as pasha_review_blueprint
 from deep_curriculum_otology_v284 import apply_otology_etd_rebuild_v284
 from deep_curriculum_production_chain_v314 import apply_deep_curriculum_production_chain_v314
+from or_tonsil_hemorrhage_rescue_v281 import apply_or_tonsil_hemorrhage_rescue_v281
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -24,6 +25,14 @@ DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v
     runtime_entry.data,
     runtime_entry.app_mod,
 )
+
+# Apply the source-grounded post-tonsillectomy hemorrhage rescue to the same final OR
+# registry served by /case-tomorrow. Keep this after the historical OR assembly so the
+# rescue cannot be overwritten by an earlier generic postoperative layer.
+OR_TONSIL_HEMORRHAGE_RESCUE_V281 = apply_or_tonsil_hemorrhage_rescue_v281(
+    runtime_entry.data.OR_PREP_REGISTRY,
+)
+runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
 
 # Rebuild the live Interpretation Atlas before the production app begins serving.
 # This removes retired lab records/resources from the registry rather than hiding cards.
