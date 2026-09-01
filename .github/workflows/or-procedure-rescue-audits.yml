@@ -1,0 +1,35 @@
+name: ENT Mastery procedure-specific OR rescue integrity
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'audit_or_*_rescue_v*.py'
+      - 'or_*_rescue_v*.py'
+      - 'runtime_entry_pasha.py'
+      - 'audit_global_release_integrity_v309.py'
+      - '.github/workflows/or-procedure-rescue-audits.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'audit_or_*_rescue_v*.py'
+      - 'or_*_rescue_v*.py'
+      - 'runtime_entry_pasha.py'
+      - 'audit_global_release_integrity_v309.py'
+      - '.github/workflows/or-procedure-rescue-audits.yml'
+
+jobs:
+  procedure-rescue-integrity:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight production boot
+        run: python preflight_boot_check_v155.py
+      - name: Fail-closed current rescue manifest
+        run: python audit_global_release_integrity_v309.py
