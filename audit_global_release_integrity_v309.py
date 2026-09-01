@@ -21,8 +21,8 @@ SOURCE_GATE = "audit_hn_source_saturation_v348.py"
 SOURCE_TRIGGER = "audit_*source_saturation_v*.py"
 TONSIL_GATE = "audit_or_tonsil_hemorrhage_rescue_v281.py"
 THYROID_GATE = "audit_or_thyroid_hematoma_rescue_v282.py"
-CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v202.py"
-CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v202.py"
+CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v203.py"
+CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v203.py"
 
 
 def main():
