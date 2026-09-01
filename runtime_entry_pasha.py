@@ -9,6 +9,7 @@ from pasha_routes import bp as pasha_review_blueprint
 from deep_curriculum_otology_v284 import apply_otology_etd_rebuild_v284
 from deep_curriculum_production_chain_v314 import apply_deep_curriculum_production_chain_v314
 from or_tonsil_hemorrhage_rescue_v281 import apply_or_tonsil_hemorrhage_rescue_v281
+from or_thyroid_hematoma_rescue_v282 import apply_or_thyroid_hematoma_rescue_v282
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -30,6 +31,13 @@ DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v
 # registry served by /case-tomorrow. Keep this after the historical OR assembly so the
 # rescue cannot be overwritten by an earlier generic postoperative layer.
 OR_TONSIL_HEMORRHAGE_RESCUE_V281 = apply_or_tonsil_hemorrhage_rescue_v281(
+    runtime_entry.data.OR_PREP_REGISTRY,
+)
+
+# Apply the post-thyroidectomy hematoma rescue at the same final production boundary.
+# This deliberately runs after the historical thyroid/OR assembly so bedside SCOOP
+# choreography and its source trail cannot be overwritten by an older generic layer.
+OR_THYROID_HEMATOMA_RESCUE_V282 = apply_or_thyroid_hematoma_rescue_v282(
     runtime_entry.data.OR_PREP_REGISTRY,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
