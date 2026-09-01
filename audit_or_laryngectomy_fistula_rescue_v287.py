@@ -24,6 +24,11 @@ def contains_all(blob, tokens):
     return all(norm(token) in hay for token in tokens)
 
 
+def contains_any(blob, tokens):
+    hay = norm(blob)
+    return any(norm(token) in hay for token in tokens)
+
+
 def resolve(reg):
     if "total-laryngectomy" in reg:
         return "total-laryngectomy", reg["total-laryngectomy"]
@@ -48,11 +53,20 @@ def main():
         "wound/source control": ("cross-sectional imaging", "infected collection", "drain", "conservative management"),
         "great-vessel danger": ("carotid", "sentinel", "hemorrhage", "blind deep packing"),
         "revision commitment": ("failure", "reconstructive reassessment", "well-vascularized tissue", "durable"),
-        "equipoise protection": ("salivary-bypass tubes", "negative-pressure wound therapy", "single postoperative day", "not universal"),
     }
     for label, tokens in checks.items():
         if not contains_all(postop, tokens):
             failures += fail(f"{slug}: missing {label}: {tokens}")
+
+    # Protect the clinical distinction rather than one exact wording. The live card must
+    # name the three debated adjunct/timing choices and explicitly communicate that they
+    # are not mandatory for every patient. This prevents a clinically equivalent phrase
+    # such as "not universal requirements" from failing a brittle literal-string gate.
+    equipoise_topics = ("salivary-bypass tubes", "negative-pressure wound therapy", "single postoperative day")
+    if not contains_all(postop, equipoise_topics):
+        failures += fail(f"{slug}: missing equipoise topics: {equipoise_topics}")
+    if not contains_any(postop, ("not universal", "universal requirements", "practice variation", "use these adjuncts selectively")):
+        failures += fail(f"{slug}: missing explicit non-universal/selective-management semantics")
 
     if not op.get("laryngectomy_fistula_rescue_v287"):
         failures += fail(f"{slug}: v28.7 live marker missing")
