@@ -5,7 +5,8 @@ existing chained release-manifest checks, the global release executes the curren
 phenotype-specific Head & Neck Oncology source-trail gate and the high-consequence
 post-tonsillectomy hemorrhage and post-thyroidectomy hematoma rescue gates. The
 manifest also verifies that edits to source-saturation audit families themselves
-trigger this global release workflow.
+trigger this global release workflow and that the newest validated Concept Check
+alignment/backlog cohort cannot be silently omitted from release validation.
 """
 from pathlib import Path
 from audit_global_release_integrity_v308 import main as _v308_main
@@ -20,6 +21,8 @@ SOURCE_GATE = "audit_hn_source_saturation_v348.py"
 SOURCE_TRIGGER = "audit_*source_saturation_v*.py"
 TONSIL_GATE = "audit_or_tonsil_hemorrhage_rescue_v281.py"
 THYROID_GATE = "audit_or_thyroid_hematoma_rescue_v282.py"
+CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v202.py"
+CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v202.py"
 
 
 def main():
@@ -34,9 +37,15 @@ def main():
         failures.append("global workflow missing source-saturation audit path trigger:" + SOURCE_TRIGGER)
     if "audit_or_rescue_v*.py" not in text and "or_*.py" not in text:
         failures.append("global workflow missing OR rescue path trigger")
+    if CONCEPT_ALIGNMENT_GATE not in text:
+        failures.append("global workflow missing newest Concept Check alignment gate:" + CONCEPT_ALIGNMENT_GATE)
+    if CONCEPT_BACKLOG_GATE not in text:
+        failures.append("global workflow missing newest Concept Check backlog gate:" + CONCEPT_BACKLOG_GATE)
 
     print("GLOBAL_RELEASE_HN_CUTANEOUS_SITE_GATE|" + GATE)
     print("GLOBAL_RELEASE_SOURCE_SATURATION_TRIGGER|" + SOURCE_TRIGGER)
+    print("GLOBAL_RELEASE_CONCEPT_ALIGNMENT_GATE|" + CONCEPT_ALIGNMENT_GATE)
+    print("GLOBAL_RELEASE_CONCEPT_BACKLOG_GATE|" + CONCEPT_BACKLOG_GATE)
     print(f"GLOBAL_RELEASE_V309_FAILURES|{len(failures)}")
     for failure in failures:
         print("FAIL|" + failure)
@@ -44,6 +53,7 @@ def main():
         raise SystemExit(1)
     print("PASS: global release protects the current H&N cSCC-versus-BCC adaptive semantic gate")
     print("PASS: source-saturation audit edits trigger the global fail-closed release workflow")
+    print("PASS: global release cannot silently omit the newest Concept Check depth cohort")
 
     print("GLOBAL_RELEASE_HN_PHENOTYPE_SOURCE_GATE|" + SOURCE_GATE)
     source_rc = _v348_source_main()
