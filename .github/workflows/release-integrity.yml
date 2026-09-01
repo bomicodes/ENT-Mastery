@@ -11,6 +11,7 @@ on:
       - 'concept_check_depth_v*.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_or_rescue_v*.py'
+      - 'audit_or_*rescue_v*.py'
       - 'audit_or_commitment_v*.py'
       - 'audit_or_reconstruction_bailouts_v*.py'
       - 'audit_or_airway_bailouts_v*.py'
@@ -57,6 +58,7 @@ on:
       - 'concept_check_depth_v*.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_or_rescue_v*.py'
+      - 'audit_or_*rescue_v*.py'
       - 'audit_or_commitment_v*.py'
       - 'audit_or_reconstruction_bailouts_v*.py'
       - 'audit_or_airway_bailouts_v*.py'
@@ -168,9 +170,9 @@ jobs:
       - name: Reviewed-ladder answer-balance regression
         run: python audit_ladder_answer_balance_v211.py
       - name: Current Concept Check task-answer alignment
-        run: python audit_concept_check_task_alignment_v203.py
+        run: python audit_concept_check_task_alignment_v204.py
       - name: Current live-canonical Concept Check depth backlog
-        run: python audit_concept_check_depth_backlog_v203.py
+        run: python audit_concept_check_depth_backlog_v204.py
       - name: Current adversarial OR danger-zone and rescue gate
         run: python audit_or_rescue_v268.py
       - name: Current OR commitment and bailout gate
@@ -199,10 +201,20 @@ jobs:
         run: python audit_or_parotid_facial_nerve_rescue_v280.py
       - name: Current cochlear-implant malformed-ear rescue gate
         run: python audit_deep_cochlear_implant_rescue_v339.py
+      - name: Current post-tonsillectomy hemorrhage rescue gate
+        run: python audit_or_tonsil_hemorrhage_rescue_v281.py
+      - name: Current post-thyroidectomy hematoma rescue gate
+        run: python audit_or_thyroid_hematoma_rescue_v282.py
+      - name: Current tracheostomy hemorrhage/TIF rescue gate
+        run: python audit_or_tracheostomy_hemorrhage_rescue_v283.py
+      - name: Current post-septoplasty septal hematoma/abscess rescue gate
+        run: python audit_or_septal_hematoma_rescue_v284.py
+      - name: Current post-esophagoscopy esophageal-perforation rescue gate
+        run: python audit_or_esophageal_perforation_rescue_v285.py
       - name: Upload current Concept Check depth backlog
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: concept-check-depth-backlog-v203
-          path: V203_DEPTH_BACKLOG_AUDIT.json
+          name: concept-check-depth-backlog-v204
+          path: V204_DEPTH_BACKLOG_AUDIT.json
           if-no-files-found: warn
