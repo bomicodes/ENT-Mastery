@@ -117,6 +117,8 @@ from concept_check_domain_curation_v178 import apply_concept_check_domain_curati
 CONCEPT_CHECK_DOMAIN_CURATION_V178 = apply_concept_check_domain_curation_v178(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 from concept_check_final_clinical_gate_v179 import apply_final_clinical_gate_v179
 CONCEPT_CHECK_FINAL_CLINICAL_GATE_V179 = apply_final_clinical_gate_v179(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
+from concept_check_depth_v204 import apply_concept_check_task_alignment_v204
+CONCEPT_CHECK_TASK_ALIGNMENT_V204 = apply_concept_check_task_alignment_v204(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 _rebuilt_concept_checks_v179 = {q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")}
 if isinstance(getattr(data, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     data.CONCEPT_CHECK_BY_ID_V112.clear(); data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
