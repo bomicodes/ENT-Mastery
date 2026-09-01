@@ -1,0 +1,27 @@
+name: OR septal hematoma rescue v28.4
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'or_septal_hematoma_rescue_v284.py'
+      - 'audit_or_septal_hematoma_rescue_v284.py'
+      - 'runtime_entry_pasha.py'
+      - 'or_postop_safety_v210.py'
+      - '.github/workflows/or-septal-hematoma-rescue-v284.yml'
+  workflow_dispatch:
+
+jobs:
+  septal-hematoma-rescue:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Septal hematoma/abscess rescue gate
+        run: python audit_or_septal_hematoma_rescue_v284.py
