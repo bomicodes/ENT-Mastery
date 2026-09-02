@@ -17,6 +17,7 @@ from or_laryngectomy_fistula_rescue_v287 import apply_or_laryngectomy_fistula_re
 from or_airway_fire_rescue_v288 import apply_or_airway_fire_rescue_v288
 from or_posterior_epistaxis_rescue_v289 import apply_or_posterior_epistaxis_rescue_v289
 from or_tep_prosthesis_rescue_v290 import apply_or_tep_prosthesis_rescue_v290
+from or_zenker_perforation_rescue_v291 import apply_or_zenker_perforation_rescue_v291
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -92,6 +93,12 @@ OR_POSTERIOR_EPISTAXIS_RESCUE_V289 = apply_or_posterior_epistaxis_rescue_v289(
 # aspirated-prosthesis and tract-preservation rescue after all older management layers
 # have assembled the live card.
 OR_TEP_PROSTHESIS_RESCUE_V290 = apply_or_tep_prosthesis_rescue_v290(
+    runtime_entry.data.OR_PREP_REGISTRY,
+)
+
+# Extend the older recognition-only Zenker/cricopharyngeal leak warning into a complete
+# NPO/imaging/closure/source-control rescue at the final production OR boundary.
+OR_ZENKER_PERFORATION_RESCUE_V291 = apply_or_zenker_perforation_rescue_v291(
     runtime_entry.data.OR_PREP_REGISTRY,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
