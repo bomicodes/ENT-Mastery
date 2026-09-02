@@ -1,0 +1,101 @@
+name: Concept Check depth v20.4
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'concept_check_depth_v204.py'
+      - 'runtime_entry.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_concept_check_task_alignment_v204.py'
+      - 'audit_concept_check_depth_backlog_v204.py'
+      - 'audit_global_release_integrity_v309.py'
+      - '.github/workflows/release-integrity.yml'
+      - '.github/workflows/concept-check-depth-v204.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'concept_check_depth_v204.py'
+      - 'runtime_entry.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_concept_check_task_alignment_v204.py'
+      - 'audit_concept_check_depth_backlog_v204.py'
+      - 'audit_global_release_integrity_v309.py'
+      - '.github/workflows/release-integrity.yml'
+      - '.github/workflows/concept-check-depth-v204.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Fail-closed global release manifest
+        run: python audit_global_release_integrity_v309.py
+      - name: Strict 325-topic canonical coverage contract
+        run: python audit_coverage_v135.py --depth --strict
+      - name: Protect Rhinology
+        run: python audit_rhinology_ladder_complete_v218.py
+      - name: Protect Otology
+        run: python audit_otology_ladder_complete_v232.py
+      - name: Protect Head and Neck Oncology
+        run: python audit_hn_ladder_complete_v231.py
+      - name: Protect Thyroid Parathyroid Salivary
+        run: python audit_tps_ladder_complete_v240.py
+      - name: Protect Pediatric Otolaryngology
+        run: python audit_pediatric_ladder_complete_v248.py
+      - name: Protect Laryngology
+        run: python audit_laryngology_ladder_complete_v256.py
+      - name: Protect Facial Plastics
+        run: python audit_facial_plastics_full_domain_v262.py
+      - name: Protect Sleep Surgery
+        run: python audit_sleep_surgery_progress_v266.py
+      - name: Protect General ENT
+        run: python audit_general_ent_complete_v274.py
+      - name: Answer-balance regression
+        run: python audit_ladder_answer_balance_v211.py
+      - name: v20.4 task-answer alignment and source gate
+        run: python audit_concept_check_task_alignment_v204.py
+      - name: v20.4 live-canonical depth backlog
+        run: python audit_concept_check_depth_backlog_v204.py
+      - name: Current adversarial OR danger-zone and rescue gate
+        run: python audit_or_rescue_v268.py
+      - name: Current OR commitment and bailout gate
+        run: python audit_or_commitment_v269.py
+      - name: Current free-flap reconstruction bailout gate
+        run: python audit_or_reconstruction_bailouts_v270.py
+      - name: Current shared-airway bailout gate
+        run: python audit_or_airway_bailouts_v271.py
+      - name: Current post-tonsillectomy hemorrhage rescue gate
+        run: python audit_or_tonsil_hemorrhage_rescue_v281.py
+      - name: Current post-thyroidectomy hematoma rescue gate
+        run: python audit_or_thyroid_hematoma_rescue_v282.py
+      - name: Current tracheostomy hemorrhage/TIF rescue gate
+        run: python audit_or_tracheostomy_hemorrhage_rescue_v283.py
+      - name: Current post-septoplasty septal hematoma/abscess rescue gate
+        run: python audit_or_septal_hematoma_rescue_v284.py
+      - name: Current post-esophagoscopy esophageal-perforation rescue gate
+        run: python audit_or_esophageal_perforation_rescue_v285.py
+      - name: Current post-laryngectomy fistula rescue gate
+        run: python audit_or_laryngectomy_fistula_rescue_v287.py
+      - name: Upload v20.4 task-alignment audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v204-task-alignment-audit
+          path: V204_TASK_ALIGNMENT_AUDIT.json
+          if-no-files-found: warn
+      - name: Upload v20.4 live-canonical depth backlog
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v204-depth-backlog-audit
+          path: V204_DEPTH_BACKLOG_AUDIT.json
+          if-no-files-found: warn
