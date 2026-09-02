@@ -14,6 +14,7 @@ from or_tracheostomy_hemorrhage_rescue_v283 import apply_or_tracheostomy_hemorrh
 from or_septal_hematoma_rescue_v284 import apply_or_septal_hematoma_rescue_v284
 from or_esophageal_perforation_rescue_v285 import apply_or_esophageal_perforation_rescue_v285
 from or_laryngectomy_fistula_rescue_v287 import apply_or_laryngectomy_fistula_rescue_v287
+from or_airway_fire_rescue_v288 import apply_or_airway_fire_rescue_v288
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -69,6 +70,12 @@ OR_ESOPHAGEAL_PERFORATION_RESCUE_V285 = apply_or_esophageal_perforation_rescue_v
 # nutrition, vessel protection and reconstructive escalation cannot be overwritten by
 # older generic postoperative content.
 OR_LARYNGECTOMY_FISTULA_RESCUE_V287 = apply_or_laryngectomy_fistula_rescue_v287(
+    runtime_entry.data.OR_PREP_REGISTRY,
+)
+
+# Extend the existing shared-airway fire-safety stop point into an executable fire
+# rescue after all historical microlaryngoscopy/RRP layers have assembled the registry.
+OR_AIRWAY_FIRE_RESCUE_V288 = apply_or_airway_fire_rescue_v288(
     runtime_entry.data.OR_PREP_REGISTRY,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
