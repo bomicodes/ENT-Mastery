@@ -170,9 +170,9 @@ jobs:
       - name: Reviewed-ladder answer-balance regression
         run: python audit_ladder_answer_balance_v211.py
       - name: Current Concept Check task-answer alignment
-        run: python audit_concept_check_task_alignment_v204.py
+        run: python audit_concept_check_task_alignment_v205.py
       - name: Current live-canonical Concept Check depth backlog
-        run: python audit_concept_check_depth_backlog_v204.py
+        run: python audit_concept_check_depth_backlog_v205.py
       - name: Current adversarial OR danger-zone and rescue gate
         run: python audit_or_rescue_v268.py
       - name: Current OR commitment and bailout gate
@@ -213,10 +213,16 @@ jobs:
         run: python audit_or_esophageal_perforation_rescue_v285.py
       - name: Current post-laryngectomy pharyngocutaneous-fistula rescue gate
         run: python audit_or_laryngectomy_fistula_rescue_v287.py
+      - name: Current shared-airway fire rescue gate
+        run: python audit_or_airway_fire_rescue_v288.py
+      - name: Current posterior-epistaxis/SPA rescue gate
+        run: python audit_or_posterior_epistaxis_rescue_v289.py
+      - name: Current TEP prosthesis displacement/aspiration rescue gate
+        run: python audit_or_tep_prosthesis_rescue_v290.py
       - name: Upload current Concept Check depth backlog
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: concept-check-depth-backlog-v204
-          path: V204_DEPTH_BACKLOG_AUDIT.json
+          name: concept-check-depth-backlog-v205
+          path: V205_DEPTH_BACKLOG_AUDIT.json
           if-no-files-found: warn

@@ -39,8 +39,8 @@ LARYNGECTOMY_GATE = "audit_or_laryngectomy_fistula_rescue_v287.py"
 AIRWAY_FIRE_GATE = "audit_or_airway_fire_rescue_v288.py"
 EPISTAXIS_GATE = "audit_or_posterior_epistaxis_rescue_v289.py"
 TEP_GATE = "audit_or_tep_prosthesis_rescue_v290.py"
-CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v204.py"
-CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v204.py"
+CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v205.py"
+CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v205.py"
 
 
 def main():
