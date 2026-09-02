@@ -6,10 +6,10 @@ phenotype-specific Head & Neck Oncology source-trail gate and the high-consequen
 post-tonsillectomy hemorrhage, post-thyroidectomy hematoma, tracheostomy
 hemorrhage/TIF, post-septoplasty septal hematoma/abscess, post-esophagoscopy
 esophageal-perforation, post-laryngectomy pharyngocutaneous-fistula, shared-airway
-fire, and posterior-epistaxis/SPA rescue gates. The manifest also verifies that edits
-to source-saturation and OR rescue audit families themselves trigger this global
-release workflow and that the newest validated Concept Check alignment/backlog cohort
-cannot be silently omitted from release validation.
+fire, posterior-epistaxis/SPA, and TEP prosthesis-displacement/aspiration rescue gates.
+The manifest also verifies that edits to source-saturation and OR rescue audit families
+themselves trigger this global release workflow and that the newest validated Concept
+Check alignment/backlog cohort cannot be silently omitted from release validation.
 """
 from pathlib import Path
 from audit_global_release_integrity_v308 import main as _v308_main
@@ -22,6 +22,7 @@ from audit_or_esophageal_perforation_rescue_v285 import main as _v285_esophageal
 from audit_or_laryngectomy_fistula_rescue_v287 import main as _v287_laryngectomy_main
 from audit_or_airway_fire_rescue_v288 import main as _v288_airway_fire_main
 from audit_or_posterior_epistaxis_rescue_v289 import main as _v289_epistaxis_main
+from audit_or_tep_prosthesis_rescue_v290 import main as _v290_tep_main
 
 ROOT = Path(__file__).resolve().parent
 WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
@@ -37,6 +38,7 @@ ESOPHAGEAL_GATE = "audit_or_esophageal_perforation_rescue_v285.py"
 LARYNGECTOMY_GATE = "audit_or_laryngectomy_fistula_rescue_v287.py"
 AIRWAY_FIRE_GATE = "audit_or_airway_fire_rescue_v288.py"
 EPISTAXIS_GATE = "audit_or_posterior_epistaxis_rescue_v289.py"
+TEP_GATE = "audit_or_tep_prosthesis_rescue_v290.py"
 CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v204.py"
 CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v204.py"
 
@@ -126,6 +128,12 @@ def main():
     if epistaxis_rc:
         raise SystemExit(epistaxis_rc)
     print("PASS: global release protects posterior-epistaxis stabilization, SPA branch control, failure re-localization, embolization tradeoffs, and ICA danger")
+
+    print("GLOBAL_RELEASE_TEP_PROSTHESIS_RESCUE_GATE|" + TEP_GATE)
+    tep_rc = _v290_tep_main()
+    if tep_rc:
+        raise SystemExit(tep_rc)
+    print("PASS: global release protects laryngectomy stoma-airway, missing-prosthesis aspiration, bronchoscopic retrieval, tract preservation and leak-triage decisions")
 
 
 if __name__ == "__main__":
