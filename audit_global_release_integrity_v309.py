@@ -6,9 +6,9 @@ phenotype-specific Head & Neck Oncology source-trail gate and the high-consequen
 post-tonsillectomy hemorrhage, post-thyroidectomy hematoma, tracheostomy
 hemorrhage/TIF, post-septoplasty septal hematoma/abscess, post-esophagoscopy
 esophageal-perforation, and post-laryngectomy pharyngocutaneous-fistula rescue gates.
-The manifest also verifies that edits to source-saturation audit families themselves
-trigger this global release workflow and that the newest validated Concept Check
-alignment/backlog cohort cannot be silently omitted from release validation.
+The manifest also verifies that edits to source-saturation and OR rescue audit families
+themselves trigger this global release workflow and that the newest validated Concept
+Check alignment/backlog cohort cannot be silently omitted from release validation.
 """
 from pathlib import Path
 from audit_global_release_integrity_v308 import main as _v308_main
@@ -25,14 +25,15 @@ WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
 GATE = "audit_hn_cutaneous_site_semantic_v309.py"
 SOURCE_GATE = "audit_hn_source_saturation_v348.py"
 SOURCE_TRIGGER = "audit_*source_saturation_v*.py"
+OR_RESCUE_TRIGGER = "audit_or_*rescue_v*.py"
 TONSIL_GATE = "audit_or_tonsil_hemorrhage_rescue_v281.py"
 THYROID_GATE = "audit_or_thyroid_hematoma_rescue_v282.py"
 TRACHEOSTOMY_GATE = "audit_or_tracheostomy_hemorrhage_rescue_v283.py"
 SEPTAL_GATE = "audit_or_septal_hematoma_rescue_v284.py"
 ESOPHAGEAL_GATE = "audit_or_esophageal_perforation_rescue_v285.py"
 LARYNGECTOMY_GATE = "audit_or_laryngectomy_fistula_rescue_v287.py"
-CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v203.py"
-CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v203.py"
+CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v204.py"
+CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v204.py"
 
 
 def main():
@@ -45,8 +46,8 @@ def main():
         failures.append("global workflow missing semantic-audit path trigger")
     if SOURCE_TRIGGER not in text:
         failures.append("global workflow missing source-saturation audit path trigger:" + SOURCE_TRIGGER)
-    if "audit_or_rescue_v*.py" not in text and "or_*.py" not in text:
-        failures.append("global workflow missing OR rescue path trigger")
+    if OR_RESCUE_TRIGGER not in text:
+        failures.append("global workflow missing generic OR rescue audit path trigger:" + OR_RESCUE_TRIGGER)
     if CONCEPT_ALIGNMENT_GATE not in text:
         failures.append("global workflow missing newest Concept Check alignment gate:" + CONCEPT_ALIGNMENT_GATE)
     if CONCEPT_BACKLOG_GATE not in text:
@@ -54,6 +55,7 @@ def main():
 
     print("GLOBAL_RELEASE_HN_CUTANEOUS_SITE_GATE|" + GATE)
     print("GLOBAL_RELEASE_SOURCE_SATURATION_TRIGGER|" + SOURCE_TRIGGER)
+    print("GLOBAL_RELEASE_OR_RESCUE_TRIGGER|" + OR_RESCUE_TRIGGER)
     print("GLOBAL_RELEASE_CONCEPT_ALIGNMENT_GATE|" + CONCEPT_ALIGNMENT_GATE)
     print("GLOBAL_RELEASE_CONCEPT_BACKLOG_GATE|" + CONCEPT_BACKLOG_GATE)
     print(f"GLOBAL_RELEASE_V309_FAILURES|{len(failures)}")
@@ -63,6 +65,7 @@ def main():
         raise SystemExit(1)
     print("PASS: global release protects the current H&N cSCC-versus-BCC adaptive semantic gate")
     print("PASS: source-saturation audit edits trigger the global fail-closed release workflow")
+    print("PASS: OR rescue audit edits trigger the global fail-closed release workflow")
     print("PASS: global release cannot silently omit the newest Concept Check depth cohort")
 
     print("GLOBAL_RELEASE_HN_PHENOTYPE_SOURCE_GATE|" + SOURCE_GATE)
