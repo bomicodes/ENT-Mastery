@@ -6,10 +6,11 @@ phenotype-specific Head & Neck Oncology source-trail gate and the high-consequen
 post-tonsillectomy hemorrhage, post-thyroidectomy hematoma, tracheostomy
 hemorrhage/TIF, post-septoplasty septal hematoma/abscess, post-esophagoscopy
 esophageal-perforation, post-laryngectomy pharyngocutaneous-fistula, shared-airway
-fire, posterior-epistaxis/SPA, and TEP prosthesis-displacement/aspiration rescue gates.
-The manifest also verifies that edits to source-saturation and OR rescue audit families
-themselves trigger this global release workflow and that the newest validated Concept
-Check alignment/backlog cohort cannot be silently omitted from release validation.
+fire, posterior-epistaxis/SPA, TEP prosthesis-displacement/aspiration, and
+Zenker/cricopharyngeal perforation rescue gates. The manifest also verifies that edits
+to source-saturation and OR rescue audit families themselves trigger this global
+release workflow and that the newest validated Concept Check alignment/backlog cohort
+cannot be silently omitted from release validation.
 """
 from pathlib import Path
 from audit_global_release_integrity_v308 import main as _v308_main
@@ -23,6 +24,7 @@ from audit_or_laryngectomy_fistula_rescue_v287 import main as _v287_laryngectomy
 from audit_or_airway_fire_rescue_v288 import main as _v288_airway_fire_main
 from audit_or_posterior_epistaxis_rescue_v289 import main as _v289_epistaxis_main
 from audit_or_tep_prosthesis_rescue_v290 import main as _v290_tep_main
+from audit_or_zenker_perforation_rescue_v291 import main as _v291_zenker_main
 
 ROOT = Path(__file__).resolve().parent
 WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
@@ -39,6 +41,7 @@ LARYNGECTOMY_GATE = "audit_or_laryngectomy_fistula_rescue_v287.py"
 AIRWAY_FIRE_GATE = "audit_or_airway_fire_rescue_v288.py"
 EPISTAXIS_GATE = "audit_or_posterior_epistaxis_rescue_v289.py"
 TEP_GATE = "audit_or_tep_prosthesis_rescue_v290.py"
+ZENKER_GATE = "audit_or_zenker_perforation_rescue_v291.py"
 CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v205.py"
 CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v205.py"
 
@@ -134,6 +137,12 @@ def main():
     if tep_rc:
         raise SystemExit(tep_rc)
     print("PASS: global release protects laryngectomy stoma-airway, missing-prosthesis aspiration, bronchoscopic retrieval, tract preservation and leak-triage decisions")
+
+    print("GLOBAL_RELEASE_ZENKER_PERFORATION_RESCUE_GATE|" + ZENKER_GATE)
+    zenker_rc = _v291_zenker_main()
+    if zenker_rc:
+        raise SystemExit(zenker_rc)
+    print("PASS: global release protects Zenker/cricopharyngeal leak recognition, CT localization, selective closure and source-control escalation")
 
 
 if __name__ == "__main__":
