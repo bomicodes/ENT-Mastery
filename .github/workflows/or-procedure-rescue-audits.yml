@@ -8,7 +8,7 @@ on:
       - 'audit_or_*_rescue_v*.py'
       - 'or_*_rescue_v*.py'
       - 'runtime_entry_pasha.py'
-      - 'audit_global_release_integrity_v309.py'
+      - 'audit_global_release_integrity_v*.py'
       - '.github/workflows/or-procedure-rescue-audits.yml'
   pull_request:
     branches: [main]
@@ -16,7 +16,7 @@ on:
       - 'audit_or_*_rescue_v*.py'
       - 'or_*_rescue_v*.py'
       - 'runtime_entry_pasha.py'
-      - 'audit_global_release_integrity_v309.py'
+      - 'audit_global_release_integrity_v*.py'
       - '.github/workflows/or-procedure-rescue-audits.yml'
 
 jobs:
@@ -32,4 +32,4 @@ jobs:
       - name: Pre-flight production boot
         run: python preflight_boot_check_v155.py
       - name: Fail-closed current rescue manifest
-        run: python audit_global_release_integrity_v309.py
+        run: python audit_global_release_integrity_v310.py
