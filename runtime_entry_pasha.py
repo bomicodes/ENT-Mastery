@@ -18,6 +18,7 @@ from or_airway_fire_rescue_v288 import apply_or_airway_fire_rescue_v288
 from or_posterior_epistaxis_rescue_v289 import apply_or_posterior_epistaxis_rescue_v289
 from or_tep_prosthesis_rescue_v290 import apply_or_tep_prosthesis_rescue_v290
 from or_zenker_perforation_rescue_v291 import apply_or_zenker_perforation_rescue_v291
+from or_airway_dilation_injury_rescue_v292 import apply_or_airway_dilation_injury_rescue_v292
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -99,6 +100,13 @@ OR_TEP_PROSTHESIS_RESCUE_V290 = apply_or_tep_prosthesis_rescue_v290(
 # Extend the older recognition-only Zenker/cricopharyngeal leak warning into a complete
 # NPO/imaging/closure/source-control rescue at the final production OR boundary.
 OR_ZENKER_PERFORATION_RESCUE_V291 = apply_or_zenker_perforation_rescue_v291(
+    runtime_entry.data.OR_PREP_REGISTRY,
+)
+
+# Convert the existing airway-dilation mucosal-tear stop point into a complete
+# laryngotracheal injury, air-leak and pleural-emergency rescue after all older OR
+# sequence/postoperative layers have assembled the live registry.
+OR_AIRWAY_DILATION_INJURY_RESCUE_V292 = apply_or_airway_dilation_injury_rescue_v292(
     runtime_entry.data.OR_PREP_REGISTRY,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
