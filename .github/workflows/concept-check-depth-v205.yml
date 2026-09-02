@@ -87,6 +87,8 @@ jobs:
         run: python audit_or_airway_fire_rescue_v288.py
       - name: Current posterior-epistaxis/SPA rescue gate
         run: python audit_or_posterior_epistaxis_rescue_v289.py
+      - name: Current TEP prosthesis displacement/aspiration rescue gate
+        run: python audit_or_tep_prosthesis_rescue_v290.py
       - name: Upload v20.5 task-alignment audit
         if: always()
         uses: actions/upload-artifact@v4
