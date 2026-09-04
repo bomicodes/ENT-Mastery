@@ -1,0 +1,22 @@
+"""v20.10 live-canonical Concept Check depth backlog gate."""
+import json,os
+from audit_concept_check_depth_backlog_v209 import main as _v209_main
+
+TARGETS={'cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns'}
+
+def main():
+ _v209_main(); source,target='V209_DEPTH_BACKLOG_AUDIT.json','V210_DEPTH_BACKLOG_AUDIT.json'
+ if not os.path.exists(source): raise SystemExit('v20.10 backlog gate did not receive v20.9 resolver output')
+ with open(source,'r',encoding='utf-8') as f: report=json.load(f)
+ markers=report.get('discovered_depth_markers') or []; failures=list(report.get('failures') or [])
+ if 'task_alignment_v210' not in markers: failures.append('missing_dynamic_depth_marker:task_alignment_v210')
+ untouched={str(x.get('id') or '') for x in report.get('candidates') or []}; residual={str(x.get('id') or '') for x in report.get('residual_candidates') or []}
+ for qid in sorted(TARGETS):
+  if qid in untouched: failures.append('deepened_target_still_in_untouched_queue:'+qid)
+  if qid in residual: failures.append('deepened_target_still_in_residual_queue:'+qid)
+ report['audit_version']='v20.10'; report['failures']=failures
+ with open(target,'w',encoding='utf-8') as f: json.dump(report,f,indent=2,ensure_ascii=False)
+ print(f"V210_CANONICAL|{report.get('canonical_count')}"); print(f"V210_DEEPENED_CONCEPTS|{report.get('deepened_concept_count')}"); print(f"V210_UNTOUCHED_UNDER_75_WORDS|{report.get('untouched_candidate_count')}"); print(f"V210_RESIDUAL_UNDER_75_WORDS|{report.get('residual_candidate_count')}"); print('V210_DISCOVERED_DEPTH_MARKERS|'+','.join(markers)); print(f'V210_FAILURES|{len(failures)}')
+ for x in failures: print('FAIL|'+x)
+ if failures: raise SystemExit(1)
+if __name__=='__main__': main()
