@@ -1,0 +1,166 @@
+name: Concept Check depth v20.7
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'concept_check_depth_v207.py'
+      - 'runtime_entry.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_concept_check_task_alignment_v207.py'
+      - 'audit_concept_check_depth_backlog_v207.py'
+      - 'audit_concept_check_teaching_alignment_v206.py'
+      - 'audit_global_release_integrity_v*.py'
+      - 'audit_or_*rescue_v*.py'
+      - 'audit_or_*bailout*.py'
+      - 'audit_*source_saturation_v*.py'
+      - '.github/workflows/release-integrity.yml'
+      - '.github/workflows/concept-check-depth-v207.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'concept_check_depth_v207.py'
+      - 'runtime_entry.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_concept_check_task_alignment_v207.py'
+      - 'audit_concept_check_depth_backlog_v207.py'
+      - 'audit_concept_check_teaching_alignment_v206.py'
+      - 'audit_global_release_integrity_v*.py'
+      - 'audit_or_*rescue_v*.py'
+      - 'audit_or_*bailout*.py'
+      - 'audit_*source_saturation_v*.py'
+      - '.github/workflows/release-integrity.yml'
+      - '.github/workflows/concept-check-depth-v207.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Fail-closed global release manifest
+        run: python audit_global_release_integrity_v310.py
+      - name: Strict 325-topic canonical coverage contract
+        run: python audit_coverage_v135.py --depth --strict
+      - name: Protect Rhinology
+        run: python audit_rhinology_ladder_complete_v218.py
+      - name: Protect Otology
+        run: python audit_otology_ladder_complete_v232.py
+      - name: Protect Head and Neck Oncology
+        run: python audit_hn_ladder_complete_v231.py
+      - name: Protect Thyroid Parathyroid Salivary
+        run: python audit_tps_ladder_complete_v240.py
+      - name: Protect Pediatric Otolaryngology
+        run: python audit_pediatric_ladder_complete_v248.py
+      - name: Protect Laryngology
+        run: python audit_laryngology_ladder_complete_v256.py
+      - name: Protect Facial Plastics
+        run: python audit_facial_plastics_full_domain_v262.py
+      - name: Protect Sleep Surgery
+        run: python audit_sleep_surgery_progress_v266.py
+      - name: Protect General ENT
+        run: python audit_general_ent_complete_v274.py
+      - name: Answer-balance regression
+        run: python audit_ladder_answer_balance_v211.py
+      - name: v20.6 all-topic Concept Check teaching-alignment gate
+        run: python audit_concept_check_teaching_alignment_v206.py
+      - name: v20.7 exact-canonical task-answer/source gate
+        run: python audit_concept_check_task_alignment_v207.py
+      - name: v20.7 live-canonical depth backlog
+        run: python audit_concept_check_depth_backlog_v207.py
+      - name: Pediatric ear semantic distinction gate
+        run: python audit_pediatric_ear_semantic_v289.py
+      - name: HN salvage distinction gate
+        run: python audit_hn_salvage_ladder_distinction_v288.py
+      - name: Neck dissection semantic gate
+        run: python audit_hn_neck_semantic_v294.py
+      - name: Frontal sinus management semantic gate
+        run: python audit_facial_frontal_sinus_management_v295.py
+      - name: NOE management semantic gate
+        run: python audit_facial_noe_management_v298.py
+      - name: Rhinitis semantic gate
+        run: python audit_rhinology_rhinitis_semantic_v297.py
+      - name: Pediatric PSG management semantic gate
+        run: python audit_sleep_peds_psg_management_v299.py
+      - name: Facial trauma deep semantic-boundary gate
+        run: python audit_facial_deep_semantic_boundaries_v302.py
+      - name: Supraglottic versus glottic semantic gate
+        run: python audit_hn_larynx_site_semantic_v306.py
+      - name: Oral tongue versus BOT semantic gate
+        run: python audit_hn_tongue_site_semantic_v307.py
+      - name: Cross-domain aspiration semantic gate
+        run: python audit_cross_domain_aspiration_semantic_v308.py
+      - name: Cutaneous SCC versus BCC semantic gate
+        run: python audit_hn_cutaneous_site_semantic_v309.py
+      - name: HN phenotype-specific source saturation
+        run: python audit_hn_source_saturation_v348.py
+      - name: Facial graft rescue semantic gate
+        run: python audit_facial_graft_rescue_semantic_v342.py
+      - name: Skin graft vascularity semantic gate
+        run: python audit_facial_graft_vascular_semantics_v343.py
+      - name: Forehead flap vascular compromise rescue
+        run: python audit_facial_forehead_flap_rescue_v345.py
+      - name: Orbital compartment rescue
+        run: python audit_facial_eyelid_ocs_rescue_v346.py
+      - name: Facelift hematoma rescue
+        run: python audit_facial_facelift_hematoma_rescue_v347.py
+      - name: OR danger-zone rescue gate
+        run: python audit_or_rescue_v268.py
+      - name: OR commitment/bailout gate
+        run: python audit_or_commitment_v269.py
+      - name: Free-flap bailout gate
+        run: python audit_or_reconstruction_bailouts_v270.py
+      - name: Shared-airway bailout gate
+        run: python audit_or_airway_bailouts_v271.py
+      - name: Neck-dissection chyle rescue
+        run: python audit_or_neck_dissection_rescue_v272.py
+      - name: Neck-dissection venous-outflow rescue
+        run: python audit_or_neck_dissection_venous_outflow_v273.py
+      - name: Neck-dissection carotid-danger rescue
+        run: python audit_or_neck_dissection_carotid_danger_v274.py
+      - name: Neck-dissection aerodigestive rescue
+        run: python audit_or_neck_dissection_aerodigestive_rescue_v275.py
+      - name: Neck-dissection air-embolism rescue
+        run: python audit_or_neck_dissection_air_embolism_rescue_v276.py
+      - name: Neck-dissection accessory-nerve rescue
+        run: python audit_or_neck_dissection_accessory_nerve_rescue_v277.py
+      - name: Neck-dissection critical-nerve rescue
+        run: python audit_or_neck_dissection_critical_nerve_rescue_v278.py
+      - name: Neck-dissection deep-plane rescue
+        run: python audit_or_neck_dissection_deep_plane_rescue_v279.py
+      - name: Parotid facial-nerve rescue
+        run: python audit_or_parotid_facial_nerve_rescue_v280.py
+      - name: Cochlear implant malformed-ear rescue
+        run: python audit_deep_cochlear_implant_rescue_v339.py
+      - name: Tonsil hemorrhage rescue
+        run: python audit_or_tonsil_hemorrhage_rescue_v281.py
+      - name: Thyroid hematoma rescue
+        run: python audit_or_thyroid_hematoma_rescue_v282.py
+      - name: Tracheostomy hemorrhage/TIF rescue
+        run: python audit_or_tracheostomy_hemorrhage_rescue_v283.py
+      - name: Septal hematoma rescue
+        run: python audit_or_septal_hematoma_rescue_v284.py
+      - name: Esophageal perforation rescue
+        run: python audit_or_esophageal_perforation_rescue_v285.py
+      - name: Laryngectomy fistula rescue
+        run: python audit_or_laryngectomy_fistula_rescue_v287.py
+      - name: Shared-airway fire rescue
+        run: python audit_or_airway_fire_rescue_v288.py
+      - name: Posterior epistaxis/SPA rescue
+        run: python audit_or_posterior_epistaxis_rescue_v289.py
+      - name: TEP prosthesis displacement/aspiration rescue
+        run: python audit_or_tep_prosthesis_rescue_v290.py
+      - name: Upload v20.7 live-canonical depth backlog
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v207-depth-backlog-audit
+          path: V207_DEPTH_BACKLOG_AUDIT.json
+          if-no-files-found: warn
