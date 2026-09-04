@@ -53,7 +53,13 @@ def main():
   rows.append({'id':qid,'concept_id':q.get('concept_id'),'resolved_topic':topic,'domain':q.get('domain'),'prompt_words':len(words(prompt)),'answer_words':len(words(ans)),'trap_count':len(traps),'source_count':len(refs),'failures':local})
  repaired=set(align.get('repaired') or [])
  if repaired!=expected: failures.append('runtime_repaired_set_mismatch='+','.join(sorted(expected-repaired))+'|extra='+','.join(sorted(repaired-expected)))
- with open('V206_TASK_ALIGNMENT_AUDIT.json','w',encoding='utf-8') as f: json.dump({'expected_ids':sorted(expected),'runtime_alignment':align,'failures':failures,'items':rows},f,indent=2,ensure_ascii=False)
+ report={'expected_ids':sorted(expected),'runtime_alignment':align,'failures':failures,'items':rows}
+ with open('V206_TASK_ALIGNMENT_AUDIT.json','w',encoding='utf-8') as f: json.dump(report,f,indent=2,ensure_ascii=False)
+ # The release workflow already uploads V206_DEPTH_BACKLOG_AUDIT.json with if:always().
+ # On alignment failure, mirror this diagnostic there so the exact failing assertion is retrievable
+ # without weakening or bypassing the gate. A successful alignment never writes this placeholder.
+ if failures:
+  with open('V206_DEPTH_BACKLOG_AUDIT.json','w',encoding='utf-8') as f: json.dump({'audit_version':'v20.6-alignment-diagnostic','alignment_report':report},f,indent=2,ensure_ascii=False)
  print(f'V206_EXPECTED|{len(expected)}'); print(f'V206_REPAIRED|{len(repaired)}'); print(f'V206_FAILURES|{len(failures)}')
  for r in rows: print('V206_DEPTH_ITEM|{id}|domain={domain}|prompt={prompt_words}|answer={answer_words}|traps={trap_count}|sources={source_count}|topic={resolved_topic}'.format(**r))
  for x in failures: print('FAIL|'+x)
