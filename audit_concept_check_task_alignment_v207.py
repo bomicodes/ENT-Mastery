@@ -5,14 +5,17 @@ from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v207 import COHORT
 
 QIDS=tuple(COHORT)
-TERM_GROUPS={
- "battery_recognition":("button battery","double rim","step off"),
- "urgency":("complete obstruction","emergent"),
- "sharp_magnet":("sharp","magnet"),
- "operative":("rigid","flexible","cricopharyngeus"),
- "perforation":("perforation","mediastinal","crepitus"),
- "battery_delayed":("vascular","after removal"),
- "food_impaction":("eosinophilic esophagitis","biops"),
+# Each semantic requirement is a tuple of requirement groups; at least one phrase
+# in every group must be present. This protects the clinical concept without
+# forcing arbitrary synonyms such as double-ring versus double-rim.
+SEMANTIC_REQUIREMENTS={
+ "battery_recognition":(("button battery",),("double ring","double rim","halo sign"),("step off",)),
+ "urgency":(("complete obstruction",),("emergent","emergency","immediate removal")),
+ "sharp_magnet":(("sharp",),("magnet",)),
+ "operative":(("rigid",),("flexible",),("cricopharyngeus",)),
+ "perforation":(("perforation",),("mediastinitis","mediastinal","pneumomediastinum"),("crepitus",)),
+ "battery_delayed":(("vascular",),("delayed","after removal","after the battery is gone")),
+ "food_impaction":(("eosinophilic esophagitis",),("biops",)),
 }
 
 def _words(s): return len(re.findall(r"\b\w+[\w'-]*\b",str(s or '')))
@@ -49,8 +52,9 @@ def main():
   for required in ('cummings','pasha','k.j. lee','espghan','poison','asge'):
    if required not in cites: failures.append('source_'+required+':'+qid)
   answer=_norm(q.get('answer_text'))
-  for label,terms in TERM_GROUPS.items():
-   if not all(_norm(t) in answer for t in terms): failures.append('semantic_'+label+':'+qid)
+  for label,groups in SEMANTIC_REQUIREMENTS.items():
+   if not all(any(_norm(term) in answer for term in alternatives) for alternatives in groups):
+    failures.append('semantic_'+label+':'+qid)
  repaired=set(align.get('repaired') or [])
  if repaired!=set(QIDS): failures.append('runtime_repaired_set_mismatch')
  print('V207_TARGETS|'+','.join(QIDS)); print(f'V207_FAILURES|{len(failures)}')
