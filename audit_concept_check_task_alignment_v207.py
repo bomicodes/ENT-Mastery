@@ -10,7 +10,7 @@ QIDS=tuple(COHORT)
 # forcing arbitrary synonyms such as double-ring versus double-rim.
 SEMANTIC_REQUIREMENTS={
  "battery_recognition":(("button battery",),("double ring","double rim","halo sign"),("step off",)),
- "urgency":(("complete obstruction",),("emergent","emergency","immediate removal")),
+ "urgency":(("complete obstruction","complete esophageal obstruction"),("emergent","emergency","immediate removal")),
  "sharp_magnet":(("sharp",),("magnet",)),
  "operative":(("rigid",),("flexible",),("cricopharyngeus",)),
  "perforation":(("perforation",),("mediastinitis","mediastinal","pneumomediastinum"),("crepitus",)),
