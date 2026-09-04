@@ -87,16 +87,16 @@ INTERPRETATION_TERMS = (
     "interpretation", "audiogram", "audiometry", "tympanometry", "electrophysiology",
     "abr", "oae", "vemp", "vhit", "caloric", "rotational chair", "psg",
     "polysomnography", "fees", "videofluoro", "mbs", "stroboscopy", "imaging",
-    "ct", "mri", "ultrasound", "endoscopy findings", "sleep study",
+    "ultrasound", "endoscopy findings", "sleep study",
 )
 
 PROCEDURE_TERMS = (
-    "surgery", "surgical", "-ectomy", "ectomy", "-plasty", "plasty", "repair",
-    "reconstruction", "flap", "dissection", "laryngoscopy", "bronchoscopy",
-    "esophagoscopy", "tracheostomy", "thyroidectomy", "parathyroidectomy",
-    "mastoidectomy", "cochlear implant", "implantation", "ablation", "ligation",
-    "embolization", "septoplasty", "turbinate reduction", "sinus surgery",
-    "tonsillectomy", "adenoidectomy", "sialendoscopy", "biopsy technique",
+    "surgery", "surgical", "ectomy", "plasty", "repair", "reconstruction", "flap",
+    "dissection", "laryngoscopy", "bronchoscopy", "esophagoscopy", "tracheostomy",
+    "thyroidectomy", "parathyroidectomy", "mastoidectomy", "cochlear implant",
+    "implantation", "ablation", "ligation", "embolization", "septoplasty",
+    "turbinate reduction", "sinus surgery", "tonsillectomy", "adenoidectomy",
+    "sialendoscopy", "biopsy technique",
 )
 
 EMERGENCY_TERMS = (
@@ -192,19 +192,30 @@ def _clean_case(text, topic):
     return s.strip().rstrip(".")
 
 
+def _contains_term(text, term):
+    t = _norm(term)
+    if not t:
+        return False
+    if " " in t:
+        return t in text
+    return t in set(text.split())
+
+
 def _concept_kind(topic, module):
     text = _norm(" ".join([
         str(topic or ""),
         " ".join(str(x) for x in (module.get("tags") or [])) if isinstance(module, dict) else "",
     ]))
-    if any(_norm(t) in text for t in INTERPRETATION_TERMS):
-        return "interpretation"
-    if any(_norm(t) in text for t in FOUNDATION_TERMS):
-        return "foundation"
-    if any(_norm(t) in text for t in PROCEDURE_TERMS):
-        return "procedure"
-    if any(_norm(t) in text for t in EMERGENCY_TERMS):
+    # Emergency takes precedence over procedure: e.g. post-tonsillectomy
+    # hemorrhage is an emergency concept, not a tonsillectomy-technique prompt.
+    if any(_contains_term(text, t) for t in EMERGENCY_TERMS):
         return "emergency"
+    if any(_contains_term(text, t) for t in INTERPRETATION_TERMS):
+        return "interpretation"
+    if any(_contains_term(text, t) for t in FOUNDATION_TERMS):
+        return "foundation"
+    if any(_contains_term(text, t) for t in PROCEDURE_TERMS):
+        return "procedure"
     return "condition"
 
 
@@ -346,8 +357,6 @@ def apply_concept_check_domain_curation_v178(checks, deep_modules, v6_item_id):
             else:
                 unresolved.append(q.get("id"))
         else:
-            # Generic free-response checks are rebuilt through the concept-type
-            # framework rather than forcing every topic into a disease vignette.
             if _convert_to_domain_oral_board(q, module):
                 stats["oral_board_rebuilt"] += 1
             elif _is_clinical(_text(q)) and str(q.get("answer_text") or q.get("model_answer") or "").strip():
