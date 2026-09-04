@@ -109,6 +109,10 @@ PARATHYROID_REBUILD_V282 = apply_parathyroid_rebuild_v282(data, app_mod)
 from deep_curriculum_parathyroid_v283 import apply_reoperative_parathyroid_rebuild_v283
 REOPERATIVE_PARATHYROID_REBUILD_V283 = apply_reoperative_parathyroid_rebuild_v283(data, app_mod)
 
+# Source-grounded rhinology Concept Hub rebuilds.
+from deep_curriculum_olfaction_v284 import apply_olfactory_rebuild_v284
+OLFACTORY_REBUILD_V284 = apply_olfactory_rebuild_v284(data, app_mod)
+
 from concept_check_repair_v162 import apply_concept_check_repair_v162
 CONCEPT_CHECK_REPAIR_V162 = apply_concept_check_repair_v162(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 from concept_check_board_repair_v177 import apply_concept_check_board_repair_v177
