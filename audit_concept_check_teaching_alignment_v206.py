@@ -53,6 +53,7 @@ def _norm(value):
 def main():
     checks = list(data.CONCEPT_CHECKS_V112)
     failures = []
+    failure_details = []
     kinds = Counter()
     reviewed = 0
     free_response = 0
@@ -92,9 +93,11 @@ def main():
         ntopic = _norm(topic)
         if ntopic and ntopic in nprompt and DIAGNOSIS_ASK_RE.search(prompt):
             failures.append(f"topic_title_answer_leak:{qid}:{topic}")
+            failure_details.append({"id": qid, "failure": "topic_title_answer_leak", "topic": topic, "kind": kind, "prompt": prompt, "answer": answer})
 
         if kind != "emergency" and any(pat in prompt.lower() for pat in GENERIC_DANGER_PATTERNS):
             failures.append(f"generic_danger_template_nonemergency:{qid}:{kind}:{topic}")
+            failure_details.append({"id": qid, "failure": "generic_danger_template_nonemergency", "topic": topic, "kind": kind, "prompt": prompt, "answer": answer})
 
     report = {
         "audit_version": "v20.6",
@@ -104,6 +107,7 @@ def main():
         "reviewed_mcq_count": mcq,
         "concept_kind_counts": dict(sorted(kinds.items())),
         "failures": failures,
+        "failure_details": failure_details,
     }
     with open("V206_CONCEPT_CHECK_TEACHING_ALIGNMENT_AUDIT.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
@@ -116,6 +120,9 @@ def main():
     print(f"V206_FAILURES|{len(failures)}")
     for failure in failures:
         print("FAIL|" + failure)
+    for detail in failure_details:
+        print("FAIL_PROMPT|" + detail["id"] + "|" + " ".join(detail["prompt"].split()))
+        print("FAIL_ANSWER|" + detail["id"] + "|" + " ".join(detail["answer"].split()))
 
     if failures:
         raise SystemExit(1)
