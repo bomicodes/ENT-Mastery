@@ -4,6 +4,12 @@ Post-completion hardening: in addition to clinical-board quality, verify that ev
 reviewed Concept Check resolves back to the live canonical Deep Curriculum and
 that any persisted canonical_topic/concept_id agrees exactly with that live
 canonical target. Duplicate Concept Check IDs are forbidden.
+
+v20.6 teaching-alignment note: foundation/anatomy/physiology concepts may use the
+explicit "clinical or operative context" teaching frame rather than an artificial
+patient vignette. That exception is accepted only when the curation metadata marks
+the item as a v20.6-aligned foundation concept; all other items still require the
+original clinical-stem markers.
 """
 
 from collections import Counter
@@ -35,9 +41,19 @@ CLINICAL = re.compile(
     re.I,
 )
 
+FOUNDATION_FRAME = "in the clinical or operative context of"
+
 
 def text(q):
     return str(q.get("prompt") or q.get("question") or q.get("stem") or "")
+
+
+def foundation_teaching_stem(q, prompt):
+    return (
+        q.get("teaching_aligned_v206") is True
+        and q.get("concept_kind_v206") == "foundation"
+        and FOUNDATION_FRAME in prompt.lower()
+    )
 
 
 def answer_present(q):
@@ -86,7 +102,7 @@ def main():
             fail("not_reviewed_v178")
         if domain not in EXPECTED_DOMAINS:
             fail(f"unknown_domain:{domain}")
-        if "?" not in prompt or not CLINICAL.search(prompt):
+        if "?" not in prompt or not (CLINICAL.search(prompt) or foundation_teaching_stem(q, prompt)):
             fail("not_clinical_board_stem")
         if not answer_present(q):
             fail("missing_reveal_answer")
