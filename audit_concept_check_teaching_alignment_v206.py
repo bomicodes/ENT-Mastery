@@ -32,8 +32,13 @@ GENERIC_DANGER_PATTERNS = (
     "dangerous complication must not be missed",
 )
 
+# Intentionally limited to language that actually asks the learner to name the
+# diagnosis/condition. Do not flag phrases such as "which disease factors" in a
+# treatment-selection question.
 DIAGNOSIS_ASK_RE = re.compile(
-    r"\b(which|what(?: is|\'s)?)\s+(?:the\s+)?(?:most likely\s+)?(?:diagnosis|condition|disorder|disease)\b",
+    r"\b(?:which\s+(?:is\s+)?(?:the\s+)?(?:most likely\s+)?(?:diagnosis|condition|disorder)|"
+    r"what(?: is|'s)\s+(?:the\s+)?(?:most likely\s+)?(?:diagnosis|condition|disorder)|"
+    r"what\s+condition\s+(?:best\s+)?fits)\b",
     re.I,
 )
 
