@@ -48,8 +48,8 @@ jobs:
         run: python audit_ladder_answer_balance_v211.py
       - name: Current Concept Check alignment and live backlog
         run: |
-          python audit_concept_check_task_alignment_v205.py
-          python audit_concept_check_depth_backlog_v205.py
+          python audit_concept_check_task_alignment_v206.py
+          python audit_concept_check_depth_backlog_v206.py
       - name: Current OR danger-zone commitment and bailout family
         run: |
           python audit_or_rescue_v268.py
