@@ -23,7 +23,8 @@ def main():
  checks=list(d.CONCEPT_CHECKS_V112)
  by={str(q.get('id') or ''):q for q in checks}
  failures=[]
- align=getattr(runtime_entry,'CONCEPT_CHECK_TASK_ALIGNMENT_V207',{}) or {}
+ final_gate=getattr(runtime_entry,'CONCEPT_CHECK_FINAL_CLINICAL_GATE_V179',{}) or {}
+ align=final_gate.get('task_alignment_v207') or {}
  if align.get('missing'): failures.append('runtime_missing='+','.join(align['missing']))
  if align.get('link_mismatch'): failures.append('runtime_link_mismatch='+','.join(align['link_mismatch']))
  for qid in QIDS:
