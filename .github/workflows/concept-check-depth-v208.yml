@@ -1,0 +1,64 @@
+name: Concept Check depth v20.8
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'concept_check_depth_v208.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_concept_check_task_alignment_v208.py'
+      - 'audit_concept_check_depth_backlog_v208.py'
+      - 'audit_concept_check_teaching_alignment_v206.py'
+      - '.github/workflows/concept-check-depth-v208.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'concept_check_depth_v208.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_concept_check_task_alignment_v208.py'
+      - 'audit_concept_check_depth_backlog_v208.py'
+      - 'audit_concept_check_teaching_alignment_v206.py'
+      - '.github/workflows/concept-check-depth-v208.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Strict 325-topic canonical coverage
+        run: python audit_coverage_v135.py --depth --strict
+      - name: All-domain Concept Check curation
+        run: python audit_concept_checks_all_domains_v178.py
+      - name: v20.8 Epistaxis task-answer/source gate
+        run: python audit_concept_check_task_alignment_v208.py
+      - name: v20.8 live-canonical depth backlog
+        run: python audit_concept_check_depth_backlog_v208.py
+      - name: Full-bank teaching-alignment regression
+        run: python audit_concept_check_teaching_alignment_v206.py
+      - name: General ENT completed-domain gate
+        run: python audit_general_ent_complete_v274.py
+      - name: Posterior epistaxis/SPA rescue regression
+        run: python audit_or_posterior_epistaxis_rescue_v289.py
+      - name: Upload v20.8 backlog
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v208-depth-backlog-audit
+          path: V208_DEPTH_BACKLOG_AUDIT.json
+          if-no-files-found: warn
+      - name: Upload teaching-alignment audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v208-teaching-alignment-audit
+          path: V206_CONCEPT_CHECK_TEACHING_ALIGNMENT_AUDIT.json
+          if-no-files-found: warn
