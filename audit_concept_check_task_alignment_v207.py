@@ -6,12 +6,12 @@ from concept_check_depth_v207 import COHORT
 
 QIDS=tuple(COHORT)
 TERM_GROUPS={
- "battery_recognition":("button battery","double ring","step off"),
- "urgency":("complete obstruction","emergent","immediate removal"),
+ "battery_recognition":("button battery","double rim","step off"),
+ "urgency":("complete obstruction","emergent"),
  "sharp_magnet":("sharp","magnet"),
  "operative":("rigid","flexible","cricopharyngeus"),
- "perforation":("perforation","mediastinitis","crepitus"),
- "battery_delayed":("vascular fistula","tracheoesophageal","delayed"),
+ "perforation":("perforation","mediastinal","crepitus"),
+ "battery_delayed":("vascular","after removal"),
  "food_impaction":("eosinophilic esophagitis","biops"),
 }
 
