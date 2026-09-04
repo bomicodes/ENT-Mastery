@@ -1,24 +1,20 @@
 """v17.8 — all-domain Concept Check clinical curation.
 
-Runs after v17.7.  v17.7 proved the architecture and hand-curated the sentinel
-external-ear cluster.  This pass applies the same review contract to every ENT
-domain and every live Concept Check.
+This pass reviews every live Concept Check and repairs weak/generated items while
+preserving already-sound clinical MCQs and manually curated questions.
 
-The goal is not to manufacture trivia.  If an existing MCQ is clinically sound,
-it is preserved.  If an item is generic, answer-leaking, structurally weak, or
-has non-parallel distractors, it is converted to a focused oral-board vignette
-whose reveal answer is taken from the live canonical Deep Curriculum.
+v20.6 teaching-alignment update:
+- stop forcing every concept into a dangerous-alternative/red-flag question;
+- choose the retrieval target from the kind of concept being taught;
+- tests/interpretation skills ask how and when to use/interpret them;
+- anatomy/physiology ask localization, relationships, and clinical consequence;
+- procedures ask indications, decision points, anatomy, and operative choices;
+- conditions ask recognition, evaluation, or management without inventing a
+  must-not-miss mimic when the concept does not have one;
+- true emergencies still test escalation through their management content.
 
-Every item receives:
-- a clinical vignette rather than a topic-definition prompt;
-- one explicit decision target (recognize/localize/evaluate/manage/operate);
-- an explicit answer and explanation;
-- an attending curveball answer whenever a curveball exists;
-- review metadata identifying the domain-specific board standard and source basis.
-
-Durable textbook breadth comes from the already-reconciled Cummings 7e
-curriculum plus Pasha 6e and K.J. Lee 12e review. Management-changing thresholds
-remain subordinate to current society/guideline evidence.
+The reveal remains tied to the live Deep Curriculum so the question and teaching
+answer stay on the same canonical concept.
 """
 
 import re
@@ -29,57 +25,48 @@ from concept_check_board_repair_v177 import _find_module, _norm
 
 DOMAIN_FRAMES = {
     "Otology / Neurotology": {
-        "setting": "An adult presents to otology clinic",
-        "priority": "localize the lesion, separate conductive from sensorineural or peripheral from central disease, and identify complications that change urgency",
-        "danger": "new cranial neuropathy, sudden sensorineural loss, intracranial complication, or invasive temporal-bone infection",
+        "setting": "An adult is evaluated in otology clinic",
+        "priority": "localize disease, interpret hearing/vestibular data correctly, and connect findings to management",
         "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current otology/neurotology evidence"],
     },
     "Rhinology / Allergy / Skull Base": {
-        "setting": "A patient presents to rhinology clinic",
-        "priority": "define inflammatory versus structural versus neoplastic disease, localize orbital/skull-base extension, and choose medical versus procedural escalation",
-        "danger": "visual loss, afferent pupillary defect, invasive fungal disease, CSF leak, intracranial extension, or uncontrolled hemorrhage",
+        "setting": "A patient is evaluated in rhinology clinic",
+        "priority": "define inflammatory, structural, or skull-base disease and connect anatomy/evaluation to treatment",
         "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current rhinology/skull-base society guidance"],
     },
     "Head & Neck Oncology": {
-        "setting": "A patient is reviewed at head-and-neck tumor board",
-        "priority": "stage the disease correctly, define the primary and nodal burden, and choose surgery, radiation, systemic therapy, or multimodality treatment based on disease and functional consequences",
-        "danger": "airway compromise, major-vessel involvement, extranodal extension, positive margins, perineural spread, or unresectable skull-base disease",
+        "setting": "A patient is reviewed by the head-and-neck team",
+        "priority": "stage disease correctly and connect site, extent, pathology, and function to treatment",
         "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current NCCN/AJCC-aligned oncology guidance"],
     },
     "Thyroid / Parathyroid / Salivary": {
         "setting": "A patient is seen in endocrine/head-and-neck surgery clinic",
-        "priority": "separate diagnosis from localization, risk-stratify malignancy, and choose observation, focused surgery, comprehensive surgery, or adjuvant treatment",
-        "danger": "invasive malignancy, vocal-fold dysfunction, hypercalcemic crisis, hereditary endocrine syndrome, or threatened facial nerve",
-        "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "2025 ATA DTC guidance where applicable", "current salivary/endocrine evidence"],
+        "priority": "separate diagnosis from localization and connect risk stratification to the appropriate intervention",
+        "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current endocrine/salivary evidence"],
     },
     "Pediatric Otolaryngology": {
         "setting": "A child is evaluated in pediatric otolaryngology",
-        "priority": "recognize age-specific physiology and airway risk, distinguish observation from intervention, and choose timing/disposition based on severity and comorbidity",
-        "danger": "respiratory distress, failure to thrive, severe OSA, deep-neck infection, foreign-body airway obstruction, or high-grade airway stenosis",
-        "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "AAO-HNS pediatric guideline updates where applicable", "current pediatric ENT evidence"],
+        "priority": "apply age-specific anatomy and physiology, then choose evaluation, timing, treatment, and disposition",
+        "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current pediatric ENT evidence"],
     },
     "Laryngology / Voice / Swallowing": {
-        "setting": "A patient presents to laryngology clinic",
-        "priority": "localize neurologic versus structural dysfunction, protect the airway and swallowing function, and choose temporary versus definitive rehabilitation",
-        "danger": "progressive airway compromise, bilateral immobility, aspiration with pulmonary consequence, malignancy, or rapidly progressive neurologic disease",
+        "setting": "A patient is evaluated in laryngology clinic",
+        "priority": "localize structural, neurologic, voice, and swallowing dysfunction and choose the right evaluation or treatment",
         "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current laryngology/swallowing evidence"],
     },
     "Facial Plastics / Trauma": {
-        "setting": "A patient is assessed after facial trauma or for reconstructive surgery",
-        "priority": "identify functional emergencies first, restore occlusion/support/vision, and choose repair based on anatomy, timing, tissue viability, and long-term function",
-        "danger": "vision loss/orbital compartment syndrome, trapdoor entrapment, CSF leak, unstable airway, uncontrolled hemorrhage, or threatened soft-tissue viability",
+        "setting": "A patient is assessed in facial plastics/trauma clinic",
+        "priority": "connect anatomy, function, timing, tissue status, and reconstruction principles to the clinical decision",
         "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current facial trauma/reconstructive evidence"],
     },
     "Sleep Surgery": {
-        "setting": "An adult with sleep-disordered breathing is reviewed in sleep surgery clinic",
-        "priority": "confirm the sleep phenotype, define the anatomic pattern of collapse, and match PAP, oral appliance, stimulation, skeletal, or soft-tissue treatment to the patient",
-        "danger": "severe hypoxemia, central or hypoventilation physiology, major cardiopulmonary comorbidity, or a collapse pattern incompatible with the proposed procedure",
-        "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current AASM/AAO-HNS/FDA-aligned sleep guidance"],
+        "setting": "A patient with sleep-disordered breathing is reviewed in sleep clinic",
+        "priority": "interpret the sleep phenotype and match anatomy and physiology to treatment selection",
+        "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current sleep guidance"],
     },
     "General ENT / Emergencies": {
-        "setting": "A patient is evaluated urgently by the ENT service",
-        "priority": "stabilize airway and hemorrhage first, identify the anatomic source, and move promptly from temporizing measures to definitive source control",
-        "danger": "cannot-intubate/cannot-oxygenate physiology, expanding neck hematoma, carotid blowout, descending mediastinal infection, caustic perforation, or unstable post-tonsillectomy hemorrhage",
+        "setting": "A patient is evaluated by the ENT service",
+        "priority": "identify the immediate problem, stabilize when necessary, and move from evaluation to definitive management",
         "sources": ["Pasha 6e", "K.J. Lee 12e", "Cummings 7e reconciliation", "current emergency/airway evidence"],
     },
 }
@@ -89,6 +76,33 @@ CLINICAL_MARKERS = (
     "patient", "child", "infant", "adult", "man", "woman", "boy", "girl",
     "presents", "returns", "develops", "postoperative", "after surgery", "exam",
     "otoscopy", "endoscopy", "ct ", "mri ", "ultrasound", "audiogram", "psg",
+)
+
+FOUNDATION_TERMS = (
+    "anatomy", "physiology", "neuroanatomy", "embryology", "histology",
+    "fundamentals", "principles", "vascular anatomy", "nerve anatomy",
+)
+
+INTERPRETATION_TERMS = (
+    "interpretation", "audiogram", "audiometry", "tympanometry", "electrophysiology",
+    "abr", "oae", "vemp", "vhit", "caloric", "rotational chair", "psg",
+    "polysomnography", "fees", "videofluoro", "mbs", "stroboscopy", "imaging",
+    "ultrasound", "endoscopy findings", "sleep study",
+)
+
+PROCEDURE_TERMS = (
+    "surgery", "surgical", "ectomy", "plasty", "repair", "reconstruction", "flap",
+    "dissection", "laryngoscopy", "bronchoscopy", "esophagoscopy", "tracheostomy",
+    "thyroidectomy", "parathyroidectomy", "mastoidectomy", "cochlear implant",
+    "implantation", "ablation", "ligation", "embolization", "septoplasty",
+    "turbinate reduction", "sinus surgery", "tonsillectomy", "adenoidectomy",
+    "sialendoscopy", "biopsy technique",
+)
+
+EMERGENCY_TERMS = (
+    "hemorrhage", "bleeding", "hematoma", "airway emergency", "foreign body",
+    "epistaxis", "abscess", "deep neck infection", "caustic", "airway fire",
+    "carotid blowout", "tracheoinnominate", "orbital compartment", "anaphylaxis",
 )
 
 
@@ -122,11 +136,10 @@ def _title_leak(q):
     prompt = _norm(_text(q))
     if not topic or topic not in prompt:
         return False
-    diagnosis_words = (
+    return any(x in prompt for x in (
         "which diagnosis", "what is the diagnosis", "most likely diagnosis",
         "which condition", "which disorder", "which disease",
-    )
-    return any(x in prompt for x in diagnosis_words)
+    ))
 
 
 def _mcq_is_structurally_sound(q):
@@ -135,34 +148,26 @@ def _mcq_is_structurally_sound(q):
     why = list(q.get("why_wrong") or [])
     if len(choices) != 4 or not (0 <= a < 4):
         return False
-    if not str(q.get("explanation") or "").strip():
-        return False
-    if len(why) != 4:
+    if not str(q.get("explanation") or "").strip() or len(why) != 4:
         return False
     if any(i != a and len(_norm(reason).split()) < 5 for i, reason in enumerate(why)):
         return False
     if _choice_leak(q) or _title_leak(q) or not _is_clinical(_text(q)):
         return False
-
-    # Structural parallelism guard. We do not pretend NLP can prove clinical
-    # equivalence, but extreme answer-length mismatch and mixed question types
-    # are reliable smells. Weak items are safer as oral-board free response.
     lengths = [len(_norm(c).split()) for c in choices]
     if min(lengths) == 0 or max(lengths) > max(32, 4 * min(lengths)):
         return False
     question = _norm(_text(q))
-    action_q = any(x in question for x in (
+    if any(x in question for x in (
         "next step", "management", "treatment", "should", "most appropriate",
         "best initial", "operative", "surgery",
-    ))
-    if action_q:
-        # A management question whose choices are mostly naked disease labels
-        # is exactly the conceptual-level mismatch we are eliminating.
-        action_words = ("treat", "observe", "obtain", "perform", "start", "place", "drain",
-                        "surgery", "therapy", "antibiotic", "imaging", "biopsy", "refer",
-                        "admit", "intub", "embol", "radiation", "chem")
-        actionish = sum(any(w in _norm(c) for w in action_words) for c in choices)
-        if actionish < 2:
+    )):
+        action_words = (
+            "treat", "observe", "obtain", "perform", "start", "place", "drain",
+            "surgery", "therapy", "antibiotic", "imaging", "biopsy", "refer",
+            "admit", "intub", "embol", "radiation", "chem",
+        )
+        if sum(any(w in _norm(c) for w in action_words) for c in choices) < 2:
             return False
     return True
 
@@ -170,7 +175,7 @@ def _mcq_is_structurally_sound(q):
 def _clean_case(text, topic):
     s = " ".join(str(text or "").split())
     if not s:
-        return "with findings characteristic of the disorder in the topic header"
+        return "the relevant clinical findings are being reviewed"
     for prefix in (
         "Recognition:", "Recognize", "Classic presentation:", "Typical presentation:",
         "Key features:", "Boards:", "Board pearl:",
@@ -184,89 +189,139 @@ def _clean_case(text, topic):
         cut = s[:470]
         stop = max(cut.rfind(". "), cut.rfind("; "))
         s = cut[:stop + 1] if stop > 190 else cut.rstrip() + "…"
-    return s.strip()
+    return s.strip().rstrip(".")
+
+
+def _contains_term(text, term):
+    t = _norm(term)
+    if not t:
+        return False
+    if " " in t:
+        return t in text
+    return t in set(text.split())
+
+
+def _concept_kind(topic, module):
+    text = _norm(" ".join([
+        str(topic or ""),
+        " ".join(str(x) for x in (module.get("tags") or [])) if isinstance(module, dict) else "",
+    ]))
+    # Emergency takes precedence over procedure: e.g. post-tonsillectomy
+    # hemorrhage is an emergency concept, not a tonsillectomy-technique prompt.
+    if any(_contains_term(text, t) for t in EMERGENCY_TERMS):
+        return "emergency"
+    if any(_contains_term(text, t) for t in INTERPRETATION_TERMS):
+        return "interpretation"
+    if any(_contains_term(text, t) for t in FOUNDATION_TERMS):
+        return "foundation"
+    if any(_contains_term(text, t) for t in PROCEDURE_TERMS):
+        return "procedure"
+    return "condition"
 
 
 def _dimension(q, module):
-    available = [x for x in ("workup", "manage", "operate", "localize", "recognize")
-                 if str(module.get(x) or "").strip()]
-    if not available:
-        return None
-    digits = sum(ord(c) for c in str(q.get("id") or q.get("topic") or ""))
-    return available[digits % len(available)]
+    topic = q.get("canonical_topic") or q.get("topic") or module.get("topic") or ""
+    kind = _concept_kind(topic, module)
+    available = {k for k in ("recognize", "localize", "workup", "manage", "operate", "teach")
+                 if str(module.get(k) or "").strip()}
+    preference = {
+        "interpretation": ("workup", "localize", "manage", "recognize", "teach"),
+        "foundation": ("localize", "recognize", "workup", "operate", "teach"),
+        "procedure": ("operate", "manage", "localize", "workup", "teach"),
+        "emergency": ("manage", "workup", "operate", "recognize", "teach"),
+        "condition": ("manage", "workup", "localize", "recognize", "operate", "teach"),
+    }[kind]
+    return next((dim for dim in preference if dim in available), None)
 
 
-def _ask_for(domain, dimension):
-    frame = DOMAIN_FRAMES.get(domain, {})
-    danger = frame.get("danger", "a finding that changes urgency")
+def _ask_for(kind, dimension, topic):
+    if kind == "interpretation":
+        if dimension == "workup":
+            return f"When is {topic} the right test or evaluation, what information does it provide, and what limitation or pitfall should you remember when interpreting it?"
+        if dimension == "localize":
+            return f"Which findings on {topic} carry the most diagnostic or localizing weight, and how do they change your interpretation?"
+        return f"How should you use the result of {topic} to make the next clinical decision?"
+
+    if kind == "foundation":
+        if dimension == "localize":
+            return f"For {topic}, what structures, relationships, or physiologic mechanisms must you be able to map, and why do they matter clinically?"
+        return f"What are the core principles of {topic}, and what practical clinical or operative consequence follows from them?"
+
+    if kind == "procedure":
+        if dimension == "operate":
+            return f"When is {topic} indicated, what key anatomy or decision points determine how you perform it, and what would make you change the operative plan?"
+        if dimension == "manage":
+            return f"Where does {topic} fit in the management pathway, and what patient or disease factors determine whether it is appropriate?"
+        return f"What must you establish before choosing {topic}, and which findings most affect procedural planning?"
+
+    if kind == "emergency":
+        if dimension == "manage":
+            return "What are your immediate priorities, what is the first definitive management step, and which finding should trigger escalation?"
+        if dimension == "workup":
+            return "What information or testing is needed now without delaying stabilization or definitive treatment?"
+        return "What feature determines the urgency of this presentation and the next action?"
+
     if dimension == "workup":
-        return (
-            "What is the best next diagnostic step, and which result would most directly "
-            f"change management or raise concern for {danger}?"
-        )
+        return "What evaluation is most useful next, and which finding would actually change the diagnosis, staging, or management?"
     if dimension == "manage":
-        return (
-            "What is the best initial management now, and what specific finding would make "
-            f"you escalate because of concern for {danger}?"
-        )
+        return "What is the initial management strategy, and what finding, response, or failure would change the next step?"
     if dimension == "operate":
-        return (
-            "Which findings determine whether an operation is indicated, and what factor "
-            "most strongly changes the choice or extent of the procedure?"
-        )
+        return "Which findings determine whether surgery is indicated, and what factor most strongly changes the choice or extent of the procedure?"
     if dimension == "localize":
-        return (
-            "Where is the process localized, and which anatomic relationship most directly "
-            "explains the symptoms or changes the procedural risk?"
-        )
-    return (
-        "What is the most important discriminating feature in this presentation, and what "
-        "dangerous alternative or complication must not be missed?"
-    )
+        return "Where is the process localized, and why does that localization matter for the differential, workup, or treatment?"
+    return "Which findings are most characteristic here, and which feature best distinguishes or confirms the diagnosis?"
+
+
+def _stem_for(domain, kind, topic, case, ask):
+    frame = DOMAIN_FRAMES.get(domain, {})
+    setting = frame.get("setting", "A patient is evaluated by the otolaryngology service")
+    if kind == "interpretation":
+        return f"{setting}. You are considering {topic}. {case}. {ask}"
+    if kind == "foundation":
+        return f"In the clinical or operative context of {topic}, {case}. {ask}"
+    if kind == "procedure":
+        return f"{setting}. {topic} is being considered. {case}. {ask}"
+    return f"{setting}. {case}. {ask}"
 
 
 def _convert_to_domain_oral_board(q, module):
     domain = q.get("domain")
-    frame = DOMAIN_FRAMES.get(domain)
-    if not frame or not module:
+    if domain not in DOMAIN_FRAMES or not module:
         return False
+    topic = q.get("topic") or module.get("topic") or "this topic"
     dim = _dimension(q, module)
     if not dim:
         return False
-
-    topic = q.get("topic") or module.get("topic") or "this condition"
+    kind = _concept_kind(topic, module)
     case = _clean_case(module.get("recognize") or module.get("localize"), topic)
-    q["prompt"] = f'{frame["setting"]} {case}. {_ask_for(domain, dim)}'
+    q["prompt"] = _stem_for(domain, kind, topic, case, _ask_for(kind, dim, topic))
     q.pop("question", None)
     q.pop("stem", None)
     q["choices"] = []
     q["answer"] = None
     q["answer_text"] = str(module.get(dim) or "").strip()
     q["explanation"] = (
-        f"This item tests {dim} in a clinical decision context. The reveal is drawn from "
-        "the live canonical Deep Curriculum rather than from the topic label."
+        f"This check tests the {dim} layer of {topic}. The reveal comes from the live canonical "
+        "Deep Curriculum, so the question is testing the concept itself rather than a generic red-flag template."
     )
     if str(module.get("teach") or "").strip():
         q["board_pearl"] = str(module.get("teach")).strip()
     q["board_dimension_v178"] = dim
+    q["concept_kind_v206"] = kind
     q["converted_to_oral_board_v178"] = True
+    q["teaching_aligned_v206"] = True
     return True
 
 
 def _ensure_curveball(q, module):
-    if not str(q.get("curveball") or "").strip():
-        return False
-    if str(q.get("curveball_answer") or "").strip():
+    if not str(q.get("curveball") or "").strip() or str(q.get("curveball_answer") or "").strip():
         return False
     if module:
         q["curveball_answer"] = str(
             module.get("operate") or module.get("manage") or module.get("workup") or module.get("teach") or ""
         ).strip()
     if not str(q.get("curveball_answer") or "").strip():
-        q["curveball_answer"] = (
-            "Reassess the diagnosis, disease extent, and urgency using the new information "
-            "before proceeding with the original plan."
-        )
+        q["curveball_answer"] = "Use the new information to reassess the diagnosis, disease extent, and next management decision."
     q["curveball_answer_added_v178"] = True
     return True
 
@@ -292,9 +347,6 @@ def apply_concept_check_domain_curation_v178(checks, deep_modules, v6_item_id):
         per_domain[q.get("domain") or "UNKNOWN"] += 1
         module = _find_module(q, deep_modules, v6_item_id)
 
-        # External-ear sentinel questions were manually curated in v17.7 and are
-        # intentionally preserved. Every other item still passes through this
-        # domain review and is either approved or converted.
         if q.get("curated_v177") == "external_ear":
             stats["preserved_manual_v177"] += 1
         elif q.get("choices"):
@@ -305,8 +357,6 @@ def apply_concept_check_domain_curation_v178(checks, deep_modules, v6_item_id):
             else:
                 unresolved.append(q.get("id"))
         else:
-            # Rebuild even v17.7 generic free-response items with a domain-specific
-            # clinical frame so every domain receives an actual second-pass review.
             if _convert_to_domain_oral_board(q, module):
                 stats["oral_board_rebuilt"] += 1
             elif _is_clinical(_text(q)) and str(q.get("answer_text") or q.get("model_answer") or "").strip():
