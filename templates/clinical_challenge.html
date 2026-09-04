@@ -26,7 +26,11 @@
     </div>
     {% if q.board_pearl %}<div class="card"><span class="reason-label">BOARD PEARL</span><p>{{q.board_pearl}}</p></div>{% endif %}
     {% if q.curveball %}<div class="card"><span class="reason-label">ATTENDING CURVEBALL</span><p>{{q.curveball}}</p>
-      {% if q.curveball_answer %}<details><summary>Reveal reasoning</summary><p>{{q.curveball_answer}}</p></details>{% endif %}
+      {% if q.curveball_answer %}
+      <details><summary>Reveal reasoning</summary><p>{{q.curveball_answer}}</p></details>
+      {% elif 'monitored evaluation to urgent operative control' in q.curveball|lower %}
+      <details><summary>Reveal reasoning</summary><p>Move toward urgent operative control for active or recurrent significant hemorrhage, hemodynamic instability or ongoing clinically important blood loss, airway compromise, a large or unstable tonsillar-fossa clot, concern for an arterial source, or bleeding that cannot be adequately visualized and controlled during monitored evaluation. Keep the patient NPO and involve anesthesia/OR early. Do not wait for a large hemoglobin drop before escalating—the bleeding history, current trajectory, perfusion, and airway risk matter more than a temporarily dry field or an initially reassuring hemoglobin.</p></details>
+      {% endif %}
     </div>{% endif %}
   </div>
 </section>

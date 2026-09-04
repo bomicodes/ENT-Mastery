@@ -61,7 +61,17 @@
 
   <div class="active-recall-box">
     <span class="question-label">ANSWER BEFORE REVEALING</span>
-    <p class="adaptive-prompt">{{x.prompt}}</p>
+    {% set topic_lower = x.topic|lower %}
+    {% set prompt_lower = x.prompt|lower %}
+    {% if x.stage == 'recognize' and 'microlaryngoscopy' in topic_lower %}
+      <p class="adaptive-prompt">When is microlaryngoscopy indicated, and what does it allow you to diagnose or treat that office laryngoscopy may not?</p>
+    {% elif x.stage == 'recognize' and (topic_lower == 'fees' or 'fiberoptic endoscopic evaluation of swallowing' in topic_lower or 'flexible endoscopic evaluation of swallowing' in topic_lower) %}
+      <p class="adaptive-prompt">When would you choose FEES for swallowing evaluation, what does it directly assess, and what are its key limitations?</p>
+    {% elif 'dangerous alternative must you not miss' in prompt_lower %}
+      <p class="adaptive-prompt">Without looking: what presentation or finding should make you think of {{x.topic}}, and which feature best helps you distinguish or confirm it?</p>
+    {% else %}
+      <p class="adaptive-prompt">{{x.prompt}}</p>
+    {% endif %}
   </div>
 
   <details class="adaptive-reveal">
