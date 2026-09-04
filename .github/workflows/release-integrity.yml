@@ -173,10 +173,14 @@ jobs:
         run: python audit_concept_check_task_alignment_v206.py
       - name: Prior validated live-canonical Concept Check depth backlog v20.6
         run: python audit_concept_check_depth_backlog_v206.py
-      - name: Current Concept Check task-answer alignment v20.7
+      - name: Prior validated Concept Check task-answer alignment v20.7
         run: python audit_concept_check_task_alignment_v207.py
-      - name: Current live-canonical Concept Check depth backlog v20.7
+      - name: Prior validated live-canonical Concept Check depth backlog v20.7
         run: python audit_concept_check_depth_backlog_v207.py
+      - name: Current Concept Check task-answer alignment v20.8
+        run: python audit_concept_check_task_alignment_v208.py
+      - name: Current live-canonical Concept Check depth backlog v20.8
+        run: python audit_concept_check_depth_backlog_v208.py
       - name: Current adversarial OR danger-zone and rescue gate
         run: python audit_or_rescue_v268.py
       - name: Current OR commitment and bailout gate
@@ -227,6 +231,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: concept-check-depth-backlog-v207
-          path: V207_DEPTH_BACKLOG_AUDIT.json
+          name: concept-check-depth-backlog-v208
+          path: V208_DEPTH_BACKLOG_AUDIT.json
           if-no-files-found: warn
