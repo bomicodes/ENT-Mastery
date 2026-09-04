@@ -1,14 +1,16 @@
-name: Concept Check depth v20.5
+name: Concept Check depth v20.6
 
 on:
   workflow_dispatch:
   pull_request:
     paths:
       - 'concept_check_depth_v205.py'
+      - 'concept_check_domain_curation_v178.py'
       - 'runtime_entry.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_concept_check_task_alignment_v205.py'
       - 'audit_concept_check_depth_backlog_v205.py'
+      - 'audit_concept_check_teaching_alignment_v206.py'
       - 'audit_global_release_integrity_v309.py'
       - '.github/workflows/release-integrity.yml'
       - '.github/workflows/concept-check-depth-v205.yml'
@@ -16,10 +18,12 @@ on:
     branches: [main]
     paths:
       - 'concept_check_depth_v205.py'
+      - 'concept_check_domain_curation_v178.py'
       - 'runtime_entry.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_concept_check_task_alignment_v205.py'
       - 'audit_concept_check_depth_backlog_v205.py'
+      - 'audit_concept_check_teaching_alignment_v206.py'
       - 'audit_global_release_integrity_v309.py'
       - '.github/workflows/release-integrity.yml'
       - '.github/workflows/concept-check-depth-v205.yml'
@@ -63,6 +67,8 @@ jobs:
         run: python audit_concept_check_task_alignment_v205.py
       - name: v20.5 live-canonical depth backlog
         run: python audit_concept_check_depth_backlog_v205.py
+      - name: v20.6 all-topic Concept Check teaching-alignment gate
+        run: python audit_concept_check_teaching_alignment_v206.py
       - name: Current adversarial OR danger-zone and rescue gate
         run: python audit_or_rescue_v268.py
       - name: Current OR commitment and bailout gate
@@ -102,4 +108,11 @@ jobs:
         with:
           name: v205-depth-backlog-audit
           path: V205_DEPTH_BACKLOG_AUDIT.json
+          if-no-files-found: warn
+      - name: Upload v20.6 teaching-alignment audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v206-concept-check-teaching-alignment-audit
+          path: V206_CONCEPT_CHECK_TEACHING_ALIGNMENT_AUDIT.json
           if-no-files-found: warn
