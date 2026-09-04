@@ -1,19 +1,10 @@
-"""v17.9 — final clinical-stem normalization after all-domain curation.
+"""Final clinical-stem normalization and ordered Concept Check depth hardening.
 
-The v17.8 audit exposed one false-positive in the curation heuristic: the token
-"ct " was found inside the word "tract", causing a didactic Aspiration-
-Prevention Surgery prompt to be mistaken for a clinical CT-based vignette.
-
-This pass uses word-boundary clinical markers identical in spirit to the hard
-CI audit and converts any remaining nonclinical item to the domain-specific
-oral-board format. It is deliberately small and idempotent.
-
-Post-completion depth hardening applies the focused v18.0-v20.7 manual
-answer/task-alignment repairs after generic normalization so they cannot be
-silently overwritten by the fallback converter. Watched ``*_depth_v*.py``
-runtime modules keep exact canonical-resolution changes under full CI.
+Generic/domain normalization runs first. Focused task-alignment repairs then run in
+version order so exact, source-grounded teaching cannot be overwritten by fallback
+question generation. This module intentionally keeps explicit latest-version imports
+because the fail-closed release manifest verifies that the newest depth patch is live.
 """
-
 import re
 
 from concept_check_board_repair_v177 import _find_module
@@ -47,6 +38,7 @@ from concept_check_depth_v204 import apply_concept_check_task_alignment_v204
 from concept_check_depth_v205 import apply_concept_check_task_alignment_v205
 from concept_check_depth_v206 import apply_concept_check_task_alignment_v206
 from concept_check_depth_v207 import apply_concept_check_task_alignment_v207
+from concept_check_depth_v208 import apply_concept_check_task_alignment_v208
 
 CLINICAL_STEM_RE = re.compile(r"\b(patient|child|infant|adult|man|woman|boy|girl|presents|returns|develops|postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b", re.I)
 
@@ -66,144 +58,75 @@ def _reassert_clinical_contract(checks, repaired_ids, unresolved, marker):
         prompt = str(q.get("prompt") or q.get("question") or q.get("stem") or "").strip()
         if prompt:
             q["prompt"] = "A patient is evaluated by the otolaryngology service. " + prompt
-            q.pop("question", None)
-            q.pop("stem", None)
-            q[marker] = True
-            reframed.append(qid)
+            q.pop("question", None); q.pop("stem", None); q[marker] = True; reframed.append(qid)
         else:
             unresolved.append(qid)
     return reframed
 
 
+_ALIGNMENT_FUNCS = [
+    (180, apply_concept_check_task_alignment_v180, False),
+    (181, apply_concept_check_task_alignment_v181, False),
+    (182, apply_concept_check_task_alignment_v182, False),
+    (183, apply_concept_check_task_alignment_v183, True),
+    (184, apply_concept_check_task_alignment_v184, True),
+    (185, apply_concept_check_task_alignment_v185, True),
+    (186, apply_concept_check_task_alignment_v186, True),
+    (187, apply_concept_check_task_alignment_v187, True),
+    (188, apply_concept_check_task_alignment_v188, True),
+    (189, apply_concept_check_task_alignment_v189, True),
+    (190, apply_concept_check_task_alignment_v190, True),
+    (191, apply_concept_check_task_alignment_v191, True),
+    (192, apply_concept_check_task_alignment_v192, True),
+    (193, apply_concept_check_task_alignment_v193, True),
+    (194, apply_concept_check_task_alignment_v194, True),
+    (195, apply_concept_check_task_alignment_v195, True),
+    (196, apply_concept_check_task_alignment_v196, True),
+    (197, apply_concept_check_task_alignment_v197, True),
+    (198, apply_concept_check_task_alignment_v198, True),
+    (199, apply_concept_check_task_alignment_v199, True),
+    (200, apply_concept_check_task_alignment_v200, True),
+    (201, apply_concept_check_task_alignment_v201, True),
+    (202, apply_concept_check_task_alignment_v202, True),
+    (203, apply_concept_check_task_alignment_v203, True),
+    (204, apply_concept_check_task_alignment_v204, True),
+    (205, apply_concept_check_task_alignment_v205, True),
+    (206, apply_concept_check_task_alignment_v206, True),
+    (207, apply_concept_check_task_alignment_v207, True),
+    (208, apply_concept_check_task_alignment_v208, True),
+]
+
+
 def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
-    converted = []
-    unresolved = []
+    converted, unresolved = [], []
     for q in checks or []:
         if _clinical_prompt(q):
             continue
         module = _find_module(q, deep_modules, v6_item_id)
         if module and _convert_to_domain_oral_board(q, module):
-            q["final_clinical_gate_v179"] = True
-            converted.append(q.get("id"))
+            q["final_clinical_gate_v179"] = True; converted.append(q.get("id"))
         else:
             unresolved.append(q.get("id"))
 
-    alignment_v180 = apply_concept_check_task_alignment_v180(checks)
-    reframed_v180 = _reassert_clinical_contract(checks, alignment_v180.get("repaired", []), unresolved, "post_alignment_clinical_frame_v181")
-    alignment_v181 = apply_concept_check_task_alignment_v181(checks)
-    reframed_v181 = _reassert_clinical_contract(checks, alignment_v181.get("repaired", []), unresolved, "post_alignment_clinical_frame_v181_cohort2")
-    alignment_v182 = apply_concept_check_task_alignment_v182(checks)
-    reframed_v182 = _reassert_clinical_contract(checks, alignment_v182.get("repaired", []), unresolved, "post_alignment_clinical_frame_v182")
-    alignment_v183 = apply_concept_check_task_alignment_v183(checks, deep_modules, v6_item_id)
-    reframed_v183 = _reassert_clinical_contract(checks, alignment_v183.get("repaired", []), unresolved, "post_alignment_clinical_frame_v183")
-    v184_content_fix = apply_bot_trimodality_depth_v184()
-    alignment_v184 = apply_concept_check_task_alignment_v184(checks, deep_modules, v6_item_id)
-    reframed_v184 = _reassert_clinical_contract(checks, alignment_v184.get("repaired", []), unresolved, "post_alignment_clinical_frame_v184")
-    alignment_v185 = apply_concept_check_task_alignment_v185(checks, deep_modules, v6_item_id)
-    reframed_v185 = _reassert_clinical_contract(checks, alignment_v185.get("repaired", []), unresolved, "post_alignment_clinical_frame_v185")
-    alignment_v186 = apply_concept_check_task_alignment_v186(checks, deep_modules, v6_item_id)
-    reframed_v186 = _reassert_clinical_contract(checks, alignment_v186.get("repaired", []), unresolved, "post_alignment_clinical_frame_v186")
-    alignment_v187 = apply_concept_check_task_alignment_v187(checks, deep_modules, v6_item_id)
-    reframed_v187 = _reassert_clinical_contract(checks, alignment_v187.get("repaired", []), unresolved, "post_alignment_clinical_frame_v187")
-    alignment_v188 = apply_concept_check_task_alignment_v188(checks, deep_modules, v6_item_id)
-    reframed_v188 = _reassert_clinical_contract(checks, alignment_v188.get("repaired", []), unresolved, "post_alignment_clinical_frame_v188")
-    alignment_v189 = apply_concept_check_task_alignment_v189(checks, deep_modules, v6_item_id)
-    reframed_v189 = _reassert_clinical_contract(checks, alignment_v189.get("repaired", []), unresolved, "post_alignment_clinical_frame_v189")
-    alignment_v190 = apply_concept_check_task_alignment_v190(checks, deep_modules, v6_item_id)
-    reframed_v190 = _reassert_clinical_contract(checks, alignment_v190.get("repaired", []), unresolved, "post_alignment_clinical_frame_v190")
-    alignment_v191 = apply_concept_check_task_alignment_v191(checks, deep_modules, v6_item_id)
-    reframed_v191 = _reassert_clinical_contract(checks, alignment_v191.get("repaired", []), unresolved, "post_alignment_clinical_frame_v191")
-    alignment_v192 = apply_concept_check_task_alignment_v192(checks, deep_modules, v6_item_id)
-    reframed_v192 = _reassert_clinical_contract(checks, alignment_v192.get("repaired", []), unresolved, "post_alignment_clinical_frame_v192")
-    alignment_v193 = apply_concept_check_task_alignment_v193(checks, deep_modules, v6_item_id)
-    reframed_v193 = _reassert_clinical_contract(checks, alignment_v193.get("repaired", []), unresolved, "post_alignment_clinical_frame_v193")
-    alignment_v194 = apply_concept_check_task_alignment_v194(checks, deep_modules, v6_item_id)
-    reframed_v194 = _reassert_clinical_contract(checks, alignment_v194.get("repaired", []), unresolved, "post_alignment_clinical_frame_v194")
-    alignment_v195 = apply_concept_check_task_alignment_v195(checks, deep_modules, v6_item_id)
-    reframed_v195 = _reassert_clinical_contract(checks, alignment_v195.get("repaired", []), unresolved, "post_alignment_clinical_frame_v195")
-    alignment_v196 = apply_concept_check_task_alignment_v196(checks, deep_modules, v6_item_id)
-    reframed_v196 = _reassert_clinical_contract(checks, alignment_v196.get("repaired", []), unresolved, "post_alignment_clinical_frame_v196")
-    alignment_v197 = apply_concept_check_task_alignment_v197(checks, deep_modules, v6_item_id)
-    reframed_v197 = _reassert_clinical_contract(checks, alignment_v197.get("repaired", []), unresolved, "post_alignment_clinical_frame_v197")
-    alignment_v198 = apply_concept_check_task_alignment_v198(checks, deep_modules, v6_item_id)
-    reframed_v198 = _reassert_clinical_contract(checks, alignment_v198.get("repaired", []), unresolved, "post_alignment_clinical_frame_v198")
-    alignment_v199 = apply_concept_check_task_alignment_v199(checks, deep_modules, v6_item_id)
-    reframed_v199 = _reassert_clinical_contract(checks, alignment_v199.get("repaired", []), unresolved, "post_alignment_clinical_frame_v199")
-    alignment_v200 = apply_concept_check_task_alignment_v200(checks, deep_modules, v6_item_id)
-    reframed_v200 = _reassert_clinical_contract(checks, alignment_v200.get("repaired", []), unresolved, "post_alignment_clinical_frame_v200")
-    alignment_v201 = apply_concept_check_task_alignment_v201(checks, deep_modules, v6_item_id)
-    reframed_v201 = _reassert_clinical_contract(checks, alignment_v201.get("repaired", []), unresolved, "post_alignment_clinical_frame_v201")
-    alignment_v202 = apply_concept_check_task_alignment_v202(checks, deep_modules, v6_item_id)
-    reframed_v202 = _reassert_clinical_contract(checks, alignment_v202.get("repaired", []), unresolved, "post_alignment_clinical_frame_v202")
-    alignment_v203 = apply_concept_check_task_alignment_v203(checks, deep_modules, v6_item_id)
-    reframed_v203 = _reassert_clinical_contract(checks, alignment_v203.get("repaired", []), unresolved, "post_alignment_clinical_frame_v203")
-    alignment_v204 = apply_concept_check_task_alignment_v204(checks, deep_modules, v6_item_id)
-    reframed_v204 = _reassert_clinical_contract(checks, alignment_v204.get("repaired", []), unresolved, "post_alignment_clinical_frame_v204")
-    alignment_v205 = apply_concept_check_task_alignment_v205(checks, deep_modules, v6_item_id)
-    reframed_v205 = _reassert_clinical_contract(checks, alignment_v205.get("repaired", []), unresolved, "post_alignment_clinical_frame_v205")
-    alignment_v206 = apply_concept_check_task_alignment_v206(checks, deep_modules, v6_item_id)
-    reframed_v206 = _reassert_clinical_contract(checks, alignment_v206.get("repaired", []), unresolved, "post_alignment_clinical_frame_v206")
-    alignment_v207 = apply_concept_check_task_alignment_v207(checks, deep_modules, v6_item_id)
-    reframed_v207 = _reassert_clinical_contract(checks, alignment_v207.get("repaired", []), unresolved, "post_alignment_clinical_frame_v207")
+    results = {"converted": converted, "unresolved": unresolved}
+    results["v184_content_fix"] = apply_bot_trimodality_depth_v184()
 
-    return {
-        "converted": converted,
-        "unresolved": unresolved,
-        "task_alignment_v180": alignment_v180,
-        "post_alignment_reframed_v181": reframed_v180,
-        "task_alignment_v181": alignment_v181,
-        "post_alignment_reframed_v181_cohort2": reframed_v181,
-        "task_alignment_v182": alignment_v182,
-        "post_alignment_reframed_v182": reframed_v182,
-        "task_alignment_v183": alignment_v183,
-        "post_alignment_reframed_v183": reframed_v183,
-        "v184_content_fix": v184_content_fix,
-        "task_alignment_v184": alignment_v184,
-        "post_alignment_reframed_v184": reframed_v184,
-        "task_alignment_v185": alignment_v185,
-        "post_alignment_reframed_v185": reframed_v185,
-        "task_alignment_v186": alignment_v186,
-        "post_alignment_reframed_v186": reframed_v186,
-        "task_alignment_v187": alignment_v187,
-        "post_alignment_reframed_v187": reframed_v187,
-        "task_alignment_v188": alignment_v188,
-        "post_alignment_reframed_v188": reframed_v188,
-        "task_alignment_v189": alignment_v189,
-        "post_alignment_reframed_v189": reframed_v189,
-        "task_alignment_v190": alignment_v190,
-        "post_alignment_reframed_v190": reframed_v190,
-        "task_alignment_v191": alignment_v191,
-        "post_alignment_reframed_v191": reframed_v191,
-        "task_alignment_v192": alignment_v192,
-        "post_alignment_reframed_v192": reframed_v192,
-        "task_alignment_v193": alignment_v193,
-        "post_alignment_reframed_v193": reframed_v193,
-        "task_alignment_v194": alignment_v194,
-        "post_alignment_reframed_v194": reframed_v194,
-        "task_alignment_v195": alignment_v195,
-        "post_alignment_reframed_v195": reframed_v195,
-        "task_alignment_v196": alignment_v196,
-        "post_alignment_reframed_v196": reframed_v196,
-        "task_alignment_v197": alignment_v197,
-        "post_alignment_reframed_v197": reframed_v197,
-        "task_alignment_v198": alignment_v198,
-        "post_alignment_reframed_v198": reframed_v198,
-        "task_alignment_v199": alignment_v199,
-        "post_alignment_reframed_v199": reframed_v199,
-        "task_alignment_v200": alignment_v200,
-        "post_alignment_reframed_v200": reframed_v200,
-        "task_alignment_v201": alignment_v201,
-        "post_alignment_reframed_v201": reframed_v201,
-        "task_alignment_v202": alignment_v202,
-        "post_alignment_reframed_v202": reframed_v202,
-        "task_alignment_v203": alignment_v203,
-        "post_alignment_reframed_v203": reframed_v203,
-        "task_alignment_v204": alignment_v204,
-        "post_alignment_reframed_v204": reframed_v204,
-        "task_alignment_v205": alignment_v205,
-        "post_alignment_reframed_v205": reframed_v205,
-        "task_alignment_v206": alignment_v206,
-        "post_alignment_reframed_v206": reframed_v206,
-        "task_alignment_v207": alignment_v207,
-        "post_alignment_reframed_v207": reframed_v207,
-    }
+    for version, fn, needs_context in _ALIGNMENT_FUNCS:
+        alignment = fn(checks, deep_modules, v6_item_id) if needs_context else fn(checks)
+        results[f"task_alignment_v{version}"] = alignment
+        marker = f"post_alignment_clinical_frame_v{version}"
+        reframed = _reassert_clinical_contract(checks, alignment.get("repaired", []), unresolved, marker)
+        # Preserve the historical public result names consumed by older audits.
+        if version == 180:
+            results["post_alignment_reframed_v181"] = reframed
+        elif version == 181:
+            results["post_alignment_reframed_v181_cohort2"] = reframed
+        else:
+            results[f"post_alignment_reframed_v{version}"] = reframed
+
+    # Explicit latest calls are retained as literals for the fail-closed release
+    # manifest; the ordered loop above performs the actual mutation once.
+    _latest_alignment_symbol = apply_concept_check_task_alignment_v208
+    _latest_result_key = "task_alignment_v208"
+    assert _latest_alignment_symbol and _latest_result_key in results
+    return results
