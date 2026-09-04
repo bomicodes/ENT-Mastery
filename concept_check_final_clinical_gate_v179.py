@@ -2,8 +2,8 @@
 
 Generic/domain normalization runs first. Focused task-alignment repairs then run in
 version order so exact, source-grounded teaching cannot be overwritten by fallback
-question generation. This module intentionally keeps an explicit latest-version call
-because the fail-closed release manifest verifies that the newest depth patch is live.
+question generation. The newest cohort remains an explicit call because the fail-closed
+release manifest verifies that the latest depth patch is truly executable in production.
 """
 import re
 
@@ -39,6 +39,7 @@ from concept_check_depth_v205 import apply_concept_check_task_alignment_v205
 from concept_check_depth_v206 import apply_concept_check_task_alignment_v206
 from concept_check_depth_v207 import apply_concept_check_task_alignment_v207
 from concept_check_depth_v208 import apply_concept_check_task_alignment_v208
+from concept_check_depth_v209 import apply_concept_check_task_alignment_v209
 
 CLINICAL_STEM_RE = re.compile(r"\b(patient|child|infant|adult|man|woman|boy|girl|presents|returns|develops|postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b", re.I)
 
@@ -67,8 +68,6 @@ def _reassert_clinical_contract(checks, repaired_ids, unresolved, marker):
     return reframed
 
 
-# Historical alignments are run in order here. The newest cohort is applied
-# explicitly below so the global fail-closed manifest can prove it is executable.
 _ALIGNMENT_FUNCS = [
     (180, apply_concept_check_task_alignment_v180, False),
     (181, apply_concept_check_task_alignment_v181, False),
@@ -98,6 +97,7 @@ _ALIGNMENT_FUNCS = [
     (205, apply_concept_check_task_alignment_v205, True),
     (206, apply_concept_check_task_alignment_v206, True),
     (207, apply_concept_check_task_alignment_v207, True),
+    (208, apply_concept_check_task_alignment_v208, True),
 ]
 
 
@@ -128,12 +128,12 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         else:
             results[f"post_alignment_reframed_v{version}"] = reframed
 
-    alignment_v208 = apply_concept_check_task_alignment_v208(checks, deep_modules, v6_item_id)
-    results["task_alignment_v208"] = alignment_v208
-    results["post_alignment_reframed_v208"] = _reassert_clinical_contract(
+    alignment_v209 = apply_concept_check_task_alignment_v209(checks, deep_modules, v6_item_id)
+    results["task_alignment_v209"] = alignment_v209
+    results["post_alignment_reframed_v209"] = _reassert_clinical_contract(
         checks,
-        alignment_v208.get("repaired", []),
+        alignment_v209.get("repaired", []),
         unresolved,
-        "post_alignment_clinical_frame_v208",
+        "post_alignment_clinical_frame_v209",
     )
     return results
