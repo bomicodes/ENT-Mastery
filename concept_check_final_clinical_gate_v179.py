@@ -2,7 +2,7 @@
 
 Generic/domain normalization runs first. Focused task-alignment repairs then run in
 version order so exact, source-grounded teaching cannot be overwritten by fallback
-question generation. This module intentionally keeps explicit latest-version imports
+question generation. This module intentionally keeps an explicit latest-version call
 because the fail-closed release manifest verifies that the newest depth patch is live.
 """
 import re
@@ -58,12 +58,17 @@ def _reassert_clinical_contract(checks, repaired_ids, unresolved, marker):
         prompt = str(q.get("prompt") or q.get("question") or q.get("stem") or "").strip()
         if prompt:
             q["prompt"] = "A patient is evaluated by the otolaryngology service. " + prompt
-            q.pop("question", None); q.pop("stem", None); q[marker] = True; reframed.append(qid)
+            q.pop("question", None)
+            q.pop("stem", None)
+            q[marker] = True
+            reframed.append(qid)
         else:
             unresolved.append(qid)
     return reframed
 
 
+# Historical alignments are run in order here. The newest cohort is applied
+# explicitly below so the global fail-closed manifest can prove it is executable.
 _ALIGNMENT_FUNCS = [
     (180, apply_concept_check_task_alignment_v180, False),
     (181, apply_concept_check_task_alignment_v181, False),
@@ -93,7 +98,6 @@ _ALIGNMENT_FUNCS = [
     (205, apply_concept_check_task_alignment_v205, True),
     (206, apply_concept_check_task_alignment_v206, True),
     (207, apply_concept_check_task_alignment_v207, True),
-    (208, apply_concept_check_task_alignment_v208, True),
 ]
 
 
@@ -104,7 +108,8 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
             continue
         module = _find_module(q, deep_modules, v6_item_id)
         if module and _convert_to_domain_oral_board(q, module):
-            q["final_clinical_gate_v179"] = True; converted.append(q.get("id"))
+            q["final_clinical_gate_v179"] = True
+            converted.append(q.get("id"))
         else:
             unresolved.append(q.get("id"))
 
@@ -116,7 +121,6 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         results[f"task_alignment_v{version}"] = alignment
         marker = f"post_alignment_clinical_frame_v{version}"
         reframed = _reassert_clinical_contract(checks, alignment.get("repaired", []), unresolved, marker)
-        # Preserve the historical public result names consumed by older audits.
         if version == 180:
             results["post_alignment_reframed_v181"] = reframed
         elif version == 181:
@@ -124,9 +128,12 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         else:
             results[f"post_alignment_reframed_v{version}"] = reframed
 
-    # Explicit latest calls are retained as literals for the fail-closed release
-    # manifest; the ordered loop above performs the actual mutation once.
-    _latest_alignment_symbol = apply_concept_check_task_alignment_v208
-    _latest_result_key = "task_alignment_v208"
-    assert _latest_alignment_symbol and _latest_result_key in results
+    alignment_v208 = apply_concept_check_task_alignment_v208(checks, deep_modules, v6_item_id)
+    results["task_alignment_v208"] = alignment_v208
+    results["post_alignment_reframed_v208"] = _reassert_clinical_contract(
+        checks,
+        alignment_v208.get("repaired", []),
+        unresolved,
+        "post_alignment_clinical_frame_v208",
+    )
     return results
