@@ -83,9 +83,6 @@ app_mod.CLINICAL_CHALLENGE_BY_ID_V119 = data.CLINICAL_CHALLENGE_BY_ID_V119
 from deep_curriculum_distinct_entities_v178 import apply_distinct_entities_v178
 DISTINCT_ENTITIES_V178 = apply_distinct_entities_v178(data)
 
-# Source-grounded salivary Concept Hub rebuilds. These must run in the actual
-# production entrypoint (Render launches runtime_entry:app) after the generated
-# curriculum has loaded and before Concept Hub requests are served.
 from deep_curriculum_salivary_v275 import apply_salivary_concept_rebuild_v275
 SALIVARY_CONCEPT_REBUILD_V275 = apply_salivary_concept_rebuild_v275(data, app_mod)
 from deep_curriculum_salivary_v276 import apply_salivary_complication_rebuild_v276
@@ -97,9 +94,6 @@ from deep_curriculum_salivary_v278 import apply_salivary_acc_rebuild_v278
 SALIVARY_ACC_REBUILD_V278 = apply_salivary_acc_rebuild_v278(data, app_mod)
 from deep_curriculum_salivary_v279 import apply_salivary_benign_rebuild_v279
 SALIVARY_BENIGN_REBUILD_V279 = apply_salivary_benign_rebuild_v279(data, app_mod)
-
-# Source-grounded thyroid/parathyroid rebuilds continue the same audit standard
-# while keeping overlapping canonical cards clinically distinct.
 from deep_curriculum_thyroid_v280 import apply_thyroid_dtc_rebuild_v280
 THYROID_DTC_REBUILD_V280 = apply_thyroid_dtc_rebuild_v280(data, app_mod)
 from deep_curriculum_thyroid_v281 import apply_thyroid_rair_rebuild_v281
@@ -108,8 +102,6 @@ from deep_curriculum_parathyroid_v282 import apply_parathyroid_rebuild_v282
 PARATHYROID_REBUILD_V282 = apply_parathyroid_rebuild_v282(data, app_mod)
 from deep_curriculum_parathyroid_v283 import apply_reoperative_parathyroid_rebuild_v283
 REOPERATIVE_PARATHYROID_REBUILD_V283 = apply_reoperative_parathyroid_rebuild_v283(data, app_mod)
-
-# Source-grounded rhinology Concept Hub rebuilds.
 from deep_curriculum_olfaction_v284 import apply_olfactory_rebuild_v284
 OLFACTORY_REBUILD_V284 = apply_olfactory_rebuild_v284(data, app_mod)
 
@@ -127,6 +119,8 @@ from concept_check_depth_v205 import apply_concept_check_task_alignment_v205
 CONCEPT_CHECK_TASK_ALIGNMENT_V205 = apply_concept_check_task_alignment_v205(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 from concept_check_depth_v206 import apply_concept_check_task_alignment_v206
 CONCEPT_CHECK_TASK_ALIGNMENT_V206 = apply_concept_check_task_alignment_v206(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
+from concept_check_depth_v208 import apply_concept_check_task_alignment_v208
+CONCEPT_CHECK_TASK_ALIGNMENT_V208 = apply_concept_check_task_alignment_v208(data.CONCEPT_CHECKS_V112, data.DEEP_MODULES_V6, data._v6_item_id)
 _rebuilt_concept_checks_v179 = {q["id"]: q for q in data.CONCEPT_CHECKS_V112 if q.get("id")}
 if isinstance(getattr(data, "CONCEPT_CHECK_BY_ID_V112", None), dict):
     data.CONCEPT_CHECK_BY_ID_V112.clear(); data.CONCEPT_CHECK_BY_ID_V112.update(_rebuilt_concept_checks_v179)
@@ -185,10 +179,8 @@ from or_postop_safety_v210 import apply_or_postop_safety_v210
 OR_POSTOP_SAFETY_V210 = apply_or_postop_safety_v210(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
 from or_preop_decision_v212 import apply_or_preop_decision_v212
 OR_PREOP_DECISION_FIX_V212 = apply_or_preop_decision_v212(data.OR_PREP_REGISTRY); app_mod.OR_PREP_REGISTRY = data.OR_PREP_REGISTRY
-
 from interpretation_labs_cleanup_v250 import apply_interpretation_labs_cleanup_v250
 INTERPRETATION_LABS_CLEANUP_V250 = apply_interpretation_labs_cleanup_v250(data, app_mod)
-
 from pasha_routes import bp as pasha_review_blueprint
 if "pasha_review" not in app.blueprints:
     app.register_blueprint(pasha_review_blueprint)
