@@ -9,6 +9,7 @@ TARGETS={
  'cc-v112-mgt-general-ent-emergencies-laser-energy-safety-in-otolaryngology',
  'cc-v112-mgt-rhinology-allergy-skull-base-frontal-sinusotomy-draf-procedures',
  'cc-v112-rec-rhinology-allergy-skull-base-frontal-sinusotomy-draf-procedures',
+ 'cc-v112-mgt-thyroid-parathyroid-salivary-four-gland-parathyroid-exploration',
 }
 
 def main():

@@ -5,8 +5,9 @@ from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v211 import COHORT as BASE_COHORT
 from concept_check_laser_energy_safety_v211 import COHORT_LASER_V211
 from concept_check_frontal_draf_v211 import COHORT_DRAF_V211
+from concept_check_four_gland_parathyroid_v211 import COHORT_PARATHYROID_V211
 
-COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_DRAF_V211}
+COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_DRAF_V211,**COHORT_PARATHYROID_V211}
 QIDS=tuple(COHORT)
 SEMANTIC_REQUIREMENTS={
  "cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns":{
@@ -56,7 +57,15 @@ SEMANTIC_REQUIREMENTS={
   "selection":(("least extensive",),("unilateral",),("bilateral",),("first-line","first line")),
   "healing":(("mucosa",),("restenosis",),("type-2","type 2")),
   "bailout":(("trephination",),("combined",),("open",),("csf leak","orbital")),
- }
+ },
+ "cc-v112-mgt-thyroid-parathyroid-salivary-four-gland-parathyroid-exploration":{
+  "indication":(("multigland",),("negative","nonlocalizing"),("focused",),("bilateral",)),
+  "anatomy":(("posterior",),("anterior",),("recurrent laryngeal nerve","rln"),("superior",),("inferior",)),
+  "ectopic_search":(("paraesophageal","retroesophageal"),("thyrothymic","thymic"),("supernumerary","fifth")),
+  "hyperplasia":(("subtotal",),("remnant",),("autotransplant",)),
+  "iopth":(("intraoperative pth",),("renal",),("timing",),("convert",)),
+  "rescue":(("hypocalcemia",),("hematoma",),("voice",),("persistent",)),
+ },
 }
 
 def _words(s): return len(re.findall(r"\b\w+[\w'-]*\b",str(s or '')))
@@ -95,6 +104,9 @@ def main():
     if required not in cites: failures.append('source_'+required+':'+qid)
   elif 'frontal-sinusotomy-draf' in qid:
    for required in ('lucidi','shahid','lein','chiari'):
+    if required not in cites: failures.append('source_'+required+':'+qid)
+  elif 'four-gland-parathyroid-exploration' in qid:
+   for required in ('american association of endocrine surgeons','fifth international workshop','surgical aspects'):
     if required not in cites: failures.append('source_'+required+':'+qid)
   else:
    for required in ('american burn association','braun'):
