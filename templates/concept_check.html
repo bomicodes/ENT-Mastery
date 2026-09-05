@@ -1,7 +1,7 @@
 {% extends "base.html" %}{% block content %}
 <div class="breadcrumb"><a href="/concept-checks">Concept Checks</a> / {{q.topic}}</div>
 <section class="card progressive-case concept-check-card" data-concept-id="{{q.concept_id}}" data-domain="{{q.domain}}" data-check-id="{{q.id}}">
-  <div class="interp-case-head"><span class="tag">{{q.domain}}</span><span>BOARD RECALL</span></div>
+  <div class="interp-case-head"><span class="tag">{{q.domain}}</span><span>BOARD RECALL</span>{% if bank_total %}<span class="muted">{{position}} / {{bank_total}}</span>{% endif %}</div>
   <h1>{{q.topic}}</h1>
   <div class="callout question"><strong>Commit before revealing</strong><br>{{q.prompt or q.question or q.stem}}</div>
 
@@ -24,6 +24,10 @@
       {% if q.curveball_answer %}<details style="margin-top:.7rem"><summary>Reveal attending answer</summary><p>{{q.curveball_answer}}</p></details>{% else %}<p><em>Answer pending clinical curation.</em></p>{% endif %}
     </div>{% endif %}
     <div class="rate-row concept-check-rating"><span>How well did you retrieve it?</span><button type="button" data-concept-check-score="0">Again</button><button type="button" data-concept-check-score="1">Hard</button><button type="button" data-concept-check-score="2">Good</button><button type="button" data-concept-check-score="3">Easy</button></div>
+    <div class="adaptive-actions" style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
+      {% if next_q %}<a class="case-btn" href="/concept-check/{{next_q.id}}">Next question →</a>{% else %}<a class="case-btn" href="/concept-checks">Bank complete ✓</a>{% endif %}
+      <a href="/concept-checks">Back to question bank</a>
+    </div>
   </div>
 
   {% if q.concept_id %}<p><a href="/concept/id/{{q.concept_id|urlencode}}">Open full concept hub ↗</a></p>{% endif %}
