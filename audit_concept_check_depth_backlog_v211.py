@@ -5,6 +5,7 @@ from audit_concept_check_depth_backlog_v210 import main as _v210_main
 TARGETS={
  'cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns',
  'cc-v112-mgt-pediatric-otolaryngology-microtia-reconstruction',
+ 'cc-v112-rec-laryngology-voice-swallowing-tracheobronchial-endoscopy-principles',
 }
 
 def main():
