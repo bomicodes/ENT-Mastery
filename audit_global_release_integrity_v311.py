@@ -1,10 +1,12 @@
 """Fail-closed global release bridge through the newest Concept Check depth cohort.
 
-Chains the current rescue/source manifest, then discovers the highest Concept Check depth,
-alignment, and backlog versions present in the repository and requires the final clinical
-gate, dedicated workflow, and global release workflow to point at that exact same cohort.
-This prevents a newer depth cohort from being added without release validation.
+Chains the current rescue/source manifest, discovers the highest Concept Check depth,
+alignment, and backlog versions present in the repository, requires the final clinical gate
+and dedicated workflow to point at that exact cohort, and then executes that cohort's exact
+alignment and backlog gates. This keeps release validation fail-closed without requiring a
+manual release-workflow stanza for every new depth increment.
 """
+import importlib
 import re
 from pathlib import Path
 from audit_global_release_integrity_v310 import main as _v310_main
@@ -35,18 +37,20 @@ def main():
     if latest is not None:
         final_text=FINAL_GATE.read_text(encoding="utf-8")
         release_text=RELEASE_WORKFLOW.read_text(encoding="utf-8")
-        required_final=[f"from concept_check_depth_v{latest} import apply_concept_check_task_alignment_v{latest}",f'task_alignment_v{latest}']
-        for token in required_final:
+        for token in (f"from concept_check_depth_v{latest} import apply_concept_check_task_alignment_v{latest}",f'task_alignment_v{latest}'):
             if token not in final_text: failures.append("final_gate_missing:"+token)
-        required_release=[f"audit_concept_check_task_alignment_v{latest}.py",f"audit_concept_check_depth_backlog_v{latest}.py",f"V{latest}_DEPTH_BACKLOG_AUDIT.json",f"concept-check-depth-backlog-v{latest}"]
-        for token in required_release:
-            if token not in release_text: failures.append("release_workflow_missing:"+token)
+        if "python audit_global_release_integrity_v311.py" not in release_text:
+            failures.append("release_workflow_missing_dynamic_manifest_call")
         dedicated=ROOT / ".github" / "workflows" / f"concept-check-depth-v{latest}.yml"
         if not dedicated.exists(): failures.append("missing_dedicated_workflow:"+dedicated.name)
     print("GLOBAL_RELEASE_LATEST_CONCEPT_DEPTH|"+(f"v{latest}" if latest is not None else "none"))
     print("GLOBAL_RELEASE_DYNAMIC_CONCEPT_FAILURES|"+str(len(failures)))
     for failure in failures: print("FAIL|"+failure)
     if failures: raise SystemExit(1)
-    print("PASS: global release dynamically protects the newest Concept Check depth/alignment/backlog cohort")
+    # Execute, rather than merely name-check, the newest exact-canonical/source and backlog gates.
+    alignment_mod=importlib.import_module(f"audit_concept_check_task_alignment_v{latest}")
+    backlog_mod=importlib.import_module(f"audit_concept_check_depth_backlog_v{latest}")
+    alignment_mod.main(); backlog_mod.main()
+    print("PASS: global release dynamically executes and protects the newest Concept Check depth/alignment/backlog cohort")
 
 if __name__ == "__main__": main()
