@@ -1,9 +1,7 @@
-"""v20.11 — deepen the exact live Facial Plastics / Trauma Facial Soft-Tissue Lacerations / Burns Concept Check.
+"""v20.11 — deepen exact live Concept Checks that remain shallow after the validated v20.10 production lineage.
 
-This cohort rehomes preserved clinical work from the stale pre-PTA v20.10 branch onto the
-validated v20.10 production lineage. Durable anatomy/operative principles are cross-checked
-against connected Cummings 7e, Pasha 6e, and K.J. Lee 12e. Burn disposition is updated
-against current American Burn Association referral guidance.
+Durable anatomy/operative principles are cross-checked against connected Cummings 7e, Pasha 6e,
+and K.J. Lee 12e. Management-changing details use current specialty guidance where appropriate.
 """
 from concept_check_board_repair_v177 import _find_module
 
@@ -66,6 +64,58 @@ COHORT={QID:{
  "deliberate_review_v211":"Preserved from the stale pre-PTA facial-trauma branch and rehomed onto exact-head-green v20.10 main. The prior live reveal was shallow and omitted pre-anesthetic facial nerve documentation, parotid duct/canalicular injury, landmark-first layered repair, conservative tissue preservation, failed-repair rescue, inhalation-airway reasoning, and current burn-center referral thresholds.",
  "source_refs_v211":SOURCE_REFS_V211,
 }}
+
+MICROTIA_QID="cc-v112-mgt-pediatric-otolaryngology-microtia-reconstruction"
+MICROTIA_CID="v6-pediatric-otolaryngology-microtia-reconstruction"
+MICROTIA_TOPIC="Microtia Reconstruction"
+MICROTIA_REFS_V211=[
+ {"type":"textbook","citation":"Cummings Otolaryngology: Head and Neck Surgery, 7th ed. (2021), congenital external-ear/microtia and aural-atresia reconstruction sections (connected ENT Boards Library copy).","role":"foundation/operative: auricular development, microtia classification, reconstructive planning, hearing/atresia coordination"},
+ {"type":"textbook","citation":"Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. (2022), congenital ear anomalies/microtia and aural-atresia sections (connected ENT Boards Library copy).","role":"board framework: congenital ear evaluation, hearing assessment, reconstruction options and sequencing"},
+ {"type":"textbook","citation":"K.J. Lee's Essential Otolaryngology: Head & Neck Surgery, 12th ed. (2019), congenital external-ear deformity/microtia-atresia and auricular reconstruction sections (connected ENT Boards Library copy).","role":"board/operative cross-check: microtia-atresia association, auricular growth, reconstruction timing and anatomy"},
+ {"type":"consensus","citation":"Zhang TY et al. International Consensus Recommendations on Microtia, Aural Atresia and Functional Ear Reconstruction. J Int Adv Otol. 2019;15(2):204-208. PMID 31418720.","role":"multidisciplinary management, hearing rehabilitation, reconstruction/atresia sequencing"},
+ {"type":"review","citation":"Integrated microtia and aural atresia management. Front Surg. 2022;9:944223.","role":"current integrated timing of hearing diagnostics/rehabilitation, autologous versus porous-polyethylene reconstruction, and atresia repair"},
+ {"type":"systematic_review","citation":"Kim YJ, Min K, Kim YS. Auricle reconstruction with autologous costal cartilage versus polyethylene implants in microtia patients: a meta-analysis. Arch Craniofac Surg. 2024;25(4):179-186.","role":"current outcomes/tradeoffs between autologous cartilage and porous polyethylene"},
+]
+MICROTIA_PROMPT="""A 7-year-old with grade III unilateral microtia and congenital aural atresia has normal hearing in the opposite ear. The family asks whether the child should first undergo canal surgery, rib-cartilage auricular reconstruction, porous-polyethylene reconstruction, or simply wait. How do you build a coordinated microtia plan that addresses hearing first, chooses the reconstructive pathway and timing appropriately, and avoids sequencing one operation in a way that compromises the next?"""
+MICROTIA_ANSWER="""Foundation — microtia is not only a cosmetic pinna problem. Begin with a complete craniofacial and otologic assessment: characterize the microtia grade and lobule/skin remnant, examine facial symmetry and syndromic features, document the contralateral ear, and establish hearing status early. Microtia and congenital aural atresia frequently coexist, so every child needs age-appropriate audiologic evaluation rather than assuming unilateral disease is functionally irrelevant. Bilateral conductive loss requires prompt hearing rehabilitation; unilateral atresia still deserves counseling about localization, hearing in noise, classroom function, and options for bone-conduction support.
+
+Hearing comes before the decorative framework — reconstruction of the auricle does not restore hearing. Infants and young children with bilateral atresia generally need early bone-conduction hearing access, initially with a non-surgical band/adhesive system when appropriate. Surgically implanted bone-conduction systems, active transcutaneous systems, or atresiaplasty are later options chosen according to age, anatomy, hearing goals, skin/soft tissue, and the planned auricular reconstruction. In unilateral cases, the urgency is different, but hearing surveillance and functional counseling still belong in the plan.
+
+Define anatomy before promising canal surgery — high-resolution temporal-bone CT is not a newborn screening test for every microtia patient. It is obtained when the child is old enough and when the result will change candidacy/planning for atresia repair or another intervention. Atresiaplasty candidacy depends on favorable middle-ear anatomy, including ossicular and facial-nerve relationships, aeration and overall Jahrsdoerfer-type anatomy; a poor candidate should not be sent for canal surgery simply because an external canal is absent.
+
+Choose the auricular pathway deliberately. Autologous costal-cartilage reconstruction uses the child's own rib to carve a three-dimensional framework. Its advantages are durable living autologous tissue and long-term integration; disadvantages include donor-site morbidity, the need for adequate rib cartilage, technically demanding framework carving, and usually staged surgery. Timing is therefore tied to chest/cartilage development and technique: classic autologous reconstruction is commonly performed in school-age children, often roughly 6-10 years depending on the chosen Brent/Nagata-type technique and surgeon preference rather than a single mandatory birthday.
+
+Porous-polyethylene reconstruction can often be performed younger and avoids rib harvest. It provides a prefabricated framework with strong definition, but it is an alloplastic implant that depends on durable vascularized soft-tissue coverage and carries different failure modes — exposure, infection, trauma vulnerability and possible implant loss. The family should hear those tradeoffs explicitly instead of being told that one material is universally superior. Modern comparative literature does not support reducing the decision to a cosmetic-score contest; complications, number of operations, donor morbidity, soft-tissue quality, age, surgeon expertise and family preference all matter.
+
+Sequence reconstruction with atresia surgery before either surgeon operates. This is a classic board and real-world trap. Canal surgery changes postauricular skin and vascularity and can alter the tissue needed for auricular reconstruction. With autologous costal-cartilage reconstruction, atresiaplasty is generally coordinated after the auricular framework stages so the microtia surgeon can preserve the skin envelope and place the ear correctly. With porous-polyethylene reconstruction, the sequence may differ: experienced integrated teams may perform atresia repair before or concurrently with alloplastic auricular reconstruction because the vascularized fascial coverage and incision planning are different. The exact sequence therefore follows the reconstructive method and the coordinated microtia-atresia team, not a generic rule that canalplasty always comes first.
+
+Plan the ear in three dimensions. Use the normal contralateral auricle when available to guide height, projection, axis and landmark relationships, while accounting for craniofacial asymmetry. Assess whether the vestigial lobule and local skin can be incorporated, whether the hairline is low, and whether scars or prior surgery threaten the skin pocket or temporoparietal fascial blood supply. Autologous reconstruction requires enough healthy skin for a tension-free pocket and enough donor cartilage for framework definition; alloplastic reconstruction requires reliable vascularized coverage. A beautiful framework under ischemic or scarred soft tissue is a setup for exposure.
+
+Senior decision — distinguish four linked decisions rather than collapsing them into one operation. HEARING: what does the child need now to access sound? ANATOMY: is atresiaplasty anatomically reasonable, and when should CT be obtained? AURICLE: autologous cartilage, porous polyethylene, prosthesis, or no reconstruction based on age, tissues, donor site, risk tolerance and goals? SEQUENCE: which operation must occur first so canal work does not compromise the auricular skin/vascular plan? Multidisciplinary planning is especially important in craniofacial microsomia, bilateral disease, prior surgery, low hairline, poor soft tissue or unusual facial-nerve anatomy.
+
+Failure/rescue — early swelling, skin compromise, framework exposure, infection, hematoma or loss of projection requires prompt reconstructive assessment because delayed management can convert a salvageable soft-tissue problem into framework loss. After autologous harvest, monitor donor-site pain, pneumothorax risk and chest-wall contour; contemporary systematic review data reinforce that donor-site deformity is real and technique-dependent, so rib harvest should be meticulous and perichondrial preservation matters. Long-term follow-up should evaluate symmetry, projection, scar, framework integrity and hearing—not appearance alone.
+
+The dangerous alternatives are reconstructing the pinna while ignoring hearing, ordering CT before it will change management, promising atresiaplasty without favorable anatomy, performing canal surgery without coordinating the planned auricular technique, treating porous polyethylene as a complication-free shortcut, or delaying every child until one arbitrary age despite different reconstructive methods and hearing needs."""
+COHORT[MICROTIA_QID]={
+ "concept_id":MICROTIA_CID,"canonical_topic":MICROTIA_TOPIC,"prompt":MICROTIA_PROMPT,"answer_text":MICROTIA_ANSWER,
+ "explanation":"Microtia care is integrated hearing and reconstruction planning: establish hearing needs early, select auricular material/timing by anatomy and goals, and coordinate atresia surgery with the reconstructive method so one operation does not compromise another.",
+ "board_pearl":"Microtia reconstruction does not restore hearing. Decide hearing rehabilitation first, then auricular method, then coordinate atresiaplasty timing with that method—especially because canal surgery can compromise tissue needed for later reconstruction.",
+ "depth_layers_v211":{"foundation":"Microtia grade, craniofacial/contralateral-ear assessment and early audiology; distinguish auricular reconstruction from hearing rehabilitation.","application":"Compare autologous rib cartilage, porous polyethylene, prosthetic/no reconstruction and atresiaplasty candidacy/timing.","senior_decision":"Coordinate hearing device, CT/atresia decision and auricular reconstruction sequence while protecting skin envelope, vascularized coverage and donor-site safety."},
+ "common_traps_v211":[
+  "Treating microtia as purely cosmetic and failing to establish hearing status early.",
+  "Assuming unilateral atresia needs no functional hearing counseling or surveillance.",
+  "Ordering temporal-bone CT in infancy before the result would change management or operative planning.",
+  "Offering atresiaplasty without confirming favorable middle-ear and facial-nerve anatomy.",
+  "Performing canal surgery first without coordinating how the incision and postauricular scar affect the planned auricular reconstruction.",
+  "Teaching one fixed age for all microtia reconstruction despite technique-dependent cartilage and soft-tissue requirements.",
+  "Presenting porous polyethylene as a simple rib-free equivalent without discussing exposure, infection and implant-loss risk.",
+  "Presenting autologous cartilage as risk-free while ignoring chest donor-site morbidity and staged reconstruction.",
+  "Designing framework position without accounting for craniofacial asymmetry, contralateral landmarks, lobule remnant and hairline.",
+  "Judging success by pinna appearance alone while neglecting hearing, projection, scar, framework integrity and family goals."
+ ],
+ "deliberate_review_v211":"Expanded after the validated v20.11 residual-depth audit identified Microtia Reconstruction as the highest-ranked remaining shallow live Concept Check (19-word reveal). The replacement separates hearing rehabilitation from auricular reconstruction, adds atresiaplasty candidacy/sequencing, autologous-versus-alloplastic tradeoffs, donor/soft-tissue risks and multidisciplinary planning.",
+ "source_refs_v211":MICROTIA_REFS_V211,
+}
 
 
 def apply_concept_check_task_alignment_v211(checks, deep_modules, v6_item_id):

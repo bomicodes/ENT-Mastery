@@ -2,7 +2,10 @@
 import json,os
 from audit_concept_check_depth_backlog_v210 import main as _v210_main
 
-TARGETS={'cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns'}
+TARGETS={
+ 'cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns',
+ 'cc-v112-mgt-pediatric-otolaryngology-microtia-reconstruction',
+}
 
 def main():
  _v210_main(); source,target='V210_DEPTH_BACKLOG_AUDIT.json','V211_DEPTH_BACKLOG_AUDIT.json'
