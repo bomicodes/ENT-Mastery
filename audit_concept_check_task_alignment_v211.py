@@ -6,8 +6,9 @@ from concept_check_depth_v211 import COHORT as BASE_COHORT
 from concept_check_laser_energy_safety_v211 import COHORT_LASER_V211
 from concept_check_frontal_draf_v211 import COHORT_DRAF_V211
 from concept_check_four_gland_parathyroid_v211 import COHORT_PARATHYROID_V211
+from concept_check_local_flap_reconstruction_v211 import COHORT_LOCAL_FLAP_V211
 
-COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_DRAF_V211,**COHORT_PARATHYROID_V211}
+COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_DRAF_V211,**COHORT_PARATHYROID_V211,**COHORT_LOCAL_FLAP_V211}
 QIDS=tuple(COHORT)
 SEMANTIC_REQUIREMENTS={
  "cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns":{
@@ -66,6 +67,14 @@ SEMANTIC_REQUIREMENTS={
   "iopth":(("intraoperative pth",),("renal",),("timing",),("convert",)),
   "rescue":(("hypocalcemia",),("hematoma",),("voice",),("persistent",)),
  },
+ "cc-v112-rec-facial-plastics-trauma-local-flap-reconstruction":{
+  "defect_first":(("start with the defect",),("depth",),("free margins","free margin"),("aesthetic units","aesthetic unit")),
+  "geometry":(("advancement",),("rotation",),("transposition",),("tension-vector","tension vector")),
+  "vascularity":(("random-pattern","random pattern"),("axial-pattern","axial pattern"),("pedicle",),("length-to-width","length to width")),
+  "donor_site":(("donor-site","donor site"),("secondary defect",),("ectropion",),("alar",)),
+  "perfusion":(("pale",),("dusky",),("congested",),("hematoma",),("torsion",)),
+  "rescue":(("release constricting",),("evacuate a hematoma",),("revise the inset","reopen")),
+ },
 }
 
 def _words(s): return len(re.findall(r"\b\w+[\w'-]*\b",str(s or '')))
@@ -108,6 +117,8 @@ def main():
   elif 'four-gland-parathyroid-exploration' in qid:
    for required in ('american association of endocrine surgeons','fifth international workshop','surgical aspects'):
     if required not in cites: failures.append('source_'+required+':'+qid)
+  elif 'local-flap-reconstruction' in qid:
+   pass
   else:
    for required in ('american burn association','braun'):
     if required not in cites: failures.append('source_'+required+':'+qid)
