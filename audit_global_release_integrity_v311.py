@@ -1,13 +1,15 @@
 """Fail-closed global release bridge through the newest Concept Check depth cohort.
 
-Chains the current rescue/source manifest, then discovers the highest Concept Check depth,
-alignment, and backlog versions present in the repository and requires the final clinical
-gate, dedicated workflow, and global release workflow to point at that exact same cohort.
-This prevents a newer depth cohort from being added without release validation.
+Chains the current rescue/source manifest, requires the live Rhinology Allergy source-
+semantic gate, then discovers the highest Concept Check depth, alignment, and backlog
+versions present in the repository and requires the final clinical gate, dedicated workflow,
+and global release workflow to point at that exact same cohort. This prevents a newer depth
+cohort or the Allergy source contract from being silently omitted from release validation.
 """
 import re
 from pathlib import Path
 from audit_global_release_integrity_v310 import main as _v310_main
+from audit_rhinology_allergy_source_semantic_v349 import main as _rhinology_allergy_source_main
 
 ROOT = Path(__file__).resolve().parent
 RELEASE_WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
@@ -22,6 +24,10 @@ def _versions(pattern):
 
 def main():
     _v310_main()
+    print("GLOBAL_RELEASE_RHINOLOGY_ALLERGY_SOURCE_GATE|audit_rhinology_allergy_source_semantic_v349.py")
+    rc = _rhinology_allergy_source_main()
+    if rc:
+        raise SystemExit(rc)
     depth=_versions("concept_check_depth_v*.py")
     align=_versions("audit_concept_check_task_alignment_v*.py")
     backlog=_versions("audit_concept_check_depth_backlog_v*.py")
@@ -47,6 +53,6 @@ def main():
     print("GLOBAL_RELEASE_DYNAMIC_CONCEPT_FAILURES|"+str(len(failures)))
     for failure in failures: print("FAIL|"+failure)
     if failures: raise SystemExit(1)
-    print("PASS: global release dynamically protects the newest Concept Check depth/alignment/backlog cohort")
+    print("PASS: global release protects the Rhinology Allergy source contract and dynamically protects the newest Concept Check depth/alignment/backlog cohort")
 
 if __name__ == "__main__": main()
