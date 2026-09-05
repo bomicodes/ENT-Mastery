@@ -4,8 +4,9 @@ import runtime_entry
 from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v211 import COHORT as BASE_COHORT
 from concept_check_laser_energy_safety_v211 import COHORT_LASER_V211
+from concept_check_local_flap_reconstruction_v211 import COHORT_LOCAL_FLAP_V211
 
-COHORT={**BASE_COHORT,**COHORT_LASER_V211}
+COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_LOCAL_FLAP_V211}
 QIDS=tuple(COHORT)
 SEMANTIC_REQUIREMENTS={
  "cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns":{
@@ -41,6 +42,14 @@ SEMANTIC_REQUIREMENTS={
   "oxidizer":(("fio2",),("nitrous oxide",),("lowest concentration","lowest")),
   "tube":(("laser-resistant","laser resistant"),("not mean laser-proof","not mean laser proof"),("saline-filled","saline filled")),
   "fire_rescue":(("stop/disconnect","disconnect"),("remove the burning endotracheal tube","remove the burning"),("extinguish",),("re-establish ventilation","re establish ventilation"),("bronchoscopy","endoscopy")),
+ },
+ "cc-v112-rec-facial-plastics-trauma-local-flap-reconstruction":{
+  "defect_first":(("start with the defect",),("depth",),("free margins","free margin"),("aesthetic units","aesthetic unit")),
+  "geometry":(("advancement",),("rotation",),("transposition",),("tension-vector","tension vector")),
+  "vascularity":(("random-pattern","random pattern"),("axial-pattern","axial pattern"),("pedicle",),("length-to-width","length to width")),
+  "donor_site":(("donor-site","donor site"),("secondary defect",),("ectropion",),("alar",)),
+  "perfusion":(("pale",),("dusky",),("congested",),("hematoma",),("torsion",)),
+  "rescue":(("release constricting",),("evacuate a hematoma",),("revise the inset","reopen")),
  }
 }
 
@@ -78,6 +87,8 @@ def main():
   elif 'laser-energy-safety' in qid:
    for required in ('aorn','anesthesia patient safety foundation'):
     if required not in cites: failures.append('source_'+required+':'+qid)
+  elif 'local-flap-reconstruction' in qid:
+   pass
   else:
    for required in ('american burn association','braun'):
     if required not in cites: failures.append('source_'+required+':'+qid)
