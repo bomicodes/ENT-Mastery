@@ -6,6 +6,7 @@ Pasha maps its review bank to the final live question objects.
 import runtime_entry
 from interpretation_labs_cleanup_v250 import apply_interpretation_labs_cleanup_v250
 from pasha_routes import bp as pasha_review_blueprint
+from practice_bank_navigation_v150 import install_practice_bank_navigation_v150
 from deep_curriculum_otology_v284 import apply_otology_etd_rebuild_v284
 from deep_curriculum_production_chain_v314 import apply_deep_curriculum_production_chain_v314
 from or_tonsil_hemorrhage_rescue_v281 import apply_or_tonsil_hemorrhage_rescue_v281
@@ -119,5 +120,13 @@ INTERPRETATION_LABS_CLEANUP_V250 = apply_interpretation_labs_cleanup_v250(
 )
 
 app=runtime_entry.app
+
+# Turn Clinical Challenges and Concept Checks into continuous practice-bank sessions
+# while preserving the existing mastery/scoring APIs and final assembled question data.
+PRACTICE_BANK_NAVIGATION_V150 = install_practice_bank_navigation_v150(
+    app,
+    runtime_entry.app_mod,
+)
+
 if "pasha_review" not in app.blueprints:
     app.register_blueprint(pasha_review_blueprint)
