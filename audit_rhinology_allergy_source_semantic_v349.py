@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
 """v34.9 — fail closed on live Allergic Rhinitis/LAR source and decision semantics.
 
-This gate complements the existing vignette-level v29.7 distinction audit.  It protects
+This gate complements the existing vignette-level v29.7 distinction audit. It protects
 exact live Deep Curriculum concepts so textbook provenance, current AAO-HNSF guidance,
 and clinically consequential allergy-testing/immunotherapy distinctions cannot silently
 fall out of the Render assembly while the topic names still exist.
+
+Important: Render launches runtime_entry_pasha:app. Audit that same final production
+boundary directly rather than relying on another audit/import to have applied the
+post-v28.4 cumulative curriculum chain first. This keeps standalone and global release
+results deterministic and prevents import-order state from producing a false green.
 """
 
 import sys
-import runtime_entry as rt
+import runtime_entry_pasha as production
 
 DOMAIN = "Rhinology / Allergy / Skull Base"
 TOPICS = ("Allergic Rhinitis", "Local Allergic Rhinitis")
@@ -37,7 +42,7 @@ def require_any(text, groups, label):
 
 
 def main():
-    data = rt.data
+    data = production.runtime_entry.data
     rows = (getattr(data, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
     by_topic = {str(row.get("topic") or ""): row for row in rows}
     failures = 0
@@ -60,7 +65,7 @@ def main():
         text = module_text(row)
         sources = source_text(row)
 
-        # The connected core-textbook trail must survive runtime assembly.
+        # The connected core-textbook trail must survive final production assembly.
         for token in ("cummings", "k.j. lee", "pasha"):
             if token not in sources:
                 failures += fail(f"{topic}: missing connected textbook provenance {token!r}")
@@ -102,8 +107,9 @@ def main():
         print(f"\nRhinology allergy source-semantic gate FAILED with {failures} issue(s).")
         return 1
 
+    print("RHINOLOGY_ALLERGY_PRODUCTION_ENTRYPOINT|runtime_entry_pasha:app")
     print("RHINOLOGY_ALLERGY_CANONICAL_IDS|" + "|".join(f"{topic}={expected_ids[topic]}" for topic in TOPICS))
-    print("PASS: exact live AR/LAR concepts retain core-textbook provenance, current guideline trails, selective testing, phenotype discrimination, and appropriate immunotherapy/surgical decision boundaries")
+    print("PASS: exact final-production AR/LAR concepts retain core-textbook provenance, current guideline trails, selective testing, phenotype discrimination, and appropriate immunotherapy/surgical decision boundaries")
     return 0
 
 
