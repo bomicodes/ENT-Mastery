@@ -6,6 +6,7 @@ TARGETS={
  'cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns',
  'cc-v112-mgt-pediatric-otolaryngology-microtia-reconstruction',
  'cc-v112-rec-laryngology-voice-swallowing-tracheobronchial-endoscopy-principles',
+ 'cc-v112-mgt-general-ent-emergencies-laser-energy-safety-in-otolaryngology',
 }
 
 def main():
