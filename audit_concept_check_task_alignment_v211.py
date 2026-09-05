@@ -2,8 +2,10 @@
 import re
 import runtime_entry
 from concept_check_board_repair_v177 import _find_module
-from concept_check_depth_v211 import COHORT
+from concept_check_depth_v211 import COHORT as BASE_COHORT
+from concept_check_laser_energy_safety_v211 import COHORT_LASER_V211
 
+COHORT={**BASE_COHORT,**COHORT_LASER_V211}
 QIDS=tuple(COHORT)
 SEMANTIC_REQUIREMENTS={
  "cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns":{
@@ -30,6 +32,15 @@ SEMANTIC_REQUIREMENTS={
   "retrieval":(("blind",),("distal",),("sharp",),("second look","re inspect")),
   "complications":(("hypoxemia",),("pneumothorax",),("perforation",),("bronchospasm","laryngospasm")),
   "rescue":(("restore ventilation","restore an airway"),("stop",),("thoracic","tracheotomy","open")),
+ },
+ "cc-v112-mgt-general-ent-emergencies-laser-energy-safety-in-otolaryngology":{
+  "tissue_effect":(("wavelength",),("tissue effect",),("lowest effective",)),
+  "eye_protection":(("wavelength-specific","wavelength specific"),("eye protection",)),
+  "plume":(("smoke evacuation",),("source",),("filtration",)),
+  "fire_triad":(("fire triad",),("ignition",),("oxidizer",),("fuel",)),
+  "oxidizer":(("fio2",),("nitrous oxide",),("lowest concentration","lowest")),
+  "tube":(("laser-resistant","laser resistant"),("not mean laser-proof","not mean laser proof"),("saline-filled","saline filled")),
+  "fire_rescue":(("stop/disconnect","disconnect"),("remove the burning endotracheal tube","remove the burning"),("extinguish",),("re-establish ventilation","re establish ventilation"),("bronchoscopy","endoscopy")),
  }
 }
 
@@ -63,6 +74,9 @@ def main():
     if required not in cites: failures.append('source_'+required+':'+qid)
   elif 'tracheobronchial-endoscopy' in qid:
    for required in ('otolaryngol clin','ct scan','j clin med'):
+    if required not in cites: failures.append('source_'+required+':'+qid)
+  elif 'laser-energy-safety' in qid:
+   for required in ('aorn','anesthesia patient safety foundation'):
     if required not in cites: failures.append('source_'+required+':'+qid)
   else:
    for required in ('american burn association','braun'):
