@@ -1,7 +1,7 @@
 {% extends "base.html" %}{% block content %}
 <div class="breadcrumb"><a href="/clinical-challenges">Clinical Challenges</a> / {{q.topic}}</div>
 <div class="topic-hero lab-hero">
-  <div><span class="pill green">{{q.domain}}</span><h1>{{q.topic}}</h1><p class="lede">Choose before revealing. Your response is saved to the mastery system.</p></div>
+  <div><span class="pill green">{{q.domain}}</span><h1>{{q.topic}}</h1><p class="lede">Choose before revealing. Your response is saved to the mastery system.</p>{% if bank_total %}<p class="muted">Question {{position}} of {{bank_total}}</p>{% endif %}</div>
   {% if q.concept_id %}<a class="case-btn" href="/concept/id/{{q.concept_id|urlencode}}">Open full topic ↗</a>{% endif %}
 </div>
 
@@ -32,6 +32,10 @@
       <details><summary>Reveal reasoning</summary><p>Move toward urgent operative control for active or recurrent significant hemorrhage, hemodynamic instability or ongoing clinically important blood loss, airway compromise, a large or unstable tonsillar-fossa clot, concern for an arterial source, or bleeding that cannot be adequately visualized and controlled during monitored evaluation. Keep the patient NPO and involve anesthesia/OR early. Do not wait for a large hemoglobin drop before escalating—the bleeding history, current trajectory, perfusion, and airway risk matter more than a temporarily dry field or an initially reassuring hemoglobin.</p></details>
       {% endif %}
     </div>{% endif %}
+    <div class="adaptive-actions" style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
+      {% if next_q %}<a class="case-btn" href="/clinical-challenge/{{next_q.id}}">Next question →</a>{% else %}<a class="case-btn" href="/clinical-challenges">Bank complete ✓</a>{% endif %}
+      <a href="/clinical-challenges">Back to question bank</a>
+    </div>
   </div>
 </section>
 
@@ -55,6 +59,7 @@
      buttons.forEach((b,i)=>{ if(i===correct) b.classList.add('selected-rating'); });
      if(!isCorrect) btn.classList.add('save-error');
      feedback.classList.remove('hidden');
+     feedback.scrollIntoView({behavior:'smooth',block:'start'});
    }catch(err){
      answered=false; buttons.forEach(b=>b.disabled=false);
      result.innerHTML='<b>Could not save response.</b><p>Please try again.</p>'; feedback.classList.remove('hidden');
