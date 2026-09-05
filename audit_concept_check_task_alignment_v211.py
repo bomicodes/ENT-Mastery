@@ -1,4 +1,4 @@
-"""v20.11 hard gate for exact-canonical Facial Soft-Tissue Lacerations / Burns and Microtia Reconstruction depth."""
+"""v20.11 hard gate for exact-canonical targeted Concept Check depth."""
 import re
 import runtime_entry
 from concept_check_board_repair_v177 import _find_module
@@ -22,13 +22,19 @@ SEMANTIC_REQUIREMENTS={
   "alloplastic":(("porous-polyethylene","porous polyethylene"),("exposure",),("infection",)),
   "sequence":(("atresiaplasty",),("sequence",),("skin","vascular")),
   "multidisciplinary":(("multidisciplinary",),("hearing",),("auricular",)),
+ },
+ "cc-v112-rec-laryngology-voice-swallowing-tracheobronchial-endoscopy-principles":{
+  "scope_selection":(("rigid",),("flexible",),("central",),("distal",)),
+  "imaging":(("low dose ct","ultra low dose ct"),("high suspicion",),("normal chest radiograph","normal radiograph")),
+  "shared_airway":(("shared airway",),("spontaneous",),("controlled",),("ventilation",)),
+  "retrieval":(("blind",),("distal",),("sharp",),("second look","re inspect")),
+  "complications":(("hypoxemia",),("pneumothorax",),("perforation",),("bronchospasm","laryngospasm")),
+  "rescue":(("restore ventilation","restore an airway"),("stop",),("thoracic","tracheotomy","open")),
  }
 }
 
-
 def _words(s): return len(re.findall(r"\b\w+[\w'-]*\b",str(s or '')))
 def _norm(s): return re.sub(r"[^a-z0-9]+"," ",str(s or '').lower()).strip()
-
 
 def main():
  d=runtime_entry.data; checks=list(d.CONCEPT_CHECKS_V112); by={str(q.get('id') or ''):q for q in checks}; failures=[]
@@ -54,6 +60,9 @@ def main():
    if required not in cites: failures.append('source_'+required+':'+qid)
   if 'microtia' in qid:
    for required in ('international consensus','front surg','meta-analysis'):
+    if required not in cites: failures.append('source_'+required+':'+qid)
+  elif 'tracheobronchial-endoscopy' in qid:
+   for required in ('otolaryngol clin','ct scan','j clin med'):
     if required not in cites: failures.append('source_'+required+':'+qid)
   else:
    for required in ('american burn association','braun'):
