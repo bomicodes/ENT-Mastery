@@ -4,8 +4,9 @@ import runtime_entry
 from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v211 import COHORT as BASE_COHORT
 from concept_check_laser_energy_safety_v211 import COHORT_LASER_V211
+from concept_check_frontal_draf_v211 import COHORT_DRAF_V211
 
-COHORT={**BASE_COHORT,**COHORT_LASER_V211}
+COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_DRAF_V211}
 QIDS=tuple(COHORT)
 SEMANTIC_REQUIREMENTS={
  "cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns":{
@@ -41,6 +42,20 @@ SEMANTIC_REQUIREMENTS={
   "oxidizer":(("fio2",),("nitrous oxide",),("lowest concentration","lowest")),
   "tube":(("laser-resistant","laser resistant"),("not mean laser-proof","not mean laser proof"),("saline-filled","saline filled")),
   "fire_rescue":(("stop/disconnect","disconnect"),("remove the burning endotracheal tube","remove the burning"),("extinguish",),("re-establish ventilation","re establish ventilation"),("bronchoscopy","endoscopy")),
+ },
+ "cc-v112-mgt-rhinology-allergy-skull-base-frontal-sinusotomy-draf-procedures":{
+  "classification":(("draf i",),("draf iia",),("draf iib",),("draf iii",)),
+  "boundaries":(("lamina papyracea",),("middle turbinate",),("nasal septum",),("skull base",)),
+  "selection":(("least extensive",),("unilateral",),("bilateral",),("first-line","first line")),
+  "healing":(("mucosa",),("restenosis",),("type-2","type 2")),
+  "bailout":(("trephination",),("combined",),("open",),("csf leak","orbital")),
+ },
+ "cc-v112-rec-rhinology-allergy-skull-base-frontal-sinusotomy-draf-procedures":{
+  "classification":(("draf i",),("draf iia",),("draf iib",),("draf iii",)),
+  "boundaries":(("lamina papyracea",),("middle turbinate",),("nasal septum",),("skull base",)),
+  "selection":(("least extensive",),("unilateral",),("bilateral",),("first-line","first line")),
+  "healing":(("mucosa",),("restenosis",),("type-2","type 2")),
+  "bailout":(("trephination",),("combined",),("open",),("csf leak","orbital")),
  }
 }
 
@@ -77,6 +92,9 @@ def main():
     if required not in cites: failures.append('source_'+required+':'+qid)
   elif 'laser-energy-safety' in qid:
    for required in ('aorn','anesthesia patient safety foundation'):
+    if required not in cites: failures.append('source_'+required+':'+qid)
+  elif 'frontal-sinusotomy-draf' in qid:
+   for required in ('lucidi','shahid','lein','chiari'):
     if required not in cites: failures.append('source_'+required+':'+qid)
   else:
    for required in ('american burn association','braun'):
