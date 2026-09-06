@@ -8,8 +8,9 @@ from concept_check_frontal_draf_v211 import COHORT_DRAF_V211
 from concept_check_four_gland_parathyroid_v211 import COHORT_PARATHYROID_V211
 from concept_check_local_flap_reconstruction_v211 import COHORT_LOCAL_FLAP_V211
 from concept_check_cervicofacial_flap_v211 import COHORT_CERVICOFACIAL_V211
+from concept_check_forehead_flap_v211 import COHORT_FOREHEAD_V211
 
-COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_DRAF_V211,**COHORT_PARATHYROID_V211,**COHORT_LOCAL_FLAP_V211,**COHORT_CERVICOFACIAL_V211}
+COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_DRAF_V211,**COHORT_PARATHYROID_V211,**COHORT_LOCAL_FLAP_V211,**COHORT_CERVICOFACIAL_V211,**COHORT_FOREHEAD_V211}
 QIDS=tuple(COHORT)
 SEMANTIC_REQUIREMENTS={
  "cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns":{
@@ -84,6 +85,15 @@ SEMANTIC_REQUIREMENTS={
   "perfusion":(("pale",),("dusky",),("hematoma",),("kink","twist")),
   "bailout":(("regional flap",),("free tissue",),("bulk",),("lining","structural support")),
  },
+ "cc-v112-rec-facial-plastics-trauma-forehead-flap-nasal-reconstruction":{
+  "defect_layers":(("nasal subunits","nasal subunit"),("lining",),("structural support",),("cover",)),
+  "pedicle":(("supratrochlear",),("kink",),("torsion",),("compression",)),
+  "staging":(("two-stage","two stage"),("three-stage","three stage"),("intermediate",),("thinning","refinement")),
+  "division":(("pedicle division",),("well healed",),("vascularized",),("calendar",)),
+  "perfusion":(("pale",),("dusky",),("hematoma",),("capillary refill",)),
+  "rescue":(("release constricting",),("correct pedicle",),("evacuate",),("operative reassessment",)),
+  "function":(("alar support",),("nasal-valve","nasal valve"),("airway",)),
+ },
 }
 
 def _words(s): return len(re.findall(r"\b\w+[\w'-]*\b",str(s or '')))
@@ -130,6 +140,9 @@ def main():
    pass
   elif 'cervicofacial-flap' in qid:
    for required in ('alam','sakellariou'):
+    if required not in cites: failures.append('source_'+required+':'+qid)
+  elif 'forehead-flap-nasal-reconstruction' in qid:
+   for required in ('correa','two or three'):
     if required not in cites: failures.append('source_'+required+':'+qid)
   else:
    for required in ('american burn association','braun'):
