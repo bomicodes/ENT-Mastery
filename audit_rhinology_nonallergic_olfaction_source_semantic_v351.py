@@ -4,7 +4,7 @@ import sys
 import runtime_entry_pasha as production
 
 DOMAIN = "Rhinology / Allergy / Skull Base"
-TOPICS = ("Nonallergic Rhinitis", "Olfactory Dysfunction")
+TOPICS = ("Nonallergic Rhinitis / Rhinitis Medicamentosa", "Olfactory Dysfunction")
 FIELDS = ("recognize", "localize", "workup", "manage", "operate", "teach")
 
 
@@ -21,7 +21,7 @@ def require(t, groups):
     return any(all(token in t for token in group) for group in groups)
 
 REQ = {
-    "Nonallergic Rhinitis": [
+    "Nonallergic Rhinitis / Rhinitis Medicamentosa": [
         (("intranasal antihistamine", "intranasal corticosteroid"),),
         (("ipratropium", "watery rhinorrhea"), ("ipratropium", "gustatory")),
         (("local allergic rhinitis", "nares"),),
@@ -62,21 +62,21 @@ def main():
         for token in ("cummings", "k.j. lee", "pasha"):
             if token not in s:
                 failures += fail(f"{topic}: missing textbook provenance {token!r}")
-        if topic == "Nonallergic Rhinitis" and not any(x in t for x in ("irritant", "weather", "gustatory", "rhinitis medicamentosa")):
-            failures += fail("Nonallergic Rhinitis: missing phenotype/trigger framework")
+        if topic == "Nonallergic Rhinitis / Rhinitis Medicamentosa" and not any(x in t for x in ("irritant", "weather", "gustatory", "rhinitis medicamentosa")):
+            failures += fail("Nonallergic Rhinitis / Rhinitis Medicamentosa: missing phenotype/trigger framework")
         for group in REQ[topic]:
             if not require(t, group):
                 failures += fail(f"{topic}: missing semantic group {group}")
-    nar = by_topic.get("Nonallergic Rhinitis") or {}
+    nar = by_topic.get("Nonallergic Rhinitis / Rhinitis Medicamentosa") or {}
     if "rhinitis 2020" not in sources(nar) or "practice parameter" not in sources(nar):
-        failures += fail("Nonallergic Rhinitis: missing Rhinitis 2020 practice-parameter trail")
+        failures += fail("Nonallergic Rhinitis / Rhinitis Medicamentosa: missing Rhinitis 2020 practice-parameter trail")
     olf = by_topic.get("Olfactory Dysfunction") or {}
     if "icar:olfaction" not in sources(olf) or "2022" not in sources(olf):
         failures += fail("Olfactory Dysfunction: missing ICAR:Olfaction source trail")
     if failures:
         print(f"RHINOLOGY_NONALLERGIC_OLFACTION_V351_FAILED|{failures}"); return 1
     print("RHINOLOGY_NONALLERGIC_OLFACTION_V351_CANONICAL_IDS|" + "|".join(f"{k}={v}" for k,v in ids.items()))
-    print("PASS: final-production Nonallergic Rhinitis and Olfactory Dysfunction retain textbook provenance, consensus guidance, deliberate-review metadata and senior decision semantics")
+    print("PASS: final-production Nonallergic Rhinitis / Rhinitis Medicamentosa and Olfactory Dysfunction retain textbook provenance, consensus guidance, deliberate-review metadata and senior decision semantics")
     return 0
 
 if __name__ == "__main__": sys.exit(main())
