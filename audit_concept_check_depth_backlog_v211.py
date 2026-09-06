@@ -12,6 +12,7 @@ TARGETS={
  'cc-v112-mgt-thyroid-parathyroid-salivary-four-gland-parathyroid-exploration',
  'cc-v112-rec-facial-plastics-trauma-local-flap-reconstruction',
  'cc-v112-rec-facial-plastics-trauma-cervicofacial-flap',
+ 'cc-v112-rec-facial-plastics-trauma-forehead-flap-nasal-reconstruction',
 }
 
 def main():
