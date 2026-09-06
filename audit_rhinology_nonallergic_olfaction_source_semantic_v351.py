@@ -22,7 +22,6 @@ def require(t, groups):
 
 REQ = {
     "Nonallergic Rhinitis": [
-        (("nsaid_placeholder",),),
         (("intranasal antihistamine", "intranasal corticosteroid"),),
         (("ipratropium", "watery rhinorrhea"), ("ipratropium", "gustatory")),
         (("local allergic rhinitis", "nares"),),
@@ -63,13 +62,9 @@ def main():
         for token in ("cummings", "k.j. lee", "pasha"):
             if token not in s:
                 failures += fail(f"{topic}: missing textbook provenance {token!r}")
-        groups = REQ[topic]
-        # First NAR tuple is replaced below with a direct phenotype requirement to keep semantics readable.
-        if topic == "Nonallergic Rhinitis":
-            if not any(x in t for x in ("irritant", "weather", "gustatory", "rhinitis medicamentosa")):
-                failures += fail("Nonallergic Rhinitis: missing phenotype/trigger framework")
-            groups = groups[1:]
-        for group in groups:
+        if topic == "Nonallergic Rhinitis" and not any(x in t for x in ("irritant", "weather", "gustatory", "rhinitis medicamentosa")):
+            failures += fail("Nonallergic Rhinitis: missing phenotype/trigger framework")
+        for group in REQ[topic]:
             if not require(t, group):
                 failures += fail(f"{topic}: missing semantic group {group}")
     nar = by_topic.get("Nonallergic Rhinitis") or {}
