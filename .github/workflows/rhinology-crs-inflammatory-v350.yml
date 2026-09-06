@@ -1,0 +1,49 @@
+name: Rhinology CRS inflammatory source-semantic v35.0
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'audit_rhinology_crs_inflammatory_source_semantic_v350.py'
+      - 'deep_curriculum_rhinology_v350.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_rhinology_ladder_complete_v218.py'
+      - 'runtime_entry_pasha.py'
+      - 'data.py'
+      - '.github/workflows/rhinology-crs-inflammatory-v350.yml'
+      - '.github/workflows/release-integrity.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'audit_rhinology_crs_inflammatory_source_semantic_v350.py'
+      - 'deep_curriculum_rhinology_v350.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_rhinology_ladder_complete_v218.py'
+      - 'runtime_entry_pasha.py'
+      - 'data.py'
+      - '.github/workflows/rhinology-crs-inflammatory-v350.yml'
+      - '.github/workflows/release-integrity.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Strict 325-topic canonical coverage contract
+        run: python audit_coverage_v135.py --depth --strict
+      - name: Full Rhinology canonical ladder gate
+        run: python audit_rhinology_ladder_complete_v218.py
+      - name: Allergy source-semantic predecessor gate
+        run: python audit_rhinology_allergy_source_semantic_v349.py
+      - name: CRS inflammatory source and decision-semantic gate
+        run: python audit_rhinology_crs_inflammatory_source_semantic_v350.py
+      - name: Reviewed-ladder answer-balance regression
+        run: python audit_ladder_answer_balance_v211.py
