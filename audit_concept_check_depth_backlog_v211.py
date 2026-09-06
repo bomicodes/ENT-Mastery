@@ -11,6 +11,7 @@ TARGETS={
  'cc-v112-rec-rhinology-allergy-skull-base-frontal-sinusotomy-draf-procedures',
  'cc-v112-mgt-thyroid-parathyroid-salivary-four-gland-parathyroid-exploration',
  'cc-v112-rec-facial-plastics-trauma-local-flap-reconstruction',
+ 'cc-v112-rec-facial-plastics-trauma-cervicofacial-flap',
 }
 
 def main():

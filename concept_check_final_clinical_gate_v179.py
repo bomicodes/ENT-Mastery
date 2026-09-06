@@ -46,6 +46,7 @@ from concept_check_laser_energy_safety_v211 import apply_laser_energy_safety_v21
 from concept_check_frontal_draf_v211 import apply_frontal_draf_v211
 from concept_check_four_gland_parathyroid_v211 import apply_four_gland_parathyroid_v211
 from concept_check_local_flap_reconstruction_v211 import apply_local_flap_reconstruction_v211
+from concept_check_cervicofacial_flap_v211 import apply_cervicofacial_flap_v211
 
 CLINICAL_STEM_RE = re.compile(r"\b(patient|child|infant|adult|man|woman|boy|girl|presents|returns|develops|postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b", re.I)
 
@@ -109,8 +110,9 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     draf_v211 = apply_frontal_draf_v211(checks, deep_modules, v6_item_id)
     parathyroid_v211 = apply_four_gland_parathyroid_v211(checks, deep_modules, v6_item_id)
     local_flap_v211 = apply_local_flap_reconstruction_v211(checks, deep_modules, v6_item_id)
+    cervicofacial_v211 = apply_cervicofacial_flap_v211(checks, deep_modules, v6_item_id)
     for key in ("repaired","missing","link_mismatch"):
-        alignment_v211[key] = list(dict.fromkeys(list(alignment_v211.get(key) or []) + list(laser_v211.get(key) or []) + list(draf_v211.get(key) or []) + list(parathyroid_v211.get(key) or []) + list(local_flap_v211.get(key) or [])))
+        alignment_v211[key] = list(dict.fromkeys(list(alignment_v211.get(key) or []) + list(laser_v211.get(key) or []) + list(draf_v211.get(key) or []) + list(parathyroid_v211.get(key) or []) + list(local_flap_v211.get(key) or []) + list(cervicofacial_v211.get(key) or [])))
     results["task_alignment_v211"] = alignment_v211
     results["post_alignment_reframed_v211"] = _reassert_clinical_contract(checks, alignment_v211.get("repaired", []), unresolved, "post_alignment_clinical_frame_v211")
     return results
