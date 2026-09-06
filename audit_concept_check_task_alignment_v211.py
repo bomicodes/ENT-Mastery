@@ -9,8 +9,9 @@ from concept_check_four_gland_parathyroid_v211 import COHORT_PARATHYROID_V211
 from concept_check_local_flap_reconstruction_v211 import COHORT_LOCAL_FLAP_V211
 from concept_check_cervicofacial_flap_v211 import COHORT_CERVICOFACIAL_V211
 from concept_check_microlaryngoscopy_v211 import COHORT_MICROLARYNGOSCOPY_V211
+from concept_check_tracheomalacia_bronchomalacia_v211 import COHORT_TRACHEOMALACIA_V211
 
-COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_DRAF_V211,**COHORT_PARATHYROID_V211,**COHORT_LOCAL_FLAP_V211,**COHORT_CERVICOFACIAL_V211,**COHORT_MICROLARYNGOSCOPY_V211}
+COHORT={**BASE_COHORT,**COHORT_LASER_V211,**COHORT_DRAF_V211,**COHORT_PARATHYROID_V211,**COHORT_LOCAL_FLAP_V211,**COHORT_CERVICOFACIAL_V211,**COHORT_MICROLARYNGOSCOPY_V211,**COHORT_TRACHEOMALACIA_V211}
 QIDS=tuple(COHORT)
 SEMANTIC_REQUIREMENTS={
  "cc-v112-rec-facial-plastics-trauma-facial-soft-tissue-lacerations-burns":{
@@ -103,6 +104,15 @@ SEMANTIC_REQUIREMENTS={
   "shared_airway":(("shared-airway","shared airway"),("oxygenation",),("restore ventilation","ventilation can be restored","restoring ventilation")),
   "rescue":(("lingual-nerve","lingual nerve"),("web",),("stridor",),("bleeding",)),
  },
+ "cc-v112-rec-airway-bronchoscopy-tracheomalacia-bronchomalacia":{
+  "dynamic_diagnosis":(("dynamic flexible bronchoscopy",),("free-breathing","free breathing"),("dynamic ct","dynamic imaging")),
+  "map_geometry":(("mainstem",),("posterior",),("anterior",),("vascular","extrinsic")),
+  "support":(("positive airway pressure",),("pneumatic stent",),("cpap","peep")),
+  "severity":(("cyanotic",),("pneumonia",),("failure to thrive",),("ventilator","ventilation")),
+  "anatomy_directed":(("aortopexy",),("posterior tracheopexy",),("bronchopexy",)),
+  "diagnostic_rescue":(("oxygenation",),("restore ventilation",),("peep","cpap")),
+  "tracheostomy_limit":(("tracheostomy",),("distal",),("bronchomalacia",)),
+ },
 }
 
 def _words(s): return len(re.findall(r"\b\w+[\w'-]*\b",str(s or '')))
@@ -135,6 +145,9 @@ def main():
     if required not in cites: failures.append('source_'+required+':'+qid)
   elif 'tracheobronchial-endoscopy' in qid:
    for required in ('otolaryngol clin','ct scan','j clin med'):
+    if required not in cites: failures.append('source_'+required+':'+qid)
+  elif 'tracheomalacia-bronchomalacia' in qid:
+   for required in ('ers statement','two-center'):
     if required not in cites: failures.append('source_'+required+':'+qid)
   elif 'laser-energy-safety' in qid:
    for required in ('aorn','anesthesia patient safety foundation'):
