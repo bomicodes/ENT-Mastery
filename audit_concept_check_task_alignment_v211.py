@@ -91,7 +91,7 @@ SEMANTIC_REQUIREMENTS={
   "direct_exam":(("palpation",),("angled",),("anterior commissure",),("ventricle",)),
   "microanatomy":(("superficial lamina propria",),("vocal ligament",),("epithelium",)),
   "operative_goal":(("biopsy",),("phonomicrosurgery",),("microflap",),("oncologic",)),
-  "shared_airway":(("shared-airway","shared airway"),("oxygenation",),("restore ventilation",)),
+  "shared_airway":(("shared-airway","shared airway"),("oxygenation",),("restore ventilation","ventilation can be restored","restoring ventilation")),
   "rescue":(("lingual-nerve","lingual nerve"),("web",),("stridor",),("bleeding",)),
  },
  "cc-v112-rec-laryngology-voice-swallowing-microlaryngoscopy":{
@@ -100,7 +100,7 @@ SEMANTIC_REQUIREMENTS={
   "direct_exam":(("palpation",),("angled",),("anterior commissure",),("ventricle",)),
   "microanatomy":(("superficial lamina propria",),("vocal ligament",),("epithelium",)),
   "operative_goal":(("biopsy",),("phonomicrosurgery",),("microflap",),("oncologic",)),
-  "shared_airway":(("shared-airway","shared airway"),("oxygenation",),("restore ventilation",)),
+  "shared_airway":(("shared-airway","shared airway"),("oxygenation",),("restore ventilation","ventilation can be restored","restoring ventilation")),
   "rescue":(("lingual-nerve","lingual nerve"),("web",),("stridor",),("bleeding",)),
  },
 }
