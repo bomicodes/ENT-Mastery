@@ -31,11 +31,15 @@ Subunit principles help camouflage scars and restore contour, but they are guide
 
 Senior synthesis — make seven decisions: DEFECT: which nasal subunits and layers are missing? INDICATION: does this need staged axial forehead skin rather than a smaller option? LINING: how will the internal surface be restored? SUPPORT: what cartilage/framework is required to resist contraction and preserve the valve? COVER: how will the supratrochlear flap be designed and transferred without pedicle distortion? STAGING: is two-stage reconstruction sufficient or is an intermediate thinning/refinement stage safer? DIVISION/RESCUE: is the flap truly healed and independently perfused, and if it becomes threatened have all reversible mechanical causes been corrected immediately? The dangerous alternatives are treating the forehead flap as a one-layer skin solution, placing cover over absent lining/support, over-thinning at the first transfer, accepting pedicle kink or tight inset, dividing because a date arrived despite questionable healing, and watching progressive congestion without correcting the cause."""
 
+CURVEBALL="The flap is dusky and swollen after stage 1 and only looks acceptable when the inset sutures are loosened. What should you do next?"
+CURVEBALL_ANSWER="Treat this as venous outflow compromise until proven otherwise. Keep the inset nonconstricting, remove external compression, inspect the supratrochlear pedicle for kink or torsion, look for and evacuate a compressive hematoma when present, and reassess color, turgor and capillary refill immediately. If congestion persists despite correction of reversible mechanical causes, obtain early operative reassessment; adjunctive venous-decongestion measures are secondary and should not delay correction of tension, compression, hematoma or pedicle distortion."
+
 COHORT_FOREHEAD_V211={QID:{
  "concept_id":CID,"canonical_topic":TOPIC,"prompt":PROMPT,"answer_text":ANSWER,
  "explanation":"Paramedian forehead-flap reconstruction is a staged three-layer nasal problem: separately restore lining and support, use supratrochlear axial tissue for cover, choose staging deliberately, protect the pedicle, and treat vascular compromise as an immediate mechanical-rescue problem.",
  "board_pearl":"The forehead flap provides COVER. Large full-thickness nasal defects still require an independent plan for LINING and STRUCTURAL SUPPORT; pedicle division depends on healing/perfusion, not the calendar alone.",
- "curveball":"The flap is dusky and swollen after stage 1 and only looks acceptable when the inset sutures are loosened. Do not retighten the sutures or simply observe: remove compression/tension, check for pedicle kink/torsion and hematoma, restore a nonconstricting inset, and escalate early if perfusion remains abnormal.",
+ "curveball":CURVEBALL,
+ "curveball_answer":CURVEBALL_ANSWER,
  "depth_layers_v211":["forehead-flap indication and nasal subunit analysis","lining-support-cover decomposition and sequence","supratrochlear axial pedicle anatomy","two- versus three-stage decision","initial transfer and conservative thinning","pedicle-division readiness","arterial versus venous compromise recognition and rescue","functional/aesthetic bailout decisions"],
  "common_traps_v211":[
   "Treating a forehead flap as a larger generic local flap",
