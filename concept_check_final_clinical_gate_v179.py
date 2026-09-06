@@ -42,6 +42,7 @@ from concept_check_depth_v208 import apply_concept_check_task_alignment_v208
 from concept_check_depth_v209 import apply_concept_check_task_alignment_v209
 from concept_check_depth_v210 import apply_concept_check_task_alignment_v210
 from concept_check_depth_v211 import apply_concept_check_task_alignment_v211
+from concept_check_depth_v212 import apply_concept_check_task_alignment_v212
 from concept_check_laser_energy_safety_v211 import apply_laser_energy_safety_v211
 from concept_check_frontal_draf_v211 import apply_frontal_draf_v211
 from concept_check_four_gland_parathyroid_v211 import apply_four_gland_parathyroid_v211
@@ -50,22 +51,30 @@ from concept_check_cervicofacial_flap_v211 import apply_cervicofacial_flap_v211
 
 CLINICAL_STEM_RE = re.compile(r"\b(patient|child|infant|adult|man|woman|boy|girl|presents|returns|develops|postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b", re.I)
 
+
 def _clinical_prompt(q):
     prompt = str(q.get("prompt") or q.get("question") or q.get("stem") or "")
     return "?" in prompt and bool(CLINICAL_STEM_RE.search(prompt))
+
 
 def _reassert_clinical_contract(checks, repaired_ids, unresolved, marker):
     by_id = {str(q.get("id") or ""): q for q in checks or []}
     reframed = []
     for qid in repaired_ids:
         q = by_id.get(str(qid))
-        if q is None or _clinical_prompt(q): continue
+        if q is None or _clinical_prompt(q):
+            continue
         prompt = str(q.get("prompt") or q.get("question") or q.get("stem") or "").strip()
         if prompt:
             q["prompt"] = "A patient is evaluated by the otolaryngology service. " + prompt
-            q.pop("question", None); q.pop("stem", None); q[marker] = True; reframed.append(qid)
-        else: unresolved.append(qid)
+            q.pop("question", None)
+            q.pop("stem", None)
+            q[marker] = True
+            reframed.append(qid)
+        else:
+            unresolved.append(qid)
     return reframed
+
 
 _ALIGNMENT_FUNCS = [
     (180, apply_concept_check_task_alignment_v180, False),(181, apply_concept_check_task_alignment_v181, False),(182, apply_concept_check_task_alignment_v182, False),
@@ -80,22 +89,30 @@ _ALIGNMENT_FUNCS = [
     (207, apply_concept_check_task_alignment_v207, True),
 ]
 
+
 def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     converted, unresolved = [], []
     for q in checks or []:
-        if _clinical_prompt(q): continue
+        if _clinical_prompt(q):
+            continue
         module = _find_module(q, deep_modules, v6_item_id)
-        if module and _convert_to_domain_oral_board(q, module): q["final_clinical_gate_v179"] = True; converted.append(q.get("id"))
-        else: unresolved.append(q.get("id"))
+        if module and _convert_to_domain_oral_board(q, module):
+            q["final_clinical_gate_v179"] = True
+            converted.append(q.get("id"))
+        else:
+            unresolved.append(q.get("id"))
     results = {"converted": converted, "unresolved": unresolved, "v184_content_fix": apply_bot_trimodality_depth_v184()}
     for version, fn, needs_context in _ALIGNMENT_FUNCS:
         alignment = fn(checks, deep_modules, v6_item_id) if needs_context else fn(checks)
         results[f"task_alignment_v{version}"] = alignment
         marker = f"post_alignment_clinical_frame_v{version}"
         reframed = _reassert_clinical_contract(checks, alignment.get("repaired", []), unresolved, marker)
-        if version == 180: results["post_alignment_reframed_v181"] = reframed
-        elif version == 181: results["post_alignment_reframed_v181_cohort2"] = reframed
-        else: results[f"post_alignment_reframed_v{version}"] = reframed
+        if version == 180:
+            results["post_alignment_reframed_v181"] = reframed
+        elif version == 181:
+            results["post_alignment_reframed_v181_cohort2"] = reframed
+        else:
+            results[f"post_alignment_reframed_v{version}"] = reframed
     alignment_v208 = apply_concept_check_task_alignment_v208(checks, deep_modules, v6_item_id)
     results["task_alignment_v208"] = alignment_v208
     results["post_alignment_reframed_v208"] = _reassert_clinical_contract(checks, alignment_v208.get("repaired", []), unresolved, "post_alignment_clinical_frame_v208")
@@ -111,8 +128,18 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     parathyroid_v211 = apply_four_gland_parathyroid_v211(checks, deep_modules, v6_item_id)
     local_flap_v211 = apply_local_flap_reconstruction_v211(checks, deep_modules, v6_item_id)
     cervicofacial_v211 = apply_cervicofacial_flap_v211(checks, deep_modules, v6_item_id)
-    for key in ("repaired","missing","link_mismatch"):
-        alignment_v211[key] = list(dict.fromkeys(list(alignment_v211.get(key) or []) + list(laser_v211.get(key) or []) + list(draf_v211.get(key) or []) + list(parathyroid_v211.get(key) or []) + list(local_flap_v211.get(key) or []) + list(cervicofacial_v211.get(key) or [])))
+    for key in ("repaired", "missing", "link_mismatch"):
+        alignment_v211[key] = list(dict.fromkeys(
+            list(alignment_v211.get(key) or [])
+            + list(laser_v211.get(key) or [])
+            + list(draf_v211.get(key) or [])
+            + list(parathyroid_v211.get(key) or [])
+            + list(local_flap_v211.get(key) or [])
+            + list(cervicofacial_v211.get(key) or [])
+        ))
     results["task_alignment_v211"] = alignment_v211
     results["post_alignment_reframed_v211"] = _reassert_clinical_contract(checks, alignment_v211.get("repaired", []), unresolved, "post_alignment_clinical_frame_v211")
+    alignment_v212 = apply_concept_check_task_alignment_v212(checks, deep_modules, v6_item_id)
+    results["task_alignment_v212"] = alignment_v212
+    results["post_alignment_reframed_v212"] = _reassert_clinical_contract(checks, alignment_v212.get("repaired", []), unresolved, "post_alignment_clinical_frame_v212")
     return results
