@@ -6,14 +6,8 @@ Practice Parameter and ICAR:Olfaction so the final production curriculum protect
 phenotype-specific decisions rather than generic labels.
 """
 
-import re
-
 DOMAIN = "Rhinology / Allergy / Skull Base"
 FIELDS = ("recognize", "localize", "workup", "manage", "operate", "teach")
-
-
-def _norm(value):
-    return re.sub(r"[^a-z0-9]+", " ", str(value or "").lower()).strip()
 
 
 CORE_SOURCES = [
@@ -27,8 +21,10 @@ def _sources(*extra):
     return list(CORE_SOURCES) + list(extra)
 
 
+# Exact live canonical topic names only. Do not alias-normalize these targets: a
+# canonical inventory rename must fail closed instead of silently patching the wrong row.
 PATCHES = {
-    "nonallergic rhinitis": {
+    "Nonallergic Rhinitis / Rhinitis Medicamentosa": {
         "recognize": "Recognize NONALLERGIC RHINITIS (NAR) as a phenotype-driven chronic rhinitis syndrome in which symptoms such as congestion and rhinorrhea are not explained by clinically relevant systemic IgE-mediated allergy. Do not use 'vasomotor rhinitis' as a wastebasket diagnosis. Identify reproducible triggers and subphenotypes: irritant/odor exposure, temperature or weather change, gustatory rhinorrhea, medication effects, hormonal states, rhinitis medicamentosa, and eosinophilic NARES. Local allergic rhinitis is a separate possibility when systemic testing is negative but the history remains strongly allergen-linked.",
         "localize": "Localize the dominant problem by symptom physiology rather than by label alone. Predominant watery rhinorrhea points toward excessive parasympathetic/glandular secretion; congestion may reflect neurovascular mucosal swelling or coexisting inflammatory/structural disease. NARES has eosinophilic inflammation without conventional systemic sensitization, while local allergic rhinitis requires evidence of local allergen-driven disease. Septal deviation, valve compromise, turbinate hypertrophy, CRS, medication overuse and CSF rhinorrhea are not interchangeable with NAR.",
         "workup": "Start with trigger chronology, medication review, laterality, prior surgery/trauma, allergy pattern and focused nasal examination/endoscopy. Use skin-prick or serum-specific IgE testing selectively when the history leaves allergic rhinitis plausible; a negative systemic test does not automatically prove NAR or exclude local allergic rhinitis. Look for dangerous alternatives: unilateral persistent clear watery drainage after trauma/skull-base surgery, salty/metallic postnasal taste, recurrent meningitis or positional leakage should trigger CSF-leak evaluation rather than empiric rhinitis treatment; unilateral bleeding, mass effect or progressive obstruction requires structural/neoplastic evaluation.",
@@ -38,7 +34,7 @@ PATCHES = {
         "tags": ["nonallergic rhinitis", "NAR", "NARES", "ipratropium", "intranasal antihistamine", "rhinitis medicamentosa", "CSF leak"],
         "source_basis": _sources("Rhinitis 2020: A Practice Parameter Update (AAAAI/ACAAI Joint Task Force) — NAR phenotypes, intranasal antihistamine/INCS monotherapy, combination treatment, ipratropium and diagnostic distinctions"),
     },
-    "olfactory dysfunction": {
+    "Olfactory Dysfunction": {
         "recognize": "Recognize OLFACTORY DYSFUNCTION as a symptom that requires characterization rather than a single diagnosis: anosmia/hyposmia are quantitative loss, while parosmia and phantosmia are qualitative distortions. Separate common inflammatory/conductive causes such as CRSwNP/CRS from postviral, post-traumatic, medication/toxin-related, congenital and central/neurodegenerative causes. Sudden smell loss, persistent unilateral symptoms, focal neurologic findings or an associated sinonasal mass change the urgency and differential.",
         "localize": "Localize smell loss along the pathway. Conductive/inflammatory disease prevents odorant access to the olfactory cleft or alters local mucosal function; sensorineural injury can involve olfactory neuroepithelium/nerve after viral or traumatic injury; central dysfunction involves bulb, tract or higher cortical processing. Endoscopy can identify olfactory-cleft edema, polyps, tumor or postoperative anatomy, but a normal-appearing nose does not exclude postviral or central olfactory loss.",
         "workup": "Take a cause-focused history including onset, URI/COVID-like illness, head trauma, CRS/polyps, medications/toxic exposure, smoking, neurologic symptoms and qualitative distortions. Perform nasal examination/endoscopy and use VALIDATED PSYCHOPHYSICAL OLFACTORY TESTING when objective baseline, severity classification or follow-up matters; self-rating alone is insufficient. Imaging is targeted rather than automatic: obtain CT for suspected sinonasal inflammatory/structural disease and MRI when unexplained loss, unilateral findings, mass concern, trauma-related central injury or focal neurologic features warrant evaluation.",
@@ -55,7 +51,8 @@ def apply_rhinology_nonallergic_olfaction_depth_v351(data_module, app_module=Non
     modules = (getattr(data_module, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, [])
     patched = []
     for module in modules:
-        payload = PATCHES.get(_norm(module.get("topic")))
+        topic = str(module.get("topic") or "")
+        payload = PATCHES.get(topic)
         if payload is None:
             continue
         for field in FIELDS:
@@ -68,7 +65,16 @@ def apply_rhinology_nonallergic_olfaction_depth_v351(data_module, app_module=Non
             "application": "selective objective workup plus phenotype- or etiology-specific treatment",
             "senior_decision": "dangerous-alternative recognition, procedure/imaging restraint, rehabilitation and safety counseling",
         }
-        patched.append(module.get("topic"))
+        patched.append(topic)
+    expected = set(PATCHES)
+    actual = set(patched)
+    if actual != expected:
+        missing = sorted(expected - actual)
+        unexpected = sorted(actual - expected)
+        raise RuntimeError(
+            "v35.1 canonical patch-target mismatch: "
+            f"missing={missing or 'none'} unexpected={unexpected or 'none'}"
+        )
     if app_module is not None:
         app_module.DEEP_MODULES_V6 = data_module.DEEP_MODULES_V6
     return {"patched": patched, "count": len(patched)}
