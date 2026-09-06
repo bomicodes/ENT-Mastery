@@ -14,6 +14,7 @@ TARGETS={
  'cc-v112-rec-facial-plastics-trauma-cervicofacial-flap',
  'cc-v112-mgt-laryngology-voice-swallowing-microlaryngoscopy',
  'cc-v112-rec-laryngology-voice-swallowing-microlaryngoscopy',
+ 'cc-v112-rec-airway-bronchoscopy-tracheomalacia-bronchomalacia',
 }
 
 def main():
