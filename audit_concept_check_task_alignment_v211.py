@@ -105,12 +105,12 @@ SEMANTIC_REQUIREMENTS={
   "rescue":(("lingual-nerve","lingual nerve"),("web",),("stridor",),("bleeding",)),
  },
  "cc-v112-rec-pediatric-otolaryngology-tracheomalacia-bronchomalacia":{
-  "dynamic_diagnosis":(("dynamic flexible bronchoscopy",),("free-breathing","free breathing"),("dynamic ct","dynamic imaging")),
+  "dynamic_diagnosis":(("flexible bronchoscopy",),("free-breathing","free breathing"),("dynamic ct","dynamic imaging","dynamic ct or mri")),
   "map_geometry":(("mainstem",),("posterior",),("anterior",),("vascular","extrinsic")),
-  "support":(("positive airway pressure",),("pneumatic stent",),("cpap","peep")),
-  "severity":(("cyanotic",),("pneumonia",),("failure to thrive",),("ventilator","ventilation")),
-  "anatomy_directed":(("aortopexy",),("posterior tracheopexy",),("bronchopexy",)),
-  "diagnostic_rescue":(("oxygenation",),("restore ventilation",),("peep","cpap")),
+  "support":(("cpap",),("pneumatic stent","pneumatic stenting"),("positive pressure","positive-pressure")),
+  "severity":(("cyanotic",),("pneumonia",),("failure to thrive","growth"),("ventilator","ventilation")),
+  "anatomy_directed":(("aortopexy",),("posterior tracheopexy",),("bronchopexy","bronchus-directed","bronchus directed")),
+  "diagnostic_rescue":(("oxygenation",),("ventilation",),("stabilize","restore"),("peep","cpap","positive pressure","positive-pressure")),
   "tracheostomy_limit":(("tracheostomy",),("distal",),("bronchomalacia",)),
  },
 }
