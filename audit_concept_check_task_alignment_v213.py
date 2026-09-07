@@ -1,7 +1,7 @@
 """v20.13 exact-canonical Submandibular Gland Excision task/source/semantic gate."""
 import runtime_entry
-import concept_check_depth_v213
 from concept_check_board_repair_v177 import _find_module
+from concept_check_depth_v213 import COHORT
 from concept_check_depth_v213 import QID, CID, TOPIC
 
 SEMANTIC_GROUPS = {
