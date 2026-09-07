@@ -104,7 +104,7 @@ SEMANTIC_REQUIREMENTS={
   "shared_airway":(("shared-airway","shared airway"),("oxygenation",),("restore ventilation","ventilation can be restored","restoring ventilation")),
   "rescue":(("lingual-nerve","lingual nerve"),("web",),("stridor",),("bleeding",)),
  },
- "cc-v112-rec-airway-bronchoscopy-tracheomalacia-bronchomalacia":{
+ "cc-v112-rec-pediatric-otolaryngology-tracheomalacia-bronchomalacia":{
   "dynamic_diagnosis":(("dynamic flexible bronchoscopy",),("free-breathing","free breathing"),("dynamic ct","dynamic imaging")),
   "map_geometry":(("mainstem",),("posterior",),("anterior",),("vascular","extrinsic")),
   "support":(("positive airway pressure",),("pneumatic stent",),("cpap","peep")),
