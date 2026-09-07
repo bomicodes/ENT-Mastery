@@ -1,0 +1,72 @@
+name: Concept Check depth v20.12
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'concept_check_depth_v212.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_concept_check_task_alignment_v212.py'
+      - 'audit_concept_check_depth_backlog_v212.py'
+      - 'audit_concept_check_teaching_alignment_v206.py'
+      - '.github/workflows/concept-check-depth-v212.yml'
+      - '.github/workflows/release-integrity.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'concept_check_depth_v212.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_concept_check_task_alignment_v212.py'
+      - 'audit_concept_check_depth_backlog_v212.py'
+      - 'audit_concept_check_teaching_alignment_v206.py'
+      - '.github/workflows/concept-check-depth-v212.yml'
+      - '.github/workflows/release-integrity.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Strict 325-topic canonical coverage
+        run: python audit_coverage_v135.py --depth --strict
+      - name: All-domain Concept Check curation
+        run: python audit_concept_checks_all_domains_v178.py
+      - name: Prior validated v20.11 task-answer/source gate
+        run: python audit_concept_check_task_alignment_v211.py
+      - name: Prior validated v20.11 live-canonical depth backlog
+        run: python audit_concept_check_depth_backlog_v211.py
+      - name: v20.12 Tracheomalacia / Bronchomalacia task-answer/source gate
+        run: python audit_concept_check_task_alignment_v212.py
+      - name: v20.12 live-canonical depth backlog
+        run: python audit_concept_check_depth_backlog_v212.py
+      - name: Full-bank teaching-alignment regression
+        run: python audit_concept_check_teaching_alignment_v206.py
+      - name: Pediatric Otolaryngology completed-domain gate
+        run: python audit_pediatric_ladder_complete_v248.py
+      - name: Shared-airway exposure and ventilation bailout gate
+        run: python audit_or_airway_bailouts_v271.py
+      - name: Tracheostomy hemorrhage/TIF rescue gate
+        run: python audit_or_tracheostomy_hemorrhage_rescue_v283.py
+      - name: Upload v20.12 backlog
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v212-depth-backlog-audit
+          path: V212_DEPTH_BACKLOG_AUDIT.json
+          if-no-files-found: warn
+      - name: Upload teaching-alignment audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v212-teaching-alignment-audit
+          path: V206_CONCEPT_CHECK_TEACHING_ALIGNMENT_AUDIT.json
+          if-no-files-found: warn
