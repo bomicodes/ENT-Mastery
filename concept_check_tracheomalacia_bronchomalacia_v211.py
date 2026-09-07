@@ -6,9 +6,9 @@ anatomy-directed tracheopexy/bronchopexy while preserving oxygenation-first resc
 """
 from concept_check_board_repair_v177 import _find_module
 
-CID="v6-airway-bronchoscopy-tracheomalacia-bronchomalacia"
+CID="v6-pediatric-otolaryngology-tracheomalacia-bronchomalacia"
 TOPIC="Tracheomalacia / Bronchomalacia"
-QIDS=("cc-v112-rec-airway-bronchoscopy-tracheomalacia-bronchomalacia",)
+QIDS=("cc-v112-rec-pediatric-otolaryngology-tracheomalacia-bronchomalacia",)
 
 SOURCE_REFS_V211_TRACHEOMALACIA=[
  {"type":"textbook","citation":"Cummings Otolaryngology: Head and Neck Surgery, 7th ed. (2021), connected Google Drive split copy; pediatric tracheomalacia/airway material reviewed 2026-09-06.","role":"foundation/operative: dynamic expiratory airway collapse, associated vascular/foregut anatomy, bronchoscopy, growth/support, positive pressure, and classic aortopexy principles"},
