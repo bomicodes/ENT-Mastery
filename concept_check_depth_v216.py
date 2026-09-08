@@ -9,12 +9,12 @@ CID = "v6-laryngology-voice-swallowing-laryngeal-anatomy"
 TOPIC = "Laryngeal Anatomy"
 
 SOURCE_REFS_V216 = [
-    {"type":"textbook","citation":"Cummings Otolaryngology: Head and Neck Surgery, 7th ed. (2021), connected Google Drive corpus including Cummings_7e_Part_4_pages_1978-2636.pdf (Drive id 1e6jOBnaay1Msf-aDw-Kf9k2_NtzODQEu) and full Cummings 7e copy (Drive id 18QGOAaZhvH-kEUJxtwDWXn1ho86PRY-t); laryngeal deep-space, posterior-cricoarytenoid, preepiglottic and conservation-surgery anatomy cross-reference refreshed 2026-09-08.","role":"durable operative/anatomic foundation: laryngeal framework, deep-space spread, PCA/postcricoid relationships and conservation-surgery boundaries"},
+    {"type":"textbook","citation":"Cummings Otolaryngology: Head and Neck Surgery, 7th ed. (2021), connected Google Drive corpus. Direct topic-level cross-check used the split Part 2 volume containing Part V Laryngology (Drive id 1_PCclrEVhvetv14xawyW2LBlLeqKMLW-) plus the connected compressed full 7e copy (Drive id 1wfKIp_HIIp3OqtyT4hbUNJP-CIxzoDtZ); laryngeal framework, intrinsic-muscle/PCA, RLN entry-course and deep-space anatomy refreshed 2026-09-08.","role":"durable operative/anatomic foundation: laryngeal framework, arytenoid mechanics, PCA/RLN relationships, deep-space spread and conservation-surgery boundaries"},
     {"type":"textbook","citation":"Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. (2022), connected Google Drive copy (Drive id 14E4Iy4XCjGPSyMT5n7uyURGtIDnhi-52), Laryngeal Anatomy and Physiology / laryngeal oncology material cross-referenced 2026-09-08.","role":"resident/board framework: intrinsic-muscle vector actions, vocal-ligament layers, anterior commissure and fixation mechanisms"},
     {"type":"textbook","citation":"K.J. Lee's Essential Otolaryngology: Head & Neck Surgery, 12th ed. (2019), connected Google Drive copy (Drive id 112c9y0fb1z_7OLP4aLlAG2z-r8weuXvR), The Larynx anatomy/innervation material cross-referenced 2026-09-08.","role":"operative cross-check: vocal versus muscular arytenoid processes, RLN motor/sensory distribution and PCA as the sole abductor"},
     {"type":"consensus_statement","citation":"Fundakowski CE, et al. Surgical management of the recurrent laryngeal nerve in thyroidectomy: American Head and Neck Society Consensus Statement. Head Neck. 2018;40:663-675. DOI: 10.1002/hed.24928.","role":"major head-and-neck society guidance: deliberate RLN identification/preservation, approach selection and management when tumor involves the nerve"},
     {"type":"guideline_statement","citation":"Barczynski M, et al. External branch of the superior laryngeal nerve monitoring during thyroid and parathyroid surgery: International Neural Monitoring Study Group standards guideline statement. Laryngoscope. 2013;123 Suppl 4:S1-S14. PMID: 23832799. DOI: 10.1002/lary.24301.","role":"EBSLN anatomy/function and standardized neural-monitoring principles; monitoring is an adjunct to anatomic preservation"},
-    {"type":"systematic_review","citation":"Surgical anatomy of the recurrent laryngeal nerve: a systematic review and meta-analysis of variants. Langenbecks Arch Surg. 2026. DOI: 10.1007/s00423-026-04097-0.","role":"current evidence reinforcing RLN–inferior-thyroid-artery variability and rare clinically important right-sided nonrecurrent nerve"},
+    {"type":"systematic_review","citation":"Luca P, Yagnik VD, Matteo M, et al. Surgical anatomy of the recurrent laryngeal nerve: a systematic review and meta-analysis of variants. Langenbecks Arch Surg. Published June 15, 2026. DOI: 10.1007/s00423-026-04097-0.","role":"current evidence reinforcing RLN–inferior-thyroid-artery variability and rare clinically important right-sided nonrecurrent nerve"},
     {"type":"anatomic_study","citation":"Saleh HA, et al. The inside-out surgical anatomy of the paraglottic space: a video-guided endoscopic dissection. Laryngoscope Investig Otolaryngol. 2023;8. DOI: 10.1002/lio2.979.","role":"modern endoscopic/cadaveric description showing paraglottic-space extension across supraglottic, glottic and subglottic levels"},
 ]
 
@@ -71,7 +71,7 @@ COHORT = {
             "Using forceful arytenoid palpation as a substitute for diagnostic localization when mechanical fixation remains uncertain.",
             "Proceeding directly to irreversible glottic-widening surgery before determining whether bilateral immobility could recover.",
         ],
-        "deliberate_review_v216": "Selected from the exact successful v20.15 production backlog (325 canonical topics, 618 Concept Checks, 159 untouched candidates, 8 residual candidates, 0 failures). Both exact live Laryngeal Anatomy siblings remained shallow despite high resident/board/OR value, so clinical priority intentionally overrides lexical rank. The management sibling emphasizes localization of immobility and deep-space disease.",
+        "deliberate_review_v216": "Selected from the exact successful v20.15 production backlog (325 canonical topics, 618 Concept Checks, 157 untouched candidates, 7 residual candidates, 0 failures). Both exact live Laryngeal Anatomy siblings remained shallow despite high resident/board/OR value, so clinical priority intentionally overrides lexical rank. The management sibling emphasizes localization of immobility and deep-space disease.",
         "source_refs_v216": SOURCE_REFS_V216,
         "evidence_distinction_v216": "Durable anatomy and operative relationships are textbook-grounded; contemporary literature is used to reinforce RLN variability, EBSLN preservation and paraglottic-space geometry rather than to overwrite stable anatomy with transient management fashion.",
     },
@@ -111,7 +111,9 @@ def apply_concept_check_task_alignment_v216(checks, deep_modules, v6_item_id):
         q=by.get(qid)
         if q is None: missing.append(qid); continue
         m=_find_module(q,deep_modules,v6_item_id); topic=str(m.get("topic") or "") if m else ""; cid=v6_item_id(q.get("domain"),topic) if m and q.get("domain") else None
-        if m is None or topic!=p["canonical_topic"] or cid!=p["concept_id"] or q.get("concept_id")!=cid: link_mismatch.append(qid); continue
+        persisted_cid=q.get("concept_id")
+        if m is None or topic!=p["canonical_topic"] or cid!=p["concept_id"] or (persisted_cid is not None and persisted_cid!=cid): link_mismatch.append(qid); continue
+        q["concept_id"]=cid; q["canonical_topic"]=topic
         for field in ("prompt","answer_text","explanation","board_pearl","depth_layers_v216","common_traps_v216","deliberate_review_v216","source_refs_v216","evidence_distinction_v216"): q[field]=p[field]
         q["choices"]=[]; q["answer"]=None; q["task_alignment_v216"]=True; repaired.append(qid)
     return {"repaired":repaired,"missing":missing,"link_mismatch":link_mismatch}
