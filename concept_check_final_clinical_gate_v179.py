@@ -46,6 +46,7 @@ from concept_check_depth_v212 import apply_concept_check_task_alignment_v212
 from concept_check_depth_v213 import apply_concept_check_task_alignment_v213
 from concept_check_depth_v214 import apply_concept_check_task_alignment_v214
 from concept_check_depth_v215 import apply_concept_check_task_alignment_v215
+from concept_check_depth_v216 import apply_concept_check_task_alignment_v216
 from concept_check_laser_energy_safety_v211 import apply_laser_energy_safety_v211
 from concept_check_frontal_draf_v211 import apply_frontal_draf_v211
 from concept_check_four_gland_parathyroid_v211 import apply_four_gland_parathyroid_v211
@@ -139,4 +140,7 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     alignment_v215 = apply_concept_check_task_alignment_v215(checks, deep_modules, v6_item_id)
     results["task_alignment_v215"] = alignment_v215
     results["post_alignment_reframed_v215"] = _reassert_clinical_contract(checks, alignment_v215.get("repaired", []), unresolved, "post_alignment_clinical_frame_v215")
+    alignment_v216 = apply_concept_check_task_alignment_v216(checks, deep_modules, v6_item_id)
+    results["task_alignment_v216"] = alignment_v216
+    results["post_alignment_reframed_v216"] = _reassert_clinical_contract(checks, alignment_v216.get("repaired", []), unresolved, "post_alignment_clinical_frame_v216")
     return results
