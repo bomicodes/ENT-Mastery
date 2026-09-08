@@ -46,6 +46,7 @@ from concept_check_depth_v212 import apply_concept_check_task_alignment_v212
 from concept_check_depth_v213 import apply_concept_check_task_alignment_v213
 from concept_check_depth_v214 import apply_concept_check_task_alignment_v214
 from concept_check_depth_v215 import apply_concept_check_task_alignment_v215
+from concept_check_depth_v216 import apply_concept_check_task_alignment_v216
 from concept_check_laser_energy_safety_v211 import apply_laser_energy_safety_v211
 from concept_check_frontal_draf_v211 import apply_frontal_draf_v211
 from concept_check_four_gland_parathyroid_v211 import apply_four_gland_parathyroid_v211
@@ -65,12 +66,26 @@ def _reassert_clinical_contract(checks, repaired_ids, unresolved, marker):
     reframed = []
     for qid in repaired_ids:
         q = by_id.get(str(qid))
-        if q is None or _clinical_prompt(q): continue
+        if q is None or _clinical_prompt(q):
+            continue
         prompt = str(q.get("prompt") or q.get("question") or q.get("stem") or "").strip()
-        if prompt:
-            q["prompt"] = "A patient is evaluated by the otolaryngology service. " + prompt
-            q.pop("question", None); q.pop("stem", None); q[marker] = True; reframed.append(qid)
-        else: unresolved.append(qid)
+        if not prompt:
+            unresolved.append(qid)
+            continue
+        # A repaired stem must remain a genuine clinical question. Earlier logic
+        # could prepend a patient frame but leave an imperative stem ending in a
+        # period, causing the hard curation gate to reject otherwise clinical
+        # exact-canonical questions. Preserve the authored content, add clinical
+        # framing only when needed, and guarantee interrogative punctuation.
+        if not CLINICAL_STEM_RE.search(prompt):
+            prompt = "A patient is evaluated by the otolaryngology service. " + prompt
+        if "?" not in prompt:
+            prompt = prompt.rstrip().rstrip(".") + "?"
+        q["prompt"] = prompt
+        q.pop("question", None)
+        q.pop("stem", None)
+        q[marker] = True
+        reframed.append(qid)
     return reframed
 
 _ALIGNMENT_FUNCS = [
@@ -89,19 +104,26 @@ _ALIGNMENT_FUNCS = [
 def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     converted, unresolved = [], []
     for q in checks or []:
-        if _clinical_prompt(q): continue
+        if _clinical_prompt(q):
+            continue
         module = _find_module(q, deep_modules, v6_item_id)
-        if module and _convert_to_domain_oral_board(q, module): q["final_clinical_gate_v179"] = True; converted.append(q.get("id"))
-        else: unresolved.append(q.get("id"))
+        if module and _convert_to_domain_oral_board(q, module):
+            q["final_clinical_gate_v179"] = True
+            converted.append(q.get("id"))
+        else:
+            unresolved.append(q.get("id"))
     results = {"converted": converted, "unresolved": unresolved, "v184_content_fix": apply_bot_trimodality_depth_v184()}
     for version, fn, needs_context in _ALIGNMENT_FUNCS:
         alignment = fn(checks, deep_modules, v6_item_id) if needs_context else fn(checks)
         results[f"task_alignment_v{version}"] = alignment
         marker = f"post_alignment_clinical_frame_v{version}"
         reframed = _reassert_clinical_contract(checks, alignment.get("repaired", []), unresolved, marker)
-        if version == 180: results["post_alignment_reframed_v181"] = reframed
-        elif version == 181: results["post_alignment_reframed_v181_cohort2"] = reframed
-        else: results[f"post_alignment_reframed_v{version}"] = reframed
+        if version == 180:
+            results["post_alignment_reframed_v181"] = reframed
+        elif version == 181:
+            results["post_alignment_reframed_v181_cohort2"] = reframed
+        else:
+            results[f"post_alignment_reframed_v{version}"] = reframed
     alignment_v208 = apply_concept_check_task_alignment_v208(checks, deep_modules, v6_item_id)
     results["task_alignment_v208"] = alignment_v208
     results["post_alignment_reframed_v208"] = _reassert_clinical_contract(checks, alignment_v208.get("repaired", []), unresolved, "post_alignment_clinical_frame_v208")
@@ -122,9 +144,10 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         apply_tracheomalacia_bronchomalacia_v211(checks, deep_modules, v6_item_id),
     ]
     for key in ("repaired","missing","link_mismatch"):
-        combined=list(alignment_v211.get(key) or [])
-        for cohort in cohorts: combined += list(cohort.get(key) or [])
-        alignment_v211[key]=list(dict.fromkeys(combined))
+        combined = list(alignment_v211.get(key) or [])
+        for cohort in cohorts:
+            combined += list(cohort.get(key) or [])
+        alignment_v211[key] = list(dict.fromkeys(combined))
     results["task_alignment_v211"] = alignment_v211
     results["post_alignment_reframed_v211"] = _reassert_clinical_contract(checks, alignment_v211.get("repaired", []), unresolved, "post_alignment_clinical_frame_v211")
     alignment_v212 = apply_concept_check_task_alignment_v212(checks, deep_modules, v6_item_id)
@@ -139,4 +162,7 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     alignment_v215 = apply_concept_check_task_alignment_v215(checks, deep_modules, v6_item_id)
     results["task_alignment_v215"] = alignment_v215
     results["post_alignment_reframed_v215"] = _reassert_clinical_contract(checks, alignment_v215.get("repaired", []), unresolved, "post_alignment_clinical_frame_v215")
+    alignment_v216 = apply_concept_check_task_alignment_v216(checks, deep_modules, v6_item_id)
+    results["task_alignment_v216"] = alignment_v216
+    results["post_alignment_reframed_v216"] = _reassert_clinical_contract(checks, alignment_v216.get("repaired", []), unresolved, "post_alignment_clinical_frame_v216")
     return results
