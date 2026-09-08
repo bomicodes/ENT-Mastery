@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'concept_check_depth_v216.py'
+      - 'concept_check_depth_v216_npc.py'
       - 'concept_check_npc_v216.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_concept_check_task_alignment_v216.py'
@@ -17,6 +18,7 @@ on:
     branches: [main]
     paths:
       - 'concept_check_depth_v216.py'
+      - 'concept_check_depth_v216_npc.py'
       - 'concept_check_npc_v216.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_concept_check_task_alignment_v216.py'
