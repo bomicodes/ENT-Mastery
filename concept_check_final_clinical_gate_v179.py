@@ -47,6 +47,7 @@ from concept_check_depth_v213 import apply_concept_check_task_alignment_v213
 from concept_check_depth_v214 import apply_concept_check_task_alignment_v214
 from concept_check_depth_v215 import apply_concept_check_task_alignment_v215
 from concept_check_depth_v216 import apply_concept_check_task_alignment_v216
+from concept_check_depth_v217 import apply_concept_check_task_alignment_v217
 from concept_check_laser_energy_safety_v211 import apply_laser_energy_safety_v211
 from concept_check_frontal_draf_v211 import apply_frontal_draf_v211
 from concept_check_four_gland_parathyroid_v211 import apply_four_gland_parathyroid_v211
@@ -72,11 +73,6 @@ def _reassert_clinical_contract(checks, repaired_ids, unresolved, marker):
         if not prompt:
             unresolved.append(qid)
             continue
-        # A repaired stem must remain a genuine clinical question. Earlier logic
-        # could prepend a patient frame but leave an imperative stem ending in a
-        # period, causing the hard curation gate to reject otherwise clinical
-        # exact-canonical questions. Preserve the authored content, add clinical
-        # framing only when needed, and guarantee interrogative punctuation.
         if not CLINICAL_STEM_RE.search(prompt):
             prompt = "A patient is evaluated by the otolaryngology service. " + prompt
         if "?" not in prompt:
@@ -165,4 +161,7 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     alignment_v216 = apply_concept_check_task_alignment_v216(checks, deep_modules, v6_item_id)
     results["task_alignment_v216"] = alignment_v216
     results["post_alignment_reframed_v216"] = _reassert_clinical_contract(checks, alignment_v216.get("repaired", []), unresolved, "post_alignment_clinical_frame_v216")
+    alignment_v217 = apply_concept_check_task_alignment_v217(checks, deep_modules, v6_item_id)
+    results["task_alignment_v217"] = alignment_v217
+    results["post_alignment_reframed_v217"] = _reassert_clinical_contract(checks, alignment_v217.get("repaired", []), unresolved, "post_alignment_clinical_frame_v217")
     return results
