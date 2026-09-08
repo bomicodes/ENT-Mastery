@@ -105,6 +105,10 @@ COHORT = {
     },
 }
 
+from concept_check_npc_v216 import NPC_COHORT
+COHORT.update(NPC_COHORT)
+QIDS = tuple(COHORT.keys())
+
 def apply_concept_check_task_alignment_v216(checks, deep_modules, v6_item_id):
     by={str(q.get("id") or ""):q for q in checks or []}; repaired=[]; missing=[]; link_mismatch=[]
     for qid,p in COHORT.items():
@@ -115,5 +119,6 @@ def apply_concept_check_task_alignment_v216(checks, deep_modules, v6_item_id):
         if m is None or topic!=p["canonical_topic"] or cid!=p["concept_id"] or (persisted_cid is not None and persisted_cid!=cid): link_mismatch.append(qid); continue
         q["concept_id"]=cid; q["canonical_topic"]=topic
         for field in ("prompt","answer_text","explanation","board_pearl","depth_layers_v216","common_traps_v216","deliberate_review_v216","source_refs_v216","evidence_distinction_v216"): q[field]=p[field]
+        if p.get("audit_profile_v216"): q["audit_profile_v216"]=p["audit_profile_v216"]
         q["choices"]=[]; q["answer"]=None; q["task_alignment_v216"]=True; repaired.append(qid)
     return {"repaired":repaired,"missing":missing,"link_mismatch":link_mismatch}
