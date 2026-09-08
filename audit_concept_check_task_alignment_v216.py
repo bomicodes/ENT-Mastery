@@ -23,7 +23,7 @@ NPC_SEMANTIC_GROUPS = {
     "staging": ("tnm-9", "extranodal extension", "m1a", "m1b"),
     "definitive": ("intensity-modulated radiation therapy", "concurrent cisplatin", "induction chemotherapy"),
     "induction_nuance": ("not", "every", "risk"),
-    "biomarker_limit": ("not a substitute", "treatment-adaptation", "localizing recurrent disease"),
+    "biomarker_limit": ("not a substitute", "treatment-adaptation", "without confirming disease"),
     "fda_immunotherapy": ("toripalimab", "penpulimab", "fda"),
     "salvage": ("nasopharyngectomy", "neck dissection", "re-irradiation"),
     "vascular_bailout": ("carotid", "sentinel hemorrhage", "vascular emergency"),
