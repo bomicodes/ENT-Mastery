@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'concept_check_depth_v216.py'
+      - 'concept_check_npc_v216.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_concept_check_task_alignment_v216.py'
       - 'audit_concept_check_depth_backlog_v216.py'
@@ -16,6 +17,7 @@ on:
     branches: [main]
     paths:
       - 'concept_check_depth_v216.py'
+      - 'concept_check_npc_v216.py'
       - 'concept_check_final_clinical_gate_v179.py'
       - 'audit_concept_check_task_alignment_v216.py'
       - 'audit_concept_check_depth_backlog_v216.py'
@@ -38,7 +40,7 @@ jobs:
         run: python preflight_boot_check_v155.py
       - name: Strict 325-topic canonical coverage
         run: python audit_coverage_v135.py --depth --strict
-      - name: v20.16 Laryngeal Anatomy task-answer/source diagnostic gate
+      - name: v20.16 Laryngeal Anatomy/NPC task-answer/source diagnostic gate
         run: python audit_concept_check_task_alignment_v216.py
       - name: All-domain Concept Check curation
         run: python audit_concept_checks_all_domains_v178.py
