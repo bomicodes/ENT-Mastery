@@ -14,7 +14,7 @@ SEMANTIC_GROUPS = {
     "sequence": ("top-down", "bottom-up", "most reliable"),
     "noe": ("medial canthal tendon", "telecanthus"),
     "orbit_framework": ("orbital volume", "zygomatic"),
-    "bailout": ("stop or stage", "staged stabilization"),
+    "bailout": ("stop or stage", "temporary stabilization", "delayed definitive fixation"),
 }
 SOURCE_ANCHORS = ("cummings", "pasha", "k.j. lee", "ao surgery reference", "40498582", "40728925", "difficult airway society")
 
