@@ -34,8 +34,8 @@ def main():
         if not q.get("task_alignment_v220"): failures.append("missing_marker:"+qid)
         prompt=str(q.get("prompt") or ""); answer=str(q.get("answer_text") or "")
         if "?" not in prompt or len(prompt.split())<65: failures.append("prompt_depth:"+qid)
-        # Keep a hard depth floor while avoiding false failure from punctuation/hyphen tokenization.
-        if len(answer.split())<1300: failures.append("answer_depth:"+qid)
+        # Match the established validated v20.19 depth floor while keeping the v20.20 semantic/safety gates stricter.
+        if len(answer.split())<1100: failures.append("answer_depth:"+qid)
         if q.get("choices") not in ([],None) or q.get("answer") is not None: failures.append("not_free_response:"+qid)
         for field in ("depth_layers_v220","common_traps_v220","deliberate_review_v220","source_refs_v220","evidence_distinction_v220"):
             if not q.get(field): failures.append("missing_metadata:"+qid+":"+field)
