@@ -225,10 +225,14 @@ jobs:
         run: python audit_concept_check_task_alignment_v219.py
       - name: Prior validated v20.19 live-canonical Concept Check depth backlog
         run: python audit_concept_check_depth_backlog_v219.py
-      - name: Current v20.20 Cranial Nerve / Skull Base Localization task-answer/source gate
+      - name: Prior validated v20.20 Cranial Nerve / Skull Base Localization task-answer/source gate
         run: python audit_concept_check_task_alignment_v220.py
-      - name: Current v20.20 live-canonical Concept Check depth backlog
+      - name: Prior validated v20.20 live-canonical Concept Check depth backlog
         run: python audit_concept_check_depth_backlog_v220.py
+      - name: Current v20.21 Le Fort / Panfacial Trauma task-answer/source gate
+        run: python audit_concept_check_task_alignment_v221.py
+      - name: Current v20.21 live-canonical Concept Check depth backlog
+        run: python audit_concept_check_depth_backlog_v221.py
       - name: Current adversarial OR danger-zone and rescue gate
         run: python audit_or_rescue_v268.py
       - name: Current OR commitment and bailout gate
@@ -279,6 +283,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: concept-check-depth-backlog-v220
-          path: V220_DEPTH_BACKLOG_AUDIT.json
+          name: concept-check-depth-backlog-v221
+          path: V221_DEPTH_BACKLOG_AUDIT.json
           if-no-files-found: warn
