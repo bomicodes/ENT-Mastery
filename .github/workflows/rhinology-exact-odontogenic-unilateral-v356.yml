@@ -1,0 +1,64 @@
+name: Rhinology exact odontogenic/unilateral v35.6
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'audit_rhinology_exact_odontogenic_unilateral_v356.py'
+      - 'deep_curriculum_rhinology_v356.py'
+      - 'deep_curriculum_rhinology_v355.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_rhinology_odontogenic_unilateral_v355.py'
+      - 'audit_rhinology_ladder_complete_v218.py'
+      - 'audit_concept_check_depth_backlog_v218.py'
+      - 'runtime_entry_pasha.py'
+      - 'data.py'
+      - '.github/workflows/rhinology-exact-odontogenic-unilateral-v356.yml'
+      - '.github/workflows/release-integrity.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'audit_rhinology_exact_odontogenic_unilateral_v356.py'
+      - 'deep_curriculum_rhinology_v356.py'
+      - 'deep_curriculum_rhinology_v355.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'audit_rhinology_odontogenic_unilateral_v355.py'
+      - 'audit_rhinology_ladder_complete_v218.py'
+      - 'audit_concept_check_depth_backlog_v218.py'
+      - 'runtime_entry_pasha.py'
+      - 'data.py'
+      - '.github/workflows/rhinology-exact-odontogenic-unilateral-v356.yml'
+      - '.github/workflows/release-integrity.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Strict 325-topic canonical coverage contract
+        run: python audit_coverage_v135.py --depth --strict
+      - name: Full Rhinology canonical ladder gate
+        run: python audit_rhinology_ladder_complete_v218.py
+      - name: v35.5 CRSsNP odontogenic/unilateral predecessor gate
+        run: python audit_rhinology_odontogenic_unilateral_v355.py
+      - name: v35.6 exact canonical Odontogenic/Unilateral gate
+        run: python audit_rhinology_exact_odontogenic_unilateral_v356.py
+      - name: Live canonical Concept Check depth backlog preservation
+        run: python audit_concept_check_depth_backlog_v218.py
+      - name: Reviewed-ladder answer-balance regression
+        run: python audit_ladder_answer_balance_v211.py
+      - name: Current OR danger-zone and rescue gate
+        run: python audit_or_rescue_v268.py
+      - name: Current OR commitment and bailout gate
+        run: python audit_or_commitment_v269.py
+      - name: Current shared-airway exposure and ventilation bailout gate
+        run: python audit_or_airway_bailouts_v271.py
