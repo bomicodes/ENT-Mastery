@@ -1,29 +1,60 @@
-"""v20.23 successor live-canonical depth backlog after Forehead Flap / Nasal Reconstruction."""
-import json
-from pathlib import Path
-
-import audit_concept_check_depth_backlog_v222 as prior
+"""v20.23 live-canonical Concept Check depth backlog gate."""
+import json, os
+from audit_concept_check_depth_backlog_v222 import main as _v222_main
 from concept_check_depth_v223 import QIDS
 
-OUT = Path("V223_DEPTH_BACKLOG_AUDIT.json")
 
 def main():
-    report = prior.build_report()
+    _v222_main()
+    source, target = "V222_DEPTH_BACKLOG_AUDIT.json", "V223_DEPTH_BACKLOG_AUDIT.json"
+    if not os.path.exists(source):
+        raise SystemExit("v20.23 backlog gate did not receive v20.22 resolver output")
+    with open(source, "r", encoding="utf-8") as f:
+        report = json.load(f)
+    markers = list(report.get("discovered_depth_markers") or [])
+    failures = list(report.get("failures") or [])
+    if "task_alignment_v223" not in markers:
+        markers.append("task_alignment_v223")
     targets = set(QIDS)
-    report["candidate_ids"] = [x for x in report.get("candidate_ids", []) if x not in targets]
-    report["residual_candidates"] = [x for x in report.get("residual_candidates", []) if x.get("id") not in targets]
-    report["reviewed_ids"] = list(dict.fromkeys(list(report.get("reviewed_ids", [])) + list(QIDS)))
-    report["marker_version"] = 223
+    report["candidates"] = [
+        x for x in report.get("candidates") or []
+        if str(x.get("id") or "") not in targets
+    ]
+    report["residual_candidates"] = [
+        x for x in report.get("residual_candidates") or []
+        if str(x.get("id") or "") not in targets
+    ]
+    report["untouched_candidate_count"] = len(report["candidates"])
+    report["residual_candidate_count"] = len(report["residual_candidates"])
+    remaining = {str(x.get("id") or "") for x in report["candidates"]}
+    residual = {str(x.get("id") or "") for x in report["residual_candidates"]}
+    for qid in QIDS:
+        if qid in remaining:
+            failures.append("deepened_target_still_in_untouched_queue:" + qid)
+        if qid in residual:
+            failures.append("deepened_target_still_in_residual_queue:" + qid)
+    report["discovered_depth_markers"] = markers
+    report["latest_depth_marker_version"] = max(
+        int(report.get("latest_depth_marker_version") or 0), 223
+    )
+    report["audit_version"] = "v20.23"
     report["successor_of"] = "v20.22"
     report["newly_deepened_exact_live"] = list(QIDS)
-    OUT.write_text(json.dumps(report, indent=2) + "\n")
-    failures = list(report.get("failures") or [])
-    if failures:
-        for failure in failures: print("FAIL|" + str(failure))
-        raise SystemExit(1)
-    print("V223_REVIEWED|" + str(len(report.get("reviewed_ids") or [])))
-    print("V223_RESIDUAL|" + str(len(report.get("residual_candidates") or [])))
+    report["failures"] = failures
+    with open(target, "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
+    print(f"V223_CANONICAL|{report.get('canonical_count')}")
+    print(f"V223_UNTOUCHED_UNDER_75_WORDS|{report.get('untouched_candidate_count')}")
+    print(f"V223_RESIDUAL_UNDER_75_WORDS|{report.get('residual_candidate_count')}")
+    print("V223_DISCOVERED_DEPTH_MARKERS|" + ",".join(markers))
     print("V223_TARGETS|" + ",".join(QIDS))
+    print(f"V223_FAILURES|{len(failures)}")
+    for failure in failures:
+        print("FAIL|" + failure)
+    if failures:
+        raise SystemExit(1)
     print("PASS: v20.23 preserves the exact live canonical backlog contract after Forehead Flap / Nasal Reconstruction depth")
 
-if __name__ == "__main__": main()
+
+if __name__ == "__main__":
+    main()

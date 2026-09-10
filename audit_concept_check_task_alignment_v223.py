@@ -12,9 +12,22 @@ SEMANTIC_GROUPS = {
     "arterial": ("pale", "arterial inflow"),
     "venous": ("dusky", "venous outflow"),
     "rescue": ("release", "hematoma", "operative reassessment"),
-    "evidence_boundary": ("no fda indication", "no major society guideline", "observational"),
 }
 SOURCE_ANCHORS = ("cummings", "pasha", "k.j. lee", "39697410", "39871421", "40062609", "38575283")
+
+
+def _has_negative_evidence_boundary(text):
+    """Require explicit negative FDA and society-rule boundaries without brittle grammar."""
+    low = str(text or "").lower()
+    fda_negative = "no fda indication" in low
+    society_negative = (
+        "no major society guideline" in low
+        or "no fda indication or major society guideline" in low
+        or "no fda indication, nor major society guideline" in low
+        or "neither an fda indication nor a major society guideline" in low
+    )
+    return fda_negative and society_negative and "observational" in low
+
 
 def main():
     data = runtime_entry.data
@@ -54,13 +67,18 @@ def main():
         low = answer.lower()
         for group, anchors in SEMANTIC_GROUPS.items():
             if not all(a in low for a in anchors): failures.append("semantic:" + qid + ":" + group)
+        if not _has_negative_evidence_boundary(answer):
+            failures.append("semantic:" + qid + ":evidence_boundary")
         evidence = str(q.get("evidence_distinction_v223") or "").lower()
-        for anchor in ("durable", "traditional", "selected", "no fda indication", "no major society guideline"):
+        for anchor in ("durable", "traditional", "selected"):
             if anchor not in evidence: failures.append("evidence_boundary:" + qid + ":" + anchor)
+        if not _has_negative_evidence_boundary(evidence):
+            failures.append("evidence_boundary:" + qid + ":negative_fda_society_boundary")
     if set(align.get("repaired") or []) != set(QIDS): failures.append("final_gate_repaired_set")
     print("V223_TARGETS|" + ",".join(QIDS)); print("V223_FAILURES|" + str(len(failures)))
     for failure in failures: print("FAIL|" + failure)
     if failures: raise SystemExit(1)
     print("PASS: v20.23 Forehead Flap / Nasal Reconstruction has exact-live linkage, layered reconstruction, supratrochlear staging, perfusion-based division and immediate vascular rescue reasoning")
+
 
 if __name__ == "__main__": main()
