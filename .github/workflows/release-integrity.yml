@@ -233,10 +233,14 @@ jobs:
         run: python audit_concept_check_task_alignment_v221.py
       - name: Prior validated v20.21 live-canonical Concept Check depth backlog
         run: python audit_concept_check_depth_backlog_v221.py
-      - name: Current v20.22 Pediatric Lymphatic Malformation task-answer/source gate
+      - name: Prior validated v20.22 Pediatric Lymphatic Malformation task-answer/source gate
         run: python audit_concept_check_task_alignment_v222.py
-      - name: Current v20.22 live-canonical Concept Check depth backlog
+      - name: Prior validated v20.22 live-canonical Concept Check depth backlog
         run: python audit_concept_check_depth_backlog_v222.py
+      - name: Current v20.23 Forehead Flap / Nasal Reconstruction task-answer/source gate
+        run: python audit_concept_check_task_alignment_v223.py
+      - name: Current v20.23 live-canonical Concept Check depth backlog
+        run: python audit_concept_check_depth_backlog_v223.py
       - name: Current adversarial OR danger-zone and rescue gate
         run: python audit_or_rescue_v268.py
       - name: Current OR commitment and bailout gate
@@ -287,6 +291,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: concept-check-depth-backlog-v222
-          path: V222_DEPTH_BACKLOG_AUDIT.json
+          name: concept-check-depth-backlog-v223
+          path: V223_DEPTH_BACKLOG_AUDIT.json
           if-no-files-found: warn
