@@ -12,9 +12,19 @@ SEMANTIC_GROUPS = {
     "arterial": ("pale", "arterial inflow"),
     "venous": ("dusky", "venous outflow"),
     "rescue": ("release", "hematoma", "operative reassessment"),
-    "evidence_boundary": ("no fda indication", "no major society guideline", "observational"),
 }
 SOURCE_ANCHORS = ("cummings", "pasha", "k.j. lee", "39697410", "39871421", "40062609", "38575283")
+
+
+def _has_no_major_society_guideline(text):
+    """Accept equivalent explicit negative constructions without weakening the boundary."""
+    low = str(text or "").lower()
+    return (
+        "no major society guideline" in low
+        or "no fda indication or major society guideline" in low
+        or "no fda indication and no major society guideline" in low
+    )
+
 
 def main():
     data = runtime_entry.data
@@ -54,9 +64,13 @@ def main():
         low = answer.lower()
         for group, anchors in SEMANTIC_GROUPS.items():
             if not all(a in low for a in anchors): failures.append("semantic:" + qid + ":" + group)
+        if "no fda indication" not in low or not _has_no_major_society_guideline(low) or "observational" not in low:
+            failures.append("semantic:" + qid + ":evidence_boundary")
         evidence = str(q.get("evidence_distinction_v223") or "").lower()
-        for anchor in ("durable", "traditional", "selected", "no fda indication", "no major society guideline"):
+        for anchor in ("durable", "traditional", "selected", "no fda indication"):
             if anchor not in evidence: failures.append("evidence_boundary:" + qid + ":" + anchor)
+        if not _has_no_major_society_guideline(evidence):
+            failures.append("evidence_boundary:" + qid + ":no_major_society_guideline")
     if set(align.get("repaired") or []) != set(QIDS): failures.append("final_gate_repaired_set")
     print("V223_TARGETS|" + ",".join(QIDS)); print("V223_FAILURES|" + str(len(failures)))
     for failure in failures: print("FAIL|" + failure)
