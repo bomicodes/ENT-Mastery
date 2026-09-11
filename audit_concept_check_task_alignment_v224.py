@@ -13,7 +13,11 @@ SEMANTIC_GROUPS = {
     "localize": ("proximal", "distal", "localize"),
     "rescue": ("release traction", "thermal", "change the surgical"),
 }
-SOURCE_ANCHORS = ("cummings", "pasha", "k.j. lee", "41353726", "41371257", "31521756", "american academy of otolaryngology")
+SOURCE_ANCHORS = (
+    "cummings", "pasha", "k.j. lee", "34000898", "41371257", "31521756",
+    "42520282", "american academy of otolaryngology"
+)
+RETRACTED_SOURCE = "41353726"
 
 
 def main():
@@ -51,17 +55,19 @@ def main():
         reftext = " ".join(str(x.get("citation") or "") for x in refs if isinstance(x, dict)).lower()
         for anchor in SOURCE_ANCHORS:
             if anchor not in reftext: failures.append("missing_source:" + qid + ":" + anchor)
+        if RETRACTED_SOURCE in reftext: failures.append("retracted_source_present:" + qid + ":" + RETRACTED_SOURCE)
         low = answer.lower()
         for group, anchors in SEMANTIC_GROUPS.items():
             if not all(a in low for a in anchors): failures.append("semantic:" + qid + ":" + group)
+        if "retract" not in low: failures.append("missing_retraction_boundary:" + qid)
         evidence = str(q.get("evidence_distinction_v224") or "").lower()
-        for anchor in ("durable", "current", "universal", "fda"):
+        for anchor in ("durable", "current", "universal", "fda", "retract"):
             if anchor not in evidence: failures.append("evidence_boundary:" + qid + ":" + anchor)
     if set(align.get("repaired") or []) != set(QIDS): failures.append("final_gate_repaired_set")
     print("V224_TARGETS|" + ",".join(QIDS)); print("V224_FAILURES|" + str(len(failures)))
     for failure in failures: print("FAIL|" + failure)
     if failures: raise SystemExit(1)
-    print("PASS: v20.24 facial nerve monitoring has exact-live linkage, physiology/anesthesia interpretation, procedure-specific parameter boundaries and stop-troubleshoot-localize-rescue reasoning")
+    print("PASS: v20.24 facial nerve monitoring has exact-live linkage, current non-retracted evidence, physiology/anesthesia interpretation, procedure-specific parameter boundaries and stop-troubleshoot-localize-rescue reasoning")
 
 
 if __name__ == "__main__": main()
