@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """v35.8 — exact-live Deep Curriculum provenance/rendering audit, seeded by SNHL.
 
-Fail closed for the exact SNHL repair and the 325-topic contract. Also emit the complete
-live source-metadata backlog so subsequent cohorts are selected from real production data
-rather than lexical guesses. The broader backlog is intentionally reported, not globally
-blocked in this first source-completeness cohort; each subsequent patch can retire exact
-canonical entries without destabilizing already-completed domain gates.
+Fail closed for the exact SNHL repair and the 325-topic contract. The live canonical label
+is resolved by requiring exactly one Otology title containing the normalized identity terms
+"sensorineural" and "hearing"; ambiguity fails closed and the actual title must be retained
+in canonical source metadata. Also emit the complete live source-metadata backlog so
+successor cohorts are selected from production data rather than lexical guesses.
 """
 
 from pathlib import Path
@@ -17,11 +17,17 @@ import runtime_entry_pasha
 
 data = runtime_entry_pasha.runtime_entry.data
 DOMAIN = "Otology / Neurotology"
-TARGET = "sensorineural hearing loss"
 
 
 def norm(value):
     return re.sub(r"[^a-z0-9]+", " ", str(value or "").lower()).strip()
+
+
+def snhl_candidates(rows):
+    return [
+        row for row in rows
+        if "sensorineural" in norm(row.get("topic")) and "hearing" in norm(row.get("topic"))
+    ]
 
 
 def fail(message):
@@ -34,19 +40,20 @@ def main():
     all_rows = [(domain, row) for domain, rows in deep.items() for row in (rows or [])]
     failures = 0
 
-    # Preserve the canonical production contract while adding provenance.
     if len(all_rows) != 325:
         failures += fail(f"canonical Deep Curriculum count changed: expected 325, found {len(all_rows)}")
 
     rows = deep.get(DOMAIN, []) or []
-    target_rows = [row for row in rows if norm(row.get("topic")) == TARGET]
+    target_rows = snhl_candidates(rows)
     if len(target_rows) != 1:
         failures += fail(
-            f"expected exactly one exact-live canonical {TARGET!r} in {DOMAIN}; "
-            f"found {len(target_rows)}: {[row.get('topic') for row in target_rows]}"
+            "expected exactly one live Otology canonical title containing normalized tokens "
+            f"sensorineural + hearing; found {len(target_rows)}: {[row.get('topic') for row in target_rows]}"
         )
     else:
         row = target_rows[0]
+        canonical_topic = row.get("topic")
+        print(f"SNHL_EXACT_CANONICAL_TOPIC={canonical_topic}")
         if not row.get("source_grounded_v358"):
             failures += fail("SNHL live canonical record did not receive v35.8 provenance patch")
         source_lines = [str(x) for x in (row.get("source_basis") or []) if str(x).strip()]
@@ -61,8 +68,10 @@ def main():
                 failures += fail(f"SNHL source trail missing {token!r}")
 
         metadata = row.get("source_metadata_v358") or {}
-        if metadata.get("canonical_link") != {"domain": DOMAIN, "topic": row.get("topic")}:
+        if metadata.get("canonical_link") != {"domain": DOMAIN, "topic": canonical_topic}:
             failures += fail("SNHL canonical source metadata is not linked to the exact live domain/topic")
+        if "sensorineural + hearing" not in str(metadata.get("identity_rule") or ""):
+            failures += fail("SNHL source metadata does not record the canonical identity rule")
         review = row.get("deliberate_review_v358") or {}
         for layer in ("foundation", "application", "senior_decision"):
             if not str(review.get(layer) or "").strip():
@@ -78,13 +87,11 @@ def main():
             if token not in combined:
                 failures += fail(f"SNHL clinical depth missing discriminator {token!r}")
 
-    # Verify that source metadata is visible on the actual Deep Curriculum UI path.
     template = Path("templates/curriculum_depth.html").read_text(encoding="utf-8")
     compact = re.sub(r"\s+", " ", template)
     if "m.source_basis" not in compact or "for s in m.source_basis" not in compact or "Source basis" not in compact:
         failures += fail("Deep Curriculum renderer does not surface live m.source_basis entries")
 
-    # Emit the exact-live source backlog for clinically prioritized successor cohorts.
     missing = []
     incomplete = []
     for domain, row in all_rows:
@@ -109,7 +116,7 @@ def main():
         print(f"\nDeep Curriculum source-completeness v35.8 FAILED with {failures} issue(s).")
         return 1
 
-    print("PASS: exact-live SNHL is clinically deep, textbook/current-evidence traceable, and source_basis is rendered; global source backlog emitted.")
+    print("PASS: exact-live SNHL identity is unique, clinically deep, textbook/current-evidence traceable, and source_basis is rendered; global source backlog emitted.")
     return 0
 
 
