@@ -33,14 +33,16 @@ def main():
             failures += fail("cholesteatoma exact-live record did not receive v35.9 source patch")
         sources = [str(x) for x in (row.get("source_basis") or []) if str(x).strip()]
         joined = " ".join(sources).lower()
-        if len(sources) < 6:
+        if len(sources) < 7:
             failures += fail(f"cholesteatoma source_basis too shallow: {len(sources)}")
-        for token in ("cummings", "pasha", "k.j. lee", "18qgoaazhvh", "14e4iy4xcj", "112c9y0fb1", "eaono/jos", "diffusion"):
+        for token in ("cummings", "pasha", "k.j. lee", "18qgoaazhvh", "14e4iy4xcj", "112c9y0fb1", "eaono/jos", "10.5152/iao.2017.3363", "10.1177/00034894241250253", "10.1002/ohn.70204", "diffusion"):
             if token not in joined:
                 failures += fail(f"cholesteatoma source trail missing {token!r}")
         meta = row.get("source_metadata_v359") or {}
         if meta.get("canonical_link") != {"domain": DOMAIN, "topic": TOPIC}:
             failures += fail("cholesteatoma canonical source metadata link is wrong")
+        if "2026" not in str(meta.get("management_currency") or ""):
+            failures += fail("cholesteatoma management-currency metadata does not record current 2026 evidence review")
         review = row.get("deliberate_review_v359") or {}
         for layer in ("foundation", "application", "senior_decision"):
             if not str(review.get(layer) or "").strip():
