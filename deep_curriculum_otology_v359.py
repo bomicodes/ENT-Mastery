@@ -13,8 +13,9 @@ SOURCE_BASIS_V359 = [
     "Pasha & Golub, Otolaryngology—Head & Neck Surgery: Clinical Reference Guide, 6e (2022), Otology/Neurotology chapter — infections/noninfectious temporal-bone disease and operative otology framework. Connected Google Drive file id 14E4Iy4XCjGPSyMT5n7uyURGtIDnhi-52.",
     "K.J. Lee's Essential Otolaryngology, 12e — chronic middle-ear disease, cholesteatoma, mastoid surgery, complications and hearing reconstruction. Connected Google Drive file id 112c9y0fb1z_7OLP4aLlAG2z-r8weuXvR.",
     "EAONO/JOS Joint Consensus Statements on the Definitions, Classification and Staging of Middle Ear Cholesteatoma. J Int Adv Otol. 2017;13(1):1-8. doi:10.5152/iao.2017.3363 — durable consensus terminology, classification and staging framework.",
-    "Patel TA et al. Cost-Effectiveness of Diffusion Weighted MRI Versus Planned Second-Look Surgery for Cholesteatoma. Ann Otol Rhinol Laryngol. 2024. doi:10.1177/00034894241250253 — non-EPI DWI surveillance and planned second-look surgery are both viable follow-up strategies; selection is individualized.",
-    "Current evidence distinction (rechecked 2026-09-11): non-EPI diffusion-weighted MRI is a surveillance tool for residual/recurrent cholesteatoma and does not replace operative judgment when disease, complications, anatomy, hearing goals, or inability to ensure follow-up favor surgery."
+    "Patel TA et al. Cost-Effectiveness of Diffusion Weighted MRI Versus Planned Second-Look Surgery for Cholesteatoma. Ann Otol Rhinol Laryngol. 2024;133(7):665-671. doi:10.1177/00034894241250253 — non-EPI DWI surveillance and planned second-look surgery are both viable follow-up strategies; selection is individualized.",
+    "Wolfovitz A et al. Defining the Timing of Radiological Follow-Up for Detection of Cholesteatoma Recidivism: A Meta-analysis. Otolaryngol Head Neck Surg. 2026;174(6):1410-1420. doi:10.1002/ohn.70204 — current evidence supports first routine postoperative non-EPI DWI at about 12-24 months, then individualized longitudinal imaging rather than assuming a single negative scan ends surveillance.",
+    "Current evidence distinction (rechecked 2026-09-11): non-EPI diffusion-weighted MRI is a surveillance tool for residual/recurrent cholesteatoma and does not replace operative judgment when disease, complications, anatomy, hearing goals, reconstruction, or inability to ensure follow-up favor surgery."
 ]
 
 DEPTH_APPEND_V359 = {
@@ -47,7 +48,7 @@ def apply_cholesteatoma_source_depth_v359(data_module, app_module=None):
             "pasha_6e": "14E4Iy4XCjGPSyMT5n7uyURGtIDnhi-52",
             "kj_lee_12e": "112c9y0fb1z_7OLP4aLlAG2z-r8weuXvR",
         },
-        "management_currency": "Durable anatomy/operative principles retained from core texts; consensus terminology and surveillance evidence rechecked 2026-09-11.",
+        "management_currency": "Durable anatomy/operative principles retained from core texts; consensus terminology and surveillance evidence rechecked 2026-09-11, including the 2026 postoperative imaging-timing meta-analysis.",
     }
     row["deliberate_review_v359"] = {
         "foundation": "recognize unsafe keratinizing middle-ear disease and distinguish it from uncomplicated chronic perforation",
