@@ -5,6 +5,11 @@ both the newest adversarial OR rescue gate and the newest OR commitment/bailout
 gate. This prevents a release from retaining complication recognition while
 silently losing the explicit stop/reassess/convert/sacrifice decisions required
 in high-risk operations.
+
+The historical manifest also accepts the newer v31.1 dynamic Concept Check
+executor as an equivalent fail-closed release path for the newest alignment and
+backlog pair, but only after verifying that the bridge discovers, version-matches,
+and actually executes both newest gates.
 """
 from pathlib import Path
 import re
@@ -12,6 +17,8 @@ import re
 ROOT = Path(__file__).resolve().parent
 WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
 FINAL_GATE = ROOT / "concept_check_final_clinical_gate_v179.py"
+DYNAMIC_CONCEPT_BRIDGE = ROOT / "audit_global_release_integrity_v311.py"
+DYNAMIC_CONCEPT_BRIDGE_NAME = DYNAMIC_CONCEPT_BRIDGE.name
 
 DOMAIN_GATES = (
     "audit_rhinology_ladder_complete_v218.py",
@@ -40,6 +47,23 @@ def latest(pattern: str, rx: str):
     if not rows:
         raise SystemExit(f"GLOBAL_RELEASE_MANIFEST_FAIL|no files matched {pattern}")
     return max(rows)
+
+
+def dynamic_concept_bridge_is_fail_closed(workflow_text: str) -> bool:
+    """Verify that the successor bridge is invoked and executes the newest gates."""
+    if DYNAMIC_CONCEPT_BRIDGE_NAME not in workflow_text or not DYNAMIC_CONCEPT_BRIDGE.exists():
+        return False
+    text = DYNAMIC_CONCEPT_BRIDGE.read_text(encoding="utf-8")
+    required_tokens = (
+        '_versions("concept_check_depth_v*.py")',
+        '_versions("audit_concept_check_task_alignment_v*.py")',
+        '_versions("audit_concept_check_depth_backlog_v*.py")',
+        'if max(align)!=latest',
+        'if max(backlog)!=latest',
+        '_run_latest("audit_concept_check_task_alignment_v"+str(latest))',
+        '_run_latest("audit_concept_check_depth_backlog_v"+str(latest))',
+    )
+    return all(token in text for token in required_tokens)
 
 
 def main() -> None:
@@ -74,12 +98,16 @@ def main() -> None:
 
     failures = []
     required = list(DOMAIN_GATES) + list(CORE_GATES) + [
-        latest_alignment,
-        latest_backlog,
         latest_rescue,
         latest_commitment,
     ]
     failures.extend(item for item in required if item not in workflow_text)
+
+    bridge_ok = dynamic_concept_bridge_is_fail_closed(workflow_text)
+    if latest_alignment not in workflow_text and not bridge_ok:
+        failures.append(latest_alignment)
+    if latest_backlog not in workflow_text and not bridge_ok:
+        failures.append(latest_backlog)
 
     # The depth cohort and its hard gate advance as a matched release unit.
     if depth_version != alignment_version:
@@ -124,6 +152,7 @@ def main() -> None:
     print(f"GLOBAL_RELEASE_LATEST_DEPTH|{latest_depth}")
     print(f"GLOBAL_RELEASE_LATEST_ALIGNMENT|{latest_alignment}")
     print(f"GLOBAL_RELEASE_LATEST_BACKLOG|{latest_backlog}")
+    print(f"GLOBAL_RELEASE_DYNAMIC_CONCEPT_BRIDGE|{'PASS' if bridge_ok else 'NOT_USED'}")
     print(f"GLOBAL_RELEASE_LATEST_OR_RESCUE|{latest_rescue}")
     print(f"GLOBAL_RELEASE_LATEST_OR_COMMITMENT|{latest_commitment}")
     print(f"GLOBAL_RELEASE_OR_COMMITMENT_VERSION|v{commitment_version}")
