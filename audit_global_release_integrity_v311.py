@@ -2,9 +2,12 @@
 
 Chains the current rescue/source manifest, requires all live Rhinology source-semantic
 gates, then discovers the highest Concept Check depth, alignment, and backlog versions
-present in the repository and requires the final clinical gate, dedicated workflow, and
-global release workflow to point at that exact same cohort.
+present in the repository. The newest cohort must be wired into the final clinical gate,
+have a dedicated exact-head workflow, and its task/source plus canonical-backlog audits
+must execute successfully from this global release bridge. This keeps global release
+fail-closed without requiring a hand-maintained duplicate step for every future cohort.
 """
+import importlib
 import re
 from pathlib import Path
 from audit_global_release_integrity_v310 import main as _v310_main
@@ -22,6 +25,15 @@ def _versions(pattern):
         m=re.search(r"_v(\d+)\.py$",path.name)
         if m: out.append(int(m.group(1)))
     return sorted(out)
+
+def _run_latest(module_name):
+    module = importlib.import_module(module_name)
+    main = getattr(module, "main", None)
+    if not callable(main):
+        raise RuntimeError(module_name + " missing callable main()")
+    rc = main()
+    if rc:
+        raise SystemExit(rc)
 
 def main():
     _v310_main()
@@ -50,15 +62,26 @@ def main():
         required_final=[f"from concept_check_depth_v{latest} import apply_concept_check_task_alignment_v{latest}",f'task_alignment_v{latest}']
         for token in required_final:
             if token not in final_text: failures.append("final_gate_missing:"+token)
-        required_release=[f"audit_concept_check_task_alignment_v{latest}.py",f"audit_concept_check_depth_backlog_v{latest}.py",f"V{latest}_DEPTH_BACKLOG_AUDIT.json",f"concept-check-depth-backlog-v{latest}"]
-        for token in required_release:
+        # The global release workflow must invoke this dynamic bridge. The bridge itself
+        # executes the newest cohort's alignment and backlog audits, avoiding stale
+        # duplicated version-specific release steps while remaining fail-closed.
+        for token in ("audit_global_release_integrity_v311.py", "Fail-closed global release manifest"):
             if token not in release_text: failures.append("release_workflow_missing:"+token)
         dedicated=ROOT / ".github" / "workflows" / f"concept-check-depth-v{latest}.yml"
         if not dedicated.exists(): failures.append("missing_dedicated_workflow:"+dedicated.name)
+        else:
+            dedicated_text=dedicated.read_text(encoding="utf-8")
+            for token in (f"audit_concept_check_task_alignment_v{latest}.py",f"audit_concept_check_depth_backlog_v{latest}.py",f"V{latest}_DEPTH_BACKLOG_AUDIT.json",f"v{latest}-depth-backlog-audit"):
+                if token not in dedicated_text: failures.append("dedicated_workflow_missing:"+token)
     print("GLOBAL_RELEASE_LATEST_CONCEPT_DEPTH|"+(f"v{latest}" if latest is not None else "none"))
     print("GLOBAL_RELEASE_DYNAMIC_CONCEPT_FAILURES|"+str(len(failures)))
     for failure in failures: print("FAIL|"+failure)
     if failures: raise SystemExit(1)
-    print("PASS: global release protects Rhinology Allergy + CRS inflammatory + Nonallergic/Olfaction source contracts and dynamically protects the newest Concept Check depth/alignment/backlog cohort")
+    if latest is not None:
+        print("GLOBAL_RELEASE_LATEST_TASK_SOURCE_GATE|audit_concept_check_task_alignment_v"+str(latest)+".py")
+        _run_latest("audit_concept_check_task_alignment_v"+str(latest))
+        print("GLOBAL_RELEASE_LATEST_CANONICAL_BACKLOG_GATE|audit_concept_check_depth_backlog_v"+str(latest)+".py")
+        _run_latest("audit_concept_check_depth_backlog_v"+str(latest))
+    print("PASS: global release protects Rhinology source contracts and dynamically executes the newest exact-live Concept Check task/source and canonical-backlog cohort")
 
 if __name__ == "__main__": main()
