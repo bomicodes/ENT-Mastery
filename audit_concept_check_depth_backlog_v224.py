@@ -44,7 +44,7 @@ def main():
     print(f"V224_FAILURES|{len(failures)}")
     for failure in failures: print("FAIL|" + failure)
     if failures: raise SystemExit(1)
-    print("PASS: v20.24 preserves the exact live canonical backlog contract after Intraoperative Nerve Monitoring Parameters depth")
+    print("PASS: v20.24 preserves the exact live canonical backlog contract after Neurotologic Intraoperative Cranial-Nerve Monitoring depth")
 
 
 if __name__ == "__main__":
