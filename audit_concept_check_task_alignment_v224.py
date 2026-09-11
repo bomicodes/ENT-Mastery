@@ -55,19 +55,24 @@ def main():
         reftext = " ".join(str(x.get("citation") or "") for x in refs if isinstance(x, dict)).lower()
         for anchor in SOURCE_ANCHORS:
             if anchor not in reftext: failures.append("missing_source:" + qid + ":" + anchor)
-        if RETRACTED_SOURCE in reftext: failures.append("retracted_source_present:" + qid + ":" + RETRACTED_SOURCE)
+        # Retraction hygiene is fail-closed: PMID 41353726 may appear only to document
+        # that it was retracted, with the formal retraction PMID present. It must not
+        # appear as an unqualified supporting evidence citation.
+        if RETRACTED_SOURCE in reftext and not ("retract" in reftext and "42520282" in reftext):
+            failures.append("unbounded_retracted_source:" + qid + ":" + RETRACTED_SOURCE)
         low = answer.lower()
         for group, anchors in SEMANTIC_GROUPS.items():
             if not all(a in low for a in anchors): failures.append("semantic:" + qid + ":" + group)
-        if "retract" not in low: failures.append("missing_retraction_boundary:" + qid)
+        if "retract" not in low or RETRACTED_SOURCE not in low or "42520282" not in low:
+            failures.append("missing_retraction_boundary:" + qid)
         evidence = str(q.get("evidence_distinction_v224") or "").lower()
-        for anchor in ("durable", "current", "universal", "fda", "retract"):
+        for anchor in ("durable", "current", "universal", "fda", "retract", RETRACTED_SOURCE, "42520282"):
             if anchor not in evidence: failures.append("evidence_boundary:" + qid + ":" + anchor)
     if set(align.get("repaired") or []) != set(QIDS): failures.append("final_gate_repaired_set")
     print("V224_TARGETS|" + ",".join(QIDS)); print("V224_FAILURES|" + str(len(failures)))
     for failure in failures: print("FAIL|" + failure)
     if failures: raise SystemExit(1)
-    print("PASS: v20.24 facial nerve monitoring has exact-live linkage, current non-retracted evidence, physiology/anesthesia interpretation, procedure-specific parameter boundaries and stop-troubleshoot-localize-rescue reasoning")
+    print("PASS: v20.24 facial nerve monitoring has exact-live linkage, explicit retraction hygiene, physiology/anesthesia interpretation, procedure-specific parameter boundaries and stop-troubleshoot-localize-rescue reasoning")
 
 
 if __name__ == "__main__": main()
