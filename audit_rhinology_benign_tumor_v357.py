@@ -29,7 +29,7 @@ def main():
     if len(rows) != 42:
         failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 42")
     names = [str(r.get("topic") or "") for r in rows]
-    if len(names) != len(set(names))):
+    if len(names) != len(set(names)):
         failures += fail("Rhinology canonical inventory contains duplicate topic names")
 
     predecessor = [r for r in rows if str(r.get("topic") or "") == "Unilateral Sinonasal Disease"]
