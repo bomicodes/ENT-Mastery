@@ -72,7 +72,10 @@ def main():
             if anchor not in reftext:
                 failures.append("missing_source:" + qid + ":" + anchor)
 
-        low = answer.lower()
+        # Validate rendered teaching semantics rather than Markdown decoration.
+        # The live answer intentionally bolds words such as **not**; strip emphasis
+        # markers so an editorial formatting change cannot create a false failure.
+        low = answer.lower().replace("**", "").replace("__", "")
         for group, anchors in SEMANTIC_GROUPS.items():
             if not all(anchor in low for anchor in anchors):
                 failures.append("semantic:" + qid + ":" + group)
