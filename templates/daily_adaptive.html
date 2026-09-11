@@ -20,8 +20,8 @@
 
 <div class="mastery-key-wrap">
   <div class="mastery-key">
-    <span>Mastery path</span>
-    <b>1 Recognize</b><i>→</i><b>2 Localize</b><i>→</i><b>3 Evaluate</b><i>→</i><b>4 Manage</b><i>→</i><b>5 Advanced</b><i>→</i><b>6 Teach</b>
+    <span>Learning path</span>
+    <b>1 Core concept</b><i>→</i><b>2 Mechanism &amp; anatomy</b><i>→</i><b>3 Evaluation &amp; evidence</b><i>→</i><b>4 Clinical application</b><i>→</i><b>5 Senior decisions</b><i>→</i><b>6 Synthesis &amp; teaching</b>
   </div>
   <p class="mastery-help"><b>How levels advance:</b> Reveal the answer, then rate yourself. <b>Got it</b> or <b>Easy</b> passes the current level and unlocks the next one. Missed/Hard keeps the same level in rotation. After passing, you can continue to the next level immediately.</p>
 </div>
@@ -40,19 +40,15 @@
 
   <div class="adaptive-title-row">
     <div>
-      {% if x.blind_reveal %}
-      <h2 class="blind-title">Unidentified case — {{x.blind_display_domain or x.domain}}</h2>
-      <a class="topic-deep-link blind-hidden-link" href="/concept/id/{{x.concept_id|urlencode}}" hidden>Open full topic ↗</a>
-      {% else %}
       <h2>{{x.topic}}</h2>
       <a class="topic-deep-link" href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a>
-      {% endif %}
-      <p class="mastery-status">Current mastery <b>{{x.mastery_before|default(0)}}/6</b> · Testing <b>Level {{x.level}} — {% if x.stage=='operate' %}Advanced decisions{% elif x.stage=='workup' %}Evaluate{% else %}{{x.stage|capitalize}}{% endif %}</b></p>
+      {% set stage_labels = {'recognize':'Core concept','localize':'Mechanism & anatomy','workup':'Evaluation & evidence','manage':'Clinical application','operate':'Senior decisions','teach':'Synthesis & teaching'} %}
+      <p class="mastery-status">Current mastery <b>{{x.mastery_before|default(0)}}/6</b> · Learning step <b>{{x.level}} — {{stage_labels[x.stage]}}</b></p>
     </div>
   </div>
 
   <div class="mini-mastery-track" aria-label="Six-level mastery path">
-    {% for stage_name in ['Recognize','Localize','Evaluate','Manage','Advanced','Teach'] %}
+    {% for stage_name in ['Core concept','Mechanism & anatomy','Evaluation & evidence','Clinical application','Senior decisions','Synthesis & teaching'] %}
       <div class="{% if loop.index <= x.mastery_before|default(0) %}mastered{% elif loop.index == x.level %}testing{% endif %}">
         <span>{{loop.index}}</span><small>{{stage_name}}</small>
       </div>
@@ -61,26 +57,13 @@
 
   <div class="active-recall-box">
     <span class="question-label">ANSWER BEFORE REVEALING</span>
-    {% set topic_lower = x.topic|lower %}
-    {% set prompt_lower = x.prompt|lower %}
-    {% if x.stage == 'recognize' and 'microlaryngoscopy' in topic_lower %}
-      <p class="adaptive-prompt">When is microlaryngoscopy indicated, and what does it allow you to diagnose or treat that office laryngoscopy may not?</p>
-    {% elif x.stage == 'recognize' and (topic_lower == 'fees' or 'fiberoptic endoscopic evaluation of swallowing' in topic_lower or 'flexible endoscopic evaluation of swallowing' in topic_lower) %}
-      <p class="adaptive-prompt">When would you choose FEES for swallowing evaluation, what does it directly assess, and what are its key limitations?</p>
-    {% elif 'dangerous alternative must you not miss' in prompt_lower %}
-      <p class="adaptive-prompt">Without looking: what presentation or finding should make you think of {{x.topic}}, and which feature best helps you distinguish or confirm it?</p>
-    {% else %}
-      <p class="adaptive-prompt">{{x.prompt}}</p>
-    {% endif %}
+    <p class="adaptive-prompt">{{x.prompt}}</p>
   </div>
 
   <details class="adaptive-reveal">
     <summary>Reveal answer</summary>
     <div class="adaptive-answer">
       <span class="answer-label">TEACHING ANSWER</span>
-      {% if x.blind_reveal %}
-      <p class="blind-answer-topic"><b>{{x.topic}}</b> · <a href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a></p>
-      {% endif %}
       <p>{{x.answer}}</p>
       <div class="self-rate-copy">
         <b>How well did you know it before revealing?</b>
