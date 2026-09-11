@@ -1,20 +1,29 @@
 """v35.8 — source-grounded Sensorineural Hearing Loss foundation/application/senior-decision rebuild.
 
-This bounded patch targets the exact live canonical Sensorineural Hearing Loss concept. It
-separates durable cochlear/auditory-pathway principles from time-sensitive management:
-chronic SNHL rehabilitation, asymmetric/retrocochlear workup, the sudden-SNHL emergency
-pathway, cochlear-implant referral, and the narrow 2026 OTOF gene-therapy indication.
+This bounded patch targets exactly one live Otology canonical concept whose normalized
+canonical title contains both "sensorineural" and "hearing". That identity rule is used
+because the live canonical label is not literally "Sensorineural Hearing Loss"; ambiguity
+fails closed rather than mutating a similarly named concept. The actual canonical title is
+then recorded in source metadata.
 """
 
 import re
 
 DOMAIN = "Otology / Neurotology"
-TARGET = "sensorineural hearing loss"
 FIELDS = ("recognize", "localize", "workup", "manage", "operate", "teach")
 
 
 def _norm(value):
     return re.sub(r"[^a-z0-9]+", " ", str(value or "").lower()).strip()
+
+
+def _snhl_candidates(rows):
+    matches = []
+    for row in rows:
+        title = _norm(row.get("topic"))
+        if "sensorineural" in title and "hearing" in title:
+            matches.append(row)
+    return matches
 
 
 SNHL_REBUILD_V358 = {
@@ -56,14 +65,16 @@ SNHL_REBUILD_V358 = {
 
 def apply_snhl_source_rebuild_v358(data_module, app_module=None):
     rows = (getattr(data_module, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
-    matches = [row for row in rows if _norm(row.get("topic")) == TARGET]
+    matches = _snhl_candidates(rows)
     if len(matches) != 1:
         raise RuntimeError(
-            f"v35.8 requires exactly one live canonical '{TARGET}' concept; found "
-            f"{len(matches)}: {[row.get('topic') for row in matches]}"
+            "v35.8 requires exactly one live Otology canonical concept containing both "
+            f"'sensorineural' and 'hearing'; found {len(matches)}: "
+            f"{[row.get('topic') for row in matches]}"
         )
 
     module = matches[0]
+    canonical_topic = module.get("topic")
     for field in FIELDS:
         module[field] = SNHL_REBUILD_V358[field]
     module["tags"] = list(SNHL_REBUILD_V358["tags"])
@@ -76,7 +87,8 @@ def apply_snhl_source_rebuild_v358(data_module, app_module=None):
             "kj_lee_12e": "112c9y0fb1z_7OLP4aLlAG2z-r8weuXvR",
         },
         "management_currency": "Guideline/device/FDA claims rechecked 2026-09-11; textbook physiology/anatomy retained as durable foundation.",
-        "canonical_link": {"domain": DOMAIN, "topic": module.get("topic")},
+        "canonical_link": {"domain": DOMAIN, "topic": canonical_topic},
+        "identity_rule": "unique live Otology canonical title containing normalized tokens sensorineural + hearing",
     }
     module["deliberate_review_v358"] = {
         "foundation": "differentiate cochlear/neural SNHL from conductive loss and avoid equating SNHL with CN VIII disease",
@@ -96,4 +108,4 @@ def apply_snhl_source_rebuild_v358(data_module, app_module=None):
 
     if app_module is not None:
         app_module.DEEP_MODULES_V6 = data_module.DEEP_MODULES_V6
-    return {"patched": [module.get("topic")], "count": 1}
+    return {"patched": [canonical_topic], "count": 1, "canonical_topic": canonical_topic}
