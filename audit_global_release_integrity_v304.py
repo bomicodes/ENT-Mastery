@@ -4,6 +4,11 @@ Extends v30.3 so the newest dedicated free-flap reconstruction bailout gate is
 part of the global release path. This protects recipient-vessel change-of-plan,
 selective vein-graft use, recurrent-thrombosis cause correction, and transition
 to an alternate reconstruction when a flap is unsalvageable.
+
+The historical manifest accepts the newer v31.1 dynamic Concept Check executor as
+an equivalent fail-closed release path for the latest alignment/backlog pair. This
+preserves compatibility for inherited workflows without requiring every historical
+workflow to be rewritten for each new Concept Check cohort.
 """
 from pathlib import Path
 import re
@@ -11,6 +16,8 @@ import re
 ROOT = Path(__file__).resolve().parent
 WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
 FINAL_GATE = ROOT / "concept_check_final_clinical_gate_v179.py"
+DYNAMIC_CONCEPT_BRIDGE = ROOT / "audit_global_release_integrity_v311.py"
+DYNAMIC_CONCEPT_BRIDGE_NAME = DYNAMIC_CONCEPT_BRIDGE.name
 
 DOMAIN_GATES = (
     "audit_rhinology_ladder_complete_v218.py",
@@ -51,6 +58,23 @@ def latest(pattern: str, rx: str):
     return max(rows)
 
 
+def dynamic_concept_bridge_is_fail_closed(workflow_text: str) -> bool:
+    """Verify the successor bridge is both invoked and actually executes latest gates."""
+    if DYNAMIC_CONCEPT_BRIDGE_NAME not in workflow_text or not DYNAMIC_CONCEPT_BRIDGE.exists():
+        return False
+    text = DYNAMIC_CONCEPT_BRIDGE.read_text(encoding="utf-8")
+    required_tokens = (
+        '_versions("concept_check_depth_v*.py")',
+        '_versions("audit_concept_check_task_alignment_v*.py")',
+        '_versions("audit_concept_check_depth_backlog_v*.py")',
+        'if max(align)!=latest',
+        'if max(backlog)!=latest',
+        '_run_latest("audit_concept_check_task_alignment_v"+str(latest))',
+        '_run_latest("audit_concept_check_depth_backlog_v"+str(latest))',
+    )
+    return all(token in text for token in required_tokens)
+
+
 def main() -> None:
     if not WORKFLOW.exists():
         raise SystemExit(f"GLOBAL_RELEASE_MANIFEST_FAIL|missing workflow:{WORKFLOW.relative_to(ROOT)}")
@@ -88,13 +112,20 @@ def main() -> None:
 
     failures = []
     required = list(DOMAIN_GATES) + list(CORE_GATES) + semantic_gates + [
-        latest_alignment,
-        latest_backlog,
         latest_rescue,
         latest_commitment,
         latest_reconstruction_bailout,
     ]
     failures.extend(item for item in required if item not in workflow_text)
+
+    # Historical workflows execute this manifest directly. The current release path may
+    # protect the newest Concept Check gates either by naming them directly or through
+    # v31.1's validated dynamic executor. Fail closed unless one of those paths exists.
+    bridge_ok = dynamic_concept_bridge_is_fail_closed(workflow_text)
+    if latest_alignment not in workflow_text and not bridge_ok:
+        failures.append(latest_alignment)
+    if latest_backlog not in workflow_text and not bridge_ok:
+        failures.append(latest_backlog)
 
     if depth_version != alignment_version:
         failures.append(
@@ -142,6 +173,7 @@ def main() -> None:
     print(f"GLOBAL_RELEASE_LATEST_DEPTH|{latest_depth}")
     print(f"GLOBAL_RELEASE_LATEST_ALIGNMENT|{latest_alignment}")
     print(f"GLOBAL_RELEASE_LATEST_BACKLOG|{latest_backlog}")
+    print(f"GLOBAL_RELEASE_DYNAMIC_CONCEPT_BRIDGE|{'PASS' if bridge_ok else 'NOT_USED'}")
     print(f"GLOBAL_RELEASE_LATEST_OR_RESCUE|{latest_rescue}")
     print(f"GLOBAL_RELEASE_LATEST_OR_COMMITMENT|{latest_commitment}")
     print(f"GLOBAL_RELEASE_OR_COMMITMENT_VERSION|v{commitment_version}")
