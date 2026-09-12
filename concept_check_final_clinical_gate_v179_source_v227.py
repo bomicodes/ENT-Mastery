@@ -8,12 +8,16 @@ import concept_check_final_clinical_gate_v179_source_v226 as _base
 from concept_check_final_clinical_gate_v179_source_v226 import *
 from concept_check_depth_v227 import apply_concept_check_task_alignment_v227
 
+# Explicit private-helper export for successor wrappers. Python import * does not carry
+# underscore-prefixed names, so keep the previously validated fail-closed helper reachable.
+_reassert_clinical_contract = _base._reassert_clinical_contract
+
 
 def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     results = _base.apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id)
     alignment_v227 = apply_concept_check_task_alignment_v227(checks, deep_modules, v6_item_id)
     results["task_alignment_v227"] = alignment_v227
-    results["post_alignment_reframed_v227"] = _base._reassert_clinical_contract(
+    results["post_alignment_reframed_v227"] = _reassert_clinical_contract(
         checks,
         alignment_v227.get("repaired", []),
         results.get("unresolved", []),
