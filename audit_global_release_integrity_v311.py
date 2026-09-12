@@ -82,9 +82,9 @@ def main():
         latest = None
     else:
         latest = max(depth)
-        if max(align) != latest:
+        if max(align)!=latest:
             failures.append(f"latest_alignment_v{max(align)}_does_not_match_depth_v{latest}")
-        if max(backlog) != latest:
+        if max(backlog)!=latest:
             failures.append(f"latest_backlog_v{max(backlog)}_does_not_match_depth_v{latest}")
 
     if latest is not None:
@@ -124,9 +124,9 @@ def main():
         raise SystemExit(1)
     if latest is not None:
         print("GLOBAL_RELEASE_LATEST_TASK_SOURCE_GATE|audit_concept_check_task_alignment_v" + str(latest) + ".py")
-        _run_latest("audit_concept_check_task_alignment_v" + str(latest))
+        _run_latest("audit_concept_check_task_alignment_v"+str(latest))
         print("GLOBAL_RELEASE_LATEST_CANONICAL_BACKLOG_GATE|audit_concept_check_depth_backlog_v" + str(latest) + ".py")
-        _run_latest("audit_concept_check_depth_backlog_v" + str(latest))
+        _run_latest("audit_concept_check_depth_backlog_v"+str(latest))
     print("PASS: global release protects source contracts, learner discoverability and the newest exact-live Concept Check task/source plus canonical-backlog cohort")
 
 
