@@ -75,7 +75,7 @@
     {% elif onb_focus and x.stage == 'operate' %}
       <p class="adaptive-prompt">You are the senior resident planning ONB resection. How do you choose endoscopic versus open/combined exposure, define a safe negative-margin goal at the skull base/orbit, and decide when not to force an endonasal resection?</p>
     {% elif onb_focus and x.stage == 'teach' %}
-      <p class="adaptive-prompt">Teach ONB from pathology and staging through surgery, radiotherapy, selective induction therapy, neck management, salvage, and decades-long surveillance. Include the major evidence limitations you would state on boards or at tumor board.</p>
+      <p class="adaptive-prompt">Teach ONB from pathology and staging through surgery, radiotherapy, selective induction therapy, neck management, salvage, and at least 20 years of surveillance because late recurrence is characteristic. Include the major evidence limitations you would state on boards or at tumor board.</p>
     {% elif x.stage == 'recognize' and 'microlaryngoscopy' in topic_lower %}
       <p class="adaptive-prompt">When is microlaryngoscopy indicated, and what does it allow you to diagnose or treat that office laryngoscopy may not?</p>
     {% elif x.stage == 'recognize' and (topic_lower == 'fees' or 'fiberoptic endoscopic evaluation of swallowing' in topic_lower or 'flexible endoscopic evaluation of swallowing' in topic_lower) %}
