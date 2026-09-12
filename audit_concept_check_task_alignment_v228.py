@@ -16,7 +16,7 @@ SEMANTIC_GROUPS = {
     "bailout": ("airway → resuscitation", "or or endovascular", "neck hematoma"),
 }
 SOURCE_ANCHORS = (
-    "cummings", "pasha", "k.j. lee", "chapter 5", "acc/aha", "chest", "aao-hns",
+    "cummings", "pasha", "k.j. lee", "chapter 5", "aha/acc", "chest", "aao-hns",
     "kcentra", "praxbind", "andexxa", "december 22, 2025"
 )
 
