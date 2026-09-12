@@ -15,7 +15,7 @@ SEMANTIC_GROUPS = {
     "senior": ("stabilize aspiration/nutrition risk", "exclude recurrent", "reassess objectively"),
 }
 SOURCE_ANCHORS = (
-    "cummings", "pasha", "k.j. lee", "aa0-hnsf", "american head and neck society",
+    "cummings", "pasha", "k.j. lee", "aao-hnsf", "american head and neck society",
     "pmid 36965195", "pmid 41340588", "pmid 41348337", "pmid 42636603"
 )
 
