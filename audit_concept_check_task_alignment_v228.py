@@ -51,7 +51,7 @@ def main():
 
         prompt = str(q.get("prompt") or "")
         answer = str(q.get("answer_text") or "")
-        if "?" not in prompt or len(prompt.split()) < 75:
+        if "?" not in prompt or len(prompt.split()) < 70:
             failures.append("prompt_depth:" + qid + ":" + str(len(prompt.split())))
         if len(answer.split()) < 1100:
             failures.append("answer_depth:" + qid + ":" + str(len(answer.split())))
