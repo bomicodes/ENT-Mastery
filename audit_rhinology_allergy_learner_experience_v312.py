@@ -18,12 +18,18 @@ TOPICS = {
         "concept": ("allergic rhinitis", "testing", "intranasal", "immunotherapy"),
         "daily": ("allergic rhinitis", "ige", "allergen", "immunotherapy"),
         "sources": ("cummings", "pasha", "k.j. lee", "allergic rhinitis", "2015", "immunotherapy for inhalant allergy", "2024"),
+        "concept_sources": ("cummings", "pasha", "k.j. lee", "0194599814561600", "alr.23090", "ohn.648"),
+        "check_id": "cc-v231-rhinology-allergic-rhinitis-ar",
+        "aliases": ("allergic rhinitis", "hay fever", "seasonal allergic rhinitis", "perennial allergic rhinitis"),
     },
     "Local Allergic Rhinitis": {
         "deep": ("negative", "nasal allergen", "specific ige", "nares", "immunotherapy"),
         "concept": ("local allergic rhinitis", "negative", "nasal allergen"),
         "daily": ("local allergic rhinitis", "nasal allergen", "negative", "allergy"),
         "sources": ("cummings", "pasha", "k.j. lee", "local allergic rhinitis", "immunotherapy for inhalant allergy", "2024"),
+        "concept_sources": ("cummings", "pasha", "k.j. lee", "alr.23090", "all.13416", "ohn.648"),
+        "check_id": "cc-v231-rhinology-local-allergic-rhinitis-lar",
+        "aliases": ("local allergic rhinitis", "localized allergic rhinitis", "entopy", "negative skin testing", "negative serum ige"),
     },
 }
 CORE_SOURCE_IDS = (
@@ -57,6 +63,7 @@ def main():
         fail(failures, f"rhinology_inventory:{len(modules)}")
 
     by_topic = {str(mod.get("topic") or ""): mod for mod in modules}
+    by_check_id = {str(q.get("id") or ""): q for q in checks}
     search_rows = list(app_mod._canonical_search_index())
     client = runtime_entry.app.test_client()
 
@@ -92,14 +99,27 @@ def main():
         if not related:
             fail(failures, "concept_check_missing:" + topic)
         else:
+            expected = by_check_id.get(contract["check_id"])
+            if expected is None or expected not in related:
+                fail(failures, "dedicated_concept_check_missing:" + topic)
             answers = " ".join(str(q.get("answer_text") or "") for q in related).lower()
             for anchor in contract["concept"]:
                 if anchor not in answers:
                     fail(failures, "concept_teaching_missing:" + topic + ":" + anchor)
             refs = " ".join(str(ref.get("citation") or "") for q in related for ref in (q.get("source_refs_v230") or []) if isinstance(ref, dict)).lower()
-            for anchor in ("cummings", "pasha", "k.j. lee"):
+            for anchor in contract["concept_sources"]:
                 if anchor not in refs:
                     fail(failures, "concept_source_missing:" + topic + ":" + anchor)
+
+            check_url = "/concept-check/" + contract["check_id"]
+            check_rows = [r for r in search_rows if r.get("type") == "Concept Check" and r.get("url") == check_url]
+            if not check_rows:
+                fail(failures, "concept_search_row_missing:" + topic)
+            else:
+                searchable = " ".join(text(r.get("title")) + " " + text(r.get("text")) for r in check_rows)
+                for alias in contract["aliases"]:
+                    if alias not in searchable:
+                        fail(failures, "concept_alias_not_searchable:" + topic + ":" + alias)
 
         items = [x for x in adaptive if x.get("concept_id") == cid]
         levels = {int(x.get("level") or 0) for x in items}
@@ -117,17 +137,16 @@ def main():
             if anchor not in hub_text:
                 fail(failures, "concept_hub_render_missing:" + topic + ":" + anchor)
 
-        if related:
-            qid = str(related[0].get("id") or "")
-            page = client.get("/concept-check/" + qid)
-            page_text = page.get_data(as_text=True).lower()
-            if page.status_code != 200:
-                fail(failures, "concept_check_http:" + topic + ":" + str(page.status_code))
-            if topic.lower() not in page_text:
-                fail(failures, "concept_check_render_missing:" + topic)
-            for anchor in ("cummings", "pasha", "k.j. lee"):
-                if anchor not in page_text:
-                    fail(failures, "concept_source_render_missing:" + topic + ":" + anchor)
+        qid = contract["check_id"]
+        page = client.get("/concept-check/" + qid)
+        page_text = page.get_data(as_text=True).lower()
+        if page.status_code != 200:
+            fail(failures, "concept_check_http:" + topic + ":" + str(page.status_code))
+        if topic.lower() not in page_text:
+            fail(failures, "concept_check_render_missing:" + topic)
+        for anchor in ("cummings", "pasha", "k.j. lee"):
+            if anchor not in page_text:
+                fail(failures, "concept_source_render_missing:" + topic + ":" + anchor)
 
     print("RHINOLOGY_ALLERGY_LEARNER_CONTRACTS|" + str(len(TOPICS)))
     print("RHINOLOGY_ALLERGY_LEARNER_FAILURES|" + str(len(failures)))
@@ -135,7 +154,7 @@ def main():
         print("FAIL|" + item)
     if failures:
         return 1
-    print("PASS: AR/LAR remain coherent and source-visible across Deep Curriculum -> Concept Check -> Daily Curriculum")
+    print("PASS: AR/LAR remain coherent, alias-searchable and source-visible across Deep Curriculum -> Concept Check -> Daily Curriculum")
     return 0
 
 
