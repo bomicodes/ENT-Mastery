@@ -5,7 +5,7 @@ from concept_check_depth_v229 import COHORT, QIDS
 
 SEMANTIC_GROUPS = {
     "mechanisms": ("fibrosis", "neuropathy", "xerostomia", "stenosis"),
-    "danger": ("silent aspiration", "recurrent pneumonias", "weight"),
+    "danger": ("aspiration may be silent", "recurrent pneumonias", "weight"),
     "oncology": ("recurrence", "second primary"),
     "instrumentation": ("fees", "modified barium swallow", "mbs"),
     "rehab": ("speech-language pathology", "exercise", "oral intake"),
