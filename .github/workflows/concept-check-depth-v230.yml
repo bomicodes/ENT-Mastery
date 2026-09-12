@@ -43,7 +43,17 @@ jobs:
       - name: v20.30 ONB management task/source gate
         run: python audit_concept_check_task_alignment_v230.py
       - name: Learner-experience discoverability gate
-        run: python audit_learner_experience_current.py
+        shell: bash
+        run: |
+          set -o pipefail
+          python audit_learner_experience_current.py | tee LEARNER_EXPERIENCE_AUDIT.txt
+      - name: Upload learner-experience diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v230-learner-experience-audit
+          path: LEARNER_EXPERIENCE_AUDIT.txt
+          if-no-files-found: error
       - name: All-domain Concept Check curation
         run: python audit_concept_checks_all_domains_v178.py
       - name: Prior validated v20.29 task/source gate
