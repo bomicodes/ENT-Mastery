@@ -235,7 +235,7 @@ def _install_route_hardening(app, data, app_mod):
             state = db.adaptive_mastery_map().get(_canonical_id(data, payload.get("concept_id"), payload.get("domain")), {})
             due = state.get("next_due")
             next_level = min(6, new_level + 1) if new_level < 6 else None
-            next_stage = {1:"Recognize",2:"Localize",3:"Evaluate",4:"Manage",5:"Advanced",6:"Teach"}.get(next_level)
+            next_stage = {1:"Core concept",2:"Mechanism & anatomy",3:"Evaluation & evidence",4:"Clinical application",5:"Senior decisions",6:"Synthesis & teaching"}.get(next_level)
             return jsonify({"ok":True,"mastery_level":new_level,"next_due":str(due) if due else None,
                             "passed":rating>=2,"next_level":next_level,"next_stage":next_stage})
         except Exception:

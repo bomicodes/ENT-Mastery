@@ -2,7 +2,6 @@ import re
 import data
 from curveballs_v123 import ORIGINAL_V11_CURVEBALLS_V123
 from vignettes_v124 import VIGNETTES_V124
-from recognize_stage_v127 import apply_recognize_blind_reveal_v127
 
 # ENT Mastery v12.4 production runtime integration.
 # Build adaptive items from the final topic registry while preserving the schema
@@ -15,7 +14,12 @@ def _get_adaptive_items_v123():
     for item in items:
         item.setdefault("level", stage_level.get(item.get("stage"), 1))
         item.setdefault("tags", sorted(set(re.findall(r"[a-z0-9]+", ((item.get("domain") or "") + " " + (item.get("topic") or "")).lower()))))
-    apply_recognize_blind_reveal_v127(items)
+    # Daily Path is a topic-linked retrieval curriculum, not a bank of hidden
+    # diagnoses.  Keep the canonical topic visible here; true unidentified
+    # vignettes live in Clinical Challenges, where a blind reveal is useful.
+    for item in items:
+        item.pop("blind_reveal", None)
+        item.pop("blind_display_domain", None)
     return items
 
 data.get_adaptive_items_v120 = _get_adaptive_items_v123

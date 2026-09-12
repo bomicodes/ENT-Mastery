@@ -592,58 +592,72 @@ if __name__ == "__main__": app.run(debug=True)
 # v6 Adaptive Daily Path
 # =============================================================================
 def _adaptive_question(item):
-    """Generate a prompt that matches the *kind* of concept being tested.
+    """Build a resident-level retrieval prompt from the linked deep-curriculum layer.
 
-    The old generator asked every level-1 item for a "clinical pattern," which made
-    foundational concepts such as Laryngeal Anatomy read nonsensically. Foundation
-    topics now use structure/relationship/mechanism prompts while disease topics keep
-    the clinical-recognition pathway.
+    The six database stages remain stable for mastery/spaced repetition, but they are
+    not interpreted as six literal commands.  The learner instead moves from a core
+    model through mechanism, diagnostic reasoning, treatment, senior judgment, and
+    synthesis.  The revealed answer is the exact corresponding deep-curriculum layer.
     """
     topic=item.get("topic","this topic")
     stage=item.get("stage","recognize")
     ntopic=topic.lower()
     tags={str(x).lower() for x in item.get("tags",[]) }
-    foundation_terms=("anatomy","physiology","neuroanatomy","principles","fundamentals","imaging fundamentals","electrophysiology")
-    is_foundation=any(t in ntopic for t in foundation_terms) or bool(tags & {"anatomy","physiology","fundamentals"})
+    anatomy_terms=("anatomy","physiology","neuroanatomy","embryology","principles","fundamentals","pathway")
+    skill_terms=("interpretation","examination","audiogram","testing","test","imaging","ultrasound","ct ","mri","psg","polysomn","fees","endoscopy","stroboscopy","outcomes research")
+    procedure_terms=("ectomy","otomy","plasty","surgical","reconstruction","implant","ablation","biopsy","dissection","flap","graft","procedure","approach","exploration","bronchoscopy","laryngoscopy")
+    is_foundation=any(t in ntopic for t in anatomy_terms) or bool(tags & {"anatomy","physiology","fundamentals","embryology"})
+    is_skill=any(t in ntopic for t in skill_terms) or "interpretation" in tags
+    # Classify by what the topic itself teaches. Looking for operative words in
+    # the answer overclassified diseases that merely mention surgery (for example,
+    # "Residual OSA After Surgery") as procedures.
+    is_procedure=any(t in ntopic for t in procedure_terms)
 
-    # v15.10 fix: topics that teach an interpretive/examination SKILL (reading
-    # an audiogram, PSG, or stroboscopy exam; performing a structured trauma
-    # exam) are neither a disease with a "dangerous alternative" to rule out,
-    # nor pure anatomy/physiology. Without this branch they fell through to
-    # the disease-pattern prompt, producing nonsensical questions like "what
-    # presentation should make you think of Audiogram Interpretation, and
-    # what dangerous alternative must you not miss?" - nothing "presents
-    # like" an interpretive skill.
-    interpretation_terms=("interpretation","structured facial trauma examination","outcomes research")
-    is_interpretation=any(t in ntopic for t in interpretation_terms) or "interpretation" in tags
+    if is_foundation:
+        prompts={
+          "recognize":f"Build a clinically useful mental map of {topic}. Which structures or mechanisms organize it, and why do those relationships matter in ENT practice?",
+          "localize":f"Trace the key spatial, developmental, or physiologic relationships in {topic}. What connects to what, and how do those relationships explain function or disease?",
+          "workup":f"How do you identify and assess the important elements of {topic} on examination, testing, imaging, or endoscopy? Include meaningful variants and common interpretation traps.",
+          "manage":f"Apply {topic} to a real clinical decision. Which findings change counseling, diagnostic interpretation, treatment selection, or operative planning?",
+          "operate":f"Use {topic} for senior operative planning: identify the critical landmarks and danger structures, how anatomy may vary, and what should make you stop or change course.",
+          "teach":f"Teach {topic} from first principles, then connect the mental map to one high-yield clinical or boards decision and one common misconception."
+        }
+        return prompts.get(stage, f"Explain the core reasoning for {topic}.")
 
-    if is_interpretation:
+    if is_skill:
         prompts={
-          "recognize":f"Without looking: what is your systematic approach to {topic}? What do you check, in what order, and what would make you question the result's validity?",
-          "localize":f"Which specific findings or components of {topic} carry the most diagnostic weight, and which are easy to overweight or misread?",
-          "workup":f"What additional data, history, or corroborating test would you want before acting on {topic} alone?",
-          "manage":f"How does the result of {topic} actually change management, versus findings that are reassuring but don't change the plan?",
-          "operate":f"What is the highest-stakes misread in {topic} - the mistake that leads to the wrong treatment or a missed diagnosis?",
-          "teach":f"Teach {topic} to a junior as a step-by-step framework, then give the one pearl that catches the most common misread."
+          "recognize":f"What clinical question does {topic} answer? Describe when to use it, the framework for approaching it, and what it cannot establish by itself.",
+          "localize":f"What anatomy, physiology, or measured signals underlie {topic}? Explain what each important finding represents and where misleading results can arise.",
+          "workup":f"Perform and interpret {topic} systematically. What must be checked first, which findings carry the most weight, and how do you confirm that the result is valid?",
+          "manage":f"Translate {topic} into action. Which results change observation, treatment, additional testing, or procedural planning—and which findings should not drive management alone?",
+          "operate":f"Address the highest-stakes use of {topic}: patient selection, technical or interpretive pitfalls, discordant data, and the error most likely to cause a missed diagnosis or wrong treatment.",
+          "teach":f"Teach a junior a reproducible approach to {topic}, including how to begin, how to reach a conclusion, and the limitation or trap they must state on boards."
         }
-    elif is_foundation:
+        return prompts.get(stage, f"Explain the core reasoning for {topic}.")
+
+    if is_procedure:
         prompts={
-          "recognize":f"Without looking: how would you organize {topic}, and what core structures or mechanisms must you know?",
-          "localize":f"Walk through the key spatial or physiologic relationships in {topic}. What connects to what, and why does it matter?",
-          "workup":f"How do you identify or assess {topic} on exam, testing, imaging, or endoscopy—and which findings or variants matter?",
-          "manage":f"How does {topic} change your clinical or operative decisions? Give the practical consequences of the anatomy/physiology.",
-          "operate":f"Apply {topic} to a procedure: what are the landmarks, danger structures, key relationships, and bailout considerations?",
-          "teach":f"Teach {topic} to a junior from first principles, then give the one attending/boards pearl you would not want them to miss."
+          "recognize":f"Where does {topic} fit in patient care? Define its purpose, the problem it addresses, and the findings or indications that should bring it into consideration.",
+          "localize":f"Map the anatomy and mechanism relevant to {topic}. Which landmarks, tissue planes, or physiologic relationships determine whether it can be performed safely and effectively?",
+          "workup":f"How do you select and prepare a patient for {topic}? Identify the evaluation that confirms the indication, exposes contraindications, and changes the operative plan.",
+          "manage":f"Build the complete care pathway around {topic}: alternatives, preparation, the intended therapeutic result, postoperative care, and how success or failure is assessed.",
+          "operate":f"Talk through the senior-level execution of {topic}: key steps, danger structures, major tradeoffs and complications, and the bailout or rescue plan.",
+          "teach":f"Present {topic} at boards level: indication and alternatives, essential anatomy, decisive technical principle, major complication, and the pearl that prevents a wrong decision."
         }
-    else:
-        prompts={
-          "recognize":f"Without looking: what presentation or finding should make you think of {topic}, and what dangerous alternative must you not miss?",
-          "localize":f"How do you localize {topic} anatomically or physiologically, and what localization changes the differential?",
-          "workup":f"What workup is useful for {topic}, and which findings actually change management?",
-          "manage":f"What is your management framework for {topic}, including when to observe, treat, or escalate?",
-          "operate":f"What is the advanced decision for {topic}? If a procedure has a role, give indication, anatomy, danger structures, and rescue plan; if not, explain the refractory/complication pathway.",
-          "teach":f"Teach {topic} to a junior from first principles and give the key attending/boards pearl."
-        }
+        return prompts.get(stage, f"Explain the core reasoning for {topic}.")
+
+    if stage=="recognize":
+        return f"Define the clinical pattern of {topic}. Which features are most discriminating, and which atypical finding, mimic, or complication would change your level of concern?"
+
+    prompts={
+      "localize":f"Explain the anatomy and pathophysiology that drive {topic}. How do site, extent, or mechanism account for the presentation and alter the differential or risk?",
+      "workup":f"Starting from clinical suspicion for {topic}, build the evaluation. Which history and examination findings matter, which tests answer the remaining questions, and which results change the plan?",
+      "manage":f"Develop a practical treatment strategy for {topic}. Include initial care, patient selection, escalation thresholds, and the follow-up needed to know whether the plan worked.",
+      "operate": (
+          f"Handle the difficult version of {topic}. What makes routine management insufficient, what escalation or procedure is justified, and how do you anticipate complications or rescue failure?"
+      ),
+      "teach":f"Give a concise boards-level synthesis of {topic} that connects the core pattern, mechanism, decisive evaluation, management logic, and the pitfall most likely to produce a wrong decision."
+    }
     return prompts.get(stage,f"Explain the core reasoning for {topic}.")
 
 def _adaptive_plan(target_minutes=30,focus=None,concept_id=None):
@@ -722,7 +736,7 @@ def daily_adaptive_answer():
         from db import record_adaptive_result
         new_level=record_adaptive_result(payload.get("concept_id"),payload.get("item_id"),payload.get("domain"),payload.get("topic"),payload.get("stage"),level,rating,REVIEW_INTERVALS_V6.get(level,7))
         from db import adaptive_mastery_map
-        state=adaptive_mastery_map().get(payload.get("concept_id"),{}); due=state.get("next_due"); next_level=min(6,new_level+1) if new_level<6 else None; next_stage={1:"Recognize",2:"Localize",3:"Evaluate",4:"Manage",5:"Advanced",6:"Teach"}.get(next_level); return jsonify({"ok":True,"mastery_level":new_level,"next_due":str(due) if due else None,"passed":rating>=2,"next_level":next_level,"next_stage":next_stage})
+        state=adaptive_mastery_map().get(payload.get("concept_id"),{}); due=state.get("next_due"); next_level=min(6,new_level+1) if new_level<6 else None; next_stage={1:"Core concept",2:"Mechanism & anatomy",3:"Evaluation & evidence",4:"Clinical application",5:"Senior decisions",6:"Synthesis & teaching"}.get(next_level); return jsonify({"ok":True,"mastery_level":new_level,"next_due":str(due) if due else None,"passed":rating>=2,"next_level":next_level,"next_stage":next_stage})
     except Exception as e: return jsonify({"ok":False,"error":str(e)}),500
 
 @app.route("/curriculum/depth")
