@@ -5,19 +5,27 @@ persistent learner-experience gate, then discovers the highest Concept Check dep
 and backlog versions present. The newest cohort must be wired into the final clinical gate,
 have a dedicated exact-head workflow, and its task/source, learner-experience and canonical-backlog
 audits must execute successfully from the release chain.
+
+The learner-experience audit runs in a fresh interpreter because historical release/source audits
+mutate imported runtime data while validating their own contracts. Running the learner gate in the
+same interpreter can therefore create a false release failure even though the exact live runtime
+passes the learner contract. Fresh-process execution preserves fail-closed behavior while testing
+what a learner actually receives on a clean application boot.
 """
 import importlib
 import re
+import subprocess
+import sys
 from pathlib import Path
 from audit_global_release_integrity_v310 import main as _v310_main
 from audit_rhinology_allergy_source_semantic_v349 import main as _rhinology_allergy_source_main
 from audit_rhinology_crs_inflammatory_source_semantic_v350 import main as _rhinology_crs_source_main
 from audit_rhinology_nonallergic_olfaction_source_semantic_v351 import main as _rhinology_nonallergic_olfaction_source_main
-from audit_learner_experience_current import main as _learner_experience_main
 
 ROOT = Path(__file__).resolve().parent
 RELEASE_WORKFLOW = ROOT / ".github" / "workflows" / "release-integrity.yml"
 FINAL_GATE = ROOT / "concept_check_final_clinical_gate_v179.py"
+LEARNER_EXPERIENCE_AUDIT = ROOT / "audit_learner_experience_current.py"
 
 
 def _versions(pattern):
@@ -39,6 +47,14 @@ def _run_latest(module_name):
         raise SystemExit(rc)
 
 
+def _run_fresh_python(path):
+    if not path.exists():
+        raise SystemExit("missing fresh-process audit:" + path.name)
+    completed = subprocess.run([sys.executable, str(path)], cwd=str(ROOT), check=False)
+    if completed.returncode:
+        raise SystemExit(completed.returncode)
+
+
 def main():
     _v310_main()
     print("GLOBAL_RELEASE_RHINOLOGY_ALLERGY_SOURCE_GATE|audit_rhinology_allergy_source_semantic_v349.py")
@@ -54,10 +70,8 @@ def main():
     if rc:
         raise SystemExit(rc)
 
-    print("GLOBAL_RELEASE_LEARNER_EXPERIENCE_GATE|audit_learner_experience_current.py")
-    rc = _learner_experience_main()
-    if rc:
-        raise SystemExit(rc)
+    print("GLOBAL_RELEASE_LEARNER_EXPERIENCE_GATE|audit_learner_experience_current.py|fresh_process")
+    _run_fresh_python(LEARNER_EXPERIENCE_AUDIT)
 
     depth = _versions("concept_check_depth_v*.py")
     align = _versions("audit_concept_check_task_alignment_v*.py")
