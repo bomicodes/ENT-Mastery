@@ -12,6 +12,7 @@ SOURCE_REFS = [
     {"type":"guideline","citation":"Crouser ED, et al. Diagnosis and Detection of Sarcoidosis: An Official ATS Clinical Practice Guideline. Am J Respir Crit Care Med. 2020;201:e26-e51."},
     {"type":"consensus","citation":"Wallace ZS, et al. 2019 ACR/EULAR Classification Criteria for IgG4-Related Disease. Arthritis Rheumatol. 2020;72:7-19. DOI 10.1002/art.41120; used as structured clinicopathologic support, not a stand-alone diagnostic test."},
 ]
+TEXTBOOK_SOURCE_REFS = SOURCE_REFS[:3]
 
 PROMPT = (
     "An adult patient referred for 'refractory chronic sinusitis' has months of bloody crusting, a new septal perforation, "
@@ -55,13 +56,41 @@ CHECK = {
 }
 
 
+def _ensure_visible_textbook_sources(q):
+    refs = list(q.get("source_refs_v230") or [])
+    blob = " ".join(str(ref.get("citation") or "").lower() for ref in refs if isinstance(ref, dict))
+    for source in TEXTBOOK_SOURCE_REFS:
+        citation = str(source.get("citation") or "")
+        marker = (
+            "cummings" if "cummings" in citation.lower()
+            else "pasha" if "pasha" in citation.lower()
+            else "k.j. lee"
+        )
+        if marker not in blob:
+            refs.append(dict(source))
+            blob += " " + citation.lower()
+    q["source_refs_v230"] = refs
+
+
 def apply_rhinology_systemic_concept_check_v234(checks, deep_modules, v6_item_id):
     module = next((m for m in (deep_modules or {}).get(DOMAIN, []) or [] if str(m.get("topic") or "") == TOPIC), None)
     if module is None:
-        return {"added": [], "link_mismatch": [QID], "expected": [QID]}
-    if QID in {str(q.get("id") or "") for q in checks or []}:
-        return {"added": [], "link_mismatch": [], "expected": [QID]}
-    q = dict(CHECK)
-    q["concept_id"] = v6_item_id(DOMAIN, TOPIC)
-    checks.append(q)
-    return {"added": [QID], "link_mismatch": [], "expected": [QID]}
+        return {"added": [], "enriched": [], "link_mismatch": [QID], "expected": [QID]}
+
+    cid = v6_item_id(DOMAIN, TOPIC)
+    added = []
+    if QID not in {str(q.get("id") or "") for q in checks or []}:
+        q = dict(CHECK)
+        q["source_refs_v230"] = [dict(ref) for ref in SOURCE_REFS]
+        q["concept_id"] = cid
+        checks.append(q)
+        added.append(QID)
+
+    enriched = []
+    for q in checks or []:
+        if str(q.get("concept_id") or "") != cid:
+            continue
+        _ensure_visible_textbook_sources(q)
+        enriched.append(str(q.get("id") or ""))
+
+    return {"added": added, "enriched": enriched, "link_mismatch": [], "expected": [QID]}
