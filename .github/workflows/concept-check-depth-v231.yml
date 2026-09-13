@@ -50,6 +50,8 @@ jobs:
         run: python audit_concept_check_depth_backlog_v231.py
       - name: Full-bank teaching-alignment regression
         run: python audit_concept_check_teaching_alignment_v206.py
+      - name: Current learner-experience gate
+        run: python audit_learner_experience_current.py
       - name: Rhinology completed-domain gate
         run: python audit_rhinology_ladder_complete_v218.py
       - name: Otology completed-domain gate
