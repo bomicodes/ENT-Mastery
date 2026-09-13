@@ -59,8 +59,8 @@ CHECKS = [
         "domain": DOMAIN,
         "topic": "Allergic Rhinitis",
         "canonical_topic": "Allergic Rhinitis",
-        "prompt": "A 24-year-old with allergic rhinitis (hay fever), including seasonal allergic rhinitis or perennial allergic rhinitis, has sneezing, nasal itching, clear rhinorrhea, and congestion that track with cat exposure. What testing is actually useful, what is first-line controller therapy, when should allergen immunotherapy enter the plan, and when would nasal surgery be addressing a different problem rather than the allergy itself?",
-        "question": "A 24-year-old with allergic rhinitis (hay fever), including seasonal allergic rhinitis or perennial allergic rhinitis, has sneezing, nasal itching, clear rhinorrhea, and congestion that track with cat exposure. What testing is actually useful, what is first-line controller therapy, when should allergen immunotherapy enter the plan, and when would nasal surgery be addressing a different problem rather than the allergy itself?",
+        "prompt": "A 24-year-old adult patient with allergic rhinitis (hay fever), including seasonal allergic rhinitis or perennial allergic rhinitis, has sneezing, nasal itching, clear rhinorrhea, and congestion that track with cat exposure. What testing is actually useful, what is first-line controller therapy, when should allergen immunotherapy enter the plan, and when would nasal surgery be addressing a different problem rather than the allergy itself?",
+        "question": "A 24-year-old adult patient with allergic rhinitis (hay fever), including seasonal allergic rhinitis or perennial allergic rhinitis, has sneezing, nasal itching, clear rhinorrhea, and congestion that track with cat exposure. What testing is actually useful, what is first-line controller therapy, when should allergen immunotherapy enter the plan, and when would nasal surgery be addressing a different problem rather than the allergy itself?",
         "choices": [],
         "answer": None,
         "answer_text": """### Allergic rhinitis — connect the symptom pattern to clinically relevant IgE, then treat the inflammatory disease
@@ -83,8 +83,8 @@ CHECKS = [
         "domain": DOMAIN,
         "topic": "Local Allergic Rhinitis",
         "canonical_topic": "Local Allergic Rhinitis",
-        "prompt": "A 31-year-old has reproducible pollen-triggered sneezing, itching, watery rhinorrhea, and congestion with negative skin testing and negative serum IgE. How should you reason through local allergic rhinitis (LAR), also called localized allergic rhinitis or entopy, what test can establish local allergen reactivity, and what should negative systemic testing not make you do?",
-        "question": "A 31-year-old has reproducible pollen-triggered sneezing, itching, watery rhinorrhea, and congestion with negative skin testing and negative serum IgE. How should you reason through local allergic rhinitis (LAR), also called localized allergic rhinitis or entopy, what test can establish local allergen reactivity, and what should negative systemic testing not make you do?",
+        "prompt": "A 31-year-old adult patient has reproducible pollen-triggered sneezing, itching, watery rhinorrhea, and congestion with negative skin testing and negative serum IgE. How should you reason through local allergic rhinitis (LAR), also called localized allergic rhinitis or entopy, what test can establish local allergen reactivity, and what should negative systemic testing not make you do?",
+        "question": "A 31-year-old adult patient has reproducible pollen-triggered sneezing, itching, watery rhinorrhea, and congestion with negative skin testing and negative serum IgE. How should you reason through local allergic rhinitis (LAR), also called localized allergic rhinitis or entopy, what test can establish local allergen reactivity, and what should negative systemic testing not make you do?",
         "choices": [],
         "answer": None,
         "answer_text": """### Local allergic rhinitis — negative systemic testing does not automatically mean nonallergic rhinitis
