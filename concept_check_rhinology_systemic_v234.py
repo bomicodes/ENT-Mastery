@@ -15,10 +15,10 @@ SOURCE_REFS = [
 
 PROMPT = (
     "An adult patient referred for 'refractory chronic sinusitis' has months of bloody crusting, a new septal perforation, "
-    "progressive nasal deformity, otitis, fatigue, and microscopic hematuria. As the senior resident, explain why another "
-    "routine FESS is the wrong reflex, organize the systemic/destructive differential, choose the next workup and biopsy "
-    "strategy, and state how sinonasal surgery should be used once GPA, EGPA, sarcoidosis, IgG4-related disease, infection, "
-    "exposure injury, and malignancy are considered."
+    "progressive nasal deformity, otitis, fatigue, and microscopic hematuria. As the senior resident, why is another routine "
+    "FESS the wrong reflex, how should you organize the systemic/destructive differential, what workup and biopsy strategy "
+    "should you choose, and how should sinonasal surgery be used once GPA, EGPA, sarcoidosis, IgG4-related disease, infection, "
+    "exposure injury, and malignancy are considered?"
 )
 
 ANSWER = """### Destructive sinonasal disease — stop treating the phenotype as routine CRS
