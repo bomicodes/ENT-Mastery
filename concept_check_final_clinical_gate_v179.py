@@ -9,7 +9,7 @@ from concept_check_final_clinical_gate_v179_source_v228 import *
 from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v229 import apply_concept_check_task_alignment_v229
 from concept_check_depth_v230 import apply_concept_check_task_alignment_v230
-from concept_check_depth_v231 import apply_concept_check_task_alignment_v231
+from concept_check_depth_v231_evidence_hardening import apply_concept_check_task_alignment_v231
 
 
 def _reassert_onb_search_aliases_v230(checks, deep_modules, v6_item_id):
