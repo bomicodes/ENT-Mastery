@@ -78,7 +78,7 @@ COHORT = {QIDS[0]: {
     "learner_experience_v230": {
         "discoverable_subtopic": "Esthesioneuroblastoma (Olfactory Neuroblastoma; ONB)",
         "search_aliases": ["esthesioneuroblastoma", "olfactory neuroblastoma", "ONB", "esthesioblastoma"],
-        "required_path": "Sinonasal Malignancy -> explicit ONB management subsection -> ONB-focused Daily management/advanced prompts",
+        "required_path": "Sinonasal Malignancy -> histology-first SCC/SNUC/ONB/mucosal melanoma pathway -> explicit ONB management subsection with preserved ONB discoverability across Deep Curriculum, Concept Checks, and Daily Curriculum",
     },
     "depth_layers_v230": {
         "foundation": "ONB terminology, olfactory-skull-base origin, Hyams grade, Kadish/Dulguerov/TNM extent and staging workup.",
