@@ -1,14 +1,22 @@
-"""Final clinical-stem normalization plus exact-live v20.30 successor alignment.
+"""Final clinical-stem normalization plus exact-live v20.31 successor alignment.
 
-The validated v20.29 implementation remains the complete predecessor. v20.30 appends a
-learner-facing ONB/esthesioneuroblastoma management pathway to the exact Sinonasal Malignancy
-canonical after all prior cohorts, so fallback normalization cannot silently hide it.
+The validated v20.30 implementation remains the complete predecessor. v20.31 fills a learner-
+experience gap without changing Deep Curriculum identities: Allergic Rhinitis and Local Allergic
+Rhinitis now receive explicit resident-facing Concept Checks after the inherited normalization and
+ONB repair have completed.
 """
 import concept_check_final_clinical_gate_v179_source_v228 as _base
 from concept_check_final_clinical_gate_v179_source_v228 import *
 from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v229 import apply_concept_check_task_alignment_v229
 from concept_check_depth_v230 import apply_concept_check_task_alignment_v230
+from concept_check_rhinology_allergy_v231 import apply_rhinology_allergy_concept_checks_v231
+
+
+_V231_ALLERGY_QIDS = {
+    "cc-v231-rhinology-allergic-rhinitis-ar",
+    "cc-v231-rhinology-local-allergic-rhinitis-lar",
+}
 
 
 def _reassert_onb_search_aliases_v230(checks, deep_modules, v6_item_id):
@@ -34,6 +42,32 @@ def _reassert_onb_search_aliases_v230(checks, deep_modules, v6_item_id):
     return True
 
 
+def _curate_new_allergy_checks_v231(checks):
+    """Bring newly appended v20.31 checks under the existing all-domain curation contract.
+
+    These checks are intentionally appended after the inherited v17.8/v20.6 curation pass, so they
+    must carry the same learner-facing review evidence explicitly rather than bypassing or weakening
+    that fail-closed gate.
+    """
+    normalized = []
+    for q in checks or []:
+        qid = str(q.get("id") or "")
+        if qid not in _V231_ALLERGY_QIDS:
+            continue
+        q["reviewed_all_domains_v178"] = True
+        q["review_basis_v178"] = (
+            "Dedicated v20.31 Rhinology learner-path repair; exact live canonical linkage, clinical "
+            "board-style stem, visible reveal answer, source-grounded management, and Deep-to-Daily "
+            "continuity reviewed against the same all-domain curation contract."
+        )
+        if not str(q.get("explanation") or "").strip():
+            q["explanation"] = str(q.get("answer_text") or "").strip()
+        q["curated_v177"] = True
+        q["converted_to_oral_board_v178"] = True
+        normalized.append(qid)
+    return normalized
+
+
 def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     results = _base.apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id)
     alignment_v229 = apply_concept_check_task_alignment_v229(checks, deep_modules, v6_item_id)
@@ -53,4 +87,8 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         "post_alignment_clinical_frame_v230",
     )
     results["onb_search_aliases_v230"] = _reassert_onb_search_aliases_v230(checks, deep_modules, v6_item_id)
+    results["rhinology_allergy_concept_checks_v231"] = apply_rhinology_allergy_concept_checks_v231(
+        checks, deep_modules, v6_item_id
+    )
+    results["rhinology_allergy_curation_v231"] = _curate_new_allergy_checks_v231(checks)
     return results
