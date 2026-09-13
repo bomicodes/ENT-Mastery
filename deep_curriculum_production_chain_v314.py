@@ -85,6 +85,7 @@ MODULES_V314 = [
     "deep_curriculum_otology_v361",
     "deep_curriculum_rhinology_v362",
     "deep_curriculum_otology_v362",
+    "deep_curriculum_rhinology_v365",
     "deep_curriculum_rhinology_v366",
 ]
 
