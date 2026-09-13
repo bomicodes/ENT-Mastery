@@ -122,9 +122,10 @@ def main():
             if not matches:
                 failures.append("live_search_alias_missing:" + qid + ":" + alias)
 
-        # Daily Curriculum data path: exact canonical ID, all six levels, and ONB-specific
-        # teaching answers at evaluation -> teaching stages. This catches fragmentation where
-        # the page asks ONB but the reveal still serves only a generic sinonasal-malignancy answer.
+        # Daily Curriculum data path: exact canonical ID and all six levels must remain linked to
+        # the same concept. ONB must remain visible in the teaching answers added by v20.30, while
+        # the learner-facing prompts are separately required below to preserve the broader
+        # histology-aware sinonasal-malignancy curriculum instead of collapsing the topic into ONB.
         items = [x for x in data.get_adaptive_items_v120() if x.get("concept_id") == contract["concept_id"]]
         levels = {int(x.get("level") or 0) for x in items}
         if levels != {1, 2, 3, 4, 5, 6}:
@@ -133,15 +134,23 @@ def main():
             level = int(item.get("level") or 0)
             answer_low = _text(item.get("answer"))
             if level >= 3 and not ("onb" in answer_low or "esthesioneuroblastoma" in answer_low or "olfactory neuroblastoma" in answer_low):
-                failures.append("daily_answer_not_onb_specific:" + qid + ":level" + str(level))
+                failures.append("daily_answer_lost_onb_path:" + qid + ":level" + str(level))
 
-        # Learner-facing templates must explicitly expose ONB Daily prompts and render source
-        # citations in the Concept Check. A metadata-only repair fails closed.
+        # Learner-facing templates must preserve both the repaired ONB pathway and the full
+        # histology-dependent sinonasal malignancy curriculum. The v20.30 implementation briefly
+        # special-cased every Daily stage into ONB-only questions; that is a learner-experience
+        # regression even though the ONB facts themselves are correct.
         daily_template = Path("templates/daily_adaptive.html").read_text(encoding="utf-8").lower()
         concept_template = Path("templates/concept_check.html").read_text(encoding="utf-8").lower()
-        for anchor in (contract["concept_id"], "esthesioneuroblastoma", "hyams", "cn0", "negative-margin", "20 years"):
+        for anchor in (
+            contract["concept_id"], "sinonasal_malignancy_focus", "esthesioneuroblastoma",
+            "hyams", "cn0", "sinonasal scc", "snuc", "mucosal melanoma",
+            "induction chemotherapy", "response-directed", "histology-first",
+        ):
             if anchor not in daily_template:
-                failures.append("daily_ui_path_missing:" + qid + ":" + anchor)
+                failures.append("daily_ui_histology_path_missing:" + qid + ":" + anchor)
+        if "{% set onb_focus" in daily_template:
+            failures.append("daily_ui_overfit_to_onb:" + qid)
         for anchor in ("source_refs_v230", "sources for this repaired pathway", "learner-facing answer path"):
             if anchor not in concept_template:
                 failures.append("concept_source_ui_missing:" + qid + ":" + anchor)
@@ -169,7 +178,7 @@ def main():
         print("FAIL|" + failure)
     if failures:
         raise SystemExit(1)
-    print("PASS: Deep Curriculum -> Concept Check -> Daily Curriculum learner paths, aliases, management decisions, and learner-visible sources satisfy the fail-closed contracts")
+    print("PASS: Deep Curriculum -> Concept Check -> Daily Curriculum learner paths preserve ONB discoverability, broader histology-aware sinonasal oncology, aliases, management decisions, and learner-visible sources")
 
 
 if __name__ == "__main__":
