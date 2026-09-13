@@ -22,3 +22,10 @@ jobs:
           python-version: '3.12'
       - name: Verify exact-live v20.31 evidence hardening
         run: python audit_concept_check_evidence_hardening_v231.py
+      - name: Upload v20.31 evidence audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v231h-evidence-audit
+          path: V231H_EVIDENCE_AUDIT.json
+          if-no-files-found: warn
