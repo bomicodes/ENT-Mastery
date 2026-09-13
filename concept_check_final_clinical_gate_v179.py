@@ -1,9 +1,9 @@
 """Final clinical-stem normalization plus exact-live Rhinology successor alignment.
 
 The validated v20.30 implementation remains the complete predecessor. Later bounded successors add
-learner-experience repairs without changing Deep Curriculum identities: AR/LAR, Facial Pain / Headache
-vs Rhinogenic Disease, and the exact Systemic Disease of the Nose / Sinuses topic receive explicit
-resident-facing Concept Checks after inherited normalization has completed.
+learner-experience repairs without changing Deep Curriculum identities: AR/LAR, Unilateral Sinonasal
+Disease, Facial Pain / Headache vs Rhinogenic Disease, and Systemic Disease of the Nose / Sinuses
+receive exact-canonical resident-facing Concept Checks after inherited normalization has completed.
 """
 import concept_check_final_clinical_gate_v179_source_v228 as _base
 from concept_check_final_clinical_gate_v179_source_v228 import *
@@ -11,6 +11,10 @@ from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v229 import apply_concept_check_task_alignment_v229
 from concept_check_depth_v230 import apply_concept_check_task_alignment_v230
 from concept_check_rhinology_allergy_v231 import apply_rhinology_allergy_concept_checks_v231
+from concept_check_rhinology_unilateral_v232 import (
+    SOURCE_REFS as UNILATERAL_SOURCE_REFS_V232,
+    apply_rhinology_unilateral_concept_check_v232,
+)
 from concept_check_rhinology_facial_pain_v233 import apply_rhinology_facial_pain_concept_check_v233
 from concept_check_rhinology_systemic_v234 import apply_rhinology_systemic_concept_check_v234
 
@@ -22,7 +26,6 @@ _V231_ALLERGY_QIDS = {
 
 
 def _reassert_onb_search_aliases_v230(checks, deep_modules, v6_item_id):
-    """Keep all learner synonyms in the live canonical Deep Curriculum search text."""
     qid = "cc-v112-rec-rhinology-allergy-skull-base-sinonasal-malignancy"
     q = next((x for x in checks if str(x.get("id") or "") == qid), None)
     module = _find_module(q, deep_modules, v6_item_id) if q else None
@@ -40,7 +43,6 @@ def _reassert_onb_search_aliases_v230(checks, deep_modules, v6_item_id):
 
 
 def _curate_new_allergy_checks_v231(checks):
-    """Bring newly appended v20.31 checks under the existing all-domain curation contract."""
     normalized = []
     for q in checks or []:
         qid = str(q.get("id") or "")
@@ -60,33 +62,46 @@ def _curate_new_allergy_checks_v231(checks):
     return normalized
 
 
+def _reassert_unilateral_visible_sources_v232(checks, deep_modules, v6_item_id):
+    repaired = []
+    for q in checks or []:
+        if str(q.get("domain") or "") != "Rhinology / Allergy / Skull Base":
+            continue
+        module = _find_module(q, deep_modules, v6_item_id)
+        if not module or str(module.get("topic") or "") != "Unilateral Sinonasal Disease":
+            continue
+        refs = list(q.get("source_refs_v230") or [])
+        existing = {str(ref.get("citation") or "").strip().lower() for ref in refs if isinstance(ref, dict)}
+        changed = False
+        for ref in UNILATERAL_SOURCE_REFS_V232:
+            citation = str(ref.get("citation") or "").strip().lower()
+            if citation and citation not in existing:
+                refs.append(dict(ref))
+                existing.add(citation)
+                changed = True
+        if changed:
+            q["source_refs_v230"] = refs
+            repaired.append(str(q.get("id") or ""))
+    return repaired
+
+
 def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     results = _base.apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id)
     alignment_v229 = apply_concept_check_task_alignment_v229(checks, deep_modules, v6_item_id)
     results["task_alignment_v229"] = alignment_v229
     results["post_alignment_reframed_v229"] = _base._reassert_clinical_contract(
-        checks,
-        alignment_v229.get("repaired", []),
-        results.get("unresolved", []),
-        "post_alignment_clinical_frame_v229",
+        checks, alignment_v229.get("repaired", []), results.get("unresolved", []), "post_alignment_clinical_frame_v229"
     )
     alignment_v230 = apply_concept_check_task_alignment_v230(checks, deep_modules, v6_item_id)
     results["task_alignment_v230"] = alignment_v230
     results["post_alignment_reframed_v230"] = _base._reassert_clinical_contract(
-        checks,
-        alignment_v230.get("repaired", []),
-        results.get("unresolved", []),
-        "post_alignment_clinical_frame_v230",
+        checks, alignment_v230.get("repaired", []), results.get("unresolved", []), "post_alignment_clinical_frame_v230"
     )
     results["onb_search_aliases_v230"] = _reassert_onb_search_aliases_v230(checks, deep_modules, v6_item_id)
-    results["rhinology_allergy_concept_checks_v231"] = apply_rhinology_allergy_concept_checks_v231(
-        checks, deep_modules, v6_item_id
-    )
+    results["rhinology_allergy_concept_checks_v231"] = apply_rhinology_allergy_concept_checks_v231(checks, deep_modules, v6_item_id)
     results["rhinology_allergy_curation_v231"] = _curate_new_allergy_checks_v231(checks)
-    results["rhinology_facial_pain_concept_check_v233"] = apply_rhinology_facial_pain_concept_check_v233(
-        checks, deep_modules, v6_item_id
-    )
-    results["rhinology_systemic_concept_check_v234"] = apply_rhinology_systemic_concept_check_v234(
-        checks, deep_modules, v6_item_id
-    )
+    results["rhinology_unilateral_concept_check_v232"] = apply_rhinology_unilateral_concept_check_v232(checks, deep_modules, v6_item_id)
+    results["rhinology_unilateral_visible_sources_v232"] = _reassert_unilateral_visible_sources_v232(checks, deep_modules, v6_item_id)
+    results["rhinology_facial_pain_concept_check_v233"] = apply_rhinology_facial_pain_concept_check_v233(checks, deep_modules, v6_item_id)
+    results["rhinology_systemic_concept_check_v234"] = apply_rhinology_systemic_concept_check_v234(checks, deep_modules, v6_item_id)
     return results
