@@ -11,6 +11,8 @@ on:
       - 'audit_concept_check_depth_backlog_v230.py'
       - 'audit_learner_experience_current.py'
       - 'audit_global_release_integrity_v311.py'
+      - 'templates/daily_adaptive.html'
+      - 'templates/concept_check.html'
       - '.github/workflows/concept-check-depth-v230.yml'
       - '.github/workflows/release-integrity.yml'
   push:
@@ -22,6 +24,8 @@ on:
       - 'audit_concept_check_depth_backlog_v230.py'
       - 'audit_learner_experience_current.py'
       - 'audit_global_release_integrity_v311.py'
+      - 'templates/daily_adaptive.html'
+      - 'templates/concept_check.html'
       - '.github/workflows/concept-check-depth-v230.yml'
       - '.github/workflows/release-integrity.yml'
 

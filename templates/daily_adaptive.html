@@ -63,19 +63,19 @@
     <span class="question-label">ANSWER BEFORE REVEALING</span>
     {% set topic_lower = x.topic|lower %}
     {% set prompt_lower = x.prompt|lower %}
-    {% set onb_focus = x.concept_id == 'v6-rhinology-allergy-skull-base-sinonasal-malignancy' %}
-    {% if onb_focus and x.stage == 'recognize' %}
-      <p class="adaptive-prompt">Within sinonasal malignancy, how do you recognize esthesioneuroblastoma/olfactory neuroblastoma (ONB), and which pathology/risk variables must be established before treatment planning?</p>
-    {% elif onb_focus and x.stage == 'localize' %}
-      <p class="adaptive-prompt">For ONB, localize the primary relative to the superior nasal vault, cribriform plate, dura/brain, orbit and neck. Which extensions change staging, resectability, or approach?</p>
-    {% elif onb_focus and x.stage == 'workup' %}
-      <p class="adaptive-prompt">Build the ONB workup: what do Hyams grade and Kadish/Dulguerov-TNM contribute, what should CT versus MRI define, and how do you stage the neck and distant disease?</p>
-    {% elif onb_focus and x.stage == 'manage' %}
-      <p class="adaptive-prompt">Give an ONB management plan for resectable disease, then explain when high-grade/high-morbidity disease changes sequencing and how you approach the cN0 versus node-positive neck.</p>
-    {% elif onb_focus and x.stage == 'operate' %}
-      <p class="adaptive-prompt">You are the senior resident planning ONB resection. How do you choose endoscopic versus open/combined exposure, define a safe negative-margin goal at the skull base/orbit, and decide when not to force an endonasal resection?</p>
-    {% elif onb_focus and x.stage == 'teach' %}
-      <p class="adaptive-prompt">Teach ONB from pathology and staging through surgery, radiotherapy, selective induction therapy, neck management, salvage, and at least 20 years of surveillance because late recurrence is characteristic. Include the major evidence limitations you would state on boards or at tumor board.</p>
+    {% set sinonasal_malignancy_focus = x.concept_id == 'v6-rhinology-allergy-skull-base-sinonasal-malignancy' %}
+    {% if sinonasal_malignancy_focus and x.stage == 'recognize' %}
+      <p class="adaptive-prompt">A unilateral sinonasal mass is not one disease. How would you distinguish the major malignant histologies—including sinonasal SCC, SNUC, esthesioneuroblastoma/olfactory neuroblastoma (ONB), and mucosal melanoma—and what pathology or molecular confirmation prevents you from treating a poorly differentiated tumor under the wrong label?</p>
+    {% elif sinonasal_malignancy_focus and x.stage == 'localize' %}
+      <p class="adaptive-prompt">Map a sinonasal malignancy relative to the orbit, skull base/cribriform, dura or brain, pterygopalatine and infratemporal fossae, cranial nerves, palate, skin, and neck. Which extensions change resectability, surgical corridor, radiation planning, or the need for multidisciplinary skull-base care?</p>
+    {% elif sinonasal_malignancy_focus and x.stage == 'workup' %}
+      <p class="adaptive-prompt">Build a histology-aware sinonasal cancer workup: what should CT versus MRI define, when is PET/systemic staging useful, and which tumor-specific variables must be added—for example Hyams/Kadish assessment for ONB and expert pathology with immunohistochemistry/molecular testing for a poorly differentiated carcinoma such as SNUC?</p>
+    {% elif sinonasal_malignancy_focus and x.stage == 'manage' %}
+      <p class="adaptive-prompt">Management is histology-dependent. Contrast the treatment framework for resectable sinonasal SCC, SNUC, ONB, and sinonasal mucosal melanoma. For ONB, include surgery plus the usual adjuvant-radiotherapy framework and the cN0 neck decision; for SNUC, explain why induction chemotherapy and response-directed definitive therapy are often considered rather than automatically copying the SCC pathway.</p>
+    {% elif sinonasal_malignancy_focus and x.stage == 'operate' %}
+      <p class="adaptive-prompt">You are the senior resident at sinonasal tumor board. How do margin geometry, orbit/skull-base involvement, histology, induction response, and expected morbidity determine endoscopic versus open/combined surgery, definitive chemoradiation, or a response-directed plan? State when organ preservation is reasonable and when it must not compromise oncologic control.</p>
+    {% elif sinonasal_malignancy_focus and x.stage == 'teach' %}
+      <p class="adaptive-prompt">Teach sinonasal malignancy as a histology-first algorithm: biopsy and expert pathology → CT/MRI mapping and stage → histology-specific local/systemic strategy → margin and skull-base/orbit decisions → neck strategy → surveillance. Use ONB and SNUC to show why two tumors in the same anatomic site may require different sequencing, and include the major evidence limitations you would state on boards or at tumor board.</p>
     {% elif x.stage == 'recognize' and 'microlaryngoscopy' in topic_lower %}
       <p class="adaptive-prompt">When is microlaryngoscopy indicated, and what does it allow you to diagnose or treat that office laryngoscopy may not?</p>
     {% elif x.stage == 'recognize' and (topic_lower == 'fees' or 'fiberoptic endoscopic evaluation of swallowing' in topic_lower or 'flexible endoscopic evaluation of swallowing' in topic_lower) %}
@@ -85,7 +85,7 @@
     {% else %}
       <p class="adaptive-prompt">{{x.prompt}}</p>
     {% endif %}
-    {% if onb_focus %}<small class="muted">Full ONB management framework and traceable textbook/guideline sources are available in <a href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a>.</small>{% endif %}
+    {% if sinonasal_malignancy_focus %}<small class="muted">The full concept hub contains the explicit ONB management pathway plus the broader histology-aware sinonasal-oncology framework and traceable textbook/guideline sources. <a href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a>.</small>{% endif %}
   </div>
 
   <details class="adaptive-reveal">
