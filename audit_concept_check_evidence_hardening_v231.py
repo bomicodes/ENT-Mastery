@@ -1,7 +1,10 @@
 """Fail-closed evidence-hardening gate for the exact-live v20.31 cleft cohort."""
+import json
+from pathlib import Path
 import runtime_entry
 
 QID = "cc-v112-rec-pediatric-otolaryngology-cleft-craniofacial-otologic-airway-care"
+OUT = Path("V231H_EVIDENCE_AUDIT.json")
 REQUIRED_SOURCES = (
     "cummings",
     "pasha",
@@ -22,6 +25,10 @@ def main():
     checks = list(runtime_entry.data.CONCEPT_CHECKS_V112)
     q = next((x for x in checks if str(x.get("id") or "") == QID), None)
     failures = []
+    refs = []
+    reftext = ""
+    evidence = ""
+    answer = ""
     if q is None:
         failures.append("missing_exact_live_qid")
     else:
@@ -38,6 +45,19 @@ def main():
         for anchor in ("tensor veli palatini tenopexy", "did not reduce ome", "otologic surveillance"):
             if anchor not in answer:
                 failures.append("missing_answer_boundary:" + anchor)
+
+    report = {
+        "qid": QID,
+        "found": q is not None,
+        "failures": failures,
+        "source_citations": [str(x.get("citation") or "") for x in refs if isinstance(x, dict)],
+        "evidence_distinction_v231": evidence,
+        "answer_boundary_presence": {
+            anchor: anchor in answer
+            for anchor in ("tensor veli palatini tenopexy", "did not reduce ome", "otologic surveillance")
+        },
+    }
+    OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
 
     print("V231H_FAILURES|" + str(len(failures)))
     for failure in failures:
