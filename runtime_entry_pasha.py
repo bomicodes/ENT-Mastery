@@ -9,6 +9,7 @@ from pasha_routes import bp as pasha_review_blueprint
 from practice_bank_navigation_v150 import install_practice_bank_navigation_v150
 from deep_curriculum_otology_v284 import apply_otology_etd_rebuild_v284
 from deep_curriculum_production_chain_v314 import apply_deep_curriculum_production_chain_v314
+from deep_curriculum_rhinology_v363 import apply_rhinology_allergy_source_trace_v363
 from or_tonsil_hemorrhage_rescue_v281 import apply_or_tonsil_hemorrhage_rescue_v281
 from or_thyroid_hematoma_rescue_v282 import apply_or_thyroid_hematoma_rescue_v282
 from or_tracheostomy_hemorrhage_rescue_v283 import apply_or_tracheostomy_hemorrhage_rescue_v283
@@ -33,6 +34,13 @@ OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(
 # after v28.4. This intentionally runs before the app begins serving and includes the
 # current v31.4 goals-of-care/palliative-intervention distinction.
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+# Preserve strong AR/LAR clinical teaching while making the connected core-textbook
+# provenance explicit at the same final production boundary used by Concept Hub pages.
+RHINOLOGY_ALLERGY_SOURCE_TRACE_V363 = apply_rhinology_allergy_source_trace_v363(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
