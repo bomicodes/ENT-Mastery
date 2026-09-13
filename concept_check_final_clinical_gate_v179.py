@@ -1,9 +1,9 @@
 """Final clinical-stem normalization plus exact-live Rhinology successor alignment.
 
 The validated v20.30 implementation remains the complete predecessor. Later bounded successors add
-learner-experience repairs without changing Deep Curriculum identities: AR/LAR and the exact Systemic
-Disease of the Nose / Sinuses topic receive explicit resident-facing Concept Checks after inherited
-normalization has completed.
+learner-experience repairs without changing Deep Curriculum identities: AR/LAR, Facial Pain / Headache
+vs Rhinogenic Disease, and the exact Systemic Disease of the Nose / Sinuses topic receive explicit
+resident-facing Concept Checks after inherited normalization has completed.
 """
 import concept_check_final_clinical_gate_v179_source_v228 as _base
 from concept_check_final_clinical_gate_v179_source_v228 import *
@@ -11,6 +11,7 @@ from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v229 import apply_concept_check_task_alignment_v229
 from concept_check_depth_v230 import apply_concept_check_task_alignment_v230
 from concept_check_rhinology_allergy_v231 import apply_rhinology_allergy_concept_checks_v231
+from concept_check_rhinology_facial_pain_v233 import apply_rhinology_facial_pain_concept_check_v233
 from concept_check_rhinology_systemic_v234 import apply_rhinology_systemic_concept_check_v234
 
 
@@ -82,6 +83,9 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         checks, deep_modules, v6_item_id
     )
     results["rhinology_allergy_curation_v231"] = _curate_new_allergy_checks_v231(checks)
+    results["rhinology_facial_pain_concept_check_v233"] = apply_rhinology_facial_pain_concept_check_v233(
+        checks, deep_modules, v6_item_id
+    )
     results["rhinology_systemic_concept_check_v234"] = apply_rhinology_systemic_concept_check_v234(
         checks, deep_modules, v6_item_id
     )
