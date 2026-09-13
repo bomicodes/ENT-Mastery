@@ -8,9 +8,6 @@ renaming any Deep Curriculum topic.
 
 DOMAIN = "Rhinology / Allergy / Skull Base"
 
-AR_ID = "v6-rhinology-allergy-skull-base-allergic-rhinitis-ar"
-LAR_ID = "v6-rhinology-allergy-skull-base-local-allergic-rhinitis-lar"
-
 CORE_TEXTBOOKS = [
     {
         "type": "textbook",
@@ -62,7 +59,6 @@ CHECKS = [
         "domain": DOMAIN,
         "topic": "Allergic Rhinitis",
         "canonical_topic": "Allergic Rhinitis",
-        "concept_id": AR_ID,
         "prompt": "A 24-year-old with allergic rhinitis (hay fever), including seasonal allergic rhinitis or perennial allergic rhinitis, has sneezing, nasal itching, clear rhinorrhea, and congestion that track with cat exposure. What testing is actually useful, what is first-line controller therapy, when should allergen immunotherapy enter the plan, and when would nasal surgery be addressing a different problem rather than the allergy itself?",
         "question": "A 24-year-old with allergic rhinitis (hay fever), including seasonal allergic rhinitis or perennial allergic rhinitis, has sneezing, nasal itching, clear rhinorrhea, and congestion that track with cat exposure. What testing is actually useful, what is first-line controller therapy, when should allergen immunotherapy enter the plan, and when would nasal surgery be addressing a different problem rather than the allergy itself?",
         "choices": [],
@@ -87,7 +83,6 @@ CHECKS = [
         "domain": DOMAIN,
         "topic": "Local Allergic Rhinitis",
         "canonical_topic": "Local Allergic Rhinitis",
-        "concept_id": LAR_ID,
         "prompt": "A 31-year-old has reproducible pollen-triggered sneezing, itching, watery rhinorrhea, and congestion with negative skin testing and negative serum IgE. How should you reason through local allergic rhinitis (LAR), also called localized allergic rhinitis or entopy, what test can establish local allergen reactivity, and what should negative systemic testing not make you do?",
         "question": "A 31-year-old has reproducible pollen-triggered sneezing, itching, watery rhinorrhea, and congestion with negative skin testing and negative serum IgE. How should you reason through local allergic rhinitis (LAR), also called localized allergic rhinitis or entopy, what test can establish local allergen reactivity, and what should negative systemic testing not make you do?",
         "choices": [],
@@ -111,21 +106,25 @@ CHECKS = [
 
 
 def apply_rhinology_allergy_concept_checks_v231(checks, deep_modules, v6_item_id):
-    """Append the two missing exact-canonical checks once and fail visibly on link drift."""
+    """Append both exact-canonical checks once, deriving concept IDs from the live inventory."""
     existing = {str(q.get("id") or "") for q in checks or []}
-    added, link_mismatch = [], []
-    deep_by_id = {
-        v6_item_id(domain, module.get("topic")): module
+    deep_by_topic = {
+        (str(domain), str(module.get("topic") or "")): module
         for domain, modules in (deep_modules or {}).items()
         for module in (modules or [])
         if module.get("topic")
     }
-    for check in CHECKS:
-        if check["concept_id"] not in deep_by_id:
+    added, link_mismatch = [], []
+    for template in CHECKS:
+        check = dict(template)
+        topic = str(check.get("canonical_topic") or check.get("topic") or "")
+        module = deep_by_topic.get((DOMAIN, topic))
+        if module is None:
             link_mismatch.append(check["id"])
             continue
+        check["concept_id"] = v6_item_id(DOMAIN, topic)
         if check["id"] not in existing:
-            checks.append(dict(check))
+            checks.append(check)
             existing.add(check["id"])
             added.append(check["id"])
     return {"added": added, "link_mismatch": link_mismatch, "expected": [q["id"] for q in CHECKS]}
