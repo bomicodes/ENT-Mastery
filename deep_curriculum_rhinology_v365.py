@@ -24,7 +24,7 @@ SOURCES = [
 ]
 
 RECOGNIZE = (
-    " FOUNDATION — 'SINUS HEADACHE' IS A SYMPTOM LABEL, NOT A DIAGNOSIS. Facial pressure, frontal pain, nasal congestion, tearing, or weather sensitivity can occur with migraine and other primary headache disorders as well as sinonasal disease. A rhinogenic attribution requires a compatible sinonasal disorder plus objective evidence and a credible causal relationship. Reopen migraine, tension-type headache, trigeminal autonomic cephalalgia, trigeminal neuralgia/other neuropathic pain, dental disease, and temporomandibular disorder when the pain phenotype or objective nasal evaluation does not fit inflammatory sinus disease."
+    " FOUNDATION — 'SINUS HEADACHE' IS A SYMPTOM LABEL, NOT A DIAGNOSIS. The related phrase 'rhinogenic headache' should likewise trigger a causation question rather than be accepted as a diagnosis by itself. Facial pressure, frontal pain, nasal congestion, tearing, or weather sensitivity can occur with migraine and other primary headache disorders as well as sinonasal disease. A rhinogenic attribution requires a compatible sinonasal disorder plus objective evidence and a credible causal relationship. Reopen migraine, tension-type headache, trigeminal autonomic cephalalgia, trigeminal neuralgia/other neuropathic pain, dental disease, and temporomandibular disorder when the pain phenotype or objective nasal evaluation does not fit inflammatory sinus disease."
 )
 
 LOCALIZE = (
