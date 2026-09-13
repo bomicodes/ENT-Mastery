@@ -11,6 +11,11 @@ Zenker/cricopharyngeal perforation rescue gates. The manifest also verifies that
 to source-saturation and OR rescue audit families themselves trigger this global
 release workflow and that the newest validated Concept Check alignment/backlog cohort
 cannot be silently omitted from release validation.
+
+Compatibility note: historical workflows still invoke this filename directly. Its
+Concept Check anchors therefore track the current exact-live cohort rather than a
+frozen historical cohort, so those workflows remain fail-closed without failing merely
+because the release chain advanced.
 """
 from pathlib import Path
 from audit_global_release_integrity_v308 import main as _v308_main
@@ -42,8 +47,8 @@ AIRWAY_FIRE_GATE = "audit_or_airway_fire_rescue_v288.py"
 EPISTAXIS_GATE = "audit_or_posterior_epistaxis_rescue_v289.py"
 TEP_GATE = "audit_or_tep_prosthesis_rescue_v290.py"
 ZENKER_GATE = "audit_or_zenker_perforation_rescue_v291.py"
-CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v206.py"
-CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v206.py"
+CONCEPT_ALIGNMENT_GATE = "audit_concept_check_task_alignment_v231.py"
+CONCEPT_BACKLOG_GATE = "audit_concept_check_depth_backlog_v231.py"
 
 
 def main():
