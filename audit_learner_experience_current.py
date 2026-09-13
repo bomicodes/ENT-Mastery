@@ -20,6 +20,10 @@ CONTRACTS = {
             "induction chemotherapy", "node-positive", "cn0", "elective neck irradiation",
             "20 years", "surveillance",
         ),
+        "required_path_terms": (
+            "histology-first", "scc", "snuc", "onb", "mucosal melanoma",
+            "deep curriculum", "concept checks", "daily curriculum",
+        ),
         "minimum_subsection_words": 500,
     },
 }
@@ -85,6 +89,17 @@ def main():
         for alias in contract["aliases"]:
             if alias not in aliases:
                 failures.append("learner_alias_missing:" + qid + ":" + alias)
+
+        # The declarative learner-path contract must describe the same architecture the UI now
+        # exposes. This prevents a later repair from treating ONB-only Daily prompts as desirable
+        # simply because stale cohort metadata still says so.
+        learner_meta = q.get("learner_experience_v230") or {}
+        required_path = _text(learner_meta.get("required_path"))
+        for term in contract["required_path_terms"]:
+            if term not in required_path:
+                failures.append("learner_declared_path_missing:" + qid + ":" + term)
+        if "onb-focused daily" in required_path:
+            failures.append("learner_declared_path_overfit_to_onb:" + qid)
 
         # Deep Curriculum: ONB must be visible in the actual six-layer card, not only in the
         # Concept Check. Management/advanced/teaching layers are intentionally required.
@@ -178,7 +193,7 @@ def main():
         print("FAIL|" + failure)
     if failures:
         raise SystemExit(1)
-    print("PASS: Deep Curriculum -> Concept Check -> Daily Curriculum learner paths preserve ONB discoverability, broader histology-aware sinonasal oncology, aliases, management decisions, and learner-visible sources")
+    print("PASS: Deep Curriculum -> Concept Check -> Daily Curriculum learner paths preserve ONB discoverability, broader histology-aware sinonasal oncology, aliases, management decisions, learner-visible sources, and a histology-first declared pathway")
 
 
 if __name__ == "__main__":
