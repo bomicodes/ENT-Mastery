@@ -1,0 +1,66 @@
+name: Rhinology systemic learner experience v31.6
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'audit_rhinology_systemic_learner_experience_v316.py'
+      - 'deep_curriculum_rhinology_v366.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'concept_check_rhinology_systemic_v234.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'templates/concept_check.html'
+      - 'runtime_entry.py'
+      - 'runtime_entry_pasha.py'
+      - 'data.py'
+      - 'app.py'
+      - '.github/workflows/rhinology-systemic-learner-experience-v316.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'audit_rhinology_systemic_learner_experience_v316.py'
+      - 'deep_curriculum_rhinology_v366.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'concept_check_rhinology_systemic_v234.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'templates/concept_check.html'
+      - 'runtime_entry.py'
+      - 'runtime_entry_pasha.py'
+      - 'data.py'
+      - 'app.py'
+      - '.github/workflows/rhinology-systemic-learner-experience-v316.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Strict 325-topic canonical coverage
+        run: python audit_coverage_v135.py --depth --strict
+      - name: Full Rhinology canonical ladder gate
+        run: python audit_rhinology_ladder_complete_v218.py
+      - name: Systemic Deep to Concept to Daily and source-render gate
+        shell: bash
+        run: |
+          set -o pipefail
+          python audit_rhinology_systemic_learner_experience_v316.py | tee RHINOLOGY_SYSTEMIC_LEARNER_AUDIT.txt
+      - name: Upload systemic learner diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rhinology-systemic-learner-v316
+          path: RHINOLOGY_SYSTEMIC_LEARNER_AUDIT.txt
+          if-no-files-found: error
+      - name: Reviewed-ladder answer-balance regression
+        run: python audit_ladder_answer_balance_v211.py
+      - name: Global fail-closed release integrity
+        run: python audit_global_release_integrity_v311.py

@@ -1,9 +1,9 @@
-"""Final clinical-stem normalization plus exact-live v20.31 successor alignment.
+"""Final clinical-stem normalization plus exact-live Rhinology successor alignment.
 
-The validated v20.30 implementation remains the complete predecessor. v20.31 fills a learner-
-experience gap without changing Deep Curriculum identities: Allergic Rhinitis and Local Allergic
-Rhinitis now receive explicit resident-facing Concept Checks after the inherited normalization and
-ONB repair have completed.
+The validated v20.30 implementation remains the complete predecessor. Later bounded successors add
+learner-experience repairs without changing Deep Curriculum identities: AR/LAR and the exact Systemic
+Disease of the Nose / Sinuses topic receive explicit resident-facing Concept Checks after inherited
+normalization has completed.
 """
 import concept_check_final_clinical_gate_v179_source_v228 as _base
 from concept_check_final_clinical_gate_v179_source_v228 import *
@@ -11,6 +11,7 @@ from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v229 import apply_concept_check_task_alignment_v229
 from concept_check_depth_v230 import apply_concept_check_task_alignment_v230
 from concept_check_rhinology_allergy_v231 import apply_rhinology_allergy_concept_checks_v231
+from concept_check_rhinology_systemic_v234 import apply_rhinology_systemic_concept_check_v234
 
 
 _V231_ALLERGY_QIDS = {
@@ -20,12 +21,7 @@ _V231_ALLERGY_QIDS = {
 
 
 def _reassert_onb_search_aliases_v230(checks, deep_modules, v6_item_id):
-    """Keep all learner synonyms in the live canonical Deep Curriculum search text.
-
-    The search index intentionally indexes learner-facing Deep Curriculum prose rather than hidden
-    metadata. Therefore the historical alias ``esthesioblastoma`` is repeated in the recognize layer
-    instead of being stored only in ``search_aliases``.
-    """
+    """Keep all learner synonyms in the live canonical Deep Curriculum search text."""
     qid = "cc-v112-rec-rhinology-allergy-skull-base-sinonasal-malignancy"
     q = next((x for x in checks if str(x.get("id") or "") == qid), None)
     module = _find_module(q, deep_modules, v6_item_id) if q else None
@@ -43,12 +39,7 @@ def _reassert_onb_search_aliases_v230(checks, deep_modules, v6_item_id):
 
 
 def _curate_new_allergy_checks_v231(checks):
-    """Bring newly appended v20.31 checks under the existing all-domain curation contract.
-
-    These checks are intentionally appended after the inherited v17.8/v20.6 curation pass, so they
-    must carry the same learner-facing review evidence explicitly rather than bypassing or weakening
-    that fail-closed gate.
-    """
+    """Bring newly appended v20.31 checks under the existing all-domain curation contract."""
     normalized = []
     for q in checks or []:
         qid = str(q.get("id") or "")
@@ -91,4 +82,7 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
         checks, deep_modules, v6_item_id
     )
     results["rhinology_allergy_curation_v231"] = _curate_new_allergy_checks_v231(checks)
+    results["rhinology_systemic_concept_check_v234"] = apply_rhinology_systemic_concept_check_v234(
+        checks, deep_modules, v6_item_id
+    )
     return results
