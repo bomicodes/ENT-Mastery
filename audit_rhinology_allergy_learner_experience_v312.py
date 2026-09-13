@@ -5,10 +5,14 @@ The v34.9 production gate already protects AR/LAR clinical/source semantics. Thi
 audit verifies that those strong concepts remain discoverable and coherent across the actual
 Deep Curriculum -> Concept Check -> Daily Curriculum learner journey, with sources rendered
 through learner-facing paths rather than surviving only as hidden metadata.
+
+Render serves runtime_entry_pasha:app, which applies the final cumulative Deep Curriculum
+production chain after runtime_entry. Audit that same boundary so learner/source checks cannot
+fail or pass because an earlier, incompletely assembled runtime object was inspected.
 """
 import sys
 
-import runtime_entry
+import runtime_entry_pasha as production
 from concept_check_board_repair_v177 import _find_module
 
 DOMAIN = "Rhinology / Allergy / Skull Base"
@@ -48,8 +52,8 @@ def fail(failures, message):
 
 
 def main():
-    data = runtime_entry.data
-    app_mod = runtime_entry.app_mod
+    data = production.runtime_entry.data
+    app_mod = production.runtime_entry.app_mod
     modules = (data.DEEP_MODULES_V6 or {}).get(DOMAIN, []) or []
     checks = list(data.CONCEPT_CHECKS_V112 or [])
     adaptive = list(data.get_adaptive_items_v120())
@@ -65,7 +69,7 @@ def main():
     by_topic = {str(mod.get("topic") or ""): mod for mod in modules}
     by_check_id = {str(q.get("id") or ""): q for q in checks}
     search_rows = list(app_mod._canonical_search_index())
-    client = runtime_entry.app.test_client()
+    client = production.app.test_client()
 
     for topic, contract in TOPICS.items():
         mod = by_topic.get(topic)
