@@ -1,0 +1,31 @@
+name: Concept Check evidence hardening v20.31
+
+on:
+  pull_request:
+    paths:
+      - 'concept_check_depth_v231.py'
+      - 'concept_check_depth_v231_evidence_hardening.py'
+      - 'concept_check_final_clinical_gate_v179.py'
+      - 'audit_concept_check_evidence_hardening_v231.py'
+      - '.github/workflows/concept-check-evidence-v231h.yml'
+  push:
+    branches:
+      - 'audit/v231-cleft-craniofacial-otologic-airway-hardened'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify exact-live v20.31 evidence hardening
+        run: python audit_concept_check_evidence_hardening_v231.py
+      - name: Upload v20.31 evidence audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v231h-evidence-audit
+          path: V231H_EVIDENCE_AUDIT.json
+          if-no-files-found: warn
