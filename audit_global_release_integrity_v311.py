@@ -11,6 +11,11 @@ mutate imported runtime data while validating their own contracts. Running the l
 same interpreter can therefore create a false release failure even though the exact live runtime
 passes the learner contract. Fresh-process execution preserves fail-closed behavior while testing
 what a learner actually receives on a clean application boot.
+
+A newest cohort may be routed through an evidence-hardening wrapper that preserves the canonical
+apply function name. In that case the final gate must import that exact hardened module; the release
+manifest accepts only the canonical module or the explicitly named evidence-hardening wrapper for
+the discovered newest version, and still requires the exact task_alignment_vN result key.
 """
 import importlib
 import re
@@ -90,13 +95,12 @@ def main():
     if latest is not None:
         final_text = FINAL_GATE.read_text(encoding="utf-8")
         release_text = RELEASE_WORKFLOW.read_text(encoding="utf-8")
-        required_final = [
-            f"from concept_check_depth_v{latest} import apply_concept_check_task_alignment_v{latest}",
-            f"task_alignment_v{latest}",
-        ]
-        for token in required_final:
-            if token not in final_text:
-                failures.append("final_gate_missing:" + token)
+        canonical_import = f"from concept_check_depth_v{latest} import apply_concept_check_task_alignment_v{latest}"
+        hardened_import = f"from concept_check_depth_v{latest}_evidence_hardening import apply_concept_check_task_alignment_v{latest}"
+        if canonical_import not in final_text and hardened_import not in final_text:
+            failures.append("final_gate_missing_exact_newest_import:" + canonical_import + " OR " + hardened_import)
+        if f"task_alignment_v{latest}" not in final_text:
+            failures.append("final_gate_missing:task_alignment_v" + str(latest))
         for token in ("audit_global_release_integrity_v311.py", "Fail-closed global release manifest"):
             if token not in release_text:
                 failures.append("release_workflow_missing:" + token)
