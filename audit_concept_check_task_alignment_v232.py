@@ -9,7 +9,7 @@ REQUIRED = (
     "superior-partial", "velopharynx", "pharyngeal flap", "rescue airway plan",
 )
 SOURCE_ANCHORS = (
-    "cummings", "pasha", "k.j. lee", "acpa", "rosenfeld", "pmid 41930721",
+    "cummings", "pasha", "k.j. lee", "american cleft palate craniofacial association", "rosenfeld", "pmid 41930721",
     "pmid 42213516", "pmid 42266256", "pmid 42298364", "pmid 42536027",
 )
 
