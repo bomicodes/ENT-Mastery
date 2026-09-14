@@ -1,0 +1,68 @@
+name: Rhinology unilateral learner experience v31.3
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'audit_rhinology_unilateral_learner_experience_v313.py'
+      - 'deep_curriculum_rhinology_v356.py'
+      - 'deep_curriculum_rhinology_v364.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'concept_check_*.py'
+      - 'templates/concept_check.html'
+      - 'runtime_entry.py'
+      - 'runtime_entry_pasha.py'
+      - 'data.py'
+      - 'app.py'
+      - '.github/workflows/rhinology-unilateral-learner-experience-v313.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'audit_rhinology_unilateral_learner_experience_v313.py'
+      - 'deep_curriculum_rhinology_v356.py'
+      - 'deep_curriculum_rhinology_v364.py'
+      - 'deep_curriculum_production_chain_v314.py'
+      - 'concept_check_*.py'
+      - 'templates/concept_check.html'
+      - 'runtime_entry.py'
+      - 'runtime_entry_pasha.py'
+      - 'data.py'
+      - 'app.py'
+      - '.github/workflows/rhinology-unilateral-learner-experience-v313.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pre-flight boot gate
+        run: python preflight_boot_check_v155.py
+      - name: Strict 325-topic canonical coverage
+        run: python audit_coverage_v135.py --depth --strict
+      - name: Full Rhinology canonical ladder gate
+        run: python audit_rhinology_ladder_complete_v218.py
+      - name: Existing exact odontogenic/unilateral clinical gate
+        run: python audit_rhinology_exact_odontogenic_unilateral_v356.py
+      - name: Unilateral Deep to Concept to Daily and source-render gate
+        shell: bash
+        run: |
+          set -o pipefail
+          python audit_rhinology_unilateral_learner_experience_v313.py | tee RHINOLOGY_UNILATERAL_LEARNER_AUDIT.txt
+      - name: Upload unilateral learner diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rhinology-unilateral-learner-v313
+          path: RHINOLOGY_UNILATERAL_LEARNER_AUDIT.txt
+          if-no-files-found: error
+      - name: Reviewed-ladder answer-balance regression
+        run: python audit_ladder_answer_balance_v211.py
+      - name: Global fail-closed release integrity
+        run: python audit_global_release_integrity_v311.py
