@@ -29,7 +29,7 @@ DIAG_ANSWER = """### CSF rhinorrhea — confirm, localize, identify the driver
 """
 
 OP_PROMPT = (
-    "During endoscopic repair of a confirmed anterior skull-base CSF leak, how should defect size/flow, encephalocele, tissue quality, prior surgery and suspected elevated ICP change your reconstruction, "
+    "An adult patient with a confirmed anterior skull-base CSF leak is undergoing endoscopic repair. How should defect size/flow, encephalocele, tissue quality, prior surgery and suspected elevated ICP change your reconstruction, "
     "when is a vascularized nasoseptal (Hadad-Bassagasteguy) flap appropriate, what is the role of a lumbar drain, and when should you stop and re-localize rather than force dissection?"
 )
 OP_ANSWER = """### Endoscopic CSF leak repair — match reconstruction to the defect
