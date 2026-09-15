@@ -27,6 +27,7 @@ from daily_curriculum_quality_v371 import install_daily_curriculum_quality_v371
 from daily_curriculum_quality_v372 import install_daily_curriculum_quality_v372
 from daily_curriculum_quality_v373 import install_daily_curriculum_quality_v373
 from daily_curriculum_quality_v374 import install_daily_curriculum_quality_v374
+from daily_curriculum_quality_v375 import install_daily_curriculum_quality_v375
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -167,6 +168,11 @@ DAILY_CURRICULUM_QUALITY_V373 = install_daily_curriculum_quality_v373(
 # Sixth-order clinical-task cleanup: replace the final repeated anatomy/category
 # prompts and remove the last shared procedural Attending Curveball fallback.
 DAILY_CURRICULUM_QUALITY_V374 = install_daily_curriculum_quality_v374(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+DAILY_CURRICULUM_QUALITY_V375 = install_daily_curriculum_quality_v375(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
