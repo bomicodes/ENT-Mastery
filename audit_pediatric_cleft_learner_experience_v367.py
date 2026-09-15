@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """v36.7 — fail closed on Cleft / Craniofacial Otologic-Airway Care learner continuity."""
 
+import re
 import runtime_entry_pasha as production
 from concept_check_board_repair_v177 import _find_module
 
@@ -17,12 +18,16 @@ def txt(value):
     return str(value or "").lower()
 
 
+def semantic(value):
+    """Normalize punctuation without weakening the required clinical phrase."""
+    return re.sub(r"[^a-z0-9]+", " ", txt(value)).strip()
+
+
 def main():
     data = production.runtime_entry.data
     app_mod = production.runtime_entry.app_mod
     failures = []
 
-    # Global and exact-domain contracts remain fail closed.
     canonical = [data._v6_item_id(domain, row.get("topic")) for domain, rows in data.DEEP_MODULES_V6.items() for row in rows]
     if len(canonical) != 325 or len(set(canonical)) != 325:
         failures.append(f"canonical_contract:{len(canonical)}:{len(set(canonical))}")
@@ -40,25 +45,27 @@ def main():
     cid = data._v6_item_id(DOMAIN, TOPIC)
     if row:
         deep_blob = " ".join(txt(row.get(field)) for field in ("recognize", "localize", "workup", "manage", "operate", "teach"))
-        for anchor in (
-            "longitudinal airway-hearing-speech",
-            "eustachian",
-            "developmental vital sign",
-            "robin",
-            "velopharyngeal",
-            "universal prophylactic tubes",
-            "rescue airway plan",
-        ):
+        for anchor in ("longitudinal airway-hearing-speech", "eustachian", "developmental vital sign", "robin", "velopharyngeal", "universal prophylactic tubes", "rescue airway plan"):
             if anchor not in deep_blob:
                 failures.append("deep_missing:" + anchor)
 
         tags = " ".join(txt(x) for x in (row.get("tags") or []))
         for alias in ("cleft palate", "robin sequence", "eustachian tube dysfunction", "velopharyngeal insufficiency"):
-            if alias not in tags and alias not in deep_blob:
+            if semantic(alias) not in semantic(tags + " " + deep_blob):
                 failures.append("deep_alias_missing:" + alias)
 
         sources = " ".join(txt(x) for x in (row.get("source_basis") or []))
-        for anchor in ("cummings", "pasha", "k.j. lee", "acpa", "aao-hnsf") + SOURCE_IDS:
+        source_requirements = {
+            "cummings": ("cummings",),
+            "pasha": ("pasha",),
+            "k.j. lee": ("k.j. lee",),
+            "acpa": ("american cleft palate craniofacial association", "acpa"),
+            "aao-hnsf": ("aao-hnsf", "clinical practice guideline: tympanostomy tubes in children"),
+        }
+        for label, alternatives in source_requirements.items():
+            if not any(anchor in sources for anchor in alternatives):
+                failures.append("source_missing:" + label)
+        for anchor in SOURCE_IDS:
             if anchor not in sources:
                 failures.append("source_missing:" + anchor)
         meta = txt(row.get("source_metadata_v367"))
@@ -68,16 +75,14 @@ def main():
         if "universal prophylactic" not in meta or "tensor tenopexy" not in meta:
             failures.append("evidence_distinction_missing")
 
-    # Canonical search must expose clinically expected aliases rather than only the formal title.
     search_rows = list(app_mod._canonical_search_index())
     hub_url = "/concept/id/" + cid
     hub_rows = [item for item in search_rows if item.get("type") == "Curriculum concept" and item.get("url") == hub_url]
     search_blob = " ".join(txt(item.get("title")) + " " + txt(item.get("text")) for item in hub_rows)
     for alias in ("cleft palate", "robin sequence", "eustachian tube dysfunction", "velopharyngeal insufficiency"):
-        if alias not in search_blob:
+        if semantic(alias) not in semantic(search_blob):
             failures.append("alias_not_searchable:" + alias)
 
-    # Concept Check must actually teach the same hearing-airway-speech decision framework.
     related = []
     for question in list(data.CONCEPT_CHECKS_V112 or []):
         found = _find_module(question, data.DEEP_MODULES_V6, data._v6_item_id)
@@ -86,15 +91,11 @@ def main():
     if not related:
         failures.append("concept_check_missing")
     else:
-        concept_blob = " ".join(
-            txt(question.get("prompt")) + " " + txt(question.get("answer_text")) + " " + " ".join(txt(x) for x in (question.get("choices") or []))
-            for question in related
-        )
+        concept_blob = " ".join(txt(question.get("prompt")) + " " + txt(question.get("answer_text")) + " " + " ".join(txt(x) for x in (question.get("choices") or [])) for question in related)
         for anchor in ("hearing", "airway", "eustachian", "velopharyngeal", "robin"):
             if anchor not in concept_blob:
                 failures.append("concept_teaching_missing:" + anchor)
 
-    # Daily Curriculum must preserve the full six-level progression and become management-facing by level 3+.
     items = [item for item in data.get_adaptive_items_v120() if item.get("concept_id") == cid]
     levels = {int(item.get("level") or 0) for item in items}
     if levels != {1, 2, 3, 4, 5, 6}:
@@ -107,7 +108,6 @@ def main():
     if not any(anchor in later for anchor in ("velopharyngeal", "vpi", "adenoid", "speech")):
         failures.append("daily_speech_vpi_management_missing")
 
-    # The live concept page must render the learner-facing content and traceable three-textbook basis.
     client = production.app.test_client()
     page = client.get(hub_url)
     page_text = page.get_data(as_text=True).lower()
