@@ -22,6 +22,7 @@ from or_tep_prosthesis_rescue_v290 import apply_or_tep_prosthesis_rescue_v290
 from or_zenker_perforation_rescue_v291 import apply_or_zenker_perforation_rescue_v291
 from or_airway_dilation_injury_rescue_v292 import apply_or_airway_dilation_injury_rescue_v292
 from daily_curriculum_quality_v368 import install_daily_curriculum_quality_v368
+from daily_curriculum_quality_v370 import install_daily_curriculum_quality_v370
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -124,6 +125,14 @@ OR_AIRWAY_DILATION_INJURY_RESCUE_V292 = apply_or_airway_dilation_injury_rescue_v
 # vignette chains so all 325 live topics receive coherent questions and every
 # attending curveball receives a revealable answer.
 DAILY_CURRICULUM_QUALITY_V368 = install_daily_curriculum_quality_v368(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+# Second-order rendered-registry audit: remove alias-revealing blind cards,
+# presentation-label drift, mid-word stems, nonoperative "operate" wording, and
+# weak curveball answers that survived the first broad repair.
+DAILY_CURRICULUM_QUALITY_V370 = install_daily_curriculum_quality_v370(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
