@@ -23,6 +23,7 @@ from or_zenker_perforation_rescue_v291 import apply_or_zenker_perforation_rescue
 from or_airway_dilation_injury_rescue_v292 import apply_or_airway_dilation_injury_rescue_v292
 from daily_curriculum_quality_v368 import install_daily_curriculum_quality_v368
 from daily_curriculum_quality_v370 import install_daily_curriculum_quality_v370
+from daily_curriculum_quality_v371 import install_daily_curriculum_quality_v371
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -133,6 +134,14 @@ DAILY_CURRICULUM_QUALITY_V368 = install_daily_curriculum_quality_v368(
 # presentation-label drift, mid-word stems, nonoperative "operate" wording, and
 # weak curveball answers that survived the first broad repair.
 DAILY_CURRICULUM_QUALITY_V370 = install_daily_curriculum_quality_v370(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+# Third-order semantic audit: align broad prompts with their actual teaching
+# answers, repair residual curriculum-prose recognition stems, and answer the
+# precise escalation asked by weak curveball fallbacks.
+DAILY_CURRICULUM_QUALITY_V371 = install_daily_curriculum_quality_v371(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
