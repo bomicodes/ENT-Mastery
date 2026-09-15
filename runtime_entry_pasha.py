@@ -25,6 +25,7 @@ from daily_curriculum_quality_v368 import install_daily_curriculum_quality_v368
 from daily_curriculum_quality_v370 import install_daily_curriculum_quality_v370
 from daily_curriculum_quality_v371 import install_daily_curriculum_quality_v371
 from daily_curriculum_quality_v372 import install_daily_curriculum_quality_v372
+from daily_curriculum_quality_v373 import install_daily_curriculum_quality_v373
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -151,6 +152,13 @@ DAILY_CURRICULUM_QUALITY_V371 = install_daily_curriculum_quality_v371(
 # answers supplied only a pearl, and make generic curveball fallbacks answer the
 # exact candidacy, diagnostic, operative, or escalation decision being asked.
 DAILY_CURRICULUM_QUALITY_V372 = install_daily_curriculum_quality_v372(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+# Fifth-order semantic cleanup: replace generic operative prompts on tests and
+# nonoperative topics, and remove inherited boilerplate from targeted curveballs.
+DAILY_CURRICULUM_QUALITY_V373 = install_daily_curriculum_quality_v373(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
