@@ -2,8 +2,9 @@
 
 The validated v20.30 implementation remains the complete predecessor. Later bounded successors add
 learner-experience repairs without changing Deep Curriculum identities: AR/LAR, Unilateral Sinonasal
-Disease, Facial Pain / Headache vs Rhinogenic Disease, and Systemic Disease of the Nose / Sinuses
-receive exact-canonical resident-facing Concept Checks after inherited normalization has completed.
+Disease, Facial Pain / Headache vs Rhinogenic Disease, Systemic Disease of the Nose / Sinuses, and the
+paired CSF Rhinorrhea -> Endoscopic CSF Leak Repair pathway receive exact-canonical resident-facing
+Concept Checks after inherited normalization has completed.
 """
 import concept_check_final_clinical_gate_v179_source_v228 as _base
 from concept_check_final_clinical_gate_v179_source_v228 import *
@@ -17,6 +18,7 @@ from concept_check_rhinology_unilateral_v232 import (
 )
 from concept_check_rhinology_facial_pain_v233 import apply_rhinology_facial_pain_concept_check_v233
 from concept_check_rhinology_systemic_v234 import apply_rhinology_systemic_concept_check_v234
+from concept_check_rhinology_csf_leak_v235 import apply_rhinology_csf_leak_concept_checks_v235
 
 
 _V231_ALLERGY_QIDS = {
@@ -104,4 +106,5 @@ def apply_final_clinical_gate_v179(checks, deep_modules, v6_item_id):
     results["rhinology_unilateral_visible_sources_v232"] = _reassert_unilateral_visible_sources_v232(checks, deep_modules, v6_item_id)
     results["rhinology_facial_pain_concept_check_v233"] = apply_rhinology_facial_pain_concept_check_v233(checks, deep_modules, v6_item_id)
     results["rhinology_systemic_concept_check_v234"] = apply_rhinology_systemic_concept_check_v234(checks, deep_modules, v6_item_id)
+    results["rhinology_csf_leak_concept_checks_v235"] = apply_rhinology_csf_leak_concept_checks_v235(checks, deep_modules, v6_item_id)
     return results
