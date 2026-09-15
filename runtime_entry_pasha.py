@@ -24,6 +24,7 @@ from or_airway_dilation_injury_rescue_v292 import apply_or_airway_dilation_injur
 from daily_curriculum_quality_v368 import install_daily_curriculum_quality_v368
 from daily_curriculum_quality_v370 import install_daily_curriculum_quality_v370
 from daily_curriculum_quality_v371 import install_daily_curriculum_quality_v371
+from daily_curriculum_quality_v372 import install_daily_curriculum_quality_v372
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -142,6 +143,14 @@ DAILY_CURRICULUM_QUALITY_V370 = install_daily_curriculum_quality_v370(
 # answers, repair residual curriculum-prose recognition stems, and answer the
 # precise escalation asked by weak curveball fallbacks.
 DAILY_CURRICULUM_QUALITY_V371 = install_daily_curriculum_quality_v371(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+# Fourth-order answer-fit audit: replace residual broad prompts whose source
+# answers supplied only a pearl, and make generic curveball fallbacks answer the
+# exact candidacy, diagnostic, operative, or escalation decision being asked.
+DAILY_CURRICULUM_QUALITY_V372 = install_daily_curriculum_quality_v372(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
