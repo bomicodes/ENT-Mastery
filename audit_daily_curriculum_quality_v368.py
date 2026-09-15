@@ -88,13 +88,13 @@ EXPECTED_CASE_LABELS = {
     "Septal Hematoma": "Post-traumatic nasal obstruction",
 }
 
-EXPECTED_CASE_LABELS = {
-    "Vestibular Neuritis": "Acute vestibular syndrome",
-    "Post-Tonsillectomy Hemorrhage": "Postoperative oral bleeding",
-    "Posterior Glottic Stenosis / Arytenoid Fixation": "Bilateral vocal-fold immobility",
-    "Tracheomalacia / Bronchomalacia": "Dynamic pediatric airway symptoms",
-    "Carotid Blowout Syndrome": "Sentinel or major neck bleeding",
-    "Septal Hematoma": "Post-traumatic nasal obstruction",
+TOPIC_STAGE_ANCHORS = {
+    ("HNS Activation / Programming", "recognize"): (("activation", "first setting"), ("starting point", "efficacy")),
+    ("HNS Activation / Programming", "localize"): (("tongue-motion", "respiratory timing"), ("protrusion", "off-target")),
+    ("HNS Activation / Programming", "workup"): (("healing", "sleep-study"), ("interrogate", "usage")),
+    ("HNS Activation / Programming", "manage"): (("home acclimation", "efficacy testing"), ("gradual", "titration")),
+    ("HNS Activation / Programming", "operate"): (("hardware failure", "revision"), ("reprogram", "collapse")),
+    ("HNS Activation / Programming", "teach"): (("longitudinal pathway", "troubleshooting"), ("implant", "measure efficacy")),
 }
 
 CURVEBALL_ANSWER_ANCHORS = {
@@ -187,10 +187,19 @@ def main():
         if actual != expected_kind:
             failures.append(f"topic_kind:{topic}:{actual}!={expected_kind}")
 
-    for topic, expected_label in EXPECTED_CASE_LABELS.items():
-        actual = (recognize_by_topic.get(topic) or {}).get("blind_case_label")
-        if actual != expected_label:
-            failures.append(f"case_label:{topic}:{actual}!={expected_label}")
+    for item in items:
+        key = (item.get("topic"), item.get("stage"))
+        if key not in TOPIC_STAGE_ANCHORS:
+            continue
+        prompt_anchors, answer_anchors = TOPIC_STAGE_ANCHORS[key]
+        prompt = str(app_mod._adaptive_question(item) or "").lower()
+        answer = str(item.get("answer") or "").lower()
+        for anchor in prompt_anchors:
+            if anchor not in prompt:
+                failures.append(f"topic_prompt:{key[0]}:{key[1]}:{anchor}")
+        for anchor in answer_anchors:
+            if anchor not in answer:
+                failures.append(f"topic_answer:{key[0]}:{key[1]}:{anchor}")
 
     for topic, expected_label in EXPECTED_CASE_LABELS.items():
         actual = (recognize_by_topic.get(topic) or {}).get("blind_case_label")
