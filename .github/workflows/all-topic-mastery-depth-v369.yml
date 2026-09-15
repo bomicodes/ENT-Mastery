@@ -1,0 +1,42 @@
+name: All-topic mastery depth v369
+
+on:
+  push:
+    branches: [main, 'audit/**']
+    paths:
+      - 'app.py'
+      - 'wsgi.py'
+      - 'runtime_entry.py'
+      - 'deep_curriculum_*.py'
+      - 'audit_all_topic_mastery_depth_v369.py'
+      - '.github/workflows/all-topic-mastery-depth-v369.yml'
+  pull_request:
+    paths:
+      - 'app.py'
+      - 'wsgi.py'
+      - 'runtime_entry.py'
+      - 'deep_curriculum_*.py'
+      - 'audit_all_topic_mastery_depth_v369.py'
+      - '.github/workflows/all-topic-mastery-depth-v369.yml'
+  workflow_dispatch:
+
+jobs:
+  mastery-depth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install runtime dependencies
+        run: pip install flask requests beautifulsoup4
+      - name: Audit all 325 canonical topics for mastery-depth floor
+        run: python audit_all_topic_mastery_depth_v369.py
+      - name: Upload depth backlog
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-topic-mastery-depth-v369
+          path: ALL_TOPIC_MASTERY_DEPTH_V369.json
+          if-no-files-found: error
