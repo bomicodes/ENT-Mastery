@@ -41,7 +41,8 @@
   <div class="adaptive-title-row">
     <div>
       {% if x.blind_reveal %}
-      <h2 class="blind-title">Unidentified case — {{x.blind_display_domain or x.domain}}</h2>
+      <h2 class="blind-title">Unidentified case · {{x.blind_case_label or 'Clinical presentation'}}</h2>
+      <p class="blind-case-domain">{{x.blind_display_domain or x.domain}}</p>
       <a class="topic-deep-link blind-hidden-link" href="/concept/id/{{x.concept_id|urlencode}}" hidden>Open full topic ↗</a>
       {% else %}
       <h2>{{x.topic}}</h2>
@@ -83,7 +84,7 @@
     {% elif 'dangerous alternative must you not miss' in prompt_lower %}
       <p class="adaptive-prompt">Without looking: what presentation or finding should make you think of {{x.topic}}, and which feature best helps you distinguish or confirm it?</p>
     {% else %}
-      <p class="adaptive-prompt">{{x.prompt}}</p>
+      <p class="adaptive-prompt">{{x.daily_prompt or x.prompt}}</p>
     {% endif %}
     {% if sinonasal_malignancy_focus %}<small class="muted">The full concept hub contains the explicit ONB management pathway plus the broader histology-aware sinonasal-oncology framework and traceable textbook/guideline sources. <a href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a>.</small>{% endif %}
   </div>
