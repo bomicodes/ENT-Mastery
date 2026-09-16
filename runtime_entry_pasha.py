@@ -30,6 +30,7 @@ from daily_curriculum_quality_v374 import install_daily_curriculum_quality_v374
 from daily_curriculum_quality_v375 import install_daily_curriculum_quality_v375
 from daily_curriculum_quality_v376 import install_daily_curriculum_quality_v376
 from daily_curriculum_quality_v377 import install_daily_curriculum_quality_v377
+from daily_curriculum_quality_v378 import install_daily_curriculum_quality_v378
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -191,6 +192,13 @@ DAILY_CURRICULUM_QUALITY_V376 = install_daily_curriculum_quality_v376(
 # whose inherited answers remained single pearls, and replace parent-topic
 # curveball fallbacks with answers to the displayed counterfactual.
 DAILY_CURRICULUM_QUALITY_V377 = install_daily_curriculum_quality_v377(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+# Tenth-order residual audit: complete terse teaching paths and make the next
+# set of parent-topic curveballs answer the displayed clinical decision.
+DAILY_CURRICULUM_QUALITY_V378 = install_daily_curriculum_quality_v378(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
