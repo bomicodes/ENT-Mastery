@@ -1,0 +1,31 @@
+name: All-topic learner-facing mastery depth v37.1
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/all-topic-learner-depth-v371]
+  pull_request:
+    branches: [main]
+
+jobs:
+  learner-depth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install runtime dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Audit assembled learner-facing depth
+        run: python audit_all_topic_learner_depth_v371.py
+      - name: Upload exact backlog
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-topic-learner-depth-v371
+          path: ALL_TOPIC_LEARNER_DEPTH_V371.json
+          if-no-files-found: error
