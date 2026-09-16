@@ -33,6 +33,7 @@ from daily_curriculum_quality_v377 import install_daily_curriculum_quality_v377
 from daily_curriculum_quality_v378 import install_daily_curriculum_quality_v378
 from daily_curriculum_quality_v379 import install_daily_curriculum_quality_v379
 from daily_curriculum_quality_v380 import install_daily_curriculum_quality_v380
+from daily_curriculum_quality_v381 import install_daily_curriculum_quality_v381
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -215,6 +216,13 @@ DAILY_CURRICULUM_QUALITY_V379 = install_daily_curriculum_quality_v379(
 # Twelfth-order residual audit: deepen localization and testing cards whose
 # inherited pearls still failed to resolve the displayed clinical question.
 DAILY_CURRICULUM_QUALITY_V380 = install_daily_curriculum_quality_v380(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+# Thirteenth-order residual audit: close the remaining high-value diagnostic,
+# operative-safety, and escalation boundaries hidden behind one-line pearls.
+DAILY_CURRICULUM_QUALITY_V381 = install_daily_curriculum_quality_v381(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
