@@ -1,21 +1,11 @@
-name: All-topic Deep Curriculum source saturation v36.8
+name: All-topic Deep Curriculum source saturation v36.9
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - 'deep_curriculum_*.py'
-      - 'audit_all_topic_source_saturation_v368.py'
-      - 'deep_curriculum_production_chain_v314.py'
-      - '.github/workflows/all-topic-source-saturation-v368.yml'
   pull_request:
     branches: [main]
-    paths:
-      - 'deep_curriculum_*.py'
-      - 'audit_all_topic_source_saturation_v368.py'
-      - 'deep_curriculum_production_chain_v314.py'
-      - '.github/workflows/all-topic-source-saturation-v368.yml'
 
 jobs:
   all-topic-source-saturation:
