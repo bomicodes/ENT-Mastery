@@ -37,8 +37,9 @@ MODULES_V314 = [
     "deep_curriculum_rhinology_v354", "deep_curriculum_rhinology_v355", "deep_curriculum_rhinology_v356",
     "deep_curriculum_rhinology_v357", "deep_curriculum_otology_v358", "deep_curriculum_otology_v359",
     "deep_curriculum_rhinology_v360", "deep_curriculum_rhinology_v361", "deep_curriculum_otology_v361",
-    "deep_curriculum_rhinology_v362", "deep_curriculum_otology_v362", "deep_curriculum_rhinology_v364",
-    "deep_curriculum_rhinology_v365", "deep_curriculum_rhinology_v366", "deep_curriculum_rhinology_v367",
+    "deep_curriculum_rhinology_v362", "deep_curriculum_otology_v362", "deep_curriculum_rhinology_v363",
+    "deep_curriculum_rhinology_v364", "deep_curriculum_rhinology_v365", "deep_curriculum_rhinology_v366",
+    "deep_curriculum_rhinology_v367",
 ]
 
 
