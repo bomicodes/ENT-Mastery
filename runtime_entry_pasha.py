@@ -29,6 +29,7 @@ from why_wrong_fix_laryngology_v1 import apply_why_wrong_fix_laryngology_v1
 from why_wrong_fix_head_neck_v1 import apply_why_wrong_fix_head_neck_v1
 from why_wrong_fix_rhinology_v1 import apply_why_wrong_fix_rhinology_v1
 from why_wrong_fix_pediatric_v1 import apply_why_wrong_fix_pediatric_v1
+from why_wrong_fix_facial_plastics_v1 import apply_why_wrong_fix_facial_plastics_v1
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -179,6 +180,12 @@ WHY_WRONG_FIX_RHINOLOGY_V1 = apply_why_wrong_fix_rhinology_v1(
 # Apply the Pediatric Otolaryngology distractor-specific reasoning repair to
 # the final assembled challenge objects.
 WHY_WRONG_FIX_PEDIATRIC_V1 = apply_why_wrong_fix_pediatric_v1(
+    runtime_entry.data,
+)
+
+# Apply the Facial Plastics / Trauma distractor-specific reasoning repair to
+# the final assembled challenge objects.
+WHY_WRONG_FIX_FACIAL_PLASTICS_V1 = apply_why_wrong_fix_facial_plastics_v1(
     runtime_entry.data,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
