@@ -2,13 +2,13 @@
 
 This pass keeps source modules immutable and repairs the fully assembled objects
 served by ``runtime_entry_pasha``.  It replaces terse distractor feedback with
-choice-specific reasoning, removes one answer-shape giveaway, and converts any
-recognition card whose own text reveals its topic into an explicitly named card.
+choice-specific reasoning, removes one answer-shape giveaway, and strips topic
+aliases from cards that are intentionally rendered as unidentified cases.
 """
 
 import re
 
-from daily_curriculum_quality_v368 import _clean, _named_recognition_prompt
+from daily_curriculum_quality_v368 import _clean
 
 
 WHY_WRONG_BY_CHOICE = {
@@ -89,6 +89,42 @@ def _reveals_topic(item):
     )
 
 
+def _neutralize_topic_aliases(text, topic):
+    """Remove diagnostic labels while preserving the clinical teaching prose."""
+    value = str(text or "")
+    # Most generated answers begin with this explicit reveal.  Remove the
+    # sentence rather than producing the awkward phrase "This is this condition."
+    value = re.sub(
+        r"^\s*This is\s+" + re.escape(topic) + r"\s*(?:[.:—-]\s*)?",
+        "",
+        value,
+        count=1,
+        flags=re.IGNORECASE,
+    )
+    for variant in sorted(_topic_variants(topic), key=len, reverse=True):
+        value = re.sub(
+            r"(?<!\w)" + re.escape(variant) + r"(?!\w)",
+            "this condition",
+            value,
+            flags=re.IGNORECASE,
+        )
+    # Smooth common constructions left by substitution without reintroducing
+    # a diagnostic alias (for example, "primary acquired this condition").
+    value = re.sub(
+        r"\b(primary acquired|secondary acquired|congenital|acquired)\s+this condition\b",
+        lambda match: match.group(1) + " form",
+        value,
+        flags=re.IGNORECASE,
+    )
+    value = re.sub(
+        r"\b(diffuse|invasive|metastatic|recurrent)\s+this condition\b",
+        lambda match: "this " + match.group(1) + " process",
+        value,
+        flags=re.IGNORECASE,
+    )
+    return _clean(value)
+
+
 def _repair_challenges(challenges):
     repaired_reasons = 0
     repaired_answers = 0
@@ -148,11 +184,11 @@ def install_question_quality_repairs_v371(data_module, app_module):
             if not _reveals_topic(item):
                 continue
             topic = _clean(item.get("topic"))
-            prompt = _named_recognition_prompt(topic)
+            prompt = _neutralize_topic_aliases(item.get("prompt"), topic)
+            answer = _neutralize_topic_aliases(item.get("answer"), topic)
             item["daily_prompt"] = prompt
             item["prompt"] = prompt
-            item["blind_reveal"] = False
-            item.pop("blind_case_label", None)
+            item["answer"] = answer
         return items
 
     data_module.get_adaptive_items_v120 = get_adaptive_items_v371
@@ -165,11 +201,11 @@ def install_question_quality_repairs_v371(data_module, app_module):
     app_module.CLINICAL_CHALLENGE_BY_ID_V119 = data_module.CLINICAL_CHALLENGE_BY_ID_V119
 
     sample = get_adaptive_items_v371()
-    named_cards = sum(
+    sanitized_blind_cards = sum(
         1
         for item in sample
         if item.get("stage") == "recognize"
-        and not item.get("blind_reveal")
-        and (item.get("prompt") or "").startswith("For ")
+        and item.get("blind_reveal")
+        and not _reveals_topic(item)
     )
-    return {**challenge_stats, "named_recognition_cards": named_cards}
+    return {**challenge_stats, "sanitized_blind_recognition_cards": sanitized_blind_cards}
