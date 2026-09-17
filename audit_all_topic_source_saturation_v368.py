@@ -2,9 +2,9 @@
 """v37.1 all-topic Deep Curriculum source/core-text saturation non-regression gate.
 
 Inventories the fully assembled learner-facing Deep Curriculum and fails closed if the
-325-topic/nine-domain canonical contract drifts, or if either source backlog grows.
-The ceilings are truthful ratchets from the last validated census and must only move
-downward as reviewed clinical/source cohorts land.
+325-topic/nine-domain canonical contract drifts, source provenance is malformed, or
+either source backlog grows. The ceilings are truthful ratchets from the last validated
+census and must only move downward as reviewed clinical/source cohorts land.
 """
 
 from collections import Counter
@@ -67,9 +67,17 @@ def main():
     missing = []
     incomplete = []
     sourced = []
+    malformed = []
+    missing_cummings = []
+    missing_companion_core = []
     for domain, row in rows:
         topic = str(row.get("topic") or "").strip()
-        sources = [str(x).strip() for x in (row.get("source_basis") or []) if str(x).strip()]
+        raw_sources = row.get("source_basis")
+        if raw_sources is not None and not isinstance(raw_sources, (list, tuple)):
+            malformed.append((domain, topic, type(raw_sources).__name__))
+            sources = []
+        else:
+            sources = [str(x).strip() for x in (raw_sources or []) if str(x).strip()]
         if not sources:
             missing.append((domain, topic))
             continue
@@ -78,12 +86,19 @@ def main():
         hits = sum(token in joined for token in CORE_TEXTBOOK_TOKENS)
         if hits < 2:
             incomplete.append((domain, topic, hits))
+        if "cummings" not in joined:
+            missing_cummings.append((domain, topic))
+        if "pasha" not in joined and "k.j. lee" not in joined:
+            missing_companion_core.append((domain, topic))
 
     print(f"SOURCE_SATURATION_TOTAL={len(rows)}")
     print(f"SOURCE_SATURATION_SOURCED={len(sourced)}")
     print(f"SOURCE_SATURATION_MISSING={len(missing)}")
     print(f"SOURCE_SATURATION_PERCENT={(100.0 * len(sourced) / len(rows)) if rows else 0:.1f}")
     print(f"SOURCE_SATURATION_INCOMPLETE_CORE_TEXTBOOK={len(incomplete)}")
+    print(f"SOURCE_SATURATION_MALFORMED_SOURCE_BASIS={len(malformed)}")
+    print(f"SOURCE_SATURATION_MISSING_CUMMINGS={len(missing_cummings)}")
+    print(f"SOURCE_SATURATION_MISSING_PASHA_OR_KJLEE={len(missing_companion_core)}")
 
     missing_by_domain = Counter(domain for domain, _ in missing)
     incomplete_by_domain = Counter(domain for domain, _, _ in incomplete)
@@ -95,6 +110,11 @@ def main():
             f"incomplete_core_textbooks={incomplete_by_domain[domain]}"
         )
 
+    if malformed:
+        failures += fail(
+            "source_basis schema drift: expected list/tuple provenance entries; "
+            f"found {len(malformed)} malformed canonical row(s)"
+        )
     if len(missing) > MAX_MISSING_SOURCE_BASIS:
         failures += fail(
             f"missing-source backlog regressed: expected <= {MAX_MISSING_SOURCE_BASIS}, found {len(missing)}"
@@ -105,6 +125,8 @@ def main():
             f"expected <= {MAX_INCOMPLETE_CORE_TEXTBOOK}, found {len(incomplete)}"
         )
 
+    for domain, topic, source_type in malformed:
+        print(f"SOURCE_BACKLOG_MALFORMED\t{domain}\t{topic}\ttype={source_type}")
     for domain, topic in missing:
         print(f"SOURCE_BACKLOG_MISSING\t{domain}\t{topic}")
     for domain, topic, hits in incomplete:
@@ -115,8 +137,8 @@ def main():
         return 1
 
     print(
-        "PASS: exact 325-topic/nine-domain live canonical contract inventoried; missing-source and "
-        "incomplete core-textbook backlogs cannot regress above their validated ratchets."
+        "PASS: exact 325-topic/nine-domain live canonical contract inventoried; source_basis schema, "
+        "missing-source and incomplete core-textbook backlogs cannot silently regress."
     )
     return 0
 
