@@ -32,6 +32,7 @@ from why_wrong_fix_pediatric_v1 import apply_why_wrong_fix_pediatric_v1
 from why_wrong_fix_facial_plastics_v1 import apply_why_wrong_fix_facial_plastics_v1
 from why_wrong_fix_otology_v1 import apply_why_wrong_fix_otology_v1
 from why_wrong_fix_thyroid_v1 import apply_why_wrong_fix_thyroid_v1
+from why_wrong_fix_sleep_v1 import apply_why_wrong_fix_sleep_v1
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -200,6 +201,12 @@ WHY_WRONG_FIX_OTOLOGY_V1 = apply_why_wrong_fix_otology_v1(
 # Apply the Thyroid / Parathyroid / Salivary distractor-specific reasoning
 # repair at the final assembled production boundary.
 WHY_WRONG_FIX_THYROID_V1 = apply_why_wrong_fix_thyroid_v1(
+    runtime_entry.data,
+)
+
+# Apply the Sleep Surgery distractor-specific reasoning repair after the final
+# assembled question-quality and domain-specific mutation layers.
+WHY_WRONG_FIX_SLEEP_V1 = apply_why_wrong_fix_sleep_v1(
     runtime_entry.data,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
