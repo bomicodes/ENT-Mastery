@@ -115,7 +115,7 @@ def audit_clinical_challenges(challenges):
                     issues.append(("GENERIC_WHY_WRONG", f"choices {idxs} share identical fallback reasoning"))
 
         # --- Check 4: empty / too-short why_wrong ---
-        short_hits = [i for i, w in enumerate(normed) if w and len(w) < 15]
+        short_hits = [i for i, w in enumerate(normed) if w and len(w) < 15 and i != answer_idx]
         empty_hits = [i for i, w in enumerate(why_wrong) if choices and i != answer_idx and not _norm(w)]
         if short_hits:
             issues.append(("EMPTY_OR_SHORT_WHY_WRONG", f"choice(s) {short_hits} have <15 char reasoning"))
