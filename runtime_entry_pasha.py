@@ -23,6 +23,7 @@ from or_zenker_perforation_rescue_v291 import apply_or_zenker_perforation_rescue
 from or_airway_dilation_injury_rescue_v292 import apply_or_airway_dilation_injury_rescue_v292
 from daily_curriculum_quality_v368 import install_daily_curriculum_quality_v368
 from daily_curriculum_quality_v370 import install_daily_curriculum_quality_v370
+from daily_curriculum_quality_v371 import install_daily_curriculum_quality_v371
 from question_quality_repairs_v371 import install_question_quality_repairs_v371
 from why_wrong_fix_general_ent_v1 import apply_why_wrong_fix_general_ent_v1
 from why_wrong_fix_laryngology_v1 import apply_why_wrong_fix_laryngology_v1
@@ -34,198 +35,40 @@ from why_wrong_fix_otology_v1 import apply_why_wrong_fix_otology_v1
 from why_wrong_fix_thyroid_v1 import apply_why_wrong_fix_thyroid_v1
 from why_wrong_fix_sleep_v1 import apply_why_wrong_fix_sleep_v1
 
-# Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
-# curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
-# production wiring point.
-OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(
-    runtime_entry.data,
-    runtime_entry.app_mod,
-)
+OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
+DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
+RHINOLOGY_ALLERGY_SOURCE_TRACE_V363 = apply_rhinology_allergy_source_trace_v363(runtime_entry.data, runtime_entry.app_mod)
+OR_TONSIL_HEMORRHAGE_RESCUE_V281 = apply_or_tonsil_hemorrhage_rescue_v281(runtime_entry.data.OR_PREP_REGISTRY)
+OR_THYROID_HEMATOMA_RESCUE_V282 = apply_or_thyroid_hematoma_rescue_v282(runtime_entry.data.OR_PREP_REGISTRY)
+OR_TRACHEOSTOMY_HEMORRHAGE_RESCUE_V283 = apply_or_tracheostomy_hemorrhage_rescue_v283(runtime_entry.data.OR_PREP_REGISTRY)
+OR_SEPTAL_HEMATOMA_RESCUE_V284 = apply_or_septal_hematoma_rescue_v284(runtime_entry.data.OR_PREP_REGISTRY)
+OR_ESOPHAGEAL_PERFORATION_RESCUE_V285 = apply_or_esophageal_perforation_rescue_v285(runtime_entry.data.OR_PREP_REGISTRY)
+OR_LARYNGECTOMY_FISTULA_RESCUE_V287 = apply_or_laryngectomy_fistula_rescue_v287(runtime_entry.data.OR_PREP_REGISTRY)
+OR_AIRWAY_FIRE_RESCUE_V288 = apply_or_airway_fire_rescue_v288(runtime_entry.data.OR_PREP_REGISTRY)
+OR_POSTERIOR_EPISTAXIS_RESCUE_V289 = apply_or_posterior_epistaxis_rescue_v289(runtime_entry.data.OR_PREP_REGISTRY)
+OR_TEP_PROSTHESIS_RESCUE_V290 = apply_or_tep_prosthesis_rescue_v290(runtime_entry.data.OR_PREP_REGISTRY)
+OR_ZENKER_PERFORATION_RESCUE_V291 = apply_or_zenker_perforation_rescue_v291(runtime_entry.data.OR_PREP_REGISTRY)
+OR_AIRWAY_DILATION_INJURY_RESCUE_V292 = apply_or_airway_dilation_injury_rescue_v292(runtime_entry.data.OR_PREP_REGISTRY)
+DAILY_CURRICULUM_QUALITY_V368 = install_daily_curriculum_quality_v368(runtime_entry.data, runtime_entry.app_mod)
+DAILY_CURRICULUM_QUALITY_V370 = install_daily_curriculum_quality_v370(runtime_entry.data, runtime_entry.app_mod)
 
-# Restore and execute the cumulative source-grounded Concept Hub audit chain added
-# after v28.4. This intentionally runs before the app begins serving and includes the
-# current v31.4 goals-of-care/palliative-intervention distinction.
-DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(
-    runtime_entry.data,
-    runtime_entry.app_mod,
-)
-
-# Preserve strong AR/LAR clinical teaching while making the connected core-textbook
-# provenance explicit at the same final production boundary used by Concept Hub pages.
-RHINOLOGY_ALLERGY_SOURCE_TRACE_V363 = apply_rhinology_allergy_source_trace_v363(
-    runtime_entry.data,
-    runtime_entry.app_mod,
-)
-
-# Apply the source-grounded post-tonsillectomy hemorrhage rescue to the same final OR
-# registry served by /case-tomorrow. Keep this after the historical OR assembly so the
-# rescue cannot be overwritten by an earlier generic postoperative layer.
-OR_TONSIL_HEMORRHAGE_RESCUE_V281 = apply_or_tonsil_hemorrhage_rescue_v281(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Apply the post-thyroidectomy hematoma rescue at the same final production boundary.
-# This deliberately runs after the historical thyroid/OR assembly so bedside SCOOP
-# choreography and its source trail cannot be overwritten by an older generic layer.
-OR_THYROID_HEMATOMA_RESCUE_V282 = apply_or_thyroid_hematoma_rescue_v282(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Apply tracheostomy hemorrhage/TIF rescue at the final OR boundary as well. This keeps
-# the established fresh-tract rescue intact while adding sentinel-bleed recognition,
-# cuff/digital temporary control and definitive vascular escalation after all older OR
-# layers have assembled the live registry.
-OR_TRACHEOSTOMY_HEMORRHAGE_RESCUE_V283 = apply_or_tracheostomy_hemorrhage_rescue_v283(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Extend the recognition-only septoplasty warning into an executable septal
-# hematoma/abscess rescue after all historical postoperative layers have run.
-OR_SEPTAL_HEMATOMA_RESCUE_V284 = apply_or_septal_hematoma_rescue_v284(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Convert recognition-only post-esophagoscopy perforation warnings into an executable
-# cervical esophageal leak pathway after every historical OR management layer has run.
-OR_ESOPHAGEAL_PERFORATION_RESCUE_V285 = apply_or_esophageal_perforation_rescue_v285(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Add a final-boundary post-laryngectomy PCF pathway so salivary-leak surveillance,
-# nutrition, vessel protection and reconstructive escalation cannot be overwritten by
-# older generic postoperative content.
-OR_LARYNGECTOMY_FISTULA_RESCUE_V287 = apply_or_laryngectomy_fistula_rescue_v287(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Extend the existing shared-airway fire-safety stop point into an executable fire
-# rescue after all historical microlaryngoscopy/RRP layers have assembled the registry.
-OR_AIRWAY_FIRE_RESCUE_V288 = apply_or_airway_fire_rescue_v288(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Deepen the existing SPA-ligation card at the final OR boundary so hemorrhage
-# stabilization, complete branch control, failure analysis, and selective embolization
-# escalation cannot be overwritten by the historical rhinology management layer.
-OR_POSTERIOR_EPISTAXIS_RESCUE_V289 = apply_or_posterior_epistaxis_rescue_v289(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Convert the recognition-only TEP dislodgement warning into a laryngectomy-airway,
-# aspirated-prosthesis and tract-preservation rescue after all older management layers
-# have assembled the live card.
-OR_TEP_PROSTHESIS_RESCUE_V290 = apply_or_tep_prosthesis_rescue_v290(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Extend the older recognition-only Zenker/cricopharyngeal leak warning into a complete
-# NPO/imaging/closure/source-control rescue at the final production OR boundary.
-OR_ZENKER_PERFORATION_RESCUE_V291 = apply_or_zenker_perforation_rescue_v291(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Convert the existing airway-dilation mucosal-tear stop point into a complete
-# laryngotracheal injury, air-leak and pleural-emergency rescue after all older OR
-# sequence/postoperative layers have assembled the live registry.
-OR_AIRWAY_DILATION_INJURY_RESCUE_V292 = apply_or_airway_dilation_injury_rescue_v292(
-    runtime_entry.data.OR_PREP_REGISTRY,
-)
-
-# Final-boundary Daily Curriculum repair.  Run after the complete Concept Hub and
-# vignette chains so all 325 live topics receive coherent questions and every
-# attending curveball receives a revealable answer.
-DAILY_CURRICULUM_QUALITY_V368 = install_daily_curriculum_quality_v368(
-    runtime_entry.data,
-    runtime_entry.app_mod,
-)
-
-# Second-order rendered-registry audit: remove alias-revealing blind cards,
-# presentation-label drift, mid-word stems, nonoperative "operate" wording, and
-# weak curveball answers that survived the first broad repair.
-DAILY_CURRICULUM_QUALITY_V370 = install_daily_curriculum_quality_v370(
-    runtime_entry.data,
-    runtime_entry.app_mod,
-)
-
-# Enforce the production question-quality audit at the final data boundary.
-# This replaces terse distractor feedback, removes answer-shape giveaways, and
-# prevents a card from claiming to be unidentified when its own text names the
-# diagnosis.
-QUESTION_QUALITY_REPAIRS_V371 = install_question_quality_repairs_v371(
-    runtime_entry.data,
-    runtime_entry.app_mod,
-)
-
-# Replace generic General ENT distractor feedback only after every vignette and
-# question-quality layer has assembled the live challenge objects.
-WHY_WRONG_FIX_GENERAL_ENT_V1 = apply_why_wrong_fix_general_ent_v1(
-    runtime_entry.data,
-)
-
-# Apply the corresponding distractor-specific reasoning repair to the live
-# Laryngology / Voice / Swallowing challenge set at the same final boundary.
-WHY_WRONG_FIX_LARYNGOLOGY_V1 = apply_why_wrong_fix_laryngology_v1(
-    runtime_entry.data,
-)
-
-# Apply distractor-specific reasoning to the final assembled Head & Neck
-# Oncology challenge set after all earlier vignette mutations.
-WHY_WRONG_FIX_HEAD_NECK_V1 = apply_why_wrong_fix_head_neck_v1(
-    runtime_entry.data,
-)
-
-# Apply the Rhinology / Allergy / Skull Base distractor-reasoning repair after
-# the final rhinology source and vignette layers have assembled production data.
-WHY_WRONG_FIX_RHINOLOGY_V1 = apply_why_wrong_fix_rhinology_v1(
-    runtime_entry.data,
-)
-
-# Apply the Pediatric Otolaryngology distractor-specific reasoning repair to
-# the final assembled challenge objects.
-WHY_WRONG_FIX_PEDIATRIC_V1 = apply_why_wrong_fix_pediatric_v1(
-    runtime_entry.data,
-)
-
-# Apply the Facial Plastics / Trauma distractor-specific reasoning repair to
-# the final assembled challenge objects.
-WHY_WRONG_FIX_FACIAL_PLASTICS_V1 = apply_why_wrong_fix_facial_plastics_v1(
-    runtime_entry.data,
-)
-
-# Apply the Otology / Neurotology distractor-specific reasoning repair after
-# all earlier curriculum and question-quality mutations have completed.
-WHY_WRONG_FIX_OTOLOGY_V1 = apply_why_wrong_fix_otology_v1(
-    runtime_entry.data,
-)
-
-# Apply the Thyroid / Parathyroid / Salivary distractor-specific reasoning
-# repair at the final assembled production boundary.
-WHY_WRONG_FIX_THYROID_V1 = apply_why_wrong_fix_thyroid_v1(
-    runtime_entry.data,
-)
-
-# Apply the Sleep Surgery distractor-specific reasoning repair after the final
-# assembled question-quality and domain-specific mutation layers.
-WHY_WRONG_FIX_SLEEP_V1 = apply_why_wrong_fix_sleep_v1(
-    runtime_entry.data,
-)
+# Reconciled Daily v37.1 runs before the newer global question-quality and domain
+# distractor-reasoning layers, so it can improve prompt/answer alignment without
+# overwriting their final challenge feedback.
+DAILY_CURRICULUM_QUALITY_V371 = install_daily_curriculum_quality_v371(runtime_entry.data, runtime_entry.app_mod)
+QUESTION_QUALITY_REPAIRS_V371 = install_question_quality_repairs_v371(runtime_entry.data, runtime_entry.app_mod)
+WHY_WRONG_FIX_GENERAL_ENT_V1 = apply_why_wrong_fix_general_ent_v1(runtime_entry.data)
+WHY_WRONG_FIX_LARYNGOLOGY_V1 = apply_why_wrong_fix_laryngology_v1(runtime_entry.data)
+WHY_WRONG_FIX_HEAD_NECK_V1 = apply_why_wrong_fix_head_neck_v1(runtime_entry.data)
+WHY_WRONG_FIX_RHINOLOGY_V1 = apply_why_wrong_fix_rhinology_v1(runtime_entry.data)
+WHY_WRONG_FIX_PEDIATRIC_V1 = apply_why_wrong_fix_pediatric_v1(runtime_entry.data)
+WHY_WRONG_FIX_FACIAL_PLASTICS_V1 = apply_why_wrong_fix_facial_plastics_v1(runtime_entry.data)
+WHY_WRONG_FIX_OTOLOGY_V1 = apply_why_wrong_fix_otology_v1(runtime_entry.data)
+WHY_WRONG_FIX_THYROID_V1 = apply_why_wrong_fix_thyroid_v1(runtime_entry.data)
+WHY_WRONG_FIX_SLEEP_V1 = apply_why_wrong_fix_sleep_v1(runtime_entry.data)
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
-
-# Rebuild the live Interpretation Atlas before the production app begins serving.
-# This removes retired lab records/resources from the registry rather than hiding cards.
-INTERPRETATION_LABS_CLEANUP_V250 = apply_interpretation_labs_cleanup_v250(
-    runtime_entry.data,
-    runtime_entry.app_mod,
-)
-
+INTERPRETATION_LABS_CLEANUP_V250 = apply_interpretation_labs_cleanup_v250(runtime_entry.data, runtime_entry.app_mod)
 app=runtime_entry.app
-
-# Turn Clinical Challenges and Concept Checks into continuous practice-bank sessions
-# while preserving the existing mastery/scoring APIs and final assembled question data.
-PRACTICE_BANK_NAVIGATION_V150 = install_practice_bank_navigation_v150(
-    app,
-    runtime_entry.app_mod,
-)
-
+PRACTICE_BANK_NAVIGATION_V150 = install_practice_bank_navigation_v150(app, runtime_entry.app_mod)
 if "pasha_review" not in app.blueprints:
     app.register_blueprint(pasha_review_blueprint)
