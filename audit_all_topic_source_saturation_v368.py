@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""v37.0 all-topic Deep Curriculum source/core-text saturation non-regression gate.
+"""v37.1 all-topic Deep Curriculum source/core-text saturation non-regression gate.
 
-This gate inventories all 325 exact canonical topics and fails closed if either the
-missing-source backlog or the incomplete core-textbook backlog grows. The ceilings are
-truthful ratchets from the last validated census and must only move downward as reviewed
-clinical/source cohorts land.
+Inventories the fully assembled learner-facing Deep Curriculum and fails closed if the
+325-topic/nine-domain canonical contract drifts, or if either source backlog grows.
+The ceilings are truthful ratchets from the last validated census and must only move
+downward as reviewed clinical/source cohorts land.
 """
 
 from collections import Counter
@@ -13,7 +13,18 @@ import runtime_entry_pasha
 
 
 data = runtime_entry_pasha.runtime_entry.data
-EXPECTED_TOTAL = 325
+EXPECTED_DOMAIN_COUNTS = {
+    "Otology / Neurotology": 47,
+    "Rhinology / Allergy / Skull Base": 42,
+    "Head & Neck Oncology": 43,
+    "Thyroid / Parathyroid / Salivary": 32,
+    "Pediatric Otolaryngology": 40,
+    "Laryngology / Voice / Swallowing": 36,
+    "Facial Plastics / Trauma": 32,
+    "Sleep Surgery": 21,
+    "General ENT / Emergencies": 32,
+}
+EXPECTED_TOTAL = sum(EXPECTED_DOMAIN_COUNTS.values())
 MAX_MISSING_SOURCE_BASIS = 139
 MAX_INCOMPLETE_CORE_TEXTBOOK = 69
 CORE_TEXTBOOK_TOKENS = ("cummings", "pasha", "k.j. lee")
@@ -28,6 +39,21 @@ def main():
     deep = getattr(data, "DEEP_MODULES_V6", {}) or {}
     rows = [(domain, row) for domain, domain_rows in deep.items() for row in (domain_rows or [])]
     failures = 0
+
+    live_domains = set(deep)
+    expected_domains = set(EXPECTED_DOMAIN_COUNTS)
+    if live_domains != expected_domains:
+        failures += fail(
+            "domain set drift; missing=" + repr(sorted(expected_domains - live_domains))
+            + "; extra=" + repr(sorted(live_domains - expected_domains))
+        )
+
+    for domain, expected_count in EXPECTED_DOMAIN_COUNTS.items():
+        found = len(deep.get(domain, []) or [])
+        if found != expected_count:
+            failures += fail(
+                f"{domain}: canonical count drift: expected {expected_count}, found {found}"
+            )
 
     if len(rows) != EXPECTED_TOTAL:
         failures += fail(f"strict canonical count changed: expected {EXPECTED_TOTAL}, found {len(rows)}")
@@ -61,7 +87,7 @@ def main():
 
     missing_by_domain = Counter(domain for domain, _ in missing)
     incomplete_by_domain = Counter(domain for domain, _, _ in incomplete)
-    for domain in deep:
+    for domain in EXPECTED_DOMAIN_COUNTS:
         total = len(deep.get(domain, []) or [])
         print(
             "SOURCE_DOMAIN\t"
@@ -85,11 +111,11 @@ def main():
         print(f"SOURCE_BACKLOG_INCOMPLETE\t{domain}\t{topic}\tcore_textbook_hits={hits}")
 
     if failures:
-        print(f"All-topic source/core-text saturation v37.0 FAILED with {failures} issue(s).")
+        print(f"All-topic source/core-text saturation v37.1 FAILED with {failures} issue(s).")
         return 1
 
     print(
-        "PASS: all 325 exact live canonical topics were inventoried; missing-source and "
+        "PASS: exact 325-topic/nine-domain live canonical contract inventoried; missing-source and "
         "incomplete core-textbook backlogs cannot regress above their validated ratchets."
     )
     return 0
