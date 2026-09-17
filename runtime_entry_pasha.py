@@ -23,6 +23,7 @@ from or_zenker_perforation_rescue_v291 import apply_or_zenker_perforation_rescue
 from or_airway_dilation_injury_rescue_v292 import apply_or_airway_dilation_injury_rescue_v292
 from daily_curriculum_quality_v368 import install_daily_curriculum_quality_v368
 from daily_curriculum_quality_v370 import install_daily_curriculum_quality_v370
+from question_quality_repairs_v371 import install_question_quality_repairs_v371
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -133,6 +134,15 @@ DAILY_CURRICULUM_QUALITY_V368 = install_daily_curriculum_quality_v368(
 # presentation-label drift, mid-word stems, nonoperative "operate" wording, and
 # weak curveball answers that survived the first broad repair.
 DAILY_CURRICULUM_QUALITY_V370 = install_daily_curriculum_quality_v370(
+    runtime_entry.data,
+    runtime_entry.app_mod,
+)
+
+# Enforce the production question-quality audit at the final data boundary.
+# This replaces terse distractor feedback, removes answer-shape giveaways, and
+# prevents a card from claiming to be unidentified when its own text names the
+# diagnosis.
+QUESTION_QUALITY_REPAIRS_V371 = install_question_quality_repairs_v371(
     runtime_entry.data,
     runtime_entry.app_mod,
 )
