@@ -25,6 +25,7 @@ from daily_curriculum_quality_v368 import install_daily_curriculum_quality_v368
 from daily_curriculum_quality_v370 import install_daily_curriculum_quality_v370
 from question_quality_repairs_v371 import install_question_quality_repairs_v371
 from why_wrong_fix_general_ent_v1 import apply_why_wrong_fix_general_ent_v1
+from why_wrong_fix_laryngology_v1 import apply_why_wrong_fix_laryngology_v1
 
 # Apply the source-grounded obstructive/patulous ETD rebuild to the fully assembled
 # curriculum. Procfile/Render launches runtime_entry_pasha:app, so this is the final
@@ -151,6 +152,12 @@ QUESTION_QUALITY_REPAIRS_V371 = install_question_quality_repairs_v371(
 # Replace generic General ENT distractor feedback only after every vignette and
 # question-quality layer has assembled the live challenge objects.
 WHY_WRONG_FIX_GENERAL_ENT_V1 = apply_why_wrong_fix_general_ent_v1(
+    runtime_entry.data,
+)
+
+# Apply the corresponding distractor-specific reasoning repair to the live
+# Laryngology / Voice / Swallowing challenge set at the same final boundary.
+WHY_WRONG_FIX_LARYNGOLOGY_V1 = apply_why_wrong_fix_laryngology_v1(
     runtime_entry.data,
 )
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
