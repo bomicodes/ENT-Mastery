@@ -40,7 +40,7 @@ MODULES_V314 = [
     "deep_curriculum_rhinology_v362", "deep_curriculum_otology_v362", "deep_curriculum_rhinology_v363",
     "deep_curriculum_rhinology_v364", "deep_curriculum_rhinology_v365", "deep_curriculum_rhinology_v366",
     "deep_curriculum_rhinology_v367",
-    "deep_curriculum_otology_v372", "deep_curriculum_thyroid_v373",
+    "deep_curriculum_snhl_v372", "deep_curriculum_dtc_rai_v373",
 ]
 
 
