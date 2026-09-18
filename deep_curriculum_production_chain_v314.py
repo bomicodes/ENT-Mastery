@@ -1,4 +1,4 @@
-"""Cumulative Concept Hub production bridge through v36.7.
+"""Cumulative Concept Hub production bridge through v37.3.
 
 The final Render entrypoint imports runtime_entry_pasha, so source-grounded Concept Hub
 rebuilds added after v28.4 must be applied there. This bridge intentionally applies the
@@ -6,7 +6,7 @@ bounded deep-curriculum modules in version order; each patch is idempotent and l
 rebuilds win when a concept is intentionally revisited.
 
 The historical filename/function remain v314 for compatibility with the production
-entrypoint, but the module registry below is authoritative and now runs through v36.7.
+entrypoint, but the module registry below is authoritative and now runs through v37.3.
 """
 
 import importlib
@@ -40,6 +40,7 @@ MODULES_V314 = [
     "deep_curriculum_rhinology_v362", "deep_curriculum_otology_v362", "deep_curriculum_rhinology_v363",
     "deep_curriculum_rhinology_v364", "deep_curriculum_rhinology_v365", "deep_curriculum_rhinology_v366",
     "deep_curriculum_rhinology_v367",
+    "deep_curriculum_otology_v372", "deep_curriculum_thyroid_v373",
 ]
 
 
