@@ -11,7 +11,7 @@ DOMAIN = "Rhinology / Allergy / Skull Base"
 TARGETS = ("Allergic Rhinitis", "Local Allergic Rhinitis")
 
 CONNECTED_TEXTBOOKS = [
-    "Cummings Otolaryngology—Head and Neck Surgery, 7e (2021) — connected Google Drive full-volume copy ID 18QGOAaZhvH-kEUJxtwDWXn1ho86PRY-t.",
+    "Cummings Otolaryngology—Head and Neck Surgery, 7e (2021) — connected Google Drive split Part 1, pages 1–659, file ID 1Dl2D7ARIi_uLdG0q7QdE0CEuWrX6LVND (inspectable Allergy/Rhinology source section).",
     "Pasha & Golub, Otolaryngology—Head & Neck Surgery: Clinical Reference Guide, 6e (2022) — connected Google Drive file ID 14E4Iy4XCjGPSyMT5n7uyURGtIDnhi-52.",
     "K.J. Lee's Essential Otolaryngology, 12e — connected Google Drive file ID 112c9y0fb1z_7OLP4aLlAG2z-r8weuXvR.",
 ]
@@ -40,7 +40,7 @@ def apply_rhinology_allergy_source_trace_v363(data_module, app_module=None):
         row["source_metadata_v363"] = {
             "canonical_link": {"domain": DOMAIN, "topic": topic},
             "textbook_drive_ids": {
-                "cummings_7e": "18QGOAaZhvH-kEUJxtwDWXn1ho86PRY-t",
+                "cummings_7e": "1Dl2D7ARIi_uLdG0q7QdE0CEuWrX6LVND",
                 "pasha_6e": "14E4Iy4XCjGPSyMT5n7uyURGtIDnhi-52",
                 "kj_lee_12e": "112c9y0fb1z_7OLP4aLlAG2z-r8weuXvR",
             },

@@ -37,7 +37,7 @@ TOPICS = {
     },
 }
 CORE_SOURCE_IDS = (
-    "18qgoaazhvh-keujxtwdwxn1ho86pry-t",
+    "1dl2d7arii_uldg0q7qde0ceuwrx6lvnd",
     "14e4iy4xcjgpsymt5n7uyurgtidnhi-52",
     "112c9y0fb1z_7olp4allag2z-r8weuxvr",
 )
