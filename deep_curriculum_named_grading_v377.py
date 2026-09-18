@@ -1,7 +1,6 @@
 """v37.7: Close five confirmed named-framework/no-concrete-criteria curriculum gaps.
 
-Idempotent per field and tag. Two already-complete topics (pediatric CRS and
-allergen immunotherapy) are intentionally unchanged.
+Idempotent per field and tag. Pediatric CRS and allergen immunotherapy remain unchanged.
 """
 
 BSTF_TOPIC = "Benign Sinonasal Tumor Framework"
@@ -24,7 +23,6 @@ BSTF_MANAGE_ADDENDUM = (
     "(attachment-oriented resection for IP; vascular control and embolization planning for "
     "JNA) stay the same across stages."
 )
-
 HNSCC_TOPIC = "Recurrent / Metastatic HNSCC"
 HNSCC_WORKUP_ADDENDUM = (
     " CONCRETE SELECTION CRITERIA: obtain PD-L1 combined positive score (CPS) testing on "
@@ -44,7 +42,6 @@ HNSCC_MANAGE_ADDENDUM = (
     "without systemic therapy is reserved for selected unresectable local/regional recurrence "
     "beyond the interval above, in patients fit enough to tolerate it."
 )
-
 SGS_TOPIC = "Subglottic / Tracheal Stenosis"
 SGS_LOCALIZE_ADDENDUM = (
     " GRADE IT WITH THE MYER-COTTON SCALE (percentage of cross-sectional narrowing, based on "
@@ -53,7 +50,6 @@ SGS_LOCALIZE_ADDENDUM = (
     "treatment -- length, scar maturity and cartilage integrity still matter -- but it is the "
     "standard way to document and compare severity."
 )
-
 OSA_TOPIC = "Residual OSA After Surgery"
 OSA_WORKUP_ADDENDUM = (
     " DEFINE 'RESIDUAL' WITH A NUMBER: in children, persistent obstructive AHI >=5 (or >=1-5 "
@@ -62,13 +58,14 @@ OSA_WORKUP_ADDENDUM = (
     "rather than reassurance from symptom improvement alone."
 )
 OSA_MANAGE_ADDENDUM = (
-    " HYPOGLOSSAL NERVE STIMULATION (Inspire) CANDIDACY, when considered in adults: AHI "
-    "roughly 15-65 on PAP-naive or PAP-intolerant testing, BMI generally <=32-35 depending on "
-    "current labeling, age >=18, and absence of complete concentric collapse at the palate on "
-    "drug-induced sleep endoscopy (DISE) -- complete concentric palatal collapse is an "
-    "exclusion criterion, not a relative consideration."
+    " HYPOGLOSSAL NERVE STIMULATION (Inspire) CANDIDACY, when considered in adults: current "
+    "FDA indication includes AHI 15-100, age >=18 and documented PAP failure or intolerance "
+    "(not PAP-naive status); FDA-expanded labeling increased the recommended BMI upper limit "
+    "to 40, although payer and program thresholds can be more restrictive. Confirm on "
+    "drug-induced sleep endoscopy (DISE) that there is no complete concentric collapse at the "
+    "soft palate; complete concentric palatal collapse excludes Inspire candidacy. Assess "
+    "central/mixed apnea burden and other device contraindications as well."
 )
-
 LEMIERRE_TOPIC = "Lemierre Syndrome"
 LEMIERRE_MANAGE_ADDENDUM = (
     " DURATION: plan roughly 4-6 weeks of systemic antibiotics for Lemierre syndrome given "
