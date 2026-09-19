@@ -70,18 +70,24 @@ def _merge_v128_clinical_challenges():
 
 
 def _merge_depth_topics(patch, patch_name):
-    """Idempotently add exact canonical topics; reject unknown domains."""
+    """Idempotently add exact canonical topics; reject unknown domains.
+
+    Deduplication must be global: the same topic may already exist under a
+    different domain, and adding a second copy creates disconnected concept IDs.
+    """
+    existing_topics_global = {
+        m["topic"] for mods in data.DEEP_MODULES_V6.values() for m in mods
+    }
     for domain, topics in patch.items():
         if domain not in data.DEEP_MODULES_V6:
             raise RuntimeError(
                 f"{patch_name}: unknown curriculum domain {domain!r}; "
                 "refusing detached topics"
             )
-        existing_topics = {m["topic"] for m in data.DEEP_MODULES_V6[domain]}
         for topic in topics:
-            if topic["topic"] not in existing_topics:
+            if topic["topic"] not in existing_topics_global:
                 data.DEEP_MODULES_V6[domain].append(topic)
-                existing_topics.add(topic["topic"])
+                existing_topics_global.add(topic["topic"])
 
 
 def _merge_validated_challenges(batch, patch_name):
@@ -109,6 +115,15 @@ def _merge_validated_challenges(batch, patch_name):
         q["id"]: q for q in data.CLINICAL_CHALLENGES_V119
     }
 
+
+# Align two legacy vignette records with the one canonical emergency concept.
+# These corrections are made before strict validation of each source batch.
+for _question in VIGNETTES_V134:
+    if _question.get("id") == "v134_hno_02":
+        _question["domain"] = "General ENT / Emergencies"
+for _question in VIGNETTES_V140:
+    if _question.get("id") == "v140_hn_08":
+        _question["domain"] = "General ENT / Emergencies"
 
 _merge_depth_topics(NEW_TOPICS_V131, "v13.1")
 _merge_depth_topics(NEW_TOPICS_V133, "v13.3")
