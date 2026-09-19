@@ -8,12 +8,21 @@ and the threshold for escalating to definitive aspiration prevention.
 """
 
 import sys
-import runtime_entry
+# v39.9: check the actual production entrypoint (runtime_entry_pasha), not
+# the pre-pasha runtime_entry layer -- the nonfunctional-larynx duplicate
+# merge (and every other H&N Oncology content patch) is wired in at the
+# runtime_entry_pasha level, so runtime_entry alone would not reflect it.
+import runtime_entry_pasha as production
 
 
-data = runtime_entry.data
+data = production.runtime_entry.data
 HN_DOMAIN = "Head & Neck Oncology"
-HN_TOPIC = "Nonfunctional Larynx and Intractable Aspiration"
+# v39.9 merged this ladder's original topic ("Nonfunctional Larynx and
+# Intractable Aspiration") into the pre-existing base-curriculum topic below
+# -- see nonfunctional_larynx_duplicate_merge_v399.py. The v231_hn_nfl_*
+# vignettes below were repointed to the canonical topic/concept_id as part
+# of that merge, so this gate now checks against the canonical name.
+HN_TOPIC = "Nonfunctional Larynx / Chronic Aspiration After Cancer Therapy"
 LAR_DOMAIN = "Laryngology / Voice / Swallowing"
 LAR_TOPIC = "Radiation-Associated Dysphagia"
 
