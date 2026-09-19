@@ -14,7 +14,7 @@
   </aside>
   <div>
     <div class="pasha-card pasha-hero">
-      <div><span class="pasha-badge">Pasha 6e · Chapter {{chapter.id}}</span><h1>{{chapter.title}}</h1><p style="color:#6b7280">Read the chapter, then retrieve the details by subsection. Questions are original or drawn from ENT Master's audited clinical bank and mapped back to this chapter.</p></div>
+      <div><span class="pasha-badge">Pasha 6e · Chapter {{chapter.id}}</span><h1>{{chapter.title}}</h1><p style="color:#6b7280">Read the chapter, then retrieve the details by subsection. Questions are original or drawn from ENT Mastery's audited clinical bank and mapped back to this chapter.</p></div>
       {% set cp=progress.chapters.get(chapter.id|string,{}) %}
       <div class="pasha-metrics"><small>Chapter practice accuracy</small><br><b>{{cp.accuracy|default(0)}}%</b><div><small>{{cp.unique|default(0)}} unique questions · {{cp.attempts|default(0)}} attempts</small></div></div>
     </div>
@@ -57,7 +57,7 @@
       </div>
       {% endif %}
     </div>
-    <div class="pasha-card"><b>Source framework</b><p style="color:#6b7280;margin-bottom:0">Chapter and subsection organization follows Pasha & Golub, <i>Otolaryngology–Head and Neck Surgery: Clinical Reference Guide</i>, 6th ed. The question wording and explanations are original to this educational companion or reused from ENT Master's independently authored audited bank; management points should continue to be cross-checked against current evidence. Mapped questions may overlap across subsections or test related material rather than a precise subsection detail.</p></div>
+    <div class="pasha-card"><b>Source framework</b><p style="color:#6b7280;margin-bottom:0">Chapter and subsection organization follows Pasha & Golub, <i>Otolaryngology–Head and Neck Surgery: Clinical Reference Guide</i>, 6th ed. The question wording and explanations are original to this educational companion or reused from ENT Mastery's independently authored audited bank; management points should continue to be cross-checked against current evidence. Mapped questions may overlap across subsections or test related material rather than a precise subsection detail.</p></div>
   </div>
 </div>
 <script>
