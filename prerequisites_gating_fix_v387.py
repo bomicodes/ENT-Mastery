@@ -1,7 +1,9 @@
 """v38.7: Validate topic-based prerequisite gates and honor cross-domain prerequisites.
 
 Legacy prerequisite labels drifted away from the current disease-centric
-curriculum. Only real, distinct DEEP_MODULES_V6 topics may be prerequisites.
+curriculum. Only real, unambiguous DEEP_MODULES_V6 topics may be prerequisites.
+Unrelated duplicate topic names elsewhere in the curriculum must not prevent
+production startup; those are a separate curriculum-quality audit concern.
 """
 import re
 
@@ -29,13 +31,18 @@ PREREQUISITES_GATING_V114_FIXED = {
 
 
 def install_prerequisites_gating_fix_v387(data_module, app_module=None):
+    required_topics = {_norm(topic) for topic in PREREQUISITES_GATING_V114_FIXED}
+    required_topics.update(_norm(pre) for requirements in PREREQUISITES_GATING_V114_FIXED.values()
+                           for pre in requirements)
     topics = {}
     for domain, modules in data_module.DEEP_MODULES_V6.items():
         for module in modules:
             normalized = _norm(module.get("topic"))
-            if normalized in topics:
-                raise RuntimeError(f"v38.7: duplicate normalized topic {normalized!r}")
-            topics[normalized] = domain
+            # Duplicate names elsewhere are pre-existing curriculum defects, not
+            # ambiguous prerequisite joins. Only reject names this gate will use.
+            if normalized in topics and normalized in required_topics:
+                raise RuntimeError(f"v38.7: duplicate prerequisite topic {normalized!r}")
+            topics.setdefault(normalized, domain)
     invalid = []
     for topic, requirements in PREREQUISITES_GATING_V114_FIXED.items():
         if _norm(topic) not in topics:
