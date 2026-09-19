@@ -2,7 +2,7 @@
 {% block title %}Pasha Review | ENT Mastery{% endblock %}
 {% block content %}
 <style>
-.pasha-layout{display:grid;grid-template-columns:250px 1fr;gap:22px}.pasha-toc,.pasha-card{background:white;border:1px solid #e5e7eb;border-radius:16px;padding:18px}.pasha-toc{align-self:start;position:sticky;top:88px}.pasha-toc a{display:block;padding:8px 10px;border-radius:9px;margin:2px 0;font-size:13px}.pasha-toc a.active,.pasha-toc a:hover{background:#eef3ff}.pasha-hero{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.pasha-hero h1{margin:7px 0}.pasha-badge{font-size:12px;font-weight:700;background:#eef3ff;padding:5px 9px;border-radius:999px}.pasha-metrics{min-width:180px;background:#f8fafc;border-radius:12px;padding:12px}.pasha-metrics b{font-size:24px}.section-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.section-pill{display:block;border:1px solid #e5e7eb;border-radius:12px;padding:12px}.section-pill small{display:block;color:#6b7280;margin-top:4px}.qcard{border-top:1px solid #e5e7eb;padding:18px 0}.choice{display:block;width:100%;text-align:left;border:1px solid #e5e7eb;background:white;border-radius:10px;padding:11px;margin:7px 0;cursor:pointer}.choice.correct{background:#ecfdf3;border-color:#10b981}.choice.wrong{background:#fff1f2;border-color:#ef4444}.reveal{display:none;margin-top:10px;background:#f8fafc;border-radius:10px;padding:12px}.reveal.show{display:block}.pasha-actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.pasha-actions a{padding:9px 12px;border-radius:10px;background:#eef2ff;font-weight:700;font-size:13px}.pasha-actions a.primary{background:#1f5eff;color:white}.must li{margin:7px 0}.weak{color:#b42318}.good{color:#0f8a5f}@media(max-width:900px){.pasha-layout{grid-template-columns:1fr}.pasha-toc{position:static}.section-grid{grid-template-columns:1fr}.pasha-hero{display:block}.pasha-metrics{margin-top:12px}}
+.pasha-layout{display:grid;grid-template-columns:250px 1fr;gap:22px}.pasha-toc,.pasha-card{background:white;border:1px solid #e5e7eb;border-radius:16px;padding:18px}.pasha-toc{align-self:start;position:sticky;top:88px}.pasha-toc a{display:block;padding:8px 10px;border-radius:9px;margin:2px 0;font-size:13px}.pasha-toc a.active,.pasha-toc a:hover{background:#eef3ff}.pasha-hero{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.pasha-hero h1{margin:7px 0}.pasha-badge{font-size:12px;font-weight:700;background:#eef3ff;padding:5px 9px;border-radius:999px}.pasha-metrics{min-width:180px;background:#f8fafc;border-radius:12px;padding:12px}.pasha-metrics b{font-size:24px}.section-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.section-pill{display:flex;flex-direction:column;gap:6px;border:1px solid #e5e7eb;border-radius:12px;padding:12px}.section-pill small{display:block;color:#6b7280;margin-top:4px}.section-pill-links{display:flex;gap:6px}.section-pill-links a{font-size:12px;font-weight:700;padding:4px 8px;border-radius:8px;background:#eef2ff}.section-pill-links a.check-link{background:#e7f7f0;color:#0f8a5f}.qcard{border-top:1px solid #e5e7eb;padding:18px 0}.choice{display:block;width:100%;text-align:left;border:1px solid #e5e7eb;background:white;border-radius:10px;padding:11px;margin:7px 0;cursor:pointer}.choice.correct{background:#ecfdf3;border-color:#10b981}.choice.wrong{background:#fff1f2;border-color:#ef4444}.reveal{display:none;margin-top:10px;background:#f8fafc;border-radius:10px;padding:12px}.reveal.show{display:block}.pasha-actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.pasha-actions a{padding:9px 12px;border-radius:10px;background:#eef2ff;font-weight:700;font-size:13px}.pasha-actions a.primary{background:#1f5eff;color:white}.pasha-actions a.check{background:#0f8a5f;color:white}.must li{margin:7px 0}.weak{color:#b42318}.good{color:#0f8a5f}.check-banner{background:#e7f7f0;border:1px solid #0f8a5f;border-radius:12px;padding:12px 16px;margin-bottom:12px}.check-summary{display:none;background:#f8fafc;border-radius:12px;padding:16px;margin-top:14px}.check-summary.show{display:block}.check-summary h3{margin-top:0}.check-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #e5e7eb}.check-row:last-child{border-bottom:none}.check-row.weak-row .pct{color:#b42318;font-weight:700}.check-row.good-row .pct{color:#0f8a5f;font-weight:700}@media(max-width:900px){.pasha-layout{grid-template-columns:1fr}.pasha-toc{position:static}.section-grid{grid-template-columns:1fr}.pasha-hero{display:block}.pasha-metrics{margin-top:12px}}
 </style>
 <div class="pasha-layout">
   <aside class="pasha-toc">
@@ -14,48 +14,96 @@
   </aside>
   <div>
     <div class="pasha-card pasha-hero">
-      <div><span class="pasha-badge">Pasha 6e · Chapter {{chapter.id}}</span><h1>{{chapter.title}}</h1><p style="color:#6b7280">Read the chapter, then retrieve the details by subsection. Questions are original or drawn from ENT Mastery's audited clinical bank and mapped back to this chapter.</p></div>
+      <div><span class="pasha-badge">Pasha 6e · Chapter {{chapter.id}}</span><h1>{{chapter.title}}</h1><p style="color:#6b7280">Read the chapter, then retrieve the details by subsection. Questions are original or drawn from ENT Master's audited clinical bank and mapped back to this chapter.</p></div>
       {% set cp=progress.chapters.get(chapter.id|string,{}) %}
-      <div class="pasha-metrics"><small>Chapter mastery</small><br><b>{{cp.accuracy|default(0)}}%</b><div><small>{{cp.unique|default(0)}} unique questions · {{cp.attempts|default(0)}} attempts</small></div></div>
+      <div class="pasha-metrics"><small>Chapter practice accuracy</small><br><b>{{cp.accuracy|default(0)}}%</b><div><small>{{cp.unique|default(0)}} unique questions · {{cp.attempts|default(0)}} attempts</small></div></div>
     </div>
 
     <div class="pasha-card">
       <h2>Must know after reading</h2><ul class="must">{% for x in chapter.must %}<li>{{x}}</li>{% endfor %}</ul>
-      <div class="pasha-actions"><a class="primary" href="/pasha-review?chapter={{chapter.id}}&mode=exam&seed={{range(1,999999)|random}}">Take 25-question chapter exam</a><a href="/pasha-review?chapter={{chapter.id}}">Balanced chapter review</a></div>
+      <div class="pasha-actions"><a class="check" href="/pasha-review?chapter={{chapter.id}}&mode=check">Concept check ({{concept_check_count|default(0)}} questions)</a><a class="primary" href="/pasha-review?chapter={{chapter.id}}&mode=exam&seed={{range(1,999999)|random}}">Take 25-question chapter exam</a><a href="/pasha-review?chapter={{chapter.id}}">Balanced chapter review</a></div>
     </div>
 
     <div class="pasha-card">
       <h2>Subsection review</h2><div class="section-grid">
       {% for s in chapter.sections %}
         {% set sp=progress.sections.get(chapter.id|string ~ ':' ~ s[0],{}) %}
-        <a class="section-pill" href="/pasha-review?chapter={{chapter.id}}&section={{s[0]}}"><b>{{s[1]}}</b><small>{{section_counts.get(s[0],0)}} mapped questions{% if sp %} · {{sp.accuracy}}% accuracy{% endif %}</small></a>
+        <div class="section-pill"><a href="/pasha-review?chapter={{chapter.id}}&section={{s[0]|urlencode}}"><b>{{s[1]}}</b><small>{{section_counts.get(s[0],0)}} mapped questions{% if sp %} · {{sp.accuracy}}% accuracy{% endif %}</small></a><div class="section-pill-links"><a class="check-link" href="/pasha-review?chapter={{chapter.id}}&section={{s[0]|urlencode}}&mode=check">Check this section →</a></div></div>
       {% endfor %}
       </div>
     </div>
 
     <div class="pasha-card">
-      <h2>{% if section %}{{section[1]}}{% elif mode=='exam' %}Comprehensive chapter exam{% else %}Balanced chapter review{% endif %}</h2>
-      <p style="color:#6b7280">{{questions|length}} questions. Answer before revealing the explanation; each attempt is saved to the backend and contributes to longitudinal mastery.</p>
+      {% if mode=='check' %}
+      <div class="check-banner"><b>Concept check{% if section %}: {{section[1]}}{% endif %}</b><p style="margin:4px 0 0;color:#374151">You just read {% if section %}this subsection{% else %}the chapter{% endif %} — answer without notes. Results identify areas to review, but a short check cannot establish mastery of an entire subsection.</p></div>
+      {% endif %}
+      <h2>{% if mode=='check' %}{% if section %}{{section[1]}} check{% else %}Chapter concept check{% endif %}{% elif section %}{{section[1]}}{% elif mode=='exam' %}Comprehensive chapter exam{% else %}Balanced chapter review{% endif %}</h2>
+      <p style="color:#6b7280">{{questions|length}} questions. Answer before revealing the explanation; each attempt is saved to the backend and contributes to longitudinal mastery where a verified concept is linked.</p>
+      <div id="pashaQuestions">
       {% for q in questions %}
       <div class="qcard" id="q-{{loop.index}}" data-qid="{{q.id}}" data-section="{{q.section_id}}">
         <b>{{loop.index}}. {{q.stem}}</b>
-        {% for ch in q.choices %}<button class="choice" onclick="answerPasha(this,{{loop.index}},{{loop.index0}},{{loop.index0}})" data-choice="{{loop.index0}}">{{ch}}</button>{% endfor %}
+        {% for ch in q.choices %}<button class="choice" type="button" onclick="answerPasha(this)" data-choice="{{loop.index0}}">{{ch}}</button>{% endfor %}
         <div class="reveal"><b>Answer:</b> <span class="ans"></span><br><span class="why"></span></div>
       </div>
       {% endfor %}
+      </div>
+      {% if mode=='check' %}
+      <div id="checkSummary" class="check-summary" aria-live="polite">
+        <h3>Concept check results</h3>
+        <div id="checkOverall" style="font-weight:700;font-size:18px;margin-bottom:8px"></div>
+        <div id="checkBySection"></div>
+        <p id="checkAdvice" style="color:#6b7280;margin-top:12px"></p>
+      </div>
+      {% endif %}
     </div>
-    <div class="pasha-card"><b>Source framework</b><p style="color:#6b7280;margin-bottom:0">Chapter and subsection organization follows Pasha & Golub, <i>Otolaryngology–Head and Neck Surgery: Clinical Reference Guide</i>, 6th ed. The question wording and explanations are original to this educational companion or reused from ENT Mastery's independently authored audited bank; management points should continue to be cross-checked against current evidence.</p></div>
+    <div class="pasha-card"><b>Source framework</b><p style="color:#6b7280;margin-bottom:0">Chapter and subsection organization follows Pasha & Golub, <i>Otolaryngology–Head and Neck Surgery: Clinical Reference Guide</i>, 6th ed. The question wording and explanations are original to this educational companion or reused from ENT Master's independently authored audited bank; management points should continue to be cross-checked against current evidence. Mapped questions may overlap across subsections or test related material rather than a precise subsection detail.</p></div>
   </div>
 </div>
 <script>
-async function answerPasha(btn,displayIndex){
-  const card=btn.closest('.qcard'); if(card.dataset.done==='1') return;
+const PASHA_IS_CHECK={% if mode=='check' %}true{% else %}false{% endif %};
+const PASHA_SECTION_TITLES={{section_titles|default({})|tojson}};
+const pashaCheckTally={};
+function pashaMaybeShowSummary(){
+  if(!PASHA_IS_CHECK) return;
+  const cards=[...document.querySelectorAll('#pashaQuestions .qcard')];
+  if(!cards.length || !cards.every(c=>c.dataset.done==='1')) return;
+  const summary=document.getElementById('checkSummary'); if(!summary) return;
+  let correct=0,total=0;
+  const bySection=document.getElementById('checkBySection'); bySection.replaceChildren();
+  const rows=Object.keys(pashaCheckTally).sort();
+  for(const sid of rows){
+    const t=pashaCheckTally[sid]; correct+=t.correct; total+=t.total;
+    const pct=t.total?Math.round(100*t.correct/t.total):0;
+    const row=document.createElement('div'); row.className='check-row '+(pct<70?'weak-row':'good-row');
+    const title=document.createElement('span'); title.textContent=PASHA_SECTION_TITLES[sid]||sid;
+    const result=document.createElement('span'); result.className='pct'; result.textContent=`${t.correct}/${t.total} (${pct}%)`;
+    row.append(title,result); bySection.appendChild(row);
+  }
+  const overallPct=total?Math.round(100*correct/total):0;
+  document.getElementById('checkOverall').textContent=`${correct}/${total} correct (${overallPct}%)`;
+  const weak=rows.filter(sid=>pashaCheckTally[sid].total && (100*pashaCheckTally[sid].correct/pashaCheckTally[sid].total)<70).map(sid=>PASHA_SECTION_TITLES[sid]||sid);
+  document.getElementById('checkAdvice').textContent=weak.length ? `Review the questions and consider rereading: ${weak.join(', ')}.` : 'No subsection fell below 70% on the questions sampled. Continue practicing; this short check is not a comprehensive mastery assessment.';
+  summary.classList.add('show'); summary.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+async function answerPasha(btn){
+  const card=btn.closest('.qcard'); if(card.dataset.done==='1' || card.dataset.saving==='1') return;
+  card.dataset.saving='1';
   const chosen=Number(btn.dataset.choice);
-  const payload={chapter_id:{{chapter.id}},section_id:card.dataset.section||'chapter',question_id:card.dataset.qid,chosen};
-  const r=await fetch('/api/pasha-review/answer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-  const d=await r.json(); if(!d.ok){alert(d.error||'Could not save answer');return;}
-  card.dataset.done='1'; const buttons=[...card.querySelectorAll('.choice')]; buttons.forEach((b,i)=>{b.disabled=true;if(i===d.answer)b.classList.add('correct');}); if(!d.correct)btn.classList.add('wrong');
-  const rev=card.querySelector('.reveal'); rev.querySelector('.ans').textContent=buttons[d.answer]?.textContent||''; rev.querySelector('.why').textContent=d.explanation||''; rev.classList.add('show');
+  const sectionId=card.dataset.section||'chapter';
+  const payload={chapter_id:{{chapter.id}},section_id:sectionId,question_id:card.dataset.qid,chosen};
+  try{
+    const r=await fetch('/api/pasha-review/answer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const d=await r.json(); if(!d.ok){alert(d.error||'Could not save answer');return;}
+    card.dataset.done='1'; const buttons=[...card.querySelectorAll('.choice')]; buttons.forEach((b,i)=>{b.disabled=true;if(i===d.answer)b.classList.add('correct');}); if(!d.correct)btn.classList.add('wrong');
+    const rev=card.querySelector('.reveal'); rev.querySelector('.ans').textContent=buttons[d.answer]?.textContent||''; rev.querySelector('.why').textContent=d.explanation||''; rev.classList.add('show');
+    if(PASHA_IS_CHECK){
+      if(!pashaCheckTally[sectionId]) pashaCheckTally[sectionId]={correct:0,total:0};
+      pashaCheckTally[sectionId].total+=1; if(d.correct) pashaCheckTally[sectionId].correct+=1;
+      pashaMaybeShowSummary();
+    }
+  }catch(err){alert('Could not save answer. Please try again.');}
+  finally{delete card.dataset.saving;}
 }
 </script>
 {% endblock %}
