@@ -5,3 +5,4 @@ __pycache__/
 ent_mastery.db
 *.sqlite
 *.sqlite3
+question_quality_report.json
