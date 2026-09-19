@@ -143,7 +143,7 @@ DEPTH_V397 = {
             "airway itself (edema is the main early postoperative risk) and the interarytenoid "
             "mucosa/posterior structures whose function protects against aspiration during "
             "swallowing. Failure mode: overly aggressive bilateral tissue removal in a single "
-            "sitting, which can scar the two sides together and create supraglottic stenosis -- a "
+            "sitting, which can scar the two sides together and create supraglottic stenosis -- "
             "avoiding opposing raw mucosal surfaces and excessive resection reduces this risk. "
             "Postoperative plan: monitor for airway edema (occasionally requiring "
             "overnight observation), and reassess feeding/growth and stridor resolution rather than "
@@ -285,8 +285,8 @@ DEPTH_V397 = {
     },
     "Tracheomalacia / Bronchomalacia": {
         "recognize": (
-            "Suspect tracheomalacia/bronchomalacia (excessive dynamic collapse of the airway wall "
-            "during, classically, expiration) with noisy breathing, a barky or 'seal-like' cough, "
+            "Suspect excessive dynamic collapse of a large airway wall, classically during "
+            "expiration, with noisy breathing, a barky or 'seal-like' cough, "
             "recurrent lower respiratory infections, or, in severe cases, life-threatening 'dying "
             "spells' (acute apparent life-threatening events from severe airway collapse); severity "
             "ranges widely from an incidental finding to a life-threatening presentation."
