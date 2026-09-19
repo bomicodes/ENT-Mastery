@@ -133,4 +133,9 @@ def apply_named_grading_criteria_v377(data_module, app_module=None):
         raise RuntimeError(f"v37.7: could not find canonical topic(s) for: {missing}")
     if app_module is not None:
         app_module.DEEP_MODULES_V6 = data_module.DEEP_MODULES_V6
-    return {"results": results, "count": sum(len(v) for v in results.values())}
+    # The production runtime already invokes v37.7; chain v37.8 here so its
+    # three new criteria sets execute on startup without modifying legacy app.py.
+    from deep_curriculum_named_grading_v378 import apply_named_grading_criteria_v378
+    v378_result = apply_named_grading_criteria_v378(data_module, app_module)
+    return {"results": results, "count": sum(len(v) for v in results.values()),
+            "v378": v378_result}
