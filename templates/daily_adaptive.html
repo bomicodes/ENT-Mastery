@@ -1,10 +1,9 @@
 {% extends "base.html" %}{% block content %}
 <div class="eyebrow">ADAPTIVE DAILY PATH</div>
-
 <div class="adaptive-head">
   <div>
     <h1>Today's {{total}}-minute curriculum</h1>
-    <p class="lede">Answer first, reveal second, then rate yourself. Sessions now keep most new material in one curriculum domain while mixing in due reviews from elsewhere.</p>
+    <p class="lede">Answer first, reveal second, then rate yourself. Sessions keep most new material in one curriculum domain while mixing in due reviews.</p>
   </div>
   <form method="get" class="adaptive-controls">
     <select name="minutes">{% for m in [15,20,30,45,60] %}<option value="{{m}}" {% if m==minutes %}selected{% endif %}>{{m}} min</option>{% endfor %}</select>
@@ -12,54 +11,40 @@
     <button>Build path</button>
   </form>
 </div>
-
 <div class="session-progress card">
   <div><b id="session-count">0 / {{plan|length}} completed</b><small>Finish in order or jump around.</small></div>
   <div class="session-progress-bar"><i id="session-progress-fill" style="width:0%"></i></div>
 </div>
-
 <div class="mastery-key-wrap">
-  <div class="mastery-key">
-    <span>Mastery path</span>
-    <b>1 Recognize</b><i>→</i><b>2 Localize</b><i>→</i><b>3 Evaluate</b><i>→</i><b>4 Manage</b><i>→</i><b>5 Advanced</b><i>→</i><b>6 Teach</b>
-  </div>
+  <div class="mastery-key"><span>Mastery path</span><b>1 Recognize</b><i>→</i><b>2 Localize</b><i>→</i><b>3 Evaluate</b><i>→</i><b>4 Manage</b><i>→</i><b>5 Advanced</b><i>→</i><b>6 Teach</b></div>
   <p class="mastery-help"><b>How levels advance:</b> Reveal the answer, then rate yourself. <b>Got it</b> or <b>Easy</b> passes the current level and unlocks the next one. Missed/Hard keeps the same level in rotation. After passing, you can continue to the next level immediately.</p>
 </div>
-
 <div class="adaptive-list">
 {% for x in plan %}
-<article class="card adaptive-card" data-item="{{x.id}}" data-index="{{loop.index}}"
-  data-concept-id="{{x.concept_id}}" data-domain="{{x.domain|e}}" data-topic="{{x.topic|e}}"
-  data-stage="{{x.stage}}" data-level="{{x.level}}">
-  <div class="adaptive-meta">
-    <span class="card-number">{{loop.index}}</span>
-    <b>{{x.domain}}</b>
-    <em>{{x.reason}}</em>
-    <small>~{{x.minutes}} min</small>
-  </div>
-
-  <div class="adaptive-title-row">
-    <div>
-      {% if x.blind_reveal %}
+{% if x.bundle_start %}
+<div class="topic-bundle-head">
+  <span class="eyebrow">NEW TOPIC · FULL STUDY SESSION</span>
+  <h2>{% if x.blind_reveal %}Clinical case study{% else %}{{x.topic}}{% endif %}</h2>
+  <p class="lede">First time on this concept — work through its levels together, then practice the matching questions below.</p>
+</div>
+{% endif %}
+<article class="card adaptive-card" data-item="{{x.id}}" data-index="{{loop.index}}" data-concept-id="{{x.concept_id}}" data-domain="{{x.domain|e}}" data-topic="{{x.topic|e}}" data-stage="{{x.stage}}" data-level="{{x.level}}">
+  <div class="adaptive-meta"><span class="card-number">{{loop.index}}</span><b>{{x.domain}}</b><em>{{x.reason}}</em><small>~{{x.minutes}} min</small></div>
+  <div class="adaptive-title-row"><div>
+    {% if x.blind_reveal %}
       <h2 class="blind-title">Unidentified case · {{x.blind_case_label or 'Clinical presentation'}}</h2>
       <p class="blind-case-domain">{{x.blind_display_domain or x.domain}}</p>
       <a class="topic-deep-link blind-hidden-link" href="/concept/id/{{x.concept_id|urlencode}}" hidden>Open full topic ↗</a>
-      {% else %}
-      <h2>{{x.topic}}</h2>
-      <a class="topic-deep-link" href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a>
-      {% endif %}
-      <p class="mastery-status">Current mastery <b>{{x.mastery_before|default(0)}}/6</b> · Testing <b>Level {{x.level}} — {% if x.stage=='operate' %}Advanced decisions{% elif x.stage=='workup' %}Evaluate{% else %}{{x.stage|capitalize}}{% endif %}</b></p>
-    </div>
-  </div>
-
+    {% else %}
+      <h2>{{x.topic}}</h2><a class="topic-deep-link" href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a>
+    {% endif %}
+    <p class="mastery-status">Current mastery <b>{{x.mastery_before|default(0)}}/6</b> · Testing <b>Level {{x.level}} — {% if x.stage=='operate' %}Advanced decisions{% elif x.stage=='workup' %}Evaluate{% else %}{{x.stage|capitalize}}{% endif %}</b></p>
+  </div></div>
   <div class="mini-mastery-track" aria-label="Six-level mastery path">
     {% for stage_name in ['Recognize','Localize','Evaluate','Manage','Advanced','Teach'] %}
-      <div class="{% if loop.index <= x.mastery_before|default(0) %}mastered{% elif loop.index == x.level %}testing{% endif %}">
-        <span>{{loop.index}}</span><small>{{stage_name}}</small>
-      </div>
+      <div class="{% if loop.index <= x.mastery_before|default(0) %}mastered{% elif loop.index == x.level %}testing{% endif %}"><span>{{loop.index}}</span><small>{{stage_name}}</small></div>
     {% endfor %}
   </div>
-
   <div class="active-recall-box">
     <span class="question-label">ANSWER BEFORE REVEALING</span>
     {% set topic_lower = x.topic|lower %}
@@ -83,113 +68,73 @@
       <p class="adaptive-prompt">When would you choose FEES for swallowing evaluation, what does it directly assess, and what are its key limitations?</p>
     {% elif 'dangerous alternative must you not miss' in prompt_lower %}
       <p class="adaptive-prompt">Without looking: what presentation or finding should make you think of {{x.topic}}, and which feature best helps you distinguish or confirm it?</p>
-    {% else %}
-      <p class="adaptive-prompt">{{x.daily_prompt or x.prompt}}</p>
-    {% endif %}
+    {% else %}<p class="adaptive-prompt">{{x.daily_prompt or x.prompt}}</p>{% endif %}
     {% if sinonasal_malignancy_focus %}<small class="muted">The full concept hub contains the explicit ONB management pathway plus the broader histology-aware sinonasal-oncology framework and traceable textbook/guideline sources. <a href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a>.</small>{% endif %}
   </div>
-
-  <details class="adaptive-reveal">
-    <summary>Reveal answer</summary>
-    <div class="adaptive-answer">
+  <details class="adaptive-reveal"><summary>Reveal answer</summary><div class="adaptive-answer">
       <span class="answer-label">TEACHING ANSWER</span>
-      {% if x.blind_reveal %}
-      <p class="blind-answer-topic"><b>{{x.topic}}</b> · <a href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a></p>
-      {% endif %}
+      {% if x.blind_reveal %}<p class="blind-answer-topic"><b>{{x.topic}}</b> · <a href="/concept/id/{{x.concept_id|urlencode}}">Open full topic ↗</a></p>{% endif %}
       <p>{{x.answer}}</p>
-      <div class="self-rate-copy">
-        <b>How well did you know it before revealing?</b>
-        <small>Missed/Hard keeps this stage in rotation. Got it/Easy passes this stage; Easy simply waits longer before the next one.</small>
-      </div>
-      <div class="rating-row">
-        <button type="button" data-rating="0">Missed it</button>
-        <button type="button" data-rating="1">Hard</button>
-        <button type="button" data-rating="2">Got it</button>
-        <button type="button" data-rating="3">Easy</button>
-      </div>
-    </div>
-  </details>
+      <div class="self-rate-copy"><b>How well did you know it before revealing?</b><small>Missed/Hard keeps this stage in rotation. Got it/Easy passes this stage; Easy simply waits longer before the next one.</small></div>
+      <div class="rating-row"><button type="button" data-rating="0">Missed it</button><button type="button" data-rating="1">Hard</button><button type="button" data-rating="2">Got it</button><button type="button" data-rating="3">Easy</button></div>
+  </div></details>
 </article>
+{% set is_last_of_bundle = (loop.nextitem is not defined) or (loop.nextitem.concept_id != x.concept_id) %}
+{% if is_last_of_bundle and bundle_questions.get(x.concept_id) %}
+<div class="topic-bundle-questions card">
+  <div class="section-head"><h3>Practice: {{x.topic}}</h3><a href="/clinical-challenges?topic={{x.topic|urlencode}}">All questions on this topic →</a></div>
+  {% for q in bundle_questions.get(x.concept_id) %}
+    <a class="dashboard-case" href="/clinical-challenge/{{q.id}}"><span>{{q.domain}}</span><p>{{q.stem}}</p></a>
+  {% endfor %}
+</div>
+{% endif %}
 {% endfor %}
 </div>
-
 {% if daily_challenges %}
 <section style="margin-top:2rem">
-  <div class="section-head">
-    <div><span class="eyebrow">CHALLENGE ROUND</span><h2>Apply today's knowledge</h2></div>
-    <a href="/clinical-challenges{% if focus %}?domain={{focus|urlencode}}{% endif %}">Browse the full bank →</a>
-  </div>
+  <div class="section-head"><div><span class="eyebrow">CHALLENGE ROUND</span><h2>Apply today's knowledge</h2></div><a href="/clinical-challenges{% if focus %}?domain={{focus|urlencode}}{% endif %}">Browse the full bank →</a></div>
   <p class="lede">These board-style vignettes are separate from the six-level path: commit to an answer, then review the discrimination logic.</p>
-  <div class="dashboard-case-grid">
-  {% for q in daily_challenges %}
-    <a class="dashboard-case" href="/clinical-challenge/{{q.id}}">
-      <span>{{q.domain}}{% if q.focus %} · {{q.focus|replace('_',' ')|title}}{% endif %}</span>
-      <b>{{q.topic}}</b>
-      <p>{{q.stem}}</p>
-    </a>
-  {% endfor %}
-  </div>
+  <div class="dashboard-case-grid">{% for q in daily_challenges %}<a class="dashboard-case" href="/clinical-challenge/{{q.id}}"><span>{{q.domain}}{% if q.focus %} · {{q.focus|replace('_',' ')|title}}{% endif %}</span><b>{{q.topic}}</b><p>{{q.stem}}</p></a>{% endfor %}</div>
 </section>
 {% endif %}
-
 <script>
 let completedCount=0;
 const totalCards={{plan|length}};
-
 function updateSessionProgress(){
   const pct=totalCards ? Math.round((completedCount/totalCards)*100) : 0;
   document.getElementById('session-count').textContent=completedCount+' / '+totalCards+' completed';
   document.getElementById('session-progress-fill').style.width=pct+'%';
 }
-
 async function rateItem(btn,rating){
   const card=btn.closest('.adaptive-card');
-  const x={
-    concept_id:card.dataset.conceptId,
-    id:card.dataset.item,
-    domain:card.dataset.domain,
-    topic:card.dataset.topic,
-    stage:card.dataset.stage,
-    level:Number(card.dataset.level)
-  };
+  const x={concept_id:card.dataset.conceptId,id:card.dataset.item,domain:card.dataset.domain,topic:card.dataset.topic,stage:card.dataset.stage,level:Number(card.dataset.level)};
   if(card.classList.contains('completed')) return;
   const buttons=card.querySelectorAll('.rating-row button');
   buttons.forEach(b=>b.disabled=true);
-
-  const body={rating:rating,concept_id:x.concept_id,item_id:x.id,domain:x.domain,topic:x.topic,stage:x.stage,level:x.level};
-  const r=await fetch('/daily-adaptive/answer',{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(body)
-  });
-  const j=await r.json();
-
-  if(j.ok){
-    card.classList.add('completed');
-    completedCount+=1;
-    updateSessionProgress();
-    const due=j.next_due ? 'Spaced review: '+j.next_due : '';
-    let next='';
-    if(j.passed && j.next_level){
-      const href='/daily-adaptive?concept='+encodeURIComponent(x.concept_id)+'&minutes=15';
-      next='<a class="continue-level" href="'+href+'">Continue to Level '+j.next_level+' — '+j.next_stage+' →</a>';
-    } else if(j.mastery_level>=6){
-      next='<span class="mastery-complete">All 6 levels demonstrated ✓</span>';
+  try {
+    const body={rating:rating,concept_id:x.concept_id,item_id:x.id,domain:x.domain,topic:x.topic,stage:x.stage,level:x.level};
+    const r=await fetch('/daily-adaptive/answer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    const j=await r.json();
+    if(j.ok){
+      card.classList.add('completed'); completedCount+=1; updateSessionProgress();
+      const due=j.next_due ? 'Spaced review: '+j.next_due : '';
+      let nextAction='';
+      if(j.passed && j.next_level){
+        const href='/daily-adaptive?concept='+encodeURIComponent(x.concept_id)+'&minutes=15';
+        nextAction='<a class="continue-level" href="'+href+'">Continue to Level '+j.next_level+' — '+j.next_stage+' →</a>';
+      } else if(j.mastery_level>=6){nextAction='<span class="mastery-complete">All 6 levels demonstrated ✓</span>';}
+      card.querySelector('.rating-row').innerHTML='<div class="saved-result"><b>Saved · mastery '+j.mastery_level+'/6</b><small>'+due+'</small>'+nextAction+'</div>';
+      const nextCard=[...document.querySelectorAll('.adaptive-card:not(.completed)')].find(c=>Number(c.dataset.index)>Number(card.dataset.index)) || document.querySelector('.adaptive-card:not(.completed)');
+      if(nextCard) setTimeout(()=>nextCard.scrollIntoView({behavior:'smooth',block:'start'}),350);
+    } else {
+      buttons.forEach(b=>b.disabled=false);
+      card.querySelector('.rating-row').insertAdjacentHTML('beforeend','<small class="save-error">Could not save the rating. Please retry.</small>');
     }
-    card.querySelector('.rating-row').innerHTML=
-      '<div class="saved-result"><b>Saved · mastery '+j.mastery_level+'/6</b><small>'+due+'</small>'+next+'</div>';
-
-    const next=[...document.querySelectorAll('.adaptive-card:not(.completed)')].find(c=>Number(c.dataset.index)>Number(card.dataset.index))
-      || document.querySelector('.adaptive-card:not(.completed)');
-    if(next) setTimeout(()=>next.scrollIntoView({behavior:'smooth',block:'start'}),350);
-  } else {
+  } catch (err) {
     buttons.forEach(b=>b.disabled=false);
-    card.querySelector('.rating-row').insertAdjacentHTML('beforeend','<small class="save-error">Could not save: '+j.error+'</small>');
+    card.querySelector('.rating-row').insertAdjacentHTML('beforeend','<small class="save-error">Network error saving rating. Please retry.</small>');
   }
 }
-document.addEventListener('click', (e)=>{
-  const b=e.target.closest('.rating-row button[data-rating]');
-  if(b) rateItem(b,Number(b.dataset.rating));
-});
+document.addEventListener('click', (e)=>{const b=e.target.closest('.rating-row button[data-rating]');if(b) rateItem(b,Number(b.dataset.rating));});
 </script>
 {% endblock %}
