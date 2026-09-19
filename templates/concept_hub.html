@@ -46,6 +46,11 @@
 
 <div class="concept-related-grid">
 <section class="card">
+  <div class="section-head"><h2>Practice questions</h2><a href="/clinical-challenges?topic={{topic|urlencode}}">All questions</a></div>
+  {% if related_questions %}{% for q in related_questions %}<a class="related-row" href="/clinical-challenge/{{q.get('id','')}}"><b>{{q.get('stem','')|truncate(90)}}</b><small>{{q.get('tier','')}}</small></a>{% endfor %}
+  {% else %}<p class="muted">No practice questions are linked to this concept yet.</p>{% endif %}
+</section>
+<section class="card">
   <div class="section-head"><h2>Progressive cases</h2><a href="/integrated">All cases</a></div>
   {% if related_cases %}{% for c in related_cases %}<a class="related-row" href="/integrated/{{c.get('id','')}}"><b>{{c.get('title','')}}</b><small>{{c.get('domain','')}}</small></a>{% endfor %}
   {% else %}<p class="muted">No tightly linked progressive case yet.</p>{% endif %}
