@@ -64,6 +64,9 @@ GENERIC_WHY_WRONG_MARKERS = (
     "does not best address the management discriminator in this scenario",
     "pending distractor-specific review",
     "does not match the keyed clinical decision in this vignette",
+    "compare the option with the management principle in the explanation and the specific clinical context",
+    "compare this option with the decision rule and anatomy described in the explanation",
+    "compare this option with the triage, anatomy, or management principle in the explanation",
 )
 
 FALLBACK_PATTERN = re.compile(
