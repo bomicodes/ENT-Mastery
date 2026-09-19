@@ -38,7 +38,9 @@ def record_pasha_attempt(chapter_id, section_id, question_id, concept_id, domain
         VALUES (?,?,?,?,?,?,?)""",
         (int(chapter_id),str(section_id),str(question_id),concept_id,domain,int(bool(correct)),datetime.now().isoformat()))
     c.commit(); c.close()
-    if concept_id:
+    # Synthetic Pasha seed identifiers are not canonical deep-curriculum join
+    # keys. Do not leak these into unified mastery as phantom concepts.
+    if concept_id and str(concept_id).startswith("v6-"):
         try:
             record_mastery_event(concept_id,domain or "ENT","reasoning",3 if correct else 0,
                                  source_type="pasha_review",source_id=question_id,
