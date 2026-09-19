@@ -69,7 +69,7 @@ def section_questions(chapter, section, target=20):
     for q in _seed_questions(chapter):
         if q["section_id"]==section_id and not any(x["id"]==q["id"] for x in rows): rows.insert(0,q)
     if len(rows)<min(8,target):
-        # Graceful fallback: same-domain audited questions, still clinically relevant to the chapter.
+        # Fallback questions are from the same domain but may not test this precise subsection.
         used={x["id"] for x in rows}
         extras=[dict(q,section_id=section_id) for q in SOURCE_POOL if canonical_domain_v94(q.get("domain"))==canonical_domain_v94(chapter["domain"]) and q["id"] not in used]
         rows.extend(extras[:max(0,min(target,12)-len(rows))])
@@ -83,6 +83,15 @@ def chapter_bank(chapter):
             seen.add(q["id"]); rows.append(q)
     return rows
 
+def concept_check_questions(chapter, per_section=2, cap=14):
+    """Short, finite post-reading retrieval check, with subsection attribution."""
+    rows=[]; seen=set()
+    for section in chapter["sections"]:
+        for q in section_questions(chapter,section,per_section):
+            if q["id"] in seen: continue
+            seen.add(q["id"]); rows.append(q)
+    return rows[:cap]
+
 @bp.route("/pasha-review")
 def index():
     try: ch=int(request.args.get("chapter",1))
@@ -93,7 +102,9 @@ def index():
     section=None
     for s in chapter["sections"]:
         if s[0]==section_id: section=s; break
-    if section:
+    if mode=="check":
+        questions=section_questions(chapter,section,8) if section else concept_check_questions(chapter)
+    elif section:
         questions=section_questions(chapter,section,20)
     else:
         bank=chapter_bank(chapter)
@@ -101,7 +112,6 @@ def index():
             rng=random.Random(request.args.get("seed") or str(ch))
             questions=list(bank); rng.shuffle(questions); questions=questions[:25]
         else:
-            # Chapter review: balanced sample, up to 2 per section, then fill to 20.
             questions=[]; seen=set()
             for s in chapter["sections"]:
                 for q in section_questions(chapter,s,2):
@@ -110,10 +120,10 @@ def index():
                 if len(questions)>=20: break
                 if q["id"] not in seen: questions.append(q); seen.add(q["id"])
     progress=pasha_progress()
-    section_counts={}
-    for s in chapter["sections"]:
-        section_counts[s[0]]=len(section_questions(chapter,s,20))
-    return render_template("pasha_review_dynamic.html",chapters=PASHA_CHAPTERS,chapter=chapter,section=section,mode=mode,questions=questions,progress=progress,section_counts=section_counts)
+    section_counts={s[0]:len(section_questions(chapter,s,20)) for s in chapter["sections"]}
+    section_titles={s[0]:s[1] for s in chapter["sections"]}
+    concept_check_count=len(concept_check_questions(chapter))
+    return render_template("pasha_review_dynamic.html",chapters=PASHA_CHAPTERS,chapter=chapter,section=section,mode=mode,questions=questions,progress=progress,section_counts=section_counts,section_titles=section_titles,concept_check_count=concept_check_count)
 
 @bp.route("/api/pasha-review/answer",methods=["POST"])
 def answer():
@@ -124,9 +134,14 @@ def answer():
     if not chapter: return jsonify({"ok":False,"error":"unknown chapter"}),404
     qid=str(d.get("question_id") or "")
     section_id=str(d.get("section_id") or "chapter")
+    if section_id not in {s[0] for s in chapter["sections"]}:
+        return jsonify({"ok":False,"error":"unknown section"}),400
     bank=chapter_bank(chapter)
     q=next((x for x in bank if x["id"]==qid),None)
     if not q: return jsonify({"ok":False,"error":"unknown question"}),404
+    if chosen not in range(len(q["choices"])): return jsonify({"ok":False,"error":"invalid choice"}),400
+    if qid not in {item["id"] for s in chapter["sections"] if s[0]==section_id for item in section_questions(chapter,s,20)}:
+        return jsonify({"ok":False,"error":"question does not belong to section"}),400
     correct=(chosen==int(q["answer"]))
     record_pasha_attempt(chapter_id,section_id,qid,q.get("concept_id"),q.get("domain"),correct)
     return jsonify({"ok":True,"correct":correct,"answer":q["answer"],"explanation":q["explanation"]})
