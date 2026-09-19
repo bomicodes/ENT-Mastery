@@ -49,6 +49,7 @@ from why_wrong_fix_sleep_v1 import apply_why_wrong_fix_sleep_v1
 from why_wrong_fix_vignettes_v137_v1 import apply_why_wrong_fix_vignettes_v137_v1
 from why_wrong_fix_vignettes_v138_v1 import apply_why_wrong_fix_vignettes_v138_v1
 from why_wrong_fix_vignettes_v139_v1 import apply_why_wrong_fix_vignettes_v139_v1
+from deep_curriculum_crswnp_biologics_named_v383 import apply_crswnp_biologics_named_v383
 
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
@@ -96,6 +97,7 @@ WHY_WRONG_FIX_SLEEP_V1 = apply_why_wrong_fix_sleep_v1(runtime_entry.data)
 WHY_WRONG_FIX_VIGNETTES_V137_V1 = apply_why_wrong_fix_vignettes_v137_v1(runtime_entry.data)
 WHY_WRONG_FIX_VIGNETTES_V138_V1 = apply_why_wrong_fix_vignettes_v138_v1(runtime_entry.data)
 WHY_WRONG_FIX_VIGNETTES_V139_V1 = apply_why_wrong_fix_vignettes_v139_v1(runtime_entry.data)
+CRSWNP_BIOLOGICS_NAMED_V383 = apply_crswnp_biologics_named_v383(runtime_entry.data, runtime_entry.app_mod)
 runtime_entry.app_mod.OR_PREP_REGISTRY = runtime_entry.data.OR_PREP_REGISTRY
 INTERPRETATION_LABS_CLEANUP_V250 = apply_interpretation_labs_cleanup_v250(runtime_entry.data, runtime_entry.app_mod)
 app=runtime_entry.app
