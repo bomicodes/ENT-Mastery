@@ -51,17 +51,20 @@ DEPTH_V400 = {
                 "the sphenozygomatic suture in particular is the key to restoring three-dimensional "
                 "projection, since it is the most reliable stable reference point. Do not interpret "
                 "a relatively soft orbit or an equivocal initial exam as exclusion of a developing "
-                "orbital compartment syndrome; reassess vision, pupils and pressure urgently. When safe and performed by an appropriate specialist, forced duction distinguishes "
-                "true muscle/soft-tissue entrapment (positive, restricted passive movement) from a "
-                "cranial nerve III/VI neuropraxia (negative duction, but abnormal active movement)."
+                "orbital compartment syndrome; reassess vision and pupils urgently and check pressure "
+                "only if an open-globe injury is excluded. In an orbital fracture with suspected "
+                "entrapment, safe forced-duction testing by a trained examiner objectively tests "
+                "passive motility: restriction supports mechanical entrapment, whereas preserved "
+                "passive movement despite abnormal active movement suggests paresis or another "
+                "nonrestrictive cause; interpret results with the clinical examination and CT."
             ),
             "workup": (
                 "Document acuity, pupils/RAPD, extraocular movements, diplopia fields and globe position "
                 "without delaying emergency decompression; assess intraocular pressure only when an open "
                 "globe is not suspected. "
                 "Thin-cut maxillofacial/orbital CT defines ZMC displacement and orbital-wall/floor "
-                "defect. Forced duction testing by an appropriately trained clinician can confirm mechanical "
-                "restriction when entrapment is suspected, after excluding an open-globe injury. "
+                "defect. When entrapment is suspected from restricted motility, a trapdoor pattern or oculocardiac symptoms, "
+                "arrange prompt ophthalmology/orbital specialist evaluation and forced-duction testing to objectify mechanical restriction when safe after excluding an open globe; it is particularly valuable if the patient cannot cooperate and should not delay urgent release for compelling clinical entrapment. "
                 "Diplopia immediately after trauma is not by itself an indication for floor repair, "
                 "since edema alone can transiently restrict movement -- reassess after edema resolves "
                 "unless there is a hard sign (entrapment, oculocardiac reflex, non-resolving "
@@ -82,7 +85,7 @@ DEPTH_V400 = {
                 "stable reference point (commonly the sphenozygomatic suture and zygomatic arch) before "
                 "committing to orbital floor reconstruction; the number and location of fixation points "
                 "follow instability/displacement rather than a fixed recipe. Recheck globe position and "
-                "forced ductions after reduction and after implant placement. Orbital implants restore "
+                "forced ductions before orbital manipulation, after releasing entrapped tissue, and after implant placement to document restored passive motility. Orbital implants restore "
                 "the posterior ledge/contour without entrapping soft tissue or impinging the orbital "
                 "apex. Lateral canthotomy with inferior cantholysis is the vision-saving bedside "
                 "decompression for orbital compartment syndrome and should never be delayed for "
@@ -99,11 +102,11 @@ DEPTH_V400 = {
                 "trapdoor fracture until proven otherwise."
             ),
             "source_basis": [
-                "Cummings Otolaryngology--Head and Neck Surgery, 7e -- ZMC/orbital anatomy, entrapment vs edema, orbital compartment syndrome",
+                "Cummings Otolaryngology--Head and Neck Surgery, 7e, facial trauma chapters -- orbital evaluation and forced ductions when an unconscious patient cannot participate; forced ductions before and after orbital operative maneuvers",
                 "Resident Manual of Trauma to the Face, Head, and Neck (AAO-HNS), ch 3 -- retrobulbar hematoma presentation, forced duction testing, canthotomy/cantholysis technique, medial canthal tendon laxity as partial self-decompression",
                 "Pasha & Golub, Otolaryngology--Head and Neck Surgery Clinical Reference Guide, 6e -- ZMC tetrapod concept and orbital fracture management thresholds",
             ],
-            "evidence_calibrated": "v40.0-targeted-guideline-review",
+            "evidence_calibrated": "v40.1-cummings-2026-guideline-reconciliation",
         },
         "Nasal Fracture": {
             "workup": (
@@ -148,11 +151,11 @@ DEPTH_V400 = {
                 "attempt."
             ),
             "source_basis": [
-                "Cummings Otolaryngology--Head and Neck Surgery, 7e, ch 30 (Nasal Fractures) -- ideal 2-10 day adult reduction window, 4-day pediatric window, septal-reduction-before-bone principle, splint duration",
+                "Cummings Otolaryngology--Head and Neck Surgery, 7e, ch 30 (Nasal Fractures) -- adult reduction timing, earlier pediatric management as healing progresses, septal-reduction-before-bone principle, splint duration; pediatric timing individualized to age, swelling, and deformity",
                 "Pasha & Golub, Otolaryngology--Head and Neck Surgery Clinical Reference Guide, 6e -- closed vs open reduction indications",
                 "Resident Manual of Trauma to the Face, Head, and Neck (AAO-HNS), ch 4 -- closed vs open reduction technique and instrumentation",
             ],
-            "evidence_calibrated": "v40.0-targeted-guideline-review",
+            "evidence_calibrated": "v40.1-cummings-2026-guideline-reconciliation",
         },
         "Le Fort / Panfacial Trauma": {
             "recognize": (
@@ -221,8 +224,7 @@ DEPTH_V400 = {
                 "Palpate and inspect in a reproducible sequence from superior to inferior: frontal "
                 "bone/brow contour, orbital rims and globe position, zygomatic projection and arch, "
                 "nasal/NOE complex (including bimanual mobility testing of the midface), maxillary "
-                "buttresses, and mandible/dental occlusion. Forced duction testing localizes true "
-                "extraocular muscle entrapment when orbital injury is suspected."
+                "buttresses, and mandible/dental occlusion. When an orbital fracture raises clinical concern for entrapment, examine active ductions and arrange safe forced ductions by a trained clinician (after excluding open-globe injury) to demonstrate passive restriction; this is not a routine maneuver for all uncomplicated fractures."
             ),
             "workup": (
                 "Thin-cut CT with multiplanar/3-D reconstruction for complex injury; ophthalmologic "
@@ -254,7 +256,7 @@ DEPTH_V400 = {
                 "Resident Manual of Trauma to the Face, Head, and Neck (AAO-HNS), ch 2 -- general principles of facial trauma evaluation, standardized 6-view photographic documentation, bimanual/forced duction testing",
                 "AO Foundation CMF Surgery Reference -- subunit-based diagnosis and treatment framework",
             ],
-            "evidence_calibrated": "v40.0-targeted-guideline-review",
+            "evidence_calibrated": "v40.1-cummings-2026-guideline-reconciliation",
         },
         "Facial Soft-Tissue Lacerations / Burns": {
             "recognize": (
@@ -316,7 +318,7 @@ DEPTH_V400 = {
         },
         "Septal Hematoma": {
             "recognize": (
-                "Bilateral, boggy, fluctuant swelling of the nasal septum after nasal trauma -- "
+                "Unilateral or bilateral boggy, fluctuant swelling of the nasal septum after nasal trauma -- "
                 "including in children, where it can be especially subtle -- should raise concern for "
                 "septal hematoma. Because it can look like simple soft-tissue swelling or a deviated "
                 "septum on cursory exam, it is one of the more preventable causes of permanent "
@@ -351,10 +353,10 @@ DEPTH_V400 = {
                 "causes of permanent saddle-nose deformity. Drain promptly; an apparently well child may still develop cartilage loss or abscess."
             ),
             "source_basis": [
-                "Cummings Otolaryngology--Head and Neck Surgery, 7e, ch 30 -- subperichondrial hematoma pathophysiology, 3-day necrosis and 6-7-day abscess timeline",
+                "Cummings Otolaryngology--Head and Neck Surgery, 7e, ch 30 -- subperichondrial hematoma, cartilage ischemia, need for prompt drainage (historical timelines are not a safe observation interval)",
                 "Resident Manual of Trauma to the Face, Head, and Neck (AAO-HNS), ch 4 -- emergent evacuation and mucoperichondrium coaptation technique",
             ],
-            "evidence_calibrated": "v40.0-targeted-guideline-review",
+            "evidence_calibrated": "v40.1-cummings-2026-guideline-reconciliation",
         },
     },
     "General ENT / Emergencies": {
@@ -425,7 +427,7 @@ DEPTH_V400 = {
                 "Suspect an esophageal foreign body with new dysphagia, drooling, chest/throat pain, "
                 "refusal to eat (children), or a witnessed/reported ingestion. Urgency is dictated by "
                 "object type and location, not by how well the patient otherwise looks: a button "
-                "battery or sharp object anywhere in the esophagus, or any object causing complete "
+                "battery, impacted or symptomatic sharp object in the esophagus, or any object causing complete "
                 "obstruction (inability to handle secretions), is an emergency regardless of "
                 "symptom severity. Esophageal button-battery injury begins within 15-30 minutes and "
                 "can progress rapidly to deep necrosis and perforation -- this is one of the few "
@@ -445,12 +447,17 @@ DEPTH_V400 = {
                 "radiolucent)."
             ),
             "manage": (
-                "Timing follows a three-tier urgency framework: EMERGENT (within about 2 hours) for "
-                "an esophageal button battery, a sharp/pointed object, or any complete obstruction, "
-                "regardless of NPO status. URGENT (within 24 hours) for a blunt esophageal object "
-                "such as a coin (some esophageal coins pass spontaneously, so repeat imaging immediately before "
-                "planned removal may be reasonable if the child remains stable and asymptomatic), magnets within "
-                "endoscopic reach or gastric sharp objects; gastric batteries require individualized "
+                "Triage by object, location, symptoms and elapsed time. EMERGENT (ideally within 2 hours "
+                "of presentation): esophageal button batteries, complete obstruction/inability to handle "
+                "secretions, impacted esophageal sharp objects or sharp objects causing symptoms, and "
+                "multiple magnets (or a magnet plus another metallic object) when reachable endoscopically. "
+                "Urgent specialist and surgical involvement is needed for multiple magnets beyond "
+                "endoscopic reach. URGENT (within 24 hours): an asymptomatic nonimpacted esophageal "
+                "sharp object and blunt esophageal objects such as coins (some esophageal coins pass "
+                "spontaneously; repeat imaging before removal if stable); an isolated confirmed single "
+                "magnet follows the blunt-object pathway. Gastric sharp objects generally warrant a low "
+                "threshold for retrieval, individualized to shape, symptoms and procedural risk; gastric "
+                "batteries require individualized "
                 "assessment by age, size, symptoms, co-ingestion, and possible prior esophageal lodgment. Once "
                 "past the pylorus, small blunt objects (under roughly 2-2.5 cm) can be observed "
                 "clinically with serial stool checks if asymptomatic; if retained after 2-4 weeks, "
@@ -476,18 +483,21 @@ DEPTH_V400 = {
                 "judged stable."
             ),
             "teach": (
-                "Button battery in the esophagus is a minutes-matter emergency (injury starts in "
-                "15-30 minutes, deep injury possible within hours) -- do not let a stable-appearing "
-                "patient slow the timeline. Use the emergent (<2h)/urgent (<24h)/elective (>24h, or "
-                "observe if small blunt object past the pylorus) triage rather than treating every "
-                "foreign body the same way."
+                "An esophageal button battery is an immediate emergency; clinical stability does not "
+                "justify delay. Multiple high-powered magnets or a magnet plus another metal object "
+                "are emergent if endoscopically reachable, whereas a confirmed single magnet may be "
+                "managed as a blunt foreign body. Impacted or symptomatic esophageal sharp objects "
+                "are emergent; stable, nonimpacted asymptomatic esophageal sharp objects require urgent "
+                "removal under the 2026 pediatric framework. Timing is object-, location-, symptom- "
+                "and delay-specific, not one rule for all foreign bodies."
             ),
             "source_basis": [
                 "European Society of Gastrointestinal Endoscopy (ESGE) Clinical Guideline, Removal of foreign bodies in the upper gastrointestinal tract in adults, 2016 (PMID 26862844) -- emergent/urgent/elective triage thresholds by object and location",
-                "NASPGHAN Endoscopy Committee, Management of Ingested Foreign Bodies in Children, clinical report, 2015 -- pediatric coin observation window, 24-hour esophageal coin removal target",
+                "NASPGHAN Endoscopy Committee, Management of Ingested Foreign Bodies in Children, clinical report, 2015 -- pediatric coin observation and esophageal coin removal",
+                "Ledder et al. Foreign body ingestions in children and adolescents: ESPGHAN endoscopy SIG position paper. JPGN 2026;83:539-554. doi:10.1002/jpn3.70485 -- multiple magnets emergent within endoscopic reach, impacted/symptomatic sharp objects emergent, asymptomatic sharp objects urgent; position paper not formally endorsed as ESPGHAN policy",
                 "Resident Manual of Trauma to the Face, Head, and Neck (AAO-HNS), ch 10 -- battery injury timeline (1h mucosal injury, 4-6h perforation risk)",
             ],
-            "evidence_calibrated": "v40.0-targeted-guideline-review",
+            "evidence_calibrated": "v40.1-cummings-2026-guideline-reconciliation",
         },
         "Airway Foreign Body": {
             "recognize": (
