@@ -71,7 +71,7 @@ NEW_TOPICS_V133 = {
         },
         {
             "topic": "Salivary Adenoid Cystic Carcinoma and Perineural Spread",
-            "recognize": "A salivary gland malignancy with disproportionate pain, numbness, weakness, or a long infiltrative course should raise concern for adenoid cystic carcinoma and perineural invasion/spread.",
+            "recognize": "A salivary gland malignancy with disproportionate pain, numbness, weakness, or a long infiltrative course should raise concern for a histology notorious for perineural invasion and spread along cranial nerves, sometimes recurring locally years after apparently complete resection.",
             "localize": "Adenoid cystic carcinoma has a strong propensity for perineural spread along named cranial nerves toward the skull base and for late distant metastasis, particularly to lung.",
             "workup": "Map cranial nerve deficits on exam and obtain contrast MRI with attention to the involved nerve pathway and skull base when perineural spread is suspected; stage the primary, neck and chest according to disease extent.",
             "manage": "Primary treatment is surgical resection when feasible, commonly followed by postoperative radiation for adverse features including perineural invasion. Long-term surveillance matters because recurrence and distant metastasis can occur late.",

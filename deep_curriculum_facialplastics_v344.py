@@ -28,8 +28,7 @@ def apply_facialplastics_local_forehead_v344(data_module, app_module=None):
 
         if topic == "local flap reconstruction":
             module["recognize"] = (
-                "This card owns GENERAL FACIAL LOCAL-FLAP DECISION-MAKING, not the staged paramedian forehead flap. "
-                "Start with the defect: size, depth, vascular bed, exposed cartilage/bone/nerve, aesthetic subunit, free-margin involvement, "
+                "For general facial local-flap decision-making, start with the defect: size, depth, vascular bed, exposed cartilage/bone/nerve, aesthetic subunit, free-margin involvement, "
                 "skin laxity, scar orientation, and whether adjacent tissue can be recruited without distorting the eyelid, lip, nasal ala, "
                 "brow, or hairline. Choose a local flap only when vascularized neighboring tissue can restore coverage with an acceptable donor deformity."
             )
@@ -79,7 +78,7 @@ def apply_facialplastics_local_forehead_v344(data_module, app_module=None):
 
         elif topic == "forehead flap nasal reconstruction":
             module["recognize"] = (
-                "This card owns STAGED PARAMEDIAN FOREHEAD-FLAP NASAL RECONSTRUCTION. It is an interpolated AXIAL flap based on the supratrochlear vascular system and is most useful "
+                "The staged paramedian forehead flap is an interpolated axial flap based on the supratrochlear vascular system and is most useful "
                 "when a sizable or deep nasal defect cannot be restored reliably with primary closure, a skin graft, or a smaller local flap—particularly distal nasal defects involving multiple "
                 "subunits or defects requiring robust vascularized cover over reconstructed support/lining."
             )

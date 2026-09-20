@@ -23,7 +23,7 @@ def apply_facialplastics_graft_selection_v341(data_module, app_module=None):
 
         if topic == "rhinoplasty graft selection":
             module["recognize"] = (
-                "This card owns STRUCTURAL NASAL GRAFT SELECTION, not skin coverage. Start by naming the mechanical problem: "
+                "For structural nasal graft selection, start by naming the mechanical problem: "
                 "midvault collapse/internal nasal valve narrowing, weak lateral wall or alar rim, inadequate caudal septal support, "
                 "tip projection/rotation instability, dorsal deficiency, or major framework loss. Then choose graft geometry and donor "
                 "material that can supply the required stiffness, shape, volume, and long-term stability. Do not choose a donor first and "
@@ -81,7 +81,7 @@ def apply_facialplastics_graft_selection_v341(data_module, app_module=None):
 
         elif topic == "skin graft selection":
             module["recognize"] = (
-                "This card owns AVASCULAR CUTANEOUS COVERAGE, not structural nasal support. Before choosing full- versus split-thickness skin, ask whether "
+                "Before choosing full- versus split-thickness skin, ask whether "
                 "a skin graft is appropriate at all: the defect needs a vascularized recipient bed, oncologic clearance when relevant, hemostasis, and a "
                 "surface on which the graft can remain immobile while neovascularization occurs. If missing framework, exposed critical structures, dead "
                 "space, or contour requirements demand vascularized tissue, a local/regional/free flap may be the better reconstruction."

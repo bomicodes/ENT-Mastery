@@ -54,7 +54,7 @@ NEW_CASE_LABELS = {
     "Vocal Tremor": "Quavering voice that worsens with sustained phonation",
 
     # "Swallowing symptoms" bucket (was shared by 7 topics)
-    "Button Battery Ingestion": "Witnessed battery ingestion with drooling",
+    "Button Battery Ingestion": "Witnessed pediatric ingestion event with drooling and refusal to eat",
     "Cricopharyngeal Dysfunction": "Cervical dysphagia with a sensation of a high obstruction",
     "Hypopharyngeal Cancer": "Progressive dysphagia and referred otalgia in a smoker",
     "Laryngotracheal Cleft": "Infant feeding-related coughing or choking with recurrent aspiration pneumonia",
@@ -112,7 +112,7 @@ NEW_CASE_LABELS = {
     "Sinonasal Malignancies": "Unilateral nasal obstruction with facial numbness or diplopia",
 
     # "Sleep-breathing presentation" / "Sleep-breathing symptoms" buckets (2 each)
-    "Circadian Rhythm Sleep-Wake Disorders": "Sleep-wake timing mismatched with the desired schedule",
+    "Circadian Rhythm Sleep-Wake Disorders": "Sleep complaint that persists despite adequate sleep opportunity and shifts with travel or schedule change",
     "Sleep-Related Hypoventilation": "Daytime hypersomnolence with elevated morning CO2",
     "Narcolepsy / Central Hypersomnolence Recognition": "Irresistible daytime sleep attacks with possible cataplexy",
     "Positional OSA": "Snoring and apneas only in the supine position",

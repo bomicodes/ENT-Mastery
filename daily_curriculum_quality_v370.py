@@ -30,7 +30,7 @@ CASE_LABEL_OVERRIDES = {
     "Residual OSA After Surgery": "Persistent sleep-breathing symptoms",
     "Restless Legs / Periodic Limb Movement Disorders": "Nocturnal limb discomfort or movement",
     "Peritonsillar Abscess": "Unilateral severe throat symptoms",
-    "Frontal Sinus Fracture": "Frontal craniofacial trauma",
+    "Frontal Sinus Fracture": "Forehead or brow contour injury after craniofacial trauma with possible CSF leak concern",
     "Chyle Leak": "Postoperative drain-output change",
     "Recurrent Laryngeal Nerve Injury During Thyroidectomy": "New postoperative voice or airway symptoms",
     "Nonfunctional Larynx / Chronic Aspiration After Cancer Therapy": "Late swallowing and pulmonary dysfunction",
@@ -52,6 +52,7 @@ NAMED_RECOGNITION_TOPICS = {
     "Recurrent Laryngeal Nerve Injury During Thyroidectomy",
     "Residual OSA After Surgery",
     "Deep Neck Space Infection",
+    "Button Battery Ingestion",
 }
 
 

@@ -599,8 +599,26 @@ def _excerpt(text, limit=900):
     text = _clean(text)
     if len(text) <= limit:
         return text
-    cut = text[:limit].rsplit(". ", 1)[0].rstrip(" .")
-    return (cut or text[:limit]).rstrip() + "."
+    window = text[:limit]
+    cut = ""
+    # Prefer the last true sentence boundary within the limit.
+    parts = window.rsplit(". ", 1)
+    if len(parts) == 2 and parts[0]:
+        cut = parts[0].rstrip(" .")
+    if not cut:
+        # No sentence boundary: many long recognize fields are one compound
+        # sentence joined by " -- " or "; ". Cutting there keeps a complete
+        # clause instead of stopping mid-thought partway into the next one.
+        for joiner in (" -- ", "; ", ", "):
+            clause_parts = window.rsplit(joiner, 1)
+            if len(clause_parts) == 2 and len(clause_parts[0]) >= 120:
+                cut = clause_parts[0].rstrip(" .,;:-")
+                break
+    if not cut:
+        # Last resort: the nearest whitespace boundary, so the excerpt never
+        # ends mid-word even when no clause boundary is available either.
+        cut = window.rsplit(None, 1)[0].rstrip(" .,;:-")
+    return (cut or window).rstrip() + "."
 
 
 def _curveball_lead(question):
@@ -1020,6 +1038,102 @@ CURVEBALL_OVERRIDES = {
         "change care, and the narrowest effective site-penetrating agent. Reassess at 48–72 hours to stop, "
         "narrow, or redirect therapy; repeated empiric antibiotics cannot substitute for drainage or other "
         "source control."
+    ),
+    "v143_gen_05": (
+        'At the bedside, opening the neck incision (removing skin staples/sutures and manually evacuating the underlying hematoma) can immediately relieve airway-compressing pressure while preparing for emergent return to the OR; this should not be delayed for imaging or transport if the airway is acutely threatened.'
+    ),
+    "v136_rhi_24": (
+        'A concurrent internal-valve problem needs its own correction, such as spreader or batten grafts to widen or support the valve angle, because septoplasty alone will not fix valve collapse and addressing only the septum leaves the obstruction unresolved.'
+    ),
+    "v137_tps_12": (
+        'A pre-existing contralateral vocal fold palsy raises the stakes of any new injury to the remaining functional nerve, since bilateral palsy risks airway obstruction requiring tracheostomy; document current voice/airway status with laryngoscopy before and after surgery, and discuss this bilateral-injury risk explicitly during consent.'
+    ),
+    "v138_hn_25": (
+        'Neck erythema, swelling, fever, and saliva or foul-smelling drainage from the wound or drain, especially around the time of first oral intake, suggest a pharyngocutaneous fistula; suspicion should prompt holding oral intake, wound inspection, and imaging or a fluoroscopic swallow study as needed.'
+    ),
+    "v139_ped_07": (
+        'Single-stage reconstruction with tracheostomy removal/closure and temporary endotracheal tube stenting during healing suits a stable child without significant reflux, aspiration risk, or comorbid pulmonary disease and with straightforward grafting; double-stage reconstruction with staged decannulation is preferred for severe or combined glottic/subglottic stenosis or a less optimized medical/pulmonary status.'
+    ),
+    "v139_ped_08": (
+        'Airway-threatening floor-of-mouth or tongue-base involvement escalates urgency: securing the airway (early intubation or a defined airway plan) takes priority over elective sclerotherapy, and urgent debulking or sclerotherapy under controlled airway conditions may be needed rather than routine staged treatment.'
+    ),
+    "v143_rhi_04": (
+        'Stop dissecting immediately, avoid grasping or resecting the prolapsed fat (mistaking it for polyp risks extraocular muscle or nerve injury), and check for periorbital ecchymosis/proptosis and extraocular movements to exclude a lamina papyracea breach with orbital injury before deciding whether to proceed, repair, or abort.'
+    ),
+    "v143_hno_05": (
+        'Carotid encasement or skull-base extension raises the risk of vascular injury and may warrant preoperative vascular imaging or balloon-occlusion testing, a combined or staged approach with vascular or skull-base surgery, and explicit counseling about stroke risk, possible carotid sacrifice or reconstruction, and lower cranial nerve injury.'
+    ),
+    "v143_ped_01": (
+        'A first branchial cleft anomaly (Work type I or II) courses near or through the parotid gland and can be intimately associated with the facial nerve, so dissection requires facial nerve identification and monitoring, unlike a second branchial cleft tract, which travels between the carotid vessels away from the facial nerve.'
+    ),
+    "v144_oto_23": (
+        'Persistent perforation at 4 months without spontaneous healing supports considering tympanoplasty (myringoplasty with graft material such as temporalis fascia or perichondrium), rather than automatically requiring surgery; individualize timing based on hearing, infections, examination, water exposure, and patient preferences; ossicular chain assessment and possible ossiculoplasty should be discussed if the air-bone gap suggests ossicular involvement beyond the perforation alone.'
+    ),
+    "v144_rh_19": (
+        'A caudal deviation requires stabilizing the caudal septum at the anterior nasal spine/maxillary crest, such as with suture fixation, batten or spreader grafting, or an extracorporeal technique for severe deformity, to prevent recurrence, whereas a simple mid-septal spur can often be corrected with straightforward cartilage/bone removal alone.'
+    ),
+    "v145_hn_03": (
+        'In a large Shamblin III tumor encasing the carotid, preoperative planning should address the possibility of carotid sacrifice or reconstruction, including vascular surgery involvement, assessment of collateral cerebral circulation, and possible balloon test occlusion, along with counseling about stroke risk and lower cranial nerve injury.'
+    ),
+    "v146_ped_07": (
+        'An airway-threatening lymphatic malformation shifts management from elective sclerotherapy to urgent airway securement (intubation or, if needed, tracheostomy) plus urgent debulking or sclerotherapy performed under controlled airway conditions, rather than routine staged outpatient treatment.'
+    ),
+    "v147_fp_11": (
+        'Full-thickness alar loss requires reconstructing all three layers: internal lining (a mucosal, septal hinge, or folded composite flap), a cartilage framework graft to restore support and prevent notching or collapse, and external skin cover such as a paramedian forehead flap for larger defects, rather than a single-layer skin-only repair.'
+    ),
+    "v209_rhi_sphenoid_snr": (
+        'Suspected internal carotid injury requires immediate firm packing of the sphenoid with hemostatic material to tamponade bleeding, maintaining the airway and hemodynamic stability, and urgent conversion to endovascular or open vascular control with neurosurgical/vascular surgery involvement, rather than continued attempts at endoscopic control alone.'
+    ),
+    "v220_hn_fom_snr": (
+        'A segmental mandibular defect requires vascularized bone reconstruction, typically a fibula free flap, to restore both contour and dental rehabilitation potential, in contrast to a marginal mandibulectomy defect, which usually needs only soft-tissue coverage; osseointegrated implant planning should be considered at the time of bony reconstruction.'
+    ),
+    "v220_hn_tonsil_app": (
+        'Delayed, brisk oropharyngeal bleeding after TORS, especially bleeding that recurs after initial control or is associated with airway compromise, requires immediate airway securement and urgent return to the operating room for surgical control, since the lingual or external carotid branches can be the source of a life-threatening post-TORS hemorrhage.'
+    ),
+    "v221_hn_tl_app": (
+        'A large, high-output, or expanding fistula, evidence of exposed or threatened carotid vessels, uncontrolled infection or necrosis, or failure of conservative wound care to allow the tract to heal should prompt operative debridement and vascularized flap reconstruction, such as a pectoralis major flap, rather than continued conservative management.'
+    ),
+    "v221_hn_pps_snr": (
+        'A vagal schwannoma typically splays the carotid artery anteriorly and the jugular vein posteriorly, and resection risks vocal fold paralysis/aspiration; a sympathetic-chain schwannoma instead displaces the carotid sheath as a unit anteriorly, and resection risks Horner syndrome, so preoperative counseling should differ based on which structure of origin is suspected.'
+    ),
+    "v222_hn_cbp_snr": (
+        'Preoperative embolization can be considered for large, highly vascular Shamblin II/III tumors to reduce intraoperative blood loss, but it carries risk of stroke from inadvertent embolization of the internal carotid or its branches, cranial nerve injury from ischemia to adjacent structures, and post-embolization inflammation that can make dissection planes more difficult.'
+    ),
+    "v234_tps_reopthy_fnd": (
+        'Review of the prior operative note for which side and how much thyroid/parathyroid tissue was removed, whether the RLN and parathyroid glands were identified with their status documented, and the pathology report for extent of disease and margins helps anticipate scarring, altered anatomy, and the structures at highest risk during re-entry.'
+    ),
+    "v234_tps_4g_fnd": (
+        'Ectopic superior glands are most often found posteriorly, tracking toward the tracheoesophageal groove, retropharyngeal or retroesophageal space, or descending into the posterior mediastinum; ectopic inferior glands more often reflect incomplete descent, located high in the neck near the carotid bifurcation/thyrothymic tract, or descended too far into the anterior mediastinum/thymus.'
+    ),
+    "v235_tps_smgex_app": (
+        'Hypoglossal nerve injury causes ipsilateral tongue weakness with deviation toward the injured side on protrusion and dysarthria/difficulty with bolus control, whereas lingual nerve injury causes numbness and taste loss over the anterior two-thirds of the tongue without motor tongue weakness; the motor-versus-sensory pattern distinguishes the two.'
+    ),
+    "v241_ped_supra_app": (
+        'Treat the posterior interarytenoid mucosa conservatively and avoid symmetric, aggressive bilateral resection in the same setting, since over-resection there is the classic cause of supraglottic (interarytenoid) stenosis; staged, asymmetric, or limited unilateral surgery reduces this risk.'
+    ),
+    "v241_ped_supra_snr": (
+        'If work of breathing and oxygen dependence persist despite a technically adequate supraglottoplasty, evaluate for a missed synchronous airway lesion (such as subglottic stenosis, tracheomalacia, or a second area of supraglottic collapse) with repeat endoscopy; noninvasive support can bridge a child who is improving, revision surgery suits an identified correctable lesion, and tracheostomy is reserved for failure of these measures or an unsafe airway.'
+    ),
+    "v241_ped_ltr_fnd": (
+        'Cricotracheal resection removes the stenotic cricoid/upper tracheal segment and re-anastomoses healthy airway, so it does not depend on cartilage graft take and suits severe, circumferential, or previously-grafted stenosis; expansion (graft) reconstruction instead enlarges the airway lumen in place using cartilage grafts, preserving native tissue but depending on graft healing and mucosalization.'
+    ),
+    "v241_ped_ltr_app": (
+        'Impaired vocal fold mobility or significant aspiration risk favors a double-stage approach with a longer period of stenting/protection and more cautious decannulation, since single-stage surgery closes the tracheostomy but retains an endotracheal tube temporarily during healing; subsequent extubation depends on adequate airway patency and protection that a mobility-impaired or aspirating larynx may not reliably provide.'
+    ),
+    "v244_ped_bca_fnd": (
+        'A second-cleft tract classically passes between the internal and external carotid arteries en route to the tonsillar fossa, while third- and fourth-pouch anomalies communicate with the pyriform sinus and are distinguished by their relationship to the superior laryngeal nerve: third above, fourth below. They may present with recurrent suppurative thyroiditis or a left-sided neck abscess; delineate the individual tract and protect nearby vessels and laryngeal nerves during treatment.'
+    ),
+    "v244_ped_bca_snr": (
+        'First-cleft anomalies risk the facial nerve; second-cleft tracts risk the hypoglossal and glossopharyngeal nerves near their course between the carotid vessels; third- and fourth-cleft tracts, which relate to the pyriform sinus, risk the recurrent laryngeal and superior laryngeal nerves during dissection near the thyroid and larynx.'
+    ),
+    "v251_lar_micro_snr": (
+        'Limited neck extension or cervical spine immobility, temporomandibular joint dysfunction or trismus, retrognathia/micrognathia, prominent or fragile incisors, a short thyromental distance, and prior radiation-induced fibrosis of the neck and pharynx all predict difficult laryngoscope suspension and should be anticipated preoperatively.'
+    ),
+    "v254_lar_nodule_snr": (
+        'Begin with a period of relative voice rest, then progress through structured vocal rehabilitation, gentle semi-occluded vocal tract exercises, and gradually increasing vocal loading, confirming mucosal wave/healing on stroboscopy before advancing from conversational voice to rehearsal-level singing and only later to full unrestricted performance voice, typically over several weeks under close therapy/laryngology follow-up.'
+    ),
+    "v254_lar_polycyst_app": (
+        'Features favoring earlier surgery include a large or hemorrhagic polyp causing marked dysphonia, a professional voice user with functional/occupational urgency, failure of an adequate trial of voice therapy, or a lesion such as a true cyst that is unlikely to resolve with therapy alone; these shift the balance away from prolonged conservative management.'
     ),
 }
 
