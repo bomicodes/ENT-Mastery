@@ -1,1 +1,1 @@
-web: gunicorn runtime_entry_pasha:app
+web: gunicorn daily_path_entry_v403:app
