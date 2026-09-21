@@ -2,9 +2,16 @@
 """v37.1 all-topic Deep Curriculum source/core-text saturation non-regression gate.
 
 Inventories the fully assembled learner-facing Deep Curriculum and fails closed if the
-327-topic/nine-domain canonical contract drifts, source provenance is malformed, or
+326-topic/nine-domain canonical contract drifts, source provenance is malformed, or
 either source backlog grows. The ceilings are truthful ratchets from the last validated
 census and must only move downward as reviewed clinical/source cohorts land.
+
+Note (v40.7 fix): "Salivary Gland Malignancy" is intentionally NOT duplicated into
+Head & Neck Oncology -- it already existed under Thyroid / Parathyroid / Salivary, and
+the AJCC v9 depth/sourcing update is merged into that single canonical entry instead.
+A second same-named topic in a different domain collides on the auto-generated
+blind-quiz case label and trips the v40.3 boot-time duplicate-label check, so
+Head & Neck Oncology stays at 41 (not 42) and the total stays at 326 (not 327).
 """
 
 from collections import Counter
@@ -16,7 +23,7 @@ data = runtime_entry_pasha.runtime_entry.data
 EXPECTED_DOMAIN_COUNTS = {
     "Otology / Neurotology": 48,
     "Rhinology / Allergy / Skull Base": 42,
-    "Head & Neck Oncology": 42,
+    "Head & Neck Oncology": 41,
     "Thyroid / Parathyroid / Salivary": 32,
     "Pediatric Otolaryngology": 40,
     "Laryngology / Voice / Swallowing": 36,
@@ -156,7 +163,7 @@ def main():
         return 1
 
     print(
-        "PASS: exact 327-topic/nine-domain live canonical contract inventoried; source_basis schema, "
+        "PASS: exact 326-topic/nine-domain live canonical contract inventoried; source_basis schema, "
         "missing-source and incomplete core-textbook backlogs cannot silently regress."
     )
     return 0

@@ -75,6 +75,7 @@ from priority_final_v407 import apply_priority_final_v407
 from priority_remainder_v408 import apply_priority_remainder_v408
 from priority_pleomorphic_adenoma_v409 import apply_pleomorphic_adenoma_transformation_v409
 from priority_first_bite_trauma_v410 import apply_first_bite_trauma_v410
+from or_followups_v411 import apply_or_followups_v411
 
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
@@ -147,6 +148,7 @@ PRIORITY_FINAL_V407 = apply_priority_final_v407(runtime_entry.data, runtime_entr
 PRIORITY_REMAINDER_V408 = apply_priority_remainder_v408(runtime_entry.data, runtime_entry.app_mod)
 PLEOMORPHIC_ADENOMA_TRANSFORMATION_V409 = apply_pleomorphic_adenoma_transformation_v409(runtime_entry.data, runtime_entry.app_mod)
 FIRST_BITE_TRAUMA_V410 = apply_first_bite_trauma_v410(runtime_entry.data, runtime_entry.app_mod)
+OR_FOLLOWUPS_V411 = apply_or_followups_v411(runtime_entry.data, runtime_entry.app_mod)
 DAILY_BLIND_CASE_LABELS_V402 = apply_daily_blind_case_labels_v402(daily_curriculum_quality_v368, runtime_entry.data)
 INTERPRETATION_LABS_CLEANUP_V250 = apply_interpretation_labs_cleanup_v250(runtime_entry.data, runtime_entry.app_mod)
 app=runtime_entry.app

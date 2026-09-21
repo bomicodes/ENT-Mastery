@@ -1,9 +1,11 @@
 """ENT Mastery v40.7 — consolidated priority patch from the 2026-09-20 audit.
 
 This single overlay supersedes the unmerged v40.5/v40.6 review bundles.  It
-applies all nine verified priority fixes atomically, retains AJCC 8 teaching,
-adds AJCC Version 9 as an explicitly labelled transition, and carries forward
-the already-reviewed BPPV, larynx, button-battery, and OR follow-up repairs.
+applies all nine verified priority fixes atomically, keeps AJCC 8 as the
+operative staging system taught and tested, adds AJCC Version 9 strictly as
+labelled reference/awareness material (not yet this curriculum's adopted
+clinical standard), and carries forward the already-reviewed BPPV, larynx,
+button-battery, and OR follow-up repairs.
 """
 from collections import Counter
 from copy import deepcopy
@@ -13,7 +15,7 @@ GENERAL = "General ENT / Emergencies"
 
 SOURCES = {
     "ajcc": "American College of Surgeons, AJCC Staging Online: current Version 9 protocols plus AJCC 8th Edition content: https://www.facs.org/quality-programs/cancer-programs/american-joint-committee-on-cancer/ajcc-staging-online/",
-    "ajcc_transition": "AJCC/CAP joint statement: AJCC Version 9 salivary-gland and HPV-associated oropharyngeal protocols are effective for cases diagnosed 2026-01-01 onward; AJCC 8 may remain visible for earlier cases and historical/board comparison: https://www.cap.org/news/cap-statement-on-salivary-gland-and-hpv-associated-oropharyngeal-carcinomas/",
+    "ajcc_transition": "AJCC/CAP joint statement announcing published AJCC Version 9 salivary-gland and HPV-associated oropharyngeal protocols: https://www.cap.org/news/cap-statement-on-salivary-gland-and-hpv-associated-oropharyngeal-carcinomas/ -- shown here for awareness only. AJCC 8 remains this curriculum's operative staging system for board preparation and current clinical use; AJCC 9 is not yet the adopted clinical standard and should not be treated as superseding AJCC 8 in practice.",
     "salivary": "Huang SH et al. Key Updates on Version 9 AJCC/UICC Salivary Gland Carcinoma. Ann Surg Oncol. 2026;33:4958-4963. https://pmc.ncbi.nlm.nih.gov/articles/PMC13499081/",
     "npc": "FDA approval of toripalimab for nasopharyngeal carcinoma, 2023-10-27: https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-toripalimab-tpzi-nasopharyngeal-carcinoma",
     "ted": "ATA/ETA Consensus Statement on Thyroid Eye Disease, 2022: https://pmc.ncbi.nlm.nih.gov/articles/PMC9727317/",
@@ -60,10 +62,10 @@ SALIVARY = {
     "topic": "Salivary Gland Malignancy", "primary_domain": "Head & Neck Oncology",
     "recognize": "A persistent or growing salivary mass with rapid growth, pain, fixation, skin involvement, facial weakness, or cervical adenopathy raises concern, although low-grade cancers may be painless. Histology and grade materially change nodal, perineural, distant-metastatic, and systemic-therapy behavior.",
     "localize": "Define major versus minor gland site, superficial/deep parotid relationships, facial-nerve function, skull-base perineural extension, and nodal levels at risk. Pretreatment facial weakness suggests nerve involvement; adenoid cystic carcinoma may track along V3 or VII.",
-    "workup": "Perform a complete head-and-neck and cranial-nerve examination, targeted ultrasound with image-guided FNA/core biopsy, MRI for deep-lobe/perineural/skull-base questions, CT for bone, and risk-directed chest/distant staging. Report histology, grade, margins, PNI/LVI, nodal ENE, and actionable biomarkers. Keep AJCC 8 visible for cases diagnosed before 2026, board preparation, and explicitly labelled historical/local comparisons. For salivary carcinomas diagnosed on or after 2026-01-01, AJCC/CAP specify the AJCC Version 9 protocol. Record the diagnosis date and staging version and never mix AJCC 8 categories with AJCC 9 stage groups.",
+    "workup": "Perform a complete head-and-neck and cranial-nerve examination, targeted ultrasound with image-guided FNA/core biopsy, MRI for deep-lobe/perineural/skull-base questions, CT for bone, and risk-directed chest/distant staging. Report histology, grade, margins, PNI/LVI, nodal ENE, and actionable biomarkers. Stage with AJCC 8th Edition -- this remains the operative system for board preparation and current clinical use. AJCC/CAP have published a Version 9 salivary-gland protocol, included below for awareness, but it is not yet this curriculum's adopted clinical standard; do not treat it as replacing AJCC 8 or mix categories/stage groups across the two systems.",
     "manage": "Resect operable localized disease with site-appropriate oncologic margins and preserve a functioning facial nerve when it is not directly invaded and clearance is feasible. Base neck management and adjuvant radiation on histology/grade, T extent, nodes, margins, and PNI. Recurrent/metastatic disease requires histology- and biomarker-directed multidisciplinary evaluation (including AR, HER2, or NTRK when relevant), not one universal regimen.",
     "operate": "Select superficial/total parotidectomy or other gland resection by extent; document preoperative nerve function and avoid automatic sacrifice of a functioning uninvolved facial nerve. Address deep-lobe, skull-base, and neck disease with appropriate exposure/reconstruction and orient margins clearly for pathology.",
-    "teach": "Keep AJCC 8 and AJCC 9 visible as two labelled systems. AJCC 8: major-gland T categories use size plus gross extraparenchymal/adjacent-structure invasion, minor-gland cancers follow their anatomic site, and the traditional head-and-neck nodal framework applies. AJCC 9 (effective for 2026+ diagnoses): major and minor salivary carcinomas share one protocol; T1 is 2 cm or smaller without gross extraparenchymal extension, T2 is over 2 through 4 cm without it, T3 is over 4 cm or gross extraparenchymal extension for a major-gland primary, N1 is 1-3 positive nodes without ENE, N2 is more than 3 positive nodes or any ENE, and stage IV is reserved for M1. Use the complete version-specific table for a real case and never blend categories across versions. Separate anatomic stage from histologic biology: adenoid cystic disease emphasizes perineural and late distant failure, while high-grade carcinomas carry greater nodal risk.",
+    "teach": "AJCC 8 is the primary system taught and tested here: major-gland T categories use size plus gross extraparenchymal/adjacent-structure invasion, minor-gland cancers follow their anatomic site, and the traditional head-and-neck nodal framework applies. AJCC Version 9 has been published (major and minor salivary carcinomas share one protocol; T1 is 2 cm or smaller without gross extraparenchymal extension, T2 is over 2 through 4 cm without it, T3 is over 4 cm or gross extraparenchymal extension for a major-gland primary, N1 is 1-3 positive nodes without ENE, N2 is more than 3 positive nodes or any ENE, stage IV reserved for M1) and is included here strictly for reference/awareness -- it is not yet this curriculum's clinical standard, so default to AJCC 8 unless a specific reason calls for the newer edition, and never blend categories across versions. Separate anatomic stage from histologic biology: adenoid cystic disease emphasizes perineural and late distant failure, while high-grade carcinomas carry greater nodal risk.",
     "tags": ["salivary gland cancer", "adenoid cystic", "mucoepidermoid", "perineural spread", "AJCC 8", "AJCC Version 9"],
     "source_basis": ["Pasha & Golub, 6th ed (2022), ch 5, pp 211-214.", SOURCES["ajcc"], SOURCES["ajcc_transition"], SOURCES["salivary"]],
     "evidence_calibrated": "v40.7-AJCC8-plus-AJCC9-transition",
@@ -71,8 +73,8 @@ SALIVARY = {
 
 PATCHES = (
     ("Head & Neck Oncology", ("HPV-Associated Oropharyngeal SCC", "HPV-Associated Oropharyngeal Carcinoma", "HPV-Associated OPSCC"), {
-        "workup": "AJCC 8 is intentionally retained for board preparation, cases diagnosed before 2026, and explicitly labelled historical/local comparison. For HPV-associated oropharyngeal carcinomas diagnosed on or after 2026-01-01, AJCC/CAP specify the separate AJCC Version 9 protocol. Record the diagnosis date, staging version, clinical versus pathologic context, primary subsite, p16/HPV classification, T extent, and nodal burden/distribution; never combine AJCC 8 N categories or stage groups with AJCC 9 elements.",
-        "teach": "Edition check before stage assignment: AJCC 8 remains clinically relevant and is preserved here, while AJCC Version 9 is the effective protocol for 2026+ HPV-associated oropharyngeal cases. State the staging system, diagnosis date, and clinical versus pathologic context. Do not infer an AJCC 9 numerical stage from AJCC 8 tables or use an AJCC 8 label without identifying it as such.",
+        "workup": "AJCC 8 is this curriculum's operative staging system for board preparation and current clinical practice. AJCC/CAP have separately published a Version 9 HPV-associated oropharyngeal protocol; it is noted here for awareness only and is not yet the adopted clinical standard, so continue staging with AJCC 8 unless told otherwise. Record staging system, clinical versus pathologic context, primary subsite, p16/HPV classification, T extent, and nodal burden/distribution; never combine AJCC 8 N categories or stage groups with AJCC 9 elements.",
+        "teach": "Edition check before stage assignment: AJCC 8 remains the primary system taught and tested here. AJCC Version 9 exists and is mentioned for awareness, but treat it as reference material, not a replacement -- do not infer an AJCC 9 numerical stage from AJCC 8 tables or use an AJCC 8 label without identifying it as such.",
     }, ("ajcc", "ajcc_transition")),
     ("Head & Neck Oncology", ("Nasopharyngeal Carcinoma",), {
         "workup": "Confirm histology, EBV context when appropriate, endoscopic primary assessment, MRI of the primary/skull base and neck, and burden-directed distant staging. Distinguish curable locoregionally advanced disease from recurrent/metastatic disease before selecting systemic therapy.",
@@ -169,24 +171,38 @@ def _or_update(ops, slug, updates, source_key):
     _sources(entry, (source_key,))
 
 
+def _normalize_qa(value):
+    if not isinstance(value, (list, tuple)):
+        return None
+    rows = []
+    for pair in value:
+        if not (isinstance(pair, (list, tuple)) and len(pair) == 2 and all(isinstance(x, str) for x in pair)):
+            return None
+        rows.append((pair[0].strip(), pair[1].strip()))
+    return tuple(rows)
+
+
 def _replace_generic_followups(ops):
+    # The review found two non-procedure-specific three-pair templates copied
+    # across many OR cards. Detect exact repeated templates regardless of length.
     signatures = Counter()
     for entry in ops.values():
-        value = entry.get("attending_followup")
-        if isinstance(value, (list, tuple)) and len(value) == 1 and isinstance(value[0], (list, tuple)) and len(value[0]) == 2 and all(isinstance(x, str) for x in value[0]):
-            signatures[tuple(x.strip() for x in value[0])] += 1
+        normalized = _normalize_qa(entry.get("attending_followup"))
+        if normalized:
+            signatures[normalized] += 1
+    generic_signatures = {sig for sig, count in signatures.items() if count >= 5}
     replaced, preserved = [], []
     for slug, pair in FOLLOWUPS.items():
         if slug not in ops:
             preserved.append(slug + ":missing")
             continue
         current = ops[slug].get("attending_followup")
-        if current == [pair] or current == (pair,):
+        normalized = _normalize_qa(current)
+        if normalized == (pair,):
             replaced.append(slug)
             continue
-        valid = isinstance(current, (list, tuple)) and len(current) == 1 and isinstance(current[0], (list, tuple)) and len(current[0]) == 2 and all(isinstance(x, str) for x in current[0])
-        if valid and signatures[tuple(x.strip() for x in current[0])] >= 2:
-            ops[slug]["attending_followup"] = [pair]
+        if normalized in generic_signatures:
+            ops[slug]["attending_followup"] = [list(pair)]
             replaced.append(slug)
         else:
             preserved.append(slug + ":individualized-or-unrecognized")
@@ -235,8 +251,29 @@ def apply_priority_final_v407(data_module, app_module=None):
     oncology = deep.get("Head & Neck Oncology")
     if not isinstance(oncology, list):
         raise RuntimeError("v40.7: Head & Neck Oncology domain unavailable")
-    if not any(x.get("topic") == SALIVARY["topic"] for x in oncology):
+    existing_salivary = None
+    for domain_topics in deep.values():
+        if not isinstance(domain_topics, list):
+            continue
+        for x in domain_topics:
+            if isinstance(x, dict) and x.get("topic") == SALIVARY["topic"]:
+                existing_salivary = x
+                break
+        if existing_salivary is not None:
+            break
+    if existing_salivary is None:
         oncology.append(deepcopy(SALIVARY))
+    else:
+        for field in ("recognize", "localize", "workup", "manage", "operate", "teach"):
+            if field in SALIVARY:
+                _append(existing_salivary, field, SALIVARY[field])
+        current_sources = existing_salivary.get("source_basis") or []
+        if isinstance(current_sources, str):
+            current_sources = [current_sources]
+        existing_salivary["source_basis"] = list(dict.fromkeys(current_sources + SALIVARY["source_basis"]))
+        existing_tags = existing_salivary.get("tags") or []
+        existing_salivary["tags"] = list(dict.fromkeys(existing_tags + SALIVARY.get("tags", [])))
+        existing_salivary["evidence_calibrated"] = SALIVARY["evidence_calibrated"]
 
     _or_update(ops, "button-battery", BATTERY, "battery")
     _or_update(ops, "frontal-sinus-trauma", FRONTAL, "frontal")
@@ -254,10 +291,11 @@ def apply_priority_final_v407(data_module, app_module=None):
     return {
         "priority_items_fixed": 9,
         "deep_updated": ["Angioedema", "Carotid Blowout Syndrome"] + modified,
-        "deep_added": [NECK_TRAUMA["topic"], SALIVARY["topic"]],
+        "deep_added": [NECK_TRAUMA["topic"]] + ([] if existing_salivary is not None else [SALIVARY["topic"]]),
+        "salivary_merged_into_existing_domain": (existing_salivary or {}).get("primary_domain"),
         "hns_vignette_fixed": True,
         "or_cards_updated": ["button-battery", "frontal-sinus-trauma"],
         "followups_replaced": followup_replaced,
         "followups_preserved": followup_preserved,
-        "ajcc_policy": "AJCC 8 retained for boards/pre-2026/historical comparison; AJCC 9 separately labelled and effective for 2026+ salivary and HPV-associated oropharyngeal cases; no cross-version numerical inference",
+        "ajcc_policy": "AJCC 8 is the operative staging system for boards and current clinical use; AJCC 9 is included for reference/awareness only and is not treated as this curriculum's adopted clinical standard; no cross-version numerical inference",
     }
