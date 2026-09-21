@@ -1,0 +1,29 @@
+name: First-bite syndrome trauma context v41.0
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'priority_first_bite_trauma_v410.py'
+      - 'audit_first_bite_trauma_v410.py'
+      - 'runtime_entry_pasha.py'
+      - '.github/workflows/first-bite-trauma-v410.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'priority_first_bite_trauma_v410.py'
+      - 'audit_first_bite_trauma_v410.py'
+      - 'runtime_entry_pasha.py'
+      - '.github/workflows/first-bite-trauma-v410.yml'
+  workflow_dispatch:
+
+jobs:
+  trauma-context:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python audit_first_bite_trauma_v410.py
