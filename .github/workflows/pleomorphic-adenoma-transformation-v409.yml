@@ -1,0 +1,29 @@
+name: Pleomorphic adenoma transformation risk v40.9
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'priority_pleomorphic_adenoma_v409.py'
+      - 'audit_pleomorphic_adenoma_transformation_v409.py'
+      - 'runtime_entry_pasha.py'
+      - '.github/workflows/pleomorphic-adenoma-transformation-v409.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'priority_pleomorphic_adenoma_v409.py'
+      - 'audit_pleomorphic_adenoma_transformation_v409.py'
+      - 'runtime_entry_pasha.py'
+      - '.github/workflows/pleomorphic-adenoma-transformation-v409.yml'
+  workflow_dispatch:
+
+jobs:
+  transformation-risk:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python audit_pleomorphic_adenoma_transformation_v409.py
