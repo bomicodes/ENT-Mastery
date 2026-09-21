@@ -79,6 +79,7 @@ from or_followups_v411 import apply_or_followups_v411
 from or_complications_fix_v412 import apply_or_complications_fix_v412
 from or_landmarks_exitcheck_fix_v413 import apply_or_landmarks_exitcheck_fix_v413
 from deep_source_claim_backfill_v414 import apply_deep_source_claim_backfill_v414
+from csf_rhinorrhea_oncall_v416 import apply_csf_rhinorrhea_oncall_v416
 
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
@@ -155,6 +156,7 @@ OR_FOLLOWUPS_V411 = apply_or_followups_v411(runtime_entry.data, runtime_entry.ap
 OR_COMPLICATIONS_FIX_V412 = apply_or_complications_fix_v412(runtime_entry.data, runtime_entry.app_mod)
 OR_LANDMARKS_EXITCHECK_FIX_V413 = apply_or_landmarks_exitcheck_fix_v413(runtime_entry.data, runtime_entry.app_mod)
 DEEP_SOURCE_CLAIM_BACKFILL_V414 = apply_deep_source_claim_backfill_v414(runtime_entry.data, runtime_entry.app_mod)
+CSF_RHINORRHEA_ONCALL_V416 = apply_csf_rhinorrhea_oncall_v416(runtime_entry.data, runtime_entry.app_mod)
 DAILY_BLIND_CASE_LABELS_V402 = apply_daily_blind_case_labels_v402(daily_curriculum_quality_v368, runtime_entry.data)
 INTERPRETATION_LABS_CLEANUP_V250 = apply_interpretation_labs_cleanup_v250(runtime_entry.data, runtime_entry.app_mod)
 app=runtime_entry.app
