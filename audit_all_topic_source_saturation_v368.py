@@ -2,7 +2,7 @@
 """v37.1 all-topic Deep Curriculum source/core-text saturation non-regression gate.
 
 Inventories the fully assembled learner-facing Deep Curriculum and fails closed if the
-325-topic/nine-domain canonical contract drifts, source provenance is malformed, or
+327-topic/nine-domain canonical contract drifts, source provenance is malformed, or
 either source backlog grows. The ceilings are truthful ratchets from the last validated
 census and must only move downward as reviewed clinical/source cohorts land.
 """
@@ -14,19 +14,19 @@ import runtime_entry_pasha
 
 data = runtime_entry_pasha.runtime_entry.data
 EXPECTED_DOMAIN_COUNTS = {
-    "Otology / Neurotology": 47,
+    "Otology / Neurotology": 48,
     "Rhinology / Allergy / Skull Base": 42,
-    "Head & Neck Oncology": 43,
+    "Head & Neck Oncology": 42,
     "Thyroid / Parathyroid / Salivary": 32,
     "Pediatric Otolaryngology": 40,
     "Laryngology / Voice / Swallowing": 36,
-    "Facial Plastics / Trauma": 32,
+    "Facial Plastics / Trauma": 33,
     "Sleep Surgery": 21,
-    "General ENT / Emergencies": 32,
+    "General ENT / Emergencies": 33,
 }
 EXPECTED_TOTAL = sum(EXPECTED_DOMAIN_COUNTS.values())
-MAX_MISSING_SOURCE_BASIS = 139
-MAX_INCOMPLETE_CORE_TEXTBOOK = 69
+MAX_MISSING_SOURCE_BASIS = 0
+MAX_INCOMPLETE_CORE_TEXTBOOK = 0
 CORE_TEXTBOOK_TOKENS = ("cummings", "pasha", "k.j. lee")
 
 
@@ -70,6 +70,8 @@ def main():
     malformed = []
     missing_cummings = []
     missing_companion_core = []
+    invalid_locator_metadata = []
+    inflated_locator_claims = []
     for domain, row in rows:
         topic = str(row.get("topic") or "").strip()
         raw_sources = row.get("source_basis")
@@ -90,6 +92,11 @@ def main():
             missing_cummings.append((domain, topic))
         if "pasha" not in joined and "k.j. lee" not in joined:
             missing_companion_core.append((domain, topic))
+        metadata = row.get("source_metadata_v408") or {}
+        if not isinstance(metadata, dict) or metadata.get("locator_level") != "domain-foundational":
+            invalid_locator_metadata.append((domain, topic))
+        if "canonical locator:" in joined:
+            inflated_locator_claims.append((domain, topic))
 
     print(f"SOURCE_SATURATION_TOTAL={len(rows)}")
     print(f"SOURCE_SATURATION_SOURCED={len(sourced)}")
@@ -99,6 +106,8 @@ def main():
     print(f"SOURCE_SATURATION_MALFORMED_SOURCE_BASIS={len(malformed)}")
     print(f"SOURCE_SATURATION_MISSING_CUMMINGS={len(missing_cummings)}")
     print(f"SOURCE_SATURATION_MISSING_PASHA_OR_KJLEE={len(missing_companion_core)}")
+    print(f"SOURCE_SATURATION_INVALID_LOCATOR_METADATA={len(invalid_locator_metadata)}")
+    print(f"SOURCE_SATURATION_INFLATED_LOCATOR_CLAIMS={len(inflated_locator_claims)}")
 
     missing_by_domain = Counter(domain for domain, _ in missing)
     incomplete_by_domain = Counter(domain for domain, _, _ in incomplete)
@@ -124,6 +133,16 @@ def main():
             "incomplete core-textbook backlog regressed: "
             f"expected <= {MAX_INCOMPLETE_CORE_TEXTBOOK}, found {len(incomplete)}"
         )
+    if invalid_locator_metadata:
+        failures += fail(
+            "v40.8 locator metadata missing or overstated on "
+            f"{len(invalid_locator_metadata)} canonical row(s)"
+        )
+    if inflated_locator_claims:
+        failures += fail(
+            "legacy topic-level canonical-locator claim remains on "
+            f"{len(inflated_locator_claims)} canonical row(s)"
+        )
 
     for domain, topic, source_type in malformed:
         print(f"SOURCE_BACKLOG_MALFORMED\t{domain}\t{topic}\ttype={source_type}")
@@ -137,7 +156,7 @@ def main():
         return 1
 
     print(
-        "PASS: exact 325-topic/nine-domain live canonical contract inventoried; source_basis schema, "
+        "PASS: exact 327-topic/nine-domain live canonical contract inventoried; source_basis schema, "
         "missing-source and incomplete core-textbook backlogs cannot silently regress."
     )
     return 0
