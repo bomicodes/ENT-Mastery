@@ -87,6 +87,7 @@ from interpretation_labs_remaining_ten_v419 import apply_interpretation_labs_rem
 from or_prep_followup_depth_v420 import apply_or_prep_followup_depth_v420
 from deep_curriculum_new_topic_gaps_v421 import apply_deep_curriculum_new_topic_gaps_v421
 from allergy_anaphylaxis_deep_dive_v422 import apply_allergy_anaphylaxis_deep_dive_v422
+from sialolithiasis_consolidation_v424 import apply_sialolithiasis_consolidation_v424
 
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
@@ -173,6 +174,7 @@ INTERPRETATION_LABS_REMAINING_TEN_V419 = apply_interpretation_labs_remaining_ten
 OR_PREP_FOLLOWUP_DEPTH_V420 = apply_or_prep_followup_depth_v420(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_NEW_TOPIC_GAPS_V421 = apply_deep_curriculum_new_topic_gaps_v421(runtime_entry.data, runtime_entry.app_mod)
 ALLERGY_ANAPHYLAXIS_DEEP_DIVE_V422 = apply_allergy_anaphylaxis_deep_dive_v422(runtime_entry.data, runtime_entry.app_mod)
+SIALOLITHIASIS_CONSOLIDATION_V424 = apply_sialolithiasis_consolidation_v424(runtime_entry.data, runtime_entry.app_mod)
 app=runtime_entry.app
 PRACTICE_BANK_NAVIGATION_V150 = install_practice_bank_navigation_v150(app, runtime_entry.app_mod)
 if "pasha_review" not in app.blueprints:

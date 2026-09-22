@@ -259,6 +259,7 @@ TOPIC_CASE_LABELS = {
     "Nasal Dermoid Cyst": "Congenital midline nasal mass",
     "Cervical Necrotizing Fasciitis": "Rapidly progressive neck infection with systemic toxicity",
     "External Branch of the Superior Laryngeal Nerve Injury": "Subtle pitch/projection change after neck surgery",
+    "Sialolithiasis": "Recurrent, meal-related salivary gland swelling",
 }
 
 

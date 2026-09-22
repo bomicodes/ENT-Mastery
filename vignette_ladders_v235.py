@@ -21,19 +21,19 @@ def _q(qid,topic,stage,stem,choices,answer,explanation,why_wrong,pearl,curveball
             "mode":"Vignette","focus":focus,"ladder_reviewed":True}
 
 VIGNETTES_V235=[
-_q("v235_tps_smstone_fnd","Submandibular Sialolithiasis","foundation",
+_q("v235_tps_smstone_fnd","Sialolithiasis","foundation",
 "A patient has recurrent painful swelling under the jaw every time they eat. Bimanual palpation finds a hard focus in the floor of mouth along Wharton duct. What is the most likely diagnosis?",
 ["Submandibular sialolithiasis","Parotid malignancy","Thyroglossal duct cyst","Peritonsillar abscess"],0,
 "Meal-triggered submandibular pain and swelling with a palpable ductal calculus is classic obstructive submandibular sialolithiasis. The submandibular gland is particularly prone to stones because of its mucous-rich saliva and long uphill duct course.",
 ["Correct. The temporal relationship to salivary stimulation and ductal stone localize the problem.","A parotid tumor does not usually cause reproducible meal-triggered submandibular swelling.","A thyroglossal cyst is a midline developmental lesion rather than an obstructed Wharton duct.","A peritonsillar abscess presents with acute pharyngeal infection, not recurrent meal-related gland swelling."],
 "Recurrent swelling with meals is salivary obstruction until proven otherwise.","Which stone locations are most accessible to transoral removal versus endoscopic or combined approaches?"),
-_q("v235_tps_smstone_app","Submandibular Sialolithiasis","application",
+_q("v235_tps_smstone_app","Sialolithiasis","application",
 "Ultrasound shows a mobile distal Wharton-duct stone in a patient with recurrent obstructive symptoms but no abscess. What treatment principle best preserves gland function?",
 ["Choose a gland-preserving ductal approach such as transoral stone removal or sialendoscopic management based on size and location before defaulting to gland excision","Excise the submandibular gland for every stone","Treat indefinitely with antibiotics despite no infection","Observe until the gland becomes permanently fibrotic"],0,
 "Most accessible ductal stones can be treated with gland-preserving techniques. Distal stones may be removed transorally, while endoscopic or combined approaches can address selected more proximal disease; gland excision is generally reserved for disease not amenable to conservative or minimally invasive management.",
 ["Correct. Modern management is location- and anatomy-driven with gland preservation when feasible.","Routine gland excision creates avoidable nerve and scar morbidity for many accessible stones.","Antibiotics treat bacterial sialadenitis, not the obstructing calculus itself.","Waiting for repeated inflammation can worsen ductal stenosis and gland damage."],
 "Treat the obstruction, not just each inflammatory flare.","How does an intraparenchymal or impacted hilar stone change the discussion?","OR_prep"),
-_q("v235_tps_smstone_snr","Submandibular Sialolithiasis","senior_decision",
+_q("v235_tps_smstone_snr","Sialolithiasis","senior_decision",
 "A patient has a large impacted hilar submandibular stone, recurrent infections, and a functioning gland. Endoscopic retrieval alone is unlikely. What is the best senior-level principle?",
 ["Automatically excise the gland","Consider a combined endoscopic-transoral gland-preserving approach when expertise and anatomy permit, while counseling that gland excision may be necessary if safe stone clearance is not achievable","Break the stone blindly with forceps","Leave the obstruction untreated permanently"],1,
 "Large hilar stones may require a combined approach that uses endoscopy for localization and transoral access for removal. The decision depends on duct anatomy, stone position, gland function, prior infection, and local expertise; submandibular gland excision remains a fallback rather than an automatic first step.",
