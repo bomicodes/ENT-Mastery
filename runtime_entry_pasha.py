@@ -92,6 +92,7 @@ from sialendoscopy_lithotripsy_and_skull_base_syndromes_v425 import apply_sialen
 from allergy_seasonal_oas_v426 import apply_allergy_seasonal_oas_v426
 from facial_plastics_chemical_peels_v427 import apply_facial_plastics_chemical_peels_v427
 from allergy_domain_consolidation_v428 import apply_allergy_domain_consolidation_v428
+from oral_cavity_neck_dissection_depth_v429 import apply_oral_cavity_neck_dissection_depth_v429
 
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
@@ -183,6 +184,7 @@ SIALENDOSCOPY_LITHOTRIPSY_AND_SKULL_BASE_SYNDROMES_V425 = apply_sialendoscopy_li
 ALLERGY_SEASONAL_OAS_V426 = apply_allergy_seasonal_oas_v426(runtime_entry.data, runtime_entry.app_mod)
 FACIAL_PLASTICS_CHEMICAL_PEELS_V427 = apply_facial_plastics_chemical_peels_v427(runtime_entry.data, runtime_entry.app_mod)
 ALLERGY_DOMAIN_CONSOLIDATION_V428 = apply_allergy_domain_consolidation_v428(runtime_entry.data, runtime_entry.app_mod)
+ORAL_CAVITY_NECK_DISSECTION_DEPTH_V429 = apply_oral_cavity_neck_dissection_depth_v429(runtime_entry.data, runtime_entry.app_mod)
 app=runtime_entry.app
 PRACTICE_BANK_NAVIGATION_V150 = install_practice_bank_navigation_v150(app, runtime_entry.app_mod)
 if "pasha_review" not in app.blueprints:
