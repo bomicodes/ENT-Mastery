@@ -260,6 +260,9 @@ TOPIC_CASE_LABELS = {
     "Cervical Necrotizing Fasciitis": "Rapidly progressive neck infection with systemic toxicity",
     "External Branch of the Superior Laryngeal Nerve Injury": "Subtle pitch/projection change after neck surgery",
     "Sialolithiasis": "Recurrent, meal-related salivary gland swelling",
+    "Gradenigo Syndrome (Petrous Apicitis)": "Otogenic pain with new eye-turning weakness",
+    "Vernet Syndrome (Jugular Foramen Syndrome)": "Combined swallow, voice, and shoulder weakness",
+    "Oral Allergy Syndrome (Pollen-Food Syndrome)": "Mouth/lip itching triggered by specific raw fruits",
 }
 
 
