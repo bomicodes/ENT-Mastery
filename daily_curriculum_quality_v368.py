@@ -139,6 +139,8 @@ PROCEDURE_TOPICS = {
     "Facial Nerve Reanimation", "Hypoglossal Nerve Stimulation",
     "Palatal Surgery", "Tongue Base Surgery", "Maxillomandibular Advancement",
     "Deep Neck Abscess Drainage",
+    "Sentinel Lymph Node Biopsy in Oral Cavity Cancer",
+    "Ear and Nasal Foreign Body Removal",
 }
 
 COMPLICATION_TOPICS = {
@@ -250,6 +252,7 @@ TOPIC_CASE_LABELS = {
     "Tracheomalacia / Bronchomalacia": "Dynamic pediatric airway symptoms",
     "Carotid Blowout Syndrome": "Sentinel or major neck bleeding",
     "Septal Hematoma": "Post-traumatic nasal obstruction",
+    "Laryngopharyngeal Reflux (LPR)": "Chronic throat symptoms without heartburn",
 }
 
 

@@ -2,16 +2,20 @@
 """v37.1 all-topic Deep Curriculum source/core-text saturation non-regression gate.
 
 Inventories the fully assembled learner-facing Deep Curriculum and fails closed if the
-326-topic/nine-domain canonical contract drifts, source provenance is malformed, or
+343-topic/nine-domain canonical contract drifts, source provenance is malformed, or
 either source backlog grows. The ceilings are truthful ratchets from the last validated
-census and must only move downward as reviewed clinical/source cohorts land.
+census and move only for a reviewed cleanup or deliberate sourced expansion.
 
 Note (v40.7 fix): "Salivary Gland Malignancy" is intentionally NOT duplicated into
 Head & Neck Oncology -- it already existed under Thyroid / Parathyroid / Salivary, and
 the AJCC v9 depth/sourcing update is merged into that single canonical entry instead.
 A second same-named topic in a different domain collides on the auto-generated
 blind-quiz case label and trips the v40.3 boot-time duplicate-label check, so
-Head & Neck Oncology stays at 41 (not 42) and the total stays at 326 (not 327).
+that change alone left Head & Neck Oncology at 41 and the total at 326.
+
+Note (v42.1): a reviewed 17-topic expansion raises the canonical total to 343:
+Otology +3, Rhinology +3, Head & Neck Oncology +1, Thyroid/Salivary +3,
+Pediatrics +3, Laryngology +1, Facial Plastics +1, and General ENT +2.
 """
 
 from collections import Counter
@@ -21,15 +25,15 @@ import runtime_entry_pasha
 
 data = runtime_entry_pasha.runtime_entry.data
 EXPECTED_DOMAIN_COUNTS = {
-    "Otology / Neurotology": 48,
-    "Rhinology / Allergy / Skull Base": 42,
-    "Head & Neck Oncology": 41,
-    "Thyroid / Parathyroid / Salivary": 32,
-    "Pediatric Otolaryngology": 40,
-    "Laryngology / Voice / Swallowing": 36,
-    "Facial Plastics / Trauma": 33,
+    "Otology / Neurotology": 51,
+    "Rhinology / Allergy / Skull Base": 45,
+    "Head & Neck Oncology": 42,
+    "Thyroid / Parathyroid / Salivary": 35,
+    "Pediatric Otolaryngology": 43,
+    "Laryngology / Voice / Swallowing": 37,
+    "Facial Plastics / Trauma": 34,
     "Sleep Surgery": 21,
-    "General ENT / Emergencies": 33,
+    "General ENT / Emergencies": 35,
 }
 EXPECTED_TOTAL = sum(EXPECTED_DOMAIN_COUNTS.values())
 MAX_MISSING_SOURCE_BASIS = 0
@@ -163,7 +167,7 @@ def main():
         return 1
 
     print(
-        "PASS: exact 326-topic/nine-domain live canonical contract inventoried; source_basis schema, "
+        "PASS: exact 343-topic/nine-domain live canonical contract inventoried; source_basis schema, "
         "missing-source and incomplete core-textbook backlogs cannot silently regress."
     )
     return 0
