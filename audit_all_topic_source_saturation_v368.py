@@ -21,6 +21,21 @@ Note (v42.2): a user-requested allergy/anaphylaxis deep dive added one more topi
 "Anaphylaxis" (General ENT / Emergencies), since epinephrine dosing/timing and the
 vasovagal-syncope differential existed nowhere in the curriculum. Total: 343 -> 344,
 General ENT / Emergencies 35 -> 36.
+
+Note (v42.5): a skull-base eponymous-syndrome coverage check (prompted by a quiz
+screenshot) added four topics that existed nowhere in the curriculum: "Orbital
+Apex Syndrome" (Rhinology/Allergy/Skull Base), "Vernet Syndrome (Jugular Foramen
+Syndrome)" and "Gradenigo Syndrome (Petrous Apicitis)" (Otology/Neurotology), and
+"Villaret Syndrome (Retroparotid Space Syndrome)" (Head & Neck Oncology) --
+Lemierre Syndrome already existed. Total: 344 -> 348. Otology/Neurotology 51 -> 53,
+Rhinology/Allergy/Skull Base 45 -> 46, Head & Neck Oncology 42 -> 43.
+
+Note (v42.8): per user request, "Anaphylaxis" moved from General ENT / Emergencies
+into Rhinology / Allergy / Skull Base (it belongs with the rest of the allergy
+content), and "Oral Allergy Syndrome (Pollen-Food Syndrome)" was promoted from an
+addendum inside Allergic Rhinitis into its own topic. Total: 348 -> 349 (the
+Anaphylaxis move is domain-neutral for the total; the OAS split adds one topic).
+Rhinology/Allergy/Skull Base 46 -> 48, General ENT / Emergencies 36 -> 35.
 """
 
 from collections import Counter
@@ -30,15 +45,15 @@ import runtime_entry_pasha
 
 data = runtime_entry_pasha.runtime_entry.data
 EXPECTED_DOMAIN_COUNTS = {
-    "Otology / Neurotology": 51,
-    "Rhinology / Allergy / Skull Base": 45,
-    "Head & Neck Oncology": 42,
+    "Otology / Neurotology": 53,
+    "Rhinology / Allergy / Skull Base": 48,
+    "Head & Neck Oncology": 43,
     "Thyroid / Parathyroid / Salivary": 35,
     "Pediatric Otolaryngology": 43,
     "Laryngology / Voice / Swallowing": 37,
     "Facial Plastics / Trauma": 34,
     "Sleep Surgery": 21,
-    "General ENT / Emergencies": 36,
+    "General ENT / Emergencies": 35,
 }
 EXPECTED_TOTAL = sum(EXPECTED_DOMAIN_COUNTS.values())
 MAX_MISSING_SOURCE_BASIS = 0
@@ -172,7 +187,7 @@ def main():
         return 1
 
     print(
-        "PASS: exact 344-topic/nine-domain live canonical contract inventoried; source_basis schema, "
+        "PASS: exact 349-topic/nine-domain live canonical contract inventoried; source_basis schema, "
         "missing-source and incomplete core-textbook backlogs cannot silently regress."
     )
     return 0
