@@ -141,6 +141,8 @@ PROCEDURE_TOPICS = {
     "Deep Neck Abscess Drainage",
     "Sentinel Lymph Node Biopsy in Oral Cavity Cancer",
     "Ear and Nasal Foreign Body Removal",
+    "Blepharoplasty / Eyelid Malposition (Ptosis, Ectropion, Entropion)",
+    "Endoscopic Pituitary / Anterior Skull Base Approach",
 }
 
 COMPLICATION_TOPICS = {
@@ -151,6 +153,7 @@ COMPLICATION_TOPICS = {
     "Post-Tonsillectomy Hemorrhage", "Tracheostomy Emergency",
     "Postoperative Neck Hematoma", "Chyle Leak",
     "Esophageal Perforation / Cervical Mediastinitis", "Septal Hematoma",
+    "External Branch of the Superior Laryngeal Nerve Injury",
 }
 
 # These are decision tools, symptom frameworks, or cross-cutting clinical maps.
@@ -253,6 +256,9 @@ TOPIC_CASE_LABELS = {
     "Carotid Blowout Syndrome": "Sentinel or major neck bleeding",
     "Septal Hematoma": "Post-traumatic nasal obstruction",
     "Laryngopharyngeal Reflux (LPR)": "Chronic throat symptoms without heartburn",
+    "Nasal Dermoid Cyst": "Congenital midline nasal mass",
+    "Cervical Necrotizing Fasciitis": "Rapidly progressive neck infection with systemic toxicity",
+    "External Branch of the Superior Laryngeal Nerve Injury": "Subtle pitch/projection change after neck surgery",
 }
 
 

@@ -2,7 +2,7 @@
 """v37.1 all-topic Deep Curriculum source/core-text saturation non-regression gate.
 
 Inventories the fully assembled learner-facing Deep Curriculum and fails closed if the
-343-topic/nine-domain canonical contract drifts, source provenance is malformed, or
+344-topic/nine-domain canonical contract drifts, source provenance is malformed, or
 either source backlog grows. The ceilings are truthful ratchets from the last validated
 census and move only for a reviewed cleanup or deliberate sourced expansion.
 
@@ -16,6 +16,11 @@ that change alone left Head & Neck Oncology at 41 and the total at 326.
 Note (v42.1): a reviewed 17-topic expansion raises the canonical total to 343:
 Otology +3, Rhinology +3, Head & Neck Oncology +1, Thyroid/Salivary +3,
 Pediatrics +3, Laryngology +1, Facial Plastics +1, and General ENT +2.
+
+Note (v42.2): a user-requested allergy/anaphylaxis deep dive added one more topic,
+"Anaphylaxis" (General ENT / Emergencies), since epinephrine dosing/timing and the
+vasovagal-syncope differential existed nowhere in the curriculum. Total: 343 -> 344,
+General ENT / Emergencies 35 -> 36.
 """
 
 from collections import Counter
@@ -33,7 +38,7 @@ EXPECTED_DOMAIN_COUNTS = {
     "Laryngology / Voice / Swallowing": 37,
     "Facial Plastics / Trauma": 34,
     "Sleep Surgery": 21,
-    "General ENT / Emergencies": 35,
+    "General ENT / Emergencies": 36,
 }
 EXPECTED_TOTAL = sum(EXPECTED_DOMAIN_COUNTS.values())
 MAX_MISSING_SOURCE_BASIS = 0
@@ -167,7 +172,7 @@ def main():
         return 1
 
     print(
-        "PASS: exact 343-topic/nine-domain live canonical contract inventoried; source_basis schema, "
+        "PASS: exact 344-topic/nine-domain live canonical contract inventoried; source_basis schema, "
         "missing-source and incomplete core-textbook backlogs cannot silently regress."
     )
     return 0
