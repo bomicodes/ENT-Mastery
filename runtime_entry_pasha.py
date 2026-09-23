@@ -98,6 +98,9 @@ from clinical_challenge_gapfill_v431 import apply_clinical_challenge_gapfill_v43
 from or_prep_attending_followup_gapfill_v432 import apply_or_prep_attending_followup_gapfill_v432
 from oral_board_simulator_v433 import apply_oral_board_simulator_v433
 from concept_check_why_wrong_gapfill_v434 import apply_concept_check_why_wrong_gapfill_v434
+from otosclerosis_duplicate_merge_v435 import apply_otosclerosis_duplicate_merge_v435
+from evidence_catalog_gapfill_v436 import apply_evidence_catalog_gapfill_v436
+from anatomy_atlas_schematics_v437 import apply_anatomy_atlas_schematics_v437
 
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
@@ -195,6 +198,9 @@ CLINICAL_CHALLENGE_GAPFILL_V431 = apply_clinical_challenge_gapfill_v431(runtime_
 OR_PREP_ATTENDING_FOLLOWUP_GAPFILL_V432 = apply_or_prep_attending_followup_gapfill_v432(runtime_entry.data, runtime_entry.app_mod)
 ORAL_BOARD_SIMULATOR_V433 = apply_oral_board_simulator_v433(runtime_entry.data, runtime_entry.app_mod)
 CONCEPT_CHECK_WHY_WRONG_GAPFILL_V434 = apply_concept_check_why_wrong_gapfill_v434(runtime_entry.data, runtime_entry.app_mod)
+OTOSCLEROSIS_DUPLICATE_MERGE_V435 = apply_otosclerosis_duplicate_merge_v435(runtime_entry.data, runtime_entry.app_mod)
+EVIDENCE_CATALOG_GAPFILL_V436 = apply_evidence_catalog_gapfill_v436(runtime_entry.data, runtime_entry.app_mod)
+ANATOMY_ATLAS_SCHEMATICS_V437 = apply_anatomy_atlas_schematics_v437(runtime_entry.data, runtime_entry.app_mod)
 # Resolve these late-registered topics against the final live curriculum.
 # The parent-concept snapshot in data.py is built before the patch chain finishes.
 runtime_entry.data.LAB_PARENT_TOPIC_V98.update({

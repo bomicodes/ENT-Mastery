@@ -45,12 +45,20 @@
 {% if x.anatomy_visual_status == 'verified_classical_plate' and x.image_url %}
       <figure class="anatomy-source-figure">
         <img src="{{x.image_url}}" alt="{{x.topic}} anatomy source plate" loading="lazy" referrerpolicy="no-referrer"
-             onerror="this.closest('figure').classList.add('image-failed')">
+             onerror="{% if x.legacy_schematic %}this.onerror=null;this.src='{{ url_for('static', filename=x.legacy_schematic) }}';{% else %}this.closest('figure').classList.add('image-failed');{% endif %}">
         <figcaption>
           <span>{{x.image_credit}}</span>
           <a href="{{x.image_source}}" target="_blank" rel="noopener">Open source / attribution ↗</a>
         </figcaption>
         <div class="anatomy-image-fallback">Source plate could not load in-browser. <a href="{{x.image_source}}" target="_blank" rel="noopener">Open the cited source directly ↗</a></div>
+      </figure>
+      {% elif x.legacy_schematic %}
+      <figure class="anatomy-source-figure">
+        <img src="{{ url_for('static', filename=x.legacy_schematic) }}" alt="{{x.topic}} orientation schematic" loading="lazy">
+        <figcaption>
+          <span>In-house orientation schematic (not a photographic plate) &middot; landmarks and danger structures match this card</span>
+          {% if x.image_source %}<a href="{{x.image_source}}" target="_blank" rel="noopener">Modern photographic reference ↗</a>{% endif %}
+        </figcaption>
       </figure>
       {% elif x.anatomy_visual_status == 'modern_source_needed' %}
       <div class="anatomy-source-needed">

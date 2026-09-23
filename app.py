@@ -79,6 +79,14 @@ def learn():
 
 @app.route("/topic/<slug>")
 def topic(slug):
+    # Best-effort resolve to a real curriculum concept instead of always
+    # dropping into a free-text search, which loses the target entirely.
+    norm=re.sub(r"[^a-z0-9]+","-",slug.lower()).strip("-")
+    for dname,mods in DEEP_MODULES_V6.items():
+        for mod in mods:
+            topic_slug=re.sub(r"[^a-z0-9]+","-",mod["topic"].lower()).strip("-")
+            if topic_slug==norm:
+                return redirect(url_for("concept_hub_id",concept_id=_v6_item_id(dname,mod["topic"])))
     return redirect(url_for("search", q=slug.replace("-"," ")))
 
 def _canonical_search_index():
@@ -443,7 +451,10 @@ def anatomy():
     for x in ANATOMY_ATLAS_V97: regions.setdefault(x["region"],[]).append(x)
     return render_template("anatomy_atlas.html",regions=regions,total=len(ANATOMY_ATLAS_V97))
 @app.route("/complications")
-def complications(): return redirect(url_for("curriculum_depth"))
+def complications():
+    # Complications content actually lives on OR-prep cards, not the curriculum
+    # depth page this used to silently redirect to.
+    return redirect(url_for("case_tomorrow"))
 
 def _adaptive_lab_session(slug,cases,count=7):
     progress=lab_progress(slug)
