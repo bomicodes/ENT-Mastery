@@ -431,7 +431,7 @@ def mastery_miss():
 @app.route("/cases")
 def cases(): return redirect(url_for("integrated_index"))
 @app.route("/case/<cid>")
-def case(cid): return redirect(url_for("integrated_index"))
+def case(cid): return redirect(url_for("integrated_case",case_id=cid))
 @app.route("/operate")
 def operate(): return redirect(url_for("case_tomorrow"))
 @app.route("/operate/<slug>")
@@ -494,7 +494,20 @@ def lab_rate():
     try: rating=int(d.get("rating",2))
     except Exception: rating=2
     if not slug or not case_id or rating not in (0,1,2,3): return jsonify({"error":"invalid lab rating"}),400
-    record_lab_attempt(slug,case_id,concept_id,rating); variant=d.get("variant_type","interpret"); dimension={"interpret":"recognition","reason":"reasoning","teach":"teaching"}.get(variant,"recognition"); parent=LAB_PARENT_CONCEPT_V98.get(slug,concept_id); record_mastery_event(parent,canonical_concept_domain_v98(parent,d.get("domain",slug)),dimension,rating,"interpretation_atlas",case_id,d.get("miss_type")); return jsonify({"ok":True,"stats":lab_stats(slug)})
+    record_lab_attempt(slug,case_id,concept_id,rating); variant=d.get("variant_type","interpret"); dimension={"interpret":"recognition","reason":"reasoning","teach":"teaching"}.get(variant,"recognition")
+    # Resolve fresh from the current curriculum rather than a dict snapshot taken at
+    # data.py import time -- LAB_PARENT_CONCEPT_V98 is baked before some topics/patches
+    # land, which silently orphaned labs like audiologic-electrophysiology into
+    # fragmented per-case concept ids (v43.4 fix). Compute the id directly via
+    # _v6_item_id rather than canonical_concept_id_v98, which a later patch
+    # (clinical_hierarchy_v167) rebinds to a 2-arg alias wrapper with no topic= kwarg.
+    parent_topic=LAB_PARENT_TOPIC_V98.get(slug)
+    parent=LAB_PARENT_CONCEPT_V98.get(slug,concept_id)
+    if parent_topic:
+        for _dom,_cards in DEEP_MODULES_V6.items():
+            if any(_c.get("topic")==parent_topic for _c in _cards):
+                parent=_v6_item_id(_dom,parent_topic); break
+    record_mastery_event(parent,canonical_concept_domain_v98(parent,d.get("domain",slug)),dimension,rating,"interpretation_atlas",case_id,d.get("miss_type")); return jsonify({"ok":True,"stats":lab_stats(slug)})
 
 @app.route("/attending")
 def attending():

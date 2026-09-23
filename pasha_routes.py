@@ -2,7 +2,8 @@ import random, re
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for
 from pasha_review_data import PASHA_CHAPTERS, PASHA_CHAPTER_BY_ID, PASHA_SEED_QUESTIONS
 from pasha_db import pasha_progress, record_pasha_attempt
-from data import CONCEPT_CHECKS_V112, CLINICAL_CHALLENGES_V119, canonical_domain_v94, canonical_concept_id_v98
+import data as _data_module
+from data import canonical_domain_v94, canonical_concept_id_v98
 
 bp=Blueprint("pasha_review",__name__)
 
@@ -28,15 +29,31 @@ def _canonical_question(q, prefix):
     qid=str(q.get("id") or f"{prefix}-{abs(hash(stem))}")
     return {"id":f"{prefix}:{qid}","stem":stem,"choices":choices,"answer":answer,"explanation":str(explanation),"domain":domain,"topic":topic,"concept_id":cid}
 
-def _source_pool():
+# v43.4: this module was imported (and SOURCE_POOL snapshotted) partway through
+# the runtime_entry_pasha patch chain, before dozens of later patches finished
+# appending to CONCEPT_CHECKS_V112/CLINICAL_CHALLENGES_V119 -- confirmed live at
+# 1866 vs. 1929 valid live MCQs in the patch author's final boot audit.
+# Recompute from the live data module instead of a one-time snapshot, cached and
+# invalidated when either bank changes identity or size. Later patches sometimes
+# replace a whole list with a new one of the same length.
+_SOURCE_POOL_CACHE={"key":None,"pool":[]}
+
+def _build_source_pool():
     pool=[]
-    for q in (CONCEPT_CHECKS_V112 or []):
+    for q in (_data_module.CONCEPT_CHECKS_V112 or []):
         if _valid_mcq(q): pool.append(_canonical_question(q,"cc"))
-    for q in (CLINICAL_CHALLENGES_V119 or []):
+    for q in (_data_module.CLINICAL_CHALLENGES_V119 or []):
         if _valid_mcq(q): pool.append(_canonical_question(q,"challenge"))
     return pool
 
-SOURCE_POOL=_source_pool()
+def _source_pool():
+    checks=_data_module.CONCEPT_CHECKS_V112
+    challenges=_data_module.CLINICAL_CHALLENGES_V119
+    key=(id(checks), len(checks or []), id(challenges), len(challenges or []))
+    if _SOURCE_POOL_CACHE["key"] != key:
+        _SOURCE_POOL_CACHE["pool"]=_build_source_pool()
+        _SOURCE_POOL_CACHE["key"]=key
+    return _SOURCE_POOL_CACHE["pool"]
 
 def _seed_questions(chapter):
     out=[]
@@ -60,7 +77,7 @@ def _section_score(q, chapter, section):
 def section_questions(chapter, section, target=20):
     section_id=section[0]
     candidates=[]
-    for q in SOURCE_POOL:
+    for q in _source_pool():
         s=_section_score(q,chapter,section)
         if s>0:
             z=dict(q); z["section_id"]=section_id; candidates.append((s,z))
@@ -71,7 +88,7 @@ def section_questions(chapter, section, target=20):
     if len(rows)<min(8,target):
         # Fallback questions are from the same domain but may not test this precise subsection.
         used={x["id"] for x in rows}
-        extras=[dict(q,section_id=section_id) for q in SOURCE_POOL if canonical_domain_v94(q.get("domain"))==canonical_domain_v94(chapter["domain"]) and q["id"] not in used]
+        extras=[dict(q,section_id=section_id) for q in _source_pool() if canonical_domain_v94(q.get("domain"))==canonical_domain_v94(chapter["domain"]) and q["id"] not in used]
         rows.extend(extras[:max(0,min(target,12)-len(rows))])
     return rows[:target]
 

@@ -149,6 +149,7 @@ def _canonical_search_index_v150():
     bank_rows = [
         {"type":"Practice bank","title":"Clinical Challenges","subtitle":f"{len(data.CLINICAL_CHALLENGES_V119)} board-style vignettes","url":"/clinical-challenges","text":"clinical challenges board vignettes overnight call OR prep postoperative call clinical reasoning"},
         {"type":"Practice bank","title":"Concept Checks","subtitle":f"{len(data.CONCEPT_CHECKS_V112)} board-recall questions","url":"/concept-checks","text":"concept checks board recall questions clinical vignettes active recall knowledge checks boards"},
+        {"type":"Practice bank","title":"Mock Oral Board","subtitle":"Self-test / reveal case simulator","url":"/oral-boards","text":"mock oral board simulator self test reveal escalating attending pimping viva examiner questions"},
     ]
     for row in bank_rows:
         key=(row["type"],row["url"])
