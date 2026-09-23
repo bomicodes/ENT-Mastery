@@ -96,6 +96,7 @@ from oral_cavity_neck_dissection_depth_v429 import apply_oral_cavity_neck_dissec
 from cleft_palate_tensor_veli_palatini_v430 import apply_cleft_palate_tensor_veli_palatini_v430
 from clinical_challenge_gapfill_v431 import apply_clinical_challenge_gapfill_v431
 from or_prep_attending_followup_gapfill_v432 import apply_or_prep_attending_followup_gapfill_v432
+from oral_board_simulator_v433 import apply_oral_board_simulator_v433
 
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
@@ -191,6 +192,7 @@ ORAL_CAVITY_NECK_DISSECTION_DEPTH_V429 = apply_oral_cavity_neck_dissection_depth
 CLEFT_PALATE_TENSOR_VELI_PALATINI_V430 = apply_cleft_palate_tensor_veli_palatini_v430(runtime_entry.data, runtime_entry.app_mod)
 CLINICAL_CHALLENGE_GAPFILL_V431 = apply_clinical_challenge_gapfill_v431(runtime_entry.data, runtime_entry.app_mod)
 OR_PREP_ATTENDING_FOLLOWUP_GAPFILL_V432 = apply_or_prep_attending_followup_gapfill_v432(runtime_entry.data, runtime_entry.app_mod)
+ORAL_BOARD_SIMULATOR_V433 = apply_oral_board_simulator_v433(runtime_entry.data, runtime_entry.app_mod)
 app=runtime_entry.app
 PRACTICE_BANK_NAVIGATION_V150 = install_practice_bank_navigation_v150(app, runtime_entry.app_mod)
 if "pasha_review" not in app.blueprints:

@@ -1,0 +1,76 @@
+{% extends "base.html" %}{% block content %}
+<style>.oral-board-step[hidden], #oral-board-pearl[hidden] { display: none !important; }</style>
+<div class="breadcrumb"><a href="/">Home</a> / Oral Boards</div>
+<div class="hero tight">
+  <div>
+    <span class="eyebrow">SELF-TEST · REVEAL AS YOU GO</span>
+    <h1>Mock Oral Board</h1>
+    <p>Read the prompt, say your answer out loud, then reveal. Each case escalates like a real oral-board or OR pimping round.</p>
+  </div>
+</div>
+
+<form method="get" action="/oral-boards" class="card" style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:flex-end;margin-bottom:1rem">
+  <div>
+    <label for="source" style="display:block;font-size:.85rem;color:var(--muted,#666)">Format</label>
+    <select id="source" name="source">
+      <option value="all" {% if source=='all' %}selected{% endif %}>Any (clinical + OR)</option>
+      <option value="clinical" {% if source=='clinical' %}selected{% endif %}>Clinical vignette</option>
+      <option value="or_prep" {% if source=='or_prep' %}selected{% endif %}>OR / attending pimping</option>
+    </select>
+  </div>
+  <div>
+    <label for="domain" style="display:block;font-size:.85rem;color:var(--muted,#666)">Domain</label>
+    <select id="domain" name="domain">
+      <option value="all" {% if domain=='all' %}selected{% endif %}>All domains</option>
+      {% for d in domains %}
+      <option value="{{d}}" {% if domain==d %}selected{% endif %}>{{d}}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <button type="submit" class="case-btn">New case</button>
+  {% if pool_size %}<span class="muted" style="align-self:center">{{pool_size}} case{{'s' if pool_size != 1 else ''}} in this pool</span>{% endif %}
+</form>
+
+{% if not case %}
+<div class="card">
+  <p>No cases match this filter combination yet. Try "Any" format or a different domain.</p>
+</div>
+{% else %}
+<section class="card interp-case" id="oral-board" data-case-id="{{case.id}}">
+  <div class="interp-case-head">
+    <span class="tag">{{case.domain}}</span>
+    <span>{{case.subtitle}}</span>
+  </div>
+  <div class="commit-prompt">
+    <span class="eyebrow">{{'CASE' if case.source=='clinical' else 'OR CASE'}}</span>
+    <h2>{{case.title}}</h2>
+    {% if case.context %}<p class="lede">{{case.context}}</p>{% endif %}
+  </div>
+
+  <div style="display:grid;gap:1rem;margin-top:1rem">
+    {% for step in case.steps %}
+    <div class="card oral-board-step" style="background:var(--card-alt,#fafafa)">
+      <span class="reason-label">{{step.label|upper}}</span>
+      <p style="white-space:pre-line"><b>{{step.prompt}}</b></p>
+      {% if step.reveal %}
+      <details class="oral-board-reveal">
+        <summary>Reveal answer</summary>
+        <p style="white-space:pre-line">{{step.reveal}}</p>
+      </details>
+      {% endif %}
+    </div>
+    {% endfor %}
+
+    {% if case.pearl %}
+    <div class="card" id="oral-board-pearl"><span class="reason-label">BOARD PEARL</span><p>{{case.pearl}}</p></div>
+    {% endif %}
+  </div>
+
+  <div class="adaptive-actions" style="margin-top:1.25rem;display:flex;gap:.75rem;flex-wrap:wrap">
+    <a class="case-btn" href="{{url_for('oral_boards_v433', source=source, domain=domain, exclude=case.id)}}">Next case →</a>
+    {% if case.concept_id %}<a href="{{url_for('concept_hub_id', concept_id=case.concept_id)}}">Open full topic ↗</a>{% else %}<a href="{{url_for('search', q=case.title)}}">Explore topic ↗</a>{% endif %}
+  </div>
+</section>
+{% endif %}
+<script src="{{url_for('static', filename='oral_board_v433.js')}}" defer></script>
+{% endblock %}
