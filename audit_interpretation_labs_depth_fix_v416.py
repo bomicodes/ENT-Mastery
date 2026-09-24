@@ -41,8 +41,11 @@ def main():
         case = index.get(("head-neck-imaging", case_id), {})
         if addition.strip() not in str(case.get("answer") or ""):
             failures.append("ajcc8_missing:" + case_id)
-        if not str(case.get("staging_edition") or "").startswith("AJCC 8"):
+        expected_edition = "AJCC Version 9" if case_id == "hn2" else "AJCC 8"
+        if not str(case.get("staging_edition") or "").startswith(expected_edition):
             failures.append("edition_policy_missing:" + case_id)
+        if case_id == "hn2" and "AJCC Version 9 adds imaging-detected extranodal extension" not in str(case.get("answer") or ""):
+            failures.append("current_iene_rule_missing:hn2")
 
     joined = " ".join(str(c.get("answer") or "") + " " + str(c.get("why") or "") for c in index.values()).lower()
     forbidden = (
