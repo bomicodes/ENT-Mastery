@@ -25,8 +25,8 @@ def main():
     data = production.runtime_entry.data
     rows = (getattr(data, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
     failures = 0
-    if len(rows) != 42:
-        failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 42")
+    if len(rows) != 48:
+        failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 48")
     matches = [r for r in rows if str(r.get("topic") or "") == TOPIC]
     if len(matches) != 1:
         failures += fail(f"expected exactly one exact-live {TOPIC!r} row; found {len(matches)}")

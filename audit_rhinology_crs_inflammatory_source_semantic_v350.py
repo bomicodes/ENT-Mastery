@@ -34,7 +34,11 @@ def main():
     rows = (getattr(data, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
     by_topic = {str(r.get("topic") or ""): r for r in rows}
     failures = 0
-    if len(rows) != 42: failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 42")
+    # v44.2: stale gate from when the domain had 42 topics; a reviewed expansion
+    # (see audit_all_topic_source_saturation_v368.py's changelog) grew it to 48.
+    # Confirmed via `git stash` this fails identically on origin/main pre-2026-09-23,
+    # so it predates and is unrelated to any 2026-09-23 audit fix.
+    if len(rows) != 48: failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 48")
     ids = {topic: data._v6_item_id(DOMAIN, topic) for topic in TOPICS}
     for topic in TOPICS:
         row = by_topic.get(topic)

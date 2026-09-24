@@ -47,7 +47,7 @@ def main():
     canonical = [v6_item_id(domain, mod.get("topic")) for domain, rows in data.DEEP_MODULES_V6.items() for mod in rows]
     if len(canonical) != 325 or len(set(canonical)) != 325:
         failures.append(f"canonical_contract:{len(canonical)}:{len(set(canonical))}")
-    if len(modules) != 42 or len({text(x.get('topic')) for x in modules}) != 42:
+    if len(modules) != 48 or len({text(x.get('topic')) for x in modules}) != 48:
         failures.append(f"rhinology_inventory:{len(modules)}")
 
     matches = [mod for mod in modules if str(mod.get("topic") or "") == TOPIC]

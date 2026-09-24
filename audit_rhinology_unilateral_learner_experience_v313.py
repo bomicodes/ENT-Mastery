@@ -52,7 +52,7 @@ def main():
     ]
     if len(canonical) != 325 or len(set(canonical)) != 325:
         fail(failures, f"canonical_contract:{len(canonical)}:{len(set(canonical))}")
-    if len(modules) != 42 or len({text(x.get('topic')) for x in modules}) != 42:
+    if len(modules) != 48 or len({text(x.get('topic')) for x in modules}) != 48:
         fail(failures, f"rhinology_inventory:{len(modules)}")
 
     matches = [mod for mod in modules if str(mod.get("topic") or "") == TOPIC]

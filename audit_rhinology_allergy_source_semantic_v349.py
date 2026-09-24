@@ -49,8 +49,15 @@ def main():
 
     # Use the live canonical inventory, not aliases or a parallel hand-maintained slug list.
     expected_ids = {topic: data._v6_item_id(DOMAIN, topic) for topic in TOPICS}
-    if len(rows) != 42:
-        failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 42")
+    # v44.2: this gate was last updated when the domain had 42 topics; a reviewed
+    # expansion since then (Anaphylaxis moved in, Oral Allergy Syndrome split out,
+    # etc. -- see audit_all_topic_source_saturation_v368.py's changelog) grew it to
+    # 48, and this stale count was failing closed on live, correct data. Confirmed
+    # via `git stash` during the 2026-09-23 audit follow-up that this fails
+    # identically on origin/main before any 2026-09-23 change, so it is a pre-existing
+    # stale gate rather than something the audit's own fixes caused.
+    if len(rows) != 48:
+        failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 48")
 
     for topic in TOPICS:
         row = by_topic.get(topic)

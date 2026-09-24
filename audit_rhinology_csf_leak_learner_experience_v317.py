@@ -29,7 +29,7 @@ def main():
     failures = []
     canonical = [v6id(d, m.get("topic")) for d, mods in data.DEEP_MODULES_V6.items() for m in mods]
     if len(canonical) != 325 or len(set(canonical)) != 325: failures.append(f"canonical_contract:{len(canonical)}:{len(set(canonical))}")
-    if len(rows) != 42 or len({text(x.get('topic')) for x in rows}) != 42: failures.append(f"rhinology_inventory:{len(rows)}")
+    if len(rows) != 48 or len({text(x.get('topic')) for x in rows}) != 48: failures.append(f"rhinology_inventory:{len(rows)}")
     by_topic = {str(x.get("topic") or ""): x for x in rows}
     search = list(app._canonical_search_index())
     client = production.app.test_client()

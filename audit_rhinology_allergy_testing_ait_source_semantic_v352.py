@@ -37,7 +37,7 @@ def main():
     rows = (getattr(data, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
     by_topic = {str(r.get("topic") or ""): r for r in rows}
     failures = 0
-    if len(rows) != 42: failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 42")
+    if len(rows) != 48: failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 48")
     ids = {topic: data._v6_item_id(DOMAIN, topic) for topic in TOPICS}
     for topic in TOPICS:
         row = by_topic.get(topic)

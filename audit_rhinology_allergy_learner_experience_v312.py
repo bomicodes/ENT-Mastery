@@ -63,7 +63,7 @@ def main():
     canonical = [v6_item_id(domain, mod.get("topic")) for domain, rows in data.DEEP_MODULES_V6.items() for mod in rows]
     if len(canonical) != 325 or len(set(canonical)) != 325:
         fail(failures, f"canonical_contract:{len(canonical)}:{len(set(canonical))}")
-    if len(modules) != 42:
+    if len(modules) != 48:
         fail(failures, f"rhinology_inventory:{len(modules)}")
 
     by_topic = {str(mod.get("topic") or ""): mod for mod in modules}

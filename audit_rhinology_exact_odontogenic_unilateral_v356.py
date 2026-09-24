@@ -30,8 +30,8 @@ def main():
     rows = (getattr(data, "DEEP_MODULES_V6", {}) or {}).get(DOMAIN, []) or []
     failures = 0
 
-    if len(rows) != 42:
-        failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 42")
+    if len(rows) != 48:
+        failures += fail(f"Rhinology canonical inventory changed: {len(rows)} != 48")
     topic_names = [str(r.get("topic") or "") for r in rows]
     if len(topic_names) != len(set(topic_names)):
         failures += fail("Rhinology canonical inventory contains duplicate topic names")
