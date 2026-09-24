@@ -36,6 +36,18 @@ content), and "Oral Allergy Syndrome (Pollen-Food Syndrome)" was promoted from a
 addendum inside Allergic Rhinitis into its own topic. Total: 348 -> 349 (the
 Anaphylaxis move is domain-neutral for the total; the OAS split adds one topic).
 Rhinology/Allergy/Skull Base 46 -> 48, General ENT / Emergencies 36 -> 35.
+
+Note (v44.1): the 2026-09-23 deep audit's "missing dedicated topics" finding added 7
+topics the audit flagged as classic/frequently-tested content with no home in the
+curriculum: "Glomus Tumor / Paraganglioma" (Otology/Neurotology), "Laryngeal
+Electromyography (LEMG)" and "Laryngocele" (Laryngology/Voice/Swallowing), "Lip Cancer"
+(Head & Neck Oncology), and "Nasal Surgery as a CPAP-Adherence Adjunct", "Adult
+Epiglottic Collapse / Epiglottopexy", and "Tracheostomy as Definitive OSA Therapy"
+(Sleep Surgery). Congenital aural atresia/microtia was confirmed to already have a
+dedicated topic (Pediatric Otolaryngology: "Microtia / Aural Atresia") and was extended
+in place rather than duplicated. Total: 349 -> 356. Otology/Neurotology 53 -> 54,
+Laryngology/Voice/Swallowing 37 -> 39, Head & Neck Oncology 43 -> 44, Sleep Surgery
+21 -> 24.
 """
 
 from collections import Counter
@@ -45,14 +57,14 @@ import runtime_entry_pasha
 
 data = runtime_entry_pasha.runtime_entry.data
 EXPECTED_DOMAIN_COUNTS = {
-    "Otology / Neurotology": 53,
+    "Otology / Neurotology": 54,
     "Rhinology / Allergy / Skull Base": 48,
-    "Head & Neck Oncology": 43,
+    "Head & Neck Oncology": 44,
     "Thyroid / Parathyroid / Salivary": 35,
     "Pediatric Otolaryngology": 43,
-    "Laryngology / Voice / Swallowing": 37,
+    "Laryngology / Voice / Swallowing": 39,
     "Facial Plastics / Trauma": 34,
-    "Sleep Surgery": 21,
+    "Sleep Surgery": 24,
     "General ENT / Emergencies": 35,
 }
 EXPECTED_TOTAL = sum(EXPECTED_DOMAIN_COUNTS.values())
@@ -187,7 +199,7 @@ def main():
         return 1
 
     print(
-        "PASS: exact 349-topic/nine-domain live canonical contract inventoried; source_basis schema, "
+        "PASS: exact 356-topic/nine-domain live canonical contract inventoried; source_basis schema, "
         "missing-source and incomplete core-textbook backlogs cannot silently regress."
     )
     return 0

@@ -116,6 +116,16 @@ NEW_CASE_LABELS = {
     "Sleep-Related Hypoventilation": "Daytime hypersomnolence with elevated morning CO2",
     "Narcolepsy / Central Hypersomnolence Recognition": "Irresistible daytime sleep attacks with possible cataplexy",
     "Positional OSA": "Snoring and apneas only in the supine position",
+
+    # v44.1 new topics (missing-topics/grading-scales content pass) -- curated up
+    # front so they never fall into a shared generic bucket with an existing topic.
+    "Glomus Tumor / Paraganglioma": "Pulsatile tinnitus with a blanching vascular middle-ear mass",
+    "Laryngeal Electromyography (LEMG)": "Vocal fold immobility of uncertain cause after neck surgery",
+    "Laryngocele": "Neck mass that enlarges with straining or playing a wind instrument",
+    "Lip Cancer": "Non-healing crusted ulcer on the sun-exposed lower lip",
+    "Nasal Surgery as a CPAP-Adherence Adjunct": "CPAP intolerance with nasal obstruction and mouth leak",
+    "Adult Epiglottic Collapse / Epiglottopexy": "Persistent sleep apnea despite a prior palate operation",
+    "Tracheostomy as Definitive OSA Therapy": "Severe sleep apnea with life-threatening cardiopulmonary complications",
 }
 
 
