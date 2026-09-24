@@ -143,6 +143,8 @@ else:
 
 _original_search_index = app_mod._canonical_search_index
 
+from pasha_review_data import PASHA_CHAPTERS as _PASHA_CHAPTERS_V439
+
 def _canonical_search_index_v150():
     rows = list(_original_search_index())
     seen = {(r.get("type"), r.get("url")) for r in rows}
@@ -150,11 +152,33 @@ def _canonical_search_index_v150():
         {"type":"Practice bank","title":"Clinical Challenges","subtitle":f"{len(data.CLINICAL_CHALLENGES_V119)} board-style vignettes","url":"/clinical-challenges","text":"clinical challenges board vignettes overnight call OR prep postoperative call clinical reasoning"},
         {"type":"Practice bank","title":"Concept Checks","subtitle":f"{len(data.CONCEPT_CHECKS_V112)} board-recall questions","url":"/concept-checks","text":"concept checks board recall questions clinical vignettes active recall knowledge checks boards"},
         {"type":"Practice bank","title":"Mock Oral Board","subtitle":"Self-test / reveal case simulator","url":"/oral-boards","text":"mock oral board simulator self test reveal escalating attending pimping viva examiner questions"},
+        {"type":"Practice bank","title":"Pasha Review","subtitle":f"{len(_PASHA_CHAPTERS_V439)} chapters, {sum(len(c['sections']) for c in _PASHA_CHAPTERS_V439)} sections","url":"/pasha-review","text":"pasha review textbook chapter section board exam question bank comprehensive review"},
     ]
     for row in bank_rows:
         key=(row["type"],row["url"])
         if key not in seen:
             rows.append(row); seen.add(key)
+    # v43.9: Pasha Review chapters/sections were previously invisible to search
+    # entirely -- add one row per chapter and one per section so a resident
+    # searching a topic name (e.g. "frontal recess") can jump straight to the
+    # matching Pasha Review section, not just its Deep Curriculum counterpart.
+    for chapter in _PASHA_CHAPTERS_V439:
+        ch_id = chapter.get("id")
+        ch_title = str(chapter.get("title") or "Pasha Review Chapter")
+        ch_url = f"/pasha-review?chapter={ch_id}"
+        ch_key = ("Pasha Review Chapter", ch_url)
+        if ch_key not in seen:
+            rows.append({"type":"Pasha Review Chapter","title":ch_title,"subtitle":str(chapter.get("domain") or "Pasha Review"),"url":ch_url,"text":ch_title+" "+" ".join(s[1] for s in chapter.get("sections", []))})
+            seen.add(ch_key)
+        for section in chapter.get("sections", []):
+            sec_id, sec_title = section[0], section[1]
+            sec_keywords = section[2] if len(section) > 2 and section[2] else []
+            sec_url = f"/pasha-review?chapter={ch_id}&section={sec_id}"
+            sec_key = ("Pasha Review Section", sec_url)
+            if sec_key in seen:
+                continue
+            rows.append({"type":"Pasha Review Section","title":str(sec_title),"subtitle":ch_title,"url":sec_url,"text":str(sec_title)+" "+" ".join(str(k) for k in sec_keywords)})
+            seen.add(sec_key)
     for q in data.CONCEPT_CHECKS_V112:
         qid=str(q.get("id", ""))
         if not qid:
