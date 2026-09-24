@@ -23,7 +23,7 @@ def main():
     failures = []
     rows = (data.DEEP_MODULES_V6 or {}).get(DOMAIN, []) or []
     canonical = [data._v6_item_id(d, r.get("topic")) for d, rs in data.DEEP_MODULES_V6.items() for r in rs]
-    if len(canonical) != 325 or len(set(canonical)) != 325:
+    if len(canonical) != 356 or len(set(canonical)) != 356:
         failures.append(f"canonical_contract:{len(canonical)}:{len(set(canonical))}")
     if len(rows) != 48 or len({txt(r.get('topic')) for r in rows}) != 48:
         failures.append(f"rhinology_inventory:{len(rows)}")

@@ -21,8 +21,8 @@ def main():
     deep = getattr(data, "DEEP_MODULES_V6", {}) or {}
     all_rows = [(domain, row) for domain, rows in deep.items() for row in (rows or [])]
     failures = 0
-    if len(all_rows) != 325:
-        failures += fail(f"canonical Deep Curriculum count changed: expected 325, found {len(all_rows)}")
+    if len(all_rows) != 356:
+        failures += fail(f"canonical Deep Curriculum count changed: expected 356, found {len(all_rows)}")
 
     matches = [row for row in (deep.get(DOMAIN, []) or []) if row.get("topic") == TOPIC]
     if len(matches) != 1:

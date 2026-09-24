@@ -33,7 +33,7 @@ def main():
             failures.append("deepened_target_still_in_residual_queue:" + qid)
 
     canonical = report.get("canonical_count")
-    if canonical != 325:
+    if canonical != 356:
         failures.append("canonical_contract_changed:" + str(canonical))
 
     report["discovered_depth_markers"] = markers
@@ -58,7 +58,7 @@ def main():
         print("FAIL|" + failure)
     if failures:
         raise SystemExit(1)
-    print("PASS: v20.27 preserves the exact live 325-topic canonical backlog contract after Pain Management in the Head & Neck Patient depth")
+    print("PASS: v20.27 preserves the exact live 356-topic canonical backlog contract after Pain Management in the Head & Neck Patient depth")
 
 
 if __name__ == "__main__":

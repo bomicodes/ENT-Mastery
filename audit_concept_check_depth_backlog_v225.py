@@ -4,7 +4,7 @@ This successor gate intentionally permits clinically selected exact-live targets
 outside the inherited short-answer lexical candidate queues. Exact-live identity and
 canonical linking are enforced by the dedicated v20.25 task/source gate; this gate
 preserves the inherited backlog, removes the target if present, and independently
-fails closed on the 325-topic canonical contract.
+fails closed on the 356-topic canonical contract.
 """
 import json, os
 from audit_concept_check_depth_backlog_v224 import main as _v224_main
@@ -45,7 +45,7 @@ def main():
             failures.append("deepened_target_still_in_residual_queue:" + qid)
 
     canonical = report.get("canonical_count")
-    if canonical != 325:
+    if canonical != 356:
         failures.append("canonical_contract_changed:" + str(canonical))
 
     report["discovered_depth_markers"] = markers
@@ -76,7 +76,7 @@ def main():
     if failures:
         raise SystemExit(1)
     print(
-        "PASS: v20.25 preserves the exact live 325-topic canonical backlog contract "
+        "PASS: v20.25 preserves the exact live 356-topic canonical backlog contract "
         "after clinically prioritized TLM laryngeal-cancer depth"
     )
 

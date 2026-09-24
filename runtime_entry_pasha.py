@@ -106,6 +106,7 @@ from prerequisite_relationship_repair_v439 import apply_prerequisite_relationshi
 from ajcc9_staging_currency_v440 import apply_ajcc9_staging_currency_v440
 from missing_topics_gradingscales_v441 import apply_missing_topics_gradingscales_v441
 from bucket6_data_hygiene_v442 import apply_bucket6_data_hygiene_v442
+from clinical_challenge_gapfill_v443 import apply_clinical_challenge_gapfill_v443
 
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
@@ -211,6 +212,7 @@ PREREQUISITE_RELATIONSHIP_REPAIR_V439 = apply_prerequisite_relationship_repair_v
 AJCC9_STAGING_CURRENCY_V440 = apply_ajcc9_staging_currency_v440(runtime_entry.data, runtime_entry.app_mod)
 MISSING_TOPICS_GRADINGSCALES_V441 = apply_missing_topics_gradingscales_v441(runtime_entry.data, runtime_entry.app_mod)
 BUCKET6_DATA_HYGIENE_V442 = apply_bucket6_data_hygiene_v442(runtime_entry.data, runtime_entry.app_mod)
+CLINICAL_CHALLENGE_GAPFILL_V443 = apply_clinical_challenge_gapfill_v443(runtime_entry.data, runtime_entry.app_mod)
 # Resolve these late-registered topics against the final live curriculum.
 # The parent-concept snapshot in data.py is built before the patch chain finishes.
 runtime_entry.data.LAB_PARENT_TOPIC_V98.update({

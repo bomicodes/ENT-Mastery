@@ -6,7 +6,15 @@ or evidence where the actual Deep Curriculum -> Concept Check -> Daily Curriculu
 """
 from pathlib import Path
 
-import runtime_entry
+import runtime_entry_pasha
+
+# v44.3: this audit calls runtime_entry.app.test_client() to smoke-test the live
+# rendered UI, but it was importing plain `runtime_entry` directly, which resolves to
+# the pre-Pasha-patch chain -- frozen at a stale 324-topic snapshot with none of the
+# later patch modules applied, rather than the actual production app. Aliasing to the
+# fully-patched view here (rather than importing `runtime_entry` directly) makes this
+# audit test the real production entrypoint, matching its own stated intent.
+runtime_entry = runtime_entry_pasha.runtime_entry
 from concept_check_board_repair_v177 import _find_module
 
 CONTRACTS = {
@@ -52,7 +60,7 @@ def main():
     # The canonical contract itself is part of learner-experience safety: this repair may deepen
     # one topic but must never create a duplicate/326th topic.
     canonical = [v6_item_id(domain, mod.get("topic")) for domain, mods in deep_modules.items() for mod in mods]
-    if len(canonical) != 325 or len(set(canonical)) != 325:
+    if len(canonical) != 356 or len(set(canonical)) != 356:
         failures.append("learner_canonical_contract:" + str(len(canonical)) + ":" + str(len(set(canonical))))
 
     for qid, contract in CONTRACTS.items():

@@ -3,7 +3,7 @@
 Audits the live, production-patched curriculum rather than a historical runtime
 slice. Default mode is informational and exits 0 so routine audits do not create
 failure-alert noise. Use --strict when a CI gate should fail below 100% or when
-the live canonical registry drifts away from the protected 325-topic contract.
+the live canonical registry drifts away from the protected 356-topic contract.
 
 Coverage milestone 1: every canonical DEEP_MODULES_V6 concept has at least one
 linked clinical vignette by concept_id. A separate depth report flags concepts
@@ -15,10 +15,17 @@ import argparse
 import json
 from collections import Counter, defaultdict
 
-import runtime_entry
+import runtime_entry_pasha
 
+# v44.2: this audit's own docstring says it "audits the live, production-patched
+# curriculum rather than a historical runtime slice", but it was importing plain
+# `runtime_entry` directly, which resolves to the pre-Pasha-patch chain and was
+# silently frozen at a stale 324-topic snapshot regardless of the live curriculum's
+# actual size. Aliasing to the fully-patched view here (rather than importing
+# `runtime_entry` directly) makes the code match its own stated intent.
+runtime_entry = runtime_entry_pasha.runtime_entry
 data = runtime_entry.data
-STRICT_CANONICAL_TOPIC_COUNT = 325
+STRICT_CANONICAL_TOPIC_COUNT = 356
 
 
 def build_report():
@@ -82,7 +89,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--json", action="store_true", dest="as_json")
     parser.add_argument("--depth", action="store_true")
-    parser.add_argument("--strict", action="store_true", help="Exit 1 unless all 325 canonical topics have a vignette")
+    parser.add_argument("--strict", action="store_true", help="Exit 1 unless all 356 canonical topics have a vignette")
     args = parser.parse_args()
     report = build_report()
     print(json.dumps(report, indent=2, sort_keys=True)) if args.as_json else print_text(report, show_depth=args.depth)

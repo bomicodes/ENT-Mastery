@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """v35.8 — exact-live Deep Curriculum provenance/rendering audit, seeded by SNHL.
 
-Fail closed for the exact SNHL repair and the 325-topic contract. The live canonical label
+Fail closed for the exact SNHL repair and the 356-topic contract. The live canonical label
 is resolved by requiring exactly one Otology title containing the normalized identity terms
 "sensorineural" and "hearing"; ambiguity fails closed and the actual title must be retained
 in canonical source metadata. Also emit the complete live source-metadata backlog so
@@ -40,8 +40,8 @@ def main():
     all_rows = [(domain, row) for domain, rows in deep.items() for row in (rows or [])]
     failures = 0
 
-    if len(all_rows) != 325:
-        failures += fail(f"canonical Deep Curriculum count changed: expected 325, found {len(all_rows)}")
+    if len(all_rows) != 356:
+        failures += fail(f"canonical Deep Curriculum count changed: expected 356, found {len(all_rows)}")
 
     rows = deep.get(DOMAIN, []) or []
     target_rows = snhl_candidates(rows)

@@ -81,7 +81,7 @@ NEW_TOPICS_V441 = [
             "syndromes, most often SDHB/SDHD and also SDHC), obtain a family history, "
             "consider biochemical screening for catecholamine secretion, and refer for "
             "genetic counseling/testing -- SDHB in particular carries higher malignant/"
-            "metastatic potential and should raise the threshold for full-body staging."
+            "metastatic potential and should lower the threshold for full-body staging."
         ),
         "manage": (
             "Treatment is class- and patient-dependent: observation with serial imaging "
