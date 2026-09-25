@@ -9,12 +9,16 @@ if not os.environ.get("DATABASE_URL"):
     os.environ["SQLITE_PATH"] = os.path.join(tempfile.gettempdir(), "ent_mastery_v168_audit.db")
 os.environ.pop("ENT_MASTERY_ACCESS_PASSWORD", None)
 
-import runtime_entry
+import daily_path_entry_v403 as _production_entry
 import db
 
-app = runtime_entry.app
-data = runtime_entry.data
-app_mod = runtime_entry.app_mod
+# runtime_entry is an intermediate boot stage. Both configured startup paths
+# (runtime_entry_pasha in render.yaml and daily_path_entry_v403 in Procfile)
+# include the later concept_daily_linking_v384 override of /daily-adaptive.
+# Exercise the fully layered app so this smoke check reflects that behavior.
+app = _production_entry.app
+data = _production_entry.production.runtime_entry.data
+app_mod = _production_entry.production.runtime_entry.app_mod
 
 errors = []
 
