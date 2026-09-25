@@ -29,6 +29,13 @@ const segmenter=('Segmenter' in Intl)?new Intl.Segmenter('en',{granularity:'sent
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 // Turn **bold** markdown into <strong>, after escaping everything else.
 function mdInline(s){const e=esc(s);return e.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');}
+// A bolded span that ends right at a sentence-ending period (e.g. "**Label.** Rest…")
+// can have its closing "**" separated from the opening one by the sentence
+// segmenter below, since the period reads as a sentence boundary. That leaves
+// both halves unpaired, so neither segment renders as bold -- the raw "**"
+// shows up as literal text instead. Move such a period outside the closing
+// "**" first, so the pair always survives in the same segment.
+function normalizeBoldBoundary(s){return s.replace(/\.(\*\*)(\s|$)/g,'$1.$2');}
 // A single "sentence" (per Intl.Segmenter) can still be a long, semicolon-joined
 // run-on that reads as a dense block even inside its own bullet. Split those
 // further on "; " so each clause becomes its own scannable line.
@@ -39,8 +46,10 @@ function splitLongClause(piece){
   return parts.map((p,i)=>i<parts.length-1?p.replace(/[.;]?$/,';'):p);
 }
 document.querySelectorAll('.depth-layer').forEach(layer=>{
-  const source=layer.querySelector('.depth-layer-source'),list=layer.querySelector('.depth-study-list'),text=(source.textContent||'').trim();
+  const source=layer.querySelector('.depth-layer-source'),list=layer.querySelector('.depth-study-list');
+  let text=(source.textContent||'').trim();
   if(!text)return;
+  text=normalizeBoldBoundary(text);
   const sentences=segmenter?[...segmenter.segment(text)].map(x=>x.segment.trim()).filter(Boolean):[text];
   const pieces=sentences.flatMap(splitLongClause);
   pieces.forEach(piece=>{const li=document.createElement('li');li.innerHTML=mdInline(piece);list.appendChild(li);});
