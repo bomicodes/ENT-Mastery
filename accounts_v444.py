@@ -45,6 +45,8 @@ LOCKOUT_SECONDS = 300
 
 def _gate_enabled():
     """Production requires an account; local audits remain ungated."""
+    if os.environ.get("ENT_MASTERY_AUDIT_MODE") == "1":
+        return False
     return bool(os.environ.get("DATABASE_URL") or os.environ.get("ENT_MASTERY_REQUIRE_ACCOUNTS"))
 
 
@@ -84,6 +86,8 @@ def _safe_next(target):
 def _install_context_processor(app, db):
     @app.context_processor
     def inject_current_user_v444():
+        if os.environ.get("ENT_MASTERY_AUDIT_MODE") == "1":
+            return {"current_user": None}
         uid = session.get("user_id")
         if not uid:
             return {"current_user": None}
@@ -99,6 +103,8 @@ def _install_context_processor(app, db):
 
 def _install_auth_routes(app, db):
     def login_v444():
+        if os.environ.get("ENT_MASTERY_AUDIT_MODE") == "1":
+            return redirect(url_for("dashboard"))
         error = None
         if request.method == "POST":
             name = (request.form.get("name") or "").strip()
@@ -125,9 +131,11 @@ def _install_auth_routes(app, db):
         session.pop("user_name", None)
         session.pop("user_role", None)
         session.pop("program_ok", None)
-        return redirect(url_for("login_v168"))
+        return redirect(url_for("dashboard" if os.environ.get("ENT_MASTERY_AUDIT_MODE") == "1" else "login_v168"))
 
     def change_pin_v444():
+        if os.environ.get("ENT_MASTERY_AUDIT_MODE") == "1":
+            return redirect(url_for("dashboard"))
         uid = session.get("user_id")
         if not uid:
             return redirect(url_for("login_v168", next=request.path))
@@ -156,6 +164,8 @@ def _install_auth_routes(app, db):
         return render_template("change_pin.html", error=error, success=success)
 
     def roster_v444():
+        if os.environ.get("ENT_MASTERY_AUDIT_MODE") == "1":
+            return redirect(url_for("dashboard"))
         if (session.get("user_role") or "") not in PRIVILEGED_ROLES:
             return render_template(
                 "login.html",
@@ -164,6 +174,8 @@ def _install_auth_routes(app, db):
         return render_template("roster.html", roster=db.roster_summary(), add_error=None)
 
     def add_resident_v444():
+        if os.environ.get("ENT_MASTERY_AUDIT_MODE") == "1":
+            return redirect(url_for("dashboard"))
         if (session.get("user_role") or "") not in PRIVILEGED_ROLES:
             return render_template(
                 "login.html",
@@ -196,6 +208,12 @@ def _install_auth_routes(app, db):
 
     @app.before_request
     def require_account_v444():
+        if os.environ.get("ENT_MASTERY_AUDIT_MODE") == "1":
+            # Signed-in browser sessions from before audit mode must not grant
+            # roster access or silently continue writing to personal accounts.
+            for key in ("user_id", "user_name", "user_role", "program_ok"):
+                session.pop(key, None)
+            return None
         if not _gate_enabled():
             return None
         if request.endpoint in {"login_v168", "health_v168", "static"}:

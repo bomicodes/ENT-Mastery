@@ -19,6 +19,8 @@ def _current_user_id():
     the pre-accounts shared-progress bucket) so every existing db.py caller
     keeps working unmodified.
     """
+    if os.environ.get("ENT_MASTERY_AUDIT_MODE") == "1":
+        return LEGACY_USER_ID
     try:
         from flask import has_request_context, session
         if has_request_context():
