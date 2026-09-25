@@ -31,7 +31,7 @@
 </div>
 {% endif %}
 
-{% if module.source_basis %}<div class="card concept-source"><b>Source basis</b>{% for s in module.source_basis %}<span>{{s}}</span>{% endfor %}</div>{% endif %}
+{% if module.source_basis %}<details class="card concept-source"><summary><b>Source basis</b><span class="source-count">{{module.source_basis|length}}</span></summary>{% for s in module.source_basis %}<span>{{s}}</span>{% endfor %}</details>{% endif %}
 
 <div class="concept-actions">
   <a class="button" href="/daily-adaptive?focus={{domain|urlencode}}">Test me in Daily Path →</a>
