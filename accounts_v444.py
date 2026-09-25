@@ -8,21 +8,9 @@ is preserved intact under the permanent "Legacy / Shared" account
 (db.LEGACY_USER_ID) rather than lost or silently merged into someone's
 personal history.
 
-Login is a short PIN, not email/password -- accounts are created by a chief
-resident from the /roster page (name + PIN), not self-service. Signing in is
-two steps:
-
-  1. Program access code (reuses ENT_MASTERY_ACCESS_PASSWORD, the same
-     secret that used to gate the whole site) -- proves the visitor belongs
-     to this program at all, before anything personal is shown.
-  2. Pick your name from a list, enter your PIN -- proves which resident you
-     are.
-
-Step 1 exists specifically so step 2's name list is never shown to a random
-visitor: a bare PIN pad with everyone's real names on it would leak the
-resident roster to the public internet if the site were ever reached without
-it. Both steps use the same session; step 1 only needs to happen once per
-browser session, not once per login.
+Login uses a typed name and PIN, with no public resident list or program
+access code. Chiefs add accounts from /roster; each resident can change their
+own PIN after signing in.
 
 PIN attempts are rate-limited per account (in-memory; resets on redeploy,
 which is fine at this scale) so a short numeric PIN can't be brute-forced by
@@ -55,32 +43,9 @@ MAX_PIN_ATTEMPTS = 5
 LOCKOUT_SECONDS = 300
 
 
-def _program_code():
-    return os.environ.get("ENT_MASTERY_ACCESS_PASSWORD") or ""
-
-
 def _gate_enabled():
-    """Whether the before_request login redirect is actually enforced.
-
-    Mirrors the old shared-password gate's own on/off switch exactly: it was
-    only active when ENT_MASTERY_ACCESS_PASSWORD was set (so local dev, CI,
-    and the repo's large audit-script suite -- which all call
-    app.test_client() expecting anonymous 200s -- ran ungated by default).
-    Reusing that same env var here means a deployment that already sets it
-    to gate the site keeps working with zero new configuration, and nothing
-    that already runs without it starts failing. ENT_MASTERY_REQUIRE_ACCOUNTS
-    can force it on independently of a program code being configured.
-    """
-    return bool(_program_code() or os.environ.get("ENT_MASTERY_REQUIRE_ACCOUNTS"))
-
-
-def _program_gate_needed():
-    """Whether step 1 (program code) must be cleared before step 2 (name+PIN).
-
-    Only meaningful when a program code is actually configured -- with no
-    code set there is nothing to check, so step 2 is shown directly.
-    """
-    return bool(_program_code())
+    """Production requires an account; local audits remain ungated."""
+    return bool(os.environ.get("DATABASE_URL") or os.environ.get("ENT_MASTERY_REQUIRE_ACCOUNTS"))
 
 
 def _pin_locked(user_id):
@@ -135,61 +100,66 @@ def _install_context_processor(app, db):
 def _install_auth_routes(app, db):
     def login_v444():
         error = None
-        needs_program_step = _program_gate_needed() and not session.get("program_ok")
-
         if request.method == "POST":
-            if needs_program_step:
-                supplied = request.form.get("program_code") or ""
-                if supplied and supplied == _program_code():
-                    session["program_ok"] = True
-                    needs_program_step = False
-                else:
-                    error = "Incorrect access code."
+            name = (request.form.get("name") or "").strip()
+            pin = request.form.get("pin") or ""
+            user = db.get_user_by_name(name) if name else None
+            if not user:
+                error = "Incorrect name or PIN."
             else:
-                try:
-                    user_id = int(request.form.get("user_id") or 0)
-                except ValueError:
-                    user_id = 0
-                pin = request.form.get("pin") or ""
-                user = db.get_user_by_id(user_id) if user_id else None
-                if not user or user["id"] == db.LEGACY_USER_ID:
-                    error = "Please pick your name from the list."
+                locked, remaining = _pin_locked(user["id"])
+                if locked:
+                    error = f"Too many incorrect attempts. Try again in {max(1, remaining // 60 + 1)} minute(s)."
+                elif user.get("pin_hash") and check_password_hash(user["pin_hash"], pin):
+                    _clear_pin_failures(user["id"])
+                    _login_user(user)
+                    target = _safe_next(request.args.get("next")) or url_for("dashboard")
+                    return redirect(target)
                 else:
-                    locked, remaining = _pin_locked(user_id)
-                    if locked:
-                        error = f"Too many incorrect attempts. Try again in {max(1, remaining // 60 + 1)} minute(s)."
-                    elif user.get("pin_hash") and check_password_hash(user["pin_hash"], pin):
-                        _clear_pin_failures(user_id)
-                        _login_user(user)
-                        target = _safe_next(request.args.get("next")) or url_for("dashboard")
-                        return redirect(target)
-                    else:
-                        _record_pin_failure(user_id)
-                        error = "Incorrect PIN."
-
-        residents = db.list_users(include_legacy=False) if not needs_program_step else []
-        return render_template(
-            "login.html",
-            error=error,
-            needs_program_step=needs_program_step,
-            residents=residents,
-        )
+                    _record_pin_failure(user["id"])
+                    error = "Incorrect name or PIN."
+        return render_template("login.html", error=error)
 
     def logout_v444():
         session.pop("user_id", None)
         session.pop("user_name", None)
         session.pop("user_role", None)
-        # Deliberately keep session["program_ok"] -- signing out returns to the
-        # name+PIN picker for this browser, not back to the program code step.
+        session.pop("program_ok", None)
         return redirect(url_for("login_v168"))
+
+    def change_pin_v444():
+        uid = session.get("user_id")
+        if not uid:
+            return redirect(url_for("login_v168", next=request.path))
+        error = success = None
+        if request.method == "POST":
+            old_pin = request.form.get("old_pin") or ""
+            new_pin = request.form.get("new_pin") or ""
+            confirmation = request.form.get("confirm_pin") or ""
+            user = db.get_user_by_id(uid)
+            locked, remaining = _pin_locked(uid)
+            if locked:
+                error = f"Too many incorrect attempts. Try again in {max(1, remaining // 60 + 1)} minute(s)."
+            elif not user or not user.get("pin_hash") or not check_password_hash(user["pin_hash"], old_pin):
+                _record_pin_failure(uid)
+                error = "Current PIN is incorrect."
+            elif not PIN_RE.fullmatch(new_pin):
+                error = "New PIN must be 4–8 digits."
+            elif new_pin != confirmation:
+                error = "New PINs do not match."
+            elif new_pin == old_pin:
+                error = "Choose a different PIN."
+            else:
+                db.update_user_pin(uid, generate_password_hash(new_pin))
+                _clear_pin_failures(uid)
+                success = "Your PIN has been changed. Use the new PIN next time you sign in."
+        return render_template("change_pin.html", error=error, success=success)
 
     def roster_v444():
         if (session.get("user_role") or "") not in PRIVILEGED_ROLES:
             return render_template(
                 "login.html",
                 error="That page is limited to chief residents and attendings.",
-                needs_program_step=False,
-                residents=[],
             ), 403
         return render_template("roster.html", roster=db.roster_summary(), add_error=None)
 
@@ -198,8 +168,6 @@ def _install_auth_routes(app, db):
             return render_template(
                 "login.html",
                 error="That page is limited to chief residents and attendings.",
-                needs_program_step=False,
-                residents=[],
             ), 403
         name = (request.form.get("name") or "").strip()
         pin = request.form.get("pin") or ""
@@ -224,6 +192,7 @@ def _install_auth_routes(app, db):
     app.add_url_rule("/logout", "logout_v168", logout_v444)
     app.add_url_rule("/roster", "roster_v444", roster_v444)
     app.add_url_rule("/roster/add", "add_resident_v444", add_resident_v444, methods=["POST"])
+    app.add_url_rule("/account/pin", "change_pin_v444", change_pin_v444, methods=["GET", "POST"])
 
     @app.before_request
     def require_account_v444():
@@ -274,7 +243,7 @@ def apply_accounts_v444(app, data, app_mod):
     _bootstrap_chief(db)
 
     result = {
-        "program_gated": _program_gate_needed(),
+        "account_gated": _gate_enabled(),
         "legacy_user_id": db.LEGACY_USER_ID,
     }
     data.ACCOUNTS_V444 = result

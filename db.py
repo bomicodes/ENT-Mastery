@@ -909,6 +909,22 @@ def get_user_by_id(user_id):
     return dict(row) if row else None
 
 
+def get_user_by_name(name):
+    c = conn()
+    row = _execute(c, "SELECT * FROM users WHERE LOWER(name)=LOWER(?) AND id<>? ORDER BY id LIMIT 1",
+                   (name.strip(), LEGACY_USER_ID)).fetchone()
+    c.close()
+    return dict(row) if row else None
+
+
+def update_user_pin(user_id, pin_hash):
+    c = conn()
+    _execute(c, "UPDATE users SET pin_hash=? WHERE id=? AND id<>?",
+             (pin_hash, user_id, LEGACY_USER_ID))
+    c.commit()
+    c.close()
+
+
 def list_users(include_legacy=False):
     c = conn()
     rows = _execute(c, "SELECT id, email, name, role, created_at FROM users ORDER BY name COLLATE NOCASE" if not USE_POSTGRES else "SELECT id, email, name, role, created_at FROM users ORDER BY LOWER(name)").fetchall()
