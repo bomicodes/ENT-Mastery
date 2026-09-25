@@ -8,6 +8,20 @@
 .access-form label{font-size:12px;font-weight:800;color:var(--muted)}
 .access-form input{width:100%;border:1px solid var(--line);border-radius:8px;padding:12px;font:inherit;background:#fff}
 .access-error{margin-top:14px;padding:10px 12px;border-radius:8px;background:var(--redbg);color:var(--red);font-size:12px;font-weight:700}
+.access-footer-link{margin-top:16px;font-size:13px}
+.access-footer-link a{color:var(--teal);font-weight:800}
+
+/* v44.4 multi-user accounts: sidebar user badge + program roster */
+.sidebar-user{display:flex;flex-direction:column;gap:2px;padding:8px 0;font-size:12px}
+.sidebar-user b{font-size:13px}
+.sidebar-user small{color:var(--muted)}
+.roster-table{width:100%;border-collapse:collapse;margin-top:16px}
+.roster-table th,.roster-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);font-size:13px}
+.roster-table th{font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+.roster-mastery-bar{display:inline-block;width:80px;height:6px;border-radius:99px;background:var(--line);overflow:hidden;vertical-align:middle;margin-right:8px}
+.roster-mastery-fill{display:block;height:100%;background:var(--teal)}
+.roster-empty{padding:24px;text-align:center;color:var(--muted)}
+.roster-add-form{max-width:360px;margin-top:12px}
 
 .concept-relationship{padding:14px 16px;margin:14px 0}
 .concept-relationship>b{display:block;margin-bottom:6px}

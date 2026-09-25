@@ -1,6 +1,6 @@
 """Database persistence for the Pasha review companion."""
 from datetime import datetime
-from db import conn, _execute, USE_POSTGRES, record_mastery_event
+from db import conn, _execute, USE_POSTGRES, record_mastery_event, _add_user_id_column, _current_user_id
 
 
 def ensure_pasha_schema():
@@ -27,6 +27,8 @@ def ensure_pasha_schema():
             correct INTEGER NOT NULL,
             created_at TEXT NOT NULL
         )""")
+    # Older Pasha attempts belong to the same legacy account as other progress.
+    _add_user_id_column(c, "pasha_attempts")
     c.commit(); c.close()
 
 
@@ -34,9 +36,9 @@ def record_pasha_attempt(chapter_id, section_id, question_id, concept_id, domain
     ensure_pasha_schema()
     c=conn()
     _execute(c,"""INSERT INTO pasha_attempts
-        (chapter_id,section_id,question_id,concept_id,domain,correct,created_at)
-        VALUES (?,?,?,?,?,?,?)""",
-        (int(chapter_id),str(section_id),str(question_id),concept_id,domain,int(bool(correct)),datetime.now().isoformat()))
+        (user_id,chapter_id,section_id,question_id,concept_id,domain,correct,created_at)
+        VALUES (?,?,?,?,?,?,?,?)""",
+        (_current_user_id(),int(chapter_id),str(section_id),str(question_id),concept_id,domain,int(bool(correct)),datetime.now().isoformat()))
     c.commit(); c.close()
     # Synthetic Pasha seed identifiers are not canonical deep-curriculum join
     # keys. Do not leak these into unified mastery as phantom concepts.
@@ -51,7 +53,7 @@ def record_pasha_attempt(chapter_id, section_id, question_id, concept_id, domain
 
 def pasha_progress():
     ensure_pasha_schema(); c=conn()
-    rows=_execute(c,"SELECT * FROM pasha_attempts ORDER BY id").fetchall(); c.close()
+    rows=_execute(c,"SELECT * FROM pasha_attempts WHERE user_id=? ORDER BY id",(_current_user_id(),)).fetchall(); c.close()
     out={"total_attempts":0,"total_correct":0,"chapters":{},"sections":{},"questions":{}}
     for r0 in rows:
         r=dict(r0); out["total_attempts"]+=1; out["total_correct"]+=int(r["correct"])

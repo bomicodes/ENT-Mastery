@@ -125,8 +125,8 @@ def _install_profile_canonicalization(data, db, app_mod):
     if getattr(raw, "_v168_canonical", False):
         return
 
-    def unified_mastery_profiles_v168():
-        profiles = raw()
+    def unified_mastery_profiles_v168(user_id=None):
+        profiles = raw(user_id=user_id)
         out = {}
         for cid, profile in profiles.items():
             canonical = _canonical_id(data, cid, profile.get("domain"))
@@ -309,7 +309,13 @@ def apply_reliability_v168(app, data, app_mod):
     _install_safe_concept_lookup(data, app_mod)
     _install_relationship_context(data, app_mod)
     _install_route_hardening(app, data, app_mod)
-    auth_enabled = _install_access_gate(app)
+    # v44.4: the single shared-password gate installed here (_install_access_gate)
+    # is superseded by accounts_v444.py's per-user login, which is installed later
+    # in the runtime_entry_pasha chain and covers every route this gate used to.
+    # _install_access_gate itself is left defined (unused) rather than deleted, in
+    # case a future deployment wants a shared-password layer back in front of
+    # individual accounts.
+    auth_enabled = False
 
     data.RELIABILITY_V168 = {
         "migration": migration,

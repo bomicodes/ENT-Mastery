@@ -136,8 +136,8 @@ def _install_mastery_aliases(data, id_map, topic_map):
 
     if not getattr(db, "_V167_MASTERY_ALIASES_INSTALLED", False):
         raw_adaptive = db.adaptive_mastery_map
-        def adaptive_mastery_map_v167():
-            raw = raw_adaptive()
+        def adaptive_mastery_map_v167(user_id=None):
+            raw = raw_adaptive(user_id=user_id)
             out = {}
             for cid, row in raw.items():
                 canonical = id_map.get(cid, cid)
@@ -154,16 +154,16 @@ def _install_mastery_aliases(data, id_map, topic_map):
         db.adaptive_mastery_map = adaptive_mastery_map_v167
 
         raw_record_adaptive = db.record_adaptive_result
-        def record_adaptive_result_v167(concept_id, item_id, domain, topic, stage, level, rating, interval_days):
+        def record_adaptive_result_v167(concept_id, item_id, domain, topic, stage, level, rating, interval_days, user_id=None):
             canonical = id_map.get(concept_id, concept_id)
             if canonical != concept_id:
                 topic = topic_map.get((domain, topic), topic)
-            return raw_record_adaptive(canonical, item_id, domain, topic, stage, level, rating, interval_days)
+            return raw_record_adaptive(canonical, item_id, domain, topic, stage, level, rating, interval_days, user_id=user_id)
         db.record_adaptive_result = record_adaptive_result_v167
 
         raw_record_event = db.record_mastery_event
-        def record_mastery_event_v167(concept_id, domain, dimension, score, source_type=None, source_id=None, miss_type=None):
-            return raw_record_event(id_map.get(concept_id, concept_id), domain, dimension, score, source_type, source_id, miss_type)
+        def record_mastery_event_v167(concept_id, domain, dimension, score, source_type=None, source_id=None, miss_type=None, user_id=None):
+            return raw_record_event(id_map.get(concept_id, concept_id), domain, dimension, score, source_type, source_id, miss_type, user_id=user_id)
         db.record_mastery_event = record_mastery_event_v167
 
         db._V167_MASTERY_ALIASES_INSTALLED = True

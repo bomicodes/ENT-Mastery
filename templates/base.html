@@ -97,11 +97,17 @@
       <a href="/progress" class="navitem {% if request.path.startswith('/progress') %}active{% endif %}">▥ <span>My Progress</span></a>
       <a href="/attending" class="navitem {% if request.path.startswith('/attending') %}active{% endif %}">↗ <span>Attending / Chief</span></a>
       <a href="/mistakes" class="navitem {% if request.path.startswith('/mistakes') %}active{% endif %}">↻ <span>Mistakes</span></a>
+      {% if current_user and current_user.is_chief %}
+      <a href="/roster" class="navitem {% if request.path.startswith('/roster') %}active{% endif %}">☷ <span>Program Roster</span></a>
+      {% endif %}
     </nav>
 
     <div class="sidebar-bottom">
+      {% if current_user %}
+      <div class="sidebar-user"><b>{{current_user.name}}</b><small>{{current_user.role|capitalize}}</small></div>
+      {% endif %}
       <a href="/evidence">Evidence & sources</a>
-      {% if request.endpoint != 'login_v168' %}<a href="/logout">Sign out</a>{% endif %}
+      {% if current_user %}<a href="/logout">Sign out</a>{% endif %}
       <small>Educational use only</small>
     </div>
   </aside>

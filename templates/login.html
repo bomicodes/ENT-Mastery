@@ -11,14 +11,36 @@
   <main class="access-shell">
     <section class="card access-card">
       <div class="modern-brand access-brand"><span class="modern-brand-ent">ENT</span><span>MASTERY</span></div>
-      <h1>Resident workspace</h1>
-      <p class="muted">Enter the private access password to continue. Progress in this workspace belongs to one learner.</p>
-      {% if error %}<div class="access-error" role="alert">{{ error }}</div>{% endif %}
-      <form method="post" class="access-form">
-        <label for="password">Access password</label>
-        <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
-        <button class="primary" type="submit">Continue</button>
-      </form>
+      {% if needs_program_step %}
+        <h1>Program access</h1>
+        <p class="muted">Enter the shared program code to continue.</p>
+        {% if error %}<div class="access-error" role="alert">{{ error }}</div>{% endif %}
+        <form method="post" class="access-form">
+          <label for="program_code">Access code</label>
+          <input id="program_code" name="program_code" type="password" autocomplete="off" required autofocus>
+          <button class="primary" type="submit">Continue</button>
+        </form>
+      {% else %}
+        <h1>Sign in</h1>
+        <p class="muted">Pick your name and enter your PIN. Your own account, your own progress.</p>
+        {% if error %}<div class="access-error" role="alert">{{ error }}</div>{% endif %}
+        {% if not residents %}
+          <p class="muted">No resident accounts have been set up yet. Ask your chief resident to add you from the Program Roster page.</p>
+        {% else %}
+        <form method="post" class="access-form">
+          <label for="user_id">Name</label>
+          <select id="user_id" name="user_id" required autofocus>
+            <option value="" disabled selected>Choose your name&hellip;</option>
+            {% for r in residents %}
+            <option value="{{r.id}}">{{r.name}}</option>
+            {% endfor %}
+          </select>
+          <label for="pin">PIN</label>
+          <input id="pin" name="pin" type="password" inputmode="numeric" pattern="[0-9]*" autocomplete="off" required>
+          <button class="primary" type="submit">Sign in</button>
+        </form>
+        {% endif %}
+      {% endif %}
     </section>
   </main>
 </body>
