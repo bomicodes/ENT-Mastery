@@ -24,6 +24,27 @@
 <section class="card evidence-box"><h2>Evidence hierarchy</h2>{% for e in evidence %}<div><b>{{e.tier}}</b><p>{{e.use}}</p><small>{{e.examples}}</small></div>{% endfor %}</section>
 <script>
 const cards=[...document.querySelectorAll('.depth-card')],domains=[...document.querySelectorAll('.depth-domain')],q=document.getElementById('depthSearch'),d=document.getElementById('depthDomain'),count=document.getElementById('depthCount');function filterDepth(){let n=0;const term=q.value.toLowerCase().trim(),dom=d.value;cards.forEach(c=>{const show=(!term||c.dataset.topic.includes(term))&&(!dom||c.dataset.domain===dom);c.hidden=!show;if(show)n++;});domains.forEach(s=>{s.hidden=![...s.querySelectorAll('.depth-card')].some(c=>!c.hidden)});count.textContent=n+' topics shown';}q.addEventListener('input',filterDepth);d.addEventListener('change',filterDepth);filterDepth();
-(function structureDepthLayers(){const segmenter=('Segmenter' in Intl)?new Intl.Segmenter('en',{granularity:'sentence'}):null;document.querySelectorAll('.depth-layer').forEach(layer=>{const source=layer.querySelector('.depth-layer-source'),list=layer.querySelector('.depth-study-list'),text=(source.textContent||'').trim();if(!text)return;const pieces=segmenter?[...segmenter.segment(text)].map(x=>x.segment.trim()).filter(Boolean):[text];pieces.forEach(piece=>{const li=document.createElement('li');li.textContent=piece;list.appendChild(li);});});})();
+(function structureDepthLayers(){
+const segmenter=('Segmenter' in Intl)?new Intl.Segmenter('en',{granularity:'sentence'}):null;
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+// Turn **bold** markdown into <strong>, after escaping everything else.
+function mdInline(s){const e=esc(s);return e.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');}
+// A single "sentence" (per Intl.Segmenter) can still be a long, semicolon-joined
+// run-on that reads as a dense block even inside its own bullet. Split those
+// further on "; " so each clause becomes its own scannable line.
+function splitLongClause(piece){
+  if(piece.length<170) return [piece];
+  const parts=piece.split(/;\s+/).map(p=>p.trim()).filter(Boolean);
+  if(parts.length<2) return [piece];
+  return parts.map((p,i)=>i<parts.length-1?p.replace(/[.;]?$/,';'):p);
+}
+document.querySelectorAll('.depth-layer').forEach(layer=>{
+  const source=layer.querySelector('.depth-layer-source'),list=layer.querySelector('.depth-study-list'),text=(source.textContent||'').trim();
+  if(!text)return;
+  const sentences=segmenter?[...segmenter.segment(text)].map(x=>x.segment.trim()).filter(Boolean):[text];
+  const pieces=sentences.flatMap(splitLongClause);
+  pieces.forEach(piece=>{const li=document.createElement('li');li.innerHTML=mdInline(piece);list.appendChild(li);});
+});
+})();
 </script>
 {% endblock %}

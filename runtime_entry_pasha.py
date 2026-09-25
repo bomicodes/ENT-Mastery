@@ -108,6 +108,7 @@ from missing_topics_gradingscales_v441 import apply_missing_topics_gradingscales
 from bucket6_data_hygiene_v442 import apply_bucket6_data_hygiene_v442
 from clinical_challenge_gapfill_v443 import apply_clinical_challenge_gapfill_v443
 from accounts_v444 import apply_accounts_v444
+from clinical_safety_and_format_gaps_v446 import apply_clinical_safety_and_format_gaps_v446
 
 OTOLOGY_ETD_REBUILD_V284 = apply_otology_etd_rebuild_v284(runtime_entry.data, runtime_entry.app_mod)
 DEEP_CURRICULUM_PRODUCTION_CHAIN_V314 = apply_deep_curriculum_production_chain_v314(runtime_entry.data, runtime_entry.app_mod)
@@ -215,6 +216,7 @@ MISSING_TOPICS_GRADINGSCALES_V441 = apply_missing_topics_gradingscales_v441(runt
 BUCKET6_DATA_HYGIENE_V442 = apply_bucket6_data_hygiene_v442(runtime_entry.data, runtime_entry.app_mod)
 CLINICAL_CHALLENGE_GAPFILL_V443 = apply_clinical_challenge_gapfill_v443(runtime_entry.data, runtime_entry.app_mod)
 ACCOUNTS_V444 = apply_accounts_v444(runtime_entry.app, runtime_entry.data, runtime_entry.app_mod)
+CLINICAL_SAFETY_AND_FORMAT_GAPS_V446 = apply_clinical_safety_and_format_gaps_v446(runtime_entry.data, runtime_entry.app_mod)
 # Resolve these late-registered topics against the final live curriculum.
 # The parent-concept snapshot in data.py is built before the patch chain finishes.
 runtime_entry.data.LAB_PARENT_TOPIC_V98.update({
