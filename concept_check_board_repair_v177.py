@@ -39,7 +39,25 @@ def _clinical_prompt(prompt):
     return "?" in str(prompt) and any(x in p for x in clinical)
 
 
+# v44.6 perf: _find_module is called once per Concept Check (well over a
+# thousand times per boot, across several patch modules), and used to rebuild
+# this domain/topic index from scratch -- including a v6_item_id() regex call
+# per Deep Curriculum module -- on every single call. Track row identity and
+# lookup fields so replacements and renames invalidate the index as well.
+_DEEP_LOOKUP_CACHE = {}
+
+
+def _deep_modules_fingerprint(deep_modules):
+    return tuple((domain, tuple((id(m), m.get("topic")) for m in modules or []))
+                 for domain, modules in (deep_modules or {}).items())
+
+
 def _deep_lookup(deep_modules, v6_item_id):
+    cache_key = id(deep_modules)
+    fingerprint = _deep_modules_fingerprint(deep_modules)
+    cached = _DEEP_LOOKUP_CACHE.get(cache_key)
+    if cached is not None and cached[0] is deep_modules and cached[1] is v6_item_id and cached[2] == fingerprint:
+        return cached[3], cached[4]
     exact, by_id = {}, {}
     for domain, modules in (deep_modules or {}).items():
         for m in modules or []:
@@ -48,6 +66,7 @@ def _deep_lookup(deep_modules, v6_item_id):
                 continue
             exact[(domain, topic)] = m
             by_id[v6_item_id(domain, topic)] = m
+    _DEEP_LOOKUP_CACHE[cache_key] = (deep_modules, v6_item_id, fingerprint, exact, by_id)
     return exact, by_id
 
 

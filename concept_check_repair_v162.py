@@ -65,9 +65,28 @@ def _is_bad_generated_diagnosis_check(q):
     return topic == correct or difflib.SequenceMatcher(None, topic, correct).ratio() >= 0.90
 
 
-def _deep_lookup(deep_modules):
+# v44.6 perf: see the matching cache in concept_check_board_repair_v177.py --
+# same issue here (this module's own _find_module/_deep_lookup, called once
+# per Concept Check). Track row identity and lookup fields to catch edits
+# that preserve the number of modules.
+_DEEP_LOOKUP_CACHE = {}
+
+
+def _deep_modules_fingerprint(deep_modules):
+    return tuple((domain, tuple((id(m), m.get("topic"), m.get("concept_id"))
+                                for m in modules or []))
+                 for domain, modules in (deep_modules or {}).items())
+
+
+def _deep_lookup(deep_modules, v6_item_id=None):
+    cache_key = id(deep_modules)
+    fingerprint = _deep_modules_fingerprint(deep_modules)
+    cached = _DEEP_LOOKUP_CACHE.get(cache_key)
+    if cached is not None and cached[0] is deep_modules and cached[1] is v6_item_id and cached[2] == fingerprint:
+        return cached[3], cached[4], cached[5]
     exact = {}
     by_concept = {}
+    by_v6_id = {}
     for domain, modules in (deep_modules or {}).items():
         for module in modules or []:
             topic = module.get("topic")
@@ -77,11 +96,14 @@ def _deep_lookup(deep_modules):
             cid = module.get("concept_id")
             if cid:
                 by_concept[cid] = module
-    return exact, by_concept
+            if v6_item_id is not None:
+                by_v6_id.setdefault(v6_item_id(domain, topic), module)
+    _DEEP_LOOKUP_CACHE[cache_key] = (deep_modules, v6_item_id, fingerprint, exact, by_concept, by_v6_id)
+    return exact, by_concept, by_v6_id
 
 
 def _find_module(q, deep_modules, v6_item_id):
-    exact, _ = _deep_lookup(deep_modules)
+    exact, _, by_v6_id = _deep_lookup(deep_modules, v6_item_id)
     domain = q.get("domain")
     topic = q.get("canonical_topic") or q.get("topic")
     if (domain, topic) in exact:
@@ -89,11 +111,8 @@ def _find_module(q, deep_modules, v6_item_id):
 
     # Concept-ID match is safer than fuzzy text when an alias exists.
     qcid = q.get("concept_id")
-    if qcid:
-        for d, modules in (deep_modules or {}).items():
-            for m in modules or []:
-                if v6_item_id(d, m.get("topic", "")) == qcid:
-                    return m
+    if qcid and qcid in by_v6_id:
+        return by_v6_id[qcid]
 
     # Conservative same-domain fuzzy fallback for legacy label drift.
     target = _norm(topic)
