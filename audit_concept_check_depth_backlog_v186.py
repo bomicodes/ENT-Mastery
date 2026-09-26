@@ -6,6 +6,7 @@ cohort so newly deepened concepts cannot be misclassified as untouched.
 from collections import Counter
 import json,re
 import runtime_entry
+import daily_path_entry_v403  # v45.6: boots the full production patch chain so runtime_entry.data/.app below reflect ALL applied patches, not just those runtime_entry.py itself applies
 from concept_check_board_repair_v177 import _find_module
 
 DATA=runtime_entry.data

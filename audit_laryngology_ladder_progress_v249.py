@@ -7,6 +7,7 @@ that the 36-topic domain is complete.
 """
 from collections import defaultdict
 import runtime_entry as rt
+import daily_path_entry_v403  # v45.6: boots the full production patch chain so runtime_entry.data/.app below reflect ALL applied patches, not just those runtime_entry.py itself applies
 
 DOMAIN="Laryngology / Voice / Swallowing"
 STAGES={"foundation","application","senior_decision"}

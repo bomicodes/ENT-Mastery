@@ -4,6 +4,18 @@
 {% set page_subtitle = 'Teach the framework back like a chief resident, then compare with the model answer.' if mode == 'chief' else 'Defend your reasoning, management pivot, and change-of-course criteria before revealing the model answer.' %}
 <div class="breadcrumb"><a href="/">Home</a> / {{page_label}}</div>
 <div class="hero tight"><div><span class="eyebrow">TEACH IT BACK</span><h1>{{page_label}}</h1><p>{{page_subtitle}}</p></div></div>
+
+<form method="get" class="card lab-controls" style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:end">
+  <input type="hidden" name="mode" value="{{mode}}">
+  <label>Domain<br><select name="domain"><option value="all" {% if domain=='all' %}selected{% endif %}>All domains</option>{% for d in domains %}<option value="{{d}}" {% if domain==d %}selected{% endif %}>{{d}}</option>{% endfor %}</select></label>
+  <label>Topic<br><input name="topic" value="{{topic}}" placeholder="Filter topic"></label>
+  <button class="case-btn" type="submit">Apply filters</button>
+  <a href="{{ url_for('attending', mode=mode) }}">Clear</a>
+</form>
+
+{% set result_noun = "prompts" %}
+{% include "_pagination.html" %}
+
 <div class="card-grid three">
 {% for p in prompts %}
   <article class="card attending-card" data-concept-id="{{p.concept_id}}" data-domain="{{p.domain}}">
@@ -20,6 +32,10 @@
     <div class="rate-row"><button type="button" data-attending-score="1">Missed it</button><button type="button" data-attending-score="2">Partial</button><button type="button" data-attending-score="3">Solid</button></div>
     {% if p.concept_id %}<p><a href="/concept/id/{{p.concept_id|urlencode}}">Open concept hub ↗</a></p>{% endif %}
   </article>
+{% else %}
+<div class="empty card"><h3>No prompts match these filters.</h3><p>Clear one or more filters to return to the full set.</p></div>
 {% endfor %}
 </div>
+
+{% include "_pagination.html" %}
 {% endblock %}

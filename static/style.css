@@ -734,3 +734,16 @@ button,input,select{font-family:inherit}
 .anatomy-source-needed p{margin:0 0 8px;color:var(--muted);font-size:11px;line-height:1.5}
 .anatomy-source-needed a{font-size:11px;font-weight:800}
 .muted-source{opacity:.85}
+
+/* Pagination control (v45.6) shared by /clinical-challenges and /attending. */
+.pagination{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:14px 18px;margin:15px 0}
+.pagination-summary{font-size:12px}
+.pagination-links{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.pagination-links a{padding:7px 11px;border:1px solid var(--line);background:#fff;border-radius:7px;font-size:12px;font-weight:700;color:var(--ink)}
+.pagination-links a:hover{background:var(--teal);color:#fff}
+.pagination-links a.disabled{opacity:.4;pointer-events:none}
+.page-jump{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.page-jump input[type=number]{width:52px;border:1px solid var(--line);border-radius:6px;padding:5px 6px;font:inherit}
+.page-jump button{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 9px;font-size:12px;font-weight:700;cursor:pointer}
+.page-jump button:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+@media(max-width:560px){.pagination{flex-direction:column;align-items:flex-start}}

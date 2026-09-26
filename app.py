@@ -370,16 +370,29 @@ def case_tomorrow():
 @app.route("/questions")
 def questions(): return redirect(url_for("daily_adaptive"))
 
+CLINICAL_CHALLENGES_PER_PAGE_V456 = 30
+
 @app.route("/clinical-challenges")
 def clinical_challenges():
-    domain=request.args.get("domain","").strip(); topic=request.args.get("topic","").strip(); tier=request.args.get("tier","").strip(); mode=request.args.get("mode","").strip(); rows=list(CLINICAL_CHALLENGES_V119)
+    domain=request.args.get("domain","").strip(); topic=request.args.get("topic","").strip(); tier=request.args.get("tier","").strip(); mode=request.args.get("mode","").strip(); focus=request.args.get("focus","").strip(); rows=list(CLINICAL_CHALLENGES_V119)
     if domain: rows=[q for q in rows if canonical_domain_v94(q.get("domain"))==canonical_domain_v94(domain)]
     if topic:
         t=topic.lower(); rows=[q for q in rows if t in q.get("topic","").lower() or t in q.get("stem","").lower()]
     if tier: rows=[q for q in rows if q.get("tier")==tier]
     if mode: rows=[q for q in rows if q.get("mode")==mode]
+    if focus: rows=[q for q in rows if (q.get("focus") or "")==focus]
     stats={"questions":len(CLINICAL_CHALLENGES_V119),"topics":len({q.get("concept_id") for q in CLINICAL_CHALLENGES_V119 if q.get("concept_id")}),"curated":sum(1 for q in CLINICAL_CHALLENGES_V119 if q.get("tier")=="Curated board-style"),"coverage":sum(1 for q in CLINICAL_CHALLENGES_V119 if q.get("tier")!="Curated board-style")}
-    return render_template("clinical_challenges.html",questions=rows,domains=CANONICAL_DOMAINS_V94,domain=domain,topic=topic,tier=tier,mode=mode,stats=stats)
+    # The bank has grown to 1,600+ questions; rendering every filtered match in
+    # one page was a real page-weight problem (v45.6). Paginate on top of the
+    # existing filters rather than instead of them -- filters narrow the set,
+    # pagination keeps any one page small regardless of how narrow that is.
+    total_filtered=len(rows); per_page=CLINICAL_CHALLENGES_PER_PAGE_V456
+    total_pages=max(1,(total_filtered+per_page-1)//per_page)
+    try: page=int(request.args.get("page",1))
+    except (TypeError, ValueError): page=1
+    page=min(max(1,page),total_pages)
+    page_rows=rows[(page-1)*per_page:page*per_page]
+    return render_template("clinical_challenges.html",questions=page_rows,domains=CANONICAL_DOMAINS_V94,domain=domain,topic=topic,tier=tier,mode=mode,focus=focus,stats=stats,page=page,total_pages=total_pages,total_filtered=total_filtered,per_page=per_page)
 
 @app.route("/clinical-challenge/<qid>")
 def clinical_challenge(qid):
@@ -520,12 +533,23 @@ def lab_rate():
                 parent=_v6_item_id(_dom,parent_topic); break
     record_mastery_event(parent,canonical_concept_domain_v98(parent,d.get("domain",slug)),dimension,rating,"interpretation_atlas",case_id,d.get("miss_type")); return jsonify({"ok":True,"stats":lab_stats(slug)})
 
+ATTENDING_PROMPTS_PER_PAGE_V456 = 12
+
 @app.route("/attending")
 def attending():
     mode=request.args.get("mode","attending"); domain=request.args.get("domain","all"); topic=request.args.get("topic","").strip().lower(); prompts=list(get_chief_prompts_v120() if mode=="chief" else get_attending_prompts_v120())
     if domain!="all": prompts=[p for p in prompts if p.get("domain")==domain]
     if topic: prompts=[p for p in prompts if topic in p.get("topic","").lower()]
-    return render_template("attending.html",prompts=prompts,mode=mode,domain=domain,domains=CANONICAL_DOMAINS_V94,topic=topic)
+    # ~360 prompts per mode used to render as one unpaginated page (v45.6).
+    # domain/topic filters already existed in this route but had no filter UI
+    # in the template, so in practice everyone got the full unfiltered dump.
+    total_filtered=len(prompts); per_page=ATTENDING_PROMPTS_PER_PAGE_V456
+    total_pages=max(1,(total_filtered+per_page-1)//per_page)
+    try: page=int(request.args.get("page",1))
+    except (TypeError, ValueError): page=1
+    page=min(max(1,page),total_pages)
+    page_prompts=prompts[(page-1)*per_page:page*per_page]
+    return render_template("attending.html",prompts=page_prompts,mode=mode,domain=domain,domains=CANONICAL_DOMAINS_V94,topic=topic,page=page,total_pages=total_pages,total_filtered=total_filtered,per_page=per_page)
 @app.route("/chief")
 def chief(): return redirect(url_for("attending",mode="chief"))
 @app.route("/mistakes")

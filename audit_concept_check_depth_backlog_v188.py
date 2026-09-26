@@ -2,6 +2,7 @@
 from collections import Counter
 import json,re
 import runtime_entry
+import daily_path_entry_v403  # v45.6: boots the full production patch chain so runtime_entry.data/.app below reflect ALL applied patches, not just those runtime_entry.py itself applies
 from concept_check_board_repair_v177 import _find_module
 DATA=runtime_entry.data
 MARKERS=("task_alignment_v180","task_alignment_v181","task_alignment_v182","task_alignment_v183","task_alignment_v184","task_alignment_v185","task_alignment_v186","task_alignment_v187","task_alignment_v188")

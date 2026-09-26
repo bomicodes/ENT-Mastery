@@ -1,0 +1,24 @@
+{# Reusable pagination control. Include with:
+   {% include "_pagination.html" %}
+   after setting: page, total_pages, total_filtered (int), and (optionally) result_noun (e.g. "questions") in the caller's render_template context.
+   Preserves every current query-string filter and only overrides `page`. #}
+{% if total_pages and total_pages > 1 %}
+<nav class="pagination card" aria-label="Pagination">
+  <span class="pagination-summary muted">Page {{page}} of {{total_pages}} &middot; {{total_filtered}} {{result_noun or 'results'}}</span>
+  <div class="pagination-links">
+    {% set prev_args = request.args.to_dict() %}{% set _ = prev_args.update({'page': ([1, page-1] | max)}) %}
+    {% set next_args = request.args.to_dict() %}{% set _ = next_args.update({'page': ([total_pages, page+1] | min)}) %}
+    {% set first_args = request.args.to_dict() %}{% set _ = first_args.update({'page': 1}) %}
+    {% set last_args = request.args.to_dict() %}{% set _ = last_args.update({'page': total_pages}) %}
+    <a href="{{ url_for(request.endpoint, **first_args) }}" class="{{ 'disabled' if page<=1 else '' }}">&laquo; First</a>
+    <a href="{{ url_for(request.endpoint, **prev_args) }}" class="{{ 'disabled' if page<=1 else '' }}">&larr; Prev</a>
+    <form method="get" class="page-jump">
+      {% for k, v in request.args.items() %}{% if k != 'page' %}<input type="hidden" name="{{k}}" value="{{v}}">{% endif %}{% endfor %}
+      <label>Go to page <input type="number" name="page" min="1" max="{{total_pages}}" value="{{page}}" size="4"></label>
+      <button type="submit">Go</button>
+    </form>
+    <a href="{{ url_for(request.endpoint, **next_args) }}" class="{{ 'disabled' if page>=total_pages else '' }}">Next &rarr;</a>
+    <a href="{{ url_for(request.endpoint, **last_args) }}" class="{{ 'disabled' if page>=total_pages else '' }}">Last &raquo;</a>
+  </div>
+</nav>
+{% endif %}

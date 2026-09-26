@@ -1,6 +1,7 @@
 """v26.9 — General ENT / Emergencies deliberate-ladder progress gate."""
 from collections import defaultdict
 import runtime_entry as rt
+import daily_path_entry_v403  # v45.6: boots the full production patch chain so runtime_entry.data/.app below reflect ALL applied patches, not just those runtime_entry.py itself applies
 DOMAIN="General ENT / Emergencies"; STAGES={"foundation","application","senior_decision"}
 PROTECTED=("Postoperative Neck Hematoma","Peritonsillar Abscess","Deep Neck Abscess Drainage","Caustic Ingestion","Airway Foreign Body")
 def main():

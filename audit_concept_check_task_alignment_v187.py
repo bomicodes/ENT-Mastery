@@ -1,6 +1,7 @@
 """v18.7 hard gate for the next live-canonical Concept Check depth cohort."""
 import json,re
 import runtime_entry
+import daily_path_entry_v403  # v45.6: boots the full production patch chain so runtime_entry.data/.app below reflect ALL applied patches, not just those runtime_entry.py itself applies
 from concept_check_board_repair_v177 import _find_module
 from concept_check_depth_v187 import COHORT
 TASK_TERMS={

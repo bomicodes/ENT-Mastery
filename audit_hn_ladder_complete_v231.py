@@ -1,6 +1,7 @@
 """v23.1 — full-domain Head & Neck Oncology learning-ladder hard gate."""
 from collections import Counter, defaultdict
 import runtime_entry as rt
+import daily_path_entry_v403  # v45.6: boots the full production patch chain so runtime_entry.data/.app below reflect ALL applied patches, not just those runtime_entry.py itself applies
 
 DOMAIN = "Head & Neck Oncology"
 STAGES = {"foundation", "application", "senior_decision"}
