@@ -42,7 +42,7 @@
           <h3>{{x.topic}}</h3>
         </div>
       </div>
-{% if x.anatomy_visual_status == 'verified_classical_plate' and x.image_url %}
+{% if x.anatomy_visual_status in ('verified_classical_plate', 'verified_open_access_photo') and x.image_url %}
       <figure class="anatomy-source-figure">
         <img src="{{x.image_url}}" alt="{{x.topic}} anatomy source plate" loading="lazy" referrerpolicy="no-referrer"
              onerror="{% if x.legacy_schematic %}this.onerror=null;this.src='{{ url_for('static', filename=x.legacy_schematic) }}';{% else %}this.closest('figure').classList.add('image-failed');{% endif %}">
