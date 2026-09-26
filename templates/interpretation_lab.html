@@ -69,6 +69,17 @@
     <div class="lab-visual-fallback">Visual asset unavailable. Use the text prompt for this study and report the missing asset.</div>
   </figure>
 {% endif %}
+  {% if c.image_url %}
+  <figure class="lab-visual-frame anatomy-source-figure">
+    <img src="{{c.image_url}}" alt="Histopathology image for {{c.id}}" class="lab-visual" loading="lazy" referrerpolicy="no-referrer"
+         onerror="this.closest('figure').classList.add('image-failed')">
+    <figcaption>
+      <span>{{c.image_credit}}</span>
+      {% if c.image_source %}<a href="{{c.image_source}}" target="_blank" rel="noopener">Open source / attribution ↗</a>{% endif %}
+    </figcaption>
+    <div class="lab-visual-fallback">Image could not load in-browser. {% if c.image_source %}<a href="{{c.image_source}}" target="_blank" rel="noopener">Open the cited source directly ↗</a>{% endif %}</div>
+  </figure>
+  {% endif %}
   {% if c.external %}
     <div class="external-visual">
       <div><span>OPEN SOURCE VISUAL</span><p>Inspect the source image/video first, then return here before revealing the answer.</p></div>

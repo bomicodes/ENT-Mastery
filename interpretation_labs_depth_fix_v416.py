@@ -14,48 +14,15 @@ GENERIC = "Interpret the finding through anatomy/physiology, then state the clin
 
 
 # case id -> (case-specific WHY THIS MATTERS, case-specific follow-up answer)
+# NOTE (2026-09-26): the old generic p8-p17 pathology cases (single-layer,
+# link-out-gallery prompts) were replaced by a real-histopathology-image,
+# two-tier (recognize -> reason) rewrite of the whole pathology lab, with new
+# case ids (path_oralscc_v43, path_mtc_v43, etc. — see data.py). Those new cases
+# already carry case-specific, board-accurate "why"/"reason_answer" content, so
+# they no longer go through this generic-placeholder-replacement mechanism.
+# The precise AJCC 8 numeric criteria this module used to inject for p8/p9/p15
+# are preserved and now appended directly by PATHOLOGY_V416_ADDENDA below.
 SPECIFIC = {
-    # Pathology
-    "p8": (
-        "Depth of invasion (DOI) is a major predictor of occult nodal risk in oral cavity SCC and, together with greatest tumor dimension, directly determines AJCC 8 T category; invasion pattern, DOI, PNI/LVI and margins therefore change neck and adjuvant decisions.",
-        "Report greatest dimension, DOI in millimeters, invasive-front pattern, PNI/LVI and margin distance; each can change staging, elective neck management or adjuvant planning.",
-    ),
-    "p9": (
-        "Block-positive p16 is a validated surrogate for HPV-mediated biology in the oropharynx, not a universal head-and-neck HPV marker; applying HPV-mediated staging to an oral cavity, laryngeal or hypopharyngeal primary would misclassify it.",
-        "Confirm the primary is oropharyngeal and that p16 meets the required block-positive pattern before using the separate AJCC 8 HPV-mediated oropharyngeal staging system.",
-    ),
-    "p10": (
-        "Papillary thyroid carcinoma is fundamentally a nuclear-features diagnosis; papillary architecture can be sparse or absent, so the characteristic nuclear changes establish the diagnosis before variant and postoperative risk features are considered.",
-        "After establishing PTC, report variant, size, gross extrathyroidal extension, margins, vascular invasion and nodal disease because these shape postoperative risk and treatment.",
-    ),
-    "p11": (
-        "Medullary thyroid carcinoma arises from parafollicular C cells, so its calcitonin-producing neuroendocrine biology requires RET/MEN2 evaluation rather than a differentiated-thyroid-cancer pathway.",
-        "Check calcitonin and CEA, obtain germline RET testing, and exclude MEN2-associated pheochromocytoma before thyroid surgery; assess hyperparathyroidism as appropriate.",
-    ),
-    "p12": (
-        "Adenoid cystic carcinoma has a marked tendency for perineural spread that can extend beyond the visible primary, so named-nerve involvement may change both resection and skull-base radiation fields.",
-        "Request explicit reporting of PNI and correlate symptoms or named-nerve disease with contrast-enhanced fat-suppressed MRI tracing the nerve toward its skull-base foramen.",
-    ),
-    "p13": (
-        "Mucoepidermoid carcinoma is anchored by a mixture of mucous, epidermoid and intermediate cells; cystic versus solid growth, mitoses, necrosis and neural invasion contribute to grade and therefore expected behavior.",
-        "Confirm the grading system and reported grade, then integrate site, extent, nodal risk, margins and PNI when planning resection, neck management and possible radiation.",
-    ),
-    "p14": (
-        "Pleomorphic adenoma may have an incomplete capsule and microscopic pseudopods, so capsular violation or enucleation can seed or leave tumor and increase recurrence.",
-        "Plan complete excision without tumor spillage—using extracapsular, partial or superficial-parotid techniques according to tumor anatomy and nerve relationships—rather than simple enucleation; document facial-nerve function.",
-    ),
-    "p15": (
-        "Pathologic extranodal extension (ENE) is an AJCC 8 nodal-stage modifier in most non-HPV-mediated head-and-neck sites and is a validated high-risk postoperative feature supporting concurrent chemoradiation when the patient can tolerate it; imaging suspicion of ENE is important but is not interchangeable with pathologic ENE for adjuvant selection.",
-        "State whether ENE is radiographic/clinical or pathologically confirmed, quantify it when the applicable pathology protocol requires, and apply the correct site-specific AJCC system before translating it into adjuvant treatment.",
-    ),
-    "p16": (
-        "Clinically significant perineural invasion in cutaneous SCC can extend along named nerves toward skull-base foramina and can enlarge both surgical and radiation fields beyond the skin specimen.",
-        "Separate incidental microscopic small-nerve PNI from symptomatic, named-nerve or larger-caliber disease and obtain nerve-pathway imaging when the latter is suspected.",
-    ),
-    "p17": (
-        "Inverted papilloma grows endophytically into stroma, but that pattern alone is not carcinoma; recurrence is driven mainly by residual disease at the attachment site, while synchronous or metachronous SCC must be excluded.",
-        "Identify and completely treat the attachment site, orient tissue for pathology, and sample suspicious or heterogeneous areas for associated dysplasia or SCC.",
-    ),
     # Vestibular
     "v8": (
         "Calorics test horizontal-canal VOR at very low frequency whereas vHIT tests high-frequency, high-acceleration function; disease and compensation can affect these frequency ranges differently, so discordance is physiologic information rather than automatic test error.",
@@ -134,10 +101,20 @@ SPECIFIC = {
 }
 
 
-P10_OLD = "Diagnosis plus variant, size, extrathyroidal extension, margins, vascular invasion and nodal disease shape postoperative strategy."
-P10_NEW = (
-    "Papillary thyroid carcinoma is identified by characteristic nuclear enlargement and overlap, irregular/angulated contours, longitudinal grooves, intranuclear cytoplasmic pseudoinclusions and optically clear chromatin ('Orphan Annie eye' nuclei). Variant, size, gross extrathyroidal extension, margins, vascular invasion and nodal disease then shape postoperative risk and treatment."
-)
+# Precise AJCC 8 / management detail appended (once, idempotently) to the reason_answer
+# of the corresponding new (2026-09-26) pathology case. Kept separate from SPECIFIC
+# because these cases already have bespoke, case-specific reason_answer prose and only
+# need this numeric/criteria addendum, not a full replacement.
+PATHOLOGY_V416_ADDENDA = {
+    "path_oralscc_v43": " AJCC 8 oral-cavity T category incorporates DOI directly: T1 is ≤2 cm with DOI ≤5 mm; T2 is ≤2 cm with DOI >5–10 mm, or >2–4 cm with DOI ≤10 mm; T3 is >4 cm or any DOI >10 mm — so DOI alone can move a tumor a full T category regardless of surface size.",
+    "path_p16_oropharynx_v43": " AJCC 8 assigns p16-positive oropharyngeal SCC a separate clinical nodal system: cN1 is one or more ipsilateral nodes ≤6 cm; cN2 is contralateral/bilateral nodes ≤6 cm; cN3 is any node >6 cm — the HPV-negative, ENE-based N categories do not apply here.",
+    "path_ene_v43": " AJCC 8 treats extranodal extension as a nodal-stage modifier in most non-HPV-mediated head-and-neck sites; radiographic/clinical ENE and pathologically confirmed ENE are assessed and reported separately and are not interchangeable when selecting adjuvant therapy.",
+    "path_mtc_v43": " Concretely: check calcitonin and CEA, obtain germline RET testing, and exclude MEN2-associated pheochromocytoma biochemically before any thyroid surgery, and assess for hyperparathyroidism as appropriate.",
+    "path_adenocystic_v43": " When PNI is reported, request explicit documentation of its extent and correlate any facial/nerve symptoms with contrast-enhanced, fat-suppressed MRI tracing the named nerve toward its skull-base foramen.",
+    "path_pleomorphic_v43": " The correct operative goal is complete excision without tumor spillage — extracapsular dissection, or partial/superficial parotidectomy according to tumor location and nerve relationships — never simple enucleation.",
+    "path_cutaneous_pni_v43": " Practically: separate incidental microscopic small-nerve PNI from symptomatic, named-nerve, or larger-caliber disease, and obtain dedicated nerve-pathway imaging when the latter is suspected.",
+    "path_invpap_v43": " The endophytic growth pattern itself is not carcinoma — recurrence is driven mainly by residual disease at the attachment site, so orient tissue for pathology and sample any heterogeneous or suspicious areas for synchronous dysplasia/SCC.",
+}
 
 
 AJCC8 = {
@@ -184,7 +161,7 @@ def apply_interpretation_labs_depth_fix_v416(data_module, app_module=None):
         raise RuntimeError("interpretation v41.6: INTERPRETATION_LABS unavailable")
     labs = deepcopy(source)
     index = _case_index(labs)
-    prefixes = {"p": "pathology", "v": "vestibular", "a": "audiology", "e": "laryngeal-endoscopy"}
+    prefixes = {"v": "vestibular", "a": "audiology", "e": "laryngeal-endoscopy"}
 
     fixed, preserved = [], []
     for case_id, (why, follow_answer) in SPECIFIC.items():
@@ -202,15 +179,18 @@ def apply_interpretation_labs_depth_fix_v416(data_module, app_module=None):
             raise RuntimeError(f"interpretation v41.6: independently changed case requires review: {case_id}")
         case["review_sources_v416"] = list(TEXTBOOKS)
 
-    p10 = index.get(("pathology", "p10"))
-    if p10 is None:
-        raise RuntimeError("interpretation v41.6: missing pathology:p10")
-    p10_fixed = False
-    if p10.get("answer") == P10_OLD:
-        p10["answer"] = P10_NEW
-        p10_fixed = True
-    elif p10.get("answer") != P10_NEW:
-        raise RuntimeError("interpretation v41.6: unexpected p10 answer")
+    pathology_addenda_applied = []
+    for case_id, addendum in PATHOLOGY_V416_ADDENDA.items():
+        case = index.get(("pathology", case_id))
+        if case is None:
+            raise RuntimeError(f"interpretation v41.6: missing pathology:{case_id}")
+        target_field = "reason_answer" if case.get("reason_answer") else "answer"
+        current = case.get(target_field) or ""
+        if addendum.strip() not in current:
+            case[target_field] = current + addendum
+            pathology_addenda_applied.append(case_id)
+        case["review_sources_v416"] = list(TEXTBOOKS) + [AJCC_SOURCE]
+        case["staging_edition"] = "AJCC 8 (operative curriculum standard); AJCC 9 reference-only"
 
     staging_added = []
     for case_id, (marker, addition) in AJCC8.items():
@@ -233,7 +213,7 @@ def apply_interpretation_labs_depth_fix_v416(data_module, app_module=None):
     return {
         "why_follow_answer_fixed": fixed,
         "why_follow_answer_already_current": preserved,
-        "p10_nuclear_features_fixed": p10_fixed,
+        "pathology_v43_addenda_applied": pathology_addenda_applied,
         "ajcc8_staging_additions": staging_added,
         "accuracy_corrections": ["DOI-plus-size", "pathologic-ENE", "larynx-T3", "thyroid-T4a-vs-T4b", "ANSD-rehabilitation", "CROS-vs-bone-conduction"],
     }
