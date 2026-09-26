@@ -44,7 +44,7 @@ def main():
     data=rt.data
     canonical=[m.get("topic") for m in data.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
     failures=[]
-    if len(canonical)!=32: failures.append(f"expected 32 canonical General ENT / Emergencies topics, found {len(canonical)}")
+    if len(canonical)!=35: failures.append(f"expected 35 canonical General ENT / Emergencies topics, found {len(canonical)}")
     if len(set(canonical))!=len(canonical): failures.append("duplicate canonical General ENT / Emergencies topic names")
     missing=sorted(set(PROTECTED_TOPICS)-set(canonical))
     if missing: failures.append(f"protected topics not exact canonical IDs: {missing}")

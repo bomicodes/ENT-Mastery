@@ -37,7 +37,7 @@ def main():
     data=rt.data
     canonical=[m.get("topic") for m in data.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
     failures=[]
-    if len(canonical)!=32: failures.append(f"expected 32 canonical Facial Plastics / Trauma topics, found {len(canonical)}")
+    if len(canonical)!=34: failures.append(f"expected 34 canonical Facial Plastics / Trauma topics, found {len(canonical)}")
     if len(set(canonical))!=len(canonical): failures.append("duplicate canonical Facial Plastics / Trauma topic names")
     by_cid=defaultdict(list)
     for q in data.CLINICAL_CHALLENGES_V119:

@@ -10,7 +10,8 @@ EXPECTED={
 "Post-Tonsillectomy Hemorrhage","Deep Neck Space Infection","Tracheostomy Emergency","Epistaxis","Ludwig Angina",
 "Angioedema","Carotid Blowout Syndrome","Esophageal Perforation / Cervical Mediastinitis","Lemierre Syndrome","Immunocompromised Host in Otolaryngology",
 "Cranial Nerve Examination / Skull Base Localization","ENT Imaging Fundamentals","ENT Fluids / Electrolytes / Nutrition","Pain Management in the Head & Neck Patient","Antimicrobial Stewardship in Otolaryngology",
-"Wound Healing / Scar Biology in Head & Neck Surgery","Grafts / Implants / Biomaterials in ENT","Systemic / Granulomatous Disease Manifestations in ENT","Laser / Energy Safety in Otolaryngology","Evidence Interpretation / Outcomes Research","Geriatric Otolaryngology / Frailty","Oral Manifestations of Systemic Disease"}
+"Wound Healing / Scar Biology in Head & Neck Surgery","Grafts / Implants / Biomaterials in ENT","Systemic / Granulomatous Disease Manifestations in ENT","Laser / Energy Safety in Otolaryngology","Evidence Interpretation / Outcomes Research","Geriatric Otolaryngology / Frailty","Oral Manifestations of Systemic Disease",
+    "Cervical Necrotizing Fasciitis","Ear and Nasal Foreign Body Removal","Penetrating and Blunt Neck Trauma",}
 def _quality(q):
  e=[]; choices=list(q.get("choices") or []); reasons=list(q.get("why_wrong") or [])
  try: a=int(q.get("answer"))
@@ -27,7 +28,7 @@ def _quality(q):
 def main():
  d=rt.data; failures=[]
  canonical=[m.get("topic") for m in d.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
- if len(canonical)!=32: failures.append(f"expected 32 canonical topics, found {len(canonical)}")
+ if len(canonical)!=35: failures.append(f"expected 35 canonical topics, found {len(canonical)}")
  if len(set(canonical))!=len(canonical): failures.append("duplicate canonical topic names")
  if set(canonical)!=EXPECTED:
   failures.append(f"canonical set drift; missing={sorted(EXPECTED-set(canonical))}; extra={sorted(set(canonical)-EXPECTED)}")

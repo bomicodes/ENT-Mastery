@@ -13,7 +13,7 @@ PROTECTED_TOPICS=(
     "Facial Nerve Reanimation","Facial Synkinesis / Static-Dynamic Rehabilitation","Scar Management","Periocular Reconstruction","Forehead Flap / Nasal Reconstruction",
     "Otoplasty","Septal Perforation","Auricular Reconstruction","Alar Retraction / Nasal Vestibular Stenosis","Aesthetic Facial Analysis",
     "Aging Face / Injectables / Resurfacing","Hair Restoration Fundamentals",
-)
+    "Blepharoplasty / Eyelid Malposition (Ptosis, Ectropion, Entropion)","Laryngeal Fracture / External Laryngeal Trauma",)
 
 def _quality_errors(q):
     errors=[]; choices=list(q.get("choices") or []); reasons=list(q.get("why_wrong") or [])
@@ -32,7 +32,7 @@ def main():
     data=rt.data
     canonical=[m.get("topic") for m in data.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
     failures=[]
-    if len(canonical)!=32: failures.append(f"expected 32 canonical Facial Plastics / Trauma topics, found {len(canonical)}")
+    if len(canonical)!=34: failures.append(f"expected 34 canonical Facial Plastics / Trauma topics, found {len(canonical)}")
     if len(set(canonical))!=len(canonical): failures.append("duplicate canonical Facial Plastics / Trauma topic names")
     if set(canonical)!=set(PROTECTED_TOPICS):
         failures.append(f"full-domain topic mismatch missing={sorted(set(canonical)-set(PROTECTED_TOPICS))} stale={sorted(set(PROTECTED_TOPICS)-set(canonical))}")

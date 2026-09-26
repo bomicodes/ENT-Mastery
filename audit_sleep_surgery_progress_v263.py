@@ -32,7 +32,7 @@ def main():
     data=rt.data
     canonical=[m.get("topic") for m in data.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
     failures=[]
-    if len(canonical)!=21: failures.append(f"expected 21 canonical Sleep Surgery topics, found {len(canonical)}")
+    if len(canonical)!=24: failures.append(f"expected 24 canonical Sleep Surgery topics, found {len(canonical)}")
     if len(set(canonical))!=len(canonical): failures.append("duplicate canonical Sleep Surgery topic names")
     missing_from_registry=sorted(set(PROTECTED_TOPICS)-set(canonical))
     if missing_from_registry: failures.append(f"protected topics not exact canonical IDs: {missing_from_registry}")

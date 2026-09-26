@@ -5,7 +5,7 @@ import daily_path_entry_v403  # v45.6: boots the full production patch chain so 
 
 DOMAIN = "Rhinology / Allergy / Skull Base"
 STAGES = {"foundation", "application", "senior_decision"}
-EXPECTED_CANONICAL = 42
+EXPECTED_CANONICAL = 48
 
 
 def main():

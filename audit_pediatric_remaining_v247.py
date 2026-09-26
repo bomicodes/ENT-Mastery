@@ -17,8 +17,8 @@ def main():
     data=rt.data
     modules=data.DEEP_MODULES_V6.get(DOMAIN,[])
     topics=[m.get("topic") for m in modules if m.get("topic")]
-    if len(topics)!=40:
-        raise AssertionError(f"Expected 40 canonical Pediatric topics, found {len(topics)}")
+    if len(topics)!=43:
+        raise AssertionError(f"Expected 43 canonical Pediatric topics, found {len(topics)}")
     if len(set(topics))!=len(topics):
         raise AssertionError("Duplicate canonical Pediatric topic names detected in DEEP_MODULES_V6")
 
@@ -46,8 +46,8 @@ def main():
         raise AssertionError(f"Partially reviewed Pediatric ladders are not allowed: {details}")
     if remaining:
         raise AssertionError(f"Pediatric domain is expected complete; remaining canonical topics: {remaining}")
-    if len(complete)!=40:
-        raise AssertionError(f"Pediatric completion accounting mismatch: expected 40 complete, found {len(complete)}")
+    if len(complete)!=43:
+        raise AssertionError(f"Pediatric completion accounting mismatch: expected 43 complete, found {len(complete)}")
 
 
 if __name__=="__main__": main()

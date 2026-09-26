@@ -6,8 +6,8 @@ import runtime_entry_pasha
 
 DOMAIN = "Rhinology / Allergy / Skull Base"
 TOPIC = "Sphenoidotomy"
-EXPECTED_RHINOLOGY = 42
-EXPECTED_GLOBAL = 325
+EXPECTED_RHINOLOGY = 48
+EXPECTED_GLOBAL = 356
 
 
 def fail(message):

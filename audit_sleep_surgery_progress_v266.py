@@ -10,7 +10,7 @@ import daily_path_entry_v403  # v45.6: boots the full production patch chain so 
 DOMAIN="Sleep Surgery"
 REQUIRED_STAGES={"foundation","application","senior_decision"}
 ALLOWED_STAGES=REQUIRED_STAGES|{"management"}
-PROTECTED_TOPICS=("Adult PSG Interpretation","DISE","Hypoglossal Nerve Stimulation","PAP Troubleshooting","HNS Activation / Programming","Palatal Surgery","Tongue Base Surgery","Maxillomandibular Advancement","Residual OSA After Surgery","HNS Troubleshooting / Nonresponse","Pediatric PSG Interpretation","Central Events / Hypoventilation","Central Sleep Apnea / Treatment-Emergent CSA","Sleep-Related Hypoventilation","Positional OSA","Circadian Rhythm Sleep-Wake Disorders","Down Syndrome Pediatric HNS","Lingual Tonsil / Tongue-Base Obstruction","Narcolepsy / Central Hypersomnolence Recognition","Restless Legs / Periodic Limb Movement Disorders","Oral Appliance Therapy")
+PROTECTED_TOPICS=("Adult PSG Interpretation","DISE","Hypoglossal Nerve Stimulation","PAP Troubleshooting","HNS Activation / Programming","Palatal Surgery","Tongue Base Surgery","Maxillomandibular Advancement","Residual OSA After Surgery","HNS Troubleshooting / Nonresponse","Pediatric PSG Interpretation","Central Events / Hypoventilation","Central Sleep Apnea / Treatment-Emergent CSA","Sleep-Related Hypoventilation","Positional OSA","Circadian Rhythm Sleep-Wake Disorders","Down Syndrome Pediatric HNS","Lingual Tonsil / Tongue-Base Obstruction","Narcolepsy / Central Hypersomnolence Recognition","Restless Legs / Periodic Limb Movement Disorders","Oral Appliance Therapy","Adult Epiglottic Collapse / Epiglottopexy","Nasal Surgery as a CPAP-Adherence Adjunct","Tracheostomy as Definitive OSA Therapy")
 def _quality_errors(q):
  errors=[]; choices=list(q.get("choices") or []); reasons=list(q.get("why_wrong") or [])
  try: answer=int(q.get("answer"))
@@ -26,7 +26,7 @@ def _quality_errors(q):
  return errors
 def main():
  data=rt.data; canonical=[m.get("topic") for m in data.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]; failures=[]
- if len(canonical)!=21: failures.append(f"expected 21 canonical Sleep Surgery topics, found {len(canonical)}")
+ if len(canonical)!=24: failures.append(f"expected 24 canonical Sleep Surgery topics, found {len(canonical)}")
  if len(set(canonical))!=len(canonical): failures.append("duplicate canonical Sleep Surgery topic names")
  missing=sorted(set(PROTECTED_TOPICS)-set(canonical)); extra=sorted(set(canonical)-set(PROTECTED_TOPICS))
  if missing: failures.append(f"protected topics not exact canonical IDs: {missing}")

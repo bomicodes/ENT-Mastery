@@ -757,7 +757,16 @@ def daily_adaptive():
     except: mins=30
     mins=max(10,min(60,mins)); plan,total=_adaptive_plan(mins,focus,concept_id); from data import DEEP_MODULES_V6
     challenge_pool=[q for q in CLINICAL_CHALLENGES_V119 if (not focus or canonical_domain_v94(q.get("domain"))==canonical_domain_v94(focus))]; random.shuffle(challenge_pool); challenge_count=max(1,min(3,mins//15)); daily_challenges=challenge_pool[:challenge_count]
-    return render_template("daily_adaptive.html",plan=plan,total=total,minutes=mins,focus=focus,concept_id=concept_id,domains=list(DEEP_MODULES_V6.keys()),daily_challenges=daily_challenges)
+    # v45.8 fix: the template shows a "Practice: {topic}" block of matching Clinical
+    # Challenge questions after the last item of each concept's bundle, keyed by
+    # bundle_questions.get(concept_id) -- this was never built or passed here, so
+    # any plan touching that template line 500'd with 'bundle_questions is undefined'.
+    plan_concept_ids=[cid for cid in dict.fromkeys(x.get("concept_id") for x in plan) if cid]
+    bundle_questions={}
+    for cid in plan_concept_ids:
+        matches=[q for q in CLINICAL_CHALLENGES_V119 if q.get("concept_id")==cid][:3]
+        if matches: bundle_questions[cid]=matches
+    return render_template("daily_adaptive.html",plan=plan,total=total,minutes=mins,focus=focus,concept_id=concept_id,domains=list(DEEP_MODULES_V6.keys()),daily_challenges=daily_challenges,bundle_questions=bundle_questions)
 
 @app.route("/daily-adaptive/answer",methods=["POST"])
 def daily_adaptive_answer():

@@ -58,7 +58,7 @@ def main():
     data=rt.data
     canonical=[m.get("topic") for m in data.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
     failures=[]
-    if len(canonical)!=36: failures.append(f"expected 36 canonical Laryngology topics, found {len(canonical)}")
+    if len(canonical)!=39: failures.append(f"expected 39 canonical Laryngology topics, found {len(canonical)}")
     if len(set(canonical))!=len(canonical): failures.append("duplicate canonical Laryngology topic names")
     by_cid=defaultdict(list)
     for q in data.CLINICAL_CHALLENGES_V119:

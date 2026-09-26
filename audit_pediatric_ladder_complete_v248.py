@@ -20,16 +20,16 @@ EXPECTED_TOPICS=[
 "Tympanostomy Tube Indications","Velopharyngeal Insufficiency","Cleft / Craniofacial Otologic-Airway Care","Croup vs Epiglottitis","Epiglottitis",
 "Congenital Hearing Loss Genetics","Cleft Lip / Palate — ENT Surgical Fundamentals","Pediatric Head & Neck Tumors","Microtia Reconstruction","Ankyloglossia / Maxillary Frenulum",
 "Juvenile Recurrent Parotitis","Pediatric Speech Disorders","Nonobstructive Pediatric Sleep Disorders","Pediatric Vestibular Disorders","Pediatric Reflux / Eosinophilic Esophagitis",
-]
+    "Infantile Hemangioma / PHACE Syndrome","Nasal Dermoid Cyst","Pierre Robin Sequence",]
 
 
 def main():
     data=rt.data
     modules=data.DEEP_MODULES_V6.get(DOMAIN,[])
     canonical=[m.get("topic") for m in modules if m.get("topic")]
-    if len(canonical)!=40:
-        raise AssertionError(f"Expected exactly 40 canonical Pediatric topics, found {len(canonical)}")
-    if len(set(canonical))!=40:
+    if len(canonical)!=43:
+        raise AssertionError(f"Expected exactly 43 canonical Pediatric topics, found {len(canonical)}")
+    if len(set(canonical))!=43:
         raise AssertionError("Duplicate canonical Pediatric topic names detected")
     if set(canonical)!=set(EXPECTED_TOPICS):
         missing=sorted(set(EXPECTED_TOPICS)-set(canonical)); unexpected=sorted(set(canonical)-set(EXPECTED_TOPICS))

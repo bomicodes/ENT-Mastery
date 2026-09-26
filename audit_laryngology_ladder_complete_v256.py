@@ -42,7 +42,7 @@ CANONICAL_TOPICS=(
     "Esophageal Disease for the Otolaryngologist",
     "Transnasal Esophagoscopy",
     "Tracheobronchial Endoscopy Principles",
-)
+    "Laryngeal Electromyography (LEMG)","Laryngocele","Laryngopharyngeal Reflux (LPR)",)
 
 
 def _quality_errors(q):
@@ -65,7 +65,7 @@ def main():
     data=rt.data
     canonical=[m.get("topic") for m in data.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
     failures=[]
-    if len(canonical)!=36: failures.append(f"expected 36 canonical Laryngology topics, found {len(canonical)}")
+    if len(canonical)!=39: failures.append(f"expected 39 canonical Laryngology topics, found {len(canonical)}")
     if len(set(canonical))!=len(canonical): failures.append("duplicate canonical Laryngology topic names")
     if set(canonical)!=set(CANONICAL_TOPICS):
         failures.append(f"canonical registry drift: missing={sorted(set(CANONICAL_TOPICS)-set(canonical))} unexpected={sorted(set(canonical)-set(CANONICAL_TOPICS))}")
