@@ -197,11 +197,16 @@ def apply_interpretation_labs_depth_fix_v416(data_module, app_module=None):
         case = index.get(("head-neck-imaging", case_id))
         if case is None:
             raise RuntimeError(f"interpretation v41.6: missing head-neck-imaging:{case_id}")
-        answer = str(case.get("answer") or "")
+        # The newer image cases teach recognition in `answer` and staging in
+        # `reason_answer`. Keep that division and the original strict check
+        # for the older text-only hn2 card.
+        authored_reason = case_id in {"hn3", "hn4", "hn11"} and bool(case.get("image_url") and case.get("reason_prompt") and case.get("reason_answer"))
+        target = "reason_answer" if authored_reason else "answer"
+        answer = str(case.get(target) or "")
         if addition.strip() not in answer:
-            if not answer.rstrip().endswith(marker):
+            if not authored_reason and not answer.rstrip().endswith(marker):
                 raise RuntimeError(f"interpretation v41.6: unexpected staging answer: {case_id}")
-            case["answer"] = answer + addition
+            case[target] = answer + addition
             staging_added.append(case_id)
         case["review_sources_v416"] = list(TEXTBOOKS) + [AJCC_SOURCE]
         case["staging_edition"] = "AJCC 8 (operative curriculum standard); AJCC 9 reference-only"
