@@ -1,0 +1,168 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='textbook_v470.css') }}">
+<div class="eyebrow">DAILY PATH</div>
+<div class="dp-head">
+  <div>
+    <h1>Today: {{ items|length }} topic{{ '' if items|length == 1 else 's' }}, ~{{ total }} minutes</h1>
+    <p class="lede">Each topic goes from foundation to mastery: learn the mechanism, then prove it with board-style vignettes at three levels. Mastered topics come back as spaced reviews.</p>
+  </div>
+  <form method="get" class="dp-controls" action="/daily-adaptive">
+    <select name="minutes" aria-label="Session length">{% for m in [15,30,45,60] %}<option value="{{m}}" {% if m==minutes %}selected{% endif %}>{{m}} min</option>{% endfor %}</select>
+    <select name="focus" aria-label="Domain"><option value="">All domains</option>{% for d in domains %}<option {% if focus==d %}selected{% endif %}>{{d}}</option>{% endfor %}</select>
+    <button>Build session</button>
+  </form>
+</div>
+<form method="get" class="dp-controls" action="/daily-adaptive" style="margin-top:10px">
+  <input name="topic" list="dp-topics" placeholder="Or study a specific topic… e.g. BPPV" aria-label="Study a specific topic">
+  <datalist id="dp-topics">{% for t in topic_names %}<option value="{{t}}">{% endfor %}</datalist>
+  <button>Study this topic</button>
+</form>
+
+<div class="dp-progress">
+  <div class="card"><small>Curriculum mastered</small><b>{{overall.mastered}} / {{overall.total}}</b><div class="dp-bar"><i style="width:{{ (100*overall.mastered/overall.total)|round(1) if overall.total else 0 }}%"></i></div><small>{{overall.started}} topics started</small></div>
+  {% for r in progress %}<div class="card"><small>{{r.domain}}</small><b>{{r.mastered}} / {{r.total}}</b><div class="dp-bar"><i style="width:{{ (100*r.mastered/r.total)|round(1) if r.total else 0 }}%"></i></div><small>{{r.started}} started</small></div>{% endfor %}
+</div>
+<div class="dp-ladder"><span>How each topic advances:</span><b>Learn</b>→<b>Foundation</b>→<b>Application</b>→<b>Mastery</b><span>· Miss a level and it comes back tomorrow; pass Mastery and it returns as spaced review.</span></div>
+
+{% if not items %}<div class="card dp-empty"><h2>Nothing scheduled</h2><p class="muted">Every topic in this filter is mastered and nothing is due. Pick another domain or a specific topic above.</p></div>{% endif %}
+
+{% macro mcq(q, idx) -%}
+<div class="dp-q" data-qid="{{q.id}}" data-answer="{{q.answer}}" data-why='{{ q.why_wrong|tojson }}'>
+  <div class="dp-q-meta">Question {{idx}} · {{ {'check':'Concept check','foundation':'Foundation vignette','application':'Application vignette','mastery':'Mastery vignette'}.get(q.kind, 'Board vignette') }}</div>
+  <p class="dp-q-stem">{{q.stem}}</p>
+  <div class="dp-choices">{% for ch in q.choices %}<button type="button" class="dp-choice" data-i="{{loop.index0}}"><b>{{ 'ABCDEFG'[loop.index0] }}</b><span>{{ch}}</span></button>{% endfor %}</div>
+  <div class="dp-feedback" hidden><div class="verdict"></div><div class="explain">{{q.explanation}}</div><div class="why-wrong" hidden></div>{% if q.pearl %}<div class="pearl"><b>Board pearl:</b> {{q.pearl}}</div>{% endif %}</div>
+</div>
+{%- endmacro %}
+
+{% macro textblock(text) -%}<div class="tt-source" hidden>{{text}}</div><ul class="tt-list"></ul>{%- endmacro %}
+
+<div class="dp-items">
+{% for it in items %}{% set m = it.module %}
+<article class="card dp-item" data-cid="{{it.cid}}" data-type="{{it.type}}" data-level="{{it.level}}">
+  <div class="dp-item-head">
+    <div>
+      <div class="dp-kind {{ 'review' if it.type=='review' }}">{{ loop.index }} · {% if it.type=='review' %}Spaced review{% elif it.level > 0 %}Resume topic{% else %}New topic{% endif %} · {{it.domain}}</div>
+      <h2>{{it.topic}}</h2>
+      <small>{{it.reason}} · <a href="/concept?domain={{it.domain|urlencode}}&topic={{it.topic|urlencode}}">Open full topic ↗</a></small>
+    </div>
+    {% if it.type == 'lesson' %}<div class="dp-levels">{% for p in it.phases %}<span class="{{ 'done' if p.done }}" data-level-pill="{{p.key}}">{{p.label}}</span>{% endfor %}</div>{% endif %}
+  </div>
+
+  {% if it.type == 'review' %}
+  <section class="dp-phase" data-phase="review">
+    <h3><span class="tag">Review</span>Can you still do it?</h3>
+    <p class="dp-goal">Three mixed vignettes. Get them right and the next review moves further out.</p>
+    {% for q in it.questions %}{{ mcq(q, loop.index) }}{% endfor %}
+    <div class="dp-phase-result" hidden></div>
+    <details class="dp-learn" style="margin-top:10px"><summary>Refresh the mechanism</summary><div>{{ textblock(m.pathophysiology or m.recognize) }}</div></details>
+  </section>
+  {% else %}
+  <section class="dp-phase dp-learn" data-phase="learn">
+    <h3><span class="tag">Learn</span>Build the foundation</h3>
+    <p class="dp-goal">Read the mechanism first — every question below builds on it.</p>
+    {% if m.overview %}<details {{ 'open' if it.level == 0 }}><summary>Why it matters</summary><div>{{ textblock(m.overview) }}</div></details>{% endif %}
+    {% if m.physiology %}<details {{ 'open' if it.level == 0 }}><summary>Normal anatomy & physiology</summary><div>{{ textblock(m.physiology) }}</div></details>{% endif %}
+    {% if m.pathophysiology %}<details {{ 'open' if it.level == 0 }}><summary>Pathophysiology & mechanism</summary><div>{{ textblock(m.pathophysiology) }}</div></details>{% endif %}
+    <details><summary>Clinical presentation</summary><div>{{ textblock(m.recognize) }}</div></details>
+    <details><summary>Diagnosis & workup</summary><div>{{ textblock(m.workup) }}</div></details>
+    <details><summary>Management</summary><div>{{ textblock(m.manage) }}</div></details>
+    <div class="dp-phase-actions"><button type="button" class="dp-continue" data-next>I've read it — start Foundation →</button></div>
+  </section>
+  {% for p in it.phases %}
+  <section class="dp-phase" data-phase="{{p.key}}" data-done="{{ 1 if p.done else 0 }}" hidden>
+    <h3><span class="tag">{{p.label}}</span>{{ {'foundation':'Recognize it and explain why','application':'Work it up and manage it','mastery':'Make the senior call and teach it'}[p.key] }}</h3>
+    <p class="dp-goal">{{p.goal}}{% if p.done %} You passed this level before — redo it as practice or skip ahead.{% endif %}</p>
+    {% for q in p.questions %}{{ mcq(q, loop.index) }}{% else %}<p class="muted">No questions at this level yet.</p>{% endfor %}
+    {% if p.key == 'mastery' %}
+    <div class="dp-q dp-explain">
+      <div class="dp-q-meta">Teach-back</div>
+      <p class="dp-q-stem">Explain {{it.topic}} to a junior resident in 60 seconds: the mechanism, how it presents, and the one decision that most often goes wrong.</p>
+      <textarea placeholder="Type or say your explanation, then reveal the teaching points."></textarea>
+      <div class="dp-phase-actions"><button type="button" data-reveal>Reveal teaching points</button></div>
+      <div class="dp-feedback" hidden>{{ textblock(m.teach) }}</div>
+    </div>
+    <div class="dp-wrap-links">
+      {% for c in it.cases %}<a href="/integrated/{{c.id}}"><small>Progressive case</small>{{c.title}}</a>{% endfor %}
+      {% for op in it.ors %}<a href="/case-tomorrow?q={{ op.title|urlencode }}"><small>OR card</small>{{op.title}}</a>{% endfor %}
+      <a href="/clinical-challenges?topic={{it.topic|urlencode}}"><small>Question bank</small>All {{it.qtotal}} {{it.topic}} questions</a>
+    </div>
+    {% endif %}
+    <div class="dp-phase-result" hidden></div>
+    <div class="dp-phase-actions" data-after hidden>{% if not loop.last %}<button type="button" class="dp-continue" data-next>Continue to {{ it.phases[loop.index].label }} →</button>{% endif %}</div>
+  </section>
+  {% endfor %}
+  {% endif %}
+</article>
+{% endfor %}
+</div>
+
+<script src="{{ url_for('static', filename='topic_text_v470.js') }}"></script>
+<script>
+(function(){
+  function post(url, body){
+    return fetch(url,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+      .then(function(r){return r.json().catch(function(){return {ok:false};});}).catch(function(){return {ok:false};});
+  }
+  function firstOpenPhase(item){
+    var phases=[].slice.call(item.querySelectorAll('.dp-phase[data-phase]:not([data-phase=learn]):not([data-phase=review])'));
+    for(var i=0;i<phases.length;i++){ if(phases[i].dataset.done!=='1') return phases[i]; }
+    return phases[phases.length-1];
+  }
+  document.querySelectorAll('.dp-item').forEach(function(item){
+    var cid=item.dataset.cid;
+    // Resumed topics skip straight to the first level not yet passed.
+    if(item.dataset.type==='lesson' && +item.dataset.level>0){ var p=firstOpenPhase(item); if(p){p.hidden=false; markNow(item,p.dataset.phase);} }
+    item.querySelectorAll('[data-next]').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var sec=btn.closest('.dp-phase'), next=sec.nextElementSibling;
+        while(next && !next.matches('.dp-phase')) next=next.nextElementSibling;
+        if(next){ next.hidden=false; markNow(item,next.dataset.phase); next.scrollIntoView({behavior:'smooth',block:'start'}); }
+        btn.disabled=true;
+      });
+    });
+    item.querySelectorAll('[data-reveal]').forEach(function(btn){
+      btn.addEventListener('click',function(){ var fb=btn.closest('.dp-explain').querySelector('.dp-feedback'); fb.hidden=false; btn.disabled=true; });
+    });
+    item.querySelectorAll('.dp-q[data-qid]').forEach(function(q){
+      q.querySelectorAll('.dp-choice').forEach(function(btn){
+        btn.addEventListener('click',function(){
+          if(q.dataset.answered) return; q.dataset.answered='1';
+          var chosen=+btn.dataset.i, answer=+q.dataset.answer, ok=chosen===answer;
+          q.dataset.correct=ok?'1':'0';
+          q.querySelectorAll('.dp-choice').forEach(function(b){ b.disabled=true; if(+b.dataset.i===answer) b.classList.add('correct'); });
+          if(!ok) btn.classList.add('wrong');
+          var fb=q.querySelector('.dp-feedback'), v=fb.querySelector('.verdict');
+          v.textContent= ok ? 'Correct.' : 'Not quite — the answer is '+'ABCDEFG'[answer]+'.';
+          v.className='verdict '+(ok?'ok':'no');
+          var why=[]; try{ why=JSON.parse(q.dataset.why||'[]'); }catch(e){}
+          if(!ok && why[chosen]){ var w=fb.querySelector('.why-wrong'); w.textContent='Why '+'ABCDEFG'[chosen]+' is wrong: '+why[chosen]; w.hidden=false; }
+          fb.hidden=false;
+          post('/daily-path/answer',{qid:q.dataset.qid,chosen:chosen,cid:cid});
+          maybeFinishPhase(item, q.closest('.dp-phase'));
+        });
+      });
+    });
+  });
+  function markNow(item, phase){
+    item.querySelectorAll('[data-level-pill]').forEach(function(s){ s.classList.toggle('now', s.dataset.levelPill===phase && !s.classList.contains('done')); });
+  }
+  function maybeFinishPhase(item, sec){
+    var qs=[].slice.call(sec.querySelectorAll('.dp-q[data-qid]'));
+    if(!qs.length || qs.some(function(q){return !q.dataset.answered;})) return;
+    var correct=qs.filter(function(q){return q.dataset.correct==='1';}).length, total=qs.length;
+    var res=sec.querySelector('.dp-phase-result');
+    post('/daily-path/phase',{cid:item.dataset.cid,phase:sec.dataset.phase,correct:correct,total:total}).then(function(r){
+      var passed = r && r.ok ? r.passed : (correct===total);
+      res.className='dp-phase-result '+(passed?'pass':'fail'); res.hidden=false;
+      var label = sec.dataset.phase==='review' ? 'Review' : sec.querySelector('.tag').textContent;
+      res.textContent = correct+' / '+total+' correct · ' + (passed
+        ? label+' passed.' + (r && r.next_due ? ' Next review: '+r.next_due+'.' : '')
+        : label+' not passed yet — reread the mechanism; this topic comes back tomorrow.' ) + (r && r.ok===false ? ' (Progress could not be saved — check your connection.)' : '');
+      if(passed){ var pill=item.querySelector('[data-level-pill="'+sec.dataset.phase+'"]'); if(pill){pill.classList.add('done');pill.classList.remove('now');} }
+      var after=sec.querySelector('[data-after]'); if(after) after.hidden=false;
+    });
+  }
+})();
+</script>
+{% endblock %}
