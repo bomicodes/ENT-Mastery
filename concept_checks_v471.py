@@ -49,7 +49,9 @@ def install_concept_checks_v471(data):
     replaced, missing, slot = 0, [], 0
     for q in data.CONCEPT_CHECKS_V112:
         stem = q.get("stem") or q.get("prompt") or ""
-        if not (isinstance(q.get("choices"), list) and TEMPLATE_RE.search(stem)):
+        # Only live multiple-choice templates. Items an earlier patch already
+        # converted to deep free-response (empty choices + answer_text) stay as-is.
+        if not (isinstance(q.get("choices"), list) and q["choices"] and TEMPLATE_RE.search(stem)):
             continue
         rows = authored.get(q.get("topic"))
         if not rows or used[q["topic"]] >= len(rows):
