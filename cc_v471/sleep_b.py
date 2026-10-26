@@ -1,0 +1,48 @@
+"""v47.1 authored Concept Checks — Sleep Surgery (part B)."""
+
+CHECKS = [
+("Maxillomandibular Advancement",
+ "A 35-year-old with severe OSA (AHI 55), retrognathia, and a BMI of 26 failed CPAP and palatal surgery. DISE shows multilevel collapse. Why is maxillomandibular advancement especially effective for him?",
+ "It enlarges and tensions the whole pharynx",
+ [("It removes redundant palatal tissue", "MMA moves bone; it does not resect soft tissue."),
+  ("It treats only the retrolingual level", "Advancing both jaws enlarges velopharyngeal and retrolingual levels."),
+  ("It works by stimulating the genioglossus", "That describes hypoglossal nerve stimulation.")],
+ "The soft palate, tongue, and suprahyoid muscles attach to the maxilla and mandible. Advancing both jaws enlarges the bony enclosure and tensions pharyngeal walls at every level, reducing collapsibility. Skeletal deficiency predicts a strong response.",
+ "Multilevel collapse with skeletal deficiency: think MMA."),
+
+("Oral Appliance Therapy",
+ "A 45-year-old with mild-to-moderate OSA (AHI 14) and good dentition cannot tolerate CPAP. Why does a mandibular advancement device improve the airway?",
+ "It pulls the tongue base forward",
+ [("It splints the palate upward", "The device repositions the mandible; it does not lift the palate."),
+  ("It reduces nasal resistance", "It does not change nasal airflow."),
+  ("It increases genioglossus nerve firing", "It works mechanically, not by stimulating the nerve.")],
+ "Advancing the mandible pulls the genioglossus, geniohyoid, and hyoid forward and stretches the lateral pharyngeal walls, enlarging the airway. AHI reduction is less than CPAP, but better adherence often gives comparable real-world benefit.",
+ "Oral appliances help mild-to-moderate OSA with adequate teeth."),
+
+("HNS Activation / Programming",
+ "One month after HNS implantation, a patient reports the tongue pushes to the left and feels uncomfortable, and residual AHI is 22 at the current amplitude. Awake endoscopy shows tongue retraction rather than protrusion on stimulation. What is the best adjustment?",
+ "Change the electrode configuration",
+ [("Increase the amplitude further", "More current increases retractor recruitment and discomfort."),
+  ("Explant the device", "Programming can often correct retractor recruitment before considering removal."),
+  ("Switch to positional therapy alone", "Abandoning HNS ignores a correctable programming problem.")],
+ "Different electrode configurations change which hypoglossal fibers are recruited. Retraction indicates retractor fiber activation; reconfiguring targets protrusors. Titration polysomnography then finds the lowest effective amplitude.",
+ "HNS retraction on stimulation = reprogram the electrodes."),
+
+("Residual OSA After Surgery",
+ "A patient's AHI fell from 40 to 25 after uvulopalatopharyngoplasty and tonsillectomy, but he gained 9 kg since surgery. Repeat DISE shows tongue-base and epiglottic collapse. What best explains the residual OSA?",
+ "Untreated lower collapse plus weight gain",
+ [("Palatal scar always causes recurrence", "Scar can affect mechanics, but the DISE findings point to lower levels."),
+  ("Central apnea induced by surgery", "Palatal surgery does not cause central apnea."),
+  ("Postoperative nasal obstruction", "Nasal obstruction is not described and does not explain the DISE findings.")],
+ "Palatal surgery addresses retropalatal collapse but not retrolingual or epiglottic levels, and weight gain increases soft-tissue collapsibility. Repeat DISE and PSG guide next steps such as CPAP retrial, HNS, or MMA.",
+ "Residual OSA after surgery: re-map the airway."),
+
+("Central Events / Hypoventilation",
+ "A 60-year-old on long-term high-dose methadone has a PSG showing an AHI of 35 with 70 percent central apneas and irregular breathing. Why is this patient not a candidate for hypoglossal nerve stimulation?",
+ "His apneas are not from collapse",
+ [("Methadone damages the hypoglossal nerve", "Opioids suppress respiratory drive; they do not injure the nerve."),
+  ("HNS is contraindicated in anyone over 55", "Age alone does not exclude HNS."),
+  ("The AHI is too low for HNS", "An AHI of 35 is within typical HNS criteria; the problem is the central proportion.")],
+ "Opioids suppress brainstem respiratory drive, causing ataxic breathing and central apneas. HNS opens the airway but cannot create respiratory effort, so a central or mixed apnea fraction above about 25 percent excludes it.",
+ "High central apnea burden = treat the drive, not the airway."),
+]

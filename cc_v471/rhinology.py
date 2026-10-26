@@ -57,7 +57,7 @@ CHECKS = [
 
 ("CRSsNP",
  "A 50-year-old has 4 months of facial pressure, congestion, and discolored drainage despite saline. Endoscopy shows purulence in the middle meatus without polyps, and CT shows mucosal thickening with thickened bony septa. Which tissue pattern is typical of this phenotype?",
- "Fibrosis with neutrophil-predominant inflammation",
+ "Fibrosis with neutrophils",
  [("Edematous stroma with eosinophils", "Edematous eosinophilic stroma is the typical pattern of CRS with nasal polyps."),
   ("Fungal hyphae invading vessel walls", "Angioinvasion defines acute invasive fungal sinusitis in immunocompromised hosts."),
   ("Eosinophilic mucin with fungal hyphae", "Allergic mucin with Charcot-Leyden crystals defines allergic fungal rhinosinusitis.")],
@@ -174,7 +174,7 @@ CHECKS = [
 
 ("Intracranial Complications of Sinusitis",
  "A 15-year-old boy with frontal sinusitis develops a soft forehead swelling and severe headache. CT shows frontal bone osteomyelitis with a subperiosteal abscess and a small epidural collection. Which anatomic feature explains this spread?",
- "Valveless diploic veins of the frontal bone",
+ "Valveless diploic veins",
  [("A dehiscent cribriform plate", "The cribriform plate is not the route for frontal bone osteomyelitis."),
   ("Hematogenous seeding from the lungs", "The source is contiguous frontal sinus infection."),
   ("Lymphatic channels to the dura", "Spread is venous and direct, not lymphatic.")],
@@ -183,7 +183,7 @@ CHECKS = [
 
 ("Revision FESS",
  "A patient has persistent maxillary sinusitis after FESS. Endoscopy shows an antrostomy in the posterior fontanelle, separate from the natural ostium hidden behind a retained uncinate. What problem does this cause?",
- "Mucus recirculation between the two openings",
+ "Mucus recirculation",
  [("Excess airflow drying the sinus", "Airflow is not the mechanism of persistent infection here."),
   ("Collapse of the orbital floor", "Separate openings do not collapse the orbit."),
   ("Obstruction of the nasolacrimal duct", "The duct lies anterior; a posterior fontanelle opening does not block it.")],
@@ -201,7 +201,7 @@ CHECKS = [
 
 ("Juvenile Nasopharyngeal Angiofibroma",
  "A 15-year-old boy has unilateral nasal obstruction and recurrent severe epistaxis. CT shows a mass centered at the sphenopalatine foramen with anterior bowing of the posterior maxillary wall. Why should biopsy not be performed in clinic?",
- "Its vessels cannot contract and bleed heavily",
+ "Its vessels cannot constrict",
  [("Biopsy seeds malignant cells", "JNA is benign; the danger of biopsy is hemorrhage."),
   ("The mass is cystic and collapses", "JNA is a solid vascular tumor."),
   ("Biopsy triggers rapid tumor growth", "Biopsy does not accelerate growth.")],
@@ -219,7 +219,7 @@ CHECKS = [
 
 ("Nonallergic Rhinitis / Rhinitis Medicamentosa",
  "A 32-year-old has used oxymetazoline spray several times daily for 2 months. Each dose works for a shorter time, and her congestion is now worse than before she started. What is the mechanism?",
- "Receptor tolerance with rebound vasodilation",
+ "Rebound vasodilation",
  [("Allergic sensitization to the spray", "This is a pharmacologic effect, not an allergy to the drug."),
   ("Chronic bacterial rhinosinusitis", "Infection does not explain shortening response and rebound congestion."),
   ("Septal perforation from the spray", "Vasoconstrictor overuse can injure mucosa, but perforation does not cause rebound congestion.")],
@@ -363,7 +363,7 @@ CHECKS = [
 
 ("Oral Allergy Syndrome (Pollen-Food Syndrome)",
  "A 28-year-old with birch pollen allergy gets itching and tingling of the mouth within minutes of eating raw apples, but tolerates apple pie. Why?",
- "Heat-labile apple proteins resemble birch pollen",
+ "Heat-labile cross-reactive proteins",
  [("Cooking removes surface pesticides", "Pesticides are not the cause of the reaction."),
   ("Pie contains less apple per bite", "Dose does not explain tolerance of cooked apple."),
   ("Raw apple skin carries bacteria", "Bacteria do not cause IgE-mediated oral itching.")],

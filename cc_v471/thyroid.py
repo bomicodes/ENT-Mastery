@@ -39,7 +39,7 @@ CHECKS = [
 
 ("Anaplastic Thyroid Cancer",
  "A 72-year-old has a rapidly enlarging, hard thyroid mass over 3 weeks with new hoarseness and stridor. Core biopsy shows anaplastic carcinoma with a BRAF V600E mutation. Why is this mutation clinically important?",
- "BRAF/MEK inhibitors can shrink the tumor",
+ "It predicts BRAF/MEK response",
  [("It predicts excellent RAI uptake", "Anaplastic tumors lose iodine uptake regardless of BRAF status."),
   ("It indicates a benign course", "BRAF V600E does not make anaplastic carcinoma less aggressive."),
   ("It rules out tracheal invasion", "Mutation status does not predict local invasion.")],
@@ -102,7 +102,7 @@ CHECKS = [
 
 ("Indeterminate Thyroid Cytology / Molecular Testing",
  "A 3 cm thyroid nodule has Bethesda IV (follicular neoplasm) cytology. Why can FNA not distinguish follicular adenoma from follicular carcinoma?",
- "Carcinoma requires capsular or vascular invasion",
+ "Carcinoma is defined by invasion",
  [("Follicular cells cannot be aspirated", "Cells are easily aspirated; the problem is architecture."),
   ("Both have papillary nuclear features", "Follicular lesions lack papillary nuclear features."),
   ("FNA damages the capsule", "The capsule is not examined in cytology.")],
@@ -174,7 +174,7 @@ CHECKS = [
 
 ("Frey Syndrome",
  "Six months after superficial parotidectomy, a patient notices sweating and flushing of the cheek skin whenever he eats. What is the mechanism?",
- "Parasympathetic fibers regrowing into sweat glands",
+ "Misdirected parasympathetic fibers",
  [("Regenerating facial nerve motor fibers", "Facial nerve fibers are motor and do not innervate sweat glands."),
   ("Sympathetic denervation hypersensitivity", "That mechanism explains first-bite syndrome, which causes pain."),
   ("A salivary fistula to the skin", "A fistula drains saliva through a wound, not sweat over intact skin.")],
@@ -210,7 +210,7 @@ CHECKS = [
 
 ("Radioiodine-Refractory Differentiated Thyroid Cancer",
  "A patient with metastatic papillary carcinoma to the lungs has rising thyroglobulin. Post-treatment scans show no radioiodine uptake in the metastases, which are intensely FDG-avid on PET. What does this pattern indicate?",
- "Dedifferentiated tumor that has lost iodine transport",
+ "Loss of iodine transport",
  [("Likely response to a higher RAI dose", "Absent uptake predicts no benefit from further radioiodine."),
   ("Benign inflammatory lung nodules", "Rising thyroglobulin with FDG-avid nodules indicates active cancer."),
   ("Transformation into medullary carcinoma", "Follicular-derived cancer does not convert into C-cell carcinoma.")],
@@ -246,7 +246,7 @@ CHECKS = [
 
 ("Subacute (de Quervain) Thyroiditis",
  "A 40-year-old has a painful, tender thyroid after a viral illness, with palpitations, low TSH, and low radioactive iodine uptake. Why are antithyroid drugs ineffective?",
- "Preformed hormone is leaking from damaged follicles",
+ "Stored hormone is leaking out",
  [("The thyroid is producing excess hormone", "Low uptake shows the gland is not synthesizing excess hormone."),
   ("The drugs worsen the inflammation", "They do not worsen inflammation; they simply do not help."),
   ("TSH-stimulating antibodies are present", "That describes Graves disease.")],

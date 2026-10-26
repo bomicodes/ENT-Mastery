@@ -3,7 +3,7 @@
 CHECKS = [
 ("AOM / OME / Tympanostomy Decisions",
  "A 2-year-old in daycare has had four episodes of acute otitis media in 6 months. Why is otitis media so much more common in young children than in adults?",
- "Their Eustachian tube is short, flat, and floppy",
+ "Their Eustachian tube is immature",
  [("Their tympanic membrane is thicker", "Drum thickness does not drive otitis media; tube function does."),
   ("Their middle-ear mucosa lacks cilia", "Middle-ear mucosa is ciliated in children."),
   ("Their adenoids are absent", "Adenoids are large in young children and can harbor biofilm, which adds to risk.")],
@@ -30,7 +30,7 @@ CHECKS = [
 
 ("Pediatric Airway Foreign Body",
  "A 2-year-old had a choking episode while eating peanuts 2 days ago and now has a cough and right-sided wheeze. Inspiratory chest X-ray is normal, but the expiratory film shows a hyperinflated right lung. What is the mechanism?",
- "Ball-valve obstruction of the right bronchus",
+ "Ball-valve bronchial obstruction",
  [("Complete obstruction with collapse", "Complete obstruction causes atelectasis, not hyperinflation."),
   ("Aspiration pneumonia only", "Pneumonia would not cause unilateral air trapping."),
   ("Tracheomalacia with collapse", "Malacia does not explain sudden unilateral air trapping after choking.")],
@@ -39,7 +39,7 @@ CHECKS = [
 
 ("Tympanostomy Tube Indications",
  "A 3-year-old has had bilateral middle-ear effusions for 4 months with a 30 dB conductive hearing loss and speech delay. Why are tubes indicated?",
- "Chronic effusion with hearing loss affecting language",
+ "Chronic effusion with hearing loss",
  [("Any effusion lasting more than 2 weeks", "Many effusions resolve; tubes are indicated for persistence of 3 months or more with hearing loss or at-risk status."),
   ("To prevent cholesteatoma in all children", "Tubes are not placed routinely to prevent cholesteatoma."),
   ("To allow topical antibiotics for effusion", "Effusion is not treated with drops; tubes ventilate the ear.")],
@@ -66,7 +66,7 @@ CHECKS = [
 
 ("Thyroglossal Duct Cyst",
  "A 6-year-old has a recurrently infected thyroglossal duct cyst. Why does the Sistrunk procedure remove the central portion of the hyoid bone?",
- "The duct tract runs through or near the hyoid",
+ "The tract runs through the hyoid",
  [("The hyoid contains thyroid tissue", "The hyoid is bone; the tract runs through or adjacent to it."),
   ("It improves swallowing afterward", "Removing the central hyoid does not improve swallowing."),
   ("It prevents hypothyroidism", "Hyoid removal does not affect thyroid function.")],
@@ -102,7 +102,7 @@ CHECKS = [
 
 ("Supraglottoplasty",
  "A 3-month-old with severe laryngomalacia has failure to thrive and oxygen desaturations during feeds. Endoscopy shows tight, short aryepiglottic folds pulling the epiglottis into an omega shape. Why does dividing the folds help?",
- "It releases tethering that collapses the inlet",
+ "It releases tethered folds",
  [("It removes the entire epiglottis", "The epiglottis is preserved; only tethering and redundant tissue are addressed."),
   ("It widens the cricoid ring", "Supraglottoplasty does not affect the subglottis."),
   ("It cures the underlying reflux", "Reflux is managed medically; surgery addresses mechanical collapse.")],
@@ -111,7 +111,7 @@ CHECKS = [
 
 ("Pediatric Subglottic Stenosis",
  "A 2-year-old intubated for 3 weeks as a premature neonate has biphasic stridor. Endoscopy shows 60 percent subglottic narrowing. Why does the subglottis narrow after prolonged intubation?",
- "Tube pressure causes ischemia and scar inside a rigid ring",
+ "Tube pressure ischemia and scar",
  [("The cricoid cartilage regrows abnormally", "Narrowing results from scar, not cartilage overgrowth."),
   ("Reflux alone causes stenosis", "Reflux contributes but is not the main mechanism."),
   ("Viral infection after extubation", "Infection does not cause fixed scar.")],
@@ -129,7 +129,7 @@ CHECKS = [
 
 ("Choanal Atresia",
  "A newborn has episodes of cyanosis that improve when she cries and worsen during feeding. A 6 French catheter cannot be passed through either nostril. Why does crying relieve the cyanosis?",
- "Crying opens the mouth, bypassing the blocked nose",
+ "Crying opens the mouth",
  [("Crying forces the atretic plates open", "The bony or membranous plates remain closed regardless of crying."),
   ("Crying improves cardiac output", "The problem is upper airway obstruction, not cardiac function."),
   ("Crying clears thick nasal mucus", "The obstruction is a fixed atretic plate, not secretions.")],
@@ -174,7 +174,7 @@ CHECKS = [
 
 ("Pediatric Vocal Fold Immobility",
  "An infant with a lumbar myelomeningocele has new inspiratory stridor with a normal cry. Laryngoscopy shows both vocal folds resting near midline. What is the most likely cause?",
- "Hindbrain herniation compressing the brainstem",
+ "Chiari brainstem compression",
  [("Left RLN injury from cardiac surgery", "Iatrogenic RLN injury is usually unilateral and causes a weak cry."),
   ("Severe laryngomalacia", "Laryngomalacia causes supraglottic collapse with mobile vocal folds."),
   ("Congenital subglottic stenosis", "Subglottic stenosis narrows below the glottis with mobile folds.")],
@@ -271,15 +271,6 @@ CHECKS = [
  "Repair before speech develops, with reorientation of the levator veli palatini sling, reduces velopharyngeal insufficiency and compensatory articulation. Very early repair may affect maxillary growth, so timing is balanced.",
  "Repair the palate before speech develops."),
 
-("Microtia Reconstruction",
- "A 4-year-old with grade III microtia has parents asking for ear reconstruction now. Why is autologous costal cartilage reconstruction usually delayed until about age 6-10?",
- "Enough rib cartilage must have grown",
- [("The external ear stops growing at age 2", "The ear continues to grow; most growth is complete by about age 6."),
-  ("Hearing must be surgically restored first", "Hearing is addressed with bone-conduction devices; atresiaplasty follows framework placement."),
-  ("Children under 6 cannot have general anesthesia", "Anesthesia is safe; the limit is cartilage availability.")],
- "Carving a durable framework requires enough costal cartilage, and the opposite ear is near adult size by then. Earlier harvest risks chest wall deformity; porous polyethylene allows earlier surgery with more extrusion risk.",
- "Rib framework timing depends on rib size."),
-
 ("Pediatric Vestibular Disorders",
  "A 3-year-old has sudden brief episodes in which she cries, clings to her parent, and seems unsteady for a few minutes, then returns to normal. Hearing is normal and her mother has migraine. What is the most likely diagnosis?",
  "Benign paroxysmal vertigo of childhood",
@@ -291,7 +282,7 @@ CHECKS = [
 
 ("Pediatric Reflux / Eosinophilic Esophagitis",
  "A 5-year-old with grade III subglottic stenosis is being planned for laryngotracheal reconstruction. He has dysphagia and occasional food impaction. Why is evaluation for eosinophilic esophagitis done first?",
- "Uncontrolled EoE promotes granulation and restenosis",
+ "EoE promotes restenosis",
  [("EoE directly causes subglottic stenosis", "EoE does not cause the stenosis, but it impairs healing after reconstruction."),
   ("EoE contraindicates general anesthesia", "EoE does not prevent anesthesia."),
   ("EoE explains his laryngomalacia", "Laryngomalacia is not described and is not caused by EoE.")],
@@ -345,7 +336,7 @@ CHECKS = [
 
 ("Nasal Dermoid Cyst",
  "A 3-year-old has a small pit on the nasal dorsum with a hair protruding from it and intermittent drainage. Why is MRI obtained before excision?",
- "To exclude a tract to the intracranial space",
+ "To exclude intracranial extension",
  [("To confirm an active infection", "Infection is diagnosed clinically; MRI looks for intracranial extension."),
   ("To plan radiation therapy", "Dermoids are excised, not irradiated."),
   ("To distinguish it from a hemangioma", "The pit with hair is characteristic; the key question is intracranial extension.")],

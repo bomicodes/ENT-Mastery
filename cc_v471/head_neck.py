@@ -3,7 +3,7 @@
 CHECKS = [
 ("HPV-Associated Oropharyngeal SCC",
  "A 46-year-old nonsmoker has a painless cystic level II neck mass. FNA shows squamous cell carcinoma with strong, diffuse p16 staining. Why is p16 overexpression a reliable surrogate for an HPV-driven tumor?",
- "Viral E7 inactivates Rb, so p16 accumulates",
+ "E7 inactivates Rb; p16 rises",
  [("Viral E6 directly switches on p16", "E6 degrades p53; p16 rises because E7 inactivates Rb and removes feedback inhibition."),
   ("Tobacco carcinogens upregulate p16", "Tobacco-driven tumors usually silence p16 (CDKN2A) rather than overexpress it."),
   ("p16 is encoded by the HPV genome", "p16INK4a is a host cell-cycle inhibitor, not a viral protein.")],
@@ -75,7 +75,7 @@ CHECKS = [
 
 ("Supraglottic Cancer",
  "A 60-year-old has a T2 lateral supraglottic carcinoma of the aryepiglottic fold and a clinically N0 neck. Why are both sides of the neck treated electively?",
- "Supraglottic lymphatics are rich and cross midline",
+ "Rich, crossing lymphatics",
  [("The glottis drains to the opposite neck", "The glottis has sparse lymphatics and is not the reason for bilateral treatment."),
   ("Supraglottic tumors are always midline", "Even lateral supraglottic tumors carry bilateral occult nodal risk."),
   ("The thyroid gland is routinely involved", "Thyroid involvement is not routine and does not dictate bilateral neck treatment.")],
@@ -93,7 +93,7 @@ CHECKS = [
 
 ("Hypopharyngeal Cancer",
  "A 63-year-old smoker has a pyriform sinus SCC and a 3 cm ipsilateral neck node at presentation. Why does hypopharyngeal cancer have the poorest prognosis among laryngopharyngeal sites?",
- "Late symptoms with early nodal and distant spread",
+ "Late symptoms, early spread",
  [("It is usually HPV-driven", "Hypopharyngeal cancer is rarely HPV-driven, which is part of why its prognosis is worse."),
   ("It does not respond to radiation", "It responds to chemoradiation; the problem is late presentation and spread."),
   ("It occurs mainly in young adults", "It occurs mainly in older smokers and drinkers.")],
@@ -111,7 +111,7 @@ CHECKS = [
 
 ("Laryngeal Preservation Decision",
  "A 60-year-old with glottic SCC and a fixed vocal fold is choosing between total laryngectomy and chemoradiation. Which additional finding most strongly favors primary laryngectomy?",
- "Destruction through the thyroid cartilage",
+ "Thyroid cartilage destruction",
  [("Fixation of the vocal fold alone", "T3 disease with fixation is a standard candidate for organ preservation."),
   ("A single ipsilateral neck node", "Nodal disease does not by itself preclude organ preservation."),
   ("A strong wish to preserve voice", "Patient preference supports a preservation approach.")],
@@ -219,7 +219,7 @@ CHECKS = [
 
 ("Recurrent / Metastatic HNSCC",
  "A 62-year-old has recurrent oral cavity SCC with lung metastases that is not amenable to surgery or reirradiation. Tumor PD-L1 combined positive score is 20. What is the preferred first-line systemic therapy?",
- "Pembrolizumab, alone or with chemotherapy",
+ "Pembrolizumab-based therapy",
  [("Cetuximab with platinum and 5-FU", "The EXTREME regimen was the prior standard, but pembrolizumab-based therapy improved survival in CPS-positive disease."),
   ("Single-agent methotrexate", "Methotrexate is a palliative option with lower efficacy, not first-line in CPS-positive disease."),
   ("Radioactive iodine therapy", "RAI treats differentiated thyroid cancer, not squamous cell carcinoma.")],
@@ -264,7 +264,7 @@ CHECKS = [
 
 ("Nonfunctional Larynx / Chronic Aspiration After Cancer Therapy",
  "Three years after chemoradiation for supraglottic cancer, a patient with no evidence of tumor has had four aspiration pneumonias despite a gastrostomy tube and swallowing therapy. Why might total laryngectomy be offered?",
- "It permanently separates airway and pharynx",
+ "It separates airway from food",
  [("It reverses radiation fibrosis", "Laryngectomy removes the aspirating larynx; it does not reverse fibrosis."),
   ("It restores normal swallowing", "Swallowing remains affected by pharyngeal fibrosis; the benefit is airway protection."),
   ("It prevents cancer recurrence", "There is no tumor; the indication is aspiration.")],
@@ -291,7 +291,7 @@ CHECKS = [
 
 ("Tracheal Malignancy",
  "A 45-year-old has 2 years of progressive exertional dyspnea and wheeze treated as asthma without improvement. CT shows a smooth mass narrowing the trachea by 70 percent; biopsy shows adenoid cystic carcinoma. Why was diagnosis delayed?",
- "Symptoms appear only after major narrowing",
+ "Symptoms need major narrowing",
  [("The tumor grows very rapidly", "Adenoid cystic carcinoma is slow-growing, which delays symptoms."),
   ("It always causes early hemoptysis", "Hemoptysis is inconsistent, especially with submucosal tumors."),
   ("It is obvious on plain chest X-ray", "Tracheal tumors are often missed on chest radiographs.")],
@@ -363,7 +363,7 @@ CHECKS = [
 
 ("Villaret Syndrome (Retroparotid Space Syndrome)",
  "A patient has dysphagia, hoarseness, ipsilateral shoulder weakness, tongue deviation, and ipsilateral ptosis with miosis. Where is the lesion?",
- "Retrostyloid parapharyngeal space",
+ "Retrostyloid space",
  [("Jugular foramen", "A jugular foramen lesion affects IX-XI but spares XII and the sympathetic chain."),
   ("Cavernous sinus", "Cavernous sinus lesions affect III, IV, V, and VI."),
   ("Lateral medulla", "Lateral medullary syndrome spares XI and XII and causes crossed sensory loss.")],

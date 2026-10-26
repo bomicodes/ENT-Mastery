@@ -48,7 +48,7 @@ CHECKS = [
 
 ("Temporal Bone Anatomy",
  "During a canal-wall-up mastoidectomy the resident has identified the lateral semicircular canal. Which structure lies just inferior to it and is most at risk while opening the facial recess?",
- "The facial nerve's second genu",
+ "The second genu of VII",
  [("The sigmoid sinus", "The sigmoid sinus forms the posterior boundary of the mastoid, not the area just below the lateral canal."),
   ("The jugular bulb", "The jugular bulb lies far inferior, in the hypotympanum and infralabyrinthine region."),
   ("The tegmen mastoideum", "The tegmen is the superior boundary of the mastoid, above the lateral canal.")],
@@ -147,7 +147,7 @@ CHECKS = [
 
 ("Cochlear Implant Surgery",
  "During implantation through the facial recess in a patient with residual low-frequency hearing, why is a slow, atraumatic round-window insertion preferred?",
- "It protects the basilar membrane and apical hair cells",
+ "It protects the basilar membrane",
  [("It eliminates any risk to the facial nerve", "Facial nerve risk comes from drilling the recess, not the cochleostomy site."),
   ("A cochleostomy always enters scala vestibuli", "A well-placed cochleostomy can enter scala tympani; the goal is atraumatic insertion."),
   ("The round window regrows to seal the array", "The opening is sealed with tissue; regeneration is not the rationale.")],
@@ -192,7 +192,7 @@ CHECKS = [
 
 ("CSF Otorrhea / Temporal Encephalocele",
  "An obese 52-year-old woman with a persistent unilateral effusion has continuous clear watery drainage after tube placement. What is the most likely underlying mechanism?",
- "Raised intracranial pressure thinning the tegmen",
+ "High ICP thinning the tegmen",
  [("Serous effusion from tube dysfunction", "Serous effusion would not produce continuous clear drainage after a tube."),
   ("Perilymph leak at the round window", "Perilymph volume is tiny; continuous drainage suggests CSF."),
   ("Allergic reaction to the tube material", "Allergy causes inflammation, not continuous clear drainage.")],
@@ -219,7 +219,7 @@ CHECKS = [
 
 ("Age-Related Hearing Loss / Presbycusis",
  "A 78-year-old has a flat, moderate bilateral sensorineural loss with surprisingly good word recognition. Which presbycusis type best fits?",
- "Strial (metabolic) presbycusis",
+ "Strial presbycusis",
  [("Sensory presbycusis", "Sensory presbycusis from basal outer hair cell loss produces a steep high-frequency slope."),
   ("Neural presbycusis", "Neural loss causes word recognition worse than thresholds predict."),
   ("Conductive presbycusis", "The loss is sensorineural, not conductive.")],
@@ -237,7 +237,7 @@ CHECKS = [
 
 ("Persistent Postural-Perceptual Dizziness (PPPD)",
  "A 44-year-old had vestibular neuritis 6 months ago. Testing is now compensated, but she has daily unsteadiness worse in supermarkets and when scrolling her phone. What best explains her symptoms?",
- "Persistent visual dependence in balance control",
+ "Persistent visual dependence",
  [("Recurrent viral vestibular neuritis", "Recurrence would cause acute vertigo and new test abnormalities."),
   ("Undiagnosed bilateral vestibular loss", "Testing is compensated, and bilateral loss causes oscillopsia rather than visual triggers."),
   ("Benign paroxysmal positional vertigo", "BPPV causes brief positional vertigo, not constant unsteadiness.")],
@@ -282,7 +282,7 @@ CHECKS = [
 
 ("Auditory Neuroanatomy / Cochlear Physiology",
  "A drug abolishes outer hair cell electromotility but spares inner hair cells. Which audiologic change is expected?",
- "Moderate threshold loss with absent emissions",
+ "Moderate loss, absent OAEs",
  [("Complete loss of all hearing", "Inner hair cells still transduce sound, so hearing is reduced, not absent."),
   ("Normal thresholds with an absent ABR", "That pattern suggests neural dyssynchrony, not outer hair cell loss."),
   ("Better hearing in background noise", "Outer hair cell loss worsens frequency selectivity and hearing in noise.")],
@@ -291,7 +291,7 @@ CHECKS = [
 
 ("Audiologic Electrophysiology / ABR-OAE-ECoG",
  "A NICU graduate has present otoacoustic emissions but an absent ABR with a visible cochlear microphonic. What is the diagnosis?",
- "Auditory neuropathy spectrum disorder",
+ "Auditory neuropathy",
  [("Middle-ear effusion", "Effusion abolishes otoacoustic emissions."),
   ("Outer hair cell loss", "Outer hair cell loss abolishes otoacoustic emissions."),
   ("Delayed ABR maturation only", "Immaturity delays ABR waves; it does not abolish them while OAEs are present.")],
@@ -372,7 +372,7 @@ CHECKS = [
 
 ("External Auditory Canal Cholesteatoma",
  "An 80-year-old has unilateral dull otalgia and otorrhea. The inferior bony canal wall shows focal erosion with keratin and a bone sequestrum, and hearing is normal. What is the diagnosis?",
- "External auditory canal cholesteatoma",
+ "Canal cholesteatoma",
  [("Keratosis obturans", "Keratosis obturans causes a dense plug with circumferential widening, acute pain, and conductive loss, usually bilateral."),
   ("Necrotizing otitis externa", "NOE has granulation, severe pain, and host risk factors."),
   ("Exostoses of the canal", "Exostoses are bony growths, not erosion.")],
