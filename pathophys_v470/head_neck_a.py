@@ -70,7 +70,7 @@ pathophysiology=(
 
 "Oral Tongue SCC": dict(
 overview=(
-"Oral tongue SCC is the most common oral cavity cancer, linked to tobacco and alcohol, but increasingly seen in younger nonsmokers. "
+"Oral tongue SCC is one of the most common oral cavity cancers (the most common site in young patients), linked to tobacco and alcohol, but increasingly seen in younger nonsmokers. "
 "Depth of invasion drives T-stage and the decision for elective neck dissection, and surgery is primary therapy."),
 physiology=(
 "**Intrinsic muscle mass**: the oral tongue is a highly mobile muscular organ essential for speech articulation, bolus formation, and swallowing. "
@@ -218,7 +218,7 @@ overview=(
 "Total laryngectomy removes the larynx and permanently separates the airway from the digestive tract, creating an end tracheostoma. "
 "It is used for advanced or recurrent laryngeal and hypopharyngeal cancer, and for a nonfunctional larynx."),
 physiology=(
-"**Upper airway conditioning**: the nose and pharynx warm, humidify, and filter inspired air, supplying about 75 percent of the humidity the lungs need. "
+"**Upper airway conditioning**: the nose and pharynx warm, humidify, and filter inspired air before it reaches the trachea. "
 "**Glottic functions**: the larynx generates voice, permits a strong cough by closing against subglottic pressure, and stabilizes the chest for lifting (Valsalva). "
 "**Separate tracts**: normally the airway and food passage share the pharynx; laryngectomy permanently separates them, so breathing is through the stoma and eating through the neopharynx. "
 "**Thyroid and parathyroid neighbors**: the thyroid isthmus and lobes lie on the trachea and are often partially removed or irradiated."),

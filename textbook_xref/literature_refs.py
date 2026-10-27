@@ -43,4 +43,20 @@ LITERATURE_REFS = {
         "WHO Classification of Head and Neck Tumours, 5th ed. (2022): SMARCB1 (INI-1)-deficient sinonasal carcinoma."],
     "Systemic Disease of the Nose / Sinuses": [
         "McGrath MM, et al. Contaminated cocaine and antineutrophil cytoplasmic antibody-associated disease. Clin J Am Soc Nephrol. 2011;6:2799-2805."],
+    "Cutaneous Squamous Cell Carcinoma of the Head & Neck": [
+        "Euvrard S, Kanitakis J, Claudy A. Skin cancers after organ transplantation. N Engl J Med. 2003;348:1681-1691.",
+        "Migden MR, et al. PD-1 blockade with cemiplimab in advanced cutaneous squamous-cell carcinoma. N Engl J Med. 2018;379:341-351."],
+    "HPV-Associated Oropharyngeal SCC": [
+        "Van Dyne EA, et al. Trends in human papillomavirus-associated cancers - United States, 1999-2015. MMWR. 2018;67:918-924.",
+        "AJCC Cancer Staging System, Version 9: HPV-mediated (p16+) oropharyngeal cancer (2024)."],
+    "Merkel Cell Carcinoma": [
+        "Heath M, et al. Clinical characteristics of Merkel cell carcinoma at diagnosis: the AEIOU features. J Am Acad Dermatol. 2008;58:375-381."],
+    "Radiation Therapy Principles for Head & Neck Surgeons": [
+        "Withers HR, Taylor JM, Maciejewski B. The hazard of accelerated tumor clonogen repopulation during radiotherapy. Acta Oncol. 1988;27:131-146."],
+    "Recurrent / Metastatic HNSCC": [
+        "Burtness B, et al. Pembrolizumab alone or with chemotherapy versus cetuximab with chemotherapy for recurrent or metastatic HNSCC (KEYNOTE-048). Lancet. 2019;394:1915-1928."],
+    "Sinonasal Malignancies": [
+        "WHO Classification of Head and Neck Tumours, 5th ed. (2022): SMARCB1 (INI-1)-deficient sinonasal carcinoma."],
+    "Tumor Immunology / Immunotherapy in HNSCC": [
+        "Uppaluri R, et al. Neoadjuvant and adjuvant pembrolizumab in resectable locally advanced head and neck cancer (KEYNOTE-689). N Engl J Med. 2025."],
 }

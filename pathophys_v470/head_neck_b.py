@@ -103,7 +103,7 @@ pathophysiology=(
 "**Hot vs cold tumors**: T-cell-inflamed tumors respond better; HPV-positive tumors carry viral antigens and are often more inflamed. "
 "**Checkpoint blockade**: anti-PD-1 antibodies (pembrolizumab, nivolumab) release suppressed T cells. "
 "**Neoadjuvant rationale**: giving immunotherapy while the tumor and nodes are intact maximizes antigen presentation; KEYNOTE-689 added perioperative pembrolizumab for resectable disease. "
-"**Immune-related adverse events**: thyroiditis and hypothyroidism are most common in head and neck patients; colitis, pneumonitis, hepatitis, and hypophysitis are less common but serious."),
+"**Immune-related adverse events**: thyroiditis and hypothyroidism are among the most common in head and neck patients; colitis, pneumonitis, hepatitis, and hypophysitis are less common but serious."),
 ),
 
 "Salvage Surgery After Radiation / Chemoradiation": dict(
@@ -117,7 +117,7 @@ physiology=(
 "**Tissue oxygen**: fibroblast collagen production and neutrophil killing both require adequate oxygen tension."),
 pathophysiology=(
 "**Hypoxic-hypocellular-hypovascular tissue**: irradiated beds cannot mount normal angiogenesis or collagen deposition, so incisions and mucosal closures break down. "
-"**Fistula risk**: pharyngocutaneous fistula rates after salvage laryngectomy are roughly double those after primary surgery. "
+"**Fistula risk**: pharyngocutaneous fistula occurs in about 29 percent of salvage laryngectomies (Cummings), substantially more often than after primary surgery. "
 "**Vascularized flap logic**: pectoralis or free flaps bring nonirradiated tissue with its own blood supply, lowering fistula rates in salvage (meta-analyses support onlay reinforcement). "
 "**Detection challenge**: post-radiation edema and fibrosis mask recurrence, so PET-CT around 12 weeks and biopsy of suspicious findings guide timing. "
 "**Prognosis**: early recurrence, advanced recurrent stage, and positive margins predict poor outcome after salvage."),
@@ -171,7 +171,7 @@ pathophysiology=(
 "**Radiation-induced fibroatrophy**: radiation activates TGF-beta-driven fibrosis, endarteritis, and osteocyte death. "
 "**Hypoxic, hypocellular, hypovascular bone (Marx)**: the bone cannot remodel after injury. "
 "**Trigger**: extraction, trauma, or ill-fitting dentures expose bone that never heals. "
-"**Risk factors**: dose above about 60 Gy, mandible within the high-dose field, poor dentition, and smoking. "
+"**Risk factors**: dose above about 50-60 Gy, mandible within the high-dose field, poor dentition, and smoking. "
 "**Progression**: pain, exposed bone, orocutaneous fistula, and pathologic fracture. "
 "**Treatment logic**: pentoxifylline-tocopherol (with clodronate) targets the fibrotic process; advanced disease requires resection of all necrotic bone and replacement with vascularized bone. "
 "**Prevention**: dental evaluation and extractions before radiation, and fluoride."),
@@ -271,7 +271,7 @@ physiology=(
 pathophysiology=(
 "**The 4 Rs**: repair (normal tissue repairs between fractions), reassortment (cells move into sensitive phases), repopulation (tumor regrows during gaps), and reoxygenation (hypoxic cells become oxygenated). "
 "**Hypoxic resistance**: hypoxic tumor cores resist radiation, contributing to failure. "
-"**Treatment interruptions**: allow accelerated repopulation, reducing control by roughly 1 percent per day of delay. "
+"**Treatment interruptions**: allow accelerated repopulation, reducing control by roughly 1 percent per day of prolongation (classic radiobiology estimate; Cummings notes worse outcomes once treatment exceeds about 42 days). "
 "**Concurrent cisplatin**: sensitizes tumor cells and improves control. "
 "**IMRT**: sculpts dose to spare parotids and swallowing structures, reducing xerostomia. "
 "**Late effects**: slowly dividing tissues show damage months to years later."),
@@ -288,7 +288,7 @@ physiology=(
 "**Cochlear vulnerability**: outer hair cells are sensitive to platinum-induced oxidative stress."),
 pathophysiology=(
 "**Cisplatin**: forms DNA crosslinks; dose-limiting toxicities are nephrotoxicity, ototoxicity, neuropathy, and nausea. "
-"**Carboplatin**: less nephrotoxic and ototoxic but more myelosuppressive. "
+"**Carboplatin**: less nephrotoxic and more myelosuppressive; it is less ototoxic than cisplatin, but Cummings notes its ototoxicity is greater than once thought. "
 "**Cetuximab**: blocks EGFR; inferior to cisplatin with radiation in HPV-positive disease (De-ESCALaTE, RTOG 1016); causes acneiform rash. "
 "**Taxanes**: stabilize microtubules; induction TPF is used in larynx preservation and bulky disease. "
 "**Checkpoint inhibitors**: now first-line in recurrent or metastatic disease."),
@@ -353,7 +353,7 @@ overview=(
 physiology=(
 "**Carotid sheath**: carotid artery, internal jugular vein, and vagus nerve. "
 "**Thoracic duct**: carries chyle (lymph with chylomicrons) to the left venous angle; it can be bilateral or variable. "
-"**Nerves at risk**: spinal accessory (level II and V), marginal mandibular (under platysma near the mandible), hypoglossal (above the posterior digastric), phrenic (on anterior scalene). "
+"**Nerves at risk**: spinal accessory (level II and V), marginal mandibular (under platysma near the mandible), hypoglossal (deep to the posterior belly of digastric), phrenic (on anterior scalene). "
 "**Venous drainage**: bilateral internal jugular veins drain the brain and face."),
 pathophysiology=(
 "**Hematoma**: venous and lymphatic obstruction causes laryngeal edema and airway compromise beyond simple compression. "

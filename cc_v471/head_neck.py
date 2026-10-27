@@ -124,7 +124,7 @@ CHECKS = [
  [("It causes stomal stenosis directly", "Hypothyroidism impairs wound healing; it does not directly narrow the stoma."),
   ("It prevents use of a voice prosthesis", "Thyroid status does not affect TEP candidacy."),
   ("It causes postoperative hypocalcemia", "Hypocalcemia relates to parathyroid injury, not TSH.")],
- "Hypothyroidism impairs wound healing and roughly doubles pharyngocutaneous fistula rates after laryngectomy, especially in irradiated tissue. Correcting it, plus vascularized flap reinforcement in salvage, reduces complications.",
+ "Hypothyroidism impairs wound healing and increases pharyngocutaneous fistula rates after laryngectomy, especially in irradiated tissue. Correcting it, plus vascularized flap reinforcement in salvage, reduces complications.",
  "Check and correct TSH before salvage laryngectomy."),
 
 ("Parapharyngeal Space Tumor",
