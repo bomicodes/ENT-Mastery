@@ -10,7 +10,7 @@ physiology=(
 "**Lateral canal skin**: it is thick and carries hair follicles plus ceruminous and sebaceous glands. "
 "**Medial canal skin**: over bone it is thin, tightly bound to periosteum, and has no adnexa, which is why swelling there is so painful. "
 "**Cerumen is a barrier**: it is hydrophobic, mildly acidic (pH about 6), and contains lysozyme and long-chain fatty acids that inhibit bacterial growth. "
-"**Self-cleaning**: canal epithelium migrates outward from the tympanic membrane at roughly 0.05 mm per day, carrying keratin and cerumen laterally. "
+"**Self-cleaning**: canal epithelium migrates outward from the tympanic membrane, carrying keratin and cerumen laterally. "
 "**Innervation**: sensory supply comes from V3 (auriculotemporal), CN X (Arnold nerve), CN VII and the great auricular nerve, which explains referred otalgia and the cough reflex with canal instrumentation."),
 pathophysiology=(
 "**Barrier breakdown starts it**: water exposure (\"swimmer's ear\"), cotton swabs, hearing-aid occlusion, or dermatitis remove cerumen and raise canal pH. "
@@ -18,7 +18,7 @@ pathophysiology=(
 "**Edema and pain**: inflammation of skin bound tightly to periosteum produces pain out of proportion to the visible findings, and tragal or pinna traction stretches the inflamed skin. "
 "**Canal occlusion**: edema narrows the lumen, causing conductive hearing loss and blocking drops from reaching the medial canal (the reason for a wick). "
 "**Spread**: cellulitis can extend to the pinna and periauricular tissues; in a diabetic or immunocompromised host, extension through the fissures of Santorini toward the skull base marks necrotizing otitis externa. "
-"**Why topical therapy wins**: drops deliver antibiotic concentrations hundreds of times higher than systemic therapy directly to the infected skin, so oral antibiotics add little unless infection extends beyond the canal."),
+"**Why topical therapy wins**: drops deliver local tissue concentrations about 1000 times higher than systemic therapy directly to the infected skin, so oral antibiotics add little unless infection extends beyond the canal."),
 ),
 
 "Chronic Otitis Media / Cholesteatoma": dict(
@@ -51,7 +51,7 @@ physiology=(
 "**Blood supply**: the labyrinthine artery (usually from AICA) is an end artery with no collateral supply, so the cochlea is very sensitive to ischemia. "
 "**Tonotopy**: the base encodes high frequencies and the apex low frequencies, which explains audiometric patterns such as low-frequency or flat losses."),
 pathophysiology=(
-"**Idiopathic in about 90 percent**: leading hypotheses are viral cochleitis, microvascular compromise, and immune-mediated injury; none is proven for an individual patient. "
+"**Mostly idiopathic (about 90 percent per the AAO-HNS guideline)**: leading hypotheses are viral cochleitis, microvascular compromise, and immune-mediated injury; none is proven for an individual patient. "
 "**Vascular theory**: the cochlea's end-artery supply and high metabolic demand mean brief ischemia can damage the stria and hair cells abruptly. "
 "**Viral/inflammatory theory**: inflammation and cytokine release disrupt hair cells and strial function; this is the rationale for corticosteroids, which reduce cochlear inflammation and stabilize the stria. "
 "**Membrane rupture**: rarely, a break between perilymph and endolymph (or a window leak) mixes potassium-rich fluid and depolarizes hair cells. "
@@ -102,7 +102,7 @@ overview=(
 "Temporal bone anatomy is the map behind every otologic diagnosis and operation, from reading a CT to drilling a mastoid safely. "
 "Mastering it means knowing the landmarks that protect the facial nerve, labyrinth, sigmoid sinus, jugular bulb, carotid, and dura."),
 physiology=(
-"**Five parts**: squamous, mastoid, petrous, tympanic, and styloid portions. "
+"**Four parts**: squamous, mastoid, petrous, and tympanic (the styloid process is sometimes counted as a fifth). "
 "**Facial nerve course**: labyrinthine segment (narrowest, no collaterals), geniculate ganglion (GSPN exits), tympanic segment above the oval window, second genu at the lateral canal, and mastoid segment to the stylomastoid foramen. "
 "**Labyrinth**: cochlea (two and a half turns), vestibule (utricle and saccule), and three semicircular canals; the lateral canal is the key mastoid landmark. "
 "**Middle-ear walls**: tegmen superiorly, jugular bulb inferiorly, carotid anteriorly, promontory and windows medially, aditus and pyramidal eminence posteriorly. "
@@ -110,8 +110,8 @@ physiology=(
 "**Pneumatization**: air cells develop from the antrum after birth, driven by middle-ear ventilation; poor ventilation leaves a sclerotic mastoid."),
 pathophysiology=(
 "**Why the labyrinthine segment matters**: it is the narrowest part of the fallopian canal, so inflammatory edema (Bell palsy) or fracture compression there causes ischemic nerve injury. "
-"**Dehiscence**: the tympanic segment is naturally dehiscent in a substantial minority of ears, which is why it is vulnerable during middle-ear surgery and cholesteatoma removal. "
-"**Spread of disease follows anatomy**: infection travels through air-cell tracts to the petrous apex (Gradenigo), through the tegmen to the dura and temporal lobe, and medial to the sigmoid sinus causing thrombosis. "
+"**Dehiscence**: the tympanic segment is partially dehiscent in about half of ears (55 percent in Cummings), which is why it is vulnerable during middle-ear surgery and cholesteatoma removal. "
+"**Spread of disease follows anatomy**: infection travels through air-cell tracts to the petrous apex (Gradenigo), through the tegmen to the dura and temporal lobe, and to the dura around the sigmoid sinus (perisinus abscess), causing thrombophlebitis. "
 "**Fracture patterns**: otic-capsule-violating fractures cross the labyrinth and cause SNHL and vertigo, while sparing fractures more often disrupt the ossicles and cause conductive loss. "
 "**Third windows**: missing bone over the superior canal or other labyrinth segments creates abnormal fluid mechanics (superior canal dehiscence physiology)."),
 ),
@@ -123,7 +123,7 @@ overview=(
 physiology=(
 "**Air conduction**: sound through headphones tests the whole pathway: outer ear, middle ear, cochlea, and nerve. "
 "**Bone conduction**: a vibrator on the mastoid stimulates the cochlea directly, largely bypassing the outer and middle ear. "
-"**Air-bone gap**: the difference between air and bone thresholds represents conductive loss; a gap of 10 dB or less is within test variability. "
+"**Air-bone gap**: the difference between air and bone thresholds represents conductive loss; a gap of 10 dB or more (with normal bone conduction) indicates a conductive component, while smaller gaps fall within test variability. "
 "**Decibels HL**: 0 dB HL is average normal hearing at each frequency; normal adult thresholds are 25 dB HL or better. "
 "**Interaural attenuation**: about 40 dB for supra-aural headphones and essentially 0 dB for bone conduction, so the non-test ear can hear the stimulus (crossover) unless masked. "
 "**Speech testing**: the speech reception threshold should agree with the pure-tone average, and word recognition measures clarity, which reflects cochlear and neural function."),
@@ -133,7 +133,7 @@ pathophysiology=(
 "**Characteristic shapes**: noise injury produces a 4 kHz notch with recovery at 8 kHz; presbycusis is bilateral, symmetric, and high-frequency sloping; Ménière disease classically starts as a fluctuating low-frequency loss. "
 "**Retrocochlear warning signs**: asymmetry, unilateral tinnitus, or word recognition disproportionately poor for the pure-tone loss suggest a nerve problem and call for MRI. "
 "**Masking dilemma**: with large bilateral conductive losses, masking noise loud enough to cover the non-test ear may itself cross over to the test ear, making thresholds uncertain. "
-"**Pseudohypacusis**: thresholds that disagree with the speech reception threshold, absent reflexes, or OAEs suggest a nonorganic loss."),
+"**Pseudohypacusis**: an SRT much better than the pure-tone average, acoustic reflexes present at or within 5 dB of the admitted thresholds, or normal OAEs despite a claimed loss suggest a nonorganic loss."),
 ),
 
 "Tympanometry / Acoustic Reflexes": dict(
@@ -182,11 +182,11 @@ overview=(
 physiology=(
 "**Layers**: lateral squamous epithelium, middle fibrous lamina propria (radial and circular fibers), and medial mucosa. "
 "**Pars tensa vs flaccida**: the tensa has an organized fibrous layer and is anchored by the fibrous annulus; the flaccida is above the lateral process of the malleus and lacks organized fibers. "
-"**Healing**: epithelium migrates across the defect from the edges, using a scaffold; the fibrous layer often does not regenerate fully, leaving a thin monomeric scar. "
+"**Healing**: epithelium migrates across the defect from the edges, using a scaffold; the fibrous layer often does not regenerate fully, leaving a thin dimeric scar (epidermal and mucosal layers; the term monomeric is a misnomer). "
 "**Sound transmission**: the drum collects sound over a large area and couples it to the malleus; it also shields the round window so sound reaches the two windows out of phase."),
 pathophysiology=(
-"**Conductive loss**: loss of surface area reduces the hydraulic ratio, and sound reaching the round window directly diminishes the phase difference between the windows. "
-"**Size and location**: larger and posterior-inferior perforations (near the round window) cause greater loss; loss over 40 dB suggests an additional ossicular problem. "
+"**Conductive loss**: loss of surface area reduces the hydraulic ratio, and in large perforations sound reaching the round window directly can diminish the phase difference between the windows. "
+"**Size, not location**: larger perforations cause greater loss; location matters little, contrary to the older posteroinferior teaching; loss over 40 dB suggests an additional ossicular problem. "
 "**Why some fail to heal**: infection, large size, marginal location involving the annulus, and squamous epithelium turning in over the edge (preventing migration across the gap). "
 "**Marginal perforations**: they involve the annulus and can allow squamous epithelium to migrate into the middle ear, causing secondary acquired cholesteatoma. "
 "**Otorrhea**: an open middle ear is exposed to water and canal bacteria, leading to recurrent drainage. "
@@ -243,7 +243,7 @@ pathophysiology=(
 "**Attack mechanism (rupture/leak theory)**: membranes may rupture or leak, mixing potassium-rich endolymph into perilymph, depolarizing hair cells and vestibular nerve fibers (initial excitation, then paralysis), then healing. "
 "**Fluctuation and progression**: each attack can recover, but repeated episodes cause permanent hair-cell loss and a flattening hearing loss over years, with eventual burnout of vestibular function. "
 "**Contributing factors**: endolymphatic sac hypoplasia, autoimmune and allergic factors, migraine overlap, and genetic predisposition; hydrops is necessary but not sufficient, since not all hydrops produces symptoms. "
-"**Therapeutic logic**: salt restriction and diuretics aim to reduce endolymph volume; intratympanic gentamicin works by chemically ablating vestibular hair cells (dark cells), while steroids are anti-inflammatory and hearing-sparing."),
+"**Therapeutic logic**: salt restriction and diuretics aim to reduce endolymph volume; intratympanic gentamicin chemically ablates vestibular hair cells (type I more than type II; reduced endolymph secretion by dark cells is debated), while steroids are anti-inflammatory and hearing-sparing."),
 ),
 
 "Vestibular Migraine": dict(
@@ -273,7 +273,7 @@ physiology=(
 "**Central compensation**: the cerebellum and brainstem rebalance resting activity over days to weeks after a unilateral loss."),
 pathophysiology=(
 "**Unilateral loss creates false rotation**: when one nerve goes silent, the intact side's resting activity is interpreted as rotation toward it, causing vertigo and nystagmus beating away from the affected ear. "
-"**Viral reactivation hypothesis**: herpes simplex type 1 latent in Scarpa ganglion is thought to reactivate, inflaming the nerve. "
+"**Viral reactivation hypothesis**: herpes simplex type 1, found latent in human vestibular (Scarpa) ganglia, is thought to reactivate and inflame the nerve; this is supported by the literature rather than the core texts. "
 "**Superior division predominance**: the superior nerve travels in a longer, narrower bony canal, so it is affected more often, sparing the posterior canal and saccule. "
 "**Hearing spared**: the cochlear nerve is uninvolved; added hearing loss means labyrinthitis or a vascular (AICA) event. "
 "**Head impulse test**: a rapid turn toward the affected side shows a corrective catch-up saccade because the VOR is lost; a normal head impulse in acute vertigo is worrisome for stroke. "
@@ -314,7 +314,7 @@ pathophysiology=(
 "**Why steroids early**: they reduce edema in the bony canal and improve complete recovery when started within 72 hours. "
 "**Prognosis tracks injury degree**: neurapraxia recovers completely; axonal loss recovers slowly and incompletely, with risk of synkinesis from misdirected regenerating axons. "
 "**ENoG logic**: more than 90 percent degeneration within 14 days of onset in complete paralysis predicts poor recovery and underlies the controversial middle fossa decompression. "
-"**Topognosis**: whether tearing, stapedial reflex, and taste are affected localizes the lesion relative to the GSPN, nerve to stapedius, and chorda tympani. "
+"**Topognosis**: whether tearing, stapedial reflex, and taste are affected in principle localizes the lesion relative to the GSPN, nerve to stapedius, and chorda tympani; in practice topognostic testing is unreliable because lesions are rarely discrete. "
 "**Red flags against Bell**: slowly progressive weakness, recurrence on the same side, involvement of individual branches, or other cranial neuropathies suggest tumor."),
 ),
 
@@ -342,14 +342,14 @@ overview=(
 physiology=(
 "**What the implant replaces**: lost hair cells; it electrically stimulates surviving spiral ganglion neurons directly. "
 "**Tonotopy**: electrodes along the scala tympani stimulate base (high pitch) to apex (low pitch) neurons, mimicking place coding. "
-"**Neural requirements**: a cochlear nerve must be present and the auditory pathway must be functional; cochlear nerve aplasia is a contraindication. "
+"**Neural requirements**: a cochlear nerve must be present and the auditory pathway must be functional; an absent cochlear nerve is a contraindication (K.J. Lee) or at least a strong relative contraindication (Cummings), and an auditory brainstem implant is considered instead. "
 "**Critical period**: the auditory cortex organizes around sound input in early childhood, so early implantation in congenitally deaf children produces better language outcomes."),
 pathophysiology=(
 "**Why aids fail**: once inner hair cells are lost, amplification produces distorted, unintelligible input; aided speech recognition scores therefore guide candidacy. "
 "**Ossification after meningitis**: labyrinthitis ossificans can fill the scala tympani within weeks, making urgent imaging and early implantation important. "
 "**Auditory deprivation**: long duration of deafness leads to neural degeneration and cortical reorganization by other senses, reducing outcomes, especially in prelingual adults implanted late. "
 "**Anatomic barriers**: malformations (common cavity, incomplete partition), cochlear nerve deficiency, and ossification change electrode choice and expected benefit, and are mapped on CT and MRI. "
-"**ANSD and CMV**: in auditory neuropathy and congenital CMV, implants may help because they bypass dyssynchronous inner hair cell or synapse function."),
+"**ANSD and CMV**: in auditory neuropathy spectrum disorder, implants can restore synchronous neural firing by bypassing a dysfunctional inner hair cell or synapse; children with congenital CMV (a sensorineural loss) also benefit, with outcomes similar to other etiologies unless neurodevelopmental comorbidity limits them."),
 ),
 
 "Cochlear Implant Surgery": dict(
@@ -365,7 +365,7 @@ pathophysiology=(
 "**Insertion trauma**: forcing the array can translocate it from scala tympani into scala vestibuli, rupture the basilar membrane, and destroy residual hearing and neurons. "
 "**Soft-surgery principles**: round window insertion, slow insertion, perioperative steroids, and lubrication reduce inflammation and fibrosis that destroy residual hearing. "
 "**Gusher**: abnormal communication between the IAC and the cochlea (e.g., incomplete partition type III, X-linked) lets CSF pour out at cochleostomy. "
-"**Meningitis risk**: implanted ears, especially with malformations and positioners in older devices, carry higher pneumococcal meningitis risk, so vaccination is required. "
+"**Meningitis risk**: implanted ears, especially with malformations and positioners in older devices, carry higher pneumococcal meningitis risk, so pneumococcal vaccination per CDC schedules is strongly recommended (Cummings notes it is not a formal requirement). "
 "**Facial nerve stimulation**: current spread from electrodes near the labyrinthine segment can stimulate the facial nerve, especially with otosclerosis or malformations."),
 ),
 
@@ -434,7 +434,7 @@ physiology=(
 pathophysiology=(
 "**Aminoglycosides**: accumulate in hair cells, generate free radicals by forming iron complexes, and trigger apoptosis; gentamicin is more vestibulotoxic and amikacin more cochleotoxic. "
 "**Mitochondrial susceptibility**: the m.1555A>G mitochondrial rRNA mutation makes ribosomes resemble bacterial ones, causing profound loss after a single aminoglycoside dose. "
-"**Cisplatin**: produces reactive oxygen species in outer hair cells and the stria vascularis, causing dose-dependent, bilateral, permanent high-frequency loss; sodium thiosulfate can reduce it in children with localized cancer. "
+"**Cisplatin**: produces reactive oxygen species in outer hair cells and the stria vascularis, causing dose-dependent, bilateral, permanent high-frequency loss; sodium thiosulfate given after cisplatin reduced hearing loss in children with localized hepatoblastoma (SIOPEL-6) and is now FDA-approved for this use. "
 "**Loop diuretics**: inhibit the Na-K-2Cl transporter in the stria vascularis, reducing the endocochlear potential (usually reversible, but synergistic with aminoglycosides). "
 "**Noise**: intense sound causes metabolic exhaustion and oxidative stress (temporary threshold shift), and with repeated exposure, permanent hair-cell loss maximal near 4 kHz (the notch). "
 "**Acoustic trauma**: very loud impulse noise mechanically tears cochlear structures. "
@@ -452,7 +452,7 @@ physiology=(
 pathophysiology=(
 "**Immune-mediated injury**: autoantibodies and T cells target inner-ear antigens (e.g., heat shock protein 70 has been studied), with immune complex deposition and inflammation. "
 "**Tempo is the clue**: faster than presbycusis and slower than sudden loss, typically progressing over weeks to months and often bilaterally. "
-"**Primary vs secondary**: about a third is associated with systemic autoimmune disease such as granulomatosis with polyangiitis, lupus, Cogan syndrome, rheumatoid arthritis, or relapsing polychondritis. "
+"**Primary vs secondary**: most AIED is primary (ear-limited); a minority is secondary to systemic autoimmune disease such as granulomatosis with polyangiitis, lupus, Cogan syndrome, rheumatoid arthritis, or relapsing polychondritis. "
 "**Vestibular involvement**: similar immune injury of the vestibular end organs causes imbalance or episodic vertigo, overlapping with bilateral Ménière disease. "
 "**Steroid response as diagnosis**: improvement with high-dose corticosteroids supports the diagnosis; steroid-sparing agents (methotrexate, biologics) are used for maintenance when steroid dependence develops."),
 ),
@@ -463,7 +463,7 @@ overview=(
 "It causes clear drainage or effusion and carries meningitis risk, so it is repaired surgically."),
 physiology=(
 "**Tegmen**: the thin bony roof of the mastoid and middle ear separates them from the middle cranial fossa dura and temporal lobe. "
-"**CSF pressure**: normal intracranial pressure is roughly 5-15 cm H2O and transmits pulsatile force to the skull base. "
+"**CSF pressure**: normal opening pressure is about 10-15 cm H2O (spontaneous leaks often run 25-27 cm H2O) and transmits pulsatile force to the skull base. "
 "**Arachnoid granulations**: aberrant granulations can erode skull-base bone over time."),
 pathophysiology=(
 "**Spontaneous leaks**: elevated intracranial pressure (often in obese patients with idiopathic intracranial hypertension physiology) gradually thins the tegmen, and arachnoid pits form multiple small defects. "

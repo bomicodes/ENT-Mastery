@@ -7,7 +7,7 @@ CHECKS = [
  [("Oral agents do not cover Pseudomonas aeruginosa", "Oral fluoroquinolones do cover Pseudomonas; the advantage of drops is delivery, not spectrum."),
   ("They prevent progression to skull-base osteomyelitis", "Necrotizing otitis externa depends on host factors such as diabetes; drops do not specifically prevent it."),
   ("Systemic therapy is unsafe when the drum is not seen", "An unseen drum changes the choice of drop (non-ototoxic), not whether systemic therapy is allowed.")],
- "Uncomplicated AOE is cellulitis of canal skin. Drops reach concentrations hundreds of times higher than oral dosing at the infection site; a wick is added when edema blocks delivery. Systemic therapy is reserved for spread beyond the canal or a high-risk host.",
+ "Uncomplicated AOE is cellulitis of canal skin. Drops reach concentrations about 1000 times higher than oral dosing at the infection site; a wick is added when edema blocks delivery. Systemic therapy is reserved for spread beyond the canal or a high-risk host.",
  "AOE: clean it, drop it, wick it if swollen; go systemic only for spread or a vulnerable host."),
 
 ("Chronic Otitis Media / Cholesteatoma",
@@ -62,7 +62,7 @@ CHECKS = [
   ("Right mixed loss with cochlear involvement", "A mixed loss requires elevated bone conduction in addition to an air-bone gap."),
   ("Normal hearing with a collapsing ear canal", "A collapsed canal elevates air thresholds but would not produce a flat tympanogram with normal volume.")],
  "Normal bone conduction with elevated air conduction defines conductive loss. A flat (type B) tympanogram with normal canal volume indicates fluid behind an intact drum.",
- "Air-bone gap over 10 dB with normal bone conduction = conductive; tympanometry tells you where."),
+ "Air-bone gap of 10 dB or more with normal bone conduction = conductive; tympanometry tells you where."),
 
 ("Tympanometry / Acoustic Reflexes",
  "A child has a flat (type B) tympanogram in the right ear. Measured canal volume is 2.5 mL, versus 0.8 mL on the left. What does this combination indicate?",
@@ -286,7 +286,7 @@ CHECKS = [
  [("Complete loss of all hearing", "Inner hair cells still transduce sound, so hearing is reduced, not absent."),
   ("Normal thresholds with an absent ABR", "That pattern suggests neural dyssynchrony, not outer hair cell loss."),
   ("Better hearing in background noise", "Outer hair cell loss worsens frequency selectivity and hearing in noise.")],
- "Outer hair cells amplify basilar membrane motion by about 40-50 dB through prestin, sharpen tuning, and generate otoacoustic emissions. Their loss removes the cochlear amplifier.",
+ "Outer hair cells amplify basilar membrane motion by about 40-60 dB through prestin, sharpen tuning, and generate otoacoustic emissions. Their loss removes the cochlear amplifier.",
  "Outer hair cells amplify; inner hair cells transmit."),
 
 ("Audiologic Electrophysiology / ABR-OAE-ECoG",

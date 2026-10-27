@@ -14,7 +14,7 @@ physiology=(
 pathophysiology=(
 "**Sensitization**: in atopic individuals, dendritic cells present allergen to naive T cells that differentiate into Th2 cells; IL-4 and IL-13 drive B cells to make allergen-specific IgE that binds mast cells and basophils. "
 "**Early phase (minutes)**: re-exposure cross-links IgE on mast cells, releasing histamine, tryptase, leukotrienes, and prostaglandins; histamine stimulates sensory nerves (itch, sneeze), glands (rhinorrhea), and vessels (congestion). "
-"**Late phase (4-8 hours)**: cytokines (IL-4, IL-5, IL-13) recruit eosinophils, basophils, and Th2 cells, producing sustained congestion. "
+"**Late phase (about 4-10 hours, peak near 6)**: cytokines (IL-4, IL-5, IL-13) recruit eosinophils, basophils, and Th2 cells, producing sustained congestion. "
 "**Priming**: repeated exposure lowers the threshold for later reactions, so symptoms build across a pollen season. "
 "**Unified airway**: the same Th2 inflammation affects the lower airway, so uncontrolled rhinitis worsens asthma. "
 "**Drug logic**: antihistamines block early-phase itch and sneeze but help congestion less; intranasal steroids suppress both phases and are the most effective single therapy; immunotherapy shifts the response toward tolerance (regulatory T cells, IgG4)."),
@@ -48,11 +48,11 @@ physiology=(
 "**Cysteinyl leukotrienes**: potent mediators of bronchoconstriction, mucus secretion, and eosinophil recruitment."),
 pathophysiology=(
 "**Baseline dysregulation**: patients overproduce cysteinyl leukotrienes and underproduce PGE2, with upregulated leukotriene receptors. "
-"**COX-1 inhibition reaction**: aspirin or NSAIDs remove the remaining PGE2 brake, causing a surge of leukotrienes and mast-cell mediators within 30-120 minutes, producing congestion, rhinorrhea, and bronchospasm. "
+"**COX-1 inhibition reaction**: aspirin or NSAIDs remove the remaining PGE2 brake, causing a surge of leukotrienes and mast-cell mediators typically within minutes to a few hours, producing congestion, rhinorrhea, and bronchospasm. "
 "**Platelet contribution**: platelet-adherent leukocytes supply extra leukotriene production. "
 "**Type 2 inflammation**: dense eosinophilic polyps with high IL-5 and IL-13 drive rapid recurrence and anosmia. "
 "**Desensitization logic**: controlled aspirin exposure followed by daily high-dose aspirin downregulates leukotriene receptors and reduces polyp regrowth. "
-"**Leukotriene modifiers**: montelukast or zileuton blunt the pathway; alcohol sensitivity is a common clue."),
+"**Leukotriene modifiers**: montelukast or zileuton blunt the pathway; respiratory reactions to alcohol are a common clue (reported by most AERD patients in the literature)."),
 ),
 
 "Frontal Recess / Frontal Sinus": dict(
@@ -78,7 +78,7 @@ overview=(
 "CSF rhinorrhea is cerebrospinal fluid leaking into the nose through a skull-base defect, from trauma, surgery, elevated intracranial pressure, tumor, or congenital defects. "
 "It carries a lifetime risk of meningitis and needs confirmation with beta-2 transferrin, localization, and usually endoscopic repair."),
 physiology=(
-"**CSF dynamics**: about 500 mL is produced daily by the choroid plexus and absorbed by arachnoid granulations; normal opening pressure is about 10-20 cm H2O. "
+"**CSF dynamics**: about 500 mL is produced daily by the choroid plexus and absorbed by arachnoid granulations; normal opening pressure is about 10-15 cm H2O (spontaneous leaks often 25-27 cm H2O). "
 "**Weak skull-base sites**: the lateral lamella of the cribriform plate (thinnest bone, Keros classification), the cribriform plate itself, the ethmoid roof, the sphenoid lateral recess, and the frontal sinus posterior table. "
 "**Meningeal barrier**: dura and arachnoid separate CSF from the sinonasal tract."),
 pathophysiology=(
@@ -105,7 +105,7 @@ pathophysiology=(
 "**Variants that obstruct**: concha bullosa, paradoxical middle turbinate, Haller (infraorbital) cells, and large agger nasi cells narrow drainage pathways. "
 "**Variants that endanger**: Onodi (sphenoethmoidal) cells can surround the optic nerve; dehiscent carotid or optic canals in the sphenoid; a deep Keros type III olfactory fossa makes the lateral lamella vulnerable; a dehiscent lamina papyracea risks orbital entry. "
 "**Maxillary ostium location**: the natural ostium is hidden behind the uncinate; accessory ostia cause recirculation if not joined to it. "
-"**Why the CT checklist**: preoperative review of each danger variant (e.g., CLOSE: cribriform, lamina, Onodi, sphenoid, ethmoid arteries) prevents complications."),
+"**Why the CT checklist**: preoperative review of each danger variant (e.g., the teaching mnemonic CLOSE: cribriform, lamina, Onodi, sphenoid, ethmoid arteries) prevents complications."),
 ),
 
 "Inferior Turbinate Hypertrophy": dict(
@@ -244,7 +244,7 @@ pathophysiology=(
 
 "Sinonasal Inverted Papilloma": dict(
 overview=(
-"Inverted papilloma is a benign but locally aggressive epithelial tumor of the lateral nasal wall with a recurrence risk and about 5-10 percent association with squamous cell carcinoma. "
+"Inverted papilloma is a benign but locally aggressive epithelial tumor of the lateral nasal wall with a recurrence risk and about 5-15 percent association with squamous cell carcinoma. "
 "Treatment is complete endoscopic resection including the attachment site."),
 physiology=(
 "**Schneiderian membrane**: the ectodermally derived ciliated respiratory mucosa lining the nose and sinuses, distinct from the endodermal mucosa of the lower airway. "
@@ -254,7 +254,7 @@ physiology=(
 pathophysiology=(
 "**Endophytic growth**: epithelium grows inward (inverts) into the stroma while keeping an intact basement membrane. "
 "**Origin site**: usually the lateral nasal wall or maxillary sinus; the attachment pedicle often shows focal hyperostosis on CT, which helps locate it. "
-"**HPV association**: low-risk HPV types are found in some; high-risk types and EGFR mutations are linked to malignant transformation. "
+"**Molecular drivers**: activating EGFR mutations are typical of inverted papilloma and persist in carcinomas arising from it; low-risk HPV is found in some, and high-risk HPV is linked to transformation. "
 "**Recurrence mechanism**: residual disease at the attachment site regrows, so subperiosteal dissection and drilling of the attachment bone matter. "
 "**Malignancy**: synchronous or metachronous SCC occurs, so all tissue is sent for pathology and surveillance is long-term."),
 ),

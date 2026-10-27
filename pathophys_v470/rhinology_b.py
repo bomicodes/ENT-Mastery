@@ -102,7 +102,7 @@ overview=(
 "Objective tests (acoustic rhinometry, rhinomanometry, peak nasal inspiratory flow, and smell testing) supplement symptoms and exam in nasal obstruction and olfactory loss. "
 "They help explain discordance between what patients feel and what clinicians see."),
 physiology=(
-"**Airflow and resistance**: nasal resistance accounts for about half of total airway resistance, concentrated at the internal valve. "
+"**Airflow and resistance**: the nose contributes about half of total airway resistance, and the internal valve accounts for about half of nasal resistance. "
 "**Cross-sectional area**: acoustic rhinometry uses reflected sound to map area along the nasal cavity. "
 "**Pressure-flow relationship**: rhinomanometry measures transnasal pressure and flow to calculate resistance."),
 pathophysiology=(
@@ -223,7 +223,7 @@ pathophysiology=(
 "**Loss of sensory surface**: aggressive turbinate resection removes cold receptors, so airflow is not perceived despite low resistance. "
 "**Abnormal airflow**: altered flow patterns and dryness cause crusting and discomfort. "
 "**Psychological overlay**: anxiety, depression, and sleep disturbance are common and amplify symptoms. "
-"**Diagnosis**: cotton test (placing cotton in the space temporarily relieves symptoms) and questionnaires. "
+"**Diagnosis**: clinical, supported by the ENS6Q questionnaire and a cotton test (cotton placed in the inferior meatus temporarily relieves symptoms; Pasha describes the same test for atrophic rhinitis). "
 "**Treatment logic**: humidification, and implants to restore airway volume and redirect flow toward mucosa."),
 ),
 
@@ -270,7 +270,7 @@ physiology=(
 "**Proximity**: both lie at the posterior orbit adjacent to the sphenoid and posterior ethmoid sinuses."),
 pathophysiology=(
 "**Combined deficits**: vision loss, ophthalmoplegia, ptosis, and V1 numbness. "
-"**Superior orbital fissure syndrome**: the same deficits without vision loss. "
+"**Superior orbital fissure syndrome**: the same deficits without vision loss (some older texts use orbital apex syndrome as a synonym). "
 "**Cavernous sinus extension**: adds V2 and sympathetic involvement. "
 "**Causes**: invasive fungal sinusitis (especially in diabetes and immunosuppression), bacterial infection, IgG4-related or idiopathic inflammation, malignancy, and fractures. "
 "**Urgency**: optic nerve compression causes irreversible vision loss, so rapid diagnosis is needed."),

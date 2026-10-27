@@ -25,7 +25,7 @@ CHECKS = [
  [("IgE antibodies against ibuprofen", "AERD is not IgE-mediated drug allergy; it is a pharmacologic reaction shared by all COX-1 inhibitors."),
   ("Direct mast-cell toxicity of NSAIDs", "The reaction reflects arachidonic-acid pathway imbalance, not a toxic effect on mast cells."),
   ("Basophil histamine release alone", "Cysteinyl leukotrienes, not histamine alone, dominate the reaction and the chronic disease.")],
- "Patients overproduce cysteinyl leukotrienes and underproduce protective PGE2. Blocking COX-1 removes the remaining PGE2 brake, causing a leukotriene surge. Acetaminophen is a weak COX-1 inhibitor and is usually tolerated at standard doses. Aspirin desensitization downregulates leukotriene receptors.",
+ "Patients overproduce cysteinyl leukotrienes and underproduce protective PGE2. Blocking COX-1 removes the remaining PGE2 brake, causing a leukotriene surge. Acetaminophen is a weak COX-1 inhibitor; low doses are usually tolerated, but higher doses (over about 1000 mg) cross-react in some patients. Aspirin desensitization downregulates leukotriene receptors.",
  "Polyps + asthma + NSAID reaction = AERD: complete surgery, then desensitization or a biologic."),
 
 ("Inferior Turbinate Hypertrophy",

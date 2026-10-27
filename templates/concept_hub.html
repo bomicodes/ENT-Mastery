@@ -48,6 +48,7 @@
 </section>{% endfor %}
 </div>
 
+{% set tr = textbook_refs_v472(module.topic) if textbook_refs_v472 is defined and module else none %}{% if tr and (tr.books or tr.literature) %}<details class="card concept-source textbook-refs" style="margin-top:14px" open><summary><b>Textbook references</b><span class="source-count">{{tr.books|length + tr.literature|length}}</span></summary>{% for s in tr.books %}<span>{{s}}</span>{% endfor %}{% if tr.literature %}<small class="muted">Beyond the core texts:</small>{% for s in tr.literature %}<span>{{s}}</span>{% endfor %}{% endif %}</details>{% endif %}
 {% if module.source_basis %}<details class="card concept-source" style="margin-top:14px"><summary><b>Source basis</b><span class="source-count">{{module.source_basis|length}}</span></summary>{% for s in module.source_basis %}<span>{{s}}</span>{% endfor %}</details>{% endif %}
 
 <div class="concept-related-grid">
