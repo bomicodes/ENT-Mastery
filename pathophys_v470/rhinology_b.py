@@ -288,8 +288,8 @@ pathophysiology=(
 "**Mediator release**: histamine and leukotrienes cause vasodilation, capillary leak, bronchospasm, and edema. "
 "**Shock**: distributive vasodilation plus fluid shift reduce preload, causing hypotension. "
 "**Airway compromise**: laryngeal and tongue edema obstruct the upper airway. "
-"**Biphasic reactions**: symptoms can recur hours later. "
-"**Why epinephrine first**: it reverses vasodilation and bronchospasm and stabilizes mast cells; antihistamines and steroids are adjuncts only. "
+"**Biphasic reactions**: symptoms recur after resolution in about 1-20 percent, up to 72 hours later; severe initial reactions, needing more than one epinephrine dose, and delayed epinephrine raise the risk, so observation is extended for these patients. "
+"**Why epinephrine first**: it reverses vasodilation and bronchospasm and stabilizes mast cells; antihistamines and steroids are adjuncts only and do not prevent biphasic reactions. Intramuscular thigh dosing (0.01 mg/kg up to 0.5 mg) remains standard, and an epinephrine nasal spray (FDA-approved 2024) is an alternative for community use. "
 "**Beta-blockers**: blunt epinephrine response, sometimes requiring glucagon."),
 ),
 

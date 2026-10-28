@@ -283,6 +283,6 @@ pathophysiology=(
 "**Anticoagulants**: warfarin (vitamin K antagonist), DOACs (factor Xa or thrombin inhibitors). "
 "**von Willebrand disease**: most common inherited bleeding disorder. "
 "**Bridging**: depends on thrombotic risk. "
-"**Reversal**: vitamin K, PCC, idarucizumab, and andexanet alfa."),
+"**Reversal**: vitamin K and four-factor PCC for warfarin, idarucizumab for dabigatran, and PCC for factor Xa inhibitors in the US (andexanet alfa was withdrawn from the US market in December 2025). **Bridging**: most patients with atrial fibrillation do not need heparin bridging when warfarin is held (CHEST 2022)."),
 ),
 }

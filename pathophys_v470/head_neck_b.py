@@ -14,7 +14,7 @@ physiology=(
 pathophysiology=(
 "**UV mutagenesis**: UVB causes signature C-to-T transitions in TP53, NOTCH1, and other genes, producing actinic keratosis, SCC in situ (Bowen disease), then invasive SCC. "
 "**Immunosuppression**: solid-organ transplant recipients have a 65- to 250-fold higher risk because surveillance fails; reducing immunosuppression (or switching to an mTOR inhibitor) is part of treatment. "
-"**High mutational burden**: UV-driven tumors carry many neoantigens, which explains why PD-1 blockade (cemiplimab) works well in advanced disease. "
+"**High mutational burden**: UV-driven tumors carry many neoantigens, which explains why PD-1 blockade (cemiplimab) works well in advanced disease and, since 2025, as adjuvant therapy after surgery and radiation for high-risk disease (C-POST). "
 "**Perineural invasion**: tumor tracks along V2, V3, or VII toward the skull base, causing numbness, formication, or facial weakness and late recurrence; MRI neurography maps it. "
 "**Parotid metastasis**: periauricular and scalp primaries spread first to parotid nodes, which then require parotidectomy plus neck dissection. "
 "**Adjuvant radiation logic**: microscopic disease along nerves and in nodal beds is not removed by surgery, so radiation is added for PNI of named nerves, close margins, and nodal disease."),
@@ -50,7 +50,7 @@ pathophysiology=(
 "**Growth phases**: radial growth along the epidermis (low metastatic risk) gives way to vertical growth into the dermis (metastatic potential). "
 "**Breslow thickness and ulceration**: the strongest predictors of nodal and distant spread, which is why they define T-stage. "
 "**Sentinel node logic**: drainage is unpredictable, so lymphoscintigraphy identifies the true first-echelon node; it is offered at about 0.8 mm or with ulceration. "
-"**Immunotherapy**: the neoantigen load makes melanoma highly responsive to PD-1 and CTLA-4 blockade, now used adjuvantly and in advanced disease; BRAF/MEK inhibitors target BRAF-mutant tumors. "
+"**Immunotherapy**: the neoantigen load makes melanoma highly responsive to PD-1 and CTLA-4 blockade, now used adjuvantly, neoadjuvantly for resectable stage III disease (SWOG S1801), and in advanced disease; BRAF/MEK inhibitors target BRAF-mutant tumors. "
 "**Desmoplastic melanoma**: neurotropic and locally aggressive, often amelanotic on sun-damaged head and neck skin."),
 ),
 
@@ -102,7 +102,7 @@ pathophysiology=(
 "**Evasion strategies**: PD-L1 upregulation, MHC class I loss, regulatory T cells, myeloid-derived suppressor cells, and immunosuppressive cytokines (TGF-beta, IL-10). "
 "**Hot vs cold tumors**: T-cell-inflamed tumors respond better; HPV-positive tumors carry viral antigens and are often more inflamed. "
 "**Checkpoint blockade**: anti-PD-1 antibodies (pembrolizumab, nivolumab) release suppressed T cells. "
-"**Neoadjuvant rationale**: giving immunotherapy while the tumor and nodes are intact maximizes antigen presentation; KEYNOTE-689 added perioperative pembrolizumab for resectable disease. "
+"**Neoadjuvant rationale**: giving immunotherapy while the tumor and nodes are intact maximizes antigen presentation; KEYNOTE-689 established perioperative pembrolizumab for resectable locally advanced disease with CPS 1 or greater (FDA-approved 2025). "
 "**Immune-related adverse events**: thyroiditis and hypothyroidism are among the most common in head and neck patients; colitis, pneumonitis, hepatitis, and hypophysitis are less common but serious."),
 ),
 

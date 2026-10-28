@@ -349,7 +349,7 @@ pathophysiology=(
 "**Bacterial superinfection**: stasis allows S. pneumoniae, H. influenzae, and M. catarrhalis to proliferate in a minority of colds. "
 "**Time course logic**: symptoms persisting beyond 10 days or a second worsening indicate bacterial infection rather than a resolving virus. "
 "**Complications**: spread through thin bone or valveless veins causes orbital (via the lamina papyracea) and intracranial complications. "
-"**Treatment logic**: amoxicillin-clavulanate covers beta-lactamase-producing H. influenzae and M. catarrhalis; watchful waiting is valid for uncomplicated cases."),
+"**Treatment logic (2025 AAO-HNSF update)**: watchful waiting is now the recommended initial approach for uncomplicated ABRS when follow-up is assured; if antibiotics are used, amoxicillin with or without clavulanate (which covers beta-lactamase-producing H. influenzae and M. catarrhalis) for 5-7 days is first-line, with reassessment if there is no improvement by 3-5 days."),
 ),
 
 "Odontogenic Sinusitis": dict(

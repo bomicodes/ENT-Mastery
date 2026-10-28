@@ -4,7 +4,7 @@ CONTENT = {
 "HPV-Associated Oropharyngeal SCC": dict(
 overview=(
 "HPV-associated oropharyngeal squamous cell carcinoma arises in the tonsils and base of tongue, driven by high-risk HPV (mostly HPV-16). "
-"It is now the most common HPV-related cancer in the US, often presents as a cystic neck mass in a younger nonsmoker, and has a much better prognosis than HPV-negative disease, which is why it has its own staging (AJCC 8th and Version 9)."),
+"It is now the most common HPV-related cancer in the US, often presents as a cystic neck mass in a younger nonsmoker, and has a much better prognosis than HPV-negative disease, which is why it has its own staging (AJCC Version 9, current since 2026, which replaced AJCC 8th)."),
 physiology=(
 "**Lymphoid oropharynx**: the palatine and lingual tonsils make up Waldeyer ring, lymphoid tissue that samples antigens from food and air. "
 "**Reticulated crypt epithelium**: tonsillar crypts are lined by a thin, discontinuous epithelium whose basal cells are directly exposed, unlike the intact squamous lining elsewhere. "
@@ -16,7 +16,7 @@ pathophysiology=(
 "**p16 surrogate**: Rb loss produces a feedback overexpression of p16INK4a, so strong diffuse p16 immunostaining is a surrogate marker for HPV-driven tumors. "
 "**Cystic nodal metastases**: small primaries hidden in crypts metastasize early, producing cystic level II nodes that can be mistaken for branchial cleft cysts. "
 "**Better prognosis biology**: tumors have fewer mutations, intact apoptosis pathways that respond to radiation, and an immune-infiltrated microenvironment. "
-"**Why separate staging**: traditional nodal staging overestimated risk for HPV-positive disease, so AJCC 8th (and Version 9 pathologic staging) groups nodes differently; smoking history still worsens outcomes. "
+"**Why separate staging**: traditional nodal staging overestimated risk for HPV-positive disease, so HPV-specific staging groups nodes differently; AJCC Version 9 also upstages N1 and N2 by one level for unequivocal clinical or imaging-detected ENE and for pathologic ENE; smoking history still worsens outcomes. "
 "**De-escalation questions**: excellent survival has driven trials of reduced-intensity therapy, though cisplatin remains standard over cetuximab."),
 ),
 
@@ -194,7 +194,7 @@ pathophysiology=(
 "**Dietary and genetic factors**: salted fish nitrosamines and HLA types contribute in endemic regions. "
 "**ET obstruction**: tumor blocks the tube, causing unilateral effusion in an adult. "
 "**Cranial nerve involvement**: spread through foramina causes CN V and VI palsies. "
-"**Radiosensitivity**: high radiosensitivity makes radiation (with chemotherapy) the primary treatment; immunotherapy now has a role in recurrent or metastatic disease."),
+"**Radiosensitivity**: high radiosensitivity makes radiation (with chemotherapy) the primary treatment; induction gemcitabine-cisplatin before chemoradiation improves survival in locoregionally advanced disease, and PD-1 blockade (toripalimab with gemcitabine-cisplatin) is first-line for recurrent or metastatic disease."),
 ),
 
 "Laryngeal Preservation Decision": dict(
@@ -274,7 +274,7 @@ physiology=(
 pathophysiology=(
 "**High-risk features**: extranodal extension and positive margins predict recurrence; postoperative chemoradiation improves outcomes (RTOG 9501 and EORTC 22931). "
 "**Intermediate-risk features**: pT3-T4, N2 or greater, perineural invasion, lymphovascular invasion, and close margins indicate adjuvant radiation. "
-"**Timing**: adjuvant therapy should start within about 6 weeks of surgery to prevent repopulation. "
+"**Timing**: adjuvant therapy should start within about 6 weeks of surgery to prevent repopulation. **Perioperative immunotherapy**: for resectable locally advanced HNSCC with PD-L1 CPS 1 or greater, KEYNOTE-689 (FDA-approved 2025) adds neoadjuvant pembrolizumab before surgery and continues it with adjuvant radiation or chemoradiation. "
 "**HPV-positive disease**: some risk features carry less weight, which is under study."),
 ),
 

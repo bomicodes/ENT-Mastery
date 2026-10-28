@@ -137,7 +137,7 @@ pathophysiology=(
 "**Aggressive juvenile course**: earlier onset and HPV-11 are associated with more frequent surgery. "
 "**Distal spread**: tracheal and pulmonary involvement increases morbidity, and malignant transformation is rare. "
 "**Surgical principle**: debulk to maintain an airway and voice while avoiding scar, especially at the anterior commissure. "
-"**Adjuvants**: bevacizumab blocks VEGF-driven angiogenesis that papillomas depend on; HPV vaccination prevents new cases and may reduce recurrence."),
+"**Adjuvants**: bevacizumab blocks VEGF-driven angiogenesis that papillomas depend on; HPV vaccination prevents new cases and may reduce recurrence. **Therapeutic vaccine**: zopapogene imadenovec (FDA-approved 2025 for adults) is an adenoviral immunotherapy carrying HPV-6/11 antigens that trains T cells to clear infected cells; about half of trial patients needed no surgery for a year."),
 ),
 
 "Subglottic Hemangioma": dict(

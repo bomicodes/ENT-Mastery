@@ -119,7 +119,7 @@ pathophysiology=(
 "**Progressive loss**: ongoing viral replication and inflammation cause progression after birth. "
 "**Asymptomatic infants**: most infected infants are asymptomatic at birth but some develop hearing loss. "
 "**Diagnosis window**: testing must occur within 21 days to distinguish congenital from postnatal infection. "
-"**Valganciclovir**: improves hearing and developmental outcomes in symptomatic infants."),
+"**Valganciclovir**: improves hearing and developmental outcomes in symptomatic infants when started within the first month; recent consensus statements (2024) also support considering it for isolated SNHL, and a growing number of US states now screen newborns for CMV."),
 ),
 
 "Thyroglossal Duct Cyst": dict(

@@ -25,7 +25,7 @@ CHECKS = [
  [("Submandibular tumors are mostly lymphomas", "Lymphoma is possible, but carcinomas are the main malignant tumors of the gland."),
   ("The submandibular gland has no myoepithelial cells", "It contains myoepithelial cells like other salivary glands."),
   ("Parotid masses are mostly inflammatory", "Most parotid masses are benign neoplasms such as pleomorphic adenoma.")],
- "About 20-25 percent of parotid tumors, about half of submandibular tumors, and most sublingual and minor salivary gland tumors are malignant. The smaller the gland, the higher the malignancy risk.",
+ "About 15-25 percent of parotid tumors, about 40-50 percent of submandibular tumors, and about half or more of minor salivary and most sublingual tumors are malignant. The smaller the gland, the higher the malignancy risk.",
  "The smaller the salivary gland, the more likely the tumor is malignant."),
 
 ("Medullary Thyroid Cancer",
@@ -200,7 +200,7 @@ CHECKS = [
  "High-risk DTC after lobectomy: complete the thyroidectomy."),
 
 ("Radioactive Iodine and TSH Suppression in DTC",
- "Six weeks after total thyroidectomy for intermediate-risk papillary carcinoma, a patient is prepared for radioiodine by either stopping levothyroxine or receiving recombinant TSH, plus a low-iodine diet. Why?",
+ "Six weeks after total thyroidectomy for intermediate-high-risk papillary carcinoma, a patient is prepared for radioiodine by either stopping levothyroxine or receiving recombinant TSH, plus a low-iodine diet. Why?",
  "High TSH increases iodine uptake by thyroid cells",
  [("High TSH protects the salivary glands", "TSH does not prevent radiation sialadenitis; hydration and sialogogues are used."),
   ("High TSH lowers serum thyroglobulin", "TSH stimulation raises thyroglobulin, which is why stimulated thyroglobulin is measured."),

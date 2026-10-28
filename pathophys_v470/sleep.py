@@ -10,7 +10,7 @@ physiology=(
 "**Sleep staging**: EEG, EOG, and chin EMG define wake, N1, N2, N3 (slow-wave), and REM sleep; adults cycle every 90 minutes, with more N3 early and more REM late in the night. "
 "**REM atonia**: skeletal muscle tone, including the upper airway dilators, is lowest in REM, so obstruction is often worst in REM. "
 "**Respiratory monitoring**: oronasal thermistor (apneas), nasal pressure (hypopneas), thoracoabdominal belts (effort), and pulse oximetry. "
-"**Event definitions**: apnea is a 90 percent or greater airflow drop for 10 seconds or more; hypopnea is a 30 percent drop with a 3 percent desaturation or arousal (AASM recommended rule). "
+"**Event definitions**: apnea is a 90 percent or greater airflow drop for 10 seconds or more; hypopnea is a 30 percent drop with a 3 percent desaturation or arousal (AASM recommended rule); Medicare still requires the 4 percent desaturation rule, so the same study can give two AHIs. "
 "**Effort distinguishes events**: obstructive apneas show continued effort; central apneas show absent effort."),
 pathophysiology=(
 "**AHI severity**: 5-15 mild, 15-30 moderate, over 30 severe in adults. "
@@ -89,7 +89,7 @@ pathophysiology=(
 "**Pressure intolerance**: auto-PAP, expiratory pressure relief, or bilevel help. "
 "**Aerophagia**: swallowed air from high pressure. "
 "**Treatment-emergent central apnea**: PAP can unmask central events. "
-"**Data download**: shows residual AHI, leak, and usage."),
+"**Data download**: shows residual AHI, leak, and usage. **Weight-loss pharmacotherapy**: tirzepatide is FDA-approved (2024) for moderate-to-severe OSA with obesity and lowered AHI substantially in SURMOUNT-OSA, so weight is now a treatable target alongside PAP and surgery."),
 ),
 
 "Palatal Surgery": dict(
@@ -274,7 +274,7 @@ pathophysiology=(
 "**Heart failure**: prolonged circulation time and pulmonary congestion cause Cheyne-Stokes respiration. "
 "**Treatment-emergent CSA**: when CPAP opens the airway, increased ventilation lowers CO2, unmasking central apneas; it often resolves with continued use. "
 "**Opioids**: depress drive. "
-"**Adaptive servo-ventilation**: contraindicated in heart failure with reduced ejection fraction (SERVE-HF)."),
+"**Adaptive servo-ventilation**: contraindicated in heart failure with reduced ejection fraction (SERVE-HF). **Phrenic nerve stimulation**: transvenous stimulation is an option for moderate-to-severe CSA in the 2025 AASM CSA guideline."),
 ),
 
 "Sleep-Related Hypoventilation": dict(
