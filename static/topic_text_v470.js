@@ -9,7 +9,22 @@
   function normalizeBoldBoundary(s){return s.replace(/\.(\*\*)(\s|$)/g,'$1.$2');}
   function splitLongClause(piece){
     if(piece.length < 170) return [piece];
-    var parts = piece.split(/;\s+/).map(function(p){return p.trim();}).filter(Boolean);
+    // Split only at semicolons outside parentheses, and never leave a stub clause.
+    var parts = [], depth = 0, start = 0;
+    for(var i = 0; i < piece.length; i++){
+      var ch = piece[i];
+      if(ch === '(') depth++;
+      else if(ch === ')') depth = Math.max(0, depth-1);
+      else if(ch === ';' && depth === 0 && /\s/.test(piece[i+1] || '')){
+        parts.push(piece.slice(start, i).trim()); start = i + 1;
+      }
+    }
+    parts.push(piece.slice(start).trim());
+    parts = parts.filter(Boolean).reduce(function(acc, p){
+      if(acc.length && (p.length < 60 || acc[acc.length-1].length < 60)) acc[acc.length-1] += '; ' + p;
+      else acc.push(p);
+      return acc;
+    }, []);
     if(parts.length < 2) return [piece];
     return parts.map(function(p,i){return i < parts.length-1 ? p.replace(/[.;]?$/,';') : p;});
   }
