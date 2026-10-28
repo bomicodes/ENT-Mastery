@@ -177,7 +177,7 @@ pathophysiology=(
 "**Preparation**: elevated TSH (withdrawal or recombinant TSH) and low-iodine diet maximize uptake. "
 "**TSH suppression**: levothyroxine to suppress TSH limits growth of residual cancer; the degree depends on risk. "
 "**Side effects**: sialadenitis, xerostomia, nasolacrimal duct obstruction, and second malignancies. "
-"**Risk-adapted use**: low-risk patients often do not need RAI."),
+"**Risk-adapted use (ATA 2025)**: RAI is generally not recommended for low-risk disease, is selective for low-intermediate and intermediate-high risk, and is recommended for high-risk disease; oncocytic carcinoma is less iodine-avid."),
 ),
 
 "Radioiodine-Refractory Differentiated Thyroid Cancer": dict(

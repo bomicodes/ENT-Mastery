@@ -312,6 +312,6 @@ pathophysiology=(
 "**Involution**: years-long regression with residual fibrofatty tissue. "
 "**PHACE**: posterior fossa anomalies, hemangioma, arterial anomalies, cardiac defects, eye anomalies. "
 "**Complications**: ulceration, visual obstruction (amblyopia), and airway involvement. "
-"**Propranolol**: vasoconstriction, VEGF reduction, and apoptosis."),
+"**Propranolol**: vasoconstriction, VEGF reduction, and apoptosis; the 2019 AAP guideline makes it first-line for problematic hemangiomas and urges evaluation of high-risk lesions by about 1 month of age, because most growth happens in the first 3 months."),
 ),
 }

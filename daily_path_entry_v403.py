@@ -13,11 +13,13 @@ from textbook_curriculum_v470 import install_textbook_curriculum_v470
 from learning_path_v470 import install_learning_path_v470
 from concept_checks_v471 import install_concept_checks_v471
 from textbook_refs_v472 import install_textbook_refs_v472
+from guideline_currency_v480 import install_guideline_currency_v480
 
 TEXTBOOK_CURRICULUM_V470 = install_textbook_curriculum_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)
 # v47.1: replace the 309 templated Concept Checks before the Daily Path indexes them.
 CONCEPT_CHECKS_V471 = install_concept_checks_v471(production.runtime_entry.data)
 TEXTBOOK_XREF_V472 = install_textbook_refs_v472(production.runtime_entry.data, app)
+GUIDELINE_CURRENCY_V480 = install_guideline_currency_v480(production.runtime_entry.data)
 LEARNING_PATH_V470 = install_learning_path_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)

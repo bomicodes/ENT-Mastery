@@ -19,7 +19,7 @@ S = {
 "Ossicular Discontinuity": "Kartush JM. Ossicular chain reconstruction: capitulum to malleus. Otolaryngol Clin North Am. 1994;27:689-715.",
 "Ménière Disease": "Lopez-Escamez JA et al. Diagnostic criteria for Menière's disease: Bárány Society consensus. J Vestib Res. 2015;25:1-7; Basura GJ et al. Clinical Practice Guideline: Ménière's Disease. Otolaryngol Head Neck Surg. 2020;162(2 Suppl):S1-S55.",
 "Vestibular Migraine": "Lempert T et al. Vestibular migraine: Diagnostic criteria (Update), literature update 2021. Bárány Society/IHS consensus. J Vestib Res. 2022;32:1-6 (criteria unchanged from 2012).",
-"Tinnitus": "Tunkel DE et al. Clinical Practice Guideline: Tinnitus. Otolaryngol Head Neck Surg. 2014;151(2 Suppl):S1-S40.",
+"Tinnitus": "Adams ME et al. Clinical Practice Guideline: Tinnitus (Update). Otolaryngol Head Neck Surg. 2026 (published October 12, 2026; doi:10.1002/ohn.70417), replacing Tunkel DE et al. Clinical Practice Guideline: Tinnitus. Otolaryngol Head Neck Surg. 2014;151(2 Suppl):S1-S40.",
 "Hearing Aids and Bone-Conduction Devices": "US Food and Drug Administration. Medical Devices; Ear, Nose, and Throat Devices; Establishing Over-the-Counter Hearing Aids. Final rule, 87 FR 50698 (2022).",
 "Vestibular Test Battery": "Strupp M et al. Vestibular Disorders: Diagnosis, New Classification and Treatment. Dtsch Arztebl Int. 2020;117:300-310; Pasha & Golub 6e, ch 7, pp 412-416. Interpret vHIT/VEMP against laboratory- and age-specific norms rather than one universal cutoff.",
 "Ototoxic / Noise-Induced Hearing Loss": "NIOSH. Criteria for a Recommended Standard: Occupational Noise Exposure. 1998; ASHA. Audiologic Management of Individuals Receiving Cochleotoxic Drug Therapy. 1994.",

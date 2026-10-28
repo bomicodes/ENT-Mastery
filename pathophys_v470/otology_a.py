@@ -56,7 +56,7 @@ pathophysiology=(
 "**Viral/inflammatory theory**: inflammation and cytokine release disrupt hair cells and strial function; this is the rationale for corticosteroids, which reduce cochlear inflammation and stabilize the stria. "
 "**Membrane rupture**: rarely, a break between perilymph and endolymph (or a window leak) mixes potassium-rich fluid and depolarizes hair cells. "
 "**Retrocochlear causes**: vestibular schwannoma can present as sudden loss through acute compression or vascular compromise of the cochlear nerve or artery, which is why MRI is part of the workup. "
-"**Why timing matters**: steroid benefit is greatest in the first two weeks, and intratympanic steroid achieves far higher perilymph concentrations than oral dosing, making it the salvage route."),
+"**Why timing matters**: steroid benefit is greatest in the first two weeks, and intratympanic steroid achieves far higher perilymph concentrations than oral dosing, making it the salvage route (within about 6 weeks of onset per the 2019 AAO-HNSF guideline); hyperbaric oxygen is a guideline option alongside steroids early or as salvage."),
 ),
 
 "Otosclerosis / Stapes Fixation": dict(
@@ -372,7 +372,7 @@ pathophysiology=(
 "Tinnitus": dict(
 overview=(
 "Tinnitus is the perception of sound without an external source; most is subjective and linked to hearing loss. "
-"The clinical job is to identify red flags (unilateral, pulsatile, objective) and then manage bothersome tinnitus with counseling, amplification, and CBT."),
+"The clinical job is to identify red flags (unilateral, pulsatile, objective) and then The clinical job is to identify red flags (unilateral, pulsatile, objective) and then manage bothersome tinnitus with counseling, amplification, and CBT. The 2026 AAO-HNSF tinnitus guideline update adds a comprehensive audiologic evaluation for every patient, asking directly about self-harm, cochlear implant evaluation when hearing loss qualifies, and follow-up, and recommends against routine medications, supplements, or rTMS."),
 physiology=(
 "**Central gain**: the auditory system adjusts its sensitivity to match input; reduced cochlear input increases gain in the cochlear nucleus, inferior colliculus, and cortex. "
 "**Spontaneous activity**: auditory neurons fire spontaneously even in silence, and the brain normally filters this out. "
@@ -380,7 +380,7 @@ physiology=(
 pathophysiology=(
 "**Deafferentation model**: hair-cell or synaptic loss reduces input in a frequency region; central neurons increase gain and spontaneous synchronous firing, which is perceived as sound, often matching the hearing-loss frequency. "
 "**Why distress varies**: limbic and attentional networks amplify perception and emotional response, explaining why CBT and counseling reduce bother without changing loudness. "
-"**Somatic modulation**: neck and jaw inputs to the dorsal cochlear nucleus explain tinnitus changes with jaw clenching or neck movement. "
+"**Somatic modulation**: neck and jaw inputs to the dorsal cochlear nucleus explain tinnitus changes with jaw clenching or neck movement (somatosensory tinnitus, now addressed in the 2026 guideline). **Why sound plus touch**: bimodal neuromodulation pairs sound with tongue or skin stimulation to exploit this auditory-somatosensory convergence and retrain central gain; the 2026 guideline discusses it as an emerging option. "
 "**Pulsatile tinnitus**: a vascular sound reaching the cochlea (paraganglioma, dural AV fistula, sigmoid sinus diverticulum or dehiscence, idiopathic intracranial hypertension, carotid disease) and requires imaging. "
 "**Objective tinnitus**: audible to the examiner, from vascular sources or muscle (palatal or middle-ear myoclonus). "
 "**Unilateral tinnitus**: asymmetric neural pathology such as vestibular schwannoma must be excluded with MRI when accompanied by asymmetric hearing."),
@@ -401,7 +401,7 @@ pathophysiology=(
 "**Occlusion effect**: blocking the canal traps bone-conducted low-frequency sound, making one's own voice boomy; open fittings reduce it. "
 "**Feedback**: sound leaking from the canal back to the microphone causes whistling, worsened by a loose fit or wax. "
 "**Single-sided deafness**: a bone-anchored device or CROS transfers sound to the hearing ear but cannot restore binaural localization, whereas a cochlear implant can partially restore it. "
-"**Untreated hearing loss**: it is associated with cognitive decline, social isolation, and falls, which is part of why amplification matters."),
+"**Untreated hearing loss**: it is associated with cognitive decline, social isolation, and falls, which is part of why amplification matters. **Access**: since 2022, FDA-regulated over-the-counter hearing aids serve adults with perceived mild-to-moderate loss, and the 2024 AAO-HNSF age-related hearing loss guideline recommends screening older adults and offering amplification."),
 ),
 
 "Vestibular Test Battery": dict(

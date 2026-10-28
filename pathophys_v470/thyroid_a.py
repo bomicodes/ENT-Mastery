@@ -23,7 +23,7 @@ pathophysiology=(
 "Differentiated Thyroid Cancer": dict(
 overview=(
 "Differentiated thyroid cancer (papillary and follicular, including oncocytic) is the most common endocrine cancer and usually has an excellent prognosis. "
-"Treatment is risk-adapted: lobectomy or total thyroidectomy, selective neck dissection, selective radioactive iodine, and TSH suppression."),
+"Treatment is risk-adapted under the 2025 ATA guideline: lobectomy for intrathyroidal cancers up to 2 cm, lobectomy or total thyroidectomy for 2-4 cm, total thyroidectomy for larger, extrathyroidal, or node-positive disease, with RAI and TSH suppression matched to a new four-tier recurrence risk (low, low-intermediate, intermediate-high, high)."),
 physiology=(
 "**Differentiated function**: cancer cells retain follicular functions (iodide uptake, thyroglobulin production, TSH responsiveness), which is why RAI and thyroglobulin monitoring work. "
 "**Lymphatic drainage**: central compartment (level VI) first, then lateral levels III-IV and II, and superior mediastinum. "
@@ -72,7 +72,7 @@ pathophysiology=(
 "**Carcinoma ex pleomorphic adenoma**: malignant transformation of a long-standing benign tumor. "
 "**Salivary duct carcinoma**: aggressive, androgen receptor and HER2 positive, offering targeted therapy. "
 "**Signs of malignancy**: rapid growth, pain, facial nerve weakness, skin fixation, and nodal disease. "
-"**Staging**: AJCC 8th edition TNM staging, with histologic grade guiding treatment intensity."),
+"**Staging (AJCC Version 9)**: now covers minor salivary glands, counts involved nodes instead of laterality (N1 1-3 nodes, N2 more than 3 or any ENE; N3 eliminated), and reserves stage IV for distant metastasis; histologic grade still guides treatment intensity."),
 ),
 
 "Medullary Thyroid Cancer": dict(
