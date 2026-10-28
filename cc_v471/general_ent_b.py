@@ -2,7 +2,7 @@
 
 CHECKS = [
 ("Angioedema",
- "A 58-year-old Black man taking lisinopril for 3 years has rapidly progressive tongue and lip swelling without hives or itching. Why are epinephrine and antihistamines unlikely to reverse it?",
+ "A 58-year-old Black man taking lisinopril for 3 years has rapidly progressive tongue and lip swelling without hives or itching. Why do epinephrine and antihistamines often fail to reverse it?",
  "The swelling is bradykinin-mediated",
  [("The drug has caused an IgE allergy", "ACE-inhibitor angioedema is not IgE-mediated, so allergy treatments target the wrong pathway."),
   ("Mast-cell tryptase levels are too high", "Tryptase is typically normal because mast cells are not the driver."),
@@ -16,7 +16,7 @@ CHECKS = [
  [("Alkali forms a protective surface eschar", "Acids produce coagulation necrosis with an eschar; alkali does not."),
   ("Alkali is rapidly neutralized by saliva", "Saliva cannot neutralize a strong alkali in meaningful amounts."),
   ("Alkali spares the esophagus and injures the stomach", "Alkali mainly injures the esophagus; acids more often injure the stomach.")],
- "Alkali saponifies fats and liquefies tissue, penetrating deeply and risking perforation and stricture. Acids cause coagulation necrosis whose eschar limits depth. Endoscopy at 12-48 hours grades the injury (Zargar) and predicts stricture.",
+ "Alkali saponifies fats and liquefies tissue, penetrating deeply and risking perforation and stricture. Acids cause coagulation necrosis whose eschar limits depth. Endoscopy at about 24-48 hours grades the injury (Zargar) and predicts stricture.",
  "Alkali burns deep; acid forms an eschar."),
 
 ("Postoperative Neck Hematoma",

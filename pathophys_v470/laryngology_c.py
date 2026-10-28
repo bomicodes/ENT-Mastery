@@ -15,7 +15,7 @@ pathophysiology=(
 "**Voice tradeoff**: a wider glottis causes breathiness, minimized by limiting the anterior extent. "
 "**Aspiration risk**: larger openings and arytenoid resection impair closure during swallowing. "
 "**Scar contracture**: granulation and scar can narrow the airway again, sometimes requiring revision. "
-"**Patient selection**: confirm no recovery is expected (often wait 9-12 months after nerve injury) and distinguish paralysis from fixation."),
+"**Patient selection**: confirm no recovery is expected (adults often wait 9-12 months after nerve injury; Bluestone advises longer in children) and distinguish paralysis from fixation."),
 ),
 
 "Cricopharyngeal Dysfunction": dict(
@@ -54,8 +54,8 @@ pathophysiology=(
 
 "Chronic Cough / Laryngeal Hypersensitivity": dict(
 overview=(
-"Chronic cough lasting over 8 weeks without a cause after treatment of asthma, reflux, and upper airway cough syndrome is often a neuropathic laryngeal hypersensitivity. "
-"Neuromodulators and behavioral cough suppression therapy help."),
+"Chronic cough lasting over 8 weeks (the adult guideline definition; some texts use 3 months) without a cause after treatment of asthma, reflux, and upper airway cough syndrome is often a neuropathic laryngeal hypersensitivity. "
+"Behavioral cough suppression therapy helps, and neuromodulators such as gabapentin may help selected patients, although K.J. Lee notes inconsistent trial evidence."),
 physiology=(
 "**Cough reflex**: vagal afferents in the larynx and airways transmit to the nucleus tractus solitarius, triggering a cough motor pattern. "
 "**Receptors**: TRPV1, TRPA1, and P2X3 receptors respond to irritants, temperature, and ATP. "
@@ -169,7 +169,7 @@ overview=(
 "Distinguishing oropharyngeal from esophageal dysphagia guides workup."),
 physiology=(
 "**Esophageal muscle**: the upper third is striated (vagal motor), the middle mixed, and the lower two-thirds smooth muscle controlled by the myenteric plexus. "
-"**Peristalsis**: coordinated sequential contraction propels a bolus in about 8-10 seconds. "
+"**Peristalsis**: coordinated sequential contraction propels a bolus to the stomach in a few seconds (under 1 second through the striated upper third, about 3 seconds through the smooth-muscle remainder). "
 "**Lower esophageal sphincter**: tonically contracted, relaxing with swallowing via inhibitory neurons (nitric oxide, VIP). "
 "**Mucosal defense**: squamous epithelium with limited acid resistance, protected by clearance and salivary bicarbonate."),
 pathophysiology=(

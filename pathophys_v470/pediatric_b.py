@@ -32,7 +32,7 @@ pathophysiology=(
 "**Failed rupture**: persistence of the bucconasal membrane or abnormal mesodermal migration produces an atretic plate, most often mixed bony-membranous. "
 "**Bilateral atresia**: cyclical cyanosis relieved by crying (mouth breathing) and worsened by feeding; a McGovern nipple or oral airway bridges to surgery. "
 "**Unilateral atresia**: often missed until childhood, presenting with unilateral mucoid rhinorrhea. "
-"**Diagnosis**: inability to pass a catheter and CT showing the atretic plate and medialized lateral pterygoid wall with a thickened vomer. "
+"**Diagnosis**: inability to pass a catheter and CT showing the atretic plate and a medialized lateral nasal wall (medial pterygoid plate) with a thickened vomer. "
 "**CHARGE association**: coloboma, heart defects, atresia choanae, growth retardation, genital anomalies, ear anomalies (CHD7). "
 "**Restenosis**: circumferential mucosal injury causes scar, so mucosal flaps and wide posterior septectomy reduce recurrence."),
 ),
@@ -60,7 +60,7 @@ overview=(
 "It occurs after cleft palate repair, after adenoidectomy in at-risk children, and with neuromuscular disease."),
 physiology=(
 "**Velopharyngeal valve**: the levator veli palatini elevates and retracts the velum to contact the posterior pharyngeal wall while the lateral walls move medially. "
-"**Closure patterns**: coronal (most common), sagittal, circular, and circular with a Passavant ridge, which guide surgical choice. "
+"**Closure patterns**: coronal (most common in classic series), sagittal, circular, and circular with a Passavant ridge, which guide surgical choice. "
 "**Speech requirement**: oral pressure consonants (p, b, s) require a sealed velopharynx to build oral pressure. "
 "**Adenoid contribution**: in young children, the adenoid pad helps the velum achieve closure."),
 pathophysiology=(
@@ -85,7 +85,7 @@ pathophysiology=(
 "**Documentation requirement**: each episode should include fever over 38.3 C, cervical adenopathy, tonsillar exudate, or a positive strep test. "
 "**Natural history**: episode frequency declines over time, so many children improve without surgery. "
 "**Modifying factors**: peritonsillar abscess, PFAPA, multiple antibiotic allergies, and missed school favor surgery. "
-"**Risk side**: post-tonsillectomy hemorrhage (about 2-4 percent), dehydration, and anesthesia risks."),
+"**Risk side**: post-tonsillectomy hemorrhage (about 1-5 percent, varying widely by series), dehydration, and anesthesia risks."),
 ),
 
 "Pediatric Tracheostomy / Decannulation": dict(
@@ -107,7 +107,7 @@ pathophysiology=(
 
 "Pediatric Vocal Fold Immobility": dict(
 overview=(
-"Pediatric vocal fold immobility is the second most common cause of neonatal stridor. "
+"Pediatric vocal fold immobility is the second or third most common cause of neonatal stridor (after laryngomalacia, with congenital subglottic stenosis ranked ahead of it by Bluestone). "
 "Unilateral immobility is often iatrogenic after cardiac surgery, and bilateral immobility is often neurologic, classically Chiari malformation."),
 physiology=(
 "**Nucleus ambiguus**: the brainstem motor nucleus for the larynx, vulnerable to pressure from hindbrain herniation or hydrocephalus. "
@@ -179,7 +179,7 @@ overview=(
 "Microtia is congenital malformation of the external ear, often with aural atresia (absent canal). "
 "Management combines early hearing rehabilitation (bone conduction) with auricular reconstruction, and atresiaplasty for favorable anatomy."),
 physiology=(
-"**Auricle development**: six hillocks of His from the first and second branchial arches fuse during weeks 6-8. "
+"**Auricle development**: six hillocks of His from the first and second branchial arches appear around weeks 5-6 and fuse by about week 12. "
 "**EAC development**: the first pharyngeal cleft canalizes late (around week 28), after the auricle forms. "
 "**Separate inner ear origin**: the inner ear develops from the otic placode, so it is usually normal in microtia. "
 "**Facial nerve**: develops alongside second-arch structures and is often displaced in atresia."),

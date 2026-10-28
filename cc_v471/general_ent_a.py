@@ -11,12 +11,12 @@ CHECKS = [
  "In a bleeding child, tachycardia is the warning; hypotension is the crash."),
 
 ("Deep Neck Space Infection",
- "A 45-year-old with a lower molar infection develops neck swelling and fever. CT shows an abscess in the retropharyngeal space extending below the level of T2 into the posterior mediastinum. Which fascial pathway allowed this spread?",
+ "A 45-year-old with a lower molar infection develops neck swelling and fever. CT shows an abscess in the retropharyngeal space extending below the level of T4 into the posterior mediastinum. Which fascial pathway allowed this spread?",
  "The danger space behind the alar fascia",
  [("The carotid sheath to the aortic arch", "The carotid sheath can carry infection, but posterior mediastinal spread below T2 follows the danger space."),
   ("The pretracheal space to the anterior chest", "Pretracheal spread reaches the anterior mediastinum, not the posterior mediastinum."),
   ("The submandibular space directly to the pleura", "There is no direct path from the submandibular space to the pleura.")],
- "The retropharyngeal space ends near T2 where the alar and visceral fascia fuse. The danger space, between alar and prevertebral fascia, extends to the diaphragm, letting infection reach the posterior mediastinum. Mediastinitis needs urgent drainage.",
+ "The retropharyngeal space ends in the upper mediastinum (about T2-T4 depending on the source) where the alar and visceral fascia fuse. The danger space, between alar and prevertebral fascia, extends to the diaphragm, letting infection reach the posterior mediastinum. Mediastinitis needs urgent drainage.",
  "Retropharyngeal infection below T2 = danger space = mediastinitis risk."),
 
 ("Tracheostomy Emergency",
@@ -25,7 +25,7 @@ CHECKS = [
  [("Blindly reinsert the tracheostomy tube", "An immature tract can collapse, so blind reinsertion risks a false passage into the pretracheal tissue."),
   ("Wait for the surgeon before any airway action", "Hypoxia requires immediate airway management."),
   ("Give a sedative to reduce agitation", "Sedation worsens respiratory drive without securing the airway.")],
- "The tract is immature before about 5-7 days, so tissue planes collapse when the tube comes out. With a patent upper airway, oxygenate by face mask and stoma and intubate orally. Stay sutures help recover the tract if reinsertion is attempted.",
+ "The tract is immature in the first several days (about 3-7), so tissue planes collapse when the tube comes out. With a patent upper airway, oxygenate by face mask and stoma and intubate orally. Stay sutures help recover the tract if reinsertion is attempted.",
  "Immature tract dislodgement with patent upper airway: intubate from above."),
 
 ("Epistaxis",

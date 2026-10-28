@@ -51,7 +51,7 @@ physiology=(
 "**Palatoglossal coupling**: tongue protrusion pulls the soft palate forward through the palatoglossus, opening the retropalatal airway in many patients."),
 pathophysiology=(
 "**Mechanism**: synchronized stimulation of protrusor branches during inspiration reverses sleep-related loss of genioglossus tone. "
-"**Candidate selection**: AHI roughly 15-100 (labeling has expanded), BMI generally under about 40, central and mixed apneas under 25 percent, and no complete concentric palatal collapse on DISE. "
+"**Candidate selection**: AHI roughly 15-100 and BMI up to about 40 under the current FDA label (the original STAR criteria in the textbooks were AHI 20-50 and BMI under 32), central and mixed apneas under 25 percent, and no complete concentric palatal collapse on DISE. "
 "**STAR trial**: 12-month AHI fell from about 29 to 9, with improved sleepiness and quality of life. "
 "**Failure modes**: retraction-dominant stimulation, epiglottic collapse, poor palatoglossal coupling, and weight gain. "
 "**Adherence**: nightly use is typically higher than CPAP."),
@@ -67,8 +67,8 @@ physiology=(
 "**Obstructive hypoventilation**: children often have prolonged partial obstruction with CO2 elevation rather than discrete apneas. "
 "**Higher respiratory rate**: and smaller lung volumes lead to faster desaturation."),
 pathophysiology=(
-"**Thresholds**: obstructive AHI 1-5 mild, 5-10 moderate, over 10 severe. "
-"**Hypoventilation**: end-tidal CO2 above 50 mm Hg for more than 25 percent of sleep time indicates obstructive hypoventilation. "
+"**Thresholds**: obstructive AHI 1-5 mild, 5-10 moderate, over 10 severe in the common convention (some sources grade more leniently). "
+"**Hypoventilation**: end-tidal CO2 above 50 mm Hg for more than about 10-25 percent of sleep time (definitions vary) indicates obstructive hypoventilation. "
 "**Central apneas**: post-arousal central apneas are common and normal. "
 "**High-risk groups**: obesity, Down syndrome, craniofacial anomalies, neuromuscular disease, and age under 2 warrant PSG. "
 "**Severity and postoperative risk**: severe OSA predicts postoperative respiratory complications."),
@@ -360,7 +360,7 @@ overview=(
 "Nasal surgery rarely cures OSA but reduces CPAP pressure and improves adherence in patients with nasal obstruction. "
 "It is also used to improve HNS and oral appliance tolerance."),
 physiology=(
-"**Nasal resistance**: contributes about half of upper airway resistance. "
+"**Nasal resistance**: contributes about two-thirds of total airway resistance during wakefulness (Cummings). "
 "**Starling resistor model**: increased upstream resistance creates more negative downstream pharyngeal pressure, promoting collapse. "
 "**Nasal breathing during sleep**: stabilizes mandibular position and pharyngeal patency."),
 pathophysiology=(

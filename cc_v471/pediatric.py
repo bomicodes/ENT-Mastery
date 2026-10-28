@@ -30,7 +30,7 @@ CHECKS = [
 
 ("Pediatric Airway Foreign Body",
  "A 2-year-old had a choking episode while eating peanuts 2 days ago and now has a cough and right-sided wheeze. Inspiratory chest X-ray is normal, but the expiratory film shows a hyperinflated right lung. What is the mechanism?",
- "Ball-valve bronchial obstruction",
+ "Check-valve (ball-valve) obstruction",
  [("Complete obstruction with collapse", "Complete obstruction causes atelectasis, not hyperinflation."),
   ("Aspiration pneumonia only", "Pneumonia would not cause unilateral air trapping."),
   ("Tracheomalacia with collapse", "Malacia does not explain sudden unilateral air trapping after choking.")],

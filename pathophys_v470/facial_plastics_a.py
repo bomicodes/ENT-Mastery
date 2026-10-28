@@ -6,7 +6,7 @@ overview=(
 "Functional nasal obstruction is reduced nasal airflow from structural causes (septal deviation, valve collapse, turbinate hypertrophy) or mucosal disease. "
 "Identifying the exact site, especially the internal and external nasal valves, determines whether septoplasty, turbinate reduction, or valve repair will help."),
 physiology=(
-"**Nasal resistance**: the nose provides about half of total airway resistance, which helps generate negative intrathoracic pressure and lung inflation. "
+"**Nasal resistance**: the nose provides about two-thirds of total airway resistance during wakefulness (Cummings), which helps generate negative intrathoracic pressure and lung inflation. "
 "**Internal nasal valve**: bounded by the septum, the caudal upper lateral cartilage, the head of the inferior turbinate, and the nasal floor; the septum-upper lateral cartilage angle is normally 10-15 degrees and this is the narrowest cross-section. "
 "**External nasal valve**: the nostril vestibule framed by the lateral crus, alar soft tissue, columella, and nasal sill. "
 "**Bernoulli effect**: as air accelerates through a narrow valve, lateral pressure drops, pulling weak sidewalls inward. "
@@ -64,7 +64,7 @@ overview=(
 "Local flaps move adjacent skin into a defect, matching color and texture better than grafts. "
 "Flap design follows tissue biomechanics, blood supply, and relaxed skin tension lines."),
 physiology=(
-"**Random pattern blood supply**: local flaps rely on the subdermal plexus rather than a named artery, limiting length-to-width ratio (about 3:1 on the face, more in well-vascularized areas). "
+"**Random pattern blood supply**: local flaps rely on the subdermal plexus rather than a named artery, limiting length-to-width ratio (about 3:1 classically, up to about 4:1 on the well-vascularized face per Pasha, 2:1 in the neck). "
 "**Axial flaps**: carry a named vessel (e.g., supratrochlear for the forehead flap), allowing longer flaps. "
 "**Skin biomechanics**: skin has viscoelastic properties, with creep (elongation under constant load) and stress relaxation. "
 "**Relaxed skin tension lines**: lie perpendicular to underlying muscle pull; closures parallel to them heal with less tension and better scars. "
@@ -104,7 +104,7 @@ physiology=(
 "**Nasolacrimal system**: lacrimal sac in the fossa between the crests, draining into the inferior meatus. "
 "**Nasal dorsum support**: depends on nasal bones and septum."),
 pathophysiology=(
-"**Telecanthus**: lateral displacement of the central fragment and medial canthal tendon widens the intercanthal distance (over about 35-40 mm suggests injury). "
+"**Telecanthus**: lateral displacement of the central fragment and medial canthal tendon widens the intercanthal distance (normal about 30-35 mm; over about 35 mm suggests injury). "
 "**Markowitz types**: I (large central fragment), II (comminuted but tendon attached to a fragment), III (tendon avulsed or fragment comminuted). "
 "**Nasal flattening**: loss of dorsal support. "
 "**Epiphora**: nasolacrimal injury. "
@@ -136,7 +136,7 @@ overview=(
 physiology=(
 "**Facial nerve**: motor supply to the muscles of facial expression via five branches. "
 "**Wallerian degeneration**: distal axons degenerate after transection. "
-"**Neuromuscular junction survival**: denervated facial muscles remain receptive to reinnervation for roughly 12-24 months before fibrosis and atrophy. "
+"**Neuromuscular junction survival**: denervated facial muscles remain receptive to reinnervation for roughly 12-24 months before fibrosis and atrophy (Pasha uses 12-18 months; Cummings says paralysis becomes irreversible at 18-24 months). "
 "**Axonal regeneration**: about 1 mm per day. "
 "**Cortical plasticity**: allows retraining after nerve transfer."),
 pathophysiology=(
@@ -220,7 +220,7 @@ overview=(
 physiology=(
 "**Normal auricle**: auriculocephalic angle about 20-30 degrees and helical rim 1.5-2 cm from the scalp. "
 "**Antihelical fold**: created by cartilage folding. "
-"**Ear growth**: reaches about 85 percent adult size by age 5-6."),
+"**Ear growth**: reaches about 85 percent of adult size by age 3, with cartilage growth nearly complete by about age 5."),
 pathophysiology=(
 "**Absent antihelical fold**: the cartilage does not fold, so the scapha projects outward. "
 "**Excess conchal bowl**: a deep concha pushes the ear away from the head. "

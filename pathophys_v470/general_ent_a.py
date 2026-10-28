@@ -9,7 +9,7 @@ physiology=(
 "**Tonsillar blood supply**: mainly the tonsillar branch of the facial artery, plus the ascending pharyngeal, dorsal lingual, ascending palatine, and lesser palatine arteries; the paratonsillar (external palatine) vein drains it. "
 "**Tonsillar fossa**: the tonsil lies on the superior constrictor; the internal carotid lies about 2.5 cm posterolateral. "
 "**Wound healing by secondary intention**: a fibrinous exudate (white eschar) covers the fossa, then granulation tissue forms underneath. "
-"**Pediatric blood volume**: about 70-80 mL/kg, so a small child loses a large proportion of volume with modest bleeding. "
+"**Pediatric blood volume**: about 80 mL/kg in infants and roughly 70-80 mL/kg in older children, so a small child loses a large proportion of volume with modest bleeding. "
 "**Coagulation**: platelet plug and fibrin clot seal small vessels."),
 pathophysiology=(
 "**Primary hemorrhage**: incomplete hemostasis or a slipped tie, often from a larger vessel at the lower pole. "
@@ -43,7 +43,7 @@ overview=(
 "Tracheostomy emergencies (decannulation, tube obstruction, bleeding) are a leading cause of preventable airway deaths. "
 "Response depends on whether the patient has a patent upper airway and how mature the tract is."),
 physiology=(
-"**Tract maturation**: the stoma tract epithelializes over about 5-7 days, after which the tube can usually be replaced through it. "
+"**Tract maturation**: the stoma tract matures over about 3-7 days (Pasha 3-5; 5-7 in children per Bluestone), after which the tube can usually be replaced through it. "
 "**Upper airway status**: a laryngectomy patient has no connection between the mouth and trachea; a tracheostomy patient usually does. "
 "**Humidification**: the upper airway normally humidifies air; bypassing it dries secretions. "
 "**Cuff function**: an inflated cuff seals the trachea for ventilation and limits aspiration."),
@@ -51,7 +51,7 @@ pathophysiology=(
 "**Accidental decannulation in an immature tract**: tissue planes collapse, and blind reinsertion can create a false passage into the pretracheal space. "
 "**Obstruction**: dried mucus plugs the inner cannula, especially without humidification. "
 "**False passage**: inability to ventilate, subcutaneous emphysema, and loss of end-tidal CO2. "
-"**Tracheoinnominate fistula**: tube or cuff erosion into the innominate artery, typically 3 days to 6 weeks after placement, often preceded by a sentinel bleed; cuff overinflation and digital pressure temporize. "
+"**Tracheoinnominate fistula**: tube or cuff erosion into the innominate artery, usually within the first weeks after placement (Cummings: most between 3 and 4 weeks), often preceded by a sentinel bleed; cuff overinflation and digital pressure temporize. "
 "**Management algorithm**: oxygenate via face and stoma, remove the inner cannula, pass a suction catheter, deflate the cuff, and remove the tube if needed; orally intubate if the upper airway is patent (not in laryngectomy)."),
 ),
 
@@ -106,7 +106,7 @@ pathophysiology=(
 "**Cellulitis more than abscess**: woody, indurated swelling without a discrete collection early. "
 "**Airway obstruction**: tongue elevation and posterior displacement and supraglottic edema. "
 "**Spread**: to parapharyngeal and retropharyngeal spaces and the mediastinum. "
-"**Management logic**: secure airway (awake fiberoptic intubation or awake tracheostomy), IV antibiotics, steroids in selected cases, and drainage plus tooth extraction."),
+"**Management logic**: secure airway (awake fiberoptic intubation or awake tracheostomy), IV antibiotics, steroids in selected cases (case-series evidence), and drainage plus tooth extraction."),
 ),
 
 "Angioedema": dict(
@@ -120,7 +120,7 @@ physiology=(
 "**Airway tissues**: loose submucosa of the tongue, floor of mouth, and supraglottis swells easily."),
 pathophysiology=(
 "**Histaminergic angioedema**: mast-cell degranulation with urticaria and itching; responds to epinephrine, antihistamines, and steroids. "
-"**ACE-inhibitor angioedema**: reduced bradykinin degradation causes swelling (more common in Black patients), often of the tongue and lips, without urticaria; it does not respond to epinephrine or antihistamines; standard care is stopping the drug and airway support, as icatibant showed no benefit in an RCT. "
+"**ACE-inhibitor angioedema**: reduced bradykinin degradation causes swelling (more common in Black patients), often of the tongue and lips, without urticaria; it often responds poorly to epinephrine and antihistamines (although K.J. Lee lists them with steroids in initial management); the core of care is stopping the drug and protecting the airway, and icatibant was not superior to placebo in a randomized trial. "
 "**Hereditary angioedema**: C1 inhibitor deficiency or dysfunction causes recurrent episodes; treated with C1 inhibitor, icatibant, or ecallantide. "
 "**Airway assessment**: flexible laryngoscopy determines laryngeal involvement; awake fiberoptic intubation or surgical airway for progressive airway swelling."),
 ),
@@ -128,7 +128,7 @@ pathophysiology=(
 "Caustic Ingestion": dict(
 overview=(
 "Caustic ingestion of alkalis or acids injures the upper aerodigestive tract and esophagus, ranging from mucosal burns to perforation. "
-"Endoscopy within 12-48 hours grades injury and predicts stricture."),
+"Endoscopy at about 24-48 hours (not before 12 hours, which can underestimate injury) grades injury and predicts stricture."),
 physiology=(
 "**Esophageal wall**: mucosa, submucosa, and muscularis without serosa. "
 "**Healing**: inflammation, granulation, and collagen deposition over weeks, with stricture formation by 3 weeks onward. "
@@ -166,7 +166,7 @@ physiology=(
 "**Cough reflex**: clears foreign material. "
 "**Ventilation**: partial obstruction creates ball-valve effects."),
 pathophysiology=(
-"**Ball-valve obstruction**: partial obstruction allows inspiration but traps air on expiration, causing hyperinflation and mediastinal shift away. "
+"**Check-valve (often called ball-valve) obstruction**: partial obstruction allows inspiration but traps air on expiration, causing hyperinflation and mediastinal shift away. "
 "**Complete obstruction**: distal atelectasis and pneumonia. "
 "**Organic materials**: nuts and seeds swell and cause intense inflammation. "
 "**Delayed presentation**: recurrent pneumonia, wheeze, or bronchiectasis. "
@@ -183,7 +183,7 @@ physiology=(
 "**Airway structures**: the larynx and trachea are central."),
 pathophysiology=(
 "**Venous and lymphatic obstruction**: hematoma compresses veins and lymphatics, causing laryngeal and pharyngeal edema; this, rather than direct tracheal compression, is the main mechanism of airway compromise. "
-"**Timing**: most occur within 6 hours, nearly all within 24 hours. "
+"**Timing**: most occur early (the first hours to a day), but some occur up to several days after surgery (K.J. Lee). "
 "**Risk factors**: hypertension, coughing or vomiting at emergence, anticoagulation, and large goiters. "
 "**Management**: SCOOP (skin exposure, cut sutures, open skin, open muscles, pack) at the bedside, then OR evacuation."),
 ),
@@ -195,10 +195,10 @@ overview=(
 physiology=(
 "**Thoracic duct**: carries lymph and chylomicrons from the intestines, ascending to the left venous angle (internal jugular-subclavian junction). "
 "**Chyle composition**: triglycerides, lymphocytes, proteins, and fat-soluble vitamins. "
-"**Flow**: up to 2-4 liters per day, increasing after fatty meals."),
+"**Flow**: high-volume lymph flow that increases sharply after fatty meals."),
 pathophysiology=(
 "**Injury**: duct or tributaries injured at the left venous angle, sometimes right-sided. "
-"**Diagnosis**: milky drainage with triglycerides over 110 mg/dL or presence of chylomicrons. "
+"**Diagnosis**: milky drainage with triglycerides over 100 mg/dL and above the serum level, or chylomicrons. "
 "**Consequences**: fluid and electrolyte loss, hypoproteinemia, lymphopenia, and wound breakdown. "
 "**Medium-chain triglycerides**: absorbed directly into the portal vein, bypassing lymphatics, reducing chyle flow. "
 "**Treatment**: diet modification, octreotide, pressure, and re-exploration or thoracic duct embolization for high output."),

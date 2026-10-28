@@ -146,7 +146,7 @@ physiology=(
 "**Eyelid function**: blinking spreads tears, and closure protects the cornea from exposure. "
 "**Lacrimal drainage**: puncta in the medial lids drain tears through canaliculi to the sac."),
 pathophysiology=(
-"**Defect size rules**: lid margin defects up to about 25-30 percent often close primarily; 30-50 percent need canthotomy or semicircular (Tenzel) flaps; larger defects need lid-sharing (Hughes, Cutler-Beard) or composite grafts. "
+"**Defect size rules**: lid margin defects under about 25 percent close primarily; up to about 50 percent with cantholysis; up to about 75 percent with a semicircular (Tenzel) flap; larger defects need lid-sharing (Hughes, Cutler-Beard) or composite grafts. "
 "**Blood supply rule**: each reconstructed lamella needs at least one vascularized layer, so a graft must be paired with a flap. "
 "**Ectropion and retraction**: vertical tension and scar pull the lower lid down, exposing the globe. "
 "**Corneal exposure**: incomplete closure dries and ulcerates the cornea. "
@@ -194,7 +194,7 @@ overview=(
 physiology=(
 "**Facial thirds**: trichion-glabella, glabella-subnasale, subnasale-menton roughly equal. "
 "**Facial fifths**: width equal to five eye widths. "
-"**Nasal angles**: nasofrontal about 115-130, nasolabial about 90-110 (men) and 95-115 (women)."),
+"**Nasal angles**: nasofrontal about 115-135, nasolabial about 90-95 (men) and 95-110 (women)."),
 pathophysiology=(
 "**Disproportion guides treatment**: deviations from ideal proportions point to the anatomic source (e.g., a long lower third, retrusive chin, or overprojected nasal tip). "
 "**Chin-nose interplay**: microgenia makes the nose look larger, so chin augmentation is considered alongside rhinoplasty. "
@@ -288,7 +288,7 @@ pathophysiology=(
 "**Mechanism**: dashboard and clothesline injuries crush the larynx against the spine. "
 "**Symptoms**: hoarseness, stridor, hemoptysis, subcutaneous emphysema. "
 "**Airway**: intubation can worsen injury; tracheostomy under local is preferred for unstable airways. "
-"**Repair**: within 24-48 hours for best outcomes."),
+"**Repair**: ideally within 24 hours (Cummings), no later than 48 hours (Bluestone)."),
 ),
 
 "Blepharoplasty / Eyelid Malposition (Ptosis, Ectropion, Entropion)": dict(
@@ -296,7 +296,7 @@ overview=(
 "Blepharoplasty addresses excess eyelid skin and fat; eyelid malpositions (ptosis, ectropion, entropion) affect function and appearance. "
 "Eyelid anatomy and lid laxity testing prevent complications."),
 physiology=(
-"**Upper eyelid elevation**: the levator palpebrae superioris (CN III) and M\u00fcller muscle (sympathetic, 1-2 mm). "
+"**Upper eyelid elevation**: the levator palpebrae superioris (CN III) and M\u00fcller muscle (sympathetic, about 2-3 mm of elevation; K.J. Lee says up to 2 mm). "
 "**Orbital septum**: a fibrous layer separating the eyelid from orbital fat. "
 "**Lower lid support**: tarsus and medial and lateral canthal tendons. "
 "**Lacrimal pump**: orbicularis contraction drives tears into the drainage system."),

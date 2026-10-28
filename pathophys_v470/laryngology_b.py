@@ -80,7 +80,7 @@ physiology=(
 pathophysiology=(
 "**Vocal fold bowing**: muscle atrophy and lamina propria thinning leave a concave fold edge and a spindle-shaped glottic gap. "
 "**Air escape**: incomplete closure produces a weak, breathy voice that fatigues by the end of the day. "
-"**Pitch shift**: women's pitch tends to fall and men's to rise as fold mass changes. "
+"**Pitch shift**: women's pitch usually falls (especially after menopause), while men's pitch may rise as fold mass decreases. "
 "**Reduced endurance and projection**: patients struggle to be heard in noise, with social withdrawal. "
 "**Diagnosis of exclusion**: paralysis, paresis, Parkinson disease, and lesions must be excluded. "
 "**Treatment logic**: strengthening therapy (Phonation Resistance Training Exercise) builds muscle bulk and closure; injection or bilateral thyroplasty adds bulk when therapy is insufficient."),

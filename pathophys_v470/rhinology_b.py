@@ -102,7 +102,7 @@ overview=(
 "Objective tests (acoustic rhinometry, rhinomanometry, peak nasal inspiratory flow, and smell testing) supplement symptoms and exam in nasal obstruction and olfactory loss. "
 "They help explain discordance between what patients feel and what clinicians see."),
 physiology=(
-"**Airflow and resistance**: the nose contributes about half of total airway resistance, and the internal valve accounts for about half of nasal resistance. "
+"**Airflow and resistance**: the nose contributes about two-thirds of total airway resistance (Cummings), and the internal valve accounts for about half of nasal resistance (Pasha). "
 "**Cross-sectional area**: acoustic rhinometry uses reflected sound to map area along the nasal cavity. "
 "**Pressure-flow relationship**: rhinomanometry measures transnasal pressure and flow to calculate resistance."),
 pathophysiology=(

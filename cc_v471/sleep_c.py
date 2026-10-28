@@ -38,7 +38,7 @@ CHECKS = [
  "Treatment-emergent CSA often settles with time on CPAP."),
 
 ("Sleep-Related Hypoventilation",
- "A 40-year-old with a BMI of 48 has a daytime PaCO2 of 52 mm Hg and a PSG showing sustained desaturation in REM without discrete apneas. What best explains this pattern?",
+ "A 40-year-old with a BMI of 48 has a daytime PaCO2 of 58 mm Hg and a PSG showing sustained desaturation in REM without discrete apneas. What best explains this pattern?",
  "Obesity hypoventilation",
  [("Obstructive apneas only", "Discrete obstructive events are not the main finding."),
   ("Central apnea from heart failure", "Cheyne-Stokes breathing shows cyclic central events, not sustained REM desaturation."),

@@ -34,7 +34,7 @@ CHECKS = [
  [("Normal study because AHI is under 1", "Pediatric hypoventilation is abnormal even when the AHI is low."),
   ("Central sleep apnea", "Paradoxical breathing and snoring indicate obstruction."),
   ("Primary snoring only", "Hypercapnia indicates more than simple snoring.")],
- "Children often maintain partial obstruction rather than discrete apneas, causing CO2 retention. End-tidal CO2 above 50 mm Hg for more than 25 percent of sleep defines obstructive hypoventilation.",
+ "Children often maintain partial obstruction rather than discrete apneas, causing CO2 retention. End-tidal CO2 above 50 mm Hg for more than about 10-25 percent of sleep (definitions vary) defines obstructive hypoventilation.",
  "In children, read the CO2, not just the AHI."),
 
 ("PAP Troubleshooting",

@@ -42,7 +42,7 @@ CHECKS = [
  "Displaced canthal fragment",
  [("Simple nasal bone fracture", "Isolated nasal fractures do not widen the intercanthal distance."),
   ("Orbital floor blowout", "Floor fractures cause enophthalmos or entrapment, not telecanthus."),
-  ("Normal intercanthal distance", "Over about 35-40 mm suggests telecanthus.")],
+  ("Normal intercanthal distance", "Over about 35 mm suggests telecanthus.")],
  "In NOE fractures, the central fragment carrying the medial canthal tendon displaces laterally, widening the intercanthal distance. Markowitz classification guides repair; type III requires transnasal canthopexy.",
  "Telecanthus after midface trauma = NOE fracture."),
 
@@ -58,10 +58,10 @@ CHECKS = [
 ("Facial Nerve Reanimation",
  "A 45-year-old had facial nerve sacrifice during parotidectomy 18 months ago. EMG shows fibrillation potentials in facial muscles. Why can a masseteric nerve transfer still work?",
  "Its muscles are still viable",
- [("Facial muscles never atrophy", "Facial muscles atrophy and fibrose after about 12-24 months."),
+ [("Facial muscles never atrophy", "Facial muscles atrophy and fibrose after about 18-24 months."),
   ("The masseter replaces facial muscles", "The masseteric nerve provides axons; facial muscles are reinnervated."),
   ("Fibrillation means recovery", "Fibrillations mean denervated but viable muscle.")],
- "Fibrillation potentials show muscle that is denervated but still alive. Within about 12-24 months, nerve transfers can reinnervate native muscles; after that, free muscle transfer is needed.",
+ "Fibrillation potentials show muscle that is denervated but still alive. Within about 18-24 months, nerve transfers can reinnervate native muscles; after that, free muscle transfer is needed.",
  "Fibrillations = viable muscle; time drives the choice of transfer."),
 
 ("Functional Septorhinoplasty",

@@ -31,9 +31,9 @@ physiology=(
 "**Arousal response**: children are more likely to maintain ventilation with partial obstruction (obstructive hypoventilation) rather than discrete apneas."),
 pathophysiology=(
 "**Mechanical obstruction**: large tonsils and adenoids narrow the pharynx so that reduced muscle tone in sleep produces collapse. "
-"**Pediatric AHI thresholds**: an obstructive AHI of 1 or more is abnormal in children, with 5-10 moderate and over 10 severe, unlike adult thresholds. "
+"**Pediatric AHI thresholds**: an obstructive AHI of 1 or more is abnormal in children, with 5-10 moderate and over 10 severe in the common convention (some sources grade more leniently), unlike adult thresholds. "
 "**Consequences**: fragmented sleep causes inattention, hyperactivity, and learning problems; intermittent hypoxia and hypercapnia increase pulmonary pressures and can cause cor pulmonale; disrupted slow-wave sleep and increased work of breathing impair growth. "
-"**Enuresis**: increased atrial natriuretic peptide from negative intrathoracic pressure promotes nocturia. "
+"**Enuresis**: a proposed mechanism is increased atrial natriuretic peptide from negative intrathoracic pressure promotes nocturia. "
 "**Residual OSA**: obesity, craniofacial anomalies, Down syndrome, and severe baseline disease increase persistence after adenotonsillectomy. "
 "**Postoperative respiratory risk**: children under 3, severe OSA, and comorbidities need inpatient monitoring."),
 ),
@@ -66,7 +66,7 @@ physiology=(
 "**Poiseuille law**: small reductions in airway radius cause large increases in resistance."),
 pathophysiology=(
 "**Penetration syndrome**: sudden choking and cough as the object passes the larynx, often followed by a quiet phase. "
-"**Ball-valve obstruction**: partial obstruction lets air in but not out, causing hyperinflation on expiratory films. "
+"**Check-valve (often called ball-valve) obstruction**: partial obstruction lets air in but not out, causing hyperinflation on expiratory films. "
 "**Stop-valve obstruction**: complete obstruction causes atelectasis. "
 "**Organic foreign bodies**: nuts swell and cause inflammation, increasing obstruction over time. "
 "**Delayed diagnosis**: recurrent pneumonia, wheeze, or bronchiectasis. "
@@ -215,7 +215,7 @@ physiology=(
 "**Mucosal perfusion**: capillary perfusion pressure is roughly 25-35 mm Hg, so endotracheal tube cuff or tube pressure above this causes ischemia. "
 "**Airway resistance**: in laminar flow resistance varies inversely with radius to the fourth power, so 1 mm of edema in a 4 mm airway reduces cross-sectional area by about 75 percent."),
 pathophysiology=(
-"**Congenital**: incomplete canalization of the cricoid. "
+"**Congenital**: incomplete recanalization of the laryngeal lumen, sometimes with an abnormally shaped cricoid. "
 "**Acquired**: endotracheal tube pressure causes mucosal ischemia, ulceration, perichondritis, and scar. "
 "**Myer-Cotton grading**: I (0-50 percent), II (51-70), III (71-99), IV (no lumen). "
 "**Poiseuille physics**: 1 mm of edema reduces the infant subglottic area dramatically."),

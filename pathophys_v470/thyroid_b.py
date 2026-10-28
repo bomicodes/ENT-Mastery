@@ -13,7 +13,7 @@ physiology=(
 pathophysiology=(
 "**Why first operations fail**: a missed ectopic adenoma, unrecognized multigland disease, a supernumerary gland, or parathyromatosis from capsular rupture. "
 "**Confirm the diagnosis first**: exclude familial hypocalciuric hypercalcemia and secondary causes such as vitamin D deficiency before reoperating. "
-"**Concordant localization**: two concordant studies (sestamibi SPECT-CT, 4D-CT, ultrasound, or venous sampling) are typically required because scar defeats exploration. "
+"**Precise localization**: ideally concordant studies (sestamibi SPECT-CT, 4D-CT, ultrasound, or venous sampling) are obtained because scar defeats blind exploration. "
 "**Scar risk**: reoperation raises the risk of RLN injury and permanent hypoparathyroidism, so cryopreservation of removed tissue is considered."),
 ),
 
@@ -141,7 +141,7 @@ physiology=(
 "**Function**: supplies all intrinsic laryngeal muscles except the cricothyroid, plus sensation below the vocal folds. "
 "**Variants**: a nonrecurrent right laryngeal nerve occurs with an aberrant right subclavian artery; extralaryngeal branching is common."),
 pathophysiology=(
-"**Mechanisms**: traction (most common), thermal injury from energy devices, compression, clamping, ligature, and transection. "
+"**Mechanisms**: traction (a leading mechanism), thermal injury from energy devices, compression, clamping, ligature, and transection. "
 "**Unilateral paralysis**: breathy voice and aspiration risk from glottic incompetence. "
 "**Bilateral paralysis**: both folds rest near midline, causing stridor and airway obstruction, often requiring reintubation or tracheostomy. "
 "**Loss of signal**: during neuromonitoring, loss of signal on the first side should prompt consideration of staging the contralateral side. "
@@ -275,7 +275,7 @@ physiology=(
 "**HPT axis**: falling thyroid hormone raises TSH, which stimulates thyroid growth and function. "
 "**Iodine supply**: adequate iodine is required, but excess iodine can promote thyroid autoimmunity in susceptible people."),
 pathophysiology=(
-"**Loss of tolerance**: genetic (HLA, CTLA-4) and environmental factors allow autoreactive T cells and B cells to target the thyroid. "
+"**Loss of tolerance**: genetic (e.g., HLA-DR3) and environmental factors allow autoreactive T cells and B cells to target the thyroid. "
 "**Autoantibodies**: anti-TPO and anti-thyroglobulin antibodies mark the disease and correlate with lymphocytic infiltration. "
 "**Tissue destruction**: cytotoxic T cells and apoptosis destroy follicles, which are replaced by lymphoid follicles with germinal centers and oncocytic (H\u00fcrthle) cells. "
 "**Progressive hypothyroidism**: shrinking functional mass leads first to subclinical (high TSH, normal T4) then overt hypothyroidism. "
@@ -293,7 +293,7 @@ physiology=(
 "**Cernea classification**: type 1 crosses the vessels more than 1 cm above the superior pole; type 2a within 1 cm; type 2b below the superior pole."),
 pathophysiology=(
 "**Mechanism**: ligation or traction near the superior pole, especially Cernea type 2b. "
-"**Voice effects**: reduced pitch range, vocal fatigue, and weak projection; glottic rotation toward the paralyzed side on exam. "
+"**Voice effects**: reduced pitch range, vocal fatigue, and weak projection; posterior glottic rotation toward the paralyzed side is taught (Pasha) but is inconsistent, since unilateral cricothyroid action does not reliably rotate the glottis (Cummings). "
 "**Prevention**: dissecting close to the thyroid capsule and ligating superior pole vessels individually. "
 "**Neuromonitoring**: stimulating the EBSLN produces cricothyroid twitch."),
 ),

@@ -66,13 +66,13 @@ physiology=(
 "**Facial nerve**: divides the parotid into superficial and deep lobes. "
 "**Saliva production**: parasympathetic stimulation (CN IX via otic ganglion for parotid; CN VII via chorda tympani and submandibular ganglion for submandibular and sublingual) drives secretion."),
 pathophysiology=(
-"**Gland size rule**: about 20-25 percent of parotid tumors, about 50 percent of submandibular, and most sublingual and minor salivary tumors are malignant. "
+"**Gland size rule**: about 15-25 percent of parotid tumors, about 40-50 percent of submandibular, about half or more of minor salivary, and most sublingual tumors are malignant (series vary). "
 "**Mucoepidermoid carcinoma**: most common malignancy; mucous, epidermoid, and intermediate cells; MAML2 fusions; grade determines behavior. "
 "**Adenoid cystic carcinoma**: MYB-NFIB fusion; perineural spread and late lung metastasis. "
 "**Carcinoma ex pleomorphic adenoma**: malignant transformation of a long-standing benign tumor. "
 "**Salivary duct carcinoma**: aggressive, androgen receptor and HER2 positive, offering targeted therapy. "
 "**Signs of malignancy**: rapid growth, pain, facial nerve weakness, skin fixation, and nodal disease. "
-"**AJCC Version 9**: updated salivary staging, reflecting histology-specific behavior."),
+"**Staging**: AJCC 8th edition TNM staging, with histologic grade guiding treatment intensity."),
 ),
 
 "Medullary Thyroid Cancer": dict(
@@ -283,9 +283,9 @@ physiology=(
 "**Set point**: in benign adenomas the calcium set point shifts modestly, so hypercalcemia is usually mild."),
 pathophysiology=(
 "**CDC73 inactivation**: loss of parafibromin (somatic or germline in hyperparathyroidism-jaw tumor syndrome) is the dominant driver, and loss of parafibromin staining supports the diagnosis. "
-"**Profound hypercalcemia**: autonomous, high-volume PTH secretion produces calcium often above 14 mg/dL and very high PTH, with severe bone and kidney disease at presentation. "
+"**Profound hypercalcemia**: autonomous, high-volume PTH secretion produces very high calcium and PTH levels, with severe bone and kidney disease at presentation. "
 "**Local invasion**: a firm, gray-white mass adherent to the thyroid, RLN, and strap muscles, unlike the soft, tan, easily separated adenoma. "
-"**Histologic criteria**: invasion of vessels, perineural spaces, or adjacent tissue, or metastasis, define malignancy. "
+"**Histologic criteria**: vascular, perineural, or adjacent-tissue invasion suggests malignancy, but histology is often inconclusive; only metastasis or local recurrence is definitive. "
 "**Why en bloc resection**: capsular rupture seeds tumor cells that implant and recur, so the gland is removed with the adjacent thyroid lobe and any adherent tissue. "
 "**Natural history**: morbidity and death usually come from uncontrolled hypercalcemia rather than tumor bulk, so calcimimetics are central in advanced disease."),
 ),

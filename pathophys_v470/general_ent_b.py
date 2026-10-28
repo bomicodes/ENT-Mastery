@@ -9,7 +9,7 @@ physiology=(
 "**Body water compartments**: about 60 percent of body weight is water, two-thirds intracellular and one-third extracellular. "
 "**Sodium and water balance**: ADH from the posterior pituitary controls free water reabsorption; serum sodium reflects water balance more than sodium content. "
 "**Calcium regulation**: PTH and vitamin D maintain ionized calcium. "
-"**Nutritional needs**: roughly 25-30 kcal/kg/day and 1.2-1.5 g/kg/day of protein after major surgery. "
+"**Nutritional needs**: roughly 30-35 kcal/kg/day and about 1.2 g/kg/day of protein after major surgery. "
 "**Gut function**: enteral feeding maintains gut barrier and immunity."),
 pathophysiology=(
 "**Malnutrition**: head and neck cancer impairs swallowing and increases catabolism, raising fistula and wound complications. "
@@ -86,7 +86,7 @@ pathophysiology=(
 "**Malnutrition**: protein and vitamin C deficiency impair collagen. "
 "**Diabetes**: impaired immunity and microvascular disease. "
 "**Hypothyroidism**: increases fistula risk. "
-"**Steroids**: impair inflammation; vitamin A partly reverses."),
+"**Steroids**: impair the early inflammatory phase; vitamin A can partly reverse this (classic experimental work)."),
 ),
 
 "Grafts / Implants / Biomaterials in ENT": dict(
@@ -226,7 +226,7 @@ overview=(
 "The oral cavity reflects systemic disease: vitamin deficiencies, autoimmune disease, infections, hematologic disorders, and medications. "
 "Recognizing patterns prompts systemic workup."),
 physiology=(
-"**Oral mucosa turnover**: oral epithelium renews every 1-2 weeks, so nutritional deficiencies and drugs show early. "
+"**Oral mucosa turnover**: oral epithelium turns over rapidly, so nutritional deficiencies and drugs show early. "
 "**Saliva**: lubricates, buffers, and contains antimicrobial proteins. "
 "**Immune surveillance**: oral mucosa is constantly exposed to microbes. "
 "**Vascular supply**: rich mucosal vessels reflect systemic hematologic changes."),
@@ -281,7 +281,7 @@ physiology=(
 "**Skin perfusion**: skin depends on perforators passing through fascia. "
 "**Anaerobic environment**: necrotic tissue supports anaerobes."),
 pathophysiology=(
-"**Polymicrobial synergy**: streptococci and anaerobes release toxins and enzymes (hyaluronidase) that spread along fascia. "
+"**Polymicrobial synergy**: streptococci and anaerobes release toxins and tissue-destroying enzymes that spread along fascia. "
 "**Perforator thrombosis**: causes skin necrosis, often with dusky skin and crepitus. "
 "**Gas formation**: anaerobes produce gas visible on CT. "
 "**Spread**: descending infection into the mediastinum. "

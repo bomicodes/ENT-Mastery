@@ -24,7 +24,17 @@ def topic_index():
         mod = importlib.import_module("cc_v471." + info.name)
         for row in mod.CHECKS:
             checks.setdefault((_dom(info.name), row[0]), []).append("cc_v471/%s.py" % info.name)
+    known = set()
     for tid, (d, t, _) in list(idx.items()):
+        known.add((d, t))
         for k, f in enumerate(checks.get((d, t), []), 1):
             idx["CC-%s.%d" % (tid[2:], k)] = (d, t, f)
+    # Checks filed under legacy topic names are numbered globally in the bundle.
+    k = 0
+    for (d, t), files in checks.items():
+        if (d, t) in known:
+            continue
+        for f in files:
+            k += 1
+            idx["CC-%s-legacy.%d" % (d, k)] = (d, t, f)
     return idx

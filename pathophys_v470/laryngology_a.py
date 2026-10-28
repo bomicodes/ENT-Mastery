@@ -111,7 +111,7 @@ physiology=(
 pathophysiology=(
 "**Reduced or absent mucosal wave**: stiffness from scar, sulcus, or invasive cancer (adynamic segment). "
 "**Asymmetry**: unilateral stiffness, mass, or paresis. "
-"**Closure patterns**: hourglass (bilateral nodules), anterior gap (presbylarynx), posterior gap (normal in many women), spindle (bowing). "
+"**Closure patterns**: hourglass (bilateral nodules), posterior gap (normal in many women), spindle (bowing or atrophy, as in presbylarynx). "
 "**Cyst vs nodule**: cysts dampen the wave locally and are often unilateral with a reactive contralateral lesion. "
 "**Malignancy clue**: a nonvibrating segment in a leukoplakic lesion suggests invasion."),
 ),
@@ -127,7 +127,7 @@ physiology=(
 "**Vocal hygiene**: hydration and efficient phonation lower collision forces."),
 pathophysiology=(
 "**Repetitive impact**: chronic loud or effortful voice use repeatedly stresses the midpoint. "
-"**Tissue response**: basement membrane thickening, edema, and fibronectin deposition produce symmetric bumps. "
+"**Tissue response**: basement membrane thickening and edema of the superficial lamina propria produce symmetric bumps. "
 "**Hourglass closure**: nodules prevent full closure anterior and posterior to them, causing breathiness and hoarseness. "
 "**Reversibility**: early soft nodules regress with behavior change; mature fibrotic nodules may need surgery. "
 "**Children**: nodules often improve at puberty."),
