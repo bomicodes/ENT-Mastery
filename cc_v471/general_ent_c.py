@@ -1,0 +1,58 @@
+"""v47.1 authored Concept Checks — General ENT / Emergencies (part C)."""
+
+CHECKS = [
+("Esophageal Perforation / Cervical Mediastinitis",
+ "Six hours after rigid esophagoscopy for a fish bone, a patient has neck pain, fever, and crepitus. CT shows air tracking along the retropharyngeal space into the mediastinum. Why is infection so dangerous here?",
+ "Leaks spread freely without a serosal barrier",
+ [("The esophagus has a thick serosa that traps bacteria", "The esophagus lacks a serosa, so leaks are not contained."),
+  ("Saliva is sterile", "Saliva carries a heavy bacterial load."),
+  ("The mediastinum has no lymphatics", "The issue is free spread along fascial planes, not lymphatics.")],
+ "Without a serosa, saliva and bacteria spread through the retropharyngeal and danger spaces into the mediastinum, causing rapidly progressive mediastinitis. Early NPO, broad antibiotics, drainage, and repair reduce mortality.",
+ "Pain and crepitus after esophagoscopy = perforation until proven otherwise."),
+
+("ENT Perioperative Anesthesia / Difficult Airway Planning",
+ "A 60-year-old with a large supraglottic tumor has stridor at rest. Why is standard induction with paralysis dangerous?",
+ "It may cause total obstruction",
+ [("Paralytics cause the tumor to bleed", "Bleeding is not the main concern of paralysis."),
+  ("Induction agents enlarge the tumor", "Drugs do not enlarge the tumor."),
+  ("Paralysis prevents any later tracheostomy", "Tracheostomy remains possible but becomes an emergency.")],
+ "Awake patients maintain airway patency with muscle tone; induction removes it, and an obstructing mass can close the airway completely. Awake fiberoptic intubation or awake tracheostomy preserves spontaneous breathing.",
+ "Stridor from an obstructing tumor: secure the airway awake."),
+
+("Hemostasis / Coagulopathy / Antithrombotic Management in ENT",
+ "A 14-year-old girl with heavy menses had prolonged bleeding after a dental extraction and now needs tonsillectomy. Platelet count and PT are normal. Which inherited disorder should be tested first?",
+ "von Willebrand disease",
+ [("Hemophilia A", "Hemophilia A is X-linked and rare in girls, and prolongs the aPTT."),
+  ("Vitamin K deficiency", "Vitamin K deficiency prolongs the PT."),
+  ("Immune thrombocytopenia", "The platelet count is normal.")],
+ "von Willebrand factor tethers platelets to exposed collagen. Deficiency causes mucocutaneous bleeding with a normal platelet count and PT. Desmopressin or factor replacement can be given perioperatively.",
+ "Mucocutaneous bleeding history with normal counts = test for von Willebrand disease."),
+
+("ENT Fluids / Electrolytes / Nutrition",
+ "A malnourished patient with obstructing oral cancer who ate little for 2 weeks starts full-calorie tube feeds. On day 3 she develops weakness, confusion, and arrhythmia; phosphate is 0.9 mg/dL. What is the mechanism?",
+ "Insulin drives phosphate into cells",
+ [("Phosphate lost through diarrhea from feeds", "Diarrhea does not account for this rapid, severe drop with refeeding."),
+  ("Hypercalcemia from vitamin D in the formula", "Formula vitamin D does not cause this, and calcium is not the abnormality."),
+  ("Acute kidney injury retaining phosphate", "Kidney injury raises phosphate rather than lowering it.")],
+ "After starvation, carbohydrate refeeding triggers insulin release, shifting phosphate, potassium, and magnesium into cells and depleting serum levels. Refeeding syndrome causes weakness, arrhythmia, and heart failure; start feeds slowly and replace electrolytes in high-risk patients.",
+ "Malnourished head and neck patient: start feeds slowly to avoid refeeding syndrome."),
+
+("Antimicrobial Stewardship in Otolaryngology",
+ "A 6-year-old with tympanostomy tubes has 3 days of purulent ear drainage without fever. Why are topical antibiotic drops preferred over oral antibiotics?",
+ "Drops give higher local levels",
+ [("Oral antibiotics cannot reach the middle ear", "Oral antibiotics reach the middle ear but at much lower concentrations."),
+  ("Drops cure the underlying tube dysfunction", "Drops treat infection; they do not fix tube function."),
+  ("Drops eliminate the need for follow-up", "Follow-up is still appropriate if drainage persists.")],
+ "Topical quinolone drops reach high concentrations through the tube, are more effective than oral therapy, and avoid systemic side effects and resistance.",
+ "Tube otorrhea: drops, not pills."),
+
+("Cranial Nerve Examination / Skull Base Localization",
+ "A patient has numbness of the forehead and cheek, diplopia on lateral gaze, and ptosis, but normal vision. Where is the lesion most likely?",
+ "Cavernous sinus",
+ [("Orbital apex", "Orbital apex lesions cause vision loss from optic nerve involvement."),
+  ("Jugular foramen", "Jugular foramen lesions affect IX, X, and XI."),
+  ("Internal auditory canal", "IAC lesions affect VII and VIII.")],
+ "The cavernous sinus contains III, IV, V1, V2, VI and the sympathetic plexus, but not the optic nerve. V2 involvement distinguishes it from superior orbital fissure syndrome.",
+ "V1 + V2 + ophthalmoplegia with normal vision = cavernous sinus."),
+
+]

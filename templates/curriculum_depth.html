@@ -1,59 +1,37 @@
-{% extends "base.html" %}{% block content %}
-<style>
-/* Deep Curriculum scanability pass. */
-.depth-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;margin-top:14px}
-.depth-layer{padding:20px 22px;min-width:0;border-bottom:1px solid var(--line)}
-.depth-layer:nth-child(odd){border-right:1px solid var(--line)}
-.depth-layer:nth-last-child(-n+2){border-bottom:0}
-.depth-layer h3{margin:0 0 12px;color:var(--teal);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.depth-study-list{list-style:none;padding:0;margin:0;display:grid;gap:9px}
-.depth-study-list li{position:relative;padding-left:16px;line-height:1.48;color:#314247}
-.depth-study-list li:before{content:"";position:absolute;left:0;top:.66em;width:5px;height:5px;border-radius:50%;background:#9bbfbc}
-.depth-study-list li:first-child{font-weight:650;color:var(--ink)}
-.depth-layer[data-layer="recognize"] li:first-child:before,.depth-layer[data-layer="teach"] li:before{background:var(--teal)}
-.depth-layer[data-layer="manage"]{background:#fbfdfd}.depth-layer[data-layer="operate"]{background:#fffdf9}.depth-layer[data-layer="teach"]{background:#f3f9f8}.depth-layer[data-layer="teach"] li{font-weight:600}
-.depth-actions{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.depth-actions a{border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px 12px;font-size:12px;font-weight:700}.depth-actions a:first-child{color:var(--teal);border-color:#b9d9d5;background:#f7fcfb}
-.depth-card summary>div{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.depth-card[open] summary{border-bottom:1px solid var(--line);margin-bottom:2px}.depth-scan-note{font-size:10px;color:var(--muted);margin-left:auto;font-weight:600}
-@media(max-width:760px){.depth-grid{grid-template-columns:1fr}.depth-layer,.depth-layer:nth-child(odd){border-right:0;border-bottom:1px solid var(--line)}.depth-layer:last-child{border-bottom:0}.depth-layer:nth-last-child(2){border-bottom:1px solid var(--line)}.depth-layer{padding:17px 18px}.depth-study-list{gap:8px}.depth-study-list li{font-size:14px}.depth-scan-note{display:none}}
-</style>
+{% if partial_topic %}{# ---- v47.0 lazily loaded topic body (also used by audits: renders m.source_basis) ---- #}
+<div class="tb-links">
+  <a class="primary" href="/daily-adaptive?topic={{meta.cid|urlencode}}">Learn it in Daily Path →</a>
+  <a href="/concept?domain={{domain|urlencode}}&topic={{m.topic|urlencode}}">Open topic page</a>
+  <a href="/clinical-challenges?topic={{m.topic|urlencode}}">Practice questions ({{meta.qcount}})</a>
+  {% for op in meta.ors %}<a class="or" href="/case-tomorrow?q={{ op.title|urlencode }}">OR: {{op.title}}</a>{% else %}<span class="muted">No dedicated OR card — clinic/medical topic</span>{% endfor %}
+</div>
+<div class="tb-sections">
+{% for s in sections %}<section class="tb-section" data-key="{{s.key}}"><h3><span class="tb-num">{{loop.index}}</span>{{s.label}}</h3>
+{% for b in s.blocks %}{% if b.sub %}<h4>{{b.sub}}</h4>{% endif %}<div class="tt-source" hidden>{{b.text}}</div><ul class="tt-list"></ul>{% endfor %}
+</section>{% endfor %}
+</div>
+{% set tr = textbook_refs_v472(m.topic) if textbook_refs_v472 is defined else none %}{% if tr and (tr.books or tr.literature) %}<details class="source-basis textbook-refs" open><summary><b>Textbook references</b><span class="source-count">{{tr.books|length + tr.literature|length}}</span></summary>{% for s in tr.books %}<span>{{s}}</span>{% endfor %}{% if tr.literature %}<small class="muted">Beyond the core texts:</small>{% for s in tr.literature %}<span>{{s}}</span>{% endfor %}{% endif %}</details>{% endif %}
+{% if m.source_basis %}<details class="source-basis"><summary><b>Source basis</b><span class="source-count">{{m.source_basis|length}}</span></summary>{% for s in m.source_basis %}<span>{{s}}</span>{% endfor %}</details>{% endif %}
+{% else %}{% extends "base.html" %}{% endif %}
+{% block content %}{% if not partial_topic %}
+<link rel="stylesheet" href="{{ url_for('static', filename='textbook_v470.css') }}">
 <div class="eyebrow">DEEP CURRICULUM</div>
-<div class="depth-hero-row"><div><h1>Learn the whole specialty without getting lost in it.</h1><p class="lede">Use this as your reference shelf; use Daily Path for sequencing. Search or filter here, then open a Concept Hub to connect the topic to cases, interpretation and the OR.</p></div><a class="button" href="/daily-adaptive">Start today’s path →</a></div>
+<div class="depth-hero-row"><div><h1>Learn the whole specialty, mechanism first.</h1><p class="lede">Every topic reads like a textbook chapter: why it matters, normal anatomy and physiology, pathophysiology, then presentation, workup, management, surgery and board pearls. Open a topic to read it, then learn it with board-style vignettes in Daily Path.</p></div><a class="button" href="/daily-adaptive">Start today’s path →</a></div>
 <div class="card depth-toolbar"><input id="depthSearch" placeholder="Filter topics… e.g. jugular, pain, cleft, ABR"><select id="depthDomain"><option value="">All domains</option>{% for domain in modules %}<option value="{{domain}}">{{domain}}</option>{% endfor %}</select><span id="depthCount"></span></div>
 <div class="depth-domain-nav">{% for domain,mods in modules.items() %}<a href="#{{domain|replace(' ','-')|replace('/','-')|lower}}">{{domain}} <small>{{mods|length}}</small></a>{% endfor %}</div>
-{% for domain, mods in modules.items() %}<section class="depth-domain" data-domain="{{domain}}" id="{{domain|replace(' ','-')|replace('/','-')|lower}}"><div class="section-head"><h2>{{domain}}</h2><span>{{mods|length}} topics</span></div><div class="depth-card-stack">{% for m in mods %}<details class="card depth-card" data-topic="{{m.topic|lower}}" data-domain="{{domain}}"><summary><div><b>{{m.topic}}</b><small class="depth-scan-note">Open for structured review</small></div><i>＋</i></summary><div class="depth-actions"><a href="/concept?domain={{domain|urlencode}}&topic={{m.topic|urlencode}}">Open Concept Hub →</a><a href="/daily-adaptive?focus={{domain|urlencode}}">Practice this domain</a><a href="/case-tomorrow?q={{m.topic|urlencode}}">Check OR link</a></div><div class="depth-grid">{% for key,label in [('recognize','1 · Recognize'),('localize','2 · Localize'),('workup','3 · Evaluate'),('manage','4 · Manage'),('operate','5 · Advanced / Operate'),('teach','6 · Teach / Boards')] %}<div class="depth-layer" data-layer="{{key}}"><h3>{{label}}</h3><div class="depth-layer-source" hidden>{{m[key]}}</div><ul class="depth-study-list" aria-label="{{label}}"></ul></div>{% endfor %}</div>{% if m.source_basis %}<details class="source-basis"><summary><b>Source basis</b><span class="source-count">{{m.source_basis|length}}</span></summary>{% for s in m.source_basis %}<span>{{s}}</span>{% endfor %}</details>{% endif %}</details>{% endfor %}</div></section>{% endfor %}
+{% for domain, mods in modules.items() %}<section class="depth-domain" data-domain="{{domain}}" id="{{domain|replace(' ','-')|replace('/','-')|lower}}"><div class="section-head"><h2>{{domain}}</h2><span>{{mods|length}} topics</span></div><div class="depth-card-stack">{% for c in cards[domain] %}<details class="card depth-card" data-topic="{{c.topic|lower}}" data-domain="{{domain}}" data-src="/curriculum/depth?domain={{domain|urlencode}}&topic={{c.topic|urlencode}}"><summary><div><b>{{c.topic}}</b><span class="depth-badges"><small>{{c.qcount}} questions</small>{% if c.ors %}<small class="or">OR card</small>{% endif %}</span></div><i>＋</i></summary><div class="depth-body"><div class="tb-loading">Loading topic…</div></div></details>{% endfor %}</div></section>{% endfor %}
 <section class="card evidence-box"><h2>Evidence hierarchy</h2>{% for e in evidence %}<div><b>{{e.tier}}</b><p>{{e.use}}</p><small>{{e.examples}}</small></div>{% endfor %}</section>
+<script src="{{ url_for('static', filename='topic_text_v470.js') }}"></script>
 <script>
-const cards=[...document.querySelectorAll('.depth-card')],domains=[...document.querySelectorAll('.depth-domain')],q=document.getElementById('depthSearch'),d=document.getElementById('depthDomain'),count=document.getElementById('depthCount');function filterDepth(){let n=0;const term=q.value.toLowerCase().trim(),dom=d.value;cards.forEach(c=>{const show=(!term||c.dataset.topic.includes(term))&&(!dom||c.dataset.domain===dom);c.hidden=!show;if(show)n++;});domains.forEach(s=>{s.hidden=![...s.querySelectorAll('.depth-card')].some(c=>!c.hidden)});count.textContent=n+' topics shown';}q.addEventListener('input',filterDepth);d.addEventListener('change',filterDepth);filterDepth();
-(function structureDepthLayers(){
-const segmenter=('Segmenter' in Intl)?new Intl.Segmenter('en',{granularity:'sentence'}):null;
-function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-// Turn **bold** markdown into <strong>, after escaping everything else.
-function mdInline(s){const e=esc(s);return e.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');}
-// A bolded span that ends right at a sentence-ending period (e.g. "**Label.** Rest…")
-// can have its closing "**" separated from the opening one by the sentence
-// segmenter below, since the period reads as a sentence boundary. That leaves
-// both halves unpaired, so neither segment renders as bold -- the raw "**"
-// shows up as literal text instead. Move such a period outside the closing
-// "**" first, so the pair always survives in the same segment.
-function normalizeBoldBoundary(s){return s.replace(/\.(\*\*)(\s|$)/g,'$1.$2');}
-// A single "sentence" (per Intl.Segmenter) can still be a long, semicolon-joined
-// run-on that reads as a dense block even inside its own bullet. Split those
-// further on "; " so each clause becomes its own scannable line.
-function splitLongClause(piece){
-  if(piece.length<170) return [piece];
-  const parts=piece.split(/;\s+/).map(p=>p.trim()).filter(Boolean);
-  if(parts.length<2) return [piece];
-  return parts.map((p,i)=>i<parts.length-1?p.replace(/[.;]?$/,';'):p);
-}
-document.querySelectorAll('.depth-layer').forEach(layer=>{
-  const source=layer.querySelector('.depth-layer-source'),list=layer.querySelector('.depth-study-list');
-  let text=(source.textContent||'').trim();
-  if(!text)return;
-  text=normalizeBoldBoundary(text);
-  const sentences=segmenter?[...segmenter.segment(text)].map(x=>x.segment.trim()).filter(Boolean):[text];
-  const pieces=sentences.flatMap(splitLongClause);
-  pieces.forEach(piece=>{const li=document.createElement('li');li.innerHTML=mdInline(piece);list.appendChild(li);});
-});
-})();
+const cards=[...document.querySelectorAll('.depth-card')],domains=[...document.querySelectorAll('.depth-domain')],q=document.getElementById('depthSearch'),d=document.getElementById('depthDomain'),count=document.getElementById('depthCount');
+function filterDepth(){let n=0;const term=q.value.toLowerCase().trim(),dom=d.value;cards.forEach(c=>{const show=(!term||c.dataset.topic.includes(term))&&(!dom||c.dataset.domain===dom);c.hidden=!show;if(show)n++;});domains.forEach(s=>{s.hidden=![...s.querySelectorAll('.depth-card')].some(c=>!c.hidden)});count.textContent=n+' topics shown';}
+q.addEventListener('input',filterDepth);d.addEventListener('change',filterDepth);filterDepth();
+cards.forEach(card=>card.addEventListener('toggle',()=>{
+  if(!card.open||card.dataset.loaded)return; card.dataset.loaded='1';
+  const body=card.querySelector('.depth-body');
+  fetch(card.dataset.src,{credentials:'same-origin'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.text();})
+    .then(html=>{body.innerHTML=html;window.structureTopicText(body);})
+    .catch(()=>{card.dataset.loaded='';body.innerHTML='<div class="tb-loading">Could not load this topic — close and reopen to retry.</div>';});
+}));
 </script>
-{% endblock %}
+{% endif %}{% endblock %}

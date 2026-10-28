@@ -1,12 +1,23 @@
 {% extends "base.html" %}{% block content %}
-<div class="eyebrow">CONCEPT HUB · {{domain}}</div>
+{%- if sections is not defined -%}{%- set ns = namespace(s=[]) -%}{%- for key,label in [('recognize','Clinical presentation'),('localize','Clinical anatomy & localization'),('workup','Diagnosis & workup'),('manage','Management'),('operate','Surgery, advanced decisions & complications'),('teach','Board pearls & teaching points')] -%}{%- if module.get(key) -%}{%- set ns.s = ns.s + [{'key':key,'label':label,'blocks':[{'sub':None,'text':module.get(key)}]}] -%}{%- endif -%}{%- endfor -%}{%- set sections = ns.s -%}{%- endif -%}
+{%- set question_total = question_total if question_total is defined else (related_questions|length) -%}
+{%- set concept_id = concept_id if concept_id is defined else '' -%}
+<link rel="stylesheet" href="{{ url_for('static', filename='textbook_v470.css') }}">
+<div class="eyebrow">TOPIC · {{domain}}</div>
 <div class="concept-hero">
-  <div><h1>{{topic}}</h1><p class="lede">One place to learn it, test it, see it in context, and connect it to the OR when relevant.</p></div>
+  <div><h1>{{topic}}</h1><p class="lede">Read it mechanism-first, then learn it with board-style vignettes and connect it to cases and the OR.</p></div>
   <div class="concept-score card"><b>{{profile.get('overall',0)}}%</b><span>Mastery</span><small>{{profile.get('coverage_count',0)}}/7 dimensions demonstrated</small></div>
 </div>
 
+<div class="tb-links">
+  <a class="primary" href="/daily-adaptive?topic={{concept_id|urlencode}}">Learn it in Daily Path →</a>
+  <a href="/clinical-challenges?topic={{topic|urlencode}}">Practice questions ({{question_total}})</a>
+  {% for op in related_or %}<a class="or" href="/case-tomorrow?q={{ op.title|urlencode }}">OR: {{op.title}}</a>{% endfor %}
+  <a href="/curriculum/depth">Browse Deep Curriculum</a>
+</div>
+
 {% if prerequisites %}
-<div class="card concept-prereqs"><b>Prerequisites</b>{% for p in prerequisites %}<a href="/concept?domain={{domain|urlencode}}&topic={{p|urlencode}}">{{p}}</a>{% endfor %}</div>
+<div class="card concept-prereqs"><b>Learn first</b>{% for p in prerequisites %}<a href="/concept?domain={{domain|urlencode}}&topic={{p|urlencode}}">{{p}}</a>{% endfor %}</div>
 {% endif %}
 
 {% if clinical_relationship or clinical_children %}
@@ -31,29 +42,25 @@
 </div>
 {% endif %}
 
-{% if module.source_basis %}<details class="card concept-source"><summary><b>Source basis</b><span class="source-count">{{module.source_basis|length}}</span></summary>{% for s in module.source_basis %}<span>{{s}}</span>{% endfor %}</details>{% endif %}
-
-<div class="concept-actions">
-  <a class="button" href="/daily-adaptive?focus={{domain|urlencode}}">Test me in Daily Path →</a>
-  <a href="/curriculum/depth">Browse deep curriculum</a>
+<div class="tb-sections" style="margin-top:14px">
+{% for s in sections %}<section class="tb-section" data-key="{{s.key}}"><h3><span class="tb-num">{{loop.index}}</span>{{s.label}}</h3>
+{% for b in s.blocks %}{% if b.sub %}<h4>{{b.sub}}</h4>{% endif %}<div class="tt-source" hidden>{{b.text}}</div><ul class="tt-list"></ul>{% endfor %}
+</section>{% endfor %}
 </div>
 
-<div class="concept-layers">
-{% for key,label in [('recognize','1 · Recognize'),('localize','2 · Localize'),('workup','3 · Evaluate'),('manage','4 · Manage'),('operate','5 · Advanced decisions'),('teach','6 · Teach')] %}
-<section class="card"><span class="lesson-label">{{label}}</span><p>{{module.get(key,'')}}</p></section>
-{% endfor %}
-</div>
+{% set tr = textbook_refs_v472(module.topic) if textbook_refs_v472 is defined and module else none %}{% if tr and (tr.books or tr.literature) %}<details class="card concept-source textbook-refs" style="margin-top:14px" open><summary><b>Textbook references</b><span class="source-count">{{tr.books|length + tr.literature|length}}</span></summary>{% for s in tr.books %}<span>{{s}}</span>{% endfor %}{% if tr.literature %}<small class="muted">Beyond the core texts:</small>{% for s in tr.literature %}<span>{{s}}</span>{% endfor %}{% endif %}</details>{% endif %}
+{% if module.source_basis %}<details class="card concept-source" style="margin-top:14px"><summary><b>Source basis</b><span class="source-count">{{module.source_basis|length}}</span></summary>{% for s in module.source_basis %}<span>{{s}}</span>{% endfor %}</details>{% endif %}
 
 <div class="concept-related-grid">
 <section class="card">
-  <div class="section-head"><h2>Practice questions</h2><a href="/clinical-challenges?topic={{topic|urlencode}}">All questions</a></div>
-  {% if related_questions %}{% for q in related_questions %}<a class="related-row" href="/clinical-challenge/{{q.get('id','')}}"><b>{{q.get('stem','')|truncate(90)}}</b><small>{{q.get('tier','')}}</small></a>{% endfor %}
-  {% else %}<p class="muted">No practice questions are linked to this concept yet.</p>{% endif %}
+  <div class="section-head"><h2>Practice questions</h2><a href="/clinical-challenges?topic={{topic|urlencode}}">All {{question_total}}</a></div>
+  {% if related_questions %}{% for q in related_questions %}<a class="related-row" href="/clinical-challenge/{{q.get('id','')}}"><b>{{q.get('stem','')|truncate(90)}}</b><small>{{ {'foundation':'Foundation','application':'Application','senior_decision':'Mastery'}.get(q.get('learning_stage'), q.get('tier','')) }}</small></a>{% endfor %}
+  {% else %}<p class="muted">No practice questions are linked to this topic yet.</p>{% endif %}
 </section>
 <section class="card">
   <div class="section-head"><h2>Progressive cases</h2><a href="/integrated">All cases</a></div>
   {% if related_cases %}{% for c in related_cases %}<a class="related-row" href="/integrated/{{c.get('id','')}}"><b>{{c.get('title','')}}</b><small>{{c.get('domain','')}}</small></a>{% endfor %}
-  {% else %}<p class="muted">No tightly linked progressive case yet.</p>{% endif %}
+  {% else %}<p class="muted">No progressive case is built for this topic yet.</p>{% endif %}
 </section>
 <section class="card">
   <div class="section-head"><h2>Interpretation Atlas</h2><a href="/lab">All interpretation areas</a></div>
@@ -62,8 +69,9 @@
 </section>
 <section class="card">
   <div class="section-head"><h2>OR Tomorrow</h2><a href="/case-tomorrow">Browse operations</a></div>
-  {% if related_or %}{% for op in related_or %}<a class="related-row" href="/case-tomorrow?q={{op.title|urlencode}}"><b>{{op.get('title','')}}</b><small>{{op.get('domain','')}}</small></a>{% endfor %}
-  {% else %}<p class="muted">This concept does not currently require a dedicated operative module.</p>{% endif %}
+  {% if related_or %}{% for op in related_or %}<a class="related-row" href="/case-tomorrow?q={{ op.title|urlencode }}"><b>{{op.get('title','')}}</b><small>{{op.get('domain','')}}</small></a>{% endfor %}
+  {% else %}<p class="muted">This is a clinic/medical topic — no dedicated operative module.</p>{% endif %}
 </section>
 </div>
+<script src="{{ url_for('static', filename='topic_text_v470.js') }}"></script>
 {% endblock %}
