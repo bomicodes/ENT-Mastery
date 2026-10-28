@@ -372,7 +372,7 @@ pathophysiology=(
 "Tinnitus": dict(
 overview=(
 "Tinnitus is the perception of sound without an external source; most is subjective and linked to hearing loss. "
-"The clinical job is to identify red flags (unilateral, pulsatile, objective) and then The clinical job is to identify red flags (unilateral, pulsatile, objective) and then manage bothersome tinnitus with counseling, amplification, and CBT. The 2026 AAO-HNSF tinnitus guideline update adds a comprehensive audiologic evaluation for every patient, asking directly about self-harm, cochlear implant evaluation when hearing loss qualifies, and follow-up, and recommends against routine medications, supplements, or rTMS."),
+"The clinical job is to identify red flags (unilateral, pulsatile, objective) and then manage bothersome tinnitus with counseling, amplification, and CBT. The 2026 AAO-HNSF tinnitus guideline update adds a comprehensive audiologic evaluation for every patient, asking directly about self-harm, cochlear implant evaluation when hearing loss qualifies, and follow-up, and recommends against routine medications, supplements, or rTMS."),
 physiology=(
 "**Central gain**: the auditory system adjusts its sensitivity to match input; reduced cochlear input increases gain in the cochlear nucleus, inferior colliculus, and cortex. "
 "**Spontaneous activity**: auditory neurons fire spontaneously even in silence, and the brain normally filters this out. "
