@@ -15,6 +15,7 @@ from concept_checks_v471 import install_concept_checks_v471
 from textbook_refs_v472 import install_textbook_refs_v472
 from guideline_currency_v480 import install_guideline_currency_v480
 from clinical_challenge_vignettes_v490 import install_clinical_challenge_vignettes_v490
+from clinical_challenge_rewrites_v491 import install_clinical_challenge_rewrites_v491
 
 TEXTBOOK_CURRICULUM_V470 = install_textbook_curriculum_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)
@@ -23,5 +24,6 @@ CONCEPT_CHECKS_V471 = install_concept_checks_v471(production.runtime_entry.data)
 TEXTBOOK_XREF_V472 = install_textbook_refs_v472(production.runtime_entry.data, app)
 GUIDELINE_CURRENCY_V480 = install_guideline_currency_v480(production.runtime_entry.data)
 VIGNETTES_V490 = install_clinical_challenge_vignettes_v490(production.runtime_entry.data, production.runtime_entry.app_mod)
+REWRITES_V491 = install_clinical_challenge_rewrites_v491(production.runtime_entry.data, production.runtime_entry.app_mod)
 LEARNING_PATH_V470 = install_learning_path_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)
