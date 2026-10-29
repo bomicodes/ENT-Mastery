@@ -1,0 +1,122 @@
+SITE = {
+    "slug": "thyroid-anaplastic",
+    "name": "Thyroid: Anaplastic Carcinoma",
+    "group": "Salivary & thyroid",
+    "order": 120,
+    "ajcc": "AJCC 8th edition",
+    "applies_to": "Anaplastic (undifferentiated) thyroid carcinoma, including ATC arising in or coexisting with a differentiated thyroid cancer.",
+    "big_picture": "Every anaplastic thyroid carcinoma is Stage IV, whatever the age or size. The substage depends on whether the disease is confined to the thyroid and node-negative (IVA), extends grossly or involves nodes (IVB), or has metastasized (IVC). Since AJCC 8, ATC uses the same T definitions as differentiated cancer (it is no longer automatically T4). The urgent clinical question is not the T category but the BRAF V600E status, because it decides whether dabrafenib/trametinib can shrink an otherwise unresectable tumor.",
+    "whats_new": [
+        "AJCC 8: ATC uses the same T categories as DTC (T1-T4b). In AJCC 7 every ATC was T4a or T4b.",
+        "Stage IVA = intrathyroidal (T1-T3a) N0; IVB = gross ETE (T3b/T4) or N1; IVC = M1.",
+        "ATA 2021 (Bible et al.): BRAF V600E should be assessed expeditiously by IHC as soon as ATC is suspected, then confirmed by molecular testing. Molecular profiling (NGS) should be done at diagnosis.",
+        "Dabrafenib + trametinib is FDA-approved for BRAF V600E-mutated ATC. Neoadjuvant BRAF/MEK therapy followed by surgery is increasingly used for initially unresectable disease."
+    ],
+    "t": [
+        ["TX", "Primary tumor cannot be assessed"],
+        ["T0", "No evidence of primary tumor"],
+        ["T1a", "≤1 cm, limited to the thyroid"],
+        ["T1b", ">1 cm but ≤2 cm, limited to the thyroid"],
+        ["T2", ">2 cm but ≤4 cm, limited to the thyroid"],
+        ["T3a", ">4 cm, limited to the thyroid"],
+        ["T3b", "Gross ETE invading only strap muscles, any size"],
+        ["T4a", "Gross ETE invading subcutaneous soft tissue, larynx, trachea, esophagus, or recurrent laryngeal nerve"],
+        ["T4b", "Gross ETE invading prevertebral fascia, or encasing the carotid artery or mediastinal vessels"]
+    ],
+    "t_extra": [],
+    "n_clinical": [
+        ["NX", "Regional nodes cannot be assessed"],
+        ["N0a", "One or more cytologically or histologically confirmed benign nodes"],
+        ["N0b", "No radiologic or clinical evidence of locoregional nodal metastasis"],
+        ["N1a", "Level VI or VII (pretracheal, paratracheal, prelaryngeal/Delphian, upper mediastinal), unilateral or bilateral"],
+        ["N1b", "Unilateral, bilateral, or contralateral lateral neck (levels I-V) or retropharyngeal nodes"]
+    ],
+    "n_pathologic": [],
+    "m": [
+        ["M0", "No distant metastasis"],
+        ["M1", "Distant metastasis"]
+    ],
+    "stage_groups": [
+        ["Stage IVA", "T1-T3a, N0/NX, M0"],
+        ["Stage IVB", "T1-T3a N1 M0; T3b any N M0; T4 any N M0"],
+        ["Stage IVC", "Any T, any N, M1"]
+    ],
+    "stage_groups_pathologic": [],
+    "memory_hooks": [
+        "'Anaplastic = always IV'. No age split and no Stage I-III.",
+        "'A = All inside': IVA is intrathyroidal and N0. 'B = Beyond': gross ETE (even strap muscles) or any node. 'C = Cosmic': distant metastasis.",
+        "'BRAF before the knife'. Order BRAF V600E IHC (VE1) the same day ATC is suspected. The result can be back within a day, while NGS takes 1-2 weeks.",
+        "'D and T for V600E': dabrafenib (BRAF inhibitor) plus trametinib (MEK inhibitor).",
+        "Prognosis rule of 5s: median survival about 5-6 months, 1-year survival about 20% historically."
+    ],
+    "algorithm": [
+        {"stage": "Diagnosis (all patients)",
+         "treatment": "Biopsy before surgery: FNA plus core biopsy for tissue. Request urgent BRAF V600E IHC, confirmed molecularly, and NGS profiling (BRAF, RET, NTRK, ALK, PD-L1, TMB). Stage with cross-sectional imaging (contrast CT or MRI of the neck, chest, abdomen and pelvis) plus FDG PET/CT if available, and examine the vocal cords and airway. Hold a goals-of-care discussion early.",
+         "notes": "ATA 2021 Recs 1-8 (biopsy, BRAF IHC, molecular profiling, staging imaging, vocal cord exam, multidisciplinary goals of care). Exclude the differentials: lymphoma, poorly differentiated carcinoma, metastatic SCC/lung cancer. Hospice should always be presented among the care options."},
+        {"stage": "Stage IVA / resectable IVB",
+         "treatment": "Surgery aiming at gross complete resection (R0/R1): total thyroidectomy plus therapeutic neck dissection, but only if it can be done without a wound or morbidity that would delay adjuvant therapy. Follow promptly with adjuvant definitive-intent RT (e.g., 66 Gy/33 fractions) ± concurrent chemotherapy (radiosensitizing taxane/platinum).",
+         "notes": "Debulking that leaves gross disease (R2) does not help and is not recommended. For BRAF V600E disease, consider dabrafenib/trametinib before or after surgery (multidisciplinary decision)."},
+        {"stage": "Unresectable IVB, BRAF V600E-mutated",
+         "treatment": "Dabrafenib + trametinib now (FDA-approved for BRAF V600E ATC). If the tumor shrinks enough, consider neoadjuvant-then-surgery, followed by RT.",
+         "notes": "The neoadjuvant BRAF/MEK then surgery approach comes from MD Anderson series (retrospective/phase 2). It improves resectability, but it is not proven in a randomized trial. Adding pembrolizumab to D/T is being studied (contested)."},
+        {"stage": "Unresectable IVB, BRAF wild-type",
+         "treatment": "Definitive-intent RT ± concurrent chemotherapy, or targeted therapy if a driver is found (NTRK: larotrectinib/entrectinib; RET fusion: selpercatinib; ALK: crizotinib). Immunotherapy (pembrolizumab) is used off-label in some cases. Clinical trial preferred.",
+         "notes": "Cytotoxic chemotherapy (paclitaxel ± carboplatin) can bridge until molecular results return."},
+        {"stage": "Stage IVC",
+         "treatment": "Systemic therapy by molecular result (BRAF V600E: dabrafenib/trametinib), clinical trial, or best supportive care/hospice according to goals. Palliative neck RT (e.g., 20 Gy/5 or 30 Gy/10) for local control and the airway.",
+         "notes": "Tracheostomy relieves acute airway obstruction but can be technically hard through tumor and burdens care. ATA 2021 advises individualized decision-making instead of routine prophylactic tracheostomy."}
+    ],
+    "pitfalls": [
+        "ATC is never Stage I-III, and there is no age split. A 30-year-old with a 2 cm intrathyroidal ATC is Stage IVA.",
+        "Gross ETE into strap muscles alone (T3b) makes Stage IVB, not IVA.",
+        "In AJCC 8, ATC is no longer automatically T4. Use the DTC T definitions.",
+        "Do not rush to surgery without tissue. ATA 2021 (Rec 2, strong) says every effort should be made to establish a biopsy diagnosis before resection, for example to rule out lymphoma, which is treated nonsurgically.",
+        "Order BRAF V600E IHC immediately and do not wait for NGS. A positive IHC can start dabrafenib/trametinib within days.",
+        "Incomplete debulking (R2) offers no survival benefit, and surgical morbidity that delays RT is harmful."
+    ],
+    "drills": [
+        {"case": "A 68-year-old has a rapidly enlarging 3.8 cm thyroid mass. Core biopsy shows anaplastic carcinoma. Imaging shows the tumor confined to the thyroid, with no nodal or distant disease.",
+         "question": "What is the AJCC 8 stage?",
+         "choices": ["Stage II", "Stage IVA", "Stage IVB", "Stage III"],
+         "answer": 1,
+         "explanation": "All ATC is Stage IV. T2 (intrathyroidal, >2-4 cm), N0, M0 = Stage IVA."},
+        {"case": "A 59-year-old has a 3 cm anaplastic carcinoma with gross invasion of the sternohyoid muscle only. No nodes, no distant metastases.",
+         "question": "What is the stage?",
+         "choices": ["Stage IVA", "Stage IVC", "Stage IVB", "Stage II"],
+         "answer": 2,
+         "explanation": "Gross ETE limited to strap muscles = T3b. For ATC, T3b any N M0 = Stage IVB."},
+        {"case": "A 72-year-old has a 2.5 cm intrathyroidal anaplastic carcinoma with a biopsy-positive level IV node. Chest CT is clear.",
+         "question": "What is the stage?",
+         "choices": ["Stage IVB", "Stage IVA", "Stage III", "Stage IVC"],
+         "answer": 0,
+         "explanation": "T2 N1b M0. For ATC, any N1 moves an intrathyroidal tumor from IVA to IVB."},
+        {"case": "A 64-year-old has anaplastic carcinoma that grossly invades the trachea, with multiple pulmonary metastases.",
+         "question": "What is the stage?",
+         "choices": ["Stage IVB", "Stage IVA", "Stage III", "Stage IVC"],
+         "answer": 3,
+         "explanation": "Any M1 = Stage IVC for anaplastic carcinoma."},
+        {"case": "FNA of a 6 cm hard neck mass in a 70-year-old suggests anaplastic thyroid carcinoma. The airway is stable.",
+         "question": "Per ATA 2021, which test should be obtained most urgently to guide treatment?",
+         "choices": ["Serum thyroglobulin", "BRAF V600E immunohistochemistry on tissue (then molecular confirmation/NGS)", "Serum calcitonin", "Diagnostic whole-body RAI scan"],
+         "answer": 1,
+         "explanation": "ATA 2021 Rec 4: assess BRAF V600E expeditiously by IHC, then confirm molecularly. A positive result makes dabrafenib/trametinib possible. ATC does not take up iodine and does not make thyroglobulin in a useful way."},
+        {"case": "A 66-year-old has unresectable stage IVB anaplastic carcinoma encasing the carotid artery. BRAF V600E IHC is positive.",
+         "question": "What is the best initial treatment?",
+         "choices": ["Debulking thyroidectomy followed by RAI", "Dabrafenib plus trametinib, then reassess for surgery", "Lenvatinib monotherapy", "Observation with TSH suppression"],
+         "answer": 1,
+         "explanation": "Dabrafenib plus trametinib is FDA-approved for BRAF V600E ATC. A good response may allow neoadjuvant-then-surgery. Debulking with gross residual disease is not recommended, and RAI and TSH suppression have no role in ATC."},
+        {"case": "A 61-year-old has a 3.5 cm anaplastic carcinoma limited to the thyroid with a few small central nodes, judged completely resectable without sacrificing vital structures. BRAF wild-type.",
+         "question": "What is the most appropriate management?",
+         "choices": ["Total thyroidectomy with central neck dissection, then prompt adjuvant RT ± concurrent chemotherapy", "Primary RAI therapy", "Hospice only", "Active surveillance"],
+         "answer": 0,
+         "explanation": "For resectable IVB, ATA 2021 recommends complete (R0/R1) resection followed by early definitive-intent RT, often with radiosensitizing chemotherapy."}
+    ],
+    "sources": [
+        ["AJCC Cancer Staging Manual, 8th ed (2017), Ch 73 Thyroid - Differentiated and Anaplastic Carcinoma", ""],
+        ["Bible KC, Kebebew E, Brierley J, et al. 2021 American Thyroid Association Guidelines for Management of Patients with Anaplastic Thyroid Cancer. Thyroid. 2021;31(3):337-386. doi:10.1089/thy.2020.0944", "https://thyca.org/wp-content/uploads/bible-et-al-2021-2021-american-thyroid-association-guidelines-for-management-of-patients-with-anaplastic-thyroid-cancer.pdf"],
+        ["Perrier ND, Brierley JD, Tuttle RM. Differentiated and anaplastic thyroid carcinoma: major changes in the AJCC 8th edition. CA Cancer J Clin. 2018;68:55-63", "https://pubmed.ncbi.nlm.nih.gov/29092098/"],
+        ["Subbiah V, et al. Dabrafenib and trametinib in BRAF V600E-mutant anaplastic thyroid cancer. J Clin Oncol. 2018;36:7-13", ""],
+        ["NCCN Clinical Practice Guidelines: Thyroid Carcinoma, 2026", ""]
+    ],
+    "verify_notes": "Reviewer check (2026-10-29). Confirmed: AJCC 8 T definitions (same as DTC) and stage groups IVA/IVB/IVC from the ATA 2021 guideline terms section, and ATA 2021 Recs 1-8 from the ThyCa full-text copy. All drills re-derived and correct. Corrected: the pitfall said ATA 2021 'requires' biopsy before surgery; Rec 2 says every effort should be made to establish a biopsy diagnosis. Staging imaging now matches Rec 6 (CT or MRI neck/chest/abdomen/pelvis plus PET/CT if available), and the vocal cord exam (Rec 7) was added. Still unconfirmed: the fetched text truncates before the surgical and treatment recommendations, so the R0/R1 wording, the neoadjuvant BRAF-directed recommendation, the RT dose examples and the tracheostomy guidance were not read verbatim. Those are stated from standard teaching, with neoadjuvant therapy labeled not randomized-proven. The NCCN 2026 thyroid PDF was not read."
+}
