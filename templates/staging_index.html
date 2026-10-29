@@ -15,7 +15,7 @@
       <span class="stg-ver {% if 'Version 9' in s.ajcc %}v9{% endif %}">{{s.ajcc}}</span>
       <b>{{s.name}}</b>
       <span class="stg-sub">{{s.applies_to|truncate(110)}}</span>
-      <span class="stg-meta">{{s.t|length}} T categories{% if s.drills %} · {{s.drills|length}} drills{% endif %}</span>
+      <span class="stg-meta">TNM tables · treatment algorithm{% if s.drills %} · {{s.drills|length}} drills{% endif %}</span>
     </a>
     {% endfor %}
   </div>
