@@ -34,7 +34,7 @@
       <label class="stg-recall"><input type="checkbox" id="recall-mode"> Recall mode: hide the definitions and tap to reveal</label></div>
     <div class="stg-tables">
       <div><h3>T: primary tumor</h3>{{ table(s.t, 'T', 'Definition') }}</div>
-      {% for extra in s.t_extra or [] %}<div><h3>T: {{extra.title}}</h3>{{ table(extra.rows, 'T', 'Definition') }}</div>{% endfor %}
+      {% for extra in s.t_extra or [] %}<div><h3>{{ extra.heading or ('T: ' ~ extra.title) }}</h3>{{ table(extra.rows, extra.col or 'T', 'Definition') }}</div>{% endfor %}
       <div><h3>N: regional nodes{% if s.n_pathologic %} (clinical){% endif %}</h3>{{ table(s.n_clinical, 'N', 'Definition') }}</div>
       {% if s.n_pathologic %}<div><h3>N: regional nodes (pathologic)</h3>{{ table(s.n_pathologic, 'pN', 'Definition') }}</div>{% endif %}
       <div><h3>M: distant metastasis</h3>{{ table(s.m, 'M', 'Definition') }}</div>
