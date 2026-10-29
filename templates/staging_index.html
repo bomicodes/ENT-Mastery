@@ -1,0 +1,24 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='staging_v500.css') }}?v=500">
+<section class="stg-hero">
+  <p class="stg-eyebrow">Head &amp; Neck Oncology</p>
+  <h1>Staging &amp; Treatment Algorithms</h1>
+  <p>TNM tables, memory hooks and stage-based treatment for every head and neck cancer site, with "stage this case" drills. {{site_count}} sites · {{drill_count}} drills.</p>
+  <p class="stg-note">AJCC Version 9 now applies to the nasopharynx, HPV-associated oropharynx and salivary glands. All other sites use the AJCC 8th edition. Each page names its version.</p>
+</section>
+{% for group, items in groups %}
+<section class="stg-group">
+  <h2>{{group}}</h2>
+  <div class="stg-grid">
+    {% for s in items %}
+    <a class="stg-card" href="/staging/{{s.slug}}">
+      <span class="stg-ver {% if 'Version 9' in s.ajcc %}v9{% endif %}">{{s.ajcc}}</span>
+      <b>{{s.name}}</b>
+      <span class="stg-sub">{{s.applies_to|truncate(110)}}</span>
+      <span class="stg-meta">{{s.t|length}} T categories{% if s.drills %} · {{s.drills|length}} drills{% endif %}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+{% endblock %}
