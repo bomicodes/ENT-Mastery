@@ -1,0 +1,152 @@
+SITE = {
+    "slug": "salivary",
+    "name": "Salivary Glands (Major and Minor)",
+    "group": "Salivary & thyroid",
+    "order": 100,
+    "ajcc": "AJCC Version 9 (2026)",
+    "applies_to": "Salivary gland carcinomas of the major glands (parotid, submandibular, sublingual) and, new in Version 9, minor salivary/seromucinous glands of the upper aerodigestive tract. Squamous cell, neuroendocrine and basosquamous carcinomas are excluded. Applies to diagnoses from January 1, 2026.",
+    "big_picture": "T is driven by size (2 and 4 cm cutoffs) and then by gross extraparenchymal extension and invasion of adjacent structures, as in AJCC 8. N is new. It counts positive nodes (1-3 vs >3) plus ENE, with no size or laterality, and N3 is gone. M0 disease now runs only from Stage I to IIIB, and Stage IV means M1. Minor salivary carcinomas now use this salivary-specific system instead of the mucosal site where they arise.",
+    "whats_new": [
+        "Chapter renamed from 'Major Salivary Glands' to 'Salivary Glands'. Minor salivary gland carcinomas are now staged here instead of by the mucosal site of origin.",
+        "Non-salivary histologies (SCC, neuroendocrine carcinoma, basosquamous carcinoma) removed from the chapter.",
+        "T3: extraparenchymal extension must be clinical or macroscopic. Microscopic EPE alone does not count, and the EPE criterion applies to major glands only. Minor gland T1-T3 are by size alone.",
+        "T4a bone invasion clarified. These do NOT count: erosion of cortical bone, destruction of intrinsic sinus bone by a sinonasal primary, and primary intraosseous (central) salivary tumors.",
+        "N: node number (1-3 vs >3) replaces size and laterality, and N3 is eliminated. cN counts imaging-detected (iENE) and clinical ENE. pN counts only definitive microscopic ENE.",
+        "pN0 needs at least 6 nodes examined. With fewer than 6, the case is pNX for staging, but it is managed as cN0.",
+        "Stage groups extensively revised: 0, I, II, IIIA, IIIB for M0 disease. Stage IV is reserved for M1 (no IVA/IVB/IVC).",
+        "One stage-group table serves both clinical and pathologic staging. cTNM uses the same criteria as pTNM, with node count and ENE judged clinically and on imaging (iENE)."
+    ],
+    "t": [
+        ["TX", "Primary tumor cannot be assessed"],
+        ["T0", "No evidence of primary tumor"],
+        ["Tis", "Carcinoma in situ"],
+        ["T1", "≤2 cm in greatest dimension without extraparenchymal extension"],
+        ["T2", ">2 cm but ≤4 cm without extraparenchymal extension"],
+        ["T3", ">4 cm and/or gross extraparenchymal extension (EPE criterion for major salivary glands only; minor gland T1-T3 by size alone)"],
+        ["T4a", "Invades any immediately adjacent structure: skin, bone, cartilage, solid organ parenchyma, esophagus, trachea, or a named nerve (e.g., facial nerve)"],
+        ["T4b", "Invades beyond adjacent structures: encases carotid artery, skull base (except nasopharynx), spinal column, intracranial, orbital apex, prevertebral space, mediastinal structures, or masticator space"]
+    ],
+    "t_extra": [
+        {"title": "T definition notes (Version 9)", "rows": [
+            ["Extraparenchymal extension", "Clinical or macroscopic invasion of soft tissues or nerve, other than the structures listed under T4a/T4b. Microscopic evidence alone does not count."],
+            ["NOT bone invasion", "(1) Destruction of intrinsic sinus bone by a sinonasal primary; (2) erosion of cortical bone; (3) primary intraosseous (central) salivary gland tumors"],
+            ["Minor salivary glands", "T1-T3 by size alone (≤2, >2-4, >4 cm). T4a/T4b use the same adjacent-structure lists as the major glands."]
+        ]}
+    ],
+    "n_clinical": [
+        ["NX", "Regional nodes cannot be assessed"],
+        ["N0", "No regional lymph node metastasis"],
+        ["N1", "Metastasis in 1-3 lymph nodes without unequivocal imaging-detected ENE (iENE) or clinical ENE"],
+        ["N2", "Metastasis in >3 lymph nodes, OR any involved node with unequivocal iENE and/or clinical ENE"]
+    ],
+    "n_pathologic": [
+        ["pNX", "Cannot be assessed, including fewer than 6 nodes examined with no positive node"],
+        ["pN0", "No tumor in regional nodes, with at least 6 nodes examined"],
+        ["pN1", "Tumor in 1-3 lymph nodes without definitive pathologic ENE"],
+        ["pN2", "Tumor in >3 lymph nodes, OR any involved node with definitive pathologic (microscopic) ENE"]
+    ],
+    "m": [
+        ["M0", "No distant metastasis"],
+        ["M1", "Distant metastasis"]
+    ],
+    "stage_groups": [
+        ["Stage 0", "Tis N0 M0"],
+        ["Stage I", "T1 N0 M0"],
+        ["Stage II", "T2 N0 M0"],
+        ["Stage IIIA", "T1-T2 N1 M0; T3-T4 N0 M0"],
+        ["Stage IIIB", "T1-T2 N2 M0; T3-T4 N1-N2 M0"],
+        ["Stage IV", "Any T, any N, M1"]
+    ],
+    "stage_groups_pathologic": [],
+    "memory_hooks": [
+        "T is unchanged in spirit: '2-4-gross'. ≤2 cm, >2-4 cm, then >4 cm or GROSS EPE. Microscopic EPE never upstages.",
+        "N is now a head count: '1-3 = N1, 4+ or ENE = N2'. No size, no sides, no N3.",
+        "'Six to be zero': pN0 needs ≥6 nodes examined. With fewer than 6, call it pNX and manage as cN0.",
+        "Stage IV = M1, period. Any M0 patient, however bulky, tops out at IIIB.",
+        "Stage III split: IIIA = ONE step up (T3-4 with N0, OR T1-2 with N1). IIIB = N2 at any T, or T3-4 with any nodal disease.",
+        "The facial nerve is a 'named nerve', so gross invasion makes T4a even if the tumor is 1.5 cm.",
+        "Bone trap: cortical erosion is not T4a. 'Erosion is not invasion.'"
+    ],
+    "algorithm": [
+        {"stage": "Early (I-II), low/intermediate grade, cN0",
+         "treatment": "Complete surgical excision: superficial or total parotidectomy with facial nerve preservation, submandibular gland excision, or wide local excision for a minor gland primary. Elective neck dissection is generally not needed for low-grade cN0 disease.",
+         "notes": "Adjuvant RT only for adverse features: close/positive margin, perineural invasion, LVI, high grade, tumor spill. Preserve a functioning facial nerve unless it is grossly encased."},
+        {"stage": "High grade or T3-T4, cN0",
+         "treatment": "Resection of the primary plus elective neck dissection (levels II-IV at minimum for parotid, guided by gland and histology), then adjuvant RT.",
+         "notes": "Elective neck dissection is favored for high-grade histology (salivary duct, high-grade mucoepidermoid, carcinoma ex-pleomorphic adenoma, etc.) and T3-T4. Resect and graft (cable graft) the facial nerve only when it is grossly involved or not functioning before surgery."},
+        {"stage": "Node-positive (IIIA-IIIB)",
+         "treatment": "Resection of the primary plus therapeutic neck dissection, then adjuvant RT to the primary bed and neck.",
+         "notes": "Adding concurrent chemotherapy (cisplatin) to adjuvant RT is CONTESTED and not established for salivary carcinoma. It is extrapolated from mucosal SCC data and being tested in RTOG 1008. Do not assume the HNSCC ENE/margin rule (RTOG 9501/EORTC 22931) transfers."},
+        {"stage": "Unresectable locoregional",
+         "treatment": "Definitive RT (± concurrent systemic therapy, contested). Particle/neutron therapy is used at some centers for adenoid cystic carcinoma (institution-dependent).",
+         "notes": "Plan with a multidisciplinary tumor board. ACC tracks along nerves to the skull base, so check the MRI for perineural spread along V3/VII."},
+        {"stage": "Recurrent / metastatic (IV)",
+         "treatment": "Biomarker-driven therapy. Androgen receptor+ (salivary duct carcinoma): androgen deprivation therapy. HER2+: trastuzumab-based regimens or trastuzumab deruxtecan. NTRK fusion (secretory carcinoma): larotrectinib or entrectinib. Adenoid cystic: lenvatinib/axitinib-type TKIs. Otherwise, clinical trial or chemotherapy.",
+         "notes": "Slow lung metastases from ACC can often be observed until they progress or cause symptoms. Test AR, HER2 and NTRK (NGS) in every R/M case."}
+    ],
+    "pitfalls": [
+        "Do not use AJCC 8 N2a/N2b/N2c/N3 for salivary cancers diagnosed in 2026. Version 9 uses only node count and ENE. A single 7 cm node without ENE is N1, not N3.",
+        "Stage IVA/IVB no longer exist for salivary cancer. A T4b N2 M0 tumor is Stage IIIB.",
+        "Microscopic extraparenchymal extension does not make T3. Only clinical or macroscopic EPE counts, and only for major glands.",
+        "Cortical bone erosion, sinonasal intrinsic bone destruction and central (intraosseous) tumors are NOT T4a bone invasion.",
+        "Minor salivary carcinomas (e.g., hard palate adenoid cystic) are now staged in this chapter, not in the oral cavity or sinonasal chapter. Cancer registrars will not stage minor gland cases until 2027, because no site code exists yet.",
+        "cN counts imaging ENE (iENE) and clinical ENE. pN counts only definitive microscopic ENE. A neck dissection with fewer than 6 nodes cannot be pN0."
+    ],
+    "drills": [
+        {"case": "A 52-year-old has a 3.5 cm high-grade mucoepidermoid carcinoma of the parotid with no extraparenchymal extension. CT shows two enlarged level II nodes (2.2 and 1.4 cm) with sharp margins and no ENE. No distant disease.",
+         "question": "What is the clinical stage (AJCC Version 9)?",
+         "choices": ["Stage II", "Stage IIIA", "Stage IIIB", "Stage IVA"],
+         "answer": 1,
+         "explanation": "T: >2-4 cm without EPE = T2. N: 2 nodes (1-3) without ENE = cN1. Size no longer matters. T1-T2 N1 M0 = Stage IIIA. Stage IVA no longer exists for salivary cancer."},
+        {"case": "A 1.8 cm parotid carcinoma grossly invades the main trunk of the facial nerve at surgery. The neck is clinically and radiographically negative, and there are no distant metastases.",
+         "question": "What is the stage (AJCC Version 9)?",
+         "choices": ["Stage I", "Stage II", "Stage IIIB", "Stage IIIA"],
+         "answer": 3,
+         "explanation": "Invasion of a named nerve makes T4a regardless of size. N0 M0. T3-T4 N0 M0 = Stage IIIA."},
+        {"case": "A 1.6 cm submandibular gland adenocarcinoma has a single 1.5 cm level IB node. CT shows irregular capsular enhancement with infiltration into adjacent fat (unequivocal imaging-detected ENE).",
+         "question": "What are the cN category and stage?",
+         "choices": ["cN1, Stage IIIA", "cN2, Stage IIIB", "cN3b, Stage IVB", "cN1, Stage II"],
+         "answer": 1,
+         "explanation": "In Version 9, any node with unequivocal iENE and/or clinical ENE is cN2, and there is no N3. T1 (≤2 cm, no EPE) N2 M0 = Stage IIIB."},
+        {"case": "After superficial parotidectomy and a limited level II dissection for a 1.5 cm acinic cell carcinoma, pathology shows 4 lymph nodes, all negative.",
+         "question": "What is the correct pN designation?",
+         "choices": ["pN0", "pN0(i-)", "pNX", "pN1"],
+         "answer": 2,
+         "explanation": "Version 9 requires at least 6 nodes examined to assign pN0. With fewer than 6 negative nodes the category is pNX, and the patient is managed as cN0."},
+        {"case": "A 3.0 cm adenoid cystic carcinoma of the hard palate (minor salivary gland) shows only erosion of the cortical palatal bone on CT, with no marrow invasion. N0 M0.",
+         "question": "What is the T category and stage under Version 9?",
+         "choices": ["T4a, Stage IIIA", "T3, Stage IIIA", "T2, Stage II", "T2 per the oral cavity chapter (DOI-based)"],
+         "answer": 2,
+         "explanation": "Minor salivary carcinomas are now staged in the salivary chapter, with T1-T3 by size alone: >2-4 cm = T2. Cortical bone erosion is explicitly NOT T4a bone invasion. T2 N0 M0 = Stage II."},
+        {"case": "A 2.0 cm salivary duct carcinoma of the parotid is resected with a neck dissection. Pathology shows 5 positive nodes, none with ENE, among 22 nodes examined. M0.",
+         "question": "What is the pathologic stage?",
+         "choices": ["Stage IIIA (pN1)", "Stage IIIB (pN2)", "Stage IVA (pN2b)", "Stage IV (pN3)"],
+         "answer": 1,
+         "explanation": "More than 3 positive nodes = pN2 even without ENE. T1 (≤2 cm) N2 M0 = Stage IIIB. AJCC 8 'pN2b' and Stage IVA no longer apply."},
+        {"case": "A 4.5 cm parotid carcinoma has gross extension into periparotid soft tissue, 2 positive nodes without ENE, and multiple lung nodules biopsy-proven as metastases.",
+         "question": "What is the stage?",
+         "choices": ["Stage IIIB", "Stage IVC", "Stage IVB", "Stage IV"],
+         "answer": 3,
+         "explanation": "T3 N1 would be Stage IIIB, but M1 is Stage IV. In Version 9, Stage IV is reserved for M1 and has no A/B/C subgroups."},
+        {"case": "A 60-year-old has a 3.2 cm parotid mass. FNA shows high-grade salivary carcinoma. The neck is clinically and radiographically N0, and the facial nerve works normally.",
+         "question": "What is the most appropriate primary management?",
+         "choices": ["Parotidectomy with facial nerve preservation, elective neck dissection, then adjuvant RT", "Superficial parotidectomy alone with observation", "Definitive chemoradiation with cisplatin", "Radical parotidectomy with routine facial nerve sacrifice and cable grafting"],
+         "answer": 0,
+         "explanation": "High-grade histology carries a substantial risk of occult nodal disease, so add an elective neck dissection. Adjuvant RT is indicated for high grade. Preserve a functioning nerve unless it is grossly involved. Surgery is primary; chemoRT is not the primary treatment."}
+    ],
+    "sources": [
+        ["CAP Cancer Protocol: Salivary Gland Carcinoma Resection, v1.0.0.0 (AJCC Version 9), posted April 2026", "https://documents.cap.org/protocols/HN.Salivary.Res_1.0.0.0.REL_CAPCP.pdf"],
+        ["AJCC: Oropharynx (HPV-Associated) and Salivary Glands - Insights from the Expert Panel (ACS/AJCC slides, 2026)", "https://www.facs.org/media/ov3f0ch0/ajcc-oropharynx-hpv-associated-and-salivary-glands-insights-from-expert-panel.pdf"],
+        ["AJCC Staging Insights into New 2026 Changes and Clarification of Staging Issues (ACS/AJCC)", "https://www.facs.org/media/wlmmwiz0/ajcc-staging-insights-into-new-2026-changes-and-clarification-of-staging-issues.pdf"],
+        ["AJCC Current Staging System 2026 (ACS)", "https://www.facs.org/media/c5ik5tkr/ajcc-current-staging-system-2026.pdf"],
+        ["Ganly I, Huang SH, Glastonbury C, et al. AJCC Cancer Staging System: Salivary Glands - Version 9. American College of Surgeons; 2025 (effective January 1, 2026)", "https://www.r2library.com/Resource/Title/9798275082845"],
+        ["Huang SH, Cotler J, Palis B, Seethala RR, et al. Proposed Version Nine of the AJCC and UICC TNM Classification for Salivary Gland Carcinoma. JAMA Otolaryngol Head Neck Surg. 2026. doi:10.1001/jamaoto.2025.5396", "https://ouci.dntb.gov.ua/works/4M1J11VB"],
+        ["Head and Neck Oncology Journal Club summary of Huang et al. (stage-group table and cohort data)", "https://buttondown.com/krishnakumar/archive/proposed-tnm-9-classification-for-salivary-gland/"],
+        ["Huang SH, Seethala RR, Patel SG, et al. Key Updates on the Version 9 AJCC/UICC Staging System for Salivary Gland Carcinoma. Ann Surg Oncol. 2026. doi:10.1245/s10434-026-19350-5", "https://researchworks.creighton.edu/esploro/outputs/journalArticle/Key-Updates-on-the-Version-9/991006257696102656"],
+        ["NCCN Clinical Practice Guidelines: Head and Neck Cancers (Salivary Gland Tumors), 2026", ""],
+        ["American Cancer Society: Salivary gland cancer stages (AJCC Version 9, effective January 2026; includes Stage 0 Tis N0 M0)", "https://www.cancer.org/cancer/types/salivary-gland-cancer/detection-diagnosis-staging/staging.html"],
+        ["NCI Thesaurus: Stage III Salivary Gland Cancer AJCC v9 (C224100; cN1/cN2/pN1/pN2 wording and IIIA/IIIB groups) and parent C224096 (lists Stage 0-IV)", "https://worldoftaxonomy.com/system/nci_thesaurus/node/C224100"],
+        ["NHS NDRS staging sheet: Salivary glands, UICC TNM 9th edition (same stage-group table, including Stage 0)", "https://nhsd-proxy.openprescribing.net/ndrs/data/cancer-data-training-materials/staging-sheets-v9/salivary-glands"]
+    ],
+    "verify_notes": "Reviewer check (2026-10-29). Confirmed: T, pN and the pN0 6-node rule from the CAP v1.0.0.0 protocol; cN1/cN2 and pN1/pN2 wording and the IIIA/IIIB groups from the NCI Thesaurus AJCC v9 entries; stage groups I-IV from the ACS/AJCC expert-panel slides, the Huang 2026 table (journal-club summary) and the UICC TNM 9 sheet; '<6 nodes = pNX, managed as cN0' from the AJCC 2026 insights slides; and the Ann Surg Oncol 2026 abstract statement that cTNM uses the same criteria as pTNM. Corrected: added Stage 0 (Tis N0 M0), which is listed by ACS cancer.org (citing the AJCC Version 9 protocol), the NCI Thesaurus and UICC 9; stated that one stage table serves clinical and pathologic staging; fixed the IIIA/IIIB memory hook; and reworded drill 2 because the nerve invasion was an operative finding. Still unconfirmed: the full AJCC Version 9 chapter text; the T4a/T4b split within 'T3-T4' is not separated in any source, so both are taken as included. RTOG 1008 results were not found published, so concurrent chemotherapy stays labeled contested. Treatment rows were not checked against the NCCN 2026 PDF."
+}

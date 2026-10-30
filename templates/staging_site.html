@@ -1,0 +1,112 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='staging_v500.css') }}?v=500">
+{% macro table(rows, head1, head2) %}
+<table class="stg-table">
+  <thead><tr><th>{{head1}}</th><th>{{head2}}</th></tr></thead>
+  <tbody>{% for r in rows %}<tr><td class="stg-cat">{{r[0]}}</td><td class="stg-def"><span>{{r[1]}}</span></td></tr>{% endfor %}</tbody>
+</table>
+{% endmacro %}
+<div class="breadcrumb"><a href="/staging">Staging</a> / {{s.name}}</div>
+
+<div class="stg-layout">
+<aside class="stg-side">
+  {% for group, items in groups %}<p class="stg-side-h">{{group}}</p>
+  {% for x in items %}<a href="/staging/{{x.slug}}" class="{% if x.slug == s.slug %}on{% endif %}">{{x.name}}</a>{% endfor %}{% endfor %}
+</aside>
+
+<article class="stg-page">
+  <header class="stg-head">
+    <span class="stg-ver {% if 'Version 9' in s.ajcc %}v9{% endif %}">{{s.ajcc}}</span>
+    <h1>{{s.name}}</h1>
+    {% if s.applies_to %}<p class="stg-applies">{{s.applies_to}}</p>{% endif %}
+    {% if s.big_picture %}<p class="stg-big">{{s.big_picture}}</p>{% endif %}
+    <nav class="stg-jump">
+      <a href="#tables">TNM tables</a>{% if s.memory_hooks %}<a href="#hooks">Memory hooks</a>{% endif %}<a href="#algorithm">Treatment</a>{% if s.pitfalls %}<a href="#pitfalls">Pitfalls</a>{% endif %}{% if s.drills %}<a href="#drills">Stage this case</a>{% endif %}
+    </nav>
+  </header>
+
+  {% if s.whats_new %}
+  <section class="stg-box stg-new"><h2>What's new in this edition</h2><ul>{% for w in s.whats_new %}<li>{{w}}</li>{% endfor %}</ul></section>
+  {% endif %}
+
+  <section class="stg-box" id="tables">
+    <div class="stg-box-head"><h2>TNM tables</h2>
+      <label class="stg-recall"><input type="checkbox" id="recall-mode"> Recall mode: hide the definitions and tap to reveal</label></div>
+    <div class="stg-tables">
+      <div><h3>T: primary tumor</h3>{{ table(s.t, 'T', 'Definition') }}</div>
+      {% for extra in s.t_extra or [] %}<div><h3>{{ extra.heading or ('T: ' ~ extra.title) }}</h3>{{ table(extra.rows, extra.col or 'T', 'Definition') }}</div>{% endfor %}
+      <div><h3>N: regional nodes{% if s.n_pathologic %} (clinical){% endif %}</h3>{{ table(s.n_clinical, 'N', 'Definition') }}</div>
+      {% if s.n_pathologic %}<div><h3>N: regional nodes (pathologic)</h3>{{ table(s.n_pathologic, 'pN', 'Definition') }}</div>{% endif %}
+      <div><h3>M: distant metastasis</h3>{{ table(s.m, 'M', 'Definition') }}</div>
+      {% if s.stage_groups %}<div><h3>Stage groups{% if s.stage_groups_pathologic %} (clinical){% endif %}</h3>{{ table(s.stage_groups, 'Stage', 'T N M') }}</div>{% endif %}
+      {% if s.stage_groups_pathologic %}<div><h3>Stage groups (pathologic)</h3>{{ table(s.stage_groups_pathologic, 'Stage', 'T N M') }}</div>{% endif %}
+    </div>
+  </section>
+
+  {% if s.memory_hooks %}
+  <section class="stg-box stg-hooks" id="hooks"><h2>Memory hooks</h2><ul>{% for h in s.memory_hooks %}<li>{{h}}</li>{% endfor %}</ul></section>
+  {% endif %}
+
+  <section class="stg-box" id="algorithm"><h2>Treatment algorithm</h2>
+    <ol class="stg-flow">{% for a in s.algorithm %}
+      <li><span class="stg-step">{{a.stage}}</span><p class="stg-tx">{{a.treatment}}</p>{% if a.notes %}<p class="stg-notes">{{a.notes}}</p>{% endif %}</li>{% endfor %}
+    </ol>
+  </section>
+
+  {% if s.pitfalls %}
+  <section class="stg-box stg-pit" id="pitfalls"><h2>Board pitfalls</h2><ul>{% for p in s.pitfalls %}<li>{{p}}</li>{% endfor %}</ul></section>
+  {% endif %}
+
+  {% if s.drills %}
+  <section class="stg-box" id="drills">
+    <div class="stg-box-head"><h2>Stage this case</h2><span class="stg-count"><b id="drill-pos">1</b> / {{s.drills|length}} · score <b id="drill-score">0</b></span></div>
+    {% set letters = 'ABCDEFGH' %}
+    {% for d in s.drills %}
+    <div class="stg-drill" data-answer="{{d.answer}}" {% if not loop.first %}hidden{% endif %}>
+      <p class="stg-case">{{d.case}}</p>
+      <p class="stg-q">{{d.question}}</p>
+      <div class="stg-choices">{% for c in d.choices %}<button type="button" data-choice="{{loop.index0}}"><span class="stg-letter">{{letters[loop.index0]}}</span><span>{{c}}</span></button>{% endfor %}</div>
+      <div class="stg-expl" hidden><p class="stg-verdict"></p><p>{{d.explanation}}</p>
+        <button type="button" class="stg-next">{% if loop.last %}Start over{% else %}Next case →{% endif %}</button></div>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if s.sources %}
+  <section class="stg-box stg-src"><h2>Sources</h2><ul>{% for src in s.sources %}<li>{% if src[1] %}<a href="{{src[1]}}" target="_blank" rel="noopener">{{src[0]}}</a>{% else %}{{src[0]}}{% endif %}</li>{% endfor %}</ul></section>
+  {% endif %}
+
+  <nav class="stg-pager">
+    {% if prev_site %}<a href="/staging/{{prev_site.slug}}">← {{prev_site.name}}</a>{% else %}<span></span>{% endif %}
+    <a href="/staging">All sites</a>
+    {% if next_site %}<a href="/staging/{{next_site.slug}}">{{next_site.name}} →</a>{% else %}<span></span>{% endif %}
+  </nav>
+</article>
+</div>
+
+<script>
+(()=>{
+  const rm=document.getElementById('recall-mode'), tables=document.getElementById('tables');
+  if(rm){ rm.addEventListener('change',()=>{ tables.classList.toggle('recall',rm.checked); tables.querySelectorAll('.stg-def').forEach(td=>td.classList.remove('shown')); });
+    tables.addEventListener('click',e=>{ const td=e.target.closest('.stg-def'); if(td && tables.classList.contains('recall')) td.classList.toggle('shown'); }); }
+  const drills=[...document.querySelectorAll('.stg-drill')]; let score=0, idx=0;
+  const pos=document.getElementById('drill-pos'), sc=document.getElementById('drill-score');
+  drills.forEach((d,i)=>{
+    const btns=[...d.querySelectorAll('.stg-choices button')], ans=Number(d.dataset.answer), ex=d.querySelector('.stg-expl');
+    btns.forEach(b=>b.addEventListener('click',()=>{
+      if(d.classList.contains('done')) return; d.classList.add('done');
+      const ok=Number(b.dataset.choice)===ans; if(ok){score++; sc.textContent=score;}
+      btns.forEach(x=>x.disabled=true); btns[ans].classList.add('ok'); if(!ok) b.classList.add('no');
+      const v=ex.querySelector('.stg-verdict'); v.textContent=ok?'Correct.':'Not quite — the answer is '+String.fromCharCode(65+ans)+'.'; v.className='stg-verdict '+(ok?'ok':'no');
+      ex.hidden=false;
+    }));
+    d.querySelector('.stg-next').addEventListener('click',()=>{
+      d.hidden=true; idx=(i+1)%drills.length;
+      if(idx===0){ score=0; sc.textContent=0; drills.forEach(x=>{x.classList.remove('done'); x.querySelector('.stg-expl').hidden=true; x.querySelectorAll('button[data-choice]').forEach(b=>{b.disabled=false; b.classList.remove('ok','no');});}); }
+      drills[idx].hidden=false; pos.textContent=idx+1; drills[idx].scrollIntoView({behavior:'smooth',block:'nearest'});
+    });
+  });
+})();
+</script>
+{% endblock %}
