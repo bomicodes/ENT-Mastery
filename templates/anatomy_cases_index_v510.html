@@ -1,0 +1,21 @@
+{% if anatomy_case_groups_v510 is defined %}{% set groups = anatomy_case_groups_v510() %}{% if groups %}
+<link rel="stylesheet" href="{{ url_for('static', filename='anatomy_v510.css') }}?v=510">
+<section class="card ax-index">
+  <div class="ax-index-head">
+    <div><span class="ax-kicker">Anatomy by OR case</span><h2>Reviewing a case tomorrow? Start here.</h2>
+      <p>Each operation has a layer-by-layer anatomy walk-through, how to find every key structure, danger zones, variants, an imaging check and attending pimp questions.</p></div>
+    <input id="axSearch" placeholder="Find an operation… parotidectomy, mastoid, thyroid">
+  </div>
+  {% for region, items in groups %}
+  <div class="ax-index-region" data-axregion><h3>{{region}}</h3>
+    <div class="ax-index-list">{% for c in items %}<a href="/anatomy/case/{{c.slug}}" data-axq="{{(c.title ~ ' ' ~ (c.landmarks|map(attribute='structure')|join(' ')))|lower}}">{{c.title}}</a>{% endfor %}</div>
+  </div>
+  {% endfor %}
+</section>
+<div class="eyebrow ax-maps-label">REGIONAL SURGICAL MAPS</div>
+<script>
+(()=>{const s=document.getElementById('axSearch'); if(!s) return;
+ s.addEventListener('input',()=>{const t=s.value.toLowerCase().trim();
+  document.querySelectorAll('[data-axregion]').forEach(r=>{let any=false; r.querySelectorAll('a[data-axq]').forEach(a=>{const ok=!t||a.dataset.axq.includes(t); a.hidden=!ok; if(ok) any=true;}); r.hidden=!any;});});})();
+</script>
+{% endif %}{% endif %}

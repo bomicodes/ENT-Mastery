@@ -1,0 +1,73 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='anatomy_v510.css') }}?v=510">
+<div class="breadcrumb"><a href="/anatomy">Anatomy Atlas</a> / {{c.region}} / {{c.title}}</div>
+
+<article class="ax-page">
+  <header class="ax-head">
+    <span class="ax-kicker">Anatomy for the OR · {{c.region}}</span>
+    <h1>{{c.title}}</h1>
+    <p class="ax-summary">{{c.summary}}</p>
+    <div class="ax-actions">
+      {% if or_card %}<a class="ax-btn primary" href="/case-tomorrow?q={{or_card.title|urlencode}}">Open the OR Tomorrow card →</a>{% endif %}
+      <a class="ax-btn" href="#pimp">Quiz me first</a>
+    </div>
+    <nav class="ax-jump"><a href="#layers">Layer by layer</a><a href="#landmarks">Finding structures</a><a href="#danger">Danger zones</a>{% if c.variants %}<a href="#variants">Variants</a>{% endif %}{% if c.imaging_check %}<a href="#imaging">Imaging check</a>{% endif %}{% if c.pimp %}<a href="#pimp">Pimp questions</a>{% endif %}</nav>
+  </header>
+
+  <section class="ax-box" id="layers"><h2>Layer by layer, in operative order</h2>
+    <ol class="ax-layers">{% for l in c.layers %}
+      <li><span class="ax-n">{{loop.index}}</span><div><b>{{l.step}}</b>
+        {% if l.structures %}<div class="ax-chips">{% for s in l.structures %}<span>{{s}}</span>{% endfor %}</div>{% endif %}
+        {% if l.note %}<p>{{l.note}}</p>{% endif %}</div></li>{% endfor %}
+    </ol>
+  </section>
+
+  <section class="ax-box" id="landmarks"><h2>How to find the key structures</h2>
+    <div class="ax-table">{% for x in c.landmarks %}
+      <div class="ax-row"><b>{{x.structure}}</b><div><p>{{x.how_to_find}}</p>{% if x.why %}<small>{{x.why}}</small>{% endif %}</div></div>{% endfor %}
+    </div>
+  </section>
+
+  <section class="ax-box ax-danger" id="danger"><h2>Danger zones</h2>
+    <div class="ax-dgrid">{% for x in c.danger %}
+      <div class="ax-dcard"><b>{{x.structure}}</b>
+        {% if x.where %}<p><span>Where</span>{{x.where}}</p>{% endif %}
+        {% if x.protect %}<p><span>Protect</span>{{x.protect}}</p>{% endif %}
+        {% if x.injury %}<p><span>If injured</span>{{x.injury}}</p>{% endif %}</div>{% endfor %}
+    </div>
+  </section>
+
+  {% if c.blood_nerve %}
+  <section class="ax-box" id="supply"><h2>Blood and nerve supply</h2>
+    <div class="ax-table">{% for r in c.blood_nerve %}<div class="ax-row"><b>{{r[0]}}</b><div><p>{{r[1]}}</p></div></div>{% endfor %}</div>
+  </section>
+  {% endif %}
+
+  <div class="ax-two">
+  {% if c.variants %}<section class="ax-box" id="variants"><h2>Variants that change the case</h2><ul>{% for v in c.variants %}<li>{{v}}</li>{% endfor %}</ul></section>{% endif %}
+  {% if c.imaging_check %}<section class="ax-box" id="imaging"><h2>Check before you scrub</h2><ul>{% for v in c.imaging_check %}<li>{{v}}</li>{% endfor %}</ul></section>{% endif %}
+  </div>
+
+  {% if c.pimp %}
+  <section class="ax-box ax-pimp" id="pimp"><div class="ax-box-head"><h2>Pimp questions</h2><button type="button" class="ax-btn small" id="revealAll">Reveal all</button></div>
+    {% for p in c.pimp %}<details class="ax-q"><summary><span class="ax-n">{{loop.index}}</span>{{p.q}}</summary><p>{{p.a}}</p></details>{% endfor %}
+  </section>
+  {% endif %}
+
+  {% if maps %}
+  <section class="ax-box" id="maps"><h2>Related regional maps</h2>
+    <div class="ax-maps">{% for m in maps %}
+      <div class="ax-map">{% if m.image_url and m.anatomy_visual_status in ('verified_classical_plate','verified_open_access_photo') %}<img src="{{m.image_url}}" alt="{{m.topic}}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">{% elif m.legacy_schematic %}<img src="{{ url_for('static', filename=m.legacy_schematic) }}" alt="{{m.topic}} schematic" loading="lazy">{% endif %}
+        <b>{{m.topic}}</b><small>{{m.landmarks[:4]|join(' · ')}}</small>{% if m.image_credit %}<small class="ax-credit">{{m.image_credit}}</small>{% endif %}</div>{% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if c.sources %}<section class="ax-box ax-src"><h2>Sources</h2><ul>{% for s in c.sources %}<li>{% if s[1] %}<a href="{{s[1]}}" target="_blank" rel="noopener">{{s[0]}}</a>{% else %}{{s[0]}}{% endif %}</li>{% endfor %}</ul></section>{% endif %}
+
+  {% if region_cases %}<nav class="ax-more"><b>More {{c.region}} cases:</b> {% for x in region_cases %}<a href="/anatomy/case/{{x.slug}}">{{x.title}}</a>{% endfor %}</nav>{% endif %}
+</article>
+<script>
+document.getElementById('revealAll')?.addEventListener('click',e=>{const q=[...document.querySelectorAll('.ax-q')];const open=!q.every(d=>d.open);q.forEach(d=>d.open=open);e.target.textContent=open?'Hide all':'Reveal all';});
+</script>
+{% endblock %}

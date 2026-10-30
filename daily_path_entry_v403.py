@@ -17,6 +17,7 @@ from guideline_currency_v480 import install_guideline_currency_v480
 from clinical_challenge_vignettes_v490 import install_clinical_challenge_vignettes_v490
 from clinical_challenge_rewrites_v491 import install_clinical_challenge_rewrites_v491
 from staging_section_v500 import install_staging_v500
+from anatomy_section_v510 import install_anatomy_cases_v510
 
 TEXTBOOK_CURRICULUM_V470 = install_textbook_curriculum_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)
@@ -27,5 +28,6 @@ GUIDELINE_CURRENCY_V480 = install_guideline_currency_v480(production.runtime_ent
 VIGNETTES_V490 = install_clinical_challenge_vignettes_v490(production.runtime_entry.data, production.runtime_entry.app_mod)
 REWRITES_V491 = install_clinical_challenge_rewrites_v491(production.runtime_entry.data, production.runtime_entry.app_mod)
 STAGING_V500 = install_staging_v500(production.runtime_entry.data, app)
+ANATOMY_CASES_V510 = install_anatomy_cases_v510(production.runtime_entry.data, production.runtime_entry.app_mod, app)
 LEARNING_PATH_V470 = install_learning_path_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)
