@@ -40,7 +40,8 @@
 .ax-map img{width:100%;max-height:170px;object-fit:contain;background:#f6f8f8;border-radius:8px}
 .ax-map small{color:#5f7372;font-size:12.5px}.ax-credit{font-size:11px!important}
 .ax-src li{font-size:13px;color:#5f7372}.ax-src a{color:#08756d;text-decoration:underline}
-.ax-more{font-size:14px;line-height:2}.ax-more a{color:#08756d;font-weight:600;margin-right:14px;white-space:nowrap}
+.ax-more{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;line-height:1.6;max-width:100%}.ax-more b{flex-basis:100%}.ax-more a{color:#08756d;font-weight:600}
+.anatomy-card-actions{display:flex;flex-wrap:wrap;gap:8px}.anatomy-card-actions .button{max-width:100%;white-space:normal}
 .ax-index{margin:18px 0 26px;padding:22px 24px}
 .ax-index-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:flex-end;margin-bottom:8px}
 .ax-index-head h2{margin:4px 0 6px;font-size:22px}.ax-index-head p{margin:0;color:#5f7372;max-width:640px}
