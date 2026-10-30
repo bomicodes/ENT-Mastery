@@ -2923,14 +2923,8 @@ REWRITES = {'v11_end_01': {'stem': 'A 38-year-old woman notices a fullness in he
                                'Correct.'],
                  'board_pearl': 'Suspected thyroid lymphoma: core biopsy with flow cytometry for '
                                 'classification; thyroidectomy is not the treatment.',
-                 'curveball': 'She develops stridor while awaiting the core biopsy. What priorities now '
-                              'supersede the ideal diagnostic sequence?',
-                 'curveball_answer': 'Securing the airway comes first, with awake fiberoptic intubation or '
-                                     'another airway-preserving technique by an experienced team. Tissue '
-                                     'should still be obtained as soon as safely possible, ideally before '
-                                     'steroids, which can obscure lymphoma histology. If the airway is '
-                                     'immediately threatened, steroids may need to be given after a rapid '
-                                     'core biopsy rather than delayed.'},
+                 'curveball': 'She develops stridor while awaiting biopsy of the mass. What priorities now supersede the ideal diagnostic sequence?',
+                 'curveball_answer': 'A threatened airway now comes first: involve anesthesia early, plan an awake fiberoptic or other airway-preserving technique, and have a surgical-airway team ready because a bulky gland can make tracheostomy difficult. Obtain diagnostic tissue as soon as it is safe, ideally before steroids, which can obscure lymphoma histology; if the airway is deteriorating, give steroids after a rapid core biopsy rather than delaying them.'},
  'v141_tps_05': {'stem': 'A 70-year-old woman has core-biopsy-proven diffuse large B-cell lymphoma of the '
                          'thyroid. Over 3 days, she has developed dyspnea when lying flat and mild '
                          'inspiratory noise, though her oxygen saturation is 96% on room air. CT shows the '
