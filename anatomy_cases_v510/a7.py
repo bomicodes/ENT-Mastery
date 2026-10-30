@@ -18,11 +18,11 @@ CASES = {
     "note": "Close in layers; check hemostasis in the parapharyngeal space."}
   ],
   "landmarks": [
-   {"structure": "Styloid tip (transoral)", "how_to_find": "Palpable as a hard point in the lateral wall of the tonsillar fossa, often at or above the upper pole", "why": "Confirms the target and reproduces the patient's pain preoperatively"},
+   {"structure": "Styloid tip (transoral)", "how_to_find": "Palpable as a hard point in the lateral wall of the tonsillar fossa, usually toward the upper pole; a short tip-to-fossa distance on CT predicts a palpable tip", "why": "Confirms the target and reproduces the patient's pain preoperatively"},
    {"structure": "Styloid process (transcervical)", "how_to_find": "Deep to the posterior belly of digastric and stylohyoid; follow the stylohyoid superiorly to its origin on the process", "why": "The stylohyoid is the guide to the bone"},
    {"structure": "Facial nerve trunk", "how_to_find": "Exits the stylomastoid foramen just posterolateral to the styloid base, between the styloid and mastoid; crosses superficial (lateral) to the base", "why": "Defines the superior limit of dissection"},
    {"structure": "Internal carotid artery", "how_to_find": "Medial and posterior to the styloid in the poststyloid compartment; palpate pulsation before deep dissection", "why": "Main hazard medial to the process"},
-   {"structure": "External carotid artery", "how_to_find": "Lateral to the styloid and its muscles, between styloglossus and stylopharyngeus", "why": "Can be injured during lateral exposure"},
+   {"structure": "External carotid artery", "how_to_find": "Lateral (superficial) to the styloid tip; the styloglossus, stylopharyngeus and styloid tip separate it from the ICA medially", "why": "Can be injured during lateral exposure"},
    {"structure": "Glossopharyngeal nerve", "how_to_find": "Curves around the posterior border of the stylopharyngeus to enter the pharynx and tongue base", "why": "Traction or injury causes sensory and taste deficits"}
   ],
   "danger": [
@@ -59,6 +59,6 @@ CASES = {
    {"q": "What is the main advantage of the transcervical approach?", "a": "Wider exposure and vascular control, at the cost of a neck scar and marginal mandibular nerve risk"}
   ],
   "atlas_topics": [],
-  "sources": [["Cummings Otolaryngology 7e: parapharyngeal space anatomy and approaches", ""], ["K.J. Lee's Essential Otolaryngology 12e: Eagle syndrome", ""], ["Pasha & Golub, Otolaryngology Clinical Reference Guide 6e", ""]]
+  "sources": [["Cummings 7e, Ch 84 Benign Neoplasms of the Salivary Glands, p 1177: prestyloid/poststyloid compartments and carotid position", ""], ["Cummings 7e, Ch 119 Complications of Neck Surgery, p 1837: hypoglossal nerve medial to the posterior digastric and stylohyoid", ""], ["K.J. Lee 12e, Ch 1 Syndromes and Eponyms, p 12: Eagle syndrome", ""], ["Pasha & Golub 6e, Ch 6 Head and Neck Cancer, p 327: parapharyngeal space anatomy", ""], ["Hassani M, et al. PeerJ. 2024;12:e17423 (systematic review and meta-analysis of Eagle syndrome phenotypes and outcomes)", "https://doi.org/10.7717/peerj.17423"]]
  }
 }

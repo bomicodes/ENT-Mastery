@@ -18,10 +18,12 @@ v44.1 batch did, plus the pieces later layers expect every topic to carry:
   * Ten board-style vignettes in the v49.0 format, validated with the v49.0 rules
     (clinical_challenge_vignettes_v490.REQUIRED, four choices, int answer, four
     why_wrong entries, live concept_id).
-  * Literature references for the "Textbook references" panel (install_eagle_refs_v501,
-    called after the v47.2 cross-reference layer). No page-level textbook citations are
-    added: those come only from the reviewer CSVs in textbook_xref/corrections/, and the
-    Eagle pages have not been through that review.
+  * Literature references and page-level textbook citations for the "Textbook references"
+    panel (install_eagle_refs_v501, called after the v47.2 cross-reference layer). Eagle is
+    not keyed in the reviewer CSVs, so its page citations (TEXTBOOK_REFS_V501) are added
+    here. The v50.1 cross-reference read K.J. Lee 12e p 12 directly and reused confirmed
+    reviewer-CSV pages for the shared anatomy. The Cummings and Pasha PDFs could not be
+    text-searched, so no Eagle-specific passage from those books is claimed.
 
 install_eagle_topic_v501 must run before the v47 textbook/Daily Path installers (they
 index DEEP_MODULES_V6, the question bank and the OR map at install time).
@@ -39,11 +41,12 @@ OR_SLUG_V501 = "styloidectomy"
 BLIND_CASE_LABEL_V501 = "Chronic one-sided throat and ear pain worse with swallowing and head turning"
 
 SOURCE_BASIS_V501 = [
-    "Cummings Otolaryngology—Head and Neck Surgery, 7e (2021) — pharyngeal/neck pain differential, parapharyngeal and stylomastoid anatomy, and transoral/transcervical approaches to the parapharyngeal space.",
-    "K.J. Lee's Essential Otolaryngology, 12e (2019) — head and neck pain syndromes, cranial nerve IX/X referred otalgia, and pharyngeal-arch embryology.",
-    "Pasha & Golub, Otolaryngology—Head & Neck Surgery: Clinical Reference Guide, 6e (2022), General Otolaryngology chapter — facial/neck pain differential and parapharyngeal space anatomy.",
-    "Eagle WW. Elongated styloid processes: further observations and a new syndrome. Arch Otolaryngol. 1948;47:630-640.",
-    "Badhey A, et al. Eagle syndrome: a comprehensive review. Clin Neurol Neurosurg. 2017;159:34-38.",
+    "K.J. Lee's Essential Otolaryngology, 12e (2019), Ch 1 Syndromes and Eponyms, p 12 — Eagle syndrome entry (elongated styloid / ossified stylohyoid ligament irritating CN V, VII, IX and X; throat discomfort, foreign-body sensation, dysphagia, facial pain; carotid impingement; surgical shortening).",
+    "Cummings Otolaryngology—Head and Neck Surgery, 7e (2021) — prestyloid/poststyloid compartments (Ch 84, p 1177), CN IX referred otalgia (Ch 91, p 1294), Arnold nerve otalgia (Ch 110, p 1680), hypoglossal nerve medial to the posterior digastric and stylohyoid (Ch 119, p 1837). Cummings has no Eagle-specific passage confirmed in this review.",
+    "Pasha & Golub, Otolaryngology—Head & Neck Surgery: Clinical Reference Guide, 6e (2022), Ch 6 Head and Neck Cancer, p 327 — parapharyngeal space anatomy. No Eagle-specific passage confirmed in this review.",
+    "Eagle WW. Elongated styloid process: further observations and a new syndrome. Arch Otolaryngol. 1948;47(5):630-640. doi:10.1001/archotol.1948.00690030654006.",
+    "Badhey A, Jategaonkar A, Anglin Kovacs AJ, et al. Eagle syndrome: a comprehensive review. Clin Neurol Neurosurg. 2017;159:34-38. PMID 28527976.",
+    "Hassani M, Grønlund EW, Albrechtsen SS, Kondziella D. Neurological phenotypes and treatment outcomes in Eagle syndrome: systematic review and meta-analysis. PeerJ. 2024;12:e17423. doi:10.7717/peerj.17423.",
 ]
 
 DEEP_ENTRY_V501 = {
@@ -63,8 +66,11 @@ DEEP_ENTRY_V501 = {
         "from Reichert cartilage of the second pharyngeal arch, so the complex can ossify along any part of "
         "its length. **Normal anatomy**: the styloid projects anteroinferiorly and medially from the "
         "undersurface of the temporal bone, just anteromedial to the stylomastoid foramen. Normal length is "
-        "usually quoted as about 20-30 mm (Eagle used 25 mm); a process longer than about 25-30 mm is "
-        "commonly called elongated, but the threshold varies between studies and measurement methods. "
+        "usually quoted as about 20-30 mm (Eagle's often-cited normal is about 25 mm); a process longer than "
+        "about 25-30 mm is commonly called elongated, but the threshold varies between studies and "
+        "measurement methods. **Prevalence**: elongation is classically quoted in about 4% of the population, "
+        "and only a small minority of those (classically about 4%) have symptoms. These figures are old and "
+        "contested, and imaging series report much wider ranges depending on method and cutoff. "
         "**Attachments**: three muscles (styloglossus, CN XII; stylohyoid, CN VII; stylopharyngeus, the only "
         "muscle supplied by CN IX) and two ligaments (stylohyoid to the lesser hyoid cornu; stylomandibular "
         "to the mandibular angle). **Relations**: the styloid and its fascia divide the parapharyngeal space "
@@ -96,8 +102,9 @@ DEEP_ENTRY_V501 = {
         "headache, pulsatile tinnitus and intracranial hypertension in case series."
     ),
     "recognize": (
-        "**Classic (stylohyoid) type**: usually an adult, more often reported in women in their 30s to 50s, "
-        "with persistent unilateral dull throat or tonsillar fossa pain, foreign-body sensation, dysphagia "
+        "**Classic (stylohyoid) type**: usually an adult in the 30s to 50s. Older series report a female "
+        "predominance, but a 2024 meta-analysis of 497 reported patients found about half were women "
+        "overall, with the vascular type about 70% male. The classic patient has persistent unilateral dull throat or tonsillar fossa pain, foreign-body sensation, dysphagia "
         "or odynophagia and referred otalgia. Symptoms are worse with swallowing, yawning, tongue movement "
         "or head rotation. Many patients had a tonsillectomy, sometimes years earlier. **Vascular "
         "(stylocarotid) type**: often no tonsillectomy history, with neck pain along the carotid, pain "
@@ -136,8 +143,10 @@ DEEP_ENTRY_V501 = {
         "cervical artery dissection, myofascial and cervical spine pain, odontogenic pain, hyoid bone "
         "syndrome, Ernest (stylomandibular ligament) syndrome, giant cell arteritis in older patients, "
         "chronic tonsillitis, and oropharyngeal or tongue-base malignancy. **Contested**: length correlates "
-        "poorly with symptoms. Studies report wide overlap between symptomatic and asymptomatic patients, "
-        "so a number alone never makes the diagnosis."
+        "poorly with symptoms. In one 3D CT study, mean length was 48 mm in Eagle syndrome and about 40 mm in "
+        "both glossopharyngeal neuralgia and asymptomatic controls, a nonsignificant difference. The "
+        "tip-to-tonsillar-fossa distance was shorter in Eagle syndrome (about 13 mm versus 21-25 mm). A "
+        "length number alone never makes the diagnosis."
     ),
     "manage": (
         "**Incidental elongation without symptoms**: no treatment; reassure. **Classic type, mild to "
@@ -147,15 +156,21 @@ DEEP_ENTRY_V501 = {
         "tonsillar fossa at the styloid tip. Injection is diagnostic and therapeutic, but relief is often "
         "temporary. Evidence for all medical options is low-level (case series). Historical manual "
         "transpharyngeal fracture of the styloid is not recommended because the fragments and great vessels "
-        "are uncontrolled. **Refractory or severe classic type**: partial styloidectomy, which most series "
-        "report improves symptoms in the large majority of carefully selected patients. **Vascular "
-        "type**: treat as a neurovascular problem. Manage dissection with antithrombotic therapy alongside "
-        "stroke neurology (antiplatelet versus anticoagulant choice follows cervical dissection practice), "
-        "and remove the compressive styloid, usually transcervically. Endovascular stenting alone has been "
-        "complicated by stent compression or fracture from the persisting styloid. The timing of "
-        "styloidectomy relative to the acute dissection is contested and individualized. **Contested**: "
-        "whether a positive lidocaine test predicts surgical success, and how long to persist with medical "
-        "therapy before surgery."
+        "are uncontrolled. **Refractory or severe classic type**: partial styloidectomy. In a 2024 "
+        "meta-analysis of published cases, surgery improved or resolved symptoms in about 98% of patients "
+        "versus about 66% with medical treatment. That evidence is case reports and series with publication "
+        "bias. **Vascular type**: treat as a neurovascular problem. Manage dissection with antithrombotic "
+        "therapy alongside stroke neurology (antiplatelet versus anticoagulant choice follows cervical "
+        "dissection practice), and remove the compressive styloid, usually transcervically. In a 2025 "
+        "systematic review of vascular complications, initial styloidectomy cured about 79% with about 3% "
+        "recurrence, while medical treatment alone cured about 25% with about 47% recurrence. Carotid "
+        "stents left against a persisting styloid have deformed, fractured or fragmented. Some vascular "
+        "series stent the ICA first and then remove the styloid. The timing of styloidectomy relative to "
+        "the acute dissection, and whether to stent first, are contested and individualized. "
+        "**Contested**: K.J. Lee calls surgical shortening the only effective treatment, while "
+        "medical-therapy series report benefit in a majority of patients. Also contested are whether a "
+        "positive lidocaine test predicts surgical success and how long to persist with medical therapy "
+        "before surgery."
     ),
     "operate": (
         "**Goal**: shorten the styloid (partial styloidectomy) and release the attached ligament and "
@@ -181,7 +196,9 @@ DEEP_ENTRY_V501 = {
         "taste change, hoarseness), parapharyngeal or deep neck infection (especially transoral), trismus, "
         "and persistent or recurrent pain from incomplete resection or a wrong diagnosis. **Contested**: "
         "whether transoral or transcervical gives better long-term relief. Comparative data are small "
-        "retrospective series without consistent superiority."
+        "retrospective series without consistent superiority; for example, one 8-patient series (4 transoral, "
+        "4 transcervical) reported similar relief. In pooled case reports, classic cases were mostly operated "
+        "transorally and vascular cases mostly transcervically, which confounds any head-to-head comparison."
     ),
     "teach": (
         "Boards/chief framework: unilateral throat pain + otalgia + pain on swallowing or head turning + a "
@@ -210,13 +227,33 @@ DEEP_ENTRY_V501 = {
 
 LITERATURE_REFS_V501 = [
     "No society clinical practice guideline exists for Eagle syndrome; recommendations rest on case series and reviews.",
-    "Eagle WW. Elongated styloid process: report of two cases. Arch Otolaryngol. 1937;25:584-587.",
-    "Eagle WW. Elongated styloid processes: further observations and a new syndrome. Arch Otolaryngol. 1948;47:630-640.",
-    "Langlais RP, Miles DA, Van Dis ML. Elongation and mineralization of the stylohyoid ligament complex: a proposed classification and report of a case of Eagle's syndrome. Oral Surg Oral Med Oral Pathol. 1986;61:527-532.",
-    "Kent DT, Rath TJ, Snyderman C. Conventional and 3-dimensional computerized tomography in Eagle's syndrome, glossopharyngeal neuralgia, and asymptomatic controls. Otolaryngol Head Neck Surg. 2015;153:41-47.",
-    "Raser JM, Mullen MT, Kasner SE, Cucchiara BL, Messé SR. Cervical carotid artery dissection is associated with styloid process length. Neurology. 2011;77:2061-2066.",
-    "Müderris T, Bercin S, Sevil E, Beton S, Kırış M. Surgical management of elongated styloid process: intraoral or transcervical? Eur Arch Otorhinolaryngol. 2014;271:1709-1713.",
-    "Badhey A, Jategaonkar A, Anglin Kovacs AJ, et al. Eagle syndrome: a comprehensive review. Clin Neurol Neurosurg. 2017;159:34-38.",
+    "Eagle WW. Elongated styloid processes: report of two cases. Arch Otolaryngol. 1937;25(5):584-587. doi:10.1001/archotol.1937.00650010656008.",
+    "Eagle WW. Elongated styloid process: further observations and a new syndrome. Arch Otolaryngol. 1948;47(5):630-640. doi:10.1001/archotol.1948.00690030654006.",
+    "Langlais RP, Miles DA, Van Dis ML. Elongated and mineralized stylohyoid ligament complex: a proposed classification and report of a case of Eagle's syndrome. Oral Surg Oral Med Oral Pathol. 1986;61(5):527-532. doi:10.1016/0030-4220(86)90400-7. PMID 3459129.",
+    "Kent DT, Rath TJ, Snyderman C. Conventional and 3-dimensional computerized tomography in Eagle's syndrome, glossopharyngeal neuralgia, and asymptomatic controls. Otolaryngol Head Neck Surg. 2015;153(1):41-47. doi:10.1177/0194599815583047. PMID 25917666.",
+    "Raser JM, Mullen MT, Kasner SE, Cucchiara BL, Messé SR. Cervical carotid artery dissection is associated with styloid process length. Neurology. 2011;77:2061-2066. doi:10.1212/WNL.0b013e31823b4729. PMID 22116948.",
+    "Müderris T, Bercin S, Sevil E, Beton S, Kırış M. Surgical management of elongated styloid process: intraoral or transcervical? Eur Arch Otorhinolaryngol. 2014;271(6):1709-1713. doi:10.1007/s00405-013-2664-0. PMID 23982667.",
+    "Badhey A, Jategaonkar A, Anglin Kovacs AJ, Kadakia S, De Deyn PP, Ducic Y, Schantz S, Shin E. Eagle syndrome: a comprehensive review. Clin Neurol Neurosurg. 2017;159:34-38. PMID 28527976.",
+    "Hassani M, Grønlund EW, Albrechtsen SS, Kondziella D. Neurological phenotypes and treatment outcomes in Eagle syndrome: systematic review and meta-analysis. PeerJ. 2024;12:e17423. doi:10.7717/peerj.17423.",
+    "Thielen A, Brizzi V, Majoufre C, et al. Eagle syndrome and vascular complications: a systematic review. Int J Oral Maxillofac Surg. 2025;54(1):31-42. doi:10.1016/j.ijom.2024.09.011. PMID 39406633.",
+    "Pagano S, Ricciuti V, Mancini F, et al. Eagle syndrome: an updated review. Surg Neurol Int. 2023. doi:10.25259/SNI_666_2023.",
+    "Kumono T, Tanaka T, Naito T, Matsuno A. Eagle syndrome as a delayed vascular complication: carotid stent deformation after stenting for high cervical stenosis. Cureus. 2025. doi:10.7759/cureus.85205.",
+]
+
+# Page-level textbook citations for the "Textbook references" panel. Eagle is not in
+# pathophys_v470/, so it has no reviewer-CSV key; these are added by install_eagle_refs_v501.
+#   * K.J. Lee 12e p 12 was read directly in this review (the Eagle syndrome entry).
+#   * The others come from the v47.2 reviewer CSVs (textbook_xref/corrections/), whose quoted
+#     excerpts support the general anatomy these Eagle sections rely on: compartments, CN IX/X
+#     referred otalgia, the hypoglossal course and malignancy presenting with referred otalgia.
+TEXTBOOK_REFS_V501 = [
+    "Cummings 7e, Ch 84 Benign Neoplasms of the Salivary Glands, p 1177",
+    "Cummings 7e, Ch 91 Malignant Neoplasms of the Oral Cavity, p 1294",
+    "Cummings 7e, Ch 110 Radiation Therapy for Cancer of the Larynx and Hypopharynx, p 1680",
+    "Cummings 7e, Ch 119 Complications of Neck Surgery, p 1837",
+    "Pasha & Golub 6e, Ch 6 Head and Neck Cancer, p 327",
+    "K.J. Lee 12e, Ch 1 Syndromes and Eponyms, p 12",
+    "K.J. Lee 12e, Ch 45 Tumors of the Oral Cavity, Pharynx, and Esophagus, p 826",
 ]
 
 # --------------------------------------------------------------------------
@@ -288,8 +325,9 @@ CONCEPT_CHECKS_V501 = [
             "The dissection is managed like any cervical artery dissection, with antithrombotic therapy "
             "under stroke neurology. The compressive styloid is then removed, usually transcervically, "
             "because that approach gives proximal and distal vascular control and better exposure of a long, "
-            "medially angulated process. The exact timing of surgery relative to the acute dissection is "
-            "individualized and contested."
+            "medially angulated process. Some vascular series stent the ICA first and then remove the styloid. "
+            "Stenting without styloidectomy risks stent deformation or fracture. The exact timing of surgery "
+            "relative to the acute dissection is individualized and contested."
         ),
         "why_wrong": [
             "The transoral route gives no vascular control next to an injured ICA, and withholding antithrombotic therapy in a symptomatic dissection increases stroke risk.",
@@ -342,7 +380,7 @@ LADDER_V501 = [
         ),
         "why_wrong": [
             "Joint tenderness and clicking point to a temporomandibular disorder, one of the main mimics.",
-            "A pulsatile bifurcation mass suggests a carotid body tumor or carotidynia, not a styloid source.",
+            "A pulsatile bifurcation mass suggests a carotid body tumor or carotid aneurysm (carotidynia gives tenderness without a mass); neither points to a styloid source.",
             "Correct.",
             "Brief pain triggered by light touch in V2 territory is trigeminal neuralgia.",
         ],
@@ -484,7 +522,7 @@ VIGNETTES_V501 = [
                     'whole stylohyoid chain is one embryologic unit, ossification can occur anywhere along it. That '
                     'explains elongated, pseudoarticulated and segmented patterns on imaging (Langlais types I-III).',
      'why_wrong': ['The greater cornu and lower hyoid body come from the third arch.',
-                   'The thyroid cartilage derives from the fourth and sixth arches.',
+                   'The thyroid cartilage derives from the fourth arch (the laryngeal cartilages as a group come from the fourth and sixth arches).',
                    'Correct.',
                    'The malleus head and incus body come from Meckel cartilage of the first arch.'],
      'board_pearl': 'Second arch (Reichert): stapes, styloid, stylohyoid ligament, lesser hyoid cornu. Its nerve is CN '
@@ -576,8 +614,8 @@ VIGNETTES_V501 = [
                   'respond?',
      'curveball_answer': 'Length thresholds are not fixed. Many studies use about 25 mm and others about 30 mm, '
                          'measurement methods differ, and CT studies show wide overlap between symptomatic and '
-                         'asymptomatic people. Angulation and the relation of the tip to the tonsillar fossa or vessels '
-                         'can matter as much as length. The diagnosis rests on symptoms, a reproducing exam and exclusion '
+                         'asymptomatic people; in one 3D CT study, asymptomatic controls averaged about 40 mm. Angulation '
+                         'and the distance from the tip to the tonsillar fossa or vessels can matter as much as length. The diagnosis rests on symptoms, a reproducing exam and exclusion '
                          'of mimics.',
      'learning_stage': 'application', 'focus': 'imaging'},
 
@@ -731,11 +769,13 @@ VIGNETTES_V501 = [
 # OR card (same shape as bucket6_data_hygiene_v442.NEW_OR_PREP_ENTRIES_V442)
 # --------------------------------------------------------------------------
 _OR_SOURCES_V501 = [
-    "Cummings Otolaryngology—Head and Neck Surgery, 7th ed. — parapharyngeal space anatomy, transoral and transcervical approaches, and lower cranial nerve relations.",
-    "K. J. Lee's Essential Otolaryngology, 12th ed. — head and neck pain syndromes and parapharyngeal anatomy.",
-    "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6th ed. — General Otolaryngology chapter.",
-    "Müderris T, et al. Surgical management of elongated styloid process: intraoral or transcervical? Eur Arch Otorhinolaryngol. 2014;271:1709-1713.",
-    "Badhey A, et al. Eagle syndrome: a comprehensive review. Clin Neurol Neurosurg. 2017;159:34-38.",
+    "Cummings Otolaryngology—Head and Neck Surgery, 7th ed. — Ch 84 p 1177 (prestyloid/poststyloid compartments and carotid position); Ch 119 p 1837 (hypoglossal nerve medial to the posterior digastric and stylohyoid).",
+    "K. J. Lee's Essential Otolaryngology, 12th ed. — Ch 1 Syndromes and Eponyms, p 12 (Eagle syndrome; surgical shortening of the styloid).",
+    "Pasha & Golub, Otolaryngology—Head and Neck Surgery Clinical Reference Guide, 6th ed. — Ch 6 Head and Neck Cancer, p 327 (parapharyngeal space anatomy).",
+    "Müderris T, et al. Surgical management of elongated styloid process: intraoral or transcervical? Eur Arch Otorhinolaryngol. 2014;271(6):1709-1713. doi:10.1007/s00405-013-2664-0.",
+    "Badhey A, et al. Eagle syndrome: a comprehensive review. Clin Neurol Neurosurg. 2017;159:34-38. PMID 28527976.",
+    "Hassani M, et al. Neurological phenotypes and treatment outcomes in Eagle syndrome: systematic review and meta-analysis. PeerJ. 2024;12:e17423. doi:10.7717/peerj.17423.",
+    "Thielen A, et al. Eagle syndrome and vascular complications: a systematic review. Int J Oral Maxillofac Surg. 2025;54(1):31-42. doi:10.1016/j.ijom.2024.09.011.",
 ]
 
 OR_CARD_V501 = {
@@ -947,4 +987,12 @@ def install_eagle_refs_v501(data):
     if not isinstance(lit, dict):
         raise RuntimeError("v50.1 Eagle refs: v47.2 cross-reference layer has not run")
     lit.setdefault(TOPIC_V501, list(LITERATURE_REFS_V501))
-    return {"literature_refs": len(lit[TOPIC_V501])}
+    books = getattr(data, "TEXTBOOK_REFS_V472", None)
+    if not isinstance(books, dict):
+        raise RuntimeError("v50.1 Eagle refs: v47.2 textbook citations are missing")
+    # Mutate the shared dict in place: the textbook_refs_v472 Jinja global closes over it.
+    lst = books.setdefault(TOPIC_V501, [])
+    for label in TEXTBOOK_REFS_V501:
+        if label not in lst:
+            lst.append(label)
+    return {"literature_refs": len(lit[TOPIC_V501]), "textbook_refs": len(lst)}
