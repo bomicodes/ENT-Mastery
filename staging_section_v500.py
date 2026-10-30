@@ -61,8 +61,20 @@ def install_staging_v500(data, app):
                                next_site=sites[i + 1] if i + 1 < len(sites) else None)
 
     if "staging_index_v500" not in app.view_functions:
-        app.add_url_rule("/staging", "staging_index_v500", staging_index)
-        app.add_url_rule("/staging/<slug>", "staging_site_v500", staging_site)
+        # Audits import this entrypoint after another module has already served a test request;
+        # Flask then refuses new rules. Production installs at import time, before any request.
+        served = getattr(app, "_got_first_request", False)
+        if served:
+            app._got_first_request = False
+        try:
+            app.add_url_rule("/staging", "staging_index_v500", staging_index)
+            app.add_url_rule("/staging/<slug>", "staging_site_v500", staging_site)
+        finally:
+            if served:
+                app._got_first_request = True
+    else:
+        app.view_functions["staging_index_v500"] = staging_index
+        app.view_functions["staging_site_v500"] = staging_site
     result = {"sites": len(sites), "rejected": rejected, "drills": sum(len(s["drills"]) for s in sites)}
     data.STAGING_V500 = result
     return result
