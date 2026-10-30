@@ -43,7 +43,7 @@ overview=(
 "Many small abscesses respond to IV antibiotics, while larger ones and airway compromise need drainage."),
 physiology=(
 "**Retropharyngeal nodes**: prominent in young children and involute by about age 5, which explains the age distribution of retropharyngeal abscess. "
-"**Fascial spaces**: the retropharyngeal space (between buccopharyngeal and alar fascia, ending at about T2) and the danger space (behind the alar fascia, extending to the diaphragm). "
+"**Fascial spaces**: the retropharyngeal space (between buccopharyngeal and alar fascia, ending in the upper mediastinum at about T2-T4, depending on the source) and the danger space (behind the alar fascia, extending to the diaphragm). "
 "**Lymphatic drainage**: the nasopharynx, adenoids, sinuses, and middle ear drain to retropharyngeal nodes. "
 "**Airway size**: the small pediatric airway tolerates little edema or mass effect."),
 pathophysiology=(
