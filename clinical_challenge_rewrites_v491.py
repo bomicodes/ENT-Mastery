@@ -24,7 +24,8 @@ def _valid(r):
 def _load():
     import rewrites_v491
     out, audited = {}, set()
-    for info in sorted(pkgutil.iter_modules(rewrites_v491.__path__), key=lambda i: i.name):
+    # lk* (locked, audit-verified) batches load last so they override older drafts of the same ids.
+    for info in sorted(pkgutil.iter_modules(rewrites_v491.__path__), key=lambda i: (i.name.startswith("lk"), i.name)):
         mod = importlib.import_module("rewrites_v491." + info.name)
         batch = getattr(mod, "REWRITES", {})
         out.update(batch)
