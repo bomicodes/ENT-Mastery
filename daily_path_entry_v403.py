@@ -2,6 +2,13 @@
 import runtime_entry_pasha as production
 from daily_path_integrity_v403 import install
 
+# v50.1: new canonical topic (Eagle Syndrome). Installed first so the v40.3 text
+# cleanup, the v47 textbook/OR-map validation, v49 bank indexing and the Daily Path
+# index all see it as an ordinary topic.
+from new_topic_eagle_v501 import install_eagle_topic_v501, install_eagle_refs_v501
+EAGLE_TOPIC_V501 = install_eagle_topic_v501(production.runtime_entry.data,
+                                            production.runtime_entry.app_mod)
+
 DAILY_PATH_INTEGRITY_V403 = install(production.runtime_entry.data,
                                     production.runtime_entry.app_mod)
 app = production.app
@@ -17,15 +24,20 @@ from guideline_currency_v480 import install_guideline_currency_v480
 from clinical_challenge_vignettes_v490 import install_clinical_challenge_vignettes_v490
 from clinical_challenge_rewrites_v491 import install_clinical_challenge_rewrites_v491
 from staging_section_v500 import install_staging_v500
+from anatomy_section_v510 import install_anatomy_cases_v510
+from or_card_fixes_v511 import install_or_card_fixes_v511
 
 TEXTBOOK_CURRICULUM_V470 = install_textbook_curriculum_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)
 # v47.1: replace the 309 templated Concept Checks before the Daily Path indexes them.
 CONCEPT_CHECKS_V471 = install_concept_checks_v471(production.runtime_entry.data)
 TEXTBOOK_XREF_V472 = install_textbook_refs_v472(production.runtime_entry.data, app)
+EAGLE_REFS_V501 = install_eagle_refs_v501(production.runtime_entry.data)
 GUIDELINE_CURRENCY_V480 = install_guideline_currency_v480(production.runtime_entry.data)
 VIGNETTES_V490 = install_clinical_challenge_vignettes_v490(production.runtime_entry.data, production.runtime_entry.app_mod)
 REWRITES_V491 = install_clinical_challenge_rewrites_v491(production.runtime_entry.data, production.runtime_entry.app_mod)
 STAGING_V500 = install_staging_v500(production.runtime_entry.data, app)
+ANATOMY_CASES_V510 = install_anatomy_cases_v510(production.runtime_entry.data, production.runtime_entry.app_mod, app)
+OR_CARD_FIXES_V511 = install_or_card_fixes_v511(production.runtime_entry.data)
 LEARNING_PATH_V470 = install_learning_path_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)

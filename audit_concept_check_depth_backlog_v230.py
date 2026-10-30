@@ -21,7 +21,7 @@ def main():
     report["residual_candidates"] = [x for x in report.get("residual_candidates") or [] if str(x.get("id") or "") not in targets]
     report["untouched_candidate_count"] = len(report["candidates"])
     report["residual_candidate_count"] = len(report["residual_candidates"])
-    if report.get("canonical_count") != 356:
+    if report.get("canonical_count") != 357:
         failures.append("canonical_contract_changed:" + str(report.get("canonical_count")))
     for qid in QIDS:
         if any(str(x.get("id") or "") == qid for x in report["candidates"]):

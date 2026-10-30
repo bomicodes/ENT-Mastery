@@ -33,7 +33,7 @@ def main():
             failures.append("deepened_target_still_in_residual_queue:" + qid)
 
     canonical = report.get("canonical_count")
-    if canonical != 356:
+    if canonical != 357:
         failures.append("canonical_contract_changed:" + str(canonical))
 
     report["discovered_depth_markers"] = markers

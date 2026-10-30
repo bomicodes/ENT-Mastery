@@ -11,6 +11,8 @@ import pkgutil
 FIELDS = ("stem", "choices", "answer", "explanation", "why_wrong", "board_pearl", "curveball", "curveball_answer")
 # Questions whose curated wording a release audit pins verbatim (ids referenced in audit_*.py); left untouched.
 SKIP_IDS = set(["v113-oto-02", "v11_fprs_05", "v124_ped_06", "v128_hn_03", "v128_lar_01", "v128_lar_03", "v136_oto_13", "v136_rhi_04", "v136_rhi_17", "v136_rhi_21", "v136_rhi_23", "v136_rhi_26", "v137_fpt_10", "v137_tps_05", "v137_tps_08", "v138_hn_02", "v138_hn_08", "v138_hn_24", "v139_gen_10", "v140_gen_10", "v140_ped_06", "v141_slp_06", "v142_rhi_04", "v143_hno_01", "v143_lar_04", "v143_rhi_03", "v144_oto_22", "v144_rh_17", "v144_rh_21", "v145_hn_02", "v145_lar_16", "v147_fp_14", "v152_ped_01", "v154_hn_app", "v154_hn_fnd", "v206_rhi_max_app", "v207_rhi_frontal_snr", "v208_rhi_pedscrs_snr", "v209_rhi_revision_snr", "v209_rhi_sphenoid_snr", "v212_rhi_ar_found", "v212_rhi_lar_app", "v212_rhi_lar_snr", "v219_hn_neck_app", "v219_hn_neck_snr", "v219_hn_tongue_app", "v219_hn_tongue_fnd", "v219_hn_tongue_snr", "v220_hn_bot_snr", "v220_hn_fom_fnd", "v220_hn_glottic_snr", "v220_hn_supra_app", "v220_hn_supra_fnd", "v220_hn_supra_snr", "v220_hn_tonsil_snr", "v222_hn_tep_fnd", "v222_hn_tep_snr", "v225_hn_salv_postcrt_app", "v231_hn_neckcomp_app", "v231_hn_neckcomp_fnd", "v231_hn_neckcomp_snr", "v231_hn_nfl_app", "v231_hn_nfl_fnd", "v231_hn_nfl_snr", "v235_tps_indet_fnd", "v236_tps_ptca_fnd", "v242_ped_ear_app", "v242_ped_ear_snr", "v243_ped_sgh_snr", "v243_ped_tm_fnd", "v245_ped_hl_app", "v246_ped_cranio_fnd", "v252_lar_mtd_snr", "v254_lar_nodule_app", "v254_lar_nodule_fnd", "v254_lar_polycyst_fnd", "v254_lar_polycyst_snr", "v256_lar_rad_dys_app", "v256_lar_rad_dys_fnd", "v256_lar_rad_dys_snr", "v258_fpt_frontal_app", "v258_fpt_frontal_fnd", "v258_fpt_frontal_snr", "v258_fpt_noe_app", "v262_fpt_otoplasty_fnd", "v267_sleep_ds_snr", "v269_gen_afb_app", "v295_fpt_frontal_outflow_mgt", "v299_sleep_peds_psg_mgt", "v416_rhi_csf_oncall_disposition"])
+# Groups an audit pins by id prefix (audit_rhinology_v209 checks the v208_rhi_ batch's answer positions).
+SKIP_PREFIXES = ("v208_rhi_",)
 
 
 def _valid(r):
@@ -41,7 +43,7 @@ def install_clinical_challenge_rewrites_v491(data, app_mod=None):
                     targets.setdefault(qid, []).append(q)
     applied, rejected, missing = [], [], []
     for qid, r in rewrites.items():
-        if qid in SKIP_IDS:
+        if qid in SKIP_IDS or str(qid).startswith(SKIP_PREFIXES):
             continue
         if not _valid(r):
             rejected.append(qid)

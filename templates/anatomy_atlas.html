@@ -2,6 +2,7 @@
 <div class="eyebrow">SURGICAL ANATOMY ATLAS</div>
 <h1>Know where you are before you operate.</h1>
 <p class="lede">Use each module as a pre-op orientation exercise. Images are shown only when the source actually matches the anatomy; otherwise the module stays text-first rather than displaying a misleading placeholder.</p>
+{% include "anatomy_cases_index_v510.html" ignore missing %}
 
 <div class="card anatomy-howto">
   <div>
@@ -105,6 +106,7 @@
         <a class="button secondary anatomy-or-link" href="/case-tomorrow?q={{x.or_link|urlencode}}">
           See this in OR Tomorrow →
         </a>
+        {% if anatomy_cases_for_map_v510 is defined %}{% for c in anatomy_cases_for_map_v510(x.topic)[:4] %}<a class="button secondary" href="/anatomy/case/{{c.slug}}">{{c.title}} anatomy →</a>{% endfor %}{% endif %}
       </div>
     </article>
   {% endfor %}
