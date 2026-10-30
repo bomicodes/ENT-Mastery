@@ -23,15 +23,18 @@ def _valid(r):
 
 def _load():
     import rewrites_v491
-    out = {}
+    out, audited = {}, set()
     for info in sorted(pkgutil.iter_modules(rewrites_v491.__path__), key=lambda i: i.name):
         mod = importlib.import_module("rewrites_v491." + info.name)
-        out.update(getattr(mod, "REWRITES", {}))
-    return out
+        batch = getattr(mod, "REWRITES", {})
+        out.update(batch)
+        if info.name.startswith("lk"):  # v49.3: locked questions rewritten together with their audits
+            audited.update(batch)
+    return out, audited
 
 
 def install_clinical_challenge_rewrites_v491(data, app_mod=None):
-    rewrites = _load()
+    rewrites, audited = _load()
     by_id = getattr(data, "CLINICAL_CHALLENGE_BY_ID_V119", None)
     targets = {}
     for q in data.CLINICAL_CHALLENGES_V119:
@@ -43,7 +46,7 @@ def install_clinical_challenge_rewrites_v491(data, app_mod=None):
                     targets.setdefault(qid, []).append(q)
     applied, rejected, missing = [], [], []
     for qid, r in rewrites.items():
-        if qid in SKIP_IDS or str(qid).startswith(SKIP_PREFIXES):
+        if qid not in audited and (qid in SKIP_IDS or str(qid).startswith(SKIP_PREFIXES)):
             continue
         if not _valid(r):
             rejected.append(qid)
