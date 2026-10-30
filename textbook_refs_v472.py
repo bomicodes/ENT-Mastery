@@ -11,7 +11,8 @@ import csv, glob, os, sys
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _XREF = os.path.join(_HERE, "textbook_xref")
 SHORT = {"Cummings": "Cummings 7e", "Pasha": "Pasha & Golub 6e", "K.J.": "K.J. Lee 12e",
-         "Bluestone": "Bluestone & Stool 5e"}
+         "Bluestone": "Bluestone & Stool 5e", "Simo": "Atlas of Head and Neck Surgery (Simo, Pracy & Fernandes 2024)",
+         "Janfaza": "Janfaza, Surgical Anatomy of the Head and Neck 1e"}
 
 
 def _short(book):

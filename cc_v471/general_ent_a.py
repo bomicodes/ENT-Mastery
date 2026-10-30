@@ -13,11 +13,11 @@ CHECKS = [
 ("Deep Neck Space Infection",
  "A 45-year-old with a lower molar infection develops neck swelling and fever. CT shows an abscess in the retropharyngeal space extending below the level of T4 into the posterior mediastinum. Which fascial pathway allowed this spread?",
  "The danger space behind the alar fascia",
- [("The carotid sheath to the aortic arch", "The carotid sheath can carry infection, but posterior mediastinal spread below T2 follows the danger space."),
+ [("The carotid sheath to the aortic arch", "The carotid sheath can carry infection, but posterior mediastinal spread below the upper mediastinum (about T2-T4) follows the danger space."),
   ("The pretracheal space to the anterior chest", "Pretracheal spread reaches the anterior mediastinum, not the posterior mediastinum."),
   ("The submandibular space directly to the pleura", "There is no direct path from the submandibular space to the pleura.")],
  "The retropharyngeal space ends in the upper mediastinum (about T2-T4 depending on the source) where the alar and visceral fascia fuse. The danger space, between alar and prevertebral fascia, extends to the diaphragm, letting infection reach the posterior mediastinum. Mediastinitis needs urgent drainage.",
- "Retropharyngeal infection below T2 = danger space = mediastinitis risk."),
+ "Spread below the upper mediastinum (about T2-T4) = danger space = mediastinitis risk."),
 
 ("Tracheostomy Emergency",
  "Four days after an open tracheostomy, a patient's tube dislodges during repositioning, and he is desaturating. The upper airway is patent. What is the safest first action?",
