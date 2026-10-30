@@ -50,7 +50,7 @@ def _classify(q):
     stage = q.get("learning_stage")
     if stage == "foundation":
         return "foundation"
-    if stage == "senior_decision":
+    if stage in ("senior_decision", "mastery"):
         return "mastery"
     if stage == "application":
         return "application"

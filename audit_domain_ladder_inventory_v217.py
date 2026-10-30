@@ -22,7 +22,7 @@ EXPECTED_COUNTS = {
     "Laryngology / Voice / Swallowing": 39,
     "Facial Plastics / Trauma": 34,
     "Sleep Surgery": 24,
-    "General ENT / Emergencies": 35,
+    "General ENT / Emergencies": 36,
 }
 EXPECTED_TOTAL = sum(EXPECTED_COUNTS.values())
 

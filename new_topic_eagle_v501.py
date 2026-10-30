@@ -906,6 +906,11 @@ def install_eagle_topic_v501(data, app_mod):
             for key in ("choices", "why_wrong"):
                 if key in check:
                     check[key] = list(check[key])
+            # Same review metadata the v17.8 all-domain curation layer stamps on every check.
+            check.update({"reviewed_all_domains_v178": True,
+                          "board_review_standard_v178": "clinical decision-making",
+                          "review_basis_v178": list(SOURCE_BASIS_V501),
+                          "canonical_topic": TOPIC_V501})
             checks.append(check)
             result["concept_checks_added"] += 1
     by_id = {q["id"]: q for q in checks if q.get("id")}
