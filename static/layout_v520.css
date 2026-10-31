@@ -1,0 +1,104 @@
+/* v52.0 layout pass: fixes found by a full-site crawl at 390px and 1280px.
+   Loaded last from base.html so it wins over older page-specific rules. */
+
+/* Card/list buttons keep their text on phones (the icon swap was meant only for the top bar). */
+@media(max-width:560px){
+  .case-btn{font-size:inherit}
+  .case-btn:after{content:none}
+  .topbar .case-btn{font-size:0}
+  .topbar .case-btn:after{content:"🩺";font-size:18px}
+}
+
+/* Dashboard: Resume Path no longer sits on top of the subtitle on phones. */
+.dashboard-resume{display:inline-flex;align-items:center;justify-content:center}
+@media(max-width:650px){.dashboard-resume{margin-top:14px}}
+
+/* Curriculum hero: the two calls to action wrap instead of overlapping. */
+.curriculum-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.curriculum-cta a:not(.button){color:var(--teal);font-weight:700}
+
+/* Domain chips on the deep curriculum wrap so every domain is visible. */
+.depth-domain-nav{flex-wrap:wrap;overflow:visible}
+@media(max-width:760px){.depth-toolbar,.atlas-toolbar{grid-template-columns:1fr}}
+
+/* Daily Path progress cards: a grid on phones instead of a clipped sideways strip. */
+@media(max-width:760px){
+  .dp-progress{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}
+  .dp-progress .card{flex:none;min-width:0}
+}
+
+/* OR Tomorrow: the WHY → POST-OP timeline wraps; the search box is styled and fits. */
+.prep-timeline{flex-wrap:wrap;overflow:visible}
+.or-search input{min-width:0;border:1px solid var(--line);border-radius:9px;padding:10px 12px;font:inherit;background:#fff}
+.or-search button{border:0;background:var(--teal);color:#fff;font:inherit;font-weight:800;border-radius:9px;padding:10px 14px;cursor:pointer;white-space:nowrap}
+
+/* Filter forms (Clinical Challenges, Concept Checks, Attending, Mock Oral Board). */
+form.lab-controls,.oral-filter{align-items:flex-end;padding:14px 16px}
+form.lab-controls label,.oral-filter label{display:flex;flex-direction:column;gap:4px;font-size:12px;font-weight:700;color:var(--muted);flex:1 1 170px;min-width:0}
+form.lab-controls label br,.oral-filter label br{display:none}
+form.lab-controls select,form.lab-controls input:not([type=checkbox]):not([type=radio]),
+.oral-filter select,.oral-filter input:not([type=checkbox]):not([type=radio]){width:100%;min-width:0;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font:inherit;font-size:14px;font-weight:400;color:var(--ink);background:#fff}
+form.lab-controls .case-btn,.oral-filter .case-btn{margin-left:0;border:0;cursor:pointer;font:inherit;font-weight:800;background:var(--teal);color:#fff;padding:10px 14px}
+form.lab-controls a,.oral-filter a{align-self:flex-end}
+@media(max-width:560px){
+  form.lab-controls label,.oral-filter label{flex-basis:100%}
+  form.lab-controls .case-btn,.oral-filter .case-btn{flex:1}
+}
+
+/* Interpretation Atlas: the ↗ marker no longer overlaps long resource names. */
+.resource-card{padding-right:34px}
+/* Study data rows (audiograms, PSG): label and value no longer run together. */
+.psg-study-item{display:grid;grid-template-columns:minmax(96px,auto) 1fr;gap:4px 10px;align-items:baseline;padding:3px 0}
+.psg-study-item small{color:var(--muted);font-size:12px}
+
+/* Pasha review: chapter status sits on its own line; colors match the site. */
+.pasha-toc a small{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.pasha-toc a.active,.pasha-toc a:hover{background:var(--teal2)}
+.pasha-actions a{background:var(--teal2);color:var(--teal)}
+.pasha-actions a.primary{background:var(--teal);color:#fff}
+.pasha-badge,.section-pill-links a{background:var(--teal2)}
+
+/* Evidence page: the source tag drops under the title on phones. */
+@media(max-width:560px){
+  .evidence-row{grid-template-columns:1fr;gap:6px}
+  .evidence-row>b{text-align:left}
+}
+
+/* Question cards: header chips wrap cleanly on phones. */
+.cc-card-head,.question-chips{flex-wrap:wrap;gap:6px}
+
+/* Staging tables fit a phone screen. */
+.stg-tables{grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr))}
+.stg-table{table-layout:auto}
+.stg-table td{overflow-wrap:anywhere}
+.stg-cat{white-space:normal;min-width:44px}
+@media(max-width:560px){.stg-cat{white-space:normal;width:auto;max-width:38%}}
+
+/* Generic safety net: long unbroken strings and media never widen a card. */
+.card,.stg-box,.ax-card{min-width:0}
+.card img,.card video{max-width:100%}
+.card p,.card li,.card td{overflow-wrap:break-word}
+
+/* Concept hub: the relationship tag sits above the "Builds on" line instead of beside wrapped text. */
+.concept-relationship .relation-role{display:table;margin:0 0 8px}
+
+/* Question list cards: header tags wrap as whole pills instead of breaking mid-label. */
+.interp-case-head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.interp-case-head .tag,.interp-case-head .pill{white-space:nowrap}
+.interp-case-head>span:not(.tag):not(.pill){font-size:11px;color:var(--muted)}
+
+/* Curriculum spiral: the five phase columns shrink to fit mid-size screens. */
+.sequence-grid{grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr))}
+.sequence-phase{min-width:0}
+@media(max-width:560px){.sequence-grid{grid-template-columns:1fr}}
+/* Section headers: the right-hand link wraps under the title when space runs out. */
+.section-head{flex-wrap:wrap}
+.section-head>a{white-space:nowrap}
+
+/* Pasha review: long chapter titles shrink and wrap instead of pushing past the edge. */
+.pasha-layout{grid-template-columns:250px minmax(0,1fr)}
+@media(max-width:900px){.pasha-layout{grid-template-columns:minmax(0,1fr)}}
+.pasha-hero>div:not(.pasha-metrics){min-width:0;flex:1 1 0}
+.pasha-metrics{flex:0 0 auto}
+.pasha-hero h1{overflow-wrap:break-word}
+@media(max-width:1100px){.pasha-hero{flex-wrap:wrap}}
