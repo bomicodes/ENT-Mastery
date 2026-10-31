@@ -13,7 +13,7 @@ physiology=(
 "**Ultrasound anatomy**: normal thyroid is homogeneous and slightly hyperechoic relative to strap muscles."),
 pathophysiology=(
 "**Benign nodules**: focal follicular hyperplasia, colloid accumulation, and cyst formation from heterogeneous growth responses to TSH and growth factors. "
-"**Autonomous (hot) nodules**: activating TSH receptor or Gs-alpha mutations make follicles produce hormone independent of TSH; a low TSH prompts scintigraphy, and hot nodules are rarely malignant. "
+"**Autonomous (hot) nodules**: activating TSH receptor (Parma et al., Nature 1993) or Gs-alpha mutations make follicles produce hormone independent of TSH; a low TSH prompts scintigraphy, and hot nodules are rarely malignant. "
 "**Malignant transformation**: BRAF V600E and RET/PTC rearrangements (papillary) or RAS mutations (follicular-patterned lesions) drive cancer. "
 "**Ultrasound features of malignancy**: hypoechogenicity, irregular margins, taller-than-wide shape, microcalcifications (psammoma bodies), and extrathyroidal extension reflect the cellular and stromal biology of papillary carcinoma. "
 "**Why cysts are reassuring**: purely cystic nodules contain colloid or degenerated fluid without solid neoplastic tissue. "
@@ -47,7 +47,7 @@ physiology=(
 "**Glands**: usually four parathyroids; superior glands (fourth pouch) lie posterior and deep to the RLN near the cricothyroid junction; inferior glands (third pouch, with thymus) are more variable and anterior to the RLN. "
 "**Normal feedback**: hypercalcemia from any non-parathyroid cause suppresses PTH."),
 pathophysiology=(
-"**Single adenoma (about 85 percent)**: clonal expansion (cyclin D1/PRAD1 or MEN1 mutations) shifts the calcium set point so PTH is secreted despite high calcium. "
+"**Single adenoma (about 85 percent)**: clonal expansion (cyclin D1/PRAD1 rearrangement, Arnold et al., J Clin Invest 1989; or MEN1 mutations) shifts the calcium set point so PTH is secreted despite high calcium. "
 "**Multigland hyperplasia (about 10-15 percent)**: more common in MEN syndromes and lithium therapy. "
 "**Carcinoma (under 1 percent)**: very high calcium and PTH, palpable mass, CDC73 mutations. "
 "**Biochemical signature**: high calcium with nonsuppressed PTH; low phosphate; high urinary calcium (unlike familial hypocalciuric hypercalcemia, where a CaSR mutation raises the set point and urine calcium is low). "
@@ -90,7 +90,7 @@ pathophysiology=(
 "**Lymphatic spread**: early central and lateral nodal metastasis, guided by calcitonin levels. "
 "**Markers**: calcitonin and CEA track disease burden; doubling time predicts prognosis. "
 "**Pheochromocytoma**: must be excluded before surgery in MEN2. "
-"**Targeted therapy**: selective RET inhibitors (selpercatinib, pralsetinib) treat advanced disease."),
+"**Targeted therapy**: selective RET inhibitors treat advanced disease: selpercatinib (LIBRETTO-001, Wirth et al., NEJM 2020) and pralsetinib (ARROW, Subbiah et al., Lancet Diabetes Endocrinol 2021), although the US pralsetinib MTC indication was withdrawn in 2023."),
 ),
 
 "Anaplastic Thyroid Cancer": dict(
@@ -135,7 +135,7 @@ physiology=(
 "**Healing after surgery**: fibroblasts lay down collagen that obliterates planes over months, gluing structures together."),
 pathophysiology=(
 "**Scar**: obliterates planes and fixes structures, increasing RLN and parathyroid injury. "
-"**Lateral (back-door) approach**: entering between strap muscles and SCM reaches the thyroid bed through less scarred tissue. "
+"**Lateral (back-door) approach**: entering between strap muscles and SCM reaches the thyroid bed through less scarred tissue (Randolph, Surgery of the Thyroid and Parathyroid Glands). "
 "**Preoperative laryngoscopy**: identifies existing vocal fold paralysis. "
 "**Nerve monitoring**: helps identify a scarred RLN."),
 ),
@@ -146,13 +146,13 @@ overview=(
 "Tertiary hyperparathyroidism is autonomous PTH secretion persisting after the stimulus is corrected (often after kidney transplant)."),
 physiology=(
 "**Kidney role**: kidneys activate vitamin D (1-alpha-hydroxylation) and excrete phosphate. "
-"**FGF23**: bone-derived hormone that increases phosphate excretion and lowers calcitriol. "
+"**FGF23**: bone-derived hormone that increases phosphate excretion and lowers calcitriol (KDIGO CKD-MBD guideline 2017). "
 "**Parathyroid response**: low calcium, high phosphate, and low calcitriol stimulate PTH secretion and gland growth."),
 pathophysiology=(
 "**CKD sequence**: phosphate retention and FGF23 rise reduce calcitriol, causing hypocalcemia and parathyroid stimulation. "
 "**Gland hyperplasia**: chronic stimulation causes polyclonal then monoclonal (nodular) hyperplasia of all four glands, with reduced CaSR and vitamin D receptor expression. "
 "**Tertiary disease**: autonomous nodules continue secreting after transplant, causing hypercalcemia. "
-"**Renal osteodystrophy and calciphylaxis**: bone disease and vascular calcification result from mineral imbalance. "
+"**Renal osteodystrophy and calciphylaxis**: bone disease and vascular calcification result from mineral imbalance (KDIGO CKD-MBD guideline 2017). "
 "**Treatment**: phosphate binders, vitamin D analogs, and calcimimetics (cinacalcet) reduce PTH; surgery (subtotal or total with autotransplant) for refractory disease."),
 ),
 
@@ -214,7 +214,7 @@ physiology=(
 "**Vessels**: facial artery and vein."),
 pathophysiology=(
 "**Chronic sialadenitis**: repeated obstruction and infection replace acini with fibrosis and lymphocytes, making the gland firm and nonfunctional; removal is indicated when sialendoscopy cannot restore drainage. "
-"**Tumors**: about half of submandibular tumors are malignant, so firmness, fixation, or nerve symptoms change the operation to an oncologic resection with neck dissection. "
+"**Tumors**: about 40-50 percent of submandibular tumors are malignant, so firmness, fixation, or nerve symptoms change the operation to an oncologic resection with neck dissection. "
 "**Marginal mandibular injury**: lower-lip weakness, avoided by elevating the fascia over the gland deep to the nerve (Hayes Martin maneuver) or ligating the facial vein low. "
 "**Lingual nerve injury**: tongue numbness from traction on the submandibular ganglion attachment. "
 "**Hypoglossal injury**: tongue weakness from dissection deep and inferior to the gland. "
@@ -231,8 +231,8 @@ physiology=(
 "**Hormone synthesis steps**: iodide trapping, organification by TPO, coupling, and release."),
 pathophysiology=(
 "**Stimulating antibodies**: TSI mimic TSH, causing diffuse hyperplasia and hyperthyroidism independent of pituitary control. "
-"**Extrathyroidal effects**: orbital fibroblasts express TSH receptor and IGF-1 receptor, explaining thyroid eye disease; pretibial myxedema results from similar mechanisms. "
-"**Toxic nodules**: autonomous function from TSH receptor mutations. "
+"**Extrathyroidal effects**: orbital fibroblasts express TSH receptor and IGF-1 receptor (Smith et al., NEJM 2017; Douglas et al., NEJM 2020), explaining thyroid eye disease; pretibial myxedema results from similar mechanisms. "
+"**Toxic nodules**: autonomous function from TSH receptor mutations (Parma et al., Nature 1993). "
 "**Thyroid storm**: decompensated thyrotoxicosis triggered by surgery, infection, or iodine load. "
 "**Medication logic**: methimazole and PTU block TPO; PTU also blocks peripheral T4-to-T3 conversion; beta-blockers control symptoms. "
 "**Preoperative iodine**: SSKI reduces gland vascularity and hormone release (Wolff-Chaikoff effect)."),
@@ -250,7 +250,7 @@ physiology=(
 pathophysiology=(
 "**The architecture problem**: follicular carcinoma is defined by capsular or vascular invasion, which only histology of the whole capsule can show, so a cellular follicular aspirate cannot be called benign or malignant. "
 "**Atypia (Bethesda III)**: partial or focal nuclear or architectural atypia that falls short of a diagnosis. "
-"**Driver mutations**: BRAF V600E, RET/PTC, and NTRK fusions carry very high cancer risk; RAS mutations are common in follicular adenoma, follicular carcinoma, and NIFTP alike, so they predict a neoplasm rather than cancer. "
+"**Driver mutations**: BRAF V600E and RET/PTC carry very high cancer risk, as do NTRK fusions in molecular-panel data (ThyroSeq v3; Nikiforova et al., Cancer 2018); RAS mutations are common in follicular adenoma, follicular carcinoma, and NIFTP alike, so they predict a neoplasm rather than cancer. "
 "**NIFTP**: a noninvasive follicular-patterned tumor with papillary-like nuclei, reclassified as a neoplasm with very low malignant potential, treated by lobectomy alone. "
 "**Molecular test logic**: rule-out tests (high negative predictive value gene expression classifiers) allow surveillance; rule-in panels with high-risk mutations support surgery and inform extent."),
 ),
@@ -282,7 +282,7 @@ physiology=(
 "**Gland capsule**: normal glands and adenomas are encapsulated and separate cleanly from surrounding tissue. "
 "**Set point**: in benign adenomas the calcium set point shifts modestly, so hypercalcemia is usually mild."),
 pathophysiology=(
-"**CDC73 inactivation**: loss of parafibromin (somatic or germline in hyperparathyroidism-jaw tumor syndrome) is the dominant driver, and loss of parafibromin staining supports the diagnosis. "
+"**CDC73 inactivation**: loss of parafibromin (somatic or germline in hyperparathyroidism-jaw tumor syndrome) is the dominant driver, and loss of parafibromin staining supports the diagnosis (WHO 2022 classification of endocrine tumours). "
 "**Profound hypercalcemia**: autonomous, high-volume PTH secretion produces very high calcium and PTH levels, with severe bone and kidney disease at presentation. "
 "**Local invasion**: a firm, gray-white mass adherent to the thyroid, RLN, and strap muscles, unlike the soft, tan, easily separated adenoma. "
 "**Histologic criteria**: vascular, perineural, or adjacent-tissue invasion suggests malignancy, but histology is often inconclusive; only metastasis or local recurrence is definitive. "

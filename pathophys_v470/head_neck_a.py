@@ -274,7 +274,7 @@ physiology=(
 pathophysiology=(
 "**High-risk features**: extranodal extension and positive margins predict recurrence; postoperative chemoradiation improves outcomes (RTOG 9501 and EORTC 22931). "
 "**Intermediate-risk features**: pT3-T4, N2 or greater, perineural invasion, lymphovascular invasion, and close margins indicate adjuvant radiation. "
-"**Timing**: adjuvant therapy should start within about 6 weeks of surgery to prevent repopulation. **Perioperative immunotherapy**: for resectable locally advanced HNSCC with PD-L1 CPS 1 or greater, KEYNOTE-689 (FDA-approved 2025) adds neoadjuvant pembrolizumab before surgery and continues it with adjuvant radiation or chemoradiation. "
+"**Timing**: adjuvant therapy should start within about 6 weeks of surgery to prevent repopulation. **Perioperative immunotherapy**: for resectable locally advanced HNSCC with PD-L1 CPS 1 or greater, KEYNOTE-689 (Uppaluri et al., NEJM 2025; FDA-approved 2025) adds neoadjuvant pembrolizumab before surgery and continues it with adjuvant radiation or chemoradiation. "
 "**HPV-positive disease**: some risk features carry less weight, which is under study."),
 ),
 

@@ -7,7 +7,7 @@ CHECKS = [
  [("Ultrasound-guided FNA of the nodule", "With a suppressed TSH, scintigraphy comes first because a hyperfunctioning (hot) nodule is rarely malignant and usually does not need FNA."),
   ("Repeat ultrasound in 12 months", "Observation without assessing function skips the key branch point created by the low TSH."),
   ("Diagnostic hemithyroidectomy", "Surgery is premature before function and, if needed, cytology have been assessed.")],
- "A low TSH suggests an autonomous nodule driven by activating TSH-receptor or Gs-alpha mutations. Hot nodules on scintigraphy are rarely malignant, so FNA is usually unnecessary; cold nodules proceed by ultrasound risk pattern.",
+ "A low TSH suggests an autonomous nodule driven by activating TSH-receptor (Parma et al., Nature 1993) or Gs-alpha mutations. Hot nodules on scintigraphy are rarely malignant, so FNA is usually unnecessary; cold nodules proceed by ultrasound risk pattern.",
  "Low TSH with a nodule: scan before you stick."),
 
 ("Differentiated Thyroid Cancer",
@@ -61,16 +61,16 @@ CHECKS = [
  [("It avoids the recurrent laryngeal nerve entirely", "The nerve is still at risk; the approach helps identify it in less scarred tissue."),
   ("It removes the need for nerve monitoring", "Monitoring remains valuable in reoperative surgery."),
   ("It allows access to the contralateral lobe", "It accesses the ipsilateral thyroid bed.")],
- "Scar from the first operation obliterates anterior planes. Approaching laterally reaches the thyroid bed and RLN through fresher planes. Preoperative laryngoscopy documents vocal fold function.",
+ "Scar from the first operation obliterates anterior planes. Approaching laterally reaches the thyroid bed and RLN through fresher planes (Randolph, Surgery of the Thyroid and Parathyroid Glands). Preoperative laryngoscopy documents vocal fold function.",
  "Reoperative neck: go around the scar, scope the cords first."),
 
 ("Four-Gland Parathyroid Exploration",
  "A 60-year-old on long-term lithium has hypercalcemia with elevated PTH. Sestamibi imaging is negative. Why is bilateral four-gland exploration favored over focused parathyroidectomy?",
  "Multigland hyperplasia is likely",
- [("Lithium causes parathyroid carcinoma", "Lithium raises the calcium set point and is linked to multigland disease, not carcinoma."),
+ [("Lithium causes parathyroid carcinoma", "Lithium is linked to multigland disease, not carcinoma, and is thought to raise the calcium set point."),
   ("Sestamibi is always falsely positive with lithium", "The issue is multigland disease that localization often misses."),
   ("Focused surgery cannot use intraoperative PTH", "Intraoperative PTH can be used with either approach.")],
- "Lithium shifts the calcium-sensing set point and is associated with multigland hyperplasia. Negative localization also raises suspicion of multigland disease, so all glands are examined.",
+ "Lithium is associated with multigland hyperplasia and is thought to shift the calcium-sensing set point (Haden et al., JCEM 1997). Negative localization also raises suspicion of multigland disease, so all glands are examined.",
  "Negative localization or lithium = explore all four glands."),
 
 ("Sialolithiasis",
@@ -160,7 +160,7 @@ CHECKS = [
  [("Smoking causes the hyperthyroidism itself", "Smoking is a risk factor for eye disease severity, not the cause of Graves hyperthyroidism."),
   ("Smoking blocks the action of methimazole", "Smoking does not affect antithyroid drug efficacy."),
   ("Smoking protects against optic neuropathy", "Smoking increases the risk of severe disease, including optic neuropathy.")],
- "Orbital fibroblasts express TSH and IGF-1 receptors. Smoking amplifies fibroblast activation and inflammation, worsens severity, increases RAI-associated flares, and reduces response to steroids and other therapy.",
+ "Orbital fibroblasts express TSH and IGF-1 receptors (Smith et al., NEJM 2017). Smoking amplifies fibroblast activation and inflammation, worsens severity, increases RAI-associated flares, and reduces response to steroids and other therapy.",
  "Thyroid eye disease: stop smoking, and cover RAI with steroids when active."),
 
 ("First-Bite Syndrome",

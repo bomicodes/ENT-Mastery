@@ -70,6 +70,6 @@ CHECKS = [
  [("Repeat excision every few months", "Repeated excision recurs because the cause persists."),
   ("Radiation therapy", "Radiation is not used for benign granulomas."),
   ("Long-term antibiotics", "Granulomas are not infections.")],
- "The thin mucoperichondrium over the vocal process ulcerates from forceful adduction, throat clearing, or intubation. Voice therapy, reflux management, and botulinum toxin to reduce adduction force let it heal; excision alone recurs.",
+ "The thin mucoperichondrium over the vocal process ulcerates from forceful adduction, throat clearing, or intubation. Voice therapy, reflux management, and botulinum toxin to reduce adduction force (Orloff & Goldman, 1999) let it heal; excision alone recurs.",
  "Granuloma: treat the cause, not just the lesion."),
 ]

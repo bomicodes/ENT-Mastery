@@ -1610,7 +1610,7 @@ VIGNETTES = [{'topic': 'Arytenoid Adduction / Reinnervation',
   'answer': 3,
   'explanation': 'Loss of upper range with normal fold motion after thyroidectomy suggests injury to the external branch of the superior laryngeal nerve, which travels with the superior thyroid '
                  'vessels and supplies the cricothyroid muscle. The cricothyroid tilts the thyroid cartilage forward on the cricoid, lengthening and tensing the folds to raise pitch. Unilateral '
-                 'weakness can cause posterior glottic rotation toward the weak side. LEMG of the cricothyroid confirms the diagnosis, while thyroarytenoid sampling assesses the recurrent nerve.',
+                 'weakness can cause posterior glottic rotation toward the weak side, although this sign is inconsistent. LEMG of the cricothyroid confirms the diagnosis, while thyroarytenoid sampling assesses the recurrent nerve.',
   'why_wrong': ['The posterior cricoarytenoid is innervated by the recurrent laryngeal nerve and tests abduction, not the suspected superior nerve injury.',
                 'The thyroarytenoid is a recurrent laryngeal nerve muscle, so it would be normal in an isolated superior laryngeal nerve injury.',
                 'The interarytenoid is supplied by recurrent nerve branches and does not assess the external branch of the superior nerve.',

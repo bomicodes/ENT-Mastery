@@ -102,7 +102,7 @@ pathophysiology=(
 "**Evasion strategies**: PD-L1 upregulation, MHC class I loss, regulatory T cells, myeloid-derived suppressor cells, and immunosuppressive cytokines (TGF-beta, IL-10). "
 "**Hot vs cold tumors**: T-cell-inflamed tumors respond better; HPV-positive tumors carry viral antigens and are often more inflamed. "
 "**Checkpoint blockade**: anti-PD-1 antibodies (pembrolizumab, nivolumab) release suppressed T cells. "
-"**Neoadjuvant rationale**: giving immunotherapy while the tumor and nodes are intact maximizes antigen presentation; KEYNOTE-689 established perioperative pembrolizumab for resectable locally advanced disease with CPS 1 or greater (FDA-approved 2025). "
+"**Neoadjuvant rationale**: giving immunotherapy while the tumor and nodes are intact maximizes antigen presentation; KEYNOTE-689 (Uppaluri et al., NEJM 2025) established perioperative pembrolizumab for resectable locally advanced disease with CPS 1 or greater (FDA-approved 2025). "
 "**Immune-related adverse events**: thyroiditis and hypothyroidism are among the most common in head and neck patients; colitis, pneumonitis, hepatitis, and hypophysitis are less common but serious."),
 ),
 
@@ -221,7 +221,7 @@ physiology=(
 pathophysiology=(
 "**Late presentation**: tumors fill air spaces silently, presenting with unilateral obstruction, epistaxis, or neuro-ophthalmic signs. "
 "**Spread**: to orbit, skull base, brain, and perineural pathways. "
-"**Histology-driven treatment**: esthesioneuroblastoma (Kadish/Hyams grading), SNUC and SMARCB1-deficient carcinomas (aggressive, induction chemotherapy), and mucosal melanoma (poor prognosis). "
+"**Histology-driven treatment**: esthesioneuroblastoma (Kadish/Hyams grading), SNUC and SMARCB1-deficient carcinomas (WHO 2022; aggressive, induction chemotherapy), and mucosal melanoma (poor prognosis). "
 "**Occupational exposure**: wood dust strongly associated with ethmoid adenocarcinoma. "
 "**Endoscopic resection**: comparable outcomes to open surgery for selected tumors with negative margins."),
 ),

@@ -34,7 +34,7 @@ CHECKS = [
  [("Full resection causes uncontrollable bleeding", "Bleeding risk exists, but it is manageable and is not the main reason to preserve the turbinate."),
   ("The turbinate bone regrows after resection", "The concern is the opposite: lost mucosal function is permanent."),
   ("The turbinate supports the nasal sidewall", "The inferior turbinate does not structurally support the external nasal valve.")],
- "Turbinate mucosa warms and humidifies air and carries TRPM8 cold receptors that signal patency. Aggressive resection can cause empty nose syndrome: a wide airway that feels blocked.",
+ "Turbinate mucosa warms and humidifies air and carries cold (menthol-sensitive, TRPM8) receptors that signal patency. Aggressive resection can cause empty nose syndrome: a wide airway that feels blocked.",
  "Reduce the turbinate; do not remove it."),
 
 ("Septal Deviation",
@@ -268,7 +268,7 @@ CHECKS = [
  [("Inaccurate rhinometry measurement", "Rhinometry is accurate here; the problem is perception."),
   ("A missed posterior septal deviation", "A large measured airway argues against significant structural obstruction."),
   ("Purely psychogenic symptoms", "A physiologic sensory loss explains the symptoms.")],
- "Patency is sensed by mucosal cooling detected by TRPM8 receptors. Removing turbinate mucosa reduces this sensation, so a wide airway can feel blocked.",
+ "Patency is sensed by mucosal cooling detected by cold (menthol-sensitive, TRPM8) receptors. Removing turbinate mucosa reduces this sensation, so a wide airway can feel blocked.",
  "Feeling blocked is not the same as being blocked."),
 
 ("Facial Pain / Headache vs Rhinogenic Disease",
@@ -295,7 +295,7 @@ CHECKS = [
  [("Cocaine suppresses ANCA production", "Cocaine adulterants induce ANCA rather than suppress it."),
   ("ANCA is never positive in GPA", "ANCA is positive in most patients with active GPA."),
   ("ANCA reflects allergic disease", "ANCA are antineutrophil antibodies, not markers of allergy.")],
- "Cocaine causes midline destructive lesions through vasoconstriction and ischemia, and levamisole adulteration can produce positive ANCA, mimicking granulomatosis with polyangiitis.",
+ "Cocaine causes midline destructive lesions through vasoconstriction and ischemia, and levamisole adulteration can produce positive ANCA (McGrath et al., Clin Rheumatol 2011), mimicking granulomatosis with polyangiitis.",
  "Midline destruction: ask about cocaine before diagnosing GPA."),
 
 ("Allergy Testing & Interpretation",

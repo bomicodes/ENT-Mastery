@@ -232,7 +232,7 @@ pathophysiology=(
 
 "Button Battery Ingestion": dict(
 overview=(
-"Button battery ingestion is a time-critical emergency: a battery lodged in the esophagus causes liquefactive necrosis within 2 hours. "
+"Button battery ingestion is a time-critical emergency: a battery lodged in the esophagus can cause severe liquefactive necrosis within about 2 hours (National Capital Poison Center guideline). "
 "It requires emergent endoscopic removal, and honey or sucralfate may be given before arrival in selected cases."),
 physiology=(
 "**Esophageal narrowings**: the cricopharyngeus, aortic arch crossing, left main bronchus, and lower esophageal sphincter, where objects lodge (most at the cricopharyngeus in children). "
@@ -241,7 +241,7 @@ physiology=(
 "**Tissue moisture**: the esophagus is a moist, conductive environment that completes an electrical circuit."),
 pathophysiology=(
 "**Electrolysis**: current flows through tissue, generating hydroxide ions at the negative pole, causing alkaline liquefactive necrosis. "
-"**Speed**: injury begins within 15 minutes and is significant within 2 hours. "
+"**Speed**: injury begins within minutes and can be severe within about 2 hours (National Capital Poison Center button battery guideline). "
 "**Negative pole injury**: the narrow side (negative pole) causes the most damage. "
 "**Complications**: perforation, tracheoesophageal fistula, aortoesophageal fistula (often delayed), and stricture. "
 "**Mitigation**: honey and sucralfate coat the battery; acetic acid irrigation neutralizes alkali at removal."),

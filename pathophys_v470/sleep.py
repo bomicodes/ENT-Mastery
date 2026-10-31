@@ -18,8 +18,8 @@ pathophysiology=(
 "**Arousals**: each obstructive event ends with a cortical arousal that restores dilator tone, fragmenting sleep and causing daytime sleepiness. "
 "**Positional OSA**: events concentrate supine because gravity pulls the tongue and soft palate backward. "
 "**REM-related OSA**: events cluster in REM due to atonia. "
-"**Central apnea index**: a high proportion of central events (above about 25 percent) changes candidacy for HNS and points to cardiac, neurologic, or opioid causes. "
-"**Home sleep apnea tests**: measure breathing but not sleep, so they underestimate AHI and are less suited for complex patients."),
+"**Central apnea index**: a high proportion of central events (central plus mixed apneas above 25 percent of the AHI, the STAR trial exclusion) changes candidacy for HNS and points to cardiac, neurologic, or opioid causes. "
+"**Home sleep apnea tests**: measure breathing but not sleep, so they underestimate AHI and are less suited for complex patients (AASM HSAT guideline, Kapur et al., JCSM 2017)."),
 ),
 
 "DISE": dict(
@@ -51,7 +51,7 @@ physiology=(
 "**Palatoglossal coupling**: tongue protrusion pulls the soft palate forward through the palatoglossus, opening the retropalatal airway in many patients."),
 pathophysiology=(
 "**Mechanism**: synchronized stimulation of protrusor branches during inspiration reverses sleep-related loss of genioglossus tone. "
-"**Candidate selection**: AHI roughly 15-100 and BMI up to about 40 under the current FDA label (the original STAR criteria in the textbooks were AHI 20-50 and BMI under 32), central and mixed apneas under 25 percent, and no complete concentric palatal collapse on DISE. "
+"**Candidate selection**: AHI roughly 15-100 and BMI up to about 40 under the 2023 FDA label expansion (the original STAR criteria in the textbooks were AHI 20-50 and BMI under 32), central and mixed apneas under 25 percent, and no complete concentric palatal collapse on DISE. "
 "**STAR trial**: 12-month AHI fell from about 29 to 9, with improved sleepiness and quality of life. "
 "**Failure modes**: retraction-dominant stimulation, epiglottic collapse, poor palatoglossal coupling, and weight gain. "
 "**Adherence**: nightly use is typically higher than CPAP."),
@@ -129,7 +129,7 @@ pathophysiology=(
 "Maxillomandibular Advancement": dict(
 overview=(
 "Maxillomandibular advancement moves the maxilla and mandible forward, enlarging the entire pharyngeal airway. "
-"It is the most effective surgical OSA treatment, especially for craniofacial skeletal deficiency."),
+"It is among the most effective surgical OSA treatments (Holty & Guilleminault meta-analysis, Sleep Med Rev 2010), especially for craniofacial skeletal deficiency."),
 physiology=(
 "**Skeletal anchorage**: the soft palate attaches to the posterior hard palate (maxilla), and the tongue, hyoid suspensory muscles, and suprahyoid muscles attach to the mandible. "
 "**Soft-tissue tension**: moving the bony attachments forward stretches pharyngeal soft tissues, stiffening the pharyngeal walls. "
@@ -138,7 +138,7 @@ physiology=(
 pathophysiology=(
 "**Skeletal crowding**: a small maxillomandibular framework forces normal-sized soft tissues into a small space, increasing collapsibility. "
 "**Mechanism of benefit**: advancement enlarges the bony enclosure and tensions the lateral pharyngeal walls, reducing critical closing pressure at multiple levels at once. "
-"**Success**: high surgical success rates in appropriately selected patients, often with advancement of about 10 mm. "
+"**Success**: high surgical success rates in appropriately selected patients, often with advancement of about 10 mm (Holty & Guilleminault, Sleep Med Rev 2010). "
 "**Complications**: malocclusion, inferior alveolar nerve paresthesia, relapse, and facial profile change (often favorable in retrognathic patients). "
 "**Indications**: severe OSA, skeletal deficiency, and failure of other therapies."),
 ),
@@ -256,7 +256,7 @@ physiology=(
 pathophysiology=(
 "**Persistent OSA**: occurs in most children with Down syndrome after adenotonsillectomy because of multilevel collapse. "
 "**HNS logic**: increases genioglossus tone, counteracting hypotonia and tongue-base collapse. "
-"**Criteria**: FDA approval for ages 13-18 with AHI roughly 10-50 after adenotonsillectomy and CPAP failure. "
+"**Criteria**: FDA approval (2023) for ages 13-18 with AHI roughly 10-50 after adenotonsillectomy and CPAP failure (criteria from Yu et al., JAMA Otolaryngol 2022). "
 "**Outcomes**: significant AHI reduction and improved quality of life. "
 "**Behavioral considerations**: tolerance of device and remote control use."),
 ),
@@ -320,7 +320,7 @@ pathophysiology=(
 "**Dopaminergic dysfunction**: explains evening symptom worsening. "
 "**Secondary causes**: pregnancy, renal failure, neuropathy, and medications (antihistamines, antidepressants). "
 "**Periodic limb movements**: fragment sleep, mimicking OSA sleepiness. "
-"**Treatment**: iron, alpha-2-delta ligands first-line; dopamine agonists risk augmentation."),
+"**Treatment**: iron, alpha-2-delta ligands first-line; dopamine agonists risk augmentation (AASM 2024 RLS guideline)."),
 ),
 
 "Circadian Rhythm Sleep-Wake Disorders": dict(
@@ -349,7 +349,7 @@ physiology=(
 "**Lung volume**: supine position reduces lung volume, reducing tracheal traction on the pharynx."),
 pathophysiology=(
 "**Supine-predominant collapse**: anteroposterior collapse at the palate and tongue base worsens supine. "
-"**Definitions**: Cartwright criteria (supine AHI at least twice non-supine AHI); Amsterdam classification refines categories. "
+"**Definitions**: Cartwright criteria (supine AHI at least twice non-supine AHI; Cartwright, Sleep 1984); the Amsterdam classification refines categories (Frank et al., 2015). "
 "**Positional therapy**: vibration devices or positional aids prevent supine sleep. "
 "**Adherence**: limited for older devices; newer vibration trainers improve it. "
 "**Adjunct role**: improves residual OSA after surgery or HNS."),

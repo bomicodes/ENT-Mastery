@@ -94,7 +94,7 @@ pathophysiology=(
 "**Mucoperichondrial injury**: endotracheal tube pressure, forceful adduction, or throat clearing ulcerates the thin mucosa. "
 "**Granulation**: chronic irritation sustains granulation tissue. "
 "**Reflux role**: often treated though evidence is mixed. "
-"**Treatment**: voice therapy, reflux management, botulinum toxin to reduce adduction force, and steroid injection; excision recurs."),
+"**Treatment**: voice therapy, reflux management, botulinum toxin to reduce adduction force (Orloff & Goldman, 1999), and steroid injection; excision recurs."),
 ),
 
 "Radiation-Associated Dysphagia": dict(

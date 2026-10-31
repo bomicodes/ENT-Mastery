@@ -43,6 +43,6 @@ CHECKS = [
  [("Methadone damages the hypoglossal nerve", "Opioids suppress respiratory drive; they do not injure the nerve."),
   ("HNS is contraindicated in anyone over 55", "Age alone does not exclude HNS."),
   ("The AHI is too low for HNS", "An AHI of 35 is within typical HNS criteria; the problem is the central proportion.")],
- "Opioids suppress brainstem respiratory drive, causing ataxic breathing and central apneas. HNS opens the airway but cannot create respiratory effort, so a central or mixed apnea fraction above about 25 percent excludes it.",
+ "Opioids suppress brainstem respiratory drive, causing ataxic breathing and central apneas. HNS opens the airway but cannot create respiratory effort, so a central or mixed apnea fraction above about 25 percent of the AHI (STAR trial criteria) excludes it.",
  "High central apnea burden = treat the drive, not the airway."),
 ]

@@ -88,7 +88,7 @@ overview=(
 "It has an active inflammatory phase then a stable fibrotic phase, and teprotumumab, steroids, radiation, and decompression surgery are matched to phase and severity."),
 physiology=(
 "**Orbital compartments**: the bony orbit contains extraocular muscles, fat, the optic nerve, and vessels in a fixed volume open only anteriorly. "
-"**Orbital fibroblasts**: express TSH receptor and IGF-1 receptor. "
+"**Orbital fibroblasts**: express TSH receptor and IGF-1 receptor (Smith et al., NEJM 2017; Douglas et al., NEJM 2020). "
 "**Glycosaminoglycans**: hydrophilic molecules that retain water when produced in excess."),
 pathophysiology=(
 "**Shared antigen**: TSH receptor antibodies activate orbital fibroblasts through TSH receptor and IGF-1 receptor signaling. "
@@ -160,7 +160,7 @@ physiology=(
 pathophysiology=(
 "**Indications**: high-risk pathology (extrathyroidal extension, vascular invasion, nodal disease, aggressive variants) that benefits from RAI or thyroglobulin surveillance. "
 "**RAI requirement**: RAI needs complete thyroid removal to target residual cancer. "
-"**Timing**: within days or after several months avoids peak inflammation and scarring. "
+"**Timing**: completion is usually done either early (within about a week) or delayed (about 3 months) to avoid peak inflammation and scarring; this timing comes from surgical series (Kupferman et al., cited in Cummings Ch 122), not a fixed rule. "
 "**Contralateral RLN and parathyroids**: the remaining side's nerve and glands are at risk; preop laryngoscopy confirms ipsilateral nerve function."),
 ),
 
@@ -176,7 +176,7 @@ pathophysiology=(
 "**Ablation and adjuvant therapy**: destroys remnant tissue, making thyroglobulin a better marker, and treats microscopic disease. "
 "**Preparation**: elevated TSH (withdrawal or recombinant TSH) and low-iodine diet maximize uptake. "
 "**TSH suppression**: levothyroxine to suppress TSH limits growth of residual cancer; the degree depends on risk. "
-"**Side effects**: sialadenitis, xerostomia, nasolacrimal duct obstruction, and second malignancies. "
+"**Side effects**: sialadenitis, xerostomia, nasolacrimal duct obstruction (Kloos et al., JCEM 2002), and second malignancies. "
 "**Risk-adapted use (ATA 2025)**: RAI is generally not recommended for low-risk disease, is selective for low-intermediate and intermediate-high risk, and is recommended for high-risk disease; oncocytic carcinoma is less iodine-avid."),
 ),
 
@@ -191,9 +191,9 @@ physiology=(
 "**Glucose metabolism**: differentiated cells rely on oxidative metabolism, whereas dedifferentiated cancer cells increase glucose uptake."),
 pathophysiology=(
 "**Dedifferentiation**: BRAF and TERT mutations and MAPK activation suppress NIS, causing loss of iodine uptake. "
-"**FDG-avidity**: PET-avid tumors are more aggressive (flip-flop phenomenon). "
+"**FDG-avidity**: PET-avid tumors are more aggressive (flip-flop phenomenon; Feine et al., J Nucl Med 1996; Robbins et al., JCEM 2006). "
 "**Kinase inhibitors**: lenvatinib and sorafenib prolong progression-free survival. "
-"**Redifferentiation**: MEK or BRAF inhibitors can restore iodine uptake in some tumors. "
+"**Redifferentiation**: MEK or BRAF inhibitors can restore iodine uptake in some tumors (selumetinib, Ho et al., NEJM 2013). "
 "**Targeted therapy**: RET, NTRK, and BRAF inhibitors for actionable alterations."),
 ),
 
