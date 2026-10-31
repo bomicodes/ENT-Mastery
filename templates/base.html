@@ -43,6 +43,7 @@
     <div class="mobile-nav-section">Review</div>
     <a href="/progress">▥ <span>My Progress</span></a>
     {% if current_user %}<a href="/account/pin">◈ <span>Change PIN</span></a>{% endif %}
+    <a href="/account/reset">↺ <span>Reset progress</span></a>
     <a href="/attending">↗ <span>Attending / Chief</span></a>
     <a href="/mistakes">↻ <span>Mistakes</span></a>
     <a href="/evidence">◫ <span>Evidence & Sources</span></a>
@@ -104,6 +105,7 @@
       <a href="/roster" class="navitem {% if request.path.startswith('/roster') %}active{% endif %}">☷ <span>Program Roster</span></a>
       {% endif %}
       {% if current_user %}<a href="/account/pin" class="navitem {% if request.path=='/account/pin' %}active{% endif %}">◈ <span>Change PIN</span></a>{% endif %}
+      <a href="/account/reset" class="navitem {% if request.path=='/account/reset' %}active{% endif %}">↺ <span>Reset progress</span></a>
     </nav>
 
     <div class="sidebar-bottom">

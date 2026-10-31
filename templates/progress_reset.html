@@ -1,0 +1,22 @@
+{% extends "base.html" %}{% block content %}
+<div class="breadcrumb"><a href="/progress">Progress</a> / Reset</div>
+<div class="eyebrow">ACCOUNT</div>
+<h1>Reset your progress</h1>
+<p class="lede">Start over with a clean slate. This erases your own learning history only; your account, PIN and other residents' progress are not affected.</p>
+<section class="card reset-card">
+  {% if error %}<div class="access-error" role="alert">{{error}}</div>{% endif %}
+  <h2>This will permanently erase</h2>
+  <ul class="reset-list">
+    <li><b>{{counts.attempts}}</b> question answers (Clinical Challenges, Concept Checks, Daily Path)</li>
+    <li><b>{{counts.concepts}}</b> spaced-review schedules and concept strengths</li>
+    <li><b>{{counts.curriculum_mastery}}</b> Daily Path topic stages and <b>{{counts.daily_path_events}}</b> Daily Path entries</li>
+    <li><b>{{counts.mastery_events}}</b> competency-dimension records (mastery %, coverage, missed items)</li>
+    <li><b>{{counts.lab_attempts}}</b> Interpretation Atlas ratings and <b>{{counts.pasha_attempts}}</b> Pasha chapter answers</li>
+  </ul>
+  <p class="reset-warn">This cannot be undone.</p>
+  <form method="post" class="access-form reset-form">
+    <div class="access-field"><label for="confirm">Type <b>{{confirm_word}}</b> to confirm</label><input id="confirm" name="confirm" autocomplete="off" autocapitalize="characters" spellcheck="false" required></div>
+    <div class="reset-actions"><button class="reset-btn" type="submit">Erase my progress</button><a href="/progress">Cancel</a></div>
+  </form>
+</section>
+{% endblock %}

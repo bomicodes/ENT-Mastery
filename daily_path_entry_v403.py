@@ -25,6 +25,7 @@ from clinical_challenge_vignettes_v490 import install_clinical_challenge_vignett
 from clinical_challenge_rewrites_v491 import install_clinical_challenge_rewrites_v491
 from concept_check_curveballs_v492 import install_concept_check_curveballs_v492
 from staging_section_v500 import install_staging_v500
+from progress_reset_v521 import install_progress_reset_v521
 from anatomy_section_v510 import install_anatomy_cases_v510
 from or_card_fixes_v511 import install_or_card_fixes_v511
 from anatomy_atlas_xref_v512 import install_anatomy_atlas_fixes_v512, install_or_atlas_fixes_v512
@@ -40,6 +41,7 @@ VIGNETTES_V490 = install_clinical_challenge_vignettes_v490(production.runtime_en
 REWRITES_V491 = install_clinical_challenge_rewrites_v491(production.runtime_entry.data, production.runtime_entry.app_mod)
 CC_CURVEBALLS_V492 = install_concept_check_curveballs_v492(production.runtime_entry.data)
 STAGING_V500 = install_staging_v500(production.runtime_entry.data, app)
+PROGRESS_RESET_V521 = install_progress_reset_v521(app)
 ANATOMY_ATLAS_V512 = install_anatomy_atlas_fixes_v512(production.runtime_entry.data)
 ANATOMY_CASES_V510 = install_anatomy_cases_v510(production.runtime_entry.data, production.runtime_entry.app_mod, app)
 OR_CARD_FIXES_V511 = install_or_card_fixes_v511(production.runtime_entry.data)
