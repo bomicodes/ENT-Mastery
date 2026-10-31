@@ -304,7 +304,7 @@ overview=(
 "PHACE syndrome accompanies large segmental facial hemangiomas, and propranolol is first-line therapy."),
 physiology=(
 "**Vascular development**: blood vessels form by vasculogenesis and angiogenesis under VEGF and related signals. "
-"**Hemangioma progenitors**: GLUT1-positive endothelial progenitor cells, possibly of placental-like origin, proliferate after birth. "
+"**Hemangioma progenitors**: GLUT1-positive endothelial progenitor cells, possibly of placental-like origin (North et al., Arch Dermatol 2001), proliferate after birth. "
 "**Hypoxia signaling**: hypoxia-inducible factors increase VEGF, which may initiate proliferation. "
 "**Involution biology**: endothelial apoptosis and replacement by fibrofatty tissue occur over years."),
 pathophysiology=(

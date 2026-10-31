@@ -4,7 +4,7 @@ CONTENT = {
 "HPV-Associated Oropharyngeal SCC": dict(
 overview=(
 "HPV-associated oropharyngeal squamous cell carcinoma arises in the tonsils and base of tongue, driven by high-risk HPV (mostly HPV-16). "
-"It is now the most common HPV-related cancer in the US, often presents as a cystic neck mass in a younger nonsmoker, and has a much better prognosis than HPV-negative disease, which is why it has its own staging (AJCC Version 9, current since 2026, which replaced AJCC 8th)."),
+"It is now the most common HPV-related cancer in the US (CDC cancer registry data; Van Dyne et al., MMWR 2018), often presents as a cystic neck mass in a younger nonsmoker, and has a much better prognosis than HPV-negative disease, which is why it has its own staging (AJCC Version 9, current since 2026, which replaced AJCC 8th)."),
 physiology=(
 "**Lymphoid oropharynx**: the palatine and lingual tonsils make up Waldeyer ring, lymphoid tissue that samples antigens from food and air. "
 "**Reticulated crypt epithelium**: tonsillar crypts are lined by a thin, discontinuous epithelium whose basal cells are directly exposed, unlike the intact squamous lining elsewhere. "
@@ -16,7 +16,7 @@ pathophysiology=(
 "**p16 surrogate**: Rb loss produces a feedback overexpression of p16INK4a, so strong diffuse p16 immunostaining is a surrogate marker for HPV-driven tumors. "
 "**Cystic nodal metastases**: small primaries hidden in crypts metastasize early, producing cystic level II nodes that can be mistaken for branchial cleft cysts. "
 "**Better prognosis biology**: tumors have fewer mutations, intact apoptosis pathways that respond to radiation, and an immune-infiltrated microenvironment. "
-"**Why separate staging**: traditional nodal staging overestimated risk for HPV-positive disease, so HPV-specific staging groups nodes differently; AJCC Version 9 also upstages N1 and N2 by one level for unequivocal clinical or imaging-detected ENE and for pathologic ENE; smoking history still worsens outcomes. "
+"**Why separate staging**: traditional nodal staging overestimated risk for HPV-positive disease, so HPV-specific staging groups nodes differently; AJCC Version 9 (in use for diagnoses from 2026) also upstages N1 and N2 by one level for unequivocal clinical or imaging-detected ENE and for pathologic ENE; smoking history still worsens outcomes. "
 "**De-escalation questions**: excellent survival has driven trials of reduced-intensity therapy, though cisplatin remains standard over cetuximab."),
 ),
 

@@ -223,7 +223,7 @@ CHECKS = [
  [("Cetuximab with platinum and 5-FU", "The EXTREME regimen was the prior standard, but pembrolizumab-based therapy improved survival in CPS-positive disease."),
   ("Single-agent methotrexate", "Methotrexate is a palliative option with lower efficacy, not first-line in CPS-positive disease."),
   ("Radioactive iodine therapy", "RAI treats differentiated thyroid cancer, not squamous cell carcinoma.")],
- "KEYNOTE-048 established pembrolizumab alone (CPS 1 or more) or with platinum and 5-FU as first-line therapy for recurrent or metastatic HNSCC. Responders can have durable control through restored T-cell immunity.",
+ "KEYNOTE-048 (Burtness et al., Lancet 2019) established pembrolizumab alone (CPS 1 or more) or with platinum and 5-FU as first-line therapy for recurrent or metastatic HNSCC. Responders can have durable control through restored T-cell immunity.",
  "Recurrent or metastatic HNSCC: check CPS, start pembrolizumab-based therapy."),
 
 ("Tumor Immunology / Immunotherapy in HNSCC",

@@ -159,18 +159,18 @@ pathophysiology=(
 "Lymphatic Malformation": dict(
 overview=(
 "Lymphatic malformations are slow-flow vascular malformations of abnormal lymphatic channels, classified as macrocystic, microcystic, or mixed (ISSVA). "
-"They can compromise the airway, and treatment includes sclerotherapy, surgery, and sirolimus."),
+"They can compromise the airway, and treatment includes sclerotherapy, surgery, and sirolimus (Adams et al., Pediatrics 2016)."),
 physiology=(
-"**Lymphatic development**: lymphatic endothelial cells bud from the cardinal veins (PROX1-driven) around weeks 6-7, forming jugular lymph sacs that connect into a network. "
-"**VEGF-C/VEGFR3 signaling**: drives lymphatic sprouting and growth. "
+"**Lymphatic development**: lymphatic endothelial cells bud from the cardinal veins (PROX1-driven) around weeks 6-7, forming jugular lymph sacs that connect into a network (Oliver, Nat Rev Immunol 2004). "
+"**VEGF-C/VEGFR3 signaling**: drives lymphatic sprouting and growth (Oliver, Nat Rev Immunol 2004). "
 "**Lymph function**: returns interstitial fluid and protein to the venous system and carries immune cells. "
 "**PI3K/AKT/mTOR pathway**: regulates endothelial cell growth and survival."),
 pathophysiology=(
-"**Abnormal development**: somatic PIK3CA mutations activate PI3K/mTOR signaling, causing abnormal lymphatic channel growth. "
+"**Abnormal development**: somatic PIK3CA mutations activate PI3K/mTOR signaling, causing abnormal lymphatic channel growth (Luks et al., J Pediatr 2015). "
 "**Macrocystic vs microcystic**: macrocystic lesions respond to sclerotherapy; microcystic lesions infiltrate tissue. "
 "**Swelling with infection**: lymphoid inflammation enlarges lesions. "
 "**Airway compromise**: cervicofacial lesions can obstruct the airway, requiring EXIT procedures prenatally. "
-"**Sirolimus**: mTOR inhibitor that reduces lesion size."),
+"**Sirolimus**: mTOR inhibitor that reduces lesion size (Adams et al., Pediatrics 2016)."),
 ),
 
 "Laryngomalacia": dict(

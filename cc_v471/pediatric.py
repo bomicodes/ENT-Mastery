@@ -88,7 +88,7 @@ CHECKS = [
  [("It is a malignant lesion needing chemotherapy", "Lymphatic malformations are benign slow-flow vascular malformations."),
   ("It reliably regresses without treatment", "Spontaneous regression is uncommon, unlike infantile hemangioma."),
   ("Microcystic lesions respond better than macrocystic", "Microcystic, infiltrative lesions respond poorly; macrocystic lesions respond best.")],
- "Sclerosant injected into large cysts damages the endothelial lining so the cysts collapse and scar. Diffuse microcystic disease infiltrates tissue and responds poorly; sirolimus, which targets the PIK3CA-driven mTOR pathway, helps those lesions.",
+ "Sclerosant injected into large cysts damages the endothelial lining so the cysts collapse and scar. Diffuse microcystic disease infiltrates tissue and responds poorly; sirolimus, which targets the PIK3CA-driven mTOR pathway, helps those lesions (Adams et al., Pediatrics 2016).",
  "Macrocystic = sclerotherapy; microcystic = harder, consider sirolimus."),
 
 ("Laryngomalacia",
