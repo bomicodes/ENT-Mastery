@@ -1,6 +1,7 @@
 {% extends "base.html" %}{% block content %}
 <div class="eyebrow">UNIFIED PROGRESS</div>
 <h1>What you can do — and what you have actually demonstrated.</h1>
+{% if request.args.get("reset") %}<div class="reset-done card" role="status"><b>Your progress has been reset.</b> Everything starts fresh from here.</div>{% endif %}
 <p class="lede">Mastery is conservative: untested dimensions do not count as mastered. Coverage shows how much of the seven-part competency model you have demonstrated.</p>
 
 <div class="progress-summary-grid">
@@ -36,5 +37,9 @@
   </div>
   {% endfor %}
 </div>
+</section>
+<section class="card reset-entry">
+  <div><b>Start over</b><p>Erase your answers, spaced-review schedule and mastery history and begin again from zero.</p></div>
+  <a class="reset-link" href="/account/reset">Reset progress</a>
 </section>
 {% endblock %}

@@ -102,3 +102,18 @@ form.lab-controls a,.oral-filter a{align-self:flex-end}
 .pasha-metrics{flex:0 0 auto}
 .pasha-hero h1{overflow-wrap:break-word}
 @media(max-width:1100px){.pasha-hero{flex-wrap:wrap}}
+
+/* v52.1 Reset progress */
+.reset-entry{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;padding:18px 22px;margin:30px 0 10px}
+.reset-entry p{margin:4px 0 0;color:var(--muted);font-size:13.5px}
+.reset-link{border:1.5px solid #e2b8b0;color:#b3412f;background:#fff;border-radius:9px;padding:9px 14px;font-weight:800;font-size:14px;white-space:nowrap}
+.reset-link:hover{background:#fbeeeb}
+.reset-card{max-width:640px;padding:22px 24px}
+.reset-card h2{margin:0 0 10px;font-size:17px}
+.reset-list{margin:0 0 12px;padding-left:20px}.reset-list li{margin:6px 0;line-height:1.5}
+.reset-warn{color:#b3412f;font-weight:700;margin:0 0 14px}
+.reset-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.reset-actions a{color:var(--muted);font-weight:700}
+.reset-btn{border:0;background:#b3412f;color:#fff;font:inherit;font-weight:800;border-radius:9px;padding:11px 16px;cursor:pointer}
+.reset-btn:hover{background:#963423}
+.reset-done{background:#e7f3f1;border-color:#b9ddd8;padding:12px 16px;margin:10px 0 14px}
