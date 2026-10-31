@@ -1354,7 +1354,7 @@ VIGNETTES = [
   "Cognitive testing should wait until after hearing aids are fitted"
  ],
  "answer": 0,
- "explanation": "Large cohort studies link age-related hearing loss to faster cognitive decline and higher dementia risk, and the Lancet Commission lists midlife hearing loss among the largest modifiable risk factors. Proposed mechanisms include increased cognitive load, social isolation, and reduced auditory input to the brain. A randomized trial suggested that hearing intervention may slow cognitive decline in higher-risk older adults, though it does not reverse dementia. Treating his loss also improves social engagement, communication, and quality of life.",
+ "explanation": "Large cohort studies link age-related hearing loss to faster cognitive decline and higher dementia risk, and the Lancet Commission lists midlife hearing loss among the largest modifiable risk factors. Proposed mechanisms include increased cognitive load, social isolation, and reduced auditory input to the brain. A randomized trial (ACHIEVE, Lin et al., Lancet 2023) suggested that hearing intervention may slow cognitive decline in higher-risk older adults, though it does not reverse dementia. Treating his loss also improves social engagement, communication, and quality of life.",
  "why_wrong": [
   "Correct.",
   "No evidence shows hearing aids reverse dementia; the benefit is in risk reduction and possibly slowing decline.",

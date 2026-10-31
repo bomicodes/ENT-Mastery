@@ -32,7 +32,7 @@ pathophysiology=(
 "**Neural type**: loss of spiral ganglion neurons and synapses produces word recognition worse than expected from thresholds. "
 "**Cumulative contributors**: noise exposure, genetics, vascular disease, diabetes, smoking, and ototoxic medications add to aging changes. "
 "**Speech-in-noise difficulty**: high-frequency consonant information is lost first, and central temporal processing declines, so patients say they hear but do not understand. "
-"**Cognitive link**: reduced auditory input increases listening effort and may reduce cognitive reserve; Cummings 7e states there is not yet definitive evidence that treatment prevents decline; the later ACHIEVE trial (2023) found slower decline only in older adults at higher baseline risk."),
+"**Cognitive link**: reduced auditory input increases listening effort and may reduce cognitive reserve; Cummings 7e states there is not yet definitive evidence that treatment prevents decline; the later ACHIEVE trial (Lin et al., Lancet 2023) found slower decline only in older adults at higher baseline risk."),
 ),
 
 "Acute Mastoiditis / Petrous Apicitis": dict(
@@ -214,7 +214,7 @@ physiology=(
 pathophysiology=(
 "**Increased central gain**: after cochlear injury, central neurons become hyperresponsive, so moderate sounds feel loud. "
 "**Overprotection**: constant earplug use reduces input further, increasing gain and worsening sensitivity. "
-"**Pain hyperacusis**: a research hypothesis (not in the core texts) is that type II cochlear afferents, which respond to tissue-damaging noise, and inflammatory pathways mediate sound-induced pain. "
+"**Pain hyperacusis**: a research hypothesis (not in the core texts) is that type II cochlear afferents, which respond to tissue-damaging noise, and inflammatory pathways mediate sound-induced pain (Flores et al., Sci Rep 2015). "
 "**Associated conditions**: Bell palsy (loss of stapedius reflex), SCD, migraine, autism, Williams syndrome, and noise exposure. "
 "**Treatment logic**: gradual sound enrichment lowers central gain, and CBT reduces the threat response."),
 ),

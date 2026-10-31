@@ -51,7 +51,7 @@ physiology=(
 "**Blood supply**: the labyrinthine artery (usually from AICA) is an end artery with no collateral supply, so the cochlea is very sensitive to ischemia. "
 "**Tonotopy**: the base encodes high frequencies and the apex low frequencies, which explains audiometric patterns such as low-frequency or flat losses."),
 pathophysiology=(
-"**Mostly idiopathic (about 90 percent per the AAO-HNS guideline)**: leading hypotheses are viral cochleitis, microvascular compromise, and immune-mediated injury; none is proven for an individual patient. "
+"**Mostly idiopathic (about 90 percent per the AAO-HNS guideline, Chandrasekhar et al., 2019)**: leading hypotheses are viral cochleitis, microvascular compromise, and immune-mediated injury; none is proven for an individual patient. "
 "**Vascular theory**: the cochlea's end-artery supply and high metabolic demand mean brief ischemia can damage the stria and hair cells abruptly. "
 "**Viral/inflammatory theory**: inflammation and cytokine release disrupt hair cells and strial function; this is the rationale for corticosteroids, which reduce cochlear inflammation and stabilize the stria. "
 "**Membrane rupture**: rarely, a break between perilymph and endolymph (or a window leak) mixes potassium-rich fluid and depolarizes hair cells. "
@@ -273,7 +273,7 @@ physiology=(
 "**Central compensation**: the cerebellum and brainstem rebalance resting activity over days to weeks after a unilateral loss."),
 pathophysiology=(
 "**Unilateral loss creates false rotation**: when one nerve goes silent, the intact side's resting activity is interpreted as rotation toward it, causing vertigo and nystagmus beating away from the affected ear. "
-"**Viral reactivation hypothesis**: herpes simplex type 1, found latent in human vestibular (Scarpa) ganglia, is thought to reactivate and inflame the nerve; this is supported by the literature rather than the core texts. "
+"**Viral reactivation hypothesis**: herpes simplex type 1, found latent in human vestibular (Scarpa) ganglia, is thought to reactivate and inflame the nerve; this is supported by the literature rather than the core texts (Arbusow et al., Ann Neurol 1999; Strupp & Brandt, NEJM 2004). "
 "**Superior division predominance**: the superior nerve travels in a longer, narrower bony canal, so it is affected more often, sparing the posterior canal and saccule. "
 "**Hearing spared**: the cochlear nerve is uninvolved; added hearing loss means labyrinthitis or a vascular (AICA) event. "
 "**Head impulse test**: a rapid turn toward the affected side shows a corrective catch-up saccade because the VOR is lost; a normal head impulse in acute vertigo is worrisome for stroke. "
@@ -434,7 +434,7 @@ physiology=(
 pathophysiology=(
 "**Aminoglycosides**: accumulate in hair cells, generate free radicals by forming iron complexes, and trigger apoptosis; gentamicin is more vestibulotoxic and amikacin more cochleotoxic. "
 "**Mitochondrial susceptibility**: the m.1555A>G mitochondrial rRNA mutation makes ribosomes resemble bacterial ones, causing profound loss after a single aminoglycoside dose. "
-"**Cisplatin**: produces reactive oxygen species in outer hair cells and the stria vascularis, causing dose-dependent, bilateral, permanent high-frequency loss; sodium thiosulfate given after cisplatin reduced hearing loss in children with localized hepatoblastoma (SIOPEL-6) and is now FDA-approved for this use. "
+"**Cisplatin**: produces reactive oxygen species in outer hair cells and the stria vascularis, causing dose-dependent, bilateral, permanent high-frequency loss; sodium thiosulfate given after cisplatin reduced hearing loss in children with localized hepatoblastoma (SIOPEL-6, Brock et al., NEJM 2018) and other solid tumors (ACCL0431, Freyer et al., Lancet Oncol 2017) and is now FDA-approved for this use. "
 "**Loop diuretics**: inhibit the Na-K-2Cl transporter in the stria vascularis, reducing the endocochlear potential (usually reversible, but synergistic with aminoglycosides). "
 "**Noise**: intense sound causes metabolic exhaustion and oxidative stress (temporary threshold shift), and with repeated exposure, permanent hair-cell loss maximal near 4 kHz (the notch). "
 "**Acoustic trauma**: very loud impulse noise mechanically tears cochlear structures. "

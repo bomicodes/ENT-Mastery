@@ -759,9 +759,10 @@ REWRITES = {'v138_hn_18': {'stem': 'A 49-year-old woman reports 6 months of muff
                 'curveball_answer': 'Cisplatin causes dose-related proximal tubular injury and '
                                     'irreversible high-frequency sensorineural hearing loss, so '
                                     'baseline creatinine clearance and audiometry identify '
-                                    'patients at risk. Carboplatin is less nephrotoxic and less '
-                                    'ototoxic but more myelosuppressive, particularly causing '
-                                    'thrombocytopenia, and is considered somewhat less effective '
+                                    'patients at risk. Carboplatin is less nephrotoxic but more '
+                                    'myelosuppressive, particularly causing thrombocytopenia; its '
+                                    'ototoxicity is lower but still clinically significant. It '
+                                    'is considered somewhat less effective '
                                     'as a radiosensitizer.'},
  'v145_hn_18': {'stem': 'A 71-year-old man has a T3N1 p16-negative supraglottic SCC and chooses '
                         'chemoradiation. He has diabetic kidney disease with a creatinine '

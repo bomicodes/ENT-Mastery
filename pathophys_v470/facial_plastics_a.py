@@ -64,7 +64,7 @@ overview=(
 "Local flaps move adjacent skin into a defect, matching color and texture better than grafts. "
 "Flap design follows tissue biomechanics, blood supply, and relaxed skin tension lines."),
 physiology=(
-"**Random pattern blood supply**: local flaps rely on the subdermal plexus rather than a named artery, limiting length-to-width ratio (about 3:1 classically, up to about 4:1 on the well-vascularized face per Pasha, 2:1 in the neck). "
+"**Random pattern blood supply**: local flaps rely on the subdermal plexus rather than a named artery, limiting length-to-width ratio (about 4:1 on the face and 2:1 in the neck, per Pasha). "
 "**Axial flaps**: carry a named vessel (e.g., supratrochlear for the forehead flap), allowing longer flaps. "
 "**Skin biomechanics**: skin has viscoelastic properties, with creep (elongation under constant load) and stress relaxation. "
 "**Relaxed skin tension lines**: lie perpendicular to underlying muscle pull; closures parallel to them heal with less tension and better scars. "
@@ -218,9 +218,9 @@ overview=(
 "Otoplasty corrects prominent ears, usually from an underdeveloped antihelical fold and excessive conchal bowl. "
 "It is commonly performed after age 5-6 when ear growth is mostly complete."),
 physiology=(
-"**Normal auricle**: auriculocephalic angle about 20-30 degrees and helical rim 1.5-2 cm from the scalp. "
+"**Normal auricle**: auriculocephalic angle about 20-35 degrees and helical rim 1.5-2 cm from the scalp. "
 "**Antihelical fold**: created by cartilage folding. "
-"**Ear growth**: reaches about 85 percent of adult size by age 3, with cartilage growth nearly complete by about age 5."),
+"**Ear growth**: the ear is near adult size by about age 5-6."),
 pathophysiology=(
 "**Absent antihelical fold**: the cartilage does not fold, so the scapha projects outward. "
 "**Excess conchal bowl**: a deep concha pushes the ear away from the head. "

@@ -54,17 +54,17 @@ pathophysiology=(
 
 "Chronic Cough / Laryngeal Hypersensitivity": dict(
 overview=(
-"Chronic cough lasting over 8 weeks (the adult guideline definition; some texts use 3 months) without a cause after treatment of asthma, reflux, and upper airway cough syndrome is often a neuropathic laryngeal hypersensitivity. "
+"Chronic cough lasting over 8 weeks (the adult guideline definition; some texts use 3 months) without a cause after treatment of asthma, reflux, and upper airway cough syndrome is often a neuropathic laryngeal hypersensitivity (Chung & Pavord, Lancet 2008). "
 "Behavioral cough suppression therapy helps, and neuromodulators such as gabapentin may help selected patients, although K.J. Lee notes inconsistent trial evidence."),
 physiology=(
 "**Cough reflex**: vagal afferents in the larynx and airways transmit to the nucleus tractus solitarius, triggering a cough motor pattern. "
-"**Receptors**: TRPV1, TRPA1, and P2X3 receptors respond to irritants, temperature, and ATP. "
+"**Receptors**: TRPV1, TRPA1, and P2X3 receptors respond to irritants, temperature, and ATP (Mazzone & Undem, Physiol Rev 2016). "
 "**Central modulation**: cortical control allows voluntary cough suppression."),
 pathophysiology=(
 "**Sensory neuropathy**: viral injury or inflammation lowers the threshold of laryngeal afferents, causing cough with trivial triggers (talking, temperature changes). "
 "**Central sensitization**: increased brainstem gain amplifies cough responses. "
 "**Laryngeal paresthesia**: tickle, globus, and throat clearing. "
-"**Treatment logic**: gabapentin, pregabalin, amitriptyline, and P2X3 antagonists reduce afferent sensitivity; speech therapy teaches suppression."),
+"**Treatment logic**: gabapentin (Ryan et al., Lancet 2012), pregabalin, amitriptyline, and P2X3 antagonists may reduce afferent sensitivity, though trial evidence is mixed; speech therapy teaches suppression."),
 ),
 
 "Vocal Fold Sulcus / Scar": dict(
@@ -94,7 +94,7 @@ pathophysiology=(
 "**Mucoperichondrial injury**: endotracheal tube pressure, forceful adduction, or throat clearing ulcerates the thin mucosa. "
 "**Granulation**: chronic irritation sustains granulation tissue. "
 "**Reflux role**: often treated though evidence is mixed. "
-"**Treatment**: voice therapy, reflux management, botulinum toxin to reduce adduction force, and steroid injection; excision recurs."),
+"**Treatment**: voice therapy, reflux management, botulinum toxin to reduce adduction force (Orloff & Goldman, 1999), and steroid injection; excision recurs."),
 ),
 
 "Radiation-Associated Dysphagia": dict(
@@ -106,7 +106,7 @@ physiology=(
 "**Lower cranial nerves**: control swallowing. "
 "**Radiation biology**: late effects from fibrosis and microvascular injury."),
 pathophysiology=(
-"**Fibrosis**: TGF-beta driven fibrosis stiffens swallowing muscles, reducing elevation and contraction. "
+"**Fibrosis**: TGF-beta driven radiation-induced fibrosis (Martin et al., Int J Radiat Oncol Biol Phys 2000) stiffens swallowing muscles, reducing elevation and contraction. "
 "**Neuropathy**: late lower cranial nerve neuropathy reduces sensation and motor function. "
 "**Stricture**: UES or esophageal stricture. "
 "**Disuse atrophy**: NPO status worsens function, so swallowing during treatment is encouraged. "

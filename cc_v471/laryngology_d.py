@@ -7,7 +7,7 @@ CHECKS = [
  [("Acute radiation mucositis", "Mucositis occurs during and shortly after treatment, not years later."),
   ("A new primary cancer in every case", "Recurrence or new primaries must be excluded, but late fibrosis explains this pattern."),
   ("Radiation-induced esophageal reflux", "Reflux does not explain progressive pharyngeal weakness and aspiration.")],
- "TGF-beta driven fibrosis stiffens the pharyngeal constrictors and tongue base, and late lower cranial neuropathy reduces sensation and motor function. Dose to swallowing structures predicts risk, and swallowing exercises during treatment help prevent it.",
+ "TGF-beta driven radiation fibrosis (Martin et al., Int J Radiat Oncol Biol Phys 2000) stiffens the pharyngeal constrictors and tongue base, and late lower cranial neuropathy reduces sensation and motor function. Dose to swallowing structures predicts risk, and swallowing exercises during treatment help prevent it.",
  "Late dysphagia years after radiation is common: rehabilitate and exclude recurrence."),
 
 ("Aspiration-Prevention Surgery",

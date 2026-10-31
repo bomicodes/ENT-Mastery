@@ -13,7 +13,7 @@ physiology=(
 "**Retronasal smell**: odors from the mouth reach the epithelium through the nasopharynx and create most of what we call flavor."),
 pathophysiology=(
 "**Conductive loss**: polyps, edema, or obstruction prevent odorants from reaching the olfactory cleft; this is often reversible with steroids or surgery. "
-"**Post-viral loss**: viruses damage supporting (sustentacular) cells and receptor neurons; SARS-CoV-2 targets sustentacular cells, and recovery depends on regeneration. "
+"**Post-viral loss**: viruses damage supporting (sustentacular) cells and receptor neurons; SARS-CoV-2 targets sustentacular cells (Brann et al., Sci Adv 2020), and recovery depends on regeneration. "
 "**Parosmia**: miswired regenerating neurons produce distorted, often unpleasant perceptions during recovery. "
 "**Post-traumatic loss**: shearing of olfactory axons at the cribriform plate or contusion of the bulbs and frontal lobes; recovery is less likely. "
 "**Neurodegenerative link**: early smell loss precedes Parkinson and Alzheimer disease because pathology involves olfactory structures early. "
@@ -26,10 +26,10 @@ overview=(
 "Rhinitis medicamentosa is rebound congestion from overuse of topical decongestants."),
 physiology=(
 "**Autonomic balance**: sympathetic tone keeps venous sinusoids constricted; parasympathetic tone drives secretion and congestion. "
-"**Sensory nerves**: trigeminal C fibers with TRPV1 receptors respond to irritants, temperature, and chemicals. "
+"**Sensory nerves**: trigeminal sensory C fibers respond to irritants, temperature, and chemicals by releasing neuropeptides (substance P, CGRP). "
 "**Adrenergic receptors**: alpha receptors on vessels mediate decongestion."),
 pathophysiology=(
-"**Vasomotor rhinitis**: neural hyperreactivity to irritants, temperature, and odors through TRPV1 and parasympathetic reflexes. "
+"**Vasomotor rhinitis**: neural hyperreactivity to irritants, temperature, and odors through sensory C-fiber and parasympathetic reflexes. "
 "**Gustatory rhinitis**: eating triggers vagal cholinergic reflexes, producing watery rhinorrhea (responsive to ipratropium). "
 "**Rhinitis medicamentosa**: repeated alpha-agonist use downregulates receptors and causes rebound vasodilation and tolerance, creating a cycle of escalating use. "
 "**Drug-induced rhinitis**: antihypertensives, PDE5 inhibitors, and hormones alter vascular tone. "
@@ -78,7 +78,7 @@ pathophysiology=(
 "**CF mechanism**: defective CFTR dehydrates airway surface liquid, producing thick mucus that cilia cannot clear, leading to obstruction, chronic infection (Pseudomonas), and polyps. "
 "**PCD mechanism**: structural defects in cilia (often dynein arm mutations) impair beating despite normal mucus, causing neonatal respiratory distress, chronic wet cough, otitis, and situs inversus in about half (Kartagener). "
 "**Lung reservoir**: the sinuses act as a reservoir for Pseudomonas, which seeds the lungs after transplant. "
-"**CFTR modulators**: elexacaftor-tezacaftor-ivacaftor improves channel function, reducing sinus disease severity. "
+"**CFTR modulators**: elexacaftor-tezacaftor-ivacaftor improves channel function, reducing sinus disease severity (Beswick et al., Int Forum Allergy Rhinol 2022). "
 "**Diagnostics**: sweat chloride and genetics for CF; nasal nitric oxide (low in PCD), ciliary electron microscopy, and genetics for PCD."),
 ),
 
@@ -106,7 +106,7 @@ physiology=(
 "**Cross-sectional area**: acoustic rhinometry uses reflected sound to map area along the nasal cavity. "
 "**Pressure-flow relationship**: rhinomanometry measures transnasal pressure and flow to calculate resistance."),
 pathophysiology=(
-"**Mismatch of perception and measurement**: patency sensation depends on mucosal cooling (TRPM8 receptors) as much as on actual resistance, so measurements and symptoms often correlate poorly. "
+"**Mismatch of perception and measurement**: patency sensation depends on mucosal cooling (cold, menthol-sensitive TRPM8 receptors) as much as on actual resistance, so measurements and symptoms often correlate poorly. "
 "**Decongestion testing**: comparing before and after decongestant distinguishes mucosal (reversible) from structural (fixed) obstruction. "
 "**Smell testing**: validated scratch-and-sniff tests (UPSIT) and threshold-discrimination-identification tests quantify loss and detect malingering. "
 "**Empty nose context**: patients with large airways may still report obstruction because of lost sensation."),
@@ -157,7 +157,7 @@ pathophysiology=(
 "**EGPA**: eosinophilic vasculitis with asthma and polyps. "
 "**Sarcoidosis**: noncaseating granulomas produce crusting and nodularity. "
 "**NK/T-cell lymphoma**: angiocentric destructive lesions of the midline face that mimic GPA; biopsy must be deep and repeated if needed. "
-"**Cocaine**: vasoconstriction and cutting agents (levamisole) cause midline destruction and false-positive ANCA."),
+"**Cocaine**: vasoconstriction and cutting agents (levamisole) cause midline destruction and false-positive ANCA (levamisole: McGrath et al., Clin Rheumatol 2011)."),
 ),
 
 "Allergy Testing & Interpretation": dict(
@@ -217,13 +217,13 @@ overview=(
 "Empty nose syndrome is paradoxical nasal obstruction and suffocation sensation after turbinate reduction, despite a widely patent airway. "
 "It reflects lost airflow sensation and conditioning rather than physical blockage."),
 physiology=(
-"**Airflow sensation**: TRPM8 cold receptors in turbinate mucosa sense cooling from airflow, which the brain interprets as breathing freely. "
+"**Airflow sensation**: cold (menthol-sensitive) receptors in turbinate mucosa, identified as TRPM8 in the literature (Zhao et al., Laryngoscope 2011), sense cooling from airflow, which the brain interprets as breathing freely. "
 "**Air conditioning**: turbinates warm and humidify air and direct flow."),
 pathophysiology=(
 "**Loss of sensory surface**: aggressive turbinate resection removes cold receptors, so airflow is not perceived despite low resistance. "
 "**Abnormal airflow**: altered flow patterns and dryness cause crusting and discomfort. "
 "**Psychological overlay**: anxiety, depression, and sleep disturbance are common and amplify symptoms. "
-"**Diagnosis**: clinical, supported by the ENS6Q questionnaire and a cotton test (cotton placed in the inferior meatus temporarily relieves symptoms; Pasha describes the same test for atrophic rhinitis). "
+"**Diagnosis**: clinical, supported by the ENS6Q questionnaire and a cotton test (cotton placed in the inferior meatus temporarily relieves symptoms; Pasha describes the same test for atrophic rhinitis; Velasquez et al., Int Forum Allergy Rhinol 2017). "
 "**Treatment logic**: humidification, and implants to restore airway volume and redirect flow toward mucosa."),
 ),
 
@@ -288,7 +288,7 @@ pathophysiology=(
 "**Mediator release**: histamine and leukotrienes cause vasodilation, capillary leak, bronchospasm, and edema. "
 "**Shock**: distributive vasodilation plus fluid shift reduce preload, causing hypotension. "
 "**Airway compromise**: laryngeal and tongue edema obstruct the upper airway. "
-"**Biphasic reactions**: symptoms recur after resolution in about 1-20 percent, up to 72 hours later; severe initial reactions, needing more than one epinephrine dose, and delayed epinephrine raise the risk, so observation is extended for these patients. "
+"**Biphasic reactions**: symptoms recur after resolution in about 1-20 percent, up to 72 hours later; severe initial reactions, needing more than one epinephrine dose, and delayed epinephrine raise the risk, so observation is extended for these patients (2020 anaphylaxis practice parameter, Shaker et al., J Allergy Clin Immunol 2020). "
 "**Why epinephrine first**: it reverses vasodilation and bronchospasm and stabilizes mast cells; antihistamines and steroids are adjuncts only and do not prevent biphasic reactions. Intramuscular thigh dosing (0.01 mg/kg up to 0.5 mg) remains standard, and an epinephrine nasal spray (FDA-approved 2024) is an alternative for community use. "
 "**Beta-blockers**: blunt epinephrine response, sometimes requiring glucagon."),
 ),
@@ -303,7 +303,7 @@ physiology=(
 "**Heat and digestion**: PR-10 proteins and profilins unfold with cooking and are degraded quickly by saliva and gastric acid, while lipid transfer and storage proteins are stable. "
 "**Oral mast cells**: the oropharyngeal mucosa contains mast cells that react on first contact with food protein."),
 pathophysiology=(
-"**Cross-reactivity**: birch pollen (Bet v 1) antibodies cross-react with apple, cherry, carrot, and others; ragweed with melon and banana. "
+"**Cross-reactivity**: birch pollen (Bet v 1) antibodies cross-react with apple, cherry, carrot, and others; ragweed with melon and banana (specific pairings per allergy references such as Middleton's Allergy rather than the core ENT texts). "
 "**Heat-labile proteins**: cooking denatures these proteins, so cooked foods are tolerated. "
 "**Localized reaction**: proteins are digested quickly, limiting symptoms mainly to the mouth. "
 "**Risk of systemic reactions**: stable proteins (lipid transfer proteins, storage proteins) can cause systemic reactions, which component testing identifies."),

@@ -43,7 +43,7 @@ overview=(
 "Tracheostomy emergencies (decannulation, tube obstruction, bleeding) are a leading cause of preventable airway deaths. "
 "Response depends on whether the patient has a patent upper airway and how mature the tract is."),
 physiology=(
-"**Tract maturation**: the stoma tract matures over about 3-7 days (Pasha 3-5; 5-7 in children per Bluestone), after which the tube can usually be replaced through it. "
+"**Tract maturation**: the stoma tract matures over about 3-7 days (Pasha 3-5; 5-7 in children per Bluestone; at least 7 after percutaneous placement), after which the tube can usually be replaced through it. "
 "**Upper airway status**: a laryngectomy patient has no connection between the mouth and trachea; a tracheostomy patient usually does. "
 "**Humidification**: the upper airway normally humidifies air; bypassing it dries secretions. "
 "**Cuff function**: an inflated cuff seals the trachea for ventilation and limits aspiration."),
@@ -120,7 +120,7 @@ physiology=(
 "**Airway tissues**: loose submucosa of the tongue, floor of mouth, and supraglottis swells easily."),
 pathophysiology=(
 "**Histaminergic angioedema**: mast-cell degranulation with urticaria and itching; responds to epinephrine, antihistamines, and steroids. "
-"**ACE-inhibitor angioedema**: reduced bradykinin degradation causes swelling (more common in Black patients), often of the tongue and lips, without urticaria; it often responds poorly to epinephrine and antihistamines (although K.J. Lee lists them with steroids in initial management); the core of care is stopping the drug and protecting the airway, and icatibant was not superior to placebo in a randomized trial. "
+"**ACE-inhibitor angioedema**: reduced bradykinin degradation causes swelling (more common in Black patients), often of the tongue and lips, without urticaria; it often responds poorly to epinephrine and antihistamines (although K.J. Lee lists them with steroids in initial management); the core of care is stopping the drug and protecting the airway, and icatibant was not superior to placebo in a randomized trial (Sinert et al., J Allergy Clin Immunol Pract 2017). "
 "**Hereditary angioedema**: C1 inhibitor deficiency or dysfunction causes recurrent episodes; treated with C1 inhibitor, icatibant, or ecallantide. "
 "**Airway assessment**: flexible laryngoscopy determines laryngeal involvement; awake fiberoptic intubation or surgical airway for progressive airway swelling."),
 ),
@@ -185,7 +185,7 @@ pathophysiology=(
 "**Venous and lymphatic obstruction**: hematoma compresses veins and lymphatics, causing laryngeal and pharyngeal edema; this, rather than direct tracheal compression, is the main mechanism of airway compromise. "
 "**Timing**: most occur early (the first hours to a day), but some occur up to several days after surgery (K.J. Lee). "
 "**Risk factors**: hypertension, coughing or vomiting at emergence, anticoagulation, and large goiters. "
-"**Management**: SCOOP (skin exposure, cut sutures, open skin, open muscles, pack) at the bedside, then OR evacuation."),
+"**Management**: SCOOP (skin exposure, cut sutures, open skin, open muscles, pack; DAS/BAETS consensus, Iliff et al., Anaesthesia 2022) at the bedside, then OR evacuation."),
 ),
 
 "Chyle Leak": dict(
@@ -232,7 +232,7 @@ physiology=(
 pathophysiology=(
 "**Radiation and surgery**: devascularize the adventitia, weakening the wall. "
 "**Wound breakdown and fistula**: saliva and infection erode the exposed artery. "
-"**Classification**: threatened (exposed artery), impending (sentinel bleed), and acute (rupture). "
+"**Classification**: threatened (exposed artery), impending (sentinel bleed), and acute (rupture) (Chaloupka et al., AJNR 1996). "
 "**Management**: pressure, airway control (cuffed tube), resuscitation, and endovascular stenting or occlusion."),
 ),
 

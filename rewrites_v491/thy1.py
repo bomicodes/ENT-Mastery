@@ -2429,7 +2429,8 @@ REWRITES = {'v11_end_01': {'stem': 'A 38-year-old woman notices a fullness in he
                                             'radioiodine. Here, multiple nodal metastases larger than a few '
                                             'millimeters and a positive margin raise her risk tier, making '
                                             'radioiodine likely, so the left lobe must be removed. It is '
-                                            'usually performed within days or after several months.',
+                                            'usually performed early (within about a week) or delayed '
+                                            '(about 3 months).',
                              'why_wrong': ['Completion addresses the remaining thyroid; bed re-excision for '
                                            'a microscopic margin is not what the term describes.',
                                            'Central neck dissection treats nodes and may accompany '

@@ -86,7 +86,7 @@ pathophysiology=(
 "**Malnutrition**: protein and vitamin C deficiency impair collagen. "
 "**Diabetes**: impaired immunity and microvascular disease. "
 "**Hypothyroidism**: increases fistula risk. "
-"**Steroids**: impair the early inflammatory phase; vitamin A can partly reverse this (classic experimental work)."),
+"**Steroids**: impair the early inflammatory phase; vitamin A can partly reverse this (classic experimental work, Ehrlich & Hunt, Ann Surg 1968)."),
 ),
 
 "Grafts / Implants / Biomaterials in ENT": dict(
@@ -96,7 +96,7 @@ overview=(
 physiology=(
 "**Graft take**: grafts survive by plasmatic imbibition, then inosculation and revascularization from the recipient bed. "
 "**Cartilage biology**: avascular, nourished by diffusion; chondrocytes survive transplantation if not crushed. "
-"**Bone healing**: osteoconduction (scaffold), osteoinduction (growth signals such as BMPs), and osteogenesis (living cells). "
+"**Bone healing**: osteoconduction (scaffold), osteoinduction (growth signals such as BMPs), and osteogenesis (living cells) (Giannoudis et al., Injury 2005). "
 "**Foreign body response**: implants are encapsulated by fibrous tissue."),
 pathophysiology=(
 "**Autografts**: lowest infection and rejection but donor morbidity. "
@@ -196,7 +196,7 @@ physiology=(
 "**Swallowing aging (presbyphagia)**: slower swallow triggering and reduced pharyngeal strength. "
 "**Pharmacology**: altered drug metabolism and polypharmacy increase adverse effects."),
 pathophysiology=(
-"**Frailty phenotype**: unintentional weight loss, weakness, exhaustion, slow gait, and low activity predict complications, delirium, and mortality better than age. "
+"**Frailty phenotype**: unintentional weight loss, weakness, exhaustion, slow gait, and low activity (Fried phenotype, Fried et al., J Gerontol 2001) predict complications, delirium, and mortality better than age. "
 "**Postoperative delirium**: anesthesia, opioids, sleep disruption, and sensory deprivation precipitate it. "
 "**Aspiration**: presbyphagia and neurologic disease increase pneumonia risk. "
 "**Falls**: vestibular and sensory loss combine with medications to increase fall risk. "

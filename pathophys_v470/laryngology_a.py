@@ -57,7 +57,7 @@ pathophysiology=(
 "**Pharyngeal weakness**: residue in the valleculae and pyriform sinuses spills into the airway after the swallow. "
 "**UES dysfunction**: cricopharyngeal hypertonicity or fibrosis causes residue and Zenker diverticulum. "
 "**Silent aspiration**: absent cough from reduced laryngeal sensation, which is why bedside screening misses aspiration. "
-"**Penetration-Aspiration Scale**: grades depth of airway entry and whether it is cleared. "
+"**Penetration-Aspiration Scale**: grades depth of airway entry and whether it is cleared (Rosenbek et al., Dysphagia 1996). "
 "**Consequences**: aspiration pneumonia, malnutrition, dehydration, and reduced quality of life."),
 ),
 

@@ -1210,7 +1210,7 @@ REWRITES = {'v11_hn_01': {'stem': 'A 63-year-old man with a 45 pack-year smoking
                      'curveball': 'The resident is drafting a prevention handout for future '
                                   'patients. Which dental and radiation factors raise the risk of '
                                   'osteoradionecrosis?',
-                     'curveball_answer': 'Risk rises with mandibular doses above about 60 Gy, '
+                     'curveball_answer': 'Risk rises with mandibular doses above about 50-60 Gy, '
                                          'larger volumes of high-dose bone, oral cavity and '
                                          'oropharyngeal primaries near the mandible, and the '
                                          'posterior mandible. Dental factors include poor '

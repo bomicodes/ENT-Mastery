@@ -13,8 +13,8 @@ physiology=(
 "**Cutaneous nerves**: sensory branches of V1-V3 and the facial nerve run in the subcutaneous plane and connect directly to the skull base."),
 pathophysiology=(
 "**UV mutagenesis**: UVB causes signature C-to-T transitions in TP53, NOTCH1, and other genes, producing actinic keratosis, SCC in situ (Bowen disease), then invasive SCC. "
-"**Immunosuppression**: solid-organ transplant recipients have a 65- to 250-fold higher risk because surveillance fails; reducing immunosuppression (or switching to an mTOR inhibitor) is part of treatment. "
-"**High mutational burden**: UV-driven tumors carry many neoantigens, which explains why PD-1 blockade (cemiplimab) works well in advanced disease and, since 2025, as adjuvant therapy after surgery and radiation for high-risk disease (C-POST). "
+"**Immunosuppression**: solid-organ transplant recipients have a 65- to 250-fold higher risk (Euvrard et al., NEJM 2003) because surveillance fails; reducing immunosuppression (or switching to an mTOR inhibitor) is part of treatment. "
+"**High mutational burden**: UV-driven tumors carry many neoantigens, which explains why PD-1 blockade (cemiplimab; Migden et al., NEJM 2018) works well in advanced disease and, since 2025, as adjuvant therapy after surgery and radiation for high-risk disease (C-POST). "
 "**Perineural invasion**: tumor tracks along V2, V3, or VII toward the skull base, causing numbness, formication, or facial weakness and late recurrence; MRI neurography maps it. "
 "**Parotid metastasis**: periauricular and scalp primaries spread first to parotid nodes, which then require parotidectomy plus neck dissection. "
 "**Adjuvant radiation logic**: microscopic disease along nerves and in nodal beds is not removed by surgery, so radiation is added for PNI of named nerves, close margins, and nodal disease."),
@@ -65,7 +65,7 @@ physiology=(
 "**Immune surveillance**: T cells also eliminate UV-mutated cells."),
 pathophysiology=(
 "**Two pathways**: about 80 percent are driven by clonally integrated Merkel cell polyomavirus whose truncated large T antigen inactivates Rb; the rest are UV-driven with very high mutational burden. "
-"**Rapid growth**: a painless, red-violet, fast-growing nodule (AEIOU: asymptomatic, expanding rapidly, immunosuppressed, older, UV-exposed). "
+"**Rapid growth**: a painless, red-violet, fast-growing nodule (AEIOU: asymptomatic, expanding rapidly, immunosuppressed, older, UV-exposed; Heath et al., J Am Acad Dermatol 2008). "
 "**Early nodal spread**: microscopic nodal disease is common even with small primaries, so sentinel node biopsy is standard. "
 "**Immunosuppression**: raises risk and worsens prognosis, consistent with immune control of the virus. "
 "**Treatment logic**: tumors are highly radiosensitive and respond well to PD-1/PD-L1 inhibitors because of viral antigens or neoantigens; CK20 perinuclear dot staining confirms the diagnosis."),
@@ -82,7 +82,7 @@ physiology=(
 "**Treatment-naive vs pretreated tissue**: prior radiation and surgery alter blood supply and immune infiltration."),
 pathophysiology=(
 "**Immune escape**: tumors upregulate PD-L1, lose MHC, and recruit suppressive cells, allowing progression after initial therapy. "
-"**First-line therapy**: pembrolizumab alone (CPS 1 or greater) or with platinum-5-FU improved survival over the EXTREME regimen (KEYNOTE-048). "
+"**First-line therapy**: pembrolizumab alone (CPS 1 or greater) or with platinum-5-FU improved survival over the EXTREME regimen (KEYNOTE-048; Burtness et al., Lancet 2019). "
 "**Durable responses**: a minority achieve long-lasting control because restored T-cell immunity has memory. "
 "**Resistance mechanisms**: DNA repair upregulation, EGFR signaling, and anti-apoptotic pathways reduce chemotherapy and cetuximab effectiveness. "
 "**Patterns of failure**: locoregional recurrence dominates; distant spread most often goes to lung, then bone and liver. "
@@ -102,7 +102,7 @@ pathophysiology=(
 "**Evasion strategies**: PD-L1 upregulation, MHC class I loss, regulatory T cells, myeloid-derived suppressor cells, and immunosuppressive cytokines (TGF-beta, IL-10). "
 "**Hot vs cold tumors**: T-cell-inflamed tumors respond better; HPV-positive tumors carry viral antigens and are often more inflamed. "
 "**Checkpoint blockade**: anti-PD-1 antibodies (pembrolizumab, nivolumab) release suppressed T cells. "
-"**Neoadjuvant rationale**: giving immunotherapy while the tumor and nodes are intact maximizes antigen presentation; KEYNOTE-689 established perioperative pembrolizumab for resectable locally advanced disease with CPS 1 or greater (FDA-approved 2025). "
+"**Neoadjuvant rationale**: giving immunotherapy while the tumor and nodes are intact maximizes antigen presentation; KEYNOTE-689 (Uppaluri et al., NEJM 2025) established perioperative pembrolizumab for resectable locally advanced disease with CPS 1 or greater (FDA-approved 2025). "
 "**Immune-related adverse events**: thyroiditis and hypothyroidism are among the most common in head and neck patients; colitis, pneumonitis, hepatitis, and hypophysitis are less common but serious."),
 ),
 
@@ -168,7 +168,7 @@ physiology=(
 "**Mandible blood supply**: the inferior alveolar artery provides endosteal flow, supplemented by periosteal vessels; the dense cortical mandible has less collateral supply than the maxilla. "
 "**Dentition and mucosa**: thin mucosa over the mandible and teeth that breach it create entry points for injury and infection."),
 pathophysiology=(
-"**Radiation-induced fibroatrophy**: radiation activates TGF-beta-driven fibrosis, endarteritis, and osteocyte death. "
+"**Radiation-induced fibroatrophy**: radiation activates TGF-beta-driven fibrosis (Martin et al., Int J Radiat Oncol Biol Phys 2000), endarteritis, and osteocyte death. "
 "**Hypoxic, hypocellular, hypovascular bone (Marx)**: the bone cannot remodel after injury. "
 "**Trigger**: extraction, trauma, or ill-fitting dentures expose bone that never heals. "
 "**Risk factors**: dose above about 50-60 Gy, mandible within the high-dose field, poor dentition, and smoking. "
@@ -221,7 +221,7 @@ physiology=(
 pathophysiology=(
 "**Late presentation**: tumors fill air spaces silently, presenting with unilateral obstruction, epistaxis, or neuro-ophthalmic signs. "
 "**Spread**: to orbit, skull base, brain, and perineural pathways. "
-"**Histology-driven treatment**: esthesioneuroblastoma (Kadish/Hyams grading), SNUC and SMARCB1-deficient carcinomas (aggressive, induction chemotherapy), and mucosal melanoma (poor prognosis). "
+"**Histology-driven treatment**: esthesioneuroblastoma (Kadish/Hyams grading), SNUC and SMARCB1-deficient carcinomas (WHO 2022; Agaimy et al., Am J Surg Pathol 2017; aggressive, induction chemotherapy), and mucosal melanoma (poor prognosis). "
 "**Occupational exposure**: wood dust strongly associated with ethmoid adenocarcinoma. "
 "**Endoscopic resection**: comparable outcomes to open surgery for selected tumors with negative margins."),
 ),
@@ -271,7 +271,7 @@ physiology=(
 pathophysiology=(
 "**The 4 Rs**: repair (normal tissue repairs between fractions), reassortment (cells move into sensitive phases), repopulation (tumor regrows during gaps), and reoxygenation (hypoxic cells become oxygenated). "
 "**Hypoxic resistance**: hypoxic tumor cores resist radiation, contributing to failure. "
-"**Treatment interruptions**: allow accelerated repopulation, reducing control by roughly 1 percent per day of prolongation (classic radiobiology estimate; Cummings notes worse outcomes once treatment exceeds about 42 days). "
+"**Treatment interruptions**: allow accelerated repopulation, reducing control by roughly 1 percent per day of prolongation (classic radiobiology estimate, Withers et al., Acta Oncol 1988; Cummings notes worse outcomes once treatment exceeds about 42 days). "
 "**Concurrent cisplatin**: sensitizes tumor cells and improves control. "
 "**IMRT**: sculpts dose to spare parotids and swallowing structures, reducing xerostomia. "
 "**Late effects**: slowly dividing tissues show damage months to years later."),

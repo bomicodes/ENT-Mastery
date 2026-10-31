@@ -7,14 +7,14 @@ overview=(
 "It is the reference test for aspiration during the swallow and for testing compensatory strategies."),
 physiology=(
 "**Fluoroscopic view**: lateral and AP views show bolus flow, hyolaryngeal elevation, epiglottic inversion, pharyngeal contraction, and UES opening. "
-"**Timing**: the swallow reflex normally triggers as the bolus head reaches the ramus of the mandible or valleculae. "
+"**Timing**: the swallow reflex normally triggers as the bolus head reaches the ramus of the mandible or valleculae (Logemann, Evaluation and Treatment of Swallowing Disorders). "
 "**Consistencies**: thin liquids move fastest and are most likely aspirated; thicker consistencies slow flow (IDDSI framework). "
 "**Biomechanics**: anterior-superior hyoid movement and laryngeal elevation pull open the UES."),
 pathophysiology=(
 "**Aspiration timing**: before (delayed trigger), during (poor laryngeal closure), or after (residue spillage) the swallow, which guides treatment. "
 "**Residue patterns**: vallecular residue implies reduced tongue base retraction; pyriform residue implies pharyngeal weakness or UES dysfunction. "
 "**Cricopharyngeal bar**: a posterior indentation reflecting a noncompliant UES. "
-"**Penetration-Aspiration Scale**: grades severity. "
+"**Penetration-Aspiration Scale** (Rosenbek et al., Dysphagia 1996): grades severity. "
 "**Strategy testing**: chin tuck, head turn, and effortful swallow are tested for effectiveness. "
 "**Advantage over FEES**: sees aspiration during the swallow and the oral and esophageal phases."),
 ),
@@ -163,7 +163,7 @@ physiology=(
 pathophysiology=(
 "**Closing a glottic gap**: added volume pushes the paralyzed or atrophic fold toward midline, reducing air escape and aspiration. "
 "**Material choice by duration**: hyaluronic acid and carboxymethylcellulose last weeks to months (bridging recovery); calcium hydroxylapatite and fat last longer. "
-"**Early injection**: in acute paralysis, early medialization improves voice and swallowing and may reduce the later need for permanent surgery by positioning the fold favorably during reinnervation. "
+"**Early injection**: in acute paralysis, early medialization improves voice and swallowing and may reduce the later need for permanent surgery by positioning the fold favorably during reinnervation (Friedman et al., Laryngoscope 2010). "
 "**Overinjection and superficial injection**: overinjection causes strained voice or airway compromise; superficial injection stiffens the cover. "
 "**Limitations**: injection does not correct large posterior gaps or level mismatch."),
 ),

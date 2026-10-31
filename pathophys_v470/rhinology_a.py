@@ -52,7 +52,7 @@ pathophysiology=(
 "**Platelet contribution**: platelet-adherent leukocytes supply extra leukotriene production. "
 "**Type 2 inflammation**: dense eosinophilic polyps with high IL-5 and IL-13 drive rapid recurrence and anosmia. "
 "**Desensitization logic**: controlled aspirin exposure followed by daily high-dose aspirin downregulates leukotriene receptors and reduces polyp regrowth. "
-"**Leukotriene modifiers**: montelukast or zileuton blunt the pathway; respiratory reactions to alcohol are a common clue (reported by most AERD patients in the literature)."),
+"**Leukotriene modifiers**: montelukast or zileuton blunt the pathway; respiratory reactions to alcohol are a common clue (reported by most AERD patients; Cardet et al., J Allergy Clin Immunol Pract 2014)."),
 ),
 
 "Frontal Recess / Frontal Sinus": dict(
@@ -116,7 +116,7 @@ physiology=(
 "**Erectile tissue**: venous sinusoids in the submucosa engorge and shrink under autonomic control, regulating airway resistance. "
 "**Internal valve region**: the head of the inferior turbinate sits near the internal nasal valve, the narrowest point of the airway. "
 "**Air conditioning**: the turbinates create turbulence that maximizes mucosal contact for warming, humidification, and particle deposition. "
-"**Sensation of airflow**: TRPM8 cold receptors in the mucosa sense airflow cooling, which is perceived as nasal patency."),
+"**Sensation of airflow**: cold (menthol-sensitive, TRPM8) receptors in the mucosa sense airflow cooling, which is perceived as nasal patency (Zhao et al., Laryngoscope 2011)."),
 pathophysiology=(
 "**Mucosal hypertrophy**: chronic allergic, nonallergic, or medication-induced inflammation causes submucosal edema, fibrosis, and glandular hyperplasia. "
 "**Bony hypertrophy**: a large conchal bone contributes in some patients and does not respond to medical therapy. "
@@ -189,7 +189,7 @@ pathophysiology=(
 "**Symptoms**: mechanical obstruction plus olfactory cleft inflammation cause congestion and anosmia. "
 "**S. aureus enterotoxins**: act as superantigens driving local polyclonal IgE. "
 "**Recurrence**: inflammation continues after surgery, so long-term topical steroid (often high-volume irrigation) is required. "
-"**Biologic targets**: dupilumab (IL-4Ralpha), omalizumab (IgE), mepolizumab (IL-5), and tezepelumab (TSLP) interrupt specific steps of type 2 inflammation."),
+"**Biologic targets**: dupilumab (IL-4Ralpha), omalizumab (IgE), mepolizumab (IL-5), and tezepelumab (TSLP; WAYPOINT trial, Lipworth et al., NEJM 2025) interrupt specific steps of type 2 inflammation."),
 ),
 
 "AFRS": dict(
@@ -271,7 +271,7 @@ pathophysiology=(
 "**Occupational exposures**: wood dust (intestinal-type adenocarcinoma, ethmoid), leather dust, nickel, and formaldehyde. "
 "**Silent growth**: tumors fill air spaces before causing symptoms, so they present late with unilateral obstruction, epistaxis, facial numbness, proptosis, or trismus. "
 "**Spread paths**: orbital invasion, skull base and dural invasion, and perineural spread along V2 into the pterygopalatine fossa. "
-"**Histology matters**: esthesioneuroblastoma arises from olfactory neuroepithelium (Kadish/Hyams grading); SNUC and SMARCB1-deficient carcinomas are aggressive and often treated with induction chemotherapy; mucosal melanoma has poor survival. "
+"**Histology matters**: esthesioneuroblastoma arises from olfactory neuroepithelium (Kadish/Hyams grading); SNUC and SMARCB1-deficient carcinomas (WHO 2022 classification; Agaimy et al., Am J Surg Pathol 2017) are aggressive and often treated with induction chemotherapy; mucosal melanoma has poor survival. "
 "**Treatment logic**: complete resection (often endoscopic) with adjuvant radiation for most, guided by histology."),
 ),
 
@@ -380,7 +380,7 @@ physiology=(
 "**Maxillary drainage**: the maxillary ostium sits high on the medial wall, so drainage depends entirely on ciliary transport rather than gravity, making the maxillary sinus the most vulnerable site."),
 pathophysiology=(
 "**Poor clearance**: impaired drainage allows spores to accumulate and grow into a mass (usually Aspergillus). "
-"**Dental association**: root canal sealers containing zinc may promote fungal growth in the maxillary sinus. "
+"**Dental association**: root canal sealers containing zinc may promote fungal growth in the maxillary sinus (Legent et al., 1989; Mensi et al., 2007). "
 "**No invasion**: hyphae stay in the lumen without tissue or vascular invasion and without a strong allergic response. "
 "**Imaging**: a single sinus opacification with central hyperdensities or calcifications on CT. "
 "**Why surgery cures**: removal of the mass and restoring drainage eliminates it; antifungals are unnecessary."),

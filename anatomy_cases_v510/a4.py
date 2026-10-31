@@ -302,7 +302,7 @@ CASES["tep"] = {
     "summary": (
         "After total laryngectomy the trachea ends at a permanent stoma and the pharynx drains into the esophagus with no connection between them. "
         "A tracheoesophageal puncture makes a controlled fistula through the shared party wall so a one-way valve can route lung air into the esophagus, where the pharyngoesophageal segment vibrates as the new voice source. "
-        "Safety depends on a midline puncture about 5-10 mm below the stomal mucocutaneous junction and on protecting the posterior esophageal wall from the needle."
+        "Safety depends on a midline puncture about 5-15 mm below the stomal mucocutaneous junction and on protecting the posterior esophageal wall from the needle."
     ),
     "layers": [
         {"step": "Stoma survey", "structures": ["mucocutaneous junction of the stoma", "posterior (12 o'clock) tracheal wall", "stomal size and depth", "crusting, granulation, prior TEP tract"],
@@ -311,7 +311,7 @@ CASES["tep"] = {
          "note": "Pass a rigid esophagoscope (or a flexible scope with transillumination) to the level of the stoma. Rotate the open bevel anteriorly so it tents the party wall forward toward the trachea. The scope's back wall now shields the posterior esophageal wall."},
         {"step": "Party wall", "structures": ["posterior tracheal mucosa", "membranous trachealis", "areolar plane between trachea and esophagus", "esophageal muscularis (circular and longitudinal)", "esophageal mucosa"],
          "note": "Transillumination and palpation through the stoma confirm the site. The party wall is usually several millimeters thick and thicker after radiation or with a flap; a puncture that stops between the layers creates a false submucosal tract."},
-        {"step": "Puncture", "structures": ["midline posterior tracheal wall about 5-10 mm below the stomal mucocutaneous junction", "esophageal lumen inside the scope"],
+        {"step": "Puncture", "structures": ["midline posterior tracheal wall about 5-15 mm below the stomal mucocutaneous junction", "esophageal lumen inside the scope"],
          "note": "Pass the needle straight posteriorly through the midline into the visible lumen of the scope, not angled up or down. Too high or too close to the edge risks tract migration into the stoma and extrusion; too low makes the prosthesis hard to reach and clean."},
         {"step": "Tract dilation and prosthesis", "structures": ["tracheal flange", "esophageal flange", "prosthesis shaft length"],
          "note": "Pass a wire or catheter retrograde or anterograde as the system requires, dilate only to the prosthesis size, and seat the prosthesis so both flanges are fully deployed. The shaft length must match party-wall thickness; too short tents the tissue and leaks around, too long pistons."},
@@ -319,7 +319,7 @@ CASES["tep"] = {
          "note": "Confirm with endoscopy that the esophageal flange is open in the lumen, rotate to check seating, and test for leakage with colored water when awake."},
     ],
     "landmarks": [
-        {"structure": "Mucocutaneous junction at 12 o'clock", "how_to_find": "The line where stomal skin meets tracheal mucosa on the posterior wall; measure about 5-10 mm down from it in the midline", "why": "Standard puncture site that keeps the tract away from the stoma edge and accessible for care"},
+        {"structure": "Mucocutaneous junction at 12 o'clock", "how_to_find": "The line where stomal skin meets tracheal mucosa on the posterior wall; measure about 5-15 mm (1-1.5 cm) down from it in the midline", "why": "Standard puncture site that keeps the tract away from the stoma edge and accessible for care"},
         {"structure": "Esophageal lumen behind the stoma", "how_to_find": "Light from the scope transilluminates the posterior tracheal wall; pressing on the tracheal side moves the tip of the scope", "why": "Confirms the needle will enter the lumen and not the party-wall plane"},
         {"structure": "Pharyngoesophageal segment", "how_to_find": "The narrowing above the stoma level through which the scope passes, formed by the cricopharyngeus and lower inferior constrictor remnant", "why": "This is the vibrating sound source; spasm here causes poor voice (assessed by the insufflation test)"},
         {"structure": "Midline of the posterior tracheal wall", "how_to_find": "Center of the flat membranous wall between the horseshoe ends of the last tracheal ring", "why": "Lateral punctures move toward the tracheoesophageal groove and are harder to maintain"},

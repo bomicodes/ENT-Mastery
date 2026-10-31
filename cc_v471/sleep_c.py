@@ -25,7 +25,7 @@ CHECKS = [
  [("It enlarges the small midface", "HNS does not change the bony skeleton."),
   ("It removes enlarged lingual tonsils", "HNS stimulates muscle; it does not remove tissue."),
   ("It treats central apnea common in Down syndrome", "HNS treats obstructive events, not central apnea.")],
- "Down syndrome combines relative macroglossia, hypotonia, and multilevel collapse. Stimulating the genioglossus restores dilator tone during inspiration. FDA approval covers ages 13-18 with AHI roughly 10-50 after adenotonsillectomy.",
+ "Down syndrome combines relative macroglossia, hypotonia, and multilevel collapse. Stimulating the genioglossus restores dilator tone during inspiration. FDA approval (2023) covers ages 13-18 with AHI roughly 10-50 after adenotonsillectomy (Yu et al., JAMA Otolaryngol 2022).",
  "Down syndrome with persistent OSA after T&A: consider HNS."),
 
 ("Central Sleep Apnea / Treatment-Emergent CSA",
@@ -61,7 +61,7 @@ CHECKS = [
  [("Serum calcium and PTH", "Calcium disorders do not cause restless legs syndrome."),
   ("Thyroid peroxidase antibodies", "Thyroid autoimmunity is not the first-line RLS evaluation."),
   ("Drug-induced sleep endoscopy", "DISE evaluates airway collapse, not limb movement disorders.")],
- "Low brain iron impairs dopamine synthesis (iron is a cofactor for tyrosine hydroxylase), driving RLS. Ferritin below about 75 ng/mL warrants iron replacement; alpha-2-delta ligands are first-line drugs, while dopamine agonists risk augmentation.",
+ "Low brain iron impairs dopamine synthesis (iron is a cofactor for tyrosine hydroxylase), driving RLS. Ferritin below about 75 ng/mL warrants iron replacement; alpha-2-delta ligands are first-line drugs, while dopamine agonists risk augmentation (AASM 2024 RLS guideline).",
  "Restless legs: check ferritin first."),
 
 ("Circadian Rhythm Sleep-Wake Disorders",

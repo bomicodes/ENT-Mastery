@@ -216,7 +216,7 @@ physiology=(
 pathophysiology=(
 "**Nerve injury**: lacerations lateral to a vertical line through the lateral canthus can injure facial nerve branches large enough to repair; repair within about 72 hours, while distal stimulation still works. "
 "**Parotid duct injury**: sialocele or fistula, repaired over a stent. "
-"**Bite wounds**: high bacterial load (Pasteurella, Eikenella) requiring irrigation and antibiotics. "
+"**Bite wounds**: high bacterial load (Pasteurella in dog and cat bites, Talan et al., NEJM 1999; Eikenella in human bites) requiring irrigation and antibiotics. "
 "**Burn depth**: superficial heals without scarring; deep partial and full thickness burns scar and contract, especially around eyelids and lips. "
 "**Contracture**: myofibroblasts shorten scars across free margins."),
 ),
@@ -296,7 +296,7 @@ overview=(
 "Blepharoplasty addresses excess eyelid skin and fat; eyelid malpositions (ptosis, ectropion, entropion) affect function and appearance. "
 "Eyelid anatomy and lid laxity testing prevent complications."),
 physiology=(
-"**Upper eyelid elevation**: the levator palpebrae superioris (CN III) and M\u00fcller muscle (sympathetic, about 2-3 mm of elevation; K.J. Lee says up to 2 mm). "
+"**Upper eyelid elevation**: the levator palpebrae superioris (CN III) and M\u00fcller muscle (sympathetic, about 2 mm of elevation; K.J. Lee up to 2 mm, Cummings 2-3 mm). "
 "**Orbital septum**: a fibrous layer separating the eyelid from orbital fat. "
 "**Lower lid support**: tarsus and medial and lateral canthal tendons. "
 "**Lacrimal pump**: orbicularis contraction drives tears into the drainage system."),
