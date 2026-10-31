@@ -1582,8 +1582,8 @@ REWRITES = {'v137_tps_01': {'stem': 'A 78-year-old woman is on postoperative day
                              'Median sternotomy to explore the mediastinum for an ectopic inferior gland',
                              'Selective venous PTH sampling before any reoperative surgery is planned'],
                  'answer': 1,
-                 'explanation': 'Reoperative parathyroid surgery is safest and most successful when two concordant '
-                                'studies identify one target. A retroesophageal gland at the cricoid level is a '
+                 'explanation': 'Reoperative parathyroid surgery is safest and most successful when precise, '
+                                'ideally concordant, localization identifies one target. A retroesophageal gland at the cricoid level is a '
                                 'classic missed superior gland that descended posteriorly. A focused approach, often '
                                 'through a lateral or back-door plane between the strap muscles and the carotid to '
                                 'avoid central scar, with nerve monitoring and intraoperative PTH, limits dissection '

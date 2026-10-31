@@ -16,7 +16,7 @@ CHECKS = [
  [("It permanently restores fold movement", "Injection adds bulk; it does not restore nerve function."),
   ("It replaces the need for swallow evaluation", "Swallow assessment is still needed."),
   ("It treats the cause of the paralysis", "It improves closure; it does not address the nerve injury.")],
- "Temporary materials such as hyaluronic acid medialize the fold, improving voice and reducing aspiration. Early injection may also position the fold favorably during reinnervation, reducing later need for permanent surgery.",
+ "Temporary materials such as hyaluronic acid medialize the fold, improving voice and reducing aspiration. Early injection may also position the fold favorably during reinnervation, reducing later need for permanent surgery (Friedman et al., Laryngoscope 2010).",
  "Early temporary injection buys time without burning bridges."),
 
 ("Arytenoid Adduction / Reinnervation",
@@ -52,7 +52,7 @@ CHECKS = [
  [("Occult bacterial bronchitis", "Infection would not explain a 14-month cough triggered by talking and temperature."),
   ("Undiagnosed interstitial lung disease", "Normal imaging makes this unlikely."),
   ("Psychogenic cough only", "There is a sensory mechanism; labeling it psychogenic misses effective treatment.")],
- "After viral injury or inflammation, laryngeal vagal afferents become hypersensitive and brainstem gain increases, so trivial stimuli trigger cough. Gabapentin, pregabalin, amitriptyline, or P2X3 antagonists plus cough-suppression therapy help.",
+ "After viral injury or inflammation, laryngeal vagal afferents become hypersensitive and brainstem gain increases, so trivial stimuli trigger cough (Chung & Pavord, Lancet 2008). Cough-suppression therapy helps, and gabapentin (Ryan et al., Lancet 2012), pregabalin, amitriptyline, or P2X3 antagonists may help selected patients.",
  "Refractory cough triggered by talking and temperature = laryngeal hypersensitivity."),
 
 ("Vocal Fold Sulcus / Scar",

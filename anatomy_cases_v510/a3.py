@@ -290,7 +290,7 @@ CASES["reop-parathyroid"] = {
     ],
     "imaging_check": [
         "Reconfirm the biochemical diagnosis (calcium, PTH, 24-h urine calcium to exclude familial hypocalciuric hypercalcemia, vitamin D)",
-        "At least two concordant localization studies (ultrasound, sestamibi SPECT/CT, 4D-CT; selective venous sampling if discordant)",
+        "Precise localization, ideally with concordant studies (ultrasound, sestamibi SPECT/CT, 4D-CT; selective venous sampling if discordant)",
         "Prior operative note and pathology: which glands were seen, removed or biopsied",
         "Preoperative laryngoscopy for vocal fold mobility",
         "Mediastinal location on CT that would require a sternotomy or VATS rather than a cervical approach",

@@ -339,7 +339,7 @@ CURVEBALLS = {
     },
     'cc-v112-rec-thyroid-parathyroid-salivary-parathyroid-carcinoma': {
         "curveball": 'Which preoperative and intraoperative features should make you suspect parathyroid carcinoma rather than adenoma?',
-        "curveball_answer": 'Before surgery, suspect it with markedly high calcium (often above 14 mg/dL) and very high PTH, a palpable neck mass, combined bone and kidney disease, hypercalcemic crisis, or recurrent laryngeal nerve palsy. A history suggesting CDC73 or hyperparathyroidism-jaw tumor syndrome also counts. During surgery, a firm, gray-white gland adherent to the thyroid or other structures calls for en bloc resection without breaking the capsule.',
+        "curveball_answer": 'Before surgery, suspect it with markedly high calcium and very high PTH, a palpable neck mass, combined bone and kidney disease, hypercalcemic crisis, or recurrent laryngeal nerve palsy. A history suggesting CDC73 or hyperparathyroidism-jaw tumor syndrome also counts. During surgery, a firm, gray-white gland adherent to the thyroid or other structures calls for en bloc resection without breaking the capsule.',
     },
     'cc-v112-rec-thyroid-parathyroid-salivary-pleomorphic-adenoma-warthin-tumor': {
         "curveball": 'A long-standing parotid pleomorphic adenoma suddenly grows and causes facial weakness. What is your concern, and how do you proceed?',

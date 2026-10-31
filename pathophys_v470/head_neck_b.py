@@ -168,7 +168,7 @@ physiology=(
 "**Mandible blood supply**: the inferior alveolar artery provides endosteal flow, supplemented by periosteal vessels; the dense cortical mandible has less collateral supply than the maxilla. "
 "**Dentition and mucosa**: thin mucosa over the mandible and teeth that breach it create entry points for injury and infection."),
 pathophysiology=(
-"**Radiation-induced fibroatrophy**: radiation activates TGF-beta-driven fibrosis, endarteritis, and osteocyte death. "
+"**Radiation-induced fibroatrophy**: radiation activates TGF-beta-driven fibrosis (Martin et al., Int J Radiat Oncol Biol Phys 2000), endarteritis, and osteocyte death. "
 "**Hypoxic, hypocellular, hypovascular bone (Marx)**: the bone cannot remodel after injury. "
 "**Trigger**: extraction, trauma, or ill-fitting dentures expose bone that never heals. "
 "**Risk factors**: dose above about 50-60 Gy, mandible within the high-dose field, poor dentition, and smoking. "

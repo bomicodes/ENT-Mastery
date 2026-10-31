@@ -290,7 +290,7 @@ physiology=(
 pathophysiology=(
 "**Mucositis**: epithelial cell death outpaces renewal, causing ulceration and pain. "
 "**Xerostomia**: acinar cell loss and fibrosis reduce saliva, increasing dental caries and dysphagia. "
-"**Fibrosis**: TGF-beta driven fibroblast activation causes trismus, neck stiffness, and dysphagia. "
+"**Fibrosis**: TGF-beta driven fibroblast activation (Martin et al., Int J Radiat Oncol Biol Phys 2000) causes trismus, neck stiffness, and dysphagia. "
 "**Endarteritis**: small-vessel damage reduces tissue perfusion and healing (osteoradionecrosis). "
 "**Hypothyroidism**: thyroid gland damage. "
 "**Prevention**: IMRT spares salivary glands, swallowing exercises preserve function, and fluoride protects teeth."),
