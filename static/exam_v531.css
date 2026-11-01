@@ -125,3 +125,7 @@
 .dup-pair{display:grid;grid-template-columns:50px 1fr 1fr;gap:12px;padding:10px 0;border-top:1px solid #edf2f2;font-size:13.5px}
 .dup-pair p{margin:4px 0 0;line-height:1.45;color:#2b4245}.dup-s{font-weight:800;color:#8a6412}
 @media(max-width:700px){.cov-head{display:none}.cov-row{grid-template-columns:1fr 70px}.cov-row>span:nth-child(3){grid-column:1/-1}.dup-pair{grid-template-columns:1fr}}
+/* v54.1 offline study */
+.off-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;padding:12px 16px;margin:12px 0 16px;font-size:13.5px;color:#5f7372}
+.off-bar button{margin-left:auto;font:inherit;cursor:pointer}
+.off-note{font-size:13px;margin:14px 0 30px}

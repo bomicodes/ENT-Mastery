@@ -191,3 +191,5 @@ form.lab-controls a,.oral-filter a{align-self:flex-end}
 .ob-rub-btns button.on[data-score="1"]{background:#fff4dc;border-color:#e3b74a;color:#8a6412}
 .ob-rub-btns button.on[data-score="0"]{background:#fbeeeb;border-color:#b3412f;color:#b3412f}
 .ob-rub-total{margin:10px 0 0;font-size:13.5px}
+.install-app{position:fixed;right:16px;bottom:16px;z-index:40;border:0;background:#0f3b3a;color:#fff;font:inherit;font-weight:800;font-size:14px;border-radius:999px;padding:11px 16px;box-shadow:0 8px 24px rgba(16,40,40,.25);cursor:pointer}
+@media print{.install-app{display:none!important}}
