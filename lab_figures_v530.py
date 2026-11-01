@@ -74,7 +74,7 @@ def tympanogram(ears, title="Tympanogram"):
     for p in (-400, -300, -200, -100, 0, 100, 200):
         g.append(f'<line x1="{x(p):.1f}" y1="{T}" x2="{x(p):.1f}" y2="{T+ph}" stroke="{GRID}" stroke-width=".8"/>'
                  f'<text x="{x(p):.1f}" y="{T+ph+12}" font-size="9" fill="{MUTED}" text-anchor="middle">{p}</text>')
-    for c in (0, .5, 1, 1.5, 2):
+    for c in (.5, 1, 1.5, 2):
         g.append(f'<text x="{L-5}" y="{yv(c)+3:.1f}" font-size="9" fill="{MUTED}" text-anchor="end">{c:g}</text>')
     g.append(f'<rect x="{x(-100):.1f}" y="{yv(1.75):.1f}" width="{x(50)-x(-100):.1f}" height="{yv(0.3)-yv(1.75):.1f}" fill="#e7f3f1" opacity=".7"/>')
     g.append(f'<text x="{L+pw/2}" y="{H-6}" font-size="9.5" fill="{MUTED}" text-anchor="middle">Ear-canal pressure (daPa) · shaded box = normal Type A range</text>')
