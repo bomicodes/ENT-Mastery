@@ -214,7 +214,7 @@ MCQ_BY_CASE = {
     "topic": "Suspicious lateral neck node in PTC",
   },
   "us9": {
-    "question": "Focus on panel (a) of this composite ultrasound: an oval lymph node with a preserved hilum, a thin cortex and hilar vascularity. Which change would move this node toward a malignancy-suspicious appearance?",
+    "question": "Focus on panel (a) of this composite ultrasound: an oval lymph node with a preserved hilum and a thin cortex (the figure legend adds that Doppler, not shown here, found hilar-only flow). Which change would move this node toward a malignancy-suspicious appearance?",
     "choices": [
       "Oval shape with a long-to-short axis ratio greater than 2",
       "Thin cortex with Doppler flow confined to the hilum",
@@ -222,7 +222,7 @@ MCQ_BY_CASE = {
       "Loss of the hilum with peripheral vascularity",
     ],
     "answer": 3,
-    "explanation": "Panel (a) is a reassuring, reactive-appearing node: oval, with a preserved echogenic hilum, a thin cortex and hilar-only flow. Loss of the hilum, a rounder shape, irregular margins, marked cortical thickening and a shift from hilar to peripheral vascularity all move a node toward suspicious. The other choices describe the reactive features already present.",
+    "explanation": "Panel (a) is a reassuring, reactive-appearing node: oval, with a preserved echogenic hilum and a thin cortex; the authors report hilar-only flow on Doppler. These are grayscale images, so judge the shape, hilum and cortex here. Loss of the hilum, a rounder shape, irregular margins, marked cortical thickening and a shift from hilar to peripheral vascularity all move a node toward suspicious. The other choices describe the reactive features already present.",
     "domain": "Head & Neck Oncology",
     "topic": "Ultrasound features of reactive vs suspicious nodes",
   },
