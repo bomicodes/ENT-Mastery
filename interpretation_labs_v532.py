@@ -16,6 +16,14 @@ ALLOWED_HOSTS = ("https://cdn.ncbi.nlm.nih.gov/", "https://upload.wikimedia.org/
 REQUIRED = ("id", "level", "prompt", "answer", "why", "image_url", "image_credit", "image_source")
 REQUIRED_SYNTHETIC = ("id", "level", "prompt", "answer", "why", "study_summary")
 
+# Pulled after viewing every image in Chrome (2026-11-01).
+EXCLUDED_V542 = {
+    "sk_keratoacanthoma_v532": "profile photo shows the patient's eye and face",
+    "sk_forehead_flap_ala_v532": "panels C-D are full, identifiable face photographs",
+    "sk_composite_graft_ala_v532": "panels A, B and D are full, identifiable face photographs",
+    "lx_normal_vl_anatomy_v532": "view is mostly blade and tube; the vocal folds the case asks about are not clearly visible",
+}
+
 
 def _valid_mcq(m):
     return (isinstance(m, dict) and isinstance(m.get("choices"), list) and len(m["choices"]) == 4
@@ -86,6 +94,9 @@ def install_interpretation_labs_v532(data, app=None):
         lab = labs[target]
         n = 0
         for c in cases:
+            if c.get("id") in EXCLUDED_V542:
+                report["rejected"].append((c["id"], "excluded after image review: " + EXCLUDED_V542[c["id"]]))
+                continue
             req = REQUIRED_SYNTHETIC if c.get("synthetic") else REQUIRED
             missing = [k for k in req if not c.get(k)]
             if missing:
