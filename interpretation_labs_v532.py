@@ -10,7 +10,7 @@ cases that predate this release.
 import importlib
 import pkgutil
 
-ALLOWED_HOSTS = ("https://cdn.ncbi.nlm.nih.gov/", "https://upload.wikimedia.org/", "https://www.ncbi.nlm.nih.gov/")
+ALLOWED_HOSTS = ("https://cdn.ncbi.nlm.nih.gov/", "https://upload.wikimedia.org/", "https://www.ncbi.nlm.nih.gov/", "https://europepmc.org/")
 REQUIRED = ("id", "level", "prompt", "answer", "why", "image_url", "image_credit", "image_source")
 
 
