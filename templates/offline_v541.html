@@ -1,0 +1,68 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=541">
+<span class="eyebrow">OFFLINE STUDY</span>
+<h1>Questions without a signal</h1>
+<p class="lede" id="off-status">Loading your offline question pack…</p>
+<div class="off-bar card"><span id="off-pack"></span><span id="off-sync"></span><button type="button" class="qx-btn" id="off-refresh">Refresh pack</button></div>
+
+<section class="qx" id="off-q" hidden>
+  <div class="qx-head"><span class="qx-chip" id="off-domain"></span><span class="qx-count" id="off-count"></span></div>
+  <div class="qx-body"><h1 class="qx-stem" id="off-stem"></h1><div class="qx-choices" id="off-choices"></div></div>
+  <div class="qx-feedback" id="off-fb" hidden></div>
+  <div class="ex-nav-btns"><span></span><button type="button" class="qx-btn primary" id="off-next">Next question →</button></div>
+</section>
+<p class="muted off-note">Text questions only; image questions and the atlas need a connection. Answers are saved on this device and count toward your history and missed-question review once you are back online.</p>
+
+<script>
+(()=>{
+ const $=id=>document.getElementById(id); const L=i=>String.fromCharCode(65+i);
+ const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+ let pack=null, order=[], cur=0;
+ const done=store.get('entmOfflineDone',{}); let queue=store.get('entmOfflineQueue',[]);
+ function syncLabel(){ $('off-sync').textContent=queue.length?`${queue.length} answer${queue.length>1?'s':''} waiting to sync`:'All answers synced'; }
+ async function sync(){
+   if(!navigator.onLine||!queue.length){syncLabel();return;}
+   const left=[];
+   for(const a of queue){try{const r=await fetch('/api/clinical-challenge',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({qid:a.id,chosen:a.chosen})});if(!r.ok)left.push(a);}catch(e){left.push(a);}}
+   queue=left; store.set('entmOfflineQueue',queue); syncLabel();
+ }
+ async function load(force){
+   try{
+     const r=await fetch('/offline-pack.json',{cache:force?'reload':'default',credentials:'same-origin'});
+     if(!r.ok) throw 0; pack=await r.json();
+   }catch(e){
+     try{const c=await caches.match('/offline-pack.json'); if(c) pack=await c.json();}catch(e2){}
+   }
+   if(!pack||!pack.items||!pack.items.length){$('off-status').textContent='No offline pack yet. Open this page once while online and it will be saved for later.';return;}
+   order=pack.items.map((_,i)=>i).filter(i=>!done[pack.items[i].id]);
+   const due=order.filter(i=>pack.items[i].due), rest=order.filter(i=>!pack.items[i].due);
+   for(let i=rest.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[rest[i],rest[j]]=[rest[j],rest[i]];}
+   order=due.concat(rest); cur=0;
+   $('off-pack').textContent=`${pack.count} questions saved · ${pack.count-order.length} done on this device`;
+   $('off-status').textContent=navigator.onLine?'You are online; this pack is also saved for when you are not.':'You are offline. Practicing from the saved pack.';
+   $('off-q').hidden=!order.length; if(order.length) render(); else $('off-status').textContent='You have finished this pack. Refresh it while online for a new set.';
+ }
+ function render(){
+   const q=pack.items[order[cur]];
+   $('off-domain').textContent=q.domain+(q.due?' · due review':''); $('off-count').textContent=`${cur+1} of ${order.length}`;
+   $('off-stem').textContent=q.stem; $('off-fb').hidden=true;
+   $('off-choices').innerHTML=q.choices.map((c,i)=>`<button type="button" class="qx-choice" data-c="${i}"><span class="qx-letter">${L(i)}</span><span class="qx-text">${esc(c)}</span><span class="qx-mark"></span></button>`).join('');
+ }
+ $('off-choices').addEventListener('click',e=>{
+   const b=e.target.closest('[data-c]'); if(!b||b.disabled) return;
+   const q=pack.items[order[cur]], i=Number(b.dataset.c), ok=i===q.answer;
+   [...$('off-choices').children].forEach((x,k)=>{x.disabled=true; if(k===q.answer) x.classList.add('is-correct'); else if(k===i) x.classList.add('is-wrong');});
+   $('off-fb').hidden=false;
+   $('off-fb').innerHTML=`<div class="qx-verdict ${ok?'ok':'no'}"><b>${ok?'Correct':'Not quite'}</b> The answer is ${L(q.answer)}.</div><div class="qx-section"><h3>Explanation</h3><p>${esc(q.explanation)}</p></div>${q.why_wrong.length?`<div class="qx-section"><h3>Why the other options are wrong</h3><ul class="qx-why">${q.why_wrong.map(w=>`<li><span class="qx-letter">${w[0]}</span><span>${esc(w[1])}</span></li>`).join('')}</ul></div>`:''}${q.pearl?`<div class="qx-section qx-pearl"><h3>Board pearl</h3><p>${esc(q.pearl)}</p></div>`:''}`;
+   done[q.id]=ok?1:0; store.set('entmOfflineDone',done);
+   queue.push({id:q.id,chosen:i}); store.set('entmOfflineQueue',queue); sync();
+ });
+ $('off-next').addEventListener('click',()=>{if(cur<order.length-1){cur++;render();window.scrollTo({top:0,behavior:'smooth'});}else{$('off-q').hidden=true;$('off-status').textContent='Pack finished. Refresh it while online for a new set.';}});
+ $('off-refresh').addEventListener('click',()=>{for(const k in done) delete done[k]; store.set('entmOfflineDone',done); load(true);});
+ window.addEventListener('online',()=>{sync();$('off-status').textContent='Back online. Syncing your answers…';});
+ syncLabel(); load(false); sync();
+})();
+</script>
+{% endblock %}

@@ -117,8 +117,12 @@ def install_exam_mode_v531(app, data, app_mod=None):
     def uid():
         return db._current_user_id()
 
+    def _quality():
+        return getattr(data, "QUALITY_V540", None) or {}
+
     def pool_for(cfg, u):
-        rows = list(bank)
+        paused = _quality().get("paused_ids", lambda: set())()
+        rows = [q for q in bank if q["id"] not in paused]
         tg = TIER_GROUPS.get(cfg.get("tier", "board"))
         if tg:
             rows = [q for q in rows if tg[1](q.get("tier"))]
@@ -132,6 +136,9 @@ def install_exam_mode_v531(app, data, app_mod=None):
             rows = [q for q in rows if (st.get(q["id"]) is None) == (pool == "unused") and (pool == "unused" or st.get(q["id"]) == "incorrect")]
         elif pool == "image":
             rows = [q for q in rows if q.get("image_url")]
+        elif pool == "due":
+            due = set(_quality().get("due_reviews", lambda u: {"due": []})(u)["due"])
+            rows = [q for q in rows if q["id"] in due]
         elif pool == "flagged":
             meta = question_meta(u)
             rows = [q for q in rows if meta.get(q["id"], {}).get("flagged")]
@@ -154,6 +161,7 @@ def install_exam_mode_v531(app, data, app_mod=None):
             "answered": len(st), "incorrect": sum(1 for v in st.values() if v == "incorrect"),
             "flagged": sum(1 for v in meta.values() if v.get("flagged")),
             "images": sum(1 for q in bank if q.get("image_url")),
+            "due": len(_quality().get("due_reviews", lambda u: {"due": []})(u)["due"]),
         }
         return render_template("exam_home.html", domains=domains, counts=counts, past=past,
                                tier_groups=TIER_GROUPS, error=request.args.get("error"))
@@ -162,12 +170,13 @@ def install_exam_mode_v531(app, data, app_mod=None):
         u = uid()
         f = request.form
         cfg = {
-            "count": max(5, min(150, int(f.get("count") or 40))),
+            "count": max(5, min(200, int(f.get("count") or 40))),
             "domains": f.getlist("domains"),
             "pool": f.get("pool", "all"),
             "tier": f.get("tier", "board"),
             "mode": "tutor" if f.get("mode") == "tutor" else "exam",
             "timed": f.get("timed", "1") == "1",
+            "blueprint": f.get("blueprint") == "1",
         }
         if cfg["pool"] == "ids":
             cfg["ids"] = [i for i in f.get("ids", "").split(",") if i]
@@ -176,6 +185,20 @@ def install_exam_mode_v531(app, data, app_mod=None):
         if not rows:
             return redirect(url_for("exam_home_v531", error="No questions match that combination. Widen the pool or domains."))
         random.shuffle(rows)
+        if cfg.get("blueprint") and cfg["pool"] != "ids":
+            weights = _quality().get("blueprint") or {}
+            by_dom = {}
+            for q in rows:
+                by_dom.setdefault(canon(q.get("domain")), []).append(q)
+            total_w = sum(w for d, w in weights.items() if by_dom.get(d)) or 1
+            picked = []
+            for d, w in weights.items():
+                k = int(round(cfg["count"] * w / total_w))
+                picked += by_dom.get(d, [])[:k]
+            ids = {q["id"] for q in picked}
+            picked += [q for q in rows if q["id"] not in ids][: max(0, cfg["count"] - len(picked))]
+            random.shuffle(picked)
+            rows = picked
         chosen = [q["id"] for q in rows[: cfg["count"]]]
         cfg["count"] = len(chosen)
         limit = len(chosen) * SECONDS_PER_QUESTION if cfg["timed"] else 0
@@ -257,6 +280,10 @@ def install_exam_mode_v531(app, data, app_mod=None):
                 ok = int(s["answers"][i]) == int(q.get("answer", -2))
                 correct += ok
                 try:
+                    _quality().get("record_review_answer", lambda *a: None)(u, qid, ok)
+                except Exception:
+                    pass
+                try:
                     db.record_mastery_event(q.get("concept_id") or q.get("topic", ""), q.get("domain", "ENT"),
                                             "management" if q.get("mode") == "Manage" else "reasoning", 3 if ok else 0,
                                             source_type="clinical_challenge", source_id=qid,
@@ -290,6 +317,10 @@ def install_exam_mode_v531(app, data, app_mod=None):
         dom_rows = sorted(({"domain": k, **v, "pct": round(100 * v["ok"] / v["n"])} for k, v in by_dom.items()), key=lambda r: r["pct"])
         used = int((s["finished_at"] or time.time()) - (s["started_at"] or 0))
         missed_ids = ",".join(it["q"].get("id", "") for it in items if not it["ok"])
+        diff = _quality().get("difficulty_map", lambda: {})()
+        for it in items:
+            d = diff.get(it["q"].get("id"))
+            it["diff"] = d if d and d[1] >= 3 else None
         return render_template("exam_report.html", s=s, items=items, dom_rows=dom_rows,
                                pct=round(100 * s["correct"] / s["total"]) if s["total"] else 0,
                                used_min=used // 60, used_sec=used % 60, missed_ids=missed_ids,

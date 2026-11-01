@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0f3b3a">
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>{% block title %}ENT Mastery{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='reliability_v168.css') }}">
@@ -30,6 +34,8 @@
     <div class="mobile-nav-section">Practice</div>
     <a href="/clinical-challenges">◆ <span>Clinical Challenges</span></a>
     <a href="/exam">⏱ <span>Timed Exam</span></a>
+    <a href="/offline">⇩ <span>Offline Questions</span></a>
+    {% if is_reviewer_v540 is defined and is_reviewer_v540() %}<a href="/review">⚐ <span>Question Review</span></a>{% endif %}
     <a href="/concept-checks">✓ <span>Concept Checks</span></a>
     <a href="/integrated">◌ <span>Cases</span></a>
     <a href="/oral-boards">☰ <span>Mock Oral Board</span></a>
@@ -88,6 +94,8 @@
       <div class="nav-section-label">Practice</div>
       <a href="/clinical-challenges" class="navitem {% if request.path.startswith('/clinical-challenge') %}active{% endif %}">◆ <span>Clinical Challenges</span></a>
       <a href="/exam" class="navitem {% if request.path.startswith('/exam') %}active{% endif %}">⏱ <span>Timed Exam</span></a>
+      <a href="/offline" class="navitem {% if request.path=='/offline' %}active{% endif %}">⇩ <span>Offline Questions</span></a>
+      {% if is_reviewer_v540 is defined and is_reviewer_v540() %}<a href="/review" class="navitem {% if request.path.startswith('/review') and request.path != '/review/missed' %}active{% endif %}">⚐ <span>Question Review</span></a>{% endif %}
       <a href="/concept-checks" class="navitem {% if request.path.startswith('/concept-check') %}active{% endif %}">✓ <span>Concept Checks</span></a>
       <a href="/integrated" class="navitem {% if request.path.startswith('/integrated') %}active{% endif %}">◌ <span>Cases</span></a>
       <a href="/oral-boards" class="navitem {% if request.path.startswith('/oral-boards') %}active{% endif %}">☰ <span>Mock Oral Board</span></a>
@@ -139,6 +147,12 @@
   <script>
   (function(){var opened=[];window.addEventListener('beforeprint',function(){document.querySelectorAll('details:not([open])').forEach(function(d){d.open=true;opened.push(d)});document.body.classList.add('printing')});
   window.addEventListener('afterprint',function(){opened.forEach(function(d){d.open=false});opened=[];document.body.classList.remove('printing')});})();
+  </script>
+  <button type="button" class="install-app" id="install-app" hidden>⇩ Install ENT Mastery</button>
+  <script>
+  if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js',{scope:'/'}).then(function(){fetch('/offline-pack.json',{credentials:'same-origin'}).then(function(r){if(r.ok&&window.caches)caches.open('entm-v541-1').then(function(c){c.put('/offline-pack.json',r)})}).catch(function(){})}).catch(function(){});});}
+  (function(){var ev=null,b=document.getElementById('install-app');window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();ev=e;b.hidden=false;});
+  b.addEventListener('click',function(){if(!ev)return;ev.prompt();ev.userChoice.finally(function(){b.hidden=true;ev=null;});});})();
   </script>
 </body>
 </html>

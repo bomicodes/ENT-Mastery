@@ -17,7 +17,8 @@
 <form method="post" action="/exam/start" class="card ex-builder">
   <fieldset>
     <legend>Block size</legend>
-    <div class="ex-pills">{% for n in [10,20,40,60,100] %}<label><input type="radio" name="count" value="{{n}}" {% if n==40 %}checked{% endif %}><span>{{n}}</span></label>{% endfor %}</div>
+    <div class="ex-pills">{% for n in [10,20,40,60,100,150,200] %}<label><input type="radio" name="count" value="{{n}}" {% if n==40 %}checked{% endif %}><span>{{n}}</span></label>{% endfor %}</div>
+    <label class="ex-bp"><input type="checkbox" name="blueprint" value="1"> <span><b>Board blueprint mix</b> — spread questions across domains in the published ABOto-derived proportions (Otology 19%, Rhinology/Allergy 22.5%, Head &amp; Neck 19%, Pediatrics 15%, Plastics 9%, Laryngology 8%, Sleep 7.5%). Long blocks (150–200, timed) make a full-length simulation.</span></label>
   </fieldset>
   <fieldset>
     <legend>Question pool</legend>
@@ -26,6 +27,7 @@
       <label><input type="radio" name="pool" value="unused"><span>Unused</span></label>
       <label><input type="radio" name="pool" value="incorrect"><span>Missed ({{counts.incorrect}})</span></label>
       <label><input type="radio" name="pool" value="flagged"><span>Flagged ({{counts.flagged}})</span></label>
+      {% if counts.due %}<label><input type="radio" name="pool" value="due"><span>Due for review ({{counts.due}})</span></label>{% endif %}
       {% if counts.images %}<label><input type="radio" name="pool" value="image"><span>Image questions ({{counts.images}})</span></label>{% endif %}
     </div>
   </fieldset>

@@ -64,3 +64,8 @@ document.addEventListener('click', async (e) => {
   const ar=e.target.closest('button[data-attending-score]');
   if(ar){const card=ar.closest('.attending-card');if(!card)return;ar.parentElement.querySelectorAll('button').forEach(x=>x.disabled=true);try{const r=await fetch('/api/mastery-event',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({concept_id:card.dataset.conceptId,domain:card.dataset.domain,dimension:'reasoning',score:Number(ar.dataset.attendingScore),source_type:'attending_mode',source_id:location.search||'resident'})});if(!r.ok)throw new Error();ar.classList.add('selected-rating');}catch(err){ar.parentElement.querySelectorAll('button').forEach(x=>x.disabled=false);}}
 });
+
+// v54.0 report a problem with a question
+document.addEventListener('click',async e=>{const b=e.target.closest('.qreport-send');if(!b)return;const box=b.closest('.qreport');const qid=box.dataset.qid;
+  const reason=(box.querySelector('input[type=radio]:checked')||{}).value||'other';const note=box.querySelector('textarea').value;const msg=box.querySelector('.qreport-msg');
+  b.disabled=true;try{const r=await fetch('/api/qreport',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({qid,reason,note})});if(!r.ok)throw 0;msg.textContent='Thanks — sent for review.';box.querySelector('textarea').value='';}catch(err){msg.textContent='Could not send; try again.';b.disabled=false;}});

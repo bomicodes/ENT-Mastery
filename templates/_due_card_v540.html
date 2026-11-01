@@ -1,0 +1,3 @@
+{% if due_reviews_v540 is defined %}{% set dr = due_reviews_v540() %}{% if dr.due %}
+<section class="card due-card"><div><span class="eyebrow">MISSED-QUESTION REVIEW</span><b>{{dr.due|length}} missed question{{ 's' if dr.due|length != 1 }} due today</b><small>They come back until you get each one right twice. {{dr.queued}} in your review queue.</small></div><a href="/review/missed">Review now →</a></section>
+{% endif %}{% endif %}

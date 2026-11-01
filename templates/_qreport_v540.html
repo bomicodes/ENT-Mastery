@@ -1,0 +1,8 @@
+<details class="qreport" data-qid="{{q.id}}">
+  <summary>⚐ Report a problem with this question</summary>
+  <div class="qreport-body">
+    <div class="qreport-reasons">{% for key, label in qreport_reasons_v540 %}<label><input type="radio" name="qr-{{q.id}}" value="{{key}}" {% if loop.first %}checked{% endif %}><span>{{label}}</span></label>{% endfor %}</div>
+    <textarea placeholder="What is wrong, and what should it say? A source helps (guideline, chapter)."></textarea>
+    <div class="qreport-row"><button type="button" class="qreport-send">Send to the chief's review queue</button><small class="qreport-msg"></small></div>
+  </div>
+</details>

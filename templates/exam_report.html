@@ -39,6 +39,8 @@
       <div class="qx-section"><h3>Explanation</h3><p>{{q.explanation}}</p></div>
       {% if q.why_wrong %}<div class="qx-section"><h3>Why the other options are wrong</h3><ul class="qx-why">{% for w in q.why_wrong %}{% if loop.index0 != q.answer|int and w %}<li><span class="qx-letter">{{letters[loop.index0]}}</span><span>{{w}}</span></li>{% endif %}{% endfor %}</ul></div>{% endif %}
       {% if q.board_pearl %}<div class="qx-section qx-pearl"><h3>Board pearl</h3><p>{{q.board_pearl}}</p></div>{% endif %}
+      {% if it.diff %}<p class="qdiff">{{it.diff[0]}}% of {{it.diff[1]}} residents answered this correctly.</p>{% endif %}
+      {% include "_qreport_v540.html" %}
       <p class="ex-links"><a href="/clinical-challenge/{{q.id}}">Open as a single question</a>{% if q.concept_id %} · <a href="/concept/id/{{q.concept_id|urlencode}}">Review the topic</a>{% endif %}</p>
     </div>
   </details>

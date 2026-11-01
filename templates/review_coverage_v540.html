@@ -1,0 +1,35 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=540">
+<div class="breadcrumb"><a href="/">Home</a> / <a href="/review">Question review</a> / Coverage</div>
+<span class="eyebrow">CHIEF'S REVIEW QUEUE</span>
+<h1>Coverage and duplicates</h1>
+<nav class="rv-tabs"><a href="/review">Reports</a><a class="on" href="/review/coverage">Coverage &amp; duplicates</a></nav>
+
+<section class="card rv-list">
+  <h2>Board-style questions against the blueprint</h2>
+  <p class="muted">Share of the board-style bank in each domain compared with the published ABOto-derived weights. <a href="{{source_url}}" target="_blank" rel="noopener">Source</a>: {{source}}</p>
+  <div class="cov-table">
+    <div class="cov-head"><span>Domain</span><span>Questions</span><span>Bank share</span><span>Blueprint</span><span>Gap</span></div>
+    {% for r in rows %}
+    <div class="cov-row"><span>{{r.domain}}</span><span>{{r.have}}</span><span><div class="bar"><i style="width:{{ [r.share*3,100]|min }}%"></i></div>{{r.share}}%</span><span>{{r.blueprint}}%</span>
+      <span class="{{ 'neg' if r.gap < -2 else ('pos' if r.gap > 2 else '') }}">{{ '+' if r.gap > 0 else '' }}{{r.gap}}</span></div>
+    {% endfor %}
+  </div>
+  <p class="muted">A negative gap means the bank is thinner than the exam in that domain; write there first. General ENT has no blueprint share of its own because those items are spread across the other domains.</p>
+</section>
+
+<section class="card rv-list">
+  <h2>Thin topics <span class="muted">({{thin_total}} with fewer than 3 board-style questions)</span></h2>
+  <div class="thin-grid">{% for d, t, n_board, n_all in thin %}<div><b>{{t}}</b><small>{{d}} · {{n_board}} board-style / {{n_all}} total</small></div>{% endfor %}</div>
+</section>
+
+<section class="card rv-list">
+  <h2>Likely duplicates <span class="muted">({{total_pairs}} pairs with stem similarity ≥ 0.62 in the same domain; top {{pairs|length}} shown)</span></h2>
+  <p class="muted">Very similar stems in the same domain. Some are deliberate pairs that test a different decision (e.g., geotropic vs apogeotropic BPPV); others repeat the same question. Keep the better one, or rewrite one to test a different decision.</p>
+  {% for p in pairs %}
+  <div class="dup-pair"><span class="dup-s">{{p.s}}</span>
+    <div><a href="/clinical-challenge/{{p.a.id}}">{{p.a.id}}</a> <small class="muted">{{p.a.tier}}</small><p>{{(p.a.stem or '')[:220]}}…</p></div>
+    <div><a href="/clinical-challenge/{{p.b.id}}">{{p.b.id}}</a> <small class="muted">{{p.b.tier}}</small><p>{{(p.b.stem or '')[:220]}}…</p></div></div>
+  {% else %}<p class="muted">No likely duplicates found.</p>{% endfor %}
+</section>
+{% endblock %}
