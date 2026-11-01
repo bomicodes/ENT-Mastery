@@ -29,6 +29,7 @@ from progress_reset_v521 import install_progress_reset_v521
 from interpretation_atlas_v530 import install_interpretation_atlas_v530
 from exam_mode_v531 import install_exam_mode_v531
 from interpretation_labs_v532 import install_interpretation_labs_v532
+from quality_v540 import install_quality_v540
 from anatomy_section_v510 import install_anatomy_cases_v510
 from or_card_fixes_v511 import install_or_card_fixes_v511
 from anatomy_atlas_xref_v512 import install_anatomy_atlas_fixes_v512, install_or_atlas_fixes_v512
@@ -52,5 +53,6 @@ OR_ATLAS_V512 = install_or_atlas_fixes_v512(production.runtime_entry.data)
 INTERPRETATION_ATLAS_V530 = install_interpretation_atlas_v530(production.runtime_entry.data)
 INTERPRETATION_LABS_V532 = install_interpretation_labs_v532(production.runtime_entry.data, app)
 EXAM_MODE_V531 = install_exam_mode_v531(app, production.runtime_entry.data, production.runtime_entry.app_mod)
+QUALITY_V540 = install_quality_v540(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 LEARNING_PATH_V470 = install_learning_path_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)

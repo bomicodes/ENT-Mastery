@@ -1,0 +1,39 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=540">
+{% set letters = 'ABCD' %}
+<div class="breadcrumb"><a href="/">Home</a> / Question review</div>
+<span class="eyebrow">CHIEF'S REVIEW QUEUE</span>
+<h1>Question quality</h1>
+<p class="lede">Reports from residents, the questions they find hardest, and anything you have pulled from exams. Fix the source file for real errors; pulling a question removes it from exam blocks right away.</p>
+<nav class="rv-tabs"><a class="on" href="/review">Reports ({{open_items|length}})</a><a href="/review/coverage">Coverage &amp; duplicates</a></nav>
+
+{% if not open_items %}<div class="card rv-empty"><b>No open reports.</b> Residents can report a question from any question page or exam review.</div>{% endif %}
+{% for it in open_items %}{% set q = it.q %}
+<section class="card rv-item" id="{{it.qid}}">
+  <div class="rv-head"><span class="tag">{{q.domain}}</span><b>{{q.topic}}</b><span class="muted">{{it.qid}}</span>{% if it.paused %}<span class="qstat incorrect">Pulled from exams</span>{% endif %}
+    {% if it.diff %}<span class="muted">{{it.diff[0]}}% correct (n={{it.diff[1]}})</span>{% endif %}</div>
+  <p class="rv-stem">{{q.stem}}</p>
+  <ol class="rv-choices" type="A">{% for c in q.choices %}<li class="{{ 'key' if loop.index0 == q.answer|int else '' }}">{{c}}{% if loop.index0 == q.answer|int %} <b>← key</b>{% endif %}</li>{% endfor %}</ol>
+  <details><summary>Explanation</summary><p>{{q.explanation}}</p></details>
+  <ul class="rv-reports">{% for r in it.reports %}<li><b>{{reasons.get(r.reason, r.reason)}}</b>{% if r.note %}: {{r.note}}{% endif %} <small class="muted">— {{ it.names.get(r.user_id) or 'resident' }}, {{r.created_at|replace('T',' ')}}</small></li>{% endfor %}</ul>
+  <form method="post" action="/review/{{it.reports[0].id}}/action" class="rv-actions">
+    <input type="hidden" name="qid" value="{{it.qid}}">
+    <input name="resolution" placeholder="What you did (e.g., fixed key in rewrites file; not an error because…)">
+    <button name="action" value="resolved">Mark fixed</button>
+    <button name="action" value="dismissed" class="ghost">Not an error</button>
+    {% if it.paused %}<button name="action" value="unpause" class="ghost">Return to exams</button>{% else %}<button name="action" value="pause" class="warn">Pull from exams</button>{% endif %}
+  </form>
+</section>
+{% endfor %}
+
+{% if paused %}
+<section class="card rv-list"><h2>Pulled from exams</h2><ul>{% for q in paused %}<li><a href="/clinical-challenge/{{q.id}}">{{q.topic or q.id}}</a> <span class="muted">{{q.id}}</span></li>{% endfor %}</ul></section>
+{% endif %}
+
+<section class="card rv-list"><h2>Hardest questions</h2><p class="muted">Lowest percent correct among questions answered by at least 3 residents. Very low scores often mean a teaching gap, but check the key and wording first.</p>
+{% if hardest %}<ul>{% for h in hardest %}<li><b>{{h.pct}}%</b> <span class="muted">(n={{h.n}})</span> <a href="/clinical-challenge/{{h.q.id}}">{{h.q.topic or h.q.id}}</a> <span class="muted">{{h.q.domain}}</span></li>{% endfor %}</ul>{% else %}<p class="muted">Not enough answers yet.</p>{% endif %}</section>
+
+{% if resolved %}
+<section class="card rv-list"><h2>Recently closed</h2><ul>{% for r in resolved %}<li><b>{{r.status|title}}</b> · <a href="/clinical-challenge/{{r.question_id}}">{{r.question_id}}</a> · {{reasons.get(r.reason, r.reason)}}{% if r.resolution %}: {{r.resolution}}{% endif %} <small class="muted">{{r.resolved_at|replace('T',' ')}}</small></li>{% endfor %}</ul></section>
+{% endif %}
+{% endblock %}

@@ -46,6 +46,8 @@
       <details><summary>Reveal reasoning</summary><p>Move toward urgent operative control for active or recurrent significant hemorrhage, hemodynamic instability or ongoing clinically important blood loss, airway compromise, a large or unstable tonsillar-fossa clot, concern for an arterial source, or bleeding that cannot be adequately visualized and controlled during monitored evaluation. Keep the patient NPO and involve anesthesia/OR early. Do not wait for a large hemoglobin drop before escalating—the bleeding history, current trajectory, perfusion, and airway risk matter more than a temporarily dry field or an initially reassuring hemoglobin.</p></details>
       {% endif %}
     </div>{% endif %}
+    <p class="qdiff" id="qdiff" hidden></p>
+    {% include "_qreport_v540.html" %}
     <div class="qx-actions">
       {% if next_q %}<a class="qx-btn primary" href="/clinical-challenge/{{next_q.id}}">Next question →</a>{% else %}<a class="qx-btn primary" href="/clinical-challenges">Bank complete ✓</a>{% endif %}
       {% if q.concept_id %}<a class="qx-btn" href="/concept/id/{{q.concept_id|urlencode}}">Review the topic</a>{% endif %}
@@ -85,6 +87,10 @@
    }
  }));
 })();
+</script>
+<script>
+(()=>{const fb=document.getElementById('challenge-feedback'),dq=document.getElementById('qdiff');if(!fb||!dq)return;
+ new MutationObserver(()=>{if(fb.hidden||dq.dataset.done)return;dq.dataset.done=1;fetch('/api/qstats/{{q.id}}').then(r=>r.json()).then(j=>{if(j.pct!==null&&j.pct!==undefined){dq.textContent=j.pct+'% of '+j.n+' residents answered this correctly.';dq.hidden=false}}).catch(()=>{})}).observe(fb,{attributes:true,attributeFilter:['hidden']});})();
 </script>
 <script>
 (()=>{const box=document.getElementById('qmeta');if(!box)return;const qid=box.dataset.qid;const f=document.getElementById('qmeta-flag'),n=document.getElementById('qmeta-note'),sv=document.getElementById('qmeta-saved'),st=document.getElementById('qmeta-status');

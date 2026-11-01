@@ -18,6 +18,7 @@
   <button>Study this topic</button>
 </form>
 
+{% include "_due_card_v540.html" %}
 <div class="dp-progress">
   <div class="card"><small>Curriculum mastered</small><b>{{overall.mastered}} / {{overall.total}}</b><div class="dp-bar"><i style="width:{{ (100*overall.mastered/overall.total)|round(1) if overall.total else 0 }}%"></i></div><small>{{overall.started}} topics started</small></div>
   {% for r in progress %}<div class="card"><small>{{r.domain}}</small><b>{{r.mastered}} / {{r.total}}</b><div class="dp-bar"><i style="width:{{ (100*r.mastered/r.total)|round(1) if r.total else 0 }}%"></i></div><small>{{r.started}} started</small></div>{% endfor %}

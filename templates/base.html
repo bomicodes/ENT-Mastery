@@ -30,6 +30,7 @@
     <div class="mobile-nav-section">Practice</div>
     <a href="/clinical-challenges">◆ <span>Clinical Challenges</span></a>
     <a href="/exam">⏱ <span>Timed Exam</span></a>
+    {% if is_reviewer_v540 is defined and is_reviewer_v540() %}<a href="/review">⚐ <span>Question Review</span></a>{% endif %}
     <a href="/concept-checks">✓ <span>Concept Checks</span></a>
     <a href="/integrated">◌ <span>Cases</span></a>
     <a href="/oral-boards">☰ <span>Mock Oral Board</span></a>
@@ -88,6 +89,7 @@
       <div class="nav-section-label">Practice</div>
       <a href="/clinical-challenges" class="navitem {% if request.path.startswith('/clinical-challenge') %}active{% endif %}">◆ <span>Clinical Challenges</span></a>
       <a href="/exam" class="navitem {% if request.path.startswith('/exam') %}active{% endif %}">⏱ <span>Timed Exam</span></a>
+      {% if is_reviewer_v540 is defined and is_reviewer_v540() %}<a href="/review" class="navitem {% if request.path.startswith('/review') and request.path != '/review/missed' %}active{% endif %}">⚐ <span>Question Review</span></a>{% endif %}
       <a href="/concept-checks" class="navitem {% if request.path.startswith('/concept-check') %}active{% endif %}">✓ <span>Concept Checks</span></a>
       <a href="/integrated" class="navitem {% if request.path.startswith('/integrated') %}active{% endif %}">◌ <span>Cases</span></a>
       <a href="/oral-boards" class="navitem {% if request.path.startswith('/oral-boards') %}active{% endif %}">☰ <span>Mock Oral Board</span></a>

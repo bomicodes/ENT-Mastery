@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block content %}
+<span class="eyebrow">MISSED-QUESTION REVIEW</span>
+<h1>{{n}} question{{ 's' if n != 1 }} due for review</h1>
+<p class="lede">These are questions you missed. Each one comes back after 1 day, then 3 and 7 days after each correct answer, and leaves the list after two correct reviews in a row.</p>
+<form method="post" action="/exam/start" id="rv-go">
+  <input type="hidden" name="pool" value="ids"><input type="hidden" name="ids" value="{{ids}}">
+  <input type="hidden" name="count" value="{{n}}"><input type="hidden" name="mode" value="tutor"><input type="hidden" name="timed" value="0">
+  <button class="ex-start" type="submit">Start review →</button>
+</form>
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=540">
+{% endblock %}

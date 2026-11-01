@@ -11,6 +11,7 @@
   <div class="card metric-card"><b>{{stats.due}}</b><span>Due today</span></div>
 </div>
 
+{% include "_due_card_v540.html" %}
 {% if board_readiness is defined %}{% set br = board_readiness() %}
 <section class="card readiness">
   <div class="section-head"><h2>Board readiness</h2><a href="/exam">Build a timed exam →</a></div>
