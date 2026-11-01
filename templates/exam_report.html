@@ -28,6 +28,7 @@
   <details class="card ex-item {{ 'ok' if it.ok else 'miss' }}" {% if not it.ok %}open{% endif %}>
     <summary><span class="ex-num">{{it.i+1}}</span><span class="ex-res">{{ '✓' if it.ok else ('—' if it.chosen is none else '✗') }}</span><span class="ex-topic">{{q.topic}}</span><span class="muted ex-dom">{{q.domain}}</span>{% if it.flagged %}<span class="ex-flag-tag">⚑</span>{% endif %}</summary>
     <div class="ex-item-body">
+      {% if q.image_url %}<figure class="qx-figure"><img src="{{q.image_url}}" alt="Image for this question" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').classList.add('image-failed')"><figcaption>{{q.image_credit}}{% if q.image_source %} · <a href="{{q.image_source}}" target="_blank" rel="noopener">source ↗</a>{% endif %}</figcaption><div class="qx-fig-fallback">Image could not load. {% if q.image_source %}<a href="{{q.image_source}}" target="_blank" rel="noopener">Open the cited source ↗</a>{% endif %}</div></figure>{% endif %}
       <p class="qx-stem ex-stem-sm">{{q.stem}}</p>
       <div class="qx-choices">
         {% for c in q.choices %}

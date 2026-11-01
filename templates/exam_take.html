@@ -15,6 +15,7 @@
     <div class="qx-head"><span class="qx-chip" id="ex-domain"></span><span class="qx-count" id="ex-count"></span>
       <button type="button" class="ex-flag" id="ex-flag" aria-pressed="false">⚑ Flag</button></div>
     <div class="qx-body">
+      <figure class="qx-figure" id="ex-fig" hidden><img id="ex-img" alt="Image for this question" referrerpolicy="no-referrer"><figcaption id="ex-cap"></figcaption></figure>
       <h1 class="qx-stem" id="ex-stem"></h1>
       <div class="qx-choices" id="ex-choices" role="group" aria-label="Answer choices"></div>
     </div>
@@ -57,6 +58,7 @@
    $('ex-domain').textContent=q.domain||'';
    $('ex-count').textContent=`Question ${cur+1} of ${qs.length}`;
    $('ex-stem').textContent=q.stem;
+   if(q.image_url){$('ex-fig').hidden=false;$('ex-img').src=q.image_url;$('ex-cap').innerHTML=esc(q.image_credit||'')+(q.image_source?` · <a href="${esc(q.image_source)}" target="_blank" rel="noopener">source ↗</a>`:'');}else{$('ex-fig').hidden=true;$('ex-img').removeAttribute('src');}
    const locked=tutor && q.answer!==undefined;
    $('ex-choices').innerHTML=q.choices.map((c,i)=>{
      let cls='qx-choice'; if(q.chosen===i) cls+=' is-chosen';

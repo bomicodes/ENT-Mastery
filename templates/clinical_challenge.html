@@ -14,6 +14,7 @@
 
   <div class="qx-body">
     <p class="qx-eyebrow">{{q.mode or 'Board vignette'}} · commit before you reveal</p>
+    {% if q.image_url %}<figure class="qx-figure"><img src="{{q.image_url}}" alt="Image for this question" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').classList.add('image-failed')"><figcaption>{{q.image_credit}}{% if q.image_source %} · <a href="{{q.image_source}}" target="_blank" rel="noopener">source ↗</a>{% endif %}</figcaption><div class="qx-fig-fallback">Image could not load. {% if q.image_source %}<a href="{{q.image_source}}" target="_blank" rel="noopener">Open the cited source ↗</a>{% endif %}</div></figure>{% endif %}
     <h1 class="qx-stem">{{q.stem}}</h1>
     <div class="qx-choices" role="group" aria-label="Answer choices">
       {% for choice in q.choices %}

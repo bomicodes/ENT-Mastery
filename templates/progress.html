@@ -11,6 +11,21 @@
   <div class="card metric-card"><b>{{stats.due}}</b><span>Due today</span></div>
 </div>
 
+{% if board_readiness is defined %}{% set br = board_readiness() %}
+<section class="card readiness">
+  <div class="section-head"><h2>Board readiness</h2><a href="/exam">Build a timed exam →</a></div>
+  <p class="muted">From your latest answer to each Clinical Challenge and exam question. Weakest domains first; aim for broad coverage before polishing percent correct.</p>
+  <div class="readiness-summary"><div><b>{{ br.pct if br.pct is not none else '—' }}{% if br.pct is not none %}%{% endif %}</b><span>correct overall</span></div><div><b>{{br.answered}}</b><span>of {{br.bank}} questions answered</span></div>
+  {% if br.exams %}<div class="readiness-trend"><span>Recent exam blocks</span><div class="trend-bars">{% for e in br.exams %}<a href="/exam/{{e.id}}/report" title="Block {{e.id}}: {{e.pct}}%"><i style="height:{{ [e.pct,4]|max }}%"></i><small>{{e.pct}}</small></a>{% endfor %}</div></div>{% endif %}</div>
+  <div class="readiness-table">
+    <div class="rt-head"><span>Domain</span><span>Correct</span><span>Coverage</span><span></span></div>
+    {% for r in br.domains %}
+    <div class="rt-row"><span>{{r.domain}}</span><span><b>{{ r.pct if r.pct is not none else '—' }}{% if r.pct is not none %}%{% endif %}</b></span><span><div class="bar"><i style="width:{{r.coverage}}%"></i></div><small>{{r.answered}}/{{r.total}}</small></span><span><a href="/clinical-challenges?domain={{r.domain|urlencode}}&status={{ 'incorrect' if r.pct is not none and r.pct < 100 else 'unused' }}">{{ 'Review misses' if r.pct is not none and r.pct < 100 else 'Start' }}</a></span></div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <section>
 <div class="section-head"><h2>Competency dimensions</h2><span>Across Daily Path + Cases + Atlas + Attending</span></div>
 <div class="dimension-grid">

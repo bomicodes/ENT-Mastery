@@ -18,6 +18,7 @@
     <option value="incorrect" {% if status=='incorrect' %}selected{% endif %}>Missed</option>
     <option value="correct" {% if status=='correct' %}selected{% endif %}>Answered correctly</option>
     <option value="flagged" {% if status=='flagged' %}selected{% endif %}>Flagged</option>
+    <option value="image" {% if status=='image' %}selected{% endif %}>Image questions</option>
   </select></label>
   <label>Type<br><select name="tier_group"><option value="">All types</option>{% for key, g in (tier_groups or {}).items() %}<option value="{{key}}" {% if tier_group==key %}selected{% endif %}>{{g[0]}}</option>{% endfor %}</select>{% if tier %}<input type="hidden" name="tier" value="{{tier}}">{% endif %}</label>
   <label>Mode<br><select name="mode"><option value="">All modes</option>{% for m in ['Vignette','Recognize','Reasoning','Workup','Manage','Operate','Clinical discrimination'] %}<option {% if mode==m %}selected{% endif %}>{{m}}</option>{% endfor %}</select></label>
@@ -44,6 +45,7 @@
     <span class="tag">{{q.domain}}</span>
     <span>{{q.tier or 'Clinical challenge'}}</span>
     {% if q_status is defined %}{% set qs_ = q_status.get(q.id) %}{% if qs_ == 'correct' %}<span class="qstat correct">✓ Correct</span>{% elif qs_ == 'incorrect' %}<span class="qstat incorrect">✗ Missed</span>{% endif %}{% if q.id in q_flags %}<span class="qstat flagged">⚑ Flagged</span>{% endif %}{% endif %}
+    {% if q.image_url %}<span class="qstat image">🖼 Image</span>{% endif %}
     {% if q.focus %}<span class="tag focus-tag">{% if q.focus=='OR_prep' %}OR prep{% elif q.focus=='overnight_call' %}Overnight call{% elif q.focus=='postoperative_call' %}Postoperative call{% elif q.focus=='boards' %}Boards{% else %}{{q.focus|replace('_',' ')|title}}{% endif %}</span>{% endif %}
   </div>
   <h2>{{q.topic}}</h2>

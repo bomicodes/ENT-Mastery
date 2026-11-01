@@ -47,6 +47,14 @@
     {% if case.context %}<p class="lede">{{case.context}}</p>{% endif %}
   </div>
 
+  <div class="ob-timer card" id="ob-timer">
+    <span class="eyebrow">EXAMINER CLOCK</span>
+    <div class="ob-timer-row"><b id="ob-clock">0:00</b>
+      <span class="ob-lengths">{% for m in [5,8,10] %}<button type="button" data-min="{{m}}" {% if m==8 %}class="on"{% endif %}>{{m}} min</button>{% endfor %}</span>
+      <button type="button" id="ob-go" class="ob-go">Start clock</button></div>
+    <small>Answer out loud before revealing each step. The clock turns amber at 2 minutes left and red at time.</small>
+  </div>
+
   <div style="display:grid;gap:1rem;margin-top:1rem">
     {% for step in case.steps %}
     <div class="card oral-board-step" style="background:var(--card-alt,#fafafa)">
@@ -61,6 +69,15 @@
     </div>
     {% endfor %}
 
+    <div class="card ob-rubric" id="ob-rubric" data-concept-id="{{case.concept_id or ''}}" data-domain="{{case.domain}}" data-case-id="{{case.id}}">
+      <span class="reason-label">SCORE YOURSELF LIKE AN EXAMINER</span>
+      {% for key, label, hint in [('workup','Data gathering & workup','Asked the history, exam and tests that change management, in a sensible order.'),('reasoning','Diagnosis & differential','Committed to a leading diagnosis and named the dangerous alternative.'),('management','Management decision','Chose a defensible plan with indications, alternatives and timing.'),('operative','Complications & safety','Anticipated the key complication and how to recognize and rescue it.'),('teaching','Communication','Explained it clearly, concisely and safely, as you would to the patient or a junior.')] %}
+      <div class="ob-rub-row" data-dim="{{key}}"><div><b>{{label}}</b><small>{{hint}}</small></div>
+        <div class="ob-rub-btns"><button type="button" data-score="0">Fail</button><button type="button" data-score="1">Borderline</button><button type="button" data-score="3">Pass</button></div></div>
+      {% endfor %}
+      <p class="ob-rub-total muted" id="ob-total">Score each domain; your ratings feed your competency dimensions.</p>
+    </div>
+
     {% if case.pearl %}
     <div class="card" id="oral-board-pearl"><span class="reason-label">BOARD PEARL</span><p>{{case.pearl}}</p></div>
     {% endif %}
@@ -73,4 +90,16 @@
 </section>
 {% endif %}
 <script src="{{url_for('static', filename='oral_board_v433.js')}}" defer></script>
+<script>
+(()=>{const t=document.getElementById('ob-timer');if(!t)return;let mins=8,end=null,iv=null;const clock=document.getElementById('ob-clock'),go=document.getElementById('ob-go');
+ const show=s=>{clock.textContent=Math.floor(s/60)+':'+String(s%60).padStart(2,'0');t.classList.toggle('warn',s<=120&&s>0);t.classList.toggle('over',s<=0&&end!==null)};show(mins*60);
+ t.querySelectorAll('[data-min]').forEach(b=>b.addEventListener('click',()=>{if(iv)return;mins=Number(b.dataset.min);t.querySelectorAll('[data-min]').forEach(x=>x.classList.toggle('on',x===b));show(mins*60)}));
+ go.addEventListener('click',()=>{if(iv){clearInterval(iv);iv=null;end=null;go.textContent='Start clock';show(mins*60);return;}end=Date.now()+mins*60000;go.textContent='Reset';iv=setInterval(()=>{const s=Math.round((end-Date.now())/1000);show(Math.max(0,s));if(s<=0){clearInterval(iv);iv=null;go.textContent='Reset'}},500)});
+ const rub=document.getElementById('ob-rubric');if(!rub)return;const scores={};
+ rub.addEventListener('click',async e=>{const b=e.target.closest('[data-score]');if(!b)return;const row=b.closest('.ob-rub-row');if(row.classList.contains('done'))return;row.querySelectorAll('button').forEach(x=>{x.classList.toggle('on',x===b);x.disabled=true});row.classList.add('done');
+  const sc=Number(b.dataset.score);scores[row.dataset.dim]=sc;const n=Object.keys(scores).length;const pass=Object.values(scores).filter(v=>v===3).length;
+  document.getElementById('ob-total').textContent=n+'/5 domains scored · '+pass+' pass'+(n===5?(pass>=4?' — this case would likely pass.':' — rework the weak domains before the real exam.'):'');
+  try{await fetch('/api/mastery-event',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({concept_id:rub.dataset.conceptId||rub.dataset.caseId,domain:rub.dataset.domain,dimension:row.dataset.dim,score:sc,source_type:'oral_board',source_id:rub.dataset.caseId})});}catch(err){}
+ });})();
+</script>
 {% endblock %}

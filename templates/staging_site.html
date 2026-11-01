@@ -17,7 +17,7 @@
 <article class="stg-page">
   <header class="stg-head">
     <span class="stg-ver {% if 'Version 9' in s.ajcc %}v9{% endif %}">{{s.ajcc}}</span>
-    <h1>{{s.name}}</h1>
+    <h1>{{s.name}}</h1><button type="button" class="print-btn" onclick="window.print()">⎙ Print</button>
     {% if s.applies_to %}<p class="stg-applies">{{s.applies_to}}</p>{% endif %}
     {% if s.big_picture %}<p class="stg-big">{{s.big_picture}}</p>{% endif %}
     <nav class="stg-jump">

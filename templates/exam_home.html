@@ -26,6 +26,7 @@
       <label><input type="radio" name="pool" value="unused"><span>Unused</span></label>
       <label><input type="radio" name="pool" value="incorrect"><span>Missed ({{counts.incorrect}})</span></label>
       <label><input type="radio" name="pool" value="flagged"><span>Flagged ({{counts.flagged}})</span></label>
+      {% if counts.images %}<label><input type="radio" name="pool" value="image"><span>Image questions ({{counts.images}})</span></label>{% endif %}
     </div>
   </fieldset>
   <fieldset>

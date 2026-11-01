@@ -130,6 +130,8 @@ def install_exam_mode_v531(app, data, app_mod=None):
         if pool in ("unused", "incorrect"):
             st = question_status(u)
             rows = [q for q in rows if (st.get(q["id"]) is None) == (pool == "unused") and (pool == "unused" or st.get(q["id"]) == "incorrect")]
+        elif pool == "image":
+            rows = [q for q in rows if q.get("image_url")]
         elif pool == "flagged":
             meta = question_meta(u)
             rows = [q for q in rows if meta.get(q["id"], {}).get("flagged")]
@@ -151,6 +153,7 @@ def install_exam_mode_v531(app, data, app_mod=None):
             "board": len(board), "all": len(bank),
             "answered": len(st), "incorrect": sum(1 for v in st.values() if v == "incorrect"),
             "flagged": sum(1 for v in meta.values() if v.get("flagged")),
+            "images": sum(1 for q in bank if q.get("image_url")),
         }
         return render_template("exam_home.html", domains=domains, counts=counts, past=past,
                                tier_groups=TIER_GROUPS, error=request.args.get("error"))
@@ -202,7 +205,8 @@ def install_exam_mode_v531(app, data, app_mod=None):
             q = by_id.get(qid, {})
             item = {"i": i, "id": qid, "domain": q.get("domain"), "topic": q.get("topic"), "stem": q.get("stem"),
                     "choices": q.get("choices", []), "chosen": s["answers"].get(i), "flagged": i in s["flags"],
-                    "note": meta.get(qid, {}).get("note", "")}
+                    "note": meta.get(qid, {}).get("note", ""),
+                    "image_url": q.get("image_url"), "image_credit": q.get("image_credit"), "image_source": q.get("image_source")}
             if s["config"].get("mode") == "tutor" and i in s["answers"]:
                 item.update(_reveal_payload(q))
             qs.append(item)
@@ -328,6 +332,8 @@ def install_exam_mode_v531(app, data, app_mod=None):
             rows = [q for q in rows if st.get(q["id"]) == status]
         elif status == "flagged":
             rows = [q for q in rows if meta.get(q["id"], {}).get("flagged")]
+        elif status == "image":
+            rows = [q for q in rows if q.get("image_url")]
         stats = {"questions": len(bank), "topics": len({q.get("concept_id") for q in bank if q.get("concept_id")}),
                  "curated": sum(1 for q in bank if q.get("tier") == "Curated board-style"),
                  "coverage": sum(1 for q in bank if q.get("tier") != "Curated board-style"),
@@ -346,6 +352,34 @@ def install_exam_mode_v531(app, data, app_mod=None):
                                tier=tier, mode=mode, focus=focus, stats=stats, page=page, total_pages=total_pages,
                                total_filtered=total_filtered, per_page=per_page, status=status, tier_group=tier_group,
                                q_status=st, q_flags={k for k, v in meta.items() if v.get("flagged")}, tier_groups=TIER_GROUPS)
+
+    def board_readiness():
+        """Per-domain readiness from the latest answer to each bank question."""
+        u = uid()
+        st = question_status(u)
+        rows = {}
+        for q in bank:
+            d = canon(q.get("domain")) or "Other"
+            r = rows.setdefault(d, {"domain": d, "total": 0, "answered": 0, "correct": 0})
+            r["total"] += 1
+            s_ = st.get(q["id"])
+            if s_:
+                r["answered"] += 1
+                r["correct"] += s_ == "correct"
+        out = []
+        for r in rows.values():
+            r["coverage"] = round(100 * r["answered"] / r["total"]) if r["total"] else 0
+            r["pct"] = round(100 * r["correct"] / r["answered"]) if r["answered"] else None
+            out.append(r)
+        out.sort(key=lambda r: (r["pct"] if r["pct"] is not None else 101, r["domain"]))
+        exams = _rows("SELECT id, correct, total, finished_at FROM exam_sessions WHERE user_id=? AND finished_at IS NOT NULL ORDER BY id DESC LIMIT 8", (u,))
+        exams = [{"id": e["id"], "pct": round(100 * e["correct"] / e["total"]) if e["total"] else 0} for e in reversed(exams)]
+        answered = sum(r["answered"] for r in out)
+        correct = sum(r["correct"] for r in out)
+        return {"domains": out, "exams": exams, "answered": answered,
+                "pct": round(100 * correct / answered) if answered else None, "bank": len(bank)}
+
+    app.jinja_env.globals["board_readiness"] = board_readiness
 
     routes = [
         ("/exam", "exam_home_v531", exam_home, ["GET"]),

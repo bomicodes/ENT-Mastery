@@ -136,5 +136,9 @@
 <script src="{{ url_for('static', filename='app.js') }}"></script>
 <script src="{{ url_for('static', filename='mobile_nav_v183.js') }}"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='layout_v520.css') }}">
+  <script>
+  (function(){var opened=[];window.addEventListener('beforeprint',function(){document.querySelectorAll('details:not([open])').forEach(function(d){d.open=true;opened.push(d)});document.body.classList.add('printing')});
+  window.addEventListener('afterprint',function(){opened.forEach(function(d){d.open=false});opened=[];document.body.classList.remove('printing')});})();
+  </script>
 </body>
 </html>

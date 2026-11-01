@@ -4,7 +4,7 @@
 <div class="lab-grid">
 <a class="card lab-card live-lab" href="/lab/otoscopy"><div class="lab-icon">👂</div><h3>Otoscopy Atlas</h3><p>Canal + TM + middle-ear clues → diagnosis → management.</p><span class="lab-status">OPEN LAB →</span></a>
 {% for slug, lab in labs.items() %}
-<a class="card lab-card live-lab" href="/lab/{{slug}}"><div class="lab-icon">{{lab.get('icon','◈')}}</div><h3>{{lab.title}}</h3><p>{{lab.get('subtitle','Describe → localize → interpret → act.')}}</p><span class="lab-status">{{lab.get('seed_case_count', lab.get('cases',[])|length)}} CONCEPTS · OPEN LAB →</span></a>
+<a class="card lab-card live-lab" href="/lab/{{slug}}"><div class="lab-icon">{{lab.get('icon','◈')}}</div><h3>{{lab.title}}</h3><p>{{lab.get('subtitle','Describe → localize → interpret → act.')}}</p><span class="lab-status">{{lab.get('cases',[])|length}} STUDIES · OPEN LAB →</span></a>
 {% endfor %}
 </div><div class="card lab-philosophy"><span class="eyebrow">THE RULE</span><h2>Describe before you diagnose.</h2><p>Every interpretation should end with the same question: <b>what does this finding change?</b></p></div>
 {% endblock %}
