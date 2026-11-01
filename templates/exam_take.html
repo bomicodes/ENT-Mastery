@@ -1,0 +1,105 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=531">
+<div class="ex-bar card">
+  <div><b>Block {{s.id}}</b> <span class="muted">· {{s.config.mode|title}} mode · {{qs|length}} questions</span></div>
+  <div class="ex-bar-right">
+    {% if remaining is not none %}<span class="ex-timer" id="ex-timer" data-remaining="{{remaining}}">--:--</span>{% endif %}
+    <span id="ex-progress" class="muted"></span>
+    <button type="button" class="ex-submit" id="ex-submit">Submit block</button>
+  </div>
+</div>
+
+<div class="ex-layout">
+  <section class="qx ex-q" id="ex-q">
+    <div class="qx-head"><span class="qx-chip" id="ex-domain"></span><span class="qx-count" id="ex-count"></span>
+      <button type="button" class="ex-flag" id="ex-flag" aria-pressed="false">⚑ Flag</button></div>
+    <div class="qx-body">
+      <h1 class="qx-stem" id="ex-stem"></h1>
+      <div class="qx-choices" id="ex-choices" role="group" aria-label="Answer choices"></div>
+    </div>
+    <div class="qx-feedback" id="ex-feedback" hidden></div>
+    <div class="ex-nav-btns"><button type="button" id="ex-prev" class="qx-btn">← Previous</button><button type="button" id="ex-next" class="qx-btn primary">Next →</button></div>
+  </section>
+  <aside class="card ex-grid-wrap">
+    <span class="eyebrow">NAVIGATOR</span>
+    <div class="ex-grid" id="ex-grid"></div>
+    <p class="ex-legend"><span class="ex-dot done"></span>answered <span class="ex-dot flag"></span>flagged</p>
+  </aside>
+</div>
+
+<form method="post" action="/exam/{{eid}}/finish" id="ex-finish"></form>
+<script id="ex-data" type="application/json">{{ qs|tojson }}</script>
+<script>
+(()=>{
+ const qs=JSON.parse(document.getElementById('ex-data').textContent);
+ const tutor={{ 'true' if s.config.mode=='tutor' else 'false' }};
+ const L=i=>String.fromCharCode(65+i);
+ let cur=qs.findIndex(q=>q.chosen===null||q.chosen===undefined); if(cur<0) cur=0;
+ const $=id=>document.getElementById(id);
+ const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ async function save(body){
+   try{const r=await fetch('/api/exam/{{eid}}/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+     const j=await r.json(); if(j.expired){$('ex-finish').submit();} return j;}catch(e){return {};}
+ }
+ function feedback(q){
+   const fb=$('ex-feedback');
+   if(!(tutor && q.answer!==undefined)){fb.hidden=true;fb.innerHTML='';return;}
+   const ok=q.chosen===q.answer;
+   fb.hidden=false;
+   fb.innerHTML=`<div class="qx-verdict ${ok?'ok':'no'}"><b>${ok?'Correct':'Not quite'}</b> The answer is ${L(q.answer)}.</div>
+     <div class="qx-section"><h3>Explanation</h3><p>${esc(q.explanation)}</p></div>
+     ${q.why_wrong&&q.why_wrong.length?`<div class="qx-section"><h3>Why the other options are wrong</h3><ul class="qx-why">${q.why_wrong.map(w=>`<li><span class="qx-letter">${w[0]}</span><span>${esc(w[1])}</span></li>`).join('')}</ul></div>`:''}
+     ${q.pearl?`<div class="qx-section qx-pearl"><h3>Board pearl</h3><p>${esc(q.pearl)}</p></div>`:''}`;
+ }
+ function render(){
+   const q=qs[cur];
+   $('ex-domain').textContent=q.domain||'';
+   $('ex-count').textContent=`Question ${cur+1} of ${qs.length}`;
+   $('ex-stem').textContent=q.stem;
+   const locked=tutor && q.answer!==undefined;
+   $('ex-choices').innerHTML=q.choices.map((c,i)=>{
+     let cls='qx-choice'; if(q.chosen===i) cls+=' is-chosen';
+     if(locked){ if(i===q.answer) cls+=' is-correct'; else if(i===q.chosen) cls+=' is-wrong'; }
+     return `<button type="button" class="${cls}" data-choice="${i}" ${locked?'disabled':''}><span class="qx-letter">${L(i)}</span><span class="qx-text">${esc(c)}</span><span class="qx-mark"></span></button>`}).join('');
+   $('ex-flag').classList.toggle('on',!!q.flagged); $('ex-flag').setAttribute('aria-pressed',q.flagged?'true':'false');
+   $('ex-prev').disabled=cur===0; $('ex-next').textContent=cur===qs.length-1?'Review & submit':'Next →';
+   feedback(q); grid(); window.scrollTo({top:0,behavior:'smooth'});
+ }
+ function grid(){
+   $('ex-grid').innerHTML=qs.map((q,i)=>`<button type="button" data-go="${i}" class="${i===cur?'cur ':''}${q.chosen!==null&&q.chosen!==undefined?'done ':''}${q.flagged?'flag':''}">${i+1}</button>`).join('');
+   const n=qs.filter(q=>q.chosen!==null&&q.chosen!==undefined).length; $('ex-progress').textContent=`${n}/${qs.length} answered`;
+ }
+ $('ex-choices').addEventListener('click',async e=>{
+   const b=e.target.closest('[data-choice]'); if(!b||b.disabled) return;
+   const q=qs[cur]; const i=Number(b.dataset.choice);
+   q.chosen=(q.chosen===i && !tutor)?null:i;
+   render();
+   const j=await save({i:cur,choice:q.chosen});
+   if(tutor && j && j.answer!==undefined){Object.assign(q,{answer:j.answer,explanation:j.explanation,why_wrong:j.why_wrong,pearl:j.pearl}); render();}
+ });
+ $('ex-flag').addEventListener('click',()=>{const q=qs[cur]; q.flagged=!q.flagged; render(); save({i:cur,flagged:q.flagged});});
+ $('ex-prev').addEventListener('click',()=>{if(cur>0){cur--;render();}});
+ $('ex-next').addEventListener('click',()=>{if(cur<qs.length-1){cur++;render();}else{submit();}});
+ $('ex-grid').addEventListener('click',e=>{const b=e.target.closest('[data-go]'); if(b){cur=Number(b.dataset.go);render();}});
+ function submit(){
+   const left=qs.filter(q=>q.chosen===null||q.chosen===undefined).length;
+   const box=document.createElement('div'); box.className='ex-confirm card';
+   box.innerHTML=`<p><b>Submit this block?</b> ${left?left+' question'+(left>1?'s are':' is')+' unanswered and will be scored as incorrect.':'All questions answered.'}</p><div><button type="button" class="ex-submit" data-yes>Submit</button><button type="button" class="qx-btn" data-no>Keep working</button></div>`;
+   document.body.appendChild(box);
+   box.addEventListener('click',e=>{if(e.target.closest('[data-yes]')) $('ex-finish').submit(); if(e.target.closest('[data-no]')) box.remove();});
+ }
+ $('ex-submit').addEventListener('click',submit);
+ document.addEventListener('keydown',e=>{
+   if(e.target.closest('textarea,input')) return;
+   const k=e.key.toUpperCase();
+   if('ABCD'.includes(k)&&k.length===1){const b=document.querySelector(`[data-choice="${k.charCodeAt(0)-65}"]`); if(b) b.click();}
+   if(e.key==='ArrowRight') $('ex-next').click(); if(e.key==='ArrowLeft') $('ex-prev').click(); if(k==='F') $('ex-flag').click();
+ });
+ const t=$('ex-timer');
+ if(t){let rem=Number(t.dataset.remaining);const end=Date.now()+rem*1000;
+   const tick=()=>{rem=Math.max(0,Math.round((end-Date.now())/1000));const m=Math.floor(rem/60),s=rem%60;t.textContent=`${m}:${String(s).padStart(2,'0')}`;t.classList.toggle('low',rem<300);if(rem<=0){$('ex-finish').submit();return;}setTimeout(tick,1000)};tick();}
+ render();
+})();
+</script>
+{% endblock %}

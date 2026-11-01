@@ -1,0 +1,46 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=531">
+{% set letters = 'ABCD' %}
+<div class="breadcrumb"><a href="/exam">Exam mode</a> / Block {{s.id}} report</div>
+<span class="eyebrow">SCORE REPORT</span>
+<h1>{{pct}}% <span class="ex-h-sub">{{s.correct}} of {{s.total}} correct</span></h1>
+<p class="lede">Time used {{used_min}} min {{used_sec}} s{% if s.time_limit %} of {{ (s.time_limit // 60) }} min{% endif %}{% if unanswered %} · {{unanswered}} left unanswered{% endif %}. Every answer here now counts in your Clinical Challenge history and mastery.</p>
+
+<div class="ex-actions">
+  {% if missed_ids %}<form method="post" action="/exam/start"><input type="hidden" name="pool" value="ids"><input type="hidden" name="ids" value="{{missed_ids}}"><input type="hidden" name="count" value="150"><input type="hidden" name="mode" value="tutor"><input type="hidden" name="timed" value="0"><button class="ex-start" type="submit">Retry the ones I missed (tutor mode)</button></form>{% endif %}
+  <a class="qx-btn" href="/exam">Build another block</a>
+  <a class="qx-btn" href="/clinical-challenges?status=flagged">Flagged questions</a>
+</div>
+
+<section class="card ex-domains">
+  <h2>By domain</h2>
+  {% for r in dom_rows %}
+  <div class="ex-dom-row"><span>{{r.domain}}</span><div class="bar large"><i style="width:{{r.pct}}%"></i></div><b>{{r.pct}}%</b><small>{{r.ok}}/{{r.n}}</small></div>
+  {% endfor %}
+</section>
+
+<section class="ex-review">
+  <h2>Review every question</h2>
+  <p class="muted">Missed questions are open; click any other question to expand it.</p>
+  {% for it in items %}
+  {% set q = it.q %}
+  <details class="card ex-item {{ 'ok' if it.ok else 'miss' }}" {% if not it.ok %}open{% endif %}>
+    <summary><span class="ex-num">{{it.i+1}}</span><span class="ex-res">{{ '✓' if it.ok else ('—' if it.chosen is none else '✗') }}</span><span class="ex-topic">{{q.topic}}</span><span class="muted ex-dom">{{q.domain}}</span>{% if it.flagged %}<span class="ex-flag-tag">⚑</span>{% endif %}</summary>
+    <div class="ex-item-body">
+      <p class="qx-stem ex-stem-sm">{{q.stem}}</p>
+      <div class="qx-choices">
+        {% for c in q.choices %}
+        {% set cls = 'is-correct' if loop.index0 == q.answer|int else ('is-wrong' if it.chosen is not none and loop.index0 == it.chosen|int else '') %}
+        <div class="qx-choice {{cls}}"><span class="qx-letter">{{letters[loop.index0]}}</span><span class="qx-text">{{c}}</span>{% if it.chosen is not none and loop.index0 == it.chosen|int %}<span class="ex-yours">your answer</span>{% endif %}</div>
+        {% endfor %}
+      </div>
+      <div class="qx-section"><h3>Explanation</h3><p>{{q.explanation}}</p></div>
+      {% if q.why_wrong %}<div class="qx-section"><h3>Why the other options are wrong</h3><ul class="qx-why">{% for w in q.why_wrong %}{% if loop.index0 != q.answer|int and w %}<li><span class="qx-letter">{{letters[loop.index0]}}</span><span>{{w}}</span></li>{% endif %}{% endfor %}</ul></div>{% endif %}
+      {% if q.board_pearl %}<div class="qx-section qx-pearl"><h3>Board pearl</h3><p>{{q.board_pearl}}</p></div>{% endif %}
+      <p class="ex-links"><a href="/clinical-challenge/{{q.id}}">Open as a single question</a>{% if q.concept_id %} · <a href="/concept/id/{{q.concept_id|urlencode}}">Review the topic</a>{% endif %}</p>
+    </div>
+  </details>
+  {% endfor %}
+</section>
+{% endblock %}

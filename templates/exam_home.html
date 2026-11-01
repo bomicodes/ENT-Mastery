@@ -1,0 +1,63 @@
+{% extends "base.html" %}{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=531">
+<div class="breadcrumb"><a href="/">Home</a> / Exam mode</div>
+<span class="eyebrow">WRITTEN BOARDS PRACTICE</span>
+<h1>Build a timed exam</h1>
+<p class="lede">Pick a block size, domains and pool. Exam mode hides explanations until you submit, like the written boards; tutor mode explains each question as you go. Timed blocks allow {{ 60 }} seconds per question.</p>
+
+{% if error %}<div class="access-error" role="alert">{{error}}</div>{% endif %}
+
+<div class="ex-stats">
+  <div class="card"><b>{{counts.board}}</b><span>board-style questions</span></div>
+  <div class="card"><b>{{counts.answered}}</b><span>answered so far</span></div>
+  <div class="card"><b>{{counts.incorrect}}</b><span>currently missed</span></div>
+  <div class="card"><b>{{counts.flagged}}</b><span>flagged</span></div>
+</div>
+
+<form method="post" action="/exam/start" class="card ex-builder">
+  <fieldset>
+    <legend>Block size</legend>
+    <div class="ex-pills">{% for n in [10,20,40,60,100] %}<label><input type="radio" name="count" value="{{n}}" {% if n==40 %}checked{% endif %}><span>{{n}}</span></label>{% endfor %}</div>
+  </fieldset>
+  <fieldset>
+    <legend>Question pool</legend>
+    <div class="ex-pills">
+      <label><input type="radio" name="pool" value="all" checked><span>All</span></label>
+      <label><input type="radio" name="pool" value="unused"><span>Unused</span></label>
+      <label><input type="radio" name="pool" value="incorrect"><span>Missed ({{counts.incorrect}})</span></label>
+      <label><input type="radio" name="pool" value="flagged"><span>Flagged ({{counts.flagged}})</span></label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Question type</legend>
+    <div class="ex-pills">{% for key, g in tier_groups.items() %}<label><input type="radio" name="tier" value="{{key}}" {% if key=='board' %}checked{% endif %}><span>{{g[0]}}</span></label>{% endfor %}<label><input type="radio" name="tier" value="any"><span>Everything</span></label></div>
+  </fieldset>
+  <fieldset>
+    <legend>Domains <small>(none checked = all)</small></legend>
+    <div class="ex-checks">{% for d in domains %}<label><input type="checkbox" name="domains" value="{{d}}"><span>{{d}}</span></label>{% endfor %}</div>
+  </fieldset>
+  <fieldset class="ex-row">
+    <div><legend>Mode</legend>
+      <div class="ex-pills"><label><input type="radio" name="mode" value="exam" checked><span>Exam (review at end)</span></label><label><input type="radio" name="mode" value="tutor"><span>Tutor (explain each)</span></label></div></div>
+    <div><legend>Timer</legend>
+      <div class="ex-pills"><label><input type="radio" name="timed" value="1" checked><span>Timed</span></label><label><input type="radio" name="timed" value="0"><span>Untimed</span></label></div></div>
+  </fieldset>
+  <button class="ex-start" type="submit">Start exam →</button>
+</form>
+
+{% if past %}
+<section class="card ex-past">
+  <h2>Your recent blocks</h2>
+  <table>
+    <thead><tr><th>Date</th><th>Questions</th><th>Mode</th><th>Score</th><th></th></tr></thead>
+    <tbody>
+    {% for p in past %}
+      <tr><td>{{p.created_at|replace('T',' ')}}</td><td>{{p.total}}</td><td>{{p.config.mode|title}}{% if p.config.timed %} · timed{% endif %}</td>
+        <td>{% if p.pct is not none %}<b>{{p.pct}}%</b> <span class="muted">({{p.correct}}/{{p.total}})</span>{% else %}<span class="muted">in progress</span>{% endif %}</td>
+        <td>{% if p.pct is not none %}<a href="/exam/{{p.id}}/report">Review</a>{% else %}<a href="/exam/{{p.id}}">Resume</a>{% endif %}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+{% endblock %}

@@ -1,5 +1,6 @@
 {% extends "base.html" %}{% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=531">
 {% set letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' %}
 <div class="breadcrumb"><a href="/clinical-challenges">Clinical Challenges</a> / {{q.topic}}</div>
 
@@ -19,6 +20,11 @@
       <button type="button" class="qx-choice" data-choice="{{loop.index0}}"><span class="qx-letter">{{letters[loop.index0]}}</span><span class="qx-text">{{choice}}</span><span class="qx-mark"></span></button>
       {% endfor %}
     </div>
+  </div>
+
+  <div class="qmeta" id="qmeta" data-qid="{{q.id}}">
+    <div class="qmeta-row"><button type="button" class="ex-flag" id="qmeta-flag" aria-pressed="false">⚑ Flag for review</button><small id="qmeta-status"></small></div>
+    <details id="qmeta-notes"><summary>My notes</summary><textarea id="qmeta-note" placeholder="Your own pearl, mnemonic or why you missed it. Saved to your account."></textarea><small id="qmeta-saved"></small></details>
   </div>
 
   <div id="challenge-feedback" class="qx-feedback" hidden>
@@ -77,6 +83,15 @@
      result.className='qx-verdict no'; result.innerHTML='<span class="qx-icon">!</span><div><b>Could not save your answer.</b>Please try again.</div>'; feedback.hidden=false;
    }
  }));
+})();
+</script>
+<script>
+(()=>{const box=document.getElementById('qmeta');if(!box)return;const qid=box.dataset.qid;const f=document.getElementById('qmeta-flag'),n=document.getElementById('qmeta-note'),sv=document.getElementById('qmeta-saved'),st=document.getElementById('qmeta-status');
+ const show=on=>{f.classList.toggle('on',on);f.setAttribute('aria-pressed',on?'true':'false');f.textContent=on?'⚑ Flagged':'⚑ Flag for review'};
+ const post=b=>fetch('/api/qmeta/'+encodeURIComponent(qid),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}).then(r=>r.json()).catch(()=>({}));
+ fetch('/api/qmeta/'+encodeURIComponent(qid)).then(r=>r.json()).then(j=>{show(!!j.flagged);n.value=j.note||'';if(j.note)document.getElementById('qmeta-notes').open=true;if(j.status)st.textContent=j.status==='correct'?'Last attempt: correct':'Last attempt: missed';}).catch(()=>{});
+ f.addEventListener('click',()=>{const on=!f.classList.contains('on');show(on);post({flagged:on})});
+ let t;n.addEventListener('input',()=>{clearTimeout(t);sv.textContent='';t=setTimeout(()=>post({note:n.value}).then(()=>sv.textContent='Saved'),600)});
 })();
 </script>
 {% endblock %}
