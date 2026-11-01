@@ -61,7 +61,10 @@
     </div>
   </div>
   {% endif %}
-  {% if c.visual %}
+  {% if c.figures %}
+  <div class="lab-figs">{% for fig in c.figures %}<figure class="lab-fig-frame">{{ fig }}</figure>{% endfor %}</div>
+  {% endif %}
+  {% if c.visual and not c.figures %}
   <figure class="lab-visual-frame">
     <img src="{{url_for('static',filename=c.visual)}}" alt="Teaching visual for {{c.id}}" class="lab-visual"
          onerror="this.closest('figure').classList.add('image-failed')">
@@ -96,11 +99,19 @@
     <div class="commit-prompt"><span class="eyebrow">COMMIT BEFORE REVEAL</span><h2>{{c.prompt}}</h2>
       <textarea rows="3" placeholder="Describe what you actually see before naming it…"></textarea>
     </div>
+    {% if c.mcq %}
+    <div class="lab-qc" data-answer="{{c.mcq.answer}}">
+      <span class="eyebrow">QUICK CHECK · SCORED</span>
+      <p class="lab-qc-q">{{c.mcq.question}}</p>
+      <div class="lab-qc-choices">{% for ch in c.mcq.choices %}<button type="button" data-qc="{{loop.index0}}"><b>{{'ABCD'[loop.index0]}}</b><span>{{ch}}</span></button>{% endfor %}</div>
+      <div class="lab-qc-result" hidden><p class="lab-qc-verdict"></p><p>{{c.mcq.explanation}}</p></div>
+    </div>
+    {% endif %}
     <button class="stage-reveal-btn" type="button">Reveal interpretation</button>
     <div class="hidden stage-reveal-content">
       <div><span class="reason-label">INTERPRETATION</span><p>{{c.answer}}</p></div>
       <div><span class="reason-label">WHY THIS MATTERS</span><p>{{c.why}}</p></div>
-      <div class="lab-self-rate" data-stage-rating="interpret"><span>How well did you interpret this?</span>
+      <div class="lab-self-rate" data-stage-rating="interpret" {% if c.mcq %}data-qc-scored="1"{% endif %}><span>How well did you interpret this?</span>
         <button type="button" data-rating="0">Again</button><button type="button" data-rating="1">Hard</button><button type="button" data-rating="2">Good</button><button type="button" data-rating="3">Easy</button>
       </div>
     </div>
@@ -139,7 +150,31 @@
   {% endif %}
 </section>
 {% else %}
-<div class="empty card"><h3>No cases at this level yet.</h3><p>Choose All to return to the available cases.</p></div>
+<div class="empty card"><h3>No studies at this level yet.</h3><p>Choose All to return to the available cases.</p></div>
 {% endfor %}
 </div>
+
+{% if lab.fundamentals %}
+<details class="card lab-fundamentals">
+  <summary><div><span class="eyebrow">FUNDAMENTALS</span><b>{{lab.fundamentals|length}} quick-recall questions for this lab</b><small>Facts to know before reading studies. These are recall, not interpretation, so they are kept out of the study count.</small></div></summary>
+  <ol class="fund-list">
+  {% for f in lab.fundamentals %}
+    <li><details><summary>{{f.prompt}}</summary><div class="fund-answer"><p>{{f.answer}}</p>{% if f.why %}<p class="muted">{{f.why}}</p>{% endif %}</div></details></li>
+  {% endfor %}
+  </ol>
+</details>
+{% endif %}
+<script>
+document.addEventListener('click',async e=>{
+  const b=e.target.closest('.lab-qc [data-qc]'); if(!b) return;
+  const box=b.closest('.lab-qc'); if(box.classList.contains('done')) return;
+  const card=b.closest('.interp-case'); const ans=Number(box.dataset.answer); const pick=Number(b.dataset.qc); const ok=pick===ans;
+  box.classList.add('done'); box.querySelectorAll('[data-qc]').forEach((x,i)=>{x.disabled=true; if(i===ans) x.classList.add('ok'); else if(i===pick) x.classList.add('no');});
+  const r=box.querySelector('.lab-qc-result'); r.hidden=false; r.querySelector('.lab-qc-verdict').textContent=ok?'Correct.':'Not quite — the answer is '+'ABCD'[ans]+'.';
+  r.querySelector('.lab-qc-verdict').className='lab-qc-verdict '+(ok?'ok':'no');
+  const rate=card.querySelector('[data-stage-rating="interpret"]');
+  try{await fetch('/api/lab-rate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({lab_slug:card.dataset.lab,case_id:card.dataset.caseId,concept_id:card.dataset.conceptId,rating:ok?3:0,variant_type:'interpret',domain:card.dataset.domain})});
+    if(rate){rate.querySelectorAll('button').forEach(x=>x.disabled=true);rate.classList.add('rated');rate.querySelector('span').textContent='Scored by the quick check ('+(ok?'correct':'missed')+').';}}catch(err){}
+});
+</script>
 {% endblock %}

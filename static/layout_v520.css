@@ -117,3 +117,77 @@ form.lab-controls a,.oral-filter a{align-self:flex-end}
 .reset-btn{border:0;background:#b3412f;color:#fff;font:inherit;font-weight:800;border-radius:9px;padding:11px 16px;cursor:pointer}
 .reset-btn:hover{background:#963423}
 .reset-done{background:#e7f3f1;border-color:#b9ddd8;padding:12px 16px;margin:10px 0 14px}
+
+/* v53.0 Interpretation Atlas: drawn studies and fundamentals */
+.lab-figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:12px;margin:12px 0 16px}
+.lab-fig-frame{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px}
+.lab-fig{display:block;width:100%;height:auto}
+.lab-fundamentals{padding:0;margin:22px 0;overflow:hidden}
+.lab-fundamentals>summary{padding:16px 20px;display:flex;list-style:none}
+.lab-fundamentals>summary div{display:flex;flex-direction:column;gap:3px}
+.lab-fundamentals>summary small{color:var(--muted);font-weight:400}
+.fund-list{margin:0;padding:4px 20px 16px 40px}
+.fund-list li{margin:4px 0}
+.fund-list details{border-top:1px solid var(--line);padding:9px 0}
+.fund-list summary{font-weight:700;line-height:1.45}
+.fund-answer p{margin:8px 0 0;line-height:1.55}
+/* v53.2 lab quick check */
+.lab-qc{border:1.5px solid #cfe3e0;background:#f7fbfa;border-radius:12px;padding:14px 16px;margin:0 0 14px}
+.lab-qc-q{font-weight:700;margin:6px 0 10px;line-height:1.5}
+.lab-qc-choices{display:grid;gap:8px}
+.lab-qc-choices button{display:flex;gap:10px;align-items:flex-start;text-align:left;font:inherit;font-size:14.5px;line-height:1.45;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;color:inherit}
+.lab-qc-choices button b{flex:0 0 22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;background:#e7f3f1;color:var(--teal)}
+.lab-qc-choices button:hover:not(:disabled){border-color:var(--teal)}
+.lab-qc-choices button:disabled{cursor:default}
+.lab-qc-choices button.ok{border-color:var(--teal);background:#e7f3f1;font-weight:600}
+.lab-qc-choices button.no{border-color:#b3412f;background:#fbeeeb}
+.lab-qc-result p{margin:10px 0 0;line-height:1.55}
+.lab-qc-verdict{font-weight:800}.lab-qc-verdict.ok{color:var(--teal)}.lab-qc-verdict.no{color:#b3412f}
+/* v53.3 Board readiness */
+.readiness{padding:18px 22px;margin:20px 0}
+.readiness .section-head a{color:var(--teal);font-weight:800}
+.readiness-summary{display:flex;flex-wrap:wrap;gap:14px 30px;align-items:flex-end;margin:10px 0 16px}
+.readiness-summary>div>b{display:block;font-size:26px}.readiness-summary>div>span{color:var(--muted);font-size:13px}
+.readiness-trend>span{display:block;color:var(--muted);font-size:12px;margin-bottom:4px}
+.trend-bars{display:flex;align-items:flex-end;gap:6px;height:64px}
+.trend-bars a{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;width:22px}
+.trend-bars i{display:block;width:100%;background:var(--teal);border-radius:4px 4px 0 0}
+.trend-bars small{font-size:10px;color:var(--muted)}
+.readiness-table{display:grid;gap:2px}
+.rt-head,.rt-row{display:grid;grid-template-columns:minmax(140px,1.4fr) 70px minmax(120px,1fr) 110px;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid #edf2f2;font-size:14px}
+.rt-head{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rt-row small{color:var(--muted);font-size:11.5px}.rt-row a{color:var(--teal);font-weight:700;font-size:13px}
+@media(max-width:560px){.rt-head{display:none}.rt-row{grid-template-columns:1fr 60px;row-gap:6px}.rt-row>span:nth-child(3){grid-column:1/-1}.rt-row>span:nth-child(4){grid-column:1/-1}}
+
+/* v53.3 Print: OR Tomorrow, staging, anatomy and topic pages print as clean handouts */
+.print-btn{display:inline-flex;align-items:center;gap:6px;margin:6px 0 4px;border:1.5px solid var(--line);background:#fff;border-radius:8px;padding:6px 12px;font:inherit;font-size:13px;font-weight:700;color:#2b4245;cursor:pointer}
+.print-btn:hover{border-color:var(--teal);color:var(--teal)}
+@media print{
+  @page{margin:14mm}
+  body{background:#fff!important;font-size:11pt}
+  .sidebar,.topbar,.mobile-nav-panel,.mobile-nav-backdrop,.mobile-nav-toggle,.print-btn,.stg-side,.stg-jump,.stg-recall,.stg-pager,.case-btn,.button,.or-search,.or-module-directory,.breadcrumb,#drills,.depth-toolbar,.lab-controls,.adaptive-actions,.qmeta,.reset-entry,textarea,.stage-reveal-btn,.lab-self-rate{display:none!important}
+  .app-shell{display:block!important}.page,.modern-page{max-width:none!important;padding:0!important;margin:0!important}
+  .stg-layout{display:block!important}
+  .card,.stg-box,.stg-head,.prep,.ax-card{box-shadow:none!important;border:1px solid #ccc!important;break-inside:avoid;page-break-inside:avoid}
+  .stage-reveal-content.hidden,.reveal-answer.hidden{display:block!important}
+  a{color:#000!important;text-decoration:none}
+  .recall .stg-def span{filter:none!important}
+  h1{font-size:20pt}h2{font-size:14pt}
+}
+/* v53.3 Mock oral board: examiner clock and rubric */
+.ob-timer{padding:12px 16px;margin-top:14px;background:#fff}
+.ob-timer.warn{border-color:#e3b74a;background:#fffaf0}.ob-timer.over{border-color:#b3412f;background:#fbeeeb}
+.ob-timer-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:6px 0}
+.ob-timer-row b{font-size:26px;font-variant-numeric:tabular-nums;min-width:70px}
+.ob-lengths{display:flex;gap:6px}.ob-lengths button,.ob-go,.ob-rub-btns button{font:inherit;font-size:13px;font-weight:700;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:5px 11px;cursor:pointer;color:#2b4245}
+.ob-lengths button.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.ob-go{background:var(--teal);border-color:var(--teal);color:#fff}
+.ob-timer small{color:var(--muted)}
+.ob-rubric{padding:16px 18px}
+.ob-rub-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;padding:10px 0;border-top:1px solid #edf2f2}
+.ob-rub-row>div:first-child{flex:1 1 260px;min-width:0}.ob-rub-row small{display:block;color:var(--muted);font-size:12.5px;line-height:1.4}
+.ob-rub-btns{display:flex;gap:6px}.ob-rub-btns button:disabled{cursor:default}
+.ob-rub-btns button.on[data-score="3"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.ob-rub-btns button.on[data-score="1"]{background:#fff4dc;border-color:#e3b74a;color:#8a6412}
+.ob-rub-btns button.on[data-score="0"]{background:#fbeeeb;border-color:#b3412f;color:#b3412f}
+.ob-rub-total{margin:10px 0 0;font-size:13.5px}

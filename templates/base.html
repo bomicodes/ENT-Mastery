@@ -29,6 +29,7 @@
 
     <div class="mobile-nav-section">Practice</div>
     <a href="/clinical-challenges">◆ <span>Clinical Challenges</span></a>
+    <a href="/exam">⏱ <span>Timed Exam</span></a>
     <a href="/concept-checks">✓ <span>Concept Checks</span></a>
     <a href="/integrated">◌ <span>Cases</span></a>
     <a href="/oral-boards">☰ <span>Mock Oral Board</span></a>
@@ -86,6 +87,7 @@
 
       <div class="nav-section-label">Practice</div>
       <a href="/clinical-challenges" class="navitem {% if request.path.startswith('/clinical-challenge') %}active{% endif %}">◆ <span>Clinical Challenges</span></a>
+      <a href="/exam" class="navitem {% if request.path.startswith('/exam') %}active{% endif %}">⏱ <span>Timed Exam</span></a>
       <a href="/concept-checks" class="navitem {% if request.path.startswith('/concept-check') %}active{% endif %}">✓ <span>Concept Checks</span></a>
       <a href="/integrated" class="navitem {% if request.path.startswith('/integrated') %}active{% endif %}">◌ <span>Cases</span></a>
       <a href="/oral-boards" class="navitem {% if request.path.startswith('/oral-boards') %}active{% endif %}">☰ <span>Mock Oral Board</span></a>
@@ -134,5 +136,9 @@
 <script src="{{ url_for('static', filename='app.js') }}"></script>
 <script src="{{ url_for('static', filename='mobile_nav_v183.js') }}"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='layout_v520.css') }}">
+  <script>
+  (function(){var opened=[];window.addEventListener('beforeprint',function(){document.querySelectorAll('details:not([open])').forEach(function(d){d.open=true;opened.push(d)});document.body.classList.add('printing')});
+  window.addEventListener('afterprint',function(){opened.forEach(function(d){d.open=false});opened=[];document.body.classList.remove('printing')});})();
+  </script>
 </body>
 </html>
