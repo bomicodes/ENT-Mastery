@@ -10,8 +10,11 @@ cases that predate this release.
 import importlib
 import pkgutil
 
+from lab_figures_v530 import figures_for
+
 ALLOWED_HOSTS = ("https://cdn.ncbi.nlm.nih.gov/", "https://upload.wikimedia.org/", "https://www.ncbi.nlm.nih.gov/", "https://europepmc.org/")
 REQUIRED = ("id", "level", "prompt", "answer", "why", "image_url", "image_credit", "image_source")
+REQUIRED_SYNTHETIC = ("id", "level", "prompt", "answer", "why", "study_summary")
 
 
 def _valid_mcq(m):
@@ -81,11 +84,12 @@ def install_interpretation_labs_v532(data, app=None):
         lab = labs[target]
         n = 0
         for c in cases:
-            missing = [k for k in REQUIRED if not c.get(k)]
+            req = REQUIRED_SYNTHETIC if c.get("synthetic") else REQUIRED
+            missing = [k for k in req if not c.get(k)]
             if missing:
                 report["rejected"].append((c.get("id"), "missing " + ",".join(missing)))
                 continue
-            if not c["image_url"].startswith(ALLOWED_HOSTS):
+            if not c.get("synthetic") and not c["image_url"].startswith(ALLOWED_HOSTS):
                 report["rejected"].append((c["id"], "image host not allowed"))
                 continue
             if c["id"] in seen:
@@ -98,6 +102,9 @@ def install_interpretation_labs_v532(data, app=None):
             c.setdefault("variant_type", "interpret")
             c.setdefault("concept_id", f"{target}:{c['id']}")
             c["new_v532"] = True
+            figs = figures_for(c["id"])
+            if figs:
+                c["figures"] = figs
             lab["cases"].append(c)
             seen.add(c["id"])
             n += 1

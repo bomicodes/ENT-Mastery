@@ -165,6 +165,31 @@ def abr(right, left, title="Click ABR"):
     return _svg(W, H, "".join(g), title)
 
 
+def enog(normal_mv, affected_mv, day, title="Electroneurography (ENoG)"):
+    """Supramaximal CMAPs, normal vs affected side; degeneration = 1 - affected/normal."""
+    W, H, L = 380, 210, 40
+    x = lambda ms: L + (W - L - 14) * ms / 20
+    g = []
+    for ms in range(0, 21, 5):
+        g.append(f'<line x1="{x(ms):.1f}" y1="20" x2="{x(ms):.1f}" y2="{H-40}" stroke="{GRID}" stroke-width=".8"/>'
+                 f'<text x="{x(ms):.1f}" y="{H-28}" font-size="9.5" fill="{MUTED}" text-anchor="middle">{ms}</text>')
+    g.append(f'<text x="{(W+L)/2}" y="{H-14}" font-size="9.5" fill="{MUTED}" text-anchor="middle">ms after stimulus · day {day} after onset</text>')
+    scale = 34 / max(normal_mv, affected_mv, 0.1)
+    for k, (side, amp, col) in enumerate((("Normal", normal_mv, BLUE), ("Affected", affected_mv, RED))):
+        base = 62 + k * 74
+        pts = []
+        for i in range(0, 401):
+            t = i / 20
+            v = amp * (math.exp(-((t - 5.2) / 1.1) ** 2) - 0.6 * math.exp(-((t - 7.6) / 1.5) ** 2))
+            pts.append(f"{x(t):.1f},{base - v*scale:.1f}")
+        g.append(f'<polyline points="{" ".join(pts)}" fill="none" stroke="{col}" stroke-width="2"/>')
+        g.append(f'<text x="{L-6}" y="{base+4}" font-size="10" font-weight="700" fill="{col}" text-anchor="end">{side[0]}</text>')
+        g.append(f'<text x="{W-14}" y="{base-20}" font-size="10" fill="{col}" text-anchor="end">{side}: {amp:g} mV</text>')
+    deg = round(100 * (1 - affected_mv / normal_mv)) if normal_mv else 0
+    g.append(f'<text x="{L}" y="14" font-size="10.5" font-weight="700" fill="{INK}">Degeneration ≈ {deg}%</text>')
+    return _svg(W, H, "".join(g), title)
+
+
 # Figures for existing cases, built from the values each case already states.
 FIGURES = {
     "aud1": [lambda: audiogram([5, 5, 10, 5, 10, 10], [10, 5, 5, 10, 5, 15], [5, 5, 5, 5, 10], [5, 5, 5, 10, 5], "Normal audiogram"),
@@ -182,6 +207,9 @@ FIGURES = {
     "vest1": [lambda: caloric(25, 20, 10, 8)],
     "vest2": [lambda: vhit(0.95, 0.55, left_saccade=True)],
     "vestnew1": [lambda: vhit(0.95, 0.45, left_saccade=True)],
+    "fn_enog92_v532": [lambda: enog(4.0, 0.3, 6, "ENoG day 6: 92% degeneration")],
+    "fn_enog60_v532": [lambda: enog(3.6, 1.45, 5, "ENoG day 5: 60% degeneration")],
+    "fn_tbfx_v532": [lambda: enog(3.8, 0.2, 4, "ENoG day 4 after temporal bone fracture")],
     "ae2": [lambda: abr((1.7, 4.1, 6.3), (1.6, 3.7, 5.4), "Click ABR: right I-V 4.6 ms, left 3.8 ms")],
 }
 
