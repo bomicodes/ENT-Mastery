@@ -28,7 +28,9 @@ def _bank_item(case, lab_slug, lab_title):
     return {
         "id": "img_" + case["id"],
         "domain": m.get("domain") or "General ENT / Emergencies",
-        "topic": m.get("topic") or lab_title,
+        # neutral label so the chip and breadcrumb don't give away a "name it" answer
+        "topic": "Image review: " + lab_title.replace(" Lab", "").replace("Interpretation", "").strip(),
+        "answer_topic": m.get("topic") or lab_title,
         "stem": m["question"],
         "choices": list(m["choices"]),
         "answer": ans,
