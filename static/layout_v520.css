@@ -117,3 +117,17 @@ form.lab-controls a,.oral-filter a{align-self:flex-end}
 .reset-btn{border:0;background:#b3412f;color:#fff;font:inherit;font-weight:800;border-radius:9px;padding:11px 16px;cursor:pointer}
 .reset-btn:hover{background:#963423}
 .reset-done{background:#e7f3f1;border-color:#b9ddd8;padding:12px 16px;margin:10px 0 14px}
+
+/* v53.0 Interpretation Atlas: drawn studies and fundamentals */
+.lab-figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:12px;margin:12px 0 16px}
+.lab-fig-frame{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px}
+.lab-fig{display:block;width:100%;height:auto}
+.lab-fundamentals{padding:0;margin:22px 0;overflow:hidden}
+.lab-fundamentals>summary{padding:16px 20px;display:flex;list-style:none}
+.lab-fundamentals>summary div{display:flex;flex-direction:column;gap:3px}
+.lab-fundamentals>summary small{color:var(--muted);font-weight:400}
+.fund-list{margin:0;padding:4px 20px 16px 40px}
+.fund-list li{margin:4px 0}
+.fund-list details{border-top:1px solid var(--line);padding:9px 0}
+.fund-list summary{font-weight:700;line-height:1.45}
+.fund-answer p{margin:8px 0 0;line-height:1.55}

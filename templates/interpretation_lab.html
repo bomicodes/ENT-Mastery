@@ -61,7 +61,10 @@
     </div>
   </div>
   {% endif %}
-  {% if c.visual %}
+  {% if c.figures %}
+  <div class="lab-figs">{% for fig in c.figures %}<figure class="lab-fig-frame">{{ fig }}</figure>{% endfor %}</div>
+  {% endif %}
+  {% if c.visual and not c.figures %}
   <figure class="lab-visual-frame">
     <img src="{{url_for('static',filename=c.visual)}}" alt="Teaching visual for {{c.id}}" class="lab-visual"
          onerror="this.closest('figure').classList.add('image-failed')">
@@ -139,7 +142,18 @@
   {% endif %}
 </section>
 {% else %}
-<div class="empty card"><h3>No cases at this level yet.</h3><p>Choose All to return to the available cases.</p></div>
+<div class="empty card"><h3>No studies at this level yet.</h3><p>Choose All to return to the available cases.</p></div>
 {% endfor %}
 </div>
+
+{% if lab.fundamentals %}
+<details class="card lab-fundamentals">
+  <summary><div><span class="eyebrow">FUNDAMENTALS</span><b>{{lab.fundamentals|length}} quick-recall questions for this lab</b><small>Facts to know before reading studies. These are recall, not interpretation, so they are kept out of the study count.</small></div></summary>
+  <ol class="fund-list">
+  {% for f in lab.fundamentals %}
+    <li><details><summary>{{f.prompt}}</summary><div class="fund-answer"><p>{{f.answer}}</p>{% if f.why %}<p class="muted">{{f.why}}</p>{% endif %}</div></details></li>
+  {% endfor %}
+  </ol>
+</details>
+{% endif %}
 {% endblock %}
