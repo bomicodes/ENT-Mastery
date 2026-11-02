@@ -19,7 +19,7 @@
 </section>
 
 <section class="card rv-list">
-  <h2>Thin topics <span class="muted">({{thin_total}} with fewer than 3 board-style questions)</span></h2>
+  <h2>Thin curriculum topics <span class="muted">({{thin_total}} of the curriculum topics have fewer than 7 board-style questions)</span></h2>{% if not thin_total %}<p class="muted">Every curriculum topic has at least 7 board-style questions.</p>{% endif %}
   <div class="thin-grid">{% for d, t, n_board, n_all in thin %}<div><b>{{t}}</b><small>{{d}} · {{n_board}} board-style / {{n_all}} total</small></div>{% endfor %}</div>
 </section>
 

@@ -37,7 +37,7 @@
 <div class="lab-controls">
  <span>Difficulty:</span>
  <a class="{{'selected' if level=='all' else ''}}" href="/lab/{{slug}}?track={{track}}">All</a>
- {% for n in [1,2,3,4,5] %}<a class="{{'selected' if level|string==n|string else ''}}" href="/lab/{{slug}}?track={{track}}&level={{n}}">L{{n}}</a>{% endfor %}
+ {% for n in [1,2,3,4,5] %}{% set _cnt = namespace(c=0) %}{% for _c in (lab.cases or []) %}{% if _c.level|string == n|string and (track == 'all' or (_c.track or 'all') == track) %}{% set _cnt.c = _cnt.c + 1 %}{% endif %}{% endfor %}{% if _cnt.c %}<a class="{{'selected' if level|string==n|string else ''}}" href="/lab/{{slug}}?track={{track}}&level={{n}}">L{{n}}</a>{% else %}<span class="lab-level-empty" title="No studies at this level yet" aria-disabled="true">L{{n}}</span>{% endif %}{% endfor %}
 </div>
 
 <section class="card adaptive-session-panel">

@@ -170,7 +170,10 @@ def near_duplicates(bank, threshold=0.62, limit=80):
     return pairs[:limit], len(pairs)
 
 
-def coverage(bank, canon):
+THIN_MIN = 7
+
+
+def coverage(bank, canon, curriculum=None):
     board = [q for q in bank if q.get("tier") == "Curated board-style"]
     per_dom = Counter(canon(q.get("domain")) for q in board)
     total = sum(per_dom.values()) or 1
@@ -179,9 +182,16 @@ def coverage(bank, canon):
         have = per_dom.get(d, 0)
         share = round(100 * have / total, 1)
         rows.append({"domain": d, "blueprint": w, "have": have, "share": share, "gap": round(share - w, 1)})
+    if curriculum:
+        # v57: count by curriculum topic (concept_id), matching how coverage is reported elsewhere
+        b = Counter(q.get("concept_id") for q in board)
+        a = Counter(q.get("concept_id") for q in bank)
+        thin = sorted(((canon(d), t, b.get(cid, 0), a.get(cid, 0)) for cid, (d, t) in curriculum.items() if b.get(cid, 0) < THIN_MIN),
+                      key=lambda r: (r[2], r[0], str(r[1])))
+        return rows, thin
     topics = Counter((canon(q.get("domain")), q.get("topic")) for q in board)
     all_topics = Counter((canon(q.get("domain")), q.get("topic")) for q in bank)
-    thin = sorted(((d, t, topics.get((d, t), 0), n) for (d, t), n in all_topics.items() if topics.get((d, t), 0) < 3),
+    thin = sorted(((d, t, topics.get((d, t), 0), n) for (d, t), n in all_topics.items() if topics.get((d, t), 0) < THIN_MIN),
                   key=lambda r: (r[2], r[0], str(r[1])))
     return rows, thin
 
@@ -274,7 +284,12 @@ def install_quality_v540(app, data, app_mod=None):
     def review_coverage():
         if not privileged():
             abort(403)
-        rows, thin = coverage(bank, canon)
+        cur = {}
+        if app_mod is not None and hasattr(app_mod, "_v6_item_id"):
+            for d, mods in getattr(data, "DEEP_MODULES_V6", {}).items():
+                for m in mods:
+                    cur[app_mod._v6_item_id(d, m["topic"])] = (d, m["topic"])
+        rows, thin = coverage(bank, canon, cur or None)
         pairs, total_pairs = near_duplicates(bank)
         pairs = [{"s": s, "a": by_id.get(a, {"id": a}), "b": by_id.get(b, {"id": b})} for s, a, b in pairs]
         return render_template("review_coverage_v540.html", rows=rows, thin=thin[:150], thin_total=len(thin),

@@ -175,8 +175,8 @@ SITE = {
         ["Long GV, et al. Adjuvant dabrafenib plus trametinib in stage III BRAF-mutated melanoma (COMBI-AD). N Engl J Med. 2017", ""],
         ["AJCC Current Staging System 2026 (melanoma of skin remains 8th edition)", "https://www.facs.org/media/c5ik5tkr/ajcc-current-staging-system-2026.pdf"],
         ["NCCN Clinical Practice Guidelines: Melanoma: Cutaneous, 2026", ""],
-        ["NCI Thesaurus/MedGen: Pathologic Stage III Cutaneous Melanoma AJCC v8 (IIIA-IIID TNM combinations)", "https://https.ncbi.nlm.nih.gov/medgen/1626911"],
-        ["NCI Thesaurus/MedGen: Clinical Stage I and Pathologic Stage I Cutaneous Melanoma AJCC v8", "https://https.ncbi.nlm.nih.gov/medgen/1626826"],
+        ["NCI Thesaurus/MedGen: Pathologic Stage III Cutaneous Melanoma AJCC v8 (IIIA-IIID TNM combinations)", "https://www.ncbi.nlm.nih.gov/medgen/1626911"],
+        ["NCI Thesaurus/MedGen: Clinical Stage I and Pathologic Stage I Cutaneous Melanoma AJCC v8", "https://www.ncbi.nlm.nih.gov/medgen/1626826"],
         ["NCI Thesaurus (CISMeF): Clinical Stage III Cutaneous Melanoma AJCC v8 (Any T, Tis, N1 or more, M0)", "https://www.cismef.org/page/detail/en/NCI_CO_C137655"],
         ["OncLive: Neoadjuvant therapy NCCN recommendations in melanoma (preferred: pembrolizumab, nivolumab/ipilimumab)", "https://www.onclive.com/view/neoadjuvant-therapy-nccn-recommendations-take-the-melanoma-field-in-a-new-direction"]
     ],
