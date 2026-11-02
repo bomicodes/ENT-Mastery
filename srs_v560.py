@@ -51,7 +51,8 @@ def ensure_schema():
         was_new INTEGER DEFAULT 0, interval_days REAL, ts REAL)""")
     c.execute("""CREATE TABLE IF NOT EXISTS srs_settings (
         user_id INTEGER PRIMARY KEY, exam_date TEXT, new_per_day INTEGER DEFAULT 20,
-        sources TEXT DEFAULT 'board,image,check', domains TEXT DEFAULT '', updated_at TEXT)""")
+        sources TEXT DEFAULT 'fact,check', domains TEXT DEFAULT '', updated_at TEXT)""")
+    c.execute("CREATE TABLE IF NOT EXISTS srs_meta (k TEXT PRIMARY KEY, v TEXT)")
     c.commit()
     c.close()
 
@@ -92,7 +93,24 @@ def day_start(now=None):
 
 
 # ------------------------------------------------------------------------------------- settings
-DEFAULT_SETTINGS = {"exam_date": "", "new_per_day": 20, "sources": "board,image,check", "domains": ""}
+DEFAULT_SETTINGS = {"exam_date": "", "new_per_day": 20, "sources": "fact,check", "domains": ""}
+KINDS = ("fact", "check", "board", "image")
+
+
+def migrate_v580(catalog):
+    """Once: switch users still on the old all-vignette default to fact cards, and carry
+    any vignette-card progress over to that question's fact card."""
+    if _rows("SELECT v FROM srs_meta WHERE k=?", ("v580_fact_cards",)):
+        return
+    _run("UPDATE srs_settings SET sources=? WHERE sources=?", ("fact,check", "board,image,check"))
+    for r in _rows("SELECT * FROM srs_cards WHERE card_id LIKE ?", ("q:%",)):
+        fid = "f:" + r["card_id"][2:]
+        if fid in catalog.cards and not _card_row(r["user_id"], fid):
+            _run("INSERT INTO srs_cards (user_id, card_id, state, ease, interval_days, due_at, reps, lapses, last_review, "
+                 "relearn_interval, introduced_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+                 (r["user_id"], fid, r["state"], r["ease"], r["interval_days"], r["due_at"], r["reps"], r["lapses"],
+                  r["last_review"], r["relearn_interval"], r["introduced_at"]))
+    _run("INSERT INTO srs_meta (k, v) VALUES (?, ?)", ("v580_fact_cards", str(time.time())))
 
 
 def get_settings(uid):
@@ -233,8 +251,9 @@ def _first_sentences(t, n=3, limit=520):
 class Catalog:
     """All cards available on the site, built once from the in-memory banks."""
 
-    def __init__(self, data, paused=lambda: set()):
+    def __init__(self, data, paused=lambda: set(), facts=None):
         self.data = data
+        self.facts = facts or {}
         self.paused = paused
         self.cards = {}
         self.order = []
@@ -251,6 +270,8 @@ class Catalog:
             else:
                 continue  # templated coverage items are not carded
             self._add("q:" + qid, kind, q)
+            if board and qid in self.facts:
+                self._add("f:" + qid, "fact", q)
         for q in getattr(data, "CONCEPT_CHECKS_V112", []) or []:
             if not q.get("id"):
                 continue
@@ -265,7 +286,7 @@ class Catalog:
         self.order.append(cid)
 
     def source(self, cid):
-        if cid.startswith("q:"):
+        if cid.startswith("q:") or cid.startswith("f:"):
             return (getattr(self.data, "CLINICAL_CHALLENGE_BY_ID_V119", {}) or {}).get(cid[2:])
         if cid.startswith("cc:"):
             idx = getattr(self.data, "CONCEPT_CHECK_BY_ID_V112", None)
@@ -280,6 +301,15 @@ class Catalog:
         q = self.source(cid)
         if not meta or not q:
             return None
+        if cid.startswith("f:"):
+            fc = self.facts.get(cid[2:]) or {}
+            return {
+                "id": cid, "kind": "fact", "domain": meta["domain"], "topic": _clean(meta["topic"]),
+                "stem": _clean(fc.get("front")), "image_url": None, "image_credit": "", "figure_html": "",
+                "figure_static": "", "answer": _clean(fc.get("back")), "pearl": _clean(q.get("board_pearl")),
+                "why": "", "link": "/clinical-challenge/" + cid[2:],
+                "link_label": "See it as a board question",
+            }
         choices = list(q.get("choices") or [])
         try:
             ans_i = int(q.get("answer"))
@@ -333,15 +363,27 @@ def rate(uid, cid, rating, source="cards", now=None):
     return nxt
 
 
-def record_answer(uid, qid, correct):
-    """Hook for answers given anywhere on the site (bank, exams, tutor blocks)."""
+def record_answer(uid, qid, correct, catalog=None):
+    """Hook for answers given anywhere on the site (bank, exams, tutor blocks).
+
+    v58: the question's fact card is the one scheduled (a miss puts that fact in the deck);
+    the full-vignette card is also scheduled when the user has vignette cards switched on."""
     if not uid or not qid:
         return
-    cid = "q:" + qid
-    row = _card_row(uid, cid)
-    if correct and row and row.get("state") in ("review",) and float(row.get("due_at") or 0) > time.time():
-        return  # answered early and correctly: do not inflate the interval
-    rate(uid, cid, 3 if correct else 1, source="answer")
+    targets = []
+    if catalog is None or ("f:" + qid) in catalog.cards:
+        targets.append("f:" + qid)
+    if catalog is not None and ("q:" + qid) in catalog.cards:
+        srcs, _ = _filters(get_settings(uid))
+        if catalog.cards["q:" + qid]["kind"] in srcs or not targets:
+            targets.append("q:" + qid)
+    for cid in targets:
+        row = _card_row(uid, cid)
+        if correct and row and row.get("state") in ("review",) and float(row.get("due_at") or 0) > time.time():
+            continue  # answered early and correctly: do not inflate the interval
+        if correct and not row and cid.startswith("f:"):
+            continue  # a correct answer does not pull a brand-new fact card into the deck
+        rate(uid, cid, 3 if correct else 1, source="answer")
 
 
 def _filters(settings):
@@ -478,8 +520,17 @@ def install_srs_v560(app, data, app_mod=None):
 
     ensure_schema()
     q540 = getattr(data, "QUALITY_V540", {}) or {}
-    catalog = Catalog(data, paused=q540.get("paused_ids", lambda: set()))
+    try:
+        import facts_v580
+        facts = facts_v580.load()
+    except Exception:
+        facts = {}
+    catalog = Catalog(data, paused=q540.get("paused_ids", lambda: set()), facts=facts)
     data.SRS_V560 = {"catalog": catalog}
+    try:
+        migrate_v580(catalog)
+    except Exception:
+        pass
 
     def uid():
         return db._current_user_id()
@@ -497,8 +548,8 @@ def install_srs_v560(app, data, app_mod=None):
     def record_review_answer_v560(u, qid, correct):
         orig(u, qid, correct)
         try:
-            if ("q:" + str(qid)) in catalog.cards:
-                record_answer(u, str(qid), bool(correct))
+            if ("q:" + str(qid)) in catalog.cards or ("f:" + str(qid)) in catalog.cards:
+                record_answer(u, str(qid), bool(correct), catalog)
         except Exception:
             pass
 
@@ -511,7 +562,7 @@ def install_srs_v560(app, data, app_mod=None):
         sm = summary(u, catalog)
         doms = sorted({c["domain"] for c in catalog.cards.values() if c["domain"]})
         return render_template("cards_v560.html", sm=sm, domains=doms,
-                               kinds={k: sum(1 for c in catalog.cards.values() if c["kind"] == k) for k in ("board", "image", "check")})
+                               kinds={k: sum(1 for c in catalog.cards.values() if c["kind"] == k) for k in KINDS}, settings=get_settings(u))
 
     def cards_settings():
         u = uid()
@@ -526,7 +577,7 @@ def install_srs_v560(app, data, app_mod=None):
             npd = max(0, min(200, int(f.get("new_per_day") or 20)))
         except ValueError:
             npd = 20
-        srcs = ",".join(k for k in ("board", "image", "check") if f.get("src_" + k)) or "board"
+        srcs = ",".join(k for k in KINDS if f.get("src_" + k)) or "fact"
         doms = "|".join(f.getlist("domains"))
         save_settings(u, exam, npd, srcs, doms)
         return redirect(url_for("cards_home_v560"))
@@ -586,6 +637,6 @@ def install_srs_v560(app, data, app_mod=None):
     finally:
         if served:
             app._got_first_request = True
-    counts = {k: sum(1 for c in catalog.cards.values() if c["kind"] == k) for k in ("board", "image", "check")}
+    counts = {k: sum(1 for c in catalog.cards.values() if c["kind"] == k) for k in KINDS}
     data.SRS_V560["counts"] = counts
     return {"cards": len(catalog.cards), **counts}
