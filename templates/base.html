@@ -25,6 +25,7 @@
   </div>
   <nav class="mobile-nav-links">
     <a href="/">⌂ <span>Dashboard</span></a>
+    <a href="/welcome">➜ <span>Start here</span></a>
     <a href="/daily-adaptive">◇ <span>Daily Path</span></a>
 
     <div class="mobile-nav-section">Curriculum</div>
@@ -81,6 +82,7 @@
 
     <nav class="modern-nav">
       <a href="/" class="navitem {% if request.path=='/' %}active{% endif %}">⌂ <span>Dashboard</span></a>
+      <a href="/welcome" class="navitem {% if request.path=='/welcome' %}active{% endif %}">➜ <span>Start here</span></a>
       <a href="/daily-adaptive" class="navitem {% if request.path.startswith('/daily-adaptive') %}active{% endif %}">◇ <span>Daily Path</span>{% if shell_stats.due %}<em>{{shell_stats.due}}</em>{% endif %}</a>
 
       <div class="nav-section-label">Curriculum</div>

@@ -2,6 +2,15 @@
 <div class="eyebrow">PROGRAM ROSTER</div>
 <h1>Every resident's progress, in one place.</h1>
 <p class="lede">Visible only to chief residents and attendings. Each row shows the resident's own mastery and practice history.</p>
+{% if admin_msg %}<div class="card roster-note ok" role="status">{{admin_msg}}</div>{% endif %}
+{% if admin_err %}<div class="access-error" role="alert">{{admin_err}}</div>{% endif %}
+{% set hc = health or setup_health_v550() %}
+<section class="card roster-health">
+  <div class="roster-manage-head"><h2>Setup check</h2><p class="muted">Confirm these before inviting residents.</p></div>
+  <ul class="roster-health-list">
+  {% for h in hc %}<li class="{{'ok' if h.ok else 'warn'}}"><span class="roster-health-dot" aria-hidden="true">{{'✓' if h.ok else '!'}}</span><b>{{h.label}}</b><span>{{h.detail}}</span></li>{% endfor %}
+  </ul>
+</section>
 
 <section class="card roster-manage-card">
 <div class="roster-manage-head"><h2>Add a resident</h2><p class="muted">They'll sign in with this name and PIN.</p></div>
@@ -28,6 +37,7 @@
       <th>Concepts touched</th>
       <th>Attempts</th>
       <th>Due today</th>
+      <th>Manage</th>
     </tr>
   </thead>
   <tbody>
@@ -40,6 +50,20 @@
       <td>{{r.concepts}}</td>
       <td>{{r.attempts}}</td>
       <td>{{r.due}}</td>
+      <td class="roster-manage-cell">
+        <details><summary>Manage</summary>
+          <form method="post" action="{{ url_for('roster_reset_pin_v550') }}" class="roster-inline-form">
+            <input type="hidden" name="user_id" value="{{r.id}}">
+            <label>New PIN <input name="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="4–8 digits" required></label>
+            <button type="submit">Reset PIN</button>
+          </form>
+          <form method="post" action="{{ url_for('roster_role_v550') }}" class="roster-inline-form">
+            <input type="hidden" name="user_id" value="{{r.id}}">
+            <label>Role <select name="role">{% for ro in ['resident','chief','attending'] %}<option value="{{ro}}" {% if r.role==ro %}selected{% endif %}>{{ro|capitalize}}</option>{% endfor %}</select></label>
+            <button type="submit">Save role</button>
+          </form>
+        </details>
+      </td>
     </tr>
     {% endfor %}
   </tbody>

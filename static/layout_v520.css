@@ -197,3 +197,39 @@ form.lab-controls a,.oral-filter a{align-self:flex-end}
 /* v54.4: cards whose base .card rule gave them no padding (text touched the border) */
 .card.adaptive-session-panel,.card.bank-exam-cta,.card.oral-board-step,.card.empty-state,.card.empty{padding:16px 20px}
 @media(max-width:760px){.card.adaptive-session-panel,.card.bank-exam-cta,.card.oral-board-step,.card.empty-state,.card.empty{padding:14px 16px}}
+
+/* v55.0 roster admin */
+.roster-health-list{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
+.roster-health-list li{display:grid;grid-template-columns:22px 200px 1fr;gap:10px;align-items:start;font-size:14px}
+.roster-health-dot{display:inline-flex;width:20px;height:20px;border-radius:50%;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;background:#2f7d5b}
+.roster-health-list li.warn .roster-health-dot{background:#b3541e}
+.roster-health-list li.warn b{color:#8a3d12}
+.roster-note.ok{padding:12px 16px;border-left:4px solid #2f7d5b}
+.roster-manage-cell details summary{cursor:pointer;font-weight:700;color:var(--accent,#0f6b5f)}
+.roster-inline-form{display:flex;gap:6px;align-items:end;flex-wrap:wrap;margin-top:8px}
+.roster-inline-form label{display:flex;flex-direction:column;font-size:12px;gap:2px}
+.roster-inline-form input,.roster-inline-form select{padding:6px 8px;border:1px solid var(--line,#d9e2e2);border-radius:8px;min-width:110px}
+.roster-inline-form button{padding:7px 10px;border-radius:8px;border:1px solid var(--line,#d9e2e2);background:#fff;font-weight:700;cursor:pointer}
+@media(max-width:760px){.roster-health-list li{grid-template-columns:22px 1fr}.roster-health-list li span:last-child{grid-column:2}}
+
+/* v55.1 welcome */
+.welcome-hero{margin:8px 0 18px}.welcome-hero h1{margin:8px 0 6px}
+.welcome-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+.welcome-stats div{background:var(--card,#fff);border:1px solid var(--line,#dfe7e7);border-radius:12px;padding:12px 14px}
+.welcome-stats b{display:block;font-size:24px;color:var(--accent,#0f6b5f)}.welcome-stats span{font-size:13px;color:var(--muted,#5f7372)}
+.card.welcome-block{padding:18px 22px;margin:14px 0}.welcome-block h2{margin:0 0 10px;font-size:19px}
+section.welcome-block:not(.card){margin:18px 0}
+.welcome-steps{margin:0;padding-left:20px;display:grid;gap:8px;line-height:1.5}
+.welcome-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.card.welcome-tile{display:flex;flex-direction:column;gap:6px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .15s}
+.card.welcome-tile:hover{border-color:var(--accent,#0f6b5f)}.welcome-tile b{color:var(--accent,#0f6b5f)}.welcome-tile span{font-size:13.5px;color:var(--muted,#5f7372);line-height:1.45}
+.welcome-list{margin:0;padding-left:18px;display:grid;gap:8px;line-height:1.5}
+.welcome-week{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.welcome-week div{border:1px solid var(--line,#dfe7e7);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.welcome-week span{font-size:13.5px;color:var(--muted,#5f7372)}
+.welcome-cta{display:flex;gap:14px;align-items:center;margin:18px 0 30px;flex-wrap:wrap}
+.card.welcome-prompt{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;margin:0 0 14px;border-left:4px solid var(--accent,#0f6b5f);flex-wrap:wrap}
+.card.welcome-prompt[hidden]{display:none}
+.welcome-prompt-actions{display:flex;gap:8px;align-items:center}
+.welcome-prompt-actions button{border:1px solid var(--line,#dfe7e7);background:#fff;border-radius:8px;padding:7px 10px;cursor:pointer}
+@media(max-width:760px){.welcome-stats,.welcome-week{grid-template-columns:repeat(2,minmax(0,1fr))}}
