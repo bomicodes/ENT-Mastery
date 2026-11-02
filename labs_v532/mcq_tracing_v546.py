@@ -1087,7 +1087,7 @@ MCQ_BY_CASE = {'aud1': {'question': 'An adult has right air-conduction threshold
                           'Sensitization to the heat-stable lipid transfer protein in apple (Mal d 3)',
                           'Sensitization to the major birch pollen allergen alone (Bet v 1)',
                           'A negative result to the apple protein that matches birch pollen'],
-              'answer': 0,
+              'answer': 1,
               'explanation': 'This is pollen-food syndrome caused by birch-related PR-10 proteins, which are '
                              'destroyed by heat and processing; that explains why cooked apple and '
                              'commercial extract are tolerated while fresh fruit is positive. Lipid transfer '

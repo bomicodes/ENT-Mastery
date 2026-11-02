@@ -37,16 +37,16 @@ REWRITES = {
              'afferent defect, there is no proptosis, and extraocular movements are full and painless. Which diagnosis is '
              'most likely?',
      'choices': ['Preseptal cellulitis', 'Orbital cellulitis', 'Subperiosteal orbital abscess', 'Acute dacryocystitis'],
-     'answer': 1,
+     'answer': 0,
      'explanation': 'The orbital septum separates eyelid tissue from orbital contents. Infection anterior to it, Chandler '
                     'stage I, causes lid edema and erythema but spares the globe, so acuity, pupils, position, and '
                     'motility are normal. This child has all of those normal findings, so preseptal cellulitis is most '
                     'likely. Many such children can be treated with oral antibiotics and close follow-up, but any '
                     'proptosis, pain with eye movement, ophthalmoplegia, or change in vision converts the problem to a '
                     'postseptal emergency requiring imaging.',
-     'why_wrong': ['Orbital cellulitis involves postseptal fat and typically causes pain with eye movement, restricted '
+     'why_wrong': ['Correct.',
+                   'Orbital cellulitis involves postseptal fat and typically causes pain with eye movement, restricted '
                    'motility, or proptosis, all absent here.',
-                   'Correct.',
                    'A subperiosteal abscess usually displaces the globe and restricts motility; normal position and '
                    'painless full movements argue against it.',
                    'Dacryocystitis causes a tender swelling over the medial canthus below the tendon with tearing, not '

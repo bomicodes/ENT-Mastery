@@ -55,7 +55,7 @@
     $('cs-answer').textContent=card.answer;
     $('cs-pearl').innerHTML=card.pearl?'<b>Board pearl.</b> '+esc(card.pearl):'';
     $('cs-why').textContent=card.why||'';
-    $('cs-link').href=card.link;
+    $('cs-link').href=card.link; $('cs-link').textContent=(card.link_label||'Open the full question')+' ↗';
     for(var r=1;r<=4;r++){ $('iv'+r).textContent=(card.intervals||{})[r]||''; }
     window.scrollTo({top:0,behavior:'smooth'});
   }

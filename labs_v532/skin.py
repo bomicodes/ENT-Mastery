@@ -62,7 +62,7 @@ CASES = [
         "Shave removal flush with the skin, with no margin evaluation needed"
       ],
       "answer": 1,
-      "explanation": "Rhomboids and annular-granular follicular pigment indicate lentigo maligna (melanoma in situ). LM spreads microscopically well beyond its visible edge, so staged excision or Mohs with full margin control is preferred. 2 cm margins and SLNB are for invasive melanoma thicker than 2 mm, not for in-situ disease.",
+      "explanation": "Rhomboids and annular-granular follicular pigment indicate lentigo maligna (melanoma in situ). LM spreads microscopically well beyond its visible edge, so staged excision or Mohs with full margin control is preferred. 2 cm margins are for invasive melanoma thicker than 2 mm, and SLNB is considered from about 0.8 mm (T1b) and up; neither applies to in-situ disease.",
       "domain": "Facial Plastics / Trauma",
       "topic": "Lentigo maligna"
     },

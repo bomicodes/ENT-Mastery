@@ -6,7 +6,7 @@
   <div>
     <span class="pill green">SPACED REPETITION</span>
     <h1>Flashcards</h1>
-    <p class="lede">Every board question, image and concept check is a card. You see each one just before you would forget it. Cards you know drift out to weeks and months; cards you miss come back the same day.</p>
+    <p class="lede">Short fact cards, one for every board question, plus the concept checks. Each takes a few seconds, and you see it just before you would forget it. Cards you know drift out to weeks and months; cards you miss come back the same day.</p>
   </div>
   <div class="cards-start card">
     <div class="cards-start-num"><b>{{ sm.due_now }}</b><span>due now</span></div>
@@ -49,7 +49,8 @@
     <label>New cards per day<input type="number" name="new_per_day" min="0" max="200" value="{{ sm.settings.new_per_day }}"></label>
     {% set srcs = (sm.settings.sources or '').split(',') %}
     <fieldset><legend>Card types</legend>
-      <label class="cards-check"><input type="checkbox" name="src_board" {% if 'board' in srcs %}checked{% endif %}> Board-style vignettes ({{ '{:,}'.format(kinds.board) }})</label>
+      <label class="cards-check"><input type="checkbox" name="src_fact" {% if 'fact' in srcs %}checked{% endif %}> Fact cards, one per board question ({{ '{:,}'.format(kinds.fact) }})</label>
+      <label class="cards-check"><input type="checkbox" name="src_board" {% if 'board' in srcs %}checked{% endif %}> Full board vignettes ({{ '{:,}'.format(kinds.board) }}) <small class="muted">slow; most people practice these in timed blocks instead</small></label>
       <label class="cards-check"><input type="checkbox" name="src_image" {% if 'image' in srcs %}checked{% endif %}> Images and tracings ({{ kinds.image }})</label>
       <label class="cards-check"><input type="checkbox" name="src_check" {% if 'check' in srcs %}checked{% endif %}> Concept checks ({{ kinds.check }})</label>
     </fieldset>
@@ -66,7 +67,8 @@
   <ul class="welcome-list">
     <li><b>Read the front and answer in your head</b> before you flip. Saying the answer to yourself is what makes it stick; recognizing it on the back does not.</li>
     <li><b>Rate honestly.</b> <i>Again</i>: you missed it, and it comes back in a minute. <i>Hard</i>: you got it with effort. <i>Good</i>: you knew it. <i>Easy</i>: instant, so push it out further. Each button shows when you'll see the card next.</li>
-    <li><b>Everything you answer elsewhere counts.</b> A question you miss in the bank or a timed exam becomes a due card right away; one you get right is scheduled for later.</li>
+    <li><b>Everything you answer elsewhere counts.</b> Miss a question in the bank or a timed exam and its fact card joins your deck right away; answer one right and its card is pushed later.</li>
+    <li><b>Keep practicing vignettes too.</b> The exam is all vignettes, so do a <a href="/exam">timed block</a> once or twice a week; it applies the facts these cards keep fresh.</li>
     <li><b>Do your reviews daily.</b> Due cards pile up if you skip days, while new cards are capped, so on a busy day do the reviews and skip new ones.</li>
     <li><b>Keyboard:</b> space or Enter flips the card; 1, 2, 3 and 4 rate it.</li>
   </ul>
