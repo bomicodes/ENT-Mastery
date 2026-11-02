@@ -283,3 +283,5 @@ section.welcome-block:not(.card){margin:18px 0}
 .due-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;padding:14px 18px;margin:0 0 16px;border-left:4px solid #e3b74a}
 .due-card .eyebrow{display:block}.due-card b{display:block;font-size:16px;margin:2px 0}.due-card small{display:block;color:var(--muted)}
 .due-card>a{background:var(--teal,#08756d);color:#fff;border-radius:9px;padding:9px 14px;font-weight:800;white-space:nowrap;text-decoration:none}
+/* v57 audit: difficulty levels with no studies are shown but not clickable */
+.lab-controls .lab-level-empty{opacity:.4;cursor:not-allowed;padding:6px 10px;border-radius:999px;border:1px dashed currentColor;font-size:13px}
