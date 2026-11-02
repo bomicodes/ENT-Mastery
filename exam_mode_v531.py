@@ -229,7 +229,8 @@ def install_exam_mode_v531(app, data, app_mod=None):
             item = {"i": i, "id": qid, "domain": q.get("domain"), "topic": q.get("topic"), "stem": q.get("stem"),
                     "choices": q.get("choices", []), "chosen": s["answers"].get(i), "flagged": i in s["flags"],
                     "note": meta.get(qid, {}).get("note", ""),
-                    "image_url": q.get("image_url"), "image_credit": q.get("image_credit"), "image_source": q.get("image_source")}
+                    "image_url": q.get("image_url"), "image_credit": q.get("image_credit"), "image_source": q.get("image_source"),
+                    "figure_html": q.get("figure_html"), "figure_static": q.get("figure_static")}
             if s["config"].get("mode") == "tutor" and i in s["answers"]:
                 item.update(_reveal_payload(q))
             qs.append(item)

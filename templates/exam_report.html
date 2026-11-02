@@ -1,6 +1,6 @@
 {% extends "base.html" %}{% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
-<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=531">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=546">
 {% set letters = 'ABCD' %}
 <div class="breadcrumb"><a href="/exam">Exam mode</a> / Block {{s.id}} report</div>
 <span class="eyebrow">SCORE REPORT</span>
@@ -28,7 +28,7 @@
   <details class="card ex-item {{ 'ok' if it.ok else 'miss' }}" {% if not it.ok %}open{% endif %}>
     <summary><span class="ex-num">{{it.i+1}}</span><span class="ex-res">{{ '✓' if it.ok else ('—' if it.chosen is none else '✗') }}</span><span class="ex-topic">{{q.topic}}</span><span class="muted ex-dom">{{q.domain}}</span>{% if it.flagged %}<span class="ex-flag-tag">⚑</span>{% endif %}</summary>
     <div class="ex-item-body">
-      {% if q.image_url %}<figure class="qx-figure"><img src="{{q.image_url}}" alt="Image for this question" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').classList.add('image-failed')"><figcaption>{{q.image_credit}}{% if q.image_source %} · <a href="{{q.image_source}}" target="_blank" rel="noopener">source ↗</a>{% endif %}</figcaption><div class="qx-fig-fallback">Image could not load. {% if q.image_source %}<a href="{{q.image_source}}" target="_blank" rel="noopener">Open the cited source ↗</a>{% endif %}</div></figure>{% endif %}
+      {% if q.image_url %}<figure class="qx-figure"><img src="{{q.image_url}}" alt="Image for this question" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').classList.add('image-failed')"><figcaption>{{q.image_credit}}{% if q.image_source %} · <a href="{{q.image_source}}" target="_blank" rel="noopener">source ↗</a>{% endif %}</figcaption><div class="qx-fig-fallback">Image could not load. {% if q.image_source %}<a href="{{q.image_source}}" target="_blank" rel="noopener">Open the cited source ↗</a>{% endif %}</div></figure>{% endif %}{% if q.figure_html %}<div class="qx-tracing" aria-label="Study for this question">{{ q.figure_html|safe }}</div>{% elif q.figure_static %}<figure class="qx-tracing"><img src="{{ url_for('static', filename=q.figure_static) }}" alt="Study for this question" loading="lazy"></figure>{% endif %}
       <p class="qx-stem ex-stem-sm">{{q.stem}}</p>
       <div class="qx-choices">
         {% for c in q.choices %}
