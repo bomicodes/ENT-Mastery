@@ -34,6 +34,7 @@ from offline_v541 import install_offline_v541
 from anatomy_section_v510 import install_anatomy_cases_v510
 from or_card_fixes_v511 import install_or_card_fixes_v511
 from anatomy_atlas_xref_v512 import install_anatomy_atlas_fixes_v512, install_or_atlas_fixes_v512
+from anatomy_atlas_plates_v544 import install_anatomy_atlas_plates_v544
 
 TEXTBOOK_CURRICULUM_V470 = install_textbook_curriculum_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)
@@ -48,6 +49,7 @@ CC_CURVEBALLS_V492 = install_concept_check_curveballs_v492(production.runtime_en
 STAGING_V500 = install_staging_v500(production.runtime_entry.data, app)
 PROGRESS_RESET_V521 = install_progress_reset_v521(app)
 ANATOMY_ATLAS_V512 = install_anatomy_atlas_fixes_v512(production.runtime_entry.data)
+ANATOMY_PLATES_V544 = install_anatomy_atlas_plates_v544(production.runtime_entry.data, production.runtime_entry.app_mod)
 ANATOMY_CASES_V510 = install_anatomy_cases_v510(production.runtime_entry.data, production.runtime_entry.app_mod, app)
 OR_CARD_FIXES_V511 = install_or_card_fixes_v511(production.runtime_entry.data)
 OR_ATLAS_V512 = install_or_atlas_fixes_v512(production.runtime_entry.data)
