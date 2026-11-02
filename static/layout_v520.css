@@ -233,3 +233,49 @@ section.welcome-block:not(.card){margin:18px 0}
 .welcome-prompt-actions{display:flex;gap:8px;align-items:center}
 .welcome-prompt-actions button{border:1px solid var(--line,#dfe7e7);background:#fff;border-radius:8px;padding:7px 10px;cursor:pointer}
 @media(max-width:760px){.welcome-stats,.welcome-week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* v56.0 flashcards */
+.cards-hero{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;margin:8px 0 16px}
+.cards-hero h1{margin:8px 0 6px}
+.card.cards-start{display:flex;gap:18px;align-items:center;padding:16px 20px;flex-wrap:wrap}
+.cards-start-num{display:flex;flex-direction:column;align-items:center;min-width:70px}
+.cards-start-num b{font-size:28px;color:var(--accent,#0f6b5f);line-height:1}.cards-start-num span{font-size:12px;color:var(--muted,#5f7372)}
+.card.cards-block{padding:18px 22px;margin:14px 0}.cards-block h2{margin:0 0 12px;font-size:19px}
+.cards-sub{font-size:14px;margin:18px 0 8px;color:var(--muted,#5f7372)}
+.cards-stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.cards-stats div{border:1px solid var(--line,#dfe7e7);border-radius:10px;padding:10px 12px}
+.cards-stats b{display:block;font-size:21px}.cards-stats span{font-size:12px;color:var(--muted,#5f7372)}
+.cards-forecast{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:6px;height:120px;align-items:end}
+.cards-bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;position:relative}
+.cards-bar-fill{width:100%;background:var(--accent,#0f6b5f);opacity:.8;border-radius:4px 4px 0 0;min-height:2px}
+.cards-bar small{font-size:11px;margin-top:3px}.cards-bar em{font-size:10px;color:var(--muted,#5f7372);font-style:normal}
+.cards-pace{margin-top:12px;line-height:1.5}
+.cards-form{display:grid;gap:14px;max-width:760px}
+.cards-form label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:14px}
+.cards-form input[type=date],.cards-form input[type=number]{max-width:220px;padding:8px 10px;border:1px solid var(--line,#dfe7e7);border-radius:8px}
+.cards-form fieldset{border:1px solid var(--line,#dfe7e7);border-radius:10px;padding:10px 14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px}
+.cards-form legend{font-weight:700;font-size:13px;padding:0 4px}
+.cards-form .cards-check{flex-direction:row;align-items:center;gap:8px;font-weight:400}
+.cards-form button{justify-self:start}
+.cards-session{max-width:860px;margin:0 auto}
+.cards-counts{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted,#5f7372);margin:6px 0 12px}
+.cards-counts b{color:var(--ink,#1f2d33)}
+.card.cards-card{padding:20px 24px}
+.cards-card-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:12px}
+.cards-queue{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--accent,#0f6b5f)}
+.cards-stem{font-size:18px;line-height:1.55;margin:6px 0 10px}
+.cards-prompt{color:var(--muted,#5f7372);font-size:13px}
+.cards-answer{background:#eef7f3;border-left:4px solid var(--accent,#0f6b5f);border-radius:8px;padding:12px 14px;margin:14px 0 10px}
+.cards-answer span{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--accent,#0f6b5f)}
+.cards-answer b{font-size:17px}
+.cards-pearl{background:#fff8e1;border-radius:8px;padding:10px 12px;line-height:1.5}
+.cards-why{color:var(--ink,#1f2d33);line-height:1.55}
+.cards-actions{margin-top:16px}
+.cards-actions kbd{font-size:11px;border:1px solid var(--line,#dfe7e7);border-radius:4px;padding:0 4px;margin-left:6px;opacity:.7}
+.cards-rate{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.cards-rate button{border:1px solid var(--line,#dfe7e7);background:#fff;border-radius:10px;padding:10px 6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+.cards-rate button small{font-size:12px;color:var(--muted,#5f7372)}
+.cards-rate .r-again b{color:#b3261e}.cards-rate .r-hard b{color:#9a6100}.cards-rate .r-good b{color:#1f7a4d}.cards-rate .r-easy b{color:#1f5fa8}
+.cards-rate button:hover{border-color:var(--accent,#0f6b5f)}
+.card.cards-done{padding:22px 24px;text-align:center}
+@media(max-width:760px){.cards-hero{grid-template-columns:1fr}.cards-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.cards-forecast{gap:3px}.cards-stem{font-size:16px}.cards-rate{grid-template-columns:repeat(2,minmax(0,1fr))}}

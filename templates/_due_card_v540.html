@@ -1,3 +1,5 @@
-{% if due_reviews_v540 is defined %}{% set dr = due_reviews_v540() %}{% if dr.due %}
+{% if cards_due_v560 is defined %}{% set cd = cards_due_v560() %}
+<section class="card due-card"><div><span class="eyebrow">FLASHCARDS{% if cd.days_left is not none %} · {{ cd.days_left }} DAYS TO EXAM{% endif %}</span><b>{% if cd.due %}{{ cd.due }} card{{ 's' if cd.due != 1 }} due{% else %}No cards due{% endif %}{% if cd.new %} · {{ cd.new }} new today{% endif %}</b><small>Spaced repetition: each card comes back just before you'd forget it. Missed questions from anywhere on the site are already in the deck.</small></div><a href="/cards/study">{% if cd.due or cd.new %}Review now →{% else %}Open deck →{% endif %}</a></section>
+{% elif due_reviews_v540 is defined %}{% set dr = due_reviews_v540() %}{% if dr.due %}
 <section class="card due-card"><div><span class="eyebrow">MISSED-QUESTION REVIEW</span><b>{{dr.due|length}} missed question{{ 's' if dr.due|length != 1 }} due today</b><small>They come back until you get each one right twice. {{dr.queued}} in your review queue.</small></div><a href="/review/missed">Review now →</a></section>
 {% endif %}{% endif %}

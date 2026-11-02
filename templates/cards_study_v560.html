@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Flashcards · ENT Mastery{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=560">
+<div class="breadcrumb"><a href="/">Home</a> / <a href="/cards">Flashcards</a> / Review</div>
+<div class="cards-session">
+  <div class="cards-counts" id="cs-counts" aria-live="polite"></div>
+  <article class="card cards-card" id="cs-card" hidden>
+    <div class="cards-card-head"><span class="tag" id="cs-domain"></span><span class="cards-queue" id="cs-queue"></span></div>
+    <div id="cs-media"></div>
+    <p class="cards-stem" id="cs-stem"></p>
+    <p class="cards-prompt" id="cs-prompt">Answer in your head, then flip.</p>
+    <div id="cs-back" hidden>
+      <div class="cards-answer"><span>Answer · <i id="cs-topic"></i></span><b id="cs-answer"></b></div>
+      <p class="cards-pearl" id="cs-pearl"></p>
+      <p class="cards-why" id="cs-why"></p>
+      <a id="cs-link" href="#" target="_blank" rel="noopener">Open the full question ↗</a>
+    </div>
+    <div class="cards-actions">
+      <button type="button" class="case-btn" id="cs-flip">Show answer <kbd>space</kbd></button>
+      <div class="cards-rate" id="cs-rate" hidden>
+        <button type="button" data-r="1" class="r-again"><b>Again</b><small id="iv1"></small><kbd>1</kbd></button>
+        <button type="button" data-r="2" class="r-hard"><b>Hard</b><small id="iv2"></small><kbd>2</kbd></button>
+        <button type="button" data-r="3" class="r-good"><b>Good</b><small id="iv3"></small><kbd>3</kbd></button>
+        <button type="button" data-r="4" class="r-easy"><b>Easy</b><small id="iv4"></small><kbd>4</kbd></button>
+      </div>
+    </div>
+  </article>
+  <section class="card cards-done" id="cs-done" hidden>
+    <h2>All done for now</h2>
+    <p id="cs-done-msg">No cards are due and today's new cards are finished. Come back tomorrow; anything you missed today will be waiting.</p>
+    <p><a class="case-btn" href="/cards">Back to Flashcards</a> <a href="/exam">or build a timed block</a></p>
+  </section>
+  <p class="muted cards-error" id="cs-error" hidden>Could not reach the server. Check your connection and reload.</p>
+</div>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var esc=function(t){return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  var card=null, flipped=false, busy=false, done=0;
+  function counts(c){ $('cs-counts').innerHTML='<span><b>'+c.due+'</b> due</span><span><b>'+c.learning+'</b> learning</span><span><b>'+c.new_left+'</b> new left today</span><span><b>'+done+'</b> reviewed this session</span>'; }
+  function show(p){
+    busy=false; counts(p.counts||{due:0,learning:0,new_left:0});
+    if(p.done){ $('cs-card').hidden=true; $('cs-done').hidden=false; return; }
+    card=p.card; flipped=false;
+    $('cs-done').hidden=true; $('cs-card').hidden=false; $('cs-back').hidden=true; $('cs-rate').hidden=true; $('cs-flip').hidden=false; $('cs-prompt').hidden=false;
+    $('cs-domain').textContent=card.domain; $('cs-topic').textContent=card.topic;
+    $('cs-queue').textContent=card.queue==='new'?'NEW':(card.state==='learning'||card.state==='relearning'?'LEARNING':'REVIEW');
+    var m='';
+    if(card.image_url){ m='<figure class="qx-figure"><img src="'+esc(card.image_url)+'" alt="Image for this card" referrerpolicy="no-referrer"><figcaption>'+esc(card.image_credit)+'</figcaption></figure>'; }
+    else if(card.figure_html){ m='<div class="qx-tracing">'+card.figure_html+'</div>'; }
+    else if(card.figure_static){ m='<figure class="qx-tracing"><img src="/static/'+esc(card.figure_static)+'" alt="Study for this card"></figure>'; }
+    $('cs-media').innerHTML=m;
+    $('cs-stem').textContent=card.stem;
+    $('cs-answer').textContent=card.answer;
+    $('cs-pearl').innerHTML=card.pearl?'<b>Board pearl.</b> '+esc(card.pearl):'';
+    $('cs-why').textContent=card.why||'';
+    $('cs-link').href=card.link;
+    for(var r=1;r<=4;r++){ $('iv'+r).textContent=(card.intervals||{})[r]||''; }
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function flip(){ if(!card||flipped)return; flipped=true; $('cs-back').hidden=false; $('cs-rate').hidden=false; $('cs-flip').hidden=true; $('cs-prompt').hidden=true; }
+  function load(){ fetch('/api/cards/next',{credentials:'same-origin'}).then(function(r){return r.json()}).then(show).catch(function(){ $('cs-error').hidden=false; }); }
+  function rate(r){
+    if(!card||!flipped||busy)return; busy=true; done++;
+    fetch('/api/cards/rate',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({card_id:card.id,rating:r})})
+      .then(function(x){return x.json()}).then(show).catch(function(){ busy=false; $('cs-error').hidden=false; });
+  }
+  $('cs-flip').addEventListener('click',flip);
+  document.querySelectorAll('#cs-rate button').forEach(function(b){ b.addEventListener('click',function(){ rate(parseInt(b.dataset.r,10)); }); });
+  document.addEventListener('keydown',function(e){
+    if(e.target&&/input|textarea|select/i.test(e.target.tagName))return;
+    if(e.key===' '||e.key==='Enter'){ e.preventDefault(); flip(); }
+    else if(/^[1-4]$/.test(e.key)){ rate(parseInt(e.key,10)); }
+  });
+  load();
+})();
+</script>
+{% endblock %}

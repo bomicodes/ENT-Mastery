@@ -33,6 +33,7 @@ from quality_v540 import install_quality_v540
 from offline_v541 import install_offline_v541
 from accounts_admin_v550 import install_accounts_admin_v550
 from welcome_v551 import install_welcome_v551
+from srs_v560 import install_srs_v560
 from anatomy_section_v510 import install_anatomy_cases_v510
 from or_card_fixes_v511 import install_or_card_fixes_v511
 from anatomy_atlas_xref_v512 import install_anatomy_atlas_fixes_v512, install_or_atlas_fixes_v512
@@ -62,5 +63,6 @@ QUALITY_V540 = install_quality_v540(app, production.runtime_entry.data, producti
 OFFLINE_V541 = install_offline_v541(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 ACCOUNTS_ADMIN_V550 = install_accounts_admin_v550(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 WELCOME_V551 = install_welcome_v551(app, production.runtime_entry.data, production.runtime_entry.app_mod)
+SRS_V560 = install_srs_v560(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 LEARNING_PATH_V470 = install_learning_path_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)

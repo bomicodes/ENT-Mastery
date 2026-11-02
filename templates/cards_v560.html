@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Flashcards · ENT Mastery{% endblock %}
+{% block content %}
+<div class="breadcrumb"><a href="/">Home</a> / Flashcards</div>
+<section class="cards-hero">
+  <div>
+    <span class="pill green">SPACED REPETITION</span>
+    <h1>Flashcards</h1>
+    <p class="lede">Every board question, image and concept check is a card. You see each one just before you would forget it. Cards you know drift out to weeks and months; cards you miss come back the same day.</p>
+  </div>
+  <div class="cards-start card">
+    <div class="cards-start-num"><b>{{ sm.due_now }}</b><span>due now</span></div>
+    <div class="cards-start-num"><b>{{ sm.new_left_today }}</b><span>new left today</span></div>
+    {% if sm.days_left is not none %}<div class="cards-start-num"><b>{{ sm.days_left }}</b><span>days to exam</span></div>{% endif %}
+    <a class="case-btn cards-go" href="/cards/study">{% if sm.due_now or sm.new_left_today %}Start review →{% else %}Open deck →{% endif %}</a>
+  </div>
+</section>
+
+<section class="card cards-block">
+  <h2>Your deck</h2>
+  <div class="cards-stats">
+    <div><b>{{ sm.seen }}</b><span>cards started of {{ '{:,}'.format(sm.total) }}</span></div>
+    <div><b>{{ sm.learning }}</b><span>learning (minutes)</span></div>
+    <div><b>{{ sm.young }}</b><span>young (under 3 weeks)</span></div>
+    <div><b>{{ sm.mature }}</b><span>mature (3+ weeks)</span></div>
+    <div><b>{{ sm.retention if sm.retention is not none else '—' }}{% if sm.retention is not none %}%{% endif %}</b><span>recall, last 30 days</span></div>
+    <div><b>{{ sm.streak }}</b><span>day streak</span></div>
+  </div>
+  <h3 class="cards-sub">Reviews due, next 14 days</h3>
+  {% set mx = (sm.forecast|max) or 1 %}
+  <div class="cards-forecast" role="img" aria-label="Reviews due per day for the next 14 days">
+    {% for n in sm.forecast %}<div class="cards-bar"><span class="cards-bar-fill" style="height:{{ (100 * n / mx)|round(0) }}%"></span><small>{{ n }}</small><em>{{ 'Today' if loop.index0 == 0 else '+' ~ loop.index0 }}</em></div>{% endfor %}
+  </div>
+  <div class="cards-pace">
+    {% if sm.days_left is not none and sm.days_left > 0 %}
+      <p><b>{{ '{:,}'.format(sm.unseen) }}</b> cards you have not started yet. To see every one at least once before your exam, add about <b>{{ sm.new_needed_per_day }}</b> new cards a day; you are set to {{ sm.settings.new_per_day }}.
+      {% if sm.new_needed_per_day and sm.new_needed_per_day > sm.settings.new_per_day %}At your current pace you will reach about {{ '{:,}'.format(sm.settings.new_per_day * sm.days_left) }} of them, so narrow the deck to your weakest domains below or raise the daily number.{% endif %}</p>
+      <p class="muted">Rule of thumb: each new card a day adds about 4 to 6 reviews a day once the deck is running. 20 new a day is usually about 20 to 30 minutes in total.</p>
+    {% else %}
+      <p>Set your exam date below so the schedule can make sure every card comes back at least once before it, and to see the pace you need.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="card cards-block">
+  <h2>Settings</h2>
+  <form method="post" action="/cards/settings" class="cards-form">
+    <label>Exam date<input type="date" name="exam_date" value="{{ sm.settings.exam_date }}"></label>
+    <label>New cards per day<input type="number" name="new_per_day" min="0" max="200" value="{{ sm.settings.new_per_day }}"></label>
+    {% set srcs = (sm.settings.sources or '').split(',') %}
+    <fieldset><legend>Card types</legend>
+      <label class="cards-check"><input type="checkbox" name="src_board" {% if 'board' in srcs %}checked{% endif %}> Board-style vignettes ({{ '{:,}'.format(kinds.board) }})</label>
+      <label class="cards-check"><input type="checkbox" name="src_image" {% if 'image' in srcs %}checked{% endif %}> Images and tracings ({{ kinds.image }})</label>
+      <label class="cards-check"><input type="checkbox" name="src_check" {% if 'check' in srcs %}checked{% endif %}> Concept checks ({{ kinds.check }})</label>
+    </fieldset>
+    {% set chosen = (sm.settings.domains or '').split('|') %}
+    <fieldset><legend>Domains for new cards (none checked = all)</legend>
+      {% for d in domains %}<label class="cards-check"><input type="checkbox" name="domains" value="{{ d }}" {% if d in chosen %}checked{% endif %}> {{ d }}</label>{% endfor %}
+    </fieldset>
+    <button class="case-btn" type="submit">Save settings</button>
+  </form>
+</section>
+
+<section class="card cards-block">
+  <h2>How it works</h2>
+  <ul class="welcome-list">
+    <li><b>Read the front and answer in your head</b> before you flip. Saying the answer to yourself is what makes it stick; recognizing it on the back does not.</li>
+    <li><b>Rate honestly.</b> <i>Again</i>: you missed it, and it comes back in a minute. <i>Hard</i>: you got it with effort. <i>Good</i>: you knew it. <i>Easy</i>: instant, so push it out further. Each button shows when you'll see the card next.</li>
+    <li><b>Everything you answer elsewhere counts.</b> A question you miss in the bank or a timed exam becomes a due card right away; one you get right is scheduled for later.</li>
+    <li><b>Do your reviews daily.</b> Due cards pile up if you skip days, while new cards are capped, so on a busy day do the reviews and skip new ones.</li>
+    <li><b>Keyboard:</b> space or Enter flips the card; 1, 2, 3 and 4 rate it.</li>
+  </ul>
+</section>
+{% endblock %}

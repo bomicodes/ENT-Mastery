@@ -27,6 +27,7 @@
     <a href="/">⌂ <span>Dashboard</span></a>
     <a href="/welcome">➜ <span>Start here</span></a>
     <a href="/daily-adaptive">◇ <span>Daily Path</span></a>
+    <a href="/cards">▣ <span>Flashcards</span></a>
 
     <div class="mobile-nav-section">Curriculum</div>
     <a href="/curriculum">▦ <span>All Topics</span></a>
@@ -84,6 +85,7 @@
       <a href="/" class="navitem {% if request.path=='/' %}active{% endif %}">⌂ <span>Dashboard</span></a>
       <a href="/welcome" class="navitem {% if request.path=='/welcome' %}active{% endif %}">➜ <span>Start here</span></a>
       <a href="/daily-adaptive" class="navitem {% if request.path.startswith('/daily-adaptive') %}active{% endif %}">◇ <span>Daily Path</span>{% if shell_stats.due %}<em>{{shell_stats.due}}</em>{% endif %}</a>
+      <a href="/cards" class="navitem {% if request.path.startswith('/cards') %}active{% endif %}">▣ <span>Flashcards</span>{% if cards_due_v560 is defined %}{% set _cd = cards_due_v560() %}{% if _cd.due %}<em>{{ _cd.due }}</em>{% endif %}{% endif %}</a>
 
       <div class="nav-section-label">Curriculum</div>
       <a href="/curriculum" class="navitem {% if request.path.startswith('/curriculum') %}active{% endif %}">▦ <span>All Topics</span></a>
