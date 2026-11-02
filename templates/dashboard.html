@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Dashboard · ENT Mastery{% endblock %}
 {% block content %}
+<section class="card welcome-prompt" id="welcome-prompt" hidden>
+  <div><b>New here?</b> Take the two-minute tour of what's on the site and how to use it.</div>
+  <div class="welcome-prompt-actions"><a class="case-btn" href="/welcome">Start here →</a><button type="button" id="welcome-dismiss" aria-label="Dismiss">Dismiss</button></div>
+</section>
+<script>(function(){var k='entm_welcome_seen_v551',p=document.getElementById('welcome-prompt');var seen=false;try{seen=localStorage.getItem(k)==='1'}catch(e){}if(!seen&&p){p.hidden=false;}var b=document.getElementById('welcome-dismiss');if(b)b.addEventListener('click',function(){try{localStorage.setItem(k,'1')}catch(e){}p.hidden=true;});var a=p&&p.querySelector('a');if(a)a.addEventListener('click',function(){try{localStorage.setItem(k,'1')}catch(e){}});})();</script>
 
 <section class="dashboard-hero">
   <div>

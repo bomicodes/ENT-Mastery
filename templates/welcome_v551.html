@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Start here · ENT Mastery{% endblock %}
+{% block content %}
+<div class="breadcrumb"><a href="/">Home</a> / Start here</div>
+<section class="welcome-hero">
+  <span class="pill green">START HERE</span>
+  <h1>Welcome to ENT Mastery</h1>
+  <p class="lede">A study and teaching site built by residents for residents: board-style questions, case and image interpretation, anatomy, and OR preparation in one place. It learns what you miss and brings it back.</p>
+  <div class="welcome-stats">
+    <div><b>{{ '{:,}'.format(stats.questions) }}</b><span>practice questions</span></div>
+    <div><b>{{ stats.topics }}</b><span>curriculum topics</span></div>
+    <div><b>{{ stats.lab_cases }}</b><span>interpretation cases in {{ stats.labs }} labs</span></div>
+    <div><b>{{ stats.maps }}</b><span>anatomy maps</span></div>
+  </div>
+</section>
+
+<section class="card welcome-block">
+  <h2>Your first 15 minutes</h2>
+  <ol class="welcome-steps">
+    <li><b>Get a baseline.</b> Build a 20-question <a href="/exam">timed block</a> with "Board blueprint mix" checked. The score report shows your weak domains.</li>
+    <li><b>Open your <a href="/daily-adaptive">Daily Path</a>.</b> It builds a short session from your weak areas and anything due for review. This is the one page to open every day.</li>
+    <li><b>Look up your next case.</b> Search a procedure in <a href="/case-tomorrow">OR Tomorrow</a> for the steps, landmarks, danger structures and postoperative watch-points before you scrub.</li>
+  </ol>
+</section>
+
+<section class="welcome-block">
+  <h2>What's here</h2>
+  <div class="welcome-grid">
+    <a class="card welcome-tile" href="/daily-adaptive"><b>Daily Path</b><span>A personalized 10-30 minute session every day: review, weak spots and new material.</span></a>
+    <a class="card welcome-tile" href="/clinical-challenges"><b>Clinical Challenges</b><span>{{ '{:,}'.format(stats.board) }} curated board-style vignettes with explanations, why each wrong answer is wrong, and a curveball follow-up.</span></a>
+    <a class="card welcome-tile" href="/concept-checks"><b>Concept Checks</b><span>Fast recall prompts for core facts. Use them before vignettes on a new topic.</span></a>
+    <a class="card welcome-tile" href="/exam"><b>Timed Exam</b><span>Board-length blocks in timed or tutor mode, weighted to the blueprint, from unused, missed, flagged or image questions.</span></a>
+    <a class="card welcome-tile" href="/lab"><b>Interpretation Atlas</b><span>Real images and tracings: endoscopy, CT/MRI, pathology, ultrasound, audiograms, VNG, sleep studies and more.</span></a>
+    <a class="card welcome-tile" href="/anatomy"><b>Anatomy Atlas</b><span>Surgical maps with landmarks, danger structures and linked anatomy cases.</span></a>
+    <a class="card welcome-tile" href="/case-tomorrow"><b>OR Tomorrow</b><span>Procedure cards for the night before: indications, key steps, landmarks to identify, what can hurt the patient, and the early and late postoperative course.</span></a>
+    <a class="card welcome-tile" href="/oral-boards"><b>Mock Oral Board</b><span>Practice the oral exam out loud: commit, defend, handle complications.</span></a>
+    <a class="card welcome-tile" href="/staging"><b>H&amp;N Staging</b><span>AJCC 8 TNM tables by site, memory hooks and practice cases.</span></a>
+    <a class="card welcome-tile" href="/curriculum/depth"><b>Deep Curriculum</b><span>Reading for each topic, organized by domain, with sources.</span></a>
+  </div>
+</section>
+
+<section class="card welcome-block">
+  <h2>How it keeps track</h2>
+  <ul class="welcome-list">
+    <li><b>Mastery per topic.</b> Every answer updates your mastery for that concept. See it in <a href="/progress">My Progress</a>.</li>
+    <li><b>Missed questions come back.</b> A miss is due again in 1 day, then 3, then 7. It leaves the queue after two correct answers in a row. Due items appear on the dashboard and in the Daily Path.</li>
+    <li><b>Your data is yours.</b> Each resident signs in with their own name and PIN. Change your PIN under Change PIN, or start over with Reset progress.</li>
+  </ul>
+</section>
+
+<section class="card welcome-block">
+  <h2>A suggested week before boards</h2>
+  <div class="welcome-week">
+    <div><b>Every day</b><span>Daily Path, 20-30 minutes.</span></div>
+    <div><b>Twice a week</b><span>A 40-question timed block on the blueprint mix, then review every miss.</span></div>
+    <div><b>Once a week</b><span>One Interpretation Atlas lab and one Mock Oral Board case.</span></div>
+    <div><b>Before each OR day</b><span>The OR Tomorrow card for your case.</span></div>
+  </div>
+</section>
+
+<section class="card welcome-block">
+  <h2>Good to know</h2>
+  <ul class="welcome-list">
+    <li><b>On your phone or offline.</b> Use "Install ENT Mastery" in the menu to add it to your home screen. <a href="/offline">Offline Questions</a> keeps a 400-question set you can practice without signal; answers sync when you reconnect.</li>
+    <li><b>Spot an error?</b> Every question has a "Report a problem" link. Reports go to the chief review queue and get fixed or pulled.</li>
+    <li><b>Teaching juniors?</b> Each question has a board pearl and a curveball you can use as a teaching prompt, and the Mock Oral Board works well as a group exercise.</li>
+  </ul>
+</section>
+
+<div class="welcome-cta"><a class="case-btn" href="/daily-adaptive">Start today's Daily Path →</a><a href="/exam">or build a baseline exam</a></div>
+{% endblock %}
