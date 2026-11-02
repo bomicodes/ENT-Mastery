@@ -1,6 +1,6 @@
 {% extends "base.html" %}{% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
-<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=531">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=546">
 <div class="ex-bar card">
   <div><b>Block {{s.id}}</b> <span class="muted">· {{s.config.mode|title}} mode · {{qs|length}} questions</span></div>
   <div class="ex-bar-right">
@@ -15,6 +15,7 @@
     <div class="qx-head"><span class="qx-chip" id="ex-domain"></span><span class="qx-count" id="ex-count"></span>
       <button type="button" class="ex-flag" id="ex-flag" aria-pressed="false">⚑ Flag</button></div>
     <div class="qx-body">
+      <div class="qx-tracing" id="ex-trace" hidden></div>
       <figure class="qx-figure" id="ex-fig" hidden><img id="ex-img" alt="Image for this question" referrerpolicy="no-referrer"><figcaption id="ex-cap"></figcaption></figure>
       <h1 class="qx-stem" id="ex-stem"></h1>
       <div class="qx-choices" id="ex-choices" role="group" aria-label="Answer choices"></div>
@@ -58,6 +59,7 @@
    $('ex-domain').textContent=q.domain||'';
    $('ex-count').textContent=`Question ${cur+1} of ${qs.length}`;
    $('ex-stem').textContent=q.stem;
+   var tr=$('ex-trace');if(q.figure_html){tr.hidden=false;tr.innerHTML=q.figure_html;}else if(q.figure_static){tr.hidden=false;tr.innerHTML='<img alt="Study for this question" src="/static/'+esc(q.figure_static)+'">';}else{tr.hidden=true;tr.innerHTML='';}
    if(q.image_url){$('ex-fig').hidden=false;$('ex-img').src=q.image_url;$('ex-cap').innerHTML=esc(q.image_credit||'')+(q.image_source?` · <a href="${esc(q.image_source)}" target="_blank" rel="noopener">source ↗</a>`:'');}else{$('ex-fig').hidden=true;$('ex-img').removeAttribute('src');}
    const locked=tutor && q.answer!==undefined;
    $('ex-choices').innerHTML=q.choices.map((c,i)=>{

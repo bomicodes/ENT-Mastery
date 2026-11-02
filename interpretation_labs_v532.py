@@ -59,6 +59,21 @@ def _bank_item(case, lab_slug, lab_title):
     }
 
 
+def _tracing_bank_item(case, lab_slug, lab_title):
+    """v54.6: bank item for a lab case with no photograph. The stem carries the key data, so it
+    reads on its own; the rendered figure (or the teaching visual) is shown when available."""
+    item = _bank_item(dict(case, image_url=None, image_credit=None, image_source=None), lab_slug, lab_title)
+    item["id"] = "lab_" + case["id"]
+    item.pop("image_question_v532", None)
+    item["tracing_question_v546"] = True
+    figs = case.get("figures") or []
+    if figs:
+        item["figure_html"] = "".join(str(f) for f in figs)
+    elif case.get("visual"):
+        item["figure_static"] = case["visual"]
+    return item
+
+
 def install_interpretation_labs_v532(data, app=None):
     labs = data.INTERPRETATION_LABS
     report = {"files": [], "added": 0, "rejected": [], "new_labs": [], "bank_added": 0}
@@ -68,8 +83,10 @@ def install_interpretation_labs_v532(data, app=None):
         mods.append(importlib.import_module(f"labs_v532.{info.name}"))
 
     extra_mcq = {}
+    case_fixes = {}
     for mod in mods:
         extra_mcq.update(getattr(mod, "MCQ_BY_CASE", {}) or {})
+        case_fixes.update(getattr(mod, "CASE_FIXES", {}) or {})
 
     seen = {c.get("id") for lab in labs.values() for c in lab.get("cases", [])}
     bank = data.CLINICAL_CHALLENGES_V119
@@ -125,17 +142,27 @@ def install_interpretation_labs_v532(data, app=None):
         report["files"].append((mod.__name__, target, n))
         report["added"] += n
 
-    # attach extra MCQs to older image cases
+    # v54.6: field corrections to existing cases, then attach extra MCQs
+    report["fixed"] = 0
+    for lab in labs.values():
+        for c in lab.get("cases", []):
+            if c.get("id") in case_fixes:
+                c.update(case_fixes[c["id"]])
+                report["fixed"] += 1
     for lab in labs.values():
         for c in lab.get("cases", []):
             if not c.get("mcq") and c.get("id") in extra_mcq and _valid_mcq(extra_mcq[c["id"]]):
                 c["mcq"] = extra_mcq[c["id"]]
 
-    # image questions into the bank
+    # image questions into the bank; v54.6: tracing/report cases (audiograms, PSG, VNG...)
+    # join too, carrying their rendered figure or teaching visual instead of a photo.
     for slug, lab in labs.items():
         for c in lab.get("cases", []):
-            if c.get("mcq") and c.get("image_url") and _valid_mcq(c["mcq"]):
-                item = _bank_item(c, slug, lab.get("title", slug))
+            if c.get("mcq") and _valid_mcq(c["mcq"]):
+                if c.get("image_url"):
+                    item = _bank_item(c, slug, lab.get("title", slug))
+                else:
+                    item = _tracing_bank_item(c, slug, lab.get("title", slug))
                 if item["id"] in by_id:
                     continue
                 bank.append(item)

@@ -129,3 +129,8 @@
 .off-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;padding:12px 16px;margin:12px 0 16px;font-size:13.5px;color:#5f7372}
 .off-bar button{margin-left:auto;font:inherit;cursor:pointer}
 .off-note{font-size:13px;margin:14px 0 30px}
+/* v54.6: rendered tracings (audiogram, PSG, VNG...) on bank and exam questions */
+.qx-tracing{margin:0 0 18px;background:#fff;border:1px solid var(--line,#dfe7e7);border-radius:12px;padding:12px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.qx-tracing svg{max-width:100%;height:auto;max-height:360px}
+.qx-tracing img{max-width:100%;max-height:360px;object-fit:contain}
+.qx-tracing[hidden]{display:none}
