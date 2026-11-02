@@ -89,6 +89,10 @@ def topic(slug):
                 return redirect(url_for("concept_hub_id",concept_id=_v6_item_id(dname,mod["topic"])))
     return redirect(url_for("search", q=slug.replace("-"," ")))
 
+def _stem_snippet_v57(stem, n=110):
+    stem=" ".join(str(stem or "").split())
+    return stem if len(stem)<=n else stem[:n].rsplit(" ",1)[0].rstrip(".,;:")+"…"
+
 def _canonical_search_index():
     """Build the searchable index without allowing one bad source record to blank the whole search."""
     from urllib.parse import quote_plus
@@ -148,7 +152,7 @@ def _canonical_search_index():
             rows.append({
                 "type":"Clinical Challenge",
                 "title":q.get("topic",""),
-                "subtitle":q.get("domain",""),
+                "subtitle":(q.get("domain","") or "")+" · "+_stem_snippet_v57(q.get("stem","")),
                 "url":"/clinical-challenge/"+q.get("id",""),
                 "text":q.get("stem","")+" "+" ".join(q.get("choices") or [])
             })

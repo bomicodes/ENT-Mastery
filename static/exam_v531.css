@@ -134,3 +134,5 @@
 .qx-tracing svg{max-width:100%;height:auto;max-height:360px}
 .qx-tracing img{max-width:100%;max-height:360px;object-fit:contain}
 .qx-tracing[hidden]{display:none}
+/* v57 audit: review list sits under the domain card, left-aligned, not a nested card */
+.ex-review{margin:24px 0 32px;max-width:900px;background:none;border:0;border-radius:0;box-shadow:none;overflow:visible}
