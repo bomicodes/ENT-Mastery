@@ -1362,7 +1362,8 @@ MCQ_BY_CASE = {'aud1': {'question': 'An adult has right air-conduction threshold
                          'domain': 'Sleep Surgery',
                          'topic': 'Persistent OSA after adenotonsillectomy'}}
 
-CASE_FIXES = {'vestnew2': {'study_summary': [['Right AC=BC 250-1k', '40, 35, 30 dB HL'],
+CASE_FIXES = {'ct1': {'visual_note': 'In-house schematic: labeled axial neck at the thyroid level (about C6), radiologic convention, with the visceral, carotid, perivertebral and posterior cervical spaces color-coded.'},
+ 'vestnew2': {'study_summary': [['Right AC=BC 250-1k', '40, 35, 30 dB HL'],
                                 ['Left AC=BC 250-1k', '10, 10, 10 dB HL'],
                                 ['Right 2k-8k', '15, 15, 10 dB HL'],
                                 ['Calorics', '~30% right weakness'],
