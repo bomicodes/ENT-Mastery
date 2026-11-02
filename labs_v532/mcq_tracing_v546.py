@@ -1362,7 +1362,14 @@ MCQ_BY_CASE = {'aud1': {'question': 'An adult has right air-conduction threshold
                          'domain': 'Sleep Surgery',
                          'topic': 'Persistent OSA after adenotonsillectomy'}}
 
-CASE_FIXES = {'ct1': {'visual_note': 'In-house schematic: labeled axial neck at the thyroid level (about C6), radiologic convention, with the visceral, carotid, perivertebral and posterior cervical spaces color-coded.'},
+CASE_FIXES = {
+ 'psg-pediatric-obstructive': {'visual': 'lab_assets/psg_psg-pediatric-obstructive.svg', 'visual_note': "Schematic tracing matched to this case's numbers (not a real recording)."},
+ 'psg-mixed-apnea': {'visual': 'lab_assets/psg_psg-mixed-apnea.svg', 'visual_note': "Schematic tracing matched to this case's numbers (not a real recording)."},
+ 'psg-severe-pediatric-osa-gas-exchange': {'visual': 'lab_assets/psg_psg-severe-pediatric-osa-gas-exchange.svg', 'visual_note': "Schematic tracing matched to this case's numbers (not a real recording)."},
+ 'psg-rem-positional-osa': {'visual': 'lab_assets/psg_psg-rem-positional-osa.svg', 'visual_note': "Schematic tracing matched to this case's numbers (not a real recording)."},
+ 'psg-central-events-not-csa': {'visual': 'lab_assets/psg_psg-central-events-not-csa.svg', 'visual_note': "Schematic tracing matched to this case's numbers (not a real recording)."},
+ 'psg-systematic-read': {'visual': 'lab_assets/psg_psg-systematic-read.svg', 'visual_note': "Schematic tracing matched to this case's numbers (not a real recording)."},
+'ct1': {'visual_note': 'In-house schematic: labeled axial neck at the thyroid level (about C6), radiologic convention, with the visceral, carotid, perivertebral and posterior cervical spaces color-coded.'},
  'vestnew2': {'study_summary': [['Right AC=BC 250-1k', '40, 35, 30 dB HL'],
                                 ['Left AC=BC 250-1k', '10, 10, 10 dB HL'],
                                 ['Right 2k-8k', '15, 15, 10 dB HL'],
@@ -1400,12 +1407,12 @@ CASE_FIXES = {'ct1': {'visual_note': 'In-house schematic: labeled axial neck at 
               'follow_answer': 'The allergen whose season matches the symptoms (here grass pollen) is the '
                                'clinically meaningful one; mite and ragweed sensitization without matching '
                                'symptoms is likely not.'},
- 'psg-normal-primary-snoring': {'reason_answer': 'Every index is normal for a child: AHI and obstructive AHI '
+ 'psg-normal-primary-snoring': {'visual': 'lab_assets/psg_psg-normal-primary-snoring.svg', 'visual_note': "Schematic tracing matched to this case's numbers (not a real recording).", 'reason_answer': 'Every index is normal for a child: AHI and obstructive AHI '
                                                  'under 1/h, a normal oxygen nadir and no hypoventilation. '
                                                  'Snoring without apnea or gas-exchange problems is primary '
                                                  'snoring. Management is driven by symptoms and examination, '
                                                  'not by this study.'},
- 'psg-central-apnea': {'reason_answer': 'In central events, airflow and inspiratory effort stop together, so '
+ 'psg-central-apnea': {'visual': 'lab_assets/psg_psg-central-apnea.svg', 'visual_note': "Schematic tracing matched to this case's numbers (not a real recording).", 'reason_answer': 'In central events, airflow and inspiratory effort stop together, so '
                                         'there is no drive to breathe; in obstructive events, effort '
                                         'continues against a closed airway. A central apnea index of 6.3/h '
                                         'with desaturation is abnormal in a 10-year-old and calls for a '
