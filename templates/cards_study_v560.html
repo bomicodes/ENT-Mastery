@@ -12,6 +12,7 @@
     <p class="cards-prompt" id="cs-prompt">Answer in your head, then flip.</p>
     <div id="cs-back" hidden>
       <div class="cards-answer"><span>Answer · <i id="cs-topic"></i></span><b id="cs-answer"></b></div>
+      <p class="cards-hook" id="cs-hook" hidden></p>
       <p class="cards-pearl" id="cs-pearl"></p>
       <p class="cards-why" id="cs-why"></p>
       <a id="cs-link" href="#" target="_blank" rel="noopener">Open the full question ↗</a>
@@ -53,7 +54,7 @@
     $('cs-media').innerHTML=m;
     $('cs-stem').textContent=card.stem;
     $('cs-answer').textContent=card.answer;
-    $('cs-pearl').innerHTML=card.pearl?'<b>Board pearl.</b> '+esc(card.pearl):'';
+    $('cs-pearl').innerHTML=card.pearl?'<b>Board pearl.</b> '+esc(card.pearl):''; const hk=$('cs-hook'); hk.hidden=!card.hook; hk.innerHTML=card.hook?'<b>Remember it:</b> '+esc(card.hook):'';
     $('cs-why').textContent=card.why||'';
     $('cs-link').href=card.link; $('cs-link').textContent=(card.link_label||'Open the full question')+' ↗';
     for(var r=1;r<=4;r++){ $('iv'+r).textContent=(card.intervals||{})[r]||''; }

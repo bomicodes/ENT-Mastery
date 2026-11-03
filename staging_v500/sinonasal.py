@@ -144,7 +144,7 @@ SITE = {
         ["Radiopaedia: Maxillary sinus carcinoma staging (AJCC 8)", "https://radiopaedia.org/articles/maxillary-sinus-carcinoma-staging?lang=gb"],
         ["Radiopaedia: Nasal cavity and ethmoid sinus carcinoma staging (AJCC 8)", "https://radiopaedia.org/articles/nasal-cavity-and-ethmoid-sinus-carcinoma-staging?lang=gb"],
         ["CAP Cancer Protocol: Larynx v4.3.0.0 (AJCC 8 pN wording for non-viral sites)", "https://documents.cap.org/protocols/HN.Larynx_4.3.0.0.REL_CAPCP.pdf"],
-        ["ACS/AJCC 8th edition head and neck staging handout (ENE in N for nasal cavity/paranasal sinus)", "https://ww2.facs.org/media/1yupvrfo/8th-edition_head-neck-staging_handout.pdf"],
+        ["ACS/AJCC 8th edition head and neck staging handout (ENE in N for nasal cavity/paranasal sinus)", "https://www.facs.org/media/1yupvrfo/8th-edition_head-neck-staging_handout.pdf"],
         ["NCCN Guidelines: Head and Neck Cancers (2026), Paranasal Sinus Tumors", "https://www.nccn.org/guidelines/category_1"],
         ["CAP Cancer Protocol: Nasal Cavity and Paranasal Sinuses v4.3.0.0 (AJCC 8 maxillary and nasoethmoid pT, verbatim)", "https://documents.cap.org/protocols/HN.Nasal_4.3.0.0.REL_CAPCP.pdf"],
     ],

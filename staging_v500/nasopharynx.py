@@ -125,7 +125,7 @@ SITE = {
     "sources": [
         ["Pan JJ, Mai HQ, Ng WT, ... Lydiatt W, Lee AWM. Ninth Version of the AJCC and UICC Nasopharyngeal Cancer TNM Staging Classification. JAMA Oncol 2024;10(12):1627-1635. doi:10.1001/jamaoncol.2024.4354 (HKU repository full text)", "https://hub.hku.hk/bitstream/10722/359441/1/content.pdf"],
         ["Same article, PMC11581663 (PMC showed a reCAPTCHA page during this review)", ""],
-        ["NHS England NDRS: TNM9 pharynx staging sheet (nasopharynx T0-T4, N, M1a/M1b, stage groups including T0 and Tis rows)", "https://nhsd-proxy.openprescribing.net/ndrs/data/cancer-data-training-materials/staging-sheets-v9/pharynx"],
+        ["NHS England NDRS: TNM9 pharynx staging sheet (nasopharynx T0-T4, N, M1a/M1b, stage groups including T0 and Tis rows)", "https://digital.nhs.uk/ndrs/data/cancer-data-training-materials/staging-sheets-v9/pharynx"],
         ["ACS/AJCC: Staging insights into new 2026 changes (nasopharynx Version 9 implemented 2025; C11.1 is nasopharynx)", "https://www.facs.org/media/wlmmwiz0/ajcc-staging-insights-into-new-2026-changes-and-clarification-of-staging-issues.pdf"],
         ["Zhang Y et al. Gemcitabine and cisplatin induction chemotherapy in nasopharyngeal carcinoma. NEJM 2019;381:1124-1135", ""],
         ["Al-Sarraf M et al. Intergroup 0099. J Clin Oncol 1998;16:1310-1317", ""],

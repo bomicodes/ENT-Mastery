@@ -27,7 +27,7 @@ LAB = {
          "url": "https://radiopaedia.org/articles/le-fort-fracture-classification",
          "note": "Pterygoid plate involvement is common to all three; unique components: I anterolateral maxillary wall, II inferior orbital rim, III zygomatic arch"},
         {"name": "Radiopaedia — Naso-orbito-ethmoid fracture",
-         "url": "https://radiopaedia.org/articles/naso-orbito-ethmoid-fracture",
+         "url": "https://radiopaedia.org/articles/naso-orbitoethmoid-noe-complex-fracture",
          "note": "Markowitz-Manson types I-III by the central fragment and the medial canthal tendon"},
         {"name": "Radiopaedia — Orbital blowout fracture",
          "url": "https://radiopaedia.org/articles/orbital-blowout-fracture",

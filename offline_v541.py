@@ -14,7 +14,7 @@ import random
 import db
 
 PACK_SIZE = 400
-CACHE_VERSION = "entm-v541-5"
+CACHE_VERSION = "entm-v541-6"
 
 SW_JS = r"""
 const CACHE = '%(ver)s';
