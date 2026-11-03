@@ -66,6 +66,8 @@ WELCOME_V551 = install_welcome_v551(app, production.runtime_entry.data, producti
 from concept_check_review_registry_v600 import apply_concept_check_review_registry_v600
 REVIEW_REGISTRY_V600 = apply_concept_check_review_registry_v600(production.runtime_entry.data, production.runtime_entry.app_mod)
 SRS_V560 = install_srs_v560(app, production.runtime_entry.data, production.runtime_entry.app_mod)
+from or_cards_v620 import install_or_cards_v620
+OR_CARDS_V620 = install_or_cards_v620(production.runtime_entry.data, production.runtime_entry.app_mod)
 from or_merge_v610 import install_or_merge_v610
 OR_MERGE_V610 = install_or_merge_v610(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 LEARNING_PATH_V470 = install_learning_path_v470(
