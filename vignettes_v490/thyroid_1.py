@@ -370,8 +370,8 @@ VIGNETTES = [
         "focus": "management",
     },
     {
-        "topic": "Anaplastic Thyroid Cancer",
-        "concept_id": "v6-thyroid-parathyroid-salivary-anaplastic-thyroid-cancer",
+        "topic": "Primary Thyroid Lymphoma",
+        "concept_id": "v6-thyroid-parathyroid-salivary-primary-thyroid-lymphoma",
         "stem": "A 73-year-old woman with long-standing Hashimoto thyroiditis on levothyroxine has rapid, painless enlargement of her thyroid over 3 weeks with mild dyspnea. Exam shows a firm, diffusely enlarged gland. CT shows a homogeneous mass surrounding the trachea without calcification or necrosis. FNA shows a monotonous population of atypical lymphoid cells. What is the most appropriate next step?",
         "choices": ["Total thyroidectomy with bilateral central neck dissection", "Core biopsy with flow cytometry and immunophenotyping", "Empiric dabrafenib and trametinib while awaiting molecular results", "Radioactive iodine after stopping levothyroxine"],
         "answer": 1,

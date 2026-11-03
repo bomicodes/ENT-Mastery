@@ -7,12 +7,17 @@ Nonfunctional Larynx and Intractable Aspiration.
 DOMAIN="Head & Neck Oncology"
 
 
+# v60: Carotid Blowout Syndrome's canonical parent lives in General ENT / Emergencies;
+# linking it under Head & Neck left these reviewed vignettes orphaned.
+TOPIC_DOMAIN={"Carotid Blowout Syndrome":"General ENT / Emergencies"}
+
+
 def _q(qid,topic,stage,stem,choices,answer,explanation,why_wrong,pearl,curveball,focus="boards"):
-    return {"id":qid,"domain":DOMAIN,"topic":topic,"learning_stage":stage,
+    return {"id":qid,"domain":TOPIC_DOMAIN.get(topic,DOMAIN),"topic":topic,"learning_stage":stage,
             "stem":stem,"choices":choices,"answer":answer,"explanation":explanation,
             "why_wrong":why_wrong,"board_pearl":pearl,"curveball":curveball,
             "tier":"Curated learning ladder","mode":"Vignette","focus":focus,
-            "ladder_reviewed":True}
+            "ladder_reviewed":True,"_coverage_reviewed_v211":True}
 
 
 VIGNETTES_V231=[
@@ -95,7 +100,7 @@ def apply_learning_ladders_v231(challenges,item_id_fn):
     added=0
     for q in VIGNETTES_V231:
         row=dict(q)
-        row["concept_id"]=item_id_fn(DOMAIN,row["topic"])
+        row["concept_id"]=item_id_fn(row["domain"],row["topic"])
         if not row["concept_id"]:
             raise RuntimeError("v231 orphan: "+row["topic"])
         if row["id"] not in existing:

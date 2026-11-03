@@ -623,7 +623,6 @@ INTERPRETATION_LABS = {
    "framework":["Reliability","Right vs left","Air conduction","Bone conduction / air-bone gap","Degree + configuration","Symmetry","Speech testing","Tympanometry / reflexes","Localization","Next step"],
    "source_note":"Synthetic audiograms in ENT Mastery are generated for practice; use ASHA/clinical audiology references for standardized symbols and your institutional standards for clinical decisions.",
    "resources":[
-     {"name":"Practical Audiology for Otorhinolaryngologists","url":"https://audiology.medlogicai.org/","note":"ENT-oriented audiology teaching and cases"},
      {"name":"ASHA — Audiometric Symbols","url":"https://www.asha.org/policy/gl1990-00006/","note":"Standard audiometric notation"}
    ],
    "cases":[
@@ -723,7 +722,7 @@ INTERPRETATION_LABS = {
       "image_credit":"Semanate F, Montoya S, Andrade E, Palacios C, Fernandez Trokhimtchouk T. Cureus. 2025;17(4):e82198 (CC BY 4.0) — Fig. 3",
       "image_source":"https://pmc.ncbi.nlm.nih.gov/articles/PMC12074894/",
       "prompt":"A thyroid resection H&E. What tumor is this and what nuclear features (not architecture) are you specifically hunting for?",
-      "answer":"Papillary thyroid carcinoma — papillary architecture with fibrovascular cores, and the diagnostic nuclear features: nuclear crowding/overlapping, elongated 'oval' nuclei, nuclear grooves, and pale ('Orphan Annie eye') chromatin.",
+      "answer":"Papillary thyroid carcinoma — papillary architecture with fibrovascular cores, and the diagnostic nuclear features: nuclear crowding/overlapping, elongated 'oval' nuclei, nuclear grooves, intranuclear pseudoinclusions, and pale ('Orphan Annie eye') chromatin.",
       "why":"Papillary thyroid carcinoma is diagnosed by nuclear features, not by papillary architecture alone — some benign lesions can look papillary but lack these specific nuclear changes.",
       "reason_prompt":"This is confirmed papillary thyroid carcinoma, 1.8 cm, unifocal, without extrathyroidal extension, in a 34-year-old with no prior neck radiation and no suspicious nodes on preoperative ultrasound. A junior resident wants to counsel this patient using 'thyroid cancer' risk-of-death statistics pooled across thyroid cancer overall. Why is that the wrong framework for this specific patient?",
       "reason_answer":"Papillary thyroid carcinoma — especially small, unifocal, non-invasive disease in a younger patient without high-risk features — carries an excellent prognosis with very high disease-specific survival. Pooling it with 'thyroid cancer' outcomes broadly (which includes far more aggressive follicular-derived or poorly differentiated/anaplastic tumors) massively overstates this patient's actual risk. Risk stratification (e.g., ATA risk categories), not a generic 'thyroid cancer' label, should drive counseling and the intensity of postoperative surveillance and radioactive-iodine decision-making.",

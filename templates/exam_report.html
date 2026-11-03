@@ -1,6 +1,6 @@
 {% extends "base.html" %}{% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
-<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=546">
+<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css', v=ASSET_V) }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css', v=ASSET_V) }}">
 {% set letters = 'ABCD' %}
 <div class="breadcrumb"><a href="/exam">Exam mode</a> / Block {{s.id}} report</div>
 <span class="eyebrow">SCORE REPORT</span>

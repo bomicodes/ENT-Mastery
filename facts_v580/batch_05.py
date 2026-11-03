@@ -192,7 +192,7 @@ FACTS = [
     {"qid": "v490-otology-3-20", "front": "Cholesteatoma labyrinthine fistula: most common site?", "back": "Lateral semicircular canal"},
     {"qid": "v490-otology-3-21", "front": "Acute otitis media complicated by labyrinthitis: management?", "back": "Myringotomy with tube and culture plus IV antibiotics"},
     {"qid": "v490-otology-3-22", "front": "Suspected congenital CMV in an infant older than 21 days: test?", "back": "PCR on the stored newborn dried blood spot"},
-    {"qid": "v490-otology-3-23", "front": "Postmeningitic labyrinthitis ossificans: where does it usually begin?", "back": "Basal turn near the cochlear aqueduct"},
+    {"qid": "v490-otology-3-23", "front": "Postmeningitic labyrinthitis ossificans: where does it usually begin?", "back": "Scala tympani of the basal turn, near the round window"},
     {"qid": "v490-otology-3-24", "front": "Cochlear implantation with an ossified basal turn: surgical options?", "back": "Drill out the basal turn or insert into the scala vestibuli"},
     {"qid": "v490-otology-3-43", "front": "CPA mass with broad dural base, obtuse angle, dural tail, hyperostosis: diagnosis?", "back": "Meningioma"},
     {"qid": "v490-otology-3-44", "front": "CPA lesion with CSF-like signal that restricts diffusion and does not enhance: diagnosis?", "back": "Epidermoid cyst"},

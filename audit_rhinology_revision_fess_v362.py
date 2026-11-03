@@ -59,6 +59,7 @@ def main():
                 failures += fail(f"Revision FESS source trail missing {token!r}")
 
         combined = " ".join(str(row.get(k) or "") for k in ("recognize", "localize", "workup", "manage", "operate", "teach")).lower()
+        combined = combined.replace("\u2013", "-").replace("\u2014", "-")  # v60: readability pass normalized dashes
         semantic_groups = {
             "mechanism-first failure taxonomy": ("failure mechanism", "nonrhinogenic"),
             "prior-operation reconstruction": ("operative note", "pathology"),
@@ -70,7 +71,7 @@ def main():
             "do-not-revise patent anatomy": ("patent", "do not revise"),
             "altered danger zones": ("orbit", "skull base", "carotid", "optic nerve"),
             "stop-and-reorient bailout": ("stop dissection", "re-localize"),
-            "outcome follow-up": ("3–12 month", "endoscopic outcome"),
+            "outcome follow-up": ("3-12 month", "endoscopic outcome"),
         }
         for label, tokens in semantic_groups.items():
             if not all(token in combined for token in tokens):

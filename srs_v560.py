@@ -425,7 +425,7 @@ def eligible_new(uid, catalog, settings, domain_weakness=None):
 
 
 def new_today(uid, now=None):
-    r = _rows("SELECT COUNT(*) AS n FROM srs_log WHERE user_id=? AND was_new=1 AND source='cards' AND ts>=?",
+    r = _rows("SELECT COUNT(*) AS n FROM srs_log WHERE user_id=? AND was_new=1 AND source IN ('cards','offline') AND ts>=?",
               (uid, day_start(now)))
     return int(r[0]["n"]) if r else 0
 
@@ -627,6 +627,54 @@ def install_srs_v560(app, data, app_mod=None):
         rate(u, cid, r)
         return jsonify(_payload(u))
 
+    # --- v60: offline study. The page saves a pack of upcoming cards and queues ratings
+    # made without a connection; /api/cards/sync replays them at their real review times.
+    def api_pack():
+        u = uid()
+        now = time.time()
+        s = get_settings(u)
+        due_rows = _rows("SELECT card_id, state, due_at FROM srs_cards WHERE user_id=? AND state<>'new' AND due_at<=? "
+                         "ORDER BY due_at", (u, now + 3 * DAY))[:400]
+        new_ids = eligible_new(u, catalog, s, weakness(u))[: min(90, max(0, s["new_per_day"]) * 3)]
+        out = []
+        for r in due_rows:
+            c = catalog.render(r["card_id"])
+            if c:
+                c.update({"state": r["state"], "due_at": float(r["due_at"] or 0), "queue": "due"})
+                out.append(c)
+        for cid in new_ids:
+            c = catalog.render(cid)
+            if c:
+                c.update({"state": "new", "due_at": 0, "queue": "new"})
+                out.append(c)
+        return jsonify({"made_at": now, "new_left_today": max(0, s["new_per_day"] - new_today(u, now)),
+                        "new_per_day": s["new_per_day"], "cards": out})
+
+    def api_sync():
+        u = uid()
+        body = request.get_json(force=True, silent=True) or {}
+        items = body.get("ratings") or []
+        now = time.time()
+        applied, skipped = 0, 0
+        for it in sorted((i for i in items if isinstance(i, dict)), key=lambda i: float(i.get("ts") or 0))[:2000]:
+            cid = str(it.get("card_id") or "")
+            try:
+                r = int(it.get("rating"))
+                ts = float(it.get("ts"))
+            except (TypeError, ValueError):
+                skipped += 1
+                continue
+            if cid not in catalog.cards or r not in RATINGS or not (now - 14 * DAY <= ts <= now + 60):
+                skipped += 1
+                continue
+            row = _card_row(u, cid)
+            if row and float(row.get("last_review") or 0) >= ts:
+                skipped += 1  # already reviewed later on another device
+                continue
+            rate(u, cid, r, source="offline", now=min(ts, now))
+            applied += 1
+        return jsonify({"applied": applied, "skipped": skipped})
+
     app.jinja_env.globals["cards_due_v560"] = lambda: (lambda sm: {"due": sm["due_now"], "new": sm["new_left_today"],
                                                                      "days_left": sm["days_left"]})(summary(uid(), catalog))
     routes = [
@@ -635,6 +683,8 @@ def install_srs_v560(app, data, app_mod=None):
         ("/cards/study", "cards_study_v560", cards_study, ["GET"]),
         ("/api/cards/next", "api_cards_next_v560", api_next, ["GET"]),
         ("/api/cards/rate", "api_cards_rate_v560", api_rate, ["POST"]),
+        ("/api/cards/pack", "api_cards_pack_v600", api_pack, ["GET"]),
+        ("/api/cards/sync", "api_cards_sync_v600", api_sync, ["POST"]),
     ]
     served = getattr(app, "_got_first_request", False)
     if served:

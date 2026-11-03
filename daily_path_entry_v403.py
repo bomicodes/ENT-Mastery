@@ -63,6 +63,8 @@ QUALITY_V540 = install_quality_v540(app, production.runtime_entry.data, producti
 OFFLINE_V541 = install_offline_v541(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 ACCOUNTS_ADMIN_V550 = install_accounts_admin_v550(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 WELCOME_V551 = install_welcome_v551(app, production.runtime_entry.data, production.runtime_entry.app_mod)
+from concept_check_review_registry_v600 import apply_concept_check_review_registry_v600
+REVIEW_REGISTRY_V600 = apply_concept_check_review_registry_v600(production.runtime_entry.data, production.runtime_entry.app_mod)
 SRS_V560 = install_srs_v560(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 LEARNING_PATH_V470 = install_learning_path_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)

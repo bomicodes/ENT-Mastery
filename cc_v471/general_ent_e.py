@@ -24,7 +24,7 @@ CHECKS = [
  "Frailty predicts complications",
  [("Age determines eligibility for surgery", "Chronological age alone is a poor predictor of outcomes."),
   ("Frailty only predicts length of stay", "Frailty predicts complications, delirium, and mortality too."),
-  ("Frail patients always do better with surgery", "Frailty increases surgical risk.")],
+  ("Frail patients always do better with surgery", "Frailty increases surgical risk, complications and loss of independence.")],
  "Frailty reflects reduced physiologic reserve across systems. Frailty scores predict postoperative complications, delirium, discharge to care facilities, and mortality better than age, guiding shared decision-making and prehabilitation.",
  "Measure frailty, not just age."),
 
@@ -32,8 +32,8 @@ CHECKS = [
  "A liver transplant recipient on tacrolimus has 2 weeks of sinus pain and a black lesion on the middle turbinate. Why must this be treated differently than sinusitis in a healthy patient?",
  "Invasive fungal infection is much more likely",
  [("Transplant patients cannot receive antibiotics", "Antibiotics are allowed but insufficient here."),
-  ("Immunosuppression makes CT unreliable", "CT remains useful."),
-  ("Bacterial sinusitis is impossible in transplant patients", "Bacterial sinusitis still occurs.")],
+  ("Immunosuppression makes CT unreliable", "CT remains useful for mapping disease extent in immunocompromised patients."),
+  ("Bacterial sinusitis is impossible in transplant patients", "Bacterial sinusitis still occurs and is common after transplantation.")],
  "Impaired neutrophil and T-cell immunity allows angioinvasive fungi. Black or pale insensate mucosa requires urgent biopsy, debridement, antifungals, and reducing immunosuppression.",
  "Immunocompromised + dark nasal mucosa = invasive fungal disease until proven otherwise."),
 

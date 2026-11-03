@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Flashcards · ENT Mastery{% endblock %}
 {% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=560">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css', v=ASSET_V) }}">
 <div class="breadcrumb"><a href="/">Home</a> / <a href="/cards">Flashcards</a> / Review</div>
 <div class="cards-session">
   <div class="cards-counts" id="cs-counts" aria-live="polite"></div>
@@ -32,7 +32,8 @@
     <p id="cs-done-msg">No cards are due and today's new cards are finished. Come back tomorrow; anything you missed today will be waiting.</p>
     <p><a class="case-btn" href="/cards">Back to Flashcards</a> <a href="/exam">or build a timed block</a></p>
   </section>
-  <p class="muted cards-error" id="cs-error" hidden>Could not reach the server. Check your connection and reload.</p>
+  <p class="muted cards-error" id="cs-error" hidden>Could not reach the server, and no cards are saved on this device yet. Open this page once while online to save a pack for offline study.</p>
+  <p class="cards-offline" id="cs-offline" hidden></p>
 </div>
 <script>
 (function(){
@@ -61,12 +62,41 @@
     window.scrollTo({top:0,behavior:'smooth'});
   }
   function flip(){ if(!card||flipped)return; flipped=true; $('cs-back').hidden=false; $('cs-rate').hidden=false; $('cs-flip').hidden=true; $('cs-prompt').hidden=true; }
-  function load(){ fetch('/api/cards/next',{credentials:'same-origin'}).then(function(r){return r.json()}).then(show).catch(function(){ $('cs-error').hidden=false; }); }
+  // ---- v60 offline study: a saved pack of upcoming cards plus a queue of ratings to sync
+  var store={get:function(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+  var PACK='entmCardsPackV60', QUEUE='entmCardsQueueV60', offline=false, local=[], newLeft=0;
+  function queue(){ return store.get(QUEUE,[]); }
+  function banner(){ var n=queue().length, el=$('cs-offline');
+    if(offline){ el.hidden=false; el.textContent='Offline: studying cards saved on this device. '+(n?n+' rating'+(n>1?'s':'')+' will sync when you reconnect.':''); }
+    else if(n){ el.hidden=false; el.textContent=n+' offline rating'+(n>1?'s':'')+' waiting to sync.'; } else { el.hidden=true; } }
+  function savePack(){ var p=store.get(PACK,null); if(p&&Date.now()/1000-p.made_at<1800)return;
+    fetch('/api/cards/pack',{credentials:'same-origin'}).then(function(r){return r.ok?r.json():null}).then(function(j){ if(j&&j.cards)store.set(PACK,j); }).catch(function(){}); }
+  function sync(){ var q=queue(); if(!q.length||!navigator.onLine)return Promise.resolve();
+    return fetch('/api/cards/sync',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({ratings:q})})
+      .then(function(r){ if(r.ok){ store.set(QUEUE,[]); store.set(PACK,null); } banner(); }).catch(function(){}); }
+  function goOffline(){
+    var p=store.get(PACK,null); if(!p||!p.cards||!p.cards.length){ $('cs-error').hidden=false; return; }
+    offline=true; var rated={}; queue().forEach(function(x){rated[x.card_id]=1;}); var now=Date.now()/1000;
+    var due=p.cards.filter(function(c){return c.queue==='due'&&c.due_at<=now&&!rated[c.id];});
+    var nw=p.cards.filter(function(c){return c.queue==='new'&&!rated[c.id];});
+    newLeft=Math.max(0,(p.new_left_today||0)-queue().filter(function(x){return x.was_new;}).length);
+    local=due.concat(nw.slice(0,newLeft)); banner(); nextLocal(); }
+  function nextLocal(){ var c=local.shift(); var cnt={due:local.filter(function(x){return x.queue==='due'}).length+(c&&c.queue==='due'?1:0),learning:0,new_left:local.filter(function(x){return x.queue==='new'}).length+(c&&c.queue==='new'?1:0)};
+    if(!c){ show({done:true,counts:cnt}); $('cs-done-msg').textContent='You have finished the cards saved on this device. Reconnect to sync your ratings and get more.'; return; }
+    c.intervals={}; show({done:false,card:c,counts:cnt}); }
+  function rateOffline(r){ var q=queue(); q.push({card_id:card.id,rating:r,ts:Date.now()/1000,was_new:card.queue==='new'}); store.set(QUEUE,q);
+    if(r===1){ var again=Object.assign({},card,{queue:'due'}); local.splice(Math.min(3,local.length),0,again); }
+    banner(); nextLocal(); }
+  function load(){ sync().then(function(){ return fetch('/api/cards/next',{credentials:'same-origin'}); })
+    .then(function(r){ if(!r.ok)throw new Error(r.status); return r.json(); }).then(function(p){ show(p); savePack(); banner(); }).catch(goOffline); }
   function rate(r){
     if(!card||!flipped||busy)return; busy=true; done++;
+    if(offline){ busy=false; rateOffline(r); return; }
     fetch('/api/cards/rate',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({card_id:card.id,rating:r})})
-      .then(function(x){return x.json()}).then(show).catch(function(){ busy=false; $('cs-error').hidden=false; });
+      .then(function(x){ if(!x.ok)throw new Error(x.status); return x.json(); }).then(show)
+      .catch(function(){ busy=false; var q=queue(); q.push({card_id:card.id,rating:r,ts:Date.now()/1000,was_new:card.queue==='new'}); store.set(QUEUE,q); goOffline(); });
   }
+  window.addEventListener('online',function(){ if(offline){ sync().then(function(){ offline=false; banner(); }); } });
   $('cs-flip').addEventListener('click',flip);
   document.querySelectorAll('#cs-rate button').forEach(function(b){ b.addEventListener('click',function(){ rate(parseInt(b.dataset.r,10)); }); });
   document.addEventListener('keydown',function(e){

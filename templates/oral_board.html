@@ -89,7 +89,7 @@
   </div>
 </section>
 {% endif %}
-<script src="{{url_for('static', filename='oral_board_v433.js')}}" defer></script>
+<script src="{{url_for('static', filename='oral_board_v433.js', v=ASSET_V)}}" defer></script>
 <script>
 (()=>{const t=document.getElementById('ob-timer');if(!t)return;let mins=8,end=null,iv=null;const clock=document.getElementById('ob-clock'),go=document.getElementById('ob-go');
  const show=s=>{clock.textContent=Math.floor(s/60)+':'+String(s%60).padStart(2,'0');t.classList.toggle('warn',s<=120&&s>0);t.classList.toggle('over',s<=0&&end!==null)};show(mins*60);

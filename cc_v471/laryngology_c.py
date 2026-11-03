@@ -60,7 +60,7 @@ CHECKS = [
  "The pliable cover layer is lost",
  [("The recurrent laryngeal nerve is cut", "Mobility is preserved; the problem is the vibrating cover."),
   ("The thyroid cartilage is fractured", "Framework injury is not the problem."),
-  ("The fold has active infection", "There is no infection.")],
+  ("The fold has active infection", "Sulcus and scar are structural lesions; there is no infection to treat.")],
  "The superficial lamina propria normally lets the cover ripple. Scar replaces it with dense collagen, so the cover cannot vibrate. Injection improves closure but not pliability; release and grafting have variable results.",
  "Protect the superficial lamina propria: scar is hard to fix."),
 
@@ -69,7 +69,7 @@ CHECKS = [
  "Reduce the injuring forces",
  [("Repeat excision every few months", "Repeated excision recurs because the cause persists."),
   ("Radiation therapy", "Radiation is not used for benign granulomas."),
-  ("Long-term antibiotics", "Granulomas are not infections.")],
+  ("Long-term antibiotics", "Granulomas are reactive, not infectious, so antibiotics do not help.")],
  "The thin mucoperichondrium over the vocal process ulcerates from forceful adduction, throat clearing, or intubation. Voice therapy, reflux management, and botulinum toxin to reduce adduction force (Orloff & Goldman, 1999) let it heal; excision alone recurs.",
  "Granuloma: treat the cause, not just the lesion."),
 ]

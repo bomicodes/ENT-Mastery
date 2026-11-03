@@ -14,11 +14,11 @@ import random
 import db
 
 PACK_SIZE = 400
-CACHE_VERSION = "entm-v541-6"
+CACHE_VERSION = "entm-v541-8"
 
 SW_JS = r"""
 const CACHE = '%(ver)s';
-const SHELL = ['/offline', '/offline-pack.json', '/static/style.css', '/static/layout_v520.css', '/static/exam_v531.css',
+const SHELL = ['/offline', '/offline-pack.json', '/cards/study', '/static/style.css', '/static/layout_v520.css', '/static/exam_v531.css',
   '/static/question_v490.css', '/static/mobile_nav_v183.css', '/static/reliability_v168.css', '/static/app.js',
   '/static/icons/icon-192.png', '/static/icons/icon-512.png'];
 self.addEventListener('install', e => {
@@ -40,6 +40,11 @@ self.addEventListener('fetch', e => {
     }).catch(() => caches.match(req).then(r => r || caches.match('/offline'))));
     return;
   }
+  if (url.pathname.startsWith('/static/') && /\.(css|js)$/.test(url.pathname)) {
+    e.respondWith(fetch(req).then(res => { if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(req, copy)); } return res; })
+      .catch(() => caches.match(req, {ignoreSearch: true})));
+    return;
+  }
   if (url.pathname.startsWith('/static/') || url.pathname === '/offline-pack.json') {
     e.respondWith(caches.match(req).then(hit => {
       const net = fetch(req).then(res => { if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(req, copy)); } return res; }).catch(() => hit);
@@ -56,6 +61,9 @@ def install_offline_v541(app, data, app_mod=None):
     bank = data.CLINICAL_CHALLENGES_V119
     src = app_mod if app_mod is not None else data
     canon = getattr(src, "canonical_domain_v94", None) or getattr(data, "canonical_domain_v94", lambda d: d)
+
+    # v60: version static CSS/JS URLs so a release can never be served with an old stylesheet
+    app.jinja_env.globals["ASSET_V"] = CACHE_VERSION
 
     def manifest():
         body = {

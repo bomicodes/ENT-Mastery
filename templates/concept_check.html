@@ -1,5 +1,5 @@
 {% extends "base.html" %}{% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
+<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css', v=ASSET_V) }}">
 {% set letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' %}
 {% set is_mcq = q.choices and q.answer is number and q.answer >= 0 and q.answer < q.choices|length %}
 <div class="breadcrumb"><a href="/concept-checks">Concept Checks</a> / {{q.topic}}</div>

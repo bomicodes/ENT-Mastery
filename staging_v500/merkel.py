@@ -134,14 +134,13 @@ SITE = {
     "sources": [
         ["AJCC Cancer Staging Manual, 8th ed (2017), Ch 46 Merkel Cell Carcinoma", ""],
         ["PathologyOutlines: Merkel cell carcinoma staging (AJCC 8 pTNM and pathologic stage groups)", "https://www.pathologyoutlines.com/topic/skintumornonmelanocyticmerkelstaging.html"],
-        ["Notology: Merkel cell carcinoma staging (AJCC 8 clinical N and clinical stage groups)", "https://notology.onrender.com/staging/merkel-cell-carcinoma.html"],
         ["ASCO Post: Adjuvant pembrolizumab in Merkel cell carcinoma (STAMP / EA6174, ESMO 2025)", "https://ascopost.com/news/october-2025/adjuvant-pembrolizumab-in-merkel-cell-carcinoma/"],
         ["AJCC Current Staging System 2026 (Merkel remains 8th edition)", "https://www.facs.org/media/c5ik5tkr/ajcc-current-staging-system-2026.pdf"],
         ["Harms KL, et al. Analysis of prognostic factors from 9387 MCC cases forms the basis for the new 8th edition AJCC staging system. Ann Surg Oncol. 2016;23:3564-3571", ""],
         ["Kaufman HL, et al. Avelumab in metastatic MCC (JAVELIN Merkel 200). Lancet Oncol. 2016", ""],
         ["NCCN Clinical Practice Guidelines: Merkel Cell Carcinoma, 2026", ""],
-        ["NCI Thesaurus (Qeios): Clinical Stage III Merkel Cell Carcinoma AJCC v8 (T0-4 N1-3 M0; cN1-cN3 definitions)", "https://www.qeios.com/read/K9AJN4/pdf"],
-        ["NCI Thesaurus (Qeios): Pathologic Stage III Merkel Cell Carcinoma AJCC v8 (IIIA/IIIB combinations)", "https://www.qeios.com/read/PS50Y9/pdf"],
+        ["NCI Thesaurus C136877: Clinical Stage III Cutaneous Merkel Cell Carcinoma AJCC v8 (T0-4 N1-3 M0; cN1-cN3 definitions)", "https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C136877"],
+        ["NCI Thesaurus C136886: Pathologic Stage III Cutaneous Merkel Cell Carcinoma AJCC v8 (IIIA/IIIB combinations)", "https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C136886"],
         ["2010 AJCC (7th ed) MCC staging table (N2 in-transit; M1a-M1c), PMC3570924", "https://pmc.ncbi.nlm.nih.gov/articles/PMC3570924/table/tab2"]
     ],
     "verify_notes": "Reviewer check (2026-10-29). Confirmed: clinical N (cN1 regional nodes; cN2 in-transit without nodes; cN3 in-transit with nodes) and clinical Stage III = T0-4 N1-3 M0 from the NCI Thesaurus AJCC v8 entry; the pathologic IIIA/IIIB combinations from the NCI Thesaurus and PathologyOutlines; clinical Stage 0-IV from Notology (secondary), consistent with the above; and the STAMP figures (RFS HR 0.80, P=0.105; DMFS HR 0.58) from the ASCO Post. All drills were re-derived and are correct. Corrected: two 'what's new' bullets wrongly said in-transit N2 and M1a-M1c were new in AJCC 8. Both existed in AJCC 7 (2010 table), and the actual change is the new N3 (in-transit plus nodes). Also fixed a memory hook that said MCC in-transit N 'mirrors melanoma'. Still unconfirmed: NCCN 2026 MCC specifics (margins, criteria for omitting RT, nodal management after positive SLNB), ADMEC-O, CheckMate 358, the occult-node rate (about 25-30%) and immunotherapy response ranges were not re-read."

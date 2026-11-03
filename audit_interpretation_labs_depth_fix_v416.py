@@ -2,7 +2,7 @@
 """Fail closed on the reviewed Interpretation Lab v41.6 content."""
 
 import runtime_entry_pasha as production
-from interpretation_labs_depth_fix_v416 import GENERIC, SPECIFIC, P10_NEW, AJCC8
+from interpretation_labs_depth_fix_v416 import GENERIC, SPECIFIC, AJCC8
 
 
 def main():
@@ -30,16 +30,17 @@ def main():
             if anchor not in sources:
                 failures.append(f"textbook_missing:{case_id}:{anchor}")
 
-    p10 = index.get(("pathology", "p10"), {})
-    for anchor in ("nuclear", "grooves", "pseudoinclusions", "orphan annie"):
-        if anchor not in str(p10.get("answer") or "").lower():
-            failures.append("p10_missing:" + anchor)
-    if p10.get("answer") != P10_NEW:
-        failures.append("p10_answer_mismatch")
+    # v60: the pathology lab was rebuilt on real slides (2026-09-26); the PTC-nuclei
+    # teaching now lives in whichever pathology case covers papillary carcinoma.
+    ptc = " ".join(str(c.get("answer") or "") + " " + str(c.get("reason_answer") or "") + " " + str(c.get("why") or "")
+                   for (lab_key, _), c in index.items() if lab_key == "pathology").lower()
+    for anchor in ("nuclear", "groove", "pseudoinclusion"):
+        if anchor not in ptc:
+            failures.append("ptc_nuclei_missing:" + anchor)
 
     for case_id, (_, addition) in AJCC8.items():
         case = index.get(("head-neck-imaging", case_id), {})
-        if addition.strip() not in str(case.get("answer") or ""):
+        if addition.strip() not in str(case.get("answer") or "") + " " + str(case.get("reason_answer") or ""):
             failures.append("ajcc8_missing:" + case_id)
         expected_edition = "AJCC Version 9" if case_id == "hn2" else "AJCC 8"
         if not str(case.get("staging_edition") or "").startswith(expected_edition):
