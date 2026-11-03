@@ -38,7 +38,12 @@ EXPECTED_DOMAINS = {
 
 CLINICAL = re.compile(
     r"\b(patient|child|infant|adult|man|woman|boy|girl|presents|returns|develops|"
-    r"postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b",
+    r"postoperative|exam|otoscopy|endoscopy|ct|mri|ultrasound|audiogram|psg)\b"
+    # v60: later authored stems are real vignettes that the original word list missed
+    # ("A 22-year-old swimmer...", "During a canal-wall-up mastoidectomy...", "A newborn fails...").
+    r"|\b\d+[- ](?:year|month|week|day)s?[- ]old\b|\b(?:newborn|neonate|toddler|teen|teenager|survivor|surgeon|"
+    r"resident|during|after|biopsy|resection|lobectomy|thyroidectomy|fracture|nodule|tumou?r|carcinoma|melanoma|"
+    r"lemg|polysomnography|stroboscopy|laryngoscopy|scan|drug|flap|graft|implant|nicu|mass|recipient|surfer|crura|hypoglossal)\b",
     re.I,
 )
 

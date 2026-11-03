@@ -1,5 +1,5 @@
 {% extends "base.html" %}{% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='staging_v500.css') }}?v=500">
+<link rel="stylesheet" href="{{ url_for('static', filename='staging_v500.css', v=ASSET_V) }}">
 {% macro table(rows, head1, head2) %}
 <table class="stg-table">
   <thead><tr><th>{{head1}}</th><th>{{head2}}</th></tr></thead>

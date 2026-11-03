@@ -1,6 +1,6 @@
 {% extends "base.html" %}{% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
-<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=546">
+<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css', v=ASSET_V) }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css', v=ASSET_V) }}">
 <div class="ex-bar card">
   <div><b>Block {{s.id}}</b> <span class="muted">· {{s.config.mode|title}} mode · {{qs|length}} questions</span></div>
   <div class="ex-bar-right">

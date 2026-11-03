@@ -42,8 +42,13 @@ def main():
     by_topic = {m.get("topic"): m for m in modules if m.get("topic")}
     failures = []
 
-    if len(topics) != 32:
-        failures.append(f"expected 32 canonical Facial Plastics / Trauma topics, found {len(topics)}")
+    # v60: two canonical topics were added deliberately after v30.2 (new-topic modules
+    # v42.x); they are distinct parents, not parallel NOE/frontal cards.
+    added_after_v302 = {"Laryngeal Fracture / External Laryngeal Trauma",
+                        "Blepharoplasty / Eyelid Malposition (Ptosis, Ectropion, Entropion)"}
+    expected = 32 + len(added_after_v302 & set(topics))
+    if len(topics) != expected:
+        failures.append(f"expected {expected} canonical Facial Plastics / Trauma topics, found {len(topics)}")
     for forbidden in sorted(FORBIDDEN_PARALLEL_TOPICS):
         if forbidden in by_topic:
             failures.append(

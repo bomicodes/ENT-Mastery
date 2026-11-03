@@ -7,6 +7,7 @@ from db import init_db, record_lab_attempt, lab_progress, lab_stats, record_mast
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "dev-ent-mastery-change-me")
 init_db()
+app.jinja_env.globals.setdefault("ASSET_V", "v60")  # overridden by offline_v541 with the cache version
 
 @app.context_processor
 def inject():

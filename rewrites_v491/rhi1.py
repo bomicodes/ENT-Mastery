@@ -652,25 +652,15 @@ REWRITES = {
              'hospital. Beta-2 transferrin is positive, and thin-section CT shows a 4 mm defect in the right posterior '
              'ethmoid roof. She is afebrile, alert, and neurologically intact, and CT shows only a small amount of '
              'pneumocephalus. What is the best management principle?',
-     'choices': ['Endoscopic multilayer repair of the localized defect, with lumbar drainage used only selectively',
-                 'Strict bed rest and a routine lumbar drain for 2 weeks before considering surgery',
-                 'Prophylactic antibiotics until the leak stops spontaneously, with surgery only if meningitis develops',
-                 'Transcranial repair through a bifrontal craniotomy because iatrogenic defects heal poorly '
-                 'endoscopically'],
-     'answer': 0,
+     'choices': ['Strict bed rest and a routine lumbar drain for 2 weeks before considering surgery', 'Prophylactic antibiotics until the leak stops spontaneously, with surgery only if meningitis develops', 'Endoscopic multilayer repair of the localized defect, with lumbar drainage used only selectively', 'Transcranial repair through a bifrontal craniotomy because iatrogenic defects heal poorly endoscopically'],
+     'answer': 2,
      'explanation': 'A persistent iatrogenic leak with a localized small ethmoid roof defect carries ongoing meningitis '
                     'risk and is unlikely to close reliably on its own a week after injury. Endoscopic repair with a free '
                     'graft or multilayer technique achieves closure in the large majority of patients. Perioperative '
                     'lumbar drainage has not been shown to improve outcomes for routine small defects and is reserved for '
                     'selected high-flow leaks or raised pressure. Prophylactic antibiotics have not been shown to prevent '
                     'meningitis and do not close the defect.',
-     'why_wrong': ['Correct.',
-                   'A trial of conservative care may suit some early leaks, but routine prolonged lumbar drainage carries '
-                   'risk and delays definitive closure.',
-                   'Prophylactic antibiotics have not been shown to prevent meningitis, and waiting for infection before '
-                   'repair is unsafe.',
-                   'Endoscopic repair has higher success and lower morbidity than craniotomy for accessible anterior skull '
-                   'base defects.'],
+     'why_wrong': ['A trial of conservative care may suit some early leaks, but routine prolonged lumbar drainage carries risk and delays definitive closure.', 'Prophylactic antibiotics have not been shown to prevent meningitis, and waiting for infection before repair is unsafe.', 'Correct.', 'Endoscopic repair has higher success and lower morbidity than craniotomy for accessible anterior skull base defects.'],
      'board_pearl': 'Persistent iatrogenic ethmoid roof leak: endoscopic repair with high success; lumbar drains only '
                     'selectively.',
      'curveball': 'What findings would make this an emergency rather than a planned repair?',

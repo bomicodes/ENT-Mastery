@@ -213,7 +213,7 @@ CHECKS = [
  "Merkel cell polyomavirus",
  [("Human papillomavirus type 16", "HPV-16 drives oropharyngeal and anogenital cancers, not Merkel cell carcinoma."),
   ("Epstein-Barr virus", "EBV is associated with nasopharyngeal carcinoma and some lymphomas."),
-  ("Human herpesvirus 8", "HHV-8 causes Kaposi sarcoma.")],
+  ("Human herpesvirus 8", "HHV-8 causes Kaposi sarcoma, not Merkel cell carcinoma.")],
  "Most Merkel cell carcinomas carry clonally integrated polyomavirus whose truncated large T antigen inactivates Rb; the rest are UV-driven. Early nodal spread is common, so sentinel node biopsy is standard, and tumors respond to radiation and PD-1/PD-L1 blockade.",
  "Fast-growing violet nodule in an older patient: think Merkel cell carcinoma."),
 

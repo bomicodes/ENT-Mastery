@@ -1,6 +1,6 @@
 {% extends "base.html" %}{% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css') }}?v=490">
-<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css') }}?v=541">
+<link rel="stylesheet" href="{{ url_for('static', filename='question_v490.css', v=ASSET_V) }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css', v=ASSET_V) }}">
 <span class="eyebrow">OFFLINE STUDY</span>
 <h1>Questions without a signal</h1>
 <p class="lede" id="off-status">Loading your offline question pack…</p>

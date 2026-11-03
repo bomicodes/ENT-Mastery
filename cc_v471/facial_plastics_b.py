@@ -51,7 +51,7 @@ CHECKS = [
  "Increased rotation and decreased projection",
  [("Decreased rotation and increased projection", "Shortening the lateral legs rotates the tip upward and reduces projection."),
   ("No change in rotation or projection", "Changing leg lengths changes tip position."),
-  ("Increased projection only", "Shortening reduces projection.")],
+  ("Increased projection only", "Shortening a tripod leg reduces projection rather than increasing it.")],
  "The tripod is formed by the conjoined medial crura and two lateral crura. Shortening the lateral legs rotates the tip cephalically and reduces projection; shortening the medial leg reduces projection and counter-rotates.",
  "Tripod: change a leg, change the tip."),
 
@@ -60,7 +60,7 @@ CHECKS = [
  "Costal cartilage; it can warp",
  [("Auricular cartilage; it is too straight", "Auricular cartilage is curved and flexible, not straight."),
   ("Alloplastic implant; it never extrudes", "Alloplasts carry infection and extrusion risk."),
-  ("Crushed septal remnants; they never resorb", "Crushed cartilage resorbs.")],
+  ("Crushed septal remnants; they never resorb", "Crushed cartilage partially resorbs over time, so it is unreliable for support.")],
  "Costal cartilage provides abundant, strong cartilage for structural grafts but tends to warp as internal stresses release; balanced carving minimizes this.",
  "Need strength and quantity: rib, and carve to prevent warping."),
 

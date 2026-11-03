@@ -136,7 +136,6 @@ SITE = {
         ["ACS/AJCC: Staging insights into new 2026 changes (ENE modifier, testing, 6-node rule, current staging list)", "https://www.facs.org/media/wlmmwiz0/ajcc-staging-insights-into-new-2026-changes-and-clarification-of-staging-issues.pdf"],
         ["NHS England NDRS: TNM9 staging sheet, pharynx (HPV-associated oropharynx clinical and pathological stage groups)", "https://digital.nhs.uk/ndrs/data/cancer-data-training-materials/staging-sheets-v9/pharynx"],
         ["Ho AS, Huang SH, O'Sullivan B, et al. Derivation and validation of the AJCC9V pathological stage classification for HPV-positive OPC. Lancet Oncol 2025;26(8):1113-1122 (abstract)", "https://www.em-consulte.com/article/1753035/derivation-and-validation-of-the-ajcc9v-pathologic"],
-        ["Head and Neck Oncology Journal Club: AJCC/UICC TNM9 for HPV oropharyngeal cancer (summary of Evans et al.)", "https://buttondown.com/krishnakumar/archive/ajccuicc-tnm9-for-hpv-oropharyngeal-cancer/"],
         ["Gillison ML et al. RTOG 1016. Lancet 2019;393:40-50; Mehanna H et al. De-ESCALaTE HPV. Lancet 2019;393:51-60", ""],
         ["Mehanna H et al. PET-CT surveillance vs neck dissection (PET-NECK). NEJM 2016;374:1444-1454", ""],
         ["Burtness B et al. KEYNOTE-048. Lancet 2019", ""],

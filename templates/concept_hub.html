@@ -2,7 +2,7 @@
 {%- if sections is not defined -%}{%- set ns = namespace(s=[]) -%}{%- for key,label in [('recognize','Clinical presentation'),('localize','Clinical anatomy & localization'),('workup','Diagnosis & workup'),('manage','Management'),('operate','Surgery, advanced decisions & complications'),('teach','Board pearls & teaching points')] -%}{%- if module.get(key) -%}{%- set ns.s = ns.s + [{'key':key,'label':label,'blocks':[{'sub':None,'text':module.get(key)}]}] -%}{%- endif -%}{%- endfor -%}{%- set sections = ns.s -%}{%- endif -%}
 {%- set question_total = question_total if question_total is defined else (related_questions|length) -%}
 {%- set concept_id = concept_id if concept_id is defined else '' -%}
-<link rel="stylesheet" href="{{ url_for('static', filename='textbook_v470.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='textbook_v470.css', v=ASSET_V) }}">
 <div class="eyebrow">TOPIC · {{domain}}</div>
 <div class="concept-hero">
   <div><h1>{{topic}}</h1><p class="lede">Read it mechanism-first, then learn it with board-style vignettes and connect it to cases and the OR.</p></div>
@@ -73,5 +73,5 @@
   {% else %}<p class="muted">This is a clinic/medical topic — no dedicated operative module.</p>{% endif %}
 </section>
 </div>
-<script src="{{ url_for('static', filename='topic_text_v470.js') }}?v=482"></script>
+<script src="{{ url_for('static', filename='topic_text_v470.js', v=ASSET_V) }}"></script>
 {% endblock %}

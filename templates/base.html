@@ -8,9 +8,9 @@
   <link rel="apple-touch-icon" href="/static/icons/icon-192.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>{% block title %}ENT Mastery{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='reliability_v168.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='mobile_nav_v183.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v=ASSET_V) }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='reliability_v168.css', v=ASSET_V) }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='mobile_nav_v183.css', v=ASSET_V) }}">
 </head>
 <body>
 <div class="mobile-nav-backdrop" data-mobile-nav-backdrop></div>
@@ -145,9 +145,9 @@
     <div class="page modern-page">{% block content %}{% endblock %}</div>
   </main>
 </div>
-<script src="{{ url_for('static', filename='app.js') }}"></script>
-<script src="{{ url_for('static', filename='mobile_nav_v183.js') }}"></script>
-  <link rel="stylesheet" href="{{ url_for('static', filename='layout_v520.css') }}">
+<script src="{{ url_for('static', filename='app.js', v=ASSET_V) }}"></script>
+<script src="{{ url_for('static', filename='mobile_nav_v183.js', v=ASSET_V) }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='layout_v520.css', v=ASSET_V) }}">
   <script>
   (function(){var opened=[];window.addEventListener('beforeprint',function(){document.querySelectorAll('details:not([open])').forEach(function(d){d.open=true;opened.push(d)});document.body.classList.add('printing')});
   window.addEventListener('afterprint',function(){opened.forEach(function(d){d.open=false});opened=[];document.body.classList.remove('printing')});})();

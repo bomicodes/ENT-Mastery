@@ -1,5 +1,5 @@
 {% extends "base.html" %}{% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='textbook_v470.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='textbook_v470.css', v=ASSET_V) }}">
 <div class="eyebrow">DAILY PATH</div>
 <div class="dp-head">
   <div>
@@ -98,7 +98,7 @@
 {% endfor %}
 </div>
 
-<script src="{{ url_for('static', filename='topic_text_v470.js') }}?v=482"></script>
+<script src="{{ url_for('static', filename='topic_text_v470.js', v=ASSET_V) }}"></script>
 <script>
 (function(){
   function post(url, body){
