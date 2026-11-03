@@ -11,7 +11,7 @@ LAB = {
                    "Decision thresholds are taught as classically described (Fisch; Gantz 1999) and the AAO-HNS Bell's palsy guideline (2013).",
     "resources": [
         {"name": "AAO-HNS Clinical Practice Guideline: Bell's Palsy (2013)", "url": "https://journals.sagepub.com/doi/10.1177/0194599813505967", "note": "Steroids within 72 h; no recommendation on surgical decompression"},
-        {"name": "House-Brackmann facial nerve grading (Radiopaedia)", "url": "https://radiopaedia.org/articles/house-brackmann-facial-nerve-grading-system", "note": "Grade I–VI definitions"},
+        {"name": "House JW, Brackmann DE. Facial nerve grading system. Otolaryngol Head Neck Surg 1985 (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/3921901/", "note": "Grade I–VI definitions"},
     ],
 }
 TARGET_LAB = "facial-nerve"

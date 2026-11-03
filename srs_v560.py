@@ -251,9 +251,10 @@ def _first_sentences(t, n=3, limit=520):
 class Catalog:
     """All cards available on the site, built once from the in-memory banks."""
 
-    def __init__(self, data, paused=lambda: set(), facts=None):
+    def __init__(self, data, paused=lambda: set(), facts=None, facts_by_qid=None):
         self.data = data
-        self.facts = facts or {}
+        self.facts = facts or {}            # {card_key: {qid, front, back, hook}}
+        self.facts_by_qid = facts_by_qid or {}  # {qid: [card_key, ...]} incl. merged aliases
         self.paused = paused
         self.cards = {}
         self.order = []
@@ -270,8 +271,10 @@ class Catalog:
             else:
                 continue  # templated coverage items are not carded
             self._add("q:" + qid, kind, q)
-            if board and qid in self.facts:
-                self._add("f:" + qid, "fact", q)
+            if board:
+                for key in self.facts_by_qid.get(qid, []):
+                    if self.facts.get(key, {}).get("qid") == qid:
+                        self._add("f:" + key, "fact", q)
         for q in getattr(data, "CONCEPT_CHECKS_V112", []) or []:
             if not q.get("id"):
                 continue
@@ -286,7 +289,10 @@ class Catalog:
         self.order.append(cid)
 
     def source(self, cid):
-        if cid.startswith("q:") or cid.startswith("f:"):
+        if cid.startswith("f:"):
+            fc = self.facts.get(cid[2:]) or {}
+            return (getattr(self.data, "CLINICAL_CHALLENGE_BY_ID_V119", {}) or {}).get(fc.get("qid") or cid[2:])
+        if cid.startswith("q:"):
             return (getattr(self.data, "CLINICAL_CHALLENGE_BY_ID_V119", {}) or {}).get(cid[2:])
         if cid.startswith("cc:"):
             idx = getattr(self.data, "CONCEPT_CHECK_BY_ID_V112", None)
@@ -306,8 +312,9 @@ class Catalog:
             return {
                 "id": cid, "kind": "fact", "domain": meta["domain"], "topic": _clean(meta["topic"]),
                 "stem": _clean(fc.get("front")), "image_url": None, "image_credit": "", "figure_html": "",
-                "figure_static": "", "answer": _clean(fc.get("back")), "pearl": _clean(q.get("board_pearl")),
-                "why": "", "link": "/clinical-challenge/" + cid[2:],
+                "figure_static": "", "answer": _clean(fc.get("back")), "hook": _clean(fc.get("hook")),
+                "pearl": _clean(q.get("board_pearl")),
+                "why": "", "link": "/clinical-challenge/" + (fc.get("qid") or cid[2:]),
                 "link_label": "See it as a board question",
             }
         choices = list(q.get("choices") or [])
@@ -371,7 +378,9 @@ def record_answer(uid, qid, correct, catalog=None):
     if not uid or not qid:
         return
     targets = []
-    if catalog is None or ("f:" + qid) in catalog.cards:
+    if catalog is not None and catalog.facts_by_qid.get(qid):
+        targets += ["f:" + k for k in catalog.facts_by_qid[qid] if ("f:" + k) in catalog.cards]
+    elif catalog is None or ("f:" + qid) in catalog.cards:
         targets.append("f:" + qid)
     if catalog is not None and ("q:" + qid) in catalog.cards:
         srcs, _ = _filters(get_settings(uid))
@@ -397,7 +406,7 @@ def eligible_new(uid, catalog, settings, domain_weakness=None):
     seen = {r["card_id"] for r in _rows("SELECT card_id FROM srs_cards WHERE user_id=?", (uid,))}
     paused = catalog.paused() or set()
     pool = [c for c in catalog.order if c not in seen and catalog.cards[c]["kind"] in srcs
-            and (not doms or catalog.cards[c]["domain"] in doms) and c[2:] not in paused]
+            and (not doms or catalog.cards[c]["domain"] in doms) and c[2:].split("~")[0] not in paused]
     # weakest domains first, then interleave across domains so one sitting is mixed
     weak = domain_weakness or {}
     by_dom = {}
@@ -522,10 +531,10 @@ def install_srs_v560(app, data, app_mod=None):
     q540 = getattr(data, "QUALITY_V540", {}) or {}
     try:
         import facts_v580
-        facts = facts_v580.load()
+        facts, facts_by_qid = facts_v580.load()
     except Exception:
-        facts = {}
-    catalog = Catalog(data, paused=q540.get("paused_ids", lambda: set()), facts=facts)
+        facts, facts_by_qid = {}, {}
+    catalog = Catalog(data, paused=q540.get("paused_ids", lambda: set()), facts=facts, facts_by_qid=facts_by_qid)
     data.SRS_V560 = {"catalog": catalog}
     try:
         migrate_v580(catalog)
@@ -548,7 +557,7 @@ def install_srs_v560(app, data, app_mod=None):
     def record_review_answer_v560(u, qid, correct):
         orig(u, qid, correct)
         try:
-            if ("q:" + str(qid)) in catalog.cards or ("f:" + str(qid)) in catalog.cards:
+            if ("q:" + str(qid)) in catalog.cards or catalog.facts_by_qid.get(str(qid)):
                 record_answer(u, str(qid), bool(correct), catalog)
         except Exception:
             pass

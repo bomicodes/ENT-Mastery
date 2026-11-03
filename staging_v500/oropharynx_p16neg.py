@@ -121,10 +121,10 @@ SITE = {
     ],
     "sources": [
         ["AJCC Cancer Staging Manual, 8th ed (2017), Ch 10 Pharynx: oropharynx (p16−) and hypopharynx", ""],
-        ["NHS England NDRS: TNM9 pharynx staging sheet (HPV-independent oropharynx T and N wording; matches AJCC 8 content)", "https://nhsd-proxy.openprescribing.net/ndrs/data/cancer-data-training-materials/staging-sheets-v9/pharynx"],
+        ["NHS England NDRS: TNM9 pharynx staging sheet (HPV-independent oropharynx T and N wording; matches AJCC 8 content)", "https://digital.nhs.uk/ndrs/data/cancer-data-training-materials/staging-sheets-v9/pharynx"],
         ["CAP Cancer Protocol: Larynx v4.3.0.0 (AJCC 8 pN wording for non-viral sites)", "https://documents.cap.org/protocols/HN.Larynx_4.3.0.0.REL_CAPCP.pdf"],
-        ["ACS/AJCC 8th edition head and neck staging: major changes", "https://ww2.facs.org/media/i2kn34ed/head-and-neck-8th-ed.pdf"],
-        ["ACS/AJCC 8th edition head and neck staging handout (ENE applies to p16− OPC, hypopharynx, larynx and sinonasal)", "https://ww2.facs.org/media/1yupvrfo/8th-edition_head-neck-staging_handout.pdf"],
+        ["ACS/AJCC 8th edition head and neck staging: major changes", "https://www.facs.org/media/i2kn34ed/head-and-neck-8th-ed.pdf"],
+        ["ACS/AJCC 8th edition head and neck staging handout (ENE applies to p16− OPC, hypopharynx, larynx and sinonasal)", "https://www.facs.org/media/1yupvrfo/8th-edition_head-neck-staging_handout.pdf"],
         ["Bernier J et al. NEJM 2004; Cooper JS et al. NEJM 2004 (postoperative chemoRT)", ""],
         ["Bonner JA et al. NEJM 2006 (RT ± cetuximab)", ""],
         ["Burtness B et al. KEYNOTE-048, Lancet 2019; Uppaluri R et al. KEYNOTE-689, NEJM 2025", ""],

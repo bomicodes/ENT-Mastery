@@ -135,7 +135,7 @@ SITE = {
         ["CAP Cancer Protocol: Larynx, v4.3.0.0 (AJCC 8 pN wording shared by all non-viral mucosal sites)", "https://documents.cap.org/protocols/HN.Larynx_4.3.0.0.REL_CAPCP.pdf"],
         ["Radiopaedia: Oral cavity carcinoma staging (AJCC 8 T and stage groups)", "https://radiopaedia.org/articles/oral-cavity-carcinoma-staging"],
         ["ICCR Oral Cavity dataset, 2nd ed (UICC TNM8 T definitions)", "https://iccr-cancer.org/wp-content/uploads/2024/11/ICCR-Oral-Cavity-2nd-ed-v2.0-hyperlinked.pdf"],
-        ["ACS/AJCC: Head and Neck 8th edition major changes (DOI, ENE)", "https://ww2.facs.org/media/i2kn34ed/head-and-neck-8th-ed.pdf"],
+        ["ACS/AJCC: Head and Neck 8th edition major changes (DOI, ENE)", "https://www.facs.org/media/i2kn34ed/head-and-neck-8th-ed.pdf"],
         ["AHNS: AJCC 8th Edition Major Updates in Cancer Staging", "https://www.ahns.info/wp-content/uploads/2017/07/AJCC-8th-Edition-Major-Updates-in-Cancer-Staging.pdf"],
         ["D'Cruz AK et al. Elective versus therapeutic neck dissection in node-negative oral cancer. NEJM 2015;373:521-529", ""],
         ["Bernier J et al. (EORTC 22931) NEJM 2004; Cooper JS et al. (RTOG 9501) NEJM 2004; Bernier pooled analysis, Head Neck 2005", ""],

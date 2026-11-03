@@ -121,7 +121,7 @@ SITE = {
     ],
     "sources": [
         ["AJCC Cancer Staging Manual, 8th ed (2017), Ch 10 Pharynx: hypopharynx", ""],
-        ["NHS England NDRS: TNM9 pharynx staging sheet (hypopharynx T wording, same content as AJCC 8)", "https://nhsd-proxy.openprescribing.net/ndrs/data/cancer-data-training-materials/staging-sheets-v9/pharynx"],
+        ["NHS England NDRS: TNM9 pharynx staging sheet (hypopharynx T wording, same content as AJCC 8)", "https://digital.nhs.uk/ndrs/data/cancer-data-training-materials/staging-sheets-v9/pharynx"],
         ["CAP Cancer Protocol: Larynx v4.3.0.0 (AJCC 8 pN wording for non-viral sites)", "https://documents.cap.org/protocols/HN.Larynx_4.3.0.0.REL_CAPCP.pdf"],
         ["AHNS: AJCC 8th Edition Major Updates in Cancer Staging (ENE in N for hypopharynx)", "https://www.ahns.info/wp-content/uploads/2017/07/AJCC-8th-Edition-Major-Updates-in-Cancer-Staging.pdf"],
         ["Lefebvre JL et al. Larynx preservation in pyriform sinus cancer (EORTC 24891). JNCI 1996;88:890-899", ""],

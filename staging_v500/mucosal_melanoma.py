@@ -97,7 +97,7 @@ SITE = {
         ["AJCC Cancer Staging Manual, 8th ed (2017), Ch 14 Mucosal Melanoma of the Head and Neck", ""],
         ["PathologyOutlines: Mucosal melanoma staging (T3/T4a/T4b, N0/N1, stage groups)", "https://www.pathologyoutlines.com/topic/oralcavitystagingmucosalmelanoma.html"],
         ["AHNS: AJCC 8th Edition Major Updates (ENE not added for mucosal melanoma)", "https://www.ahns.info/wp-content/uploads/2017/07/AJCC-8th-Edition-Major-Updates-in-Cancer-Staging.pdf"],
-        ["ACS/AJCC 8th edition head and neck staging handout (no ENE in N for melanoma of the head and neck)", "https://ww2.facs.org/media/1yupvrfo/8th-edition_head-neck-staging_handout.pdf"],
+        ["ACS/AJCC 8th edition head and neck staging handout (no ENE in N for melanoma of the head and neck)", "https://www.facs.org/media/1yupvrfo/8th-edition_head-neck-staging_handout.pdf"],
         ["NCCN Guidelines: Head and Neck Cancers (2026), Mucosal Melanoma", "https://www.nccn.org/guidelines/category_1"],
         ["Weber JS et al. CheckMate 238. NEJM 2017; Eggermont AMM et al. KEYNOTE-054. NEJM 2018", ""],
         ["Radiopaedia: Mucosal melanoma of the head and neck staging (AJCC 8 T3/T4a/T4b, N, M, stage groups)", "https://radiopaedia.org/articles/mucosal-melanoma-of-the-head-and-neck-staging?lang=gb"],

@@ -30,7 +30,7 @@ LAB = {
          "url": "https://dermnetnz.org/topics/dermoscopy",
          "note": "Pattern library for BCC, SCC, keratoacanthoma, lentigo maligna and melanoma"},
         {"name": "Burget GC, Menick FJ — the subunit principle in nasal reconstruction",
-         "url": "https://pubmed.ncbi.nlm.nih.gov/4048787/",
+         "url": "https://pubmed.ncbi.nlm.nih.gov/4023097/",
          "note": "Classic paper on replacing the whole subunit when most of it is lost"},
     ],
 }
