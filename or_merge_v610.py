@@ -51,6 +51,16 @@ MERGE_V610 = {
     (S, "Hypoglossal Nerve Stimulation"): "hypoglossal-stimulator",
     (S, "Palatal Surgery"): "reconstructive-palate",
     (G, "Deep Neck Abscess Drainage"): "deep-neck-drain",
+    (T, "Four-Gland Parathyroid Exploration"): "four-gland",
+    (T, "Submandibular Gland Excision"): "submandibular-gland",
+    (L, "Transnasal Esophagoscopy"): "transnasal-esophagoscopy",
+    (L, "Arytenoid Adduction / Reinnervation"): "arytenoid-adduction",
+    (S, "Maxillomandibular Advancement"): "mma",
+    # v62.0 new OR cards (or_cards_v620)
+    (R, "Revision FESS"): "revision-fess",
+    (R, "Endoscopic Pituitary / Anterior Skull Base Approach"): "endoscopic-pituitary",
+    (P, "Supraglottoplasty"): "supraglottoplasty",
+    (T, "Completion Thyroidectomy"): "completion-thyroidectomy",
 }
 
 BACKGROUND_KEYS = ("overview", "physiology", "pathophysiology")
