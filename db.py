@@ -40,9 +40,104 @@ SQLITE_PATH = os.environ.get(
     os.path.join(os.path.dirname(__file__), "ent_mastery.db")
 )
 
+import threading as _threading
+import time as _time
+
+_PG_LOCAL = _threading.local()
+_PG_IDLE_CHECK_SECONDS = 30
+
+
+class _ReusedPgConnection:
+    """v67: one Postgres connection per worker thread, reused across db calls.
+
+    Every db helper opens conn() and closes it, often 10-20 times per page. Opening a new
+    Postgres connection each time (TCP + TLS + auth) is the main per-page cost on Render.
+    This wrapper keeps the connection open: close() just ends the transaction the same way
+    a real close would (uncommitted work is rolled back), so callers behave exactly as before.
+    """
+
+    def __init__(self, raw):
+        self._raw = raw
+        self._open = True
+        _PG_LOCAL.depth = getattr(_PG_LOCAL, "depth", 0) + 1
+
+    def close(self):
+        # Nested helpers share the connection, so only the outermost close ends the
+        # transaction (a real close of an inner connection never touched the outer one).
+        if not self._open:
+            return
+        self._open = False
+        _PG_LOCAL.depth = max(0, getattr(_PG_LOCAL, "depth", 1) - 1)
+        if _PG_LOCAL.depth == 0:
+            _end_pg_transaction()
+        _PG_LOCAL.last_used = _time.monotonic()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        try:
+            if exc_type is None:
+                self._raw.commit()
+            else:
+                self._raw.rollback()
+        finally:
+            self.close()
+
+    def __getattr__(self, name):
+        return getattr(self._raw, name)
+
+
+def _end_pg_transaction():
+    raw = getattr(_PG_LOCAL, "raw", None)
+    try:
+        if raw is not None and not raw.closed and raw.info.transaction_status != psycopg.pq.TransactionStatus.IDLE:
+            raw.rollback()
+    except Exception:
+        _drop_pg_connection()
+
+
+def reset_request_connection_state():
+    """Called at the end of every request: discard anything a caller left uncommitted."""
+    if not USE_POSTGRES:
+        return
+    _PG_LOCAL.depth = 0
+    _end_pg_transaction()
+
+
+def _drop_pg_connection():
+    raw = getattr(_PG_LOCAL, "raw", None)
+    _PG_LOCAL.raw = None
+    if raw is not None:
+        try:
+            raw.close()
+        except Exception:
+            pass
+
+
+def _pg_connection():
+    raw = getattr(_PG_LOCAL, "raw", None)
+    if raw is not None and (raw.closed or raw.broken):
+        _drop_pg_connection(); raw = None
+    if raw is not None and getattr(_PG_LOCAL, "depth", 0) == 0 and _time.monotonic() - getattr(_PG_LOCAL, "last_used", 0) > _PG_IDLE_CHECK_SECONDS:
+        # The server or a proxy may have dropped an idle connection; check before reuse.
+        try:
+            raw.execute("SELECT 1")
+            raw.rollback()
+        except Exception:
+            _drop_pg_connection(); raw = None
+    if raw is None:
+        raw = psycopg.connect(DATABASE_URL, row_factory=dict_row)
+        _PG_LOCAL.raw = raw
+    _PG_LOCAL.last_used = _time.monotonic()
+    return _ReusedPgConnection(raw)
+
+
 def conn():
     if USE_POSTGRES:
-        return psycopg.connect(DATABASE_URL, row_factory=dict_row)
+        if os.environ.get("ENT_MASTERY_DB_REUSE", "1") == "0":
+            return psycopg.connect(DATABASE_URL, row_factory=dict_row)
+        return _pg_connection()
     c = sqlite3.connect(SQLITE_PATH)
     c.row_factory = sqlite3.Row
     return c

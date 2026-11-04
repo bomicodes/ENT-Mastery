@@ -64,6 +64,13 @@ OFFLINE_V541 = install_offline_v541(app, production.runtime_entry.data, producti
 ACCOUNTS_ADMIN_V550 = install_accounts_admin_v550(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 WELCOME_V551 = install_welcome_v551(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 from concept_check_review_registry_v600 import apply_concept_check_review_registry_v600
+import db as _db_v67
+def _db_reset_v67(exc=None):
+    _db_v67.reset_request_connection_state()
+# Registered directly: audits may import this module after the app has served requests.
+_td_v67 = app.teardown_request_funcs.setdefault(None, [])
+if not any(getattr(f, '__name__', '') == '_db_reset_v67' for f in _td_v67):
+    _td_v67.append(_db_reset_v67)
 from bank_fixes_v640 import install_bank_fixes_v640
 BANK_FIXES_V640 = install_bank_fixes_v640(production.runtime_entry.data)
 REVIEW_REGISTRY_V600 = apply_concept_check_review_registry_v600(production.runtime_entry.data, production.runtime_entry.app_mod)
