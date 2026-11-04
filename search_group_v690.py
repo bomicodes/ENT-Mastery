@@ -19,12 +19,16 @@ def install_search_group_v690(app, app_mod):
         try:
             index = app_mod._canonical_search_index()
             if q:
-                scored = []
-                for r in index:
-                    s = app_mod._search_score_v1009(r, q)
-                    if s > 0:
-                        scored.append((s, r))
-                scored.sort(key=lambda x: (-x[0], 0 if x[1].get("type") == "Curriculum concept" else 1, str(x[1].get("title", ""))))
+                ranker = getattr(app_mod, "_search_rank_v700", None)
+                if ranker:
+                    scored = ranker(index, q)
+                else:
+                    scored = []
+                    for r in index:
+                        s = app_mod._search_score_v1009(r, q)
+                        if s > 0:
+                            scored.append((s, r))
+                    scored.sort(key=lambda x: (-x[0], 0 if x[1].get("type") == "Curriculum concept" else 1, str(x[1].get("title", ""))))
                 groups, out = {}, []
                 for s, r in scored:
                     typ = r.get("type")
