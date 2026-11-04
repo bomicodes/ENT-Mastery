@@ -64,6 +64,8 @@ OFFLINE_V541 = install_offline_v541(app, production.runtime_entry.data, producti
 ACCOUNTS_ADMIN_V550 = install_accounts_admin_v550(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 WELCOME_V551 = install_welcome_v551(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 from concept_check_review_registry_v600 import apply_concept_check_review_registry_v600
+from bank_fixes_v640 import install_bank_fixes_v640
+BANK_FIXES_V640 = install_bank_fixes_v640(production.runtime_entry.data)
 REVIEW_REGISTRY_V600 = apply_concept_check_review_registry_v600(production.runtime_entry.data, production.runtime_entry.app_mod)
 SRS_V560 = install_srs_v560(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 from or_cards_v620 import install_or_cards_v620
