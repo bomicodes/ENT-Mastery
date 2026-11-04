@@ -58,3 +58,19 @@
 .access-brand{display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;height:auto;margin:0 0 20px;padding:14px 18px 13px;border-radius:12px;line-height:1;box-shadow:0 6px 18px rgba(16,39,42,.16)}
 .access-brand .modern-brand-ent{font-size:30px;line-height:1;letter-spacing:.04em}
 .access-brand>span:last-child{margin-top:0;font-size:10.5px;letter-spacing:.32em;line-height:1;opacity:.92}
+/* v68: setup check card matches the Add-a-resident card; rows separated; collapses when all green */
+.roster-health{max-width:820px;padding:clamp(22px,3vw,30px);margin:24px 0}
+.roster-health .roster-health-list{margin-top:16px;gap:0}
+.roster-health .roster-health-list li{grid-template-columns:24px minmax(150px,190px) 1fr;gap:12px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.roster-health .roster-health-list li:first-child{border-top:0;padding-top:4px}
+.roster-health .roster-health-list li b{font-weight:750;line-height:1.3}
+.roster-health-detail{color:var(--muted);line-height:1.45}
+.roster-health .roster-health-list li.warn .roster-health-detail{color:var(--ink)}
+.roster-health .roster-health-dot{width:22px;height:22px;flex:0 0 22px}
+.roster-health.all-ok{padding:16px clamp(18px,3vw,24px)}
+.roster-health-summary{border:0;padding:0}
+.roster-health-summary>summary{display:flex;align-items:center;gap:12px;list-style:none}
+.roster-health-summary>summary::-webkit-details-marker{display:none}
+.roster-health-summary>summary .muted{margin-left:auto;font-size:13px;font-weight:600}
+.roster-health-summary[open]>summary .muted{visibility:hidden}
+@media(max-width:620px){.roster-health .roster-health-list li{grid-template-columns:24px 1fr;align-items:start}.roster-health-detail{grid-column:2}}
