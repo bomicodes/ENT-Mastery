@@ -58,6 +58,7 @@ MERGE_V610 = {
     (S, "Maxillomandibular Advancement"): "mma",
     # v62.0 new OR cards (or_cards_v620)
     (R, "Revision FESS"): "revision-fess",
+    (R, "Inferior Turbinate Hypertrophy"): "inferior-turbinate-reduction",
     (R, "Endoscopic Pituitary / Anterior Skull Base Approach"): "endoscopic-pituitary",
     (P, "Supraglottoplasty"): "supraglottoplasty",
     (T, "Completion Thyroidectomy"): "completion-thyroidectomy",
