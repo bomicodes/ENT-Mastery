@@ -73,13 +73,21 @@ if not any(getattr(f, '__name__', '') == '_db_reset_v67' for f in _td_v67):
     _td_v67.append(_db_reset_v67)
 from bank_fixes_v640 import install_bank_fixes_v640
 BANK_FIXES_V640 = install_bank_fixes_v640(production.runtime_entry.data)
+from question_dedupe_v690 import install_question_dedupe_v690
+QUESTION_DEDUPE_V690 = install_question_dedupe_v690(production.runtime_entry.data)
+from question_dedupe_v690 import install_retired_redirects_v690
+install_retired_redirects_v690(app)
 REVIEW_REGISTRY_V600 = apply_concept_check_review_registry_v600(production.runtime_entry.data, production.runtime_entry.app_mod)
 SRS_V560 = install_srs_v560(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 from or_cards_v620 import install_or_cards_v620
 OR_CARDS_V620 = install_or_cards_v620(production.runtime_entry.data, production.runtime_entry.app_mod)
 from or_cards_v630 import install_or_cards_v630
 OR_CARDS_V630 = install_or_cards_v630(production.runtime_entry.data, production.runtime_entry.app_mod)
+from or_dedupe_v690 import install_or_dedupe_v690
+OR_DEDUPE_V690 = install_or_dedupe_v690(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 from or_merge_v610 import install_or_merge_v610
 OR_MERGE_V610 = install_or_merge_v610(app, production.runtime_entry.data, production.runtime_entry.app_mod)
+from search_group_v690 import install_search_group_v690
+SEARCH_GROUP_V690 = install_search_group_v690(app, production.runtime_entry.app_mod)
 LEARNING_PATH_V470 = install_learning_path_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)
