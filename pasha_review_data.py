@@ -8,9 +8,9 @@ PASHA_CHAPTERS = [
     {"id":1,"title":"Allergy and Rhinology","domain":"Rhinology / Allergy / Skull Base","sections":[
         ("nose-sinus-anatomy","Anatomy of the Nose and Paranasal Sinuses",["nasal anatomy","sinus anatomy","ostiomeatal","frontal recess","sphenoid","ethmoid","nasal valve","septum","turbinate"]),
         ("nose-sinus-physiology","Physiology of the Nose and Paranasal Sinuses",["mucociliary","nasal cycle","olfaction","sinus physiology"]),
-        ("nasal-obstruction","Evaluation of Nasal Obstruction",["nasal obstruction","septal deviation","nasal valve","turbinate hypertrophy","choanal"]),
-        ("nasal-diseases","Nasal Diseases",["epistaxis","septal perforation","nasal mass","granulomatosis","cocaine","rhinitis medicamentosa"]),
-        ("allergy-rhinitis","Allergy and Rhinitis",["allergic rhinitis","nonallergic rhinitis","immunotherapy","antihistamine","intranasal steroid"]),
+        ("nasal-obstruction","Evaluation of Nasal Obstruction",["nasal obstruction","rhinomanometry","acoustic rhinometry","unilateral","medication","choanal"]),
+        ("nasal-diseases","Nasal Diseases",["epistaxis","septal perforation","septal hematoma","nasal valve","septoplasty","turbinate","inverted papilloma","angiofibroma","olfactory","CSF leak","granulomatosis","HHT"]),
+        ("allergy-rhinitis","Allergy and Rhinitis",["allergic rhinitis","nonallergic rhinitis","rhinitis medicamentosa","immunotherapy","skin test","antihistamine","intranasal steroid","EGPA"]),
         ("sinus-disease","Paranasal Sinus Disease",["acute sinusitis","chronic rhinosinusitis","nasal polyps","fungal sinusitis","orbital complication","pott"]),
         ("sinus-surgery","Sinus Surgery",["endoscopic sinus surgery","FESS","lamina papyracea","skull base","frontal sinus","sphenoid surgery"]),
         ("immunology","Immunology",["immunology","hypersensitivity","IgE","eosinophil","immune deficiency"]),

@@ -55,16 +55,36 @@ def _source_pool():
         _SOURCE_POOL_CACHE["key"]=key
     return _SOURCE_POOL_CACHE["pool"]
 
+import hashlib as _hashlib
+
+def _stable_shuffle(stem, choices, answer):
+    """Deterministic per-question shuffle so section-specific answers are not stuck in one position."""
+    order=list(range(len(choices)))
+    random.Random(int(_hashlib.md5(stem.encode()).hexdigest()[:8],16)).shuffle(order)
+    return [choices[i] for i in order], order.index(answer)
+
 def _seed_questions(chapter):
+    """Book-specific questions: section-specific ones (v64) first, then the original chapter seeds."""
     out=[]
+    try:
+        from pasha_extra_questions_v640 import EXTRA_QUESTIONS_V640
+    except Exception:
+        EXTRA_QUESTIONS_V640={}
+    sids={s[0] for s in chapter["sections"]}
+    for sid,rows in EXTRA_QUESTIONS_V640.items():
+        if sid not in sids: continue
+        for j,(stem,choices,answer,explanation) in enumerate(rows,1):
+            ch,ans=_stable_shuffle(stem,list(choices),answer)
+            out.append({"id":f"pasha:{chapter['id']}:{sid}:{j}","stem":stem,"choices":ch,"answer":ans,"explanation":explanation,"domain":chapter["domain"],"topic":chapter["title"],"concept_id":f"pasha-{chapter['id']}-{sid}","section_id":sid,"seed":True})
     for i,row in enumerate(PASHA_SEED_QUESTIONS.get(chapter["id"],[]),1):
         stem,choices,answer,explanation,section_id=row
-        out.append({"id":f"pasha:{chapter['id']}:{i}","stem":stem,"choices":choices,"answer":answer,"explanation":explanation,"domain":chapter["domain"],"topic":chapter["title"],"concept_id":f"pasha-{chapter['id']}-{section_id}","section_id":section_id,"seed":True})
+        ch,ans=_stable_shuffle(stem,list(choices),answer)
+        out.append({"id":f"pasha:{chapter['id']}:{i}","stem":stem,"choices":ch,"answer":ans,"explanation":explanation,"domain":chapter["domain"],"topic":chapter["title"],"concept_id":f"pasha-{chapter['id']}-{section_id}","section_id":section_id,"seed":True,"chapter_seed":True})
     return out
 
 def _section_score(q, chapter, section):
+    """Keyword relevance, used to order questions and to place image-review items."""
     section_id,title,keywords=section
-    if canonical_domain_v94(q.get("domain")) != canonical_domain_v94(chapter["domain"]): return 0
     hay=_norm(" ".join([q.get("topic",""),q.get("stem","")]))
     score=0
     for kw in keywords:
@@ -74,22 +94,73 @@ def _section_score(q, chapter, section):
     if title_norm and title_norm in hay: score+=12
     return score
 
+def _section_topics(section_id):
+    from pasha_section_map_v640 import SECTION_TOPICS_V640
+    return SECTION_TOPICS_V640.get(section_id, [])
+
+def _tokens(text):
+    return set(w for w in _norm(text).split() if len(w)>3)
+
+def _near_duplicate(stem, kept):
+    a=_tokens(stem)
+    if not a: return False
+    for b in kept:
+        if len(a & b)/max(1,len(a | b)) >= 0.6: return True
+    return False
+
+_HOME_CACHE={}
+
+def _chapter_assignment(chapter):
+    """v64: each bank question gets one home section per chapter, so the same question does not
+    appear in several section quizzes. Image-review items, which span a whole chapter, only go
+    to a section whose keywords they match."""
+    pool=_source_pool()
+    key=(chapter["id"], _SOURCE_POOL_CACHE["key"])
+    if key in _HOME_CACHE: return _HOME_CACHE[key]
+    best={}
+    for si,section in enumerate(chapter["sections"]):
+        topics=_section_topics(section[0])
+        pos={t:i for i,t in enumerate(topics)}
+        for q in pool:
+            t=q["topic"]
+            if t not in pos: continue
+            sc=_section_score(q,chapter,section)
+            if t.startswith("Image review") and sc<=0: continue
+            rank=(-sc, pos[t], si)
+            if q["id"] not in best or rank<best[q["id"]][0]:
+                best[q["id"]]=(rank, section[0])
+    home={}
+    for q in pool:
+        b=best.get(q["id"])
+        if b: home.setdefault(b[1],[]).append(q)
+    _HOME_CACHE.clear(); _HOME_CACHE[key]=home
+    return home
+
 def section_questions(chapter, section, target=20):
+    """v64: section-specific book questions first, then bank questions from the topics mapped to
+    this section (each question in one section only), spread round-robin over the topics in map
+    order, skipping near-duplicates. The original chapter seed questions go last. No filler."""
     section_id=section[0]
-    candidates=[]
-    for q in _source_pool():
-        s=_section_score(q,chapter,section)
-        if s>0:
-            z=dict(q); z["section_id"]=section_id; candidates.append((s,z))
-    candidates.sort(key=lambda x:(-x[0],x[1]["id"]))
-    rows=[q for _,q in candidates[:target]]
-    for q in _seed_questions(chapter):
-        if q["section_id"]==section_id and not any(x["id"]==q["id"] for x in rows): rows.insert(0,q)
-    if len(rows)<min(8,target):
-        # Fallback questions are from the same domain but may not test this precise subsection.
-        used={x["id"] for x in rows}
-        extras=[dict(q,section_id=section_id) for q in _source_pool() if canonical_domain_v94(q.get("domain"))==canonical_domain_v94(chapter["domain"]) and q["id"] not in used]
-        rows.extend(extras[:max(0,min(target,12)-len(rows))])
+    topics=_section_topics(section_id)
+    mine=_chapter_assignment(chapter).get(section_id,[])
+    by_topic={}
+    for q in mine:
+        z=dict(q); z["section_id"]=section_id
+        by_topic.setdefault(q["topic"],[]).append((-_section_score(q,chapter,section),z["id"],z))
+    queues=[[z for _,_,z in sorted(by_topic[t])] for t in topics if t in by_topic]
+    seeds=[q for q in _seed_questions(chapter) if q["section_id"]==section_id]
+    rows=[q for q in seeds if not q.get("chapter_seed")]
+    kept=[_tokens(q["stem"]) for q in rows]
+    i=0
+    while len(rows)<target and any(queues):
+        qq=queues[i%len(queues)]
+        if qq:
+            z=qq.pop(0)
+            if not _near_duplicate(z["stem"],kept):
+                rows.append(z); kept.append(_tokens(z["stem"]))
+        i+=1
+    for q in seeds:
+        if q.get("chapter_seed") and len(rows)<target: rows.append(q)
     return rows[:target]
 
 def chapter_bank(chapter):
