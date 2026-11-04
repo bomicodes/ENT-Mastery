@@ -5,11 +5,17 @@
 {% if admin_msg %}<div class="card roster-note ok" role="status">{{admin_msg}}</div>{% endif %}
 {% if admin_err %}<div class="access-error" role="alert">{{admin_err}}</div>{% endif %}
 {% set hc = health or setup_health_v550() %}
-<section class="card roster-health">
-  <div class="roster-manage-head"><h2>Setup check</h2><p class="muted">Confirm these before inviting residents.</p></div>
+{% set hc_warn = hc|rejectattr('ok')|list %}
+<section class="card roster-health{{' all-ok' if not hc_warn }}">
+  {% if hc_warn %}
+  <div class="roster-manage-head"><h2>Setup check</h2><p class="muted">{{ hc_warn|length }} item{{ 's' if hc_warn|length != 1 }} to fix before inviting residents.</p></div>
+  {% else %}
+  <details class="roster-health-summary"><summary><span class="roster-health-dot" aria-hidden="true">✓</span><b>Setup check: all set</b><span class="muted">Show details</span></summary>
+  {% endif %}
   <ul class="roster-health-list">
-  {% for h in hc %}<li class="{{'ok' if h.ok else 'warn'}}"><span class="roster-health-dot" aria-hidden="true">{{'✓' if h.ok else '!'}}</span><b>{{h.label}}</b><span>{{h.detail}}</span></li>{% endfor %}
+  {% for h in hc %}<li class="{{'ok' if h.ok else 'warn'}}"><span class="roster-health-dot" aria-hidden="true">{{'✓' if h.ok else '!'}}</span><b>{{h.label}}</b><span class="roster-health-detail">{{h.detail}}</span></li>{% endfor %}
   </ul>
+  {% if not hc_warn %}</details>{% endif %}
 </section>
 
 <section class="card roster-manage-card">
