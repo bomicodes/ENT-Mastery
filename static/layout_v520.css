@@ -299,3 +299,13 @@ section.welcome-block:not(.card){margin:18px 0}
 /* v63: cross-links between companion OR cards (septoplasty <-> turbinate reduction) */
 .or-see-also{display:inline-flex;margin:10px 8px 0 0;font-weight:700;color:#08756d;border:1.5px solid #08756d;border-radius:10px;padding:8px 14px;text-decoration:none}
 .or-see-also:hover{background:#08756d;color:#fff}
+/* v71: rating buttons stay hidden until the card is flipped ([hidden] lost to display:grid),
+   and Show answer is the one obvious action on the front of a card */
+.cards-rate[hidden],.cards-rate-label[hidden],.cards-flip-btn[hidden]{display:none!important}
+.cards-flip-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;border:0;border-radius:12px;background:var(--teal,#0f6b5f);color:#fff;font:inherit;font-size:17px;font-weight:800;cursor:pointer;box-shadow:0 6px 16px rgba(15,107,95,.25);transition:transform .08s ease,box-shadow .15s ease}
+.cards-flip-btn:hover{box-shadow:0 8px 20px rgba(15,107,95,.32)}
+.cards-flip-btn:active{transform:translateY(1px)}
+.cards-flip-btn:focus-visible{outline:3px solid #8fd3c9;outline-offset:2px}
+.cards-flip-btn kbd{color:#fff;border-color:rgba(255,255,255,.45);opacity:.85}
+.cards-rate-label{margin:0 0 8px;font-size:13px;font-weight:700;color:var(--muted,#5f7372)}
+@media(hover:none){.cards-flip-btn kbd,.cards-rate kbd{display:none}}

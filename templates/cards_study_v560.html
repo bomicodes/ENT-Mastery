@@ -18,7 +18,8 @@
       <a id="cs-link" href="#" target="_blank" rel="noopener">Open the full question ↗</a>
     </div>
     <div class="cards-actions">
-      <button type="button" class="case-btn" id="cs-flip">Show answer <kbd>space</kbd></button>
+      <button type="button" class="cards-flip-btn" id="cs-flip">Show answer <kbd>space</kbd></button>
+      <p class="cards-rate-label" id="cs-rate-label" hidden>How well did you know it?</p>
       <div class="cards-rate" id="cs-rate" hidden>
         <button type="button" data-r="1" class="r-again"><b>Again</b><small id="iv1"></small><kbd>1</kbd></button>
         <button type="button" data-r="2" class="r-hard"><b>Hard</b><small id="iv2"></small><kbd>2</kbd></button>
@@ -45,7 +46,7 @@
     busy=false; counts(p.counts||{due:0,learning:0,new_left:0});
     if(p.done){ $('cs-card').hidden=true; $('cs-done').hidden=false; return; }
     card=p.card; flipped=false;
-    $('cs-done').hidden=true; $('cs-card').hidden=false; $('cs-back').hidden=true; $('cs-rate').hidden=true; $('cs-flip').hidden=false; $('cs-prompt').hidden=false;
+    $('cs-done').hidden=true; $('cs-card').hidden=false; $('cs-back').hidden=true; $('cs-rate').hidden=true; $('cs-rate-label').hidden=true; $('cs-flip').hidden=false; $('cs-prompt').hidden=false;
     $('cs-domain').textContent=card.domain; $('cs-topic').textContent=card.topic;
     $('cs-queue').textContent=card.queue==='new'?'NEW':(card.state==='learning'||card.state==='relearning'?'LEARNING':'REVIEW');
     var m='';
@@ -61,7 +62,7 @@
     for(var r=1;r<=4;r++){ $('iv'+r).textContent=(card.intervals||{})[r]||''; }
     window.scrollTo({top:0,behavior:'smooth'});
   }
-  function flip(){ if(!card||flipped)return; flipped=true; $('cs-back').hidden=false; $('cs-rate').hidden=false; $('cs-flip').hidden=true; $('cs-prompt').hidden=true; }
+  function flip(){ if(!card||flipped)return; flipped=true; $('cs-back').hidden=false; $('cs-rate').hidden=false; $('cs-rate-label').hidden=false; $('cs-flip').hidden=true; $('cs-prompt').hidden=true; }
   // ---- v60 offline study: a saved pack of upcoming cards plus a queue of ratings to sync
   var store={get:function(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
   var PACK='entmCardsPackV60', QUEUE='entmCardsQueueV60', offline=false, local=[], newLeft=0;
