@@ -279,8 +279,10 @@ class Catalog:
             if not q.get("id"):
                 continue
             mcq = bool(q.get("choices")) and q.get("answer") is not None
-            recall = bool(q.get("prompt") and q.get("answer_text"))
-            if mcq or recall:
+            # v72: open-ended concept checks ("...what is the initial management strategy, and what
+            # would change the next step?") have paragraph answers built from the curriculum text;
+            # they work as think-aloud prompts on the concept-check page but not as flashcards.
+            if mcq:
                 self._add("cc:" + q["id"], "check", q)
 
     def _add(self, cid, kind, q):
@@ -440,7 +442,8 @@ def due_cards(uid, now=None, learn_ahead=20 * MIN):
 def summary(uid, catalog, now=None):
     now = now or time.time()
     s = get_settings(uid)
-    rows = _rows("SELECT state, due_at, interval_days FROM srs_cards WHERE user_id=?", (uid,))
+    rows = [r for r in _rows("SELECT card_id, state, due_at, interval_days FROM srs_cards WHERE user_id=?", (uid,))
+            if r["card_id"] in catalog.cards]
     due_now = sum(1 for r in rows if r["state"] != "new" and (r["due_at"] or 0) <= now)
     learning = sum(1 for r in rows if r["state"] in ("learning", "relearning"))
     mature = sum(1 for r in rows if r["state"] == "review" and (r["interval_days"] or 0) >= 21)
@@ -503,7 +506,7 @@ def next_card(uid, catalog, domain_weakness=None, now=None):
     """Order: cards actually due, then today's new cards (rotating across domains, weakest first),
     then learning cards a few minutes early so a session can finish."""
     now = now or time.time()
-    due = due_cards(uid, now)
+    due = [r for r in due_cards(uid, now) if r["card_id"] in catalog.cards]  # skip retired cards
     real = [r for r in due if (r["due_at"] or 0) <= now]
     if real:
         return real[0]["card_id"], "review"
