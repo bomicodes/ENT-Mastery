@@ -109,7 +109,7 @@ CASES["translabyrinthine-skull-base"] = {
     "landmarks": [
         {"structure": "Lateral semicircular canal", "how_to_find": "Dense, smooth, yellow-white bone in the antrum floor, medial to the short process of the incus", "why": "Sets the depth and plane of the facial nerve and the start of the labyrinthectomy"},
         {"structure": "Mastoid facial nerve / second genu", "how_to_find": "Below and slightly anterior to the lateral canal, medial to the short process of the incus. It descends along a line from the inferior lateral canal to the anterior end of the digastric ridge.", "why": "Forms the anterior boundary of the labyrinthectomy and the IAC exposure"},
-        {"structure": "Endolymphatic sac", "how_to_find": "Thickened dura between the sigmoid and the posterior canal, inferior to Donaldson's line (the plane of the lateral canal extended posteriorly through the posterior canal)", "why": "Confirms the presigmoid dura and the posterior canal position"},
+        {"structure": "Endolymphatic sac", "how_to_find": "Thickened dura between the sigmoid and the posterior semicircular canal, inferior to Donaldson's line (the plane of the lateral semicircular canal extended posteriorly through the posterior semicircular canal)", "why": "Confirms the presigmoid dura and the posterior semicircular canal position"},
         {"structure": "Subarcuate artery", "how_to_find": "Runs through the center of the superior canal arc in the petromastoid canal toward the posterior fossa dura", "why": "Bleeds when drilled; marks the arc of the superior canal"},
         {"structure": "IAC", "how_to_find": "Deep to the vestibule, running roughly parallel to the EAC in the axial plane. Define it by drilling troughs above (toward the middle fossa dura) and below (toward the jugular bulb), then thin the bone to blue.", "why": "Must be skeletonized before the dura is opened"},
         {"structure": "Bill's bar", "how_to_find": "Vertical crest at the superior fundus. The facial nerve is anterior to it and the superior vestibular nerve posterior.", "why": "The most reliable place to identify VII before tumor dissection"},
@@ -144,7 +144,7 @@ CASES["translabyrinthine-skull-base"] = {
         ["Facial nerve segments", "Meatal, labyrinthine (narrowest), geniculate, tympanic, second genu, mastoid"]
     ],
     "pimp": [
-        {"q": "Define Donaldson's line and why it matters.", "a": "The plane of the lateral canal extended posteriorly, bisecting the posterior canal. The endolymphatic sac lies inferior to it."},
+        {"q": "Define Donaldson's line and why it matters.", "a": "The plane of the lateral semicircular canal extended posteriorly, bisecting the posterior semicircular canal. The endolymphatic sac lies inferior to it."},
         {"q": "What are the boundaries of Trautmann triangle?", "a": "Sigmoid sinus (posterior), superior petrosal sinus / middle fossa dura (superior) and the bony labyrinth / posterior canal (anterior)"},
         {"q": "What forms the crus commune?", "a": "The non-ampullated ends of the superior and posterior canals"},
         {"q": "Which canal ampullae lie closest to the tympanic and labyrinthine facial nerve?", "a": "The lateral and superior canal ampullae, anteriorly"},

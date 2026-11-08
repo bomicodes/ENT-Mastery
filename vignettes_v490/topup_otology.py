@@ -172,13 +172,13 @@ VIGNETTES = [
         "concept_id": "v6-otology-neurotology-temporal-bone-anatomy",
         "stem": "A 50-year-old man with intractable unilateral Meniere disease and serviceable hearing undergoes right endolymphatic sac decompression. After a complete mastoidectomy, the surgeon skeletonizes the sigmoid sinus and the posterior semicircular canal and now needs to find the sac on the posterior fossa dura. Which landmark best guides the search?",
         "choices": [
-            "Below a line carried back along the lateral canal through the posterior canal",
+            "Below a line carried back along the lateral semicircular canal through the posterior semicircular canal",
             "Directly lateral to the second genu of the facial nerve in the facial recess",
             "Above the superior petrosal sinus along the dura of the middle cranial fossa",
             "Medial to the jugular bulb in the hypotympanum, just below the round window"
         ],
         "answer": 0,
-        "explanation": "Donaldson's line runs along the plane of the lateral semicircular canal and is extended backward to bisect the posterior semicircular canal. The endolymphatic sac lies on the posterior fossa dura below this line, between the posterior canal and the sigmoid sinus. It appears as a thickened, whiter patch of dura, with the duct entering beneath the operculum. The deciding clue is that the lateral canal, posterior canal and sigmoid sinus are already exposed, so the landmark can be used. Staying below the line also keeps the drill away from the posterior canal.",
+        "explanation": "Donaldson's line runs along the plane of the lateral semicircular canal and is extended backward to bisect the posterior semicircular canal. The endolymphatic sac lies on the posterior fossa dura below this line, between the posterior semicircular canal and the sigmoid sinus. It appears as a thickened, whiter patch of dura, with the duct entering beneath the operculum. The deciding clue is that the lateral semicircular canal, posterior semicircular canal and sigmoid sinus are already exposed, so the landmark can be used. Staying below the line also keeps the drill away from the posterior semicircular canal.",
         "why_wrong": [
             "Correct.",
             "The second genu and facial recess are landmarks for the posterior tympanotomy, anterior to the posterior fossa dura where the sac lies.",
@@ -186,7 +186,7 @@ VIGNETTES = [
             "The hypotympanum is part of the middle ear and has no relation to the sac on the posterior fossa dura."
         ],
         "board_pearl": "Find the endolymphatic sac below Donaldson's line, between the posterior semicircular canal and the sigmoid sinus.",
-        "curveball": "While thinning bone over the posterior fossa dura, the surgeon opens the blue line of the posterior canal. What is the immediate response?",
+        "curveball": "While thinning bone over the posterior fossa dura, the surgeon opens the blue line of the posterior semicircular canal. What is the immediate response?",
         "curveball_answer": "Stop suctioning near the opening so perilymph is not aspirated, and seal the fenestration promptly with bone wax, fascia, or bone pate. Hearing can often be preserved if the canal is plugged quickly, and the patient should be told about possible postoperative vertigo and hearing loss.",
         "learning_stage": "application",
         "focus": "anatomy"
