@@ -1331,7 +1331,7 @@ VIGNETTES = [
         "why_wrong": ["A lesion at the stylomastoid foramen spares tearing, stapedius function, and taste.", "A lesion below the stapedius branch preserves both the stapedial reflex and tearing.", "An isolated chorda tympani injury causes taste change but not facial paralysis, hyperacusis, or reduced tearing.", "Correct."],
         "board_pearl": "Facial palsy with reduced tearing means the lesion is at or above the geniculate ganglion.",
         "curveball": "She has no recovery at 3 weeks, and electroneurography shows 95% degeneration within 14 days. What is the role of surgery?",
-        "curveball_answer": "In Bell palsy with complete paralysis and more than 90% degeneration on electroneurography within 14 days, with no voluntary EMG activity, middle fossa decompression of the labyrinthine segment and geniculate ganglion may improve outcomes. The 2013 AAO-HNSF guideline makes no recommendation on surgery, so counseling is individualized.",
+        "curveball_answer": "In Bell palsy with complete paralysis and more than 90% degeneration on electroneurography and no voluntary EMG activity, prompt middle fossa decompression (no later than 14 days from onset) of the labyrinthine segment and geniculate ganglion may improve outcomes. The 2013 AAO-HNSF guideline makes no recommendation on surgery, so counseling is individualized.",
         "learning_stage": "application",
         "focus": "diagnosis",
     },

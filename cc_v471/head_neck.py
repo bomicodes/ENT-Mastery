@@ -111,10 +111,10 @@ CHECKS = [
 
 ("Laryngeal Preservation Decision",
  "A 60-year-old with glottic SCC and a fixed vocal fold is choosing between total laryngectomy and chemoradiation. Which additional finding most strongly favors primary laryngectomy?",
- "Thyroid cartilage destruction",
- [("Fixation of the vocal fold alone", "T3 disease with fixation is a standard candidate for organ preservation."),
-  ("A single ipsilateral neck node", "Nodal disease does not by itself preclude organ preservation."),
-  ("A strong wish to preserve voice", "Patient preference supports a preservation approach.")],
+ "Thyroid cartilage destruction (T4a) or a poorly functioning larynx with aspiration",
+ [("Vocal fold fixation alone, with normal swallowing", "T3 disease with fixation is a standard candidate for organ preservation."),
+  ("A single ipsilateral neck node under 3 cm", "Nodal disease does not by itself preclude organ preservation."),
+  ("A strong wish to preserve voice and avoid a stoma", "Patient preference supports a preservation approach.")],
  "Cartilage destruction (T4a) predicts poor organ preservation and a high risk of a nonfunctional, aspirating larynx after chemoradiation. Poor baseline laryngeal function also favors primary laryngectomy: significant aspiration, recurrent pneumonia, or tracheostomy or feeding-tube dependence before treatment, since radiation rarely restores a larynx that already does not protect the airway or swallow. For many T3 tumors with a functioning larynx, chemoradiation preserves the larynx without compromising survival (RTOG 91-11).",
  "Primary laryngectomy is favored by T4a cartilage destruction or a poorly functioning larynx (aspiration, tracheostomy or feeding-tube dependence) before treatment."),
 
