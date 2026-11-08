@@ -10,4 +10,8 @@ FIXES = {
          "back": 'Drain now; correct INR at the same time'},
         {"front": 'Undrained septal hematoma: nasal deformity it can cause?',
          "back": 'Saddle nose'}]},
+    # v75.0: add the styloid length card alongside the imaging card
+    "v501-general-ent-eagle-5": {"mode": "split", "cards": [
+        {"front": "Suspected Eagle syndrome: imaging of choice?", "back": "Thin-section neck CT with 3D reconstruction"},
+        {"front": "Styloid process length called elongated on CT?", "back": "More than about 25-30 mm (30 mm most often used)"}]},
 }
