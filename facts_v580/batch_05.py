@@ -146,7 +146,7 @@ FACTS = [
     {"qid": "img_ft_ocv_tbone_v532", "front": "Otic capsule-violating temporal bone fracture: hearing outcome most associated, compared with capsule-sparing?", "back": "Profound SNHL (also more facial palsy and CSF leak)"},
     {"qid": "lab_fn_emg_late_v532", "front": "Facial paralysis with fibrillation potentials on EMG and no proximal repair: reanimation?", "back": "Masseteric or hypoglossal-to-facial nerve transfer to native muscles"},
     {"qid": "lab_fn_enog60_v532", "front": "Complete Bell palsy with 60% degeneration on early ENoG: next step?", "back": "Repeat ENoG every 2-3 days through day 14"},
-    {"qid": "lab_fn_enog92_v532", "front": "Complete Bell palsy, >90% ENoG degeneration and no voluntary EMG within 14 days: classic surgery?", "back": "Middle fossa decompression of meatal foramen and labyrinthine segment"},
+    {"qid": "lab_fn_enog92_v532", "front": "Complete Bell palsy, >90% ENoG degeneration and no voluntary EMG: classic surgery and timing?", "back": "Middle fossa decompression of meatal foramen and labyrinthine segment, as soon as criteria are met (ENoG from day 3); 14 days from onset is the outer limit"},
     {"qid": "lab_fn_hb_v532", "front": "House-Brackmann grade: some forehead movement, complete eye closure with effort, noticeable synkinesis?", "back": "Grade III"},
     {"qid": "lab_fn_progressive_v532", "front": "Facial weakness worsening over months, preceded by twitching, recurrent same side: next step?", "back": "Gadolinium MRI of the entire facial nerve course including the parotid"},
     {"qid": "lab_fn_rhs_v532", "front": "Ramsay Hunt syndrome vs Bell palsy: prognosis?", "back": "Worse — treat with corticosteroids plus antiviral"},

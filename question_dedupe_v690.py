@@ -10,6 +10,7 @@ Map: retired id -> kept id.
 """
 
 RETIRED_V690 = {
+ "challenge:v490-general-ent-1-81": "challenge:v490-general-ent-1-82",  # v83: warfarin hold/bridging question removed on request
  "cc:cc-v112-mgt-general-ent-emergencies-cranial-nerve-examination-skull-base-localization": "challenge:v490-general-ent-1-91",
  "cc:cc-v112-mgt-general-ent-emergencies-lemierre-syndrome": "challenge:v490-general-ent-1-6",
  "cc:cc-v112-mgt-head-neck-oncology-head-neck-cancer-surveillance-second-primaries": "challenge:v490-head-neck-2-50",

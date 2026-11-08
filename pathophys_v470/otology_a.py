@@ -313,7 +313,7 @@ pathophysiology=(
 "**Bell palsy mechanism**: presumed viral (HSV-1) reactivation causes nerve inflammation and edema; swelling within the tight labyrinthine segment produces compression, ischemia, and conduction block or degeneration. "
 "**Why steroids early**: they reduce edema in the bony canal and improve complete recovery when started within 72 hours. "
 "**Prognosis tracks injury degree**: neurapraxia recovers completely; axonal loss recovers slowly and incompletely, with risk of synkinesis from misdirected regenerating axons. "
-"**ENoG logic**: more than 90 percent degeneration within 14 days of onset in complete paralysis predicts poor recovery and underlies the controversial middle fossa decompression. "
+"**ENoG logic**: more than 90 percent degeneration in complete paralysis (tested from day 3) predicts poor recovery and underlies the controversial middle fossa decompression, done as soon as criteria are met and no later than 14 days from onset. "
 "**Topognosis**: whether tearing, stapedial reflex, and taste are affected in principle localizes the lesion relative to the GSPN, nerve to stapedius, and chorda tympani; in practice topognostic testing is unreliable because lesions are rarely discrete. "
 "**Red flags against Bell**: slowly progressive weakness, recurrence on the same side, involvement of individual branches, or other cranial neuropathies suggest tumor."),
 ),
