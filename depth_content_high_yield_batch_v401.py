@@ -213,7 +213,7 @@ DEPTH_V401 = {
     "Otology / Neurotology": {
         "Superior Canal Dehiscence": {
             "recognize": (
-                """Superior semicircular canal dehiscence syndrome arises from a true bony defect over the superior canal that forms a third mobile window. In the 2021 Bárány Society criteria, qualifying symptoms include bone-conduction hyperacusis, sound- or pressure-induced vertigo/oscillopsia time-locked to the stimulus, or pulsatile tinnitus. Thin bone or an apparent defect on CT alone is not enough: imaging can overcall dehiscence, and symptoms and physiology must agree."""
+                """Superior semicircular canal dehiscence syndrome arises from a true bony defect over the superior semicircular canal that forms a third mobile window. In the 2021 Bárány Society criteria, qualifying symptoms include bone-conduction hyperacusis, sound- or pressure-induced vertigo/oscillopsia time-locked to the stimulus, or pulsatile tinnitus. Thin bone or an apparent defect on CT alone is not enough: imaging can overcall dehiscence, and symptoms and physiology must agree."""
             ),
             "localize": (
                 "The dehiscence sits in the plane of the superior semicircular canal, so eye "

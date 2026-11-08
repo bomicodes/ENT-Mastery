@@ -159,7 +159,7 @@ FACTS = [
     {"qid": "v490-general-ent-2-27", "front": "Older adult with bowed vocal folds, prominent vocal processes and spindle gap: diagnosis?", "back": "Presbylaryngis (age-related fold atrophy) — voice therapy"},
     {"qid": "v490-general-ent-2-28", "front": "Older inpatient who cannot sleep: best approach to prevent delirium?", "back": "Nonpharmacologic sleep support and sensory aids (return hearing aids); avoid sedatives"},
     {"qid": "v490-general-ent-2-29", "front": "Older adult with age-related hearing loss and family concern: management?", "back": "Counsel and offer bilateral hearing aid fitting"},
-    {"qid": "v490-general-ent-2-30", "front": "Older adult with falls and positive right Dix-Hallpike: treatment?", "back": "Canalith repositioning for right posterior canal; not meclizine"},
+    {"qid": "v490-general-ent-2-30", "front": "Older adult with falls and positive right Dix-Hallpike: treatment?", "back": "Canalith repositioning for right posterior semicircular canal; not meclizine"},
     {"qid": "v490-general-ent-2-31", "front": "Older patient's surgical decision opposed by family: what determines whether it stands?", "back": "Decision-specific capacity; honor an informed capable choice"},
     {"qid": "v490-topup-general-38", "front": "Insomnia in an older inpatient: which sleep medications should be avoided?", "back": "Diphenhydramine, benzodiazepines, zolpidem"},
     {"qid": "v490-topup-general-39", "front": "Older adult with severe hyposmia: most important safety counseling?", "back": "Smoke and gas detectors; check food dates, not smell"},

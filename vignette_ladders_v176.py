@@ -45,7 +45,7 @@ VIGNETTES_V176 = [
 
     _q(
         "v176_oto_vtb_app", "Vestibular Test Battery", "application",
-        "A patient with episodic imbalance has normal caloric responses but an abnormal video head-impulse test for one horizontal canal. Which interpretation is most appropriate?",
+        "A patient with episodic imbalance has normal caloric responses but an abnormal video head-impulse test for one horizontal semicircular canal. Which interpretation is most appropriate?",
         ["One test must be discarded because calorics and vHIT should always agree", "The tests interrogate the vestibulo-ocular reflex at different stimulus frequencies, so discordance can be real and should be interpreted with the clinical syndrome", "Calorics measure only saccular function", "vHIT is primarily a hearing test"], 1,
         "Caloric irrigation tests the horizontal-canal VOR at very low frequencies, whereas vHIT interrogates higher-frequency head impulses. Disease can affect these frequency ranges differently, so discordance is physiologically plausible and sometimes diagnostically useful.",
         ["Vestibular tests are not redundant copies of the same stimulus.", "Correct. Interpret the pattern across tests rather than declaring a winner.", "Calorics predominantly interrogate low-frequency horizontal-canal/superior-vestibular-nerve function.", "vHIT measures high-frequency vestibulo-ocular reflex behavior, not auditory thresholds."],

@@ -58,7 +58,7 @@ VIGNETTES_V175 = [
     _q(
         "v175_oto_pppd_app", "Persistent Postural-Perceptual Dizziness (PPPD)", "application",
         "Five months after compensated vestibular neuritis, a patient has daily nonspinning dizziness that worsens when upright, walking through grocery aisles, or viewing busy visual scenes. Neurologic examination is normal. Which diagnosis best fits?",
-        ["Persistent postural-perceptual dizziness", "Posterior canal BPPV", "Acute cerebellar stroke", "Perilymphatic fistula"], 0,
+        ["Persistent postural-perceptual dizziness", "Posterior semicircular canal BPPV", "Acute cerebellar stroke", "Perilymphatic fistula"], 0,
         "PPPD is characterized by persistent nonspinning dizziness or unsteadiness on most days for at least several months, worsened by upright posture, motion, and complex visual stimuli, often after a vestibular precipitant has otherwise compensated.",
         ["Correct. The chronic visual-motion/postural pattern is classic.", "BPPV produces brief position-triggered attacks with characteristic positional nystagmus rather than continuous visual dependence.", "A stable five-month syndrome with normal neurologic exam and a typical trigger pattern is not an acute stroke presentation.", "A fistula is more associated with pressure/strain-related vestibular symptoms and relevant ear history."],
         "PPPD is diagnosed by the pattern of symptoms and triggers—not by requiring abnormal vestibular testing.",

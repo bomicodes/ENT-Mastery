@@ -78,7 +78,7 @@
     {% if p.key == 'mastery' %}
     <div class="dp-q dp-explain">
       <div class="dp-q-meta">Teach-back</div>
-      <p class="dp-q-stem">Explain {{it.topic}} to a junior resident in 60 seconds: the mechanism, how it presents, and the one decision that most often goes wrong.</p>
+      <p class="dp-q-stem">{% if teachback_prompt_v810 is defined %}{{ teachback_prompt_v810(it.topic) }}{% else %}Explain {{it.topic}} to a junior resident in 60 seconds: why it happens, how it presents, and the one decision that most often goes wrong.{% endif %}</p>
       <textarea placeholder="Type or say your explanation, then reveal the teaching points."></textarea>
       <div class="dp-phase-actions"><button type="button" data-reveal>Reveal teaching points</button></div>
       <div class="dp-feedback" hidden>{{ textblock(m.teach) }}</div>

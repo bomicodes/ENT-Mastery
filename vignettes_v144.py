@@ -214,7 +214,7 @@ VIGNETTES_V144 = [
 
     _case("v144_oto_27", O, "Vestibular Test Battery",
           "A patient has chronic imbalance with suspected superior vestibular nerve dysfunction. Which pairing correctly links a vestibular test to the structure/function it emphasizes?",
-          ["vHIT—high-frequency semicircular canal vestibulo-ocular reflex", "Pure-tone audiometry—otolith function", "Tympanometry—saccular function", "OAE—horizontal canal function"], 0,
+          ["vHIT—high-frequency semicircular canal vestibulo-ocular reflex", "Pure-tone audiometry—otolith function", "Tympanometry—saccular function", "OAE—horizontal semicircular canal function"], 0,
           "The vestibular battery is complementary: vHIT probes high-frequency canal VOR, calorics emphasize low-frequency horizontal-canal function, and VEMPs assess otolith pathways. No single test is a complete vestibular examination.",
           "Choose vestibular tests by the frequency range and end organ you are trying to interrogate.",
           "Why can calorics be abnormal while vHIT remains normal in the same patient?", "boards"),

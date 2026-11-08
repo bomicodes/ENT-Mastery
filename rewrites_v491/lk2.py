@@ -164,7 +164,7 @@ REWRITES = {'v254_lar_polycyst_snr': {'stem': 'A 34-year-old female voice teache
                              'Superior canal dehiscence',
                              'Perilymphatic fistula'],
                  'answer': 2,
-                 'explanation': 'A dehiscence over the superior canal creates a third mobile window. Sound energy is '
+                 'explanation': 'A dehiscence over the superior semicircular canal creates a third mobile window. Sound energy is '
                                 'shunted away from the cochlea, worsening air conduction, while the lower inner-ear '
                                 'impedance improves bone conduction, sometimes below 0 dB. That produces an air-bone '
                                 'gap with a normal middle ear. Bone-conduction hyperacusis explains hearing eye '

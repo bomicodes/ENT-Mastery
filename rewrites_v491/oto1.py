@@ -157,14 +157,14 @@ REWRITES = {
   ],
   "board_pearl": "Scutum erosion with soft tissue in Prussak space is the CT hallmark of pars flaccida cholesteatoma.",
   "curveball": "CT also shows erosion over the lateral semicircular canal, and he has serviceable hearing. How does that change counseling?",
-  "curveball_answer": "A lateral canal fistula raises the risk of postoperative sensorineural loss and vertigo. Counsel about a small risk of a dead ear, plan careful matrix handling at the end of dissection without suction over the fistula, and consider staging or leaving matrix in place depending on fistula size and approach. Preoperative steroids and intraoperative facial monitoring are often used."
+  "curveball_answer": "A lateral semicircular canal fistula raises the risk of postoperative sensorineural loss and vertigo. Counsel about a small risk of a dead ear, plan careful matrix handling at the end of dissection without suction over the fistula, and consider staging or leaving matrix in place depending on fistula size and approach. Preoperative steroids and intraoperative facial monitoring are often used."
  },
  "v135_oto_03": {
   "stem": "A 45-year-old man with known left attic cholesteatoma asks to postpone surgery for 6 months because of a work project. He has intermittent otorrhea controlled with drops and a 30 dB conductive loss. He mentions that pressing on the tragus sometimes makes the room spin briefly. CT shows bony erosion over the lateral semicircular canal. Which finding most strongly argues against deferring surgery?",
   "choices": [
    "Intermittent otorrhea that responds to fluoroquinolone drops",
    "A 30 dB conductive loss with an eroded long process of the incus",
-   "Pressure-induced vertigo with CT erosion of the lateral canal",
+   "Pressure-induced vertigo with CT erosion of the lateral semicircular canal",
    "A contralateral ear with a shallow, self-cleaning retraction"
   ],
   "answer": 2,
@@ -200,7 +200,7 @@ REWRITES = {
   "curveball_answer": "Clear all other disease first and address the fistula matrix last, so an inner-ear injury does not compromise the rest of the case. Avoid suction directly over the fistula, and if matrix is removed, seal the opening immediately with fascia or bone pate. With a large fistula or adherent matrix in a hearing ear, many surgeons leave matrix in place, especially in a canal wall down cavity."
  },
  "v152_oto_01": {
-  "stem": "A 50-year-old man with serviceable hearing undergoes right tympanomastoidectomy for cholesteatoma. Preoperative CT suggested lateral semicircular canal erosion, and he had vertigo with tragal pressure. Intraoperatively, matrix overlies a 2-mm fistula of the lateral canal. Disease also fills the attic and aditus. Which operative sequence best balances disease control with inner-ear preservation?",
+  "stem": "A 50-year-old man with serviceable hearing undergoes right tympanomastoidectomy for cholesteatoma. Preoperative CT suggested lateral semicircular canal erosion, and he had vertigo with tragal pressure. Intraoperatively, matrix overlies a 2-mm fistula of the lateral semicircular canal. Disease also fills the attic and aditus. Which operative sequence best balances disease control with inner-ear preservation?",
   "choices": [
    "Drill around the fistula rim to smooth it before peeling matrix from the canal",
    "Lift the fistula matrix first so the rest of the dissection can proceed more safely",
@@ -368,7 +368,7 @@ REWRITES = {
    "Start a trial of oral steroids for presumed early cochlear otosclerosis"
   ],
   "answer": 1,
-  "explanation": "Present acoustic reflexes are incompatible with a fixed stapes, and a normal tympanogram argues against middle-ear stiffness. Supranormal bone conduction, autophony, and sound-induced vertigo complete a third-window pattern, most commonly superior canal dehiscence. The extra mobile window shunts air-conducted energy away from the cochlea while enhancing bone-conducted sound, creating a pseudoconductive gap. Confirm with low-threshold VEMPs and CT reformatted in the plane of the superior canal before any surgery, since stapes surgery would not help.",
+  "explanation": "Present acoustic reflexes are incompatible with a fixed stapes, and a normal tympanogram argues against middle-ear stiffness. Supranormal bone conduction, autophony, and sound-induced vertigo complete a third-window pattern, most commonly superior canal dehiscence. The extra mobile window shunts air-conducted energy away from the cochlea while enhancing bone-conducted sound, creating a pseudoconductive gap. Confirm with low-threshold VEMPs and CT reformatted in the plane of the superior semicircular canal before any surgery, since stapes surgery would not help.",
   "why_wrong": [
    "Normal drum and tympanogram do not prove fixation; present reflexes argue strongly against otosclerosis here.",
    "Correct.",
@@ -388,16 +388,16 @@ REWRITES = {
    "A Gufoni maneuver with the patient lying on the left side"
   ],
   "answer": 2,
-  "explanation": "Brief triggered vertigo with a positive right Dix-Hallpike showing latency, upbeating torsional nystagmus, short duration, and fatigability localizes to right posterior canal canalithiasis. The AAO-HNSF BPPV guideline recommends treating with a canalith repositioning procedure such as the Epley maneuver, which moves free otoconia out of the posterior canal into the utricle. A single maneuver resolves symptoms in most patients. Vestibular suppressants are not recommended, and imaging is unnecessary with a classic examination.",
+  "explanation": "Brief triggered vertigo with a positive right Dix-Hallpike showing latency, upbeating torsional nystagmus, short duration, and fatigability localizes to right posterior semicircular canal canalithiasis. The AAO-HNSF BPPV guideline recommends treating with a canalith repositioning procedure such as the Epley maneuver, which moves free otoconia out of the posterior semicircular canal into the utricle. A single maneuver resolves symptoms in most patients. Vestibular suppressants are not recommended, and imaging is unnecessary with a classic examination.",
   "why_wrong": [
    "Brandt-Daroff exercises are less effective than a repositioning maneuver and are not the preferred initial treatment.",
    "The guideline recommends against routine vestibular suppressants for BPPV; they do not clear otoconia and may delay compensation.",
    "Correct.",
-   "Gufoni maneuvers treat horizontal canal BPPV, while this nystagmus pattern localizes to the posterior canal."
+   "Gufoni maneuvers treat horizontal semicircular canal BPPV, while this nystagmus pattern localizes to the posterior semicircular canal."
   ],
-  "board_pearl": "Upbeat torsional, latent, fatigable nystagmus on Dix-Hallpike: posterior canal BPPV, treated with Epley.",
+  "board_pearl": "Upbeat torsional, latent, fatigable nystagmus on Dix-Hallpike: posterior semicircular canal BPPV, treated with Epley.",
   "curveball": "The Dix-Hallpike is negative, but the supine roll test produces horizontal geotropic nystagmus on both sides, stronger with the head turned right. Which canal is involved, and how does treatment change?",
-  "curveball_answer": "This is right horizontal canal canalithiasis; in the geotropic variant, the side producing stronger nystagmus is affected. Treat with a barbecue roll (Lempert) rotating toward the healthy left side, or a Gufoni maneuver lying on the healthy side. The Epley maneuver does not clear the horizontal canal."
+  "curveball_answer": "This is right horizontal semicircular canal canalithiasis; in the geotropic variant, the side producing stronger nystagmus is affected. Treat with a barbecue roll (Lempert) rotating toward the healthy left side, or a Gufoni maneuver lying on the healthy side. The Epley maneuver does not clear the horizontal semicircular canal."
  },
  "v141_oto_01": {
   "stem": "A 55-year-old man has 1 week of brief vertigo when lying back in the dentist's chair and rolling left in bed. Hearing and neurologic examination are normal. Left Dix-Hallpike testing produces upbeating torsional nystagmus after a short latency that fatigues within 20 seconds. His primary care physician ordered brain MRI and started daily meclizine. What is the best management?",
@@ -408,7 +408,7 @@ REWRITES = {
    "Left-sided repositioning maneuver, with no MRI or meclizine needed"
   ],
   "answer": 3,
-  "explanation": "This is classic left posterior canal BPPV, a bedside diagnosis based on the characteristic Dix-Hallpike response. The AAO-HNSF guideline recommends a canalith repositioning procedure and advises against radiographic imaging, vestibular testing, and routine vestibular suppressants when the diagnosis is clear and there are no additional red flags. Meclizine masks symptoms without addressing displaced otoconia. Imaging is reserved for atypical nystagmus, failure of appropriate maneuvers, or neurologic signs.",
+  "explanation": "This is classic left posterior semicircular canal BPPV, a bedside diagnosis based on the characteristic Dix-Hallpike response. The AAO-HNSF guideline recommends a canalith repositioning procedure and advises against radiographic imaging, vestibular testing, and routine vestibular suppressants when the diagnosis is clear and there are no additional red flags. Meclizine masks symptoms without addressing displaced otoconia. Imaging is reserved for atypical nystagmus, failure of appropriate maneuvers, or neurologic signs.",
   "why_wrong": [
    "Vestibular testing is not needed when the Dix-Hallpike findings are classic, and it delays definitive treatment.",
    "With classic nystagmus and a normal neurologic exam, the guideline recommends against imaging before treatment.",
@@ -422,7 +422,7 @@ REWRITES = {
  "v204_oto_bppv_snr": {
   "stem": "A 63-year-old woman is referred for refractory BPPV after six Epley maneuvers over 2 months. Dix-Hallpike testing to either side and the straight head-hanging position produce immediate downbeating nystagmus without latency that persists as long as the position is held and does not fatigue. She has no vertigo intensity matching the nystagmus and mild gait imbalance. What is the best next step?",
   "choices": [
-   "Deep head-hanging maneuver for presumed anterior canal canalithiasis",
+   "Deep head-hanging maneuver for presumed anterior semicircular canal canalithiasis",
    "MRI of the brain focused on the posterior fossa and craniocervical junction",
    "A Semont liberatory maneuver, since many Epley failures respond to it",
    "Vestibular rehabilitation with habituation exercises for refractory BPPV"
@@ -430,14 +430,14 @@ REWRITES = {
   "answer": 1,
   "explanation": "Peripheral BPPV produces nystagmus with a short latency, duration under a minute, fatigability, and a direction matching the stimulated canal. Immediate, persistent, nonfatiguing downbeat nystagmus in multiple positions, with little vertigo and gait imbalance, is a central positional nystagmus pattern. Causes include cerebellar degeneration, Chiari malformation, tumors of the fourth ventricle region, and demyelination. Failure of appropriate maneuvers plus atypical nystagmus should prompt MRI rather than more repositioning.",
   "why_wrong": [
-   "Anterior canal BPPV can cause downbeat nystagmus, but it is transient and fatigable, not immediate and persistent in every position.",
+   "Anterior semicircular canal BPPV can cause downbeat nystagmus, but it is transient and fatigable, not immediate and persistent in every position.",
    "Correct.",
    "Switching maneuvers assumes a peripheral diagnosis that this nonfatiguing pattern contradicts.",
    "Rehabilitation without imaging risks missing a structural posterior fossa lesion that explains the nystagmus."
   ],
   "board_pearl": "Positional nystagmus that is immediate, persistent, nonfatiguing, or pure downbeat is central until imaging proves otherwise.",
-  "curveball": "What positional nystagmus pattern supports horizontal canal cupulolithiasis, and how do you distinguish it from central positional nystagmus?",
-  "curveball_answer": "Horizontal canal cupulolithiasis gives apogeotropic, direction-changing horizontal nystagmus on the roll test that persists while the head is held but beats with consistent canal-plane geometry, often with a null point when the head is turned slightly toward the affected side. Central nystagmus lacks a canal-specific pattern, often has little vertigo, coexists with other cerebellar signs, and does not respond to maneuvers."
+  "curveball": "What positional nystagmus pattern supports horizontal semicircular canal cupulolithiasis, and how do you distinguish it from central positional nystagmus?",
+  "curveball_answer": "Horizontal semicircular canal cupulolithiasis gives apogeotropic, direction-changing horizontal nystagmus on the roll test that persists while the head is held but beats with consistent canal-plane geometry, often with a null point when the head is turned slightly toward the affected side. Central nystagmus lacks a canal-specific pattern, often has little vertigo, coexists with other cerebellar signs, and does not respond to maneuvers."
  },
  "v11_oto_05": {
   "stem": "A 74-year-old man with insulin-treated diabetes has 6 weeks of severe right otalgia that wakes him at night and scant otorrhea, despite two courses of ciprofloxacin drops. Granulation tissue sits on the floor of the canal at the bony-cartilaginous junction, and he has new right lower and upper facial weakness. Canal culture grows Pseudomonas aeruginosa, and ESR is 96 mm/h. What is the most likely diagnosis?",
@@ -668,7 +668,7 @@ REWRITES = {
    "Superior semicircular canal dehiscence"
   ],
   "answer": 3,
-  "explanation": "Superior canal dehiscence creates a third mobile window in the inner ear. Air-conducted sound energy escapes through the dehiscence, raising air thresholds, while bone-conducted sound is enhanced, producing supranormal bone conduction and a pseudoconductive low-frequency gap. The same pathway lets sound and pressure move endolymph in the superior canal, causing Tullio and Hennebert phenomena, and amplifies internal sounds such as eye movements. Normal tympanometry and present reflexes show the middle ear is not the cause.",
+  "explanation": "Superior canal dehiscence creates a third mobile window in the inner ear. Air-conducted sound energy escapes through the dehiscence, raising air thresholds, while bone-conducted sound is enhanced, producing supranormal bone conduction and a pseudoconductive low-frequency gap. The same pathway lets sound and pressure move endolymph in the superior semicircular canal, causing Tullio and Hennebert phenomena, and amplifies internal sounds such as eye movements. Normal tympanometry and present reflexes show the middle ear is not the cause.",
   "why_wrong": [
    "Ménière disease causes spontaneous vertigo attacks and fluctuating low-frequency sensorineural loss, not a pseudoconductive gap.",
    "Stapes fixation abolishes acoustic reflexes and does not explain hearing eye movements or sound-induced vertigo.",
@@ -677,7 +677,7 @@ REWRITES = {
   ],
   "board_pearl": "Low-frequency air-bone gap with present reflexes and supranormal bone conduction: superior canal dehiscence.",
   "curveball": "Which CT reformat and physiologic test would you use to support the diagnosis before discussing repair?",
-  "curveball_answer": "Obtain high-resolution temporal bone CT with thin slices reformatted in the Pöschl plane, parallel to the superior canal, and the Stenvers plane, perpendicular to it. Standard axial and coronal images overcall dehiscence. Physiologically, cervical VEMPs with abnormally low thresholds or ocular VEMPs with enlarged amplitudes confirm a third window."
+  "curveball_answer": "Obtain high-resolution temporal bone CT with thin slices reformatted in the Pöschl plane, parallel to the superior semicircular canal, and the Stenvers plane, perpendicular to it. Standard axial and coronal images overcall dehiscence. Physiologically, cervical VEMPs with abnormally low thresholds or ocular VEMPs with enlarged amplitudes confirm a third window."
  },
  "v143_oto_04": {
   "stem": "A 47-year-old woman has 2 years of right autophony, hearing her heartbeat in that ear, and vertigo when lifting heavy objects or hearing her child scream. Audiometry shows a right low-frequency air-bone gap with present reflexes, and cervical VEMP thresholds are abnormally low on the right. Standard 1.25-mm axial head CT from the emergency department was read as normal. What is the best next diagnostic step before considering repair?",
@@ -693,7 +693,7 @@ REWRITES = {
    "Correct.",
    "MRI can suggest dehiscence on T2 sequences but is less precise than CT for the bony defect needed in surgical planning.",
    "ECoG may show an elevated SP/AP ratio in dehiscence but does not image the defect or localize it for repair.",
-   "Middle-ear exploration does not reach the superior canal and exposes her to surgery without a diagnosis."
+   "Middle-ear exploration does not reach the superior semicircular canal and exposes her to surgery without a diagnosis."
   ],
   "board_pearl": "SCD needs symptoms, physiology (low VEMP thresholds), and thin-slice CT in the Pöschl plane to agree.",
   "curveball": "Which disabling symptoms most often justify canal plugging or resurfacing rather than observation?",
@@ -720,10 +720,10 @@ REWRITES = {
   "curveball_answer": "Cervical VEMPs show abnormally low thresholds and ocular VEMPs show enlarged amplitudes on the affected side, reflecting enhanced vestibular sensitivity to sound. High-resolution CT with sub-millimeter slices reformatted in the Pöschl and Stenvers planes demonstrates the bony defect. Both should match the symptomatic side before surgery is discussed."
  },
  "v204_oto_sscd_snr": {
-  "stem": "A 49-year-old man has 3 years of disabling right autophony and vertigo triggered by loud sounds and straining that keeps him from working. Right cVEMP thresholds are low, and the left are normal. Pöschl-plane CT shows a 4-mm right superior canal dehiscence and thin but intact bone over the left superior canal. He has no left-sided symptoms. Counseling and avoidance strategies have failed. What is the best management?",
+  "stem": "A 49-year-old man has 3 years of disabling right autophony and vertigo triggered by loud sounds and straining that keeps him from working. Right cVEMP thresholds are low, and the left are normal. Pöschl-plane CT shows a 4-mm right superior canal dehiscence and thin but intact bone over the left superior semicircular canal. He has no left-sided symptoms. Counseling and avoidance strategies have failed. What is the best management?",
   "choices": [
    "Perform right stapedotomy to close the low-frequency air-bone gap",
-   "Repair both superior canals in a single sitting to prevent later left symptoms",
+   "Repair both superior semicircular canals in a single sitting to prevent later left symptoms",
    "Reinforce the right round window as the definitive dehiscence treatment",
    "Plug or resurface the right canal by a middle fossa or transmastoid route"
   ],
@@ -745,7 +745,7 @@ REWRITES = {
    "Inner-ear decompression sickness after diving",
    "Perilymph fistula from inner-ear barotrauma",
    "Middle-ear barotrauma with hemotympanum",
-   "Posterior canal BPPV triggered by head motion"
+   "Posterior semicircular canal BPPV triggered by head motion"
   ],
   "answer": 1,
   "explanation": "Forceful Valsalva against a blocked eustachian tube transmits a pressure spike through the cochlear aqueduct and inner ear, which can rupture the oval or round window membrane. Perilymph leaks into the middle ear, causing abrupt sensorineural loss, tinnitus, and vertigo. A positive fistula sign (pressure-induced vertigo) supports the diagnosis. The deciding clues are symptoms immediately after a forceful Valsalva at shallow depth, which essentially excludes decompression sickness, and a normal tympanic membrane.",
@@ -1062,7 +1062,7 @@ REWRITES = {
  "v204_oto_lab_fnd": {
   "stem": "A 33-year-old woman has 4 days of right ear pain and fever from acute otitis media. Today she developed continuous spinning vertigo with nausea and new right tinnitus. Exam shows a red, bulging right drum, left-beating horizontal-torsional nystagmus, and an abnormal right head impulse. There is no cholesteatoma, meningismus, or other neurologic deficit. Audiometry shows a 35 dB right sensorineural loss. Which diagnosis best fits?",
   "choices": [
-   "Posterior canal BPPV triggered by the ear infection",
+   "Posterior semicircular canal BPPV triggered by the ear infection",
    "Right vestibular neuritis coincident with the infection",
    "Serous labyrinthitis from the adjacent otitis media",
    "Labyrinthine fistula from chronic middle-ear disease"
@@ -1073,7 +1073,7 @@ REWRITES = {
    "BPPV causes brief positional vertigo, not continuous vertigo with spontaneous nystagmus and sensorineural loss.",
    "Vestibular neuritis spares hearing, so the new sensorineural loss during active otitis media points to labyrinthitis instead.",
    "Correct.",
-   "Labyrinthine fistula usually results from cholesteatoma eroding the lateral canal, and none is present."
+   "Labyrinthine fistula usually results from cholesteatoma eroding the lateral semicircular canal, and none is present."
   ],
   "board_pearl": "AOM plus vertigo and partial SNHL: serous labyrinthitis; profound loss or meningismus suggests suppurative disease.",
   "curveball": "Which fever, neurologic, meningeal, or mastoid findings would convert this into an urgent intracranial or source-control problem?",
@@ -1196,8 +1196,8 @@ REWRITES = {
    "Correct."
   ],
   "board_pearl": "An air-bone gap with present acoustic reflexes is not middle-ear disease; think third window.",
-  "curveball": "Which VEMP and CT findings would you want before offering superior canal surgery?",
-  "curveball_answer": "On VEMP testing, look for an abnormally low cervical VEMP threshold or an enlarged ocular VEMP amplitude on the left. On CT, sub-millimeter temporal bone slices reformatted in the Pöschl and Stenvers planes should show a dehiscence of the left superior canal. Symptoms, VEMPs, and CT should all point to the same ear before surgery is offered."
+  "curveball": "Which VEMP and CT findings would you want before offering superior semicircular canal surgery?",
+  "curveball_answer": "On VEMP testing, look for an abnormally low cervical VEMP threshold or an enlarged ocular VEMP amplitude on the left. On CT, sub-millimeter temporal bone slices reformatted in the Pöschl and Stenvers planes should show a dehiscence of the left superior semicircular canal. Symptoms, VEMPs, and CT should all point to the same ear before surgery is offered."
  },
  "v124_oto_02": {
   "stem": "A 40-year-old man has years of intermittent left otorrhea, now dry, and mild left hearing loss. His canal is narrow and tortuous, so the drum cannot be fully seen in clinic. Audiometry shows a 20 dB left conductive loss with normal bone conduction. Left tympanometry is a flat type B tracing with an ear canal volume of 3.4 mL; the right ear canal volume is 1.2 mL. Which finding best explains this pattern?",
@@ -1277,7 +1277,7 @@ REWRITES = {
   ],
   "board_pearl": "Before stapes surgery, present reflexes or Tullio symptoms mandate a search for a third window.",
   "curveball": "What CT plane and VEMP pattern would strengthen the diagnosis, and what imaging pitfall can overcall dehiscence?",
-  "curveball_answer": "Thin-slice CT reformatted in the Pöschl plane, parallel to the superior canal, should show a clear gap in the bony roof, confirmed on Stenvers views. Cervical VEMPs with low thresholds or ocular VEMPs with large amplitudes support it. Thick slices or standard axial and coronal planes cause partial-volume averaging that makes thin bone appear absent, overcalling dehiscence."
+  "curveball_answer": "Thin-slice CT reformatted in the Pöschl plane, parallel to the superior semicircular canal, should show a clear gap in the bony roof, confirmed on Stenvers views. Cervical VEMPs with low thresholds or ocular VEMPs with large amplitudes support it. Thick slices or standard axial and coronal planes cause partial-volume averaging that makes thin bone appear absent, overcalling dehiscence."
  },
  "v124_oto_04": {
   "stem": "A 71-year-old retired lawyer has bilateral severe sensorineural hearing loss with thresholds of 70 to 85 dB. He wears well-fit, verified premium hearing aids full time, but aided sentence recognition in quiet is 30% in the right ear and 38% in the left. He has stopped attending social events. His health is good and cognitive screening is normal. What is the most appropriate next step?",
@@ -1365,7 +1365,7 @@ REWRITES = {
    "Recurrent vestibular neuritis",
    "Ménière disease",
    "Vestibular migraine",
-   "Posterior canal BPPV"
+   "Posterior semicircular canal BPPV"
   ],
   "answer": 2,
   "explanation": "Vestibular migraine is diagnosed by recurrent vestibular episodes of moderate or severe intensity lasting 5 minutes to 72 hours, a history of migraine, and migraine features such as headache, photophobia, or phonophobia in at least half of episodes. It is thought to reflect migraine mechanisms acting on central and peripheral vestibular pathways. Normal, stable hearing on serial audiograms is the deciding clue against Ménière disease, which requires documented fluctuating low-frequency loss.",
@@ -1377,7 +1377,7 @@ REWRITES = {
   ],
   "board_pearl": "Recurrent vertigo of minutes to 72 hours with migraine features and normal hearing: vestibular migraine.",
   "curveball": "She also has a positive Dix-Hallpike on one side. How do you avoid forcing two disorders into one diagnosis?",
-  "curveball_answer": "Treat each finding on its own merits. Classic latent, fatigable, upbeat torsional nystagmus indicates coexisting posterior canal BPPV, which is common in vestibular migraine, and is treated with repositioning. Her spontaneous hours-long attacks still reflect migraine. Atypical or persistent positional nystagmus during an attack may be central migrainous nystagmus and should not be repeatedly repositioned."
+  "curveball_answer": "Treat each finding on its own merits. Classic latent, fatigable, upbeat torsional nystagmus indicates coexisting posterior semicircular canal BPPV, which is common in vestibular migraine, and is treated with repositioning. Her spontaneous hours-long attacks still reflect migraine. Atypical or persistent positional nystagmus during an attack may be central migrainous nystagmus and should not be repeatedly repositioned."
  },
  "v143_oto_05": {
   "stem": "A 33-year-old woman with migraine since college has had recurrent 1- to 3-hour episodes of spinning and motion sensitivity, usually with photophobia, over 18 months. Hearing is normal on audiometry, there is no fluctuating aural fullness, and the neurologic exam between episodes is normal. She has no stroke risk factors or new neurologic symptoms. She asks what testing is needed before treatment. What is the best next step?",
@@ -1442,7 +1442,7 @@ REWRITES = {
  "v124_oto_07": {
   "stem": "A 52-year-old man developed sudden severe continuous vertigo, nausea, and gait unsteadiness 2 days ago after a cold. Hearing is unchanged and audiometry is normal. He has left-beating horizontal-torsional nystagmus that increases on left gaze and does not reverse with right gaze. Head impulse testing shows a corrective saccade when the head is turned rapidly to the right. There is no skew deviation or other neurologic deficit. What is the most likely localization?",
   "choices": [
-   "Right posterior canal otoconial debris",
+   "Right posterior semicircular canal otoconial debris",
    "Left peripheral vestibular hypofunction",
    "Right cerebellar hemisphere ischemia",
    "Right peripheral vestibular hypofunction"
@@ -1450,7 +1450,7 @@ REWRITES = {
   "answer": 3,
   "explanation": "In a peripheral vestibular deficit, the intact side drives the eyes toward the weak side, and the fast phase beats away from the lesion, toward the healthy ear. Left-beating nystagmus that obeys Alexander's law therefore implies a right-sided deficit. The head impulse confirms it: rapid rotation toward the hypofunctioning right side cannot be matched by the vestibulo-ocular reflex, so a corrective saccade appears. With normal hearing and no central signs, this fits right vestibular neuritis.",
   "why_wrong": [
-   "Posterior canal BPPV causes brief positional upbeat torsional nystagmus, not continuous spontaneous horizontal nystagmus.",
+   "Posterior semicircular canal BPPV causes brief positional upbeat torsional nystagmus, not continuous spontaneous horizontal nystagmus.",
    "Left hypofunction would cause right-beating nystagmus and an abnormal head impulse toward the left.",
    "Cerebellar stroke usually produces a normal head impulse, direction-changing nystagmus, or skew, none of which are present.",
    "Correct."
@@ -1465,7 +1465,7 @@ REWRITES = {
    "Left vestibular neuritis; scheduled meclizine for 4 weeks to prevent relapse",
    "Left vestibular neuritis; brief suppressants then early mobilization",
    "Left labyrinthitis; intratympanic steroid to rescue the cochlear function",
-   "Left horizontal canal BPPV; barbecue roll repositioning in clinic today"
+   "Left horizontal semicircular canal BPPV; barbecue roll repositioning in clinic today"
   ],
   "answer": 1,
   "explanation": "A continuous acute vestibular syndrome with unidirectional nystagmus beating away from the left, an abnormal left head impulse, no skew, and normal hearing indicates left vestibular neuritis. Vestibular suppressants help only for the first few days of severe symptoms; prolonged use slows central compensation. Early mobilization and vestibular rehabilitation speed recovery. Corticosteroids may improve caloric recovery when started early, but their effect on long-term symptoms is debated.",

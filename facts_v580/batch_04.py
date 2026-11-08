@@ -235,8 +235,8 @@ FACTS = [
     {"qid": "v490-otology-2-34", "front": "Steroid-dependent autoimmune inner ear disease on prolonged high-dose prednisone: main reason to change strategy?", "back": "Cumulative steroid toxicity — needs a steroid-sparing plan"},
     {"qid": "v490-otology-2-35", "front": "Main immunocompetent site of the inner ear?", "back": "Endolymphatic sac"},
     {"qid": "v490-otology-2-36", "front": "Secondary autoimmune inner ear disease: which GI disorder is a recognized association?", "back": "Inflammatory bowel disease (ulcerative colitis, Crohn)"},
-    {"qid": "v11_oto_04", "front": "Latent, fatigable upbeat torsional nystagmus on Dix-Hallpike: treatment?", "back": "Epley canalith repositioning in clinic today (posterior canal BPPV)"},
-    {"qid": "v490-otology-1-86", "front": "Geotropic horizontal canal BPPV, stronger nystagmus turning right: treatment?", "back": "Barbecue roll toward the left (healthy) side — right ear affected"},
-    {"qid": "v490-otology-1-87", "front": "Apogeotropic persistent horizontal nystagmus on roll test, weaker turning left: diagnosis?", "back": "Left horizontal canal cupulolithiasis"},
+    {"qid": "v11_oto_04", "front": "Latent, fatigable upbeat torsional nystagmus on Dix-Hallpike: treatment?", "back": "Epley canalith repositioning in clinic today (posterior semicircular canal BPPV)"},
+    {"qid": "v490-otology-1-86", "front": "Geotropic horizontal semicircular canal BPPV, stronger nystagmus turning right: treatment?", "back": "Barbecue roll toward the left (healthy) side — right ear affected"},
+    {"qid": "v490-otology-1-87", "front": "Apogeotropic persistent horizontal nystagmus on roll test, weaker turning left: diagnosis?", "back": "Left horizontal semicircular canal cupulolithiasis"},
     {"qid": "v490-otology-1-88", "front": "Typical BPPV meeting diagnostic criteria: role of imaging, vestibular testing, suppressants?", "back": "None routinely — reposition instead"},
 ]

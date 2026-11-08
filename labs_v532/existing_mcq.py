@@ -256,8 +256,8 @@ MCQ_BY_CASE = {
   "tb5": {
     "question": "A patient has hyperacusis, tinnitus and vertigo. The high-resolution temporal bone CT pictured is reviewed for the bone over the superior semicircular canal at the floor of the middle cranial fossa. Which finding is present?",
     "choices": [
-      "Thinning or dehiscence of the superior canal roof, bilaterally",
-      "Thinning or dehiscence of the superior canal roof, on one side only",
+      "Thinning or dehiscence of the superior semicircular canal roof, bilaterally",
+      "Thinning or dehiscence of the superior semicircular canal roof, on one side only",
       "Erosion of the lateral semicircular canal by soft tissue",
       "Lucency of the otic capsule anterior to the oval window",
     ],

@@ -975,14 +975,14 @@ VIGNETTES = [{'topic': 'Systemic / Granulomatous Disease Manifestations in ENT',
           'rolling over in bed or looking up to a shelf, and she takes amlodipine and sertraline. Orthostatic vitals '
           'are normal. On the right-sided Dix-Hallpike test, upbeating torsional nystagmus appears after a few '
           "seconds' latency and fades within 30 seconds. What is the most appropriate management?",
-  'choices': ['Canalith repositioning maneuver for the right posterior canal',
+  'choices': ['Canalith repositioning maneuver for the right posterior semicircular canal',
               'Meclizine scheduled three times daily for vestibular suppression',
               'MRI of the brain to exclude a central cause of positional vertigo',
               'Discontinue amlodipine because of suspected orthostatic dizziness'],
   'answer': 0,
   'explanation': 'BPPV is the most common vestibular cause of dizziness in older adults and an underrecognized '
                  'contributor to falls. The positive right Dix-Hallpike test with latency, upbeating torsional '
-                 'nystagmus, and fatigue within a minute identifies right posterior canal canalithiasis. The 2017 '
+                 'nystagmus, and fatigue within a minute identifies right posterior semicircular canal canalithiasis. The 2017 '
                  'AAO-HNSF BPPV guideline recommends canalith repositioning, such as the Epley maneuver, and '
                  'recommends against routine vestibular suppressants and imaging in typical cases. It also advises '
                  'assessing for fall risk and home safety, which is especially relevant in this patient.',
