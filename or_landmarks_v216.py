@@ -16,7 +16,7 @@ TARGETS = [
             "long process/lenticular process of the incus",
             "stapes head, crura, and footplate in the oval window",
             "pyramidal eminence and stapedius tendon",
-            "tympanic segment of the facial nerve above the oval window",
+            "tympanic segment of the facial nerve, directly superior to the oval window and stapes and inferior to the lateral semicircular canal",
             "chorda tympani in the posterior mesotympanum",
             "promontory and round-window niche as inferior orientation landmarks",
         ],
