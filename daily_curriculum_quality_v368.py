@@ -933,7 +933,7 @@ CURVEBALL_OVERRIDES = {
         "language access and consider implantation for persistently poor benefit rather than from threshold alone."
     ),
     "v113-oto-02": (
-        "Use submillimeter temporal-bone CT reformatted in the plane of the superior canal "
+        "Use submillimeter temporal-bone CT reformatted in the plane of the superior semicircular canal "
         "(Pöschl) and orthogonal to it (Stenvers), plus VEMP testing. A low cVEMP threshold "
         "and/or increased oVEMP amplitude supports third-window physiology; symptoms, physiology, "
         "and dedicated CT should agree before repair is offered."

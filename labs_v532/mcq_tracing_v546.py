@@ -570,14 +570,14 @@ MCQ_BY_CASE = {'aud1': {'question': 'An adult has right air-conduction threshold
                           "frequency, so always apply your own lab's norms.",
            'domain': 'Otology / Neurotology',
            'topic': 'Caloric unilateral weakness'},
- 'vest2': {'question': 'Video head impulse testing shows right horizontal canal gain of 0.95 with no '
-                       'saccades and left horizontal canal gain of 0.55 with overt corrective saccades. '
+ 'vest2': {'question': 'Video head impulse testing shows right horizontal semicircular canal gain of 0.95 with no '
+                       'saccades and left horizontal semicircular canal gain of 0.55 with overt corrective saccades. '
                        'Vertical canal gains are 0.85-0.95 bilaterally. Device norms for horizontal gain are '
                        'about 0.8 or higher. Which interpretation is most accurate?',
-           'choices': ['Right horizontal canal hypofunction, because the eyes drift toward the right',
+           'choices': ['Right horizontal semicircular canal hypofunction, because the eyes drift toward the right',
                        'A central lesion, because only one canal plane is affected',
                        'A normal study, because overt saccades are expected during fast impulses',
-                       'Reduced high-frequency VOR function of the left horizontal canal'],
+                       'Reduced high-frequency VOR function of the left horizontal semicircular canal'],
            'answer': 3,
            'explanation': 'Low gain on head impulses toward the left, plus corrective saccades, shows the '
                           'left horizontal-canal VOR cannot stabilize gaze, which means peripheral '
@@ -603,7 +603,7 @@ MCQ_BY_CASE = {'aud1': {'question': 'An adult has right air-conduction threshold
                           'vestibular suppressants and imaging are not recommended for typical BPPV. Pearl: '
                           'the upper pole of the eye beats toward the affected, downward ear.',
            'domain': 'Otology / Neurotology',
-           'topic': 'Posterior canal BPPV treatment'},
+           'topic': 'Posterior semicircular canal BPPV treatment'},
  'vest4': {'question': 'A patient with chronic dizziness has VNG showing saccadic smooth pursuit in both '
                        'directions and gaze-evoked nystagmus that changes direction with the direction of '
                        'gaze. Saccade velocity and accuracy are normal, and there is no spontaneous '
@@ -623,7 +623,7 @@ MCQ_BY_CASE = {'aud1': {'question': 'An adult has right air-conduction threshold
            'domain': 'Otology / Neurotology',
            'topic': 'Central oculomotor signs on VNG'},
  'v8': {'question': 'A patient with recurrent episodic vertigo has a 40% right caloric weakness, but video '
-                    'head impulse testing shows normal horizontal canal gains bilaterally with no corrective '
+                    'head impulse testing shows normal horizontal semicircular canal gains bilaterally with no corrective '
                     'saccades. Both studies are technically adequate. What is the best explanation?',
         'choices': ['The caloric result must be wrong, because vHIT is more objective',
                     'The two tests measure VOR at different frequencies, which disease can affect '
@@ -640,16 +640,16 @@ MCQ_BY_CASE = {'aud1': {'question': 'An adult has right air-conduction threshold
         'domain': 'Otology / Neurotology',
         'topic': 'Caloric-vHIT dissociation'},
  'v9': {'question': "After an episode of acute continuous vertigo, a patient's video head impulse testing "
-                    'shows left horizontal canal gain of 0.5 with corrective saccades. Left posterior canal '
+                    'shows left horizontal semicircular canal gain of 0.5 with corrective saccades. Left posterior semicircular canal '
                     'gain and all right-sided canal gains are normal. Which pathway is most likely affected?',
         'choices': ['The left superior vestibular nerve',
                     'The left inferior vestibular nerve',
                     'The left cochlear nerve and the saccule',
                     'The right vestibular nucleus in the brainstem'],
         'answer': 0,
-        'explanation': 'The superior vestibular nerve supplies the horizontal and anterior canals and the '
-                       'utricle, so a horizontal-canal deficit with a spared posterior canal localizes to '
-                       'that division. The inferior vestibular nerve supplies the posterior canal and the '
+        'explanation': 'The superior vestibular nerve supplies the horizontal and anterior semicircular canals and the '
+                       'utricle, so a horizontal-canal deficit with a spared posterior semicircular canal localizes to '
+                       'that division. The inferior vestibular nerve supplies the posterior semicircular canal and the '
                        'saccule, which are normal here. Pearl: map the affected canals, then add cVEMP '
                        '(saccule and inferior nerve) and oVEMP (utricle and superior nerve) to define how '
                        'much of the nerve is involved.',
@@ -678,7 +678,7 @@ MCQ_BY_CASE = {'aud1': {'question': 'An adult has right air-conduction threshold
                      'to evaluate this?',
          'choices': ['Gadolinium-enhanced MRI of the internal auditory canals',
                      'Electrocochleography to measure the SP/AP ratio',
-                     'Thin-section temporal bone CT with superior canal reformats',
+                     'Thin-section temporal bone CT with superior semicircular canal reformats',
                      'Exploratory tympanotomy with a planned stapedotomy'],
          'answer': 2,
          'explanation': 'Enhanced, low-threshold VEMPs together with sound- and pressure-induced symptoms '

@@ -126,7 +126,7 @@ VIGNETTES = [
         "choices": [
             "A thin or absent bony roof over the superior semicircular canal",
             "Attic soft-tissue opacification with erosion of the scutum",
-            "A vestibular aqueduct wider than the posterior canal",
+            "A vestibular aqueduct wider than the posterior semicircular canal",
             "A lucent focus in the bone just anterior to the oval window"
         ],
         "answer": 3,

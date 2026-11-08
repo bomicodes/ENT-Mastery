@@ -53,7 +53,7 @@ CURVEBALLS = {
     },
     'cc-v112-rec-otology-neurotology-bppv': {
         "curveball": 'The Dix-Hallpike is negative, but the supine roll test produces horizontal geotropic nystagmus. Which canal, which side, and which maneuver?',
-        "curveball_answer": 'Horizontal geotropic nystagmus means lateral canal canalithiasis, and the affected ear is the side with the stronger nystagmus. Treat with a barbecue (Lempert) roll toward the healthy side or a Gufoni maneuver. Apogeotropic nystagmus suggests cupulolithiasis, where the weaker side is usually affected. The 2017 BPPV guideline recommends a supine roll test when the history fits but the Dix-Hallpike is negative.',
+        "curveball_answer": 'Horizontal geotropic nystagmus means lateral semicircular canal canalithiasis, and the affected ear is the side with the stronger nystagmus. Treat with a barbecue (Lempert) roll toward the healthy side or a Gufoni maneuver. Apogeotropic nystagmus suggests cupulolithiasis, where the weaker side is usually affected. The 2017 BPPV guideline recommends a supine roll test when the history fits but the Dix-Hallpike is negative.',
     },
     'cc-v112-mgt-otology-neurotology-bppv': {
         "curveball": 'An elderly patient with posterior-canal BPPV is successfully repositioned. What does the 2017 guideline say about restrictions, imaging, medications and follow-up?',
@@ -320,7 +320,7 @@ CURVEBALLS = {
         "curveball_answer": 'Diabetes is a relative, not absolute, contraindication to systemic steroids. Intratympanic steroid can be used as initial therapy and avoids systemic hyperglycemia; the guideline allows it when systemic steroids are risky. Alternatively, give oral steroids with close glucose monitoring coordinated with the primary physician. Either way, start promptly, since treatment within 2 weeks of onset gives the best chance of benefit.',
     },
     'cc-v112-rec-otology-neurotology-superior-canal-dehiscence': {
-        "curveball": 'CT shows a dehiscent superior canal, but the patient has no symptoms. Do you operate?',
+        "curveball": 'CT shows a dehiscent superior semicircular canal, but the patient has no symptoms. Do you operate?',
         "curveball_answer": "No. Radiographic dehiscence on CT is far more common than the clinical syndrome, and partial volume averaging overcalls thin bone. Diagnosis needs symptoms plus physiologic confirmation, such as low cervical VEMP thresholds or enlarged ocular VEMP amplitudes, a low-frequency conductive gap with bone conduction better than 0 dB, or sound- or pressure-evoked nystagmus in the canal's plane. Asymptomatic patients are observed.",
     },
     'cc-v112-mgt-otology-neurotology-superior-canal-dehiscence': {
@@ -385,7 +385,7 @@ CURVEBALLS = {
     },
     'cc-v112-mgt-otology-neurotology-vestibular-neuritis': {
         "curveball": 'Weeks after recovering from vestibular neuritis, the patient develops brief vertigo when rolling over in bed. What is the likely cause?',
-        "curveball_answer": 'Posterior canal BPPV is a well-known sequel of superior vestibular neuritis. Utricular damage can release otoconia, while the posterior canal, supplied by the spared inferior vestibular nerve, still works and can signal the debris. Perform a Dix-Hallpike test and treat with a canalith repositioning maneuver such as the Epley. This is distinct from incomplete compensation and responds quickly.',
+        "curveball_answer": 'Posterior semicircular canal BPPV is a well-known sequel of superior vestibular neuritis. Utricular damage can release otoconia, while the posterior semicircular canal, supplied by the spared inferior vestibular nerve, still works and can signal the debris. Perform a Dix-Hallpike test and treat with a canalith repositioning maneuver such as the Epley. This is distinct from incomplete compensation and responds quickly.',
     },
     'cc-v112-rec-otology-neurotology-vestibular-rehabilitation': {
         "curveball": 'A patient with bilateral vestibular loss from gentamicin has oscillopsia when walking. How does rehabilitation differ from unilateral loss?',
@@ -409,7 +409,7 @@ CURVEBALLS = {
     },
     'cc-v112-mgt-otology-neurotology-vestibular-test-battery': {
         "curveball": 'Which test would assess the saccule and inferior vestibular nerve, which lateral-canal calorics and head impulse testing miss?',
-        "curveball_answer": 'Cervical VEMP tests the saccule and inferior vestibular nerve, while ocular VEMP tests the utricle and superior vestibular nerve. Video head impulse testing can also check the posterior canal, supplied by the inferior nerve, and the anterior canal, supplied by the superior nerve. Calorics test only the lateral canal at low frequency. Together these separate superior from inferior vestibular neuritis.',
+        "curveball_answer": 'Cervical VEMP tests the saccule and inferior vestibular nerve, while ocular VEMP tests the utricle and superior vestibular nerve. Video head impulse testing can also check the posterior semicircular canal, supplied by the inferior nerve, and the anterior semicircular canal, supplied by the superior nerve. Calorics test only the lateral semicircular canal at low frequency. Together these separate superior from inferior vestibular neuritis.',
     },
     'cc-v112-rec-pediatric-otolaryngology-aom-ome-tympanostomy-decisions': {
         "curveball": 'A child has bilateral effusions for 4 months with documented hearing difficulty and a speech delay. What does the 2022 tubes guideline recommend?',

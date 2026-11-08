@@ -95,7 +95,7 @@ def tympanogram(ears, title="Tympanogram"):
     return _svg(W, H, "".join(g), title)
 
 
-def vhit(right_gain, left_gain, left_saccade=False, right_saccade=False, title="vHIT, horizontal canals"):
+def vhit(right_gain, left_gain, left_saccade=False, right_saccade=False, title="vHIT, horizontal semicircular canals"):
     W, H = 380, 190
     g = []
     for k, (side, gain, sac, col) in enumerate((("Right", right_gain, right_saccade, RED), ("Left", left_gain, left_saccade, BLUE))):

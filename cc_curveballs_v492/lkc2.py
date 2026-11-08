@@ -47,7 +47,7 @@ CURVEBALLS = {
     },
     'cc-v112-rec-otology-neurotology-temporal-bone-anatomy': {
         "curveball": "The mastoid is sclerotic and you cannot find the lateral semicircular canal. Which landmarks keep you safe, and where is the facial nerve once the canal is identified?",
-        "curveball_answer": "Widen the cavity broadly rather than drilling deep. Follow the tegmen, which is reliably superior, and keep the sigmoid sinus posterior and the canal wall anterior, working toward the antrum, which lies deep to Macewen's triangle. A persistent Koerner septum can mimic the floor of the antrum. Once found, the lateral canal marks the second genu of the facial nerve just anterior and inferior to it.",
+        "curveball_answer": "Widen the cavity broadly rather than drilling deep. Follow the tegmen, which is reliably superior, and keep the sigmoid sinus posterior and the canal wall anterior, working toward the antrum, which lies deep to Macewen's triangle. A persistent Koerner septum can mimic the floor of the antrum. Once found, the lateral semicircular canal marks the second genu of the facial nerve just anterior and inferior to it.",
     },
     'cc-v112-mgt-pediatric-otolaryngology-ankyloglossia-maxillary-frenulum': {
         "curveball": "Feeding assessment confirms tongue-tie related breastfeeding dysfunction and the parents consent to frenotomy. What complications do you counsel about, and what anatomy limits the depth of release?",

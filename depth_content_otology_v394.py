@@ -17,7 +17,7 @@ DEPTH_V394 = {
             "loss in a patient who understands and accepts the alternative to hearing aids. Setup: "
             "transcanal microscopic or endoscopic approach, tympanomeatal flap elevation to expose "
             "the middle ear. Key steps: confirm stapes fixation and rule out an alternative "
-            "mechanical cause (ossicular discontinuity, congenital fixation, superior canal "
+            "mechanical cause (ossicular discontinuity, congenital fixation, superior semicircular canal "
             "dehiscence) under direct vision before committing; create a controlled fenestra in the "
             "footplate (small-fenestra stapedotomy is the common modern approach, by laser or "
             "microdrill), then place and crimp a properly sized prosthesis between the incus long "

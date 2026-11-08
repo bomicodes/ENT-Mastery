@@ -135,7 +135,7 @@ VIGNETTES_V204 = [
         [
             "Perform stapedotomy because the air-bone gap proves ossicular fixation",
             "Operate on the contralateral radiographic dehiscence first because it is larger on CT",
-            "Discuss surgical occlusion/repair of the symptomatic superior canal using an anatomy-appropriate approach, with counseling about hearing, vestibular, and recurrence risks",
+            "Discuss surgical occlusion/repair of the symptomatic superior semicircular canal using an anatomy-appropriate approach, with counseling about hearing, vestibular, and recurrence risks",
             "Avoid surgery in all patients because CT can overcall thin bone",
         ], 2,
         "Surgery is reserved for a clinically significant, concordant third-window syndrome—not a CT finding alone. When symptoms are disabling and physiology plus imaging agree, canal plugging/repair through an appropriate middle-fossa or transmastoid corridor can be considered after counseling about postoperative disequilibrium and auditory risk.",

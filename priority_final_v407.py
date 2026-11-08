@@ -93,7 +93,7 @@ PATCHES = (
     ("Otology / Neurotology", ("Benign Paroxysmal Positional Vertigo", "BPPV"), {
         "workup": "Transient torsional upbeating nystagmus on Dix-Hallpike supports posterior-canal BPPV. If history is compatible but Dix-Hallpike is horizontal or negative, perform a supine roll test for horizontal-canal disease. Atypical, persistent/nonfatigable nystagmus or neurologic deficits should prompt reconsideration of a central cause; routine imaging and vestibular suppressants are not indicated for otherwise typical BPPV.",
         "manage": "Use a canalith-repositioning maneuver such as Epley for posterior-canal BPPV. For horizontal-canal disease, identify geotropic versus apogeotropic physiology and use an appropriate Lempert/barbecue-roll or Gufoni maneuver. Reassess persistent symptoms for unresolved/multicanal BPPV or an alternative peripheral/central diagnosis.",
-        "teach": "Dix-Hallpike with torsional upbeating nystagmus -> posterior canal -> Epley. Compatible history with horizontal/no Dix-Hallpike nystagmus -> supine roll -> horizontal-canal-specific maneuver.",
+        "teach": "Dix-Hallpike with torsional upbeating nystagmus -> posterior semicircular canal -> Epley. Compatible history with horizontal/no Dix-Hallpike nystagmus -> supine roll -> horizontal-canal-specific maneuver.",
     }, ("bppv",)),
 )
 

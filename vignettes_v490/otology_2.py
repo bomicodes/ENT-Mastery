@@ -434,7 +434,7 @@ VIGNETTES = [
 {
  "topic": "Vestibular Test Battery",
  "concept_id": "v6-otology-neurotology-vestibular-test-battery",
- "stem": "A 46-year-old woman had acute vertigo 3 months ago diagnosed as left vestibular neuritis. Testing now shows a 60% left caloric weakness, abnormal left horizontal and anterior canal gains on video head impulse testing, an absent left ocular VEMP, and a normal left cervical VEMP. Posterior canal vHIT gain is normal. Which structure is most likely spared?",
+ "stem": "A 46-year-old woman had acute vertigo 3 months ago diagnosed as left vestibular neuritis. Testing now shows a 60% left caloric weakness, abnormal left horizontal and anterior semicircular canal gains on video head impulse testing, an absent left ocular VEMP, and a normal left cervical VEMP. Posterior semicircular canal vHIT gain is normal. Which structure is most likely spared?",
  "choices": [
   "Superior vestibular nerve",
   "Lateral semicircular canal ampulla",
@@ -442,16 +442,16 @@ VIGNETTES = [
   "Inferior vestibular nerve"
  ],
  "answer": 3,
- "explanation": "The superior vestibular nerve carries the horizontal and anterior canals and the utricle; the inferior vestibular nerve carries the posterior canal and most of the saccule. Caloric and horizontal vHIT test the horizontal canal, ocular VEMP reflects utricular and superior nerve function, and cervical VEMP reflects saccular and inferior nerve function. Abnormal horizontal and anterior canal results with an absent oVEMP but a normal cVEMP and posterior canal gain localize the neuritis to the superior division, sparing the inferior nerve.",
+ "explanation": "The superior vestibular nerve carries the horizontal and anterior semicircular canals and the utricle; the inferior vestibular nerve carries the posterior semicircular canal and most of the saccule. Caloric and horizontal vHIT test the horizontal semicircular canal, ocular VEMP reflects utricular and superior nerve function, and cervical VEMP reflects saccular and inferior nerve function. Abnormal horizontal and anterior semicircular canal results with an absent oVEMP but a normal cVEMP and posterior semicircular canal gain localize the neuritis to the superior division, sparing the inferior nerve.",
  "why_wrong": [
-  "Abnormal horizontal and anterior canal function and absent oVEMP show the superior nerve is affected, not spared.",
-  "Caloric weakness and low horizontal vHIT gain indicate the lateral canal pathway is impaired.",
+  "Abnormal horizontal and anterior semicircular canal function and absent oVEMP show the superior nerve is affected, not spared.",
+  "Caloric weakness and low horizontal vHIT gain indicate the lateral semicircular canal pathway is impaired.",
   "The absent ocular VEMP points to loss of utricular input traveling in the superior nerve.",
   "Correct."
  ],
- "board_pearl": "Superior vestibular nerve: horizontal and anterior canals, utricle, oVEMP. Inferior: posterior canal, saccule, cVEMP.",
+ "board_pearl": "Superior vestibular nerve: horizontal and anterior semicircular canals, utricle, oVEMP. Inferior: posterior semicircular canal, saccule, cVEMP.",
  "curveball": "Six weeks later she develops brief positional vertigo when lying back with the left ear down. What explains this?",
- "curveball_answer": "Posterior canal BPPV is a known sequela of superior vestibular neuritis. Utricular damage releases otoconia, and because the inferior nerve to the posterior canal is preserved, displaced otoconia in that canal still produce a positional response. Diagnose with a left Dix-Hallpike and treat with an Epley maneuver.",
+ "curveball_answer": "Posterior semicircular canal BPPV is a known sequela of superior vestibular neuritis. Utricular damage releases otoconia, and because the inferior nerve to the posterior semicircular canal is preserved, displaced otoconia in that canal still produce a positional response. Diagnose with a left Dix-Hallpike and treat with an Epley maneuver.",
  "learning_stage": "mastery",
  "focus": "anatomy"
 },
@@ -466,7 +466,7 @@ VIGNETTES = [
   "Reduced rotary chair gain at low frequencies"
  ],
  "answer": 1,
- "explanation": "Sound- and pressure-induced vertigo, autophony, and a low-frequency air-bone gap with supranormal bone conduction and preserved acoustic reflexes describe superior semicircular canal dehiscence. The third window lowers inner ear impedance, so sound energy is shunted to the vestibular end organs. VEMPs therefore show abnormally low cervical thresholds and abnormally large ocular VEMP amplitudes on the affected side; oVEMP amplitude is particularly sensitive. Thin-section CT reformatted in the plane of the superior canal then confirms the dehiscence.",
+ "explanation": "Sound- and pressure-induced vertigo, autophony, and a low-frequency air-bone gap with supranormal bone conduction and preserved acoustic reflexes describe superior semicircular canal dehiscence. The third window lowers inner ear impedance, so sound energy is shunted to the vestibular end organs. VEMPs therefore show abnormally low cervical thresholds and abnormally large ocular VEMP amplitudes on the affected side; oVEMP amplitude is particularly sensitive. Thin-section CT reformatted in the plane of the superior semicircular canal then confirms the dehiscence.",
  "why_wrong": [
   "An absent cVEMP suggests saccular or inferior nerve loss or conductive disease, the opposite of a third-window pattern.",
   "Correct.",
@@ -490,12 +490,12 @@ VIGNETTES = [
   "Torsional nystagmus toward the left"
  ],
  "answer": 0,
- "explanation": "Elevating the head 30 degrees brings the horizontal canal into the vertical plane, so a thermal gradient creates convection of endolymph. Warm water causes endolymph to rise toward the ampulla (ampullopetal flow), deflecting the cupula toward the utricle and exciting the right horizontal canal. Increased right vestibular tone drives a slow phase to the left and a corrective fast phase to the right. The mnemonic COWS, cold opposite and warm same, describes the fast-phase direction.",
+ "explanation": "Elevating the head 30 degrees brings the horizontal semicircular canal into the vertical plane, so a thermal gradient creates convection of endolymph. Warm water causes endolymph to rise toward the ampulla (ampullopetal flow), deflecting the cupula toward the utricle and exciting the right horizontal semicircular canal. Increased right vestibular tone drives a slow phase to the left and a corrective fast phase to the right. The mnemonic COWS, cold opposite and warm same, describes the fast-phase direction.",
  "why_wrong": [
   "Correct.",
   "Left-beating nystagmus follows cold irrigation of the right ear or warm irrigation of the left ear, by COWS.",
-  "Down-beating nystagmus suggests a central or vertical canal source, not horizontal canal caloric stimulation.",
-  "Calorics with this head position stimulate the horizontal canal and produce horizontal, not predominantly torsional, nystagmus."
+  "Down-beating nystagmus suggests a central or vertical canal source, not horizontal semicircular canal caloric stimulation.",
+  "Calorics with this head position stimulate the horizontal semicircular canal and produce horizontal, not predominantly torsional, nystagmus."
  ],
  "board_pearl": "COWS: cold opposite, warm same, for the fast phase during caloric testing with head up 30 degrees.",
  "curveball": "In a comatose patient with intact brainstem function, what happens with cold water irrigation of the right ear?",
@@ -514,7 +514,7 @@ VIGNETTES = [
   "Computerized dynamic posturography"
  ],
  "answer": 2,
- "explanation": "Gentamicin is preferentially vestibulotoxic, injuring type I hair cells, and characteristically produces bilateral vestibular hypofunction with oscillopsia and dark-walking ataxia while sparing hearing. Calorics stimulate only the horizontal canal at a very low equivalent frequency and can be weak from technical factors, so bilateral reduced responses need confirmation. Rotary chair testing is the best measure for bilateral loss because it stimulates both ears together and measures VOR gain, phase, and symmetry across frequencies; vHIT adds high-frequency information.",
+ "explanation": "Gentamicin is preferentially vestibulotoxic, injuring type I hair cells, and characteristically produces bilateral vestibular hypofunction with oscillopsia and dark-walking ataxia while sparing hearing. Calorics stimulate only the horizontal semicircular canal at a very low equivalent frequency and can be weak from technical factors, so bilateral reduced responses need confirmation. Rotary chair testing is the best measure for bilateral loss because it stimulates both ears together and measures VOR gain, phase, and symmetry across frequencies; vHIT adds high-frequency information.",
  "why_wrong": [
   "Cervical VEMPs assess saccular and inferior nerve function, not canal VOR gain across frequencies.",
   "Electrocochleography evaluates cochlear potentials such as the SP/AP ratio and does not measure VOR function.",
@@ -1690,11 +1690,11 @@ VIGNETTES = [
   "Begin daily meclizine for the new positional vertigo"
  ],
  "answer": 1,
- "explanation": "PPPD often coexists with other vestibular disorders, and a new symptom pattern must be evaluated on its own merits. Brief positional spinning with a right Dix-Hallpike producing upbeating torsional nystagmus after latency is classic right posterior canal BPPV. Treat it with a canalith repositioning maneuver such as the Epley, per the BPPV guideline, while continuing PPPD therapy. Failing to recognize treatable comorbid disorders, or attributing all symptoms to PPPD, is a common pitfall.",
+ "explanation": "PPPD often coexists with other vestibular disorders, and a new symptom pattern must be evaluated on its own merits. Brief positional spinning with a right Dix-Hallpike producing upbeating torsional nystagmus after latency is classic right posterior semicircular canal BPPV. Treat it with a canalith repositioning maneuver such as the Epley, per the BPPV guideline, while continuing PPPD therapy. Failing to recognize treatable comorbid disorders, or attributing all symptoms to PPPD, is a common pitfall.",
  "why_wrong": [
   "Attributing a classic new positional pattern to PPPD misses a quickly treatable cause.",
   "Correct.",
-  "Typical posterior canal BPPV with a classic Dix-Hallpike does not require imaging before treatment.",
+  "Typical posterior semicircular canal BPPV with a classic Dix-Hallpike does not require imaging before treatment.",
   "The BPPV guideline recommends against routine vestibular suppressants, which also hinder PPPD recovery."
  ],
  "board_pearl": "PPPD coexists with other vestibular disorders; treat a new BPPV with repositioning, not more PPPD medication.",
@@ -1939,7 +1939,7 @@ VIGNETTES = [
  ],
  "board_pearl": "At PLF exploration, graft both the oval and round windows even when no leak is seen.",
  "curveball": "Where else might a leak occur besides the oval and round windows?",
- "curveball_answer": "Less common sites include the fissula ante fenestram anterior to the oval window, microfissures in the otic capsule after trauma, and a dehiscent superior canal causing third-window physiology. Thin-section CT can identify fractures, malformations, or dehiscence, which should be considered when window grafting fails.",
+ "curveball_answer": "Less common sites include the fissula ante fenestram anterior to the oval window, microfissures in the otic capsule after trauma, and a dehiscent superior semicircular canal causing third-window physiology. Thin-section CT can identify fractures, malformations, or dehiscence, which should be considered when window grafting fails.",
  "learning_stage": "mastery",
  "focus": "surgery"
 },
@@ -2198,7 +2198,7 @@ VIGNETTES = [
  "why_wrong": [
   "IP-I is a cystic cochleovestibular malformation with profound congenital loss, not progressive fluctuating loss after head bumps.",
   "Otosclerosis is rare in young children and shows otic capsule lucency rather than an enlarged aqueduct.",
-  "SSCD involves the superior canal roof, not the canal running from the vestibule to the posterior fossa.",
+  "SSCD involves the superior semicircular canal roof, not the canal running from the vestibule to the posterior fossa.",
   "Correct."
  ],
  "board_pearl": "EVA: stepwise or fluctuating SNHL after minor head trauma, small air-bone gaps, normal tympanometry.",

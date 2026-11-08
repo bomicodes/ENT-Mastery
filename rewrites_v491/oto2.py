@@ -65,7 +65,7 @@ REWRITES = {
    "Reassurance that normal thresholds and word scores in quiet exclude an organic auditory deficit",
    "Speech-in-noise and central auditory testing with ABR, interpreted against the operative field",
    "Bilateral conventional hearing aids programmed to his current pure-tone audiogram results",
-   "Temporal bone CT to look for ossicular discontinuity from drilling of the posterior canal"
+   "Temporal bone CT to look for ossicular discontinuity from drilling of the posterior semicircular canal"
   ],
   "answer": 1,
   "explanation": "Pure-tone thresholds and word recognition in quiet test detection and simple encoding, which bilateral central redundancy preserves. Brainstem retraction near the cochlear nucleus and superior olive can injure binaural and temporal processing, producing difficulty in noise and poor localization despite a normal audiogram. The right workup stresses the system: speech-in-noise, dichotic and temporal processing tests, acoustic reflexes, and ABR, correlated with the operative anatomy and postoperative MRI. Results guide rehabilitation such as remote-microphone systems and auditory training.",
@@ -628,7 +628,7 @@ REWRITES = {
    "MRI of the internal auditory canals to exclude vestibular schwannoma"
   ],
   "answer": 0,
-  "explanation": "Autophony, conductive hyperacusis such as hearing eye movements, sound- and pressure-induced vertigo, and a low-frequency air-bone gap with supranormal bone conduction and preserved acoustic reflexes describe a third-window disorder, classically superior semicircular canal dehiscence. The dehiscence shunts acoustic energy away from the cochlea and into the labyrinth. The next step is high-resolution temporal bone CT with reformats in the planes of the superior canal plus VEMPs, which typically show low cVEMP thresholds and enlarged oVEMP amplitudes.",
+  "explanation": "Autophony, conductive hyperacusis such as hearing eye movements, sound- and pressure-induced vertigo, and a low-frequency air-bone gap with supranormal bone conduction and preserved acoustic reflexes describe a third-window disorder, classically superior semicircular canal dehiscence. The dehiscence shunts acoustic energy away from the cochlea and into the labyrinth. The next step is high-resolution temporal bone CT with reformats in the planes of the superior semicircular canal plus VEMPs, which typically show low cVEMP thresholds and enlarged oVEMP amplitudes.",
   "why_wrong": [
    "Correct.",
    "His symptoms describe bone-conduction hypersensitivity and sound-induced vertigo, not reduced loudness tolerance, so further evaluation is needed.",
@@ -1129,34 +1129,34 @@ REWRITES = {
    "The nerve follows the tegmen mastoideum downward toward the mastoid tip"
   ],
   "answer": 2,
-  "explanation": "The facial nerve's second genu lies just inferior to the lateral semicircular canal and medial to the short process of the incus, which points toward it. From there the mastoid segment descends inferiorly and slightly laterally to the stylomastoid foramen, which the digastric ridge marks inferiorly. Thus the incus short process, lateral canal, and digastric ridge together define the nerve's path. The facial recess is opened lateral to the nerve, bounded by the chorda tympani laterally and the incus buttress superiorly.",
+  "explanation": "The facial nerve's second genu lies just inferior to the lateral semicircular canal and medial to the short process of the incus, which points toward it. From there the mastoid segment descends inferiorly and slightly laterally to the stylomastoid foramen, which the digastric ridge marks inferiorly. Thus the incus short process, lateral semicircular canal, and digastric ridge together define the nerve's path. The facial recess is opened lateral to the nerve, bounded by the chorda tympani laterally and the incus buttress superiorly.",
   "why_wrong": [
    "The spine of Henle is a surface landmark for locating the antrum, not a guide to the deep facial nerve.",
    "The sigmoid sinus lies posterior to the mastoid segment, and the nerve is not adjacent to it in the tip.",
    "Correct.",
    "The tegmen marks the superior limit of the dissection and does not follow the vertical facial nerve."
   ],
-  "board_pearl": "Short process of the incus and lateral canal point to the second genu; the digastric ridge marks the stylomastoid foramen.",
+  "board_pearl": "Short process of the incus and lateral semicircular canal point to the second genu; the digastric ridge marks the stylomastoid foramen.",
   "curveball": "What are the three boundaries of the facial recess that she must respect when opening it?",
   "curveball_answer": "The facial nerve's mastoid segment forms the medial or posterior boundary, the chorda tympani the lateral or anterior boundary, and the incus buttress at the fossa incudis the superior boundary. Drilling between the nerve and chorda below the buttress opens the posterior mesotympanum to the stapes and round window niche."
  },
  "v142_oto_04": {
-  "stem": "An 18-month-old girl with profound bilateral sensorineural hearing loss undergoes right cochlear implantation through a transmastoid approach. After cortical mastoidectomy, the surgeon identifies the lateral semicircular canal and short process of the incus, thins the posterior canal wall, and prepares to drill a posterior tympanotomy to reach the round window. Which set of structures defines the boundaries of this opening?",
+  "stem": "An 18-month-old girl with profound bilateral sensorineural hearing loss undergoes right cochlear implantation through a transmastoid approach. After cortical mastoidectomy, the surgeon identifies the lateral semicircular canal and short process of the incus, thins the posterior canal wall, and prepares to drill a posterior tympanotomy (opening the facial recess) to reach the round window. Which set of structures bounds the facial recess?",
   "choices": [
    "Sigmoid sinus posteriorly, tegmen superiorly, digastric ridge inferiorly",
-   "Facial nerve medially, chorda tympani laterally, incus buttress superiorly",
+   "Facial nerve posteriorly and medially, chorda tympani anteriorly and laterally, incus buttress superiorly",
    "Jugular bulb inferiorly, carotid canal anteriorly, cochlea medially",
-   "Lateral canal superiorly, endolymphatic sac medially, sinus tympani laterally"
+   "Lateral semicircular canal superiorly, endolymphatic sac medially, sinus tympani laterally"
   ],
   "answer": 1,
-  "explanation": "The facial recess, or posterior tympanotomy, is a triangular corridor from the mastoid into the posterior mesotympanum. Its boundaries are the mastoid segment of the facial nerve medially or posteriorly, the chorda tympani laterally or anteriorly, and the incus buttress at the fossa incudis superiorly. Opening it exposes the stapes, pyramidal eminence, promontory, and round window niche. In young children the recess is already near adult size, though the facial nerve lies more superficially at the stylomastoid foramen.",
+  "explanation": "The facial recess is a small triangle of bone between the mastoid and the middle ear; a posterior tympanotomy is the operation of drilling it open. Its borders are the mastoid segment of the facial nerve (posterior, and deeper or medial), the chorda tympani (anterior, and more superficial or lateral, closer to the ear canal) and the incus buttress at the fossa incudis (superior). Drilling between the nerve and the chorda, below the buttress, opens a window into the posterior middle ear that shows the stapes, pyramidal eminence, promontory and round window niche, where the electrode goes in. In an 18-month-old the recess is already close to adult size, but the mastoid tip is small, so the facial nerve exits the stylomastoid foramen closer to the skin and the incision must account for it.",
   "why_wrong": [
    "These are boundaries of the mastoid cavity during cortical mastoidectomy, not of the facial recess.",
    "Correct.",
    "These structures border the hypotympanum and petrous apex, not the posterior tympanotomy.",
    "The sinus tympani lies medial to the facial nerve and cannot be reached through the facial recess."
   ],
-  "board_pearl": "Facial recess: facial nerve medially, chorda tympani laterally, incus buttress superiorly.",
+  "board_pearl": "Posterior tympanotomy opens the facial recess: facial nerve posterior/medial, chorda tympani anterior/lateral, incus buttress superior.",
   "curveball": "The facial nerve is anomalously anterior and obscures the round window. What alternative cochlear access strategies can be considered?",
   "curveball_answer": "Extend the recess by sacrificing the chorda, drill carefully along the nerve with monitoring, or use a cochleostomy anterior to the window if the scala tympani can be reached. Alternatives include a combined transcanal approach, a suprameatal approach, or subtotal petrosectomy with canal closure for wide exposure."
  },
@@ -1174,7 +1174,7 @@ REWRITES = {
    "Correct.",
    "The pyramidal eminence lies medial in the middle ear, adjacent to the facial nerve, and is seen through the recess rather than bounding it.",
    "The cochleariform process lies anterosuperior in the middle ear near the geniculate region, far from the facial recess.",
-   "The lateral canal lies superior and medial in the antrum, above the level of the facial recess."
+   "The lateral semicircular canal lies superior and medial in the antrum, above the level of the facial recess."
   ],
   "board_pearl": "Preserve the incus buttress: it is the superior limit of the facial recess and protects the incus from the drill.",
   "curveball": "What landmark helps locate the mastoid segment of the facial nerve before it is fully skeletonized?",
@@ -1191,12 +1191,12 @@ REWRITES = {
   "answer": 3,
   "explanation": "When orientation is lost, the safe response is to return to known boundaries rather than drill deeper in a narrow hole. Saucerize the cavity, identify the tegmen superiorly and the sigmoid sinus posteriorly, and follow the tegmen medially and anteriorly, which leads to the antrum and the lateral semicircular canal. Reviewing the CT for tegmen height, sigmoid position, and pneumatization helps. Depth without landmarks endangers the dura, sinus, labyrinth, and facial nerve.",
   "why_wrong": [
-   "Deep drilling in a narrow cavity without landmarks is how injury to the facial nerve or lateral canal happens.",
+   "Deep drilling in a narrow cavity without landmarks is how injury to the facial nerve or lateral semicircular canal happens.",
    "Drilling under the canal wall without a landmark risks injuring the facial nerve and ossicles.",
    "Monitoring supplements but does not replace anatomic orientation; a silent monitor does not indicate safety.",
    "Correct."
   ],
-  "board_pearl": "Lost in the mastoid: widen, find the tegmen and sigmoid, and follow the tegmen to the antrum and lateral canal.",
+  "board_pearl": "Lost in the mastoid: widen, find the tegmen and sigmoid, and follow the tegmen to the antrum and lateral semicircular canal.",
   "curveball": "Which CT features should make you anticipate a narrow facial recess or an unusually anterior sigmoid sinus before surgery?",
   "curveball_answer": "A sclerotic, poorly pneumatized or contracted mastoid, a low-lying tegmen, an anterior sigmoid sinus nearly touching the posterior canal wall, a high jugular bulb, and an aberrant or anteriorly displaced mastoid facial nerve all narrow the working space. Recognizing them preoperatively guides approach and monitoring."
  },
@@ -1298,7 +1298,7 @@ REWRITES = {
   ],
   "board_pearl": "Unilateral hypofunction: gaze stabilization and balance exercises drive compensation; stop suppressants.",
   "curveball": "During therapy he develops brief spinning vertigo when lying back and rolling toward the right. What finding would suggest new BPPV?",
-  "curveball_answer": "Dix-Hallpike testing with the right ear down that produces upbeating torsional nystagmus after a brief latency, lasting under a minute and fatiguing, indicates right posterior canal BPPV, which often follows neuritis. Treat with an Epley maneuver rather than escalating habituation exercises."
+  "curveball_answer": "Dix-Hallpike testing with the right ear down that produces upbeating torsional nystagmus after a brief latency, lasting under a minute and fatiguing, indicates right posterior semicircular canal BPPV, which often follows neuritis. Treat with an Epley maneuver rather than escalating habituation exercises."
  },
  "v144_oto_26": {
   "stem": "A 77-year-old woman had left vestibular neuritis 4 months ago. Testing shows compensated left hypofunction with a covert corrective saccade, normal right-sided function, and no positional nystagmus. She still avoids turning her head quickly, has fallen twice at home, and asks for a cane so she can 'keep her head still.' What is the best management?",
@@ -1338,7 +1338,7 @@ REWRITES = {
   ],
   "board_pearl": "After acute vestibular neuritis, stop suppressants within days and start rehabilitation early.",
   "curveball": "What bedside finding would make you test specifically for secondary BPPV before simply escalating habituation exercises?",
-  "curveball_answer": "Brief vertigo triggered by lying down, rolling over, or looking up suggests secondary BPPV, which often follows neuritis. Dix-Hallpike testing showing upbeating torsional nystagmus after a short latency identifies posterior canal BPPV. Treat it with canalith repositioning, then continue rehabilitation."
+  "curveball_answer": "Brief vertigo triggered by lying down, rolling over, or looking up suggests secondary BPPV, which often follows neuritis. Dix-Hallpike testing showing upbeating torsional nystagmus after a short latency identifies posterior semicircular canal BPPV. Treat it with canalith repositioning, then continue rehabilitation."
  },
  "v176_oto_vr_snr": {
   "stem": "A 61-year-old man with hypertension was diagnosed with right vestibular neuritis 6 weeks ago in an urgent care. He has adhered to vestibular therapy but is getting worse, with increasing gait unsteadiness and new slurring of words. Today, nystagmus is right-beating on right gaze and left-beating on left gaze, and he cannot tandem walk. Head impulse testing is normal bilaterally. What is the best next step?",
@@ -1361,7 +1361,7 @@ REWRITES = {
   "curveball_answer": "Central features include a normal head impulse test in a dizzy patient, direction-changing gaze-evoked nystagmus, pure vertical or pure torsional spontaneous nystagmus, skew deviation on alternate cover testing, and nystagmus not suppressed by fixation. Peripheral loss gives unidirectional horizontal-torsional nystagmus with an abnormal head impulse."
  },
  "v136_oto_22": {
-  "stem": "A 57-year-old man had right vestibular neuritis 1 year ago and still has imbalance with rapid head turns. Bithermal calorics now show only a 15% right reduced vestibular response, within normal limits. Video head impulse testing shows a right horizontal canal gain of 0.6 with consistent covert corrective saccades. The left side is normal. Which interpretation is most appropriate?",
+  "stem": "A 57-year-old man had right vestibular neuritis 1 year ago and still has imbalance with rapid head turns. Bithermal calorics now show only a 15% right reduced vestibular response, within normal limits. Video head impulse testing shows a right horizontal semicircular canal gain of 0.6 with consistent covert corrective saccades. The left side is normal. Which interpretation is most appropriate?",
   "choices": [
    "The vHIT result is likely artifact, because calorics are the reference",
    "The tests sample different frequencies, so both results can be valid",
@@ -1369,12 +1369,12 @@ REWRITES = {
    "A normal caloric with an abnormal vHIT indicates a central VOR lesion"
   ],
   "answer": 1,
-  "explanation": "Calorics stimulate the horizontal canal at a very low equivalent frequency, around 0.003 Hz, while vHIT tests high-frequency, high-acceleration head movement similar to natural activity. Recovery after neuritis can restore low-frequency responses while high-frequency function remains impaired, so normal calorics with an abnormal vHIT is a real and clinically meaningful pattern explaining his symptoms with fast head turns. Discordance should be interpreted physiologically and with the clinical syndrome rather than dismissed.",
+  "explanation": "Calorics stimulate the horizontal semicircular canal at a very low equivalent frequency, around 0.003 Hz, while vHIT tests high-frequency, high-acceleration head movement similar to natural activity. Recovery after neuritis can restore low-frequency responses while high-frequency function remains impaired, so normal calorics with an abnormal vHIT is a real and clinically meaningful pattern explaining his symptoms with fast head turns. Discordance should be interpreted physiologically and with the clinical syndrome rather than dismissed.",
   "why_wrong": [
    "Consistent covert saccades with reduced gain indicate a genuine deficit; calorics are not a universal reference across frequencies.",
    "Correct.",
    "Calorics test the horizontal semicircular canal, not the saccule, which cVEMP assesses.",
-   "A peripheral horizontal canal deficit explains reduced gain with corrective saccades; central lesions usually spare head impulse gain."
+   "A peripheral horizontal semicircular canal deficit explains reduced gain with corrective saccades; central lesions usually spare head impulse gain."
   ],
   "board_pearl": "Calorics test low-frequency and vHIT high-frequency VOR; discordant results can both be correct.",
   "curveball": "The clinician also wants to know about his otolith organs. Which VEMP pathway predominantly samples saccular and inferior vestibular nerve function?",
@@ -1386,17 +1386,17 @@ REWRITES = {
    "vHIT measures the high-frequency VOR of each individual canal",
    "Cervical VEMP measures utricular and superior nerve function",
    "Ocular VEMP measures saccular and inferior nerve function",
-   "Rotary chair measures unilateral function of the anterior canal"
+   "Rotary chair measures unilateral function of the anterior semicircular canal"
   ],
   "answer": 0,
-  "explanation": "Each vestibular test isolates part of the system. Video head impulse testing measures high-frequency VOR gain for each of the six canals: the horizontal and anterior canals reflect the superior division, and the posterior canal reflects the inferior division. Cervical VEMP reflects the saccule and inferior nerve, and ocular VEMP reflects the utricle and superior nerve. Calorics test the horizontal canal at low frequency, and rotary chair tests bilateral horizontal function across a range of low frequencies.",
+  "explanation": "Each vestibular test isolates part of the system. Video head impulse testing measures high-frequency VOR gain for each of the six canals: the horizontal and anterior semicircular canals reflect the superior division, and the posterior semicircular canal reflects the inferior division. Cervical VEMP reflects the saccule and inferior nerve, and ocular VEMP reflects the utricle and superior nerve. Calorics test the horizontal semicircular canal at low frequency, and rotary chair tests bilateral horizontal function across a range of low frequencies.",
   "why_wrong": [
    "Correct.",
    "The cervical VEMP reflects the saccule and inferior vestibular nerve, not the utricle and superior nerve.",
    "The ocular VEMP reflects the utricle and superior vestibular nerve, not the saccule and inferior nerve.",
-   "Rotary chair stimulates both horizontal canals together and does not isolate one anterior canal."
+   "Rotary chair stimulates both horizontal semicircular canals together and does not isolate one anterior semicircular canal."
   ],
-  "board_pearl": "Superior nerve: horizontal and anterior canals plus oVEMP. Inferior nerve: posterior canal plus cVEMP.",
+  "board_pearl": "Superior nerve: horizontal and anterior semicircular canals plus oVEMP. Inferior nerve: posterior semicircular canal plus cVEMP.",
   "curveball": "Why can calorics be abnormal while vHIT remains normal in the same patient?",
   "curveball_answer": "Calorics test low-frequency function, and vHIT tests high-frequency function. In Meniere disease, hydrops may disturb caloric convection or low-frequency responses while high-frequency hair cell function is preserved, giving abnormal calorics with normal vHIT. Partial lesions and compensation can also affect the two frequency ranges differently."
  },
@@ -1438,7 +1438,7 @@ REWRITES = {
   ],
   "board_pearl": "Interpret VEMPs in context: age, muscle activation, and conductive loss can all abolish responses.",
   "curveball": "What cVEMP and oVEMP pattern would you expect from a true third-window syndrome, and how would you correlate it?",
-  "curveball_answer": "Third-window syndromes show abnormally low cVEMP thresholds and enlarged oVEMP amplitudes on the affected side. Correlate with a low-frequency air-bone gap, supranormal bone conduction, and present acoustic reflexes, plus dehiscence on CT reformatted in the plane of the superior canal, before diagnosing dehiscence."
+  "curveball_answer": "Third-window syndromes show abnormally low cVEMP thresholds and enlarged oVEMP amplitudes on the affected side. Correlate with a low-frequency air-bone gap, supranormal bone conduction, and present acoustic reflexes, plus dehiscence on CT reformatted in the plane of the superior semicircular canal, before diagnosing dehiscence."
  },
  "v216_oto_eacc_found": {
   "stem": "A 71-year-old woman has 5 months of intermittent left otorrhea and dull, aching otalgia. She does not have diabetes, and topical drops have helped only briefly. After microscopic debridement, a focal crater filled with keratin and overlying exposed, eroded bone is seen along the posterior bony canal wall. The tympanic membrane is intact and mobile, and audiometry is normal. Which diagnosis best fits?",
@@ -1781,7 +1781,7 @@ REWRITES = {
   "curveball_answer": "No. Evidence does not support routine surgical decompression for Ramsay Hunt syndrome. Management is prompt antiviral therapy with corticosteroids, eye protection, and follow-up for recovery. Decompression has been studied mainly for Bell palsy with severe degeneration on electroneurography, and its role in zoster remains unproven."
  },
  "v431-ramsay-hunt-02": {
-  "stem": "A 64-year-old woman has 4 days of burning left ear pain, vesicles on the concha and posterior canal, and left facial paralysis, House-Brackmann V. She also has new left tinnitus, vertigo with left-beating nystagmus, and a 40 dB left sensorineural loss on audiometry. Her daughter asks how one infection affects her face, hearing, and balance. Which mechanism best explains the combination?",
+  "stem": "A 64-year-old woman has 4 days of burning left ear pain, vesicles on the concha and posterior semicircular canal, and left facial paralysis, House-Brackmann V. She also has new left tinnitus, vertigo with left-beating nystagmus, and a 40 dB left sensorineural loss on audiometry. Her daughter asks how one infection affects her face, hearing, and balance. Which mechanism best explains the combination?",
   "choices": [
    "Herpes simplex reactivation in the spiral ganglion compressing the facial nerve",
    "Varicella-zoster reactivation in the geniculate ganglion spreading to CN VIII",

@@ -41,7 +41,7 @@ DEPTH_ENRICHMENT_V158 = {
         "localize": (
             "The posterior semicircular canal is affected in the large majority of cases given "
             "its dependent anatomic position relative to the utricle; horizontal and, rarely, "
-            "anterior canal involvement produce distinct nystagmus patterns and require different "
+            "anterior semicircular canal involvement produce distinct nystagmus patterns and require different "
             "repositioning maneuvers. Distinguish canalithiasis (free-floating debris, the more "
             "common pattern, with nystagmus that is transient and fatigable) from cupulolithiasis "
             "(debris adherent to the cupula, producing more persistent, non-fatiguing nystagmus)."

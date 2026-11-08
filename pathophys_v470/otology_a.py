@@ -103,8 +103,8 @@ overview=(
 "Mastering it means knowing the landmarks that protect the facial nerve, labyrinth, sigmoid sinus, jugular bulb, carotid, and dura."),
 physiology=(
 "**Four parts**: squamous, mastoid, petrous, and tympanic (the styloid process is sometimes counted as a fifth). "
-"**Facial nerve course**: labyrinthine segment (narrowest, no collaterals), geniculate ganglion (GSPN exits), tympanic (horizontal) segment running posteriorly along the medial middle-ear wall, directly superior to the oval window and stapes and just inferior to the lateral semicircular canal (cochleariform process marks its anterior end), second genu inferior to the lateral canal, and mastoid segment to the stylomastoid foramen. "
-"**Labyrinth**: cochlea (two and a half turns), vestibule (utricle and saccule), and three semicircular canals; the lateral canal is the key mastoid landmark. "
+"**Facial nerve course**: labyrinthine segment (narrowest, no collaterals), geniculate ganglion (GSPN exits), tympanic (horizontal) segment running posteriorly along the medial middle-ear wall, directly superior to the oval window and stapes and just inferior to the lateral semicircular canal (cochleariform process marks its anterior end), second genu inferior to the lateral semicircular canal, and mastoid segment to the stylomastoid foramen. "
+"**Labyrinth**: cochlea (two and a half turns), vestibule (utricle and saccule), and three semicircular canals; the lateral semicircular canal is the key mastoid landmark. "
 "**Middle-ear walls**: tegmen superiorly, jugular bulb inferiorly, carotid anteriorly, promontory and windows medially, aditus and pyramidal eminence posteriorly. "
 "**Mastoid landmarks**: Macewen triangle overlies the antrum; the sinodural angle, digastric ridge (leads to stylomastoid foramen), and Trautmann triangle guide dissection. "
 "**Pneumatization**: air cells develop from the antrum after birth, driven by middle-ear ventilation; poor ventilation leaves a sclerotic mastoid."),
@@ -113,7 +113,7 @@ pathophysiology=(
 "**Dehiscence**: the tympanic segment is partially dehiscent in about half of ears (55 percent in Cummings), which is why it is vulnerable during middle-ear surgery and cholesteatoma removal. "
 "**Spread of disease follows anatomy**: infection travels through air-cell tracts to the petrous apex (Gradenigo), through the tegmen to the dura and temporal lobe, and to the dura around the sigmoid sinus (perisinus abscess), causing thrombophlebitis. "
 "**Fracture patterns**: otic-capsule-violating fractures cross the labyrinth and cause SNHL and vertigo, while sparing fractures more often disrupt the ossicles and cause conductive loss. "
-"**Third windows**: missing bone over the superior canal or other labyrinth segments creates abnormal fluid mechanics (superior canal dehiscence physiology)."),
+"**Third windows**: missing bone over the superior semicircular canal or other labyrinth segments creates abnormal fluid mechanics (superior canal dehiscence physiology)."),
 ),
 
 "Audiogram Interpretation": dict(
@@ -216,12 +216,12 @@ overview=(
 "It explains sound- or pressure-induced vertigo, autophony, and a conductive-appearing loss with normal middle-ear function."),
 physiology=(
 "**Two-window system**: normally the inner ear has only two mobile windows, the oval window (input) and round window (pressure release), so stapes motion drives fluid along the cochlea. "
-"**Superior canal position**: it arches toward the middle cranial fossa floor and is covered by a thin bony layer under the temporal lobe dura. "
+"**Superior semicircular canal position**: it arches toward the middle cranial fossa floor and is covered by a thin bony layer under the temporal lobe dura. "
 "**Canal stimulation**: semicircular canals sense angular acceleration through endolymph flow deflecting the cupula. "
 "**Bone conduction physiology**: cochlear bone-conduction sensitivity depends partly on the impedance difference between the two windows."),
 pathophysiology=(
-"**Third window**: a dehiscence lets sound energy and pressure shunt away from the cochlea into the superior canal. "
-"**Sound- and pressure-induced vertigo**: shunted energy moves endolymph in the canal, deflecting its cupula (Tullio phenomenon with sound, Hennebert sign with pressure), with eye movements in the plane of the superior canal. "
+"**Third window**: a dehiscence lets sound energy and pressure shunt away from the cochlea into the superior semicircular canal. "
+"**Sound- and pressure-induced vertigo**: shunted energy moves endolymph in the canal, deflecting its cupula (Tullio phenomenon with sound, Hennebert sign with pressure), with eye movements in the plane of the superior semicircular canal. "
 "**Air-bone gap with normal middle ear**: air conduction worsens because energy leaks away from the cochlea, while bone conduction improves (can be better than 0 dB) because the third window lowers inner-ear impedance on that side. "
 "**Reflexes present**: unlike otosclerosis, the stapes moves normally, so acoustic reflexes are present, which is a key discriminator. "
 "**Autophony**: patients hear their own voice, eye movements, footsteps, or pulse loudly through the bone-conduction pathway. "
@@ -268,13 +268,13 @@ overview=(
 "The key bedside task is separating it from posterior-circulation stroke using HINTS."),
 physiology=(
 "**Tonic balance**: each vestibular nerve fires at a resting rate; the brain senses rotation from the difference between the two sides. "
-"**Vestibulo-ocular reflex**: head rotation excites the ipsilateral horizontal canal and drives eye movement opposite the head to keep gaze stable. "
-"**Nerve divisions**: the superior vestibular nerve supplies the superior and horizontal canals and utricle; the inferior nerve supplies the posterior canal and saccule. "
+"**Vestibulo-ocular reflex**: head rotation excites the ipsilateral horizontal semicircular canal and drives eye movement opposite the head to keep gaze stable. "
+"**Nerve divisions**: the superior vestibular nerve supplies the superior and horizontal semicircular canals and utricle; the inferior nerve supplies the posterior semicircular canal and saccule. "
 "**Central compensation**: the cerebellum and brainstem rebalance resting activity over days to weeks after a unilateral loss."),
 pathophysiology=(
 "**Unilateral loss creates false rotation**: when one nerve goes silent, the intact side's resting activity is interpreted as rotation toward it, causing vertigo and nystagmus beating away from the affected ear. "
 "**Viral reactivation hypothesis**: herpes simplex type 1, found latent in human vestibular (Scarpa) ganglia, is thought to reactivate and inflame the nerve; this is supported by the literature rather than the core texts (Arbusow et al., Ann Neurol 1999; Strupp & Brandt, NEJM 2004). "
-"**Superior division predominance**: the superior nerve travels in a longer, narrower bony canal, so it is affected more often, sparing the posterior canal and saccule. "
+"**Superior division predominance**: the superior nerve travels in a longer, narrower bony canal, so it is affected more often, sparing the posterior semicircular canal and saccule. "
 "**Hearing spared**: the cochlear nerve is uninvolved; added hearing loss means labyrinthitis or a vascular (AICA) event. "
 "**Head impulse test**: a rapid turn toward the affected side shows a corrective catch-up saccade because the VOR is lost; a normal head impulse in acute vertigo is worrisome for stroke. "
 "**Compensation and steroids**: central compensation, accelerated by early vestibular rehabilitation, drives recovery; steroids may improve caloric recovery but not clearly long-term symptoms."),
@@ -283,18 +283,18 @@ pathophysiology=(
 "BPPV": dict(
 overview=(
 "Benign paroxysmal positional vertigo (BPPV) is brief vertigo triggered by head position change, caused by otoconia displaced into a semicircular canal. "
-"It is the most common cause of peripheral vertigo and is cured at the bedside with canalith repositioning (Epley for posterior canal)."),
+"It is the most common cause of peripheral vertigo and is cured at the bedside with canalith repositioning (Epley for posterior semicircular canal)."),
 physiology=(
 "**Otolith organs**: the utricle and saccule contain otoconia, calcium carbonate crystals embedded on a gelatinous membrane, that sense linear acceleration and gravity. "
 "**Canals sense rotation**: each semicircular canal's cupula is normally the same density as endolymph, so it ignores gravity and responds only to angular acceleration. "
-"**Canal geometry**: the posterior canal is the most dependent canal when upright and supine, so free debris settles there most often. "
-"**Ewald laws**: eye movements occur in the plane of the stimulated canal; excitation of the posterior canal produces upbeating torsional nystagmus toward the affected ear."),
+"**Canal geometry**: the posterior semicircular canal is the most dependent canal when upright and supine, so free debris settles there most often. "
+"**Ewald laws**: eye movements occur in the plane of the stimulated canal; excitation of the posterior semicircular canal produces upbeating torsional nystagmus toward the affected ear."),
 pathophysiology=(
 "**Canalithiasis**: otoconia dislodged from the utricle (aging, head trauma, inner-ear disease, prolonged bed rest) float freely in the canal. "
 "**Mechanism of vertigo**: when the head moves the canal into a gravity-dependent position, the debris falls and drags endolymph, deflecting the cupula. "
 "**Latency and fatigue**: the clump takes a few seconds to start moving (latency), the response lasts under a minute, and repeated testing disperses particles (fatigability). "
-"**Posterior canal (most common)**: Dix-Hallpike produces upbeating, torsional nystagmus toward the dependent ear. "
-"**Horizontal canal**: supine roll test produces horizontal nystagmus; geotropic nystagmus suggests canalithiasis and apogeotropic suggests cupulolithiasis (debris stuck on the cupula, making it gravity sensitive). "
+"**Posterior semicircular canal (most common)**: Dix-Hallpike produces upbeating, torsional nystagmus toward the dependent ear. "
+"**Horizontal semicircular canal**: supine roll test produces horizontal nystagmus; geotropic nystagmus suggests canalithiasis and apogeotropic suggests cupulolithiasis (debris stuck on the cupula, making it gravity sensitive). "
 "**Repositioning logic**: the Epley maneuver rotates the head so debris travels around the canal and exits into the utricle, where it no longer stimulates the cupula."),
 ),
 
@@ -409,8 +409,8 @@ overview=(
 "The vestibular test battery (VNG/ENG with calorics, rotary chair, video head impulse testing, and VEMPs) measures each part of the vestibular system across frequencies. "
 "It localizes peripheral versus central dysfunction, identifies the affected side and organ, and documents compensation."),
 physiology=(
-"**Frequency coverage**: calorics test very low-frequency horizontal canal function, rotary chair tests low-to-mid frequencies, and head impulse testing tests high-frequency natural head movement. "
-"**Calorics**: warm or cool irrigation creates a temperature gradient that moves endolymph convectively in the horizontal canal; warm water produces nystagmus toward the irrigated ear and cool water away (COWS). "
+"**Frequency coverage**: calorics test very low-frequency horizontal semicircular canal function, rotary chair tests low-to-mid frequencies, and head impulse testing tests high-frequency natural head movement. "
+"**Calorics**: warm or cool irrigation creates a temperature gradient that moves endolymph convectively in the horizontal semicircular canal; warm water produces nystagmus toward the irrigated ear and cool water away (COWS). "
 "**VEMPs**: loud sound stimulates otolith organs; cervical VEMP (saccule, inferior vestibular nerve) is recorded from the SCM and ocular VEMP (utricle, superior vestibular nerve) from the inferior oblique. "
 "**Oculomotor testing**: saccades, pursuit, and optokinetic testing evaluate central pathways."),
 pathophysiology=(

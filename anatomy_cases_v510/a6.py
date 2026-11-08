@@ -214,7 +214,7 @@ CASES["otoplasty"] = {
     ],
     "blood_nerve": [
         ["Arterial supply", "Posterior auricular artery (ECA) posteriorly; superficial temporal artery anterior auricular branches; perforators pass through the cartilage"],
-        ["Sensory", "Great auricular (C2-C3) to the lower and posterior ear; lesser occipital to the upper posterior ear; auriculotemporal (V3) to the tragus and anterosuperior ear; Arnold nerve (CN X) to the concha and posterior canal"],
+        ["Sensory", "Great auricular (C2-C3) to the lower and posterior ear; lesser occipital to the upper posterior ear; auriculotemporal (V3) to the tragus and anterosuperior ear; Arnold nerve (CN X) to the concha and posterior semicircular canal"],
         ["Embryology", "Six hillocks of His: hillocks 1-3 from the first arch (tragus, helical crus, part of the helix) and 4-6 from the second arch (antihelix, antitragus and most of the remaining auricle); texts differ on the exact derivative of each hillock"],
     ],
     "pimp": [

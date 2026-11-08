@@ -101,7 +101,7 @@ VIGNETTES_V172 = [
     _q(
         "v172_oto_ephys_app", "Audiologic Electrophysiology / ABR-OAE-ECoG", "application",
         "An infant has absent or grossly abnormal ABR waveforms but preserved otoacoustic emissions and a present cochlear microphonic. Tympanometry is normal. Which interpretation best fits the physiology?",
-        ["Auditory neuropathy spectrum disorder with preserved outer-hair-cell function but impaired neural synchrony", "Ossicular discontinuity", "Typical presbycusis", "Posterior canal BPPV"], 0,
+        ["Auditory neuropathy spectrum disorder with preserved outer-hair-cell function but impaired neural synchrony", "Ossicular discontinuity", "Typical presbycusis", "Posterior semicircular canal BPPV"], 0,
         "Preserved OAEs/cochlear microphonic show functioning outer hair cells, while an abnormal ABR indicates failure of synchronous neural transmission. That dissociation is characteristic of auditory neuropathy spectrum disorder.",
         [
             "Correct. The pattern localizes the dysfunction beyond ordinary outer-hair-cell loss.",
