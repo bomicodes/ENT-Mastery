@@ -103,7 +103,7 @@ overview=(
 "Mastering it means knowing the landmarks that protect the facial nerve, labyrinth, sigmoid sinus, jugular bulb, carotid, and dura."),
 physiology=(
 "**Four parts**: squamous, mastoid, petrous, and tympanic (the styloid process is sometimes counted as a fifth). "
-"**Facial nerve course**: labyrinthine segment (narrowest, no collaterals), geniculate ganglion (GSPN exits), tympanic segment above the oval window, second genu at the lateral canal, and mastoid segment to the stylomastoid foramen. "
+"**Facial nerve course**: labyrinthine segment (narrowest, no collaterals), geniculate ganglion (GSPN exits), tympanic (horizontal) segment running posteriorly along the medial middle-ear wall, directly superior to the oval window and stapes and just inferior to the lateral semicircular canal (cochleariform process marks its anterior end), second genu inferior to the lateral canal, and mastoid segment to the stylomastoid foramen. "
 "**Labyrinth**: cochlea (two and a half turns), vestibule (utricle and saccule), and three semicircular canals; the lateral canal is the key mastoid landmark. "
 "**Middle-ear walls**: tegmen superiorly, jugular bulb inferiorly, carotid anteriorly, promontory and windows medially, aditus and pyramidal eminence posteriorly. "
 "**Mastoid landmarks**: Macewen triangle overlies the antrum; the sinodural angle, digastric ridge (leads to stylomastoid foramen), and Trautmann triangle guide dissection. "
