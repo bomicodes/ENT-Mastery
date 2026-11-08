@@ -693,7 +693,7 @@ CASES = {
   {"q": "Where does the thyroid originate?", "a": "Foramen cecum, at the junction of the anterior two thirds and posterior third of the tongue"},
   {"q": "What is the embryology of the hyoid?", "a": "Second arch: lesser cornua and upper body; third arch: greater cornua and lower body"},
   {"q": "Why is the central hyoid removed?", "a": "The duct descends in close relation to the developing hyoid and may pass through it; leaving it raises recurrence"},
-  {"q": "What is the recurrence rate after Sistrunk versus simple excision?", "a": "Roughly 3-5% after Sistrunk (most series under 10%) versus about 40-70% after cyst excision alone in commonly cited series"},
+  {"q": "What is the recurrence rate after Sistrunk versus simple excision?", "a": "About 3-5% after a primary Sistrunk versus about 45-55% after cyst excision alone (Rohof 2015: 5.3% vs 55.6%); revision surgery recurs more often"},
   {"q": "What is the most common congenital neck mass in children?", "a": "Thyroglossal duct cyst"},
   {"q": "Why does a thyroglossal duct cyst elevate with tongue protrusion?", "a": "The tract attaches to the foramen cecum and hyoid"},
   {"q": "What must be confirmed before excision?", "a": "Presence of a normal thyroid gland in the neck"},

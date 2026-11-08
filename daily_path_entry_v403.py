@@ -73,6 +73,8 @@ if not any(getattr(f, '__name__', '') == '_db_reset_v67' for f in _td_v67):
     _td_v67.append(_db_reset_v67)
 from bank_fixes_v640 import install_bank_fixes_v640
 BANK_FIXES_V640 = install_bank_fixes_v640(production.runtime_entry.data)
+from tgdc_update_v770 import install_tgdc_update_v770
+TGDC_UPDATE_V770 = install_tgdc_update_v770(production.runtime_entry.data, production.runtime_entry.app_mod)
 from question_dedupe_v690 import install_question_dedupe_v690
 QUESTION_DEDUPE_V690 = install_question_dedupe_v690(production.runtime_entry.data)
 from question_dedupe_v690 import install_retired_redirects_v690

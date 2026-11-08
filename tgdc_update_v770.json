@@ -1,0 +1,307 @@
+{
+ "fixes": [
+  {
+   "where": "curriculum_topic.recognize",
+   "current": "a dermoid cyst moves with swallowing but not tongue protrusion, and does not track through the hyoid",
+   "replacement": "a dermoid cyst usually lies superficial to the strap muscles, often moves with the overlying skin, typically does not elevate with tongue protrusion (and moves little, if at all, with swallowing), and is not attached to the hyoid. The sign is imperfect: exam and ultrasound misclassify a meaningful share of midline cysts, so if a presumed dermoid proves attached to the hyoid, convert to a Sistrunk"
+  },
+  {
+   "where": "curriculum_topic.recognize",
+   "current": "typically an asymptomatic, smooth, mobile cystic mass discovered in childhood, though it can present at any age",
+   "replacement": "typically a painless, smooth, mobile cystic mass. Most present in childhood (classically before age 10), but adult presentation is common: large surgical-pathology series show a bimodal age distribution with peaks in the 1st and 5th decades, and about 60% of operated patients in one 685-case series were adults"
+  },
+  {
+   "where": "curriculum_topic.localize",
+   "current": "**About two-thirds** of cysts are found at or below the hyoid. A minority are suprahyoid (near the tongue base/floor of mouth) or intralingual.",
+   "replacement": "**About three-quarters** are at or below the hyoid (thyrohyoid ~60%, suprasternal ~13%), about 20-25% are suprahyoid, and ~2% are intralingual. Suprahyoid lesions are more common in children (~20-25%) than adults (~5%). Most lie within 2 cm of midline; off-midline lesions are usually inferior and usually left-sided."
+  },
+  {
+   "where": "curriculum_topic.localize",
+   "current": "because the tract can pass anterior to, posterior to, or directly through the hyoid body",
+   "replacement": "because the tract can pass anterior to (most often), through, or posterior to (in roughly 30%) the hyoid body"
+  },
+  {
+   "where": "curriculum_topic.workup",
+   "current": "since **1-2%** of patients have an ectopic thyroid with the TGDC representing their only functioning thyroid tissue",
+   "replacement": "since an estimated **1-2%** of presumed TGDCs are actually ectopic thyroid (probably fewer in modern ultrasound-screened series), and in those patients the mass may be the only functioning thyroid tissue"
+  },
+  {
+   "where": "curriculum_topic.workup",
+   "current": "**Active infection**: should be treated with antibiotics (and aspiration if abscessed) before definitive excision",
+   "replacement": "**Active infection**: treat with antibiotics covering oral and skin flora (H. influenzae, S. aureus including local MRSA risk, S. epidermidis, streptococci) and needle aspiration if abscessed. Avoid formal incision and drainage; if unavoidable, make a small incision inside the planned excision ellipse. Delay excision until inflammation has fully resolved (typically several weeks)"
+  },
+  {
+   "where": "curriculum_topic.manage",
+   "current": "and is the reason it achieves markedly lower recurrence.",
+   "replacement": "and is the reason recurrence falls from roughly 45-55% after simple cystectomy to about 3-5% after a primary Sistrunk (pooled pediatric data run higher: ~11% for primary and ~20% for revision operations)."
+  },
+  {
+   "where": "curriculum_topic.operate",
+   "current": "resect the central (mid-body) segment of the hyoid along with the cyst",
+   "replacement": "resect the central ~1-1.5 cm of the hyoid body (staying medial to the lesser cornua) along with the cyst"
+  },
+  {
+   "where": "curriculum_topic.operate",
+   "current": "carries a recurrence rate as high as **40-50%**, versus roughly **3-6%** after a properly performed Sistrunk procedure",
+   "replacement": "carries a recurrence rate of roughly **45-55%**, versus about **3-5%** after a properly performed primary Sistrunk procedure"
+  },
+  {
+   "where": "curriculum_topic.operate",
+   "current": "Recurrence, when it occurs, usually presents as a new mass along the same tract and warrants repeat imaging and revision Sistrunk.",
+   "replacement": "Recurrence usually presents within the first 1-2 years as a new mass or draining sinus along the tract. It warrants repeat imaging (ultrasound; MRI if complex) and revision as a wide central neck ('en bloc') dissection: excise the scar/skin ellipse, any residual hyoid, the strap muscles and central soft tissue, and a generous tongue-base core toward the foramen cecum, because recurrent tracts are often multiple and branched. Simple re-excision of a recurrence fails in about one-third."
+  },
+  {
+   "where": "curriculum_topic.overview",
+   "current": "The Sistrunk procedure (including the central hyoid) is curative.",
+   "replacement": "The Sistrunk procedure (including the central hyoid and a tongue-base core) cures about 95-97% of primary cases; simple cystectomy recurs in roughly half."
+  },
+  {
+   "where": "curriculum_topic.pathophysiology",
+   "current": "**Ectopic thyroid**: rarely the only functioning thyroid tissue",
+   "replacement": "**Ectopic thyroid**: in an estimated 1-2% of presumed TGDCs, the mass is ectopic thyroid that may be the only functioning thyroid tissue. Separately, microscopic thyroid tissue is common in the walls of true TGDCs (up to ~70% on careful sectioning) and is the source of TGDC carcinoma"
+  },
+  {
+   "where": "curriculum_topic.pathophysiology",
+   "current": "**Carcinoma**: rare papillary carcinoma within the cyst.",
+   "replacement": "**Carcinoma**: about 1% of TGDCs (up to ~3% in pathology-referral series) harbor carcinoma, mostly papillary thyroid carcinoma (roughly 80-90%+) arising from thyroid rests in the cyst wall; squamous cell carcinoma is rare. It occurs mainly in adults (mean age ~40), is rare in young children, and in roughly a quarter to a third of patients who undergo thyroidectomy a separate primary is found in the thyroid gland."
+  },
+  {
+   "where": "curriculum_topic.source_basis",
+   "current": "Cummings Otolaryngology—Head and Neck Surgery, 7e (2021)",
+   "replacement": "Cummings Otolaryngology—Head and Neck Surgery, 8e (2025)"
+  },
+  {
+   "where": "curriculum_topic.source_basis",
+   "current": "Pasha & Golub, 6e (2022)",
+   "replacement": "Pasha & Golub, 7e (2026)"
+  },
+  {
+   "where": "or_card_thyroglossal.domain",
+   "current": "Pediatrics",
+   "replacement": "Pediatric Otolaryngology"
+  },
+  {
+   "where": "or_card_thyroglossal.steps[0]",
+   "current": "Make the transverse incision over the cyst, elevate subplatysmal flaps",
+   "replacement": "Make a transverse skin-crease incision over the cyst, including an ellipse around any sinus opening, prior drainage site, or adherent scar, elevate subplatysmal flaps"
+  },
+  {
+   "where": "or_card_thyroglossal.steps[1]",
+   "current": "while separating it from strap muscles and preserving normal laryngeal framework",
+   "replacement": "keeping a cuff of surrounding soft tissue/strap muscle on the specimen rather than skeletonizing the tract, and preserving the thyroid cartilage and thyrohyoid membrane"
+  },
+  {
+   "where": "or_card_thyroglossal.steps[2]",
+   "current": "divide it on each side of the tract",
+   "replacement": "divide it on each side of the tract, removing about 1-1.5 cm and staying medial to the lesser cornua,"
+  },
+  {
+   "where": "or_card_thyroglossal.steps[3]",
+   "current": "taking a small core of tissue rather than stopping at the hyoid",
+   "replacement": "taking a core of tongue-base muscle around the tract (not the tract alone), angled ~45 degrees posterosuperiorly, with a gloved finger on the foramen cecum through the mouth to guide depth, rather than stopping at the hyoid"
+  },
+  {
+   "where": "or_card_thyroglossal.danger[0]",
+   "current": "Hypoglossal nerve",
+   "replacement": "Hypoglossal nerves/lingual arteries (lateral: at risk only if the core strays off midline or the hyoid cut extends past the lesser cornua)"
+  },
+  {
+   "where": "or_card_thyroglossal.attending_followup[0][1]",
+   "current": "the hypoglossal nerve runs nearby as dissection continues toward the tongue base and should be identified and protected.",
+   "replacement": "the hypoglossal nerves and lingual arteries lie laterally, so a midline core and a hyoid resection limited to the central body protect them; routine nerve identification is not required."
+  },
+  {
+   "where": "or_card_thyroglossal.attending_followup[1][0]",
+   "current": "Why remove the central hyoid in a Sistrunk procedure?",
+   "replacement": "A child has a recurrence 1 year after a Sistrunk. What is your revision plan?"
+  },
+  {
+   "where": "or_card_thyroglossal.attending_followup[1][1]",
+   "current": "The tract commonly passes through or closely behind the hyoid; removing the central segment and tract toward the tongue base lowers recurrence versus simple cyst excision while avoiding unnecessarily blind deep dissection.",
+   "replacement": "Settle any infection, re-image (ultrasound, MRI if complex) and confirm the thyroid, then perform a wide central neck ('en bloc') dissection: skin/scar ellipse, residual hyoid, strap muscles and central soft tissue from hyoid to thyroid cartilage, and a generous tongue-base core toward the foramen cecum. Recurrent tracts are often multiple and branched, so simple re-excision fails in about a third."
+  },
+  {
+   "where": "or_card_thyroglossal.landmarks[1]",
+   "current": "carotid/parapharyngeal space",
+   "replacement": "hyoid body and lesser cornua"
+  },
+  {
+   "where": "or_card_thyroglossal.landmarks[2]",
+   "current": "Eustachian tube orifice when relevant",
+   "replacement": "foramen cecum / vallecula (tongue base)"
+  },
+  {
+   "where": "or_card_thyroglossal.landmarks[3]",
+   "current": "facial nerve when relevant",
+   "replacement": "strap muscles, thyrohyoid membrane, and pyramidal lobe/thyroid isthmus"
+  },
+  {
+   "where": "or_card_thyroglossal.complications.early[0]",
+   "current": "Airway obstruction/desaturation, bleeding, dehydration, nausea/vomiting or infection depending on operation.",
+   "replacement": "Hematoma with airway compromise, seroma, wound infection (~10-15% in some pediatric series), unrecognized pharyngeal entry leading to salivary leak or fistula, tongue-base/airway edema, and rarely hypoglossal injury."
+  },
+  {
+   "where": "or_card_thyroglossal.complications.late[0]",
+   "current": "Scar/stenosis, recurrence or persistent functional deficit depending on the procedure.",
+   "replacement": "Recurrence (about 3-5% after primary Sistrunk, higher after revision or post-op wound infection), draining sinus, hypertrophic scar, hypothyroidism if ectopic thyroid was removed, and an occult carcinoma found on final pathology."
+  },
+  {
+   "where": "or_card_thyroglossal.antibiotics.regimen",
+   "current": "No preoperative antibiotic is required for this clean procedure without an implant, prosthesis, or mucosal entry.",
+   "replacement": "Not required for an uncomplicated clean excision. A single preincision dose (e.g., cefazolin; clindamycin if beta-lactam allergic) is reasonable when the cyst was previously infected or drained, or when tongue-base mucosal entry is likely. Give it if the pharynx is entered, which makes the case clean-contaminated."
+  },
+  {
+   "where": "or_card_thyroglossal.source_basis",
+   "current": "Cummings Otolaryngology—Head and Neck Surgery, 7th ed.",
+   "replacement": "Cummings Otolaryngology—Head and Neck Surgery, 8th ed. (2025)"
+  },
+  {
+   "where": "question:v139_ped_19.explanation",
+   "current": "simple cystectomy has a high recurrence rate. The Sistrunk procedure removes the cyst, the central hyoid body, and a core of tissue up toward the foramen cecum, markedly lowering recurrence.",
+   "replacement": "simple cystectomy recurs in roughly 45-55% of cases. The Sistrunk procedure removes the cyst, the central hyoid body, and a core of tissue up toward the foramen cecum, lowering recurrence to about 3-5%."
+  },
+  {
+   "where": "question:v146_ped_18.explanation",
+   "current": "through or just behind the hyoid, to the cyst",
+   "replacement": "anterior to, through, or (in about 30%) behind the hyoid, to the cyst"
+  },
+  {
+   "where": "question:v146_ped_18.curveball_answer",
+   "current": "An assistant's finger in the vallecula can guide the dissection",
+   "replacement": "A gloved finger placed on the foramen cecum through the mouth can guide the dissection"
+  },
+  {
+   "where": "question:v241_ped_tgdc_fnd.explanation",
+   "current": "A dermoid moves with the skin and does not rise with tongue protrusion.",
+   "replacement": "A dermoid usually lies superficial to the strap muscles, may move with the overlying skin, and does not rise with tongue protrusion. The sign is imperfect, though, and dermoids are often misdiagnosed as TGDCs before surgery."
+  },
+  {
+   "where": "question:v241_ped_tgdc_app.curveball_answer",
+   "current": "Recurrence after a properly performed Sistrunk procedure is low, generally a few percent, while simple cystectomy recurs in a large fraction of patients. Prior infection, incision and drainage, and incomplete hyoid or tract removal increase recurrence.",
+   "replacement": "Recurrence after a properly performed Sistrunk procedure is about 3-5%, while simple cystectomy recurs in roughly 45-55%. Incomplete hyoid or tract removal is the strongest risk factor; repeated preoperative infection, incision and drainage, intraoperative rupture, lobulated cysts, and postoperative wound infection are also associated."
+  },
+  {
+   "where": "question:v241_ped_tgdc_snr.explanation",
+   "current": "Revisions carry a higher recurrence risk than primary Sistrunk procedures, so an experienced surgeon and careful en bloc technique matter.",
+   "replacement": "Revisions carry a higher recurrence risk than primary operations (about 20% vs 11% in pooled pediatric data). This is why a wide central neck ('en bloc') dissection by an experienced surgeon is preferred; small series report few or no recurrences after it, while simple re-excision fails in about a third."
+  },
+  {
+   "where": "question:v241_ped_tgdc_snr.curveball_answer",
+   "current": "guided by ATA risk stratification",
+   "replacement": "using risk stratification extrapolated from ATA differentiated thyroid cancer guidelines (2025 adult; 2015 pediatric), which do not specifically address TGDC carcinoma"
+  },
+  {
+   "where": "question:v490-pediatric-1-31.explanation",
+   "current": "descends anterior to the developing hyoid to the lower neck. The thyroglossal duct normally involutes by about the tenth week of gestation",
+   "replacement": "descends anterior to, through, or behind the developing hyoid to the lower neck. The thyroglossal duct normally involutes by about weeks 8-10 of gestation"
+  },
+  {
+   "where": "question:v490-pediatric-1-33.explanation",
+   "current": "Cyst rupture during surgery and failure to remove the central hyoid also increase recurrence.",
+   "replacement": "The strongest technical predictor is failure to remove the central hyoid (non-Sistrunk excision). Intraoperative rupture, lobulated or multiloculated cysts, and postoperative wound infection also increase risk. Data on preoperative infection are mixed: repeated infection raised risk in a pediatric systematic review, but a 207-case series found only postoperative infection significant."
+  },
+  {
+   "where": "question:v490-pediatric-1-34.stem",
+   "current": "with the anesthesiologist's finger not used for guidance",
+   "replacement": "without a finger placed on the foramen cecum through the mouth for guidance"
+  },
+  {
+   "where": "question:v490-pediatric-1-35.explanation",
+   "current": "almost always papillary, from ectopic thyroid tissue in the wall",
+   "replacement": "most often papillary (roughly 80-90%+), from thyroid tissue in the cyst wall"
+  },
+  {
+   "where": "question:v490-pediatric-1-35.explanation",
+   "current": "Total thyroidectomy is reserved for higher-risk features such as cyst wall invasion, thyroid nodules, nodal disease, radiation exposure, or larger tumors.",
+   "replacement": "Total thyroidectomy is reserved for higher-risk features such as extension beyond the cyst wall, thyroid nodules, nodal disease, radiation exposure, tumors larger than about 1 cm, or older adult age."
+  },
+  {
+   "where": "question:v490-pediatric-3-14.choices[1]",
+   "current": "The thyroid descends from the foramen cecum before the hyoid forms",
+   "replacement": "The thyroid descends from the foramen cecum as the hyoid forms around its tract"
+  },
+  {
+   "where": "question:v490-pediatric-3-14.curveball_answer",
+   "current": "In a small number of children",
+   "replacement": "In an estimated 1-2% of presumed thyroglossal duct cysts"
+  },
+  {
+   "where": "concept_check:cc-v112-rec-pediatric-otolaryngology-thyroglossal-duct-cyst.prompt",
+   "current": "A child is evaluated in pediatric otolaryngology. Midline mass near hyoid that moves with swallowing/tongue protrusion reflects persistent embryologic tract. What is the initial management strategy, and what finding, response, or failure would change the next step?",
+   "replacement": "A 5-year-old has a midline cystic mass at the hyoid that rises with swallowing and tongue protrusion. What is the initial management, and which findings would change the next step?"
+  },
+  {
+   "where": "concept_check:cc-v112-rec-pediatric-otolaryngology-thyroglossal-duct-cyst.answer_text",
+   "current": "Sistrunk procedure removes cyst, central hyoid and tract toward tongue base to reduce recurrence.",
+   "replacement": "Ultrasound first, to confirm a cyst and a normal orthotopic thyroid, then elective Sistrunk (cyst + central hyoid + tongue-base core) when quiescent. Change course if: there is no orthotopic thyroid or the mass is solid (TSH/free T4, scintigraphy, endocrinology; do not excise); the cyst is infected (antibiotics +/- aspiration, avoid I&D, operate after resolution); there is a solid, calcified, or vascular component (FNA of the solid part, evaluate thyroid and nodes); it recurs after surgery (re-image, then wide central neck dissection)."
+  },
+  {
+   "where": "concept_check:cc-v112-rec-pediatric-otolaryngology-thyroglossal-duct-cyst.explanation",
+   "current": "This check tests the manage layer of Thyroglossal Duct Cyst. The reveal comes from the live canonical Deep Curriculum, so the question is testing the concept itself rather than a generic red-flag template.",
+   "replacement": "Cure requires removing the tract with the central hyoid (recurrence about 3-5% vs roughly 45-55% for cystectomy), but only after you confirm the mass is not the patient's only thyroid tissue and that it is not infected or harboring carcinoma."
+  },
+  {
+   "where": "concept_check:cc-v112-mgt-pediatric-otolaryngology-thyroglossal-duct-cyst.explanation",
+   "current": "reduces recurrence from about 50 percent to under 5 percent",
+   "replacement": "reduces recurrence from roughly 45-55 percent to about 3-5 percent"
+  }
+ ],
+ "additions": [
+  {
+   "where": "curriculum_topic.workup",
+   "text": "**Concerning features**: a solid component, microcalcifications, or internal vascularity on ultrasound (more likely in adolescents/adults) should prompt ultrasound-guided FNA of the solid part, plus ultrasound of the thyroid gland and central/lateral nodes. In adults and in complex or recurrent cases, CT or MRI can help define the tract and the tongue-base extent."
+  },
+  {
+   "where": "curriculum_topic.workup",
+   "text": "A preoperative TSH is reasonable and inexpensive. Scintigraphy is not needed when ultrasound clearly shows a normal orthotopic gland; reserve it for an absent, small, or equivocal gland or a solid midline mass."
+  },
+  {
+   "where": "curriculum_topic.manage",
+   "text": "**Observation** is not recommended for a confirmed TGDC: cysts do not regress, infection risk persists, and each infection makes later surgery harder. Sclerotherapy/ethanol ablation is not standard care in children."
+  },
+  {
+   "where": "curriculum_topic.manage",
+   "text": "**TGDC carcinoma (~1%, mostly papillary)**: a complete Sistrunk is the core operation. Sistrunk alone with thyroid/neck ultrasound surveillance is reasonable for low-risk disease (tumor about 1 cm or smaller, confined to the cyst, clear margins, normal thyroid and nodes, no radiation history). Add total thyroidectomy (with nodal surgery and RAI as indicated) for extracystic extension, thyroid nodules, nodal metastasis, larger tumors, radiation history, or older adult age. Risk stratification is extrapolated from ATA DTC guidelines (2025 adult, 2015 pediatric), and there is no TGDC-specific AJCC category."
+  },
+  {
+   "where": "curriculum_topic.manage",
+   "text": "**Recurrence/revision**: re-image, confirm the thyroid, and perform a wide central neck ('en bloc') dissection: skin/scar ellipse, residual hyoid, strap muscles and central soft tissue, and a generous tongue-base core. Some centers use this up front for previously infected or drained cysts."
+  },
+  {
+   "where": "curriculum_topic.teach",
+   "text": "**Numbers to know**: about 7% of people have thyroglossal remnants; about three-quarters of cysts are at or below the hyoid and ~20-25% are suprahyoid; ectopic thyroid is found in ~1-2% of presumed TGDCs; carcinoma in ~1% (mostly papillary, mostly adults); recurrence is ~3-5% after Sistrunk vs ~45-55% after cystectomy, and higher after revision."
+  },
+  {
+   "where": "curriculum_topic.teach",
+   "text": "**Pediatric vs adult**: children have smaller cysts, more suprahyoid lesions, about twice as many skin sinuses/fistulae, and a slight male predominance, and ultrasound without sedation is the workhorse study. Adults have more complex cysts, more carcinoma (consider FNA and thyroid evaluation), a female predominance, and are more often imaged with CT/MRI. The Sistrunk is the same operation in both."
+  },
+  {
+   "where": "curriculum_topic.source_basis",
+   "text": "Rohof D, et al. Recurrences after thyroglossal duct cyst surgery: results in 207 consecutive cases and review of the literature. Head Neck. 2015."
+  },
+  {
+   "where": "curriculum_topic.source_basis",
+   "text": "Galluzzi F, Pignataro L, Gaini R, Hartley B, Garavello W. Risk of recurrence in children operated for thyroglossal duct cysts: a systematic review. J Pediatr Surg. 2013;48(1):222-227."
+  },
+  {
+   "where": "curriculum_topic.source_basis",
+   "text": "Thompson LDR, Herrera HB, Lau SK. A clinicopathologic series of 685 thyroglossal duct remnant cysts; and Thyroglossal duct cyst carcinomas: a clinicopathologic series of 22 cases. Head Neck Pathol. 2016."
+  },
+  {
+   "where": "curriculum_topic.source_basis",
+   "text": "Kim MK, et al. Central neck dissection for the treatment of recurrent thyroglossal duct cysts in childhood. Otolaryngol Head Neck Surg. 1999;121(5):543-547."
+  },
+  {
+   "where": "curriculum_topic.source_basis",
+   "text": "2025 American Thyroid Association Management Guidelines for Adult Patients with Differentiated Thyroid Cancer. Thyroid. 2025 (doi 10.1177/10507256251363120); ATA Management Guidelines for Children with Thyroid Nodules and DTC. Thyroid. 2015."
+  },
+  {
+   "where": "or_card_thyroglossal.postop",
+   "text": "Send the whole specimen for histology (carcinoma ~1%; confirms TGDC vs dermoid) and follow up for at least 1-2 years for recurrence."
+  },
+  {
+   "where": "or_card_thyroglossal.indications",
+   "text": "The same operation applies to adults, where a solid component or suspicious ultrasound features should prompt FNA and thyroid/nodal evaluation first."
+  }
+ ]
+}
