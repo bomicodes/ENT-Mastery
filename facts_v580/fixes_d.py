@@ -13,4 +13,6 @@ FIXES = {
     "v490-pediatric-3-14": {"mode": "split", "cards": [
         {"front": "Why is the central hyoid removed in a Sistrunk procedure?", "back": "The hyoid forms around the descending tract, which runs in front of, through or behind its body"},
         {"front": "TGDC vs dermoid on exam?", "back": "TGDC rises with tongue protrusion; dermoid is superficial and does not (sign is imperfect)"}]},
+    # v82.0: warfarin holding recommendation card removed at the user's request
+    "v490-general-ent-1-81": {"mode": "remove", "cards": []},
 }

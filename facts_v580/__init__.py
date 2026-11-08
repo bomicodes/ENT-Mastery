@@ -38,7 +38,9 @@ def load():
             cs = [{"front": (c.get("front") or "").strip(), "back": (c.get("back") or "").strip(),
                    "hook": (c.get("hook") or "").strip()} for c in fix.get("cards") or []]
             cs = [c for c in cs if c["front"] and c["back"]]
-            if q in base and cs:
+            if fix.get("mode") == "remove":
+                base.pop(q, None)  # v82: card removed on request
+            elif q in base and cs:
                 base[q] = cs
     alias = {}
     dpath = os.path.join(HERE, "dups.py")
