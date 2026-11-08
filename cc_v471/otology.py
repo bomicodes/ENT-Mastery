@@ -52,7 +52,7 @@ CHECKS = [
  [("The sigmoid sinus", "The sigmoid sinus forms the posterior boundary of the mastoid, not the area just below the lateral canal."),
   ("The jugular bulb", "The jugular bulb lies far inferior, in the hypotympanum and infralabyrinthine region."),
   ("The tegmen mastoideum", "The tegmen is the superior boundary of the mastoid, above the lateral canal.")],
- "The lateral semicircular canal is the key mastoid landmark: the facial nerve's second genu lies just inferior to it before descending as the mastoid segment. The facial recess is opened lateral to the nerve and medial to the chorda tympani.",
+ "The lateral semicircular canal is the key mastoid landmark: the facial nerve's second genu lies just inferior to it before descending as the mastoid segment. The facial recess is the triangle between them: the mastoid facial nerve is its posterior and deeper (medial) border, the chorda tympani its anterior and more superficial (lateral) border, and the incus buttress its top. Drilling stays anterior to and lateral to the nerve, and posterior to and medial to the chorda.",
  "Find the lateral canal and you have found the level of the second genu."),
 
 ("Audiogram Interpretation",
