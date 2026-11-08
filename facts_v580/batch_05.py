@@ -208,7 +208,7 @@ FACTS = [
     {"qid": "v490-otology-1-70", "front": "Ménière disease: proper use of vestibular suppressants?", "back": "Acute attacks only — daily use blocks compensation"},
     {"qid": "v490-otology-1-71", "front": "Episodic vertigo years after an ear was profoundly deafened: diagnosis?", "back": "Delayed endolymphatic hydrops"},
     {"qid": "v490-otology-1-72", "front": "Ménière disease natural history: vertigo vs hearing over years?", "back": "Vertigo tends to wane while hearing gradually declines"},
-    {"qid": "v490-otology-1-73", "front": "Endolymphatic sac surgery: where is the sac found?", "back": "Posterior fossa dura below Donaldson line, between posterior canal and sigmoid"},
+    {"qid": "v490-otology-1-73", "front": "Endolymphatic sac surgery: where is the sac found?", "back": "Posterior fossa dura below Donaldson line, between posterior semicircular canal and sigmoid"},
     {"qid": "v11_oto_05", "front": "Elderly diabetic with night ear pain, canal-floor granulation, high ESR, and CN VII palsy: diagnosis?", "back": "Necrotizing otitis externa with skull base osteomyelitis"},
     {"qid": "v490-otology-2-43", "front": "Necrotizing otitis externa: route of spread from the cartilaginous canal to the skull base?", "back": "Fissures of Santorini"},
     {"qid": "v490-otology-2-44", "front": "Necrotizing otitis externa: imaging to monitor resolution and decide when to stop antibiotics?", "back": "Gallium-67 scintigraphy with SPECT"},

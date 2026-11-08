@@ -69,7 +69,7 @@ FACTS = [
     {"qid": "v490-otology-1-28", "front": "Cough with ear canal instrumentation (Arnold reflex): nerve responsible?", "back": "Auricular branch of the vagus"},
     {"qid": "v490-otology-1-29", "front": "Bill's bar in the IAC fundus: which nerve lies anterior to it?", "back": "Facial nerve (superior vestibular nerve posterior)"},
     {"qid": "v490-otology-1-30", "front": "Aberrant internal carotid artery found on CT as a red retrotympanic mass: management?", "back": "Observation with counseling — no biopsy or myringotomy"},
-    {"qid": "v490-topup-otology-8", "front": "Locating the endolymphatic sac in mastoidectomy: relation to Donaldson's line?", "back": "Below it, between posterior canal and sigmoid sinus"},
+    {"qid": "v490-topup-otology-8", "front": "Locating the endolymphatic sac in mastoidectomy: relation to Donaldson's line?", "back": "Below it, between posterior semicircular canal and sigmoid sinus"},
     {"qid": "v124_oto_03", "front": "Otic capsule-violating vs capsule-sparing temporal bone fracture: facial nerve injury rate?", "back": "Roughly twice as high, plus more CSF leak and profound SNHL"},
     {"qid": "v490-otology-1-100", "front": "Otic capsule-sparing temporal bone fracture: usual cause of the hearing loss?", "back": "Middle ear hemorrhage (hemotympanum) — conductive"},
     {"qid": "v490-otology-1-101", "front": "Otic capsule fracture: how does it heal, and what lifelong risk results?", "back": "Fibrous union — lifelong meningitis risk"},
