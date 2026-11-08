@@ -791,6 +791,7 @@ OR_CARD_V501 = {
         "transoral surgery. The choice of approach is contested and based on small series."
     ),
     "setup": [
+        "Length: a styloid longer than about 25-30 mm is called elongated (30 mm is the most common cutoff; studies vary and many asymptomatic people exceed it). There is no length threshold for surgery; length supports the diagnosis only alongside compatible symptoms and a positive exam.",
         "Confirm the diagnosis before booking: compatible symptoms, a pain-reproducing palpable tip, response to "
         "local anesthetic infiltration, exclusion of oropharyngeal, tongue-base and hypopharyngeal malignancy, and "
         "consideration of glossopharyngeal neuralgia, TMJ disorder and carotidynia.",
@@ -852,6 +853,8 @@ OR_CARD_V501 = {
         "Review symptom response at follow-up; persistent identical pain should prompt CT for a residual segment and reconsideration of the diagnosis.",
     ],
     "attending_followup": [
+        ["Is there a styloid length cutoff for surgery?",
+         "No. A normal styloid is about 20-30 mm (Eagle's normal was about 25 mm), and longer than about 25-30 mm is usually called elongated; 30 mm is the most common cutoff, but studies use 25, 30 or even 40 mm and measurement methods differ. About 4% of the population has an elongated styloid and only a small fraction have symptoms, so length never decides surgery on its own. Operate for compatible symptoms with a pain-reproducing palpable tip, a positive local anesthetic test, malignancy and mimics excluded, or a vascular (stylocarotid) presentation, with CT confirming an elongated or angulated process."],
         ["Which vessels lie lateral and medial to the styloid tip?",
          "The ECA usually lies lateral and the ICA medial/posterior, with the IJV posterior to the base. A medially angulated process points at the ICA, which is why vascular-type disease favors a transcervical approach with vascular control."],
         ["Why stop short of the styloid base?",
