@@ -40,7 +40,7 @@
   "issue": "The statement that the trachea is supplied 'largely from the esophagus' after isthmus division is misleading; the supply is lateral segmental pedicles shared with the esophagus.",
   "new_value": [
    "Protect the tracheal blood supply",
-   "The trachea is supplied by segmental lateral pedicles, mainly from inferior thyroid artery branches that also feed the esophagus through the tracheoesophageal groove. Do not mobilize far below the stenosis, keep the lateral attachments, and separate the membranous wall from the esophagus for only about 1 to 1.5 cm beyond the cut, especially on the distal stump."
+   "The trachea is supplied by segmental lateral pedicles, mainly from inferior thyroid artery branches that also feed the esophagus through the tracheoesophageal groove. Do not mobilize far below the stenosis, keep the lateral attachments, and separate the membranous wall from the esophagus for no more than about 1 cm beyond the cut, especially on the distal stump."
   ]
  },
  {
@@ -51,7 +51,7 @@
   "issue": "Refers to 'the atlas' without explanation; restated as a plain comparison of release options.",
   "new_value": [
    "Place stay sutures and test tension",
-   "Pass 2-0 polyglactin stay sutures around a full ring on each side of the distal stump, at least two rings below the cut. For cricoid resections, place matching upper stays into the lower thyroid alae, outside the mucosa. Bring each pair together to judge tension. If tension remains, usually when the resection exceeds about 4 cm, add a laryngeal release; most US surgeons prefer the suprahyoid (Montgomery) release over the thyrohyoid (Dedo) release because of less dysphagia."
+   "Pass 2-0 polyglactin stay sutures around a full ring on each side of the distal stump, a ring or two below the cut. For cricoid resections, place matching upper stays into the lower thyroid alae, outside the mucosa. Bring each pair together to judge tension. If tension remains, usually when the resection exceeds about 4 cm, add a laryngeal release; most US surgeons prefer the suprahyoid (Montgomery) release over the thyrohyoid (Dedo) release because of less dysphagia."
   ]
  },
  {
@@ -121,7 +121,7 @@
    "Treat new subcutaneous emphysema, air leak, stridor, hemoptysis, wound redness or fever as possible anastomotic dehiscence: call the airway surgeon and anesthesia at once, avoid blind instrumentation across the anastomosis, and if intubation is needed do it under endoscopic guidance with the cuff below the anastomosis.",
    "Prevent strain on the anastomosis with antiemetics, cough suppression and acid suppression.",
    "Check voice and swallowing; a breathy voice or aspiration suggests recurrent laryngeal nerve injury, and dysphagia is more likely after a laryngeal release.",
-   "Remove the drain around day 3 and perform endoscopy before discharge or at about 1 week, then at intervals to detect granulation or restenosis."
+   "Remove the drain once output is low, usually within the first few days, and perform endoscopy before discharge or at about 1 week, then at intervals to detect granulation or restenosis."
   ]
  },
  {
@@ -1746,7 +1746,7 @@
   "new_value": [
    "After ZMC fixation, new visual change, proptosis, severe orbital pain or worsening motility is an urgent orbital concern. Once swelling settles, reassess malar symmetry, globe position and diplopia, mouth opening and infraorbital sensation; persistent flattening or trismus can indicate malreduction.",
    "Check vision and pupils on recovery and overnight after orbital floor work.",
-   "Advise no nose blowing for 1 to 2 weeks and avoid pressure on the cheek (no sleeping on that side)."
+   "Advise no nose blowing for at least 2 weeks and avoid pressure on the cheek (no sleeping on that side)."
   ]
  },
  {
@@ -3216,7 +3216,7 @@
   "issue": "Contains an unexplained source reference (\"The atlas advises...\").",
   "new_value": [
    "Let timing and size pick the pathway",
-   "Some surgeons favor early operative re-closure for a fistula that appears in the first few days with healthy tissue, and conservative care for one appearing after about 5-7 days, which usually closes with no oral intake, tube feeding and local wound care. In US practice most fistulas get conservative care first, with surgery reserved for large or persistent tracts, carotid exposure, sepsis or failed wound care."
+   "Some surgeons favor early operative re-closure for a fistula that appears in the first few days with healthy tissue, and conservative care for a fistula that appears later, which usually closes with no oral intake, tube feeding and local wound care. In US practice most fistulas get conservative care first, with surgery reserved for large or persistent tracts, carotid exposure, sepsis or failed wound care."
   ]
  },
  {
@@ -3398,7 +3398,7 @@
   "issue": "Flap abbreviations (MSAP, ALT, RFF) are not spelled out at first use.",
   "new_value": [
    "Match tissue to subsite",
-   "Oral cavity defects need a thin, pliable fasciocutaneous flap (medial sural artery perforator [MSAP], thin anterolateral thigh [ALT], or radial forearm free flap [RFF]) with a 4 to 6 cm paddle and a short pedicle. Subtotal or total glossectomy needs bulk such as ALT, keeping in mind that muscle atrophies after radiation. A circumferential pharyngeal defect needs a paddle about 9.4 cm wide to tube to a 3 cm lumen."
+   "Oral cavity defects need a thin, pliable fasciocutaneous flap (medial sural artery perforator [MSAP], thin anterolateral thigh [ALT], or radial forearm free flap [RFF]) with a paddle sized to the defect and enough pedicle length to reach the neck vessels. Subtotal or total glossectomy needs bulk such as ALT, keeping in mind that muscle atrophies after radiation. A circumferential pharyngeal defect needs a paddle about 9.4 cm wide to tube to a 3 cm lumen."
   ]
  },
  {
@@ -4099,7 +4099,7 @@
   "issue": "Overlaps item 1 and partly contradicts it by recommending awake fiberoptic intubation as routine; replaced with a timing/group question.",
   "new_value": [
    "Which Schaefer groups need open repair, and when?",
-   "Groups III and IV (displaced or unstable fractures, exposed cartilage, anterior commissure disruption) need open repair, ideally within about 24 hours after the airway is secured; group V (laryngotracheal separation) needs emergency airway control and reconstruction."
+   "Groups III and IV (displaced or unstable fractures, exposed cartilage, anterior commissure disruption) need open repair, ideally within about 24 to 48 hours after the airway is secured; group V (laryngotracheal separation) needs emergency airway control and reconstruction."
   ]
  },
  {
@@ -4974,7 +4974,7 @@
   "issue": "Complications are a shared otology template (graft failure, canal stenosis, CSF leak, device extrusion) rather than stapedotomy complications.",
   "new_value": {
    "early": [
-    "Facial weakness: after local anesthetic, re-examine at 2 to 4 hours; delayed weakness days later is usually treated with steroids; immediate complete weakness without an anesthetic explanation warrants urgent evaluation and possible exploration.",
+    "Facial weakness: after local anesthetic, re-examine after a few hours once the anesthetic has worn off; delayed weakness days later is usually treated with steroids; immediate complete weakness without an anesthetic explanation warrants urgent evaluation and possible exploration.",
     "Vertigo: mild imbalance is common; severe or persistent vertigo suggests an overlong piston, pneumolabyrinth or perilymph fistula and needs CT and possible revision.",
     "Sensorineural hearing loss or a dead ear (about 1%): treat promptly with steroids and evaluate for reparative granuloma (typically 1 to 6 weeks) or fistula.",
     "Taste change or dry mouth from chorda stretch or section, usually improving over months.",
@@ -5484,7 +5484,7 @@
   "issue": "Refers to 'the atlas' (a leaked source reference) instead of stating the practice point directly.",
   "new_value": [
    "Core out the suprahyoid tract",
-   "Above the hyoid, remove the tract inside a core of surrounding muscle rather than the tract alone, heading back and up at about 45 degrees toward the foramen cecum. Sistrunk's core was about 3 mm in radius. Some surgeons include the foramen cecum mucosa; many US surgeons stop just short of the tongue-base mucosa. Stay midline to protect the lingual arteries and hypoglossal nerves."
+   "Above the hyoid, remove the tract inside a core of surrounding muscle rather than the tract alone, heading back and up at about 45 degrees toward the foramen cecum. Sistrunk's core was a narrow cuff of muscle around the tract, not a wide wedge of tongue. Some surgeons include the foramen cecum mucosa; many US surgeons stop just short of the tongue-base mucosa. Stay midline to protect the lingual arteries and hypoglossal nerves."
   ]
  },
  {
@@ -5939,7 +5939,7 @@
    ],
    [
     "Leak test",
-    "Fill the wound with saline and ask anesthesia to hold positive pressure at about 20 to 30 cmH2O. Bubbling means the closure leaks; add sutures or a muscle layer until it is airtight. A trachea that still leaks under a sealed skin closure is the main cause of subcutaneous emphysema and pneumomediastinum."
+    "Fill the wound with saline and ask anesthesia to give a sustained positive-pressure breath. Bubbling means the closure leaks; add sutures or a muscle layer until it is airtight. A trachea that still leaks under a sealed skin closure is the main cause of subcutaneous emphysema and pneumomediastinum."
    ],
    [
     "Strap muscles and air escape",
@@ -6089,7 +6089,7 @@
   "index": 2,
   "severity": "minor",
   "issue": "Generic phonosurgery line (stroboscopy, functional target) rather than cleft palate planning.",
-  "new_value": "Confirm timing (commonly about 9 to 18 months, before major speech development), weight gain and the cleft type and width, and plan ear tubes at the same anesthetic when middle-ear effusion is present."
+  "new_value": "Confirm timing (commonly between 6 and 18 months, most often around 9 to 12 months, before major speech development), weight gain and the cleft type and width, and plan ear tubes at the same anesthetic when middle-ear effusion is present."
  },
  {
   "slug": "palatoplasty",
@@ -6924,7 +6924,7 @@
    ],
    [
     "Protect the lacrimal opening",
-    "Keep bony work in the anterior inferior meatus medial and superior to the Hasner valve, which lies about 1 cm behind the anterior tip of the turbinate. Do not resect lateral-wall bone or mucosa there, to avoid nasolacrimal duct injury and epiphora."
+    "The Hasner valve opens high on the lateral wall of the inferior meatus, about 1 to 1.5 cm behind the turbinate's anterior attachment. Keep instruments on the turbinate itself, and do not resect lateral meatal wall bone or mucosa in that area, to avoid nasolacrimal duct injury and epiphora."
    ],
    [
     "Hemostasis and dressing",
@@ -7112,7 +7112,7 @@
    "After orbital abscess drainage, repeat objective visual and motility examinations; worsening acuity, new RAPD, increasing proptosis, ophthalmoplegia, severe pain or declining mental status means treatment failure or progression until proven otherwise and requires immediate reassessment, not delayed routine rounds.",
    "Persistent fever, worsening orbital signs or absent clinical improvement should prompt review for residual/loculated abscess, inadequately treated sinus source, resistant organism, intracranial extension or another diagnosis. Continue antibiotic duration and repeat imaging based on clinical trajectory rather than a fixed postoperative timetable alone.",
    "Continue IV antibiotics tailored to cultures and switch to oral therapy once clearly improving; involve infectious disease and neurosurgery for intracranial extension.",
-   "Serial ophthalmology exams; repeat contrast CT if there is no improvement within 24 to 48 hours or any worsening."
+   "Serial ophthalmology exams; repeat contrast CT if there is no improvement within 48 hours or any worsening."
   ]
  },
  {
