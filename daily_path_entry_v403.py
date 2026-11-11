@@ -89,6 +89,8 @@ from or_cards_v740 import install_or_cards_v740
 OR_CARDS_V740 = install_or_cards_v740(production.runtime_entry.data, production.runtime_entry.app_mod)
 from or_indications_v760 import install_or_indications_v760
 OR_INDICATIONS_V760 = install_or_indications_v760(production.runtime_entry.data)
+from or_steps_v840 import install_or_steps_v840
+OR_STEPS_V840 = install_or_steps_v840(production.runtime_entry.data)
 from or_dedupe_v690 import install_or_dedupe_v690
 OR_DEDUPE_V690 = install_or_dedupe_v690(app, production.runtime_entry.data, production.runtime_entry.app_mod)
 from or_merge_v610 import install_or_merge_v610

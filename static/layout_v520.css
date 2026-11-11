@@ -309,3 +309,5 @@ section.welcome-block:not(.card){margin:18px 0}
 .cards-flip-btn kbd{color:#fff;border-color:rgba(255,255,255,.45);opacity:.85}
 .cards-rate-label{margin:0 0 8px;font-size:13px;font-weight:700;color:var(--muted,#5f7372)}
 @media(hover:none){.cards-flip-btn kbd,.cards-rate kbd{display:none}}
+
+.steps-rich li{margin-bottom:10px}.steps-rich p{margin:4px 0}.steps-rich b{color:var(--ink)}.steps-src{font-size:12px;margin-top:6px}
