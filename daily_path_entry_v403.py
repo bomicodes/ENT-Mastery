@@ -106,3 +106,5 @@ LEARNING_PATH_V470 = install_learning_path_v470(
     production.runtime_entry.data, production.runtime_entry.app_mod, app)
 from or_card_fixes_v860 import install_or_card_fixes_v860
 OR_CARD_FIXES_V860 = install_or_card_fixes_v860(production.runtime_entry.data)
+from or_images_v880 import install_or_images_v880
+OR_IMAGES_V880 = install_or_images_v880(production.runtime_entry.data)
