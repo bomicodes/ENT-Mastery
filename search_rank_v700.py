@@ -64,7 +64,14 @@ def _phrase_in(phrase_words, words):
     return False
 
 
+# v92: words that name a kind of scheme rather than the topic; they help ranking but aren't required,
+# so "Chandler's classification" finds the Chandler material even if the text says "Chandler stages".
+SOFT = {"classification", "classifications", "criteria", "staging", "stage", "stages", "grading", "grade",
+        "grades", "system", "score", "scale", "sign", "triad", "rule", "type", "types"}
+
+
 def parse_query(q):
+    q = re.sub(r"[\'\u2019]s\b", "", str(q or ""))  # possessives: "chandler's" -> "chandler"
     words = _words(q)
     terms = [w for w in words if w not in STOP] or words
     alts = {}
@@ -93,18 +100,21 @@ def score_row(row, parsed):
             total += best
             if best >= 8:
                 in_title += 1
-    if matched < len(terms):
-        return 0.0  # every meaningful word (or its abbreviation) must match
+    required = [t for t in terms if t not in SOFT] or terms
+    req_hit = sum(1 for t in required if any(_term_hit(t, fw) or any(_phrase_in(a, fw) for a in alts.get(t, []))
+                                             for fw in (tw, sw, xw)))
+    if req_hit < len(required):
+        return 0.0  # every meaningful word (or its abbreviation) must match; scheme words are optional
     page = row.get("type") not in QUESTION_TYPES
     if tw == terms or tw == words:
         total += 60 if page else 10
     elif _phrase_in(terms, tw):
         total += 30 if page else 8
-    if in_title == len(terms):
+    if in_title >= len(required):
         total += 15
     # a shorter title that matches is a more specific hit
     total *= 1.0 + 0.4 / max(1, len(tw))
-    row_tier = 1 if in_title == len(terms) else (2 if page else 3)
+    row_tier = 1 if in_title >= len(required) else (2 if page else 3)
     return total * TYPE_BOOST.get(row.get("type"), 1.0), row_tier
 
 
