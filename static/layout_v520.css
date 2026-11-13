@@ -313,3 +313,6 @@ section.welcome-block:not(.card){margin:18px 0}
 .steps-rich li{margin-bottom:10px}.steps-rich p{margin:4px 0}.steps-rich b{color:var(--ink)}.steps-src{font-size:12px;margin-top:6px}
 
 .or-atlas-links{margin-top:12px;font-size:13px}.or-atlas-links a{color:var(--teal);text-decoration:underline}
+
+/* v92: search result type pill no longer overlaps the title */
+.result{grid-template-columns:128px minmax(0,1fr) 25px;column-gap:16px}.result-type{justify-self:start;max-width:128px;white-space:normal;line-height:1.3;overflow-wrap:anywhere}@media (max-width:640px){.result{grid-template-columns:1fr 20px;row-gap:6px}.result-type{grid-column:1/-1;justify-self:start;max-width:none;white-space:nowrap}}
