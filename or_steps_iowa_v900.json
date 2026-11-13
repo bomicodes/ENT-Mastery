@@ -1,0 +1,1900 @@
+{
+ "laryngeal-botox": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Confirm the phenotype and target",
+    "Decide whether this is adductor spasmodic dysphonia, abductor spasmodic dysphonia or essential vocal tremor, because that sets the muscle: thyroarytenoid for adductor and most tremor, posterior cricoarytenoid for abductor. Review prior dose, side, duration of benefit and any breathiness or thin-liquid dysphagia. Ask about bleeding disorders and anticoagulants, and note prior laryngeal surgery or infection that may distort the percutaneous route."
+   ],
+   [
+    "Choose the starting dose",
+    "For adductor disease a common start is 2.5 units in 0.1 mL into each thyroarytenoid; halve it for elderly or small-framed patients. A unilateral regimen uses a larger one-side dose, and cricothyroid or strap muscles are options when EMG or the clinical pattern points there. For abductor disease, give 3.75 to 10 units split between two sites in one posterior cricoarytenoid."
+   ],
+   [
+    "Position and connect the EMG",
+    "Seat the patient semi-reclined with the neck partly, not fully, extended so the cricothyroid space opens without stretching the skin taut. Place the reference electrode on the forehead and the ground lead, and run the monitor before skin entry to clear 60-cycle interference. Sedation is not needed; keep oxygen and suction available."
+   ],
+   [
+    "Palpate and mark landmarks",
+    "Feel the hyoid, thyroid notch, lower border of the thyroid cartilage, cricoid arch and the cricothyroid membrane between them, then mark the midline. Landmarks are harder to find in obese or irradiated necks; take time here, because a wrong starting point is the usual reason the needle ends up in strap muscle or the airway."
+   ],
+   [
+    "Anesthetize sparingly",
+    "Raise a small superficial weal of 1% lidocaine with 1:100,000 epinephrine over the midline cricothyroid membrane (and about 1 cm below the cricoid if the cricothyroid muscle is a target). Use only a fraction of a milliliter: too much local swells the tissue and hides the cartilage edges you need to steer by. Topical laryngeal anesthesia is not required."
+   ],
+   [
+    "Fix the skin over the membrane",
+    "With the nondominant index and middle fingers in the cricothyroid space, press gently to pin the skin and shorten the distance from skin to membrane. This keeps the entry point from sliding as the needle passes and gives a steadier feel for the membrane as it gives way."
+   ],
+   [
+    "Pass the needle to the thyroarytenoid",
+    "Use a Teflon-coated hollow monopolar EMG injection needle. Enter at or just off the midline, pierce the cricothyroid membrane and angle superolaterally toward the vocal fold, usually 1.5 to 4 cm from skin depending on neck thickness. Stay submucosal under the fold; the aim is muscle, not the laryngeal lumen."
+   ],
+   [
+    "Read the EMG to correct position",
+    "Too superficial gives sternohyoid (fires with head lift) or cricothyroid (rises with high pitch). Too deep passes through the fold toward the posterior cricoarytenoid. Too medial enters the airway: the tracing goes to a hollow air artifact and the patient coughs. Withdraw slightly and redirect rather than injecting on a doubtful signal."
+   ],
+   [
+    "Confirm activation before injecting",
+    "Ask for a sustained /i/, a glottal stop or a breath hold; the thyroarytenoid shows brisk, dense recruitment at once, while the lateral cricoarytenoid gives a burst at phonation onset. Do not inject on surface anatomy alone. If a flexible scope is in place, small needle movements can be matched to fold motion."
+   ],
+   [
+    "Inject a small volume and repeat as planned",
+    "Deliver the dose in about 0.1 mL, withdraw, and repeat on the other side only if the plan is bilateral and symmetric. Minimize passes through the airway, which provoke cough and spread toxin onto mucosa. Expect coughing or a swallow during confirmation; pause and resettle rather than pushing through it."
+   ],
+   [
+    "Abductor disease: inject one posterior cricoarytenoid at a time",
+    "Reach the posterior cricoarytenoid percutaneously (rotating the larynx to approach behind the thyroid lamina) or transorally under videostroboscopic guidance. Confirm with a sniff, which activates this abductor. Inject two sites in one muscle, then treat the opposite side at a separate visit, usually 2 to 4 weeks later, to avoid bilateral abductor weakness and airway compromise."
+   ],
+   [
+    "Know the other targets",
+    "When supraglottic squeeze dominates, the false vocal fold can be injected percutaneously in clinic. After total laryngectomy, constrictor hypertonicity that blocks tracheoesophageal speech responds to toxin divided among cricopharyngeus and inferior and middle constrictors, but only after transnasal esophagoscopy has excluded stricture and recurrence and the prosthesis is confirmed patent."
+   ],
+   [
+    "Observe and counsel",
+    "Watch for about 30 minutes for bleeding, vasovagal symptoms or airway reaction; endoscope the larynx if injury is a concern. Warn the patient that breathiness and choking on thin liquids may appear over the first one to two weeks before the voice improves, and advise small sips and a chin tuck until it settles."
+   ],
+   [
+    "Document and titrate",
+    "Record muscle, side, dose, dilution and EMG findings. If there is no effect by about 2 weeks, re-inject; doses given less than 6 to 8 weeks apart count as boosters and add to the prior dose. With a good response, repeat at roughly 3 to 4 months, and raise the dose only if benefit is long and side effects are absent."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/557",
+   "https://iowaprotocols.medicine.uiowa.edu/node/558",
+   "https://medicine.uiowa.edu/iowaprotocols/node/741",
+   "https://iowaprotocols.medicine.uiowa.edu/node/405"
+  ],
+  "notes": "Iowa added: positioning (partial extension, semi-reclined), sparing local anesthetic, two-finger skin fixation, thyroarytenoid needle angle and 1.5-4 cm depth, EMG troubleshooting by misplacement pattern (sternohyoid/cricothyroid/air artifact), confirmation tasks, 30-minute observation, adductor/abductor dosing (2.5 U/0.1 mL bilateral TA; 3.75-10 U split in one PCA, contralateral 2-4 weeks later), booster rule (<6-8 weeks additive), and post-laryngectomy constrictor injection. Iowa quotes a unilateral TA dose of 10-15 U; I left the number out as it is high relative to common US practice. Percutaneous PCA access detail (larynx rotation) and the dysphagia counseling are standard practice, not from Iowa. No disagreement with the current card."
+ },
+ "rigid-tracheobronchoscopy": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Assemble and test before induction",
+    "Choose bronchoscope diameter and length for age, and have one size smaller open. Build the telescope, light and camera, and pick the optical forceps for the expected object before starting; changing mid-case wastes apnea time. Preload the matched suction catheter, which is awkward to place once in the airway, and keep a flexible bronchoscope available."
+   ],
+   [
+    "Agree the ventilation plan",
+    "Discuss with anesthesia how the patient will breathe: spontaneous ventilation is preferred for most foreign bodies, with controlled ventilation through the side port once the scope is in. In children, mask induction is typical and the bed is turned 90 degrees toward the surgeon. If a laser is planned, agree on the lowest workable FiO2."
+   ],
+   [
+    "Expose the larynx and topicalize",
+    "Lift with a Macintosh or Miller blade to view the glottis, spray the vocal folds with lidocaine within the weight-based maximum dose, then re-expose to confirm the view. Topical anesthesia reduces laryngospasm and coughing when the scope passes. Protect the teeth or gums from the blade throughout."
+   ],
+   [
+    "Pass the glottis with the bevel turned",
+    "Advance the bronchoscope under telescope vision. As the tip nears the larynx, rotate it 90 degrees so the leading edge lies parallel to the vocal folds and slips between them rather than catching a fold; then rotate back. Remove the laryngoscope once the scope is through, and keep the lips clear of the barrel."
+   ],
+   [
+    "Connect ventilation and suction",
+    "Attach the anesthesia circuit to the side port, confirm chest rise and end-tidal carbon dioxide, and advance the preloaded suction. Cover the eyepiece port when ventilating through the scope so pressure is not lost. Short, planned apneic periods during instrument changes should be coordinated with the anesthetist."
+   ],
+   [
+    "Advance through subglottis and trachea",
+    "Move forward under continuous vision, keeping the posterior membranous wall as the orientation landmark. Note the subglottic lumen, tracheal rings and the normal motion of the posterior wall with breathing, and look for stenosis, malacia, external compression or secretions before reaching the carina."
+   ],
+   [
+    "Enter each mainstem by turning the head",
+    "Turn the head to the right to align the scope with the left mainstem bronchus, and to the left to enter the right. Inspect the carina and both mainstems systematically, then the lobar orifices as scope size allows, including the right upper lobe origin just below the carina, which is easy to pass by."
+   ],
+   [
+    "Document before you intervene",
+    "Record stenosis, lesion, secretion burden, dynamic collapse or foreign body, with photographs, before manipulating anything. Once bleeding or edema starts, the baseline view is lost. For a foreign body, note its type, orientation and whether granulation tissue surrounds it, since that changes the grasp."
+   ],
+   [
+    "Biopsy or debride with control",
+    "Keep forceps and energy devices in the visual field at all times. Coordinate low FiO2 and laser-fire precautions. Topical dilute epinephrine helps hemostasis, but warn anesthesia if the patient takes beta-blockers, as unopposed alpha effect can cause a hypertensive crisis."
+   ],
+   [
+    "Set up the foreign body grasp",
+    "Hold the bronchoscope steady just proximal to the object, remove the telescope and bridge, and pass the optical forceps loaded with the camera. Approach the object so the jaws can close on its most stable part; for round objects, a cup or basket forceps or a balloon passed beyond it is safer than repeated slipping grasps."
+   ],
+   [
+    "Withdraw scope and object as a unit",
+    "Once grasped, pull the forceps back against the bronchoscope tip and withdraw forceps, object and scope together, rather than drawing the object through the scope or pushing it distally. Slow down at the glottis, where a large object is most likely to be stripped off; if dropped there, re-secure the airway first."
+   ],
+   [
+    "Reinspect the whole airway",
+    "Reinsert the bronchoscope and look again in both mainstems for residual fragments, a second object, bleeding or mucosal injury, and confirm bilateral ventilation. Suction the trachea on withdrawal. Organic material often fragments, so a clear first pass does not guarantee a clear airway."
+   ],
+   [
+    "Look at the upper esophagus",
+    "After airway work, examine the upper esophagus for foreign material. Esophageal objects can cause airway symptoms, and children sometimes ingest and aspirate at the same time. Remove the bronchoscope under vision."
+   ],
+   [
+    "Plan observation for edema and pulmonary edema",
+    "Decide the level of postoperative monitoring by the intervention, edema, bleeding and oxygen need. Watch for postobstructive pulmonary edema: it usually appears soon after relief of an acute obstruction such as a foreign body, but can be delayed up to 24 hours, and presents with hypoxia and frothy secretions."
+   ]
+  ],
+  "protocol_urls": [
+   "https://medicine.uiowa.edu/iowaprotocols/node/4361",
+   "https://medicine.uiowa.edu/iowaprotocols/node/131"
+  ],
+  "notes": "Iowa (pediatric rigid bronchoscopy for foreign body) added: preloading suction, choosing optical forceps before starting, mask induction with bed turned 90 degrees, topical lidocaine to the folds and re-exposure, the 90-degree bevel rotation through the glottis, head turning to enter each mainstem, holding the scope steady and swapping telescope for optical forceps, withdrawing object and scope as a unit, suctioning on withdrawal, examining the upper esophagus, and postobstructive pulmonary edema up to 24 hours. The beta-blocker/epinephrine caution comes from Iowa's adult flexible bronchoscopy protocol. Spontaneous-ventilation preference, basket/balloon options and right upper lobe point are standard practice added for completeness. No disagreement with the current card."
+ },
+ "button-battery": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Treat it as an immediate emergency",
+    "An esophageal button battery causes injury by current, alkaline liquefaction and pressure, and perforation has been reported within about 5 hours. Confirm location on radiographs (a double-ring or halo outline on the frontal view separates it from a coin), then go straight to the operating room without delaying for nonessential tests."
+   ],
+   [
+    "Secure the airway",
+    "Intubate before instrumenting; a proximal battery can compress the airway, and extraction may be prolonged or bloody. Have rigid and flexible esophagoscopes, suspension laryngoscopes and a range of graspers ready, since injury can make the stone-like battery hard to free from swollen mucosa."
+   ],
+   [
+    "Expose a proximal battery directly",
+    "Batteries of 1.5 to 2 cm commonly lodge at the cricopharyngeus. At this level, a suspension laryngoscope placed into the hypopharynx, with a laryngeal lift to open the introitus, can expose the battery for removal under direct vision. Lower batteries need rigid or flexible esophagoscopy."
+   ],
+   [
+    "Assess and note the negative pole",
+    "Before grasping, look at the surrounding mucosa and note which face of the battery points to which wall. The negative pole (the narrower side, opposite the side marked +) produces the most severe injury, so knowing its orientation tells you where to look hardest afterward and which structure, airway or aorta, is at risk."
+   ],
+   [
+    "Remove along the esophageal axis",
+    "Grasp a stable edge and withdraw the battery in line with the esophagus without fragmenting it, prolonged manipulation or pushing it distally. If it is embedded, gently free the rim rather than levering it against necrotic wall. A protective overtube or withdrawal into a rigid scope helps protect the injured wall."
+   ],
+   [
+    "Reinspect the injury circumferentially",
+    "Reinsert the scope and assess depth of necrosis, any perforation, bleeding and the level relative to the trachea and aortic arch. Expect the worst injury on the wall that faced the negative pole. Measure the length of injury, which often extends several centimeters below the battery site."
+   ],
+   [
+    "Leave adherent necrosis alone",
+    "Avoid aggressive debridement of adherent slough: it may be sealing a contained perforation or a weakened vessel wall. Gentle irrigation is acceptable, but do not scrape the bed. If perforation is seen, stop instrumenting and move to imaging and surgical planning."
+   ],
+   [
+    "Survey for other objects",
+    "Check the rest of the esophagus and stomach for additional batteries or material, especially when the history is uncertain, and document the exact level and severity of mucosal injury with photographs for comparison at the second look."
+   ],
+   [
+    "Plan a second-look esophagoscopy",
+    "Injury keeps progressing after removal, so re-examine at about 24 to 48 hours to see the full extent of damage. Abort the procedure if a perforation is found. Use the second look, together with imaging, to decide feeding route and how long to restrict oral intake."
+   ],
+   [
+    "Set NPO, imaging and feeding plan",
+    "Institute NPO status and arrange contrast imaging and feeding access according to injury depth. When the battery sat near the aorta, plan contrast CT or MRI to assess vascular risk. Give antibiotics only when perforation or mediastinitis is present or suspected."
+   ],
+   [
+    "Monitor for delayed catastrophe",
+    "Keep explicit precautions for aorto-esophageal hemorrhage and tracheoesophageal fistula, which can occur days to weeks after removal; tracheoesophageal fistula is well described. Herald bleeding, new cough with feeding or chest pain requires immediate evaluation, and families must know these warning signs."
+   ],
+   [
+    "Follow for stricture",
+    "Deep circumferential injuries often heal with stricture. Arrange follow-up esophagram or endoscopy once healing is under way, and counsel families on dysphagia symptoms. Use the event to teach battery safety, since most ingestions involve batteries removed from devices."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/pediatric-disc-battery-ingestion"
+  ],
+  "notes": "Iowa's page is brief (last updated before 2015) but added operative points: imaging before transfer to the OR, 1.5-2 cm cells lodging at cricopharyngeus, suspension (Lindholm) laryngoscopy with laryngeal lift for removal under direct vision, noting negative-pole orientation, second-look esophagoscopy at 24-48 hours (abort if perforation), injury extending ~5 cm distally, and early perforation (~5 h). All current card points are kept. Not from Iowa: overtube/rigid-scope protection, stricture follow-up, and vascular imaging (kept from card). Consider adding the 0.25% acetic acid irrigation already on the esophageal-fb card; Iowa does not mention it, so I did not add it here."
+ },
+ "branchial": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Confirm the diagnosis and timing",
+    "Review imaging and examination to define the arch and course. In adults, treat a lateral neck cyst as possible cystic metastasis (oropharyngeal or thyroid) until proven otherwise. Operate when the lesion is quiet: treat active infection first, since a recently infected tract is scarred and harder to follow."
+   ],
+   [
+    "Anesthesia and draping",
+    "Use general endotracheal anesthesia without long-acting paralysis so the facial, hypoglossal and other nerves can be stimulated. Drape so the face is visible to watch for facial twitch, and for a first-cleft lesion include the auricle and ear canal in the field. Have a nerve stimulator, lacrimal probes and methylene blue ready."
+   ],
+   [
+    "Mark the tract",
+    "For a sinus or fistula, cannulate the external opening with a fine lacrimal probe or inject dilute methylene blue to mark the tract before incising. For a first-cleft lesion, examine the ear canal under the microscope for a canal opening or web. Mark incisions in relaxed skin lines and infiltrate with dilute epinephrine."
+   ],
+   [
+    "First cleft: parotidectomy-style access",
+    "For anomalies near the angle of the mandible, ear canal or parotid, plan a parotidectomy-type incision, incorporating any pit or involved skin in an ellipse. Raise the skin flap over the parotid fascia. Do not cut through the tract as you dissect near the tragal cartilage, which is close to where the tract often runs."
+   ],
+   [
+    "First cleft: find the facial nerve first",
+    "Identify the main facial nerve trunk as in a superficial parotidectomy before following the tract, because it may run superficial to, deep to or between the branches. Keep the nerve in view throughout and use the stimulator to confirm branches rather than relying on appearance."
+   ],
+   [
+    "First cleft: excise to the canal",
+    "Under direct view of the nerve, remove the cyst and tract with a thin cuff of parotid tissue, following it to the canal. Excise any involved canal skin or a small piece of cartilage where the tract ends. Stimulate the nerve afterward and pack the canal to support the canal skin."
+   ],
+   [
+    "Second to fourth cleft: incisions",
+    "Make a horizontal skin-crease incision at or just above a cyst, or a small ellipse around a sinus opening. For a long tract, add one or two higher stepladder incisions rather than one long vertical scar; the tract can be passed up beneath the skin bridge to the next incision."
+   ],
+   [
+    "Raise flaps and define the lesion",
+    "Elevate subplatysmal flaps, protecting the marginal mandibular nerve superiorly. Develop the cyst or tract circumferentially with its capsule intact and define its relation to the sternocleidomastoid, carotid sheath and cranial nerves before following it deeply."
+   ],
+   [
+    "Second cleft: follow the course",
+    "Follow the tract superiorly between the internal and external carotid arteries, superficial to the glossopharyngeal and hypoglossal nerves and deep to the posterior digastric and stylohyoid, toward the tonsillar fossa. Identify and protect the hypoglossal and glossopharyngeal nerves at this stage."
+   ],
+   [
+    "Third and fourth pouch lesions",
+    "A third-cleft tract runs behind the internal carotid, between the glossopharyngeal nerve above and hypoglossal nerve below, and enters the pyriform sinus just above the internal branch of the superior laryngeal nerve. Find the pyriform opening by direct laryngoscopy; endoscopic cauterization is accepted, while open excision may need hemithyroidectomy with recurrent and superior laryngeal nerve protection."
+   ],
+   [
+    "Dissect under vision, not traction",
+    "Control feeding vessels and divide scarred attachments sharply under direct visualization rather than avulsing with traction, which tears the tract and leaves epithelium behind. Blunt and sharp dissection along the tract wall keeps you out of the carotid and off the nerves."
+   ],
+   [
+    "Ligate the pharyngeal end",
+    "Follow the epithelial tract to its endpoint. When it reaches the pharynx, suture-ligate it at the pharyngeal wall and divide it, removing the cyst and full tract to minimize recurrence. Leaving a segment of tract is the main cause of recurrence."
+   ],
+   [
+    "Check nerves and hemostasis",
+    "Inspect the carotid sheath and the nerves encountered and confirm function with the stimulator: facial nerve for first-cleft lesions, hypoglossal, glossopharyngeal and superior laryngeal for lower lesions. Irrigate and obtain meticulous hemostasis."
+   ],
+   [
+    "Close and follow up",
+    "Close in layers and place a drain when dead space warrants it (some surgeons drain routinely, removing it at one to two days as output falls). Remove skin sutures at about five to seven days, and confirm benign pathology, particularly in adults."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/branchial-cleft-cystsinusfistula-excision"
+  ],
+  "notes": "Iowa added: general anesthesia without long-acting paralysis with face visible and auricle in field; microscope exam of canal for first-cleft lesions; parotidectomy-type approach with facial trunk identification, excision with a parotid cuff and canal cartilage, avoiding transection near the tragal pointer, and canal packing; stair-step incisions; third-cleft course (behind ICA, between IX and XII, above superior laryngeal nerve, into pyriform); nerve stimulation before closure; suture removal timing and benign-pathology confirmation. Iowa's antibiotic content omitted per site policy. Iowa places Penrose drains routinely; card's 'drain only for dead space' kept as US practice with Iowa's routine noted. Adult cystic-metastasis caution is from Iowa's mimic list. All current card points retained."
+ },
+ "hypoglossal-stimulator": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Confirm candidacy and choose the side",
+    "Recheck criteria and drug-induced sleep endoscopy: no complete concentric palatal collapse, and few central or mixed events. Choose the implant side in advance (commonly right, though some centers default to left), keeping the generator at least 15 cm from any other implanted device and away from the shoulder a patient braces a firearm against."
+   ],
+   [
+    "Anesthesia without lasting paralysis",
+    "Intubate orally and tape the tube to the side opposite the implant. Use only short-acting relaxants so the nerve can be mapped. Keep the ipsilateral arm free of IV, blood pressure cuff and oximeter, and the ipsilateral chest free of ECG leads. Turn the head away from the implant side; a shoulder roll is optional."
+   ],
+   [
+    "Place tongue electrodes, prep and drape",
+    "Before prepping, insert NIM electrodes: one into the hyoglossus in the ventrolateral tongue (retractor) and one into the genioglossus lateral to the frenulum, in front of the duct (protrusor). Prep from lower lip to xiphoid. Isolate the mouth with a clear adhesive drape so tongue movement stays visible. Avoid monopolar cautery near the nerve and leads."
+   ],
+   [
+    "Make the neck incision",
+    "Make a horizontal upper-neck incision below the mandible, about midway between mandible and hyoid and just off the midline. Divide platysma and raise a small subplatysmal flap, protecting the marginal mandibular nerve, which lies superficial in this field."
+   ],
+   [
+    "Expose the hypoglossal nerve",
+    "Mobilize the anteroinferior submandibular gland and retract it posterosuperiorly. Retract the digastric tendon inferiorly with a vessel loop. Find the posterior border of the mylohyoid and retract it anteriorly to reveal the nerve beneath; control or divide the ranine veins. The lingual nerve lies superior and deep, so stay on the hypoglossal."
+   ],
+   [
+    "Map the branches",
+    "Loop the nerve and bring in the microscope. Stimulate to find the functional breakpoint, dissect focally there and remap. Include the medial branches to the genioglossus (protrusors), the transverse and vertical intrinsic muscles and the C1 branch to the geniohyoid; exclude the lateral branches to the hyoglossus and styloglossus (retrusors). The vasa nervorum often marks the division."
+   ],
+   [
+    "Place and anchor the cuff",
+    "Place the stimulation cuff around the selected distal branches without stretching or compressing the nerve. Anchor the lead with silk sutures and a strain-relief loop. Stimulate through the cuff and confirm forward tongue protrusion without retraction or depression; if retraction occurs, a retrusor branch is captured and the cuff must be repositioned."
+   ],
+   [
+    "Create the generator pocket",
+    "Make a chest incision about 3 cm below the clavicle (or over the second to third rib space, about 3 cm lateral to the sternal edge). Dissect to the pectoralis fascia and create a pocket about three fingerbreadths wide, sized so the generator lies flat without tension on the skin."
+   ],
+   [
+    "Inspire IV only: place the sensing lead",
+    "Through the pectoralis, divide the fat pad beneath it and identify external intercostal fibers, which run superolateral to inferomedial. Incise the thin muscle near its medial edge and slide a narrow bent malleable retractor, without resistance and parallel to the rib, into the plane between the external and internal intercostals. Place the lead there, anchored with silk, avoiding pleural entry. Inspire V has no separate sensing lead."
+   ],
+   [
+    "Check for pneumothorax",
+    "If a sensing lead was placed, fill the wound with saline and ask anesthesia for a positive-pressure breath; bubbling suggests a pleural leak. Obtain a chest radiograph if pneumothorax is suspected, and repair any pleural opening before closing."
+   ],
+   [
+    "Tunnel the stimulation lead",
+    "Pass the tunneler from the neck to the chest pocket deep to the platysma but over the clavicle, then pull the stimulation lead through. Leave enough slack at both ends so neck movement does not tether or dislodge the cuff, and avoid sharp kinks."
+   ],
+   [
+    "Connect and seat the generator",
+    "Connect stimulation and sensing leads to the generator and seat it in the pocket, securing it to the fascia. Coil excess lead beneath the generator and keep the leads lying flat, since a raised loop under thin skin is a common site of extrusion."
+   ],
+   [
+    "Test the whole system",
+    "With the telemetry wand in a sterile sleeve, stimulate through the device and confirm tongue protrusion without retraction. With Inspire IV, confirm a clean respiratory waveform from the sensing lead. Revise cuff position if activation is retrusive, before closing."
+   ],
+   [
+    "Close without compressing hardware",
+    "Obtain hemostasis, irrigate both wounds and close in layers with buried absorbable sutures and skin glue. Avoid tight dressings that compress the generator or leads. Obtain a chest film to document generator and leads, and a lateral neck film to document the cuff position."
+   ],
+   [
+    "Recovery and activation",
+    "Most patients go home the same day or after overnight observation and resume diet once awake. Check tongue movement and wounds at one to two days, limit strenuous activity for about 4 weeks, and activate the device at about 1 month, with sleep study titration a few months later."
+   ]
+  ],
+  "protocol_urls": [
+   "https://medicine.uiowa.edu/iowaprotocols/node/7611"
+  ],
+  "notes": "Iowa added: candidacy check, side selection (15 cm from other devices; firearm shoulder), anesthesia setup (short-acting relaxant, contralateral tube, ipsilateral arm and chest kept clear), NIM tongue electrode placement, no monopolar cautery, submandibular gland/digastric/mylohyoid exposure sequence and lingual nerve relation, functional breakpoint and vasa nervorum landmark, silk anchoring, intercostal plane technique for the sensing lead, tunneling over the clavicle with slack, flat leads to prevent extrusion, postoperative chest and lateral neck films, 4-week activity limit and ~4-week activation. Disagreement: Iowa uses the left side as standard; the card's 'usually right side' (manufacturer default in US practice) is kept with Iowa's choice noted. Iowa's antibiotic content omitted per site policy. Iowa does not mention C1/geniohyoid fibers explicitly but includes geniohyoid; card's C1 wording kept. Inspire V point kept from card."
+ },
+ "parathyroidectomy": {
+  "mode": "edit",
+  "edits": [
+   {
+    "op": "replace",
+    "index": 9,
+    "step": [
+     "Identify the gland correctly",
+     "Distinguish parathyroid from fat, thyroid nodule and node: parathyroid is tan to light brown against yellow fat, with a discrete capsule, its own pedicle and a soft, mobile feel when nudged with a Kittner. A thin fascial layer often covers it; opening that layer lets it roll free. Check thyroid clefts, so a gland is not hidden under the retractor. Use any normal ipsilateral gland as this patient's reference."
+    ]
+   },
+   {
+    "op": "insert_after",
+    "index": 10,
+    "step": [
+     "Autotransplant a devascularized normal gland",
+     "If a normal gland darkens or loses its pedicle, set it aside in cold saline, confirm parathyroid on frozen section of a small fragment, and mince it into about 1 mm pieces. Place them in one or more sternocleidomastoid pockets and mark the site with a nonabsorbable suture and a clip, so the graft can be found if hyperparathyroidism recurs."
+    ]
+   },
+   {
+    "op": "replace",
+    "index": 11,
+    "step": [
+     "Intraoperative PTH after excision",
+     "Draw PTH at set times after removal, commonly 5 and 10 minutes. The Miami criterion is a fall of more than 50% from the highest pre-incision or pre-excision value by 10 minutes; some also require a normal value. Handling the gland can spike PTH, so a 15 to 20 minute draw helps when early values are ambiguous. A slow or partial fall means keep the operation open."
+    ]
+   },
+   {
+    "op": "replace",
+    "index": 13,
+    "step": [
+     "Inadequate PTH fall: convert",
+     "Lengthen the incision and look at the second gland on the same side, then explore the other side; also convert when only three normal glands are found. Palpate the tracheoesophageal groove and esophagus into the posterior mediastinum, check retroesophageal and retropharyngeal spaces, carotid sheath, behind the tubercle of Zuckerkandl and inside the thyroid. Deliver the thymus with gentle traction. For four-gland hyperplasia, remove three and a half glands."
+    ]
+   }
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/756"
+  ],
+  "notes": "Iowa added gland identification cues (light brown vs yellow fat, overlying fascia, Kittner palpation, thyroid clefts), autotransplantation technique with nonabsorbable-suture and clip marking, the 15-20 minute repeat PTH because manipulation spikes PTH, converting when only three normal glands are found, ectopic search sites (posterior mediastinum along the esophagus, retroesophageal/retropharyngeal, intrathyroidal, thymic delivery by traction), and 3.5-gland resection for hyperplasia. Disagreements: Iowa routinely places a drain and admits to postoperative day 1; the card's 'no drain' and same-day discharge reflect current US practice and were left unchanged. Iowa's waiting 15-20 min before the first draw differs from the Miami 10-minute standard; card keeps Miami with Iowa's later draw as a tie-breaker. No antibiotic content added."
+ },
+ "airway-fb": {
+  "mode": "replace",
+  "protocol_urls": [
+   "https://medicine.uiowa.edu/iowaprotocols/node/4361"
+  ],
+  "steps": [
+   [
+    "Assemble equipment before induction",
+    "Have age-appropriate rigid ventilating bronchoscopes, telescopes, and rescue sizes open on the field. Preload the color-matched flexible suction catheter into the bronchoscope, because it is difficult to place once the scope is in the airway. Keep a small flexible bronchoscope available for distal or segmental objects and for a final survey."
+   ],
+   [
+    "Match forceps to the object",
+    "Open an optical forceps set sized to the child and the object (infant or child sizes, with very small forceps rarely needed), and load the telescope and light into the chosen forceps in advance. Have nonoptical long forceps, cup or basket instruments, and a magnet-tipped option available for objects that optical forceps cannot hold."
+   ],
+   [
+    "Plan a shared airway",
+    "Agree with anesthesia on a plan that keeps the child oxygenated: typically inhalational mask induction maintaining spontaneous ventilation, so a ball-valving or mobile object is not driven distally by positive pressure. Discuss how ventilation will run through the bronchoscope side port and what to do if saturation falls during extraction."
+   ],
+   [
+    "Position and expose the larynx",
+    "Turn the table about 90 degrees toward the surgeon once the child is deeply anesthetized. Place a shoulder roll if needed and protect the teeth or gums. Expose the glottis with a Macintosh or Miller laryngoscope blade, suctioning secretions so the vocal folds and any supraglottic or subglottic object are seen first."
+   ],
+   [
+    "Topicalize the vocal folds",
+    "Spray the vocal folds and subglottis with 1% lidocaine to blunt laryngospasm and coughing during instrumentation. Calculate the dose by weight before spraying and stay within the maximum (the protocol cites 4 mg/kg), remembering that small children reach toxic doses quickly with repeated applications."
+   ],
+   [
+    "Pass the bronchoscope atraumatically",
+    "Re-expose the glottis and advance the rigid bronchoscope with its 0-degree telescope under direct vision. Rotate the scope about 90 degrees as it reaches the larynx so the beveled tip is parallel to the vocal folds and slides between them rather than catching a fold. Then remove the laryngoscope and rotate the bronchoscope back to neutral."
+   ],
+   [
+    "Connect ventilation and survey",
+    "Attach the anesthesia circuit to the bronchoscope side port and advance the suction catheter. Survey the trachea and both main bronchi before touching the object, so its position, orientation, surrounding edema or granulation, and the distal airway are understood. Turn the head away from the side being examined to align the scope with each main bronchus."
+   ],
+   [
+    "Stabilize the scope and change instruments",
+    "Once the object is seen, hold the bronchoscope still at a fixed depth and remove the telescope and its bridge. Introduce the preloaded optical forceps down the barrel so the object stays in view. Keep the bronchoscope tip just proximal to the object to avoid pushing it deeper."
+   ],
+   [
+    "Grasp under direct vision",
+    "Choose a grasp suited to the object: open jaws around its widest part, or use cup or basket instruments for friable organic material such as nuts that fragment. Close firmly under vision and never grasp blindly or advance while grasping. If fragments break off, plan to retrieve each piece rather than pushing pieces distally."
+   ],
+   [
+    "Withdraw as one unit",
+    "If the object is larger than the bronchoscope lumen, withdraw the forceps, object, and bronchoscope together as a single unit, keeping the object close to the scope tip. Slow down at the glottis, where objects are most often stripped off. If an object is lost in the subglottis and ventilation fails, push it back into a main bronchus to restore ventilation, then retrieve again."
+   ],
+   [
+    "Re-examine the airway",
+    "Reinsert the bronchoscope and inspect the entire trachea and both bronchial trees again for a second object or residual fragments, mucosal tears, granulation, bleeding, and retained secretions. Rotate the head to the right to see the left main bronchus and to the left to see the right. Use the flexible bronchoscope for distal segments."
+   ],
+   [
+    "Clear secretions and treat edema",
+    "Suction obstructing secretions and pus from distal segments through the bronchoscope, using a large suction catheter as the scope is withdrawn. Treat bronchospasm and airway edema as needed, for example with bronchodilators and a corticosteroid such as dexamethasone after prolonged or traumatic extraction."
+   ],
+   [
+    "Check the esophagus",
+    "Before ending the anesthetic, examine the upper esophagus for a second object, since children who aspirate may also swallow material and some airway symptoms come from an esophageal object compressing the trachea. Then confirm symmetric air entry and adequate oxygenation as the child returns to spontaneous ventilation."
+   ],
+   [
+    "Recover and observe",
+    "Monitor for hypoxia, stridor, and postobstructive pulmonary edema, which can follow relief of a high-grade obstruction and may need positive pressure support. Set the observation level by the difficulty of extraction, duration of instrumentation, residual pneumonia or atelectasis, and airway edema. Obtain a chest radiograph when symptoms persist or residual material is suspected."
+   ]
+  ],
+  "notes": "Replaced the 8-step outline with a 14-step sequence built from the Iowa airway foreign-body protocol: preloaded suction catheter, optical-forceps tray selection, mask induction with the table turned 90 degrees, weight-based lidocaine topicalization (protocol cites 4 mg/kg), the 90-degree bronchoscope rotation through the glottis, telescope-to-forceps exchange while holding the scope still, head turning to view each main bronchus, and esophageal check. All prior card points kept (shared airway, rescue scopes, survey first, matched forceps, withdraw as a unit, second-look, suction, edema/bronchospasm, observation). Pushing a lost object back into a main bronchus and postobstructive pulmonary edema monitoring are standard practice; the edema point comes from the protocol's postoperative section. The Iowa page states it was last updated before 2013."
+ },
+ "medialization": {
+  "mode": "replace",
+  "protocol_urls": [
+   "https://gme.medicine.uiowa.edu/iowaprotocols/node/3576",
+   "https://iowaprotocols.medicine.uiowa.edu/node/175"
+  ],
+  "steps": [
+   [
+    "Plan an awake case",
+    "Perform the procedure under local anesthesia with light intravenous sedation so the patient can phonate on request; voice and glottic closure are the intraoperative endpoints. Confirm side and persistence of paralysis on preoperative laryngoscopy. Have arytenoid adduction instruments available in case a posterior glottic gap persists after medialization."
+   ],
+   [
+    "Set up the transnasal scope",
+    "Decongest and topically anesthetize one nostril, then pass a flexible laryngoscope to confirm the paralyzed side and baseline gap. Turn the table away from anesthesia, give supplemental oxygen, and drape so the face above the lips stays outside the sterile field, keeping the scope usable throughout the case."
+   ],
+   [
+    "Infiltrate with restraint",
+    "Infiltrate local anesthetic with epinephrine along the incision, over the thyroid prominence, the ipsilateral thyroid lamina, and its lower border. Avoid large volumes or deep injection near the paraglottic space, because the fluid itself medializes the fold and makes intraoperative voice and scope assessment misleading."
+   ],
+   [
+    "Incise and divide the straps",
+    "Make a horizontal skin incision in a neck crease over the middle of the thyroid cartilage, extended toward the paralyzed side. Raise subplatysmal flaps, separate the strap muscles in the midline, and retract them laterally on the operative side to expose the thyroid lamina."
+   ],
+   [
+    "Expose the thyroid lamina",
+    "Incise the outer perichondrium in the midline and elevate it laterally off the ipsilateral lamina, exposing the inferior border down to the cricothyroid membrane and back toward the posterior edge. Release cricothyroid muscle slips at the inferior tubercle if needed. A hook or heavy suture in the thyroid prominence rotates the larynx toward the opposite side."
+   ],
+   [
+    "Mark the window",
+    "For an expanded polytetrafluoroethylene (Gore-Tex) implant, outline a window about 5 by 10 mm. Place its lower edge about 3 mm above the inferior border so a solid inferior strut remains, its anterior edge 7 to 10 mm behind the midline, and its upper edge at vocal-fold level, roughly midway between the thyroid notch and the lower border."
+   ],
+   [
+    "Cut the window",
+    "Cut the outline with a blade in soft cartilage, or with a small fluted drill when the lamina is ossified, using light pressure so the bit does not plunge into the soft tissue beneath. Keep the inferior strut intact; fracturing it removes the support the implant is wedged against. Control bleeding with bipolar cautery."
+   ],
+   [
+    "Develop the paraglottic pocket",
+    "Elevate the inner perichondrium through the window with fine elevators, releasing it posteriorly, inferiorly, and superiorly as needed but not anteriorly, and never enter the laryngeal mucosa. Separate the cricothyroid membrane from the lower border of the cartilage to create a second, inferior access route into the paraglottic space beneath the strut."
+   ],
+   [
+    "Find the target position",
+    "Push the paraglottic tissues medially with a blunt elevator from the inferior route while the patient phonates and the fold is watched on the scope. Note the depth and position, usually at the level of the membranous fold, that gives the strongest voice and best closure without airway narrowing or excessive posterior pressure."
+   ],
+   [
+    "Insert the implant",
+    "Cut a continuous strip about 1 cm wide from a 0.6 mm Gore-Tex sheet. Feed it from the inferior route under the strut and out through the window, then layer it into the paraglottic space with the elevator, folding it evenly against the inner perichondrium and avoiding lumps (knuckling) that create uneven contour."
+   ],
+   [
+    "Adjust and overcorrect",
+    "Add or reposition implant in small increments while the patient phonates and the scope shows fold position. Target the membranous fold, keep the airway adequate, and check height so the fold is not pushed above or below the opposite side. Once the best voice is reached, medialize about 2 mm more to allow for resolving edema; the voice should sound slightly pressed."
+   ],
+   [
+    "Secure the implant",
+    "Trim the excess strip. Pass a fine nonabsorbable monofilament (polypropylene) suture under the inferior strut and through the implant, then run it over the window in a hammock and anchor it through cartilage above the window, or a small drill hole if ossified. This prevents extrusion into the neck or migration."
+   ],
+   [
+    "Add arytenoid adduction if needed",
+    "If the scope still shows a posterior glottic gap or the vocal process sits at a different height, add arytenoid adduction through the same exposure before closing. Medialization alone corrects the membranous fold but has limited effect on a lateralized or rotated arytenoid."
+   ],
+   [
+    "Close and drain",
+    "Irrigate, obtain meticulous hemostasis, and place a small Penrose drain deep to the straps. Loosely approximate the straps in the midline so a hematoma cannot compress the framework, then close platysma and skin. Recheck with the scope for airway caliber, fold position, edema, and mucosal integrity before the patient leaves the room."
+   ],
+   [
+    "Observe the airway",
+    "Monitor overnight or for several hours for stridor, neck swelling, or hematoma, since edema around the implant can narrow the glottis in the first day. A perioperative corticosteroid is commonly given to limit edema. Explain that the voice may be strained initially and settles as swelling resolves."
+   ]
+  ],
+  "notes": "Replaced with a 15-step sequence from the Iowa Gore-Tex medialization laryngoplasty protocol and its case operative note: awake transnasal-scope monitoring with the face left outside the field, restrained infiltration (fluid itself medializes the fold), window about 5 x 10 mm with lower edge about 3 mm above the inferior border, anterior edge 7-10 mm behind midline, upper edge at fold level; second inferior route through the cricothyroid membrane; strip insertion under the strut; about 2 mm overcorrection; polypropylene hammock fixation; Penrose drain. Disagreement with the current card: the card said to create the window 'without violating the inner perichondrium'; in the Iowa Gore-Tex technique the inner perichondrium is elevated and released posteriorly, inferiorly, and superiorly (not anteriorly), with the mucosa left intact. The step now reflects that. The protocol's perioperative implant soak and intravenous drug doses were left out under the site rule."
+ },
+ "microtia-reconstruction": {
+  "mode": "replace",
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/670"
+  ],
+  "steps": [
+   [
+    "Make the template",
+    "Trace the normal ear on clear radiographic film and record its position relative to fixed facial landmarks such as the lateral canthus, lateral alar base, and oral commissure. Sterilize the template for use at harvest, carving, and placement. Mark the planned auricular position and axis on the affected side, mirroring the opposite ear."
+   ],
+   [
+    "Prepare the head",
+    "Intubate orally with the tube secured in the midline so it does not distort the face. Shave the hairline as needed. Infiltrate dilute epinephrine without lidocaine into the temporal region and around the remnant to reduce bleeding while preserving tissue planes. Plan a skin pocket about 2 cm larger than the framework all around."
+   ],
+   [
+    "Prep and drape both ears",
+    "Prep the entire face and both ears into the field so the normal ear can be compared directly for height, projection, and axis throughout the case. Prep the contralateral chest separately for cartilage harvest, and keep the head and chest fields organized so two teams can work if available."
+   ],
+   [
+    "Expose the rib cartilage",
+    "Use the contralateral chest so rib curvature suits the helix. Make a 5 to 6 cm incision near the xiphoid along the lower costal margin and divide subcutaneous tissue and fascia. Identify the floating rib for the helical rim and the synchondrosis of ribs 6 to 8 for the base block."
+   ],
+   [
+    "Harvest without pleural injury",
+    "Free the cartilage from surrounding muscle and perichondrium with careful blunt and sharp dissection, staying on cartilage and protecting the underlying pleura. Outline and excise the base block using the sterile template. Remove only what the framework needs to limit chest-wall deformity, and keep the floating rib long enough for the full helix."
+   ],
+   [
+    "Test for pneumothorax",
+    "Fill the wound with saline and ask anesthesia for a sustained Valsalva breath; bubbling indicates a pleural tear. Repair a tear with a purse-string suture around a red rubber catheter, withdrawing the catheter under suction while the lung is fully inflated, then retest. Close the chest wound in layers; a drain is usually unnecessary."
+   ],
+   [
+    "Carve the base",
+    "On the back table, draw the planned ear outline from the template. Carve the base block from the rib 6 to 8 synchondrosis to form the concha, triangular fossa, and scapha, thinning areas to create depth while leaving enough cartilage for rigidity. Keep the framework slightly smaller than the template to allow for skin thickness."
+   ],
+   [
+    "Shape and attach the helix",
+    "Trim the floating rib (rib 8 or 9) to a strip about 1 to 1.5 cm wide, curving it with its convex surface inward. Fix it along the base so its lower end reaches the antitragus level and its upper end forms the helical root. Use fine stainless-steel wire and clear nylon, with all knots tied on the deep surface."
+   ],
+   [
+    "Create the skin pocket",
+    "Transpose the lobular remnant posteriorly. Raise a thin subcutaneous pocket at the premarked site through a small incision, removing remnant cartilage. Thin the skin enough to show framework detail without buttonholing it, preserve the superficial temporal vessels, and secure hemostasis so a hematoma cannot lift skin off the framework."
+   ],
+   [
+    "Place suction drains",
+    "Place two small drains exiting posteriorly through the hair-bearing scalp, plus a larger drain, secured with silk. Suction draws the thin skin envelope into the framework contours and evacuates blood. Pack the pocket with moist gauze until the framework is ready, then confirm drain function before inserting it."
+   ],
+   [
+    "Insert and orient the framework",
+    "Slide the framework into the pocket and check it against the template and the opposite ear for vertical height, axis tilt, distance from the lateral canthus, and projection. Adjust before closing, since malposition is difficult to correct later. Confirm the skin drapes over the helix without blanching from tension."
+   ],
+   [
+    "Set the lobule",
+    "Bivalve the lobular remnant conservatively to preserve its blood supply, and deliver the lower framework into it. Place a deep stitch beneath the cartilage to seat the lobule upward and backward, two through-and-through stitches fixing it to the posterior skin, and a precise stitch at the lower helix to avoid a notch at the junction."
+   ],
+   [
+    "Close and dress",
+    "Advance a small facelift-type skin flap anterior to the ear if needed, close deep tissues with absorbable sutures, and close skin with fine nylon. Confirm all drains hold suction and skin perfusion is good over the framework. Apply a protective mastoid dressing that does not press on the framework."
+   ],
+   [
+    "Monitor and stage",
+    "Check the drains, skin color, and pocket for hematoma, skin ischemia, infection, or cartilage exposure, and examine the chest for pneumothorax and pain control. Document the staged plan: elevating the framework with a posterior graft, and tragal and conchal refinement in later stages."
+   ]
+  ],
+  "notes": "Replaced with a 14-step first-stage reconstruction from the Iowa microtia protocol: radiographic-film template referenced to facial landmarks, epinephrine-only infiltration, midline oral tube, both ears in the field, pocket about 2 cm larger than the framework, contralateral rib harvest through a 5-6 cm costal-margin incision, saline/Valsalva pleural test with purse-string-over-catheter repair, floating rib helix 1-1.5 cm wide fixed with wire and nylon tied deep, base from ribs 6-8, suction drains through the scalp, lobule transposition and the multi-stitch lobule set. All prior card points kept. Note: Iowa does lobule transposition at stage 1, which differs from strict Brent sequencing (lobule at stage 2); surgeon preference varies. The page is old (last updated before 2017). Later stages are listed but not detailed because the protocol does not describe them."
+ },
+ "zmc-orif": {
+  "mode": "replace",
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/zygomaticomaxillary-complex-fracture-tripod-fracture",
+   "https://iowaprotocols.medicine.uiowa.edu/node/78"
+  ],
+  "steps": [
+   [
+    "Assess before surgery",
+    "Examine malar projection and width, globe position, vision, extraocular movement, infraorbital sensation, occlusion, and trismus. On CT, review displacement and rotation at the zygomaticofrontal suture, infraorbital rim, zygomaticomaxillary buttress, zygomatic arch, sphenozygomatic suture, and orbital floor. Arrange an ophthalmology examination when the orbit is involved."
+   ],
+   [
+    "Plan the airway",
+    "Oral intubation usually works for an isolated ZMC fracture; deviating the mandible away from the injured side can improve mouth opening despite trismus. Be prepared for flexible endoscopic nasal intubation or tracheostomy in combined injuries, poor mouth opening, or when a cervical-spine injury limits positioning. Agree on tube position so it does not block the field."
+   ],
+   [
+    "Choose approaches for each fracture line",
+    "Plan to expose every displaced fracture line before plating; a nondisplaced or minimally displaced arch is usually left unexposed. Consent for gingivobuccal, transconjunctival, subciliary, lateral brow or upper eyelid, and hemicoronal options as needed, explaining the lower-eyelid malposition (ectropion) risk of the eyelid approaches."
+   ],
+   [
+    "Open the gingivobuccal sulcus",
+    "Incise the upper buccal sulcus with a needle cautery or blade, leaving a 3 to 5 mm cuff of mobile gingiva for a secure closure. Go straight to bone and elevate subperiosteally to expose the zygomaticomaxillary buttress, anterior maxilla, zygomatic body, and piriform rim. Stay out of the buccal fat posteriorly, which herniates and obscures the field."
+   ],
+   [
+    "Protect the infraorbital nerve",
+    "As elevation proceeds superiorly, identify the infraorbital nerve at its foramen and dissect around it without traction. Stay out of the nasal cavity at the piriform aperture medially. This exposure gives the buttress for fixation and lets the surgeon see the anterior face of the maxilla to judge reduction."
+   ],
+   [
+    "Expose the rim and orbital floor",
+    "Use a transconjunctival incision (with lateral canthotomy and inferior cantholysis if wider access is needed) to reach the infraorbital rim and orbital floor while protecting the globe with a malleable retractor. Reach the zygomaticofrontal suture through a lateral brow or upper eyelid crease incision, protecting the frontal branch of the facial nerve."
+   ],
+   [
+    "Mobilize and reduce in three dimensions",
+    "Disimpact the zygoma with an elevator or bone hook placed beneath the body or arch, or a screw placed in the body. Reduce it in three dimensions, using sphenozygomatic suture alignment along the lateral orbital wall, the arch contour, and the buttress to judge rotation. The rim and zygomaticofrontal suture alone can look reduced while the body remains rotated."
+   ],
+   [
+    "Fix the most reliable point first",
+    "Fix the most reliable reference point first, then add plates at the remaining buttresses in sequence, rechecking malar projection against the opposite side after each plate. Use stronger plates at the zygomaticomaxillary buttress and low-profile plates at the infraorbital rim and zygomaticofrontal suture. A hemicoronal approach is reserved for comminuted arches and severe displacement."
+   ],
+   [
+    "Reconstruct the orbital floor",
+    "After the zygoma is reduced and fixed, inspect the floor when the fracture pattern, enophthalmos, or entrapment requires it. Free herniated orbital contents and place an implant on stable ledges, including the posterior ledge, without impinging on the orbital apex. Confirm infraorbital rim alignment and restoration of orbital volume."
+   ],
+   [
+    "Check the eye before closing",
+    "Perform forced duction testing after floor work and implant placement to confirm free globe movement and no soft-tissue entrapment. Check pupil response and globe position. Any new restriction means the implant or orbital tissue must be adjusted before closure."
+   ],
+   [
+    "Close each approach",
+    "Irrigate and obtain hemostasis. Resuspend the midface soft tissue and close the gingivobuccal incision in layers, the transconjunctival incision with canthal repair as needed, and the brow or eyelid incision carefully. Drains are usually unnecessary; two suction drains are placed if a coronal approach was used."
+   ],
+   [
+    "Recover and follow up",
+    "Order serial vision checks depending on orbital involvement and manipulation. Prescribe a soft diet for one to two weeks and oral hygiene for the intraoral wound. Treat persistent trismus with jaw-stretching exercises or a jaw-opening device. Obtain postoperative imaging when reduction or implant position is uncertain."
+   ]
+  ],
+  "notes": "Replaced with 12 steps. Iowa ZMC protocol supplied: airway planning (oral intubation usually feasible, mandible deviation for exposure, readiness for flexible endoscopic nasal intubation or tracheostomy), the principle of exposing all fracture lines before plating with nondisplaced arch left alone, gingivobuccal incision details (3-5 mm gingival cuff, subperiosteal plane, avoid buccal fat posteriorly, protect V2, avoid entering the nose at the piriform), consent for eyelid approaches with ectropion risk, coronal drains, soft diet, vision checks, and trismus therapy. Limitation: the Iowa page does not describe reduction, fixation order, orbital floor repair, or transconjunctival technique; those steps keep the current card's reviewed content with standard detail added (sphenozygomatic alignment, plate profile, posterior-ledge floor implant, frontal branch protection)."
+ },
+ "free-flap-takeback": {
+  "mode": "edit",
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/390"
+  ],
+  "edits": [
+   {
+    "op": "replace",
+    "index": 3,
+    "step": [
+     "Relieve external compression and correct systemic factors",
+     "While the OR is being arranged, check for tight tracheostomy tapes, dressings, or ties around the neck. Correct head rotation or flexion that kinks the pedicle, and sit the patient up to about 45 degrees. Treat hypovolemia and hypotension. A tense hematoma threatening the flap or airway may need sutures released right away."
+    ]
+   },
+   {
+    "op": "insert_after",
+    "index": 11,
+    "step": [
+     "Venous congestion without a revisable cause",
+     "If the pedicle cannot be revised, the patient cannot safely return to the OR, or only part of the flap is congested, consider medicinal leech therapy, with ongoing blood loss monitoring and transfusion as needed. Incising the congested flap edge to let it bleed is a temporary bridge, not a substitute for exploration when salvage is feasible."
+    ]
+   }
+  ],
+  "notes": "From the Iowa free flap monitoring and salvage protocol: added correction of systemic factors (hypovolemia, hypotension) to the bedside step, and a new step on leech therapy and temporary flap-edge incision for venous congestion when operative revision is not possible, unlikely to succeed, or only part of the flap is affected. Iowa also lists heparin with or without thrombectomy, thrombolytics, and anastomotic revision, which the card already covers in more detail. Point of difference: Iowa uses routine postoperative aspirin; the card's statement that aspirin has not been shown to improve flap survival was kept because it matches the published evidence and it addresses rescue, not routine postoperative use. Medication cover that usually goes with leech therapy was left out under the site rule; the site owner should decide on it."
+ },
+ "reop-parathyroid": {
+  "mode": "edit",
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/756"
+  ],
+  "edits": [
+   {
+    "op": "replace",
+    "index": 9,
+    "step": [
+     "Other missed-gland sites",
+     "Check the space medial to the superior pole (may need upper pole vessel division), the carotid sheath, retropharyngeal space, and the thyrothymic ligament and upper thymus, where transcervical thymectomy retrieves a low inferior gland. Dividing the sternothyroid improves exposure. An intrathyroidal gland may need hemithyroidectomy. Find a marked remnant by its suture; after autotransplant, a high PTH from the grafted arm points to graft recurrence."
+    ]
+   },
+   {
+    "op": "insert_after",
+    "index": 11,
+    "step": [
+     "Autotransplant devascularized tissue",
+     "If a normal gland is devascularized, confirm it is parathyroid, mince it into roughly 1 mm pieces in saline, and implant them into small pockets in the sternocleidomastoid or forearm. Mark the site with a nonabsorbable suture and clips so it can be found on imaging or at any later operation for recurrence."
+    ]
+   },
+   {
+    "op": "replace",
+    "index": 12,
+    "step": [
+     "Interpret intraoperative PTH",
+     "Draw post-excision samples about 10 to 15 minutes after removal; PTH half-life is about 5 minutes, and manipulation can spike levels. A fall of at least 50% from the higher of the baseline and pre-excision values, ideally into the normal range, supports cure. If the fall is inadequate, reassess localization and multigland disease before extending into scarred territory."
+    ]
+   }
+  ],
+  "notes": "Iowa parathyroidectomy protocol (no separate reoperative section) added: ectopic sites including the retropharyngeal space and intrathyroidal glands needing hemithyroidectomy, sternothyroid division for exposure, an autotransplant step with suture-and-clip marking to help later localization, and PTH timing (half-life about 5 minutes, manipulation spikes) with the at least 50% or normal-range criterion. Iowa redraws at 15-20 minutes; the step uses 10-15 minutes, the common Miami-criterion timing in US practice, and notes manipulation spikes. Iowa also notes that nerve monitoring is most useful in reoperation, which the card already reflects."
+ },
+ "lingual-tonsillectomy": {
+  "mode": "edit",
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/1404"
+  ],
+  "edits": [
+   {
+    "op": "insert_after",
+    "index": 5,
+    "step": [
+     "Robotic en bloc sequence",
+     "For transoral robotic lingual tonsillectomy, incise just behind the circumvallate papillae into the superficial tongue base muscle, then make a midline cut back toward the center of the epiglottis and a lateral release just deep to mucosa at the glossotonsillar sulcus. Dissect from anterior to posterior on a thin layer of muscle so the specimen stays intact."
+    ]
+   },
+   {
+    "op": "insert_after",
+    "index": 8,
+    "step": [
+     "Release the vallecula last",
+     "The vallecular mucosa is the final attachment. Divide it either from anterior while folding the specimen back toward the epiglottis, or by flipping the specimen forward and cutting under direct view into the vallecula. Leave no lymphoid mucosa posteriorly. When searching for an unknown primary cancer, mark the specimen for orientation before it is released."
+    ]
+   }
+  ],
+  "notes": "Iowa TORS lingual tonsillectomy (tongue base mucosectomy) protocol supplied the en bloc incision sequence (circumvallate incision, midline cut toward the epiglottis, lateral release, anterior-to-posterior dissection on a thin muscle layer, vallecular mucosa divided last by either of two routes, orientation marking, next-day discharge for most). Caveat: the Iowa page describes this for an unknown primary carcinoma after a negative workup, not sleep apnea; the inserted steps adapt only the dissection technique, and the orientation marking is flagged for the oncologic use. Used edit mode rather than a full replacement because the card's 14 existing steps are already detailed and recently reviewed."
+ },
+ "skin-graft-face": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Choose the reconstruction",
+    "Work up the reconstructive ladder first: secondary intention, primary closure, local flap, then graft. Ask about isotretinoin use and note any cautery damage to the bed, because injury to adnexal structures and a heat-damaged bed both impair take. Plan the donor site so the scar is hidden and the patient is comfortable."
+   ],
+   [
+    "Pick full versus split thickness",
+    "Template the defect and choose by contour, contraction risk, color and texture match, and bed vascularity. A full-thickness graft matches facial color better and contracts less but needs a well-vascularized bed. A split-thickness graft takes more reliably on a poorer bed but contracts more and may change pigment. Graft survival depends on imbibition, then inosculation, then ingrowth of new vessels."
+   ],
+   [
+    "Prepare the recipient bed",
+    "Debride the defect to a clean, well-vascularized base and achieve meticulous hemostasis with the finest bipolar or pressure possible before harvest. Avoid charring the bed with broad cautery. Exposed bare cartilage or bone without perichondrium or periosteum will not support a graft; plan a flap or wait for granulation instead."
+   ],
+   [
+    "Harvest a full-thickness graft",
+    "For a facial full-thickness graft, take skin from the preauricular, postauricular, supraclavicular or upper-lid region for color match. Excise an ellipse slightly larger than the template that can be closed primarily, staying in the subdermal plane so little fat comes with the graft."
+   ],
+   [
+    "Defat the full-thickness graft",
+    "Drape the graft dermis-up over a finger or a moist sponge and trim all subcutaneous fat with curved scissors until only shiny white dermis remains, without perforating it. Residual fat blocks imbibition and inosculation and is a common reason for partial loss. Keep the graft moist in saline until inset."
+   ],
+   [
+    "Set up the dermatome",
+    "For a split-thickness graft, fit the blade guard to the needed width and set depth to about 0.012 to 0.018 inch; about 0.015 to 0.018 inch gives an intermediate graft. Lubricate the blade and the skin with mineral oil, and wipe all prep solution off the donor site so the dermatome glides."
+   ],
+   [
+    "Harvest the split-thickness graft",
+    "Choose a large, flat, concealed donor site such as the posterolateral thigh, or the scalp. Run the dermatome at about 30 degrees with gentle, steady downward pressure in one continuous pass. Traction matters: the surgeon tensions skin behind the device while an assistant flattens skin ahead with a tongue depressor, or the assistant tensions the borders with towel clamps."
+   ],
+   [
+    "Finish the harvest",
+    "End the pass by angling the dermatome up off the skin, or stop with the blade still engaged and cut the distal edge with a scalpel. Store the graft in saline. Apply gauze soaked in epinephrine or thrombin to the donor site for hemostasis, but not when the donor skin lies on a free flap, where vasoconstrictor could compromise flow."
+   ],
+   [
+    "Orient and trim",
+    "Lay the graft dermal side down; the dermis is the shinier, whiter surface. Trim it to fit the defect exactly without folding, stretching, wrinkling, or unnecessary overlap onto normal skin. On the face, avoid meshing for cosmetic reasons; instead pie-crust a split-thickness graft with a few small stab cuts so blood and serum can escape."
+   ],
+   [
+    "Secure the perimeter",
+    "Anchor the graft with four corner sutures, then a running or interrupted perimeter suture, for example 4-0 or finer fast-absorbing gut on the face. Place internal quilting or basting sutures so the undersurface stays in complete contact with the bed, especially over concave areas such as the medial canthus or conchal bowl."
+   ],
+   [
+    "Evacuate trapped fluid",
+    "Before dressing, roll out any blood or air trapped under the graft with a moist cotton-tipped applicator through the pie-crust cuts or the edges. Obtain hemostasis without lifting the construct repeatedly. Hematoma, seroma and shear are the main causes of graft failure, and all are prevented at this step and the next."
+   ],
+   [
+    "Bolster the graft",
+    "Apply a tie-over bolster or contoured pressure dressing that gives uniform, gentle pressure and immobilizes the graft against shear, without ischemic compression of surrounding structures such as the lid, ala or ear. A contoured negative-pressure dressing is an option where it can hold a seal."
+   ],
+   [
+    "Close and dress the donor",
+    "Close a full-thickness donor primarily in layers. Dress a split-thickness donor with a moisture-retentive dressing such as a transparent film or foam; occlusive dressings speed healing and reduce pain. Warn the patient about donor pain, fluid weeping, pigment change, hypertrophic scarring and slow healing."
+   ],
+   [
+    "Take down the bolster",
+    "Remove the bolster at about 5 to 7 days and inspect for take, hematoma, seroma, infection and shear. A healthy graft is pink and adherent. Dark, blistered epidermis may still survive if the dermis is adherent, so do not debride early. Choose the next dressing by what you see, and protect the graft from sun to limit pigment change."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/973"
+  ],
+  "notes": "Iowa STSG protocol added dermatome setup (blade guard width, 0.015-0.018 inch intermediate thickness, mineral oil, removing prep solution), 30-degree steady pass with two traction methods, two ways to end the pass, donor hemostasis with epinephrine/thrombin except on free-flap skin, dermal-side identification, corner-then-running fixation, pie-crusting as an alternative to meshing, isotretinoin/cautery risk, graft-survival phases, donor-site complication list. Iowa removes the dressing around day 7; card's 5-7 days kept. Iowa offers meshing; card's 'avoid meshing on the face' kept and pie-crusting used instead. Iowa mentions topical antibiotic ointment after takedown; omitted per site rule. Full-thickness harvest/defatting details retained from the current card (Iowa page is STSG-focused)."
+ },
+ "spa-ligation": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Stabilize and prepare",
+    "Correct coagulopathy and, with the prescribing team, reverse anticoagulation where safe. Intubate with a cuffed tube to protect the airway from blood. Remove any packing and clear clot with suction under a 0-degree endoscope so the field is clean before injection and the true bleeding site can be judged."
+   ],
+   [
+    "Decongest and inject",
+    "Place vasoconstrictor pledgets, then inject 1% lidocaine with 1:100,000 epinephrine at the middle turbinate insertion and along the uncinate process. A transoral greater palatine canal injection, aspirating first, can further reduce flow from the pterygopalatine fossa. Allow time for vasoconstriction before incising."
+   ],
+   [
+    "Medialize and orient",
+    "Medialize the middle turbinate gently. If the corridor is narrow, perform an uncinectomy and maxillary antrostomy so the posterior wall of the maxillary sinus guides you. Palpate the posterior fontanelle region of the lateral wall to find where firm bone begins, just ahead of the sphenopalatine foramen."
+   ],
+   [
+    "Plan the incision",
+    "Make the mucosal incision on the lateral nasal wall about 1 cm in front of the posterior end of the middle turbinate, either as a vertical cut from just below the turbinate's horizontal attachment toward the inferior turbinate, or as a U-shaped cut centered on the posterior middle turbinate. Coagulating the mucosa first with bipolar limits bleeding."
+   ],
+   [
+    "Raise the flap",
+    "Incise through to bone with a Cottle or suction elevator and elevate a subperiosteal flap posteriorly. Working the flap inferiorly toward the choana first, then sweeping superiorly, keeps the plane clean and delivers the crista ethmoidalis, the small palatine-bone ridge with the foramen directly behind and above it."
+   ],
+   [
+    "Remove the crista",
+    "Take down the crista ethmoidalis with a 2-mm Kerrison rongeur and curette to open the anterior margin of the foramen. A small neurosurgical cottonoid placed inferiorly helps retract the flap medially and keeps it out of the instruments. Identify the artery by anatomy rather than chasing active bleeding blindly."
+   ],
+   [
+    "Map every branch",
+    "Expose the main trunk and its divisions, including the posterior lateral nasal artery and the posterior septal artery running medially across the face of the sphenoid. Look above and below the main foramen for accessory foramina, which are common and a frequent cause of failure."
+   ],
+   [
+    "Take the anterior branch first",
+    "Cauterize and divide the most anterior branch first. It often hides additional branches behind it, which then come into view and can be treated in turn under direct vision rather than missed."
+   ],
+   [
+    "Bipolar along the course",
+    "Coagulate each vessel with bipolar along its length and divide it medially, following the branches until you reach the anterior face of the sphenoid sinus. Avoid deep thermal spread into the pterygopalatine fossa. Cautery has been associated with lower rebleeding rates than clips."
+   ],
+   [
+    "If clipping instead",
+    "When clips are used, dissect each vessel free around its full circumference before applying the clip, so the clip occludes the whole lumen and does not slip. Partial dissection leads to incomplete occlusion and early rebleeding."
+   ],
+   [
+    "Look for a second source",
+    "If the source appears superior or anterior, or bleeding continues, search the septum and ethmoid region and consider anterior ethmoidal artery ligation rather than repeating sphenopalatine cautery. After a pause with blood pressure normalized, reinspect both sides and the nasopharynx."
+   ],
+   [
+    "Replace the flap",
+    "Lay the mucosal flap back over the treated vessels and exposed bone, and hold it with a small piece of absorbable packing such as Nasopore or oxidized cellulose. Avoid bulky nonabsorbable packing unless bleeding elsewhere demands it."
+   ],
+   [
+    "Document and plan",
+    "Record the branches treated, the method, blood loss and any second source. Document the plan if bleeding recurs: early endoscopy, ligation of the anterior ethmoidal artery, or interventional radiology for embolization of feeding vessels."
+   ]
+  ],
+  "protocol_urls": [
+   "https://medicine.uiowa.edu/iowaprotocols/node/8116",
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/nose-bleed-management-and-epistaxis-control"
+  ],
+  "notes": "Iowa (page mislabeled 'Anterior Ethmoid Artery Ligation' but describing endoscopic SPA ligation) added: injection sites at middle turbinate insertion and uncinate, palpating the posterior fontanelle, U-shaped incision option with prior bipolar of mucosa, flap elevated toward choana then superiorly, 2-mm Kerrison, inferior cottonoid retraction, treating the anterior branch first to reveal hidden branches, cauterizing to the sphenoid face, 360-degree dissection before clipping, cautery associated with lower rebleeding than clips, flap secured with Nasopore/oxidized cellulose. Epistaxis protocol supports embolization as a fallback. No disagreement with the current card; its vertical-incision option was kept."
+ },
+ "airway-dilation": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Plan before induction",
+    "Review prior procedures, autoimmune workup and reflux status; idiopathic stenosis often recurs and needs serial treatment. Agree with anesthesia on the ventilation sequence, typically mask ventilation with full relaxation, then jet ventilation for the endoscopic work, then a small tube for balloon dilation, plus a rescue plan if the lumen is critical."
+   ],
+   [
+    "Expose the airway",
+    "Place a Dedo or similar operating laryngoscope with its tip gently separating the posterior vocal folds, giving a straight view into the subglottis for photography and instruments. Protect the teeth and lips, and suspend so the stenosis is centered under the telescope or microscope."
+   ],
+   [
+    "Topical anesthesia",
+    "Insufflate about 1 mL of 4% lidocaine onto the larynx and subglottis before instrumentation. This blunts laryngospasm and cough during jet ventilation and the repeated passes that follow, and it lowers the anesthetic depth needed during stimulation."
+   ],
+   [
+    "Document and grade",
+    "Before treatment, record the level, length, grade and character of the stenosis: mature, firm scar versus inflamed, friable tissue. Photograph it with a telescope. Note glottic involvement and posterior glottic scar, which change the plan and the risk of damaging the vocal folds."
+   ],
+   [
+    "Measure the stenosis",
+    "Use a marked suction catheter against the laryngoscope entrance: mark at the vocal-fold level, again at the upper edge of the stenosis, and again at its lower edge. The first interval gives the distance from the vocal-fold free edge to the stenosis; the second gives stenosis length. This creates a reproducible map for future procedures."
+   ],
+   [
+    "Open a critical lumen first",
+    "If the airway is critically narrow, start with gentle rigid dilation using tapered Jackson dilators until a small microlaryngeal tube passes. In a small female larynx, staying at or below about size 36 lowers injury risk; men usually tolerate about 40 to 42, and larger dilators are hard to pass through the laryngoscope."
+   ],
+   [
+    "Inject steroid into the scar",
+    "Inject the stenotic segment with triamcinolone diluted to about 10 mg/mL, for example triamcinolone 40 mg/mL mixed one part to three parts with 1% lidocaine with 1:100,000 epinephrine. The epinephrine also limits bleeding from the later incisions."
+   ],
+   [
+    "Biopsy and radial incisions",
+    "With microscissors or a laser, make radial cuts through the scar, commonly at 3 and 9 o'clock, adapting the sites to the shape of the narrowing. Paired cuts around a small anterior segment at 12 o'clock allow a biopsy. Divide scar bands radially before dilation, and avoid circumferential mucosal injury that promotes restenosis."
+   ],
+   [
+    "Place a small tube",
+    "Intubate with a small microlaryngeal tube, about 4.0 to 5.0, so ventilation continues during balloon work and the glottis is shielded. This reduces glottic injury and avoids a long apneic period."
+   ],
+   [
+    "Position the balloon",
+    "Choose a radial-expansion balloon sized to the expected normal lumen, for example 15 to 18 mm in an adult female subglottis. Center it across the stenosis under direct vision so it does not migrate distally or sit on the vocal folds."
+   ],
+   [
+    "Inflate under control",
+    "Inflate to the planned diameter and pressure for a controlled interval while maintaining the agreed ventilation or apnea strategy, watching oxygen saturation. Hold, then deflate completely before reassessing; never leave a balloon inflated while saturations fall."
+   ],
+   [
+    "Reassess and repeat only as needed",
+    "After deflation, inspect the mucosa, bleeding and the lumen gained. Repeat dilation only if it adds lumen, avoiding progressive mucosal tearing or cartilage injury from oversized dilation. Deep tears expose cartilage and invite worse scarring."
+   ],
+   [
+    "Adjuncts with care",
+    "Apply topical mitomycin only when it is part of your protocol, with careful dose and contact control, and keep it off the glottis. Treat reflux when present; esophagoscopy may show esophagitis in these patients."
+   ],
+   [
+    "Finish and plan",
+    "Reinspect the entire airway and photograph the result for comparison at the next procedure. Decide on postoperative steroids, observation level and a rescue-airway plan, and schedule follow-up endoscopy, often in clinic, since serial dilations or office steroid injections are typical."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/subglottic-stenosis-example-cases",
+   "https://iowaprotocols.medicine.uiowa.edu/node/1016"
+  ],
+  "notes": "Iowa subglottic stenosis case protocol added: mask-to-jet-to-small-tube ventilation sequence, Dedo laryngoscope tip spreading the posterior folds, 1 mL 4% lidocaine, suction-catheter measurement technique, rigid Jackson dilator size limits by sex, triamcinolone 10 mg/mL with lidocaine/epinephrine injection, biopsy cuts at 12 o'clock with radial cuts at 3 and 9 o'clock, small tube during balloon dilation (15-18 mm), reflux evaluation. Inflation time/pressure and mitomycin are not on the Iowa page; kept from the current card in general terms. No disagreement with the card."
+ },
+ "microflap": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Anesthesia and tube",
+    "Use general anesthesia with a small microlaryngeal tube, about 5.0 to 5.5 in women and 5.5 to 6.0 in men, so the tube sits posteriorly and leaves the membranous folds exposed. If a laser will be used, choose a laser-safe tube and agree on low inspired oxygen with anesthesia."
+   ],
+   [
+    "Expose the lesion",
+    "Obtain atraumatic suspension laryngoscopy with the largest laryngoscope that fits and the lesion centered. Protect the teeth and lips. Document both folds with a telescope before manipulation, including the contralateral fold, which may hide a reactive lesion."
+   ],
+   [
+    "Define depth under magnification",
+    "Under the microscope, palpate and retract to define the lesion's depth and its relationship to the epithelium, superficial lamina propria, vocal ligament and anterior commissure. Cysts sit beneath the epithelium; polyps are usually exophytic and can be removed more superficially."
+   ],
+   [
+    "Polyp: truncate, don't dig",
+    "For an exophytic polyp, grasp it gently and cut it bimanually under the microscope at its base, flush with the fold. The goal is a straight free edge without removing extra mucosal cover or lamina propria. Send all tissue for pathology."
+   ],
+   [
+    "Infuse the subepithelial space",
+    "For a cyst or deeper lesion, inject saline with dilute epinephrine (about 1:10,000) into the superficial lamina propria. This lifts the epithelium off the lesion, separates the planes, and limits bleeding without distorting the vibratory edge."
+   ],
+   [
+    "Make the cordotomy",
+    "Incise the epithelium on the superior surface just lateral to the lesion, at a site that preserves the vibratory edge and leaves the most usable epithelium for redraping. Keep the incision long enough for access but no longer than needed."
+   ],
+   [
+    "Elevate the microflap",
+    "Raise the epithelial flap within the superficial lamina propria, separating epithelium from the lesion with fine blunt instruments. Stay out of the vocal ligament. Preserve the overlying epithelium, since it is the cover that will re-epithelialize the fold."
+   ],
+   [
+    "Dissect around the capsule",
+    "Separate the cyst capsule bluntly from the underlying superficial lamina propria wherever possible, keeping the capsule intact. Leave a small cuff of soft tissue at the anterior and posterior poles to grasp for traction. Switch to sharp dissection where inflammation has scarred the planes."
+   ],
+   [
+    "If the cyst ruptures",
+    "Do not abandon the dissection. Dissect the decompressed capsule carefully off the epithelial basement membrane, removing all lining so the cyst does not recur, while preserving the epithelium itself. Retained capsule is the usual cause of recurrence."
+   ],
+   [
+    "Remove and preserve",
+    "Deliver the lesion while preserving normal superficial lamina propria and avoiding extra tissue removal at the medial edge, since lost lamina propria leaves a stiff, scarred vibratory edge that cannot be restored. Send it for pathology."
+   ],
+   [
+    "Minimal hemostasis",
+    "Control pinpoint bleeding with epinephrine-soaked cottonoids held gently on the bed, or the least traumatic method available. Avoid broad cautery, which stiffens the fold and harms vibration, and avoid laser near the edge."
+   ],
+   [
+    "Redrape the flap",
+    "Lay the microflap back over the bed so the edge lies smooth without tension. Trim only clearly redundant or nonviable epithelium. Reinspect both folds and document the final straight contour."
+   ],
+   [
+    "End suspension and set voice rest",
+    "Release suspension before pressure injury to the tongue or teeth. Plan a period of voice rest; Iowa's cyst protocol uses about 2 weeks of complete rest after microflap excision, followed by graded voice use and voice therapy."
+   ],
+   [
+    "Rescue step: airway fire",
+    "If an airway fire or sustained flash occurs, announce it and stop laser or energy delivery. Anesthesia stops oxidizer flow and disconnects the circuit; remove the burning tube and debris and flood the airway with saline. Do not continue or pause for imaging during combustion. Then re-establish ventilation, avoiding supplemental oxygen and nitrous oxide when physiology permits."
+   ]
+  ],
+  "protocol_urls": [
+   "https://medicine.uiowa.edu/iowaprotocols/node/476",
+   "https://iowaprotocols.medicine.uiowa.edu/node/1183"
+  ],
+  "notes": "Iowa vocal fold cyst protocol added subepithelial infusion of saline with 1:10,000 epinephrine, blunt capsule dissection from superficial lamina propria, handling of rupture by removing capsule from the basement membrane, leaving tissue cuffs at the poles for traction, sharp dissection when inflamed, and 2 weeks complete voice rest. Iowa KTP polyp page added small-tube sizes by sex, bimanual truncation of exophytic polyps leaving a straight edge, and sending all tissue to pathology. Fire step from the current card retained (condensed). No disagreement with the card."
+ },
+ "frontal-sinus-trauma": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Position and protect",
+    "Position supine with the head fixed in a Mayfield or horseshoe headrest and the bed turned away from anesthesia. Place temporary tarsorrhaphy sutures to protect the corneas. Prep the face and entire scalp, and secure a towel behind the planned incision down to the mastoid regions. Prep the abdomen if fat obliteration is possible."
+   ],
+   [
+    "Design the coronal incision",
+    "Mark from helical root to helical root about 2 to 3 cm behind the hairline, using a zigzag or broken-line pattern so the scar hides better when hair is wet. Check the hairline in men; with receding hair, move the line back but warn that the scar may show later. Use an existing laceration only if it gives adequate exposure."
+   ],
+   [
+    "Raise the scalp flap",
+    "Incise through galea and raise the flap in the subgaleal plane, leaving pericranium on the skull for a later vascularized flap. Switch to a subperiosteal plane over the sinus and about 2 cm above the supraorbital rims. Close the galea and subcutaneous layer at the end, so preserve a clean galeal edge now."
+   ],
+   [
+    "Protect the frontal branch laterally",
+    "Over the temporalis, dissect deep to the temporoparietal fascia and directly on the deep temporal fascia so the frontal branch rides up in the flap. If the arch or lateral orbit is needed, incise the superficial layer of deep temporal fascia just above the arch; entering the fat pad higher bleeds from the middle temporal artery and causes later hollowing."
+   ],
+   [
+    "Release the supraorbital bundles",
+    "For exposure of the rims, nasofrontal region and orbital roofs, free the supraorbital neurovascular bundle and reflect it with the flap. If it runs through a bony foramen, take down the inferior bridge with a small osteotome tap. Preserve the supratrochlear bundles too; injury causes scalp and forehead numbness."
+   ],
+   [
+    "Raise the pericranial flap",
+    "Elevate a broad, anteriorly based pericranial flap supplied by the supraorbital and supratrochlear vessels, as long as the planned coverage requires. Keep it moist and protect its base throughout, since it is the key barrier if the sinus is cranialized or the ducts are plugged."
+   ],
+   [
+    "Define the injury",
+    "Expose the anterior table, supraorbital rims and nasofrontal region. Define anterior and posterior table fractures and the outflow anatomy, correlating with the CT. Remove and preserve usable anterior-table fragments in oriented fashion, plating them together if helpful."
+   ],
+   [
+    "Inspect the sinus",
+    "Look into the sinus for mucosal injury, posterior-table displacement or comminution, CSF leak and outflow-tract disruption. These findings determine preservation, obliteration or cranialization. Involve neurosurgery when the posterior table is badly comminuted or dura is torn."
+   ],
+   [
+    "Preserve when possible",
+    "If the outflow tract is intact or can be restored and the posterior table is stable, preserve the sinus: reduce and fix the anterior table without trapping mucosa behind displaced fragments, and plan endoscopic surveillance of drainage."
+   ],
+   [
+    "Obliterate when outflow is lost",
+    "For obliteration, remove every trace of mucosa from all walls and recesses and lightly drill the bone with a burr to clear mucosa in the foramina of Breschet. Invert and plug the frontonasal ducts, then fill the cavity with abdominal fat or another accepted material before replacing the anterior table."
+   ],
+   [
+    "Cranialize a destroyed posterior table",
+    "Remove the posterior table back to the anterior cranial fossa floor, strip all mucosa, and drill the inner cortex of remaining walls to clear the foramina of Breschet. Invert outflow mucosa downward, plug both frontonasal ducts with pericranium, muscle or bone, and let the frontal lobe expand into the space after dural repair."
+   ],
+   [
+    "Repair dura and seal the floor",
+    "Repair dural tears primarily or with a fascia or pericranial graft for a watertight closure. Turn the vascularized pericranial flap down over the sinus floor and plugged ducts to separate the nose from the anterior cranial fossa permanently. Leave its base free so it is not strangled when the anterior table is replaced."
+   ],
+   [
+    "Restore the contour",
+    "Reconstruct the anterior table and supraorbital rims with stable low-profile fixation, bridging small gaps with bone graft or mesh as needed for protection and cosmesis. Check the forehead contour against the opposite side before closing."
+   ],
+   [
+    "Close over drains",
+    "Confirm hemostasis and close dead space. Place two perforated suction drains under the coronal flap, close galea and subcutaneous tissue with 2-0 absorbable sutures, and close skin with staples or a running 3-0 nylon. Remove drains when output falls below about 30 mL per 24 hours."
+   ],
+   [
+    "Follow-up and surveillance",
+    "Warn the patient about numbness behind the incision, possible alopecia along the scar and frontal-branch weakness. Watch early for hematoma and CSF leak, and document long-term surveillance for mucocele, contour deformity, CSF leak and intracranial infection."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/coronal-approaches-upper-facial-skeleton"
+  ],
+  "notes": "Iowa has no frontal sinus fracture protocol page that could be fetched (the osteoplastic flap page redirected outside the allowed fetch list); its coronal-approach protocol supplied the approach steps: Mayfield positioning, tarsorrhaphy, broken-line helix-to-helix incision 2-3 cm behind the hairline, hairline assessment, switch to subperiosteal over the sinus and 2 cm above the rims, temporal plane deep to temporoparietal fascia, superficial-layer deep temporal fascia incision just above the arch and middle temporal artery/fat atrophy pitfall, osteotome release of a foraminal supraorbital bundle, two suction drains removed under 30 mL/day, closure layers, complications. The Iowa page dissects to periosteum at the incision; the card's need for a pericranial flap means the subgaleal plane is used first (Iowa itself refers to separate galeal flap protocols). Sinus management steps retained from the current card. Iowa's topical antibiotic ointment on the incision omitted per site rule."
+ },
+ "palatoplasty": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Expose and inject",
+    "Position supine with a shoulder roll and the neck gently extended. Place a Dingman or similar mouth gag, checking the tongue blade does not compress the tongue or endotracheal tube. Infiltrate the planned incisions with local anesthetic containing 1:200,000 epinephrine and wait for vasoconstriction."
+   ],
+   [
+    "Mark the repair",
+    "Mark the medial cleft margins, hard-palate relaxing incisions along the alveolar ridge, and the greater palatine neurovascular pedicles before cutting. For the soft palate, choose between straight-line closure with intravelar veloplasty and a double-opposing Z-plasty, which also lengthens the velum and suits narrow soft-palate clefts."
+   ],
+   [
+    "Raise the hard-palate flaps",
+    "Elevate oral mucoperiosteal flaps from the relaxing incisions and cleft margins, identifying and preserving the greater palatine pedicles as they exit their foramina. Free them enough for a tension-free midline closure, using gentle pedicle release if more reach is needed."
+   ],
+   [
+    "Close the hard-palate nasal layer",
+    "Separate nasal mucosa from the hard-palate shelves and vomer as required, and close the nasal layer with 4-0 absorbable sutures without leaving a gap. The hard and soft palate junction is the most common fistula site, so take extra care there."
+   ],
+   [
+    "Split and freshen the velum",
+    "Divide the soft palate along the cleft in the midline back to the uvula, and trim the medial edges and uvular tips to fresh tissue. Identify the abnormal levator veli palatini fibers inserting on the posterior hard palate."
+   ],
+   [
+    "Option A: intravelar veloplasty",
+    "Dissect the levator insertions off the posterior hard-palate edge and from the nasal and oral mucosa, then reorient each muscle transversely and suture the two together across the midline as a muscle sling, aligning nasal, muscle and oral layers."
+   ],
+   [
+    "Option B: design the Z-plasties",
+    "For a double-opposing Z-plasty, draw lateral limbs at about 45 to 60 degrees from the midline limb, ending behind the alveolar ridge. On one side the oral flap is posteriorly based and carries the muscle; on the other it is anteriorly based mucosa only. The nasal flaps are designed as the mirror image. Steeper angles give more lengthening."
+   ],
+   [
+    "Option B: elevate the oral flaps",
+    "On the muscle-carrying side, lift the levator with the oral mucosa off the nasal mucosa, freeing it from the posterior hard-palate edge. On the opposite side, lift only mucosa and submucosa, leaving muscle on the nasal side. A back-cut along the medial alveolar margin can add mobility."
+   ],
+   [
+    "Option B: transpose the nasal layer",
+    "Cut the nasal flaps parallel to the bases of their overlying oral flaps. Rotate the nasal myomucosal flap backward and the nasal mucosal flap forward, aiming each tip toward the opposite superior constrictor. This overlaps the two levator bundles and lengthens the velum. Close the nasal layer first, from flap tips toward the midline."
+   ],
+   [
+    "Option B: close the oral layer",
+    "Transpose and advance the oral flaps across the midline and close with 4-0 absorbable sutures, placing a stronger buried monofilament stitch near the midline to secure the flaps. Avoid leaving raw nasal surface exposed, which contracts and shortens the palate."
+   ],
+   [
+    "Close the uvula",
+    "Freshen the uvular halves and close them with a horizontal mattress suture, aligning nasal, muscle and oral layers without airway-narrowing bulk. A well-aligned uvula is a visible check that the layers have been matched."
+   ],
+   [
+    "Close the hard-palate oral layer",
+    "Close the oral mucoperiosteal flaps in the midline from posterior to anterior, securing them without kinking or strangling their pedicles. Lateral relaxing-incision raw areas can be left to heal by secondary intention."
+   ],
+   [
+    "Inspect before release",
+    "Check for exposed bone at the closure, pedicle kinking, bleeding and symmetric palatal length and mobility. Avoid tight packing against the repair. Remove the gag and check the tongue for swelling and the teeth and lips for injury."
+   ],
+   [
+    "Postoperative plan",
+    "Plan airway observation, since tongue swelling and narrowing of the velopharynx can obstruct breathing, especially in syndromic children. Set hydration, analgesia, arm restraints and a soft feeding plan. Arrange fistula checks and speech follow-up for velopharyngeal function."
+   ]
+  ],
+  "protocol_urls": [
+   "https://medicine.uiowa.edu/iowaprotocols/node/5651"
+  ],
+  "notes": "Iowa's Z-palatoplasty dictation template (historical, pre-2015) added the double-opposing Z-plasty option: Dingman gag, 1:200,000 epinephrine injection, midline split with trimming of uvula/medial edges, 45-60 degree limbs (about 50-75 percent lengthening), which side carries the muscle on oral versus nasal flaps, back-cut, nasal flaps cut parallel to oral flap bases and aimed at the opposite superior constrictor, nasal closure from tips to midline with 4-0 absorbable, oral closure with a stronger midline 4-0 monofilament, horizontal mattress uvula, avoiding raw nasal surface, higher fistula risk at the hard/soft palate junction. Two-flap hard palate and intravelar veloplasty steps retained from the current card. No disagreement with the card."
+ },
+ "endoscopic-pituitary": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Preoperative review",
+    "Review CT and MRI for the carotid arteries, optic nerves, cavernous sinus, sphenoid septation and suprasellar extension. Ask about prior nasal trauma, sinus surgery and sinus disease, and identify obstructive sleep apnea and CPAP use, since CPAP must be held after surgery. Confirm the glucocorticoid plan with anesthesia and endocrinology."
+   ],
+   [
+    "Position and set up",
+    "Tape the tube to the left lower lip, and place an arterial line (left arm preferred) and Foley catheter when intradural work is expected. Rotate the bed 180 degrees; neurosurgery pins the head in a Mayfield, slightly extended and turned toward the surgeon. Prep the face, and the abdomen or thigh if fat or fascia lata may be needed."
+   ],
+   [
+    "Register navigation",
+    "Register the navigation system before prepping, then drape and position the reference array over the field. Recheck probe accuracy at key points, especially after any turbinate resection and intermittently through the case, because anatomy shifts as bone is removed."
+   ],
+   [
+    "Decongest and inject",
+    "Place pledgets with oxymetazoline plus either 4% cocaine or 1% lidocaine with 1:100,000 epinephrine. Perform a transoral greater palatine canal injection, aspirating first. Inject the middle turbinate face and axilla and the posterior septum. Use a white-balanced, focused 0-degree endoscope."
+   ],
+   [
+    "Find the sphenoid ostium",
+    "Survey both sides for septal deviation and choanal anatomy. Lateralize the middle turbinate with the curved back of a blunt Freer and find the natural sphenoid ostium in the sphenoethmoidal recess, medial to the superior turbinate and about 1.5 cm above the choanal arch."
+   ],
+   [
+    "Manage the turbinates",
+    "Gently outfracture the middle and superior turbinates to widen the corridor. Resect the inferior third of the superior turbinate if needed for exposure, and a middle turbinate only when the planned approach requires it. Avoid tearing the superior turbinate high on the skull base, which risks olfactory injury or a leak."
+   ],
+   [
+    "Decide on the flap",
+    "If a high-flow leak is likely (extended approach, large suprasellar tumor, planned arachnoid opening), harvest the nasoseptal flap now. Otherwise make a rescue-flap incision that preserves the posterior septal artery pedicle, so a full flap can be raised later if a leak appears."
+   ],
+   [
+    "Harvest the nasoseptal flap",
+    "Cut superiorly 1 to 2 cm below the skull base to spare olfactory mucosa, inferiorly along the maxillary crest or nasal floor, and anteriorly as far as size requires. Join the cuts across the rostrum, keeping the pedicle between ostium and choana, elevate subperichondrially, and park the flap in the nasopharynx or maxillary sinus."
+   ],
+   [
+    "Open both sphenoid sinuses",
+    "Enlarge each ostium inferiorly and medially, protecting the posterior septal artery below it. Take the rostrum down to the sphenoid floor with a Kerrison or drill and join both sides into one wide opening, extending laterally as the lesion requires."
+   ],
+   [
+    "Posterior septectomy",
+    "Remove about 1 to 2 cm of posterior septum with a backbiter, microdebrider or sickle knife on each side so instruments pass through both nostrils. This binarial, two-surgeon technique lets one surgeon drive the endoscope and suction while the other dissects with both hands."
+   ],
+   [
+    "Remove intersinus septa safely",
+    "Check the CT for septa that insert on the carotid canal. Bring them flush with the posterior sphenoid wall using a drill or cutting instrument, never by twisting or fracturing, because torque can fracture the canal and tear a dehiscent carotid. Remove sellar-face mucosa only as needed."
+   ],
+   [
+    "Confirm the landmarks",
+    "Identify the sella, planum, tuberculum, clival recess, parasellar and paraclival carotid prominences, optic protuberances and lateral opticocarotid recesses. Confirm with navigation, use a micro-Doppler when anatomy is uncertain, and confirm carotid and optic positions with neurosurgery before bone is opened."
+   ],
+   [
+    "Open the sella and assist",
+    "Thin the sellar floor with a diamond drill and remove it with Kerrison rongeurs between the carotids. Control intercavernous sinus bleeding before neurosurgery opens the dura. During resection, drive the endoscope, keep the field clear, and watch for CSF, arterial bleeding and the normal gland and stalk."
+   ],
+   [
+    "Grade the CSF leak",
+    "Inspect the defect during a Valsalva maneuver and grade it as no leak, low-flow leak through a small diaphragma tear, or high-flow leak from a wide arachnoid or ventricular opening. If an unexpected high-flow leak appears, raise the full flap from the rescue incision."
+   ],
+   [
+    "Reconstruct the skull base",
+    "For no or low-flow leaks, use a collagen dural substitute or free fat or fascia graft. For high-flow leaks, build a multilayer repair (inlay and onlay grafts, fat as needed) covered by the nasoseptal flap, laid on bare bone after removing mucosa from the defect margins. Confirm the pedicle is untwisted and not compressed."
+   ],
+   [
+    "Pack and protect",
+    "Support the repair with absorbable packing such as Nasopore, plus a balloon or nonabsorbable packing per protocol. Cover the septal donor site with a reverse septal flap or splints. Decide with neurosurgery on a lumbar drain for high-flow defects. Hold CPAP for at least a month to avoid pneumocephalus."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/transnasal-transsphenoidal-approach-pituitary"
+  ],
+  "notes": "Iowa transnasal transsphenoidal protocol added: OSA/CPAP screening and holding CPAP at least one month for pneumocephalus risk, prior sinus/trauma history, tube taped left lower lip, arterial line and Foley, bed rotated 180 degrees with Mayfield, navigation registration and rechecks after turbinate resection, greater palatine injection, cocaine or lidocaine-epinephrine pledgets with oxymetazoline, posterior septal injection, Freer lateralization, inferior-third superior turbinate resection, rostrum to the sphenoid floor, septum taken flush with drill and warning against twisting, confirming carotid/optic with neurosurgery, Nasopore. Iowa page does not cover sellar opening, CSF grading or reconstruction; those retained from the current card. No disagreement."
+ },
+ "pharyngocutaneous-fistula": {
+  "mode": "edit",
+  "edits": [
+   {
+    "op": "replace",
+    "index": 0,
+    "step": [
+     "Know the high-risk patient",
+     "Fistula is more likely after prior radiation, with poor nutrition (albumin below about 3.5 g/dL), anemia (hemoglobin below about 12.5 g/dL), hypothyroidism, diabetes, ongoing smoking, or positive margins. Before the index laryngectomy and again before any repair, correct what you can: nutrition, anemia, thyroid function, glucose and smoking. Plan a salvage case assuming a leak may happen."
+    ]
+   },
+   {
+    "op": "replace",
+    "index": 1,
+    "step": [
+     "Prevent it at the index closure",
+     "Close the mucosa with inverting sutures, such as a running Connell-type stitch, in a watertight, tension-free line, saving healthy mucosa. Add a second layer of interrupted absorbable sutures through remaining constrictor and strap muscle. T-shaped and straight closures are both accepted, but the T's three-point junction leaks more, so many prefer a straight closure when feasible."
+    ]
+   }
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/403",
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/near-field-laryngectomy-case"
+  ],
+  "notes": "Iowa added the running (modified) Connell inverting mucosal suture as a fistula-lowering choice, a second-layer constrictor/strap closure with interrupted 3-0 absorbable sutures, and the cited risk thresholds of albumin below 3.5 g/dL and hemoglobin below 12.5 g/dL. Iowa's case used a T-type closure successfully; this does not contradict the card's preference for straight closure when feasible. No Iowa page covers fistula repair itself, so steps 2-15 are unchanged."
+ },
+ "facial-nerve-reanimation": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Stage the injury and plan",
+    "Map the deficit, how long the face has been paralyzed, whether a usable proximal facial stump exists, the distal branches, and candidate donor nerves. Within about 30 days favor primary repair; from one month to roughly two years favor bringing new axons to native muscle; beyond about two years plan muscle transfer unless viable distal nerve and muscle are proven by electromyography."
+   ],
+   [
+    "Anesthesia and prep",
+    "Ask anesthesia to avoid long-acting paralytics, because a nerve stimulator is used to find and test branches. Position for access to both the face and the donor site, and prep the donor widely: the whole lower leg and foot for sural nerve, the whole arm for medial antebrachial cutaneous nerve, so graft length is never limited by the drape."
+   ],
+   [
+    "Find distal branches early",
+    "Expose recipient branches in healthy tissue, usually through a preauricular or parotidectomy-type incision with a flap raised over the parotid fascia. In an acute injury, stimulate distal branches before about 72 hours have passed, while they still conduct; tag them with vessel loops and watch which facial region each one moves."
+   ],
+   [
+    "Prepare the proximal stump",
+    "Identify the proximal facial nerve and trim back to healthy, pouting fascicles. In oncologic cases send frozen sections of the nerve margins before committing to the graft. Use longitudinal incisions along the nerve course and extend them as needed rather than stair-stepping across the neck or face."
+   ],
+   [
+    "Cut nerve ends cleanly",
+    "Under loupes or the microscope, cut each end with a fresh scalpel blade against a firm backstop such as a sterile tongue blade, not with scissors, which crush fascicles. Strip only enough epineurium to align the ends, and match fascicle groups and surface vessels so the two ends sit in their natural rotation."
+   ],
+   [
+    "Decide primary repair or graft",
+    "Gaps up to about 1 cm can usually be closed by mobilizing the ends; rerouting the nerve out of the mastoid canal gains about another centimeter but risks devascularizing it. A graft with two suture lines gives better results than a primary repair under tension, so graft any gap that cannot be closed without stretch."
+   ],
+   [
+    "Harvest great auricular nerve",
+    "For short single-trunk gaps, the ipsilateral great auricular nerve is the usual donor: similar diameter, two or three fascicles, found crossing the sternocleidomastoid roughly midway between the mastoid tip and the mandibular angle. Its length and branching are limited for multibranch repairs. Warn the patient about earlobe and mastoid numbness."
+   ],
+   [
+    "Harvest sural nerve",
+    "For long or branched grafts, take the sural nerve: incise behind and below the lateral malleolus beside the small saphenous vein, loop the nerve, divide it distally, and free it proximally with a tendon stripper or a second calf incision. Up to about 30 cm is available. Use caution in diabetes or peripheral vascular disease."
+   ],
+   [
+    "Prepare the graft",
+    "Cut the graft to the shortest length that still allows a tension-free repair, store it in balanced salt solution, and reverse its direction so regenerating axons are not lost into side branches. For several distal targets, use a branched segment or split the graft so each cable reaches its own branch."
+   ],
+   [
+    "Perform the coaptation",
+    "Place 3 to 4 interrupted 9-0 or 10-0 nylon sutures with about 1 mm bites, using the fewest that hold stable fascicular contact; a perineurial repair suits the proximal trunk and an epineurial repair suits distal branches. If fascicles bulge between the ends, realign or redo the repair. Fibrin sealant may cover the junction, never sit between the ends."
+   ],
+   [
+    "Hypoglossal-facial transfer",
+    "When no proximal facial stump exists but distal nerve and muscle are viable, transfer the hypoglossal nerve, ideally at the time of tumor resection. Using part of the hypoglossal nerve or a jump graft spares tongue function and avoids excess drive. Counsel about tongue weakness and atrophy; about 95% regain resting tone and eye protection, with motion beginning at 3 to 6 months."
+   ],
+   [
+    "Masseteric transfer and branch choice",
+    "For a masseteric transfer, find the nerve below the zygomatic arch about 3 cm in front of the tragus, deep within the masseter, and divide it distally for length. Coapt to the zygomatic or buccal branches that drive smile and eye closure, and avoid unnecessarily denervating branches that still function."
+   ],
+   [
+    "Cross-face nerve graft",
+    "When the proximal nerve is unusable and a spontaneous smile is the goal, stimulate the healthy side's buccal branches and select a redundant one that produces smile without eye or nose movement. Roughly half of those fibers can be sacrificed safely. Tunnel a 15 to 18 cm sural graft through upper-lip incisions and mark its tip with permanent sutures for staged retrieval."
+   ],
+   [
+    "Protect the repair and close",
+    "Lay grafts and coaptations in a vascularized, uncompressed bed and check that turning the head or neck does not tension them; with a free flap, coapt after the flap is inset. Place a small drain under the facial flap, close in layers, and apply a light compression dressing. Document the exact donor-recipient construct."
+   ],
+   [
+    "Set expectations and rehabilitate",
+    "Facial axons regrow about 1 mm per day: distal repairs may show motion by about 6 months, cerebellopontine-angle repairs up to 18 months, and cross-face grafts 9 to 12 months. Steroids are limited to the perioperative period. Plan facial physical therapy, botulinum toxin for synkinesis, and static support such as an eyelid weight while waiting."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/facial-reanimation",
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/nerve-grafting-and-neurorraphy",
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/nerve-grafting-facial-paralysis-cross-face-nerve-grafting"
+  ],
+  "notes": "Iowa added: timing windows (0-30 days, 1 month-2 years, >2 years); avoid paralytics and stimulate branches; wide donor prep; scalpel-on-backstop end preparation; ~1 cm primary-repair limit and mastoid rerouting gain; grafting beats tension; graft reversal and storage; suture size/number (3-4 of 9-0/10-0 nylon); proximal perineurial vs distal epineurial; donor options and sural harvest; XII-VII outcomes and counseling; cross-face branch selection, tunneling and tip marking; regeneration rates. The 72-hour distal-stimulation window, great auricular landmark and masseteric-nerve landmarks are standard US teaching added to fill gaps (Iowa does not describe masseteric nerve transfer). No conflict with current card; current points kept (tension-free coaptation, no glue between ends, vector-appropriate branch choice, vascularized bed). One Iowa page says cut obliquely, another transversely; written as a clean sharp cut. Iowa pages are dated (pre-2017)."
+ },
+ "closed-nasal-reduction": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Time the reduction",
+    "Reduce either within a few hours of injury, before swelling hides the deformity, or after the swelling settles at about 3 to 10 days (no later than about 14 days in adults; 3 to 7 days in children, whose bones set faster). Pre-injury photographs help; reexamine once edema falls, because early swelling can mask or exaggerate the deformity."
+   ],
+   [
+    "Screen for what closed reduction cannot fix",
+    "Exclude septal hematoma, clear rhinorrhea suggesting cerebrospinal fluid leak, naso-orbito-ethmoid and Le Fort fractures, open or severely comminuted septal fractures, caudal septal fracture-dislocation, deviation greater than half the width of the nasal bridge, and presentation beyond two weeks. These need open treatment or delayed septorhinoplasty instead."
+   ],
+   [
+    "Drain a septal hematoma now",
+    "A widened, boggy septum with obstruction and ecchymosis is a hematoma until proven otherwise. Incise and evacuate it immediately, then prevent reaccumulation with quilting sutures or bilateral splints, because untreated hematoma leads to cartilage necrosis, abscess and saddle nose."
+   ],
+   [
+    "Choose setting and anesthesia",
+    "The reduction can be done in the office, emergency department or operating room under monitored or general anesthesia, with similar functional and cosmetic results. Seat or recline the patient. Examine the external nose and septum, marking sidewall depression, dorsal deviation and points of airway obstruction before anything is manipulated."
+   ],
+   [
+    "Topical decongestion",
+    "Lay two narrow pledgets per side along the septum and nasal floor, soaked in oxymetazoline, lidocaine with epinephrine, or 4% cocaine. This shrinks the mucosa so the fracture lines and the septum can be seen and palpated, and it reduces bleeding when the elevator is passed."
+   ],
+   [
+    "Local blocks",
+    "Infiltrate 1% lidocaine with 1:100,000 epinephrine at both infraorbital foramina, the supratrochlear nerves and along the nasal dorsum. Wait 10 to 15 minutes for vasoconstriction and full anesthesia. Then palpate inside and out to map which segments are mobile, depressed or overriding."
+   ],
+   [
+    "Measure the elevator",
+    "Lay the Boies elevator against the outside of the nose from the alar rim to the depressed nasal bone and mark that depth with your thumb. Its tip must not pass above the level of the medial canthus, which keeps the instrument below the cribriform plate."
+   ],
+   [
+    "Elevate the depressed side",
+    "Pass the elevator into the nose on the side of the depressed fragment, lift it outward and forward, and push the opposite, outwardly displaced bone toward midline with the thumb of the other hand. Reduction is often felt as a click. Use controlled force in a stepwise sequence rather than one forceful sweep."
+   ],
+   [
+    "Correct the opposite bone",
+    "Reassess after the first side moves. The contralateral nasal bone may need its own outward lift or inward push to center the pyramid and restore dorsal width and projection. Recheck the dorsum by sight and palpation from above and in profile."
+   ],
+   [
+    "Use forceps for impacted fragments",
+    "If the elevator will not move an impacted segment, grip the bone with Walsham forceps, one padded blade inside the nose and one outside, and disimpact it with a controlled rocking motion. Avoid crushing the overlying skin and mucosa."
+   ],
+   [
+    "Realign the septum",
+    "Assess the septal cartilage; if it is displaced, reduce it at the same time with the elevator or Asch forceps so it does not push the bony pyramid back off midline. Avoid aggressive septal resection in the acute setting. Inspect for mucosal tears, persistent obstruction and nasal valve narrowing."
+   ],
+   [
+    "Internal support if needed",
+    "Internal packing or silicone splints are optional and are used for an unstable septum or bleeding. For bleeding, absorbable packing is gentler on the mucosa. Avoid overpacking, which can push fragments back out of position."
+   ],
+   [
+    "Apply the external splint",
+    "Paint the dorsum and cheeks with benzoin, lay strips of adhesive tape across the dorsum, then soften a thermoplastic splint in hot water until it turns clear, shake off excess water, and mold it over the tape. Press it gently so it holds the reduction without collapsing the sidewalls."
+   ],
+   [
+    "Aftercare and follow-up",
+    "Use ice and head elevation for swelling, and avoid contact sports or glasses resting on the nose while the bones set. Remove the splint and any packing at 5 to 7 days and recheck alignment. Watch for bleeding, perforation, adhesions and saddling. Persistent obstruction or deformity is treated by septorhinoplasty at least 6 months after injury."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/nasal-fracture-reduction-closed-nasal-reduction"
+  ],
+  "notes": "Iowa added: timing windows (adult and pediatric), contraindication list, office vs operating room equivalence, specific topical and block technique (infraorbital, supratrochlear, dorsum) with 10-15 min wait, Boies depth measured from alar rim, contralateral bone correction, Walsham forceps for impacted fractures, absorbable packing for bleeding, thermoplastic splint sequence, 5-7 day removal, septorhinoplasty at least 6 months later. Iowa's medication advice during packing was deliberately omitted per site policy. Asch forceps and the click/medial-canthus rationale are standard additions. No disagreement with the current card; all current points kept."
+ },
+ "deep-neck-drain": {
+  "mode": "edit",
+  "edits": [
+   {
+    "op": "insert_after",
+    "index": 5,
+    "step": [
+     "Peritonsillar collections: limit depth",
+     "The pocket usually lies above the tonsil where the anterior pillar meets the base of the uvula; the carotid is about 2 to 2.5 cm posterolateral. Guard the needle so only about 1.5 cm is exposed, aspirate while advancing, never aim laterally or go deeper than 2 cm, then open about 1 cm along the arch, spread to break septations and leave it open."
+    ]
+   }
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/813"
+  ],
+  "notes": "Iowa has no dedicated deep neck space infection protocol; only the peritonsillar abscess page has drainage technique, so one peritonsillar-specific step was added (target landmark, carotid distance, needle-guard and 2 cm depth limit, incision orientation). Rest of the card left unchanged; no disagreement."
+ },
+ "mastoidectomy": {
+  "mode": "edit",
+  "edits": [
+   {
+    "op": "insert_after",
+    "index": 3,
+    "step": [
+     "CWR: harvest bone pâté first",
+     "If you plan canal wall reconstruction with obliteration, collect bone pâté from the mastoid and squamous cortex with a collector before any air cells are opened, so it is free of disease and mucosa. Set it aside. Leave the posterior canal wall thicker than in a routine canal-wall-up case so it survives being cut out and replaced."
+    ]
+   },
+   {
+    "op": "insert_after",
+    "index": 8,
+    "step": [
+     "CWR: remove the canal wall en bloc",
+     "Extend the facial recess down to the canal floor, remove incus and malleus head, and sacrifice the chorda. Elevate canal skin from behind without incising it and lift the annulus to about 6 o'clock. Make interlocking mitered microsaw cuts so the replaced wall cannot fall into the mastoid. The inferior cut threatens the facial nerve; the superior cuts threaten a low tegmen and the geniculate ganglion."
+    ]
+   },
+   {
+    "op": "insert_after",
+    "index": 13,
+    "step": [
+     "CWR: spacer and fascia first",
+     "After all disease is cleared, inspect the removed canal wall segment for adherent matrix. Place a teardrop of thick silicone sheet with its tip in the Eustachian tube orifice; if the stapes superstructure is gone, add a small wedge marking the footplate. Underlay a generous temporalis fascia graft that also covers every bone-cut margin, supported with gelatin sponge."
+    ]
+   },
+   {
+    "op": "insert_after",
+    "index": 14,
+    "step": [
+     "CWR: block, replace and obliterate",
+     "Seal the attic (scutum to tympanic facial nerve) and facial recess with cortical bone chips from the mastoid tip, replace the canal wall, and pack the drained pâté firmly up to the cortex so canal packing cannot push the wall backward. Reposition the canal skin through a long speculum. Contraindications: matrix that cannot be fully removed, prior canal-wall-down surgery, or no second look."
+    ]
+   }
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/canal-wall-reconstruction-mastoidectomy"
+  ],
+  "notes": "Iowa added a canal wall reconstruction (removable posterior canal wall with mastoid/attic obliteration) pathway: pâté harvest before opening cells, thick canal wall, en bloc mitered wall removal and its nerve/dural hazards, silicone spacer and fascia sequence, bone-chip blocking, wall replacement and pâté packing, contraindications. Iowa stages this with a second look at about 6 months (card says 9 to 12 months or diffusion MRI); left the card's staging step alone since both intervals are used in US practice. Iowa's perioperative medication regimen and pâté irrigation solution were omitted per site policy. No lateral semicircular canal fistula or tegmen repair content was found on Iowa pages, so those gaps remain."
+ },
+ "endoscopic-sinus-surgery": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Plan from the CT",
+    "Before incision, review the CT for skull base height and asymmetry (Keros depth of the olfactory fossa), a dehiscent or medially displaced lamina papyracea, Onodi cells, anterior ethmoid artery position, and the ratio of maxillary to ethmoid height; a low skull base relative to the maxillary roof raises the risk of skull base injury."
+   ],
+   [
+    "Set up and register",
+    "With the patient supine, intubated orally and the table turned, register the image-guidance system and confirm accuracy on fixed landmarks. Leave the eyes exposed under clear dressings so they can be checked and palpated during the case. Confirm a plan with anesthesia for controlled blood pressure."
+   ],
+   [
+    "Decongest and inject",
+    "After topical decongestion, perform rigid endoscopy on both sides and gently out-fracture the inferior turbinates if access is tight. Inject 1% lidocaine with 1:100,000 epinephrine into the lateral nasal wall and the axilla of the middle turbinate. Medialize the middle turbinate gently without fracturing it."
+   ],
+   [
+    "Uncinectomy and maxillary antrostomy",
+    "Remove the uncinate process with back-biting forceps or a microdebrider, find the natural maxillary ostium with a curved suction, and enlarge it posteriorly and inferiorly into the natural opening so there is no recirculation. Culture purulence and irrigate the sinus. The antrostomy roof marks the orbital floor height."
+   ],
+   [
+    "Define landmarks",
+    "Identify the ethmoid bulla, lamina papyracea, middle turbinate and the orbital floor at the top of the antrostomy. These set the lateral and inferior boundaries and give a starting height well below the skull base before any ethmoid cell is opened."
+   ],
+   [
+    "Open the bulla",
+    "Enter the ethmoid bulla in its safe medial and inferior portion and remove its partitions while keeping the lamina papyracea continuously in view laterally. Leave the bulla's roof and the suprabullar region until the skull base has been identified further back."
+   ],
+   [
+    "Anterior ethmoid cells",
+    "Clear the anterior ethmoid cells toward the basal lamella, keeping a known superior limit rather than following disease blindly upward. Medially, stay away from the lateral lamella of the cribriform plate, the thinnest bone in the anterior skull base."
+   ],
+   [
+    "Enter the basal lamella",
+    "Pass through the basal lamella of the middle turbinate at a controlled inferior and medial point, just above its horizontal portion, when posterior disease requires it. Preserve the horizontal attachment so the middle turbinate remains stable."
+   ],
+   [
+    "Posterior ethmoid and skull base",
+    "In the posterior ethmoid, where the skull base is usually higher and easier to see, identify it with image guidance and direct visualization. Recognize that it slopes downward toward the back and may be asymmetric between sides. Watch for an Onodi cell, which can carry the optic nerve."
+   ],
+   [
+    "Clear the roof from back to front",
+    "Once the skull base is found posteriorly, take ethmoid partitions off it working posterior to anterior with curettes, through-cutting instruments and a Kerrison punch. Skeletonize rather than strip the skull base mucosa and the lamina, and never pull bone fragments down from the roof."
+   ],
+   [
+    "Respect the anterior ethmoid artery",
+    "Near the front of the roof, locate the anterior ethmoid artery. A vessel sitting within the skull base is protected; one hanging in a mesentery below it is at risk of being torn, with retraction into the orbit and orbital hematoma. Handle the area deliberately and avoid powered instruments against it."
+   ],
+   [
+    "Frontal recess",
+    "Clear the frontal recess, including suprabullar and agger nasi cell partitions, following the drainage pathway from below with angled endoscopes and instruments. Irrigate and suction the frontal sinus to remove secretions, while preserving mucosa around the drainage pathway to limit scarring."
+   ],
+   [
+    "Sphenoid when indicated",
+    "If the sphenoid is diseased, open it through its natural ostium medial and inferior to the superior turbinate attachment, enlarge medially and inferiorly, and inspect it with a 30-degree endoscope before clearing debris. Repeat the full sequence on the other side."
+   ],
+   [
+    "Final inspection and closure",
+    "Remove residual partitions while preserving middle turbinate stability and mucosa. Inspect the orbit, skull base and hemostasis, using vasoconstrictor pledgets and suction cautery. Palpate the eyes to confirm they remain soft. Place middle meatal packing or a spacer if needed to keep the turbinate from lateralizing."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/chronic-sinusitis-surgical-treatment-annotated-video-and-sample-operative-note"
+  ],
+  "notes": "Iowa added: setup with image guidance, eye checks, injection sites, uncinectomy and natural-ostium antrostomy with culture, posterior-to-anterior clearance off the skull base, frontal recess and sphenoidotomy position, CT risk factors (Keros, lateral lamella, displaced lamina, Onodi cell, anterior ethmoid artery, maxillary:ethmoid ratio), pledgets/suction cautery and middle meatal packing. All current card points kept. Iowa's postoperative medication and mitomycin items were not included."
+ },
+ "sphenoidotomy": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Review the sphenoid on CT",
+    "Before entering, check pneumatization type (a sellar pattern leaves thin bone over the clivus), the side and attachment of intersinus septa, dehiscence of the carotid canal or optic canal, and any Onodi cell. Septa often insert on the carotid prominence, so they must never be twisted or torn out."
+   ],
+   [
+    "Set up",
+    "Use image guidance when available and confirm registration. Decongest the nose and inject the region of the middle and superior turbinates with lidocaine and epinephrine. Keep the eyes visible for intermittent checks."
+   ],
+   [
+    "Choose the route",
+    "Approach either directly through the sphenoethmoidal recess, medial to the middle and superior turbinates, or through a completed posterior ethmoidectomy. In either case identify the sphenoid rostrum and the face of the sinus rather than drilling into it blindly."
+   ],
+   [
+    "Find the natural ostium",
+    "Locate the superior turbinate and the sphenoethmoidal recess. The natural ostium lies medial to the superior turbinate, usually about 1 to 1.5 cm above the choana. Confirm it by direct visualization or a gentle probe directed away from the orbit and skull base."
+   ],
+   [
+    "Enter safely",
+    "Enter the ostium with an instrument directed medially and inferiorly. If the ostium cannot be seen, enter low and medially on the face of the sphenoid, close to the septum and just above the choana, where the sinus is reliably present and far from the optic nerve and carotid."
+   ],
+   [
+    "Enlarge medially and inferiorly",
+    "Widen the opening medially and inferiorly first with a Kerrison rongeur or mushroom punch. Watch for the posterior septal artery crossing the sphenoid face below the ostium; cauterize it before enlarging further down to avoid troublesome bleeding."
+   ],
+   [
+    "Trim the superior turbinate sparingly",
+    "Remove only the inferior portion of the superior turbinate when needed for exposure. Preserve its upper part and the mucosa superiorly, which carries olfactory fibers, and keep the attachment as a landmark for the skull base."
+   ],
+   [
+    "Inspect with angled endoscopes",
+    "Look into the sinus with a 30-degree endoscope and identify the carotid and optic prominences, the opticocarotid recess, the sella and the clivus before any lateral or superior instrumentation. Correlate each with image guidance."
+   ],
+   [
+    "Size the opening to the goal",
+    "Enlarge the sphenoidotomy to what drainage or skull base access requires, without unnecessary mucosal stripping. For combined ethmoid surgery, the opened sphenoid roof gives a reliable posterior skull base height from which ethmoid dissection can proceed forward."
+   ],
+   [
+    "Clear disease under vision",
+    "Remove purulence, inspissated debris and polyps with suction and through-cutting forceps under direct vision, then irrigate gently. Keep powered instruments away from the lateral wall and roof unless the course of the optic nerve and carotid is unequivocally defined."
+   ],
+   [
+    "Handle septa and fungus carefully",
+    "Take intersinus septa down only with cutting instruments well away from their lateral insertion, never by twisting. Remove fungal debris by irrigation and gentle suction rather than stripping mucosa from the lateral wall."
+   ],
+   [
+    "Confirm patency and hemostasis",
+    "Confirm a widely patent opening and hemostasis, using vasoconstrictor pledgets and suction cautery on the septal artery branches. Check the eyes, and place packing or a spacer only if bleeding or scarring risk warrants it."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/chronic-sinusitis-surgical-treatment-annotated-video-and-sample-operative-note"
+  ],
+  "notes": "Iowa's coverage of sphenoidotomy is limited to its chronic sinusitis operative note and anatomy section: identify the rostrum, open medial and inferior to the superior turbinate attachment and extend medially/inferiorly, explore with a 30-degree telescope, irrigate and remove debris, and the CT risk factors (sellar pneumatization, carotid/optic dehiscence, Onodi cell). The remaining steps restructure the current card (all points kept) with standard US teaching (ostium height above choana, low-medial safe entry, septa inserting on the carotid). Treat this card as partially Iowa-sourced; review if stricter sourcing is required."
+ },
+ "tonsillectomy-adenoidectomy": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Position and protect the airway",
+    "Place the patient supine, with the bed turned 90 degrees and the endotracheal tube taped in the midline. A shoulder roll can help extend the neck. In a child with Down syndrome, skip the roll and keep the neck neutral because of atlantoaxial instability. Review any prior cervical films: more than 4 mm of laxity suggests instability."
+   ],
+   [
+    "Suspend the mouth gag",
+    "Insert a Crowe-Davis (or McIvor) gag. Choose a tongue blade long enough to lift the tongue base but not so long that it presses on the posterior pharyngeal wall. Check that the teeth, lips, and tongue are not pinched and that the tube stays in the blade's groove. Then suspend the gag and expose both tonsils."
+   ],
+   [
+    "Check the palate for submucous cleft",
+    "Look at and palpate the soft and hard palate before you start. A bifid uvula, a translucent midline zona pellucida, or a notch in the posterior hard palate suggests a submucous cleft. Any of these should make you reconsider adenoidectomy or limit it to the upper pad, because full removal can unmask velopharyngeal insufficiency."
+   ],
+   [
+    "Retract the palate and view the nasopharynx",
+    "Pass a red rubber catheter through the nose, bring it out of the mouth, and clamp it to retract the soft palate. Put gauze between the clamp and the nasal ala so the ala does not get a pressure injury. With a mirror or endoscope, identify the adenoid pad, choanae, vomer, and both torus tubarius and Eustachian tube openings."
+   ],
+   [
+    "Remove the adenoid",
+    "Choose an adenoid curette by sizing it against the maxillary incisor arch. Seat it against the vomer and sweep down with steady pressure, or use a suction cautery, microdebrider, or coblation. Keep off the torus tubarius. Avoid deep or excessive inferior resection in a child at risk for velopharyngeal insufficiency, since that low tissue helps close the palate."
+   ],
+   [
+    "Pack the nasopharynx",
+    "Pack the adenoid bed with a tonsil ball or sponge and let it compress the bed while you remove the tonsils. Many surgeons do the adenoid first for this reason, though you can also take the tonsils first. Write down how many sponges you place so every one comes out before emergence."
+   ],
+   [
+    "Optional local infiltration",
+    "Some surgeons inject 1% lidocaine with 1:100,000 epinephrine into the pillars and behind the tonsil with a curved needle, then wait for vasoconstriction. This can make the plane easier to see and reduce oozing. Aspirate before injecting, and keep the needle shallow because the great vessels lie lateral to the tonsillar bed."
+   ],
+   [
+    "Grasp and incise the superior pole",
+    "Grasp the upper pole with a curved Allis clamp and pull it medially and down to tent the anterior pillar mucosa. Open that mucosa over the tonsil capsule with a sickle knife, a #12 or #14 blade, or a monopolar needle. Keep the cut close to the tonsil so you save pillar muscle and avoid scarring that can distort the palate."
+   ],
+   [
+    "Find the capsular plane",
+    "Spread into the loose areolar layer between the white tonsil capsule and the superior constrictor fascia with a hemostat, Fischer knife, or scissors. The right plane separates almost bloodless with gentle spreading. If you see muscle fibers on the specimen side, you are too deep: move back onto the capsule before going on."
+   ],
+   [
+    "Dissect superior to inferior",
+    "Keep pulling the tonsil medially while you work along the capsule from the upper pole toward the lower pole, using cold steel, monopolar or bipolar cautery, or coblation. As each vessel crossing into the capsule comes into view, coagulate it with guarded bipolar or seal it with the energy device before cutting. With monopolar, leave the fibrous layer of the bed intact."
+   ],
+   [
+    "Intracapsular alternative",
+    "For obstructive sleep-disordered breathing, some surgeons use an intracapsular (partial) technique. They remove tonsil tissue with a microdebrider or coblation and leave a thin rim of tissue on the capsule. This protects the constrictor and reduces pain and late bleeding. Remove enough to open the oropharyngeal airway, and tell the family that the tonsil can grow back."
+   ],
+   [
+    "Divide the inferior pole",
+    "The lower pole merges with lingual tonsil tissue and has a constant arterial supply. Close a Tydings snare across it, or coagulate it with bipolar and then cut it with scissors. Do not dig into the tongue base. Put a tonsil ball in the fossa for pressure, then remove the other tonsil the same way, keeping the capsular plane on both sides."
+   ],
+   [
+    "Secure tonsillar fossa hemostasis",
+    "Take out the sponges one at a time. Pull the pillars apart to see the whole fossa, including the lower pole, then coagulate each bleeding point with suction cautery. Avoid broad, deep cautery, which increases pain and the risk of late bleeding. A figure-of-eight 3-0 chromic stitch is only rarely needed. Some surgeons inject bupivacaine into the pillars for pain relief."
+   ],
+   [
+    "Adenoid bed hemostasis and choanal check",
+    "Remove the nasopharyngeal pack and look at the adenoid bed again with the mirror or endoscope. Cauterize only the points that are bleeding. Confirm that the choanae are open and no residual tissue blocks them, and that there is no loose tag that could be aspirated. Then irrigate the nasopharynx and look for clots that hide a bleeding site."
+   ],
+   [
+    "Relax suspension and recheck",
+    "Release the gag briefly, or have anesthesia give a Valsalva breath, so the vessels refill at closer to normal pressure. Then suspend again and look at both tonsillar fossae and the nasopharynx. Bleeding that the retractor had tamponaded will show now, while it is still easy to control."
+   ],
+   [
+    "Finish and hand off",
+    "Irrigate and suction the oropharynx and nasopharynx, suction the stomach to remove swallowed blood, and take out the catheter and gag. Count the sponges. Check the teeth, lips, gums, and tongue for injury, wipe the mouth, apply ointment to the lips, and confirm there is no active bleeding before extubation."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/410"
+  ],
+  "notes": "Built from the Iowa Tonsillectomy and Adenoidectomy protocol: its shared setup and its six surgeon dictation templates (cold steel, Fischer knife, monopolar, bipolar, coblation). Iowa added the 90-degree bed turn, the shoulder roll and the Down syndrome neck precautions (over 4 mm atlantoaxial laxity), sizing the gag blade so it does not touch the posterior pharyngeal wall, red rubber catheter palate retraction with gauze to protect the ala, sizing the adenoid curette against the maxillary incisors, packing the nasopharynx while the tonsils come out, optional lidocaine-epinephrine infiltration, opening the superior pole with a sickle knife or blade, removing the inferior pole with a Tydings snare, rare chromic suture ligation, optional bupivacaine in the pillars, and suctioning the stomach before emergence. Iowa usually does the adenoid first. The card did the tonsils first; both orders are acceptable, and the steps now take the adenoid first. All prior card points are kept: submucous cleft check, capsular plane, intracapsular option, torus and velopharyngeal insufficiency precautions, targeted cautery, release-and-recheck, and the dental check. Iowa's tannic acid step was left out as an institutional preference. No disagreement with the card."
+ },
+ "pta-drainage": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Confirm the diagnosis and airway",
+    "Peritonsillar abscess usually presents with trismus from medial pterygoid spasm, muffled voice, bulging of the soft palate on one side, and the uvula pushed to the other side. Before you drain at the bedside, make sure the patient is breathing comfortably and can cooperate. Take a patient with stridor, a child who cannot cooperate, or severe trismus to the operating room."
+   ],
+   [
+    "Image selectively",
+    "Ultrasound, done through the mouth or through the neck, helps separate abscess from cellulitis. An abscess appears as a fluid space with no echoes and an irregular border, and ultrasound before aspiration improves the success rate. Get a contrast CT if neck pain is marked on turning, swelling is bilateral, the findings are unusual, or parapharyngeal or retropharyngeal spread is suspected."
+   ],
+   [
+    "Set up before you start",
+    "Gather a headlamp, a Yankauer suction already running, topical spray and viscous lidocaine, 1% lidocaine with 1:100,000 epinephrine on a 27-gauge needle, and a 10 mL control syringe with an 18-gauge needle. You also need a #11 or #15 blade and a curved hemostat. The patient can sit upright, which lets them spit, or lie down, depending on what you prefer."
+   ],
+   [
+    "Know the target and the danger",
+    "The abscess usually sits above and in front of the tonsil, deep to the mucosa and palatoglossus muscle. The typical spot is where a horizontal line from the base of the uvula meets the anterior pillar. The internal carotid lies about 2 to 2.5 cm posterolateral to this spot, so every needle and blade stays shallow and does not angle laterally."
+   ],
+   [
+    "Topical anesthesia and sedation",
+    "Spray the area with topical anesthetic or have the patient gargle viscous lidocaine. Then press the tongue down with a blade to see the bulge. If you give IV opioid or benzodiazepine for anxiety and pain, monitor the patient, and give small doses so the patient can still guard the airway."
+   ],
+   [
+    "Infiltrate local anesthetic",
+    "Inject lidocaine with epinephrine into the mucosa over the most swollen point, then a little into the muscle beneath it. Hold the suction at the injection site the whole time, because pus may well up during the injection and could be aspirated. If pus appears, aim your aspiration needle at that spot."
+   ],
+   [
+    "Limit needle depth",
+    "Trim the needle cap or bend the needle so only about 1 to 1.5 cm of needle can go in. That keeps the tip well short of the carotid. Never go deeper than 2 cm, and point the needle straight back or slightly medially, never laterally toward the parapharyngeal space."
+   ],
+   [
+    "Aspirate the superior pole first",
+    "Put the 18-gauge needle in at the point of greatest bulge, usually above the tonsil, and advance about 1 cm while pulling back on the plunger all the time. Drain as much pus as you can. Confirm that you have pus before you make the opening bigger, since a dry tap may mean the swelling is cellulitis."
+   ],
+   [
+    "Manage a dry tap",
+    "If the first pass is dry, try a second spot a little lower, at the middle pole, and change the angle slightly. Do not go deeper or more lateral. If two or three passes are dry, stop and get ultrasound or CT before probing further. Many dry taps are cellulitis that will respond to antibiotics and steroids."
+   ],
+   [
+    "Incise at the confirmed site",
+    "Take out the needle and make an incision about 1 cm long, parallel to the palatal arch, at the spot where you found pus. Tape the #11 blade so only its tip is exposed, which limits depth. Cut through the mucosa only, not deep and lateral."
+   ],
+   [
+    "Spread and break loculations",
+    "Put a curved hemostat into the cavity, open the jaws to widen the tract, and break up any loculations. Press gently around the incision with the Yankauer tip to squeeze out more pus and suction it as you go. Leave the incision open to keep draining; do not suture or pack it."
+   ],
+   [
+    "Culture and irrigate",
+    "Send pus for culture if it will change management, for example in recurrent abscess, failed prior treatment, an immunocompromised patient, or an unusual presentation. Group A streptococcus is the most common single organism, but mixed oral aerobes and anaerobes are typical. Irrigate the cavity only when it is large or the pus is thick."
+   ],
+   [
+    "Reassess before discharge",
+    "Check that the airway is clear, oozing has stopped, trismus has improved, and the patient can swallow liquids. A patient who can drink, breathe comfortably, has no signs of sepsis, and is not bleeding can usually go home. Start therapeutic antibiotics that cover streptococci and oral anaerobes, and arrange early follow-up."
+   ],
+   [
+    "Escalate when drainage fails",
+    "Perform a quinsy (abscess) tonsillectomy under general anesthesia if drainage fails or the abscess comes back. Also consider it for repeated peritonsillar abscess, for prior recurrent tonsillitis, or when an uncooperative child cannot be drained awake. Get a CT and an urgent neck evaluation for neck swelling or worsening pain, which suggests parapharyngeal, retropharyngeal, or mediastinal spread, jugular vein thrombophlebitis, or necrotizing infection."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/813"
+  ],
+  "notes": "Built from the Iowa Peritonsillar Abscess (Tonsil Abscess) protocol. Iowa added: the target landmark (where the uvular base meets the anterior pillar, deep to palatoglossus) and the carotid at about 2 to 2.5 cm posterolateral; ultrasound to tell abscess from cellulitis, with better outcomes when it is used before aspiration; CT criteria; the equipment list; suction held ready during injection because pus can drain and be aspirated; continuous negative pressure while advancing about 1 cm; an absolute limit of 2 cm with no lateral angle; a roughly 1 cm incision along the arch; hemostat spreading, Yankauer pressure, and leaving the incision open; Streptococcus pyogenes as the most common single organism; and discharge criteria. Small difference: the card limited the exposed needle to about 1 cm, while Iowa trims the cap to leave 1.5 cm exposed and advances about 1 cm. The step now says 1 to 1.5 cm exposed and never more than 2 cm. Iowa does not describe the quinsy tonsillectomy technique, so the escalation step lists only indications. Taping the blade and the dry-tap, middle-pole sequence come from the prior card and standard US practice, not from Iowa."
+ },
+ "adenoidectomy": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Preoperative safety check",
+    "Ask about bleeding history, prior anesthetic problems and a recent upper respiratory infection, which raises the risk of laryngospasm. In children with Down syndrome, review neck imaging: more than 4 mm of atlantodental laxity suggests atlantoaxial instability, but because flexion-extension films are insensitive, apply neck precautions to every child with Down syndrome regardless of the films."
+   ],
+   [
+    "Airway and positioning",
+    "Secure an oral endotracheal tube exactly in the midline and bring it down over the chin so the tubing leaves the field. Turn the table 90 degrees. A shoulder roll improves extension and the view; omit it and keep head tilt minimal in Down syndrome or any suspected cervical instability."
+   ],
+   [
+    "Place the mouth gag",
+    "Insert a Crowe-Davis gag with a blade long enough to control the tongue base but not so long that it presses on the posterior pharyngeal wall. Suspend it, adjust the tongue with a Hurd retractor if needed, and confirm with anesthesia that the tube is not kinked or displaced."
+   ],
+   [
+    "Assess the palate",
+    "Palpate the hard and soft palate for a midline notch and inspect for a bifid uvula or a translucent midline zone. These signs of submucous cleft are a relative contraindication: consider a limited superior adenoidectomy that spares the inferior pad, or not removing adenoid at all, because velopharyngeal insufficiency may follow."
+   ],
+   [
+    "Retract the soft palate",
+    "Pass a red rubber catheter through the nose, retrieve it from the mouth and clamp it to lift the soft palate atraumatically. Put a gauze between the clamp and the nostril so the alar rim is not pressure-injured, and avoid excessive tension on the velum."
+   ],
+   [
+    "Survey the nasopharynx",
+    "Use a laryngeal mirror or an endoscope to see the adenoid pad, both choanae, the posterior vomer and both torus tubarius with their Eustachian tube orifices before removing anything. Judge the size of the pad and how much it obstructs the choanae, which defines how much tissue must come out."
+   ],
+   [
+    "Remove the central pad",
+    "Size the adenoid curette to the space, using the maxillary incisor width as a guide. Seat it high in the vault against the posterior vomer and sweep down along the posterior wall in one controlled pass, removing the central obstructing tissue from superior to inferior. Microdebrider or suction cautery ablation under mirror or endoscopic view are alternatives."
+   ],
+   [
+    "Protect the Eustachian tubes",
+    "Preserve tissue around the torus tubarius and do not curette or cauterize deeply in the lateral recesses. Deep lateral injury can scar the Eustachian tube orifice and cause tubal stenosis. Stay superficial to the prevertebral fascia so the cervical spine and its ligaments are not exposed."
+   ],
+   [
+    "Respect the inferior limit",
+    "Avoid an aggressive inferior resection when velopharyngeal competence is at risk, as with submucous cleft, hypotonia or neuromuscular disease. Leaving a band of inferior adenoid preserves the cushion the velum closes against, and reduces the chance of hypernasal speech and nasal regurgitation after surgery."
+   ],
+   [
+    "Pack the bed",
+    "Place a tonsil ball firmly in the nasopharynx for pressure hemostasis while waiting, or while the tonsillectomy is done in a combined case. Count the packs so none is left behind in the nasopharynx at the end of the case."
+   ],
+   [
+    "Inspect and control bleeding",
+    "Remove the pack and re-inspect with the mirror or endoscope for residual choanal tissue and tags, which can be removed with a smaller curette or forceps. Use targeted suction cautery on bleeding points, keeping power modest and staying away from the torus."
+   ],
+   [
+    "Irrigate and confirm packs out",
+    "Irrigate the nose and nasopharynx and suction clots from the nasopharynx and oral cavity. Confirm every pack has been removed and no active bleeding remains, then pass a suction catheter into the stomach to empty swallowed blood, which reduces postoperative nausea and vomiting."
+   ],
+   [
+    "Release and final check",
+    "Release the suspension and remove the catheter, then recheck the oropharynx and nasopharynx after a moment, because bleeding can reappear once pressure on the tongue and palate is relieved. Check the lips, teeth, gums and tongue for injury, clean the mouth and return the patient to anesthesia."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/410",
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/tonsillectomy-and-adenoidectomy"
+  ],
+  "notes": "Iowa (embedded in its tonsillectomy and adenoidectomy protocol and dictation) added: recent upper respiratory infection and laryngospasm risk; Down syndrome neck precautions (no shoulder roll, minimal tilt, more than 4 mm laxity suggests instability, precautions for all because flexion-extension films are insensitive); midline tube and 90-degree table turn; Crowe-Davis blade sizing and Hurd retractor; gauze to protect the ala from the catheter clamp; curette sizing by the maxillary incisors; tonsil-ball pack then suction cautery; irrigation, stomach suction and final oral injury check. Iowa does not describe limits at the torus or the inferior pad, mirror or endoscope technique, or the microdebrider; those points come from the existing card and were kept. No disagreement with the current card."
+ },
+ "maxillary-antrostomy": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Review the CT",
+    "Before scrubbing, check the uncinate attachment, infraorbital ethmoid (Haller) cells, accessory ostia, a dehiscent or medially displaced lamina papyracea, the Keros depth and skull-base asymmetry. A displaced lamina can look like an ethmoid septation and lead to orbital entry. Plan image guidance for revision surgery, distorted anatomy or extensive polyposis."
+   ],
+   [
+    "Set up the room",
+    "Intubate orally, position supine and turn the table 180 degrees. Leave both eyes uncovered (taped shut, not draped) so the globes can be seen and palpated during dissection. Register the navigation system if it is used, and confirm accuracy on fixed landmarks before cutting."
+   ],
+   [
+    "Decongest and inject",
+    "Place oxymetazoline-soaked cottonoid pledgets along the middle meatus. Then inject 1% lidocaine with 1:100,000 epinephrine into the lateral nasal wall at the uncinate and into the axilla of the middle turbinate on each side, and wait several minutes for vasoconstriction before starting."
+   ],
+   [
+    "Diagnostic endoscopy",
+    "Make a first pass along the nasal floor to see the nasopharynx and Eustachian tube openings, then a second pass to view the middle turbinate, osteomeatal complex, superior meatus and sphenoethmoidal recess. Identify the middle turbinate, uncinate process, ethmoid bulla and the expected region of the natural maxillary ostium before cutting."
+   ],
+   [
+    "Create working room",
+    "Medialize the middle turbinate gently with a Freer elevator without fracturing its skull-base attachment, because the lateral lamella of the cribriform plate is the thinnest bone in the anterior skull base. Lateralize the inferior turbinate if access is tight. Avoid raw mucosa on the turbinate that could scar to the lateral wall."
+   ],
+   [
+    "Remove the uncinate",
+    "Palpate the free edge with a ball probe and remove the uncinate in a controlled fashion with a back-biting forceps or by incising and swinging it medially. Keep the anterior cut behind the hard bone of the nasolacrimal duct, and keep instruments parallel to the lamina so nothing is pushed laterally into the orbit."
+   ],
+   [
+    "Clear the remnants",
+    "Trim the horizontal and superior uncinate remnants with through-cutting forceps or a microdebrider with the blade facing medially, away from the lamina. A retained horizontal remnant is the usual reason the natural ostium cannot be found, and it is a common cause of a missed ostium at revision surgery."
+   ],
+   [
+    "Find the natural ostium",
+    "With a 30- or 45-degree scope, find the natural ostium with a curved suction or ball probe in the posterior infundibulum, roughly level with the lower edge of the middle turbinate. Do not create a separate accessory opening and assume it is the ostium, since a posterior fontanelle opening is easily mistaken for it."
+   ],
+   [
+    "Enlarge the ostium",
+    "Widen the natural ostium posteriorly and inferiorly with straight through-cutting forceps, a back-biter and the microdebrider, sizing the opening to the disease. Join any accessory ostium to the natural ostium so mucus is not carried out one opening and back in through the other (recirculation)."
+   ],
+   [
+    "Respect the boundaries",
+    "Keep the anterior limit behind the nasolacrimal duct; stop when the back-biter meets hard bone. Keep the superior dissection oriented to the orbital floor and lamina, and avoid extending far posteriorly toward the posterior lateral nasal branches of the sphenopalatine artery, which cause brisk bleeding."
+   ],
+   [
+    "Inspect and clear the sinus",
+    "Use angled scopes to look inside the sinus. Evacuate thick pus with a suction trap and send it for culture, then irrigate copiously. Remove only disease that needs direct treatment, such as polyps or fungal debris, and do not strip healthy sinus mucosa, which leads to scarring and poor mucociliary clearance."
+   ],
+   [
+    "Confirm patency and the orbit",
+    "Confirm the antrostomy is circumferentially patent and clearly includes the natural ostium. Palpate the globes intermittently through the case and at the end; they should stay soft without proptosis or periorbital bruising. Pressing on the globe while watching the lamina for movement or fat helps detect a dehiscence."
+   ],
+   [
+    "Hemostasis and spacer",
+    "Control bleeding with oxymetazoline pledgets and suction cautery while preserving middle meatal landmarks. A dissolvable spacer in the middle meatus can control ooze and keep the middle turbinate medial, limiting opposing raw surfaces. Recheck before extubation and remove all pledgets as the patient is awakened."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/protocols/chronic-sinusitis-surgical-treatment-annotated-video-and-sample-operative-note"
+  ],
+  "notes": "Iowa (chronic sinusitis annotated video and sample operative note) added: CT checklist (Keros, maxillary to ethmoid ratio, skull-base asymmetry, medially displaced lamina mimicking a septation), image guidance for revision, distorted anatomy or polyposis, 180-degree table setup, lidocaine with epinephrine injection sites, a two-pass diagnostic endoscopy, back-biter and microdebrider uncinectomy, curved suction to find the ostium, through-cutting and back-biting enlargement, culture of pus and irrigation, intermittent globe palpation, oxymetazoline pledgets with suction cautery, and a middle meatal spacer. Iowa gives no uncinectomy direction or enlargement limits; those, and the nasolacrimal and recirculation points, come from the current card. No disagreement."
+ },
+ "tracheocutaneous-fistula-closure": {
+  "mode": "replace",
+  "steps": [
+   [
+    "Confirm readiness and airway plan",
+    "Before incision confirm the child has tolerated decannulation for months, including through sleep and respiratory illness, and review the endoscopy findings. If suprastomal collapse, granulation or subglottic stenosis was found, treat it first or reconsider closure. Agree with anesthesia on oral intubation with the cuff below the fistula, or a mask or laryngeal mask airway for small tracts."
+   ],
+   [
+    "Position and infiltrate",
+    "Place a shoulder roll to extend the neck and bring the trachea forward, prep from chin to sternal notch, and keep the anesthesia circuit accessible. Probe the tract gently to judge its length and direction. Infiltrate the skin around the stoma with lidocaine and 1:100,000 epinephrine to reduce bleeding in the superficial layers."
+   ],
+   [
+    "Topical tracheal anesthesia for awake cases",
+    "When an older child or adult is closed under local anesthesia, sit the patient semi-upright and spray 4% lidocaine into the trachea through the fistula before infiltrating the skin. This blunts the cough reflex, so the patient is less likely to cough or strain against the repair during dissection and suturing."
+   ],
+   [
+    "Mark and incise an ellipse",
+    "Mark an elliptical incision around the fistula with its long axis in a horizontal skin crease, taking only a narrow margin of normal skin. Short horizontal extensions on each side make skin closure easier and leave a flatter scar. Incise through the dermis around the full circumference."
+   ],
+   [
+    "Dissect the tract",
+    "Grasp the skin island and use it as a handle. Dissect around the tract through subcutaneous fat with fine scissors or needle cautery, keeping close to the tract wall. In children the tract is usually short; follow it straight down between the separated strap muscles to the anterior tracheal wall."
+   ],
+   [
+    "Protect nearby structures",
+    "With a low or wide stoma, the thyroid isthmus and anterior jugular veins can lie against the tract; ligate or cauterize them rather than tearing them. With a high stoma, identify the cricoid above so you do not dissect into the cricothyroid region. Keep the dissection midline, away from the recurrent laryngeal nerves."
+   ],
+   [
+    "Excise at the tracheal wall",
+    "Divide the tract flush with the tracheal wall and send it for pathology. Confirm no skin lining remains at the opening, because retained epithelium prevents healing and causes recurrence. Trim granulation at the tracheal edge, but avoid enlarging the opening or cutting into neighboring tracheal rings."
+   ],
+   [
+    "Choose the closure method",
+    "Primary layered closure suits most small to moderate tracts and heals with a neater scar. Healing by secondary intention avoids trapping air under a sealed skin closure and usually shortens the hospital stay, at the cost of a wound that takes weeks to close. Pooled outcomes for closure rate and complications are similar, so surgeon preference and airway stability guide the choice."
+   ],
+   [
+    "Close the tracheal opening",
+    "For primary closure, close the tracheal opening or the soft tissue directly over it with interrupted absorbable sutures, inverting any remaining mucosa toward the lumen. Do not narrow the trachea; with a large defect, closing perichondrium and pretracheal tissue or rotating a local muscle flap avoids pulling cartilage edges together and distorting the airway."
+   ],
+   [
+    "Leak test",
+    "Fill the wound with saline and ask anesthesia to give a sustained positive-pressure breath. Bubbling means the closure leaks; add sutures or a muscle layer until it is airtight. A trachea that still leaks under a sealed skin closure is the main cause of subcutaneous emphysema and pneumomediastinum."
+   ],
+   [
+    "Strap muscles and air escape",
+    "Bring the sternohyoid muscles together in the midline over the tracheal repair as a second layer. Some surgeons place a small passive drain or leave a short gap in the skin closure so any leaked air can escape through the wound rather than tracking into the neck and mediastinum."
+   ],
+   [
+    "Close the skin",
+    "Close the subcutaneous layer and skin with absorbable sutures without tension, everting the edges to limit a depressed scar. Apply a light dressing that can be lifted to inspect the neck; avoid a bulky compressive dressing that would hide early swelling or crepitus."
+   ],
+   [
+    "Secondary-intention variant",
+    "If healing by secondary intention, after excising the epithelium leave the tracheal opening and skin open or loosely approximated and cover with a light nonocclusive dressing. Expect air bubbling and drainage through the wound for days to weeks; most close within a few weeks, sometimes leaving a wider, depressed scar that can be revised later."
+   ],
+   [
+    "Skin-level closure variant",
+    "For a small mature tract under local anesthesia, freshen the scar and make an ellipse that starts at the skin-mucosa junction on the lateral edge and curves medially, with both ends in normal skin. Undermine lightly, use bipolar cautery, then close in one layer with a few vertical mattress sutures that catch deep tissue to close dead space."
+   ],
+   [
+    "Leave a planned air leak",
+    "In the skin-level variant, deliberately approximate the skin loosely rather than airtight, so that air escaping from the trachea vents through the wound instead of tracking into the neck. Nonabsorbable 4-0 sutures are usually enough in two or three bites and are removed in 7 to 10 days."
+   ],
+   [
+    "Smooth emergence and handoff",
+    "Ask anesthesia for a smooth extubation that limits coughing, bucking and positive pressure. Examine the neck for swelling and crepitus before leaving the room. Hand off the plan: continuous pulse oximetry overnight, a chest x-ray for any crepitus, and opening the skin closure promptly if subcutaneous emphysema develops. After a local-anesthesia closure, observe about an hour for subcutaneous emphysema before discharge."
+   ]
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/290"
+  ],
+  "notes": "All 13 current steps kept unchanged except the handoff step, which gains the Iowa one-hour observation point. Added from Iowa's tracheocutaneous fistula closure protocol: intratracheal 4% lidocaine through the fistula and semi-upright positioning for awake closure; a skin-level variant (ellipse starting at the lateral skin-mucosa junction and curving medially with ends in skin, light undermining, single-layer vertical mattress sutures that catch deep tissue); a deliberately loose, non-airtight skin closure to vent air; suture removal at 7 to 10 days; and about one hour of observation for emphysema before discharge. Iowa's protocol is a brief office- or local-style closure that does not excise the tract or close the tracheal wall in layers; the card's layered pediatric technique was kept as the main pathway. One postoperative prescribing recommendation on the Iowa page was omitted under the site's content rule."
+ },
+ "completion-thyroidectomy": {
+  "mode": "edit",
+  "edits": [
+   {
+    "op": "insert_after",
+    "index": 8,
+    "step": [
+     "Expose the nerve without making false nerves",
+     "Pull the paratracheal tissue laterally toward the carotid and the trachea medially to open the tracheoesophageal groove. Spread the hemostat across the expected course of the nerve, not along it, because repeated spreading in line with the nerve creates fibrous strands that mimic it. Confirm by stimulation, with a laryngeal twitch felt behind the cricoid or an electromyography response."
+    ]
+   },
+   {
+    "op": "replace",
+    "index": 9,
+    "step": [
+     "Nerve anatomy reminders",
+     "The left nerve runs more medially, parallel within the tracheoesophageal groove; the right runs obliquely from lateral. A nonrecurrent nerve occurs almost only on the right and always with a retroesophageal subclavian artery, so check prior imaging. The nerve may lie in front of, behind or between inferior thyroid artery branches and may branch before entry; preserve every branch."
+    ]
+   },
+   {
+    "op": "replace",
+    "index": 10,
+    "step": [
+     "Berry ligament",
+     "The nerve passes deep to the ligament in most patients, through it in about a quarter, and briefly inside the capsule in some. Use minimal traction on the lobe and divide the ligament sharply or with careful bipolar while following the nerve into the larynx, behind the cricothyroid joint. Old isthmus stump or tissue on the trachea is scarred here."
+    ]
+   },
+   {
+    "op": "insert_after",
+    "index": 10,
+    "step": [
+     "When the nerve is tethered to the gland",
+     "If the nerve is pulled medially into a knuckle against the ligament, release traction and shave the thyroid off the ligament with a knife, staying on the gland side of the nerve, then use bipolar for hemostasis. A remnant of tissue this small is acceptable; it usually shows only about 1% uptake and is ablated by radioactive iodine."
+    ]
+   },
+   {
+    "op": "replace",
+    "index": 11,
+    "step": [
+     "Remove all remaining thyroid",
+     "Take the pyramidal lobe (present in about half of patients, often missed at the first operation), any isthmus remnant and tissue at the old resection margin. Residual thyroid beyond a tiny ligament remnant undermines radioactive iodine ablation and thyroglobulin surveillance. Inspect the specimen for parathyroid tissue before it leaves the field."
+    ]
+   }
+  ],
+  "protocol_urls": [
+   "https://iowaprotocols.medicine.uiowa.edu/node/416"
+  ],
+  "notes": "Iowa's thyroidectomy and thyroid lobectomy protocol has no dedicated completion or reoperative section, but it filled gaps in the nerve and Berry ligament steps: traction that opens the tracheoesophageal groove, spreading across the nerve's course to avoid false nerves, confirmation by stimulation with a palpated laryngeal twitch, the cricothyroid joint as the nerve's fixed entry landmark, a right nonrecurrent nerve with a retroesophageal subclavian artery, nerve relation to the Berry ligament (mostly deep, about 25% through it, sometimes briefly intracapsular), and shaving the gland off the ligament when the nerve is tethered medially, accepting a tiny remnant. The pyramidal lobe is present in about 50%. Iowa (protocol last updated before 2019) places two suction drains routinely; the card's 'drains are not routine' reflects current evidence and US practice and was left unchanged. Iowa uses no paralysis; this fits the card's short-acting agent given only for intubation. Edit indices refer to the current step list and should be applied from the highest index down, or with inserts placed after the named original step."
+ }
+}

@@ -1,0 +1,332 @@
+[
+ {
+  "slug": "button-battery",
+  "index": "insert:1",
+  "severity": "important",
+  "issue": "No pre-removal mitigation step: current poison-center and pediatric GI guidance gives honey or sucralfate while the OR is mobilized.",
+  "new": [
+   "Mitigate while mobilizing the OR",
+   "If ingestion was within 12 hours and there is no sign of perforation or sepsis, give honey (age 1 year or older) or sucralfate, 10 mL every 10 minutes, until anesthesia. This slows the alkaline burn but never justifies delaying removal. Give nothing else by mouth and do not induce vomiting."
+  ]
+ },
+ {
+  "slug": "button-battery",
+  "index": "insert:5",
+  "severity": "important",
+  "issue": "No post-removal neutralization or airway check: guidance recommends dilute acetic acid irrigation when there is no perforation, and bronchoscopy when the negative pole faced the trachea.",
+  "new": [
+   "Neutralize and check the airway",
+   "If no perforation is seen, irrigate the injured segment with 50 to 150 mL of 0.25% acetic acid to neutralize residual alkali, suctioning as you go. When the negative pole faced anteriorly or the injury is deep, perform bronchoscopy to look at the posterior tracheal wall for necrosis or an early fistula."
+  ]
+ },
+ {
+  "slug": "button-battery",
+  "index": 0,
+  "severity": "minor",
+  "issue": "The timeline understates urgency: serious mucosal burns can occur within about 2 hours, which is the usual teaching figure.",
+  "new": [
+   "Treat it as an immediate emergency",
+   "An esophageal button battery injures tissue by generating hydroxide at the negative pole, and by pressure; serious burns can form within about 2 hours. Confirm location on radiographs (a double-ring or halo outline on the frontal view separates it from a coin), then go straight to the operating room without waiting for nonessential tests."
+  ]
+ },
+ {
+  "slug": "button-battery",
+  "index": 8,
+  "severity": "minor",
+  "issue": "'Abort the procedure if a perforation is found' is unclear for a diagnostic second look and practice on timing varies.",
+  "new": [
+   "Plan a second-look esophagoscopy",
+   "Injury keeps progressing for days after removal, so many centers re-examine at about 24 to 48 hours to see its full extent. If the second look shows perforation, stop instrumenting and move to imaging and surgical consultation. Use the findings and imaging together to decide the feeding route and how long to restrict oral intake."
+  ]
+ },
+ {
+  "slug": "pta-drainage",
+  "index": 6,
+  "severity": "important",
+  "issue": "A 2 cm maximum depth leaves almost no margin when step 3 places the carotid only 2 to 2.5 cm away; standard teaching limits penetration to about 1 cm.",
+  "new": [
+   "Limit needle depth",
+   "Trim the needle cap or bend the needle so no more than about 1 cm can enter the tissue. The abscess is usually reached within this depth, and the internal carotid may lie only 2 cm away. Point the needle straight back or slightly medially, never laterally toward the parapharyngeal space."
+  ]
+ },
+ {
+  "slug": "pta-drainage",
+  "index": 5,
+  "severity": "minor",
+  "issue": "Infiltration step does not say to aspirate before injecting epinephrine-containing local anesthetic near the tonsillar vessels.",
+  "new": [
+   "Infiltrate local anesthetic",
+   "Inject lidocaine with epinephrine into the mucosa over the most swollen point, aspirating before each injection, then a little into the muscle beneath. Keep the suction at the injection site throughout, because pus may well up and be aspirated. If pus appears, aim the aspiration needle at that spot."
+  ]
+ },
+ {
+  "slug": "tonsillectomy-adenoidectomy",
+  "index": "append",
+  "severity": "important",
+  "issue": "Card omits guideline-backed perioperative care: single intraoperative dexamethasone dose, ibuprofen and acetaminophen analgesia, no codeine under 12, and overnight monitoring criteria.",
+  "new": [
+   "Perioperative medication and disposition",
+   "Give a single intraoperative dose of IV dexamethasone. Send the child home on scheduled acetaminophen and ibuprofen; do not use codeine or tramadol in anyone under 18 (FDA contraindication after tonsillectomy). Admit overnight children under 3 years, with severe obstructive sleep apnea, or with significant comorbidity. Review hydration, pain control and bleeding warning signs with the family."
+  ]
+ },
+ {
+  "slug": "tonsillectomy-adenoidectomy",
+  "index": 7,
+  "severity": "minor",
+  "issue": "'#14 blade' is not a standard tonsil blade; the hooked #12 is the usual choice.",
+  "new": [
+   "Grasp and incise the superior pole",
+   "Grasp the upper pole with a curved Allis clamp and pull it medially and down to tent the anterior pillar mucosa. Open that mucosa over the tonsil capsule with a sickle knife, a #12 blade or a monopolar needle. Keep the cut close to the tonsil to save pillar muscle and avoid scarring that distorts the palate."
+  ]
+ },
+ {
+  "slug": "tonsillectomy-adenoidectomy",
+  "index": 8,
+  "severity": "minor",
+  "issue": "Misspelled instrument name ('Fischer knife' should be Fisher knife).",
+  "new": [
+   "Find the capsular plane",
+   "Spread into the loose areolar layer between the white tonsil capsule and the superior constrictor fascia with a hemostat, Fisher knife or scissors. The correct plane separates almost bloodlessly with gentle spreading. If muscle fibers appear on the specimen side, you are too deep; move back onto the capsule before continuing."
+  ]
+ },
+ {
+  "slug": "endoscopic-pituitary",
+  "index": "append",
+  "severity": "important",
+  "issue": "No postoperative step for the listed danger of diabetes insipidus and hypopituitarism, or for nasal precautions after skull-base repair.",
+  "new": [
+   "Postoperative endocrine and leak watch",
+   "Track urine output, serum sodium and urine specific gravity for diabetes insipidus in the first days, and watch for delayed hyponatremia (SIADH) around day 5 to 10. Check morning cortisol or continue stress steroids per endocrinology. Enforce sinus precautions: no nose blowing, straws or heavy straining. Evaluate any clear rhinorrhea or headache for CSF leak."
+  ]
+ },
+ {
+  "slug": "airway-fb",
+  "index": 4,
+  "severity": "minor",
+  "issue": "'The protocol cites' is source-specific wording; the weight-based limit should simply be stated.",
+  "new": [
+   "Topicalize the vocal folds",
+   "Spray the vocal folds and subglottis with 1% lidocaine to blunt laryngospasm and coughing during instrumentation. Calculate the weight-based dose before spraying and stay at or below about 4 mg/kg in total, remembering that small children reach toxic levels quickly with repeated applications from several sprays."
+  ]
+ },
+ {
+  "slug": "adenoidectomy",
+  "index": 11,
+  "severity": "minor",
+  "issue": "Randomized data show orogastric suctioning does not reduce post-adenotonsillectomy vomiting, so the stated benefit is overstated.",
+  "new": [
+   "Irrigate and confirm packs out",
+   "Irrigate the nose and nasopharynx and suction clots from the nasopharynx and oral cavity. Confirm every pack has been removed and no active bleeding remains. Many surgeons then pass an orogastric catheter to empty swallowed blood, though trials have not shown that this reduces postoperative vomiting."
+  ]
+ },
+ {
+  "slug": "mastoidectomy",
+  "index": 0,
+  "severity": "minor",
+  "issue": "Steps labeled 'CWR' (canal wall reconstruction) are used but the abbreviation is never defined, while CWU and CWD are.",
+  "new": [
+   "Set up and decide the plan",
+   "Use facial nerve monitoring. Review the CT for tegmen height, sigmoid position, a dehiscent facial nerve and a lateral semicircular canal fistula. Decide whether you expect canal-wall-up (CWU), canal-wall-down (CWD) or canal wall reconstruction with obliteration (CWR), but be ready to convert. Steps marked with a technique apply only to that path."
+  ]
+ },
+ {
+  "slug": "mastoidectomy",
+  "index": 20,
+  "severity": "minor",
+  "issue": "'Never' place graft on the stapes head is too absolute; direct fascia-to-stapes (type III) myringostapediopexy is an accepted technique, with cartilage preferred to reduce retraction.",
+  "new": [
+   "Rebuild hearing",
+   "In a canal-wall-down ear the middle ear is shallow, so a rotated incus or cartilage alone often bridges the gap. Over a mobile stapes head, a thin cartilage disc under the fascia resists retraction and extrusion better than fascia alone. If the middle ear mucosa is poor or disease was left behind, stage the reconstruction instead."
+  ]
+ },
+ {
+  "slug": "parathyroidectomy",
+  "index": 14,
+  "severity": "minor",
+  "issue": "'Convert when only three normal glands are found' is confusing in a focused case; finding three normal glands means the missing fourth gland is the likely culprit and must be sought.",
+  "new": [
+   "Inadequate PTH fall: convert",
+   "Lengthen the incision, find the second gland on that side, then explore the other side. If three normal glands are found, the missing fourth is the likely culprit: check the tracheoesophageal groove, retroesophageal space, carotid sheath, behind the tubercle of Zuckerkandl, the thymus and the thyroid itself. For four-gland hyperplasia, remove three and a half glands."
+  ]
+ },
+ {
+  "slug": "laryngeal-botox",
+  "index": 9,
+  "severity": "minor",
+  "issue": "'Minimize passes through the airway' contradicts steps 6 and 7, which keep the needle submucosal and treat entering the lumen as an error.",
+  "new": [
+   "Inject a small volume and repeat as planned",
+   "Deliver the dose in about 0.1 mL, withdraw, and repeat on the other side only if the plan is bilateral. If the needle enters the airway, the patient coughs and toxin may spread onto mucosa, so withdraw and redirect before injecting. Expect a cough or swallow during confirmation; pause and resettle rather than pushing through."
+  ]
+ },
+ {
+  "slug": "medialization",
+  "index": 3,
+  "severity": "minor",
+  "issue": "Step title says the straps are divided but the detail separates them in the midline and retracts them.",
+  "new": [
+   "Incise and separate the straps",
+   "Make a horizontal skin incision in a neck crease over the middle of the thyroid cartilage, extended toward the paralyzed side. Raise subplatysmal flaps, separate the strap muscles in the midline, and retract them laterally on the operative side to expose the thyroid lamina, dividing the sternohyoid only if exposure is poor."
+  ]
+ },
+ {
+  "slug": "facial-nerve-reanimation",
+  "index": 14,
+  "severity": "minor",
+  "issue": "Corneal exposure is a listed danger but no step gives immediate eye protection beyond a later eyelid weight.",
+  "new": [
+   "Set expectations and protect the eye",
+   "Start lubricating drops, night ointment and moisture-chamber protection at once. Facial axons regrow about 1 mm per day: distal repairs may move by about 6 months, cerebellopontine-angle repairs up to 18 months, cross-face grafts 9 to 12 months. Plan facial physical therapy, botulinum toxin for synkinesis, and an eyelid weight if closure is poor."
+  ]
+ },
+ {
+  "slug": "airway-dilation",
+  "index": 0,
+  "severity": "important",
+  "issue": "States a small tube is used during balloon dilation; a conventional occlusive balloon needs the tube out and an apneic window, with the tube used only to reoxygenate between inflations.",
+  "new": [
+   "Plan before induction",
+   "Review prior procedures, autoimmune workup and reflux status; idiopathic stenosis often recurs and needs serial treatment. Agree with anesthesia on the ventilation plan: jet ventilation or intermittent intubation for endoscopic work, and short apneic windows for occlusive balloon inflation with reintubation or mask ventilation between inflations. Agree on a rescue plan, including rigid bronchoscopy or tracheostomy, if the lumen is critical."
+  ]
+ },
+ {
+  "slug": "airway-dilation",
+  "index": 8,
+  "severity": "important",
+  "issue": "A tube cannot stay in the subglottis while an occlusive balloon is inflated across the stenosis; the step implies ventilation continues through the tube during balloon work.",
+  "new": [
+   "Reoxygenate with a small tube",
+   "Between steps, intubate with a small microlaryngeal tube, about 4.0 to 5.0, to preoxygenate and restore saturations. Remove it immediately before each balloon inflation, since an occlusive balloon needs an apneic window, and replace it or resume jet ventilation after deflation. Keep each apneic period short and agreed in advance with anesthesia."
+  ]
+ },
+ {
+  "slug": "airway-dilation",
+  "index": 9,
+  "severity": "important",
+  "issue": "A 15-18 mm balloon in an adult female subglottis is at or beyond normal cricoid lumen size and conflicts with step 5's rigid-dilation limit (about size 36, roughly 12 mm); oversizing risks cricoid fracture or deep tears.",
+  "new": [
+   "Position the balloon",
+   "Choose a radial-expansion balloon sized to the expected normal lumen at that level, commonly about 12 to 15 mm for an adult female subglottis and larger only for the trachea or a male airway. Center it across the stenosis under direct vision so it does not migrate distally or sit on the vocal folds."
+  ]
+ },
+ {
+  "slug": "airway-dilation",
+  "index": "insert:7",
+  "severity": "important",
+  "issue": "Laser incision is offered and airway fire is on the danger list, but no step covers laser fire precautions.",
+  "new": [
+   "Laser safety if used",
+   "If a laser will cut the scar, confirm with anesthesia that inspired oxygen is 30% or less with no nitrous oxide, use a laser-safe tube or tubeless technique, protect the patient's eyes and face with wet towels, and keep saline ready. Announce each laser use, and stop at once if a flash or fire occurs."
+  ]
+ },
+ {
+  "slug": "branchial",
+  "index": 9,
+  "severity": "minor",
+  "issue": "Titled third and fourth pouch lesions but describes only the third-pouch course; the fourth-pouch course, which runs close to the recurrent laryngeal nerve, is missing.",
+  "new": [
+   "Third and fourth pouch lesions",
+   "A third-pouch tract runs behind the internal carotid, between the glossopharyngeal and hypoglossal nerves, and enters the pyriform sinus above the internal branch of the superior laryngeal nerve. A fourth-pouch tract opens at the pyriform apex below that nerve, near the recurrent laryngeal nerve, often into the thyroid lobe. Find the opening by laryngoscopy; endoscopic cauterization or open excision with hemithyroidectomy are options."
+  ]
+ },
+ {
+  "slug": "endoscopic-sinus-surgery",
+  "index": 3,
+  "severity": "minor",
+  "issue": "Wording 'enlarge it posteriorly and inferiorly into the natural opening' is confusing, and the nasolacrimal duct (on the danger list) is not mentioned as the anterior limit.",
+  "new": [
+   "Uncinectomy and maxillary antrostomy",
+   "Remove the uncinate process with back-biting forceps or a microdebrider and find the natural maxillary ostium with a curved suction. Enlarge it posteriorly or inferiorly so the opening includes the natural ostium and does not allow recirculation. Stop anteriorly at the hard bone of the nasolacrimal duct. Culture purulence and irrigate. The antrostomy roof marks the orbital floor height."
+  ]
+ },
+ {
+  "slug": "hypoglossal-stimulator",
+  "index": 0,
+  "severity": "important",
+  "issue": "The 15 cm separation from other implanted devices is not in the Inspire labeling (15 cm applies to phones); an implanted device that may interact is a labeled contraindication needing manufacturer review, and the labeled side is right.",
+  "new": [
+   "Confirm candidacy and choose the side",
+   "Recheck criteria and drug-induced sleep endoscopy: no complete concentric palatal collapse, and few central or mixed events. If the patient has a pacemaker, defibrillator or other stimulator, confirm compatibility with both manufacturers before surgery. Implant on the right side, as the device labeling recommends, unless there is a specific reason not to, and ask which shoulder the patient braces a firearm against."
+  ]
+ },
+ {
+  "slug": "microflap",
+  "index": 12,
+  "severity": "minor",
+  "issue": "Cites an Iowa-specific 2-week voice rest protocol; most US laryngologists advise about 7 days of complete voice rest after cyst or polyp excision.",
+  "new": [
+   "End suspension and set voice rest",
+   "Release suspension promptly to limit pressure injury to the tongue and teeth. Most laryngologists advise about one week of complete voice rest after microflap excision of a cyst or polyp, with shorter rest for leukoplakia or papilloma, followed by graded return of voice use and voice therapy. Tailor the plan to the lesion and the patient's voice demands."
+  ]
+ },
+ {
+  "slug": "microflap",
+  "index": 13,
+  "severity": "important",
+  "issue": "The fire response omits inspecting the removed tube for missing fragments and bronchoscopy to assess airway injury, and the phrase about pausing for imaging is unclear.",
+  "new": [
+   "Rescue step: airway fire",
+   "If an airway fire occurs, announce it and stop laser use. Anesthesia stops gas flow; remove the tube and flood the airway with saline. Re-establish ventilation by mask, avoiding supplemental oxygen and nitrous oxide when possible. Inspect the tube for missing fragments, then perform bronchoscopy to remove debris and grade the injury, and reintubate if the airway is damaged."
+  ]
+ },
+ {
+  "slug": "palatoplasty",
+  "index": 5,
+  "severity": "important",
+  "issue": "Option A describes the muscle sling but never closes the soft-palate nasal and oral mucosal layers, and Option B's oral-layer step does not apply to it, so the repair is left incomplete for that option.",
+  "new": [
+   "Option A: intravelar veloplasty",
+   "Close the soft-palate nasal mucosa in the midline first. Dissect the levator insertions off the posterior hard-palate edge and off the nasal and oral mucosa, reorient each muscle transversely, and suture the two together across the midline as a sling. Then close the oral mucosa over the sling, keeping nasal, muscle and oral layers aligned."
+  ]
+ },
+ {
+  "slug": "palatoplasty",
+  "index": 6,
+  "severity": "minor",
+  "issue": "'Steeper angles give more lengthening' is ambiguous, and the lateral limbs should end near the hamulus rather than 'behind the alveolar ridge'.",
+  "new": [
+   "Option B: design the Z-plasties",
+   "For a double-opposing Z-plasty, draw lateral limbs at about 45 to 60 degrees from the midline cleft limb, ending near the hamulus. On one side the oral flap is posteriorly based and carries the muscle; on the other it is anteriorly based mucosa only. Design the nasal flaps as the mirror image. Wider angles give more lengthening but are harder to close."
+  ]
+ },
+ {
+  "slug": "pharyngocutaneous-fistula",
+  "index": 4,
+  "severity": "minor",
+  "issue": "A nasogastric tube passes through the neopharynx, so saying it 'avoids the repair' is inaccurate.",
+  "new": [
+   "Drains and early feeding plan",
+   "Bring suction drains out through separate stab wounds and route them away from the pharyngeal suture line. Feed through a nasogastric tube placed at surgery, which crosses the repair but is well tolerated, or through a tracheoesophageal puncture catheter or gastrostomy. Start oral intake around day 4 to 7 without prior radiation and later after radiation, if there is no sign of leak."
+  ]
+ },
+ {
+  "slug": "reop-parathyroid",
+  "index": 16,
+  "severity": "minor",
+  "issue": "Checking calcium only 'within two weeks' is too late after a reoperation that may have removed the last functioning gland; calcium and PTH should be checked early.",
+  "new": [
+   "Aftercare",
+   "Observe for neck swelling for several hours. Reoperative surgery raises the risk of hypocalcemia, which often appears at 24 to 72 hours. Check calcium and PTH the morning after surgery, discharge on calcium (with calcitriol if PTH is low), teach the symptoms of hypocalcemia, and recheck calcium within about a week. Assess vocal fold function after surgery."
+  ]
+ },
+ {
+  "slug": "skin-graft-face",
+  "index": 7,
+  "severity": "minor",
+  "issue": "The caution about donor skin 'lying on a free flap' is confusing and does not generalize; the real point is avoiding vasoconstrictor near a free-flap pedicle or on flap skin.",
+  "new": [
+   "Finish the harvest",
+   "End the pass by angling the dermatome up off the skin, or stop with the blade engaged and cut the distal edge with a scalpel. Keep the graft moist in saline. Control donor-site bleeding with gauze soaked in dilute epinephrine or thrombin, but avoid topical vasoconstrictor on or near a free flap or its pedicle, where it could reduce flow."
+  ]
+ },
+ {
+  "slug": "tracheocutaneous-fistula-closure",
+  "index": 13,
+  "severity": "minor",
+  "issue": "The ellipse description ('starts at the skin-mucosa junction on the lateral edge and curves medially') is unclear and does not tell the reader what to excise.",
+  "new": [
+   "Skin-level closure variant",
+   "For a small mature tract under local anesthesia, excise a narrow horizontal ellipse that includes the whole skin-mucosa junction around the opening, with both ends in normal skin. Remove the epithelial lining down to healthy tissue, undermine lightly, use bipolar cautery for hemostasis, and close in one layer with a few vertical mattress sutures that catch deep tissue to close dead space."
+  ]
+ }
+]
