@@ -1691,7 +1691,7 @@ VIGNETTES = [
  ],
  "board_pearl": "Lhermitte sign months after neck radiation: transient demyelination that resolves; reassure and observe.",
  "curveball": "Why are spinal cord dose constraints particularly important when considering re-irradiation?",
- "curveball_answer": "Cumulative spinal cord dose determines the risk of permanent radiation myelopathy, which is irreversible and devastating. Re-irradiation must reconstruct prior dose distribution, account for partial recovery over time, and keep the cumulative cord dose within accepted limits, which often restricts the dose that can be delivered to recurrences near the spine.",
+ "curveball_answer": "Cumulative spinal cord dose determines the risk of permanent radiation myelopathy, which is irreversible and devastating. Re-irradiation must reconstruct prior dose distribution, account for partial recovery over time, and keep the cumulative spinal cord dose within accepted limits, which often restricts the dose that can be delivered to recurrences near the spine.",
  "learning_stage": "mastery",
  "focus": "complication"
 },
