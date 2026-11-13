@@ -296,14 +296,14 @@ REWRITES = {'v138_hn_18': {'stem': 'A 49-year-old woman reports 6 months of muff
                                 'Accept the clean PET-CT as proof that re-irradiation will be safe',
                                 'Use stereotactic radiation, since steep dose falloff removes the '
                                 'risk',
-                                'Retrieve the prior plan and sum cumulative dose to cord and '
-                                'carotid'],
+                                'Retrieve the prior plan and sum cumulative dose to the spinal '
+                                'cord and carotid'],
                     'answer': 3,
                     'explanation': 'Re-irradiation can control selected recurrences, but it '
                                    'carries serious risks: carotid blowout, soft-tissue necrosis, '
                                    'osteoradionecrosis, myelopathy, and severe dysphagia. Safe '
                                    'planning starts with reconstructing the original dose '
-                                   'distribution so cumulative dose to the cord, carotid, and '
+                                   'distribution so cumulative dose to the spinal cord, carotid, and '
                                    'mucosa can be estimated. That estimate is weighed with the '
                                    'interval since treatment, target size, carotid involvement, '
                                    'performance status, and alternatives such as salvage surgery '
@@ -317,7 +317,7 @@ REWRITES = {'v138_hn_18': {'stem': 'A 49-year-old woman reports 6 months of muff
                                   'risk remains substantial near an encased or contacted carotid.',
                                   'Correct.'],
                     'board_pearl': 'Before re-irradiation, obtain the prior dose plan and estimate '
-                                   'cumulative dose to cord and carotid.',
+                                   'cumulative dose to the spinal cord and carotid.',
                     'curveball': 'Which features of this recurrence or its treatment would most '
                                  'increase the risk of carotid blowout after re-irradiation?',
                     'curveball_answer': 'Risk rises with tumor surrounding the carotid by more '

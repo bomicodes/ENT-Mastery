@@ -16,10 +16,17 @@ TEST = re.compile(r"\b(interpretation|audiogram|tympanometry|electrophysiology|t
 OPERATION = re.compile(r"(ectomy|otomy|ostomy|plasty|pexy|ectomies|\bsurgery\b|\brepair\b|\bflap\b|\bgraft|"
                        r"\bapproach\b|\bexcision\b|\bdissection\b|\breconstruction\b|\bimplant(ation)?\b|\bstimulation\b|"
                        r"\bexploration\b|\bdrainage\b|\breanimation\b|\bfundamentals\b|\bsialendoscopy\b|\bmicrolaryngoscopy\b|"
-                       r"\besophagoscopy\b|\binjection\b|\badvancement\b|\bdraf\b|\bfess\b|\bantrostomy\b|\bsalvage\b|\bdecannulation\b)", re.I)
+                       r"\besophagoscopy\b|\binjection\b|\badvancement\b|\bdraf\b|\bfess\b|\bantrostomy\b|\bsalvage\b|\bdecannulation\b|microsurgery|\bbiopsy\b|\bligation\b)", re.I)
 
 
-DISEASE_FIRST = re.compile(r"\b(hemorrhage|residual|complications?|injury|decisions?|candidacy|failure|syndrome)\b", re.I)
+DISEASE_FIRST = re.compile(r"\b(hemorrhage|residual|complications?|injury|failure|syndrome)\b", re.I)
+# v91: decisions and treatment/management principles have no "why it happens / how it presents".
+DECISION = re.compile(r"\b(decisions?|decision-making|candidacy|management by)\b", re.I)
+PRINCIPLES = re.compile(r"\b(principles|foundations|framework|immunology|immunotherapy|stewardship|safety|"
+                        r"management|adjuvant therapy|radioactive iodine|surveillance|triage|nutrition|anesthesia|"
+                        r"goals-of-care|hearing aids|bone-conduction devices|appliance therapy|troubleshooting|"
+                        r"rehabilitation|programming|activation|phenotyping|geriatric|immunocompromised host|"
+                        r"professional voice|examination)\b", re.I)
 
 
 def teachback_prompt(topic):
@@ -27,6 +34,12 @@ def teachback_prompt(topic):
     if DISEASE_FIRST.search(t) and not ANATOMY.search(t):
         return (f"Explain {t} to a junior resident in 60 seconds: why it happens, how it presents, and the one "
                 f"decision that most often goes wrong.")
+    if DECISION.search(t):
+        return (f"Walk a junior resident through {t} in 60 seconds: who the decision applies to, the factors that "
+                f"tip it one way or the other, and the mistake that most often leads to the wrong choice.")
+    if PRINCIPLES.search(t) and not ANATOMY.search(t):
+        return (f"Teach {t} to a junior resident in 60 seconds: the core principles, how they change what you do "
+                f"for the patient, and the mistake that most often causes harm.")
     if ANATOMY.search(t):
         return (f"Walk a junior resident through {t} in 60 seconds: the key structures and how they relate, the "
                 f"landmarks you use to find them, and the one relationship that most often leads to an injury or a "
