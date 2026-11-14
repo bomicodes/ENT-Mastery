@@ -8981,5 +8981,16 @@
    "For a small tumor under observation, what best predicts whether the patient keeps serviceable hearing?",
    "Word recognition at diagnosis. In the Danish wait-and-scan cohort, 69% of patients with 100% speech discrimination kept good hearing after more than 10 years, versus 38% with even a small discrimination loss. Tumor size, intracanalicular location and age are weaker or inconsistent predictors, and hearing can fall without tumor growth, so follow audiograms as well as MRI."
   ]
+ },
+ {
+  "slug": "zenker",
+  "field": "attending_followup",
+  "index": "append",
+  "severity": "important",
+  "issue": "v94: Killian-Jamieson not on card",
+  "new_value": [
+   "The esophagram shows the pouch arising below the cricopharyngeus from the anterolateral wall. Do you still staple it?",
+   "No, that is a Killian-Jamieson diverticulum. Its neck lies near where the recurrent laryngeal nerve enters the larynx, so endoscopic division of a common wall risks the nerve. Symptomatic pouches are traditionally excised through the neck with the nerve identified and protected; small asymptomatic ones can be observed."
+  ]
  }
 ]
