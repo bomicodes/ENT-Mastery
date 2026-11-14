@@ -1,10 +1,67 @@
 [
- {"topic": "Cochlear Implant Surgery", "field": "workup", "text": "**Middle-ear status before surgery**: active acute otitis media is a contraindication, because the opening into the cochlea gives middle-ear bacteria a route to the inner ear and meninges. Treat it and reschedule once the ear has been free of infection for at least about 2 weeks; children with recurrent otitis media or persistent effusion are often given tympanostomy tubes first and implanted once the ear is dry and stable. Confirm age-appropriate pneumococcal vaccination, ideally completed at least 2 weeks before surgery."},
- {"topic": "Cochlear Implant Surgery", "field": "manage", "text": "**Fluid found in the middle ear at surgery**: a clear, nonpurulent (serous) effusion with quiet mucosa does not stop the operation. Irrigate the middle ear with saline before opening the cochlea and give topical drops and postoperative antibiotics; series of children implanted with an effusion show more intraoperative difficulty but no increase in postoperative complications, and delaying implantation costs auditory development. Purulent fluid with inflamed mucosa is acute otitis media: do not open the cochlea; culture, place a tympanostomy tube, treat, and implant after at least about 2 weeks free of infection."},
- {"topic": "Vestibular Schwannoma", "field": "manage", "text": "**Hearing prognosis on observation**: word recognition (speech discrimination) at diagnosis is the best predictor of long-term serviceable hearing. In the Danish wait-and-scan cohort (Stangerup 2010), 69% of patients with 100% speech discrimination at diagnosis kept good hearing after more than 10 years of observation, compared with 38% of those with even a small discrimination loss. Tumor size, intracanalicular location and age have not consistently predicted hearing outcome, and hearing can decline without tumor growth, so follow audiograms as well as MRI and revisit the treatment discussion if word recognition falls."},
- {"topic": "Immunocompromised Host in Otolaryngology", "field": "recognize", "text": "**Oral hairy leukoplakia**: white, corrugated, vertically ridged plaques on the lateral borders of the tongue, often on both sides, that cannot be scraped off and do not respond to antifungals. It is caused by Epstein-Barr virus replication in the epithelium and almost always signals systemic immunosuppression: HIV most often, but also transplant immunosuppression, chemotherapy or steroids."},
- {"topic": "Immunocompromised Host in Otolaryngology", "field": "workup", "text": "**Confirming oral hairy leukoplakia**: biopsy shows hyperparakeratosis with ballooned, koilocyte-like cells and little inflammation; in situ hybridization for EBV (EBER) confirms the diagnosis. A confirmed case should prompt HIV testing and a search for another cause of immunosuppression if HIV is negative. The lesion is not premalignant and needs no specific treatment; it usually regresses with antiretroviral therapy or restored immunity."},
- {"topic": "Oral Manifestations of Systemic Disease", "field": "recognize", "text": "**Oral hairy leukoplakia**: corrugated white plaques on the lateral tongue that do not scrape off, caused by Epstein-Barr virus and almost always a marker of immunosuppression (most often HIV). Confirm with biopsy and EBV in situ hybridization, test for HIV, and expect regression with antiretroviral therapy; it is not premalignant."},
- {"topic": "Zenker Diverticulum", "field": "localize", "text": "**Killian-Jamieson diverticulum**: a less common pouch that arises from the anterolateral wall of the cervical esophagus just below the cricopharyngeus, lateral to the longitudinal esophageal muscle, through the Killian-Jamieson space, often on the left. It lies close to where the recurrent laryngeal nerve enters the larynx. On esophagram it projects laterally below the cricopharyngeal bar, whereas a Zenker pouch arises in the posterior midline above it."},
- {"topic": "Zenker Diverticulum", "field": "operate", "text": "**Killian-Jamieson pouch**: endoscopic stapling of a common wall, the standard for Zenker, risks the recurrent laryngeal nerve, which runs near the pouch neck, so the traditional approach is transcervical diverticulectomy with identification and protection of the nerve (with or without a limited myotomy). Small asymptomatic pouches can be observed. Endoscopic division has been reported in selected cases at experienced centers, but it is not the default, and the nerve's proximity is the reason."}
+ {
+  "topic": "Cochlear Implant Surgery",
+  "field": "workup",
+  "text": "**Middle-ear status before surgery**: active acute otitis media is a contraindication, because the opening into the cochlea gives middle-ear bacteria a route to the inner ear and meninges. Treat it and reschedule once the ear has been free of infection for at least about 2 weeks; children with recurrent otitis media or persistent effusion are often given tympanostomy tubes first and implanted once the ear is dry and stable. Confirm age-appropriate pneumococcal vaccination, ideally completed at least 2 weeks before surgery."
+ },
+ {
+  "topic": "Cochlear Implant Surgery",
+  "field": "manage",
+  "text": "**Fluid found in the middle ear at surgery**: a clear, nonpurulent (serous) effusion with quiet mucosa does not stop the operation. Irrigate the middle ear with saline before opening the cochlea and give topical drops and postoperative antibiotics; series of children implanted with an effusion show more intraoperative difficulty but no increase in postoperative complications, and delaying implantation costs auditory development. Purulent fluid with inflamed mucosa is acute otitis media: do not open the cochlea; culture, place a tympanostomy tube, treat, and implant after at least about 2 weeks free of infection."
+ },
+ {
+  "topic": "Vestibular Schwannoma",
+  "field": "manage",
+  "text": "**Hearing prognosis on observation**: word recognition (speech discrimination) at diagnosis is the best predictor of long-term serviceable hearing. In the Danish wait-and-scan cohort (Stangerup 2010), 69% of patients with 100% speech discrimination at diagnosis kept good hearing after more than 10 years of observation, compared with 38% of those with even a small discrimination loss. Tumor size, intracanalicular location and age have not consistently predicted hearing outcome, and hearing can decline without tumor growth, so follow audiograms as well as MRI and revisit the treatment discussion if word recognition falls."
+ },
+ {
+  "topic": "Immunocompromised Host in Otolaryngology",
+  "field": "recognize",
+  "text": "**Oral hairy leukoplakia**: white, corrugated, vertically ridged plaques on the lateral borders of the tongue, often on both sides, that cannot be scraped off and do not respond to antifungals. It is caused by Epstein-Barr virus replication in the epithelium and almost always signals systemic immunosuppression: HIV most often, but also transplant immunosuppression, chemotherapy or steroids."
+ },
+ {
+  "topic": "Immunocompromised Host in Otolaryngology",
+  "field": "workup",
+  "text": "**Confirming oral hairy leukoplakia**: biopsy shows hyperparakeratosis with ballooned, koilocyte-like cells and little inflammation; in situ hybridization for EBV (EBER) confirms the diagnosis. A confirmed case should prompt HIV testing and a search for another cause of immunosuppression if HIV is negative. The lesion is not premalignant and needs no specific treatment; it usually regresses with antiretroviral therapy or restored immunity."
+ },
+ {
+  "topic": "Oral Manifestations of Systemic Disease",
+  "field": "recognize",
+  "text": "**Oral hairy leukoplakia**: corrugated white plaques on the lateral tongue that do not scrape off, caused by Epstein-Barr virus and almost always a marker of immunosuppression (most often HIV). Confirm with biopsy and EBV in situ hybridization, test for HIV, and expect regression with antiretroviral therapy; it is not premalignant."
+ },
+ {
+  "topic": "Zenker Diverticulum",
+  "field": "localize",
+  "text": "**Killian-Jamieson diverticulum**: a less common pouch that arises from the anterolateral wall of the cervical esophagus just below the cricopharyngeus, lateral to the longitudinal esophageal muscle, through the Killian-Jamieson space, often on the left. It lies close to where the recurrent laryngeal nerve enters the larynx. On esophagram it projects laterally below the cricopharyngeal bar, whereas a Zenker pouch arises in the posterior midline above it."
+ },
+ {
+  "topic": "Zenker Diverticulum",
+  "field": "operate",
+  "text": "**Killian-Jamieson pouch**: endoscopic stapling of a common wall, the standard for Zenker, risks the recurrent laryngeal nerve, which runs near the pouch neck, so the traditional approach is transcervical diverticulectomy with identification and protection of the nerve (with or without a limited myotomy). Small asymptomatic pouches can be observed. Endoscopic division has been reported in selected cases at experienced centers, but it is not the default, and the nerve's proximity is the reason."
+ },
+ {
+  "topic": "Olfactory Dysfunction",
+  "field": "recognize",
+  "text": "**Age and neurodegeneration**: smell loss is common with age, affecting roughly half of adults aged 65 to 80 and about three quarters of those over 80 (presbyosmia), and most older people are unaware of it. Hyposmia is one of the earliest signs of Parkinson disease, often years before the motor features, and is common in Alzheimer disease, Lewy body dementia and multiple sclerosis. It is also associated with depression and schizophrenia, and in older adults it independently predicts higher mortality."
+ },
+ {
+  "topic": "Olfactory Dysfunction",
+  "field": "workup",
+  "text": "**When smell loss may be neurologic**: in an older patient with otherwise unexplained hyposmia, ask about and examine for tremor, rigidity, slowed movement, postural instability, memory decline and mood change, and screen cognition (for example with the MMSE or MoCA). Validated smell testing documents the deficit, and neurology referral is appropriate when the history or examination suggests a neurodegenerative disorder."
+ },
+ {
+  "topic": "Primary Hyperparathyroidism",
+  "field": "recognize",
+  "text": "**Physiology in one line**: excess PTH raises calcium by increasing bone resorption and distal renal calcium reabsorption and by stimulating 1-alpha-hydroxylase (more calcitriol, more gut calcium absorption), while it reduces proximal tubular phosphate reabsorption, so urine phosphate rises (phosphaturia) and serum phosphate falls. **Causes**: single adenoma in about 80 to 85 percent, multigland hyperplasia in about 10 to 15 percent, double adenoma in a few percent, and carcinoma in under 1 percent."
+ },
+ {
+  "topic": "Familial Hyperparathyroidism and Parathyromatosis",
+  "field": "recognize",
+  "text": "**Penetrance**: primary hyperparathyroidism is the most common and usually the first feature of MEN1, present in over 90 percent of carriers by about age 50, and it is multiglandular. In MEN2A it is less common (roughly 10 to 30 percent) and usually milder, often found when the thyroid is removed for medullary carcinoma."
+ },
+ {
+  "topic": "Vestibular Schwannoma",
+  "field": "operate",
+  "text": "**Facial nerve risk by approach**: the middle cranial fossa approach carries the highest risk of facial weakness, because from above the facial nerve lies in the anterosuperior internal auditory canal, in the surgeon's path to a tumor that usually arises from the inferior vestibular nerve; much of this weakness is early and temporary. It remains the best route for hearing preservation in small intracanalicular tumors with good hearing. The translabyrinthine route exposes the nerve reliably at the fundus without crossing it, and the retrosigmoid route reaches the tumor from behind."
+ }
 ]

@@ -8992,5 +8992,16 @@
    "The esophagram shows the pouch arising below the cricopharyngeus from the anterolateral wall. Do you still staple it?",
    "No, that is a Killian-Jamieson diverticulum. Its neck lies near where the recurrent laryngeal nerve enters the larynx, so endoscopic division of a common wall risks the nerve. Symptomatic pouches are traditionally excised through the neck with the nerve identified and protected; small asymptomatic ones can be observed."
   ]
+ },
+ {
+  "slug": "middle-fossa-skull-base",
+  "field": "attending_followup",
+  "index": "append",
+  "severity": "important",
+  "issue": "v95: facial nerve risk comparison",
+  "new_value": [
+   "How does facial nerve risk with the middle fossa approach compare with retrosigmoid and translabyrinthine?",
+   "It is the highest of the three, because from above the facial nerve sits in the anterosuperior internal auditory canal, between you and a tumor arising from the inferior vestibular nerve. Much of the weakness is early and temporary. It is the tradeoff for the best hearing preservation in small intracanalicular tumors with good hearing."
+  ]
  }
 ]
