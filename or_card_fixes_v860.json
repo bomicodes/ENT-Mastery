@@ -8959,5 +8959,27 @@
   "severity": "important",
   "issue": "No exit check for the airway plan after loss of signal in a bilateral operation.",
   "new_value": "Record final vagal signals on both sides; if either side lost signal, plan extubation, laryngeal examination and airway monitoring with anesthesia."
+ },
+ {
+  "slug": "cochlear-implant",
+  "field": "attending_followup",
+  "index": "append",
+  "severity": "important",
+  "issue": "v93: middle-ear fluid at surgery not covered",
+  "new_value": [
+   "You open the facial recess and find fluid in the middle ear. What do you do?",
+   "If it is clear and the mucosa is not inflamed, irrigate the middle ear with saline and proceed, with topical drops and postoperative antibiotics; children implanted with a serous effusion have more intraoperative difficulty but no more complications, and delay costs auditory development. If it is purulent acute otitis media, do not open the cochlea: culture, place a tube, treat, and implant after at least about 2 weeks free of infection."
+  ]
+ },
+ {
+  "slug": "vestibular-schwannoma",
+  "field": "attending_followup",
+  "index": "append",
+  "severity": "important",
+  "issue": "v93: hearing prognosis on observation not covered",
+  "new_value": [
+   "For a small tumor under observation, what best predicts whether the patient keeps serviceable hearing?",
+   "Word recognition at diagnosis. In the Danish wait-and-scan cohort, 69% of patients with 100% speech discrimination kept good hearing after more than 10 years, versus 38% with even a small discrimination loss. Tumor size, intracanalicular location and age are weaker or inconsistent predictors, and hearing can fall without tumor growth, so follow audiograms as well as MRI."
+  ]
  }
 ]
