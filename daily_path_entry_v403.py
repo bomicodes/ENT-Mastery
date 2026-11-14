@@ -75,6 +75,8 @@ from bank_fixes_v640 import install_bank_fixes_v640
 BANK_FIXES_V640 = install_bank_fixes_v640(production.runtime_entry.data)
 from tgdc_update_v770 import install_tgdc_update_v770
 TGDC_UPDATE_V770 = install_tgdc_update_v770(production.runtime_entry.data, production.runtime_entry.app_mod)
+from deepcurr_additions_v940 import install_deepcurr_additions_v940
+DEEPCURR_ADDITIONS_V940 = install_deepcurr_additions_v940(production.runtime_entry.data)
 from question_dedupe_v690 import install_question_dedupe_v690
 QUESTION_DEDUPE_V690 = install_question_dedupe_v690(production.runtime_entry.data)
 from question_dedupe_v690 import install_retired_redirects_v690
