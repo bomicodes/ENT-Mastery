@@ -9003,5 +9003,16 @@
    "How does facial nerve risk with the middle fossa approach compare with retrosigmoid and translabyrinthine?",
    "It is the highest of the three, because from above the facial nerve sits in the anterosuperior internal auditory canal, between you and a tumor arising from the inferior vestibular nerve. Much of the weakness is early and temporary. It is the tradeoff for the best hearing preservation in small intracanalicular tumors with good hearing."
   ]
+ },
+ {
+  "slug": "vestibular-schwannoma",
+  "field": "attending_followup",
+  "index": "append",
+  "severity": "important",
+  "issue": "v96: approach selection summary",
+  "new_value": [
+   "Walk me through how you pick the approach.",
+   "Hearing first: if it is not serviceable, translabyrinthine for almost any size (retrosigmoid for some large tumors). If hearing is serviceable: an intracanalicular or small tumor reaching the fundus goes middle fossa; a small to medium tumor centered in the CPA with CSF at the fundus goes retrosigmoid; above about 2 cm hearing preservation is rarely realistic. Large tumors with brainstem compression go translabyrinthine or retrosigmoid with planned near-total resection. An only-hearing ear, NF2 or a high-risk patient usually favors observation or radiosurgery."
+  ]
  }
 ]
