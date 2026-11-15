@@ -388,7 +388,7 @@ pathophysiology=(
 
 "Orbital Complications of Sinusitis": dict(
 overview=(
-"Orbital complications of sinusitis range from preseptal cellulitis to orbital cellulitis, subperiosteal abscess, orbital abscess, and cavernous sinus thrombosis (Chandler classification). "
+"Orbital complications of sinusitis follow the Chandler classification: I preseptal cellulitis, II orbital cellulitis, III subperiosteal abscess, IV orbital abscess, and V cavernous sinus thrombosis. "
 "They are most common in children with ethmoiditis and threaten vision."),
 physiology=(
 "**Lamina papyracea**: the paper-thin lateral ethmoid wall, with natural dehiscences and neurovascular foramina. "
@@ -396,11 +396,12 @@ physiology=(
 "**Valveless veins**: ophthalmic veins connect the face, sinuses, orbit, and cavernous sinus without valves."),
 pathophysiology=(
 "**Spread**: infection crosses the lamina papyracea or travels through valveless veins from the ethmoids into the orbit. "
-"**Preseptal cellulitis**: anterior to the septum, eyelid swelling with normal vision and eye movement. "
-"**Orbital cellulitis**: postseptal, causing chemosis, proptosis, painful or limited eye movement. "
-"**Subperiosteal abscess**: pus collects between the lamina and periorbita, displacing the globe. "
-"**Vision threat**: rising orbital pressure compresses the optic nerve and its blood supply; decreased acuity, color vision loss, or an afferent pupillary defect demand urgent drainage. "
-"**Cavernous sinus thrombosis**: bilateral findings, cranial neuropathies (III, IV, V1, V2, VI), and sepsis."),
+"**Chandler I, preseptal cellulitis**: inflammation anterior to the orbital septum, with eyelid swelling but normal vision, normal eye movement and no proptosis. "
+"**Chandler II, orbital cellulitis**: diffuse inflammation of the orbital fat behind the septum, without an abscess, causing chemosis, proptosis and painful or limited eye movement. "
+"**Chandler III, subperiosteal abscess**: pus between the lamina papyracea and the periorbita, usually medial, pushing the globe down and out. "
+"**Chandler IV, orbital abscess**: pus within the orbital fat itself, with marked proptosis, ophthalmoplegia and a high risk to vision. "
+"**Chandler V, cavernous sinus thrombosis**: spread back through the valveless ophthalmic veins, with bilateral eye findings, cranial neuropathies (III, IV, V1, V2, VI) and sepsis. "
+"**Vision threat (any stage)**: rising orbital pressure compresses the optic nerve and its blood supply. Decreased acuity, loss of color vision or an afferent pupillary defect calls for urgent drainage."),
 ),
 
 "Intracranial Complications of Sinusitis": dict(
