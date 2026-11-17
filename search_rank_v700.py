@@ -34,7 +34,7 @@ ALIASES = {
     "nosebleed": ["epistaxis"], "drop": ["persistent", "reoperative", "fall"], "hoarse": ["dysphonia", "hoarseness"],
     "hoarseness": ["dysphonia"], "palsy": ["paralysis"], "dizzy": ["vertigo", "dizziness"], "dizziness": ["vertigo"],
     "infant": ["pediatric", "neonatal", "infantile"], "child": ["pediatric"], "kid": ["pediatric"], "baby": ["pediatric", "infant"],
-    "swallowed": ["ingestion", "foreign body"], "battery": ["button battery"], "cancer": ["carcinoma", "malignancy"],
+    "swallowed": ["ingestion", "foreign body"], "battery": ["button battery"], "baha": ["bone conduction", "bone anchored", "osia"], "osia": ["osia", "bone conduction implant"], "cancer": ["carcinoma", "malignancy"],
 }
 TYPE_BOOST = {"OR Tomorrow": 1.25, "Curriculum concept": 1.2, "Progressive case": 1.1, "Interpretation Atlas": 1.05,
               "Pasha Review Section": 1.0, "Pasha Review Chapter": 1.0, "Evidence": 1.0, "Practice bank": 1.0,
