@@ -3,7 +3,7 @@
  "title": "Substernal / Intrathoracic Goiter Thyroidectomy",
  "domain": "Thyroid / Parathyroid / Salivary",
  "or_family_v190": "thyroid",
- "linked_topic": "Thyroid Nodule",
+ "linked_topic": "Substernal and Multinodular Goiter",
  "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
  "indications": "Thyroid enlargement extending through the thoracic inlet into the mediastinum that causes tracheal or esophageal compression (dyspnea, positional stridor, dysphagia), superior vena cava or thoracic inlet syndrome, or that carries concern for malignancy, or progressive growth on interval imaging in a fit patient. Because radioiodine and suppression rarely shrink these glands and acute airway compromise can occur, surgery is the mainstay for symptomatic patients with reasonable life expectancy. About 95% can be removed through the neck; plan a combined cervicothoracic approach for disease below the aortic arch, posterior mediastinal or retrotracheal extension, iceberg or inverted-cone shape, separate mediastinal components, recurrent goiter, or invasive malignancy.",
  "setup": [
