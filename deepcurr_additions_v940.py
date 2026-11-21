@@ -4,12 +4,20 @@ oral hairy leukoplakia, Killian-Jamieson diverticulum). Data in deepcurr_additio
 import json
 import os
 
-_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "deepcurr_additions_v940.json")
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_PATH = os.path.join(_HERE, "deepcurr_additions_v940.json")
+# v99: textbook gap-review batches (Pasha 6e, Bluestone & Stool 5e, K.J. Lee 12e, Cummings 7e, ...)
+_EXTRA = ["deepcurr_additions_v991.json", "deepcurr_additions_v992.json", "deepcurr_additions_v993.json"]
 
 
 def install_deepcurr_additions_v940(data):
     with open(_PATH, encoding="utf-8") as fh:
         adds = json.load(fh)
+    for name in _EXTRA:
+        p = os.path.join(_HERE, name)
+        if os.path.exists(p):
+            with open(p, encoding="utf-8") as fh:
+                adds += json.load(fh)
     by_topic = {}
     for mods in data.DEEP_MODULES_V6.values():
         for m in mods:
