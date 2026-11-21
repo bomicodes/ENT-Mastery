@@ -1,0 +1,124 @@
+{
+ "slug": "dise",
+ "title": "Drug-Induced Sleep Endoscopy (DISE)",
+ "domain": "Sleep Surgery",
+ "or_family_v190": "airway",
+ "linked_topic": "DISE",
+ "source_label": "Pasha 6e Ch 4 and Cummings 7e Ch 15 (Sleep Apnea and Sleep Disorders)",
+ "indications": "Adults with moderate to severe obstructive sleep apnea who cannot tolerate PAP and are being considered for upper airway surgery, especially hypoglossal nerve stimulation (which requires absence of complete concentric collapse at the velum), multilevel surgery, or revision after failed surgery; suspected hypopharyngeal or epiglottic collapse; and oral appliance planning. In children, DISE helps with persistent OSA after adenotonsillectomy, small tonsils with OSA, and syndromic children such as those with Down syndrome. Findings change the surgical plan in about half of cases. Reported with the VOTE classification (velum, oropharynx, tongue base, epiglottis), noting degree and configuration of collapse.",
+ "setup": [
+  "Recent polysomnography reviewed; DISE done in OR or endoscopy suite with monitoring and an anesthesia team",
+  "Supine on a flat bed, natural pillow height, mouth closed, no oral airway; lights low and quiet room",
+  "Topical nasal decongestant and lubricant only (avoid heavy topical anesthesia of the pharynx)",
+  "Propofol infusion or target-controlled infusion, or dexmedetomidine (preferred by many for children); bispectral index monitor if available",
+  "Flexible endoscope with video recording; jaw-thrust and oral appliance simulation ready"
+ ],
+ "landmarks": [
+  "Velum and soft palate (anteroposterior, lateral, or concentric collapse)",
+  "Oropharyngeal lateral walls and tonsils",
+  "Tongue base and lingual tonsils",
+  "Epiglottis (anteroposterior or lateral collapse, trapdoor)",
+  "Nasal cavity and nasopharynx (adenoids in children)"
+ ],
+ "danger": [
+  "Oversedation producing nonphysiologic collapse and false complete concentric collapse",
+  "Undersedation with arousals and no snoring, missing true obstruction",
+  "Apnea and desaturation requiring airway support",
+  "Laryngospasm from endoscope contact with the larynx",
+  "Topical anesthesia blunting airway reflexes and changing collapse"
+ ],
+ "steps": [
+  [
+   "Pre-procedure plan",
+   "Confirm the question DISE should answer: HGNS candidacy, which levels to treat, or why prior surgery failed. Review AHI, BMI, nadir saturation, and positional data from PSG. Discuss with anesthesia the goal of a light sedation level mimicking natural sleep, with minimal opioid and no benzodiazepine boluses if possible."
+  ],
+  [
+   "Position and prepare",
+   "Lay the patient supine with a usual pillow, mouth closed as in natural sleep. Apply topical decongestant and lubricant to the nose only. Attach oximetry, ECG, and BIS monitoring, and start video recording so the examination can be reviewed by the team."
+  ],
+  [
+   "Titrate sedation",
+   "Begin propofol infusion (or dexmedetomidine) slowly, increasing until the patient loses response to verbal stimulation and begins snoring or obstructing, typically with BIS around 50-70. Avoid rapid boluses, which create collapse that does not occur in natural sleep. Pause whenever arousals occur."
+  ],
+  [
+   "Pass the scope",
+   "Pass the flexible endoscope through the more patent nostril, avoiding contact with turbinates and septum that cause arousal. Inspect the nasal cavity and nasopharynx, then position the tip just above the velum to view the retropalatal airway without touching the posterior pharyngeal wall."
+  ],
+  [
+   "Score the velum",
+   "Over several breathing cycles with snoring and desaturation, record velum collapse degree (0 none, 1 partial, 2 complete) and configuration: anteroposterior, lateral, or concentric. Complete concentric collapse at the velum excludes hypoglossal nerve stimulation under current criteria and must be scored carefully at a stable sedation depth."
+  ],
+  [
+   "Score oropharynx",
+   "Advance below the velum to assess the oropharyngeal lateral walls and tonsils, recording degree and lateral configuration. Note tonsil size and whether lateral wall collapse is independent of the tonsils, which affects whether expansion pharyngoplasty or tonsillectomy is likely to help."
+  ],
+  [
+   "Score tongue base and epiglottis",
+   "Advance to view the tongue base and epiglottis. Record anteroposterior tongue base collapse and lingual tonsil size, and whether the epiglottis collapses anteroposteriorly, laterally, or as a trapdoor. Distinguish primary epiglottic collapse from epiglottis pushed back by the tongue base."
+  ],
+  [
+   "Perform maneuvers",
+   "Apply a gentle jaw thrust (simulating mandibular advancement) and observe changes at each level; marked improvement predicts oral appliance or HGNS response. Optionally test head rotation for positional effect and mouth opening or closure. Record which maneuvers relieve obstruction at each site."
+  ],
+  [
+   "Recover and remove scope",
+   "Withdraw the scope, stop the infusion, and allow recovery with monitoring. Support the airway with jaw thrust or nasal airway if desaturation persists. Keep the patient in recovery until fully awake, since many have severe OSA and residual sedation."
+  ],
+  [
+   "Report and counsel",
+   "Write a VOTE score for each level with configuration, oxygen saturation trends, and maneuver results, and attach representative video. Match findings to treatment options and HGNS eligibility at the follow-up visit, and discuss the limitations of sedated examination compared with natural sleep."
+  ]
+ ],
+ "exit_check": [
+  "VOTE score completed at every level with configuration noted",
+  "Velum complete concentric collapse explicitly confirmed or excluded",
+  "Patient recovered with stable saturation and airway"
+ ],
+ "postop": [
+  "Routine recovery monitoring until fully awake; resume PAP at home if used",
+  "Same-day or clinic review of video with the patient",
+  "Proceed to HGNS, multilevel surgery, or oral appliance referral based on findings and current criteria",
+  "Repeat DISE if findings were equivocal from sedation depth or after major weight change"
+ ],
+ "complications": {
+  "early": [
+   "Desaturation or apnea needing airway support",
+   "Laryngospasm",
+   "Epistaxis or nasal discomfort",
+   "Prolonged sedation or aspiration"
+  ],
+  "late": [
+   "Misclassification from sedation depth leading to wrong surgical selection",
+   "Sedated findings that do not reflect natural sleep",
+   "Rare adverse reaction to sedatives",
+   "Delay in therapy if repeated studies are needed"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the VOTE classification?",
+   "Velum, Oropharynx, Tongue base, and Epiglottis, each scored for degree of collapse (0 none, 1 partial, 2 complete) and configuration (anteroposterior, lateral, or concentric)."
+  ],
+  [
+   "Which DISE finding excludes hypoglossal nerve stimulation?",
+   "Complete concentric collapse at the velum, because the STAR trial excluded it and stimulation does not open a circumferentially collapsing velopharynx."
+  ],
+  [
+   "Why is propofol bolusing discouraged?",
+   "Rapid deep sedation exaggerates collapse and can produce findings, including concentric collapse, not present during natural sleep; slow target-controlled infusion to light sleep is preferred."
+  ],
+  [
+   "Why is dexmedetomidine often used in children?",
+   "It causes less respiratory depression and cardiovascular instability and better mimics natural sleep, though it may underestimate obstruction relative to propofol."
+  ],
+  [
+   "What does improvement with jaw thrust suggest?",
+   "Tongue base and oropharyngeal collapse that may respond to mandibular advancement devices or hypoglossal nerve stimulation."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RA, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Ch 4 Sleep Medicine, Evaluation of OSAS and Drug Induced Sleep Endoscopy (p 164-165)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Ch 15 Sleep Apnea and Sleep Disorders",
+  "Kezirian EJ, Hohenhorst W, de Vries N. Drug-induced sleep endoscopy: the VOTE classification. Eur Arch Otorhinolaryngol 2011"
+ ]
+}

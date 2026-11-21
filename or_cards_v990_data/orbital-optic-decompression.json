@@ -1,0 +1,133 @@
+{
+ "slug": "orbital-optic-decompression",
+ "title": "Endoscopic Orbital / Optic Nerve Decompression",
+ "domain": "Rhinology",
+ "or_family_v190": "sinus",
+ "linked_topic": "Thyroid Eye Disease / Graves Ophthalmopathy",
+ "source_label": "Cummings 7e and Pasha 6e",
+ "indications": "Orbital decompression of the medial and inferior walls is used for thyroid eye disease with compressive optic neuropathy that has not responded to high-dose corticosteroids (urgent), for corneal exposure, and electively for disfiguring proptosis once the disease has been stable and inactive for about 6 months. It is often combined with lateral wall decompression by oculoplastics. Optic nerve decompression of the canal is considered for compressive optic neuropathy from fibro-osseous lesions, tumors, or Graves disease at the apex, and selectively for traumatic optic neuropathy with bony impingement or worsening vision, where evidence is mixed and treatment must be individualized.",
+ "setup": [
+  "Full ophthalmology assessment: visual acuity, color vision, pupils, visual fields, exophthalmometry, motility and baseline diplopia",
+  "Fine-cut CT of the sinuses and orbits for navigation; MRI orbits for optic neuropathy work-up",
+  "Image guidance, angled endoscopes, high-speed drill with coarse diamond burr, sickle knives that can be bent, ball-tipped probes",
+  "Perioperative corticosteroids for optic neuropathy cases, coordinated with ophthalmology",
+  "Eyes left uncovered and in the field to allow globe palpation and watching for orbital changes"
+ ],
+ "landmarks": [
+  "Lamina papyracea from the frontal process of the maxilla to the sphenoid face",
+  "Frontoethmoidal suture and anterior and posterior ethmoidal arteries on the skull base",
+  "Infraorbital nerve canal, the lateral limit of the floor decompression",
+  "Inferomedial orbital strut between medial wall and floor",
+  "Optic canal and opticocarotid recess in the lateral sphenoid wall",
+  "Onodi (sphenoethmoidal) cell carrying the optic nerve",
+  "Annulus of Zinn at the orbital apex"
+ ],
+ "danger": [
+  "Direct optic nerve injury or heat injury from the drill",
+  "Internal carotid artery next to the optic canal, and an ophthalmic artery running inferomedial to the nerve in about one fifth of orbits",
+  "Early periorbital tear causing fat herniation that hides the field",
+  "Medial rectus injury and new diplopia",
+  "Frontal recess obstruction causing later frontal sinusitis or mucocele",
+  "CSF leak at the skull base or after opening the nerve sheath"
+ ],
+ "steps": [
+  [
+   "Wide maxillary antrostomy",
+   "Remove the uncinate and open the maxillary ostium widely, back to the posterior wall and down to the top of the inferior turbinate. This gives access to the floor and leaves room for prolapsed orbital fat without blocking the sinus. Reflect the posterosuperior maxillary mucosa to preserve it for redraping."
+  ],
+  [
+   "Total ethmoidectomy",
+   "Perform a complete ethmoidectomy to expose the skull base above and the entire lamina papyracea laterally, with thorough posterior cell clearance. Preserve the anterior-superior cells and mucosa of the frontal recess to avoid later frontal obstruction. Strip mucosa from the lamina only."
+  ],
+  [
+   "Sphenoidotomy when needed",
+   "For apex or optic nerve decompression, open the sphenoid widely up to the planum and laterally to the apex, removing any Onodi cell partition. Identify the optic and carotid prominences and the opticocarotid recess. If the sphenoid is not opened, preserve the superior turbinate."
+  ],
+  [
+   "Medial wall removal",
+   "Fracture the lamina in its middle with an elevator or curette and lift the fragments off the periorbita, working back to the sphenoid face, forward to the frontal process of the maxilla, and up to the frontoethmoid suture. Keep the periorbita intact so fat does not herniate before the bone work is complete."
+  ],
+  [
+   "Orbital floor removal",
+   "Remove the floor medial to the infraorbital nerve with angled instruments. Decide whether to keep the inferomedial strut, which supports the globe and lowers the risk of new diplopia, or to take it for maximal decompression in severe proptosis or optic neuropathy."
+  ],
+  [
+   "Periorbital incisions",
+   "Incise the periorbita with a sickle knife in parallel strips from posterior to anterior, along the upper and lower limits of the opening and along the floor when the strut is kept. Leaving a horizontal band of periorbita over the medial rectus is another way to reduce diplopia."
+  ],
+  [
+   "Release the fat",
+   "Lyse fibrous septa within the orbital fat with a probe or knife, sweeping away from the orbit, while an assistant gently presses on the globe. Watch fat prolapse into the ethmoid and maxillary cavities. Avoid deep dissection near the medial rectus."
+  ],
+  [
+   "Optic canal exposure",
+   "For optic nerve decompression, remove the posterior lamina for about 1 to 1.5 cm in front of the sphenoid face, then follow the dense periorbita at the annulus of Zinn into the sphenoid. Clear the bone over the medial optic canal from the apex backward along the lateral sphenoid wall."
+  ],
+  [
+   "Drill the canal",
+   "Thin the optic strut and the medial canal wall with a coarse diamond burr, working laterally to medially with constant irrigation to avoid heat injury. Lift the thin shell away from the nerve inferomedially with a fine elevator and remove it, decompressing about half the circumference of the canal."
+  ],
+  [
+   "Nerve sheath",
+   "Open the sheath only when needed, such as for tumor within the sheath. Incise superomedially, away from the usual ophthalmic artery course, accepting a higher risk of CSF leak. In traumatic neuropathy, sheath incision has not been shown better than bone removal alone."
+  ],
+  [
+   "Finish without packing",
+   "Redrape preserved maxillary mucosa. Check hemostasis but avoid nasal packing, which presses on the unprotected orbit and traps blood. Ask anesthesia to avoid mask ventilation at extubation to prevent orbital emphysema."
+  ]
+ ],
+ "exit_check": [
+  "Pupils and globe tension checked before leaving the room",
+  "Maxillary, ethmoid, and frontal outflow left open around the prolapsed fat",
+  "No nasal packing placed; no CSF leak seen"
+ ],
+ "postop": [
+  "Serial visual acuity and pupil checks; corticosteroid taper for optic neuropathy cases",
+  "No nose blowing or straining and no positive-pressure mask ventilation for about 2 weeks",
+  "Saline rinses and endoscopic debridement at follow-up",
+  "Return to the OR for endoscopic control of bleeding rather than bedside packing",
+  "Strabismus and eyelid surgery deferred until proptosis is stable"
+ ],
+ "complications": {
+  "early": [
+   "Retrobulbar hematoma with vision loss, requiring lateral canthotomy and cantholysis",
+   "Worsening optic neuropathy from swelling",
+   "CSF leak",
+   "Epistaxis",
+   "Orbital emphysema"
+  ],
+  "late": [
+   "New or worse diplopia",
+   "Maxillary or frontal sinusitis or mucocele from obstruction by orbital fat, sometimes years later",
+   "Infraorbital numbness",
+   "Under-correction of proptosis"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the sequence of surgery in thyroid eye disease?",
+   "Orbital decompression first, then strabismus surgery, then eyelid surgery, because each step changes the next. Elective decompression waits until the disease is inactive for about 6 months; compressive optic neuropathy is treated urgently."
+  ],
+  [
+   "How can new-onset diplopia be reduced after orbital decompression?",
+   "Preserve the inferomedial strut, leave a horizontal strip of periorbita over the medial rectus, or use balanced medial and lateral wall decompression."
+  ],
+  [
+   "What is the evidence for treating indirect traumatic optic neuropathy?",
+   "The International Optic Nerve Trauma Study found no clear benefit of steroids or decompression over observation, and high-dose steroids increased mortality in head injury (CRASH). Treatment is individualized; decompression is considered for bony impingement or worsening vision."
+  ],
+  [
+   "Why avoid nasal packing after decompression?",
+   "The orbit is no longer protected by bone, so packing presses directly on the orbital contents and can trap blood behind the globe. Bleeding is better controlled endoscopically in the OR."
+  ],
+  [
+   "What anatomic variant puts the optic nerve at risk in ethmoid surgery?",
+   "An Onodi (sphenoethmoidal) cell, in which the optic nerve, and sometimes the carotid, runs in the lateral wall of a posterior ethmoid cell above the sphenoid."
+  ]
+ ],
+ "source_basis": [
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 49 Sino-Orbital Interface (endoscopic medial and inferior orbital decompression; endoscopic optic nerve decompression).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 1 Allergy and Rhinology (extended endoscopic sinus surgery indications); Ch 3 Endocrine (Graves disease, management of exophthalmos and optic neuropathy); Ch 10 Head and Neck Trauma (traumatic optic neuropathy).",
+  "Levin LA et al. The treatment of traumatic optic neuropathy: the International Optic Nerve Trauma Study. Ophthalmology 1999;106:1268-1277."
+ ]
+}

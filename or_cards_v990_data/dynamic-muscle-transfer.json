@@ -1,0 +1,134 @@
+{
+ "slug": "dynamic-muscle-transfer",
+ "title": "Temporalis Tendon Transfer / Free Gracilis Smile Reanimation",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Facial Nerve Reanimation",
+ "source_label": "Pasha 6e (Otology and Neurotology and Reconstructive and Facial Plastic Surgery chapters) and Cummings 7e (Rehabilitation of Facial Paralysis chapter)",
+ "indications": "Dynamic smile reanimation when the facial muscles can no longer be reinnervated: long-standing paralysis (generally beyond about 18 to 24 months, or loss of motor end plates on EMG or biopsy), resected or absent facial muscles, and congenital paralysis such as Moebius syndrome. Free gracilis transfer is the standard for dynamic smile; it is innervated either by a cross-face nerve graft (CFNG) from the normal side for spontaneous smile, usually in two stages, or by the ipsilateral masseteric nerve in one stage for a stronger, faster but volitional (bite-triggered) smile; dual innervation is also used. Temporalis tendon transfer (orthodromic) is a single-stage regional option for older patients, poor microvascular candidates, or those wanting faster results. Both are distinct from primary nerve repair or nerve transfer, which require viable facial muscle.",
+ "setup": [
+  "Assess smile vector, commissure excursion and dental show on the normal side; document with video. EMG confirms absent reinnervation potential",
+  "Two teams for gracilis (face and thigh); general anesthesia with nasotracheal or oral tube secured to the normal side; no long-acting paralysis after induction (nerve stimulator needed)",
+  "Microscope, microvascular instruments, 9-0 and 10-0 nylon, coupler, nerve stimulator",
+  "Doppler; facial artery and vein identified as recipient vessels",
+  "For temporalis: plan transoral or nasolabial fold approach, coronoidotomy tools, fascia lata if extension is needed",
+  "Mark contralateral smile vector, modiolus position, and nasolabial fold on the paralyzed side before incision"
+ ],
+ "landmarks": [
+  "Modiolus and oral commissure; nasolabial fold",
+  "Parotid-masseteric fascia and buccal fat pad",
+  "Masseteric nerve in the subzygomatic triangle (roughly 3 cm anterior to the tragus and 1 cm below the zygomatic arch, deep to the masseter fascia)",
+  "Facial artery and vein at the anterior masseter border",
+  "Gracilis on the medial thigh, posterior to adductor longus; dominant pedicle entering about 8 to 10 cm below the pubic tubercle",
+  "Anterior branch of the obturator nerve to gracilis",
+  "Temporalis tendon inserting on the coronoid process"
+ ],
+ "danger": [
+  "Injury to remaining facial nerve branches or parotid duct during facial pocket dissection",
+  "Pedicle kinking or tension at inset leading to flap loss",
+  "Muscle set too loose (weak smile) or too bulky in the cheek",
+  "Wrong vector, producing an unnatural grimace",
+  "Temporalis overpull with mastication difficulty, or dehiscence of the tendon from the commissure",
+  "Facial hematoma compressing the pedicle"
+ ],
+ "steps": [
+  [
+   "Plan the vector and staging",
+   "Match the paralyzed-side vector to the normal smile, usually from the modiolus toward the zygoma or temporal region. Choose donor nerve: CFNG (stage one now, muscle transfer 6 to 9 months later once axons reach the graft end), masseteric nerve (single stage, movement at about 4 to 6 months), or both. Temporalis transfer is chosen when microsurgery is unsuitable."
+  ],
+  [
+   "CFNG stage (if used)",
+   "Through a normal-side preauricular or nasolabial approach, stimulate buccal and zygomatic branches and select a redundant branch that produces smile. Coapt a sural nerve graft to it and tunnel the graft across the upper lip to the paralyzed side, banking the distal end in the upper buccal sulcus or preauricular region for the second stage."
+  ],
+  [
+   "Facial exposure",
+   "Through a preauricular incision with a cervical extension, raise a skin flap superficial to the parotid-masseteric fascia toward the commissure and nasolabial fold. Create a pocket large enough for the muscle while protecting the parotid duct. Debulk excess buccal fat if needed for contour."
+  ],
+  [
+   "Prepare the modiolus anchor",
+   "Identify the modiolus and place strong anchoring sutures in the orbicularis oris of the upper lip, commissure and lower lip. Test pulls on these sutures in the vector chosen should create a smile shape similar to the normal side, which confirms the correct placement before the muscle arrives."
+  ],
+  [
+   "Prepare recipient vessels and nerve",
+   "Expose the facial artery and vein at the anterior border of the masseter. For masseteric innervation, find the nerve within the masseter in the subzygomatic triangle with a stimulator, dissect it distally for length and divide it. For CFNG, retrieve the banked graft end and confirm axonal growth by a Tinel sign or a biopsy of the end showing axons."
+  ],
+  [
+   "Harvest the gracilis",
+   "Through a medial thigh incision posterior to adductor longus, identify gracilis and its pedicle from the medial circumflex femoral or profunda system plus the anterior obturator nerve branch. Harvest a segment (often the anterior portion split lengthwise) sized to the upper lip elevators. Mark resting length with sutures before detachment. Keep its fascia for gliding."
+  ],
+  [
+   "Inset the muscle",
+   "Suture the distal end to the modiolus anchor sutures, then tension the proximal end and fix it to the deep temporal fascia or zygomatic periosteum at the marked resting length, so the sarcomeres can generate maximal force. Orient the pedicle toward the recipient vessels without kinking. Aim for slight overcorrection at rest."
+  ],
+  [
+   "Microvascular anastomosis and neurorrhaphy",
+   "Perform arterial and venous anastomoses to the facial vessels under the microscope. Coapt the obturator nerve branch to the masseteric nerve or CFNG end with epineurial sutures close to the muscle hilum, shortening reinnervation distance. Confirm flow and bleeding from the muscle."
+  ],
+  [
+   "Temporalis tendon transfer: approach",
+   "For the orthodromic transfer, use a nasolabial fold incision or an intraoral incision along the anterior ramus. Dissect through the buccal space to the coronoid process and expose the temporalis tendon insertion. Avoid injury to the buccal fat pad vessels and any remaining buccal branches."
+  ],
+  [
+   "Temporalis tendon transfer: release and inset",
+   "Perform a coronoidotomy to release the tendon with its bony attachment, or detach the tendon, then advance it to the modiolus and suture it to the orbicularis at the upper lip, commissure and lower lip. Set tension with overcorrection. Extend with fascia lata if length is short; lengthening temporalis myoplasty is an alternative."
+  ],
+  [
+   "Close and protect",
+   "Place a drain away from the pedicle. Close the facial skin flap in layers without compression over the pedicle and avoid tight dressings or ties around the neck. Close the thigh in layers. Mark the Doppler site for monitoring."
+  ]
+ ],
+ "exit_check": [
+  "Muscle viable with good arterial inflow and venous return; pedicle lies without tension or kink",
+  "Commissure slightly overcorrected at rest in the planned vector",
+  "No pressure on pedicle from drains, dressings or tube ties"
+ ],
+ "postop": [
+  "Free flap monitoring with Doppler and clinical checks; avoid pressure on the cheek",
+  "Soft diet, limited mouth opening and no chewing on that side for several weeks",
+  "Expect no movement for months: masseteric about 4 to 6 months, CFNG longer",
+  "Smile retraining with biofeedback: bite-to-smile for masseteric and temporalis, then work toward spontaneous use",
+  "Contralateral botulinum toxin or later revision for asymmetry or bulk"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma",
+   "Flap thrombosis and loss",
+   "Wound dehiscence or salivary leak",
+   "Thigh seroma"
+  ],
+  "late": [
+   "Poor or absent excursion",
+   "Excess bulk in the cheek needing debulking",
+   "Unnatural smile vector or overcorrection",
+   "Synkinesis or contraction with chewing (masseteric)",
+   "Temporalis or sling stretch with descent of the commissure"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why can't you do a nerve graft or hypoglossal-facial transfer for a paralysis of 5 years?",
+   "The facial muscles have atrophied and lost motor end plates after roughly 18 to 24 months, so reinnervated nerve has nothing to drive. New muscle must be brought in, by free muscle transfer or regional muscle transfer."
+  ],
+  [
+   "Compare masseteric and CFNG innervation for gracilis transfer.",
+   "Masseteric: single stage, faster (movement at about 4 to 6 months), stronger, reliable, but initially volitional (bite to smile). CFNG: two stages about 6 to 9 months apart, weaker and less reliable, but can give spontaneous emotional smile; favored in younger patients. Dual innervation combines both."
+  ],
+  [
+   "What are the gracilis neurovascular pedicle and the key inset principle?",
+   "Arterial supply from the adductor (medial circumflex femoral) branch arising from the profunda femoris, with two venae comitantes; motor nerve is the anterior branch of the obturator nerve. Inset at resting length (Blix curve) for maximal contraction, with slight overcorrection."
+  ],
+  [
+   "What is the advantage of the orthodromic temporalis tendon transfer over the classic Gillies turnover?",
+   "The tendon is moved from the coronoid to the modiolus, so the muscle stays in place, pulling in the same direction. There is no temporal hollowing or bulge over the zygomatic arch, and it is a single-stage procedure that works within weeks with bite-triggered smile."
+  ],
+  [
+   "Where do you find the masseteric nerve?",
+   "In the subzygomatic triangle, about 3 cm anterior to the tragus and 1 cm below the zygomatic arch, running obliquely within the masseter about 1.5 cm deep to the SMAS; confirm with a nerve stimulator."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 7, Otology and Neurotology: Facial Nerve Repair and Reanimation, static and dynamic procedures (p 435-436)",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8, Reconstructive and Facial Plastic Surgery: Microvascular Free Flaps, gracilis (p 458)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 174, Rehabilitation of Facial Paralysis: free muscle transfer, regional muscle transfer, midfacial reanimation"
+ ]
+}

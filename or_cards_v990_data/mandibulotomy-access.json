@@ -1,0 +1,142 @@
+{
+ "slug": "mandibulotomy-access",
+ "title": "Access Procedures: Lip Split, Mandibulotomy, Visor Flap, Lingual Release",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "headneck",
+ "linked_topic": "Base of Tongue SCC",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Exposure procedures used when transoral access cannot give safe margins or allow flap inset for advanced (T3 or T4) or posterior oral cavity, oropharyngeal and parapharyngeal tumors. Options: lip split alone or with a cheek flap (anterior oral cavity, large buccal tumors), lip split with paramedian mandibulotomy (posterolateral tongue, tongue base, lateral oropharynx, parapharyngeal space), visor flap (anterior segmental mandibulectomy, combined with mandibulotomy or lingual release to avoid a lip scar), lingual release or pull-through (posterior tongue and tongue base without an osteotomy, useful in a previously irradiated anterior mandible), and chin point osteotomy (lingual release that keeps the genial and digastric attachments). Choice weighs tumor site, dentition, prior radiation, need for mandibular resection and surgeon experience; examination under anesthesia and, where available, TORS assessment may avoid an access procedure altogether.",
+ "setup": [
+  "Contrast CT neck from skull base to mediastinum (or MRI plus CT mandible) and an orthopantomogram to judge dental roots, mandibular height and osteotomy site; examination under anesthesia and panendoscopy for posterior tumors.",
+  "Consent for possible lip split, mandibulotomy and bilateral neck incisions, with lip notching, numbness, malocclusion, nonunion, plate exposure and osteoradionecrosis risks.",
+  "Plan elective tracheostomy: posterior resections, bilateral neck dissections and free flaps risk airway edema, and bleeding at the tongue base is hard to reach without one.",
+  "Nasal intubation if the mouth must be closed into occlusion for plating; dental chart and extraction plan; 1.0 to 2.0 mm plating set, reciprocating saw and fine fissure burr.",
+  "Coordinate the order of tracheostomy, neck dissection, access, resection and reconstruction with the reconstructive team."
+ ],
+ "landmarks": [
+  "Vermilion border, white roll and philtrum",
+  "Mental foramen and nerve",
+  "Canine and lateral incisor or first premolar roots",
+  "Genial tubercles and anterior belly of digastric",
+  "Mylohyoid muscle",
+  "Lingual and hypoglossal nerves",
+  "Marginal mandibular nerve and facial vessels"
+ ],
+ "danger": [
+  "Mental nerve injury with lip and chin numbness",
+  "Tooth roots at the osteotomy line",
+  "Marginal mandibular nerve during flap elevation",
+  "Lingual and hypoglossal nerves during floor-of-mouth release",
+  "Malocclusion from unplated osteotomy",
+  "Lip notching from poor orbicularis alignment"
+ ],
+ "steps": [
+  [
+   "Start the mucosal cuts first",
+   "Before opening the lip or cutting bone, begin the anterior mucosal resection margins transorally under direct vision. Once the mandible is split and swung, the soft tissue tears easily and margins can be compromised; marking and starting them early protects the oncologic plan."
+  ],
+  [
+   "Visor flap",
+   "For a visor flap, make a mastoid-to-mastoid apron incision crossing the midline at or just below the hyoid, often the same incision as bilateral neck dissections. Raise the subplatysmal flap to the mandibular border, identify and lift the marginal mandibular nerves, ligate the facial vessels, and raise the cheek and chin subperiosteally while protecting the mental nerves."
+  ],
+  [
+   "Mark the lip split",
+   "For a lip split, mark a midline incision with a chevron or step at the vermilion and a Z or notch above the chin. Then continue as a chin contour incision or straight midline line down to the neck incision. Tattoo the vermilion border with methylene blue points before injection for precise realignment."
+  ],
+  [
+   "Divide the lip",
+   "Incise through skin, orbicularis and mucosa at slightly different levels so scars do not overlap. Control the labial arteries. Carry the chin incision through mentalis to bone and join it to the ipsilateral neck incision, which is raised subplatysmally with the marginal mandibular nerve lifted above the mandible."
+  ],
+  [
+   "Cheek flap option",
+   "For a large buccal tumor where a mandibulotomy would compromise margins, raise the lip split as a cheek flap laterally in the subcutaneous plane, superficial to the masseter, as far back as needed to clear the tumor. This gives wide exposure of the buccal mucosa and maxilla without dividing bone."
+  ],
+  [
+   "Choose and mark the osteotomy",
+   "Extract any teeth that need removal before cutting, since they come out more easily from an intact mandible. Place a paramedian osteotomy between the canine and lateral incisor or first premolar, through an extraction socket if needed, staying in front of the mental foramen. A straight or stepped cut both work."
+  ],
+  [
+   "Pre-plate the mandible",
+   "Limit subperiosteal stripping to the plate sites. Bend two four-hole miniplates in situ, one below the tooth roots and one at the lower border, and drill all screw holes with the mandible in occlusion. Remove the plates, label upper and lower, and only then complete the osteotomy."
+  ],
+  [
+   "Complete the osteotomy and release",
+   "Finish the bicortical cut with a reciprocating saw, then make the lingual floor-of-mouth incision before spreading the segments to avoid mucosal tearing, leaving a cuff of mucosa laterally for closure. Isolate the mylohyoid with a finger and divide it; preserve the lingual nerve where possible and swing the mandible laterally."
+  ],
+  [
+   "Lingual release",
+   "For a lingual release, after the visor flap and neck dissections, incise paralingually in the floor of mouth leaving mucosa for closure, extending posteriorly into the glossotonsillar sulcus on the involved side. Divide the genial muscles and anterior digastric from the symphysis and deliver the tongue into the neck for resection."
+  ],
+  [
+   "Chin point osteotomy",
+   "As a variation, cut a box osteotomy of the symphysis between the mental foramina, below the tooth apices, after pre-plating. Hinge the chin segment down with the genial and digastric attachments intact, then perform the floor-of-mouth release. Access is similar to a lingual release while preserving hyoid suspension."
+  ],
+  [
+   "Resect and inset the flap",
+   "Complete the resection with the mandible swung or the tongue delivered, checking margins by palpation and frozen section. Inset the posterior part of any free flap before closing the mandible, because the posterior pharyngeal and tongue base suture lines become hard to reach once the bone is plated."
+  ],
+  [
+   "Restore occlusion and fix",
+   "Return the mandible into occlusion and reapply the pre-bent plates into the predrilled holes. For lingual release, resuspend the genial and digastric muscles to the symphysis through drill holes or with long-lasting absorbable sutures so the hyoid and larynx keep their elevation for swallowing."
+  ],
+  [
+   "Layered closure",
+   "Close mucosa, muscle, subcutaneous tissue and skin in order. Realign the vermilion exactly at the tattoo marks and repair the orbicularis meticulously to prevent notching and dehiscence. Close the chin Z and neck incisions and place drains away from the plates."
+  ]
+ ],
+ "exit_check": [
+  "Occlusion checked against preoperative dental relationship with plates in the predrilled holes",
+  "Vermilion aligned at the tattoo marks with orbicularis repaired; free flap perfusion confirmed after closure",
+  "Tracheostomy secure and floor-of-mouth closure watertight"
+ ],
+ "postop": [
+  "Airway care via tracheostomy until edema settles; flap monitoring per protocol",
+  "Keep the lip scar coated with petrolatum to avoid desiccation",
+  "Orthopantomogram after decannulation to check plate position and exclude inadvertent fracture",
+  "Speech and swallow therapy, with attention to hyoid elevation after lingual release",
+  "Dental review before radiation; watch for plate exposure or osteoradionecrosis at the mandibulotomy"
+ ],
+ "complications": {
+  "early": [
+   "Floor-of-mouth wound breakdown and orocutaneous fistula",
+   "Malocclusion",
+   "Lip dehiscence",
+   "Hematoma or flap compromise",
+   "Airway obstruction without tracheostomy"
+  ],
+  "late": [
+   "Nonunion, plate exposure or osteoradionecrosis at the osteotomy",
+   "Lip notching and chin scar",
+   "Mental nerve numbness",
+   "Loss of adjacent teeth",
+   "Dysphagia from impaired hyoid suspension after lingual release"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why prefer a paramedian over a midline mandibulotomy?",
+   "A paramedian cut between the lateral incisor and canine passes where roots are farther apart, keeps the genial muscles and anterior digastric attached to one segment, preserves hyoid suspension, and lies outside the highest-dose radiation field for many oral and oropharyngeal cancers. Complication rates are otherwise similar."
+  ],
+  [
+   "Why place the osteotomy anterior to the mental foramen?",
+   "To preserve the inferior alveolar and mental nerves and avoid sensory loss of the lower lip and chin, and to keep the cut in thick symphyseal bone that fixes well with plates."
+  ],
+  [
+   "Why pre-plate before cutting?",
+   "Drilling and bending the plates with the mandible intact and in occlusion lets the segments be returned to their exact position, restoring occlusion and reducing malunion or nonunion."
+  ],
+  [
+   "How do functional outcomes compare between lip split mandibulotomy and lingual release?",
+   "Margin and recurrence rates are similar. Lingual release avoids a facial scar and an osteotomy, which helps in an irradiated anterior mandible, but it divides all hyomandibular muscles; some series show worse speech, swallowing and chewing unless the muscles are carefully resuspended."
+  ],
+  [
+   "What features of the lip split design reduce visible deformity?",
+   "A midline incision preserves lip sensation better than a lateral split; a chevron or step at the vermilion and a Z or contour incision at the chin break up the scar, and exact white roll and orbicularis realignment prevent notching."
+  ]
+ ],
+ "source_basis": [
+  "Breik O, Idle M, Martin T. Access Procedures: Visor Flap, Lip Split, Mandibulotomy, and Lingual Release. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 32.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, oral cavity, oropharyngeal and parapharyngeal surgical approaches (lip-splitting and mandibulotomy).",
+  "Devine JC, Rogers SN, McNally D, Brown JS, Vaughan ED. A comparison of aesthetic, functional and patient subjective outcomes following lip-split mandibulotomy and mandibular lingual releasing access procedures. Int J Oral Maxillofac Surg. 2001;30:199-204."
+ ]
+}

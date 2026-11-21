@@ -1,0 +1,132 @@
+{
+ "slug": "carotid-body-tumor",
+ "title": "Carotid Body Tumor Excision",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "headneck",
+ "linked_topic": "Carotid Body Paraganglioma",
+ "source_label": "Cummings 7e Neoplasms of the Neck and Pasha 6e",
+ "indications": "Surgical excision is the mainstay for carotid body paragangliomas, especially tumors under about 5 cm in younger, healthy patients, before growth raises cranial nerve and vascular risk. Shamblin I tumors are localized with minimal vessel attachment, II partially surround the vessels, and III encase the carotids. Observation suits small, slow-growing tumors in older or high-risk patients; radiotherapy suits poor surgical candidates or advanced lesions. With bilateral tumors, the priority is preserving at least one vagus and its laryngeal branches.",
+ "setup": [
+  "MRI and CT angiography for size, Shamblin grade, distance to the skull base and multifocality; consider DOTATATE PET",
+  "Plasma or urine metanephrines; if secreting, alpha blockade then beta blockade before surgery; offer germline (SDHx) testing",
+  "Discuss preoperative embolization (surgery 24 to 48 hours later) and balloon test occlusion for large Shamblin III tumors",
+  "Vascular surgeon as cosurgeon or immediately available; blood crossmatched; arterial line",
+  "Supine, shoulder roll, head turned away; prep and drape a thigh for saphenous vein if reconstruction is possible",
+  "Baseline laryngoscopy and cranial nerve examination documented"
+ ],
+ "landmarks": [
+  "Common carotid artery and bifurcation with the tumor splaying ICA and ECA (lyre sign)",
+  "Internal jugular vein and common facial vein",
+  "Vagus nerve posterior within the carotid sheath",
+  "Hypoglossal nerve crossing the ICA and ECA above the tumor; ansa cervicalis",
+  "Superior laryngeal nerve deep and medial to the bifurcation",
+  "Posterior belly of digastric marking the upper limit of easy exposure",
+  "Periadventitial plane between tumor and artery"
+ ],
+ "danger": [
+  "ICA injury, especially at the bifurcation, where tumor adherence is greatest",
+  "Vagus, hypoglossal and superior laryngeal nerves",
+  "Carotid sinus manipulation causing bradycardia and hypotension",
+  "Sympathetic chain (Horner syndrome) and marginal mandibular nerve",
+  "Unrecognized catecholamine secretion causing intraoperative hypertensive crisis",
+  "Bilateral excision causing baroreflex failure"
+ ],
+ "steps": [
+  [
+   "Time-out and team brief",
+   "Confirm functional status and blockade if secreting, embolization timing, balloon-test result, blood availability, vascular surgery presence and the plan for ICA repair. Tell anesthesia about expected carotid sinus reflexes and blood pressure swings. Avoid long-acting paralysis if nerve monitoring is used."
+  ],
+  [
+   "Incision and flaps",
+   "Make a transverse incision in a skin crease at about the level of the hyoid, or along the anterior border of the sternocleidomastoid, extendable toward the mastoid. Raise subplatysmal flaps, protect the marginal mandibular nerve, and retract the sternocleidomastoid posteriorly to open the carotid sheath."
+  ],
+  [
+   "Vein and proximal control",
+   "Identify the internal jugular vein and ligate the common facial vein to expose the bifurcation. Dissect the common carotid artery below the tumor and pass a vessel loop for proximal control. Identify the vagus nerve in the sheath and keep it in view throughout."
+  ],
+  [
+   "Find the nerves above",
+   "Identify the hypoglossal nerve as it crosses the ICA and ECA above the tumor, following the descendens hypoglossi up if helpful. Retract the posterior belly of digastric or divide it for high tumors. For lesions near the skull base, consider mandibular subluxation for distal exposure."
+  ],
+  [
+   "Distal control",
+   "Pass vessel loops around the ICA above the tumor and the ECA. Having proximal and distal control before any tumor dissection lets you clamp and repair quickly if the artery is entered. Note the distance from the upper pole to the skull base."
+  ],
+  [
+   "Enter the periadventitial plane",
+   "Start dissection on the caudal aspect of the tumor at the common carotid. Find the plane just outside the adventitia, between tumor and artery, and develop it with fine scissors and bipolar under loupe magnification. Staying in this plane protects the arterial wall and controls feeding vessels."
+  ],
+  [
+   "Work up the ECA side",
+   "Dissect along the ECA first, ligating tumor feeders such as branches of the ascending pharyngeal and superior thyroid. Ligating the ECA can help with a large tumor but preserving it is preferable. Large Shamblin II or III tumors can be divided to separate them from the ICA and ECA."
+  ],
+  [
+   "Release the ICA",
+   "Dissect the tumor off the ICA from below upward, protecting the vagus posteriorly and the superior laryngeal nerve medially. If the carotid sinus causes bradycardia, pause and infiltrate local anesthetic into the sinus. Keep dissection on the artery, not inside the tumor."
+  ],
+  [
+   "Bifurcation last",
+   "Leave the crotch of the bifurcation for last, because adherence is greatest and rupture is most likely there. Dissect it with fine bipolar under magnification. Deliver the tumor once freed, and send for histology."
+  ],
+  [
+   "Manage arterial injury",
+   "If the ICA is entered, clamp proximally and distally and repair primarily, with a patch, or with an interposition saphenous vein graft, with vascular surgery. Routine shunting is not advised; reserve it for ICA resection in patients who failed balloon occlusion. Ligation carries a high risk of stroke and death."
+  ],
+  [
+   "Check nerves and close",
+   "Stimulate or inspect the vagus, hypoglossal and superior laryngeal nerves. Irrigate, confirm hemostasis with normal blood pressure restored, place a suction drain, and close platysma and skin in layers. Record nerve findings and any vessel repair in the operative note for the postoperative team."
+  ]
+ ],
+ "exit_check": [
+  "ICA and CCA pulsatile with no hematoma; drain functioning",
+  "Vagus, hypoglossal and superior laryngeal nerves identified intact",
+  "Neurologic status assessed on emergence; blood pressure stable"
+ ],
+ "postop": [
+  "Neuro checks for stroke and cranial nerve examination (tongue, voice, swallow)",
+  "Monitor blood pressure and heart rate for lability or baroreflex failure, especially after bilateral surgery",
+  "Flexible laryngoscopy and swallow assessment if voice or swallowing changes",
+  "Genetic counseling if not already done; long-term imaging surveillance for recurrence and new paragangliomas"
+ ],
+ "complications": {
+  "early": [
+   "Stroke from ICA injury, clamping or embolization",
+   "Vagus or hypoglossal palsy; superior laryngeal nerve injury",
+   "Hematoma",
+   "Blood pressure lability, baroreflex failure",
+   "First-bite syndrome from sympathetic injury"
+  ],
+  "late": [
+   "Permanent cranial nerve deficit (dysphagia, aspiration, dysphonia)",
+   "Horner syndrome",
+   "Recurrence or metachronous paraganglioma",
+   "Metastatic disease (rare, more with SDHB)"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Describe the Shamblin classification.",
+   "Group I: small, localized tumor minimally attached to the carotids, removed with little difficulty. Group II: tumor adherent to or partially surrounding the vessels. Group III: tumor encasing the carotids, which may need vessel resection and reconstruction. Higher grade predicts more blood loss, cranial nerve injury and vascular repair."
+  ],
+  [
+   "What is the role of preoperative embolization?",
+   "It can reduce blood loss in larger tumors, but it has not been shown to reduce cranial nerve injury or transfusion and carries a stroke risk of up to about 2 percent. If used, operate 24 to 48 hours afterward, before revascularization and inflammation develop."
+  ],
+  [
+   "What workup is needed before excision?",
+   "Contrast MRI and CT angiography, catecholamine screening (plasma or urine metanephrines), germline testing for SDH and related mutations, and functional imaging such as DOTATATE PET when multifocal or metastatic disease is suspected. Secreting tumors need alpha then beta blockade."
+  ],
+  [
+   "What is baroreflex failure and when does it occur?",
+   "Loss of carotid sinus baroreceptor input, typically after bilateral carotid body tumor excision. It causes labile hypertension, tachycardia, headache and flushing beginning 24 to 72 hours after surgery. Acute management is with nitroprusside or labetalol; long term, clonidine."
+  ],
+  [
+   "How do you approach bilateral carotid body tumors?",
+   "Resect the smaller tumor first, preserving the vagus and hypoglossal nerves, then reassess before staging the larger side. If one vagus is already paralyzed, avoid surgery on the functioning side unless the tumor is growing, and consider radiotherapy or observation."
+  ]
+ ],
+ "source_basis": [
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 115 Neoplasms of the Neck (carotid body tumors: Shamblin classification, management, embolization, multicentric tumors, baroreflex failure).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 7 Otology and Neurotology (paraganglioma, pp. 393-394); Ch 6 Head and Neck Cancer (neck masses)."
+ ]
+}

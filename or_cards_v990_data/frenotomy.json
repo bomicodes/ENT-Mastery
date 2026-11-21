@@ -1,0 +1,133 @@
+{
+ "slug": "frenotomy",
+ "title": "Frenotomy / Frenuloplasty for Ankyloglossia",
+ "domain": "Pediatric Otolaryngology",
+ "or_family_v190": "pediatric",
+ "linked_topic": "Ankyloglossia / Maxillary Frenulum",
+ "source_label": "Pasha 6e Ch 9 and Cummings 7e Ch 207 (Ankyloglossia and Tight Maxillary Frenula)",
+ "indications": "Anterior ankyloglossia (Coryllos type I-II insertion near the tongue tip) causing documented breastfeeding difficulty in a neonate (maternal nipple pain or trauma, inability to maintain latch, poor weight gain) with restricted lift, cupping, or protrusion past the gum line; or, in an older child, a short frenulum that limits tip elevation and protrusion with articulation errors, a lower incisor diastema, or mechanical problems (licking lips, oral hygiene). Neonatal frenotomy is an office procedure; frenuloplasty with closure suits a thick fibrous band, posterior (type III-IV) tie, or older child under general anesthesia. Assess with a validated tool and a lactation consultant before cutting, and counsel that evidence for posterior tie release, lip-tie release, and speech benefit is limited.",
+ "setup": [
+  "Neonate: swaddled supine, assistant stabilizes head; oral 24% sucrose for analgesia, no topical lidocaine or benzocaine (FDA boxed warning: seizures, methemoglobinemia)",
+  "Older child: general anesthesia via mask or nasal/oral tube, shoulder roll, mouth gag or bite block",
+  "Grooved director or tongue elevator, fine iris or tenotomy scissors, gauze",
+  "Silk or Vicryl traction suture through the tongue tip for frenuloplasty",
+  "Bipolar or needle-tip cautery and 4-0 or 5-0 fast-absorbing chromic or Vicryl Rapide for closure"
+ ],
+ "landmarks": [
+  "Thin translucent anterior frenulum band",
+  "Tongue undersurface and its insertion point (type I-IV)",
+  "Sublingual caruncles and Wharton duct papillae at the frenulum base",
+  "Deep lingual (ranine) veins either side of midline",
+  "Genioglossus fibers deep to the fibrous band",
+  "Floor of mouth mucosa and lingual alveolar ridge"
+ ],
+ "danger": [
+  "Submandibular duct orifices at the base of the frenulum (obstruction, ranula, sialadenitis)",
+  "Deep lingual veins and lingual artery branches (bleeding)",
+  "Cutting into genioglossus muscle in a neonate",
+  "Airway compromise from tongue swelling or posterior retraction of a released tongue in neuro-impaired infants",
+  "Overtreatment of normal or posterior frenula without functional indication"
+ ],
+ "steps": [
+  [
+   "Confirm the indication",
+   "Review the feeding history, weight curve, and maternal symptoms with the lactation assessment. Examine lift, lateralization, cupping, and protrusion, and record the insertion type. Older children: measure tip protrusion and the interincisal distance with the tongue tip touching the upper incisors. Discuss benefits, limited evidence, and bleeding risk with parents."
+  ],
+  [
+   "Position and analgesia",
+   "Swaddle the neonate and have an assistant hold the head steady in midline. Give 24% oral sucrose for comfort; avoid topical anesthetic gels. For an older child, induce general anesthesia, place a shoulder roll and gag, and pass a traction suture through the tongue tip to lift it toward the palate."
+  ],
+  [
+   "Expose and tent the frenulum",
+   "Slip the grooved director or a tongue elevator under the tongue on either side of the frenulum and push the tongue up and back. This tents the band, shows its thin anterior portion, and pushes the floor of mouth and duct papillae down and away from the cut line."
+  ],
+  [
+   "Identify the duct papillae",
+   "Before cutting, look at the floor of mouth and identify both sublingual caruncles where the Wharton ducts open lateral to the frenulum base. Note the deep lingual veins under the tongue. The cut must stay close to the tongue undersurface, above these structures, never down at the floor of mouth."
+  ],
+  [
+   "Divide the band (frenotomy)",
+   "With fine scissors, divide the thin avascular frenulum in one or two snips close to the tongue, extending back until the band is released but stopping before muscle. A diamond-shaped defect opens as the tongue lifts. In a neonate there is only a few drops of bleeding."
+  ],
+  [
+   "Hemostasis and immediate feed",
+   "Apply gentle gauze pressure for a minute or two. Hand the infant straight to the mother for breastfeeding, which comforts the baby, provides pressure, and lets the lactation consultant reassess latch before leaving. Persistent oozing is managed with more pressure or silver nitrate; true hemorrhage is rare."
+  ],
+  [
+   "Frenuloplasty: release the band",
+   "Under general anesthesia with the tongue on traction, divide the fibrous frenulum horizontally between the tongue and floor of mouth, then bluntly release residual fibrous bands down to genioglossus fascia until the tip elevates fully to the palate. Use bipolar cautery for vessels instead of broad monopolar cautery near the ducts."
+  ],
+  [
+   "Check release and duct safety",
+   "Confirm the tongue now protrudes past the lower lip, elevates to the upper incisors with mouth open, and lateralizes freely. Re-inspect the caruncles; expressing the submandibular glands should still deliver saliva from both papillae. Gently cannulate with a lacrimal probe if there is doubt."
+  ],
+  [
+   "Close horizontal-to-vertical",
+   "Pull the tongue tip upward so the diamond-shaped defect becomes a vertical line, then close it longitudinally with interrupted 4-0 or 5-0 absorbable sutures, placing them shallowly to avoid catching the ducts. This lengthens the ventral tongue and limits scar contracture and reattachment."
+  ],
+  [
+   "Optional Z-plasty",
+   "For a thick band or recurrence after prior frenotomy, design a Z-plasty along the vertical line with 60-degree limbs, transpose the triangular flaps, and close with interrupted absorbable sutures. The transposition gains additional length and avoids a straight longitudinal scar that can contract."
+  ],
+  [
+   "Maxillary lip-tie (if indicated)",
+   "Only for documented functional concern, evert the upper lip, divide the tight maxillary frenulum near its lip attachment, and avoid the interdental papilla and periosteum unless orthodontic diastema closure is planned. Self-limited bleeding is expected; laser and cold techniques have similar outcomes."
+  ],
+  [
+   "Final check and hand-off",
+   "Remove the traction suture, confirm hemostasis and a patent airway, and inspect the tongue for swelling. Brief the family on stretching or massage, feeding immediately, and warning signs of bleeding or floor-of-mouth swelling."
+  ]
+ ],
+ "exit_check": [
+  "Tongue tip elevates and protrudes freely; no residual band",
+  "Dry wound with both Wharton duct papillae intact and draining",
+  "No floor-of-mouth hematoma or tongue swelling threatening the airway"
+ ],
+ "postop": [
+  "Neonates breastfeed immediately; older children resume diet the same day",
+  "Acetaminophen for pain; avoid topical anesthetic gels in infants",
+  "Gentle tongue range-of-motion exercises or wound stretching per surgeon preference to limit reattachment",
+  "Lactation follow-up within days; speech therapy for articulation concerns in older children"
+ ],
+ "complications": {
+  "early": [
+   "Bleeding (usually minor; rare significant hemorrhage)",
+   "Submandibular duct injury with gland swelling",
+   "Tongue or floor-of-mouth edema, rarely airway compromise",
+   "Feeding aversion or pain"
+  ],
+  "late": [
+   "Reattachment or scar band with recurrent restriction",
+   "Ranula or sialocele from duct injury",
+   "Persistent feeding or speech problems despite release",
+   "Dissatisfaction from overtreatment of posterior or lip ties"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What structure is at greatest risk during frenotomy and how do you protect it?",
+   "The submandibular (Wharton) duct papillae at the frenulum base. Tent the frenulum with a grooved director, cut close to the tongue undersurface, and confirm saliva flow from both papillae afterward."
+  ],
+  [
+   "Which analgesic should be avoided in a neonatal frenotomy and what do you use instead?",
+   "Topical lidocaine and benzocaine carry an FDA warning for seizures and methemoglobinemia in infants. Use 24% oral sucrose, swaddling, and immediate breastfeeding."
+  ],
+  [
+   "What is the Coryllos classification?",
+   "Type I insertion at the tip, type II slightly behind the tip (both anterior), type III mid to posterior undersurface, type IV submucosal broad posterior restriction (posterior tie)."
+  ],
+  [
+   "What outcome is best supported by evidence after neonatal frenotomy?",
+   "Reduction in maternal nipple pain and improved latch; evidence for improved weight gain, speech, posterior tie release, and lip-tie release is weak, per the 2020 AAO-HNS clinical consensus statement."
+  ],
+  [
+   "Why close a frenuloplasty horizontal-to-vertical?",
+   "Closing the diamond defect longitudinally lengthens the ventral tongue and reduces contracture and reattachment compared with leaving a transverse raw surface."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RA, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Ch 9 Pediatric Otolaryngology (oral examination, p 530); Ch 5 (Wharton duct anatomy)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Ch 207 Ankyloglossia and Tight Maxillary Frenula",
+  "Messner AH et al. Clinical Consensus Statement: Ankyloglossia in Children. Otolaryngol Head Neck Surg 2020"
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "slug": "facial-nerve-decompression",
+ "title": "Facial Nerve Decompression (Transmastoid / Middle Fossa)",
+ "domain": "Otology / Neurotology",
+ "or_family_v190": "otology",
+ "linked_topic": "Facial Paralysis",
+ "source_label": "Pasha 6e and Cummings 7e (Intratemporal Facial Nerve Surgery; Temporal Bone Trauma)",
+ "indications": "Temporal bone trauma with immediate complete paralysis and ENoG degeneration above 90% within the first 6-14 days, or CT showing bony impingement or transection, especially at the perigeniculate region. Idiopathic (Bell) palsy with complete paralysis, more than 90% ENoG degeneration within 14 days of onset, and no voluntary motor units on EMG is a controversial indication requiring middle fossa decompression of the labyrinthine segment and meatal foramen. Decompression for Ramsay Hunt or after iatrogenic injury is individualized. Approach depends on site and hearing: transmastoid for mastoid and tympanic segments, middle fossa for labyrinthine/geniculate with hearing preserved, translabyrinthine when hearing is already lost.",
+ "setup": [
+  "Thin-cut CT temporal bone; MRI with gadolinium if neoplasm is in the differential; serial ENoG from day 3 and voluntary EMG",
+  "Audiogram to choose the approach (hearing-preserving middle fossa versus translabyrinthine)",
+  "General anesthesia without long-acting paralytics, facial nerve monitoring, otologic drill, diamond burrs, microscope",
+  "For middle fossa: supine with head turned, surgeon at head of bed, Mayfield optional, middle fossa retractor (House-Urban), mannitol/lumbar drain per team",
+  "Neurotology team with neurosurgery available; nerve graft donor site (great auricular or sural) prepped in case of transection"
+ ],
+ "landmarks": [
+  "Lateral semicircular canal and short process of incus (transmastoid)",
+  "Digastric ridge and stylomastoid foramen",
+  "Cog and cochleariform process (tympanic segment)",
+  "Arcuate eminence and greater superficial petrosal nerve (middle fossa)",
+  "Geniculate ganglion and labyrinthine segment",
+  "Meatal foramen at the fundus of the IAC (narrowest point, about 0.68 mm)"
+ ],
+ "danger": [
+  "Cochlea anteromedial to the labyrinthine segment and geniculate",
+  "Superior semicircular canal under the arcuate eminence",
+  "Middle meningeal artery at foramen spinosum and GSPN traction injury",
+  "Temporal lobe retraction injury",
+  "Ossicular chain during tympanic segment exposure"
+ ],
+ "steps": [
+  [
+   "Confirm timing and site",
+   "Confirm complete paralysis, ENoG degeneration greater than 90% and absent voluntary EMG potentials, ideally within 2 weeks of onset. Localize the injury on CT; trauma injuries are most often perigeniculate, while Bell palsy edema is thought to compress at the meatal foramen."
+  ],
+  [
+   "Transmastoid exposure",
+   "For mastoid and tympanic segment injuries, perform a complete mastoidectomy, identify the lateral canal and incus, thin the posterior canal wall, and open the facial recess. Skeletonize the nerve from the second genu to the stylomastoid foramen."
+  ],
+  [
+   "Tympanic segment access",
+   "To reach the tympanic segment and geniculate through the mastoid, the incus may be removed and later replaced, allowing exposure from the cochleariform process to the second genu. Remove bone with diamond burrs and irrigation, leaving a thin eggshell lifted with picks."
+  ],
+  [
+   "Middle fossa craniotomy",
+   "For the labyrinthine segment, make a preauricular temporal incision, split temporalis, and create a craniotomy about 4 x 4 cm, two-thirds anterior and one-third posterior to the external canal root. Elevate dura from the floor posterior to anterior."
+  ],
+  [
+   "Middle fossa landmarks",
+   "Identify the arcuate eminence and the GSPN emerging from the facial hiatus. Avoid traction on the GSPN, which tugs the geniculate. The IAC lies along the bisector of the angle between the superior canal and GSPN (meatal plane), or is found by following the GSPN back."
+  ],
+  [
+   "Expose the IAC and labyrinthine segment",
+   "Drill over the IAC medially where it is safest, then follow laterally to the fundus, identifying the vertical crest (Bill bar). Decompress the labyrinthine segment and geniculate ganglion along their course, mindful of the cochlea anteriorly and superior canal posteriorly."
+  ],
+  [
+   "Open the sheath when indicated",
+   "Many surgeons incise the epineurium along edematous segments in Bell palsy to complete decompression, taking care not to injure fascicles. In trauma, remove bone spicules, evacuate any intraneural or perineural hematoma, and assess continuity of the nerve under high magnification."
+  ],
+  [
+   "Repair if transected",
+   "For a clean transection, perform end-to-end neurorrhaphy if tension-free; otherwise interpose a cable graft from the great auricular or sural nerve. Rerouting can gain length. Coapt with a few fine sutures or fibrin glue within the fallopian canal."
+  ],
+  [
+   "Seal and close",
+   "In middle fossa cases, replace the bone flap, repair any dural tears, and seal the floor with fascia if CSF is encountered. In transmastoid cases, replace the incus if removed or reconstruct the chain, and close in layers."
+  ],
+  [
+   "Neurologic check",
+   "At emergence, observe for seizures, hemiparesis or speech difficulty after temporal lobe retraction; ensure no CSF otorrhea or rhinorrhea. Document the segments decompressed and any repair performed for prognostic counseling."
+  ]
+ ],
+ "exit_check": [
+  "Entire involved segment decompressed including meatal foramen for Bell palsy",
+  "Cochlea, superior canal and ossicular chain intact (or chain reconstructed)",
+  "Dura intact or repaired; no CSF leak"
+ ],
+ "postop": [
+  "Neurologic checks overnight after middle fossa craniotomy",
+  "Eye protection with lubrication, taping and moisture chamber until closure returns",
+  "Monitor for CSF leak and hearing changes; postoperative audiogram",
+  "Facial rehabilitation and long-term House-Brackmann tracking; recovery may take months after grafting"
+ ],
+ "complications": {
+  "early": [
+   "Sensorineural hearing loss or vertigo",
+   "CSF leak",
+   "Temporal lobe edema, seizures or aphasia",
+   "Epidural hematoma"
+  ],
+  "late": [
+   "Incomplete facial recovery or synkinesis",
+   "Conductive hearing loss",
+   "Persistent dry eye or corneal exposure",
+   "Delayed CSF leak or encephalocele"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What are the indications for decompression in Bell palsy?",
+   "Complete paralysis, ENoG degeneration greater than 90% within 14 days of onset, and no voluntary motor unit potentials on EMG. Benefit is most supported within 2 weeks; it remains controversial and requires middle fossa exposure of the labyrinthine segment."
+  ],
+  [
+   "Why middle fossa for Bell palsy?",
+   "The meatal foramen at the start of the labyrinthine segment is the narrowest part of the fallopian canal and the presumed site of entrapment; it cannot be reached through the mastoid without sacrificing hearing."
+  ],
+  [
+   "When is ENoG useful?",
+   "From about day 3 until about day 21 after complete paralysis, once Wallerian degeneration progresses. Before 72 hours it can be falsely reassuring."
+  ],
+  [
+   "Most common site of injury in temporal bone fractures?",
+   "The perigeniculate region including the labyrinthine segment and geniculate; otic capsule-violating fractures carry the highest facial nerve injury rates."
+  ],
+  [
+   "How do you find the IAC from the middle fossa?",
+   "Follow the GSPN back to the geniculate, or bisect the angle between the arcuate eminence (superior canal) and the GSPN; drill medially first where the IAC is farther from the cochlea and superior canal."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RS, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 7 (Facial Nerve Disorders: Bell palsy surgical decompression)",
+  "Pasha 6e Chapter 10, Trauma (Temporal Bone Fractures: facial nerve injury)",
+  "Flint PW et al. Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 173, Intratemporal Facial Nerve Surgery",
+  "Cummings 7e Chapter 147, Management of Temporal Bone Trauma; Chapter 171, Tests of Facial Nerve Function",
+  "Baugh RF et al. Clinical Practice Guideline: Bell's Palsy. Otolaryngol Head Neck Surg 2013;149(3 Suppl):S1-S27"
+ ]
+}

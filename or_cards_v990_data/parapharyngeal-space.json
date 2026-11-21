@@ -1,0 +1,132 @@
+{
+ "slug": "parapharyngeal-space",
+ "title": "Parapharyngeal Space Tumor Excision",
+ "domain": "Head & Neck",
+ "or_family_v190": "headneck",
+ "linked_topic": "Parapharyngeal Space Tumor",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Excision of primary parapharyngeal space (PPS) tumors, about 80% of which are benign. Prestyloid lesions are mostly salivary (pleomorphic adenoma from the deep parotid lobe or minor salivary rests) and displace the PPS fat posteromedially; poststyloid lesions are mostly neurogenic (vagal or sympathetic schwannoma) or paraganglioma (vagale, extension of carotid body or jugular tumors) and displace the fat anteriorly while pushing the internal carotid artery forward. Approach is chosen by compartment, size, vascularity and pathology: transcervical for most, transparotid-transcervical for deep-lobe parotid or high tumors, mandibulotomy for large, malignant, recurrent or highly vascular lesions needing carotid control, transoral or robotic only in selected prestyloid cases, and lateral skull base approaches for jugular foramen or intracranial extension. Observation or radiation suits some slow-growing poststyloid neural tumors in older patients, where surgery would cause predictable cranial nerve deficits.",
+ "setup": [
+  "MRI with contrast (and CT for skull base and mandible) to place the lesion in the prestyloid or poststyloid compartment by fat and carotid displacement, and to look for flow voids (salt-and-pepper) suggesting paraganglioma.",
+  "Image-guided or transoral fine-needle aspiration; avoid open or transoral incisional biopsy, which risks bleeding and seeding of pleomorphic adenoma. Urine or plasma metanephrines for suspected paraganglioma, with angiography and embolization within 24 to 48 hours of surgery for highly vascular tumors.",
+  "Document baseline vocal fold, palate, tongue and shoulder function and Horner signs; counsel about first-bite syndrome, vagal or sympathetic deficit and possible facial nerve weakness.",
+  "Supine, shoulder roll, head turned away; nasal intubation keeps the mouth closed, widening the space between the mandibular ramus and mastoid; facial nerve and consider vagal (endotracheal tube) monitoring.",
+  "Prepare for a Blair extension, parotidectomy, mandibulotomy plates and vascular control; blood available for vascular lesions."
+ ],
+ "landmarks": [
+  "Posterior belly of digastric",
+  "Stylomandibular ligament and styloid process",
+  "Internal and external carotid arteries",
+  "Internal jugular vein",
+  "Hypoglossal, vagus, spinal accessory and glossopharyngeal nerves",
+  "Facial nerve trunk and marginal mandibular branch",
+  "Medial pterygoid muscle"
+ ],
+ "danger": [
+  "Internal carotid artery deep to the styloid and displaced by poststyloid tumors",
+  "Vagus, hypoglossal and glossopharyngeal nerves",
+  "Cervical sympathetic chain (Horner syndrome, first-bite syndrome)",
+  "Facial nerve and its marginal branch with mandibular retraction",
+  "Tumor capsule rupture and pleomorphic adenoma spillage",
+  "Pharyngeal mucosa entry"
+ ],
+ "steps": [
+  [
+   "Incision and flaps",
+   "Make a transverse incision in a skin crease two fingerbreadths below the mandible, designed to extend into a modified Blair incision if parotidectomy is needed. Raise subplatysmal flaps superiorly, identifying and protecting the marginal mandibular branch of the facial nerve at or below the mandibular border."
+  ],
+  [
+   "Skeletonize the posterior digastric",
+   "Retract the sternocleidomastoid posteriorly and expose the posterior belly of digastric from its tendon to the mastoid. This muscle is the key landmark: the external carotid, internal carotid, internal jugular vein, and the hypoglossal, vagus and accessory nerves all lie deep or inferior to it."
+  ],
+  [
+   "Control the great vessels",
+   "Identify the common, internal and external carotid arteries and the internal jugular vein, and loop them. Trace the internal carotid as far superiorly toward the skull base as is safe, so it can be mobilized away from the tumor. Identify the hypoglossal and vagus nerves before deeper work."
+  ],
+  [
+   "Widen the window",
+   "Retract the mandibular angle anteriorly without stretching the facial nerve. Divide the stylomandibular ligament to let the mandible swing forward. Divide the external carotid branches, posterior digastric or stylohyoid if they limit access, and remove the submandibular gland for large tumors to open the space."
+  ],
+  [
+   "Prestyloid tumor: transcervical delivery",
+   "Follow the medial pterygoid muscle upward to the tumor. Dissect along the capsule with gentle blunt technique, using a clamp on surrounding fascia for traction and epinephrine-soaked gauze or peanuts to separate the tumor from PPS fat. Work circumferentially from place to place, avoiding vigorous blind finger dissection."
+  ],
+  [
+   "Transparotid extension",
+   "For deep-lobe parotid or high tumors near the skull base, extend to a modified Blair incision and perform a superficial parotidectomy, mobilizing the facial nerve completely off the deep lobe. Divide the external carotid branches and retromandibular vein, then deliver the tumor between or below the nerve branches without capsular rupture."
+  ],
+  [
+   "Poststyloid tumor: identify the nerve of origin",
+   "For schwannoma, find the nerve of origin (vagus or sympathetic chain). Consider intracapsular enucleation along the fascicles, preserving as many functioning fibers as possible, rather than segmental resection. Remove the styloid process with bone cutters when it lies lateral to the tumor, guarding the internal carotid immediately deep to it."
+  ],
+  [
+   "Vascular tumors and paraganglioma",
+   "After embolization, ligate feeding vessels early, especially the ascending pharyngeal artery. Dissect in the subadventitial plane off the internal carotid, keeping proximal and distal control. Anticipate vagal sacrifice with vagal paraganglioma and prepare the patient for medialization."
+  ],
+  [
+   "Mandibulotomy when needed",
+   "For large, malignant, recurrent or vascular tumors needing high carotid control, add a lip split or visor flap with a pre-plated paramedian mandibulotomy. Incise the floor of mouth leaving a mucosal cuff, release the mylohyoid, preserve the lingual nerve, divide the superior constrictor along the anterior tonsillar pillar and swing the mandible laterally."
+  ],
+  [
+   "Selected transoral or robotic excision",
+   "Reserve transoral robotic excision for well-defined prestyloid tumors without great vessel encasement in experienced centers. Incise the lateral pharyngeal wall over the bulge, dissect bluntly along the capsule within the PPS fat, and close the pharyngeal mucosa. Convert to a cervical approach for bleeding or capsule concerns."
+  ],
+  [
+   "Check the bed and close",
+   "After delivery, inspect the bed for bleeding along the skull base and vessels, irrigate, and confirm nerve integrity with stimulation. Repair any pharyngeal tear in layers. Reattach divided muscles if possible, place a suction drain, and close the platysma and skin in layers."
+  ]
+ ],
+ "exit_check": [
+  "Tumor removed intact with capsule; any spillage noted and irrigated",
+  "Hemostasis along the skull base and carotid; no pharyngeal leak",
+  "Facial, vagal, hypoglossal and accessory nerves stimulated and documented"
+ ],
+ "postop": [
+  "Airway watch for hematoma and pharyngeal edema, with a low threshold for return to theater for neck swelling",
+  "Bedside swallow and voice check; early laryngoscopy if vagal injury suspected, with injection medialization for aspiration",
+  "Assess for Horner syndrome and counsel on first-bite syndrome; botulinum toxin to the parotid helps persistent cases",
+  "Drain removal when output is low; review pathology and long-term MRI follow-up for pleomorphic adenoma or incompletely removed neural tumors"
+ ],
+ "complications": {
+  "early": [
+   "Hemorrhage or hematoma with airway compromise",
+   "Vagal, hypoglossal or glossopharyngeal palsy with dysphagia and aspiration",
+   "Facial nerve weakness, especially marginal",
+   "Horner syndrome",
+   "Pharyngeal fistula after mucosal entry"
+  ],
+  "late": [
+   "First-bite syndrome after sympathetic injury",
+   "Trismus",
+   "Recurrent pleomorphic adenoma after spillage",
+   "Malocclusion or nonunion after mandibulotomy",
+   "Carotid injury or pseudoaneurysm (rare)"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How do you tell prestyloid from poststyloid PPS tumors on imaging?",
+   "Prestyloid tumors displace the PPS fat posteromedially and the carotid posteriorly, often with a fat plane from the deep parotid (or a dumbbell through the stylomandibular tunnel). Poststyloid tumors push the fat anterolaterally and the internal carotid anteriorly; flow voids suggest paraganglioma."
+  ],
+  [
+   "Why avoid transoral biopsy or excision of a PPS mass in general?",
+   "Limited exposure risks tumor rupture and seeding of pleomorphic adenoma, and the lack of vascular control risks carotid or vascular tumor hemorrhage. Imaging-guided fine-needle aspiration is preferred; transoral robotic excision is reserved for selected prestyloid tumors."
+  ],
+  [
+   "What is first-bite syndrome?",
+   "Severe cramping parotid pain with the first bites of each meal after loss of sympathetic innervation to the parotid (sympathetic chain or ECA dissection) with denervation hypersensitivity of myoepithelial cells to parasympathetic input. It tends to improve with time; botulinum toxin to the parotid helps."
+  ],
+  [
+   "Which lesions displace the carotid in which direction?",
+   "Vagal schwannoma and vagal paraganglioma displace the internal carotid anteromedially and separate it from the jugular vein; carotid body tumors splay the internal and external carotids; sympathetic schwannoma tends to push both vessels anteriorly without separating them."
+  ],
+  [
+   "When do you add a mandibulotomy?",
+   "For large, malignant, recurrent or highly vascular tumors, especially high poststyloid tumors that need control of the internal carotid up to the skull base, when transcervical and transparotid exposure would leave the surgeon working blind."
+  ]
+ ],
+ "source_basis": [
+  "Rijken JA, Palme CE, Leemans CR. Parapharyngeal Space Tumour Excision. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 22.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, Parapharyngeal Space Tumors: anatomy, compartments, tumor types and surgical approaches (p 327-329)."
+ ]
+}

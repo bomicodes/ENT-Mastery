@@ -1,0 +1,136 @@
+{
+ "slug": "jna-resection",
+ "title": "Juvenile Nasopharyngeal Angiofibroma Resection",
+ "domain": "Rhinology",
+ "or_family_v190": "skull_base",
+ "linked_topic": "Juvenile Nasopharyngeal Angiofibroma",
+ "source_label": "Atlas of Endoscopic Sinus and Skull Base Surgery 2e (Ch 24), Pasha 6e and Cummings 7e",
+ "indications": "Adolescent male with unilateral nasal obstruction and recurrent epistaxis and a contrast-enhancing mass centered on the sphenopalatine foramen and pterygopalatine fossa (anterior bowing of the posterior maxillary wall, widened vidian canal). Diagnosis is made on imaging; biopsy is avoided. Surgery is first-line. Andrews stage I, II, and selected IIIa tumors are resected endoscopically; extensive lateral or intracranial disease may need combined open approaches, and radiation is reserved for unresectable or recurrent disease with cavernous sinus or optic involvement.",
+ "setup": [
+  "Angiography with embolization of the feeding vessels (distal maxillary, ascending pharyngeal, accessory meningeal, vidian) within 24 to 48 hours before surgery",
+  "Two large-bore IVs, arterial line, type and crossmatch with blood on hold; consider cell salvage",
+  "Image guidance loaded with contrast CT and MRI; controlled hypotension with total IV anesthesia",
+  "Endoscopes (0, 30, 45 degree), drill with long diamond burs, Kerrison rongeurs, clip applier, suction bipolar and suction monopolar, curved adenoid bipolar",
+  "Two-surgeon setup for a binostril four-hand technique on large tumors",
+  "Oxymetazoline pledgets, warm saline irrigation, hemostatic materials"
+ ],
+ "landmarks": [
+  "Sphenopalatine foramen and crista ethmoidalis",
+  "Posterior maxillary wall and pterygopalatine fossa contents",
+  "Internal maxillary artery lateral to the tumor, anterior to V2",
+  "Vidian canal and base of the medial pterygoid plate (site of tumor root)",
+  "Foramen rotundum and V2 superolaterally",
+  "Sphenoid sinus roof, optic nerve and paraclival carotid",
+  "Inferior orbital fissure and infratemporal fossa laterally"
+ ],
+ "danger": [
+  "Major hemorrhage before arterial control",
+  "Internal carotid artery in the sphenoid and at the foramen lacerum",
+  "Orbit and optic nerve with superior extension",
+  "V2 and vidian nerve (cheek numbness, dry eye)",
+  "Residual tumor left in the basisphenoid or vidian canal",
+  "Skull base defect and CSF leak with intracranial extension"
+ ],
+ "steps": [
+  [
+   "Review stage and embolization",
+   "Confirm the Andrews (or UPMC) stage and the extent into the pterygopalatine fossa, infratemporal fossa, sphenoid, orbit, and skull base. Review the angiogram to know which vessels were embolized and whether internal carotid supply remains, because residual internal carotid feeders predict more bleeding and higher recurrence."
+  ],
+  [
+   "Decongest and create working space",
+   "Pledget the nose with oxymetazoline. Perform a wide maxillary antrostomy, total ethmoidectomy, and a sphenoidotomy when the tumor extends posteriorly. Lateralize or remove the inferior or middle turbinate as needed; a medial maxillectomy may be necessary for large tumors. Wide exposure creates drip space and room for instruments."
+  ],
+  [
+   "Posterior septectomy for a binostril approach",
+   "For bulky tumors, remove the posterior septum to allow two surgeons working through both nostrils. Cauterize the contralateral posterior septal artery. If the tumor is attached to the septum, resect the involved septum with it to get a clean margin."
+  ],
+  [
+   "Remove the posterior maxillary wall",
+   "Take down the posterior wall of the maxillary sinus with Kerrison rongeurs or a drill, extending laterally as far as the tumor goes. Open the periosteum of the pterygopalatine fossa carefully. For wide lateral extension, add an endoscopic Denker or Caldwell-Luc corridor to reach the lateral edge."
+  ],
+  [
+   "Control the internal maxillary artery",
+   "Identify the internal maxillary artery and its branches lateral to the tumor in the fat of the pterygopalatine fossa and clip it proximal to the tumor. Embolization may recanalize, so direct arterial control is still needed; the tumor usually blanches and softens after clipping."
+  ],
+  [
+   "Define the lateral and superior margins",
+   "Dissect the tumor capsule off the pterygopalatine fat, infratemporal fossa musculature, and V2 with blunt dissection and bipolar cautery. Follow the tumor along the inferior orbital fissure if involved. Keep traction gentle so the capsule does not tear and bleed."
+  ],
+  [
+   "Free the nasopharyngeal component",
+   "Release the posterior attachments in the nasopharynx using a curved adenoid bipolar placed transorally, visualized with an angled endoscope. On large tumors, the nasopharyngeal part can be resected or debulked first to restore visualization before dissecting the root."
+  ],
+  [
+   "Release the root from the pterygoid base",
+   "Dissect in the subperiosteal plane to strip the tumor off the lateral nasal wall, medial pterygoid plate, and sphenoid floor. Use countertraction by the second surgeon through the opposite nostril. Aim for en bloc removal; piecemeal removal is acceptable if it is controlled and the root is clearly seen."
+  ],
+  [
+   "Deliver the specimen",
+   "Remove the tumor through the nose if it is small, or push it into the nasopharynx and deliver it transorally if it is large. Send it for pathology and check the specimen surface for capsule breaks that indicate residual tumor."
+  ],
+  [
+   "Drill the vidian canal and basisphenoid",
+   "Inspect the pterygoid base and vidian canal. If the canal is widened or the cancellous bone of the basisphenoid is involved, drill with a diamond bur until healthy bone is reached. This is the most common site of recurrence. Control vidian bleeding with bipolar cautery or bone wax."
+  ],
+  [
+   "Check margins and hemostasis",
+   "Use frozen sections from the bed where margins are uncertain. Use image guidance to confirm the sphenoid, pterygoid, and infratemporal limits have been cleared. Achieve hemostasis with bipolar cautery and warm irrigation, and repair any skull base defect with a multilayer graft or nasoseptal flap from the opposite side."
+  ],
+  [
+   "Cover the bed",
+   "Cover exposed pterygopalatine fat or bone with a free mucosal graft or absorbable material. Place light absorbable packing, or a nonabsorbable pack only if needed for hemostasis, and document what was left so it is removed at the first postoperative debridement."
+  ]
+ ],
+ "exit_check": [
+  "No residual tumor in the pterygoid base, vidian canal, or sphenoid on endoscopic and image-guided review",
+  "Hemostasis secure with the internal maxillary artery clipped; blood loss and transfusion documented",
+  "Orbit and vision assessed at extubation; skull base intact or repaired"
+ ],
+ "postop": [
+  "Monitor hemoglobin and for delayed bleeding; ICU for large resections",
+  "Check vision and extraocular movement; document V2 sensation",
+  "Saline irrigation and serial endoscopic debridement starting about 1 week after surgery",
+  "Contrast MRI at about 3 to 6 months as baseline, then serial imaging for submucosal recurrence for several years"
+ ],
+ "complications": {
+  "early": [
+   "Hemorrhage and transfusion",
+   "CSF leak",
+   "Visual loss or diplopia",
+   "Embolization stroke or blindness from reflux through anastomoses"
+  ],
+  "late": [
+   "Residual or recurrent tumor (often vidian canal or basisphenoid)",
+   "Cheek and palate numbness from V2 injury",
+   "Dry eye from vidian nerve section",
+   "Synechiae and crusting"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Where does JNA originate, and what is the classic radiographic sign?",
+   "At the sphenopalatine foramen and pterygopalatine fossa near the vidian canal; anterior bowing of the posterior maxillary wall (Holman-Miller sign) and widening of the pterygopalatine fossa and vidian canal."
+  ],
+  [
+   "Why do you not biopsy a suspected JNA in clinic?",
+   "It is highly vascular and can bleed massively; the diagnosis is made by the clinical picture and contrast imaging, with tissue obtained at definitive resection."
+  ],
+  [
+   "When should embolization be done relative to surgery and why?",
+   "Within about 24 to 48 hours, before collateral supply forms and revascularizes the tumor. It reduces blood loss, but direct ligation of the internal maxillary artery is still done during resection."
+  ],
+  [
+   "Where does JNA most often recur and how do you prevent it?",
+   "In the basisphenoid and pterygoid base through the vidian canal. Drill the involved cancellous bone and vidian canal until healthy bone is reached."
+  ],
+  [
+   "What staging systems are used and what feature does the UPMC system add?",
+   "Andrews-Fisch (and Radkowski) stage by anatomic extent; the UPMC system adds residual vascularity after embolization (internal carotid supply), which predicts blood loss and recurrence."
+  ]
+ ],
+ "source_basis": [
+  "Atlas of Endoscopic Sinus and Skull Base Surgery, 2nd ed., Chapter 24: Pterygopalatine/Pterygomaxillary Space Approaches, Maxillary Artery Ligation, and Approach to Juvenile Nasopharyngeal Angiofibroma",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed., Chapter 1: Allergy and Rhinology (Juvenile Nasopharyngeal Angiofibroma)",
+  "Cummings Otolaryngology: Head and Neck Surgery, 7th ed., Chapter 50: Benign Tumors of the Sinonasal Tract"
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "slug": "vermilionectomy",
+ "title": "Lip Shave (Vermilionectomy) with Mucosal Advancement",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Lip Cancer",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Removal of the entire lower lip vermilion for diffuse actinic cheilitis, a premalignant condition with reported malignant transformation of roughly 10 to 30%, and for diffuse carcinoma in situ or field change that has failed or is unsuitable for topical therapy, cryotherapy, photodynamic therapy or laser ablation. Any ulcer, induration or nodule needs biopsy first; invasive carcinoma requires full-thickness wedge excision, which can be combined with vermilionectomy when there is a focal cancer in a field of actinic damage. The defect is resurfaced with a labial mucosal advancement flap, or closed primarily or allowed to heal in patients on anticoagulants or with scarred labial mucosa. Relative contraindications are heavy scarring of the labial mucosa and inability to stop smoking or sun exposure.",
+ "setup": [
+  "Biopsy any focal ulcer or thickening to exclude invasive carcinoma that would need wedge excision instead.",
+  "Review anticoagulant and antiplatelet use with the prescriber; hematoma under the mucosal flap is the main threat to flap survival.",
+  "Patients with a history of herpes labialis start a short preoperative antiviral course to prevent an outbreak on the healing lip.",
+  "Counsel about thinner lip with posterior migration of the vermilion line, temporary numbness, tightness, mucocele and possible revision.",
+  "Local or general anesthesia; with general, nasal intubation avoids distorting the lip and allows symmetric closure. Fine marking pen, 15 blade, tenotomy scissors, bipolar and 5-0 or 6-0 sutures."
+ ],
+ "landmarks": [
+  "White roll (vermilion-cutaneous junction)",
+  "Wet-dry line of the vermilion",
+  "Oral commissures",
+  "Orbicularis oris muscle surface",
+  "Labial minor salivary gland layer",
+  "Gingivolabial sulcus and mental nerve branches"
+ ],
+ "danger": [
+  "Mental nerve branches during deep undermining toward the sulcus",
+  "Labial artery within the orbicularis",
+  "Commissure distortion from poor release",
+  "Hematoma under the mucosal flap",
+  "Undertreating an invasive cancer"
+ ],
+ "steps": [
+  [
+   "Mark before infiltrating",
+   "Mark the anterior incision along the white roll, or 1 to 2 mm onto the skin to include a small skin cuff, from commissure to commissure. Mark the posterior incision at the wet-dry line. Mark first, because local anesthetic blurs the white roll; then infiltrate along the lip and inferior alveolar or mental nerve regions."
+  ],
+  [
+   "Anterior incision",
+   "Incise along the anterior marking with a 15 blade, through the skin into the subcutaneous tissue and into both commissures, beveling slightly away from the specimen. A precise, even cut at the white roll is what gives a clean final vermilion line after advancement."
+  ],
+  [
+   "Posterior incision",
+   "Incise the posterior marking at the wet-dry line through mucosa to the level of the orbicularis muscle and join it to the anterior incision at each commissure. Keep the posterior cut far enough back to include all clinically abnormal vermilion."
+  ],
+  [
+   "Remove the vermilion in a submucosal plane",
+   "Grasp one end with toothed forceps and dissect the specimen off the orbicularis oris in the submucosal plane with tenotomy scissors or fine cautery, leaving the muscle intact. Orient the specimen with a marking suture for pathology so any focus of invasion can be located."
+  ],
+  [
+   "Combine with a wedge if needed",
+   "For a focal invasive cancer, mark a V or W wedge with margins around it. Raise the vermilion strip from each side toward the wedge, then excise the wedge full thickness so the whole specimen comes out en bloc. Close the wedge in three layers, muscle first, before resurfacing the vermilion."
+  ],
+  [
+   "Hemostasis",
+   "Obtain meticulous hemostasis with fine bipolar cautery on the exposed muscle surface, minimizing thermal injury. Small bleeders left now become hematomas under the flap, which can lead to flap loss and scarring."
+  ],
+  [
+   "Raise the labial mucosal flap",
+   "Evert the lip and undermine the labial mucosa in the submucosal plane, superficial to the minor salivary glands and muscle, down toward the gingivolabial sulcus. Stay superficial in the lateral sulcus to avoid mental nerve branches; undermine only as far as needed for tension-free advancement."
+  ],
+  [
+   "Release at the commissures",
+   "Make short releasing incisions of about 1 cm in the mucosa at each commissure so the flap advances straight forward without pulling the corners of the mouth. Check symmetry and that the flap reaches the skin edge without tension."
+  ],
+  [
+   "Inset the flap",
+   "Advance the mucosa and suture it to the skin edge at the white roll with fine interrupted 5-0 or 6-0 sutures, starting at the midline and working out to each commissure. Align carefully so the new vermilion line is smooth and even, without notching or bunching."
+  ],
+  [
+   "Alternative closure",
+   "When the patient cannot stop anticoagulation or the labial mucosa is scarred, skip the flap: close primarily by limited advancement or allow the raw surface to heal by secondary intention, accepting a longer healing time and greater contraction."
+  ]
+ ],
+ "exit_check": [
+  "Specimen oriented with any wedge component marked",
+  "Flap pink and inset without tension; commissures symmetric",
+  "Hemostasis complete; no expanding swelling under the flap"
+ ],
+ "postop": [
+  "Ice for 24 to 48 hours, head elevation and multimodal analgesia",
+  "Liquid diet for about 72 hours, then soft diet for a further week",
+  "Keep the lip moist with a thin layer of petrolatum; remove sutures at 7 to 10 days",
+  "Strict sun protection with lip sunscreen, smoking cessation, and lifelong lip surveillance for new lesions"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma and flap necrosis",
+   "Wound dehiscence",
+   "Herpes labialis reactivation",
+   "Temporary lip numbness or oral incompetence"
+  ],
+  "late": [
+   "Thinning of the lip and inward migration of the vermilion line",
+   "Lip tightness, paresthesia or prickly discomfort",
+   "Mucocele from injured labial glands",
+   "Asymmetry or notching needing revision",
+   "New actinic disease or carcinoma"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is actinic cheilitis and why treat it?",
+   "Chronic ultraviolet damage of the lower lip vermilion with dryness, scaling, blurring of the white roll and leukoplakia. It is premalignant, with transformation to squamous cell carcinoma in a meaningful minority, and lip SCC has higher nodal risk than other cutaneous SCC."
+  ],
+  [
+   "What are the nonsurgical options and why choose vermilionectomy?",
+   "Topical 5-fluorouracil or imiquimod, cryotherapy, photodynamic therapy and CO2 or erbium laser ablation. Vermilionectomy provides a full histologic specimen to exclude invasion and has the lowest recurrence, at the cost of more morbidity."
+  ],
+  [
+   "When does a lip lesion need a wedge instead of a shave?",
+   "When biopsy or examination shows invasive carcinoma, which needs full-thickness excision with clear margins. A vermilionectomy alone treats only surface disease."
+  ],
+  [
+   "What lymphatic drainage pattern matters for lip cancer?",
+   "Lower lip drains to submental and submandibular nodes; the central lower lip can drain bilaterally, so midline tumors may need bilateral neck assessment. Upper lip drains to submandibular and preauricular or parotid nodes."
+  ],
+  [
+   "What is the main functional change after a lip shave with mucosal advancement?",
+   "The lip becomes thinner and the vermilion line moves posteriorly, with labial mucosa that is redder and more moist than native vermilion; most patients accept it, but numbness and tightness can persist."
+  ]
+ ],
+ "source_basis": [
+  "Ogledzki MJ, Ramirez CA. Lip Shave (Vermilionectomy). In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 23.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 8 Facial Plastic and Reconstructive Surgery, Lip reconstruction: minor defect reconstruction and labial mucosal advancement flap (p 473-474)."
+ ]
+}

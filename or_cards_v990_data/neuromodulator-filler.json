@@ -1,0 +1,134 @@
+{
+ "slug": "neuromodulator-filler",
+ "title": "Botulinum Toxin and Injectable Filler (Aesthetic)",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Aging Face / Injectables / Resurfacing",
+ "source_label": "Pasha 6e (Reconstructive and Facial Plastic Surgery chapter)",
+ "indications": "Office treatment of facial aging. Botulinum toxin treats dynamic rhytids by blocking presynaptic acetylcholine release at the neuromuscular junction: glabellar lines, forehead lines, lateral canthal lines (crow's feet), platysmal bands, perioral lines, mentalis dimpling, and masseter hypertrophy; it does not treat static lines or skin quality. OnabotulinumtoxinA is FDA-approved cosmetically for glabellar, lateral canthal and forehead lines and platysma bands; other uses are off-label. Fillers restore volume and soften static folds: hyaluronic acid (HA) for lips, nasolabial folds, tear troughs and fine lines (reversible with hyaluronidase); calcium hydroxyapatite and poly-L-lactic acid for deeper volume and lipoatrophy. Contraindications include active infection at the site, pregnancy, neuromuscular junction disorders (toxin), unrealistic expectations, and known product allergy.",
+ "setup": [
+  "Consent covering bruising, asymmetry, ptosis, vascular occlusion and blindness; standardized pre-treatment photographs at rest and in animation",
+  "Reconstitute toxin with preservative-free or bacteriostatic saline per product; know unit equivalence (about 2.5 to 3 abobotulinumtoxinA units per onabotulinumtoxinA unit)",
+  "30 to 32 gauge needles on tuberculin or insulin syringes; blunt cannulas (25 to 27 gauge) for deep filler planes",
+  "Topical anesthetic or ice; many HA products contain lidocaine",
+  "Vascular occlusion kit in the room: hyaluronidase (enough for repeated high doses), warm compresses, aspirin, nitroglycerin paste, emergency ophthalmology contact",
+  "Clean skin with alcohol or chlorhexidine; makeup removed"
+ ],
+ "landmarks": [
+  "Corrugator supercilii (belly medial, tail laterally above the brow) and procerus",
+  "Frontalis, staying about 2 cm above the brow",
+  "Lateral orbicularis oculi, about 1 cm lateral to the orbital rim",
+  "Supraorbital and supratrochlear vessels at the glabella",
+  "Angular and dorsal nasal arteries along the nose and medial canthus",
+  "Facial artery near the nasolabial fold and labial arteries deep to orbicularis oris",
+  "Superficial temporal artery in the temple"
+ ],
+ "danger": [
+  "Toxin diffusion into levator palpebrae causing lid ptosis (injections too low or medial at the brow or orbit)",
+  "Low frontalis injections causing brow ptosis",
+  "Perioral or depressor overtreatment causing incompetence, drooling or asymmetric smile",
+  "Intra-arterial filler at the glabella, nose, nasolabial fold or temple, causing skin necrosis or retinal artery occlusion",
+  "Superficial HA in thin skin causing Tyndall (blue) discoloration",
+  "Permanent fillers producing late granulomas that cannot be dissolved"
+ ],
+ "steps": [
+  [
+   "Assess and plan",
+   "Separate dynamic lines (toxin) from static folds and volume loss (filler). Note pre-existing brow or lid asymmetry and ptosis, which toxin can worsen. Agree on a conservative first treatment. Photograph and document planned sites, units and product for every session."
+  ],
+  [
+   "Toxin: mark sites",
+   "Have the patient animate (frown, raise brows, squint) to locate hyperfunctional muscle. Mark corrugator sites at the medial belly and over the tail above the brow, a central procerus site, frontalis grid points at least 2 cm above the brow, and two to three lateral orbicularis sites at least 1 cm outside the orbital rim."
+  ],
+  [
+   "Toxin: glabella",
+   "Inject the corrugator bellies deep and the tails more superficially, with the needle angled upward and the finger guarding the orbital rim; inject the procerus centrally. Stay above the rim at the mid-pupillary line to keep toxin away from the levator. Apply gentle pressure after each injection to limit bruising."
+  ],
+  [
+   "Toxin: forehead and crow's feet",
+   "Inject frontalis in small aliquots across 3 to 5 sites per side, high enough to preserve some brow lift and avoid brow heaviness, and preferably after treating the glabella depressors. For crow's feet, inject superficially in lateral orbicularis, avoiding the lower lid near the canthus and below the zygomatic arch to protect zygomaticus and the smile."
+  ],
+  [
+   "Toxin: lower face and neck",
+   "Mentalis for chin dimpling (central and low, away from orbicularis and depressor labii), tiny doses in orbicularis oris within 5 mm of the vermilion for perioral lines or lip flip, platysmal bands by pinching and injecting the band itself superficially, avoiding deep injection near strap muscles and swallowing structures."
+  ],
+  [
+   "Toxin: aftercare",
+   "Ask the patient to stay upright and not rub or massage the area for several hours. Onset is 2 to 5 days with peak at about 2 weeks; duration is about 3 to 4 months. Review at 2 weeks for touch-up, and treat lid ptosis with apraclonidine drops."
+  ],
+  [
+   "Filler: choose product and plane",
+   "Match product to depth: low-viscosity HA superficially for fine lines and lips, higher-crosslinked HA deeper for folds and cheeks, calcium hydroxyapatite or poly-L-lactic acid in deep dermal or supraperiosteal planes for volume, never in lips. Avoid permanent products for routine use."
+  ],
+  [
+   "Filler: safe injection technique",
+   "Know the arterial danger zones. Use blunt cannulas where possible in high-risk areas, inject slowly with low pressure in small aliquots, keep the needle moving or use small boluses on bone, and limit total volume per site. Aspiration is unreliable for excluding intravascular placement."
+  ],
+  [
+   "Filler: watch for blanching",
+   "Observe skin color while injecting. Immediate blanching, pain out of proportion, or a reticular dusky pattern away from the injection point indicate vascular compromise. Stop immediately; do not continue to fill the area."
+  ],
+  [
+   "Vascular occlusion response",
+   "For HA, flood the entire affected vascular territory with high-dose hyaluronidase and repeat hourly until capillary refill normalizes. Add warm compresses, massage, aspirin and topical nitroglycerin. Intervene within 24 to 48 hours. Any visual change is an emergency requiring immediate ophthalmology referral."
+  ],
+  [
+   "Filler: finish",
+   "Mold gently for symmetry and smoothness, document product lot numbers, volumes and sites, and give aftercare: ice, avoid heavy exercise and pressure for 24 hours, and call immediately with pain, color change or visual symptoms."
+  ]
+ ],
+ "exit_check": [
+  "All injected areas well perfused with normal capillary refill; no blanching or livedo",
+  "Units, product, lot and sites documented with photographs",
+  "Patient knows warning symptoms for vascular occlusion and ptosis and how to reach the team"
+ ],
+ "postop": [
+  "Toxin review at 2 weeks for asymmetry and touch-up",
+  "Filler bruising and swelling settle within about 1 to 2 weeks; ice and head elevation",
+  "Nodules from HA treated with hyaluronidase; inflammatory or delayed nodules assessed for biofilm or granuloma, often with intralesional triamcinolone",
+  "Apraclonidine drops for toxin-induced blepharoptosis",
+  "Retreatment intervals: toxin about 3 to 4 months, HA 6 to 12 months or longer"
+ ],
+ "complications": {
+  "early": [
+   "Bruising and swelling",
+   "Blepharoptosis or brow ptosis",
+   "Asymmetry or spock brow",
+   "Vascular occlusion with skin necrosis",
+   "Visual loss from retinal artery embolization"
+  ],
+  "late": [
+   "Tyndall effect",
+   "Nodules and granulomas, especially with permanent fillers",
+   "Product migration",
+   "Delayed hypersensitivity reactions",
+   "Neutralizing antibodies with frequent high-dose toxin"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Mechanism of botulinum toxin and duration of effect?",
+   "It cleaves SNARE proteins (type A cleaves SNAP-25) to block presynaptic acetylcholine release at the neuromuscular junction. Onset is 2 to 5 days, peak at 2 weeks, duration about 3 to 4 months, with recovery through axonal sprouting."
+  ],
+  [
+   "A patient has upper lid ptosis 10 days after glabellar toxin. Why and how is it treated?",
+   "Toxin diffused through the orbital septum into the levator palpebrae, usually from injections too low or medial. Treat with apraclonidine 0.5 percent eye drops, an alpha-adrenergic agonist that contracts Muller muscle to lift the lid 1 to 2 mm, until the toxin wears off."
+  ],
+  [
+   "Signs and management of filler vascular occlusion?",
+   "Immediate blanching, disproportionate pain, then dusky reticular discoloration in the territory. Stop injecting, give high-dose hyaluronidase throughout the territory repeated hourly, plus warm compresses, massage, aspirin and nitroglycerin paste. Visual symptoms mean possible ophthalmic artery embolization and need emergency ophthalmology."
+  ],
+  [
+   "Which fillers can be reversed, and what is the Tyndall effect?",
+   "Only hyaluronic acid can be dissolved, with hyaluronidase. Calcium hydroxyapatite, poly-L-lactic acid and PMMA have no reversal agent. The Tyndall effect is a bluish hue from HA placed too superficially in thin skin; treat with hyaluronidase."
+  ],
+  [
+   "Which areas carry the highest filler blindness risk?",
+   "The glabella, nasal dorsum and side wall, nasolabial fold and forehead, where branches of the ophthalmic artery (supratrochlear, supraorbital, dorsal nasal) connect with the facial and angular arteries, allowing retrograde flow to the retinal circulation."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8, Reconstructive and Facial Plastic Surgery: Fillers, Skin Substitutes, and Injections; injectable fillers, materials, complications (p 513-515)",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8: Botulinum Toxin, types, mechanism, indications, complications and technique (p 516-517)"
+ ]
+}

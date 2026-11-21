@@ -1,0 +1,136 @@
+{
+ "slug": "percutaneous-tracheostomy",
+ "title": "Percutaneous Dilational Tracheostomy",
+ "domain": "General ENT",
+ "or_family_v190": "airway",
+ "linked_topic": "Tracheostomy Emergency",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024), Cummings 7e, and Pasha 6e",
+ "indications": "Elective tracheostomy in an intubated adult needing prolonged ventilation or pulmonary toilet, done at the bedside in the ICU when anatomy is favorable: palpable thyroid and cricoid cartilages, at least 3 to 4 cm between cricoid and sternal notch, ability to extend the neck, and a patient who could be reintubated orally if the tube is lost. Open surgical tracheostomy is preferred for emergencies or impending airway loss, children, coagulopathy that cannot be corrected, unstable cervical spine, large goiter or midline vessels, prior neck surgery or radiation, laryngeal tumor, anterior neck infection, morbid obesity with a long tract, and when long-term tracheostomy is expected. High PEEP or FiO2 needs are relative contraindications by local policy.",
+ "setup": [
+  "Three-person team: airway and sedation, bronchoscopy, and operator; full neuromuscular blockade and 100% oxygen",
+  "Coagulation and platelets checked; anticoagulation held; latest chest radiograph reviewed for tube position",
+  "Bedside ultrasound of the neck to map midline vessels, thyroid, and tracheal depth",
+  "Neck extended over a shoulder roll; open tracheostomy tray and difficult-airway cart at the bedside",
+  "Kit checked and opened; tracheostomy tube cuff tested, with one size up and one size down available, and extra-length tubes if the tract will be deep"
+ ],
+ "landmarks": [
+  "Thyroid notch and cricoid cartilage",
+  "First to third tracheal rings in the midline",
+  "Sternal notch and the cricoid-to-notch distance",
+  "Thyroid isthmus over rings 2 to 4",
+  "Anterior jugular veins and any high brachiocephalic artery",
+  "Bronchoscopic 12 o'clock position on the anterior tracheal wall"
+ ],
+ "danger": [
+  "Loss of airway when the endotracheal tube is pulled back too far",
+  "Posterior tracheal wall laceration and esophageal injury",
+  "Paratracheal false passage and pneumothorax",
+  "Puncture through the cricoid or first ring causing stenosis",
+  "Bleeding from isthmus or midline vessels with no surgical exposure",
+  "Early accidental decannulation into an unformed, collapsing tract"
+ ],
+ "steps": [
+  [
+   "Time-out and roles",
+   "Confirm consent, coagulation, ventilator settings, and the rescue plan for loss of airway, which is oral reintubation or conversion to open tracheostomy. Assign who controls the endotracheal tube, who drives the bronchoscope, and who performs the procedure. Increase oxygen to 100% and paralyze."
+  ],
+  [
+   "Ultrasound and landmarks",
+   "Scan the midline to identify the rings, the isthmus, and any vessel crossing the planned path, and measure skin-to-trachea depth. Palpate and mark the thyroid notch, cricoid, and sternal notch. If landmarks cannot be felt or a large thyroid or pulsatile vessel lies in the path, convert to an open procedure."
+  ],
+  [
+   "Withdraw the tube under vision",
+   "Pass the bronchoscope down the endotracheal tube, deflate the cuff, and withdraw the tube until its tip sits just below the cords and the cuff lies at the glottis. Reinflate and secure it there. Keep the scope inside the tube rather than beyond its tip to avoid puncturing it."
+  ],
+  [
+   "Skin incision",
+   "Infiltrate local anesthetic with epinephrine below the cricoid. Make a 1.5 to 2 cm transverse or vertical incision below the cricoid and spread bluntly in the midline down to the pretracheal fascia so the trachea can be felt."
+  ],
+  [
+   "Needle entry",
+   "Stabilize the trachea with the non-dominant hand and pass the introducer needle on a saline-filled syringe in the midline, angled slightly caudally, between the first and second or second and third rings. Aspirate air bubbles and confirm on the bronchoscope that entry is between 11 and 1 o'clock and below the first ring."
+  ],
+  [
+   "Guidewire",
+   "Advance the J-tipped guidewire through the cannula toward the carina and confirm its position on the bronchoscope. Remove the needle and leave the cannula or wire, holding the wire so it cannot migrate during dilation."
+  ],
+  [
+   "Initial dilation",
+   "Pass the short punch dilator over the wire to open the tracheal wall, then place the guiding catheter over the wire to its safety ridge. These two together protect the posterior wall during the next step."
+  ],
+  [
+   "Single-stage dilation",
+   "Advance the lubricated curved dilator over the guiding catheter and wire, in a smooth arc following the tracheal curve, until the marked level is reached. Do not twist it side to side. Watch on the bronchoscope that the posterior wall is not being pushed and that rings are not fracturing into the lumen."
+  ],
+  [
+   "Insert the tube",
+   "Remove the dilator and immediately railroad the tracheostomy tube, mounted on its loading dilator, over the wire and guide into the trachea. Remove the loader, wire, and guide while holding the flange firmly against the neck."
+  ],
+  [
+   "Confirm placement",
+   "Inflate the cuff, connect the circuit, and confirm with sustained waveform capnography and bilateral breath sounds. Pass the bronchoscope through the new tube to see trachea and carina and to check that the tip clears the carina. Only then remove the endotracheal tube."
+  ],
+  [
+   "Secure the tube",
+   "Suture the flange and apply ties that admit one finger. The fresh tract is unstable and closes immediately if the tube slips out, so a team member holds the tube until it is fixed. Adjust cuff pressure to no more than 25 cm H2O with a manometer."
+  ],
+  [
+   "Bleeding and conversion",
+   "Minor ooze settles with pressure and the tube in place. For persistent bleeding, a malposition that cannot be corrected, or loss of airway, convert to open exploration or reintubate orally. Do not attempt blind reinsertion through an immature tract."
+  ]
+ ],
+ "exit_check": [
+  "Waveform capnography and bronchoscopic view of the carina through the tracheostomy tube",
+  "Cuff pressure 25 cm H2O or less and tube secured with sutures and ties",
+  "Obturator, spare tubes, and bedside airway sign in place before handover"
+ ],
+ "postop": [
+  "Chest radiograph for tube position and pneumothorax",
+  "Head-up positioning; humidification and regular suctioning; cuff checks each shift",
+  "Bedside sign that the tract is percutaneous and not to be reinserted blindly; oral intubation is the rescue route if the tube dislodges early",
+  "Delay the first tube change until the tract has matured, about 7 to 10 days, longer than after open tracheostomy",
+  "Multidisciplinary tracheostomy team for weaning, speech valve, and decannulation planning"
+ ],
+ "complications": {
+  "early": [
+   "Bleeding",
+   "Paratracheal placement or false passage",
+   "Posterior wall injury or tracheoesophageal fistula",
+   "Pneumothorax or subcutaneous emphysema",
+   "Accidental decannulation with loss of airway"
+  ],
+  "late": [
+   "Tracheal stenosis from ring fracture or high placement",
+   "Granulation tissue and tracheomalacia",
+   "Tracheoinnominate fistula",
+   "Persistent tracheocutaneous fistula or poor scar"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why is bronchoscopy recommended during percutaneous tracheostomy?",
+   "It confirms a midline, below-first-ring needle entry, shows the wire going toward the carina, protects against posterior wall injury during dilation, and verifies the final tube position. It reduces paratracheal placement and other complications."
+  ],
+  [
+   "What are the main contraindications to a percutaneous approach?",
+   "Emergency airway, children, uncorrectable coagulopathy, impalpable landmarks or morbid obesity with a long tract, large goiter or midline vessels, unstable cervical spine, anterior neck infection, laryngeal cancer, and a patient who cannot be reintubated orally. Use an open approach instead."
+  ],
+  [
+   "How does percutaneous tracheostomy compare with open tracheostomy in trials?",
+   "Meta-analyses show similar or lower wound infection and bleeding, faster performance, and no transport to the OR, with similar long-term stenosis. It requires favorable anatomy and expertise."
+  ],
+  [
+   "A percutaneous tracheostomy tube falls out on day 2. What do you do?",
+   "Do not try to replace it blindly through the immature tract. Oxygenate from above and intubate orally, then replace the tracheostomy in a controlled way, open if needed."
+  ],
+  [
+   "What cuff pressure is safe and why?",
+   "No more than about 25 cm H2O. Higher pressure exceeds mucosal capillary perfusion pressure and causes ischemic necrosis, leading to stenosis or fistula."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes T (eds). Atlas of Head and Neck Surgery (Springer Surgery Atlas Series, 2024): Ch 4 Percutaneous Tracheostomy and Open Standard Surgical Tracheostomy (Muscat, Sood).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 7 Tracheotomy (percutaneous dilational tracheotomy, procedural steps).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 2 Laryngology (tracheotomy indications, complications, management)."
+ ]
+}

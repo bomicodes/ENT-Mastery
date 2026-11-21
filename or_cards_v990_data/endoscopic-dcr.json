@@ -1,0 +1,131 @@
+{
+ "slug": "endoscopic-dcr",
+ "title": "Endoscopic Dacryocystorhinostomy",
+ "domain": "Rhinology",
+ "or_family_v190": "sinus",
+ "linked_topic": "Nasal Anatomy for Endoscopy",
+ "source_label": "Cummings 7e and Pasha 6e",
+ "indications": "Epiphora or recurrent dacryocystitis from obstruction of the nasolacrimal duct below the lacrimal sac (primary acquired obstruction, post-traumatic obstruction distal to the sac, or a mucocele), confirmed by irrigation and Jones testing, dacryocystography, or scintigraphy. Functional obstruction with a patent system can also be treated, with lower success. Proximal canalicular obstruction needs canalicular repair or conjunctivodacryocystorhinostomy instead. Suspected sac tumor (bloody tears, a firm mass above the medial canthal tendon) requires biopsy rather than a routine DCR. The procedure is usually coordinated with oculoplastics.",
+ "setup": [
+  "Nasal endoscopy and CT when anatomy, prior trauma, or sinus disease is a concern; review the dacryocystogram for sac size",
+  "General anesthesia, head extended slightly and free to turn; monitor opposite the surgeon",
+  "Topical decongestant pledgets, then infiltration of the lateral wall in front of the middle turbinate axilla with local anesthetic and epinephrine",
+  "0 and 30 degree endoscopes, sickle and spear knives, Kerrison punch, powered drill with diamond burr, punctal dilators and Bowman probes",
+  "Silicone lacrimal intubation set and small clips ready; consent for septoplasty if the axilla cannot be seen"
+ ],
+ "landmarks": [
+  "Axilla (anterior attachment) of the middle turbinate",
+  "Maxillary line, the bony ridge of the frontal process of the maxilla",
+  "Uncinate process just behind the sac",
+  "Lacrimal sac, which extends about 1 cm above the axilla",
+  "Agger nasi cell above and behind the sac",
+  "Lamina papyracea and orbit posterior to the lacrimal bone"
+ ],
+ "danger": [
+  "Orbital entry through the lamina papyracea behind the sac",
+  "Skull base injury from dissection too high and posterior",
+  "Common canaliculus damage from opening the sac before the probe is clearly in it",
+  "Leaving the upper sac covered by bone, the main cause of failure",
+  "Exposed bone and poor flap apposition leading to granulation and scarring",
+  "Stent tension causing punctal cheese-wiring"
+ ],
+ "steps": [
+  [
+   "Optimize the field",
+   "Decongest the nose and infiltrate the lateral wall over the maxillary line and axilla. Keep the field completely dry throughout, because accurate flap apposition is the key to success. Perform a limited high septoplasty if the septum blocks the view of the axilla."
+  ],
+  [
+   "Raise the mucosal flap",
+   "Incise the lateral wall mucosa with a sickle knife: the upper cut about 10 mm above the axilla, running forward from just behind the turbinate attachment; a vertical cut down in front of the maxillary line; and the lower cut at the top of the inferior turbinate. Elevate the flap posteriorly off the frontal process of the maxilla."
+  ],
+  [
+   "Expose the lacrimal bone",
+   "Continue elevation back to the thin lacrimal bone and uncinate. Fold the flap back over the uncinate or tuck it into the middle meatus to protect it. The suture between the hard frontal process and the thin lacrimal bone marks the front of the sac."
+  ],
+  [
+   "Remove the lacrimal bone",
+   "Flake the thin lacrimal bone off the posterior sac with a round knife or elevator. Engage the edge of the frontal process with a forward-biting Kerrison punch and remove bone forward and upward, keeping the punch under the bone and not biting the sac."
+  ],
+  [
+   "Drill the upper sac",
+   "Where the frontal process becomes too thick, thin it with a diamond burr until the upper sac is exposed well above the axilla. Open the agger nasi cell if it sits over the sac. The goal is a whole sac standing proud of the bone, from fundus to the duct opening."
+  ],
+  [
+   "Cannulate the canaliculi",
+   "Dilate the upper and lower puncta and pass a Bowman probe horizontally into the canaliculus, then turn it to enter the sac. Confirm that the probe tip tents the medial sac wall clearly. If the whole sac moves without a visible tip, the probe is still in the common canaliculus; do not open the sac yet."
+  ],
+  [
+   "Open the sac",
+   "With the probe tenting the sac, make a vertical incision along the full height of the medial wall with a spear knife. Check that the probe passes freely into the nose and that the common canaliculus opening is visible."
+  ],
+  [
+   "Create sac flaps",
+   "Make small horizontal relaxing cuts at the top and bottom of the posterior edge and the anterior edge so the sac opens into anterior and posterior flaps. Lay both flat against the lateral nasal wall so the sac is fully marsupialized."
+  ],
+  [
+   "Trim and appose the nasal flap",
+   "Trim the nasal mucosal flap to fit around the opened sac, so mucosa meets mucosa and no bone is left bare. Use the posterior portion to cover any exposed bone behind the sac. Good apposition allows healing by first intention rather than granulation."
+  ],
+  [
+   "Decide on stents",
+   "Place silicone stents if the common canaliculus was tight on probing, for canalicular stenosis, or in revision surgery; omit them when the probe passed without resistance. Pass the tubes through both canaliculi into the nose and secure the ends with clips or a knot, without tension at the medial canthus."
+  ],
+  [
+   "Hold the flaps",
+   "Place a small piece of absorbable gelatin or other dissolvable packing over the flaps to keep them in position. Avoid tight packing. Irrigate the system through the punctum to confirm free flow into the nose."
+  ]
+ ],
+ "exit_check": [
+  "Entire sac marsupialized with the common canaliculus opening visible",
+  "Mucosal flaps apposed with no bare bone",
+  "Free irrigation from the punctum into the nose; any stent tension-free at the canthus"
+ ],
+ "postop": [
+  "Saline rinses and topical steroid-containing eye drops for a few weeks",
+  "Avoid nose blowing for about a week",
+  "Endoscopic review at 1 to 2 weeks and again at about 4 weeks to clear crusts and treat granulation",
+  "Remove stents at about 4 to 6 weeks when used",
+  "Assess success by symptom relief, endoscopic patency, and dye testing"
+ ],
+ "complications": {
+  "early": [
+   "Epistaxis",
+   "Orbital fat exposure or orbital hematoma",
+   "Stent displacement or prolapse",
+   "Periorbital bruising or emphysema"
+  ],
+  "late": [
+   "Ostium stenosis or closure",
+   "Granulation tissue or synechia to the septum or middle turbinate",
+   "Sump syndrome from an under-opened lower sac",
+   "Punctal or canalicular erosion from stents",
+   "Persistent epiphora from lacrimal pump failure"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How do Jones I and II tests localize obstruction?",
+   "Jones I tests whether fluorescein reaches the nose. If not, Jones II irrigates the system: clear fluid refluxing from the same punctum means canalicular block, clear fluid from the opposite punctum means common canalicular block, and dye-stained reflux means nasolacrimal duct obstruction distal to the sac."
+  ],
+  [
+   "What is the most common technical cause of DCR failure?",
+   "Incomplete exposure of the upper sac above the axilla, leaving a small opening low on the sac that scars closed, along with poor flap apposition and granulation."
+  ],
+  [
+   "When do you place silicone stents?",
+   "When the common canaliculus is tight, with canalicular stenosis, in revision cases, or when the sac is small. They are usually unnecessary in primary nasolacrimal duct obstruction with a large sac."
+  ],
+  [
+   "Which structures sit posterior and superior to the lacrimal sac in the nose?",
+   "The uncinate process and lamina papyracea posteriorly, with the orbit behind, and the agger nasi cell and frontal recess superiorly. Staying anterior to the uncinate and in front of the lamina protects the orbit."
+  ],
+  [
+   "A patient has bloody tears and a firm mass above the medial canthal tendon. What do you do?",
+   "Suspect a lacrimal sac tumor. Image with CT or MRI and biopsy through a DCR approach rather than performing a standard marsupialization."
+  ]
+ ],
+ "source_basis": [
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 49 Sino-Orbital Interface (endoscopic dacryocystorhinostomy).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 1 Allergy and Rhinology (endoscopic sinus surgery extended indications: dacryocystorhinostomy); Ch 10 Head and Neck Trauma (lacrimal system injury)."
+ ]
+}

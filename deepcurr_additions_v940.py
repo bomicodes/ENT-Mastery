@@ -7,7 +7,8 @@ import os
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _PATH = os.path.join(_HERE, "deepcurr_additions_v940.json")
 # v99: textbook gap-review batches (Pasha 6e, Bluestone & Stool 5e, K.J. Lee 12e, Cummings 7e, ...)
-_EXTRA = ["deepcurr_additions_v991.json", "deepcurr_additions_v992.json", "deepcurr_additions_v993.json"]
+_EXTRA = ["deepcurr_additions_v991.json", "deepcurr_additions_v992.json", "deepcurr_additions_v993.json",
+          "deepcurr_additions_v994.json", "deepcurr_additions_v995.json"]
 
 
 def install_deepcurr_additions_v940(data):

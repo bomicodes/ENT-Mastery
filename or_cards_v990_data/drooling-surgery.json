@@ -1,0 +1,124 @@
+{
+ "slug": "drooling-surgery",
+ "title": "Drooling Surgery (Duct Ligation / Rerouting, Gland Excision, Botox)",
+ "domain": "Pediatric Otolaryngology",
+ "or_family_v190": "salivary",
+ "linked_topic": "Pediatric Aspiration",
+ "source_label": "Pasha 6e Ch 9 and Cummings 7e Ch 205 (Salivary Gland Disease in Children)",
+ "indications": "Persistent sialorrhea beyond about age 4 to 6 in a child with cerebral palsy or other neurologic impairment, causing anterior drooling (soiled clothing, perioral skin breakdown, social burden) or posterior drooling (choking, aspiration pneumonia). Management follows a ladder: oral-motor and positioning therapy, treat contributors (nasal obstruction, reflux, medications, dental issues), anticholinergics such as glycopyrrolate, then botulinum toxin into the submandibular and parotid glands, then surgery. Surgery suits moderate to profuse drooling after failed conservative care, posterior drooling with aspiration at any age, or high care needs. Duct rerouting is avoided in children who aspirate, because it moves saliva posteriorly.",
+ "setup": [
+  "Drooling quantified with Teacher's scale or drooling frequency and severity scale; swallow evaluation for aspiration",
+  "Dental assessment before reducing salivary flow (caries risk)",
+  "Ultrasound for guided botulinum toxin injection; dilute toxin dosed by weight",
+  "Oral or nasotracheal intubation; mouth gag or cheek retractors; lacrimal probes for duct cannulation",
+  "For gland excision: neck incision setup, facial nerve monitor optional, bipolar cautery"
+ ],
+ "landmarks": [
+  "Parotid (Stensen) duct papilla opposite the upper second molar",
+  "Submandibular (Wharton) duct papillae beside the lingual frenulum",
+  "Lingual nerve crossing beneath the submandibular duct",
+  "Sublingual gland lying over the duct in the floor of mouth",
+  "Marginal mandibular nerve, facial vessels, hypoglossal nerve (gland excision)",
+  "Parotid and submandibular glands on ultrasound for injection"
+ ],
+ "danger": [
+  "Lingual nerve during duct dissection or gland excision",
+  "Marginal mandibular and hypoglossal nerves during submandibular excision",
+  "Ranula if sublingual gland is not removed with duct rerouting",
+  "Aspiration with rerouting or excessive toxin spread to pharyngeal muscles",
+  "Xerostomia and dental caries from overtreatment"
+ ],
+ "steps": [
+  [
+   "Select the right intervention",
+   "Confirm conservative therapy and contributors have been addressed. Decide between anterior drooling (rerouting acceptable) and posterior drooling with aspiration (excision or ligation, never rerouting). Review prior botulinum toxin response; a good response predicts surgical benefit. Set goals with caregivers and arrange dental follow-up."
+  ],
+  [
+   "Position and prepare",
+   "Intubate nasally or orally depending on the procedure, with a throat pack for intraoral work. Place a mouth gag or cheek retractors and identify each papilla; gentle gland massage shows saliva flow. For neck work, place a shoulder roll and turn the head away, and mark the marginal mandibular nerve course."
+  ],
+  [
+   "Botulinum toxin injection",
+   "Under brief anesthesia or sedation, identify each submandibular and parotid gland with ultrasound and inject the weight-based dose of botulinum toxin into the gland parenchyma at one or two sites, away from the masseter and floor-of-mouth muscles. Effect begins in days and lasts about 3 to 6 months."
+  ],
+  [
+   "Four-duct ligation",
+   "Cannulate both parotid and both submandibular ducts with lacrimal probes. Incise mucosa around each papilla, dissect the duct back for about 1 cm, and ligate it with nonabsorbable suture, keeping the lingual nerve clear during submandibular duct dissection. Expect transient gland swelling for several days."
+  ],
+  [
+   "Bilateral submandibular duct rerouting",
+   "Through a floor-of-mouth incision encircling the papilla, dissect each submandibular duct posteriorly to the lingual nerve crossing, excise the overlying sublingual gland, and tunnel the duct submucosally to exit behind the anterior tonsillar pillar. Suture the papilla there so saliva drains into the oropharynx."
+  ],
+  [
+   "Excise the sublingual glands",
+   "Remove the sublingual gland on each side during rerouting to prevent ranula. Lift the gland off the duct and lingual nerve with blunt dissection and bipolar cautery, identifying the lingual nerve where it loops under the duct before cutting any band."
+  ],
+  [
+   "Bilateral submandibular gland excision",
+   "Through a neck crease incision two fingerbreadths below the mandible, raise subplatysmal flaps below the marginal mandibular nerve, ligate the facial vessels as needed, retract the mylohyoid to expose the lingual nerve and ganglion branches, and divide the duct anterior to the hypoglossal nerve. Remove the gland and close over a drain."
+  ],
+  [
+   "Combine with parotid duct ligation",
+   "For posterior drooling or aspiration, pair bilateral submandibular gland excision with bilateral parotid duct ligation, which reduces total saliva without moving it posteriorly. Some surgeons add parotid botulinum toxin to reduce failure from duct recanalization."
+  ],
+  [
+   "Transtympanic neurectomy (selected)",
+   "Rarely, divide the tympanic plexus on the promontory and the chorda tympani through a tympanomeatal flap to remove parasympathetic supply to the parotid, submandibular, and sublingual glands. Effects may wane with nerve regrowth and taste is lost on the anterior tongue."
+  ],
+  [
+   "Hemostasis and closure",
+   "Close floor-of-mouth mucosa with absorbable suture, check that the rerouted papillae lie posteriorly without kinking, and confirm hemostasis in the floor of mouth before extubation, since a hematoma there can push the tongue back. Close neck incisions in layers over drains."
+  ]
+ ],
+ "exit_check": [
+  "Floor of mouth soft without hematoma; tongue not displaced",
+  "Lingual and marginal mandibular nerves preserved by visualization",
+  "Rerouted papillae positioned behind the anterior pillar with no tension"
+ ],
+ "postop": [
+  "Monitor airway and floor-of-mouth swelling overnight, especially in neurologically impaired children",
+  "Soft diet; analgesia; expect transient gland swelling after duct ligation",
+  "Reassess drooling with the same scale at 1-3 months and compare with baseline",
+  "Ongoing dental care with fluoride because saliva reduction increases caries risk"
+ ],
+ "complications": {
+  "early": [
+   "Floor-of-mouth hematoma or swelling with airway compromise",
+   "Painful gland swelling after ligation, sialocele",
+   "Lingual, hypoglossal, or marginal mandibular nerve injury",
+   "Aspiration worsened by rerouting or toxin spread"
+  ],
+  "late": [
+   "Ranula if sublingual glands are left",
+   "Recurrent drooling from duct recanalization or other glands",
+   "Xerostomia and dental caries",
+   "Thickened saliva and dysphagia"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why should submandibular duct rerouting be avoided in a child who aspirates?",
+   "It redirects saliva into the oropharynx, increasing the volume reaching the larynx; excision or ligation reduces flow instead."
+  ],
+  [
+   "What is the most important accompanying step during submandibular duct rerouting?",
+   "Excision of the sublingual glands to prevent ranula formation."
+  ],
+  [
+   "How does botulinum toxin reduce salivary flow?",
+   "It cleaves SNAP-25 to block presynaptic acetylcholine release at parasympathetic secretory terminals, giving effect within days that lasts several months."
+  ],
+  [
+   "What anticholinergic side effects limit glycopyrrolate?",
+   "Constipation, urinary retention, flushing, thick secretions, behavioral changes, and blurred vision."
+  ],
+  [
+   "Which glands produce most resting versus stimulated saliva?",
+   "Submandibular glands produce most unstimulated (resting) saliva; the parotids produce most stimulated saliva."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RA, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Ch 9 Pediatric Otolaryngology, Pediatric Aspiration and Sialorrhea and Ptyalism (pp 576-578)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Ch 205 Salivary Gland Disease in Children (Sialorrhea)"
+ ]
+}

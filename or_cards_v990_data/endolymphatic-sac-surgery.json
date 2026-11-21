@@ -1,0 +1,123 @@
+{
+ "slug": "endolymphatic-sac-surgery",
+ "title": "Endolymphatic Sac Decompression / Shunt",
+ "domain": "Otology / Neurotology",
+ "or_family_v190": "otology",
+ "linked_topic": "Ménière Disease",
+ "source_label": "Cummings 7e (Surgery for Vestibular Disorders) and Pasha 6e",
+ "indications": "Definite unilateral Ménière disease with disabling episodic vertigo despite diet, diuretics, and often intratympanic steroids, in a patient who wants to keep hearing and vestibular function. It is the nondestructive surgical step before intratympanic gentamicin or ablative surgery. Vertigo control is reported at about 60 to 80 percent but efficacy is debated given the natural remission of the disease. MRI should exclude a retrocochlear lesion first. The operation is a wide bony decompression of the sac, with or without opening it and placing a shunt into the mastoid.",
+ "setup": [
+  "Supine, head turned; facial nerve monitoring with no long-acting paralysis",
+  "Postauricular approach with a standard otologic drill, cutting and diamond burs, and microscope",
+  "Gelfoam or silicone sheet ready to block the aditus and keep bone dust out of the middle ear",
+  "Silastic sheeting or a shunt tube if the sac is to be opened",
+  "Preoperative audiogram and contrast MRI reviewed; laterality confirmed"
+ ],
+ "landmarks": [
+  "Lateral semicircular canal at the depth of the antrum",
+  "Posterior semicircular canal and its dome",
+  "Donaldson line (extension of the lateral canal plane bisecting the posterior canal)",
+  "Sigmoid sinus posteriorly",
+  "Mastoid segment of the facial nerve and digastric ridge",
+  "Jugular bulb inferiorly and retrofacial air cells"
+ ],
+ "danger": [
+  "Posterior semicircular canal (sensorineural loss)",
+  "Mastoid segment of the facial nerve in a poorly pneumatized bone",
+  "Sigmoid sinus and jugular bulb",
+  "Posterior fossa dura tear and CSF leak",
+  "Bone dust in the middle ear causing ossicular fixation"
+ ],
+ "steps": [
+  [
+   "Confirm the indication",
+   "Review that the patient meets criteria for definite Ménière disease on the affected side, that the vertigo is truly episodic and refractory to medical treatment, and that MRI excludes a retrocochlear lesion. Counsel on modest efficacy and the option of intratympanic therapy."
+  ],
+  [
+   "Postauricular exposure",
+   "Make a postauricular incision, raise a periosteal flap, and expose the mastoid cortex from the spine of Henle back past the planned position of the sigmoid sinus and down to the mastoid tip."
+  ],
+  [
+   "Cortical mastoidectomy",
+   "Perform a complete cortical mastoidectomy, saucerizing the edges. Open the antrum and identify the lateral semicircular canal. Block the aditus with gelfoam and irrigate copiously so bone dust does not enter the middle ear and fix the ossicles."
+  ],
+  [
+   "Identify the posterior canal",
+   "Thin the bone over the posterior semicircular canal until its dense otic capsule bone can be seen clearly, without opening it. Draw the Donaldson line mentally from the lateral canal through the posterior canal; the sac always lies below this line."
+  ],
+  [
+   "Follow the facial nerve and digastric ridge",
+   "Identify the digastric ridge inferiorly and follow it to the stylomastoid foramen. This locates the mastoid segment of the facial nerve, which forms the anterior-lateral border of the sac area. Open retrofacial air cells if present."
+  ],
+  [
+   "Decompress the sigmoid sinus",
+   "Thin and remove bone over the sigmoid sinus and the posterior fossa dura in front of it with a large diamond bur. Decompressing the sinus allows it to be gently retracted and widens access to the presigmoid dura where the sac sits."
+  ],
+  [
+   "Remove the bony plate over the sac",
+   "Remove the bone covering the presigmoid posterior fossa dura below the Donaldson line, from the posterior canal back to the sinus and down to the jugular bulb. The sac appears as a thicker, whiter, more vascular area of dura. Follow it anteromedially toward the operculum."
+  ],
+  [
+   "Expose the duct entry",
+   "Carefully drill anteromedially through retrofacial cells toward where the duct enters bone medial to the posterior canal, protecting the medial surface of the facial nerve and the posterior canal dome. Wide exposure of the sac is the main goal of the operation."
+  ],
+  [
+   "Decide on a shunt",
+   "If the decompression is complete, stop there or open the lateral wall of the sac with a sickle knife and place silastic sheeting into the lumen as a mastoid shunt. Avoid a sac-subarachnoid shunt because of CSF leak risk. If the lumen cannot be found, end with decompression alone."
+  ],
+  [
+   "Close",
+   "Remove the aditus block, irrigate the cavity and middle ear entrance, and confirm there is no CSF leak at the dura. Close the periosteal flap and skin in layers and apply a mastoid pressure dressing for 24 hours."
+  ]
+ ],
+ "exit_check": [
+  "Sac widely decompressed below the Donaldson line from the posterior canal to the sigmoid sinus",
+  "Posterior canal, facial nerve, and dura intact; no CSF leak",
+  "Aditus block removed and middle ear free of bone dust"
+ ],
+ "postop": [
+  "Outpatient or overnight stay; mastoid dressing for 24 hours",
+  "Check facial function and bedside tuning forks",
+  "Continue the Ménière diet and medications; audiogram at 6 weeks",
+  "Track vertigo frequency with a diary; plan next steps if attacks persist"
+ ],
+ "complications": {
+  "early": [
+   "CSF leak",
+   "Facial nerve weakness",
+   "Hematoma",
+   "Sensorineural hearing loss"
+  ],
+  "late": [
+   "Persistent vertigo needing further treatment",
+   "Progressive hearing loss from the disease",
+   "Conductive loss from ossicular fixation by bone dust"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Define the Donaldson line and explain its role.",
+   "A line extended along the plane of the lateral canal that bisects the posterior canal perpendicularly; the endolymphatic sac lies inferior to it, so bone is removed below the line."
+  ],
+  [
+   "What are the boundaries of the endolymphatic sac in the mastoid?",
+   "Donaldson line superiorly, sigmoid sinus posteriorly, jugular bulb inferiorly, and the mastoid segment of the facial nerve laterally; the posterior canal lies anterior-superior."
+  ],
+  [
+   "Where does this operation sit in the Ménière treatment ladder?",
+   "After lifestyle, diuretics, and intratympanic steroids fail; it is the nondestructive surgical step before intratympanic gentamicin, labyrinthectomy, or vestibular nerve section."
+  ],
+  [
+   "Why is the endolymphatic-subarachnoid shunt rarely used?",
+   "It carries higher CSF leak risk and is conceptually flawed because subarachnoid pressure exceeds endolymphatic pressure; mastoid shunt or decompression alone is preferred."
+  ],
+  [
+   "Why is efficacy debated?",
+   "Ménière disease has frequent spontaneous remission, and controlled trials including sham comparisons have shown similar improvement, so benefit may be nonspecific."
+  ]
+ ],
+ "source_basis": [
+  "Cummings Otolaryngology: Head and Neck Surgery, 7th ed., Chapter 169: Surgery for Vestibular Disorders (Endolymphatic Sac Surgery)",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed., Chapter 7: Otology and Neurotology (Ménière's Disease; Donaldson's Line)"
+ ]
+}

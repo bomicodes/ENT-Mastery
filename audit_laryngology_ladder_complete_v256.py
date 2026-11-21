@@ -6,6 +6,7 @@ import daily_path_entry_v403  # v45.6: boots the full production patch chain so 
 DOMAIN="Laryngology / Voice / Swallowing"
 STAGES={"foundation","application","senior_decision"}
 CANONICAL_TOPICS=(
+    'Achalasia and Esophageal Motility Disorders',
     'Gender-Affirming Voice and Laryngeal Surgery',
     'Neurologic Disease of the Larynx: Parkinson, ALS, MS, Myasthenia, Myoclonus and Related Disorders',
     'Voice Evaluation: Patient-Reported, Perceptual, Acoustic and Aerodynamic Measures',
@@ -69,7 +70,7 @@ def main():
     data=rt.data
     canonical=[m.get("topic") for m in data.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
     failures=[]
-    if len(canonical)!=43: failures.append(f"expected 43 canonical Laryngology topics, found {len(canonical)}")
+    if len(canonical)!=44: failures.append(f"expected 44 canonical Laryngology topics, found {len(canonical)}")
     if len(set(canonical))!=len(canonical): failures.append("duplicate canonical Laryngology topic names")
     if set(canonical)!=set(CANONICAL_TOPICS):
         failures.append(f"canonical registry drift: missing={sorted(set(CANONICAL_TOPICS)-set(canonical))} unexpected={sorted(set(canonical)-set(CANONICAL_TOPICS))}")

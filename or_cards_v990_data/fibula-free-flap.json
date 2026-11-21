@@ -1,0 +1,135 @@
+{
+ "slug": "fibula-free-flap",
+ "title": "Fibula Osteocutaneous Free Flap / Mandible Reconstruction",
+ "domain": "Head & Neck Reconstruction",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Reconstruction Selection After Head & Neck Ablation",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Workhorse bony free flap for segmental mandible defects and selected maxillary defects. Provides up to about 25 cm of bicortical bone that tolerates multiple segmental osteotomies and dental implants, a long large-caliber peroneal pedicle, and an optional thin skin paddle or fat-fascia paddle. Anterior (central) mandible defects must be reconstructed with bone to avoid the Andy Gump deformity, and vascularized bone is preferred when postoperative radiotherapy is expected. Contraindicated when the peroneal artery is the dominant supply to the foot (peronea magna) or there is significant peripheral vascular disease.",
+ "setup": [
+  "CTA or MRA of both legs to confirm normal three-vessel runoff and exclude peronea magna or severe atherosclerosis",
+  "Virtual surgical planning with cutting guides and pre-bent or custom plates when available; models in the room",
+  "Choose the side: contralateral fibula for intraoral skin over mandible, ipsilateral for extraoral skin or palate",
+  "Leg flexed at hip and knee and internally rotated, thigh tourniquet applied (if used, about 250 mmHg, no more than 2 hours)",
+  "Two-team approach; oscillating saw, plates, screws, Doppler"
+ ],
+ "landmarks": [
+  "Fibular head and lateral malleolus (keep 6 cm of bone at each end)",
+  "Posterior crural (intermuscular) septum carrying skin perforators",
+  "Peroneus longus and brevis anteriorly; anterior intermuscular septum",
+  "Anterior tibial vessels and deep peroneal nerve in the anterior compartment",
+  "Interosseous membrane and tibialis posterior",
+  "Peroneal artery and veins between flexor hallucis longus and tibialis posterior, up to the tibioperoneal trunk",
+  "Common peroneal nerve around the fibular neck"
+ ],
+ "danger": [
+  "Common peroneal nerve at the fibular neck: foot drop",
+  "Distal 6 cm of fibula and the syndesmosis: ankle instability",
+  "Mistaking the anterior tibial vessels for the pedicle",
+  "Stripping periosteum or making segments too short, devascularizing bone",
+  "Harvest in peronea magna: foot ischemia",
+  "Tight closure or bleeding in the leg causing compartment syndrome"
+ ],
+ "steps": [
+  [
+   "Plan the reconstruction",
+   "Review the virtual plan: resection margins, number and length of segments, plate design and the condylar position. Confirm the fibula side, skin paddle needs and recipient vessels. Have a contingency flap agreed in advance. If no virtual plan, pre-bend a reconstruction plate to the native mandible before resection to preserve contour and occlusion."
+  ],
+  [
+   "Mark the leg",
+   "Mark the fibular head and lateral malleolus and place horizontal marks 6 cm below the head and 6 cm above the malleolus to protect the common peroneal nerve and syndesmosis. Join them to mark the posterior septum. Doppler perforators, usually near the junction of the middle and distal thirds, and center the paddle on them."
+  ],
+  [
+   "Incise and approach the septum",
+   "Incise along the anterior paddle margin and the septum line down to the fascia over peroneus longus. Dissect subfascially anteriorly over the peroneal muscles and posteriorly toward the posterior septum, identifying and preserving perforators in the septum. Tack fascia to skin to protect the perforators."
+  ],
+  [
+   "Free the lateral and anterior surfaces",
+   "Sharply dissect peroneus longus and brevis off the fibula and reflect them anteriorly, leaving a thin cuff of muscle to protect the periosteum. Incise the anterior intermuscular septum close to bone and enter the anterior compartment, identifying and protecting the anterior tibial vessels and deep peroneal nerve."
+  ],
+  [
+   "Reach the interosseous membrane",
+   "Dissect extensor hallucis longus and the extensor muscles off the anterior fibula to expose the interosseous membrane along the full length to be harvested. Stay close to bone to avoid the anterior tibial bundle lying on the membrane."
+  ],
+  [
+   "Distal and proximal osteotomies",
+   "Create a subperiosteal window at the distal cut, pass a curved retractor behind the bone to protect the pedicle, and cut at least 6 cm above the ankle joint. Repeat proximally at least 6 cm below the fibular head. Measure the bone length to the plan, adding a margin for trimming."
+  ],
+  [
+   "Open the interosseous membrane",
+   "Retract the freed fibula laterally and incise the interosseous membrane along its length, which mobilizes the bone and exposes tibialis posterior with its chevron-shaped fibers. Some surgeons divide the membrane before the osteotomies; either sequence works if the pedicle is protected."
+  ],
+  [
+   "Identify and dissect the pedicle",
+   "Find the peroneal vessels at the distal cut and ligate them if needed for traction. Dissect tibialis posterior off the fibula from distal to proximal, staying within the pedicle fascia or medial to it, and follow the peroneal artery and veins up to their junction with the posterior tibial vessels."
+  ],
+  [
+   "Complete the skin or fat-fascia paddle",
+   "Make the posterior paddle incision through fascia to soleus, taking a small cuff of soleus or flexor hallucis longus to protect the perforators. Divide flexor hallucis longus as needed and ligate large soleal branches. For a fat-fascia paddle, dissect at the dermal level and take only fat and fascia."
+  ],
+  [
+   "Shape the bone on the pedicle",
+   "With perfusion maintained, apply cutting guides and make closing-wedge osteotomies, keeping segments roughly 2 cm or longer and leaving the periosteum and pedicle intact on the medial side. Fix segments to the planned plate on the leg or after transfer, depending on ischemia-time strategy."
+  ],
+  [
+   "Divide and inset",
+   "Ligate the pedicle near the tibioperoneal trunk, release the tourniquet, and transfer the flap. Fix the construct to the mandible stumps with the condyle seated and occlusion checked, position the pedicle without kinking, then complete the arterial and venous anastomoses. Inset the paddle watertight to the oral mucosa."
+  ],
+  [
+   "Close the leg",
+   "Secure hemostasis, then close in layers over a suction drain. If the skin will not close without tension, skin graft the defect rather than risk compartment syndrome. For fat-fascia harvest, quilt the thin skin to the bed under a pressure dressing. Apply a posterior splint or boot with the ankle neutral."
+  ]
+ ],
+ "exit_check": [
+  "Foot warm and pink with palpable or Doppler dorsalis pedis and posterior tibial pulses",
+  "Occlusion and condylar position as planned; plate and screws secure",
+  "Flap bleeding from bone and paddle; pedicle untwisted; leg compartments soft"
+ ],
+ "postop": [
+  "Free-flap monitoring of the paddle (or implantable Doppler if buried)",
+  "Neurovascular checks of the foot; watch for compartment syndrome",
+  "Leg splint or boot; early mobilization with physiotherapy, weight-bearing as advised",
+  "Venous thromboembolism precautions (chemical and mechanical) and early ambulation",
+  "Postoperative imaging of bone position; plan dental rehabilitation if implants intended"
+ ],
+ "complications": {
+  "early": [
+   "Flap thrombosis, venous congestion, partial skin paddle loss",
+   "Leg hematoma, skin graft loss, delayed donor wound healing",
+   "Compartment syndrome",
+   "Malocclusion or condylar malposition"
+  ],
+  "late": [
+   "Plate exposure or osteoradionecrosis",
+   "Nonunion or malunion at osteotomy sites",
+   "Ankle instability or great toe flexion contracture",
+   "Foot drop from common peroneal nerve injury"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why is preoperative leg angiography required?",
+   "To confirm normal trifurcation of the popliteal artery with good anterior and posterior tibial runoff. In a small percentage the peroneal artery is the dominant supply to the foot (peronea magna); harvest would risk foot ischemia and is an absolute contraindication. It also detects atherosclerosis."
+  ],
+  [
+   "How much fibula must be left proximally and distally, and why?",
+   "About 6 cm at each end. Proximally to protect the common peroneal nerve around the fibular neck (foot drop); distally to preserve the syndesmosis and ankle stability."
+  ],
+  [
+   "Which side do you harvest for an intraoral skin paddle on a mandible defect?",
+   "Usually the contralateral fibula, so the septocutaneous perforators wrap lingually around the bone into the mouth with the pedicle exiting posteriorly. The ipsilateral fibula suits extraoral skin cover or palatal lining for maxillary defects."
+  ],
+  [
+   "Why must an anterior mandible defect be reconstructed with bone?",
+   "Loss of the symphysis lets the tongue base and lower lip fall back, producing the Andy Gump deformity with poor speech, swallowing, oral competence, appearance and possible airway obstruction. A plate alone bridging an anterior defect frequently extrudes or fractures, especially after radiation."
+  ],
+  [
+   "What makes the fibula suitable for dental implants and multiple osteotomies?",
+   "Thick bicortical bone with consistent diameter, and a segmental periosteal blood supply from the peroneal artery, so each segment stays perfused if periosteum is preserved and segments are not too short."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes V (eds). Atlas of Head and Neck Surgery. Springer, 2024: Ch 51 Bony Reconstruction in the Head and Neck (fibula free flap).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 8 Reconstructive and Facial Plastic Surgery (osseous free flaps, fibula, pp. 456-457; mandibular reconstruction, pp. 477-478)."
+ ]
+}

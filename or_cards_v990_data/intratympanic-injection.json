@@ -1,0 +1,126 @@
+{
+ "slug": "intratympanic-injection",
+ "title": "Intratympanic Steroid / Gentamicin Injection",
+ "domain": "Otology",
+ "or_family_v190": "otology",
+ "linked_topic": "Sudden Sensorineural Hearing Loss",
+ "source_label": "Pasha 6e and Cummings 7e (Peripheral Vestibular Disorders)",
+ "indications": "Steroid: idiopathic sudden sensorineural hearing loss as primary therapy when systemic steroids are contraindicated or poorly tolerated (diabetes, glaucoma, psychiatric history), combined with oral steroids, or as salvage within roughly 2-6 weeks after an incomplete oral course; also Meniere disease with fluctuating hearing or attacks not controlled by diet and diuretics. Gentamicin: unilateral definite Meniere disease with disabling vertigo despite medical therapy (and usually after or instead of steroid injection), accepting a small risk of further hearing loss; requires confirmation of the affected side and reasonable function of the contralateral labyrinth. Avoid gentamicin in bilateral disease, the only hearing ear, or with poor vestibular compensation potential.",
+ "setup": [
+  "Office or clinic procedure chair that reclines fully supine; binocular microscope with speculum set",
+  "Topical anesthesia of the TM (phenol on a fine applicator or EMLA/lidocaine cream for 15-30 minutes, or iontophoresis); avoid excessive canal anesthetic pooling",
+  "Medication drawn up and warmed to body temperature to limit caloric vertigo: dexamethasone (commonly 10-24 mg/mL) or methylprednisolone (40-62.5 mg/mL); buffered gentamicin (about 26-40 mg/mL)",
+  "27- or 25-gauge spinal needle on a 1 mL syringe, bent at the hub for microscope sightline; a second vent needle or pre-placed vent optional",
+  "Pre-procedure audiogram (and baseline vestibular testing such as VHIT or calorics before gentamicin); documented informed consent including perforation, persistent hearing loss and imbalance"
+ ],
+ "landmarks": [
+  "Tympanic annulus and handle of malleus",
+  "Anteroinferior quadrant (common vent site) and posteroinferior quadrant (injection site over the round window niche)",
+  "Round window niche lying posteroinferior, under the overhang of the promontory",
+  "Promontory (avoid striking with the needle tip)",
+  "Posterosuperior quadrant (incus, stapes and chorda; avoid)",
+  "Eustachian tube orifice anterosuperiorly (drug drains here)"
+ ],
+ "danger": [
+  "Posterosuperior quadrant puncture risks ossicular injury",
+  "Persistent TM perforation (higher with repeated injections or tubes)",
+  "Gentamicin cochleotoxicity: added SNHL, sometimes profound",
+  "Vasovagal reaction and acute vertigo from cold or caustic solutions",
+  "High jugular bulb or dehiscent bulb in the hypotympanum"
+ ],
+ "steps": [
+  [
+   "Confirm side and baseline",
+   "Review the audiogram, word recognition and, for gentamicin, vestibular testing confirming the involved ear. Check for a dehiscent high jugular bulb on any imaging, an active otitis externa, or a pre-existing perforation, which changes the plan to direct drops or a wick through the defect."
+  ],
+  [
+   "Clean and anesthetize",
+   "Under the microscope, remove cerumen and debris without abrading the canal. Apply topical anesthetic to the planned puncture sites only; phenol produces an immediate small blanched spot, while creams need 15-30 minutes and must be fully suctioned before injecting."
+  ],
+  [
+   "Position the patient",
+   "Lay the patient fully supine with the head turned about 45 degrees away from the treated ear so the round window niche becomes dependent. Explain that brief dizziness, a sting, and a sensation of fullness are expected, and ask the patient not to swallow or talk."
+  ],
+  [
+   "Create a vent (optional)",
+   "Some surgeons place a small anterosuperior or anteroinferior puncture first so air escapes as fluid fills the middle ear. Venting reduces pressure pain and allows more complete filling; others use a single puncture and inject slowly so air bubbles out around the needle."
+  ],
+  [
+   "Inject posteroinferiorly",
+   "Pass the bent needle through the posteroinferior quadrant, just beyond the TM, aiming toward the round window niche without touching the promontory. Inject slowly until fluid fills the middle ear and is seen behind the drum or at the vent, typically 0.4-0.8 mL."
+  ],
+  [
+   "Hold position",
+   "Keep the patient still, head turned, for 20-30 minutes, discouraging swallowing and talking to limit eustachian tube clearance. This dwell time is the main determinant of round window absorption. Monitor for vertigo or vasovagal symptoms and allow sitting up slowly."
+  ],
+  [
+   "Steroid schedule",
+   "For SSNHL, a common course is 3-4 injections over about 2 weeks, with repeat audiometry after the series. For Meniere steroid therapy, injections are repeated as needed for flares. Tubes or wicks can be used when frequent dosing is planned, accepting a higher perforation risk."
+  ],
+  [
+   "Gentamicin titration",
+   "Use a titration approach: give one injection, then reassess at 3-4 weeks with audiogram, symptoms and head impulse testing. Repeat only if vertigo persists. Stop when vestibular hypofunction develops or hearing drops, since cumulative dosing drives cochlear injury."
+  ],
+  [
+   "Manage acute vertigo",
+   "Expect brief caloric vertigo from injected fluid; warming the solution minimizes it. Delayed unsteadiness several days after gentamicin indicates the intended vestibular effect. Use short-term vestibular suppressants only, and start early vestibular rehabilitation to promote central compensation."
+  ],
+  [
+   "Document and counsel",
+   "Record drug, concentration, volume, side, puncture sites and the patient's tolerance. Advise dry-ear precautions until the puncture heals in a few days, and give return precautions for sudden hearing drop, persistent drainage, or severe disequilibrium."
+  ]
+ ],
+ "exit_check": [
+  "Middle ear filled with medication and patient held in position for the full dwell time",
+  "Puncture sites in the anterior and posteroinferior quadrants only, no posterosuperior injury",
+  "Patient able to stand and walk safely before leaving; follow-up audiogram scheduled"
+ ],
+ "postop": [
+  "Keep the ear dry until perforations heal, usually within a few days",
+  "Repeat audiogram after the steroid series or 3-4 weeks after each gentamicin dose",
+  "Vestibular rehabilitation after gentamicin; brief suppressant use only",
+  "Recheck the TM at follow-up for persistent perforation"
+ ],
+ "complications": {
+  "early": [
+   "Transient vertigo and nausea",
+   "Otalgia and vasovagal episode",
+   "Middle ear hemorrhage or canal bleeding",
+   "Caustic burn of canal skin from phenol"
+  ],
+  "late": [
+   "Persistent TM perforation",
+   "Additional or profound SNHL after gentamicin",
+   "Chronic disequilibrium in poorly compensating patients",
+   "Recurrent Meniere vertigo requiring further treatment"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why does intratympanic gentamicin control vertigo while often sparing hearing?",
+   "It is preferentially vestibulotoxic, injuring type I vestibular hair cells and dark cells more than cochlear outer hair cells. Low-dose titration exploits this window; hearing loss risk rises with cumulative dose and frequency."
+  ],
+  [
+   "What is the role of intratympanic steroid in SSNHL per current guidelines?",
+   "The AAO-HNS guideline supports it as an option for initial therapy when systemic steroids cannot be used and recommends offering it as salvage for incomplete recovery within 2-6 weeks of onset."
+  ],
+  [
+   "Which quadrant do you inject and why?",
+   "The posteroinferior quadrant, overlying the round window niche, so the medication pools at the round window membrane, the main route into the perilymph. Avoid the posterosuperior quadrant where the ossicles lie."
+  ],
+  [
+   "What makes a patient a poor candidate for gentamicin?",
+   "Bilateral Meniere disease, an only hearing ear, uncertain side of disease, or poor central compensation (elderly, cerebellar disease). Such patients risk bilateral vestibular loss with oscillopsia."
+  ],
+  [
+   "How do you maximize absorption?",
+   "Supine positioning with the head turned 45 degrees away, warmed solution, filling the middle ear, and a 20-30 minute dwell with no swallowing or talking. A round window pseudomembrane or obliterated niche can block uptake, which partly explains nonresponders."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RS, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 7, Otology and Neurotology (Sudden SNHL; Meniere disease medical management)",
+  "Flint PW et al. Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 167, Peripheral Vestibular Disorders (intratympanic injection)",
+  "Chandrasekhar SS et al. Clinical Practice Guideline: Sudden Hearing Loss (Update). Otolaryngol Head Neck Surg 2019;161(1 Suppl):S1-S45",
+  "Basura GJ et al. Clinical Practice Guideline: Meniere's Disease. Otolaryngol Head Neck Surg 2020;162(2 Suppl):S1-S55"
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "slug": "sscd-repair",
+ "title": "Superior Canal Dehiscence Repair (Middle Fossa / Transmastoid Plugging)",
+ "domain": "Otology / Neurotology",
+ "or_family_v190": "otology",
+ "linked_topic": "Superior Canal Dehiscence",
+ "source_label": "Cummings 7e (Surgery for Vestibular Disorders), Pasha 6e and K.J. Lee",
+ "indications": "Disabling symptoms of superior semicircular canal dehiscence (sound- or pressure-induced vertigo, autophony, pulsatile tinnitus, hyperacusis to bone-conducted sounds) with matching findings: dehiscence on CT reformatted in the plane of the superior canal (Poschl view), low cVEMP thresholds or high oVEMP amplitudes, supranormal bone-conduction thresholds with intact acoustic reflexes, and often a raised ECochG SP/AP ratio. Mildly affected patients avoid triggers. Plugging gives more reliable control than resurfacing alone. Middle fossa craniotomy is the classic route; transmastoid plugging suits a low tegmen-free approach or a patient less suited to craniotomy.",
+ "setup": [
+  "Supine, head turned; facial nerve monitoring and optional ECochG to confirm the third window closes",
+  "Middle fossa: mannitol and mild hyperventilation or a lumbar drain for brain relaxation; craniotomy set and House-Urban retractor",
+  "Transmastoid: standard otologic drill and microscope",
+  "Temporalis fascia and bone pate or bone chips harvested at the start; bone cement or bone graft for resurfacing",
+  "Image guidance with the CT can help find the arcuate eminence and dehiscence",
+  "Avoid suction near the dehiscence: use cottonoids and low-flow suction"
+ ],
+ "landmarks": [
+  "Zygomatic root (craniotomy center, two-thirds anterior and one-third posterior to the EAC)",
+  "Middle meningeal artery at foramen spinosum (anterior limit)",
+  "Greater superficial petrosal nerve and facial hiatus",
+  "Arcuate eminence and the dehiscence along its crest",
+  "Superior petrosal sinus at the petrous ridge",
+  "Transmastoid: tegmen, lateral and posterior canals, common crus and superior canal ampulla"
+ ],
+ "danger": [
+  "Suctioning or opening the membranous labyrinth (sensorineural loss)",
+  "Dura tear and CSF leak; temporal lobe injury from retraction",
+  "Elevating the geniculate ganglion via traction on the GSPN",
+  "Superior petrosal sinus bleeding at the ridge",
+  "Over-plugging into the vestibule or ampulla",
+  "Missing a second dehiscence near the superior petrosal sinus"
+ ],
+ "steps": [
+  [
+   "Confirm side and diagnosis",
+   "Check that symptoms, VEMP, audiometry, and the Poschl-plane CT all point to the same ear; bilateral dehiscence on CT is common and repair should target the symptomatic side. Exclude otosclerosis by confirming intact acoustic reflexes and supranormal bone thresholds, and note any tegmen defects to repair at the same time."
+  ],
+  [
+   "Middle fossa: incision and craniotomy",
+   "Make a vertical or curved incision above the ear and reflect the temporalis. Turn a roughly 4 by 5 cm craniotomy centered over the zygomatic root, two-thirds anterior and one-third posterior to the canal, flush with the middle fossa floor. Keep the bone flap and save bone dust for plugging."
+  ],
+  [
+   "Elevate the dura posterior to anterior",
+   "Elevate the temporal dura off the floor of the middle fossa working from posterior to anterior so the GSPN is not lifted with it, which would pull on the geniculate ganglion. Identify the middle meningeal artery as the anterior limit and the petrous ridge medially. Place the self-retaining retractor on the ridge."
+  ],
+  [
+   "Find the arcuate eminence and dehiscence",
+   "Follow the floor medially to the arcuate eminence. The dehiscence usually sits at the top of the eminence or close to the superior petrosal sinus. Identify it under high magnification, keeping it irrigated with saline and covered with a cottonoid; never suction directly over the open canal."
+  ],
+  [
+   "Plug the canal",
+   "Gently pack fascia and bone pate or small bone chips into the canal lumen on both sides of the dehiscence until each limb is completely blocked. Place the plug under direct view without deep force so it does not intrude toward the ampulla or common crus. With ECochG, the SP/AP ratio should fall when the window is closed."
+  ],
+  [
+   "Resurface",
+   "Cover the plugged area with a layer of fascia and then bone graft or bone cement to recreate a solid roof over the canal. Repair any tegmen defects found at the same time with the same layered technique."
+  ],
+  [
+   "Check and close the middle fossa",
+   "Remove the retractor and inspect the dura for tears, repairing any with suture or fascia. Allow the temporal lobe to re-expand, replace the bone flap with plates, and close temporalis and scalp in layers. Remove the lumbar drain at the end or the next day."
+  ],
+  [
+   "Transmastoid: mastoidectomy",
+   "For the transmastoid route, make a postauricular incision and perform a complete mastoidectomy, thinning the tegmen and identifying the lateral and posterior semicircular canals and the sinodural angle. A low tegmen limits the view of the superior canal."
+  ],
+  [
+   "Transmastoid: blue-line both limbs",
+   "Find the superior canal deep to the tegmen and blue-line it on either side of the dehiscence: the ampullated limb anteriorly near the lateral canal ampulla and the nonampullated limb posteriorly near the common crus. Use a small diamond bur with continuous irrigation."
+  ],
+  [
+   "Transmastoid: fenestrate and plug",
+   "Make a small fenestration in each limb, protecting the membranous labyrinth, and plug each one with fascia and bone pate so the dehiscent segment is isolated from the vestibule. Cover the fenestrations with fascia and close the incision in layers."
+  ],
+  [
+   "Confirm hearing and neurologic status",
+   "On waking, check facial movement and look for spontaneous nystagmus. Do a bedside tuning fork test to confirm the cochlea is functioning and that no sudden sensorineural loss has occurred."
+  ]
+ ],
+ "exit_check": [
+  "Both limbs of the dehiscent canal plugged and resurfaced; no suction or opening of the membranous labyrinth",
+  "Dura intact or repaired; no active bleeding from the superior petrosal sinus",
+  "Facial nerve stimulates normally; tuning forks lateralize as expected"
+ ],
+ "postop": [
+  "Neurologic and neurovascular checks for craniotomy; watch for seizure, aphasia, or epidural hematoma",
+  "Expect temporary unsteadiness from superior canal hypofunction; start vestibular rehabilitation",
+  "Audiogram at 4 to 6 weeks to confirm hearing and closure of the air-bone gap",
+  "Activity restrictions with no straining or heavy lifting for about 4 weeks"
+ ],
+ "complications": {
+  "early": [
+   "Sensorineural hearing loss",
+   "Vertigo and imbalance",
+   "CSF leak",
+   "Epidural hematoma or temporal lobe injury"
+  ],
+  "late": [
+   "Persistent or recurrent symptoms from resorption or second dehiscence",
+   "BPPV",
+   "Chronic dysequilibrium",
+   "Facial weakness (rare)"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What audiometric pattern suggests SSCD rather than otosclerosis?",
+   "A low-frequency air-bone gap with supranormal (better than 0 dB) bone-conduction thresholds and intact acoustic reflexes; reflexes are absent in otosclerosis."
+  ],
+  [
+   "What CT view do you need to confirm a dehiscence?",
+   "Thin-section CT reformatted in the Poschl plane (parallel to the superior canal) and the Stenver plane (perpendicular); standard axial and coronal cuts overcall dehiscence."
+  ],
+  [
+   "Which VEMP findings support SSCD?",
+   "Lower cVEMP thresholds and higher oVEMP amplitudes on the affected side, reflecting the third window."
+  ],
+  [
+   "Why plug rather than just resurface the canal?",
+   "Resurfacing alone has more failures from resorption or graft shifting; plugging eliminates the third window more reliably and controls vertigo better."
+  ],
+  [
+   "Why do you elevate the dura from posterior to anterior in the middle fossa?",
+   "Elevating from anterior can lift the GSPN and transmit traction to the geniculate ganglion, causing facial weakness; working posterior to anterior keeps the GSPN down in its groove."
+  ]
+ ],
+ "source_basis": [
+  "Cummings Otolaryngology: Head and Neck Surgery, 7th ed., Chapter 169: Surgery for Vestibular Disorders (Surgery for Superior Semicircular Canal Dehiscence)",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed., Chapter 7: Otology and Neurotology (Superior Semicircular Canal Dehiscence Syndrome)",
+  "Lee KJ. Essential Otolaryngology: Head and Neck Surgery (Superior Canal Dehiscence Syndrome)"
+ ]
+}

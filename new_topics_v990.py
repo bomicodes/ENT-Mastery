@@ -50,6 +50,18 @@ def _question_for(q):
     return "Which of the following is the best answer?"
 
 
+def _defaults(q, stage="application"):
+    """Fill learning_stage/focus when an authored item left them out."""
+    if isinstance(q, dict):
+        q = dict(q)
+        q.setdefault("learning_stage", stage)
+        if "focus" not in q:
+            st = q.get("stem", "").lower()
+            q["focus"] = ("diagnosis" if "diagnosis?" in st else "workup" if "evaluation" in st or "test" in st[-80:]
+                          else "surgery" if "surgical" in st[-80:] else "management")
+    return q
+
+
 def _ask(q):
     """Some authored stems end on the findings; add a question matched to the choices so every stem asks one."""
     if isinstance(q, dict) and "?" not in q.get("stem", ""):
@@ -66,8 +78,9 @@ def load_topics():
         if t:
             t = dict(t, _slug=info.name)
             t["concept_check"] = _ask(t.get("concept_check"))
-            t["ladder"] = [_ask(q) for q in t.get("ladder", [])]
-            t["vignettes"] = [_ask(q) for q in t.get("vignettes", [])]
+            t["ladder"] = [_defaults(_ask(q), st) for q, st in zip(t.get("ladder", []), STAGES)]
+            t["vignettes"] = [_defaults(_ask(q)) for q in t.get("vignettes", [])]
+            t["concept_check"] = _defaults(t["concept_check"])
             out.append(t)
     return out
 

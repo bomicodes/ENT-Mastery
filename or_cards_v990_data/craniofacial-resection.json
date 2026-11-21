@@ -1,0 +1,138 @@
+{
+ "slug": "craniofacial-resection",
+ "title": "Craniofacial Resection (Open / Endoscopic-Assisted)",
+ "domain": "Skull Base",
+ "or_family_v190": "skull_base",
+ "linked_topic": "Sinonasal Malignancies",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "En bloc or margin-controlled resection of malignancy involving the anterior skull base, cribriform plate, fovea ethmoidalis or overlying dura: esthesioneuroblastoma (olfactory neuroblastoma), sinonasal adenocarcinoma and squamous cell carcinoma, sinonasal neuroendocrine carcinoma, selected sarcomas and recurrent tumors. A craniotomy-based (open) or combined approach is favored when tumor extends lateral to the mid-orbital roof, involves the frontal sinus anterior or lateral walls, skin, nasal bones or anterior maxilla, or has substantial brain involvement; purely endoscopic resection suits midline disease that can be cleared with negative margins. Contraindications include extensive brain parenchymal, cavernous sinus, bilateral orbital apex or optic chiasm involvement, carotid encasement, and distant metastases. Treatment is multimodal, typically followed by radiation.",
+ "setup": [
+  "Contrast CT for bone erosion and MRI for dural, brain, orbital and perineural extent; PET-CT or chest imaging for staging; neck imaging, since esthesioneuroblastoma and SCC can present with or develop cervical nodes.",
+  "Joint planning with neurosurgery, and with ophthalmology, plastic surgery and radiation oncology as needed; image guidance loaded and merged CT-MRI.",
+  "Consent for anosmia, cerebrospinal fluid leak, meningitis, pneumocephalus, frontal lobe injury, visual loss, epiphora, forehead numbness and frontal branch weakness.",
+  "Supine with the head in pins, slightly extended; prepare a thigh for fascia lata; lumbar drain only if the team prefers it for large dural defects.",
+  "Neuro-anesthesia: avoid nasal mask ventilation and nasal tubes; mannitol and mild hyperventilation for brain relaxation if requested; tarsorrhaphy sutures or corneal shields."
+ ],
+ "landmarks": [
+  "Supraorbital and supratrochlear neurovascular bundles",
+  "Frontal sinus and posterior table",
+  "Crista galli and cribriform plate",
+  "Anterior and posterior ethmoid arteries",
+  "Planum sphenoidale and optic canals",
+  "Lamina papyracea and medial orbital wall",
+  "Superior sagittal sinus at the midline"
+ ],
+ "danger": [
+  "Superior sagittal sinus when lifting the bone flap",
+  "Optic nerves and chiasm at the posterior bone cut",
+  "Frontal lobe retraction injury and venous infarct",
+  "Pericranial flap pedicle (supraorbital and supratrochlear vessels)",
+  "Ethmoid arteries retracting into the orbit",
+  "Cerebrospinal fluid leak and tension pneumocephalus"
+ ],
+ "steps": [
+  [
+   "Stage the extent endoscopically",
+   "Begin endoscopically: debulk the intranasal tumor to find its origin and confirm its relation to the septum, orbit and skull base. Send frozen sections from the septum and from the planned nasoseptal flap territory. This shows whether a pedicled nasoseptal flap can be preserved and which side needs the wider transfacial or endoscopic work."
+  ],
+  [
+   "Bicoronal incision and scalp flap",
+   "Make a bicoronal incision behind the hairline. If a pericranial flap is planned, raise the scalp in the subgaleal plane anteriorly to the glabella and upper nasal bones, using Raney clips for scalp bleeding. Protect the frontal branch laterally by staying deep to the superficial layer of deep temporal fascia."
+  ],
+  [
+   "Raise the pericranial flap",
+   "Raise a broad pericranial flap, about 10 cm wide and at least 15 cm long, from behind the incision down to the orbital rims. Preserve the supraorbital and supratrochlear vessels that supply it, freeing the supraorbital nerve from its notch if needed. Keep the flap moist and out of the way."
+  ],
+  [
+   "Frontal craniotomy or subcranial window",
+   "Perform a low bifrontal craniotomy within 1 cm of the orbital rims to minimize frontal lobe retraction, taking care at the midline over the sagittal sinus. Alternatively, for a subcranial approach, pre-plate and remove a window of frontal bone over the frontal sinuses and upper nasal bones, then cranialize or remove the sinus mucosa."
+  ],
+  [
+   "Extradural skull base exposure",
+   "Elevate the dura off the orbital roofs, crista galli and cribriform plate, where it is adherent at the olfactory fibers. Clip or coagulate the anterior and posterior ethmoid arteries. Repair small dural tears as they occur. If tumor stops at bone, aim for an extradural resection with separate dural margin."
+  ],
+  [
+   "Intradural resection when needed",
+   "When tumor breaches the skull base or involves dura, incise the dura around the involved area so the tumor-bearing dura stays attached to the specimen, along with the olfactory bulbs and tracts. Resect involved brain with neurosurgery. Send dural and olfactory tract margins for frozen section."
+  ],
+  [
+   "Transfacial or endoscopic inferior release",
+   "From below, perform at minimum a medial maxillectomy with total ethmoidectomy on the tumor side, through a lateral rhinotomy, midface degloving, or preferably endoscopically. Add wide sphenoidotomy, a Draf III and posterior septectomy for endoscopic-assisted cases. Extend to orbital wall or exenteration only when tumor dictates."
+  ],
+  [
+   "Skull base osteotomies",
+   "Join the cranial and facial dissections with a high-speed drill: laterally through the orbital roofs or fovea, anteriorly through the frontal sinus floor and nasal bones, and posteriorly through the planum sphenoidale. Unroof and protect the optic canals before any posterior cut that approaches them."
+  ],
+  [
+   "Deliver the specimen",
+   "Free the remaining septal and turbinate attachments and deliver the specimen en bloc, either transcranially or through the nose and mouth. When en bloc removal is not feasible, resect in mapped segments, sending separately labeled margins; accurate mapping matters more than single-piece delivery for oncologic outcome."
+  ],
+  [
+   "Dural repair",
+   "Close the dural defect watertight with fascia lata or dural substitute as an inlay graft, adding sutures where possible, with an onlay layer between dura and residual bone. Use tissue sealant between layers. Confirm with a Valsalva maneuver from anesthesia that there is no leak."
+  ],
+  [
+   "Vascularized skull base reconstruction",
+   "Lay the pericranial flap under the frontal lobes across the skull base defect to the planum, tucking it under the bone flap edges, or use a galeal-pericranial flap for larger defects. For endoscopic cases, a nasoseptal flap if the septum is free of tumor, or a free flap if local tissue is unavailable or previously irradiated."
+  ],
+  [
+   "Replace bone and close",
+   "Replace the frontal bone flap or subcranial window with plates, leaving a gap inferiorly so the pericranial pedicle is not compressed. Support the nasal side with absorbable packing over the repair. Close the scalp in layers over a subgaleal drain if used, and close any facial incisions precisely."
+  ]
+ ],
+ "exit_check": [
+  "Watertight dural repair confirmed with Valsalva and the vascularized flap lying flat across the defect",
+  "Margins mapped and frozen sections reviewed, including dura, olfactory tracts and orbit",
+  "Pupils and globe checked; packing secure without excessive pressure on the reconstruction"
+ ],
+ "postop": [
+  "Neurosurgical intensive care with neurological checks and CT on day 1 for pneumocephalus, contusion or hematoma",
+  "No positive-pressure ventilation by mask, nose blowing, straws, or straining; stool softeners; head of bed elevated",
+  "Remove nasal packing at 5 to 10 days; saline irrigation afterward and endoscopic debridement in clinic",
+  "Monitor for clear rhinorrhea, headache, fever or neck stiffness suggesting leak or meningitis; check sodium for diabetes insipidus or SIADH",
+  "Tumor board review for adjuvant radiation with or without chemotherapy, and endoscopic plus MRI surveillance"
+ ],
+ "complications": {
+  "early": [
+   "Cerebrospinal fluid leak",
+   "Tension pneumocephalus",
+   "Meningitis or epidural abscess",
+   "Frontal lobe edema, contusion or hematoma",
+   "Visual loss or diplopia"
+  ],
+  "late": [
+   "Anosmia (expected with bilateral resection)",
+   "Frontal bone flap osteomyelitis or resorption",
+   "Mucocele or chronic crusting",
+   "Epiphora and cosmetic deformity",
+   "Local or regional recurrence, including delayed nodes in esthesioneuroblastoma"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What are the Kadish and Dulguerov staging systems for esthesioneuroblastoma?",
+   "Kadish: A, nasal cavity; B, nasal cavity and paranasal sinuses; C, beyond the sinuses (orbit, skull base, intracranial or distant), with modified D for nodal or distant metastases. Dulguerov is TNM based: T1 nasal cavity and sinuses sparing the sphenoid and superior ethmoids, T2 adds sphenoid or cribriform, T3 orbit or extradural anterior fossa, T4 brain."
+  ],
+  [
+   "Which histology features identify olfactory neuroblastoma, and what grading predicts outcome?",
+   "Small round blue cells in lobules with neurofibrillary matrix, Homer-Wright pseudorosettes and Flexner-Wintersteiner true rosettes, with sustentacular S100-positive cells. Hyams grade I to IV predicts behavior; high grade carries more nodal and distant failure."
+  ],
+  [
+   "What determines whether a pericranial flap will survive?",
+   "Its supraorbital and supratrochlear vascular pedicle. The flap must not be cut short at the orbital rim, and the replaced bone flap must leave an inferior gap so the pedicle is not strangled."
+  ],
+  [
+   "When must an orbit be exenterated in anterior skull base cancer?",
+   "When tumor invades orbital fat, extraocular muscles, the orbital apex or the globe. Erosion of the lamina or orbital roof with tumor confined outside intact periorbita can be managed with removal of bone and periorbita, preserving the eye."
+  ],
+  [
+   "How do you recognize and treat tension pneumocephalus?",
+   "Declining consciousness or focal signs with the Mount Fuji sign on CT (air separating and compressing the frontal lobes). Treat urgently with 100% oxygen, needle or burr-hole aspiration with neurosurgery, and repair of the leak; avoid positive-pressure mask ventilation."
+  ]
+ ],
+ "source_basis": [
+  "Mani N, Homer JJ. Craniofacial Resection. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 43.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, Sinonasal Malignancies: esthesioneuroblastoma, surgical management, transfacial and cranial approaches, resection types (p 308-311).",
+  "Dulguerov P, Calcaterra T. Esthesioneuroblastoma: the UCLA experience 1970-1990. Laryngoscope. 1992;102:843-849."
+ ]
+}

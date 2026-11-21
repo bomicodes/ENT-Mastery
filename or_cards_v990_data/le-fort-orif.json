@@ -1,0 +1,138 @@
+{
+ "slug": "le-fort-orif",
+ "title": "Le Fort (Maxillary) Fracture ORIF",
+ "domain": "Facial Trauma",
+ "or_family_v190": "facial_trauma",
+ "linked_topic": "Le Fort / Panfacial Trauma",
+ "source_label": "Pasha 6e (Head and Neck Trauma chapter) and Cummings 7e (Maxillofacial Trauma chapter)",
+ "indications": "Displaced or mobile maxillary fractures with malocclusion, midface mobility, loss of facial height or projection, or associated orbital and nasal deformity. All Le Fort fractures involve the pterygoid plates. Le Fort I (horizontal, low maxillary) separates the tooth-bearing maxilla from the midface. Le Fort II (pyramidal, most common) crosses the nasofrontal junction, medial orbit, orbital floor and infraorbital rim and the zygomaticomaxillary suture. Le Fort III (craniofacial dysjunction) separates the midface from the skull base through the nasofrontal and zygomaticofrontal sutures, orbits and zygomatic arches. Fractures are often mixed or unilateral. The goals are restoring occlusion first, then midfacial height, width and projection by fixing the vertical buttresses. Repair is ideally early (first days, before edema) or once swelling settles within about 2 weeks.",
+ "setup": [
+  "Stabilize per ATLS; clear the cervical spine, assess for intracranial injury, CSF leak and ophthalmic injury (ophthalmology exam before orbital surgery)",
+  "Fine-cut maxillofacial CT with 3D reconstruction; dental impressions or pre-injury photographs if occlusion is uncertain",
+  "Airway plan with anesthesia: nasotracheal intubation for isolated Le Fort I with intact skull base; submental intubation or tracheostomy for Le Fort II/III or with NOE and skull base injury, since MMF and nasal tubes conflict",
+  "Arch bars or MMF screws and 24 to 26 gauge wire, wire cutters",
+  "Midface plating set (1.5 to 2.0 mm L- and straight plates, monocortical screws), Rowe disimpaction forceps, periosteal elevators, headlight",
+  "Bone graft source (split calvarium, iliac crest) or mesh if buttress gaps are large"
+ ],
+ "landmarks": [
+  "Nasomaxillary (medial) buttress along the piriform aperture",
+  "Zygomaticomaxillary (lateral) buttress above the first molar, the strongest",
+  "Pterygomaxillary (posterior) buttress",
+  "Infraorbital rim, foramen and nerve",
+  "Nasofrontal junction and zygomaticofrontal suture",
+  "Tooth roots, especially the long canine root beside the piriform aperture",
+  "Inferior orbital fissure and orbital floor"
+ ],
+ "danger": [
+  "Fixing the maxilla in a malreduced position, which locks in malocclusion (condyles must be seated during MMF)",
+  "Monocortical screws into tooth roots or the thin anterior maxillary wall",
+  "Infraorbital nerve injury during degloving",
+  "Nasal intubation through a cribriform fracture",
+  "Lid malposition from subciliary approaches (prefer transconjunctival)",
+  "Telecanthus or loss of projection if NOE or zygoma components are ignored"
+ ],
+ "steps": [
+  [
+   "Classify and sequence",
+   "From the CT, identify each fracture component and the highest Le Fort level on each side. Decide on approaches. In panfacial injury, work from stable to unstable: establish occlusion with MMF, repair any mandible fracture to restore the lower face, then rebuild the outer frame (zygoma and arch) before the central midface and NOE."
+  ],
+  [
+   "Secure the airway",
+   "Use submental or nasal intubation as planned so the teeth can be wired together. Nasotracheal intubation requires a nasal pathway intact and no skull base fracture; otherwise use submental intubation or tracheostomy, particularly if prolonged MMF or ventilation is likely."
+  ],
+  [
+   "Apply arch bars or MMF screws",
+   "Place maxillary and mandibular arch bars with circumdental wires, or bone-borne MMF screws or hybrid bars. In edentulous patients use the patient's dentures or a splint fixed with circummandibular and piriform or circumzygomatic wires."
+  ],
+  [
+   "Disimpact the maxilla",
+   "Mobilize the impacted maxilla with Rowe disimpaction forceps (one blade in the nose, one on the palate) or digital pressure, rocking it gently until it moves freely into occlusion. Incomplete mobilization causes the maxilla to spring back and leaves an open bite."
+  ],
+  [
+   "Establish occlusion",
+   "Place the patient into premorbid occlusion using wear facets as a guide and wire into MMF. Seat the condyles by pressing upward and backward at the mandibular angles; the mandible now acts as the template that sets maxillary position, so condylar seating is critical."
+  ],
+  [
+   "Maxillary exposure",
+   "Make an upper gingivobuccal sulcus incision from first molar to first molar, leaving a mucosal cuff on the gingiva for closure. Elevate subperiosteally to expose the piriform aperture, anterior maxilla and zygomaticomaxillary buttress, identifying and protecting the infraorbital nerve at its foramen."
+  ],
+  [
+   "Reduce and plate the vertical buttresses",
+   "Reduce each nasomaxillary and zygomaticomaxillary buttress anatomically. Fix each of the four buttresses with an L-shaped or straight 1.5 to 2.0 mm plate and at least two screws on each side of the fracture, placing screws into thick buttress bone above the tooth roots. The thin anterior wall holds screws poorly."
+  ],
+  [
+   "Bone graft gaps",
+   "If a buttress is comminuted or has a gap (more than about 5 mm), span it with a longer plate and bridge it with bone graft or titanium mesh to restore vertical height. Loose anterior wall fragments can be replaced or supported with mesh to prevent soft tissue collapse into the sinus."
+  ],
+  [
+   "Le Fort II components",
+   "Add reduction and fixation of the infraorbital rim through a transconjunctival (preferred) or subciliary incision, explore and repair the orbital floor if needed, and plate the nasofrontal junction through an existing laceration or local incision. Evaluate the medial canthal tendon and lacrimal system for NOE involvement."
+  ],
+  [
+   "Le Fort III components",
+   "Use a coronal flap to expose the zygomaticofrontal sutures, zygomatic arches and nasofrontal region. Reduce and fix the zygomatic arches straight (not bowed) to restore facial width and projection, then the ZF sutures and nasal root. Combine with orbital wall reconstruction as needed."
+  ],
+  [
+   "Release MMF and check",
+   "Release the MMF and bring the mandible through its range of motion. Occlusion should reproduce reliably when the jaw is closed by gentle pressure with condyles seated. If it does not, remove the plates and re-reduce; do not rely on elastics to correct a malpositioned fixation."
+  ],
+  [
+   "Close",
+   "Irrigate and close the sulcus incision in layers with absorbable suture, resuspending the soft tissue of the cheek and nasal base (alar cinch if needed) to prevent widening. Close the transconjunctival and coronal incisions. Leave arch bars in place for guiding elastics if needed."
+  ]
+ ],
+ "exit_check": [
+  "Reproducible premorbid occlusion with MMF released and condyles seated",
+  "All four vertical buttresses reduced and stable; facial height, width and projection restored",
+  "Globe position and forced duction checked when orbital floor was manipulated"
+ ],
+ "postop": [
+  "Head elevation and sinus precautions (no nose blowing) for several weeks",
+  "Soft, non-chew diet for about 6 weeks; guiding elastics if needed",
+  "Oral hygiene with chlorhexidine rinses and toothbrushing around arch bars",
+  "Postoperative CT for complex or orbital repairs; serial vision checks",
+  "Remove arch bars once healing is secure, typically around 6 weeks"
+ ],
+ "complications": {
+  "early": [
+   "Malocclusion (often open bite from incomplete disimpaction or condylar malseating)",
+   "Infraorbital nerve hypesthesia",
+   "CSF leak with Le Fort II/III",
+   "Diplopia or enophthalmos from orbital component",
+   "Hardware infection"
+  ],
+  "late": [
+   "Malunion with midface retrusion (dish face) or elongation",
+   "Nonunion",
+   "Palpable or exposed plates",
+   "Nasolacrimal obstruction and epiphora",
+   "Chronic sinusitis or mucocele"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What anatomic feature is common to all Le Fort fractures?",
+   "Fracture of the pterygoid plates. Without pterygoid plate involvement it is not a true Le Fort fracture."
+  ],
+  [
+   "Which buttresses are most important to fix and which is strongest?",
+   "The vertical nasomaxillary and zygomaticomaxillary buttresses, bilaterally (four-point fixation); the zygomaticomaxillary is the strongest. The pterygomaxillary buttress is not routinely plated."
+  ],
+  [
+   "Why must the condyles be seated during MMF before fixing the maxilla?",
+   "With the mandible used as the template, any condylar distraction is transmitted into the maxillary position; the fixed maxilla ends up too superior or posterior, producing an anterior open bite once the condyles drop back into the fossae."
+  ],
+  [
+   "How do you classify the fracture if Le Fort I on the left and Le Fort II on the right?",
+   "Each side is described separately by its highest level, so it is a left Le Fort I and right Le Fort II. Mixed and unilateral patterns are common."
+  ],
+  [
+   "How is airway managed for a Le Fort III with CSF rhinorrhea?",
+   "Avoid nasotracheal intubation because of the skull base disruption. Use oral intubation converted to submental intubation, or tracheostomy if prolonged ventilation or complex panfacial repair is expected, so MMF can be applied."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 10, Head and Neck Trauma: Maxillary Fractures, buttress system, Le Fort classification, management principles, techniques, management by Le Fort classification, palatal fractures, complications (p 643-647)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 20, Maxillofacial Trauma"
+ ]
+}

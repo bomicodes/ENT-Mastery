@@ -1,0 +1,124 @@
+{
+ "slug": "vascular-malformation",
+ "title": "Lymphatic Malformation Excision / Sclerotherapy",
+ "domain": "Pediatric Otolaryngology",
+ "or_family_v190": "pediatric",
+ "linked_topic": "Lymphatic Malformation",
+ "source_label": "Pasha 6e Ch 9 and Cummings 7e Ch 203 (Vascular Anomalies of the Head and Neck)",
+ "indications": "Symptomatic cervicofacial lymphatic malformation causing airway compromise, dysphagia, recurrent infection or hemorrhage, functional impairment, or disfigurement. Macrocystic lesions (cysts at least 2 mL) respond best to percutaneous sclerotherapy with doxycycline, bleomycin, ethanol, or sodium tetradecyl sulfate; microcystic and mixed lesions respond poorly to sclerotherapy and are treated with sirolimus, staged conservative excision, or laser and radiofrequency to mucosal vesicles. Localized infrahyoid unilateral lesions (de Serres I) are the best surgical candidates; bilateral suprahyoid disease (stages IV-V) carries high morbidity and recurrence. Small asymptomatic lesions may be observed, and some macrocystic lesions regress spontaneously.",
+ "setup": [
+  "MRI with T2 and contrast to define macro- versus microcystic components, extent, and airway relationship",
+  "Interventional radiology suite with ultrasound and fluoroscopy for sclerotherapy, or OR with nerve integrity monitor for excision",
+  "Oral or nasotracheal intubation planned with anesthesia; tracheostomy tray if the airway is involved",
+  "Bipolar cautery, fine dissecting scissors, loupes, closed suction drains",
+  "Sirolimus history reviewed (wound healing, immunosuppression) before elective excision"
+ ],
+ "landmarks": [
+  "Cyst walls and septations on MRI and in the field",
+  "Marginal mandibular and other facial nerve branches weaving through the lesion",
+  "Hypoglossal and lingual nerves in the submandibular triangle",
+  "Spinal accessory nerve and vagus with the carotid sheath",
+  "Floor of mouth and tongue base for suprahyoid lesions",
+  "Airway, parapharyngeal and retropharyngeal extension"
+ ],
+ "danger": [
+  "Facial nerve branches displaced and splayed within the lesion",
+  "Cranial nerves IX-XII and carotid or jugular vessels in deep extension",
+  "Airway obstruction from postprocedure swelling (sclerotherapy or excision)",
+  "Lymphorrhea and seroma after incomplete excision",
+  "Sclerosant toxicity: bleomycin pulmonary fibrosis, ethanol nerve injury, skin necrosis"
+ ],
+ "steps": [
+  [
+   "Stage and choose therapy",
+   "Classify the lesion on MRI as macrocystic, microcystic, or mixed, and stage it by de Serres (I unilateral infrahyoid through V bilateral supra- and infrahyoid, with retropharyngeal and mediastinal modifiers). Choose sclerotherapy for macrocysts, sirolimus or staged surgery for microcystic disease, and confirm the airway plan before any intervention."
+  ],
+  [
+   "Sclerotherapy: access cysts",
+   "Under general anesthesia, use ultrasound to puncture each macrocyst with small needles or catheters. Aspirate the chylous or hemorrhagic fluid completely and confirm intralesional position with contrast under fluoroscopy, checking for venous communication or extravasation before injecting any agent."
+  ],
+  [
+   "Sclerotherapy: inject agent",
+   "Inject the chosen sclerosant (doxycycline, bleomycin, ethanol, or sodium tetradecyl sulfate) into each cyst at a volume proportional to the aspirate and within weight-based maximum dose. Leave a catheter for repeat dosing over 1-2 days for large cysts. Expect swelling peaking in 24-72 hours; plan observation for airway lesions."
+  ],
+  [
+   "Excision: plan the incision",
+   "For a localized lesion, use a cervical crease incision placed for neck-dissection-style access and good cosmesis, or a parotidectomy incision for parotid lesions. Mark the expected course of the marginal mandibular nerve. Connect the facial nerve monitor and avoid long-acting paralysis."
+  ],
+  [
+   "Raise flaps over the lesion",
+   "Elevate subplatysmal flaps carefully; the thin cyst walls lie directly beneath and rupture easily, which makes the margin hard to follow. Keep the dissection on the lesion surface and avoid excessive skin thinning, which risks necrosis, particularly after prior sclerotherapy or infection."
+  ],
+  [
+   "Identify nerves first",
+   "Find the facial nerve trunk or marginal branch, hypoglossal, lingual, and spinal accessory nerves in normal tissue outside the malformation and trace them into it, using stimulation mapping as you go. Nerves are often splayed, elongated, and woven through septations, so never divide a band without testing it."
+  ],
+  [
+   "Dissect the malformation",
+   "Dissect the lesion off vessels and nerves with bipolar cautery and sharp scissors, controlling feeding lymphatic channels with cautery or ligatures. Excise as much as can be removed safely; total removal lowers recurrence, but leave residual disease on a vital structure rather than sacrifice it."
+  ],
+  [
+   "Address deep extension",
+   "For parapharyngeal, floor of mouth, or tongue involvement, combine cervical and transoral access as needed. Stage bilateral disease, treating one side at a time to limit airway edema. Mucosal vesicles of the tongue can be treated separately with laser, radiofrequency, or coblation."
+  ],
+  [
+   "Hemostasis and lymphatic control",
+   "Inspect the bed with Valsalva for lymph leak and bleeding, ligating or cauterizing open channels. Consider a sclerosant or fibrin sealant to residual microcystic tissue. Place closed suction drains because lymphorrhea and seroma are common after resection."
+  ],
+  [
+   "Closure",
+   "Reapproximate platysma and close skin in layers, excising redundant stretched skin conservatively. Apply a light pressure dressing if the cavity is large. Keep the patient intubated after extensive suprahyoid or tongue surgery until edema settles, or perform tracheostomy if prolonged airway obstruction is expected."
+  ]
+ ],
+ "exit_check": [
+  "Facial nerve branches stimulate at low threshold at the end",
+  "Drains functioning and no expanding hematoma",
+  "Airway plan confirmed (extubated, kept intubated, or tracheostomy)"
+ ],
+ "postop": [
+  "Airway monitoring 24-72 hours after sclerotherapy or excision of suprahyoid lesions; steroids for edema at surgeon discretion",
+  "Drain until output is low; reaccumulation is aspirated or treated with sclerotherapy",
+  "Repeat MRI or ultrasound at 6-12 weeks; repeat sclerotherapy sessions are often needed",
+  "Sirolimus monitoring (trough levels, blood counts, lipids) when used for microcystic disease"
+ ],
+ "complications": {
+  "early": [
+   "Airway obstruction from swelling",
+   "Facial, hypoglossal, or lingual nerve injury",
+   "Hematoma, lymph leak, or seroma",
+   "Skin necrosis or blistering after sclerotherapy; fever and pain"
+  ],
+  "late": [
+   "Recurrence (about 50% after subtotal excision)",
+   "Scarring and persistent asymmetry from bony overgrowth",
+   "Macroglossia or dysphagia",
+   "Recurrent infection or intralesional hemorrhage"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Which lymphatic malformations respond best to sclerotherapy?",
+   "Macrocystic lesions (cysts of at least 2 mL or 2 cm); microcystic lesions respond poorly and are treated with sirolimus, staged excision, or local ablation."
+  ],
+  [
+   "Describe the modified de Serres staging.",
+   "I unilateral infrahyoid, II unilateral suprahyoid, III unilateral supra- and infrahyoid, IV bilateral suprahyoid, V bilateral supra- and infrahyoid; higher stages carry more complications and recurrence."
+  ],
+  [
+   "What is sirolimus and why does it work for lymphatic malformations?",
+   "An mTOR inhibitor that blocks the PI3K/AKT/mTOR pathway, which is often activated by somatic PIK3CA mutations in lymphatic malformations; it shrinks microcystic disease."
+  ],
+  [
+   "What is the cause of sudden enlargement of a known lymphatic malformation?",
+   "Intralesional hemorrhage or infection, often after an upper respiratory infection; treat supportively and monitor the airway."
+  ],
+  [
+   "What specific toxicity is associated with bleomycin and ethanol?",
+   "Bleomycin: dose-related pulmonary fibrosis. Ethanol: nerve injury, skin necrosis, and systemic toxicity."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RA, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Ch 9 Pediatric Otolaryngology, Vascular Anomalies (pp 543-548) and pediatric neck masses (p 610)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Ch 203 Vascular Anomalies of the Head and Neck"
+ ]
+}

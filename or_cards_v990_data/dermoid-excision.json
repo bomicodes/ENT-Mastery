@@ -1,0 +1,124 @@
+{
+ "slug": "dermoid-excision",
+ "title": "Nasal Dermoid / Midline Neck Dermoid Excision",
+ "domain": "Pediatric Otolaryngology",
+ "or_family_v190": "pediatric",
+ "linked_topic": "Nasal Dermoid Cyst",
+ "source_label": "Pasha 6e Ch 9 and Cummings 7e Chs 190 and 202",
+ "indications": "Nasal dermoid sinus cyst presenting as a midline dorsal pit, sinus tract with or without protruding hair, or firm noncompressible mass anywhere from glabella to columella, and midline cervical or submental dermoid cysts. Excision is indicated for all lesions because of infection, meningitis risk with intracranial tracts, and progressive deformity of the developing nose; aspiration, incision and drainage, and subtotal excision recur. Obtain both thin-cut CT and MRI before surgery to define intracranial extension (bifid crista galli, enlarged foramen cecum, tract to the dura). Intracranial extension requires a combined approach with neurosurgery. Distinguish from encephalocele, glioma, and hemangioma before any biopsy.",
+ "setup": [
+  "Imaging review: CT for bony landmarks and MRI for the tract and intracranial component",
+  "Supine, head on donut or in pins if craniotomy is planned; oral RAE tube",
+  "Lacrimal probes and methylene blue for cannulating the sinus tract",
+  "External rhinoplasty set, fine osteotomes or a drill for the nasal bones, loupes",
+  "Neurosurgery available for frozen-section-directed or planned intracranial work"
+ ],
+ "landmarks": [
+  "Sinus ostium on the dorsum and its tract",
+  "Nasal bones and the space between them (prenasal space)",
+  "Foramen cecum and crista galli at the skull base",
+  "Upper lateral cartilages and septum",
+  "Medial canthal tendons and angular vessels (glabellar lesions)",
+  "For neck dermoid: hyoid, mylohyoid, and geniohyoid in the midline"
+ ],
+ "danger": [
+  "Dural tear and CSF leak at the foramen cecum",
+  "Incomplete tract excision with recurrence",
+  "Disruption of nasal growth centers and dorsal deformity",
+  "Lacrimal system and canthal tendon injury with lateral approaches",
+  "Misdiagnosis of encephalocele (pulsatile, enlarges with crying, positive Furstenberg)"
+ ],
+ "steps": [
+  [
+   "Confirm diagnosis and extent",
+   "Confirm a firm, noncompressible, non-transilluminating lesion with a negative Furstenberg sign. Review CT for bifid crista galli, widened foramen cecum, and nasal bone defects, and MRI for a tract signal reaching the dura. Plan an extracranial approach, or a combined approach with neurosurgery for intracranial extension."
+  ],
+  [
+   "Choose the incision",
+   "Use an elliptical vertical incision around a dorsal sinus ostium, accepting a small midline scar. For deep dorsal or intraseptal lesions without a large skin pit, an external rhinoplasty approach gives skull base access and dorsal exposure with the best scar. Lateral rhinotomy, midline vertical, or coronal incisions suit glabellar or intracranial cases."
+  ],
+  [
+   "Cannulate the tract",
+   "Gently pass a lacrimal probe into the sinus ostium to follow its direction, and inject a small amount of methylene blue if helpful. This stains the epithelial lining and guides complete excision, especially where the tract dives between the nasal bones."
+  ],
+  [
+   "Excise skin ellipse and cyst",
+   "Incise the ellipse around the ostium and dissect circumferentially around the cyst with fine scissors, staying just outside its capsule. Avoid rupturing the cyst, since spilled keratin and adnexal elements cause inflammation and recurrence."
+  ],
+  [
+   "Protect the cyst and septum",
+   "Keep the cyst intact as you free it from the overlying dorsal skin and the upper lateral cartilages. If the lesion sits within the septum, approach it through the open rhinoplasty exposure between the medial crura and dissect it off the septal cartilage, preserving dorsal and caudal L-strut support for later nasal growth."
+  ],
+  [
+   "Follow the tract deep",
+   "Trace the tract down to the nasal bones. If it passes between them, open the bony dorsum in midline with a fine osteotome or drill, or perform medial osteotomies, to follow the tract toward the septum and skull base without leaving epithelium behind."
+  ],
+  [
+   "Address the skull base",
+   "At the foramen cecum, send the deepest tract for frozen section. If epithelium persists or imaging shows intracranial extension, neurosurgery performs a small frontal or bifrontal craniotomy to remove the intracranial portion and repair dura. If the tract ends as a fibrous stalk, ligate and divide it."
+  ],
+  [
+   "Reconstruct the dorsum",
+   "Reduce or replate the nasal bones and close the dorsal soft tissue. Fill a significant dorsal defect with cartilage or a soft tissue graft in older children or stage reconstruction. Close the skin in layers with fine sutures, or close the columellar incision after an open approach."
+  ],
+  [
+   "Midline neck dermoid excision",
+   "For a submental or midline cervical dermoid, use a transverse skin crease incision, raise subplatysmal flaps, and dissect the cyst off the mylohyoid and geniohyoid muscles intact. Assess its relation to the hyoid; if it moves with tongue protrusion or attaches to the hyoid, treat it as a thyroglossal duct cyst and perform a Sistrunk procedure."
+  ],
+  [
+   "Hemostasis and closure",
+   "Irrigate, obtain hemostasis with bipolar, and confirm no CSF leak with Valsalva after skull base work. Close in layers with a small drain only for large neck cavities. Send all tissue for pathology to confirm dermoid elements and rule out teratoma."
+  ]
+ ],
+ "exit_check": [
+  "Cyst and entire tract removed intact, with frozen section of the deepest portion",
+  "No CSF leak and dura repaired if opened",
+  "Nasal dorsum contour acceptable and incisions closed without tension"
+ ],
+ "postop": [
+  "Head of bed elevation, nasal splint or tape after dorsal bone work",
+  "Neurosurgical monitoring after craniotomy for CSF leak and meningitis",
+  "Follow-up until adolescence for recurrence and nasal growth disturbance",
+  "Secondary rhinoplasty in adolescence if dorsal deformity develops"
+ ],
+ "complications": {
+  "early": [
+   "CSF leak or meningitis after skull base involvement",
+   "Wound infection or hematoma",
+   "Cyst rupture with inflammatory reaction",
+   "Lacrimal or canthal injury with lateral approaches"
+  ],
+  "late": [
+   "Recurrence from retained epithelium",
+   "Dorsal saddle or broad nasal deformity",
+   "Hypertrophic or widened midline scar",
+   "Intracranial abscess from retained intracranial component"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the embryologic origin of a nasal dermoid?",
+   "Failure of the dural projection through the prenasal space or fonticulus frontalis to regress, which pulls ectoderm with it and leaves a tract from the nasal skin to the foramen cecum."
+  ],
+  [
+   "What CT findings suggest intracranial extension?",
+   "Bifid crista galli and an enlarged foramen cecum; MRI best shows the tract and any intracranial component."
+  ],
+  [
+   "How do you distinguish a dermoid from an encephalocele and glioma on exam?",
+   "Dermoid: firm, noncompressible, may have a pit with hair, negative Furstenberg. Encephalocele: soft, compressible, pulsatile, enlarges with crying (positive Furstenberg). Glioma: firm, noncompressible, no CSF connection, no pit."
+  ],
+  [
+   "Why should a nasal midline mass never be biopsied in clinic?",
+   "It may be an encephalocele, and biopsy risks CSF leak and meningitis; image first."
+  ],
+  [
+   "How does a dermoid differ histologically from an epidermoid and a teratoma?",
+   "Dermoid contains ectoderm and mesoderm with adnexal structures (hair follicles, sebaceous and sweat glands); epidermoid is squamous epithelium only; teratoma contains all three germ layers."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RA, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Ch 9 Pediatric Otolaryngology, Nasal Dermoid (p 552-553) and Dermoid Cyst and Teratoma (p 608)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Ch 190 Congenital and Acquired Malformations of the Nose and Nasopharynx; Ch 202 Congenital and Inflammatory Neck Masses in Children"
+ ]
+}

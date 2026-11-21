@@ -1,0 +1,124 @@
+{
+ "slug": "ear-canal-foreign-body",
+ "title": "Ear Canal Foreign Body / Cerumen Removal Under Microscope",
+ "domain": "General ENT",
+ "or_family_v190": "otology",
+ "linked_topic": "Ear and Nasal Foreign Body Removal",
+ "source_label": "Pasha 6e and Cummings 7e (Infections of the External Ear; Topical Therapies of External Ear Disorders)",
+ "indications": "Symptomatic or obstructing cerumen impaction (hearing loss, fullness, pain, need to see the TM) and any canal foreign body. Button batteries are an emergency requiring same-day removal because current-driven and alkaline injury can perforate the TM and damage the canal, ossicles and facial nerve within hours; do not irrigate them. Live insects should be immobilized with mineral oil or lidocaine before removal. Vegetable matter swells with water, so irrigation is avoided. Irrigation is also contraindicated with known or suspected perforation, prior ear surgery, tubes, or the only hearing ear. Uncooperative children, deeply impacted objects near the TM, failed prior attempts, or canal trauma warrant removal under general anesthesia.",
+ "setup": [
+  "Binocular microscope with assorted speculums; good restraint or assistant for children, or brief general anesthesia by mask",
+  "Instruments: right-angle hooks, alligator and cup forceps, ring curettes, Frazier and Schuknecht suctions in several sizes",
+  "Mineral oil or 2% lidocaine for insects; cerumenolytics for hard wax (water- or oil-based)",
+  "Irrigation setup only when the TM is known intact and object is not organic or a battery",
+  "Tissue glue (cyanoacrylate on a stick) only for smooth spherical objects in cooperative patients, used cautiously"
+ ],
+ "landmarks": [
+  "Cartilaginous lateral canal (hair, cerumen glands; less painful)",
+  "Bony-cartilaginous junction and isthmus (narrowest, objects lodge medial to it)",
+  "Bony medial canal with thin, sensitive skin",
+  "Anterior canal recess and tympanic annulus",
+  "Tympanic membrane and handle of malleus"
+ ],
+ "danger": [
+  "Pushing the object medially past the isthmus or into the middle ear",
+  "Canal laceration and bleeding obscuring the field",
+  "TM perforation and ossicular injury",
+  "Button battery injury progressing in hours",
+  "Vasovagal or cough (Arnold nerve) reflex"
+ ],
+ "steps": [
+  [
+   "History and object type",
+   "Identify what the object is (battery, organic, smooth bead, sharp, insect), duration, prior attempts, and history of perforation, tubes or ear surgery. Examine the opposite ear and nostrils in children, who often have multiple foreign bodies."
+  ],
+  [
+   "Prepare the patient",
+   "Position supine for children with a parent or assistant stabilizing the head, or use general anesthesia when cooperation is poor or the object is medial. For adults, a seated or reclined position works. Explain each step and warn about pressure and noise."
+  ],
+  [
+   "Visualize first",
+   "Use the largest speculum that fits comfortably, straightening the canal by pulling the pinna up and back in adults or back and down in infants. Under the microscope, define the edges of the object and the space around it before touching anything."
+  ],
+  [
+   "Kill and immobilize insects",
+   "Instill mineral oil or lidocaine to kill a live insect, which eases pain and stops movement. Then remove it with forceps or suction. Lidocaine can cause brief vertigo if it reaches the middle ear through an unrecognized perforation."
+  ],
+  [
+   "Grasp irregular objects",
+   "Use alligator or cup forceps for soft or irregular objects with an edge, such as paper or foam. Avoid forceps on smooth, round objects because they slip and push medially. Remove in one controlled movement while watching through the microscope."
+  ],
+  [
+   "Hook behind round objects",
+   "For beads and balls, slide a right-angle hook or ring curette past the object along a gap, rotate it behind, and roll the object laterally. Suction with a soft tip can also capture smooth objects that occupy most of the lumen."
+  ],
+  [
+   "Remove button batteries promptly",
+   "Remove batteries the same day with forceps or suction, then inspect for burns, perforation and canal necrosis. Do not irrigate or use drops before removal. Document injury carefully, and arrange close follow-up for stenosis, perforation or facial nerve involvement."
+  ],
+  [
+   "Cerumen removal",
+   "Remove soft wax with suction and hard plugs with curettes, working lateral to medial along the canal floor, not against the thin superior or anterior bony skin. Soften very hard plugs with drops for several days or irrigate with body-temperature water when the TM is intact."
+  ],
+  [
+   "Inspect after removal",
+   "Examine the entire canal and the TM for retained fragments, lacerations or perforation, and check hearing grossly. Lacerations heal well on their own; a perforation warrants an audiogram and follow-up to confirm healing."
+  ],
+  [
+   "Escalate when needed",
+   "Stop after one or two failed attempts in an awake child to avoid trauma and loss of cooperation. Proceed to removal under general anesthesia, or rarely a postauricular approach for deeply impacted objects or those in the middle ear."
+  ]
+ ],
+ "exit_check": [
+  "Object completely removed with no fragments or second object remaining",
+  "TM integrity documented and canal injuries noted",
+  "Gross hearing and facial nerve function intact"
+ ],
+ "postop": [
+  "Dry-ear precautions if a laceration or perforation is present",
+  "Topical drops only to treat established otitis externa, not routinely",
+  "Audiogram and follow-up for perforation, battery injuries, or hearing concerns",
+  "Counsel on avoiding cotton swabs and safe storage of batteries"
+ ],
+ "complications": {
+  "early": [
+   "Canal laceration and bleeding",
+   "TM perforation",
+   "Otitis externa",
+   "Vertigo from cold irrigation or caloric effect"
+  ],
+  "late": [
+   "Canal stenosis after battery or chemical injury",
+   "Persistent perforation",
+   "Conductive hearing loss from ossicular injury",
+   "Facial nerve injury (rare, batteries)"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why is a button battery in the ear an emergency?",
+   "Current flow generates hydroxide at the negative pole, causing liquefactive necrosis within hours. It can perforate the TM, destroy canal skin and ossicles, and rarely injure the facial nerve. Remove immediately; never irrigate."
+  ],
+  [
+   "Contraindications to irrigation?",
+   "Known or suspected TM perforation, tympanostomy tubes, prior ear surgery, vegetable or organic foreign bodies that swell, button batteries, and an only hearing ear."
+  ],
+  [
+   "Where do objects lodge and why does it matter?",
+   "Medial to the isthmus at the bony-cartilaginous junction. Medial canal skin is thin and sensitive, so manipulation there is painful and bleeds easily; push-past risk to the TM is greatest."
+  ],
+  [
+   "What is the Arnold reflex?",
+   "Coughing on stimulation of the posterior canal skin, mediated by the auricular branch of the vagus nerve."
+  ],
+  [
+   "Management of a live insect?",
+   "Kill it first with mineral oil or lidocaine, then remove with forceps or suction under the microscope."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RS, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 7 (Cerumen Impaction and Foreign Body; External Ear)",
+  "Flint PW et al. Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 138, Infections of the External Ear; Chapter 139, Topical Therapies of External Ear Disorders",
+  "Schwartz SR et al. Clinical Practice Guideline (Update): Earwax (Cerumen Impaction). Otolaryngol Head Neck Surg 2017;156(1 Suppl):S1-S29"
+ ]
+}

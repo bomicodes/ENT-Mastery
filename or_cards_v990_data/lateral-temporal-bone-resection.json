@@ -1,0 +1,136 @@
+{
+ "slug": "lateral-temporal-bone-resection",
+ "title": "Lateral Temporal Bone Resection",
+ "domain": "Otology / Neurotology",
+ "or_family_v190": "skull_base",
+ "linked_topic": "Lateral Skull-Base Tumor Framework",
+ "source_label": "Cummings 7e (Temporal Bone Neoplasms and Lateral Cranial Base Surgery), the Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Malignancy of the external auditory canal (most often squamous cell carcinoma) involving or abutting the bony canal but lateral to the tympanic membrane, or periauricular and parotid cancers that reach the canal. The operation removes en bloc the cartilaginous and bony canal, tympanic membrane, malleus and incus, keeping the facial nerve, stapes and inner ear. Tumors limited to the cartilaginous canal can be managed with sleeve resection; middle ear, mastoid, or medial extension needs subtotal resection. It is usually combined with parotidectomy and neck dissection, followed by radiation for T2 and higher disease.",
+ "setup": [
+  "Supine, head turned, with facial nerve monitoring and no long-acting paralysis after intubation",
+  "Fine-cut temporal bone CT and contrast MRI reviewed for bone erosion, middle ear, TMJ, parotid, dural and nodal disease",
+  "Otologic drill with cutting and diamond burs, microscope, osteotomes, parotid and neck dissection trays",
+  "Prep the abdomen for fat graft and plan a regional flap (temporalis or sternocleidomastoid) or free flap",
+  "Frozen section available for margins; plan audiology (expect maximal conductive loss)"
+ ],
+ "landmarks": [
+  "Tympanic annulus and tympanic membrane (medial limit of specimen)",
+  "Mastoid segment of the facial nerve and chorda tympani (extended facial recess)",
+  "Incudostapedial joint and stapes",
+  "Root of zygoma and glenoid fossa of the TMJ (anterior-superior cut)",
+  "Jugular bulb and carotid canal medial to the hypotympanum",
+  "Main trunk of the facial nerve at the stylomastoid foramen",
+  "Tegmen and sigmoid sinus"
+ ],
+ "danger": [
+  "Facial nerve in the extended facial recess and hypotympanum",
+  "Stapes dislocation causing sensorineural loss and vertigo",
+  "Jugular bulb and carotid during the inferior hypotympanic cut",
+  "Breach of tumor by cutting into the canal",
+  "Dura and sigmoid sinus during mastoidectomy",
+  "Positive margins (nearly uniformly fatal despite radiation)"
+ ],
+ "steps": [
+  [
+   "Plan the margins",
+   "Use CT and MRI to confirm the tumor stays lateral to the tympanic membrane, and decide preoperatively whether the parotid, condyle, conchal skin or pinna must be included. Mark a circumferential incision around the lateral canal opening that includes the tragus and conchal bowl as needed to obtain a soft tissue margin."
+  ],
+  [
+   "Incise and close the meatus",
+   "Make the circumferential meatal incision down to cartilage and a postauricular incision extended into a neck crease for parotidectomy and neck dissection. Raise the auricle forward, connect the planes, and oversew the lateral canal skin so the tumor is sealed inside the specimen."
+  ],
+  [
+   "Expose the cortex and parotid",
+   "Elevate the flap anteriorly over the parotid and posteriorly over the mastoid. Elevate periosteum to expose the mastoid cortex, spine of Henle, and root of the zygoma. Identify the main trunk of the facial nerve early if a parotidectomy is planned."
+  ],
+  [
+   "Complete mastoidectomy, canal wall up",
+   "Perform a complete mastoidectomy keeping the bony canal intact. Thin the posterior canal wall and skeletonize the tegmen and sigmoid sinus. Identify the lateral semicircular canal and the mastoid segment of the facial nerve without exposing its sheath."
+  ],
+  [
+   "Extend into the epitympanum and zygoma",
+   "Drill superiorly into the epitympanum and forward through the root of the zygoma, staying above the canal, until the soft tissue of the TMJ capsule is exposed. This is the superior cut that frees the roof of the canal from the temporal squama."
+  ],
+  [
+   "Open the extended facial recess",
+   "Open the facial recess and extend it inferiorly by sacrificing the chorda tympani, working lateral to the vertical facial nerve. This connects the mastoid to the middle ear and the hypotympanum behind the tympanic membrane."
+  ],
+  [
+   "Disarticulate the ossicles",
+   "Separate the incudostapedial joint under the microscope, then remove the incus and the incus buttress. Cut the tensor tympani tendon and nip the malleus head so the malleus stays attached to the specimen. Protect the stapes throughout."
+  ],
+  [
+   "Make the hypotympanic cut",
+   "Continue drilling anterior to the vertical facial nerve along the floor of the hypotympanum, medial to the annulus and lateral to the jugular bulb and carotid canal, until soft tissue is reached anteriorly. Use a diamond bur near the nerve and the bulb."
+  ],
+  [
+   "Free and deliver the specimen",
+   "When the superior and inferior cuts meet at the TMJ and eustachian tube anteriorly, gently fracture the remaining anterior bone with an osteotome. Dissect the specimen off the TMJ capsule and superficial parotid and remove it en bloc with the canal, tympanic membrane and malleus intact."
+  ],
+  [
+   "Margins, parotidectomy and condyle",
+   "Send margins from the TMJ, parotid, and bony edges. Add parotidectomy (superficial or total) for anterior or nodal disease, and a condylectomy if the TMJ is invaded. Preserve facial nerve branches unless directly involved; graft if sacrificed."
+  ],
+  [
+   "Neck dissection",
+   "Perform an ipsilateral neck dissection for clinically positive nodes or advanced primary tumors, typically levels II and III with the parotid basin, extended as needed. Nodal disease automatically upstages and usually mandates adjuvant treatment."
+  ],
+  [
+   "Obliterate and reconstruct",
+   "Pack the eustachian tube with soft tissue, fill the cavity with abdominal fat, and rotate a temporalis or superiorly based sternocleidomastoid flap over it, or use a free flap for large defects. Close the meatus primarily or skin graft the concha. Obliteration protects bone if radiation follows."
+  ]
+ ],
+ "exit_check": [
+  "Specimen removed en bloc with canal, tympanic membrane and malleus; margins sent and reported",
+  "Facial nerve stimulates at low threshold at the stylomastoid foramen; stapes intact",
+  "Eustachian tube sealed, cavity obliterated, flap viable and closure watertight"
+ ],
+ "postop": [
+  "Mastoid pressure dressing; check facial nerve function and for CSF leak",
+  "Drain care and monitoring of the neck and abdominal fat graft sites",
+  "Postoperative radiation for T2 and higher or close margins, starting within about 6 weeks",
+  "Hearing rehabilitation with a bone-conduction device once healed",
+  "Surveillance with exam and imaging every 1 to 3 months in the first year"
+ ],
+ "complications": {
+  "early": [
+   "Facial nerve weakness",
+   "CSF leak",
+   "Hematoma or flap failure",
+   "Sensorineural loss or vertigo from stapes trauma"
+  ],
+  "late": [
+   "Local recurrence",
+   "Osteoradionecrosis of the temporal bone",
+   "Trismus and TMJ dysfunction",
+   "Conductive hearing loss and meatal stenosis"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What structures are removed in a lateral temporal bone resection?",
+   "En bloc removal of the cartilaginous and bony EAC, the tympanic membrane, malleus and incus. The facial nerve, stapes, and inner ear are preserved."
+  ],
+  [
+   "How do you choose between sleeve, lateral, and subtotal resection?",
+   "Sleeve resection for disease confined to the cartilaginous canal; lateral resection for disease involving or abutting the bony canal but lateral to the drum; subtotal resection for middle ear or mastoid involvement; total resection for petrous apex or carotid involvement (rarely improves survival)."
+  ],
+  [
+   "Which staging system applies to EAC carcinoma, and what makes a tumor T4?",
+   "The modified Pittsburgh system. T4 includes erosion of the cochlea, petrous apex, medial middle ear wall, carotid canal, jugular foramen or dura, more than 0.5 cm soft tissue spread, or facial paralysis."
+  ],
+  [
+   "What is the most important prognostic factor after resection?",
+   "Margin status; positive margins carry nearly uniform mortality despite radiation. Nodal disease, facial paralysis, and high T stage are also poor prognostic factors."
+  ],
+  [
+   "Why obliterate the cavity at the time of resection?",
+   "Most patients get postoperative radiation, and covering exposed bone with vascularized tissue reduces osteoradionecrosis and gives a sealed, low-maintenance cavity."
+  ]
+ ],
+ "source_basis": [
+  "Cummings Otolaryngology: Head and Neck Surgery, 7th ed., Chapter 178: Temporal Bone Neoplasms and Lateral Cranial Base Surgery",
+  "Simo R, Pracy P, Fernandes T. Atlas of Head and Neck Surgery (2024), Chapter 17: Total Conservative and Radical Parotidectomy",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed., Chapter 7: Otology and Neurotology (Temporal Bone Resection)"
+ ]
+}

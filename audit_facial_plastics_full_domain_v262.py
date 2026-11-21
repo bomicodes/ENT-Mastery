@@ -6,6 +6,8 @@ import daily_path_entry_v403  # v45.6: boots the full production patch chain so 
 DOMAIN="Facial Plastics / Trauma"
 STAGES={"foundation","application","senior_decision"}
 PROTECTED_TOPICS=(
+    'Forehead and Brow Lift',
+    'Rhytidectomy (Facelift) and Neck Lift',
     "Chin and Midface Skeletal Augmentation (Implants and Sliding Genioplasty)",
     "Structured Facial Trauma Examination","ZMC / Orbital Trauma","Mandible Fracture","Nasal Fracture","Septal Hematoma",
     "NOE Fracture","Frontal Sinus Fracture","Le Fort / Panfacial Trauma","Mandibular Biomechanics and Occlusion","Facial Soft-Tissue Lacerations / Burns",
@@ -33,7 +35,7 @@ def main():
     data=rt.data
     canonical=[m.get("topic") for m in data.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
     failures=[]
-    if len(canonical)!=35: failures.append(f"expected 35 canonical Facial Plastics / Trauma topics, found {len(canonical)}")
+    if len(canonical)!=37: failures.append(f"expected 37 canonical Facial Plastics / Trauma topics, found {len(canonical)}")
     if len(set(canonical))!=len(canonical): failures.append("duplicate canonical Facial Plastics / Trauma topic names")
     if set(canonical)!=set(PROTECTED_TOPICS):
         failures.append(f"full-domain topic mismatch missing={sorted(set(canonical)-set(PROTECTED_TOPICS))} stale={sorted(set(PROTECTED_TOPICS)-set(canonical))}")

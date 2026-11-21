@@ -1,0 +1,137 @@
+{
+ "slug": "pediatric-tracheostomy",
+ "title": "Pediatric Tracheostomy",
+ "domain": "Pediatric Airway",
+ "or_family_v190": "pediatric",
+ "linked_topic": "Pediatric Tracheostomy / Decannulation",
+ "source_label": "Pasha 6e and Cummings 7e",
+ "indications": "Children who need long-term ventilation (bronchopulmonary dysplasia, neuromuscular or neurologic disease), fixed upper airway obstruction (subglottic stenosis, bilateral cord paralysis, craniofacial anomalies, airway tumors), or pulmonary toilet and protection from aspiration. Infants tolerate prolonged intubation with a properly sized uncuffed tube better than adults, so timing is individualized with neonatology and pulmonology. Plan the operation in the OR with an endotracheal tube or rigid bronchoscope securing the airway; perform airway endoscopy at the same sitting when the cause or extent of obstruction is unknown.",
+ "setup": [
+  "Discussion with anesthesia on airway control, ventilation limits, and fire safety: FiO2 as low as tolerated and no monopolar cautery once the trachea is opened",
+  "Shoulder roll with gentle extension only; avoid hyperextension, which pulls the pleural apices and great vessels into the neck",
+  "Tube chosen by outer diameter to match an age-appropriate endotracheal tube, plus a half size smaller; neonatal versus pediatric length and the obturator tested",
+  "Rigid bronchoscopes and a flexible scope available; remove feeding tubes that can be mistaken for trachea on palpation",
+  "Nonabsorbable stay sutures (for example 3-0 or 4-0 polypropylene) and fine absorbable maturation sutures ready"
+ ],
+ "landmarks": [
+  "Cricoid cartilage, the most reliable palpable landmark in an infant",
+  "Hyoid overlapping the thyroid cartilage in infants",
+  "Tracheal rings 2 to 4, the target for the incision",
+  "Thyroid isthmus over the upper rings",
+  "Innominate artery, which can sit high in the suprasternal neck",
+  "Pleural apices rising above the clavicles in infants"
+ ],
+ "danger": [
+  "Incision too high, injuring the cricoid and first ring and causing subglottic stenosis",
+  "Incision too low, near the innominate artery and carina",
+  "Pneumothorax from dissection lateral or deep toward the apices",
+  "Posterior wall or endotracheal tube cuff injury when opening a small trachea",
+  "Airway fire with oxygen and cautery at the open trachea",
+  "Lost tube in the first days before a tract forms"
+ ],
+ "steps": [
+  [
+   "Endoscopy and positioning",
+   "Perform laryngoscopy and bronchoscopy first if the diagnosis or airway size is uncertain, then secure ventilation with an endotracheal tube. Place a small shoulder roll and extend only gently. Palpate and mark the cricoid and sternal notch, and feel for an abnormal pulsation in the suprasternal area."
+  ],
+  [
+   "Skin incision",
+   "Infiltrate with local anesthetic and epinephrine dosed by weight. Make a horizontal incision about 1 cm below the cricoid, or a short vertical incision down from it, large enough for two small retractors and a fingertip."
+  ],
+  [
+   "Remove subcutaneous fat",
+   "Excise the subcutaneous fat between the skin and strap fascia, particularly in chubby infants. A thin soft-tissue envelope shortens the tract and makes reinsertion easier if the tube comes out, because less tissue collapses into the stoma."
+  ],
+  [
+   "Separate the straps",
+   "Open the midline raphe and retract the strap muscles laterally, staying strictly in the midline. Feel the trachea repeatedly to stay on it; dissection lateral to the trachea risks the recurrent laryngeal nerves, the esophagus, and the pleura."
+  ],
+  [
+   "Manage the isthmus",
+   "Retract the isthmus up or down, or divide it between ligatures or with bipolar cautery, to expose the anterior trachea from the cricoid to the fourth ring. Count the rings from the cricoid. Avoid a cricoid hook in small children because it can tear the cricoid."
+  ],
+  [
+   "Place stay sutures",
+   "Pass two stay sutures through the anterior tracheal wall, one each side of the planned vertical midline incision, encircling one or two rings. Leave them long. Gentle outward pull on them opens the stoma for tube placement now and for reinsertion if the tube is lost before the first change."
+  ],
+  [
+   "Vertical tracheal incision",
+   "Ask anesthesia to lower the oxygen and stop monopolar cautery. With an 11 or 15 blade, open the trachea vertically through two rings, usually the second to fourth, without removing any cartilage. Cut carefully to avoid the endotracheal tube cuff and the posterior wall."
+  ],
+  [
+   "Maturation sutures",
+   "Suture the tracheal edges to the skin edges on each side with fine absorbable sutures to form a mature stoma. This makes early tube reinsertion safer and may reduce granulation, at the possible cost of a higher rate of persistent tracheocutaneous fistula after decannulation."
+  ],
+  [
+   "Insert the tube",
+   "Pull the stay sutures apart and have anesthesia withdraw the endotracheal tube under direct view until its tip is just above the incision. Insert the tracheostomy tube with its obturator, remove the obturator, and connect the circuit. Keep the endotracheal tube in the subglottis until ventilation is confirmed, so it can be advanced again if needed."
+  ],
+  [
+   "Confirm position",
+   "Check end-tidal CO2, chest movement, and breath sounds. Pass a flexible scope through the tube to confirm the tip lies above the carina and away from the posterior wall; this is routine in children under 2. If the tube is too long, change to a shorter size."
+  ],
+  [
+   "Secure the tube",
+   "Tie the twill ties with the neck flexed so one finger fits beneath them; ties that are too tight compress neck veins, and ties that are too loose risk decannulation. Do not suture the flange to the skin. Label the stay sutures right and left and tape them to the chest."
+  ],
+  [
+   "Handover",
+   "Send the child to the ICU with the obturator, a same-size and a half-size-smaller tube, suction, and a sign showing the stay suture plan. The child is a critical airway patient until the first tube change."
+  ]
+ ],
+ "exit_check": [
+  "End-tidal CO2 and scope view showing the tip above the carina",
+  "Ties correctly tensioned; stay sutures labeled and taped",
+  "Spare tubes and obturator travel with the patient"
+ ],
+ "postop": [
+  "ICU monitoring with sedation as needed until the first tube change on postoperative day 3 to 7",
+  "First change by the surgical team; remove stay sutures once the tract is confirmed intact",
+  "Humidification and frequent suctioning, since pediatric tubes usually lack an inner cannula and plug easily",
+  "Daily skin checks under the ties, flange, and chin for pressure injury",
+  "Caregiver training in tube change and cardiopulmonary resuscitation before discharge; airway endoscopy before downsizing or decannulation"
+ ],
+ "complications": {
+  "early": [
+   "Accidental decannulation or tube obstruction by secretions",
+   "Pneumothorax or pneumomediastinum",
+   "Subcutaneous emphysema",
+   "Bleeding",
+   "Airway fire"
+  ],
+  "late": [
+   "Suprastomal granuloma or collapse",
+   "Tracheocutaneous fistula after decannulation",
+   "Subglottic or tracheal stenosis",
+   "Tracheoinnominate fistula",
+   "Speech and swallowing delays"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why is a vertical tracheal incision with no cartilage removed preferred in children?",
+   "It preserves tracheal wall support, lowers the risk of stomal collapse and stenosis, and heals well after decannulation. Removing a window of cartilage in a small airway can cause tracheomalacia at the stoma."
+  ],
+  [
+   "What is the purpose of stay sutures?",
+   "They open the tracheal incision and pull it to the skin, allowing rapid reinsertion if the tube comes out before the tract matures. They are labeled, taped to the chest, and removed after the first tube change."
+  ],
+  [
+   "When is the first tracheostomy change in a child, and why does it matter?",
+   "Usually between days 3 and 7, done by the surgical team. Until then the tract is immature and reinsertion is hazardous, so the child stays in a monitored setting."
+  ],
+  [
+   "A child with a two-week-old tracheostomy has a sudden desaturation. What are the steps?",
+   "Suction the tube; if that fails, change the tube at once, using stay sutures or a smaller tube if needed. If it cannot be replaced, cover the stoma and ventilate from above or intubate orally."
+  ],
+  [
+   "What should be checked before decannulation?",
+   "Airway endoscopy to exclude suprastomal granuloma, collapse, and subglottic stenosis; resolution of the original indication; tolerance of downsizing and capping, often with a polysomnogram while capped."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 9 Pediatric Otolaryngology (Pediatric Tracheotomy); Ch 2 Laryngology (tracheotomy indications, complications, care).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 213 Pediatric Tracheotomy and Decannulation.",
+  "Simo R, Pracy P, Fernandes T (eds). Atlas of Head and Neck Surgery (Springer Surgery Atlas Series, 2024): Ch 4 Percutaneous Tracheostomy and Open Standard Surgical Tracheostomy (pediatric considerations)."
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "slug": "endoscopic-sinonasal-tumor",
+ "title": "Endoscopic Resection of Sinonasal Neoplasm / Endoscopic Medial Maxillectomy",
+ "domain": "Rhinology",
+ "or_family_v190": "sinus",
+ "linked_topic": "Sinonasal Inverted Papilloma",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024), Atlas of Endoscopic Sinus and Skull Base Surgery (Chiu, Palmer 2e) and Pasha 6e",
+ "indications": "Endoscopic resection of benign and selected malignant sinonasal tumors, most commonly inverted papilloma, but also oncocytic and exophytic papilloma, juvenile angiofibroma, osteoma and low-grade or early-stage malignancies (adenocarcinoma, esthesioneuroblastoma, selected squamous cell carcinoma) where clear margins can be achieved. The operation is built from modules chosen to fit the tumor: wide antrostomy, prelacrimal approach, endoscopic medial maxillectomy (with or without the nasolacrimal duct), endoscopic Denker or septal window for anterior and lateral antral attachment, ethmoidectomy, sphenoidotomy, Draf III, transpterygoid access, lamina papyracea or skull base resection. The key principle for papilloma is identifying and removing the attachment site with its underlying bone (subperiosteal resection plus drilling). Contraindications to a purely endoscopic plan include extensive anterior wall, palate, skin, orbital apex, or brain involvement and frontal sinus disease lateral to the reach of a Draf III.",
+ "setup": [
+  "CT sinus for focal hyperostosis or osteitis that predicts the attachment site, and MRI to separate tumor from retained secretions (convoluted cerebriform pattern in papilloma) and assess orbit, dura and perineural spread; biopsy in clinic before definitive surgery.",
+  "Load image guidance; review Krouse stage, attachment site and the modules needed, including whether the nasolacrimal duct, anterior maxillary wall or skull base must be addressed and whether a nasoseptal flap must be preserved.",
+  "Field optimization: 15 to 20 degrees reverse Trendelenburg, total intravenous anesthesia with controlled heart rate and blood pressure, topical vasoconstrictor pledgets, and lidocaine with epinephrine to the lateral nasal wall and greater palatine canal.",
+  "0, 30, 45 and 70-degree endoscopes, angled microdebrider and 15 and 70-degree diamond drills, backbiting and Kerrison punches, angled instruments, bipolar suction cautery.",
+  "Consent for epiphora, numbness of the cheek and teeth, crusting, diplopia, cerebrospinal fluid leak, open or combined conversion, and long-term endoscopic surveillance."
+ ],
+ "landmarks": [
+  "Uncinate process and natural maxillary ostium",
+  "Nasolacrimal duct and Hasner valve in the inferior meatus",
+  "Inferior turbinate attachment to the medial maxilla",
+  "Posterior maxillary wall and sphenopalatine foramen",
+  "Infraorbital nerve in the antral roof",
+  "Lamina papyracea and orbital floor",
+  "Ethmoid skull base and anterior ethmoid artery"
+ ],
+ "danger": [
+  "Nasolacrimal duct with resulting epiphora",
+  "Sphenopalatine and posterior lateral nasal arteries",
+  "Infraorbital nerve during anterior wall drilling",
+  "Orbit through the lamina or orbital floor",
+  "Skull base and cerebrospinal fluid leak during superior dissection",
+  "Tumor fragmentation obscuring the attachment"
+ ],
+ "steps": [
+  [
+   "Inspect and debulk",
+   "Survey both nasal cavities with a 0-degree endoscope. Debulk the intranasal tumor with a microdebrider, sending tissue for pathology, until the margins of the cavity and the stalk can be seen. Do not try to remove the attachment at this stage; the goal is visualization and orientation."
+  ],
+  [
+   "Map the attachment",
+   "Use image guidance and the preoperative hyperostosis to locate the attachment. Take separately labeled biopsies from the suspected pedicle and surrounding mucosa. Papillomas usually attach at one or a few points and fill the rest of the cavity without true invasion, so the attachment, not the bulk, defines the resection."
+  ],
+  [
+   "Uncinectomy and wide antrostomy",
+   "Remove the uncinate and enlarge the natural ostium posteriorly to the posterior antral wall and inferiorly toward the inferior turbinate. For tumors limited to the medial or posterior maxillary sinus, a mega-antrostomy may be enough. Inspect the antrum with angled scopes to decide whether a medial maxillectomy is needed."
+  ],
+  [
+   "Decide on the lacrimal duct",
+   "Choose between a prelacrimal approach that preserves the duct and inferior turbinate, a medial maxillectomy behind the duct, or a medial maxillectomy that includes the duct. If the tumor involves the duct, sacrifice it. When transecting, cut it sharply and obliquely with scissors so it drains freely into the nose."
+  ],
+  [
+   "Subtotal inferior turbinectomy",
+   "Clamp the inferior turbinate at its attachment along the lateral wall with a straight hemostat, then cut along the crushed line with endoscopic scissors from the antrostomy posteriorly toward the medial pterygoid plate. Cauterize the posterior stump where the inferior turbinate branch of the sphenopalatine artery enters."
+  ],
+  [
+   "Raise a lateral wall and nasal floor flap",
+   "Incise the mucosa vertically just anterior to the planned bone cut and along the nasal floor, then raise a mucoperiosteal flap off the nasal floor and inferior lateral wall with a suction elevator. The flap can be laid back over exposed bone at the end to speed healing and reduce crusting."
+  ],
+  [
+   "Remove the medial maxillary wall",
+   "Take down the medial maxillary wall with a drill, osteotome or punches, from the nasal floor up to the inferior orbital wall and back to the posterior antral wall and palatine bone. Lower the medial wall flush with the nasal floor so the cavity drains and the antral floor can be seen."
+  ],
+  [
+   "Reach anterior and lateral disease",
+   "For attachment on the anterior, lateral or prelacrimal antral walls, extend anteriorly: drill the piriform aperture and anterior wall (endoscopic Denker) or create a septal window for cross-court instruments. Stay inferior and medial to the infraorbital nerve, identified on the antral roof, and protect the orbital floor."
+  ],
+  [
+   "Resect the attachment subperiosteally",
+   "Elevate the mucosa and periosteum at the attachment site as a single layer, removing it with the tumor. Then drill the underlying bone with a diamond burr to remove osteitic bone that can harbor microscopic papilloma; residual disease in this bone is the main cause of recurrence."
+  ],
+  [
+   "Extend for ethmoid, sphenoid or frontal attachment",
+   "For tumor beyond the maxillary sinus, add complete ethmoidectomy, wide sphenoidotomy and, for frontal attachment within reach, a Draf IIb or III. Remove the middle or superior turbinate when tumor attaches to them. Drill skull base attachment carefully over dura and avoid stripping the mucosa unnecessarily."
+  ],
+  [
+   "Malignant tumors: plan margins",
+   "For malignancy, resect in an outside-in, centripetal fashion with margins mapped by frozen section. Add lamina papyracea and periorbita removal, transpterygoid exposure after clipping the sphenopalatine artery, or skull base and dural resection with multilayer reconstruction as needed. Avoid piecemeal fragmentation of the final margins."
+  ],
+  [
+   "Hemostasis and closure",
+   "Control bleeding from the sphenopalatine branches, turbinate stump and drilled bone with bipolar and warm saline. Replace the nasal floor flap over exposed bone, place dissolvable packing or a soft splint as needed, and confirm the opened nasolacrimal duct drains clearly into the cavity."
+  ]
+ ],
+ "exit_check": [
+  "Attachment site resected with periosteum and drilled bone; separate attachment and margin specimens labeled",
+  "No orbital fat exposure or cerebrospinal fluid leak; globe soft with normal pupils",
+  "Hemostasis at sphenopalatine and turbinate stump; nasolacrimal duct opening patent"
+ ],
+ "postop": [
+  "Saline irrigations starting the day after surgery and debridement at 1 to 3 weeks to manage crusting",
+  "Avoid nose blowing and straining for 1 to 2 weeks",
+  "Watch for epiphora, cheek numbness and diplopia",
+  "Endoscopic surveillance at least every 3 to 6 months for 2 years, then annually for life, with MRI if the cavity cannot be fully seen",
+  "Tumor board review and adjuvant radiation for malignancy or dysplasia with positive margins"
+ ],
+ "complications": {
+  "early": [
+   "Epistaxis from the sphenopalatine or turbinate stump",
+   "Orbital injury or hematoma",
+   "Cerebrospinal fluid leak with skull base work",
+   "Infraorbital nerve numbness",
+   "Synechiae"
+  ],
+  "late": [
+   "Epiphora and dacryocystitis",
+   "Crusting and empty-nose symptoms",
+   "Recurrence, usually at the attachment site within 2 years",
+   "Malignant transformation of papilloma",
+   "Oroantral fistula after anterior wall or floor drilling"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What radiographic sign predicts the attachment site of an inverted papilloma?",
+   "Focal hyperostosis or a bony spur on CT at the site of origin; on MRI a convoluted cerebriform columnar pattern supports papilloma and helps separate tumor from trapped secretions."
+  ],
+  [
+   "Why is drilling the bone under the attachment important?",
+   "Recurrence usually stems from residual disease at the attachment. Subperiosteal removal with drilling of the underlying osteitic bone addresses microscopic extension and has lowered endoscopic recurrence rates to those of open approaches."
+  ],
+  [
+   "How should the nasolacrimal duct be managed when resected?",
+   "Transect it sharply and obliquely with scissors rather than crushing or tearing; a clean cut usually leaves a functional drainage opening and avoids epiphora. If epiphora develops, dacryocystorhinostomy is the fix."
+  ],
+  [
+   "What is the Krouse staging of inverted papilloma?",
+   "T1 is confined to the nasal cavity; T2 involves the ostiomeatal complex, ethmoids or medial maxillary sinus; T3 involves lateral, inferior, superior, anterior or posterior maxillary walls, sphenoid or frontal sinus; T4 has extrasinus extension or malignancy."
+  ],
+  [
+   "When should a frontal sinus or anterior maxillary lesion prompt an open or combined approach?",
+   "When attachment is lateral to the reach of a Draf III in the frontal sinus, or the anterior or lateral antral attachment cannot be fully drilled endoscopically despite a Denker or septal window; an osteoplastic flap or Caldwell-Luc can then be combined."
+  ]
+ ],
+ "source_basis": [
+  "Surda P, Ranford D, Connor S, Touska P, Volpini L, Walker A. Endoscopic Resection of Nasal and Paranasal Sinus Neoplasms. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 41.",
+  "Ference EH, Welch KC. Endoscopic Medial Maxillectomy. In: Chiu AG, Palmer JN, Adappa ND, eds. Atlas of Endoscopic Sinus and Skull Base Surgery, 2nd ed. Elsevier; 2019: chapter 21; and Endoscopic Denker Approach for Anterior Maxilla Tumors, chapter 22.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 1 Rhinology, Inverted Papilloma (p 18) and Chapter 6 Head and Neck Cancer, Sinonasal Malignancies, endoscopic approaches and resection types (p 307-310).",
+  "Krouse JH. Development of a staging system for inverted papilloma. Laryngoscope. 2000;110:965-968."
+ ]
+}

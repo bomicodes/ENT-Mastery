@@ -1,0 +1,128 @@
+{
+ "slug": "brow-lift",
+ "title": "Forehead and Brow Lift (Endoscopic / Trichophytic / Direct)",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Aging Face / Injectables / Resurfacing",
+ "source_label": "Pasha 6e and Cummings 7e (The Aesthetic Brow and Forehead)",
+ "indications": "Brow ptosis (brow at or below the supraorbital rim, especially laterally), lateral hooding contributing to upper eyelid excess, brow asymmetry, deep glabellar and forehead rhytids, and corrugator bunching. Facial paralysis with brow ptosis and visual field obstruction is a functional indication. The technique is matched to hairline and forehead height: endoscopic for normal or low hairlines and adequate hair; trichophytic (pretrichial) for high hairlines in women; coronal for broad correction in normal hairlines; midforehead for deep rhytids in balding men; direct brow lift for paralysis or unilateral ptosis where a scar is acceptable; and transblepharoplasty browpexy for mild lateral ptosis. When combined with blepharoplasty, the brow is addressed first.",
+ "setup": [
+  "Mark upright: ideal brow position (women arch peaking at the lateral limbus to lateral canthus, at or above the rim; men flatter and at the rim), hairline, temporal line, and frontal branch course",
+  "General anesthesia or IV sedation; supine with head on a ring; tumescent infiltration in the planned plane and supraorbital/supratrochlear blocks",
+  "Endoscopic set (30-degree 4 mm scope with sheath), curved periosteal elevators, endoforehead dissectors, fixation devices (bone tunnels, absorbable implants, screws or cortical tunnels)",
+  "Hair management with taping or banding instead of shaving",
+  "Document visual field testing and photos if a functional indication exists"
+ ],
+ "landmarks": [
+  "Supraorbital notch or foramen and supratrochlear neurovascular bundle",
+  "Temporal line of fusion (conjoint tendon)",
+  "Frontal branch of facial nerve within or under the temporoparietal fascia along Pitanguy line",
+  "Sentinel vein (zygomaticotemporal vein) near the lateral orbital rim",
+  "Arcus marginalis at the superior orbital rim",
+  "Corrugator and procerus muscles"
+ ],
+ "danger": [
+  "Frontal branch of facial nerve in the temporal dissection (stay deep on the deep temporal fascia)",
+  "Supraorbital and supratrochlear nerves (numbness)",
+  "Deep branch of the supraorbital nerve running along the temporal line",
+  "Alopecia or raised hairline with coronal approaches",
+  "Overelevation (surprised look) or medial overelevation"
+ ],
+ "steps": [
+  [
+   "Plan approach and marks",
+   "Choose the approach based on hairline height, hair density, forehead length, and rhytid depth. With the patient upright, mark the desired brow peak and vector, usually superolateral, and the temporal crest lines. Note asymmetry and frontalis compensation for eyelid hooding."
+  ],
+  [
+   "Endoscopic incisions",
+   "Place a midline incision and two paramedian incisions behind the hairline, plus temporal incisions about 2 cm behind the hairline over the temporalis. Bevel incisions parallel to hair follicles to minimize alopecia."
+  ],
+  [
+   "Central subperiosteal dissection",
+   "Through the central incisions, elevate in the subperiosteal plane blindly down to about 2 cm above the orbital rims, then continue under endoscopic view. This plane is avascular and protects the supraorbital and supratrochlear nerves, which emerge superficial to the periosteum lower down."
+  ],
+  [
+   "Temporal dissection",
+   "Through the temporal incisions, dissect directly on the deep temporal fascia, deep to the temporoparietal fascia that carries the frontal branch. Join central and temporal pockets by releasing the conjoint tendon at the temporal line from lateral to medial."
+  ],
+  [
+   "Protect the sentinel vein",
+   "Near the lateral orbital rim, identify the sentinel vein, which marks the frontal branch running just superficial to it. Preserve or carefully cauterize away from the nerve; this area deserves the slowest dissection."
+  ],
+  [
+   "Release the arcus marginalis",
+   "Under endoscopic view, release the periosteum along the supraorbital rim and the orbital ligament laterally. Spread around the supraorbital bundle. Adequate release is the key to mobility; a brow that does not move freely will relapse."
+  ],
+  [
+   "Address glabellar muscles",
+   "Weaken or partially resect corrugator and procerus fibers when frown lines are a concern, preserving the supratrochlear nerve branches. Avoid excess resection, which can create contour depressions; fat grafts can fill defects."
+  ],
+  [
+   "Fixation",
+   "Elevate the brow along the planned vector and fix the scalp to bone with bone tunnels, absorbable implants, or screws at the paramedian incisions. Suspend the temporal tissue by suturing temporoparietal fascia to deep temporal fascia. Avoid overcorrection medially."
+  ],
+  [
+   "Trichophytic or coronal option",
+   "For high hairlines, make an irregular pretrichial incision beveled so hair grows through the scar. Dissect in the subgaleal or subperiosteal plane, release similarly, then excise excess skin. This can lower the hairline while lifting the brow."
+  ],
+  [
+   "Direct brow lift option",
+   "For facial paralysis or unilateral ptosis, excise an ellipse of skin and subcutaneous tissue directly above the brow hairs, beveling parallel to follicles. Suture the orbicularis-brow fat to frontal periosteum for durability, staying superficial to the supraorbital nerve."
+  ],
+  [
+   "Closure and dressing",
+   "Close scalp incisions with staples or sutures without tension, keeping bevels parallel to follicles. Place a light compressive dressing to limit edema, and consider a small drain for coronal or trichophytic approaches. Keep the head elevated and check the brow position and symmetry before leaving the room."
+  ]
+ ],
+ "exit_check": [
+  "Brows symmetric in the planned position with the lateral brow at or above the rim",
+  "Frontal branch preserved; forehead animation checked at follow-up",
+  "Fixation secure and incisions tension-free"
+ ],
+ "postop": [
+  "Head elevation, cold compresses, and light dressing for 24-48 hours",
+  "Monitor for hematoma and forehead numbness, which commonly improves over months",
+  "Staple or suture removal at 7-10 days",
+  "Avoid heavy exertion for about 2 weeks while fixation matures"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma or seroma",
+   "Frontal branch weakness",
+   "Forehead and scalp numbness",
+   "Asymmetry"
+  ],
+  "late": [
+   "Recurrent brow ptosis",
+   "Alopecia at incisions",
+   "Raised hairline or visible scar",
+   "Chronic itching or dysesthesia"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the ideal female brow position?",
+   "The medial brow begins in line with the alar base and medial canthus, arches with its highest point between the lateral limbus and lateral canthus, and sits above the supraorbital rim; the male brow is flatter and at the rim."
+  ],
+  [
+   "Where does the frontal branch run in the temporal region?",
+   "Within the deep surface of the temporoparietal fascia, along Pitanguy line from below the tragus to about 1.5 cm above the lateral brow. Dissecting directly on the deep temporal fascia keeps the nerve in the superficial flap."
+  ],
+  [
+   "Which approach for a woman with a high hairline?",
+   "A trichophytic (pretrichial) lift, which lifts the brow without raising the hairline and can shorten the forehead; coronal and endoscopic approaches raise the hairline."
+  ],
+  [
+   "Why perform brow lift before blepharoplasty?",
+   "Brow elevation changes how much upper lid skin is redundant; doing blepharoplasty first risks overresecting skin and causing lagophthalmos."
+  ],
+  [
+   "What is the most important technical step for durability?",
+   "Complete release of the arcus marginalis and orbital ligament at the rim, plus secure fixation along the desired vector."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RS, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8, Reconstructive and Facial Plastic Surgery (Forehead Lift and Brow Lift; Complications of Rhytidectomy, Brow Lift, Liposurgery)",
+  "Flint PW et al. Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 25, The Aesthetic Brow and Forehead"
+ ]
+}
