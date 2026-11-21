@@ -3,7 +3,7 @@
  "title": "Craniofacial Resection (Open / Endoscopic-Assisted)",
  "domain": "Skull Base",
  "or_family_v190": "skull_base",
- "linked_topic": "Sinonasal Malignancies",
+ "linked_topic": "Open Approaches to the Anterior and Middle Cranial Base (Craniofacial Resection)",
  "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
  "indications": "En bloc or margin-controlled resection of malignancy involving the anterior skull base, cribriform plate, fovea ethmoidalis or overlying dura: esthesioneuroblastoma (olfactory neuroblastoma), sinonasal adenocarcinoma and squamous cell carcinoma, sinonasal neuroendocrine carcinoma, selected sarcomas and recurrent tumors. A craniotomy-based (open) or combined approach is favored when tumor extends lateral to the mid-orbital roof, involves the frontal sinus anterior or lateral walls, skin, nasal bones or anterior maxilla, or has substantial brain involvement; purely endoscopic resection suits midline disease that can be cleared with negative margins. Contraindications include extensive brain parenchymal, cavernous sinus, bilateral orbital apex or optic chiasm involvement, carotid encasement, and distant metastases. Treatment is multimodal, typically followed by radiation.",
  "setup": [

@@ -3,7 +3,7 @@
  "title": "Drooling Surgery (Duct Ligation / Rerouting, Gland Excision, Botox)",
  "domain": "Pediatric Otolaryngology",
  "or_family_v190": "salivary",
- "linked_topic": "Pediatric Aspiration",
+ "linked_topic": "Sialorrhea and Chronic Drooling",
  "source_label": "Pasha 6e Ch 9 and Cummings 7e Ch 205 (Salivary Gland Disease in Children)",
  "indications": "Persistent sialorrhea beyond about age 4 to 6 in a child with cerebral palsy or other neurologic impairment, causing anterior drooling (soiled clothing, perioral skin breakdown, social burden) or posterior drooling (choking, aspiration pneumonia). Management follows a ladder: oral-motor and positioning therapy, treat contributors (nasal obstruction, reflux, medications, dental issues), anticholinergics such as glycopyrrolate, then botulinum toxin into the submandibular and parotid glands, then surgery. Surgery suits moderate to profuse drooling after failed conservative care, posterior drooling with aspiration at any age, or high care needs. Duct rerouting is avoided in children who aspirate, because it moves saliva posteriorly.",
  "setup": [

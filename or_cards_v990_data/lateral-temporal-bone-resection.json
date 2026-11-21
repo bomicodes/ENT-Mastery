@@ -3,7 +3,7 @@
  "title": "Lateral Temporal Bone Resection",
  "domain": "Otology / Neurotology",
  "or_family_v190": "skull_base",
- "linked_topic": "Lateral Skull-Base Tumor Framework",
+ "linked_topic": "Temporal Bone Malignancy and Temporal Bone Resection",
  "source_label": "Cummings 7e (Temporal Bone Neoplasms and Lateral Cranial Base Surgery), the Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
  "indications": "Malignancy of the external auditory canal (most often squamous cell carcinoma) involving or abutting the bony canal but lateral to the tympanic membrane, or periauricular and parotid cancers that reach the canal. The operation removes en bloc the cartilaginous and bony canal, tympanic membrane, malleus and incus, keeping the facial nerve, stapes and inner ear. Tumors limited to the cartilaginous canal can be managed with sleeve resection; middle ear, mastoid, or medial extension needs subtotal resection. It is usually combined with parotidectomy and neck dissection, followed by radiation for T2 and higher disease.",
  "setup": [

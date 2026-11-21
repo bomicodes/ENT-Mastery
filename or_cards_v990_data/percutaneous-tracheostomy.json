@@ -3,7 +3,7 @@
  "title": "Percutaneous Dilational Tracheostomy",
  "domain": "General ENT",
  "or_family_v190": "airway",
- "linked_topic": "Tracheostomy Emergency",
+ "linked_topic": "Adult Tracheotomy: Indications, Timing, Technique and Complications",
  "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024), Cummings 7e, and Pasha 6e",
  "indications": "Elective tracheostomy in an intubated adult needing prolonged ventilation or pulmonary toilet, done at the bedside in the ICU when anatomy is favorable: palpable thyroid and cricoid cartilages, at least 3 to 4 cm between cricoid and sternal notch, ability to extend the neck, and a patient who could be reintubated orally if the tube is lost. Open surgical tracheostomy is preferred for emergencies or impending airway loss, children, coagulopathy that cannot be corrected, unstable cervical spine, large goiter or midline vessels, prior neck surgery or radiation, laryngeal tumor, anterior neck infection, morbid obesity with a long tract, and when long-term tracheostomy is expected. High PEEP or FiO2 needs are relative contraindications by local policy.",
  "setup": [

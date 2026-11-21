@@ -1,8 +1,9 @@
-{"slug": "rhytidectomy",
+{
+ "slug": "rhytidectomy",
  "title": "Rhytidectomy (SMAS / Deep-Plane Facelift)",
  "domain": "Facial Plastics",
  "or_family_v190": "reconstruction",
- "linked_topic": "Aging Face / Injectables / Resurfacing",
+ "linked_topic": "Rhytidectomy (Facelift) and Neck Lift",
  "source_label": "Pasha 6e (Reconstructive and Facial Plastic Surgery chapter)",
  "indications": "Lower face and neck aging with jowling, loss of a defined mandibular line, deepened melolabial folds, midface descent and cervicomental laxity (obtuse angle, platysmal banding). Best candidates have good skeletal support, a normally positioned hyoid, moderate skin laxity, stable weight and realistic goals. Screen for smoking (markedly higher skin slough and hematoma risk), uncontrolled hypertension, anticoagulant and supplement use, bleeding disorders, diabetes, connective tissue disease and prior facial surgery. Technique choice ranges from skin-only and SMAS plication (safest for nerves, least durable) to SMASectomy, extended SMAS, deep-plane, composite and subperiosteal lifts that release retaining ligaments for more midface correction at higher dissection risk.",
  "setup": [
@@ -31,30 +32,54 @@
   "Excess tension on the earlobe (pixie ear) and hairline incisions (alopecia, step-off)"
  ],
  "steps": [
-  ["Incision planning",
-   "Plan a temporal incision within or along the hairline, curving into a pretragal or retrotragal incision, around the lobule, and up the postauricular sulcus onto the mastoid with a posterior hairline or occipital extension. Hide scars in natural creases and preserve the temporal tuft and sideburn position."],
-  ["Submental work if needed",
-   "Through a short submental crease incision, perform conservative liposuction or direct fat excision and approximate the medial platysmal borders (corset or plication) for banding and an obtuse angle. Avoid over-aggressive suction, which causes cobra neck and contour irregularity."],
-  ["Raise the skin flap",
-   "Elevate the cheek and neck skin in the subcutaneous plane with facelift scissors under transillumination, leaving a thin layer of fat on the flap to protect the subdermal plexus. Extent depends on technique: shorter in deep-plane lifts, wider for SMAS plication. Over the SCM leave the superficial cervical fascia intact to protect the great auricular nerve."],
-  ["Design the SMAS flap",
-   "For an extended SMAS or deep-plane lift, incise the SMAS along a line from the lateral canthus region toward the angle of the mandible, joined by a horizontal limb just below the zygomatic arch and a preauricular limb. Keeping the horizontal limb below the arch protects the frontal branch where it runs superficially."],
-  ["Sub-SMAS dissection",
-   "Elevate the SMAS off the parotid fascia; the parotid protects nerve branches over the gland. Anterior to the gland the branches lie under the deep facial fascia, so dissect bluntly with spreading parallel to nerve direction, staying superficial to the masseteric fascia and seeing every structure you divide."],
-  ["Release retaining ligaments",
-   "In a deep-plane lift, release the zygomatic and masseteric cutaneous ligaments so the malar fat pad and cheek move with the SMAS as a composite flap. Stay superficial to the zygomaticus major, whose branches enter on its deep surface; the release allows vertical lift of the midface and jowl with less skin tension."],
-  ["Suspend the SMAS",
-   "Advance the SMAS flap in a superolateral (largely vertical) vector and fix it to the stable preauricular and mastoid fascia with permanent or long-lasting sutures. Trim or imbricate the excess. For plication or SMASectomy, the same vector is achieved with folding sutures or strip excision without sub-SMAS elevation."],
-  ["Neck suspension",
-   "Advance the posterior platysma superolaterally and suture it to the mastoid fascia to define the jawline and cervicomental angle. Check the neck and jaw contour on both sides for symmetry before skin redraping."],
-  ["Hemostasis",
-   "Inspect every surface with a headlight and lighted retractor, using bipolar cautery near nerves. Ask anesthesia to bring the blood pressure up to normal and to perform a Valsalva maneuver to reveal occult bleeders. Meticulous hemostasis is the most important hematoma prevention."],
-  ["Redrape and trim the skin",
-   "Redrape the skin along a posterior-superior vector, different from the SMAS vector, so the tension is carried by the deep layer. Place key sutures above the ear and at the mastoid, then trim excess skin so closure is tension-free, especially around the tragus and lobule."],
-  ["Inset the earlobe and tragus",
-   "Inset the lobule with no downward pull, leaving it slightly loose so it settles in a natural position; tension here causes a pixie earlobe. Thin the pretragal flap and leave slight laxity over the tragus so it is not pulled forward, exposing the canal."],
-  ["Drains and closure",
-   "Place closed suction drains in the neck and postauricular areas as preferred. Close the hairline incisions with care for follicles and the preauricular incision with fine sutures. Apply a light compressive dressing that does not strangle the flap or neck."]
+  [
+   "Incision planning",
+   "Plan a temporal incision within or along the hairline, curving into a pretragal or retrotragal incision, around the lobule, and up the postauricular sulcus onto the mastoid with a posterior hairline or occipital extension. Hide scars in natural creases and preserve the temporal tuft and sideburn position."
+  ],
+  [
+   "Submental work if needed",
+   "Through a short submental crease incision, perform conservative liposuction or direct fat excision and approximate the medial platysmal borders (corset or plication) for banding and an obtuse angle. Avoid over-aggressive suction, which causes cobra neck and contour irregularity."
+  ],
+  [
+   "Raise the skin flap",
+   "Elevate the cheek and neck skin in the subcutaneous plane with facelift scissors under transillumination, leaving a thin layer of fat on the flap to protect the subdermal plexus. Extent depends on technique: shorter in deep-plane lifts, wider for SMAS plication. Over the SCM leave the superficial cervical fascia intact to protect the great auricular nerve."
+  ],
+  [
+   "Design the SMAS flap",
+   "For an extended SMAS or deep-plane lift, incise the SMAS along a line from the lateral canthus region toward the angle of the mandible, joined by a horizontal limb just below the zygomatic arch and a preauricular limb. Keeping the horizontal limb below the arch protects the frontal branch where it runs superficially."
+  ],
+  [
+   "Sub-SMAS dissection",
+   "Elevate the SMAS off the parotid fascia; the parotid protects nerve branches over the gland. Anterior to the gland the branches lie under the deep facial fascia, so dissect bluntly with spreading parallel to nerve direction, staying superficial to the masseteric fascia and seeing every structure you divide."
+  ],
+  [
+   "Release retaining ligaments",
+   "In a deep-plane lift, release the zygomatic and masseteric cutaneous ligaments so the malar fat pad and cheek move with the SMAS as a composite flap. Stay superficial to the zygomaticus major, whose branches enter on its deep surface; the release allows vertical lift of the midface and jowl with less skin tension."
+  ],
+  [
+   "Suspend the SMAS",
+   "Advance the SMAS flap in a superolateral (largely vertical) vector and fix it to the stable preauricular and mastoid fascia with permanent or long-lasting sutures. Trim or imbricate the excess. For plication or SMASectomy, the same vector is achieved with folding sutures or strip excision without sub-SMAS elevation."
+  ],
+  [
+   "Neck suspension",
+   "Advance the posterior platysma superolaterally and suture it to the mastoid fascia to define the jawline and cervicomental angle. Check the neck and jaw contour on both sides for symmetry before skin redraping."
+  ],
+  [
+   "Hemostasis",
+   "Inspect every surface with a headlight and lighted retractor, using bipolar cautery near nerves. Ask anesthesia to bring the blood pressure up to normal and to perform a Valsalva maneuver to reveal occult bleeders. Meticulous hemostasis is the most important hematoma prevention."
+  ],
+  [
+   "Redrape and trim the skin",
+   "Redrape the skin along a posterior-superior vector, different from the SMAS vector, so the tension is carried by the deep layer. Place key sutures above the ear and at the mastoid, then trim excess skin so closure is tension-free, especially around the tragus and lobule."
+  ],
+  [
+   "Inset the earlobe and tragus",
+   "Inset the lobule with no downward pull, leaving it slightly loose so it settles in a natural position; tension here causes a pixie earlobe. Thin the pretragal flap and leave slight laxity over the tragus so it is not pulled forward, exposing the canal."
+  ],
+  [
+   "Drains and closure",
+   "Place closed suction drains in the neck and postauricular areas as preferred. Close the hairline incisions with care for follicles and the preauricular incision with fine sutures. Apply a light compressive dressing that does not strangle the flap or neck."
+  ]
  ],
  "exit_check": [
   "Hemostasis confirmed at normal blood pressure with Valsalva; drains functioning",
@@ -69,22 +94,45 @@
   "Warn about temporary numbness of the cheek and ear and transient weakness that usually recovers"
  ],
  "complications": {
-  "early": ["Expanding hematoma requiring return to the OR", "Seroma", "Skin flap ischemia and slough", "Temporary facial nerve weakness (neuropraxia)", "Infection"],
-  "late": ["Great auricular nerve injury with ear numbness or neuroma", "Permanent facial nerve branch injury (rare)", "Pixie earlobe, tragal distortion, hairline displacement or temporal alopecia", "Hypertrophic scar or pigment change", "Contour deformities such as cobra neck"]
+  "early": [
+   "Expanding hematoma requiring return to the OR",
+   "Seroma",
+   "Skin flap ischemia and slough",
+   "Temporary facial nerve weakness (neuropraxia)",
+   "Infection"
+  ],
+  "late": [
+   "Great auricular nerve injury with ear numbness or neuroma",
+   "Permanent facial nerve branch injury (rare)",
+   "Pixie earlobe, tragal distortion, hairline displacement or temporal alopecia",
+   "Hypertrophic scar or pigment change",
+   "Contour deformities such as cobra neck"
+  ]
  },
  "attending_followup": [
-  ["What is the most common complication of rhytidectomy and its main risk factors?",
-   "Hematoma; risk is higher in men, with hypertension, antiplatelet or anticoagulant and supplement use, and smoking. An expanding hematoma is evacuated in the OR to protect the flap."],
-  ["Which nerve is most often injured in a facelift and where?",
-   "The great auricular nerve, crossing the SCM about 6.5 cm below the external auditory canal (McKinney's point); protect it by leaving superficial cervical fascia on the muscle."],
-  ["Where is the frontal branch most vulnerable and how do you protect it?",
-   "As it crosses superficially over the middle of the zygomatic arch along Pitanguy's line; keep the horizontal SMAS incision below the arch and stay deep to the superficial temporal fascia or on deep temporal fascia above it."],
-  ["What does a deep-plane lift add over SMAS plication?",
-   "Release of the zygomatic and masseteric ligaments with a composite skin-SMAS flap, giving better midface and melolabial correction and a better-perfused flap, at the cost of a longer anterior dissection near nerve branches."],
-  ["Why is smoking a major concern?",
-   "It sharply increases flap necrosis and skin slough by impairing the subdermal plexus; patients should be nicotine-free for weeks before and after, or the dissection should be limited."]
+  [
+   "What is the most common complication of rhytidectomy and its main risk factors?",
+   "Hematoma; risk is higher in men, with hypertension, antiplatelet or anticoagulant and supplement use, and smoking. An expanding hematoma is evacuated in the OR to protect the flap."
+  ],
+  [
+   "Which nerve is most often injured in a facelift and where?",
+   "The great auricular nerve, crossing the SCM about 6.5 cm below the external auditory canal (McKinney's point); protect it by leaving superficial cervical fascia on the muscle."
+  ],
+  [
+   "Where is the frontal branch most vulnerable and how do you protect it?",
+   "As it crosses superficially over the middle of the zygomatic arch along Pitanguy's line; keep the horizontal SMAS incision below the arch and stay deep to the superficial temporal fascia or on deep temporal fascia above it."
+  ],
+  [
+   "What does a deep-plane lift add over SMAS plication?",
+   "Release of the zygomatic and masseteric ligaments with a composite skin-SMAS flap, giving better midface and melolabial correction and a better-perfused flap, at the cost of a longer anterior dissection near nerve branches."
+  ],
+  [
+   "Why is smoking a major concern?",
+   "It sharply increases flap necrosis and skin slough by impairing the subdermal plexus; patients should be nicotine-free for weeks before and after, or the dissection should be limited."
+  ]
  ],
  "source_basis": [
   "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8, Reconstructive and Facial Plastic Surgery: Rhytidoplasty (Rhytidectomy, Facelift), anatomy, evaluation and surgical techniques (p 499-503)",
   "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8: Complications of Rhytidectomy, Brow Lift, Liposurgery (p 506-507)"
- ]}
+ ]
+}
