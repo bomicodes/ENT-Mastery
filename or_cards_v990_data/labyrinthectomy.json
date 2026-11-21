@@ -1,0 +1,129 @@
+{
+ "slug": "labyrinthectomy",
+ "title": "Transmastoid Labyrinthectomy",
+ "domain": "Otology / Neurotology",
+ "or_family_v190": "otology",
+ "linked_topic": "Ménière Disease",
+ "source_label": "Cummings 7e (Surgery for Vestibular Disorders) and Pasha 6e",
+ "indications": "Disabling recurrent vertigo from a clearly lateralized unstable peripheral vestibular disorder (most often Ménière disease) in an ear with nonserviceable hearing, typically worse than 50 to 60 dB or under 50 percent word recognition, after medical treatment and usually intratympanic therapy have failed. It is the gold standard for vertigo control (about 90 percent or better). Contraindications include reduced vestibular function in the other ear, active contralateral disease, and poor central compensation (for example uncompensated stable lesions, which need rehabilitation instead). Cochlear implantation can be done at the same time.",
+ "setup": [
+  "Supine, head turned; facial nerve monitoring with no long-acting paralysis",
+  "Otologic drill with 4 mm and 3 mm cutting and diamond burs, continuous suction-irrigation",
+  "Microscope, fine picks for neuroepithelium; reverse drill rotation available for the right ear",
+  "Contrast MRI reviewed to exclude retrocochlear tumor; audiogram and caloric testing confirm the side",
+  "Antiemetics and vestibular suppressants ready for immediate postoperative vertigo"
+ ],
+ "landmarks": [
+  "Lateral semicircular canal dome at the antrum depth",
+  "Solid angle between the three canals",
+  "Posterior canal and common crus",
+  "Superior canal and subarcuate artery",
+  "Ampullae of the lateral and superior canals near the tympanic facial nerve",
+  "Second genu and mastoid segment of the facial nerve",
+  "Vestibule with utricle and saccule; lateral IAC fundus medial to it"
+ ],
+ "danger": [
+  "Tympanic segment and second genu of the facial nerve",
+  "Drill slipping laterally onto the facial nerve when the cup rim is too low",
+  "Opening the IAC fundus and causing CSF leak",
+  "Middle fossa dura and superior petrosal sinus",
+  "Incomplete removal of neuroepithelium (posterior canal ampulla)"
+ ],
+ "steps": [
+  [
+   "Confirm candidacy",
+   "Confirm vertigo comes from this ear (asymmetric hearing loss and unilateral caloric weakness), that the other ear has normal vestibular function, and that residual hearing is not useful to the patient. Discuss total hearing loss on this side, a period of vertigo, and the option of a simultaneous cochlear implant."
+  ],
+  [
+   "Mastoidectomy with beveled margins",
+   "Perform a complete cortical mastoidectomy through a postauricular incision. Bevel the bone over the middle fossa dura and sinodural angle widely so the view medial to the facial nerve is good. Thin the posterior canal wall and identify the facial nerve and lateral canal."
+  ],
+  [
+   "Start at the solid angle",
+   "Using the largest bur that fits safely between the dura and the lateral canal (usually 4 mm), deepen the solid angle between the three canals before opening any lumen. Develop a bony cup that becomes deeper and wider as labyrinthine bone is removed."
+  ],
+  [
+   "Open the lateral canal",
+   "Open the lateral canal lumen first and use it as the landmark protecting the tympanic segment of the facial nerve below it. Keep the equator of the bur above the inferior rim of the cup so it cannot slip down onto the nerve; consider reversing rotation in a right ear."
+  ],
+  [
+   "Follow to the posterior canal",
+   "Follow the lateral canal posteriorly toward its nonampullated end and open the dome of the posterior canal. Trace the posterior canal superiorly to the common crus, where the nonampullated end of the superior canal joins."
+  ],
+  [
+   "Open the superior canal",
+   "Follow the superior canal from the common crus forward toward its ampulla by deepening the cup. Bleeding from the subarcuate artery is expected as the arch is opened; control it once definitively with bone wax or diamond drilling."
+  ],
+  [
+   "Open the anterior ampullae",
+   "Open the superior canal ampulla and the adjacent lateral canal ampulla, which lie together just above the tympanic facial nerve. Remove their neuroepithelium under the microscope with a fine pick, staying above the facial nerve and avoiding pressure on its bony covering."
+  ],
+  [
+   "Reach the posterior canal ampulla",
+   "Drill through the nonampullated end of the lateral canal to open the posterior vestibule. Follow the inner surface of the posterior canal deep to the second genu, beveling laterally over the nerve so you do not undercut it. Use a 3 mm bur between the skeletonized nerve and the dura."
+  ],
+  [
+   "Open the vestibule",
+   "Connect the three ampullated ends to unroof the vestibule. Identify the utricle in the elliptical recess and the saccule in the spherical recess and remove all membranous labyrinth with a fine pick. Do not perforate the thin bone at the lateral IAC fundus."
+  ],
+  [
+   "Confirm complete ablation",
+   "Inspect each ampulla and both maculae to be sure no neuroepithelium remains, since residual tissue causes ongoing vertigo. Some surgeons place gelfoam soaked in gentamicin in the vestibule as a supplement."
+  ],
+  [
+   "Close",
+   "Pack the vestibule and aditus with fascia or muscle, add abdominal fat to the mastoid if the IAC was entered, irrigate, and close periosteum and skin in layers with a mastoid dressing."
+  ]
+ ],
+ "exit_check": [
+  "All three ampullae, utricle and saccule removed under direct vision",
+  "Facial nerve intact and stimulating; IAC fundus intact with no CSF leak",
+  "Vestibule and aditus packed before closure"
+ ],
+ "postop": [
+  "Brisk nystagmus and vertigo for several days; antiemetics and short-term vestibular suppressants only",
+  "Early mobilization; most walk unassisted by day 2 or 3",
+  "Start vestibular rehabilitation early, especially in older or sedated patients",
+  "Discuss hearing options for single-sided deafness (CROS, bone conduction, cochlear implant)"
+ ],
+ "complications": {
+  "early": [
+   "Severe vertigo and nausea",
+   "Facial nerve injury",
+   "CSF leak",
+   "Wound hematoma"
+  ],
+  "late": [
+   "Chronic dysequilibrium from poor compensation",
+   "Persistent vertigo from residual neuroepithelium",
+   "Contralateral Ménière disease",
+   "Single-sided deafness"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the key contraindication to labyrinthectomy?",
+   "Reduced vestibular function in the other ear (or active contralateral Ménière disease), because bilateral loss causes permanent oscillopsia and imbalance."
+  ],
+  [
+   "Which canal do you open first and why?",
+   "The lateral canal, because it is the most accessible and its lumen marks the position of the tympanic facial nerve just below it, guiding safe deeper drilling."
+  ],
+  [
+   "Which bleeding is expected when opening the superior canal arch?",
+   "The subarcuate artery running through the arch; control it once, definitively, after the arch is opened."
+  ],
+  [
+   "Why does a labyrinthectomy fail early, and what do you do?",
+   "Wrong diagnosis or side, residual neuroepithelium (often posterior ampulla), or poor compensation. Start with vestibular rehabilitation; revision or nerve section is reserved for proven residual function."
+  ],
+  [
+   "How does transcanal labyrinthectomy compare with transmastoid?",
+   "Transcanal through the oval window is quick but blind to some ampullae and less reliable, with more postoperative imbalance; transmastoid allows complete visual removal and is the gold standard."
+  ]
+ ],
+ "source_basis": [
+  "Cummings Otolaryngology: Head and Neck Surgery, 7th ed., Chapter 169: Surgery for Vestibular Disorders (Labyrinthectomy)",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed., Chapter 7: Otology and Neurotology (Surgical Management of Vertigo)"
+ ]
+}

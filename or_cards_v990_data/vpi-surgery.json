@@ -1,0 +1,132 @@
+{
+ "slug": "vpi-surgery",
+ "title": "VPI Surgery: Pharyngeal Flap / Sphincter Pharyngoplasty / Furlow",
+ "domain": "Pediatric Otolaryngology",
+ "or_family_v190": "pediatric",
+ "linked_topic": "Velopharyngeal Insufficiency",
+ "source_label": "Pasha 6e Ch 9 and Cummings 7e Ch 189 (Velopharyngeal Dysfunction)",
+ "indications": "Persistent velopharyngeal insufficiency after repaired cleft palate, submucous cleft, 22q11.2 deletion, or adenoidectomy, with hypernasality and nasal air emission confirmed by a speech-language pathologist and imaged by nasopharyngoscopy and/or multiview videofluoroscopy, after an adequate trial of speech therapy to correct compensatory articulation. Surgery is tailored to gap size and closure pattern: Furlow double-opposing Z-plasty when the levators are sagittally oriented and the gap is small; superiorly based pharyngeal flap for sagittal or circular closure with good lateral wall motion; sphincter pharyngoplasty for coronal or circular closure with poor lateral wall motion; posterior wall augmentation for a small central gap.",
+ "setup": [
+  "Supine with shoulder roll, oral RAE tube, Dingman or similar mouth gag with careful tongue blade sizing",
+  "Local anesthetic with epinephrine, needle-tip cautery, bipolar, fine palate instruments and long needle drivers",
+  "Red rubber or nasal catheters for retraction and to size lateral ports",
+  "3-0 and 4-0 Vicryl sutures, nasopharyngoscope available for intraoperative check",
+  "Preoperative MRA or careful palpation for medialized carotids in 22q11.2 deletion"
+ ],
+ "landmarks": [
+  "Velum, levator veli palatini orientation, and posterior hard palate edge",
+  "Posterior pharyngeal wall and level of maximal velar excursion (often near C1)",
+  "Passavant ridge if present",
+  "Posterior tonsillar pillars (palatopharyngeus) and lateral pharyngeal walls",
+  "Prevertebral fascia",
+  "Adenoid pad and eustachian tube orifices"
+ ],
+ "danger": [
+  "Medialized internal carotid arteries behind the posterior pharyngeal wall (22q11.2)",
+  "Obstructive sleep apnea or airway obstruction from over-obturation",
+  "Cervical spine and prevertebral fascia under the pharyngeal flap",
+  "Dehiscence or flap retraction from tension or inadequate length",
+  "Inadequate obturation with persistent hypernasality"
+ ],
+ "steps": [
+  [
+   "Match the operation to imaging",
+   "Review nasoendoscopy and videofluoroscopy with the speech pathologist: gap size, closure pattern (coronal about 55%, circular, sagittal, circular with Passavant ridge), lateral wall movement, levator orientation, and adenoid size. Screen for 22q11.2 deletion, pulsatile pharyngeal walls, and OSA risk; obtain sleep study or MRA when indicated."
+  ],
+  [
+   "Position and expose",
+   "Place the oral RAE tube and mouth gag, avoiding excessive tongue compression on long cases. Pass red rubber catheters through the nose and out the mouth to retract the velum forward and expose the posterior pharyngeal wall. Inject the palate and planned pharyngeal incisions with dilute epinephrine."
+  ],
+  [
+   "Furlow: design the Z-plasties",
+   "Draw two opposite-handed Z-plasties on the oral and nasal surfaces of the soft palate. On the oral side (often the left for a right-handed surgeon), the posteriorly based flap carries the levator muscle; the opposite oral flap is mucosa only. The nasal side mirrors this so each muscle flap faces a mucosal flap."
+  ],
+  [
+   "Furlow: raise and transpose",
+   "Elevate the oral myomucosal flap with the abnormally inserted levator off the hard palate edge, then the contralateral mucosal flap. Incise the nasal layer in the opposite Z. Transpose the nasal flaps and close, then transpose the oral flaps so the two levator bundles overlap horizontally, lengthening and bulking the velum."
+  ],
+  [
+   "Pharyngeal flap: raise the flap",
+   "Outline a superiorly based posterior pharyngeal wall flap sized to the preoperative gap, with the base at or above the level of maximal velar closure. Incise laterally through mucosa and superior constrictor down to the prevertebral fascia, undermine in that plane, and avoid extending too low toward the hypopharynx."
+  ],
+  [
+   "Pharyngeal flap: inset into the velum",
+   "Split the soft palate in midline or create a fish-mouth pocket on its nasal surface. Divide the inferior end of the flap, which will shorten as it contracts, then suture it high into the velum raw surface to raw surface, with nasal mucosal flaps covering the flap's raw undersurface to limit tubing."
+  ],
+  [
+   "Pharyngeal flap: size the ports",
+   "Before final closure, place appropriately sized catheters through each nostril into the lateral ports to define their size and leave adequate airway. Flap width sets the balance between speech correction and obstruction. Partially close the donor site only if it does not narrow the pharynx."
+  ],
+  [
+   "Sphincter: raise the lateral flaps",
+   "Outline superiorly based myomucosal flaps on each posterior tonsillar pillar, including palatopharyngeus. Incise from as high as possible down to near the tonsil base and elevate them off the superior constrictor, preserving width, which governs how tight the final sphincter will be."
+  ],
+  [
+   "Sphincter: posterior wall incision",
+   "Make a horizontal incision across the posterior pharyngeal wall at the level of maximal velar excursion, usually well above the level a natural mouth view suggests, joining the top of each lateral donor incision. Keep it superficial to the deep fascia, especially with medialized carotids."
+  ],
+  [
+   "Sphincter: inset and overlap",
+   "Rotate both flaps medially into the horizontal incision, suturing one to the superior edge and the other to the inferior edge, then sew the flaps together where they overlap. Use more overlap and wider flaps when palatal motion is poor; narrower flaps when the palate moves well, to limit OSA."
+  ],
+  [
+   "Close donor sites",
+   "Close the tonsillar pillar donor sites primarily with absorbable sutures. For a pharyngeal flap, close the palate in layers: nasal mucosa, muscle, then oral mucosa. Avoid excessive closure of the posterior wall defect, which narrows the airway and increases postoperative obstruction."
+  ],
+  [
+   "Hemostasis and airway check",
+   "Irrigate, confirm meticulous hemostasis on flap edges and donor sites, and remove catheters. If available, pass a flexible scope transnasally to confirm open lateral ports or central sphincter opening. Release the mouth gag periodically and check tongue perfusion before final removal."
+  ]
+ ],
+ "exit_check": [
+  "Hemostasis on all flap edges and donor sites",
+  "Patent nasal airway through ports or central sphincter opening",
+  "Tongue perfused and swelling minimal after gag release"
+ ],
+ "postop": [
+  "Monitored bed with continuous pulse oximetry the first night (higher-level care for 22q11.2, syndromic, or OSA-prone children); avoid nasal tubes or blind nasal suctioning",
+  "Soft or pureed diet 2-3 weeks; no straws or hard utensils",
+  "Speech therapy resumes 4-6 weeks after surgery; perceptual speech evaluation and imaging at 3-6 months",
+  "Polysomnography if snoring, apneas, or daytime symptoms develop; flap or port revision for persistent OSA"
+ ],
+ "complications": {
+  "early": [
+   "Airway obstruction or obstructive sleep apnea",
+   "Hemorrhage",
+   "Flap dehiscence",
+   "Dysphagia, neck pain or stiffness"
+  ],
+  "late": [
+   "Persistent hypernasality from undercorrection",
+   "Hyponasality and OSA from overcorrection",
+   "Nasopharyngeal stenosis or port scarring",
+   "Need for revision or flap takedown"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Which closure pattern is best suited to a pharyngeal flap, and which to a sphincter pharyngoplasty?",
+   "Pharyngeal flap: sagittal or circular closure with good lateral wall motion (it obturates the center). Sphincter pharyngoplasty: coronal or circular closure with poor lateral wall motion (it narrows the lateral and posterior port)."
+  ],
+  [
+   "Why obtain an MRA before VPI surgery in 22q11.2 deletion?",
+   "Medialized internal carotid arteries can lie just behind the posterior pharyngeal wall and be injured by flap elevation; imaging or palpation guides the incision or changes the operation."
+  ],
+  [
+   "What is the most significant airway complication after pharyngeal flap?",
+   "Obstructive sleep apnea or acute airway obstruction from over-obturation, which is why ports are sized with catheters and children are monitored with oximetry postoperatively."
+  ],
+  [
+   "When is a Furlow palatoplasty preferred for VPI?",
+   "With a small gap and sagittally oriented (unrepaired) levators, such as a submucous cleft or prior repair without intravelar veloplasty, because it reorients and lengthens the levator sling with lower OSA risk."
+  ],
+  [
+   "Why insist on speech therapy before surgery?",
+   "Compensatory articulation errors such as glottal stops mimic or worsen VPI and must be corrected so imaging reflects true velopharyngeal function; surgery cannot fix misarticulation."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RA, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Ch 9 Pediatric Otolaryngology, Velopharyngeal Dysfunction/Insufficiency (pp 624-625)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Ch 189 Velopharyngeal Dysfunction"
+ ]
+}

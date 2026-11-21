@@ -1,0 +1,148 @@
+{
+ "slug": "inferior-maxillectomy-palate",
+ "title": "Inferior (Infrastructure) Maxillectomy / Palatal Neoplasm Excision",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "headneck",
+ "linked_topic": "Reconstruction Selection After Head & Neck Ablation",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Transoral resection of tumors of the upper alveolus and hard or soft palate that lie below the infraorbital nerve and anterior-inferior to Ohngren's line: alveolar and palatal squamous cell carcinoma, minor salivary gland carcinomas (adenoid cystic, mucoepidermoid, polymorphous adenocarcinoma), benign minor salivary tumors such as pleomorphic adenoma, and selected odontogenic or bony lesions. Superficial lesions not fixed to bone can be removed with the periosteum and left to granulate; tumors attached to or through palatal bone need a through-and-through resection. Planned Brown and Shaw class I or II (a to d) defects suit this approach; superior extension to the orbital floor, infraorbital rim or pterygopalatine fossa calls for total maxillectomy or a combined endoscopic or transfacial approach. Margins are typically one uninvolved anatomic layer for benign disease and 10 to 15 mm for carcinoma.",
+ "setup": [
+  "Contrast CT for bone erosion of the alveolus, palate, antral floor and pterygoid plates; MRI when perineural spread along the greater palatine nerve toward the pterygopalatine fossa is a concern (adenoid cystic carcinoma); chest CT or PET-CT for carcinoma.",
+  "Tumor board review and prosthodontic consultation before surgery: dental impressions, a surgical obturator or immediate denture, and decisions on which teeth to keep as obturator abutments versus planned free flap reconstruction.",
+  "Oral (not nasal) intubation so the tube is not cut during the lateral nasal wall and septal osteotomies; consider a south-facing tube taped to the contralateral commissure.",
+  "Warn anesthesia that downfracture is the high blood loss step; controlled hypotension if safe, type and screen, and tranexamic acid per institutional practice.",
+  "Mouth gag (Dingman or Crowe-Davis) with bite block, headlight or loupes, reciprocating saw, fine and curved osteotomes, 30-degree endoscope for antral inspection, clips and bipolar.",
+  "Plan the neck: alveolar and palatal carcinomas carry a meaningful occult nodal rate, so stage and treat the neck with the primary when indicated."
+ ],
+ "landmarks": [
+  "Incisive foramen and nasopalatine bundle",
+  "Greater palatine foramen medial to the second and third molars",
+  "Maxillary tuberosity and pterygomaxillary junction",
+  "Piriform aperture and lateral nasal wall",
+  "Infraorbital foramen and nerve",
+  "Zygomaticomaxillary buttress",
+  "Hard-soft palate junction and nasal septum attachment"
+ ],
+ "danger": [
+  "Greater palatine and descending palatine artery bleeding at downfracture",
+  "Pterygoid venous plexus and internal maxillary artery behind the tuberosity",
+  "Infraorbital nerve and orbital floor with a high horizontal cut",
+  "Nasolacrimal duct at the lateral nasal wall cut",
+  "Adjacent tooth roots and the remaining abutment teeth",
+  "Perineural spread along the greater palatine nerve"
+ ],
+ "steps": [
+  [
+   "Examine and mark",
+   "Under anesthesia, palpate the lesion, assess fixation to bone and extension onto the soft palate, tuberosity and buccal sulcus, and check the nose and nasopharynx endoscopically. Mark mucosal margins with cautery: 10 to 15 mm for carcinoma, a single uninvolved layer for benign lesions, preserving uninvolved mucosa to help closure."
+  ],
+  [
+   "Superficial lesions: subperiosteal excision",
+   "For small superficial lesions not fixed to bone, incise to bone around the margin and peel the mucoperiosteum off the palate with a Freer or periosteal elevator, taking the periosteum as the deep margin. Control greater palatine bleeding with bipolar; the bare bone granulates and re-epithelializes under a dressing plate."
+  ],
+  [
+   "Soft palate lesions",
+   "Small soft palate tumors can be excised transorally with cold steel, needle cautery or CO2 laser; larger lesions become through-and-through defects. Lateral extension onto the tonsillar pillars or pharyngeal wall may need TORS exposure. Plan to restore velopharyngeal closure with local flap, free flap or a speech bulb prosthesis."
+  ],
+  [
+   "Circumvestibular incision for bony resection",
+   "For alveolar or palatal disease fixed to bone, incise in a circumvestibular line in the buccal sulcus around the tumor, behind the tuberosity, and across the palate or hard-soft palate junction. Near the tumor, step through soft tissue to keep the margin before turning toward bone."
+  ],
+  [
+   "Raise the cheek flap",
+   "Elevate a full-thickness mucoperiosteal flap over the anterior maxilla to expose the piriform rim, the infraorbital nerve at its foramen and the zygomaticomaxillary buttress, continuing posteriorly to the pterygomaxillary junction. Preserve the infraorbital nerve unless it lies within the resection."
+  ],
+  [
+   "Define the superior extent",
+   "If antral involvement is uncertain on imaging, open a small window in the anterior wall and inspect the sinus with a 30-degree endoscope, taking frozen sections. Disease confined below the infraorbital nerve allows inferior maxillectomy; frank superior invasion converts the plan to total maxillectomy with orbital floor management."
+  ],
+  [
+   "Extract teeth at the osteotomy",
+   "Extract the tooth in the line of the anterior alveolar cut and make the cut through the socket, so adjacent teeth keep bone around their roots. Keeping a sound abutment tooth beside the defect greatly improves later obturator retention when prosthetic rehabilitation is planned."
+  ],
+  [
+   "Horizontal and palatal osteotomies",
+   "With a reciprocating saw, cut horizontally from the pterygomaxillary junction across the buttress and anterior wall to the piriform aperture, staying below the infraorbital nerve. Cut the palate in the sagittal plane (paramedian or across the midline as needed). Complete the lateral nasal wall cut with a guarded osteotome."
+  ],
+  [
+   "Manage the septum",
+   "If the septum is uninvolved, separate it from the nasal crest with a curved double-ball septal osteotome. If the tumor reaches the nasal floor or septum, transect the septum with heavy scissors to include it in the specimen. Bilateral or total palatal resections need both sides cut before downfracture."
+  ],
+  [
+   "Pterygomaxillary separation and downfracture",
+   "Seat a curved osteotome at the pterygomaxillary junction angled inferiorly, with a finger in the mouth behind the tuberosity, and tap until the tip is felt. Warn anesthesia, then downfracture the segment with controlled digital pressure. Clip the descending and greater palatine arteries on the superior surface promptly."
+  ],
+  [
+   "Release and deliver the specimen",
+   "Divide the remaining posterior soft tissue attachments along the planned line at the hard-soft palate junction and tuberosity with cautery, connecting to the contralateral incision. Deliver the specimen, orient it with sutures for pathology, and send separate margins from soft tissue, bone edges and the greater palatine nerve if perineural spread is suspected."
+  ],
+  [
+   "Hemostasis and cavity inspection",
+   "Pack the cavity briefly, then secure bleeding from the pterygoid plexus, palatine stumps and septal vessels with bipolar, clips or suture ligation. Smooth sharp bone edges. Check that the remaining abutment teeth are stable and that the nasolacrimal duct and orbital floor are intact."
+  ],
+  [
+   "Airway and feeding",
+   "Place nasal airways secured to the septum before any reconstruction if postoperative swelling is expected, and a nasogastric tube for larger resections or free flaps. Tracheostomy is rarely needed unless a bulky flap is used or the resection is combined with oropharyngeal or neck surgery."
+  ],
+  [
+   "Reconstruct or obturate",
+   "Small alveolar defects close with local advancement, buccal fat pad or a FAMM or palatal island flap, without obliterating the denture sulcus. Larger defects receive a surgical obturator wired or screwed in place over a skin-grafted, packed cavity, or a radial forearm (soft tissue) or fibula, scapula or DCIA flap when dental implants are planned."
+  ]
+ ],
+ "exit_check": [
+  "Hemostasis secure behind the tuberosity and at the palatine stumps; packing and surgical obturator stable",
+  "Specimen oriented with soft tissue, bone and nerve margins sent; frozen results reviewed",
+  "Nasal airway and feeding plan in place; teeth and orbit checked"
+ ],
+ "postop": [
+  "Sinus precautions (no nose blowing, sneeze with mouth open) when the reconstruction borders the antrum",
+  "Soft diet for small resections; nasogastric feeding for 5 to 7 days after larger resections or free flaps",
+  "Remove packing and the surgical obturator at about 5 to 7 days and convert to an interim obturator, with the definitive prosthesis after healing and any radiation",
+  "Saline irrigation and meticulous cavity and prosthesis hygiene; teach the patient to remove and clean the obturator",
+  "Tumor board review of margins, perineural invasion and nodal status for adjuvant radiation"
+ ],
+ "complications": {
+  "early": [
+   "Hemorrhage from the palatine or internal maxillary vessels",
+   "Oronasal or oroantral fistula from flap breakdown",
+   "Free flap compromise",
+   "Infraorbital numbness or tooth devitalization",
+   "Epiphora from nasolacrimal injury"
+  ],
+  "late": [
+   "Hypernasal speech and nasal regurgitation from poor obturator seal",
+   "Trismus, worse after radiation",
+   "Loss of abutment teeth and poor prosthesis retention",
+   "Chronic crusting and sinusitis in the cavity",
+   "Local recurrence, especially perineural in adenoid cystic carcinoma"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What does the Brown and Shaw classification describe?",
+   "Maxillectomy defects in two dimensions: vertical class I to VI (I, no oronasal fistula; II, not involving the orbit; III, orbital adnexa involved with orbit retained; IV, orbital exenteration; V, orbitomaxillary; VI, nasomaxillary) and horizontal a to d for the palatal and alveolar defect. Inferior maxillectomy produces class I or II defects."
+  ],
+  [
+   "Obturator or free flap after an inferior maxillectomy?",
+   "An obturator suits smaller defects with good abutment teeth, allows direct cavity surveillance and avoids a donor site. A free flap suits large, bilateral or anterior defects, edentulous patients, irradiated fields or those unable to manage a prosthesis; a bony flap such as fibula is needed when implants are planned."
+  ],
+  [
+   "Why must the greater palatine nerve be considered a margin in palatal salivary carcinoma?",
+   "The hard-soft palate junction has the highest density of minor salivary glands. Adenoid cystic carcinoma there tracks along the greater palatine nerve to the pterygopalatine fossa and skull base, so the nerve margin should be checked and MRI reviewed for perineural spread."
+  ],
+  [
+   "Why oral rather than nasal intubation for this case?",
+   "The lateral nasal wall and septal osteotomies and downfracture can cut or dislodge a nasal tube, and maxillomandibular fixation is not needed, so a nasal tube adds risk without benefit."
+  ],
+  [
+   "What is the significance of Ohngren's line?",
+   "The plane from the medial canthus to the mandibular angle divides the maxilla into an anteroinferior infrastructure and a posterosuperior suprastructure. Infrastructure tumors are more often resectable by inferior maxillectomy with better prognosis; suprastructure tumors reach the orbit, pterygopalatine fossa and skull base early."
+  ]
+ ],
+ "source_basis": [
+  "Slijepcevic AA, Petrisor D, Wax MK. Excision of Palatal Neoplasms. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 28.",
+  "Fagin AP, Petrisor D, Brennan PA. Inferior Maxillectomy and Resection of Tumour of the Upper Alveolus. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 29.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, sinonasal surgical resection types and prosthetic obturator (p 282, 310-311).",
+  "Brown JS, Shaw RJ. Reconstruction of the maxilla and midface: introducing a new classification. Lancet Oncol. 2010;11:1001-1008."
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "slug": "remote-access-thyroidectomy",
+ "title": "Video-Assisted / Remote-Access (Robotic, TOETVA) Thyroidectomy",
+ "domain": "Thyroid / Parathyroid / Salivary",
+ "or_family_v190": "thyroid",
+ "linked_topic": "Thyroid Nodule",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Cummings 7e",
+ "indications": "A niche option for selected patients who want to avoid a visible neck scar for personal, cultural, or keloid-related reasons, when the operation chosen by the thyroid team (usually lobectomy) would otherwise be done open. The ideal candidate is slim and healthy with a small (under about 4 cm) solitary nodule that is benign or low risk. Contraindications include large or retrosternal goiter, Graves disease (relative), cancer with extrathyroidal extension, bulky or extranodal nodal disease, prior neck surgery or radiation, contralateral cord palsy, and, for the transaxillary route, obesity and shoulder joint disease. Video-assisted thyroidectomy (MIVAT) uses a small central neck incision; transaxillary robotic and transoral vestibular (TOETVA) approaches leave no neck scar.",
+ "setup": [
+  "Consent covers standard thyroid risks plus approach-specific risks: open conversion, chest-wall numbness and brachial plexus injury (axillary), mental nerve injury and CO2-related problems (transoral)",
+  "Preoperative and postoperative laryngoscopy as for open surgery",
+  "Nerve-monitoring tube with confirmed glottic position; extended-length stimulator probe for the long reach",
+  "Transaxillary: arm placed in the extended-salute position and the axillary incision marked with the patient awake; no shoulder roll, mild head support, table head lowered",
+  "Transoral: neck slightly extended, oral prep with chlorhexidine rinse, nasal intubation optional; CO2 insufflator set low",
+  "Open thyroid tray opened and ready for urgent conversion"
+ ],
+ "landmarks": [
+  "Sternal and clavicular heads of the sternocleidomastoid (axillary entry point to the neck)",
+  "Clavipectoral fascia over pectoralis major (axillary flap plane)",
+  "Mental nerve exiting near the lower premolars (transoral port placement)",
+  "Internal jugular vein and common carotid artery",
+  "Recurrent laryngeal nerve in the tracheoesophageal groove",
+  "Superior pole and external branch of the superior laryngeal nerve",
+  "Ligament of Berry"
+ ],
+ "danger": [
+  "Great-vessel injury that cannot be compressed or clamped quickly through a remote port",
+  "Thermal spread from energy devices near the recurrent and superior laryngeal nerves",
+  "Brachial plexus traction from arm hyperextension",
+  "Tracheal or esophageal injury from instruments working in a long tunnel",
+  "Mental nerve injury and skin perforation of the chin flap (transoral)",
+  "CO2 embolism and subcutaneous emphysema with high insufflation pressures"
+ ],
+ "steps": [
+  [
+   "Choose the approach",
+   "Confirm that the planned extent of surgery is the same one the tumor board would choose for an open operation; approach preference must not change it. Match the route to anatomy and team experience: MIVAT for small glands with acceptance of a short neck scar, transaxillary for unilateral disease, transoral for midline access to both lobes."
+  ],
+  [
+   "Position the transaxillary patient",
+   "With the patient awake, place the ipsilateral arm with the back of the hand resting on the forehead and check comfort, then mark a 5 to 6 cm incision in a natural axillary crease just behind the pectoralis major border. Under anesthesia, recheck the position, avoid a shoulder roll, and lower the head of the table about 20 degrees."
+  ],
+  [
+   "Raise the axillary flap",
+   "Incise to the pectoralis fascia and raise a subcutaneous flap superficial to the clavipectoral fascia with long insulated cautery and lighted retractors. Carry it over the clavicle toward the sternal notch in a trapezoid shape until the two heads of the sternocleidomastoid are reached."
+  ],
+  [
+   "Enter the neck and dock",
+   "Open the natural gap between the sternal and clavicular heads bluntly, then retract the sternothyroid and sternohyoid to expose the lobe, internal jugular vein, and carotid. Place a fixed lifting retractor under the flap and straps, which creates gasless working space, then dock the robot with the angled endoscope and three working arms."
+  ],
+  [
+   "Lateral approach to the nerve",
+   "Retract the lobe medially and find the recurrent laryngeal nerve early in the tracheoesophageal groove. Stimulate it, then displace it gently laterally and cover it with a pledget when energy must be used nearby. Keep the nerve, jugular, and carotid in view the whole time."
+  ],
+  [
+   "Inferior pole and parathyroids",
+   "Release the lobe laterally and inferiorly. Identify the inferior parathyroid and peel it off the capsule on its vascular pedicle, dividing branches of the inferior thyroid artery close to the gland. Divide the inferior veins."
+  ],
+  [
+   "Superior pole",
+   "Retract the upper pole down and laterally and divide the superior vessels close to the capsule, keeping the active blade of the energy device away from the cricothyroid and the external branch of the superior laryngeal nerve to limit lateral heat spread. Identify the superior parathyroid and keep it on its blood supply."
+  ],
+  [
+   "Berry's ligament and specimen",
+   "Lift the lobe off the trachea and divide Berry's ligament with the nerve protected under a pledget. Divide the isthmus with the energy device. Bag the specimen and remove it through the axillary incision, then restimulate the nerve and vagus."
+  ],
+  [
+   "Transoral vestibular ports",
+   "For TOETVA, infiltrate the oral vestibule and the subplatysmal space with dilute epinephrine solution. Make a central 10 to 20 mm incision above the lower lip frenulum for the camera, and two 5 mm incisions far lateral near the oral commissures to stay clear of the mental nerves. Tunnel down over the mandible into the subplatysmal plane."
+  ],
+  [
+   "Transoral working space and dissection",
+   "Insufflate CO2 at about 6 mmHg and widen the flap to the sternocleidomastoids and sternal notch, keeping the skin flap thick to avoid burns. Open the midline raphe, divide the isthmus first, and work from medial to lateral on each lobe: superior pole, nerve identification near the insertion, then Berry's ligament. Extract in a bag through the central port."
+  ],
+  [
+   "Video-assisted option",
+   "For MIVAT, a 1.5 to 3 cm central incision above the notch is used with small retractors and a 30-degree endoscope without gas. Open the midline, retract the straps, divide superior vessels under magnification, find the nerve and parathyroids, then deliver the lobe through the incision to finish the dissection under direct view."
+  ],
+  [
+   "Hemostasis and closure",
+   "Raise blood pressure to normal, place in reverse Trendelenburg, and perform Valsalva to check for bleeding. Close the axillary wound in two layers with skin glue and apply a chest-wall compression dressing to limit seroma. Close vestibular incisions with absorbable sutures and apply a chin compression dressing for TOETVA."
+  ],
+  [
+   "Recognize when to convert",
+   "Convert to an open collar incision for uncontrolled bleeding, unexpected invasive cancer, unclear nerve anatomy, or no progress. Bleeding from the jugular or carotid cannot be controlled reliably through a remote tunnel, so pack and convert early rather than persist."
+  ]
+ ],
+ "exit_check": [
+  "Recurrent laryngeal and vagal stimulation intact at the end",
+  "Dry bed after Valsalva with normal blood pressure",
+  "Arm neurovascular status checked in recovery for axillary cases; chin and lip sensation documented for transoral cases"
+ ],
+ "postop": [
+  "Overnight stay for lobectomy; calcium and PTH after total or completion thyroidectomy as for open surgery",
+  "Laryngoscopy before discharge or at follow-up to document cord function",
+  "Axillary: compression garment for about 2 weeks; early physiotherapy for any arm weakness or shoulder stiffness",
+  "Transoral: soft diet and oral hygiene for several days; chin compression dressing for 1 to 2 days",
+  "Counsel that flap numbness over the chest or chin is expected and usually resolves over months"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma or seroma in the flap",
+   "Recurrent or superior laryngeal nerve injury",
+   "Brachial plexus neurapraxia (axillary)",
+   "Mental nerve paresthesia, flap perforation, or skin burn (transoral)",
+   "Subcutaneous emphysema or CO2 embolism (transoral)"
+  ],
+  "late": [
+   "Prolonged chest-wall or chin dysesthesia",
+   "Hypoparathyroidism after bilateral surgery",
+   "Hypertrophic axillary scar",
+   "Need for completion surgery when pathology upgrades"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Who is the ideal candidate for remote-access thyroidectomy?",
+   "A slim, healthy patient with a small solitary nodule (under about 4 cm) that is benign or low risk on ultrasound and cytology, who strongly wishes to avoid a neck scar, especially with a history of keloids. The extent of surgery must be the same as would be chosen for an open operation."
+  ],
+  [
+   "How do you minimize brachial plexus injury in transaxillary thyroidectomy?",
+   "Position the arm with the hand on the forehead rather than fully extended overhead, check comfort with the patient awake, keep it there for the whole case, and examine the arm in recovery. Fully abducted overhead positions caused plexus injuries in early series."
+  ],
+  [
+   "Why are the lateral vestibular ports in TOETVA placed near the oral commissures?",
+   "The mental nerve exits near the second premolar; lateral ports placed medially at the canine level risk injuring it. Placing them far lateral at the commissure reduces lip and chin numbness."
+  ],
+  [
+   "What approach to the nerve does the transaxillary robotic route use?",
+   "A lateral approach, similar to reoperative or minimally invasive parathyroid surgery: the lobe is retracted medially and the nerve is found early in the tracheoesophageal groove, then kept in constant view."
+  ],
+  [
+   "Is cancer a contraindication to robotic thyroidectomy?",
+   "Not by itself. Small low-risk differentiated cancers can be removed, but extrathyroidal extension, bulky or lateral nodal disease, and extranodal spread are contraindications, and any unexpected invasion should prompt conversion."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes T (eds). Atlas of Head and Neck Surgery (Springer Surgery Atlas Series, 2024): Ch 47 Video-Assisted and Robotic Thyroidectomy (Garas, Timon, Tolley).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 124 Surgical Robotics in Otolaryngology (remote-access thyroid surgery).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 3 Endocrine (endoscopic, transaxillary, and transoral thyroidectomy).",
+  "Anuwong A. Transoral endoscopic thyroidectomy vestibular approach: a series of the first 60 human cases. World J Surg 2016;40:491-497."
+ ]
+}

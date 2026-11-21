@@ -1,0 +1,132 @@
+{
+ "slug": "scar-revision",
+ "title": "Scar Revision (W-plasty, GBLC, Serial Excision)",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Scar Management",
+ "source_label": "Pasha 6e (Reconstructive and Facial Plastic Surgery chapter) and Cummings 7e (Scar Revision chapter)",
+ "indications": "Revision of facial scars that are widened, depressed or raised, contracted with landmark distortion, misdirected across relaxed skin tension lines (RSTLs), or long and straight enough to catch the eye. The ideal scar is flat, narrow, color-matched, parallel to RSTLs or hidden at aesthetic subunit junctions, and causes no distortion. Revision is usually done after maturation at about 12 months, although some surgeons revise at 6 to 9 weeks during peak fibroblast activity, and obviously misplaced scars may be revised earlier. Technique depends on the problem: fusiform excision for scars already parallel to RSTLs, Z-plasty to lengthen or reorient, W-plasty or geometric broken-line closure (GBLC) to camouflage long scars that cannot be reoriented, and serial excision for scars too wide to excise at once.",
+ "setup": [
+  "Photograph scar and face at rest and in animation; mark RSTLs, subunit borders and free margins with the patient upright",
+  "Local anesthesia with epinephrine (general for large or pediatric revisions); inject after marking",
+  "Fine instruments: #11 and #15 blades, skin hooks, fine forceps, iris scissors, bipolar",
+  "Templates or ruler for W-plasty and GBLC segments; marking pen with fine tip",
+  "Buried absorbable dermal sutures (5-0) and fine skin sutures (6-0) or fast-absorbing gut",
+  "Adjuncts available: dermabrasion or laser for later contour and color, intralesional triamcinolone"
+ ],
+ "landmarks": [
+  "Relaxed skin tension lines",
+  "Aesthetic subunit junctions and natural creases (melolabial, preauricular, hairline)",
+  "Free margins: lid, lip vermilion border, ala, brow",
+  "Depth of scar into dermis and subcutaneous tissue",
+  "Plane of undermining (subcutaneous on the face)",
+  "Hair-bearing borders and follicle direction near the brow and hairline"
+ ],
+ "danger": [
+  "Closing under tension, which widens the new scar",
+  "Z-plasty angles under about 20 degrees (tip necrosis) or over about 75 degrees (dog-ears and poor transposition)",
+  "W-plasty or GBLC segments that are too large and become visible",
+  "Distorting a free margin (ectropion, lip notching)",
+  "Transecting hair follicles at the brow by not beveling parallel to the shafts",
+  "Revising keloids without adjunctive steroid or other therapy (high recurrence)"
+ ],
+ "steps": [
+  [
+   "Analyze the scar",
+   "Decide what is wrong: width, height, contour, color, direction, length, or contracture. Color problems and mild contour irregularity respond better to resurfacing or laser than excision. Determine whether the scar can be made parallel to RSTLs or moved to a subunit border, and whether keloid features call for steroid or radiation adjuncts rather than excision alone."
+  ],
+  [
+   "Choose the technique",
+   "Fusiform excision for a scar already near RSTLs. Z-plasty for contracture, webbing, landmark distortion or a misdirected scar. W-plasty or GBLC for a long scar crossing RSTLs, especially on convex surfaces such as the mandibular border or cheek. Serial partial excision or tissue expansion for wide scars or skin grafts that cannot be removed in one stage."
+  ],
+  [
+   "Mark the design",
+   "Mark with fine ink before injection. For fusiform excision keep a length-to-width ratio of about 3:1 with end angles of 30 degrees or less, using M-plasty ends to shorten the excision near a landmark. For irregularization, draw the full pattern on both sides so the limbs interdigitate exactly."
+  ],
+  [
+   "Fusiform excision",
+   "Excise the scar with blades angled slightly outward (beveled) to evert the edges, staying in the subcutaneous plane. Deep scar and subcutaneous tissue may be preserved when they are not part of the deformity, which maintains bulk and avoids a depressed scar."
+  ],
+  [
+   "Z-plasty design",
+   "Make the central limb along the scar, and peripheral limbs of equal length at equal angles so they end parallel to RSTLs after transposition. The final central limb lies along the line connecting the free ends of the peripheral limbs. Theoretical length gain: 30 degrees 25 percent, 45 degrees 50 percent, 60 degrees 75 percent, 90 degrees 120 percent."
+  ],
+  [
+   "Z-plasty execution",
+   "Incise, undermine both triangular flaps and surrounding skin enough to allow free transposition, and swap them. Tack each flap tip with a half-buried horizontal mattress suture to protect its blood supply. Use multiple small Z-plasties in series for a long contracted scar, which gains length with less lateral tension."
+  ],
+  [
+   "W-plasty",
+   "Excise the scar as mirrored, regularly zigzagging triangles on both sides, each limb under about 6 mm, with angles to the RSTLs of more than 35 degrees so many limbs lie favorably. Taper the ends into small M-plasties or 30-degree angles. Undermine and interdigitate the points, sacrificing a little normal skin."
+  ],
+  [
+   "Geometric broken-line closure",
+   "Excise the scar with a random mix of small rectangles, triangles, semicircles and squares, each 5 to 7 mm, mirrored precisely on the opposite edge. This irregularly irregular pattern camouflages better than W-plasty because the eye cannot follow a repeating rhythm. Use M-plasty ends."
+  ],
+  [
+   "Serial partial excision",
+   "Excise the central part of a wide scar, leaving scar at the edges, undermine widely, and close; rely on creep and stress relaxation to allow the next excision months later. Advance toward hairlines or subunit borders. A tissue expander reduces the number of stages for large grafts or burn scars."
+  ],
+  [
+   "Undermine and close in layers",
+   "Undermine just enough to close without tension. Place buried dermal sutures to carry the tension and evert the edges, then close the epidermis with fine sutures that only approximate. Remove facial skin sutures early (about 5 to 7 days) to avoid track marks and support with tape strips."
+  ],
+  [
+   "Plan adjuncts",
+   "Dermabrasion or fractional laser at 6 to 8 weeks smooths the irregularization pattern and blends edges. Intralesional triamcinolone treats early hypertrophy; silicone gel sheeting and sun protection are used during maturation. Discuss camouflage makeup where relevant."
+  ]
+ ],
+ "exit_check": [
+  "Closure tension-free with everted edges and no landmark distortion",
+  "Flap tips viable after transposition; no standing cones left untreated",
+  "Limbs aligned with RSTLs as planned"
+ ],
+ "postop": [
+  "Keep incision clean with ointment; tape support after suture removal",
+  "Suture removal at about 5 to 7 days on the face",
+  "Strict sun protection for 6 to 12 months to limit hyperpigmentation",
+  "Silicone gel or sheeting; massage once healed",
+  "Review at 6 to 8 weeks for steroid injection or dermabrasion and at 12 months for final result"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma under undermined skin",
+   "Flap tip necrosis, especially with narrow Z-plasty angles",
+   "Wound dehiscence",
+   "Infection"
+  ],
+  "late": [
+   "Hypertrophic scar or keloid recurrence",
+   "Widened scar from tension",
+   "Visible W-plasty or GBLC pattern",
+   "Trapdoor deformity of curvilinear flaps",
+   "Pigment change"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What length gain do you expect from a 60-degree Z-plasty, and what are the other numbers?",
+   "About 75 percent. Thirty degrees gives about 25 percent, 45 degrees about 50 percent, and 90 degrees about 120 percent. Actual gain is less because of skin elasticity."
+  ],
+  [
+   "When is W-plasty or GBLC preferred over Z-plasty?",
+   "When the scar is long and crosses RSTLs but does not need lengthening, especially on convex surfaces like the mandibular border or cheek. Irregularization breaks up the straight line. Z-plasty is preferred when the scar is contracted or needs reorientation."
+  ],
+  [
+   "Why is GBLC thought to camouflage better than W-plasty?",
+   "W-plasty is regularly irregular, so the eye can pick out the repeating zigzag. GBLC uses random shapes, so it is irregularly irregular and harder to follow."
+  ],
+  [
+   "When should you time a scar revision?",
+   "Most at about 12 months after maturation, when contracture and remodeling are complete; some revise at 6 to 9 weeks. Revise earlier if the scar is clearly misplaced or causing functional distortion. A scar reaches about 70 percent of normal strength at 3 months and remodels for about a year."
+  ],
+  [
+   "How do you manage a keloid at excision?",
+   "Excise (often intramarginally), close without tension, and use adjuncts: serial intralesional triamcinolone, pressure, silicone, or postoperative radiation in selected adults. Excision alone has a high recurrence rate."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8, Reconstructive and Facial Plastic Surgery: Incision/Excision Planning and Scar Revisions, excisional techniques, Z-plasty, W-plasty and geometric broken-line closure (p 519-523)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 18, Scar Revision, Keloids, and Camouflage"
+ ]
+}

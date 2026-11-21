@@ -1,0 +1,127 @@
+{
+ "slug": "vestibular-nerve-section",
+ "title": "Vestibular Nerve Section",
+ "domain": "Otology / Neurotology",
+ "or_family_v190": "otology",
+ "linked_topic": "Ménière Disease",
+ "source_label": "Cummings 7e (Surgery for Vestibular Disorders) and Pasha 6e",
+ "indications": "Disabling episodic vertigo from a lateralized unstable peripheral vestibular disorder, usually Ménière disease, in an ear with hearing that the patient considers useful, after medical therapy and usually intratympanic therapy have failed. It selectively divides the vestibular fibers while keeping the cochlear nerve, with vertigo control of about 80 to 95 percent. It needs a craniotomy, so it has higher risk than labyrinthectomy; it does not stop the hearing loss or tinnitus of ongoing hydrops. Approaches are retrosigmoid (most common today), retrolabyrinthine, combined retrolabyrinthine-retrosigmoid, or middle fossa.",
+ "setup": [
+  "Supine or lateral with head turned and pinned or taped; facial nerve EMG and ABR or direct eighth-nerve monitoring",
+  "Neuroanesthesia with mannitol and mild hyperventilation; consider lumbar drain",
+  "Craniotomy set, otologic drill, microscope, microsurgical scissors and hooks, nerve stimulator",
+  "Abdominal fat and fascia available for closure and sealing of mastoid air cells",
+  "Contrast MRI reviewed; confirm laterality with audiogram and caloric tests"
+ ],
+ "landmarks": [
+  "Asterion, transverse-sigmoid junction (retrosigmoid craniotomy)",
+  "Sigmoid sinus, posterior semicircular canal, endolymphatic sac (retrolabyrinthine)",
+  "Cerebellar flocculus overlying the eighth nerve",
+  "Trigeminal nerve and tentorium superiorly; CN IX and X inferiorly",
+  "Cleavage plane between vestibular (superior) and cochlear (inferior) fibers of CN VIII",
+  "Facial nerve anterior to CN VIII; AICA loop",
+  "Middle fossa: Bill bar, superior and inferior vestibular nerves in the lateral IAC"
+ ],
+ "danger": [
+  "Facial nerve and nervus intermedius anterior to the eighth nerve",
+  "Cochlear fibers and labyrinthine artery (hearing loss)",
+  "AICA and its branches",
+  "Sigmoid sinus and posterior fossa dura",
+  "Cerebellar retraction injury",
+  "CSF leak through opened mastoid cells"
+ ],
+ "steps": [
+  [
+   "Select the patient and approach",
+   "Confirm unilateral vestibular disease with useful hearing on that side, a stable or normal other ear, and that symptoms are unstable spells rather than poor compensation. Choose retrosigmoid for simplicity and speed, retrolabyrinthine when the surgeon wants a transtemporal route, or middle fossa for the most selective division in the lateral IAC."
+  ],
+  [
+   "Retrosigmoid craniotomy",
+   "Through a curved postauricular incision, expose the asterion and make a craniotomy behind the sigmoid sinus and below the transverse sinus. Wax any opened mastoid cells. Open the dura in a flap based on the sigmoid sinus."
+  ],
+  [
+   "Retrolabyrinthine alternative",
+   "For the retrolabyrinthine route, perform a mastoidectomy, decompress the sigmoid sinus and the dura 1.5 cm behind it, skeletonize the labyrinth, and expose the endolymphatic sac down to the jugular bulb. Incise the presigmoid dura parallel to the sinus and tack it forward."
+  ],
+  [
+   "Release CSF and expose the CPA",
+   "Gently retract the cerebellum and open the arachnoid over the cerebellopontine angle cistern to release CSF and relax the brain. Retract the flocculus if needed to see the eighth nerve complex. Identify the trigeminal nerve and tentorium above and the lower cranial nerves below for orientation."
+  ],
+  [
+   "Identify the facial nerve",
+   "Find the facial nerve anterior and slightly inferior to the eighth nerve and confirm it with electrical stimulation, which often needs slight retraction of the eighth nerve. Keep the stimulus current low and track facial EMG throughout."
+  ],
+  [
+   "Find the vestibulocochlear cleavage plane",
+   "Look for the faint septum or small vessel between the vestibular fibers (superior half, grayer) and cochlear fibers (inferior half, whiter) in the cisternal eighth nerve. In the retrosigmoid approach, drilling a little posterior IAC wall can expose the separated nerves more distally if the plane is unclear."
+  ],
+  [
+   "Divide the vestibular fibers",
+   "Separate the superior half along the cleavage plane and cut it sharply with microscissors, keeping the cochlear fibers, nervus intermedius, and facial nerve intact. Avoid cautery near the nerve and protect the AICA loop and labyrinthine artery."
+  ],
+  [
+   "Middle fossa variant",
+   "Through a temporal craniotomy, elevate the dura and skeletonize the IAC. Open its dura, confirm the facial nerve by stimulation in the superior compartment anterior to Bill bar, avulse and divide the superior vestibular nerve, then divide the inferior vestibular nerve while protecting the cochlear nerve and labyrinthine artery."
+  ],
+  [
+   "Monitor hearing during section",
+   "Watch ABR or direct eighth-nerve action potentials as the fibers are divided. A drop in the signal suggests cochlear fiber or blood supply compromise; stop, irrigate with warm saline, and reassess the plane before cutting more."
+  ],
+  [
+   "Watertight closure",
+   "Irrigate the angle and close the dura watertight, adding fascia as needed. In the retrolabyrinthine route, block the aditus with fascia and a bone chip to keep graft out of the middle ear and fill the mastoid with abdominal fat. Wax all mastoid air cells and replace the bone flap."
+  ]
+ ],
+ "exit_check": [
+  "Vestibular fibers divided with facial nerve stimulating normally at the brainstem at low threshold",
+  "Cochlear potentials preserved; no vascular injury",
+  "Dura closed watertight and mastoid cells sealed"
+ ],
+ "postop": [
+  "ICU or step-down neurologic checks; watch for hematoma, stroke, and CSF leak",
+  "Expect acute vertigo for days; short-term antiemetics and early mobilization",
+  "Start vestibular rehabilitation; return to usual activity typically over 2 to 4 months",
+  "Audiogram at 6 weeks; ongoing hydrops can still cause fluctuating hearing and tinnitus",
+  "Treat postoperative headache, which is more common after retrosigmoid craniotomy"
+ ],
+ "complications": {
+  "early": [
+   "CSF leak",
+   "Facial nerve paresis (highest with middle fossa)",
+   "Sensorineural hearing loss",
+   "Meningitis, hematoma, or stroke"
+  ],
+  "late": [
+   "Chronic headache",
+   "Incomplete section with persistent vertigo",
+   "Chronic dysequilibrium",
+   "Progression of Ménière hearing loss"
+  ]
+ },
+ "attending_followup": [
+  [
+   "When do you choose vestibular nerve section over labyrinthectomy?",
+   "When the affected ear has hearing that is useful to the patient; labyrinthectomy is preferred for nonserviceable hearing because it is more reliable and avoids a craniotomy."
+  ],
+  [
+   "Where are the vestibular fibers in the cisternal eighth nerve?",
+   "In the superior (and slightly posterior) half; the cochlear fibers are inferior. The vestibular nerves become distinct only in the lateral IAC."
+  ],
+  [
+   "Which approach has the highest facial nerve risk, and why might it be chosen?",
+   "The middle fossa approach, with temporary paresis rates up to about a third; it gives the most selective section because the superior and inferior vestibular nerves are separate in the lateral IAC."
+  ],
+  [
+   "Why does vestibular nerve section not stop hearing loss in Ménière disease?",
+   "It removes only vestibular input; the hydrops continues to affect the cochlea, so hearing can still fluctuate and decline."
+  ],
+  [
+   "What is a typical cause of failure after nerve section, and how is it managed?",
+   "Incomplete division of vestibular fibers or poor central compensation; start vestibular rehabilitation, and if residual function is proven, consider labyrinthectomy or revision."
+  ]
+ ],
+ "source_basis": [
+  "Cummings Otolaryngology: Head and Neck Surgery, 7th ed., Chapter 169: Surgery for Vestibular Disorders (Vestibular Neurectomy)",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed., Chapter 7: Otology and Neurotology (Surgical Management of Vertigo; Retrolabyrinthine and Middle Cranial Fossa Approaches)"
+ ]
+}

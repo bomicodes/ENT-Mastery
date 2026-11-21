@@ -1,0 +1,134 @@
+{
+ "slug": "ranula-excision",
+ "title": "Ranula Excision (Intraoral Sublingual Gland / Transcervical Plunging)",
+ "domain": "Thyroid / Parathyroid / Salivary",
+ "or_family_v190": "salivary",
+ "linked_topic": "Ranula",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Symptomatic simple (oral) or plunging (cervical) ranula. A ranula is a mucous extravasation pseudocyst, usually from the sublingual gland, with no epithelial lining; a plunging ranula passes into the submandibular triangle through a mylohyoid dehiscence or behind the free edge of mylohyoid. Excision of the ipsilateral sublingual gland gives the lowest recurrence rates for both types; marsupialization, simple cyst excision and sclerotherapy recur more often. A transcervical approach is added when a large cervical component must be drained or removed.",
+ "setup": [
+  "Confirm diagnosis: soft bluish floor-of-mouth swelling, aspirate of thick straw-colored saliva that is amylase-positive",
+  "Imaging (US, CT or MRI) for plunging ranula or when the swelling crosses midline, to determine the side of origin",
+  "General anesthesia with nasotracheal intubation for floor-of-mouth access",
+  "Mouth gag or bite block, tongue stay suture or swab retraction, headlight, bipolar, fine scissors",
+  "For transcervical work: avoid long-acting paralysis so the lower lip can be watched; prep the neck",
+  "Consent for lingual, hypoglossal and marginal mandibular nerve injury and submandibular duct injury"
+ ],
+ "landmarks": [
+  "Sublingual gland directly beneath floor-of-mouth mucosa, anterior and lateral to the duct",
+  "Wharton duct running along the medial surface of the sublingual gland to the papilla",
+  "Lingual nerve crossing beneath the duct posteriorly",
+  "Distal hypoglossal branches and ranine veins deep and medial",
+  "Mylohyoid muscle and its dehiscence; posterior free edge",
+  "Submandibular gland and anterior belly of digastric in the neck"
+ ],
+ "danger": [
+  "Lingual nerve posteriorly where it crosses the duct",
+  "Wharton duct transection or ligation causing obstructive sialadenitis",
+  "Ranine vein bleeding obscuring the field",
+  "Hypoglossal branches medially",
+  "Marginal mandibular nerve in the cervical approach",
+  "Operating on the wrong side when a large ranula crosses midline"
+ ],
+ "steps": [
+  [
+   "Expose the floor of mouth",
+   "Supine with neck slightly extended. Open with a self-retaining gag, retract the tongue up and to the opposite side with a stay suture or swab-on-a-stick, and illuminate with a headlight. Identify the papilla and cannulate the duct with a lacrimal probe if this will help you track it."
+  ],
+  [
+   "Infiltrate",
+   "Inject local anesthetic with vasoconstrictor just under the mucosa along the planned incision using a fine dental needle. The submucosal plane infiltration reduces bleeding and helps separate mucosa from the pseudocyst and gland."
+  ],
+  [
+   "Incise the mucosa",
+   "Incise the floor-of-mouth mucosa over the ranula and sublingual gland parallel to and about 1 cm medial to the inner aspect of the mandible. Keep the cut shallow to avoid entering the sac early; if it ruptures, the gland is still the target, so carry on."
+  ],
+  [
+   "Find the gland",
+   "Dissect submucosally with sharp and blunt technique to expose the sublingual gland, which is larger than expected and lies just under the mucosa anterior to and alongside the duct. Use countertraction with a swab and stay on the gland capsule."
+  ],
+  [
+   "Identify the duct and nerve",
+   "As dissection proceeds medially and posteriorly, identify Wharton duct and the lingual nerve, which crosses beneath the duct posteriorly. Further back, distal hypoglossal branches and thin-walled ranine veins appear. Keep all of these in view before dividing tissue."
+  ],
+  [
+   "Remove the sublingual gland",
+   "Dissect the gland off the duct and lingual nerve and deliver it completely, coagulating its feeding vessels with bipolar. Posterolaterally the gland can blend with the deep lobe of the submandibular gland; aim for complete sublingual removal without chasing the submandibular gland. The pseudocyst wall need not be removed."
+  ],
+  [
+   "Decompress a plunging component",
+   "For a plunging ranula, aspirate the cervical component once the gland is out, either transcutaneously or by passing a suction through the mylohyoid defect from the mouth. This usually suffices for the neck component and avoids a neck incision."
+  ],
+  [
+   "Repair the duct if injured",
+   "If Wharton duct is cut, translocate it: divide it distally, mobilize it, and bring it through a stab incision in the lateral floor of mouth, securing it with an absorbable suture through the duct wall. This prevents stenosis and obstruction."
+  ],
+  [
+   "Close the floor of mouth",
+   "Approximate the mucosa loosely with absorbable sutures if possible, which hastens healing and, in combined cases, seals the oral cavity from the neck. Leave some drainage space rather than closing tightly over a bleeding bed."
+  ],
+  [
+   "Transcervical approach when needed",
+   "For a large or recurrent cervical component, make a skin-crease incision at least 3 cm below the mandible, raise subplatysmal flaps, and dissect in the submandibular gland subcapsular plane to protect the marginal mandibular nerve. Watch for lower-lip twitching as a warning."
+  ],
+  [
+   "Excise the cervical extension",
+   "Find the pseudocyst anterior to the submandibular gland, deep and posterior to the anterior belly of digastric. Mobilize it and follow it to the mylohyoid dehiscence or posterior edge. Retract mylohyoid to protect the lingual nerve, ganglion and duct; mobilize or remove the submandibular gland if needed for access."
+  ],
+  [
+   "Close the neck",
+   "Irrigate, check hemostasis, close platysma and skin in layers over a suction drain. Document the status of the lingual and marginal mandibular nerves and the duct, and send the gland and any cyst tissue for histology."
+  ]
+ ],
+ "exit_check": [
+  "Sublingual gland removed entirely; Wharton duct intact or translocated",
+  "Lingual nerve seen intact; floor-of-mouth hemostasis secure",
+  "Neck drain in place after any transcervical work"
+ ],
+ "postop": [
+  "Usually day case for intraoral excision; simple analgesia",
+  "Soft diet from the same day; antiseptic mouth rinse for a few days",
+  "Watch for floor-of-mouth swelling or hematoma that could threaten the airway",
+  "Review for recurrence, tongue numbness, and submandibular swelling with meals"
+ ],
+ "complications": {
+  "early": [
+   "Floor-of-mouth hematoma or swelling",
+   "Lingual nerve paresthesia",
+   "Submandibular duct obstruction and gland swelling",
+   "Neck seroma or sialocele after transcervical work"
+  ],
+  "late": [
+   "Recurrence (mostly when the sublingual gland was not removed)",
+   "Permanent tongue numbness or taste change",
+   "Duct stenosis with obstructive sialadenitis",
+   "Marginal mandibular weakness after transcervical approach"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is a ranula and why does it not need its wall excised?",
+   "A mucous extravasation pseudocyst from the sublingual gland (often via a ruptured duct of Rivinus). It has no epithelial lining, so removing the source gland cures it; the wall collapses and scars once secretion stops."
+  ],
+  [
+   "How does a ranula reach the neck?",
+   "Saliva tracks through a dehiscence in the mylohyoid muscle (common) or around its posterior free edge into the submandibular space, producing a plunging ranula. It can also extend into the parapharyngeal space."
+  ],
+  [
+   "What treatment has the lowest recurrence rate?",
+   "Excision of the ipsilateral sublingual gland, for both simple and plunging ranulae. Marsupialization or excision of the pseudocyst alone and sclerotherapy have substantially higher recurrence."
+  ],
+  [
+   "How do you confirm the diagnosis preoperatively?",
+   "Clinical appearance plus aspiration of thick, straw-colored saliva with high amylase, which distinguishes it from lymphatic malformation, dermoid, epidermoid and thyroglossal cysts. Imaging is reserved for plunging or midline-crossing lesions to find the side of origin."
+  ],
+  [
+   "What do you do if you transect Wharton duct during dissection?",
+   "Perform a sialodochoplasty by translocating the proximal duct through a new opening in the lateral floor of mouth and securing it, which preserves drainage and avoids obstructive sialadenitis."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes V (eds). Atlas of Head and Neck Surgery. Springer, 2024: Ch 20 Intraoral Excision of Ranula; Ch 21 Transcervical Excision of Ranula.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 5 General Otolaryngology (mucocele and ranula, p. 206); Ch 9 Pediatric Otolaryngology (plunging ranula, p. 610)."
+ ]
+}

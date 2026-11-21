@@ -1,0 +1,134 @@
+{
+ "slug": "transoral-sialolithotomy",
+ "title": "Transoral Submandibular / Parotid Duct Stone Removal (Sialodochotomy)",
+ "domain": "Thyroid / Parathyroid / Salivary",
+ "or_family_v190": "salivary",
+ "linked_topic": "Sialolithiasis",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Gland-preserving open removal of salivary stones that are palpable or too large for endoscopic basket retrieval. Typical indications are submandibular stones in the distal, middle or hilar duct (often larger than about 6 mm, palpable, impacted), and anterior-third Stensen duct stones. Performed after acute infection has settled, when conservative care (hydration, massage, warm compresses, sialogogues) fails. Small mobile stones (up to about 4 mm submandibular, 3 mm parotid) suit sialendoscopy; intraparenchymal stones may need fragmentation, a combined approach or gland excision.",
+ "setup": [
+  "High-resolution ultrasound to size and localize the stone; CT or cone-beam CT if ultrasound is unclear",
+  "Local anesthesia for distal palpable stones; general anesthesia with nasotracheal intubation for hilar or posterior stones",
+  "Ferguson-type mouth prop on the contralateral side to allow tongue retraction (not a bite block that fixes the tongue)",
+  "Lacrimal probes and dilators, sialendoscope if available, dental excavator, 20 mL saline syringe with soft tip",
+  "Fine sutures (6-0 and 4-0 absorbable), stents for Stensen duct (fine silicone tube or cannula)",
+  "Consent for lingual nerve injury, bleeding, duct stenosis, ranula, and residual stones"
+ ],
+ "landmarks": [
+  "Wharton papilla and sublingual caruncle",
+  "Sublingual gland as a yellowish ridge lateral to the planned incision",
+  "Wharton duct on the medial undersurface of the sublingual gland",
+  "Lingual nerve crossing beneath the duct from lateral to medial near the second molar",
+  "Ranine veins and lingual artery medially",
+  "Stensen papilla opposite the upper second molar; buccal branch of facial nerve along the duct"
+ ],
+ "danger": [
+  "Lingual nerve in the posterior floor of mouth (hilar danger zone)",
+  "Pushing the stone backward into the gland during manipulation",
+  "Ranine and lingual vessel bleeding; avoid monopolar near the nerve",
+  "Incising into the sublingual gland (postoperative ranula)",
+  "Stensen duct stenosis after opening it without stenting",
+  "Leaving fragments in the floor of mouth"
+ ],
+ "steps": [
+  [
+   "Position and expose",
+   "Place the mouth prop on the opposite side and retract the tongue away with the nondominant index finger over gauze, which straightens the duct and lifts the floor of mouth. Palpate bimanually to locate the stone and confirm it matches the imaging. Loupes help."
+  ],
+  [
+   "Infiltrate",
+   "Inject local anesthetic with adrenaline superficially along the planned incision. This reduces bleeding and hydrodissects the submucosal plane above the duct, sublingual gland and nerve. Keep the volume small so the stone remains palpable and the anatomy is not distorted."
+  ],
+  [
+   "Secure a distal stone",
+   "For a palpable stone in the anterior or middle duct, pass a stay suture around the duct just behind the stone to stop it migrating back toward the gland. Cannulating the papilla with a probe helps define the duct course."
+  ],
+  [
+   "Incise directly over a distal stone",
+   "Incise the mucosa and duct longitudinally directly over the stone with a blade, staying parallel to the duct. Deliver the stone with a fine elevator or excavator under direct vision and irrigate the duct to flush retained saliva or debris."
+  ],
+  [
+   "Marsupialize or leave open",
+   "Suture the cut duct edges to the oral mucosa with fine interrupted absorbable sutures to create a new wide opening, which reduces stricture. Releasing the stay suture and massaging the gland confirms free salivary flow."
+  ],
+  [
+   "Retropapillary incision for hilar stones",
+   "For a proximal or hilar stone, start an incision about 5 mm behind the papilla, medial to the sublingual gland, and carry it back to the first or second molar. Cut mucosa only; a deeper first cut risks the duct, nerve, vessels and tongue muscle."
+  ],
+  [
+   "Follow the duct posteriorly",
+   "Develop the loose areolar plane and identify the duct on the undersurface of the sublingual gland. A retraction suture in the sublingual gland pulled anterolaterally lifts the duct. Follow the duct back with blunt dissection and bipolar hemostasis."
+  ],
+  [
+   "Free the lingual nerve",
+   "Behind the first molar, find the lingual nerve where it crosses under the duct from lateral to medial; this is usually where hilar stones sit. Separate nerve from duct carefully, as prior inflammation causes adhesions. Keep the nerve in view during the ductal incision."
+  ],
+  [
+   "Bring the hilum forward",
+   "Have the assistant press the submandibular gland upward and forward from the neck, delivering the hilum and stone toward the mouth. Brief the assistant to hold steady, because losing this pressure loses the stone and the plane."
+  ],
+  [
+   "Open the duct and extract",
+   "Incise the duct directly over the stone, extending past its anterior edge, on the side of the nerve that keeps it safe. Lift the stone out with an excavator, then irrigate through the duct; this often brings smaller stones forward. Collect every fragment."
+  ],
+  [
+   "Close",
+   "Approximate the duct edges with 6-0 absorbable suture where feasible; leaving a proximal ductotomy open rarely causes problems. Close the floor-of-mouth mucosa loosely with 4-0 absorbable sutures. Rinsing the bed with tranexamic acid and a single steroid dose can limit swelling."
+  ],
+  [
+   "Anterior Stensen duct stone",
+   "Cannulate the parotid papilla with a probe until it meets the stone, make an elliptical incision around the papilla, and dissect along the duct to the stone. Open the duct over the stone, deliver it, massage the gland, and stent the duct with sutures to the buccal mucosa, or marsupialize the opening."
+  ]
+ ],
+ "exit_check": [
+  "All stones and fragments retrieved; clear saliva flows on gland massage",
+  "Lingual nerve seen intact; floor-of-mouth hemostasis secure",
+  "Stensen duct stented or marsupialized if opened"
+ ],
+ "postop": [
+  "Often day case; admit overnight if floor-of-mouth or neck swelling is significant, watching the airway",
+  "Analgesia with NSAIDs; cold soft diet and at least 2 L of fluid daily",
+  "Avoid sialogogues for the first few days, then use them with massage to flush the gland",
+  "Review at 10 to 14 days (sutures, stent removed at about 2 weeks) and at 2 to 3 months for stenosis and recurrence"
+ ],
+ "complications": {
+  "early": [
+   "Floor-of-mouth hematoma or edema",
+   "Lingual nerve paresthesia",
+   "Acute sialadenitis or gland swelling",
+   "Retained stone fragments"
+  ],
+  "late": [
+   "Duct stricture, especially of Stensen duct",
+   "Ranula from sublingual gland injury",
+   "Recurrent stones or obstructive symptoms",
+   "Permanent tongue numbness (uncommon)"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why is the submandibular gland the most common site of stones?",
+   "Its duct is long and runs uphill against gravity, its saliva is more alkaline and mucinous with higher calcium content, and its papilla is narrow. About 80 to 90 percent of stones occur there, and most submandibular stones are radiopaque, whereas most parotid stones are radiolucent."
+  ],
+  [
+   "Where does the lingual nerve relate to Wharton duct?",
+   "It starts lateral to the duct near the third molar, crosses beneath it from lateral to medial at about the second molar, and then runs medially into the tongue. This crossing zone is where hilar stones are typically removed and where nerve injury is most likely."
+  ],
+  [
+   "Which stones suit sialendoscopy versus open removal?",
+   "Small mobile stones (up to about 4 mm submandibular, 3 mm parotid) suit basket retrieval. Intermediate stones may need laser or mechanical fragmentation. Large, impacted or palpable hilar submandibular stones are well suited to transoral release; inaccessible intraparenchymal stones may need a combined approach or gland excision."
+  ],
+  [
+   "Why stent the parotid duct after opening it?",
+   "Stensen duct is narrow and prone to stenosis when the papilla or duct is incised. A temporary stent for about two weeks, or marsupialization, keeps the lumen open while it heals."
+  ],
+  [
+   "What is the key maneuver for hilar stone release?",
+   "Bimanual pressure: an assistant pushes the submandibular gland up from the neck, bringing the hilum and stone forward into the floor of mouth, so the stone can be removed under direct vision with the lingual nerve protected."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes V (eds). Atlas of Head and Neck Surgery. Springer, 2024: Ch 15 Transoral Removal of Salivary Stones; Ch 18 Transoral Removal of Intracanalicular Stones in the Submandibular Glands.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 5 General Otolaryngology (salivary calculi and sialendoscopy, pp. 203-204)."
+ ]
+}

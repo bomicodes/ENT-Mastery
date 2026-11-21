@@ -1,0 +1,137 @@
+{
+ "slug": "eyelid-weight-static-reanimation",
+ "title": "Upper Eyelid Weight and Static Facial Reanimation",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Facial Nerve Reanimation",
+ "source_label": "Pasha 6e (Otology and Neurotology chapter, Facial Nerve Repair and Reanimation) and Cummings 7e (Rehabilitation of Facial Paralysis chapter)",
+ "indications": "Eye protection and static support in facial paralysis. Upper eyelid loading (platinum or gold weight) is first-line surgery for paralytic lagophthalmos with exposure keratopathy not controlled by lubrication and moisture chambers; it works with reversible or permanent paralysis and is removable. Poor Bell phenomenon, absent corneal sensation (combined V and VII deficits) and dry eye raise urgency. Lower lid laxity and paralytic ectropion are treated with lateral tarsal strip or canthopexy. Static slings (fascia lata, palmaris tendon, or synthetic) suspend the oral commissure and nasolabial fold to improve resting symmetry, oral competence and nasal valve collapse, in patients who are poor candidates for dynamic procedures or as adjuncts to them. Tarsorrhaphy is reserved for severe exposure because of visual field and cosmetic cost.",
+ "setup": [
+  "Document House-Brackmann grade, lagophthalmos in millimeters, Bell phenomenon, corneal sensation and staining; involve ophthalmology for keratopathy",
+  "Preoperative weight sizing: tape sizers to the upper lid centered over the medial limbus, increasing in 0.2 g steps until closure is achieved without significant ptosis (most patients need about 0.8 to 1.2 g)",
+  "Local anesthesia with epinephrine, with or without sedation; corneal protector shield",
+  "Platinum weight (preferred) or gold; permanent fine suture to fix to tarsus",
+  "For tarsal strip: double-armed 4-0 or 5-0 suture, Westcott scissors, needle driver",
+  "For sling: fascia lata harvest set (or palmaris longus tendon), tendon stripper, Gore-Tex as alternative"
+ ],
+ "landmarks": [
+  "Upper lid crease (supratarsal fold)",
+  "Tarsal plate, about 10 mm tall in the upper lid",
+  "Levator aponeurosis and Muller muscle deep to orbicularis",
+  "Medial limbus and junction of medial and central thirds of the lid",
+  "Lateral canthal tendon and Whitnall tubercle on the inner aspect of the lateral orbital rim",
+  "Modiolus and oral commissure",
+  "Deep temporal fascia and zygomatic arch for sling anchorage"
+ ],
+ "danger": [
+  "Overweighting causing mechanical ptosis and visual field obstruction",
+  "Placing the weight too high or loose, leading to migration, visible bulge, or extrusion",
+  "Injuring the levator aponeurosis",
+  "Shortening the lower lid excessively or lateralizing the punctum",
+  "Undercorrection of slings from inadequate overcorrection at surgery",
+  "Weight loading in a patient with glaucoma or thin lid skin (relative contraindication per Pasha)"
+ ],
+ "steps": [
+  [
+   "Confirm the weight",
+   "Recheck the chosen weight with the sizer taped on the lid with the patient upright: the lid should close or nearly close with gentle effort and the resting lid should not drop more than about 1 to 2 mm. Pick platinum when available, since it is denser, allowing a thinner, lower-profile implant that migrates and extrudes less."
+  ],
+  [
+   "Mark and anesthetize the upper lid",
+   "Mark the lid crease and the medial limbus position. Infiltrate a small volume of local anesthetic with epinephrine just under the skin so the levator is not paralyzed or distorted. Place a corneal shield."
+  ],
+  [
+   "Open the crease",
+   "Incise along the crease for about 2 cm over the medial and central lid. Divide orbicularis and dissect inferiorly in the pretarsal plane onto the anterior surface of the tarsus, leaving a thin layer of tissue over it and staying superficial to the levator attachment."
+  ],
+  [
+   "Create the pocket",
+   "Make a pocket on the anterior tarsal face just large enough for the weight, with its lower edge about 2 to 3 mm above the lash line. Center it at the junction of the medial and central thirds (over the medial limbus), where it gives the best closure of the medial lid."
+  ],
+  [
+   "Fix the weight",
+   "Place the weight and suture it to the tarsus through its holes with fine permanent sutures, partial thickness so they do not reach the conjunctiva. Check that it lies flat and is fully covered. A chain design conforms better to the tarsal curve."
+  ],
+  [
+   "Close over the implant",
+   "Close the orbicularis as a separate layer over the weight, since this second layer is the main defense against extrusion, then close the skin with fine suture. Check closure and lid height at the end; gravity-based closure works best upright."
+  ],
+  [
+   "Lateral tarsal strip: canthotomy",
+   "For paralytic ectropion or lower lid laxity, perform a lateral canthotomy and inferior cantholysis, freeing the lower lid. Pull the lid laterally to judge how much horizontal shortening is needed for snug apposition to the globe without bowstringing under a prominent eye."
+  ],
+  [
+   "Lateral tarsal strip: make the strip",
+   "Split the lateral lower lid into anterior lamella (skin, orbicularis) and posterior lamella (tarsus, conjunctiva). Excise the mucocutaneous margin, lashes and the conjunctiva from the lateral tarsal segment to form a denuded strip. Trim the excess length."
+  ],
+  [
+   "Lateral tarsal strip: anchor",
+   "Pass a double-armed suture through the strip and into the periosteum on the inner aspect of the lateral orbital rim at Whitnall tubercle, slightly above the original canthal height so the lid hugs the globe. Tie, reform the canthal angle with a buried suture, trim excess anterior lamella, and close the skin."
+  ],
+  [
+   "Static sling: harvest",
+   "Harvest a strip of fascia lata through a lateral thigh incision with a tendon stripper (or palmaris longus tendon at the wrist), long enough to reach from the commissure to the temporal fascia. Split the distal end into slips for the upper lip, commissure and lower lip when needed."
+  ],
+  [
+   "Static sling: tunnel and fix",
+   "Through small incisions at the vermilion border or nasolabial fold and a temporal or preauricular incision, tunnel subcutaneously along the desired vector. Suture the distal slips to the orbicularis oris and modiolus. Anchor proximally to deep temporal fascia or the zygomatic arch."
+  ],
+  [
+   "Set tension with overcorrection",
+   "Tension the sling so the commissure is overcorrected, with the paralyzed corner higher than the normal side and some dental show, because fascia stretches and slings relax over weeks. Add nasal alar base suspension for valve collapse if planned. Close all incisions in layers."
+  ]
+ ],
+ "exit_check": [
+  "Upper lid closes with gentle effort with acceptable resting height; weight not visible or tilted",
+  "Lower lid apposed to globe with sharp lateral canthal angle and normal punctal position",
+  "Commissure overcorrected and symmetric vector with the normal side"
+ ],
+ "postop": [
+  "Continue lubricating drops and ointment; eye protection at night until closure is proven",
+  "Cold compresses and head elevation; ophthalmology review if keratopathy",
+  "Counsel that weight works by gravity, so closure is less effective lying down",
+  "Soft diet and limited facial animation for about 2 weeks after sling",
+  "Remove or adjust the weight if the facial nerve recovers or ptosis is bothersome"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma or edema causing temporary ptosis",
+   "Infection",
+   "Undercorrection of lagophthalmos",
+   "Corneal abrasion"
+  ],
+  "late": [
+   "Weight migration, visible bulge or extrusion",
+   "Mechanical ptosis and astigmatism",
+   "Recurrent lower lid laxity or lateral canthal webbing",
+   "Sling stretch with recurrent commissure droop",
+   "Thigh seroma or muscle herniation at fascia donor site"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the first-line surgical procedure for paralytic lagophthalmos, and why platinum over gold?",
+   "Upper eyelid loading. Platinum is denser than gold, so the implant is thinner and lower profile at the same mass, with less migration, extrusion and visible bulk; allergy is also less of an issue."
+  ],
+  [
+   "How is weight size chosen and where is it placed?",
+   "With external sizers taped to the lid, increasing by 0.2 g until closure without significant ptosis, usually 0.8 to 1.2 g. Place it on the anterior tarsus 2 to 3 mm above the lash line, centered at the junction of the medial and central thirds, fixed to tarsus and covered by orbicularis."
+  ],
+  [
+   "What eye findings make exposure most dangerous after facial paralysis?",
+   "Poor Bell phenomenon, loss of corneal sensation (combined trigeminal and facial deficits), dry eye, and lower lid ectropion. These patients need early aggressive protection and early surgery."
+  ],
+  [
+   "Why overcorrect a static sling at surgery?",
+   "Fascia and synthetic slings stretch and the soft tissue settles, so the commissure drops over the first weeks to months. Setting it high initially leaves an acceptable resting position later."
+  ],
+  [
+   "What does a lateral tarsal strip correct and what is the main pitfall?",
+   "It corrects horizontal lower lid laxity and paralytic ectropion by shortening and refixing the lid to the lateral orbital rim. Pitfalls are lateral displacement of the punctum with epiphora, recurrent laxity, and anchoring too low or anterior so the lid pulls away from the globe."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 7, Otology and Neurotology: Facial Nerve Repair and Reanimation, static procedures and ocular rehabilitation techniques (p 434-436)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 174, Rehabilitation of Facial Paralysis: eyelid weighting, canthoplasty and tarsal strip, static sling procedures"
+ ]
+}

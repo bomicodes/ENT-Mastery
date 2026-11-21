@@ -46,7 +46,9 @@ def main():
     # v42.x); they are distinct parents, not parallel NOE/frontal cards.
     added_after_v302 = {"Laryngeal Fracture / External Laryngeal Trauma",
                         "Blepharoplasty / Eyelid Malposition (Ptosis, Ectropion, Entropion)",
-                        "Chin and Midface Skeletal Augmentation (Implants and Sliding Genioplasty)"}
+                        "Chin and Midface Skeletal Augmentation (Implants and Sliding Genioplasty)",
+                        'Forehead and Brow Lift',
+                        'Rhytidectomy (Facelift) and Neck Lift'}
     expected = 32 + len(added_after_v302 & set(topics))
     if len(topics) != expected:
         failures.append(f"expected {expected} canonical Facial Plastics / Trauma topics, found {len(topics)}")

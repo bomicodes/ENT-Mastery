@@ -1,0 +1,140 @@
+{
+ "slug": "cleft-lip-repair",
+ "title": "Unilateral Cleft Lip Repair (Rotation-Advancement)",
+ "domain": "Pediatric Otolaryngology",
+ "or_family_v190": "pediatric",
+ "linked_topic": "Cleft Lip / Palate — ENT Surgical Fundamentals",
+ "source_label": "Pasha 6e Ch 9 and Cummings 7e Ch 188 (Cleft Lip and Palate)",
+ "indications": "Complete or incomplete unilateral cleft lip in an infant who meets the rule of 10s (at least 10 weeks old, 10 pounds, hemoglobin 10 g/dL), typically repaired at 10-14 weeks, after presurgical lip taping or nasoalveolar molding for wide clefts. Goals are a symmetric Cupid's bow and vermilion, a continuous orbicularis oris sphincter, an intact nasal floor and vestibular sill, and repositioning of the cleft-side alar base and lower lateral cartilage (primary rhinoplasty). A lip adhesion at 2-4 weeks can convert a very wide complete cleft to incomplete before definitive repair. The Millard rotation-advancement is the workhorse; Mohler, Noordhoff, Fisher anatomic subunit, and triangular flap repairs are alternatives.",
+ "setup": [
+  "Supine, shoulder roll, oral RAE tube taped to the lower lip in midline so the upper lip is not distorted",
+  "Methylene blue with a 30-gauge needle or fine marking pen, calipers, ruler",
+  "Local anesthetic with epinephrine (weight-based dosing confirmed with anesthesia) injected after marking",
+  "No. 11 and No. 15 blades, fine skin hooks, Castroviejo scissors, loupes",
+  "4-0 Vicryl for muscle and mucosa, 6-0 fast-absorbing gut (or 7-0 nylon) for skin; Logan bow or tape optional"
+ ],
+ "landmarks": [
+  "Cupid's bow low point (point 1) and noncleft peak (point 2)",
+  "Cleft-side peak on the medial segment (point 3) and on the lateral segment (point 8)",
+  "Columellar base (point 5) and back-cut point x",
+  "Noncleft philtral ridge, which the back-cut must not cross",
+  "White roll and red line of the vermilion",
+  "Alar bases, alar-facial crease, and lower lateral cartilages"
+ ],
+ "danger": [
+  "Inaccurate marking, the main cause of a short lip and asymmetric Cupid's bow",
+  "Back-cut crossing the noncleft philtral column",
+  "Inadequate release of the lateral segment, producing tension and a tight or short lip",
+  "Failure to reconstruct orbicularis oris (whistle deformity, notching)",
+  "Excess dissection or cautery of thin infant tissue and the airway shared with anesthesia"
+ ],
+ "steps": [
+  [
+   "Confirm readiness",
+   "Verify weight, hemoglobin, age, and feeding, and screen for syndromes and cardiac disease. Review nasoalveolar molding or taping progress. Plan whether primary rhinoplasty and nasal floor closure are done now, and confirm the airway plan with anesthesia: oral RAE tube fixed in midline to the lower lip."
+  ],
+  [
+   "Mark the Cupid's bow",
+   "Tattoo landmarks with methylene blue before any injection distorts them. Mark point 1 at the Cupid's bow low point and point 2 at the noncleft peak. Set point 3, the cleft-side peak on the medial segment, so 1-3 equals 1-2, usually 2-4 mm."
+  ],
+  [
+   "Mark the nasal and lateral points",
+   "Mark the noncleft alar base (4), columellar base (5), and both commissures (6, 7). Place point 8 on the lateral segment white roll so 7-8 equals 2-6 and the vermilion is fullest. Mark the cleft alar base (10), alar-facial crease (11), and lateral flap extent (12)."
+  ],
+  [
+   "Design rotation, back-cut, and advancement",
+   "Draw the rotation incision from 3 curving toward and hugging the columellar base at 5, then the back-cut to x running parallel to and medial to the noncleft philtral ridge, never across it. Design the advancement edge 8-9 equal in length to 3-x so the new philtral ridges match in height."
+  ],
+  [
+   "Inject and incise the rotation flap",
+   "Inject dilute local anesthetic with epinephrine and wait. Incise the rotation line through skin, full-thickness orbicularis, and mucosa, completing the back-cut with a No. 11 blade at 90 degrees to the curve. Undermine 1-2 mm on skin and mucosa edges so the medial segment drops to level the Cupid's bow."
+  ],
+  [
+   "Raise the C flap",
+   "The skin between the rotation incision and cleft edge becomes the C flap. Elevate it on a pedicle at the columella; it will either lengthen the cleft-side columella, fill the gap at the top of the rotation incision, or line the nasal floor, depending on what the closure needs."
+  ],
+  [
+   "Incise and release the advancement flap",
+   "Incise 8-9 along the lateral cleft edge, then carry the incision horizontally beneath the cleft alar base. Release the gingivobuccal sulcus sharply and dissect bluntly over the maxillary face so the lateral segment, with the displaced alar base, moves medially without tension. Discard the excess medial cleft-edge tissue."
+  ],
+  [
+   "Dissect the orbicularis",
+   "Separate orbicularis oris from skin and mucosa for several millimeters on both sides and free its abnormal insertion into the cleft alar base and piriform aperture. Muscle must be released and redirected horizontally across the cleft to restore a functional sphincter and a natural philtral ridge."
+  ],
+  [
+   "Close the nasal floor",
+   "Using the lateral mucosal flap and the medial (septal or C flap) mucosa, close the nasal floor and sill back to the alveolus so the nostril sill is continuous and the cleft-side nostril is not wider than the noncleft side. Leave the alveolar cleft for later bone grafting."
+  ],
+  [
+   "Primary rhinoplasty",
+   "If planned, free the cleft lower lateral cartilage from skin through the alar base and an intercartilaginous incision, then place suspension or transfixion sutures to lift the cartilage superomedially, set the alar base medially, increase tip projection, and improve nostril symmetry. Bolster lightly if the vestibular skin was undermined."
+  ],
+  [
+   "Approximate muscle first",
+   "With skin hooks, place the key 4-0 Vicryl stitch joining muscle at the advancement tip to muscle at the back-cut point x, then close muscle up the philtral ridge in layers. A well-bulked muscle closure everts the skin edges and recreates the philtral column."
+  ],
+  [
+   "Align the vermilion",
+   "Place the critical first skin stitch exactly at the white roll so it lines up perfectly across the repair, then match the red line. Use a small Noordhoff triangular vermilion flap or Z-plasty if needed to fill a vermilion notch and avoid a whistle deformity."
+  ],
+  [
+   "Close skin and mucosa",
+   "Close oral mucosa with interrupted 4-0 Vicryl and skin with interrupted 6-0 fast-absorbing gut or fine nylon. Place the C flap and close the alar base. Inspect from above and below for Cupid's bow level, symmetric philtral heights, a smooth vermilion, and nostril symmetry."
+  ],
+  [
+   "Dress and protect",
+   "Apply skin adhesive strips or ointment and, if used, a Logan bow to off-load tension. Consider soft nasal conformers if a primary rhinoplasty was done. Place arm restraints (no-no's) before emergence so the infant cannot rub the repair."
+  ]
+ ],
+ "exit_check": [
+  "Cupid's bow level with symmetric philtral column heights",
+  "Continuous white roll and vermilion without notching",
+  "Nasal floor closed and alar bases symmetric; airway clear after extubation"
+ ],
+ "postop": [
+  "Elbow restraints 2-3 weeks; avoid pacifiers and objects in the mouth",
+  "Resume breast or bottle feeding with cleft-appropriate nipple as tolerated, with feeding team input",
+  "Clean suture line gently and apply ointment; sun protection and scar massage after healing",
+  "Follow cleft team schedule: palate repair at 9-14 months, alveolar bone graft at 6-10 years before canine eruption, definitive rhinoplasty in adolescence"
+ ],
+ "complications": {
+  "early": [
+   "Wound dehiscence from tension or trauma",
+   "Bleeding or hematoma",
+   "Airway obstruction from edema or nasal packing in an obligate nasal breather",
+   "Stitch abscess or hypertrophic suture marks"
+  ],
+  "late": [
+   "Short lip or vertical scar contracture",
+   "Whistle deformity or vermilion notching",
+   "Residual cleft-lip nasal deformity (needs secondary rhinoplasty)",
+   "Wide or hypertrophic scar; maxillary growth restriction from tight lip"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the rule of 10s?",
+   "Repair when the infant is at least 10 weeks old, weighs 10 pounds, and has hemoglobin of at least 10 g/dL (some add white count under 10,000)."
+  ],
+  [
+   "Why does the Millard back-cut need to stay medial to the noncleft philtral ridge?",
+   "Crossing the ridge would scar and flatten the normal philtral column; staying parallel and medial preserves a scar-free noncleft ridge while gaining 2-3 mm of vertical height."
+  ],
+  [
+   "What is the purpose of the advancement flap besides closing the gap?",
+   "It holds the rotation flap down, maintaining the vertical height gained by rotation and back-cut, and brings the displaced alar base medially."
+  ],
+  [
+   "What causes a whistle deformity and how is it prevented?",
+   "A central vermilion deficiency from inadequate orbicularis reconstruction or vermilion mismatch; prevent with full muscle release and repair and a vermilion triangular flap or Z-plasty."
+  ],
+  [
+   "What is the role of nasoalveolar molding?",
+   "Presurgical molding narrows a wide alveolar and lip cleft and reshapes the alar cartilage and columella, reducing tension and improving nasal symmetry at the definitive repair."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RA, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Ch 9 Pediatric Otolaryngology, Cleft Lip and Palate (pp 619-623)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Ch 188 Cleft Lip and Palate"
+ ]
+}

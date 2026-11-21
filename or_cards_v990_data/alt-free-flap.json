@@ -1,0 +1,128 @@
+{
+ "slug": "alt-free-flap",
+ "title": "Anterolateral Thigh Free Flap Harvest",
+ "domain": "Head & Neck Reconstruction",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Reconstruction Selection After Head & Neck Ablation",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Workhorse fasciocutaneous or myocutaneous perforator free flap based on the descending branch of the lateral circumflex femoral artery (LCFA). Used for total and subtotal glossectomy, pharyngeal and pharyngoesophageal reconstruction (including tubed or two-paddle designs), large oral, skull base and neck skin defects. Advantages are a long pedicle (about 12 cm), large adjustable paddle, option to thin, chimeric components (vastus lateralis muscle, fascia lata, nerve), two-team approach and low donor morbidity. Thickness varies with body habitus; perforator anatomy is variable.",
+ "setup": [
+  "Supine, thigh prepped from iliac crest to below the knee; avoid a leg with prior hip or knee replacement if possible",
+  "Assess thigh scars, skin thickness by pinch, and quadriceps function preoperatively",
+  "Handheld Doppler to mark perforators; consider CTA for perforator mapping in difficult cases",
+  "Two-team setup with the head team; microclips, bipolar, loupes",
+  "Plan a fallback: tensor fascia lata perforator, anteromedial thigh flap, or opposite leg"
+ ],
+ "landmarks": [
+  "Line from the anterior superior iliac spine to the superolateral patella",
+  "Midpoint of that line: most perforators lie within a 3 cm radius, mostly inferolateral",
+  "Intermuscular septum between rectus femoris (medial) and vastus lateralis (lateral)",
+  "Descending branch of the LCFA and its venae comitantes deep to rectus femoris",
+  "Motor nerve to vastus lateralis running alongside the pedicle",
+  "Lateral femoral cutaneous nerve in the proximal flap"
+ ],
+ "danger": [
+  "Absent or tiny perforators: have a fallback ready",
+  "Nerve to vastus lateralis injury during intramuscular dissection",
+  "Twisting or traction injury of a musculocutaneous perforator",
+  "Tight donor closure causing thigh compartment syndrome",
+  "Excessive thinning that removes the subdermal plexus around the perforator"
+ ],
+ "steps": [
+  [
+   "Mark the thigh",
+   "Draw the line from the ASIS to the superolateral patella and mark its midpoint. Doppler within a 3 cm circle around the midpoint and mark signals, which usually cluster in the inferolateral quadrant. Center a paddle on the best perforators, sized to the defect and to what will close by pinch test (often up to 8 to 9 cm wide)."
+  ],
+  [
+   "Exploratory medial incision",
+   "Incise the medial border of the paddle about 3 cm medial to the expected septum, down through the deep fascia over rectus femoris. This incision can be extended or redirected if the perforators are not where expected, without committing the skin paddle."
+  ],
+  [
+   "Subfascial elevation to the septum",
+   "Elevate the flap in the subfascial plane laterally across the rectus femoris toward the septum. Subfascial dissection gives clear sight of perforators and better pedicle exposure; suprafascial elevation is an option for a thinner flap. Look for vessels emerging through the septum or vastus lateralis."
+  ],
+  [
+   "Identify the perforators",
+   "Inspect laterally from the septum and confirm size and pulsation. Note whether each is septocutaneous (easy) or musculocutaneous through vastus lateralis (most common). If none are suitable, look proximally for a large tensor fascia lata perforator, medially for an anteromedial thigh perforator, or close and use the other leg."
+  ],
+  [
+   "Expose the descending branch",
+   "Retract the rectus femoris medially to expose the descending branch of the LCFA and its venae comitantes in the septum. Identify the motor nerve to vastus lateralis running with the pedicle and separate it so it can be preserved. Follow the pedicle proximally toward its origin."
+  ],
+  [
+   "Intramuscular perforator dissection",
+   "For musculocutaneous perforators, unroof the vastus lateralis over the vessel and follow it to the descending branch. Clip or bipolar side branches at a distance from the perforator. Keep a small muscle cuff when speed or safety requires; avoid traction and twisting of the perforator."
+  ],
+  [
+   "Complete the paddle",
+   "Once perforators and pedicle are secured, incise the lateral border of the paddle and raise it from lateral to medial in the same plane. Confirm the perforators enter the paddle centrally. Add a vastus lateralis segment, fascia lata, or a second paddle on a separate perforator if the defect needs it."
+  ],
+  [
+   "Thin if needed",
+   "For a bulky thigh, thin the flap by removing fat deep to Scarpa fascia, keeping a cuff of fat around the perforator entry. In-situ thinning to Scarpa fascia is safe; aggressive thinning closer to the dermis risks the subdermal plexus and partial necrosis."
+  ],
+  [
+   "Lengthen and divide the pedicle",
+   "Dissect the descending branch proximally to obtain the needed length and caliber, clipping branches to rectus femoris. Divide it distal to the branch to rectus femoris to preserve that muscle's supply. Divide when recipient vessels are ready; note ischemia time and mark orientation."
+  ],
+  [
+   "Hemostasis and fascial repair",
+   "Achieve hemostasis on the vastus lateralis and septum. Repair the fascia if possible, or leave it open to reduce compartment pressure. Place a suction drain in the bed, because seroma is common after ALT harvest."
+  ],
+  [
+   "Close the thigh",
+   "Close primarily in layers when it comes together without tension. If tension is significant, use a split-thickness skin graft over muscle rather than forcing closure, to avoid compartment syndrome and dehiscence. Apply a compressive dressing."
+  ]
+ ],
+ "exit_check": [
+  "Paddle perfused with bright edge bleeding and perforators centered",
+  "Nerve to vastus lateralis preserved and rectus femoris supply intact",
+  "Donor closed without tension or grafted; drain in place; thigh compartments soft"
+ ],
+ "postop": [
+  "Free-flap monitoring protocol for the head and neck paddle",
+  "Thigh checks for hematoma, seroma and compartment pain or tension",
+  "Early mobilization and physiotherapy; full weight-bearing as tolerated",
+  "Drain removal when output falls; counsel about lateral thigh numbness"
+ ],
+ "complications": {
+  "early": [
+   "Partial paddle necrosis or venous congestion",
+   "Thigh hematoma or seroma",
+   "Wound dehiscence",
+   "Compartment syndrome after tight closure (rare)"
+  ],
+  "late": [
+   "Lateral thigh numbness (common, improves over time)",
+   "Quadriceps weakness if the motor nerve or large muscle cuff was taken",
+   "Hypertrophic or widened scar",
+   "Bulk of the flap in obese patients requiring later debulking"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the pedicle of the ALT flap and where does it run?",
+   "The descending branch of the lateral circumflex femoral artery (from the profunda femoris) and its venae comitantes, running in the intermuscular septum between rectus femoris and vastus lateralis, deep to rectus femoris."
+  ],
+  [
+   "Where do you expect the perforators?",
+   "Within about 3 cm of the midpoint of a line from the ASIS to the superolateral patella, most often in the inferolateral quadrant. Most are musculocutaneous through vastus lateralis; a minority are septocutaneous."
+  ],
+  [
+   "What do you do if no usable perforator is found?",
+   "Look proximally for a tensor fascia lata perforator, medially for an anteromedial thigh perforator from rectus femoris, convert to a vastus lateralis muscle flap, or close and harvest the contralateral thigh or another flap."
+  ],
+  [
+   "How wide can the paddle be and still close primarily?",
+   "Typically up to about 8 to 9 cm, judged by the pinch test. Wider paddles need a skin graft; forced closure risks compartment syndrome and dehiscence."
+  ],
+  [
+   "Why is the ALT favored for total laryngopharyngectomy?",
+   "Large paddle that can be tubed or split into two paddles on separate perforators (one for the pharynx, one for neck skin or monitoring), a long pedicle, reliable anatomy and low donor morbidity compared with jejunum, avoiding a laparotomy."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes V (eds). Atlas of Head and Neck Surgery. Springer, 2024: Ch 50 Principles of Soft Tissue Free Flap Reconstruction in Head and Neck Cancer (anterolateral thigh flap).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 8 Reconstructive and Facial Plastic Surgery (microvascular free flaps, anterolateral thigh, pp. 454-458)."
+ ]
+}

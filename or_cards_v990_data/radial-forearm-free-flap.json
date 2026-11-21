@@ -1,0 +1,133 @@
+{
+ "slug": "radial-forearm-free-flap",
+ "title": "Radial Forearm Free Flap Harvest",
+ "domain": "Head & Neck Reconstruction",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Reconstruction Selection After Head & Neck Ablation",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Thin, pliable, usually hairless fasciocutaneous free flap on the radial artery with a long pedicle (up to about 20 cm) and good vessel caliber. Used for hemiglossectomy, floor of mouth, buccal, palatal and partial pharyngeal defects, tubed pharyngeal reconstruction, and thin facial or nasal lining. It can be made sensate (lateral antebrachial cutaneous nerve) or osteocutaneous with a limited radius segment. Contraindicated by an inadequate ulnar collateral circulation or incomplete palmar arch; avoid prior arterial cannulation or trauma on that arm.",
+ "setup": [
+  "Allen test and, if equivocal, duplex of the palmar arch; choose the nondominant arm",
+  "Protect the arm from IV lines and arterial lines from admission (label it)",
+  "Arm on a hand table, abducted and supinated, upper-arm tourniquet; second team works simultaneously with the head team",
+  "Exsanguinate and inflate the tourniquet (about 250 mmHg, time tracked)",
+  "Microclips, bipolar, loupes; plan the skin graft donor site (proximal forearm or thigh)"
+ ],
+ "landmarks": [
+  "Radial artery between brachioradialis and flexor carpi radialis (FCR)",
+  "Paired venae comitantes and the superficial cephalic vein",
+  "Superficial branch of the radial nerve under brachioradialis, emerging distally",
+  "Lateral antebrachial cutaneous nerve near the cephalic vein",
+  "Wrist crease (start paddle about 1 cm proximal) and antecubital fossa",
+  "Paratenon over the FCR and palmaris tendons"
+ ],
+ "danger": [
+  "Hand ischemia if ulnar collateral flow is inadequate",
+  "Superficial radial nerve injury causing dorsal hand numbness or neuroma",
+  "Stripping paratenon causing skin graft loss and tendon exposure",
+  "Pedicle injury at the septum during distal-to-proximal elevation",
+  "Radius fracture after osteocutaneous harvest unless the remaining radius is plated",
+  "Tourniquet time beyond about 2 hours"
+ ],
+ "steps": [
+  [
+   "Confirm hand perfusion",
+   "Repeat the Allen test: occlude both arteries, have the patient pump the fist, release the ulnar artery and expect color return within about 10 seconds. A delayed return or doubtful exam prompts duplex study or the other arm. Document the result; an absent ulnar contribution contraindicates harvest on that side."
+  ],
+  [
+   "Design the paddle",
+   "Template the defect. Center the ellipse over the radial artery, start about 1 cm proximal to the wrist crease, and include the cephalic vein within or at the edge of the paddle. Mark the course of the artery and cephalic vein to the antecubital fossa for the pedicle incision."
+  ],
+  [
+   "Raise the ulnar side suprafascially",
+   "Under tourniquet, incise the ulnar border and elevate in the suprafascial plane toward the FCR tendon, preserving paratenon on the tendons for graft take. At the radial border of the FCR, go deep to the fascia to capture the septum that carries the radial artery perforators."
+  ],
+  [
+   "Raise the radial side",
+   "Incise the radial border and elevate suprafascially toward the brachioradialis. Identify the superficial radial nerve branches and dissect them off the paddle, leaving them on the bed to avoid numbness and painful neuroma. Include the cephalic vein in the flap and ligate its tributaries."
+  ],
+  [
+   "Divide the distal pedicle",
+   "At the distal end, isolate the radial artery and venae comitantes. Apply a microvascular clamp to the artery and confirm the thumb and hand remain perfused with good capillary refill. Then ligate and divide the distal artery, both venae comitantes and the distal cephalic vein."
+  ],
+  [
+   "Elevate distal to proximal",
+   "Lift the paddle with the septum, radial artery and venae comitantes off the flexor pollicis longus and pronator quadratus. Clip small muscular branches close to the muscle, not the artery. Keep the septum intact against the paddle so the perforators are not sheared."
+  ],
+  [
+   "Dissect the pedicle",
+   "Open the proximal incision along the marked line, retract brachioradialis laterally, and follow the artery to the antecubital fossa near the brachial bifurcation. Dissect the cephalic vein proximally. Preserve the communicating vein between superficial and deep systems when possible, which helps drainage through a single venous anastomosis."
+  ],
+  [
+   "Release the tourniquet",
+   "Deflate the tourniquet before pedicle division. Confirm the paddle perfuses with bright edge bleeding and the hand remains pink. Achieve hemostasis on the flap and forearm bed with bipolar and clips. Allow the flap to reperfuse while the recipient site is completed."
+  ],
+  [
+   "Osteocutaneous option",
+   "If bone is required, take a segment of radius on the septum between the brachioradialis and pronator quadratus insertions, limited to under about 40 percent of the circumference and about 10 cm in length. Use bevelled cuts and a plate on the remaining radius at the time of harvest to reduce fracture risk."
+  ],
+  [
+   "Divide and transfer",
+   "When the recipient vessels are ready, ligate and divide the radial artery, venae comitantes and cephalic vein at the planned length. Note ischemia time. Hand the flap to the head team without twisting the pedicle; mark the arterial side and orientation of the paddle."
+  ],
+  [
+   "Close the donor site",
+   "Close the proximal incision primarily. Cover the paddle bed with a split-thickness or full-thickness graft (proximal forearm skin as an ellipse closed primarily, or thigh), or use local advancement for small defects. Secure the graft with a bolster or negative-pressure dressing over intact paratenon."
+  ],
+  [
+   "Splint the forearm",
+   "Apply a well-padded volar splint with the wrist slightly extended to immobilize the graft bed, typically for about five to seven days. Leave the fingertips exposed for perfusion checks. Elevate the arm and document hand color, capillary refill and sensation."
+  ]
+ ],
+ "exit_check": [
+  "Hand pink with brisk capillary refill after tourniquet release",
+  "Flap perfused with bright edge bleeding; pedicle untwisted and orientation marked",
+  "Graft secured over intact paratenon; splint applied with fingertips visible"
+ ],
+ "postop": [
+  "Flap checks per free-flap protocol (color, refill, Doppler, pinprick)",
+  "Hand perfusion and radial nerve sensation checks with each flap check",
+  "Splint and graft bolster down at about day 5 to 7, then hand therapy if stiff",
+  "Arm elevation; no blood pressure cuffs or lines on the donor arm"
+ ],
+ "complications": {
+  "early": [
+   "Flap venous congestion or thrombosis",
+   "Skin graft loss with tendon exposure",
+   "Hand ischemia (rare with a normal Allen test)",
+   "Donor site hematoma"
+  ],
+  "late": [
+   "Dorsal hand numbness or neuroma from the superficial radial nerve",
+   "Cold intolerance and reduced grip strength",
+   "Unfavorable donor scar",
+   "Radius fracture after osteocutaneous harvest"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How do you perform and interpret the Allen test?",
+   "Occlude the radial and ulnar arteries at the wrist while the patient clenches the fist until the hand blanches, then release the ulnar artery. Color return within about 10 seconds indicates adequate ulnar collateral flow (a normal or negative test). Delayed return suggests poor collaterals and calls for duplex or another donor site."
+  ],
+  [
+   "What venous options does the radial forearm flap provide?",
+   "The deep system (paired venae comitantes) and the superficial system (cephalic vein). Including the communicating branch that joins them lets one anastomosis drain both. Many surgeons use the cephalic vein or a vena comitans, or both when two recipient veins are available."
+  ],
+  [
+   "Why preserve the paratenon over the flexor tendons?",
+   "A skin graft will not take on bare tendon. Paratenon is a vascularized bed; stripping it leads to graft loss, tendon exposure, adhesions and poor hand function."
+  ],
+  [
+   "What limits bone harvest with this flap?",
+   "Fracture of the residual radius. Take under about 40 percent of the cross-section and about 10 cm length, bevel the cuts, and plate the remaining radius at harvest. The bone stock usually does not support dental implants, so the fibula is preferred for mandible."
+  ],
+  [
+   "How do you make the flap sensate?",
+   "Include and coapt the lateral antebrachial cutaneous nerve (and sometimes the medial antebrachial cutaneous) to a recipient sensory nerve such as the lingual nerve for tongue reconstruction."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes V (eds). Atlas of Head and Neck Surgery. Springer, 2024: Ch 50 Principles of Soft Tissue Free Flap Reconstruction in Head and Neck Cancer (radial forearm flap).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 8 Reconstructive and Facial Plastic Surgery (microvascular free flaps, radial forearm, pp. 454-460)."
+ ]
+}

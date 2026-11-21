@@ -1,0 +1,129 @@
+{
+ "slug": "isthmusectomy-subtotal",
+ "title": "Isthmusectomy / Subtotal Thyroidectomy",
+ "domain": "Thyroid / Parathyroid / Salivary",
+ "or_family_v190": "thyroid",
+ "linked_topic": "Thyroid Nodule",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Isthmusectomy suits a solitary nodule confined to the isthmus: a benign symptomatic nodule, a diagnostic excision of an indeterminate nodule (with counseling that completion surgery may follow), or, more selectively, a small low-risk differentiated cancer without extrathyroidal extension or nodal disease. Subtotal thyroidectomy (leaving a posterior remnant on one or both sides) is reserved for benign disease such as Graves disease or symptomatic goiter, and is now rarely chosen because total thyroidectomy has similar complication rates with less recurrence and no risk of reoperation in a scarred field. Subtotal resection is never appropriate for malignancy.",
+ "setup": [
+  "Ultrasound mapping showing the nodule centered in the isthmus with enough normal margin to each lobe; cytology reviewed",
+  "Preoperative laryngoscopy; thyroid function, and euthyroid state for Graves disease",
+  "Supine with shoulder roll and head ring, neck extended without hanging the head; arms tucked; slight head-up tilt",
+  "Collar incision marked in a skin crease about two fingerbreadths above the sternal notch; local anesthetic with epinephrine in the line of incision only",
+  "Energy device or clamps and ties; nerve stimulator for subtotal resection"
+ ],
+ "landmarks": [
+  "Isthmus anterior to tracheal rings 2 to 4",
+  "Pyramidal lobe and Delphian (precricoid) node above the isthmus",
+  "Inferior thyroid veins at the lower border of the isthmus",
+  "Tracheoesophageal groove and recurrent laryngeal nerve (outside the isthmus field)",
+  "Superior pole and the avascular space of Reeves medially",
+  "External branch of the superior laryngeal nerve on the cricothyroid"
+ ],
+ "danger": [
+  "Inadequate margin around the nodule, especially for indeterminate or malignant lesions",
+  "Straying lateral into the tracheoesophageal groove during isthmusectomy",
+  "Recurrent nerve and parathyroids near the posterior remnant in subtotal resection",
+  "Bleeding from a cut thyroid remnant surface",
+  "Persistent hyperthyroidism or recurrent goiter from an over-sized remnant"
+ ],
+ "steps": [
+  [
+   "Incision and flaps",
+   "Make the collar incision through skin, fat, and platysma, sized to the gland and nodule. Raise subplatysmal flaps up to the thyroid cartilage and down to the sternal notch, staying deep to the anterior jugular veins. Handheld retractors that can be redirected allow a smaller incision than a fixed retractor."
+  ],
+  [
+   "Open the midline",
+   "Divide the median raphe between the strap muscles from the thyroid cartilage to the sternal notch and lift the sternohyoid and sternothyroid off the thyroid capsule. Continue laterally on both sides until the full extent of the nodule and a cuff of normal parenchyma are visible."
+  ],
+  [
+   "Free the inferior border",
+   "Define the lower edge of the isthmus and divide the inferior thyroid veins as they run down to the brachiocephalic vein. This exposes the anterior trachea below the isthmus and starts the plane between gland and trachea."
+  ],
+  [
+   "Define the upper border",
+   "Release the upper edge of the isthmus and the pyramidal lobe if present, following it up toward the hyoid so no remnant is left. The precricoid node can be taken with the specimen when the nodule is indeterminate or malignant."
+  ],
+  [
+   "First lateral division",
+   "Choose the line of division on one side with a clear margin of normal thyroid around the nodule. Divide the parenchyma with an energy device, or between clamps with transfixion sutures, cutting vertically down to the trachea."
+  ],
+  [
+   "Lift off the trachea",
+   "Grasp the free edge and lift the isthmus off the anterior trachea, dividing the fine attachments. Stay on the tracheal surface and avoid wandering lateral; the recurrent nerve should never be in this field, and the margin of the gland is the limit of dissection."
+  ],
+  [
+   "Second lateral division and pretracheal tissue",
+   "Divide the opposite side with an equal margin and remove the specimen, oriented for pathology. For suspected cancer, add pretracheal tissue for node sampling. Seal the cut lobe surfaces and confirm hemostasis."
+  ],
+  [
+   "Subtotal: mobilize the lobe",
+   "For subtotal thyroidectomy, develop the plane between the strap muscles and the lobe and retract the straps laterally while rotating the gland medially. Ligate the middle thyroid vein. Continue capsular dissection around the lateral surface of the lobe."
+  ],
+  [
+   "Subtotal: superior pole",
+   "Push the upper pole laterally and open the avascular plane between the pole and the cricothyroid muscle. Divide the superior vessels close to the gland, individually where possible, to protect the external branch of the superior laryngeal nerve. Ligate any lower pole vessels."
+  ],
+  [
+   "Subtotal: plan the remnant",
+   "Mark the line of transection so the posterior remnant lies a safe distance in front of the expected nerve course, and identify parathyroids where possible so the line spares them. Record the intended remnant size, since the term subtotal is otherwise imprecise."
+  ],
+  [
+   "Subtotal: transect and repeat",
+   "Divide the isthmus, then cut through the lobe along the marked line with an energy device or between clamps, leaving the posterior remnant attached to the trachea and protecting the nerve beneath it. Secure hemostasis on the cut surface. Repeat on the other side when bilateral."
+  ],
+  [
+   "Closure",
+   "Irrigate and check hemostasis on both cut surfaces with a Valsalva maneuver. Use a drain only by preference. Reapproximate the straps and platysma with interrupted absorbable sutures and close the skin with a subcuticular suture."
+  ]
+ ],
+ "exit_check": [
+  "Specimen oriented with margins around the nodule and pathology requisition stating the indication",
+  "Dry cut surfaces after Valsalva",
+  "For subtotal resection: remnant size documented and nerve stimulation intact"
+ ],
+ "postop": [
+  "Head-up nursing; isthmusectomy patients may go home the same day",
+  "Review final histology for any need for completion surgery",
+  "Thyroid function at 4 to 6 weeks; replacement is usually not needed after isthmusectomy",
+  "Calcium monitoring and long-term thyroid function and goiter surveillance after subtotal resection"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma",
+   "Seroma",
+   "Transient hypocalcemia (subtotal)",
+   "Voice change from nerve stretch (subtotal)"
+  ],
+  "late": [
+   "Need for completion thyroidectomy on final pathology",
+   "Recurrent or persistent hyperthyroidism after subtotal resection for Graves",
+   "Recurrent goiter in the remnant",
+   "Hypothyroidism despite a remnant"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why has total thyroidectomy largely replaced subtotal thyroidectomy for Graves disease and multinodular goiter?",
+   "Complication rates are similar in experienced hands, while subtotal resection leaves a real risk of recurrent hyperthyroidism or goiter, and reoperation in a scarred field carries higher nerve and parathyroid risk. Remnant volume needed for euthyroidism is also unpredictable."
+  ],
+  [
+   "When is isthmusectomy reasonable for a thyroid cancer?",
+   "Selected small, low-risk differentiated cancers confined to the isthmus without extrathyroidal extension, nodal disease, or other risk factors. Isthmic papillary cancers may be more often multifocal and node-positive, so many surgeons still prefer lobectomy or total thyroidectomy."
+  ],
+  [
+   "Where is the recurrent laryngeal nerve relative to an isthmusectomy?",
+   "It lies in the tracheoesophageal groove, well lateral to the isthmus. Risk comes only from excessive lateral dissection, which is why isthmusectomy has a very low rate of nerve and parathyroid injury."
+  ],
+  [
+   "What is the Hartley-Dunhill operation?",
+   "Lobectomy on one side with a subtotal resection on the other. It was used for bilateral benign goiter and is now uncommon for the same reasons as other subtotal procedures."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes T (eds). Atlas of Head and Neck Surgery (Springer Surgery Atlas Series, 2024): Ch 45 Isthmusectomy and Subtotal Thyroidectomy (Black, Hubbard).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 3 Endocrine (thyroid nodule management; Graves disease, subtotal thyroidectomy).",
+  "Haugen BR et al. 2015 American Thyroid Association Management Guidelines for Adult Patients with Thyroid Nodules and Differentiated Thyroid Cancer. Thyroid 2016;26:1-133."
+ ]
+}

@@ -1,0 +1,138 @@
+{
+ "slug": "mentoplasty",
+ "title": "Mentoplasty: Chin Implant / Sliding Genioplasty",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Aesthetic Facial Analysis",
+ "source_label": "Pasha 6e (Reconstructive and Facial Plastic Surgery chapter) and Cummings 7e (Mentoplasty chapter)",
+ "indications": "Chin augmentation for microgenia (deficient bony chin with normal occlusion), often combined with rhinoplasty because chin projection changes perceived nasal size and profile balance. On profile, soft-tissue pogonion should reach a vertical line through nasion perpendicular to Frankfort horizontal (Gonzalez-Ulloa zero meridian). An alloplastic implant suits mild to moderate isolated horizontal deficiency. Sliding (osseous) genioplasty suits more severe deficiency, vertical excess or deficiency, asymmetry, or a failed implant, because the bony segment can move in three dimensions. True retrognathia or micrognathia with Class II malocclusion needs orthognathic surgery (sagittal split), not a chin procedure alone.",
+ "setup": [
+  "Preoperative standardized photographs and profile analysis; lateral cephalogram or panorex when osteotomy is planned (tooth root height, mental foramen position)",
+  "Check occlusion and lip competence; note mentalis strain at rest",
+  "Implant: local with sedation or general; mental nerve blocks plus local infiltration with epinephrine. Genioplasty: general with nasotracheal tube (orotracheal if rhinoplasty is combined)",
+  "Implant sizers and selection (extended anatomic silicone or porous polyethylene preferred over small central button); mark midline and mental foramina before injection",
+  "Genioplasty set: reciprocating saw, side-cutting burr, calipers, pre-bent genioplasty step plates or 2.0 mm plates and screws",
+  "Chin-strap tape dressing ready"
+ ],
+ "landmarks": [
+  "Soft-tissue pogonion and nasion-perpendicular zero meridian",
+  "Submental crease (external incision site)",
+  "Mental foramen below the second premolar, mental nerve exiting superolaterally",
+  "Canine-to-canine gingivolabial sulcus",
+  "Lower incisor and canine root apices (osteotomy must stay below them)",
+  "Mentalis muscle origin on the incisive fossa",
+  "Inferior mandibular border and bony midline"
+ ],
+ "danger": [
+  "Mental nerve stretch or transection during lateral dissection or a lateral osteotomy cut too high",
+  "Tooth root injury from a high osteotomy or screws",
+  "Failure to reapproximate mentalis causing chin ptosis (witch's chin) and lower lip incompetence",
+  "Implant malposition or asymmetry, especially with small central implants",
+  "Bone erosion under subperiosteal implants",
+  "Overcorrection, which is less forgiving than undercorrection"
+ ],
+ "steps": [
+  [
+   "Mark and plan",
+   "With the patient upright, mark the facial midline, the inferior border, and the expected mental foramen positions. Decide on implant versus osteotomy from the profile analysis, vertical chin height, and asymmetry. Choose implant size with sizers held against the chin; for genioplasty, plan the horizontal advancement and any vertical change in millimeters."
+  ],
+  [
+   "Anesthetize",
+   "Perform bilateral mental nerve blocks, then infiltrate the submental crease or gingivolabial sulcus, lower lip and chin with lidocaine and epinephrine. Wait for vasoconstriction. Inject after marking so swelling does not distort the midline or the planned pocket dimensions."
+  ],
+  [
+   "Implant: choose the approach",
+   "The submental approach (2 to 3 cm incision in or just behind the submental crease) gives direct control of the inferior border and keeps the implant away from oral flora. The intraoral approach avoids a skin scar but risks superior migration if the pocket is too high and requires careful mentalis repair."
+  ],
+  [
+   "Implant: create the pocket",
+   "Divide the mentalis fibers to reach the anterior mandible. Dissect supraperiosteally in the midline and subperiosteally laterally along the inferior border. Keep the pocket snug, just large enough for the implant, so it cannot rotate or migrate. Identify each mental nerve and stay below the foramen."
+  ],
+  [
+   "Implant: insert and position",
+   "Place the extended implant with its wings in the lateral subperiosteal tunnels below the mental nerves and the midline mark aligned with the facial midline. It should sit on the inferior border, not ride up onto the thin bone over the incisor roots. Check symmetry from above and below. Secure with a suture or monocortical titanium screw if any tendency to shift."
+  ],
+  [
+   "Implant: close in layers",
+   "Reapproximate the mentalis muscle carefully with absorbable braided suture to resuspend the soft-tissue chin pad, then close subcutaneous and skin layers (or mucosa intraorally). Apply a firm tape chin-strap dressing for several days to hold position and reduce dead space."
+  ],
+  [
+   "Genioplasty: incision and exposure",
+   "Make a gingivolabial incision from canine to canine on the labial side of the sulcus, leaving a mucosal cuff for closure. Divide mentalis obliquely, leaving a muscle cuff on bone. Dissect subperiosteally to expose the anterior mandible and both mental nerves, but leave the inferior soft tissue attached to the chin segment to keep its blood supply."
+  ],
+  [
+   "Genioplasty: mark the osteotomy",
+   "Score the bony midline vertically with a side-cutting burr above and below the planned cut for later alignment. Mark a horizontal (or oblique) osteotomy with calipers so it is symmetric, at least 5 mm below the mental foramina and well below the canine roots. Orientation determines movement: horizontal for pure advancement, oblique to shorten."
+  ],
+  [
+   "Genioplasty: cut and mobilize",
+   "Cut with a reciprocating saw from lateral to medial on each side through both cortices, protecting the soft tissues and floor of mouth. Complete the cut and downfracture the segment gently with an osteotome. Keep the lingual muscle attachments (genioglossus, geniohyoid) on the distal segment, which preserves blood supply."
+  ],
+  [
+   "Genioplasty: advance and fix",
+   "Advance the segment the planned distance, align the midline score marks, and check symmetry and the smoothness of the inferior border. Fix with a pre-bent step plate or two plates and monocortical screws placed away from tooth roots. For vertical reduction, remove an intervening wedge between two cuts; for lengthening, interpose graft."
+  ],
+  [
+   "Genioplasty: smooth and close",
+   "Contour any lateral step-off at the inferior border with a burr so it is not palpable. Irrigate. Reapproximate mentalis to its cuff securely, since this prevents chin ptosis and lower lip incompetence, then close the mucosa. Apply a tape pressure dressing."
+  ],
+  [
+   "Final assessment",
+   "Examine the profile against the preoperative plan, check lip position and the labiomental fold, and confirm nothing is palpable. Document mental nerve status at the end of the case because postoperative numbness is common and the baseline matters."
+  ]
+ ],
+ "exit_check": [
+  "Chin projection and midline match plan; inferior border smooth with no palpable step or implant edge",
+  "Mentalis repaired and soft tissue resuspended; tape dressing secure",
+  "Mental nerves visualized intact and documented"
+ ],
+ "postop": [
+  "Head elevation, cold compresses, soft diet for several days after genioplasty",
+  "Chlorhexidine or saline mouth rinses after intraoral incisions; avoid pulling the lower lip down",
+  "Warn about temporary lower lip and chin numbness",
+  "Watch for hematoma, which can displace an implant or compromise the wound",
+  "Follow-up to judge final projection after swelling resolves (months)"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma or seroma",
+   "Infection requiring implant removal",
+   "Mental nerve hypesthesia",
+   "Wound dehiscence of the intraoral incision",
+   "Implant displacement or asymmetry"
+  ],
+  "late": [
+   "Bony erosion beneath the implant",
+   "Chin ptosis and lower lip incompetence from inadequate mentalis repair",
+   "Implant extrusion",
+   "Malunion or undercorrection after genioplasty",
+   "Tooth devitalization from root injury"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How do you separate microgenia from retrognathia, and why does it matter?",
+   "Microgenia is a small bony chin with normal occlusion and is treated with an implant or genioplasty. Retrognathia or micrognathia involves a retropositioned or small mandible, usually with Class II occlusion, and needs orthognathic surgery. A chin implant alone in retrognathia will not fix the occlusion."
+  ],
+  [
+   "Where should a chin implant lie and in what plane?",
+   "On the inferior border, supraperiosteal centrally and subperiosteal laterally, with the wings below the mental foramina. Subperiosteal placement fixes better but causes more bone resorption; high placement over thin bone and roots increases erosion and migration."
+  ],
+  [
+   "When do you choose a sliding genioplasty over an implant?",
+   "Severe horizontal deficiency, vertical excess or deficiency, asymmetry, failed or extruded implant, or patients who prefer autologous correction. The osteotomy allows three-dimensional repositioning, including vertical shortening with wedge removal."
+  ],
+  [
+   "What causes the witch's chin or lower lip incompetence after chin surgery, and how is it prevented?",
+   "Failure to reapproximate the mentalis muscle, which lets the soft-tissue pad drop. Prevent it by leaving a muscle cuff on bone, repairing mentalis securely, and taping the chin."
+  ],
+  [
+   "How low must the genioplasty cut be and why?",
+   "At least 5 mm below the mental foramen, because the inferior alveolar nerve loops below the foramen before exiting, and below the canine roots, which are the longest in the anterior mandible."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8, Reconstructive and Facial Plastic Surgery: Chin and Malar Augmentation, evaluation, chin implants, sliding genioplasty, complications (p 507-508)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 27, Mentoplasty"
+ ]
+}

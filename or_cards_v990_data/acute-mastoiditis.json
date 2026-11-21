@@ -1,0 +1,127 @@
+{
+ "slug": "acute-mastoiditis",
+ "title": "Cortical Mastoidectomy for Acute Mastoiditis / Subperiosteal Abscess",
+ "domain": "Otology",
+ "or_family_v190": "otology",
+ "linked_topic": "Acute Mastoiditis / Petrous Apicitis",
+ "source_label": "Pasha 6e and Cummings 7e (Complications of Temporal Bone Infections; Mastoidectomy)",
+ "indications": "Acute coalescent mastoiditis on CT (loss of bony septations, cortical erosion), subperiosteal abscess (postauricular, Bezold at the SCM insertion, Citelli in the digastric groove, Luc at the zygomatic root), failure to improve after 24-48 hours of parenteral antibiotics and myringotomy, or intratemporal or intracranial complications (facial palsy, labyrinthitis, sigmoid sinus thrombosis, epidural or brain abscess, meningitis). Noncoalescent mastoiditis is managed first with IV antibiotics and myringotomy with or without a tube. Many uncomplicated pediatric subperiosteal abscesses can be managed with myringotomy and tube plus incision and drainage or needle aspiration, reserving mastoidectomy for nonresponders or coalescence. Coordinate with neurosurgery and pediatrics when intracranial disease is present.",
+ "setup": [
+  "Contrast CT temporal bone and, if intracranial complication or sigmoid thrombosis suspected, MRI/MRV; review tegmen, sigmoid position and any dehiscence",
+  "General anesthesia, supine, head turned, no long-acting paralysis after induction so facial nerve monitoring is reliable",
+  "Facial nerve monitor, otologic drill with cutting and diamond burrs, suction irrigation, operating microscope",
+  "Myringotomy blade and tympanostomy tubes; culture swabs and anaerobic transport",
+  "Plan with infectious disease for culture-directed IV therapy; neurosurgery available if intracranial extension"
+ ],
+ "landmarks": [
+  "Henle spine and suprameatal triangle (Macewen triangle)",
+  "Temporal line (approximate tegmen level)",
+  "Sigmoid sinus plate and sinodural angle",
+  "Mastoid antrum and lateral semicircular canal",
+  "Short process of incus in the fossa incudis",
+  "Digastric ridge (facial nerve exits anterior to it)"
+ ],
+ "danger": [
+  "Facial nerve (especially in children with a shallow, laterally placed mastoid tip and stylomastoid foramen)",
+  "Sigmoid sinus and emissary veins, which may be thrombosed or dehiscent",
+  "Tegmen dura with possible epidural abscess",
+  "Lateral semicircular canal",
+  "Incus (avoid drilling contact in the aditus)"
+ ],
+ "steps": [
+  [
+   "Myringotomy first",
+   "Under the microscope, perform an anteroinferior myringotomy, aspirate and send middle ear fluid for aerobic, anaerobic and fungal culture, and place a tympanostomy tube. This drains the middle ear and provides a path for topical therapy after surgery."
+  ],
+  [
+   "Postauricular incision",
+   "Make a curvilinear incision about 1 cm behind the postauricular crease. In infants, keep it more posterior and shallow because the mastoid tip is undeveloped and the facial nerve exits superficially. If a subperiosteal abscess is present, expect pus immediately beneath the soft tissue."
+  ],
+  [
+   "Drain the abscess",
+   "Open the abscess cavity, culture the pus, and irrigate. Raise a periosteal flap (Palva or T-shaped) to expose the mastoid cortex. Look for a cortical fistula or necrotic bone indicating the route of spread, often near the spine of Henle."
+  ],
+  [
+   "Identify surface landmarks",
+   "Expose the spine of Henle, temporal line and mastoid tip. The suprameatal triangle overlies the antrum. Inflamed periosteum and granulation can obscure landmarks, so clear soft tissue methodically before drilling."
+  ],
+  [
+   "Begin cortical drilling",
+   "With a large cutting burr and continuous suction irrigation, saucerize the cortex starting along the temporal line and parallel to the posterior canal wall, defining the tegmen superiorly and the sigmoid posteriorly. Use broad strokes, staying wide rather than deep."
+  ],
+  [
+   "Remove infected air cells",
+   "Remove coalesced cells and granulation tissue from the mastoid with burrs and curettes, sending tissue for culture and pathology. Bleeding granulation is common; use a diamond burr and gentle pressure near the sigmoid and tegmen."
+  ],
+  [
+   "Open the antrum",
+   "Follow the tegmen medially to enter the antrum, identifying the lateral semicircular canal and short process of incus. Establish patency of the aditus to allow communication with the middle ear. A canal wall up cortical mastoidectomy is the goal; facial recess opening is not required."
+  ],
+  [
+   "Assess the sigmoid and tegmen",
+   "Inspect the sigmoid plate for perisinus abscess or granulation and the tegmen for epidural abscess. If sinus thrombosis is present, decompress the sinus and drain perisinus pus; needle aspiration or opening the sinus is individualized and coordinated with the team."
+  ],
+  [
+   "Irrigate and decide drainage",
+   "Irrigate the cavity copiously. Place a small drain or wick through the wound when there was a large abscess cavity, or close primarily over a clean cavity. Ensure no residual pus pockets in tip cells or the zygomatic root."
+  ],
+  [
+   "Close",
+   "Replace the periosteal flap and close in layers. Apply a mastoid dressing. Send all specimens labeled, including for cholesteatoma pathology if unexpected keratin was found, which would change the operative plan."
+  ]
+ ],
+ "exit_check": [
+  "Antrum opened and aditus patent; coalescent cells and abscess fully drained",
+  "Facial nerve stimulates at low threshold and sigmoid and tegmen intact or addressed",
+  "Tube in place and cultures sent from middle ear, abscess and bone"
+ ],
+ "postop": [
+  "Culture-directed parenteral antibiotics with transition to oral therapy guided by clinical response and infectious disease input",
+  "Ototopical drops through the tube; mastoid dressing removed at 24-48 hours",
+  "Monitor facial function, fever curve, headache, and neurologic status",
+  "Anticoagulation decision for sigmoid thrombosis with neurology/hematology",
+  "Audiogram once the ear has healed"
+ ],
+ "complications": {
+  "early": [
+   "Facial nerve injury",
+   "Sigmoid sinus bleeding or air embolism",
+   "Dural injury with CSF leak",
+   "Persistent infection or abscess reaccumulation"
+  ],
+  "late": [
+   "Conductive hearing loss or ossicular injury",
+   "Postauricular fistula",
+   "Undiagnosed cholesteatoma recurrence",
+   "Otitic hydrocephalus after sinus thrombosis"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What CT finding defines coalescent mastoiditis?",
+   "Loss of bony septations between air cells with coalescence into a single cavity, often with cortical erosion. Fluid in an intact mastoid alone is not coalescent mastoiditis and is common in routine otitis media."
+  ],
+  [
+   "Name the extratemporal abscesses by location.",
+   "Postauricular (most common), Bezold beneath the SCM from tip erosion, Citelli along the digastric groove, and Luc beneath the temporalis from the zygomatic root or canal."
+  ],
+  [
+   "What is the Gradenigo triad?",
+   "Otorrhea, abducens palsy from Dorello canal involvement and retro-orbital pain, indicating petrous apicitis."
+  ],
+  [
+   "Why is the facial nerve at greater risk in infants?",
+   "The mastoid tip is undeveloped until about age 2, so the stylomastoid foramen and nerve lie superficial and lateral near a standard postauricular incision."
+  ],
+  [
+   "Most common organisms?",
+   "Streptococcus pneumoniae, Streptococcus pyogenes and Staphylococcus aureus, with Fusobacterium in anaerobic and sinus thrombosis cases."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RS, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 7 (Mastoiditis; Subperiosteal Abscess; Petrous Apicitis)",
+  "Pasha 6e Chapter 9, Pediatric Otolaryngology (complications of otitis media)",
+  "Flint PW et al. Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 141, Complications of Temporal Bone Infections",
+  "Cummings 7e Chapter 143, Mastoidectomy: Surgical Techniques"
+ ]
+}

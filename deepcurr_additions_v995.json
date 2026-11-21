@@ -1,0 +1,487 @@
+[
+ {
+  "topic": "Sentinel Lymph Node Biopsy in Oral Cavity Cancer",
+  "field": "teach",
+  "text": "**SENT trial and counseling numbers**: In the SENT trial, SLNB spared over 70% of cT1-T2N0 oral cancer patients a neck dissection, with 92% 3-year disease-free survival. Over 10% of well-lateralized tumors drained to the contralateral neck, and 7% of positive nodes were contralateral. Tell patients that 20-40% of SLNBs are positive and lead to more surgery. The false-negative rate (neck recurrence after a negative SLNB) is 5-14%, and the complication rate is under 5%. (H&N Surgery Atlas 2024, Ch 14, pp 140-141)"
+ },
+ {
+  "topic": "Sentinel Lymph Node Biopsy in Oral Cavity Cancer",
+  "field": "manage",
+  "text": "**Selection and timing rules**: SLNB suits tumors that can be resected with margins without a free flap, in a neck staged N0 by imaging (with FNA of any suspicious node). Prior neck surgery or radiation does not rule it out, but drainage may be unexpected. Serial sectioning takes up to a week, so book the completion neck dissection ahead, ideally within 3 weeks, and cancel it if the SLNB is negative. Patients with WHO performance status over 2 may do better with elective neck dissection, so they avoid a second operation. (H&N Surgery Atlas 2024, Ch 14, pp 139-140)"
+ },
+ {
+  "topic": "Unknown Primary with Cervical Metastasis",
+  "field": "workup",
+  "text": "**Tongue-base mucosectomy yield**: Random tongue-base biopsies find the primary in only 25-43%. PET-CT finds extra primaries in 37-44% but misses tumors under 1 cm and has up to 39% false positives in Waldeyer ring. In a meta-analysis of 556 patients, TORS/TLM tongue-base mucosectomy found the primary in 53%, rising to 78% when done after negative imaging, PET-CT, EUA and palatine tonsillectomy. Do it bilaterally (contralateral primaries are found in about 2-12%). Bleeding (about 5%) is the main risk. (H&N Surgery Atlas 2024, Ch 35, pp 346-347)"
+ },
+ {
+  "topic": "Recurrent Laryngeal Nerve Injury During Thyroidectomy",
+  "field": "workup",
+  "text": "**Neuromonitoring thresholds**: A good starting EMG amplitude is 500 microvolts or more. Loss of signal means an amplitude under 100 microvolts. If the amplitude does not recover to at least 50% of baseline (about 250 microvolts) within 20 minutes, the risk of fold paralysis is about 80%. Recovery takes about 27 days for type II (global) injuries and 62 days for type I (segmental) injuries. If the first side reads under 250 microvolts, consider staging the contralateral side. Delaying completion thyroidectomy for differentiated cancer by up to about 25 weeks is considered oncologically safe. Most injuries recover in 2-6 months. (H&N Surgery Atlas 2024, Ch 46, pp 481-483)"
+ },
+ {
+  "topic": "Recurrent Laryngeal Nerve Injury During Thyroidectomy",
+  "field": "manage",
+  "text": "**Nerve invaded by thyroid cancer**: The RLN is involved in about 33-61% of locally invasive differentiated thyroid cancers, and about 45% of these patients still have normal fold motion before surgery. Type A invasion (epineurium only) can usually be shaved off, with over 80% functional recovery. Type B (deeper) invasion rarely allows clearance without leaving gross tumor. INMSG guidance is to try to preserve a nerve that still works before surgery. (H&N Surgery Atlas 2024, Ch 46, p 479)"
+ },
+ {
+  "topic": "Central Neck Dissection",
+  "field": "teach",
+  "text": "**Prophylactic central dissection tradeoffs**: Elective central dissection for papillary cancer finds nodal disease in up to 40%, but small deposits left in place rarely progress. Prophylactic dissection upstages about 30% of patients, which can lead to RAI that would not otherwise be given. A meta-analysis found locoregional recurrence of 6.9% after total thyroidectomy alone versus 4.6% with prophylactic central dissection, but the dissection group also got more RAI. Hypocalcemia follows about 20% of total thyroidectomies and is more common when central dissection is added. (H&N Surgery Atlas 2024, Ch 46, pp 477, 483-484)"
+ },
+ {
+  "topic": "Substernal and Multinodular Goiter",
+  "field": "operate",
+  "text": "**Who needs the chest opened**: About 95% of intrathoracic goiters come out through the neck. The risk of an extracervical approach rises when more than 50% of the gland is intrathoracic, when the goiter is retrotracheal or retroesophageal, when the chest part is larger than the neck part, or when cancer is present. High risk: below the aortic arch, recurrent goiter reaching the arch, giant, multicompartment, separate components, iceberg/inverted-cone shape, or reaching the posterior pleura. Moderate risk: reaching the arch, or minimal retrotracheal extension. Low risk: retroclavicular only. Have thoracic surgery on standby for high- and moderate-risk cases. (H&N Surgery Atlas 2024, Ch 48, pp 509-510)"
+ },
+ {
+  "topic": "Substernal and Multinodular Goiter",
+  "field": "manage",
+  "text": "**Airway, prep and follow-up**: Up to 40% of intrathoracic goiters are found incidentally. Tracheal compression is usually soft, and a tube one size smaller than usual generally passes; use awake fiberoptic intubation if neck extension makes the airway worse. Goiters reaching the posterior mediastinum or posterior pleura need a combined neck and right posterolateral thoracotomy, because a sternotomy cannot reach them. Treat all total thyroidectomies for intrathoracic goiter as high risk for hypocalcemia. After hemithyroidectomy, 12-35% become hypothyroid, so check thyroid function at 6-8 weeks. (H&N Surgery Atlas 2024, Ch 48, pp 507-515)"
+ },
+ {
+  "topic": "Four-Gland Parathyroid Exploration",
+  "field": "teach",
+  "text": "**Failure numbers and when to stop**: Even in expert hands, 2-5% of patients are not cured. With a competent bilateral exploration, an adenoma should go unfound in under 3%. Stop rather than keep dissecting, recheck the diagnosis (rule out FHH, especially if four normal glands were seen), and relocalize before any reoperation. Major ectopic glands that a neck incision cannot reach are the main cause of persistent disease after high-volume surgeons. Supernumerary glands occur in up to 5-10% of renal and hereditary HPT, usually inferior and thymic, so add a transcervical thymectomy. Routine intraoperative PTH after confirmed four-gland identification adds little. (H&N Surgery Atlas 2024, Ch 49, pp 519, 523-524)"
+ },
+ {
+  "topic": "Four-Gland Parathyroid Exploration",
+  "field": "localize",
+  "text": "**Where to look first**: Find the superior gland first, because its position is most constant. It usually lies within 1 cm of the cricothyroid joint, near where the inferior thyroid artery crosses the RLN, and posterior to the nerve. A missing superior gland is most often para- or retroesophageal. The inferior gland is caudal to the inferior thyroid artery and anterior to the RLN. When it is missing, it is most often flat under the thyroid capsule or low in the thyrothymic ligament. Other sites to check are intercricothyroid, carotid sheath and behind a Zuckerkandl tubercle. In MEN1, the preferred operation is subtotal parathyroidectomy plus transcervical thymectomy. (H&N Surgery Atlas 2024, Ch 49, pp 520-523)"
+ },
+ {
+  "topic": "Sinonasal Malignancies",
+  "field": "manage",
+  "text": "**Elective neck by histology**: About 25% of sinonasal cancers have neck metastases overall, but the rate varies widely. Nearly 30% of SCCs have nodes at presentation, compared with under 10% of adenocarcinomas (about 7% for ITAC, so no elective neck is needed). Esthesioneuroblastoma has 20-25% nodes at presentation and the strongest case for elective neck treatment. T3-T4 SCC and SNUC carry at least a 15% nodal risk and should have elective treatment. BAHNO's threshold is a nodal risk over 10-15%. (H&N Surgery Atlas 2024, Ch 41, pp 416, 421, 427)"
+ },
+ {
+  "topic": "Sinonasal Malignancies",
+  "field": "operate",
+  "text": "**Histology-driven surgical rules**: For intestinal-type adenocarcinoma, remove the whole ethmoid complex even when disease looks one-sided, because of field change. RT can be omitted for low-grade T1-T2 ITAC. Esthesioneuroblastoma resection should include at least the anterior skull base dura and the ipsilateral olfactory bulb, followed by postoperative RT. The endoscopic route is the gold standard when not contraindicated. After craniofacial resection, 40% or more of margins are R1, which reflects efforts to preserve the orbit and brain. (H&N Surgery Atlas 2024, Ch 41, p 421; Ch 43, p 454)"
+ },
+ {
+  "topic": "Parapharyngeal Space Tumor",
+  "field": "teach",
+  "text": "**Numbers and complications**: PPS tumors are 0.5-1.5% of head and neck tumors, and about 80% are benign salivary tumors (mostly pleomorphic adenoma, prestyloid). Neurogenic tumors (schwannoma, neurofibroma, paraganglioma) come next and are poststyloid. Early complications in one series were facial palsy 21.8%, wound infection 10.9% and hemorrhage 3.6%. Late complications were first-bite syndrome 16.4% and Frey syndrome 7.3%. Dividing the stylomandibular ligament widens transcervical access. TORS is an option for selected tumors but gives limited vascular control. (H&N Surgery Atlas 2024, Ch 22, pp 207, 212)"
+ },
+ {
+  "topic": "Pleomorphic Adenoma / Warthin Tumor",
+  "field": "operate",
+  "text": "**Categories that guide the extent of parotidectomy**: Quer and colleagues classify benign parotid tumors as category I (up to 3 cm, mobile, superficial, near the edge of the gland), II (deeper, up to 3 cm), III (over 3 cm, in 2 ESGS levels) and IV (over 3 cm, in more than 2 levels). Category I, and selected category II, tumors suit partial superficial parotidectomy or extracapsular dissection. Deep partial parotidectomy suits benign tumors limited to levels III-IV. Ultrasound-guided FNA separates benign from malignant in 80-90%, and permanent facial palsy is about 1-2%. (H&N Surgery Atlas 2024, Ch 16, pp 159-161)"
+ },
+ {
+  "topic": "Salivary Gland Malignancy",
+  "field": "localize",
+  "text": "**ESGS parotid levels**: The European Salivary Gland Society divides the parotid into five levels. I is lateral superior and II lateral inferior (split by a line through the facial nerve bifurcation, along the Stensen duct). III is deep inferior and IV deep superior (both under CN VII), and V is the accessory gland. Write operations as levels removed plus structures resected, for example parotidectomy I-IV (VII, S, MM) for an extended total parotidectomy with nerve, skin and masseter. The superficial lobe is about 80% of the parotid. (H&N Surgery Atlas 2024, Ch 17, pp 169-171)"
+ },
+ {
+  "topic": "Salivary Gland Malignancy",
+  "field": "operate",
+  "text": "**When to remove the deep lobe or the nerve**: Do a total conservative parotidectomy for intraparotid nodal metastases, deep-lobe cancer, large infiltrative tumors with spread outside the gland, and extensive neck disease. Resecting the facial nerve is absolutely indicated when there is preoperative nerve dysfunction, unless the tumor is lymphoma. It is relatively indicated when MRI shows gross tumor along the nerve. A working nerve should be preserved even in high-grade cancer if only microscopic disease remains, with postoperative RT to follow. (H&N Surgery Atlas 2024, Ch 17, pp 171-172)"
+ },
+ {
+  "topic": "Cutaneous Squamous Cell Carcinoma of the Head & Neck",
+  "field": "operate",
+  "text": "**Parotid metastases: total parotidectomy**: In one series of 87 patients with cutaneous cancer metastatic to the parotid, most treated by superficial parotidectomy (82%) and RT (86%), local recurrence was 20%, and two-thirds of recurrences were in the deep-lobe bed. Total parotidectomy for metastatic SCC gave 93% parotid control. Many surgeons therefore prefer total parotidectomy, although no prospective data support it. (H&N Surgery Atlas 2024, Ch 17, p 172)"
+ },
+ {
+  "topic": "Sialolithiasis",
+  "field": "pathophysiology",
+  "text": "**Epidemiology and where stones sit**: Stones cause about 60-70% of nonneoplastic obstructive salivary disease, with stenosis in 15-25% and sialodochitis in 5-10%. Autopsy prevalence is about 1.2%, and symptomatic incidence is about 1 in 10,000-20,000 per year. About 3% of cases are in children. Submandibular stones are 53% hilar, 37% in the distal duct and 10% intraparenchymal, and 17% of patients have multiple stones. Glands removed for stones are usually histologically normal, which supports gland preservation. In a 4,691-patient series, minimally invasive treatment cleared stones completely in 80.5% and partly in 16.6%, and only 2.9% needed gland excision. (H&N Surgery Atlas 2024, Ch 18, pp 181-183)"
+ },
+ {
+  "topic": "Sialolithiasis",
+  "field": "operate",
+  "text": "**Transoral stone removal indications**: The key questions are whether the stone is palpable and whether it is mobile or impacted. Absolute indications are failed sialendoscopy or conservative care, a palpable impacted stone, or a stone 5 mm or larger with no way to fragment it. Relative indications are nonpalpable stones, or a patient who wants one operation instead of repeated fragmentation. Contraindications are a fully atrophic gland, very deep intraparenchymal stones and multiple impacted intraparenchymal stones. (H&N Surgery Atlas 2024, Ch 18, p 183)"
+ },
+ {
+  "topic": "Subglottic / Tracheal Stenosis",
+  "field": "workup",
+  "text": "**Lano-Netterville staging and treatment choice**: Lano-Netterville stages laryngotracheal stenosis by how many subsites are involved (glottis, subglottis, trachea): stage I has one, II has two and III has all three. Endoscopic treatment suits short (under 1 cm), web-like, mature scars with intact cartilage. Longer, multisite stenosis or framework collapse (fracture or malacia) favors resection. The practical upper limit for resection is about 5.5 cm, and resections over about 4 cm may need a laryngeal release. GPA causes laryngotracheal stenosis in about 10-20% of adults and up to 50% of children with the disease. (H&N Surgery Atlas 2024, Ch 5, pp 59-62)"
+ },
+ {
+  "topic": "Subglottic / Tracheal Stenosis",
+  "field": "manage",
+  "text": "**After cricotracheal resection**: Avoid corticosteroids as far as possible, because they impair healing of the anastomosis. Give antiemetics, antitussives and PPIs to prevent vomiting, coughing and reflux, and humidify the air. Watch for leak (dry cough, subcutaneous emphysema, skin redness). Start oral feeding around day 2, remove the drain around day 3, and cut the chin-to-chest guardian sutures around day 8. When a tracheostomy is needed (type D/E resections), place it 2-3 rings below the anastomosis. (H&N Surgery Atlas 2024, Ch 5, pp 67-68)"
+ },
+ {
+  "topic": "Oral Tongue SCC",
+  "field": "operate",
+  "text": "**Subsites, nodes and bleeding**: Oral tongue SCC arises on the lateral border in about 80% of cases, the dorsum in 6%, the ventral surface in 5% and the posterior tongue in up to 8%. In anterior tongue cancer, nodal spread is most common to level IIA (37.1%), then III (20.9%) and IB (13.5%), so target these levels on ultrasound. Lingual artery bleeding after transoral partial glossectomy occurs in up to 10%, so some surgeons find and ligate the vessel during surgery. The ultrasonic scalpel causes about 0.8 mm of thermal necrosis, compared with 6-8 mm for monopolar cautery, which helps margin reading. (H&N Surgery Atlas 2024, Ch 26, pp 244-246)"
+ },
+ {
+  "topic": "Floor of Mouth SCC",
+  "field": "manage",
+  "text": "**Depth-based resection ladder**: Treat mild dysplasia with CO2 laser ablation. Moderate or selected high-grade dysplasia needs laser excision for histology. CIS or invasion up to 2 mm needs wide local excision with a 1 cm margin, including the sublingual glands, and the neck can be observed (SLNB is an option). T1 with DOI of 4 mm or more, or higher stage, needs resection with neck dissection, which is bilateral if the tumor crosses the midline. Reroute the cut submandibular ducts posteriorly. Do not close the defect primarily, because it tethers the tongue; let it granulate or use a skin graft or flap. (H&N Surgery Atlas 2024, Ch 27, pp 254-255)"
+ },
+ {
+  "topic": "Lip Cancer",
+  "field": "manage",
+  "text": "**Actinic cheilitis**: Actinic cheilitis involves the whole lower lip and turns malignant in about 10-30%. Treatment options include 5-FU, imiquimod, cryotherapy, photodynamic therapy, peels, CO2 laser and vermilionectomy (lip shave). Vermilionectomy and CO2 laser have the lowest recurrence. Laser scars less, but only vermilionectomy gives tissue to look for occult invasion. Defects over about 60% of the lower lip need Abbe, Estlander, Bernard, Gillies, McHugh or Karapandzic flaps. (H&N Surgery Atlas 2024, Ch 23, p 217; Ch 24, p 225)"
+ },
+ {
+  "topic": "Tonsil SCC",
+  "field": "recognize",
+  "text": "**Asymmetric tonsil**: In adults, a markedly asymmetric tonsil that otherwise looks normal is malignant (usually lymphoma) in over 2%. Constitutional symptoms, progressive growth, neck nodes, mucosal change or a firm feel raise the yield of a diagnostic tonsillectomy. (H&N Surgery Atlas 2024, Ch 33, p 322)"
+ },
+ {
+  "topic": "Open Partial / Conservation Laryngectomy",
+  "field": "manage",
+  "text": "**Supracricoid laryngectomy course**: About 10% of patients have acute complications in hospital, most often neck bleeding, aspiration pneumonia and wound infection, and perioperative death is very rare. About 15% have late problems after discharge, most often soft-tissue stenosis of the neoglottis, aspiration pneumonia and lasting dyspnea. Most can be treated with transoral CO2 laser. (H&N Surgery Atlas 2024, Ch 39, p 399)"
+ },
+ {
+  "topic": "Free-Flap Monitoring / Compromise / Salvage",
+  "field": "manage",
+  "text": "**Perioperative physiology targets**: Keep the patient euvolemic with hematocrit around 25-30% and crystalloid at about 3.5-6 mL/kg/h. Too much fluid swells the flap, and too little causes vasoconstriction. Failure rates are 2-5% in major centers. Without prophylaxis, DVT occurs in 40-80% of cancer patients over 40, with fatal PE in 0.2-5%, so mechanical and pharmacologic prophylaxis matter. (H&N Surgery Atlas 2024, Ch 50, pp 532, 543)"
+ },
+ {
+  "topic": "Reconstruction Selection After Head & Neck Ablation",
+  "field": "teach",
+  "text": "**Bony donor facts**: The peroneal arteria magna (the foot depends on the peroneal artery) occurs in about 0.2-8% and is an absolute contraindication to harvesting a fibula, so confirm normal popliteal trifurcation first. The DCIA (iliac crest) flap gives up to about 14 cm of curved, implant-quality bone on a 5-6 cm pedicle. It is best for class 3-4 Brown maxillary defects and the dentate mandible. However, a meta-analysis found 6.2% failure versus 3.4% for other bony flaps, plus a risk of hernia at the donor site. Low (class II Brown) maxillary defects can often be managed with an obturator. (H&N Surgery Atlas 2024, Ch 51, pp 549-555)"
+ },
+ {
+  "topic": "Differentiated Thyroid Cancer",
+  "field": "operate",
+  "text": "**Transaxillary robotic thyroidectomy selection**: The approach is for a few patients who want to avoid a neck scar, and only in high-volume centers. Contraindications are a benign nodule over 6 cm, a suspicious nodule over 2 cm, extrathyroidal extension (T3/T4), multiple lateral-neck nodes or ENE, retrosternal or dorsal extension, and prior neck radiation. Relative contraindications are contralateral RLN paresis, Graves disease, prior neck surgery, BMI over 30 and ASA over 2. Shoulder problems and body dysmorphic disorder also exclude it. Cancer itself is not a contraindication. The ideal patient is slim with a single benign-appearing nodule under 4 cm, especially one prone to keloids. (H&N Surgery Atlas 2024, Ch 47, pp 485-486)"
+ },
+ {
+  "topic": "Neck Dissection",
+  "field": "pathophysiology",
+  "text": "**Why the neck matters**: The neck holds about 300 lymph nodes, about 40% of the body's total. Regional metastasis cuts survival by more than half compared with localized disease, and an isolated neck recurrence after treatment lowers disease-specific survival by about 54%. In 8-25% of chyle injuries the leak comes from the right-sided accessory duct, not the thoracic duct. (H&N Surgery Atlas 2024, Ch 12, pp 123, 125)"
+ },
+ {
+  "topic": "Laryngeal Anatomy",
+  "field": "physiology",
+  "text": "**Surface landmarks for framework surgery**: the true vocal fold sits nearer the lower than the upper border of the thyroid lamina, not at its midpoint. The superior tubercle (where the superior cornu meets the ala) marks the spot about 1 cm below which the superior laryngeal artery and nerve cross to pierce the thyrohyoid membrane. The strap muscles (sternothyroid, thyrohyoid) attach at the oblique line, and the inferior constrictor inserts on the posterior lamina edge. (Operative Techniques in Laryngology 2024, Ch 1, p 3)"
+ },
+ {
+  "topic": "Laryngeal Anatomy",
+  "field": "physiology",
+  "text": "**Cricoid geometry**: the cricoid is the only complete ring; its anterior arch is only about 3-4 mm tall, while the posterior lamina is about 20-30 mm. This steep anterior-to-posterior rise leaves the anterior window filled by the cricothyroid membrane. (Operative Techniques in Laryngology 2024, Ch 1, p 3)"
+ },
+ {
+  "topic": "Laryngeal Anatomy",
+  "field": "physiology",
+  "text": "**Cricoarytenoid joint mechanics**: the joint surface is tilted steeply (about 45 degrees to the horizontal) on the cricoid lamina and allows sliding, rocking and twisting. With adduction the vocal process moves medially and drops downward; with PCA contraction it moves up and out. The cricothyroid joint allows anteroposterior sliding and rotation; CT contraction closes the anterior cricothyroid 'visor' angle, lengthening and tensing the fold, which is the basis of cricothyroid subluxation/approximation for pitch. (Operative Techniques in Laryngology 2024, Ch 1, p 4)"
+ },
+ {
+  "topic": "Laryngeal Anatomy",
+  "field": "physiology",
+  "text": "**Two-bellied PCA**: the horizontal (medial) belly runs from the cricoid lamina to the medial muscular process and mainly abducts the fold; the vertical (lateral) belly inserts on the lateral muscular process, keeps the arytenoid upright and helps set fold length and tension. The PCA is the key landmark when exposing the muscular process for arytenoid adduction. The interarytenoid is the only unpaired intrinsic muscle (transverse and oblique fibers; oblique fibers continue as the aryepiglottic muscle). (Operative Techniques in Laryngology 2024, Ch 1, p 6)"
+ },
+ {
+  "topic": "Laryngeal Anatomy",
+  "field": "physiology",
+  "text": "**Maculae flavae**: dense masses at the anterior and posterior ends of the membranous fold contain vocal fold stellate cells, specialized fibroblasts believed to produce extracellular matrix, build the vocal ligament, and maintain the layered lamina propria. Hyaluronic acid in the superficial lamina propria largely sets its viscosity; collagen (mainly types I and III) is woven so the fold can stretch despite non-stretchable fibers. The membranous (phonatory) fold is the anterior two-thirds; the cartilaginous (respiratory) part is the posterior third. (Operative Techniques in Laryngology 2024, Ch 1, p 7)"
+ },
+ {
+  "topic": "Laryngeal Anatomy",
+  "field": "pathophysiology",
+  "text": "**Laryngeal nerve anastomoses**: besides Galen's anastomosis (internal SLN to RLN over the dorsal PCA; sensory to pharyngeal mucosa and possibly motor to PCA), the 'human communicating nerve' runs from the external SLN through the cricothyroid membrane to the internal larynx (possibly the TA). Other SLN-RLN links may carry motor fibers to the TA or LCA, and the ventricularis (superior TA in the false fold) may receive SLN input. These explain residual false-fold contraction or tone after complete RLN transection. (Operative Techniques in Laryngology 2024, Ch 1, p 8)"
+ },
+ {
+  "topic": "Laryngeal Anatomy",
+  "field": "pathophysiology",
+  "text": "**Thyroplasty-window bleeding**: the cricothyroid artery (branch of the superior laryngeal artery) runs along the lower thyroid border; its branches pierce the cricothyroid membrane and climb the inner thyroid lamina, so they can bleed when the window is cut. The superior laryngeal artery enters the thyrohyoid membrane with the internal SLN; the inferior laryngeal artery (from the inferior thyroid) enters between inferior constrictor fibers. (Operative Techniques in Laryngology 2024, Ch 1, p 7)"
+ },
+ {
+  "topic": "Laryngeal Anatomy",
+  "field": "physiology",
+  "text": "**EMG recruitment during phonation**: TA and LCA fire in a burst just before and at voice onset, then fade during sustained phonation; the IA starts later but holds steady tone; the cricothyroid rises most with higher pitch and loudness; the PCA is most active with deep inhalation and sniffing (the basis of the sniff task to test abduction). (Operative Techniques in Laryngology 2024, Ch 1, p 9)"
+ },
+ {
+  "topic": "Laryngeal Anatomy",
+  "field": "teach",
+  "text": "**Vagal course numbers**: motor fibers arise in the nucleus ambiguus, exit the medulla between olive and pyramid as 8-10 rootlets, and leave through the jugular foramen. The SLN leaves near the inferior nodose ganglion about 4 cm above the carotid bifurcation; the internal branch pierces the thyrohyoid membrane about 2-4 mm below the greater hyoid cornu (the SLN block site). The first RLN motor branch enters at the cricothyroid articulation to supply the PCA. (Operative Techniques in Laryngology 2024, Ch 1, p 8)"
+ },
+ {
+  "topic": "Professional Voice",
+  "field": "recognize",
+  "text": "**Laryngopathia premenstrualis**: premenstrual voice change with slight hoarseness, muffling, vocal fatigue and loss of the highest notes. Uncommon in untrained women but reported by up to about one-third of singers. Varices tend to enlarge before and during menses, raising hemorrhage risk. (Operative Techniques in Laryngology 2024, Ch 2, p 12)"
+ },
+ {
+  "topic": "Professional Voice",
+  "field": "recognize",
+  "text": "**Performer history specifics**: ask about rehearsal and performance counts, rest between shows, venue size, amplification and in-ear monitors, role difficulty and whether an understudy exists; for teachers, class and room size, amplification, subject (music, gym) and duties such as recess. AAO-HNS defines a voice professional as anyone whose voice is essential to their job. Airplane cabin air is 5% humidity or less, and oil-based stage smoke causes irritation, allergy and bronchospasm. (Operative Techniques in Laryngology 2024, Ch 2, p 13)"
+ },
+ {
+  "topic": "Benign Vocal Fold Lesions",
+  "field": "recognize",
+  "text": "**Symptom-to-lesion clues**: roughness points to free-edge pathology (mass, laryngitis); breathiness to incomplete closure (paralysis, ankylosis, dislocation, scar, atrophy); strain to hyperfunction (primary or compensatory for a gap); odynophonia to granuloma or MTD. Hoarseness that appears over seconds to minutes should raise concern for vocal fold hemorrhage (or a psychogenic cause). (Operative Techniques in Laryngology 2024, Ch 2, p 11)"
+ },
+ {
+  "topic": "Spasmodic Dysphonia",
+  "field": "recognize",
+  "text": "**Neurologic dysphonia by pattern**: hypoadducted, weak breathy voice with poor cough suggests myasthenia, muscular dystrophy, Parkinson disease, Shy-Drager (multiple system atrophy), post-polio syndrome, TBI or abductor SD. Strained/staccato hyperfunction suggests adductor SD, pseudobulbar palsy or Huntington disease. Mixed patterns occur in MS, ataxic (cerebellar) dysphonia and ALS. Palatal involvement (VPI) suggests myasthenia, ALS or high vagal paralysis. (Operative Techniques in Laryngology 2024, Ch 2, p 13)"
+ },
+ {
+  "topic": "Spasmodic Dysphonia",
+  "field": "workup",
+  "text": "**Speech tasks during exam**: 'taxi' and other voiceless-consonant words bring out abductor SD breaks; 'kaa' tests palatal lift and closure; 'maa' and /m/, /n/ test nasal resonance for hyper- or hyponasality. The rainbow passage contains every English phoneme and is the standard recorded sample for tracking change. (Operative Techniques in Laryngology 2024, Ch 2, p 14)"
+ },
+ {
+  "topic": "Stroboscopy Interpretation",
+  "field": "workup",
+  "text": "**Standard strobe protocol**: confirm the signal is periodic or nearly periodic, then record modal pitch and loudness, low pitch soft and loud (best for overall pliability and the most aperiodic voice), and high-pitch soft phonation, which best reveals subtle lesions and pliability defects. At modal pitch the closed phase should take about half of each cycle (measured precisely with electroglottography). Amplitude and mucosal wave both shrink at higher pitch, so pitch and loudness must be controlled. (Operative Techniques in Laryngology 2024, Ch 3, p 19)"
+ },
+ {
+  "topic": "Stroboscopy Interpretation",
+  "field": "pathophysiology",
+  "text": "**Symmetry is not periodicity**: folds can have different amplitudes yet vibrate periodically, and folds can be aperiodic with normal, symmetric amplitude, as is common with vocal fold paresis. Stroboscopy is only a light source and works through either a flexible or a rigid scope. The wave starts subglottically, travels over the free edge and superior surface, and fades at the ventricle. (Operative Techniques in Laryngology 2024, Ch 3, p 20)"
+ },
+ {
+  "topic": "Stroboscopy Interpretation",
+  "field": "workup",
+  "text": "**Flexible dynamic voice assessment (DVA)**: test the velum with sustained /ee/, 'koka kola' and a long /s/ (VPI, palatal tremor); the tongue base at rest and protruded (tremor, fasciculations from ALS); the larynx with quiet breathing, repeated 'hee' with a breath between each, three sniffs, connected speech ('We were away a year ago'), singing, coughing and laughing. DVA is the key exam for MTD, PVFM, functional aphonia, dystonia, tremor and motion impairment. Repeated 'ee-sniff' cycles over 30-60 s expose fatigue from subtle paresis. (Operative Techniques in Laryngology 2024, Ch 3, p 20)"
+ },
+ {
+  "topic": "Stroboscopy Interpretation",
+  "field": "teach",
+  "text": "**Which scope first**: start with a flexible exam for suspected neurologic problems (dystonia/SD, tremor, breathy voice, paralysis) and with rigid stroboscopy for rough or veiled voices, since a rigid HD view still beats flexible resolution. High-speed video does not need a periodic signal and helps with chaotic voice, diplophonia and onset disorders such as SD and MTD, but currently needs a rigid oral scope. Videokymography stacks a single line-scan across the folds over time to show left-right asymmetry, open quotient and the wave, and is cheaper than HSV. (Operative Techniques in Laryngology 2024, Ch 3, p 22)"
+ },
+ {
+  "topic": "Stroboscopy Interpretation",
+  "field": "manage",
+  "text": "**Record every exam**: video plus audio allows long-term comparison, preoperative planning, patient education and medicolegal documentation. Get baseline recordings before and after any elective voice surgery, and keep the strobe video available during excision of a lesion. (Operative Techniques in Laryngology 2024, Ch 3, p 21)"
+ },
+ {
+  "topic": "Microlaryngoscopy",
+  "field": "manage",
+  "text": "**Recovery timeline for scheduling**: complete voice rest is 2-14 days (about 7 on average), return to full speaking 7-30 days, and full singing typically 30-90 days. Performers must clear their calendar. For teachers, operate at the start of summer; surgery over winter break with return in January is a setup for failure. (Operative Techniques in Laryngology 2024, Ch 9, p 69)"
+ },
+ {
+  "topic": "Microlaryngoscopy",
+  "field": "workup",
+  "text": "**Pre-op optimization**: avoid heavy voice use (singing, yelling, lecturing) for about 1-2 weeks before surgery and treat or postpone for LPR, allergy flare or URI; a short oral steroid course can settle transient edema. Otherwise edematous tissue may be mistaken for disease and over-resected, and healing is worse in inflamed tissue. Get a strobe exam 1-3 weeks before surgery and review it on the day of surgery. (Operative Techniques in Laryngology 2024, Ch 9, pp 69–71)"
+ },
+ {
+  "topic": "Benign Vocal Fold Lesions",
+  "field": "manage",
+  "text": "**Who decides and when**: elective phonosurgery should be patient-driven, with the surgeon as educator. Give one or two voice therapy sessions, reassess, and finish therapy if progress appears. The deciding question after maximum nonsurgical care is whether the patient can do what they need to do with their voice. Do not delay surgery for aspiration with dysphagia, impending airway compromise or concern for cancer. (Operative Techniques in Laryngology 2024, Ch 9, p 70)"
+ },
+ {
+  "topic": "Benign Vocal Fold Lesions",
+  "field": "teach",
+  "text": "**Outcome counseling numbers**: well-done phonomicrosurgery for benign lamina propria lesions in a compliant patient improves voice more than 95% of the time. Improvement differs from return to premorbid ability, which is less likely. Resect conservatively and accept occasional repeat surgery rather than risk permanent scar. (Operative Techniques in Laryngology 2024, Ch 9, p 71)"
+ },
+ {
+  "topic": "Medialization Thyroplasty",
+  "field": "teach",
+  "text": "**First operation is the best chance**: revision framework surgery is less reversible and adjustable, so aim for the best voice at the first procedure. Counsel that glottic-insufficiency surgery restores volume, clarity and endurance for ordinary speech, but loud speech and singing often stay limited because the paralysis, scar or paresis persists. (Operative Techniques in Laryngology 2024, Ch 9, p 71)"
+ },
+ {
+  "topic": "Posterior Cordotomy / Arytenoidectomy",
+  "field": "teach",
+  "text": "**Voice-airway tradeoff consent**: the larger the glottic airway created (transverse cordotomy, medial or total arytenoidectomy), the worse the voice. Enlarge conservatively and in stages, warn that repeat surgery is likely, and get consent for possible tracheotomy in patients without one. (Operative Techniques in Laryngology 2024, Ch 9, p 71)"
+ },
+ {
+  "topic": "Glottic Cancer",
+  "field": "operate",
+  "text": "**Uncertain frozen margins**: if frozen-section margins are not trustworthy, take conservative margins, wait for permanent pathology, and return to the OR for a positive margin rather than over-resecting non-malignant tissue. Consent should cover possible voice and swallowing loss and further surgery. (Operative Techniques in Laryngology 2024, Ch 9, p 71)"
+ },
+ {
+  "topic": "Microlaryngoscopy",
+  "field": "operate",
+  "text": "**Intubating the laryngology patient**: a Macintosh blade sits in the vallecula and avoids touching fragile glottic lesions (Reinke edema, papilloma, carcinoma, exophytic polyps); a Miller blade lifts the epiglottis and may disturb them but previews the surgical view. Spray 4 mL of 4% lidocaine under direct view before intubation. Use a 4.5 or 5.0 MLT (laser-safe when needed) and sweep it to the left. Recheck tube depth after suspension: a cuff just below the folds is a laser or microdebrider target. (Operative Techniques in Laryngology 2024, Ch 11, p 93)"
+ },
+ {
+  "topic": "Microlaryngoscopy",
+  "field": "operate",
+  "text": "**Paralysis and reflexes in suspension**: full neuromuscular blockade is needed during rigid suspension because coughing can lacerate or fracture the larynx. On train-of-four, one twitch is more than 95% block and two twitches more than 90%. Laryngoscopy is the most stimulating step, and bradycardia is less common after preoperative glycopyrrolate 0.2 mg IV (onset 10-15 min, lasts about 2 h; caution with glaucoma, obstructive uropathy and tachyarrhythmia). Use few opioids once suspended. (Operative Techniques in Laryngology 2024, Ch 11, pp 91–94)"
+ },
+ {
+  "topic": "Microlaryngoscopy",
+  "field": "manage",
+  "text": "**Emergence protects the result**: before removing the scope, spray more 4% lidocaine (and do not suction it away) and pass an orogastric tube under direct view. Aim for a smooth wake-up without bucking, since coughing worsens edema and can push out injected material. Give PONV prophylaxis to every patient (ondansetron 4 mg IV; scopolamine or aprepitant if prior PONV), because vomiting acid onto raw mucosa or retching after injection can undo the procedure. Dexamethasone 10-20 mg IV before laryngoscopy limits edema. (Operative Techniques in Laryngology 2024, Ch 11, pp 95–99)"
+ },
+ {
+  "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
+  "field": "operate",
+  "text": "**Automatic HFJV settings**: start with a driving pressure of about 20-25 psi (higher in obese patients), 100-120 pulses/min and an inspiratory time of 40% (like an I:E of 1:2.5). FiO2 starts at 100%, but room air entrained by the Venturi effect lowers delivered oxygen. Do not add supplemental oxygen at the mouth during laser or cautery. Humidify at 30-100%. The pause-pressure alarm detects rising end-expiratory pressure (air trapping) before pneumothorax or pneumomediastinum, so keep chest decompression equipment in the room. (Operative Techniques in Laryngology 2024, Ch 11, p 97)"
+ },
+ {
+  "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
+  "field": "operate",
+  "text": "**Jet delivery pitfalls**: the jet must be centered, because an angled stream reflects off the folds or a stenosis and becomes turbulent; recheck alignment whenever the laryngoscope moves. The Hunsaker Mon-Jet basket centers the catheter. Hand jets have no PEEP alarms and become erratic as the operator tires. Pledgets placed below a supraglottic jet can be blown distally. The Hunsaker CO2 side port is unreliable, so use transcutaneous CO2 checked against end-tidal CO2 before jetting. (Operative Techniques in Laryngology 2024, Ch 11, p 98)"
+ },
+ {
+  "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
+  "field": "manage",
+  "text": "**Intermittent apnea and plan changes**: preoxygenate to end-tidal O2 above 90%, remove the tube to work, and reintubate at a preset saturation. High-flow nasal oxygen extends apneic time. In repeat cases such as papilloma, record tolerated apnea and resaturation time. When patients cannot tolerate jet or apnea (obesity, poor compliance, V/Q mismatch, pulmonary hypertension, CO2 retention), reorder the surgery so a small tube can go in early. (Operative Techniques in Laryngology 2024, Ch 11, p 99)"
+ },
+ {
+  "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
+  "field": "manage",
+  "text": "**Post-extubation laryngospasm after laryngoscopy**: partial spasm in an awake patient (high-pitched stridor, anxiety) often breaks with IV lidocaine 40-50 mg or slow nasal sniffing with the mouth closed, which reflexively abducts the folds. Complete spasm usually comes with reduced consciousness. Give positive pressure plus IV lidocaine, then small doses of propofol or succinylcholine if saturation falls. Magnesium 2 g IV during the case may help prevent it. (Operative Techniques in Laryngology 2024, Ch 11, pp 95–100)"
+ },
+ {
+  "topic": "Subglottic / Tracheal Stenosis",
+  "field": "operate",
+  "text": "**Negative-pressure pulmonary edema during dilation**: an underanesthetized patient breathing against a balloon-occluded trachea can develop post-obstructive pulmonary edema, so make sure there is no chest rise during inflation. It also follows laryngospasm, biting on the tube or removal of an obstructing mass. It is more common in young, muscular patients. Suspect it with unexplained low saturation in PACU and rales or infiltrates on chest X-ray. Treat with oxygen and fluid reduction, then CPAP/BiPAP or reintubation with PEEP. (Operative Techniques in Laryngology 2024, Ch 11, p 100)"
+ },
+ {
+  "topic": "Inducible Laryngeal Obstruction / PVFM",
+  "field": "manage",
+  "text": "**Post-procedure PVFM**: after airway surgery, especially with preexisting bilateral fold disease, paradoxical adduction can cause acute distress needing reintubation. Try CPAP/BiPAP first. Breathing through a short (3-4 inch) straw moves the constriction to the mouth and often breaks the pattern. Rule out a structural cause with flexible laryngoscopy in PACU. (Operative Techniques in Laryngology 2024, Ch 11, p 100)"
+ },
+ {
+  "topic": "Injection Laryngoplasty",
+  "field": "recognize",
+  "text": "**Postoperative breathing sensations**: after injection augmentation the smaller glottis can feel harder to breathe through. After glottic enlargement the reduced work of breathing can paradoxically feel like no air is moving, and topical anesthetic can blunt the sensation of airflow. These sensations are usually brief and respond to reassurance, which works best when they are discussed before surgery. (Operative Techniques in Laryngology 2024, Ch 11, p 100)"
+ },
+ {
+  "topic": "Medialization Thyroplasty",
+  "field": "operate",
+  "text": "**Sedation for framework surgery**: dexmedetomidine (alpha-2 agonist; bolus 0.5-1 µg/kg over 10 min or infusion alone) gives a still, cooperative patient with little airway collapse, unlike propofol, which caused obstruction and disorientation when phonation was needed. It causes no amnesia and blunts airway reflexes less than opioids, so patients look sedated but remember everything; add small doses of midazolam or fentanyl and generous local anesthetic. Bradycardia and hypotension can occur, and a rapid bolus can cause transient hypertension. Use fire precautions with cautery near an open airway. (Operative Techniques in Laryngology 2024, Ch 11, p 102)"
+ },
+ {
+  "topic": "Arytenoid Adduction / Reinnervation",
+  "field": "operate",
+  "text": "**Sequential anesthesia**: arytenoid adduction can be done under general endotracheal anesthesia for the dissection and suture placement, then converted to monitored sedation (MAC) for the final check of fold position and voice. This requires planned coordination of the timing with anesthesia. (Operative Techniques in Laryngology 2024, Ch 11, p 102)"
+ },
+ {
+  "topic": "Injection Laryngoplasty",
+  "field": "operate",
+  "text": "**Awake procedures with sedation in the OR**: for strong gag, anxiety, major comorbidity or abnormal vital signs, do office-type injection or laser under monitored mild sedation. Nebulize 4% lidocaine 2 mg/kg 10-15 minutes before. Consent for conversion to general anesthesia with suspension laryngoscopy the same day. Keep the patient NPO until airway reflexes return, about 2 hours after the last topical dose. (Operative Techniques in Laryngology 2024, Ch 11, p 103)"
+ },
+ {
+  "topic": "Microlaryngoscopy",
+  "field": "workup",
+  "text": "**Airway huddle before induction**: review prior anesthesia records (mask ventilation, glottic view, tolerated apnea, post-op laryngospasm) and prior operative notes. Show the anesthesia team the office video for Reinke edema, glottic masses or stenosis. Agree on primary and backup airway plans and roles with the circulator and scrub tech. Note dentition at the start and any tooth damage before extubation (to avoid aspirating a fragment). Prior neck surgery or radiation predicts difficult exposure. (Operative Techniques in Laryngology 2024, Ch 11, p 89)"
+ },
+ {
+  "topic": "AOM / OME / Tympanostomy Decisions",
+  "field": "recognize",
+  "text": "**Hearing loss with middle-ear effusion**: OME usually causes a mild to moderate conductive loss averaging 20-30 dB (range 0-60 dB, about 25 dB on average). About a third of children with effusion hear at 15 dB or better, and about a quarter have thresholds up to 30 dB. Thin and glue-like fluid impair hearing equally, while a partly filled ear (bubbles or an air-fluid level) loses less. The loss is smaller at 2000 Hz, so a 500/1000/2000 Hz pure-tone average understates it. OME is the most common reason a newborn fails hearing screening, but SNHL must still be excluded. Bullous myringitis carries a high rate of mixed or sensorineural loss and needs an early audiogram. (Bluestone & Stool 5e, Ch 38, pp 761-763)"
+ },
+ {
+  "topic": "AOM / OME / Tympanostomy Decisions",
+  "field": "teach",
+  "text": "**Otitis media and development evidence**: In Teele's Boston cohort, more days with effusion in the first 3 years (especially the first year) went with lower speech, language and cognitive scores at ages 3 and 7 (adjusted full-scale IQ about 113 with the least effusion vs about 105 with the most). Paradise's Pittsburgh RCT found that prompt tubes in otherwise healthy children under 3 with persistent effusion did not improve developmental outcomes at 3, 6 or 9-11 years. A benefit was seen in children already at risk for developmental delay. Unilateral hearing loss should not be considered benign. (Bluestone & Stool 5e, Ch 38, pp 764-768)"
+ },
+ {
+  "topic": "Pediatric Vestibular Disorders",
+  "field": "recognize",
+  "text": "**Otitis media as a cause of imbalance**: Otitis media is the most common cause of vestibular disturbance in children, and parents often report clumsiness while effusion is present. Vestibular testing is abnormal with effusion and returns to normal after tube placement. Some children with past otitis but no current effusion still test abnormal, which suggests a residual labyrinthine effect. Labyrinthitis is the other otitis-related cause. (Bluestone & Stool 5e, Ch 38, p 769)"
+ },
+ {
+  "topic": "Tympanic Membrane Perforation",
+  "field": "recognize",
+  "text": "**Classification and misnomers**: Classify perforations by site (pars tensa quadrant or pars flaccida), extent (one quadrant under 25%, two or more quadrants, or total) and duration (acute, or chronic after 3 months). So-called *marginal* posterosuperior and *attic* perforations are usually deep retraction pockets or cholesteatomas, not true holes. A small perforation alone has little effect on hearing, whereas a large one gives about 20-30 dB. 'Chronic otitis media inactive' is a misnomer; the correct term is chronic perforation without otitis media. In the Pittsburgh tube trials, 14.8% had a perforation at the tube site after extrusion but only 1.4% stayed chronic and needed repair, so watchful waiting (most heal in 2-3 months) is appropriate. (Bluestone & Stool 5e, Ch 38, pp 769-772)"
+ },
+ {
+  "topic": "Tympanic Membrane Perforation",
+  "field": "manage",
+  "text": "**AOM with acute perforation and otorrhea**: Treat with antibiotics rather than observation, because a perforation marks a severe episode. Culture pus aspirated at or through the perforation, and add a topical quinolone, pumped in by pressing the tragus. Ofloxacin and ciprofloxacin-dexamethasone are the only drops FDA-approved for a nonintact drum. Avoid aminoglycoside (neomycin-polymyxin-hydrocortisone) drops and acetic acid or Burow solution when the middle ear is open. Keep the ear dry, and expect the drum to close within about a week. If otorrhea persists 2-3 weeks despite proper oral therapy, examine under the microscope (under anesthesia if needed) to look for cholesteatoma or tumor, culture the middle ear, and give culture-directed IV therapy. If it still persists, do tympanostomy and simple mastoidectomy even when CT shows no coalescence, because mastoid osteitis is the usual cause. Do not close an uncomplicated perforation before 3 months. (Bluestone & Stool 5e, Ch 38, pp 770-772)"
+ },
+ {
+  "topic": "Chronic Otitis Media / Cholesteatoma",
+  "field": "workup",
+  "text": "**CSOM definition and diagnostic pearls**: CSOM is chronic middle-ear and mastoid inflammation with a nonintact drum (perforation or tube) for about 3 months or more (sooner with Pseudomonas). The mastoid is always involved. CSOM itself causes no pain, fever, vertigo or mastoid tenderness, so any of these points to a complication. A polyp through the perforation must be told apart from a canal tumor. A large canal volume confirms a perforation, but the tympanogram can be flat if the middle ear and mastoid hold little air; raising the pump pressure to force the eustachian tube open proves the perforation. A conductive loss over 20-30 dB implies ossicular involvement, and any sensorineural part usually reflects serous labyrinthitis. Get CT when IV therapy fails, the ear recurs early, or cholesteatoma is suspected. Get CT first if tumor or LCH is possible, since labyrinthine erosion suggests a neoplasm. Treat coexisting sinusitis. (Bluestone & Stool 5e, Ch 38, pp 776-783)"
+ },
+ {
+  "topic": "Chronic Otitis Media / Cholesteatoma",
+  "field": "manage",
+  "text": "**CSOM medical outcomes and failure predictors**: Parenteral antipseudomonal therapy with daily aural toilet and drops dries about 90% of children within 5-7 days (89% in Kenna's series). Over the long term, 78% stayed resolved and 22% eventually needed mastoid surgery. Failure is linked to older age, early recurrence, and recurrence with the *same* Pseudomonas serotype or pyocin type (a new type usually responds to medical therapy again). Causes of failure are aditus block, irreversible osteitis, and hidden cholesteatoma or tumor. In adults, topical ofloxacin beat oral amoxicillin-clavulanate. Oral ciprofloxacin is off-label under 18 and needs parental consent. A tube helps when the perforation is too small to drain. (Bluestone & Stool 5e, Ch 38, pp 783-785)"
+ },
+ {
+  "topic": "Chronic Otitis Media / Cholesteatoma",
+  "field": "pathophysiology",
+  "text": "**Why CSOM clusters in certain populations**: CSOM affects about 4.6% of people worldwide (about 31 million, 22.6% under age 5). Prevalence is highest in Inuit (30-46% in Alaska), Aboriginal Australians (12-25%) and Apache/Navajo (4-8%), and under 1% in the US and UK. These groups have a semipatulous, low-resistance eustachian tube that lets nasopharyngeal secretions reflux, causing perforation and discharge but rarely cholesteatoma. Cleft palate is the opposite case: functional tubal obstruction leads to retraction and cholesteatoma. Once the drum is open, reinfection comes from reflux or insufflation (crying, nose blowing, the Toynbee effect) without the protective gas cushion, or from contaminated bath and swimming water. (Bluestone & Stool 5e, Ch 38, pp 777-781)"
+ },
+ {
+  "topic": "Chronic Otitis Media / Cholesteatoma",
+  "field": "manage",
+  "text": "**Atelectasis and retraction-pocket management**: Acute or total atelectasis during a URI or barotrauma is self-limited. Treat the nose, and do a myringotomy only for severe symptoms. For chronic atelectasis, look for adenoid, allergy or sinus disease. Autoinflation has no sustained benefit (the drum re-retracts within 15 minutes to 5 hours) and has rarely caused pneumolabyrinth. Place a tube for a chronic posterosuperior or attic pocket. If the pocket stays stuck to the ossicles despite the tube, adhesive otitis media is present, and tympanoplasty with tragal or conchal cartilage-perichondrium plus a tube is indicated. At examination under anesthesia, probe the pocket and check the incus and stapes. A pocket that balloons outward under nitrous oxide usually needs only a tube. Expect recurrence and follow for years. (Bluestone & Stool 5e, Ch 38, pp 806-808)"
+ },
+ {
+  "topic": "Chronic Otitis Media / Cholesteatoma",
+  "field": "pathophysiology",
+  "text": "**Adhesive otitis media**: Adhesive otitis media is a healing sequela of recurrent or chronic inflammation, in which fibrous proliferation of the mucosa binds the ossicles. Bluestone stages: 1, adhesions with no functional deficit and an aerated ear; 2, mild conductive loss from ossicular fixation or discontinuity or reduced drum compliance, still aerated; 3, maximal conductive loss with no middle-ear space. Schuknecht called it fibrous, fibrocystic or fibro-osseous sclerosis. A posterosuperior pocket adherent to the incus causes rarefying osteitis, discontinuity and cholesteatoma. Ossiculoplasty in an adhesive ear often fails over time because adhesions re-form, so prevention (treating recurrent AOM, OME and atelectasis) is the best strategy. (Bluestone & Stool 5e, Ch 38, pp 808-809)"
+ },
+ {
+  "topic": "Chronic Otitis Media / Cholesteatoma",
+  "field": "workup",
+  "text": "**Bluestone staging and epidemiology of acquired cholesteatoma**: Record whether infection is present. Stage 1, confined to the middle ear without ossicular erosion; 2, the same with ossicular erosion; 3, middle ear and mastoid without erosion; 4, the same with erosion; 5, extends to areas not fully accessible surgically (e.g., medial to the labyrinth); 6, beyond the temporal bone. In Sheehy's 1024 cases, the defect was attic in 42%, posterosuperior in 31%, total perforation 18%, central 6% and none 3%. Incidence is about 6 per 100,000 overall and peaks at 9.2 per 100,000 at ages 10-19. (Bluestone & Stool 5e, Ch 38, pp 809-810)"
+ },
+ {
+  "topic": "Chronic Otitis Media / Cholesteatoma",
+  "field": "recognize",
+  "text": "**Exam and hearing pitfalls**: No tympanometric pattern diagnoses cholesteatoma, and the tympanogram may be normal. The size of the drum defect does not predict extent: a tiny attic defect can hide extensive disease. Always remove a crust over the pars flaccida or posterosuperior quadrant. Hearing can be near normal despite ossicular erosion when the cholesteatoma or pocket bridges the gap ('hearing through cholesteatoma'). Inspect the entire drum of every child under anesthesia for tubes, to catch pockets or cholesteatoma. (Bluestone & Stool 5e, Ch 38, pp 815, 821)"
+ },
+ {
+  "topic": "Chronic Otitis Media / Cholesteatoma",
+  "field": "manage",
+  "text": "**Tympanosclerosis handling**: Myringosclerosis alone needs no surgery. Place a myringotomy in uninvolved drum, because removing large plaques leaves a permanent perforation. During tympanoplasty, plaque removal is optional when it does not interfere. Ossicular fixation from tympanosclerosis often refixes after plaque removal and ossiculoplasty, so consider a hearing aid. Tubes increase myringosclerosis but may reduce later ossicular fixation by controlling inflammation. (Bluestone & Stool 5e, Ch 38, pp 819-820)"
+ },
+ {
+  "topic": "Acute Mastoiditis / Petrous Apicitis",
+  "field": "pathophysiology",
+  "text": "**Mastoiditis without periosteitis and the aditus block**: Nearly every AOM or OME involves the mastoid. A cloudy mastoid on CT without osteitis is an incidental finding, not a complication, and is managed as the underlying AOM or OME. The mastoid starts as a single antrum and is usually extensively pneumatized by age 2. Infection progresses from hyperemia and edema to exudate, demineralization of septa, coalescence and escape of pus, and after 7-10 days granulation tissue and hypertrophic osteitis form. Edema at the aditus ('bottleneck') explains mastoiditis with a clear middle ear. Periosteitis spreads by the mastoid emissary vein and responds to antibiotics plus myringotomy, unlike a subperiosteal abscess. Mastoiditis complicated 20% of AOM in 1938 vs 2.8% a decade later. It is most common in infants, which argues for treating AOM in infants with antibiotics, and pneumococcal conjugate vaccine did not reduce it. (Bluestone & Stool 5e, Ch 38, pp 785-788)"
+ },
+ {
+  "topic": "Labyrinthitis / Infections of the Labyrinth",
+  "field": "manage",
+  "text": "**Serous labyrinthitis and congenital window defects**: With AOM, do tympanocentesis, myringotomy and a tube, and give parenteral therapy covering pneumococcus, H. influenzae and Moraxella. Labyrinthectomy is never indicated for serous labyrinthitis. Suspect a congenital perilymphatic/CSF fistula when a child with otitis has mixed loss, vertigo or nystagmus. In Pittsburgh, 64% of children explored for fistula had otitis media, and 93% of those had a fistula. CT shows an inner- or middle-ear anomaly (e.g., Mondini, large vestibular aqueduct) in only about half. Once the ear is dry, explore, and pack both windows with temporalis muscle or connective tissue even if no leak is seen. Typical findings are a laterally facing round window, a deformed stapes or a window fissure. A ventriculoperitoneal shunt is an option for refractory leaks. (Bluestone & Stool 5e, Ch 38, pp 798-799)"
+ },
+ {
+  "topic": "Labyrinthitis / Infections of the Labyrinth",
+  "field": "manage",
+  "text": "**Suppurative and chronic labyrinthitis**: Suppurative disease presents with sudden vertigo, vomiting, deep pain and severe SNHL. Nystagmus first beats toward the affected ear and then away once function is lost. MRI shows the labyrinthitis, CT shows predisposing defects, and CSF is normal without meningitis. Facial palsy, meningitis and later cerebellar abscess may follow. Treat with myringotomy and a tube, a cortical mastoidectomy for osteitis, or a modified radical mastoidectomy for cholesteatoma or CSOM, plus gram-negative coverage (Pseudomonas, Proteus). Perform labyrinthectomy only for complete loss of function or meningeal spread despite antibiotics. Delay major surgery until meningitis is controlled. Chronic labyrinthitis usually comes from a cholesteatoma fistula of the lateral semicircular canal, with slowly progressive loss. Recurrent meningitis needs CT and MRI to look for an inner-to-middle-ear defect. (Bluestone & Stool 5e, Ch 38, pp 799-801)"
+ },
+ {
+  "topic": "Acute Otitis Externa",
+  "field": "recognize",
+  "text": "**Otitis externa secondary to otorrhea (infectious eczematoid dermatitis)**: Draining AOM through a perforation or tube infects the canal skin, which shows edema, pus and yellow crusts. Extreme tenderness with tight meatal stenosis favors primary AOE. Significant hearing loss, a recent AOM, or a large-volume tympanogram points to a nonintact drum, and a normal tympanometric peak suggests a normal middle ear. Pseudomonas, S. aureus, Proteus, MRSA and (when chronic) Aspergillus are typical. S. aureus can cause autosensitization spread to the pinna and body. Treat the middle-ear source and use only ofloxacin or ciprofloxacin-dexamethasone drops. Avoid aminoglycosides, acetic acid and antifungal drops (m-cresyl acetate, terbinafine, gentian violet) when the drum is open. Use a wick for stenosis, and give IV therapy for toxicity or spread. Also consider impetigo and contact or seborrheic dermatitis. (Bluestone & Stool 5e, Ch 38, pp 803-805)"
+ },
+ {
+  "topic": "Ossicular Discontinuity",
+  "field": "recognize",
+  "text": "**Patterns of inflammatory ossicular damage**: The incus long process is eroded most often, from poor blood supply and adherence of a posterosuperior pocket. The stapes crura come second (from pockets or cholesteatoma). Manubrium erosion goes with perforation but adds little loss. Incudostapedial discontinuity behind an intact drum gives a maximal 50-60 dB loss, which is less when a perforation coexists. A conductive loss of about 30 dB with a perforation implies ossicular involvement. High compliance suggests discontinuity and low compliance fixation, though the distinction is unreliable. In children, fixation is usually from adhesive otitis media and rarely from tympanosclerosis. CT detects only large defects. (Bluestone & Stool 5e, Ch 38, pp 820-821)"
+ },
+ {
+  "topic": "Ossicular Discontinuity",
+  "field": "manage",
+  "text": "**Pediatric ossiculoplasty decisions**: Operate only when neither ear has had effusion or atelectasis for at least 1 year (risk is higher the younger the child). Bilateral maximal conductive loss favors surgery. For unilateral mild to moderate loss, fit a hearing aid and defer surgery to adolescence, when local anesthesia is possible. In cholesteatoma surgery, stage the ossiculoplasty to the second look. Prefer the child's own incus (interposition) over prostheses. Never do a stapedectomy with a perforation, and rarely if ever in a child with recent otitis, because of the risk of suppurative labyrinthitis. Freed fixed ossicles often refix, and footplate status predicts TORP results. (Bluestone & Stool 5e, Ch 38, pp 821-822)"
+ },
+ {
+  "topic": "Facial Paralysis",
+  "field": "teach",
+  "text": "**Otitic facial palsy is often mislabeled Bell palsy**: Facial paralysis complicated 0.5% of AOM before antibiotics vs about 0.005% now (Denmark). Children with acute facial palsy are frequently misdiagnosed with Bell palsy in the ED, so every child needs a full ENT exam with pneumatic otoscopy. An underlying disease such as leukemia should be considered when palsy develops during otitis. In a Washington series, incomplete palsies resolved with myringotomy and IV antibiotics alone. (Bluestone & Stool 5e, Ch 38, pp 802-803)"
+ },
+ {
+  "topic": "Pediatric Head & Neck Tumors",
+  "field": "teach",
+  "text": "**Middle-ear rhabdomyosarcoma prognosis and therapy**: Although parameningeal, middle-ear and temporal bone RMS does better than other parameningeal sites (younger age, embryonal histology in up to 90%). 5-year survival was 88% in IRS-IV vs 42% in IRS-I, and 3-year survival was 48% with metastases. About 15% have distant metastases at diagnosis (lung most often), and nodes are involved in 5-20%. It spreads via the eustachian tube to the infratemporal fossa and nasopharynx, and through the fallopian canal to the IAC and posterior fossa. Dural or sigmoid involvement is a poor sign. On MRI it is T2 hyperintense and enhances, and desmin and muscle-specific actin confirm it. Therapy is VAC chemotherapy (vincristine, actinomycin D, cyclophosphamide) with radiation. Resect only if complete removal is possible without mutilation, and do no prophylactic neck dissection. Late RT effects include growth or pituitary failure, cataract, and mandible/TMJ hypoplasia. (Bluestone & Stool 5e, Ch 42, pp 895-899)"
+ },
+ {
+  "topic": "Pediatric Head & Neck Tumors",
+  "field": "recognize",
+  "text": "**Temporal bone LCH specifics**: Temporal bone involvement is present in about 10% of children with eosinophilic granuloma, 75% with Hand-Schüller-Christian disease and 40% with Letterer-Siwe disease, and is the first presentation in up to 25%. LCH polyps arise in the mastoid and erode the posterosuperior canal wall. They often spare the middle ear and ossicles behind a normal drum, and the otic capsule resists erosion, so SNHL, vertigo or facial palsy is rare. About 30% of unifocal cases progress, and mortality approaches 10% (worse under age 1 or with liver, lung, spleen or marrow disease). The Histiocyte Society counts the temporal bone as a *special site* (vinblastine-prednisone for 6 months). Follow monthly or every 2 months for the first year, with CT at 1 year. (Bluestone & Stool 5e, Ch 42, pp 899-902)"
+ },
+ {
+  "topic": "Chronic Otitis Media / Cholesteatoma",
+  "field": "workup",
+  "text": "**Congenital cholesteatoma: Nelson types and non-middle-ear sites**: Nelson types: I, mesotympanum without incus or stapes erosion; II, with ossicular erosion but no mastoid; III, mastoid extension, with recurrence of 0%, 34% and 55% respectively. Potsic stages I-IV were distributed 40/14/23/23%. On CT the lesion is hypodense and nonenhancing, and unlike in chronic ear disease the mastoid is well aerated. CT can be skipped if the lesion is wholly visible anterosuperiorly. *Congenital mastoid cholesteatoma* (epithelium trapped in sutures when the mastoid fontanelle closes) is often found incidentally or as neck pain or abscess. Mastoid-only lesions erode the dural plate, and those reaching the middle ear erode ossicles. *Petrous apex cholesteatoma* is resected through a transcochlear approach if hearing is lost or a middle fossa approach if it is preserved, and is exteriorized if the matrix cannot be removed. (Bluestone & Stool 5e, Ch 42, pp 903-905)"
+ },
+ {
+  "topic": "Petrous Apex Lesions",
+  "field": "workup",
+  "text": "**Contralateral apex and CT density clues**: With petrous apex cholesteatoma the opposite apex is often sclerotic, whereas cholesterol granuloma arises in a well-pneumatized system with an extensively aerated opposite apex. On CT, cholesterol granuloma is isodense to brain, cholesteatoma is hypodense to brain and isodense to CSF, and a mucocele is hypodense unless infected. Mucous cyst: no erosion, T1 low, T2 high. Benign slow lesions remodel bone with sclerotic margins, while neoplasms erode irregularly and enhance (unlike cholesteatoma, granuloma, mucocele and dermoid). (Bluestone & Stool 5e, Ch 42, pp 904-905)"
+ },
+ {
+  "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
+  "field": "manage",
+  "text": "**Malignant hyperthermia crisis numbers**: Inheritance is autosomal dominant with variable penetrance, and masseter rigidity is the most common first sign. Call for help, stop volatiles and succinylcholine, end surgery, and hyperventilate with 100% O2. Give dantrolene 2.5 mg/kg, repeating 1 mg/kg up to 10 mg/kg, then about 1 mg/kg every 6 hours for at least 24 hours. Treat acidosis with bicarbonate and hyperkalemia with glucose, insulin and calcium (no potassium). Never give calcium channel blockers for arrhythmias. Cool without overcooling, and force diuresis against myoglobinuria. Watch for DIC (about 7%), and monitor in the ICU for 36 hours because about 20% recrudesce. For a known susceptible patient, flush the machine with 100% O2 at high flow for 20-30 minutes. (Pasha 6e, Ch 11, pp 698-699)"
+ },
+ {
+  "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
+  "field": "recognize",
+  "text": "**Methemoglobinemia from topical anesthetics**: Prilocaine (e.g., in EMLA) and benzocaine can oxidize hemoglobin to methemoglobin, which cannot carry oxygen. Pulse oximetry then plateaus near 85% regardless of the true saturation, so confirm with co-oximetry. Treat with 1% methylene blue IV. In G6PD deficiency methylene blue can cause hemolysis, so these patients may need transfusion, exchange or dialysis instead. (Pasha 6e, Ch 11, p 698)"
+ },
+ {
+  "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
+  "field": "teach",
+  "text": "**Sedation continuum and MAC**: Per ASA, sedation runs from minimal (anxiolysis) to moderate (purposeful response to voice or light touch) to deep (purposeful response only to painful stimulation) to general anesthesia (unarousable). Airway intervention may be needed at deep sedation and beyond. Monitored anesthesia care is a *service* by a qualified anesthesia provider, not a particular depth of sedation. Related pearls: hydromorphone is about 5 times as potent as morphine; remifentanil is ultra-short acting for TIVA; sugammadex encapsulates rocuronium or vecuronium, allowing quick reversal before nerve monitoring. (Pasha 6e, Ch 11, pp 695-697)"
+ }
+]

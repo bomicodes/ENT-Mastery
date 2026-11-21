@@ -1,0 +1,134 @@
+{
+ "slug": "septal-perforation-repair",
+ "title": "Septal Perforation Repair",
+ "domain": "Rhinology",
+ "or_family_v190": "nasal",
+ "linked_topic": "Septal Perforation",
+ "source_label": "Cummings 7e (The Nasal Septum) and Pasha 6e",
+ "indications": "A septal perforation that still causes symptoms (crusting, epistaxis, whistling, obstruction from turbulent airflow, or progressive saddling) despite nasal hygiene, in a patient who has stopped any causative drug use and whose cause has been worked up. Perforations up to about 2 cm in vertical height close most reliably with bilateral mucoperichondrial advancement flaps and an interposition graft. Large perforations, active vasculitis, ongoing cocaine use, or a poor surgical candidate are better served by a silicone button or by observation. Asymptomatic perforations do not need surgery.",
+ "setup": [
+  "Supine, head slightly elevated; general anesthesia with oral RAE tube",
+  "Topical oxymetazoline pledgets; lidocaine with epinephrine for hydrodissection of the subperichondrial plane on both sides",
+  "Headlight and endoscopes (0 and 30 degree), Cottle and Freer elevators, angled scissors, fine absorbable suture on a small cutting needle",
+  "Graft: temporalis fascia, acellular dermis, mastoid periosteum, or crushed septal / conchal cartilage; prep the scalp or ear if harvesting",
+  "Silicone splints cut to cover the repair on both sides, with through-and-through fixation suture",
+  "Ruler to measure perforation height and length before and after decongestion"
+ ],
+ "landmarks": [
+  "Posterior and superior edges of the perforation (vertical height drives difficulty)",
+  "Nasal floor and inferior meatus, the main donor mucosa for advancement",
+  "Maxillary crest and premaxilla, where the floor flap is tethered",
+  "Caudal septum and medial crura for open or hemitransfixion access",
+  "Upper lateral cartilage junction along the dorsum for superior flap release",
+  "Anterior ethmoid and septal branches of the sphenopalatine artery feeding flap bases"
+ ],
+ "danger": [
+  "Tearing the flaps while elevating scarred mucosa off the perforation edge",
+  "Suture lines on both sides lying directly over each other",
+  "Closing under tension rather than adding releasing incisions",
+  "Operating on an unrecognized vasculitis, malignancy, or active cocaine user",
+  "Overresecting remaining cartilage and losing dorsal or caudal support",
+  "Flap ischemia from cautery near the pedicle"
+ ],
+ "steps": [
+  [
+   "Confirm the work-up",
+   "Before the day of surgery the edge should have been biopsied when the cause is unclear, and serology reviewed (ANCA, ACE, treponemal test) along with a urine drug screen if cocaine is possible. Measure the perforation in both dimensions after decongestion; vertical height matters more than length because flap advancement is mainly up from the floor and down from the roof."
+  ],
+  [
+   "Choose the approach",
+   "Use an external (open) rhinoplasty approach for perforations over about 1 cm or those placed high and posterior, because it gives a two-handed bimanual view of both sides. Small anterior defects can be done endonasally through a hemitransfixion incision or with an endoscope. Mark incisions so the planned flaps are based on robust blood supply."
+  ],
+  [
+   "Inject and elevate around the defect",
+   "Hydrodissect under the mucoperichondrium and mucoperiosteum on both sides. Elevate bilateral subperichondrial flaps from the caudal septum backward, circling the perforation. At the defect edge, sharply divide the fused nasal mucosa so that each side has its own mucosal layer, keeping the cut close to the opposite side to leave enough tissue for closure."
+  ],
+  [
+   "Extend elevation to the nasal floor",
+   "Continue the elevation under the mucoperiosteum of the nasal floor out to the inferior meatus on each side, separating it sharply at the maxillary crest where fibers are dense. A wide floor flap that extends laterally under the inferior turbinate is what supplies most of the tissue for closure without tension."
+  ],
+  [
+   "Free the superior mucosa",
+   "Elevate the mucosa superiorly toward the dorsum and, if needed, under the upper lateral cartilages. This creates a superior flap that can be brought down to meet the inferior flap. Release along the undersurface of the upper laterals if the superior flap is too tight to reach the midpoint of the defect."
+  ],
+  [
+   "Make releasing incisions",
+   "If the flaps will not meet without tension, make an incision along the floor of the inferior meatus (bipedicled floor flap based anteriorly and posteriorly) and, if needed, a high incision under the dorsum to create a bipedicled superior flap. Keep at least one pedicle wide; the released flaps slide toward each other to close the hole."
+  ],
+  [
+   "Close the first side",
+   "Advance the superior and inferior flaps on the first side and suture the edges with fine interrupted absorbable sutures. Evert the mucosal edges and avoid strangulating the tissue. Full closure on at least one side is the goal; small gaps on the second side often heal over the graft if the first side is intact."
+  ],
+  [
+   "Place the interposition graft",
+   "Size the graft (temporalis fascia, acellular dermis, periosteum, or thin crushed cartilage) to be larger than the defect by about 1 cm in each direction. Slide it between the two mucosal layers so it overlaps the repair and acts as a scaffold for mucosal ingrowth. Secure it with a through-and-through quilting suture."
+  ],
+  [
+   "Close the second side",
+   "Repeat the flap advancement on the opposite side, offsetting the suture line from the first side where possible so the two closures are not stacked. If complete closure is impossible on the second side, leave a small gap over the graft rather than closing under tension."
+  ],
+  [
+   "Replace structural support",
+   "Return any straightened or crushed septal cartilage to the midline pocket as needed for support, avoiding new tears. In an open approach, reset the medial crura with a columellar strut or tongue-in-groove if tip support was lost, and close the transcolumellar and marginal incisions in layers."
+  ],
+  [
+   "Cover exposed floor",
+   "Bare bone of the nasal floor at the donor sites will remucosalize. Cover it with a thin layer of absorbable packing or ointment-coated material, and confirm no exposed cartilage remains over the repair site."
+  ],
+  [
+   "Splint the repair",
+   "Place silicone splints on both sides of the septum, cut to cover the repair completely, and fix them with a transseptal suture placed away from the repair. Splints protect the repair from drying and crusting and hold the layers together while the graft revascularizes."
+  ]
+ ],
+ "exit_check": [
+  "Repair inspected endoscopically on both sides: flaps viable, closure intact on at least one side, graft covered",
+  "Splints secured and not compressing the flap pedicles; no active bleeding",
+  "External incisions closed and tip support confirmed"
+ ],
+ "postop": [
+  "Saline spray several times daily and ointment to the nasal vestibule; no nose blowing for 2 weeks",
+  "Splints removed at about 2 to 3 weeks, then gentle debridement of crusts",
+  "Strict avoidance of cocaine, nicotine, and topical decongestant overuse",
+  "Humidification during healing; check closure endoscopically at 1 and 3 months"
+ ],
+ "complications": {
+  "early": [
+   "Flap necrosis or dehiscence",
+   "Septal hematoma",
+   "Epistaxis",
+   "Crusting and obstruction around splints"
+  ],
+  "late": [
+   "Recurrent or residual perforation",
+   "Synechiae",
+   "Saddle deformity or tip ptosis",
+   "Persistent whistling with small residual defect"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the most common cause of septal perforation and how is it prevented?",
+   "Prior septal surgery, especially opposing bilateral mucoperichondrial tears. Prevent it by elevating in the true subperichondrial plane, repairing tears immediately, and replacing crushed cartilage into the pocket so opposing tears are not in direct contact."
+  ],
+  [
+   "Which perforation dimension best predicts surgical success?",
+   "Vertical height. Flaps advance mainly from the floor and roof, so a perforation over about 2 cm high is hard to close; anteroposterior length is less limiting."
+  ],
+  [
+   "Why place an interposition graft rather than just suturing the mucosal flaps?",
+   "The graft gives a scaffold between the two mucosal layers that allows healing across any small gap on one side and reduces failure when suture lines are stacked; closure rates are higher with a graft."
+  ],
+  [
+   "What must you rule out before repairing an atraumatic perforation?",
+   "Granulomatosis with polyangiitis, sarcoidosis, syphilis, tuberculosis, malignancy (including NK/T-cell lymphoma), and cocaine use; biopsy the edge and check serology. Ongoing cocaine or active vasculitis is a contraindication."
+  ],
+  [
+   "What nonsurgical option do you offer a poor candidate?",
+   "A silicone septal button, placed in clinic or under brief anesthesia, with nasal hygiene. It relieves whistling and bleeding but may crust and need periodic replacement."
+  ]
+ ],
+ "source_basis": [
+  "Cummings Otolaryngology: Head and Neck Surgery, 7th ed., Chapter 29: The Nasal Septum (septal perforation repair)",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed., Chapter 1: Allergy and Rhinology (Septal Perforation)"
+ ]
+}

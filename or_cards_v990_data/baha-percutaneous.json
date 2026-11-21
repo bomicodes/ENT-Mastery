@@ -1,0 +1,129 @@
+{
+ "slug": "baha-percutaneous",
+ "title": "Percutaneous Bone-Anchored Hearing Implant (Abutment)",
+ "domain": "Otology",
+ "or_family_v190": "otology",
+ "linked_topic": "Hearing Aids and Bone-Conduction Devices",
+ "source_label": "Pasha 6e and Cummings 7e (Implantable Hearing Devices)",
+ "indications": "Conductive or mixed hearing loss when conventional air-conduction aids cannot be worn or fail: congenital aural atresia or microtia, chronically draining ears or open mastoid cavities aggravated by occlusion, canal stenosis, and ossicular anomalies not suitable for ossiculoplasty. Also single-sided deafness with normal contralateral bone conduction (bone-conduction thresholds on the better side within device fitting range). Candidates should trial the processor on a headband or test rod preoperatively. Implantation is generally done at age 5 or older with at least about 3 mm of cortical bone; younger or thin-skulled children use a Softband or a two-stage approach. Poor hygiene, inability to care for the abutment, and heavy radiation to the site increase failure risk.",
+ "setup": [
+  "General anesthesia (local with sedation is suitable for many adults); supine, head turned, hair shaved over a small area behind the ear",
+  "Preoperative headband or test-rod trial documented; audiogram confirming bone-conduction thresholds in device range",
+  "Mark the site about 50-60 mm posterosuperior to the canal, along the line of the superior orbital rim-to-canal axis, so the processor clears the auricle and eyeglass arm",
+  "Implant kit with guide and widening drills, countersink, fixture with preattached abutment of chosen length (soft tissue thickness gauge), drill unit with low-speed torque control and copious irrigation",
+  "Plan with microtia surgeon if auricular reconstruction is anticipated (place implant more posterior and superior)"
+ ],
+ "landmarks": [
+  "External auditory canal and temporal line",
+  "Mastoid tip and suprameatal region",
+  "Sigmoid sinus and posterior fossa dura (thin pediatric bone)",
+  "Temporalis muscle edge",
+  "Postauricular hairline",
+  "Planned auricular reconstruction pocket"
+ ],
+ "danger": [
+  "Thermal bone injury from overheating (osseointegration failure)",
+  "Dural or sigmoid sinus exposure in thin skulls",
+  "Implant too close to auricle causing feedback and processor contact",
+  "Excess soft tissue thickness leading to skin overgrowth",
+  "Poor angle of insertion leading to instability"
+ ],
+ "steps": [
+  [
+   "Mark and confirm location",
+   "With the patient positioned, use the template to mark the implant site 50-60 mm behind the canal, high enough to avoid the pinna and eyeglass temple. In microtia candidates, move posterior and superior to keep the future reconstruction field untouched. Note any prior skull base plates."
+  ],
+  [
+   "Local infiltration and measure tissue",
+   "Infiltrate with lidocaine and epinephrine. Measure skin and subcutaneous thickness with a needle or gauge to select abutment length. Modern soft tissue preservation techniques use a longer abutment rather than thinning, accepting thicker tissue when it remains stable."
+  ],
+  [
+   "Incision",
+   "Make a short linear incision (about 2-3 cm) just behind the mark, or use a punch (minimally invasive punch technique) directly over the site. Avoid wide skin flaps; preserving soft tissue reduces numbness, alopecia and adverse skin reactions compared with classic thinning techniques."
+  ],
+  [
+   "Expose periosteum",
+   "Dissect to the periosteum and incise it in a cruciate or linear fashion, elevating only a small area so the fixture seats directly on bone. Leave the periosteum in place around the site where possible for vascular support of the overlying tissue."
+  ],
+  [
+   "Guide drill",
+   "Using the guide drill with high-speed rotation and continuous irrigation, drill to 3 mm, check the depth for dura or sinus, and deepen to 4 mm only if bone is adequate. Use intermittent strokes and pull back regularly to clear chips and cool the bone."
+  ],
+  [
+   "Widen and countersink",
+   "Use the widening drill with the matching spacer and then the countersink to create a seat for the fixture flange. Keep the drill perpendicular to the bone surface. Maintaining heavy irrigation and avoiding heating above about 47 degrees Celsius is essential for osseointegration."
+  ],
+  [
+   "Place the fixture",
+   "Switch to low speed with torque limit. Insert the fixture with preattached abutment at low speed, following the system's irrigation protocol, until the flange seats flush on bone without stripping the threads. Typical torque settings are about 40-50 Ncm for good bone, lower for soft or thin pediatric bone."
+  ],
+  [
+   "Two-stage option",
+   "In young children or with less than about 2.5-3 mm of bone, place the fixture without the abutment, close skin over it, and return after several months to attach the abutment. Many surgeons place a sleeper fixture nearby for use if the first is lost."
+  ],
+  [
+   "Bring abutment through skin",
+   "With a linear incision, punch a hole through the skin adjacent to or through the incision over the abutment and pass it through, or close the incision around it with a punch site separate from the scar. Ensure skin lies flat and is not tight around the abutment."
+  ],
+  [
+   "Close and dress",
+   "Close the incision with absorbable sutures. Place a healing cap and a gentle compressive dressing around the abutment to limit hematoma and edema. Remove the dressing after about 1 week and inspect the skin interface."
+  ],
+  [
+   "Load the processor",
+   "Allow osseointegration before loading the processor. Classic wait times were about 12 weeks in adults and longer in children, but many centers now load adults at 3-6 weeks with modern fixtures. Fit and program the processor with audiology."
+  ]
+ ],
+ "exit_check": [
+  "Fixture flange flush with bone and abutment stable without rotation",
+  "Skin flat around the abutment with no tension; abutment height above skin surface appropriate",
+  "Hemostasis achieved and healing cap with compressive dressing in place"
+ ],
+ "postop": [
+  "Dressing removed at about 1 week; inspect for hematoma or skin necrosis",
+  "Daily gentle cleaning of the abutment-skin interface with soft brush and soap and water once healed",
+  "Processor loading after osseointegration period, then audiologic fitting",
+  "Long-term skin checks (Holgers grading) at each visit"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma or seroma",
+   "Skin flap necrosis or wound dehiscence",
+   "Dural exposure or CSF leak (rare)",
+   "Pain and numbness around the site"
+  ],
+  "late": [
+   "Adverse skin reaction around the abutment (Holgers grading)",
+   "Skin overgrowth requiring revision or longer abutment",
+   "Osseointegration failure or fixture loss (higher in children and irradiated bone)",
+   "Trauma-related abutment loss"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Who qualifies for a bone-anchored implant for single-sided deafness?",
+   "Patients with profound unilateral SNHL and normal hearing in the other ear. The device transmits sound from the deaf side to the hearing cochlea, improving the head shadow effect but not localization."
+  ],
+  [
+   "Why two-stage surgery in young children?",
+   "Thin skull bone (often under 3 mm) and rapid bone turnover increase nonintegration and extrusion. Staging protects the fixture while it integrates; a sleeper fixture provides a backup."
+  ],
+  [
+   "What causes osseointegration failure?",
+   "Bone overheating during drilling, poor bone quality (radiation, thin cortex), excessive early load, infection and trauma. Copious irrigation, low-speed insertion with torque control, and proper healing time reduce it."
+  ],
+  [
+   "How do soft tissue preservation techniques differ from classic thinning?",
+   "They avoid removing subcutaneous tissue and use a longer abutment through a linear incision or punch. This gives better sensation, fewer alopecia problems, shorter surgery, and similar or lower rates of adverse skin reactions."
+  ],
+  [
+   "What is the ideal implant location?",
+   "About 50-60 mm posterosuperior to the canal along the canal-to-orbital-rim line, so the processor does not touch the pinna and avoids feedback, and away from any planned microtia reconstruction."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RS, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 7, Otology and Neurotology (Bone-Anchored Hearing Devices)",
+  "Pasha 6e Chapter 9, Pediatric Otolaryngology (Hearing Device Considerations: BAHA)",
+  "Flint PW et al. Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 159, Implantable Hearing Devices"
+ ]
+}

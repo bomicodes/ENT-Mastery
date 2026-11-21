@@ -1,0 +1,138 @@
+{
+ "slug": "laryngopharyngectomy",
+ "title": "Total Laryngopharyngectomy / Pharyngeal Reconstruction",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "headneck",
+ "linked_topic": "Hypopharyngeal Cancer",
+ "source_label": "Pasha 6e and Cummings Otolaryngology 7e",
+ "indications": "Resection of the larynx with part or all of the pharynx for advanced hypopharyngeal squamous cell carcinoma (T4a, piriform apex, postcricoid or posterior pharyngeal wall disease with laryngeal fixation or cartilage invasion), laryngeal cancer with extensive pharyngeal spread, salvage after failed radiation or chemoradiation, and selected thyroid or cervical esophageal cancers. When enough pharyngeal mucosa remains (classically at least about 1.5 cm relaxed or 2.5 cm stretched, with many surgeons preferring more) it can be closed primarily or patched; a circumferential defect needs a tubed fasciocutaneous free flap (anterolateral thigh or radial forearm), a free jejunum, or, when the cervical esophagus is involved below the thoracic inlet, total laryngopharyngoesophagectomy with gastric pull-up. Contraindications include unresectable prevertebral fixation, carotid encasement, and distant metastases.",
+ "setup": [
+  "Panendoscopy with esophagoscopy to map submucosal and inferior extent (skip lesions are common) and to exclude synchronous primaries; contrast CT or MRI and PET-CT for nodes, paratracheal and mediastinal disease and distant metastases.",
+  "Tumor board and plan with reconstructive (and thoracic or general surgery for gastric pull-up or jejunum) teams; preoperative speech pathology for voice rehabilitation counseling and nutrition optimization.",
+  "Check thyroid function, especially after prior radiation, since hypothyroidism impairs healing and raises fistula risk; plan for hemithyroidectomy or total thyroidectomy with parathyroid preservation or autotransplantation.",
+  "Airway: awake tracheostomy under local anesthesia or careful intubation for bulky, bleeding or obstructing tumors; prepare and mark the thigh, forearm or abdomen as needed.",
+  "Plan the neck: bilateral levels II to IV plus level VI (paratracheal) dissection for most hypopharyngeal primaries."
+ ],
+ "landmarks": [
+  "Hyoid bone and greater cornua",
+  "Thyroid cartilage, cricoid and tracheal rings",
+  "Superior laryngeal neurovascular bundle",
+  "Recurrent laryngeal nerves and paratracheal nodes",
+  "Prevertebral fascia",
+  "Cervical esophagus and thoracic inlet",
+  "Carotid sheath and transverse cervical vessels"
+ ],
+ "danger": [
+  "Carotid artery, especially in salvage necks",
+  "Parathyroid blood supply and hypocalcemia",
+  "Thoracic duct on the left",
+  "Posterior membranous trachea during esophageal dissection",
+  "Inadequate inferior margin in the esophagus",
+  "Recipient vessel depletion in previously operated or irradiated necks"
+ ],
+ "steps": [
+  [
+   "Endoscopy and airway",
+   "Confirm the inferior extent with esophagoscopy at the start. Secure the airway with tracheostomy below the planned stoma, or intubate. Design an apron incision incorporating the stoma and allowing neck dissection exposure, or a separate stoma site if a gastric pull-up or large skin paddle is planned."
+  ],
+  [
+   "Flaps and neck dissection",
+   "Raise subplatysmal flaps from above the hyoid to the clavicles. Perform the bilateral neck dissections first, leaving the specimens attached to the larynx when possible, and preserve the best recipient vessels (transverse cervical, superior thyroid stump, facial artery and internal jugular branches) for the free flap."
+  ],
+  [
+   "Thyroid and central compartment",
+   "Divide the thyroid isthmus. Include the ipsilateral thyroid lobe with the specimen when tumor is near the thyroid cartilage or subglottis, and clear the paratracheal level VI nodes. Preserve the contralateral lobe and at least one well-vascularized parathyroid gland, autotransplanting any gland that is devascularized."
+  ],
+  [
+   "Skeletonize the larynx",
+   "Divide the strap muscles low, ligate the superior laryngeal pedicles, and free the suprahyoid muscles from the hyoid. Release the constrictor muscles from the posterior thyroid cartilage on the uninvolved side to keep mucosa. Dissect the pharynx off the prevertebral fascia from behind, checking for fixation."
+  ],
+  [
+   "Transect the trachea",
+   "Divide the trachea obliquely below the tumor, beveled to create a larger stoma, and place a reinforced tube in the distal trachea. Send a tracheal margin if there is subglottic extension. Separate the posterior tracheal wall from the esophagus carefully to avoid membranous injury."
+  ],
+  [
+   "Enter the pharynx away from tumor",
+   "Open the pharynx on the side opposite the tumor, through the vallecula or contralateral piriform sinus, to see the tumor directly. Cut the mucosal margins under vision with at least 1.5 to 2 cm of clearance, accounting for submucosal spread typical of hypopharyngeal cancer."
+  ],
+  [
+   "Circumferential resection and esophageal margin",
+   "For circumferential tumors, divide the pharynx above the tumor and the cervical esophagus below it, sending superior and inferior margins for frozen section. If the inferior margin is positive or tumor extends to the thoracic inlet, convert to laryngopharyngoesophagectomy with gastric pull-up through a transhiatal approach."
+  ],
+  [
+   "Decide on closure",
+   "Measure the remaining pharyngeal mucosa. Close primarily only if a tension-free lumen remains; patch partial defects with a pedicled pectoralis major flap or a fasciocutaneous free flap; reconstruct circumferential defects with a tubed anterolateral thigh or radial forearm flap, or free jejunum. In salvage cases, add vascularized tissue over the closure."
+  ],
+  [
+   "Tubed fasciocutaneous flap inset",
+   "Tube the anterolateral thigh or radial forearm skin around a salivary bypass tube, suture the vertical seam, and inset it to the posterior pharyngeal wall first. Interdigitate a triangular skin tab into a longitudinal cut in the esophagus at the distal anastomosis to reduce stricture. Exteriorize a monitoring paddle if possible."
+  ],
+  [
+   "Free jejunum alternative",
+   "For jejunum, the general surgeons harvest a segment on a mesenteric arcade and mark its direction. Inset it isoperistaltically, with the distal anastomosis completed and the segment pulled taut to avoid redundancy and kinking. Leave a small external monitoring loop that is removed later at the bedside."
+  ],
+  [
+   "Gastric pull-up",
+   "When the esophagus is resected, the stomach is mobilized on the right gastroepiploic and right gastric arteries, a pyloric drainage procedure is done, and the stomach is passed through the posterior mediastinum to the neck for a single pharyngogastric anastomosis. A feeding jejunostomy is commonly placed."
+  ],
+  [
+   "Stoma, TEP and closure",
+   "Mature the stoma with skin-to-mucosa sutures. Consider primary tracheoesophageal puncture only with a well-healed, non-tubed segment; delay it after tubed flaps, jejunum or pull-up. Cover the carotids with healthy tissue, place suction drains away from the anastomoses and vascular pedicle, and close in layers."
+  ]
+ ],
+ "exit_check": [
+  "Superior, inferior and deep margins clear on frozen section",
+  "Flap or jejunum perfused, without kinking or tension; pedicle lies free and anastomoses watertight",
+  "Carotids covered, stoma matured, and parathyroid tissue preserved or autotransplanted"
+ ],
+ "postop": [
+  "Intensive or step-down care with hourly flap or monitoring-segment checks; humidified air via the stoma",
+  "Calcium and parathyroid hormone checks with replacement as needed; thyroid hormone replacement",
+  "Nothing by mouth with feeding by nasogastric tube, gastrostomy or jejunostomy; contrast swallow at about 7 to 14 days (longer after salvage or radiation) before oral intake",
+  "Watch for fistula (fever, neck erythema, saliva in drains) and chyle leak; protect the carotid if a fistula develops",
+  "Voice rehabilitation with electrolarynx or delayed TEP; dilation for strictures; tumor board for adjuvant chemoradiation"
+ ],
+ "complications": {
+  "early": [
+   "Pharyngocutaneous fistula, especially after radiation",
+   "Free flap or jejunal failure",
+   "Hypocalcemia",
+   "Chyle leak",
+   "Carotid exposure or blowout"
+  ],
+  "late": [
+   "Anastomotic stricture, mostly distal",
+   "Dysphagia and pseudodiverticulum",
+   "Hypothyroidism",
+   "Stomal stenosis",
+   "Recurrence, often peristomal, paratracheal or distant"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How wide must remaining pharyngeal mucosa be for primary closure?",
+   "Classic teaching is at least about 1.5 cm relaxed (2.5 cm stretched), and many surgeons want 3 cm or more; narrower strips risk stricture and dysphagia, so a patch or tubed flap is used. Irradiated mucosa should be reinforced with vascularized tissue."
+  ],
+  [
+   "Anterolateral thigh, radial forearm, jejunum or gastric pull-up: how do you choose?",
+   "Tubed anterolateral thigh or radial forearm suits circumferential defects above the thoracic inlet and avoids an abdominal operation; jejunum gives a mucosal tube with low fistula but needs a laparotomy and has wet speech; gastric pull-up is reserved for cervical esophageal extension below the inlet, with a single anastomosis but higher mortality."
+  ],
+  [
+   "What causes hypocalcemia after gastric pull-up or laryngopharyngectomy?",
+   "Parathyroid devascularization or removal during central neck dissection and thyroidectomy, and in pull-up, reduced calcium absorption from lower gastric acidity, vagotomy and faster intestinal transit."
+  ],
+  [
+   "Why are skip lesions and submucosal spread important?",
+   "Hypopharyngeal SCC spreads submucosally and can have skip lesions in the esophagus, so mucosal margins should be generous with frozen-section confirmation and the esophagus examined before resection."
+  ],
+  [
+   "How do you prevent distal anastomotic stricture with a tubed fasciocutaneous flap?",
+   "Spatulate the esophagus with a longitudinal cut and interdigitate a triangular tab of flap skin into it to break up the circular scar, and use a salivary bypass tube as a stent during healing."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, Hypopharyngeal Cancer: management, surgical options, reconstruction, gastric pull-up complications (p 288-291).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Elsevier; Chapter 101, Neoplasms of the Hypopharynx and Cervical Esophagus.",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Elsevier; Chapter 103, Reconstruction of the Hypopharynx and Esophagus."
+ ]
+}

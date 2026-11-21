@@ -1,0 +1,127 @@
+{
+ "slug": "exit-procedure",
+ "title": "EXIT Procedure / Neonatal Airway Securing",
+ "domain": "Pediatric Airway",
+ "or_family_v190": "airway",
+ "linked_topic": "Congenital Neck Masses",
+ "source_label": "Pasha 6e Ch 9 and Cummings 7e Chs 203 and 206",
+ "indications": "Prenatally diagnosed fetal airway obstruction expected to prevent ventilation at birth: large cervical teratoma or lymphatic malformation compressing or displacing the airway, epignathus, congenital high airway obstruction syndrome (laryngeal atresia, web, or subglottic atresia), severe micrognathia, or removal of a fetal tracheal occlusion balloon. Predictors on ultrasound and fetal MRI include polyhydramnios, absent stomach bubble, tracheal deviation or compression, and mass size. Ex utero intrapartum treatment keeps the fetus on placental circulation while the airway is secured, with variants of EXIT-to-airway, EXIT-to-resection, and EXIT-to-ECMO.",
+ "setup": [
+  "Multidisciplinary team briefing: maternal-fetal medicine, obstetrics, maternal and fetal anesthesia, neonatology, pediatric otolaryngology, pediatric surgery, ECMO team",
+  "Maternal general anesthesia with deep volatile agent for uterine relaxation, arterial line, large-bore access, blood cross-matched",
+  "Fetal medications drawn up: intramuscular opioid, muscle relaxant, atropine, epinephrine",
+  "Airway cart in order: laryngoscopes, rigid ventilating bronchoscopes with telescopes, endotracheal tubes, tracheostomy tray with small tubes",
+  "Fetal pulse oximeter on the hand, warm saline amnioinfusion, sterile ultrasound"
+ ],
+ "landmarks": [
+  "Placental edge on intraoperative ultrasound (hysterotomy must avoid it)",
+  "Fetal larynx position relative to the mass",
+  "Cricoid and tracheal rings through a distorted neck",
+  "Thyroid isthmus and great vessels displaced by the mass",
+  "Umbilical cord (protect from compression and kinking)"
+ ],
+ "danger": [
+  "Loss of uteroplacental circulation from uterine contraction or placental separation",
+  "Maternal hemorrhage from uterine atony after delivery",
+  "Fetal hypoxia, bradycardia, or hypothermia",
+  "Great vessel injury when the neck anatomy is distorted by a mass",
+  "Accidental extubation during transfer"
+ ],
+ "steps": [
+  [
+   "Plan with fetal imaging",
+   "Review ultrasound and fetal MRI: mass type, size, tracheal deviation, polyhydramnios, and placental location. Decide the escalation sequence (direct laryngoscopy, rigid bronchoscopy, tracheostomy, resection, ECMO) and who performs each. Schedule a planned delivery near term, ideally before labor, with a backup plan for preterm labor."
+  ],
+  [
+   "Maternal anesthesia and uterine relaxation",
+   "Maternal anesthesia induces deep general anesthesia with high-concentration volatile agent and adds nitroglycerin if needed to keep the uterus relaxed. Maintain maternal blood pressure with vasopressors to preserve placental perfusion. Confirm fetal heart rate before incision."
+  ],
+  [
+   "Hysterotomy",
+   "Obstetrics maps the placenta by ultrasound and makes a hysterotomy away from its edge, often with a uterine stapling device to limit bleeding. Keep the lower body of the fetus inside the uterus and run warm amnioinfusion to preserve uterine volume and prevent contraction and placental separation."
+  ],
+  [
+   "Deliver head and shoulders",
+   "Deliver only the head, neck, shoulders, and one arm. Place a pulse oximeter on the hand, give intramuscular opioid, muscle relaxant, and atropine, and protect the cord from compression. Assign one person to monitor fetal saturation and heart rate continuously and call out trends."
+  ],
+  [
+   "Direct laryngoscopy and intubation",
+   "Attempt direct or video laryngoscopy first, with an assistant displacing the mass. If the larynx is visible, intubate with an appropriately sized tube and confirm with end-tidal carbon dioxide or bronchoscopic view. Do not ventilate aggressively until the decision to clamp the cord is made."
+  ],
+  [
+   "Rigid bronchoscopy",
+   "If the laryngoscopy view is poor or the lumen is compressed, pass a rigid ventilating bronchoscope with a telescope through the glottis or past the compression. Use a telescope with a tube loaded over it to railroad intubation once the lumen is found."
+  ],
+  [
+   "Tracheostomy when needed",
+   "With laryngeal atresia, failed intubation, or an inaccessible larynx, perform a tracheostomy on placental support. Expose the trachea through a vertical or horizontal incision, retract or divide the thyroid isthmus and mass, place stay sutures, open a vertical tracheal incision, and insert the tube."
+  ],
+  [
+   "Confirm the airway",
+   "Confirm placement with end-tidal carbon dioxide, symmetric chest movement, and stable or rising saturation during gentle ventilation. Secure the tube or tracheostomy with sutures and ties. If no airway is achievable, the team proceeds to ECMO cannulation while still on placental support."
+  ],
+  [
+   "Resection or ECMO if planned",
+   "For EXIT-to-resection, the mass may be partially or fully excised on placental circulation when the airway cannot otherwise be maintained. For EXIT-to-ECMO, pediatric surgery cannulates neck vessels before cord clamping. Keep time on placental support as short as possible, generally under an hour."
+  ],
+  [
+   "Cord clamping and maternal reversal",
+   "When the airway is secure, ventilation is established, the cord is clamped and cut, and the newborn goes to the neonatal team. Anesthesia lowers the volatile agent and gives uterotonics immediately to contract the uterus; obstetrics closes the hysterotomy and monitors for hemorrhage."
+  ],
+  [
+   "Neonatal transfer",
+   "Transfer intubated or tracheostomized with the tube secured, a spare tube and obturator alongside, and a surgeon accompanying. Obtain chest radiograph, postnatal MRI or CT of the mass, and plan definitive treatment (sclerotherapy, resection, or airway reconstruction) in the NICU."
+  ]
+ ],
+ "exit_check": [
+  "Airway confirmed with end-tidal carbon dioxide and rising saturation before cord clamping",
+  "Tube or tracheostomy secured with spare tube at bedside",
+  "Uterine tone restored and maternal bleeding controlled after delivery"
+ ],
+ "postop": [
+  "NICU with dedicated airway precautions; tracheostomy tube changes per pediatric protocol (first change by surgeon)",
+  "Postnatal imaging of the mass and planning for resection, sclerotherapy, or sirolimus",
+  "Maternal monitoring for postpartum hemorrhage and wound complications; counsel about future pregnancies after hysterotomy",
+  "Genetic and multidisciplinary follow-up for associated anomalies"
+ ],
+ "complications": {
+  "early": [
+   "Failure to secure airway with neonatal hypoxic injury or death",
+   "Maternal hemorrhage from uterine atony or placental abruption",
+   "Fetal bradycardia or hypothermia",
+   "Pneumothorax or great vessel injury"
+  ],
+  "late": [
+   "Tracheostomy dependence and its complications",
+   "Neurodevelopmental impairment from perinatal hypoxia",
+   "Recurrent or residual neck mass",
+   "Maternal risks in subsequent pregnancies (uterine rupture)"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the physiologic principle of the EXIT procedure?",
+   "Maintaining uteroplacental gas exchange by keeping the uterus relaxed (deep volatile anesthesia, partial delivery, amnioinfusion) so the fetus is oxygenated while the airway is secured."
+  ],
+  [
+   "What prenatal findings suggest the fetus needs an EXIT?",
+   "Polyhydramnios and an absent or small stomach bubble (impaired swallowing), tracheal deviation or compression, a large anterior neck mass, CHAOS findings such as echogenic enlarged lungs, flattened diaphragm, and fluid-filled dilated airway."
+  ],
+  [
+   "What is the escalating airway sequence during EXIT?",
+   "Direct or video laryngoscopy and intubation, then rigid bronchoscopy, then tracheostomy, then mass resection or ECMO cannulation if an airway still cannot be secured."
+  ],
+  [
+   "What is the major maternal risk, and how is it managed?",
+   "Hemorrhage from uterine atony caused by the deep uterine relaxation; after cord clamping the volatile agent is reduced and uterotonics are given immediately."
+  ],
+  [
+   "What is CHAOS?",
+   "Congenital high airway obstruction syndrome, from laryngeal or tracheal atresia, web, or stenosis, with lung hyperexpansion, inverted diaphragms, and hydrops; it typically requires EXIT-to-tracheostomy."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RA, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Ch 9 Pediatric Otolaryngology, Lymphatic Malformation (p 546-547) and Congenital High Airway Obstruction Syndrome (p 562)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Ch 206 Evaluation and Management of the Pediatric Airway; Ch 203 Vascular Anomalies of the Head and Neck"
+ ]
+}

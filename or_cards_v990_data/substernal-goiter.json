@@ -1,0 +1,145 @@
+{
+ "slug": "substernal-goiter",
+ "title": "Substernal / Intrathoracic Goiter Thyroidectomy",
+ "domain": "Thyroid / Parathyroid / Salivary",
+ "or_family_v190": "thyroid",
+ "linked_topic": "Thyroid Nodule",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Thyroid enlargement extending through the thoracic inlet into the mediastinum that causes tracheal or esophageal compression (dyspnea, positional stridor, dysphagia), superior vena cava or thoracic inlet syndrome, or that carries concern for malignancy, or progressive growth on interval imaging in a fit patient. Because radioiodine and suppression rarely shrink these glands and acute airway compromise can occur, surgery is the mainstay for symptomatic patients with reasonable life expectancy. About 95% can be removed through the neck; plan a combined cervicothoracic approach for disease below the aortic arch, posterior mediastinal or retrotracheal extension, iceberg or inverted-cone shape, separate mediastinal components, recurrent goiter, or invasive malignancy.",
+ "setup": [
+  "Contrast CT (or MRI) of neck and chest to map extension relative to the aortic arch, trachea, esophagus, and great vessels; note tracheal narrowing and deviation",
+  "Preoperative laryngoscopy for cord mobility, thyroid function, calcium baseline; correct anticoagulation",
+  "Joint airway plan with anesthesia: awake fiberoptic intubation if severe compression; rigid bronchoscopy available; nerve-monitoring tube",
+  "Thoracic surgeon on standby for moderate- and high-risk extension, with chest prepped into the field from neck to umbilicus when sternotomy is likely",
+  "Shoulder roll, neck extended, arms tucked; a low, generous Kocher incision that can be extended into a T for sternotomy"
+ ],
+ "landmarks": [
+  "Thoracic inlet: manubrium, clavicular heads, first ribs",
+  "Aortic arch and brachiocephalic (innominate) artery and vein",
+  "Recurrent laryngeal nerve, often stretched over the goiter or displaced anteriorly",
+  "Cricotracheal junction and Beahr's triangle for nerve identification",
+  "Inferior thyroid artery and tubercle of Zuckerkandl",
+  "Parathyroid glands displaced along the expanded capsule",
+  "Tracheoesophageal groove and the retrotracheal space"
+ ],
+ "danger": [
+  "Loss of airway at induction from a compressed or deviated trachea",
+  "Recurrent laryngeal nerve on an unpredictable course over the gland",
+  "Innominate vein and inferior thyroid veins torn by blind traction",
+  "Parathyroid devascularization in long, bilateral dissections",
+  "Pleural breach and pneumothorax during mediastinal delivery",
+  "Postextubation obstruction from bilateral cord palsy or tracheomalacia"
+ ],
+ "steps": [
+  [
+   "Secure the airway",
+   "Follow the planned airway strategy with anesthesia. With significant compression, intubate awake under fiberoptic guidance past the narrowed segment, with a reinforced or nerve-monitoring tube. Confirm electrode position at the glottis and a baseline vagal signal plan. Keep rigid bronchoscopes in the room until the tube is secured."
+  ],
+  [
+   "Incision and flaps",
+   "Place an extended low collar incision just above the sternal notch so that a vertical sternotomy limb, if needed, adds little to the neck scar. Raise subplatysmal flaps to the thyroid cartilage or higher, down over the sternal notch and sternoclavicular joints, and laterally over the sternocleidomastoids. Protect engorged anterior jugular veins."
+  ],
+  [
+   "Open the midline and divide straps",
+   "Separate the strap muscles in the midline and divide the sternothyroid, and the sternohyoid if needed, high to improve exposure of the lateral goiter and superior pedicle. This also gives better venous control. Reapproximate the muscles at closure."
+  ],
+  [
+   "Divide the isthmus early",
+   "Skeletonize and divide the isthmus with an energy device and clear pretracheal fat. For a total thyroidectomy, start on the smaller lobe and complete that side first; this frees the dominant lobe, reduces tension in the neck, and makes the nerves and parathyroids on the large side easier to find."
+  ],
+  [
+   "Middle thyroid vein",
+   "Retract the gland medially and ligate and divide the middle thyroid vein. Handle the goiter gently; vigorous traction on a large gland can avulse the vein from the internal jugular and cause brisk bleeding that is hard to control at the thoracic inlet."
+  ],
+  [
+   "Superior pole first",
+   "Release the upper pole from the cricothyroid muscle and ligate the superior vessels individually on the capsule to protect the external branch of the superior laryngeal nerve. Freeing the top of the gland gives the mobility needed to lift the lower, intrathoracic portion toward the neck."
+  ],
+  [
+   "Find the recurrent laryngeal nerve",
+   "Choose the approach the anatomy allows: superiorly at the cricotracheal junction, laterally near the tubercle of Zuckerkandl above the inferior thyroid artery, or inferiorly in Beahr's triangle. With a large inferior component, the superior approach is often safest. Confirm with the stimulator and trace the nerve as far caudally as exposure permits."
+  ],
+  [
+   "Preserve parathyroids",
+   "Follow the capsule from the superior pole down to the superior parathyroid and dissect tight on the capsule throughout. Keep the inferior glands on their own vessels by ligating inferior thyroid artery branches distally. Check the specimen before it leaves the field; autotransplant any removed gland into the sternocleidomastoid after frozen confirmation."
+  ],
+  [
+   "Deliver the mediastinal component",
+   "Work the gland out of the chest within its capsular plane with gentle upward traction and blunt finger sweeps around the lower pole, staying on the capsule. Avoid morcellation, which risks bleeding and seeding if cancer is present. Ligate inferior veins as they come into view and keep the nerve in sight as the inlet portion rises."
+  ],
+  [
+   "Decide on sternotomy",
+   "Convert if the lower pole cannot be reached by finger, there is bleeding below the inlet that cannot be controlled, the gland is fixed or invasive, or it lies posterior or below the arch. The thoracic team performs a median sternotomy (partial or full), controls the innominate vessels, and dissects the gland upward to the inlet, where the nerve is finally freed."
+  ],
+  [
+   "Posterior mediastinal goiter",
+   "When the gland extends behind the trachea to the posterior pleura, a sternotomy may not reach it. Free and amputate the cervical portion, pack along the nerve to mark it, then reposition for a right posterolateral thoracotomy, dividing Sibson's fascia to join the chest and neck planes while protecting the phrenic nerve and superior vena cava."
+  ],
+  [
+   "Berry's ligament and removal",
+   "At Berry's ligament reduce traction on the lobe, which tents and stretches the nerve. Divide the ligament with fine instruments and bipolar cautery away from the nerve. Remove the lobe and recheck nerve signal; if signal is lost on the first side, consider staging the contralateral side."
+  ],
+  [
+   "Hemostasis and closure",
+   "Irrigate, clear clots, and perform repeated Valsalva maneuvers. Confirm nerve integrity and parathyroid color. Use suction drains selectively for large dead space or anticoagulated patients, knowing a drain does not prevent a hematoma. Close straps and platysma with absorbable sutures, and skin in a way that is easy to reopen."
+  ],
+  [
+   "Extubation planning",
+   "Extubate deep or over an airway exchange catheter when tracheomalacia or cord palsy is a concern, with reintubation equipment ready. Examine the cords as the patient wakes if signal changes occurred. Sternotomy patients go to the ICU for about 24 hours with chest drains in place."
+  ]
+ ],
+ "exit_check": [
+  "Stable airway with cord mobility assessed or a clear plan if neural signal was lost",
+  "Hemostasis after Valsalva in neck and, when opened, mediastinum; no pleural breach unaddressed",
+  "Parathyroids viable or autotransplanted and the specimen checked"
+ ],
+ "postop": [
+  "Head-up nursing and close neck checks for hematoma; bedside suture-removal kit",
+  "Serum calcium and PTH after total or completion thyroidectomy, with a low threshold to start calcium and calcitriol",
+  "Flexible laryngoscopy for any voice change or stridor",
+  "Chest radiograph after sternotomy, thoracotomy, or suspected pleural entry",
+  "Levothyroxine after total thyroidectomy and review of final pathology"
+ ],
+ "complications": {
+  "early": [
+   "Postextubation airway obstruction from bilateral cord palsy or tracheomalacia",
+   "Neck or mediastinal hematoma",
+   "Transient hypocalcemia",
+   "Pneumothorax or chylothorax",
+   "Recurrent laryngeal nerve paresis"
+  ],
+  "late": [
+   "Permanent hypoparathyroidism",
+   "Permanent cord paralysis",
+   "Sternal wound problems after sternotomy",
+   "Recurrent goiter after lobectomy or incomplete removal"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What proportion of substernal goiters can be removed through the neck, and what predicts sternotomy?",
+   "About 95% come out transcervically. Sternotomy becomes likely with extension below the aortic arch, posterior mediastinal or retrotracheal disease, an intrathoracic portion larger than the cervical part (iceberg shape), separate mediastinal components, recurrent goiter, or invasive cancer."
+  ],
+  [
+   "Why is radioactive iodine a poor primary choice for a compressive substernal goiter?",
+   "Multinodular goiters take up iodine unevenly, shrinkage is limited and slow, and early radiation thyroiditis can swell the gland and worsen tracheal compression. It is reserved for patients unfit for surgery."
+  ],
+  [
+   "How does the recurrent laryngeal nerve behave with a large substernal goiter?",
+   "It can be stretched and displaced anteriorly over the gland, so it may be met before it is expected. Identify it early, superiorly at the cricotracheal junction if the lower pole is out of reach, and use stimulation to confirm."
+  ],
+  [
+   "The patient develops stridor after extubation following total thyroidectomy for a large goiter. What is the differential and first step?",
+   "Bilateral recurrent laryngeal nerve palsy, neck hematoma, tracheomalacia, or laryngeal edema. Open the wound at once if a hematoma is suspected; otherwise examine the cords with a flexible scope and reintubate or perform tracheostomy based on the findings."
+  ],
+  [
+   "When should you consider staging a total thyroidectomy?",
+   "When nerve monitoring shows loss of signal on the first side. Delaying the second side until the first nerve recovers avoids bilateral cord paralysis and tracheostomy."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes T (eds). Atlas of Head and Neck Surgery (Springer Surgery Atlas Series, 2024): Ch 48 Surgery for Intrathoracic Goitres (Simo, Nixon, Harrison-Phipps).",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 3 Endocrine (Mediastinal/Substernal Goiter).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 119 Complications of Neck Surgery."
+ ]
+}

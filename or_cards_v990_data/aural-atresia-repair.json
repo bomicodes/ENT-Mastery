@@ -1,0 +1,133 @@
+{
+ "slug": "aural-atresia-repair",
+ "title": "Congenital Aural Atresia Repair (Atresiaplasty)",
+ "domain": "Pediatric Otolaryngology",
+ "or_family_v190": "pediatric",
+ "linked_topic": "Microtia / Aural Atresia",
+ "source_label": "Pasha 6e and Cummings 7e (Evaluation and Management of Congenital Aural Atresia)",
+ "indications": "Congenital aural atresia with favorable CT anatomy, typically a Jahrsdoerfer score of 7 or higher (6 is borderline), normal inner ear and cochlear reserve on bone-conduction ABR or audiogram, and a family motivated for canal care and possible revisions. Usually performed at age 6-7 or older and after rib-cartilage microtia reconstruction so the auricular blood supply is not compromised; with porous polyethylene reconstruction, canal surgery may be timed differently by team protocol. Cholesteatoma behind an atretic plate or canal stenosis with trapped skin is an indication regardless of hearing goals. Poor scores, major malformations, or unwillingness for postoperative care favor bone-conduction devices instead, which close the air-bone gap more reliably.",
+ "setup": [
+  "High-resolution CT temporal bone scored by Jahrsdoerfer grade; review facial nerve course, tegmen height, middle ear size, ossicles, oval and round windows",
+  "Audiogram or ABR with bone conduction confirming cochlear reserve; counsel on stenosis, graft lateralization and revision rates",
+  "General anesthesia without long-acting paralysis, facial nerve monitoring mandatory, microscope, diamond burrs, CO2 laser optional, image guidance optional",
+  "Donor sites prepared: temporalis fascia and a thin split-thickness skin graft (upper arm, inner thigh, or hip at about 0.006-0.008 inch)",
+  "Coordination with the microtia surgeon to protect the reconstructed auricle and its blood supply"
+ ],
+ "landmarks": [
+  "Zygomatic root and glenoid fossa (anterior limit, TMJ)",
+  "Tegmen (superior limit; may be low-lying)",
+  "Cribriform area or vestigial tympanic bone (starting point)",
+  "Atretic plate and fused malleus-incus complex in the epitympanum",
+  "Mastoid air cells posteriorly (avoid opening)",
+  "Stapes and oval window"
+ ],
+ "danger": [
+  "Facial nerve, often anteriorly and laterally displaced in its vertical segment, crossing the middle ear more superficially",
+  "Inner ear trauma from drill energy transmitted through the fused ossicular mass",
+  "Low tegmen and dura",
+  "TMJ capsule anteriorly",
+  "Opening mastoid cells (moist cavity)"
+ ],
+ "steps": [
+  [
+   "Incision and fascia",
+   "Make a postauricular incision, elevating the remnant or reconstructed auricle in the plane of the temporalis fascia while preserving its anterior blood supply. Harvest temporalis fascia for the drum and incise periosteum along the temporal line and down the glenoid fossa to the mastoid tip."
+  ],
+  [
+   "Expose landmarks",
+   "Elevate periosteum to identify the zygomatic root, glenoid fossa, and superior mastoid tip. Look for the cribriform area of tiny vascular pits, a remnant of the tympanic bone, which marks the usual starting point for drilling."
+  ],
+  [
+   "Anterior and superior drilling",
+   "Begin drilling just behind the glenoid fossa and below the tegmen, staying anterior and superior because that area lies farthest from the facial nerve. Identify the tegmen laterally and follow it medially. Avoid wide posterior removal that opens the mastoid air cell system."
+  ],
+  [
+   "Enter the epitympanum",
+   "Continue medially and anteriorly, thinning bone at the glenoid fossa, until the epitympanum and fused malleus-incus complex are seen. Entering through the epitympanum rather than the mesotympanum identifies the ossicles early and keeps away from the facial nerve."
+  ],
+  [
+   "Remove the atretic plate",
+   "Thin the atretic plate with diamond burrs to eggshell thickness, then remove the last bone with picks and excavators or the CO2 laser. Never let the drill contact the ossicular mass, which transmits energy to the cochlea and can cause high-frequency SNHL."
+  ],
+  [
+   "Assess and mobilize ossicles",
+   "Remove all bone around fixation points, commonly the malleus neck, before freeing the chain so drill energy cannot reach a mobile chain. Generous removal reduces refixation from new bone. Use the native chain when mobile; otherwise reconstruct with a prosthesis capped with cartilage."
+  ],
+  [
+   "Defer stapes surgery",
+   "If the stapes is fixed, create a stable drum now and stage stapes surgery later. Stapes work combined with a fresh canal and graft risks inner ear injury in an infected or unstable field."
+  ],
+  [
+   "Size the canal",
+   "Enlarge the bony canal to about 1.5 times normal size, as the canal narrows with healing. Smooth bone edges and plug any exposed mastoid cells with temporalis muscle or bone pâté."
+  ],
+  [
+   "Fascia drum graft",
+   "Place temporalis fascia over the ossicular mass or prosthesis, creating a new tympanic membrane. Some surgeons notch the bony annulus or tuck the graft under the malleus to reduce lateralization, the most common long-term failure."
+  ],
+  [
+   "Skin graft lining",
+   "Harvest a thin split-thickness skin graft and line the neocanal, overlapping the fascia graft edge slightly. Pack medially with absorbable material or silicone discs to hold the graft against bone and fascia."
+  ],
+  [
+   "Meatoplasty",
+   "Create a generous meatus in the conchal or reconstructed auricle, removing cartilage and soft tissue to match the enlarged canal. Suture the skin graft to the meatal skin edge, then place lateral packing or a stent."
+  ],
+  [
+   "Close",
+   "Return the auricle to position, close the postauricular incision, and apply a mastoid dressing. Confirm facial nerve stimulation and document all landmark findings, including facial nerve course, for future revision planning."
+  ]
+ ],
+ "exit_check": [
+  "Facial nerve intact and stimulating at low threshold",
+  "Canal about 1.5 times normal diameter with skin graft fully covering bone",
+  "Graft drum seated medially with no lateralization; meatus generous"
+ ],
+ "postop": [
+  "Packing removal at 1-3 weeks with canal cleaning under the microscope",
+  "Frequent early follow-up to detect stenosis, granulation, or graft lateralization",
+  "Audiogram at about 6-8 weeks after healing",
+  "Lifelong canal care with periodic debridement; counsel that revisions are common"
+ ],
+ "complications": {
+  "early": [
+   "Facial nerve injury",
+   "Sensorineural hearing loss from drill trauma",
+   "Skin graft failure or infection",
+   "TMJ pain"
+  ],
+  "late": [
+   "Graft lateralization (most common reason for revision)",
+   "Meatal or canal stenosis",
+   "Persistent conductive hearing loss or refixation",
+   "Chronic drainage or cholesteatoma in the canal"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the Jahrsdoerfer score?",
+   "A 10-point CT and appearance score: stapes present (2 points), oval window open, middle ear space, facial nerve normal, malleus-incus complex, mastoid pneumatization, incus-stapes connection, round window, and external ear appearance (1 point each). A score of 7 or higher predicts good outcomes."
+  ],
+  [
+   "How is the facial nerve displaced in atresia?",
+   "The vertical segment is often more anterior and lateral, and the second genu more acute, so it can cross the middle ear or run over the oval window. Drilling anteriorly and superiorly keeps you away from it."
+  ],
+  [
+   "Timing relative to microtia repair?",
+   "Atresiaplasty usually follows rib-cartilage auricular reconstruction to preserve the auricular skin vascularity and avoid scarring that would compromise the reconstruction."
+  ],
+  [
+   "Which approach is preferred and why?",
+   "The anterior approach, entering the epitympanum along the tegmen and glenoid fossa. It avoids the mastoid cavity problems and poorer hearing of the older transmastoid canal wall down route."
+  ],
+  [
+   "Hearing outcome compared with bone conduction devices?",
+   "About half to three-quarters of well-selected patients reach 30 dB or better, but results may decline over time; bone-anchored devices close the air-bone gap in roughly 85%."
+  ]
+ ],
+ "source_basis": [
+  "Pasha RS, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 9, Pediatric Otolaryngology (Aural Atresia and Microtia)",
+  "Flint PW et al. Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 197, Evaluation and Management of Congenital Aural Atresia",
+  "Jahrsdoerfer RA et al. Grading system for the selection of patients with congenital aural atresia. Am J Otol 1992;13:6-12"
+ ]
+}

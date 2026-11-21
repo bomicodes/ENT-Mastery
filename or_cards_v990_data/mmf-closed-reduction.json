@@ -1,0 +1,134 @@
+{
+ "slug": "mmf-closed-reduction",
+ "title": "Closed Reduction / Maxillomandibular Fixation (Arch Bars, IMF Screws)",
+ "domain": "Facial Trauma",
+ "or_family_v190": "facial_trauma",
+ "linked_topic": "Mandible Fracture",
+ "source_label": "Pasha 6e (Head and Neck Trauma chapter) and Cummings 7e (Maxillofacial Trauma chapter)",
+ "indications": "Maxillomandibular fixation (MMF, also IMF) is used alone as closed treatment for favorable, minimally displaced non-condylar mandible fractures, most displaced subcondylar and condylar fractures (short MMF with elastics then guided function), and pediatric fractures where growth and developing teeth argue against plates. It is also the first step of nearly every open reduction, setting occlusion before plating. Duration of rigid MMF depends on age and site: about 2 to 4 weeks in children, 4 to 6 weeks in adults, longer in the elderly, and only 1 to 3 weeks for condylar fractures to avoid ankylosis. Relative contraindications to prolonged MMF include seizure disorder, poor pulmonary reserve, uncontrolled psychiatric illness or substance use, pregnancy, and inability to comply, which favor ORIF.",
+ "setup": [
+  "Panorex and/or CT; examine for occlusion, missing or fractured teeth, and teeth in the fracture line",
+  "General anesthesia with nasotracheal intubation (or submental if nasal route contraindicated); throat pack placed",
+  "Erich arch bars, 24 to 26 gauge stainless steel wire (prestretched), wire twisters, wire cutters",
+  "MMF screws (self-drilling 2.0 mm, about 8 to 12 mm long) or hybrid bone-borne arch bars as alternatives",
+  "Bite block, cheek retractors, suction, dental instruments; elastics if using flexible fixation",
+  "Plan for wire cutters to stay with the patient at all times after surgery"
+ ],
+ "landmarks": [
+  "Premorbid occlusion and wear facets (Angle class I: mesiobuccal cusp of upper first molar in buccal groove of lower first molar)",
+  "Cervical necks of the teeth, below the height of contour (where wires sit)",
+  "Mucogingival junction",
+  "Interradicular spaces between canine and first premolar roots (MMF screw sites)",
+  "Mental foramen near the lower premolars",
+  "Condyles seated in the glenoid fossae",
+  "Mandibular midline relative to the maxillary midline"
+ ],
+ "danger": [
+  "Wire or screw injury to tooth roots or the mental nerve",
+  "Extruding or loosening teeth from excessive wire tension",
+  "Glove puncture and needlestick from wire ends",
+  "Wire ends left sharp, lacerating cheek and lips",
+  "Postoperative airway obstruction or aspiration with vomiting while in MMF",
+  "Fixing into the wrong occlusion, especially with crossbite or open bite from condylar collapse"
+ ],
+ "steps": [
+  [
+   "Confirm the plan and occlusion",
+   "Review imaging and decide on closed treatment. Determine the patient's premorbid occlusion from wear facets, dental history and the uninjured side. Note missing teeth and those in the fracture line; extract teeth that block reduction or are nonviable before applying MMF."
+  ],
+  [
+   "Airway and preparation",
+   "Secure nasotracheal intubation so the teeth can be brought together. Place a throat pack. Clean the oral cavity and remove debris. Protect the lips with ointment and use cheek retractors and a bite block on the uninjured side while working."
+  ],
+  [
+   "Shape the arch bars",
+   "Cut Erich bars to span from the first or second molar on one side to the other, hooks pointing up on the maxilla and down on the mandible. Contour each bar to the dental arch so it sits passively at the cervical third of the teeth without pressing on the gingiva."
+  ],
+  [
+   "Wire the maxillary bar",
+   "Pass prestretched 24 or 26 gauge wires around each tooth, one end above and one below the bar, entering and exiting the interdental spaces. Twist clockwise to tighten, starting near the midline and working back, keeping the wire below the height of contour so it does not slip off."
+  ],
+  [
+   "Wire the mandibular bar",
+   "Repeat on the mandible, spanning the fracture so each fragment has at least two or three solidly wired teeth. Over a fracture in the tooth-bearing region the bar acts as a tension band and helps reduce the fracture as it is tightened."
+  ],
+  [
+   "MMF screw alternative",
+   "For quicker application, insert self-drilling 2.0 mm screws in the attached gingiva or alveolus above the mucogingival junction, between canine and first premolar roots, usually two in each jaw on each side. Stay away from roots and the mental foramen. Screws give less control of segment rotation than bars."
+  ],
+  [
+   "Reduce and place into occlusion",
+   "Manipulate fragments into position by hand, check the midlines and molar relationships, and confirm the condyles are seated by pressing up and back at the angles. Ensure there is no crossbite or open bite on either side."
+  ],
+  [
+   "Apply fixation",
+   "Connect upper and lower bars or screws with wire loops or elastics between hooks, in vectors that hold the reduction. Wires give rigid fixation; elastics allow guided occlusion and easier emergency release, and are preferred for condylar fractures."
+  ],
+  [
+   "Tuck and check wires",
+   "Cut wire ends to about 3 to 5 mm and turn them into the interdental space so they cannot irritate mucosa. Check every wire for tension and recheck occlusion bilaterally, then remove the throat pack and suction the oropharynx thoroughly."
+  ],
+  [
+   "Condylar fracture protocol",
+   "Use 1 to 3 weeks of elastic MMF to reduce pain and maintain occlusion, then switch to guiding elastics while starting active mouth opening exercises. Early motion is important to prevent ankylosis and allow remodeling. Open reduction is reserved for specific indications such as displacement into the middle cranial fossa or failure to obtain occlusion."
+  ],
+  [
+   "Extubation and safety",
+   "Extubate the patient fully awake with good airway reflexes, with antiemetics given. Wire cutters or scissors (for elastics) stay at the bedside and with the patient after discharge, and nursing is instructed on which wires to cut in an airway emergency."
+  ]
+ ],
+ "exit_check": [
+  "Occlusion correct bilaterally with matched midlines and condyles seated",
+  "All wire ends tucked, bars secure, no tooth luxation",
+  "Throat pack removed; airway and suction plan in place; wire cutters at bedside"
+ ],
+ "postop": [
+  "Full liquid diet with nutrition counseling; monitor weight",
+  "Oral hygiene with toothbrushing and chlorhexidine rinses; ointment to lips",
+  "Antiemetic plan and instruction on cutting wires or elastics for vomiting or airway distress",
+  "Weekly checks for wire loosening, occlusion and wound healing",
+  "Remove MMF at the planned interval in clinic (or OR) and start jaw exercises; remove arch bars once union is confirmed"
+ ],
+ "complications": {
+  "early": [
+   "Airway obstruction or aspiration",
+   "Loose or broken wires and loss of reduction",
+   "Mucosal ulceration from wire ends",
+   "Tooth extrusion or fracture",
+   "Infection at the fracture site"
+  ],
+  "late": [
+   "Malocclusion or malunion",
+   "Nonunion",
+   "TMJ hypomobility or ankylosis (especially with prolonged condylar MMF)",
+   "Weight loss",
+   "Periodontal injury and gingival recession; tooth devitalization from screws"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How long do you keep a 30-year-old with a favorable mandibular body fracture in MMF, and a condylar fracture?",
+   "About 4 to 6 weeks for a non-condylar body fracture treated closed; condylar fractures 1 to 3 weeks with elastics followed by guided function and exercises. Children 2 to 4 weeks, elderly longer if closed treatment is used at all."
+  ],
+  [
+   "What makes a mandible fracture favorable?",
+   "The fracture line orientation resists displacement by muscle pull: for angle fractures, a line running from posterior-superior to anterior-inferior (horizontally favorable) where the masseter and medial pterygoid push the segments together. Unfavorable lines are distracted by those muscles and usually need ORIF."
+  ],
+  [
+   "When are MMF screws a poor choice compared with arch bars?",
+   "When fine control of segment rotation is needed, for multiple or comminuted fractures, in children with unerupted teeth, or where root anatomy is crowded. Screws are faster and safer for the surgeon but risk root injury and give less tension band effect."
+  ],
+  [
+   "Who should not be placed in prolonged MMF?",
+   "Patients with seizure disorder, poor pulmonary reserve, uncontrolled psychiatric illness or alcohol use, pregnancy, inability to comply, and those at high aspiration risk. These patients are better served by rigid internal fixation allowing early release."
+  ],
+  [
+   "A patient in MMF vomits in recovery. What do you do?",
+   "Turn the patient to the side and suction; if the airway is threatened, cut the vertical connecting wires or elastics immediately with the bedside cutters, clear the airway, and reapply fixation later. This is why cutters stay with the patient."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 10, Head and Neck Trauma: Mandible Fractures, Maxillo-Mandibular Fixation, ORIF indications, management by type and condylar fractures, complications (p 639-643)",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7th ed. Chapter 20, Maxillofacial Trauma"
+ ]
+}
