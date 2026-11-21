@@ -1,0 +1,135 @@
+{
+ "slug": "leukoplakia-excision-microflap",
+ "title": "Vocal Fold Leukoplakia / Dysplasia Excisional Biopsy (Microflap)",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Leukoplakia / Laryngeal Dysplasia",
+ "source_label": "Operative Techniques in Laryngology (2024)",
+ "indications": "Vocal fold leukoplakia or erythroplakia without a tissue diagnosis, particularly with reduced or absent mucosal wave on stroboscopy, lesions that change or grow, symptomatic lesions, or recurrence after prior treatment. The goal is excisional biopsy of all abnormal epithelium in the most superficial plane, preserving the superficial lamina propria and ligament, while providing an oriented specimen so pathology can grade dysplasia or identify invasion. In selected high-level voice users, a brief trial of conservative therapy (antifungal, reflux) may come first.",
+ "setup": [
+  "Review stroboscopy: extent of lesion, mucosal wave, and stiffness suggesting invasion; check smoking status and HPV/papilloma history.",
+  "Anesthesia plan: total intravenous anesthesia with a small (5.0-5.5) microlaryngeal tube, full paralysis for suspension, and a smooth emergence; confirm dentition and neck mobility for exposure.",
+  "Phonomicrosurgery set: largest laryngoscope that exposes the whole membranous fold, suspension arm, 0/30/70 degree telescopes, microscope with 400-mm lens, sickle knife, 30 degree elevators, straight and curved microscissors, triangular and cup forceps, fine suctions, and 1:10,000 epinephrine pledgets.",
+  "27-gauge primed infusion needle with saline or 1:10,000 epinephrine (no air), up-cutting scissors, and a tongue blade or foam to pin the specimen.",
+  "Photodocumentation and a specimen orientation diagram for pathology."
+ ],
+ "landmarks": [
+  "Borders of the white or red patch",
+  "Normal epithelium lateral, anterior, and posterior to the lesion",
+  "Superficial lamina propria",
+  "Vocal ligament",
+  "Infraglottic surface",
+  "Anterior commissure"
+ ],
+ "danger": [
+  "Entering ligament fibers (especially reoperation)",
+  "Flap perforation where the plane turns lateral inferiorly",
+  "Missed infraglottic extension",
+  "Tethered area under infusion suggesting invasion",
+  "Bilateral anterior excision causing web"
+ ],
+ "steps": [
+  [
+   "Confirm the indication",
+   "Excise leukoplakia without a tissue diagnosis, especially with reduced or absent mucosal wave, lesions that change in appearance, or symptomatic lesions. In high-level singers a short trial of conservative therapy (antifungal, reflux) may come first if suspicion is low."
+  ],
+  [
+   "Exam under anesthesia",
+   "Intubate with a 5.0-5.5 microlaryngeal tube, suspend, and map all mucosa with 0 and 70 degree telescopes and high-power microscopy. Photodocument every lesion and palpate for firmness and adherence that could suggest invasion."
+  ],
+  [
+   "Subepithelial infusion",
+   "Infuse 0.1-0.3 mL of saline or 1:10,000 epinephrine into the superficial lamina propria with a primed 27-gauge needle. Noninvasive disease lifts off the ligament; an area that stays tethered and dimpled suggests invasion and changes the plan."
+  ],
+  [
+   "Incise lateral to the lesion",
+   "With a fresh sickle knife, incise the epithelium just lateral to the white patch, tenting the mucosa upward. Without a cancer diagnosis no oncologic margin is needed, only complete removal of the abnormal epithelium with normal tissue spared."
+  ],
+  [
+   "Identify the ligament early",
+   "Raise the plane with a 30 degree elevator as superficially as possible and find the vocal ligament early; it is easy to enter ligament fibers, especially in reoperations. Start in normal epithelium anterior or posterior if the plane is unclear."
+  ],
+  [
+   "Undermine the whole lesion",
+   "Keep the elevator visible through the thin flap and undermine the entire leukoplakic area before cutting. Inferiorly the plane turns lateral, so press the back of the elevator against the ligament to avoid perforating the flap."
+  ],
+  [
+   "Posterior and anterior cuts",
+   "Lift the diseased flap with an elevator and use up-cutting scissors held sideways to cut the posterior epithelial boundary, then the anterior boundary, keeping just outside the visible abnormal epithelium."
+  ],
+  [
+   "Recheck the margins",
+   "Redrape the flap periodically and re-inspect, including with a 70 degree telescope for infraglottic extension, to confirm that the planned cut line includes all abnormal epithelium before the final cut."
+  ],
+  [
+   "Inferior cut",
+   "Retract the specimen with triangular forceps and complete the inferior cut with up-cutting scissors from posterior to anterior, delivering the lesion as one piece rather than in fragments, which preserves architecture and margins so the pathologist can grade it accurately."
+  ],
+  [
+   "Orient the specimen",
+   "Pin the specimen flat on a tongue blade or foam and label medial/lateral and anterior/posterior so the pathologist can report the extent and grade of dysplasia, margins, and any invasion to guide further treatment."
+  ],
+  [
+   "Multiple patches",
+   "Several lesions can be removed in one session, but avoid bilateral anterior epithelial removal near the anterior commissure, which risks web formation. Stage the second side several weeks later if both folds have anterior disease, accepting a second anesthetic to protect the commissure."
+  ],
+  [
+   "Hemostasis and close",
+   "Use epinephrine pledgets for hemostasis. The preserved lamina propria heals by re-epithelialization from the wound edges, so no suture or flap closure is needed; apply topical lidocaine to the larynx and emerge smoothly without coughing."
+  ],
+  [
+   "Plan for recurrence",
+   "Recurrent benign keratosis may be ablated with office pulsed KTP, but a lesion that changes or grows must be excised again for histology rather than ablated. Invasive carcinoma on pathology moves the patient to oncologic management."
+  ]
+ ],
+ "exit_check": [
+  "All visible abnormal epithelium removed in one oriented specimen, ligament intact, infraglottic surface checked with a 70 degree telescope.",
+  "No bilateral anterior raw surfaces; photodocumentation and orientation diagram sent with the specimen."
+ ],
+ "postop": [
+  "Complete voice rest for about 3-7 days, then graduated voice use.",
+  "Review pathology at 1-2 weeks; invasive carcinoma triggers staging and oncologic treatment planning.",
+  "Smoking cessation, reflux control, and correction of glottic insufficiency.",
+  "Regular stroboscopic surveillance; recurrence is common with continued smoking, reflux, or HPV."
+ ],
+ "complications": {
+  "early": [
+   "Bleeding",
+   "Dental or oral injury from suspension",
+   "Flap perforation or loss of specimen orientation",
+   "Laryngospasm at emergence"
+  ],
+  "late": [
+   "Recurrence or progression to carcinoma",
+   "Vocal fold scar and stiffness with dysphonia",
+   "Anterior glottic web",
+   "Under-staging from fragmented or poorly oriented specimen"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why excise rather than just biopsy or ablate a leukoplakia?",
+   "Leukoplakia is a clinical description; it can be keratosis, any grade of dysplasia, carcinoma in situ, or invasive cancer. Excisional biopsy of the whole lesion gives the most accurate histology; ablation destroys the tissue and can miss invasion."
+  ],
+  [
+   "What does a tethered area on subepithelial infusion mean?",
+   "Failure of the epithelium to lift off the ligament suggests invasion through the basement membrane (or scar from prior surgery) and warrants deeper excision or treatment as possible carcinoma."
+  ],
+  [
+   "What is the risk of malignant transformation?",
+   "It rises with grade: low for keratosis without dysplasia and higher for high-grade dysplasia or carcinoma in situ; WHO now uses a two-tier low-grade/high-grade dysplasia system. Smoking increases the risk."
+  ],
+  [
+   "How deep should you go?",
+   "In the most superficial subepithelial plane, preserving the superficial lamina propria and ligament; dysplasia is confined to epithelium so no deeper tissue is needed unless invasion is suspected."
+  ],
+  [
+   "What is the role of office KTP?",
+   "Treating recurrent biopsy-proven benign or low-grade disease while preserving voice; any changing lesion still needs excision for histology."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology, 2nd ed (Rubin, Sataloff, Korovin, eds; Springer 2024), Ch 22: Vocal Fold Leukoplakia and Epithelial Dysplasia: Phonomicrosurgery (pp 185-190).",
+  "WHO Classification of Head and Neck Tumours, 5th ed (2022/2024): laryngeal epithelial dysplasia grading."
+ ]
+}

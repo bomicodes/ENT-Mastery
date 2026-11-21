@@ -1,0 +1,89 @@
+{"slug": "local-flaps-basic",
+ "title": "Local Skin Flaps: Advancement, Rotation, Rhombic, Z-plasty",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Local Flap Reconstruction",
+ "source_label": "Pasha 6e (Reconstructive and Facial Plastic Surgery chapter)",
+ "indications": "Reconstruction of facial and scalp skin defects (after Mohs or excision with clear margins, trauma, or scar excision) that are too large or too tension-bearing for primary closure, or that would distort a free margin such as the eyelid, lip, brow or alar rim. Local tissue gives the best color and texture match. Choose by direction of tissue movement and available laxity: advancement for linear movement (forehead, brow, chin, lip), rotation for large defects next to lax tissue (cheek, scalp), transposition such as rhombic for cheek and temple, and Z-plasty for lengthening or reorienting contracted or misdirected scars. Confirm clear margins before closing with tissue rearrangement, and account for smoking, radiation and the need for later surveillance.",
+ "setup": [
+  "Local anesthesia with epinephrine for most; general for large scalp or combined procedures. Inject after marking, since swelling distorts geometry",
+  "Mark relaxed skin tension lines, aesthetic subunit borders and free margins with the patient sitting or the face at rest",
+  "Measure the defect after any margin trimming and template the flap with a ruler and marking pen",
+  "Fine instruments: #15 blade, skin hooks, fine-toothed forceps, undermining scissors, bipolar cautery",
+  "Buried absorbable dermal sutures (e.g. 4-0 or 5-0) plus fine skin sutures; half-buried horizontal mattress (Gillies corner) sutures ready",
+  "Confirm margin status (frozen section or Mohs) before rearranging tissue"
+ ],
+ "landmarks": [
+  "Relaxed skin tension lines (perpendicular to underlying muscle pull)",
+  "Aesthetic subunit borders and free margins (lid, lip, ala, brow)",
+  "Plane of undermining: subcutaneous on the face, subgaleal on the scalp, supra-SMAS over the cheek",
+  "Pivot point and base of the flap",
+  "Line of maximal tension (lies at the donor closure for transposition flaps)",
+  "Named vessels for axial patterns where relevant"
+ ],
+ "danger": [
+  "Closing under tension, which causes necrosis, widened scars and distortion of free margins",
+  "Narrow flap base or excessive length-to-width ratio leading to distal tip necrosis",
+  "Undermining too deep over the cheek or temple and injuring facial nerve branches",
+  "Pulling a free margin (ectropion, lip or alar elevation)",
+  "Pincushion (trapdoor) deformity with curvilinear flaps",
+  "Rearranging tissue before margins are confirmed"
+ ],
+ "steps": [
+  ["Analyze the defect",
+   "Measure size and depth, note the subunit and nearby free margins, and pinch the surrounding skin to find the reservoir of laxity. Decide which direction the tissue can move without distorting a free margin; the vector of closure should be perpendicular to the free margin or parallel to it with no tension pulling on it."],
+  ["Choose the flap",
+   "Pick the simplest option that works: primary closure, then advancement, rotation, transposition, then interpolated or grafts. Orient incisions in relaxed skin tension lines and subunit borders. Respect length-to-width ratios of about 3:1 to 4:1 on the face and less on the neck, since these are random flaps on the subdermal plexus."],
+  ["Advancement flap",
+   "Make two parallel incisions extending from the defect along RSTLs, usually no longer than two to three times the flap width. Undermine the flap and surrounding skin, advance it into the defect, and excise Burow's triangles at the base to remove standing cones. A V-to-Y or A-to-T (O-to-T) variation suits lip, chin and forehead."],
+  ["Rotation flap",
+   "Design a curvilinear incision from one edge of a triangularized defect, with an arc several times the defect diameter (about 4 to 5 times), so the flap pivots into place. Undermine widely. If the pivot point is tight, add a small back cut or Burow's triangle at the base, keeping the base wide enough to preserve perfusion."],
+  ["Rhombic (Limberg) flap design",
+   "Convert the defect into a rhombus with 60 and 120 degree angles. Extend the short diagonal from a 120 degree corner by a length equal to a side, then draw a second limb at 60 degrees parallel to an adjacent side. Of the four possible flaps, choose the one whose donor closure lies along RSTLs in a zone of laxity."],
+  ["Rhombic flap transposition",
+   "Incise and undermine the flap and the surrounding tissue, close the donor site first with the key suture since it carries the maximal tension, and then transpose the flap into the defect. The Dufourmentel variation uses less acute angles to share tension and keep a broader base."],
+  ["Z-plasty design",
+   "Draw the central limb along the scar or line of contracture, then two peripheral limbs of equal length at equal angles, classically 60 degrees, arranged so they end up parallel to RSTLs. A 60 degree Z-plasty lengthens the central limb by about 75 percent; 30 degrees gives about 25 percent and 45 degrees about 50 percent."],
+  ["Z-plasty transposition",
+   "Excise the scar if needed, incise all limbs, undermine both triangular flaps and surrounding skin, and transpose them so the central limb rotates about 90 degrees. Angles below about 20 degrees risk tip necrosis and above about 75 degrees create dog-ears; for long scars use several smaller Z-plasties in series."],
+  ["Undermine in the correct plane",
+   "Undermine in the subcutaneous plane on the face, preserving the subdermal plexus on the flap, and in the subgaleal plane on the scalp. Undermine the recipient side too so tension is spread over a wide area rather than at the wound edge."],
+  ["Key sutures and layered closure",
+   "Place the buried key sutures first at the points of greatest tension, then the dermal layer so the skin edges sit everted and touch before skin sutures are placed. Use a half-buried horizontal mattress at flap tips to protect the tip blood supply."],
+  ["Manage standing cones",
+   "Check the ends of the closure for dog-ears and remove them by extending the incision along RSTLs or with a Burow's triangle. Do not leave a large cone hoping it settles, especially near free margins."],
+  ["Assess perfusion and distortion",
+   "Before dressing, look at flap color and capillary refill, especially at the tip, and check that the lid, lip, brow and ala are not pulled. A dusky, tense tip may need a suture released; unacceptable distortion means the design or vector needs revision now."]
+ ],
+ "exit_check": [
+  "Tension-free closure with everted edges and no free-margin distortion",
+  "Flap tip pink with brisk capillary refill",
+  "Standing cones removed and incisions lying in RSTLs or subunit borders"
+ ],
+ "postop": [
+  "Light pressure dressing for 24 to 48 hours, then gentle cleaning and petrolatum ointment",
+  "Head elevation and cold compresses; avoid strenuous activity for about a week",
+  "Suture removal on the face at 5 to 7 days",
+  "Strict sun protection; scar massage after about 3 weeks",
+  "Counsel that pincushioning and scar thickening often improve over months, with intralesional steroid or revision if needed"
+ ],
+ "complications": {
+  "early": ["Hematoma under the flap", "Distal tip necrosis", "Wound dehiscence", "Venous congestion", "Infection"],
+  "late": ["Pincushion (trapdoor) deformity", "Hypertrophic or widened scar", "Free-margin distortion such as ectropion or lip elevation", "Standing cone deformity", "Tumor recurrence hidden under rearranged tissue"]
+ },
+ "attending_followup": [
+  ["How much length does a 60 degree Z-plasty gain, and what happens to the central limb?",
+   "About 75 percent; the central limb rotates about 90 degrees, so a contracted or misdirected scar can be redirected to lie closer to RSTLs."],
+  ["Where is the point of maximal tension in a rhombic flap?",
+   "At the donor site closure, between the base of the flap and the 120 degree corner; this is why the donor site is closed first and the flap is designed so this closure falls in the most lax tissue."],
+  ["What is a Burow's triangle?",
+   "A triangle of skin excised at the base or end of an advancement or rotation flap to remove a standing cone and allow flat movement of the flap."],
+  ["Why choose a rotation flap over an advancement flap on the cheek?",
+   "It can close a large defect by recruiting lax tissue from a broad area, such as the neck or lateral cheek, at the cost of a long peripheral incision and wider undermining."],
+  ["Why must margins be clear before a local flap?",
+   "Tissue rearrangement moves and buries the margin; residual tumor becomes hard to localize and can spread along flap planes, so close with flaps only after frozen section or Mohs confirmation."]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8, Reconstructive and Facial Plastic Surgery: Local (Pedicled) Skin Flaps, advancement, rotational, transposition, rhomboid, bilobed, Z-plasty and W-plasty (p 447-450)",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8: Scar revision and irregularization techniques, Z-plasty and W-plasty (p 519-523)"
+ ]}

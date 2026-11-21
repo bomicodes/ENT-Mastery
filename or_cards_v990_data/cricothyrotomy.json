@@ -1,0 +1,126 @@
+{
+ "slug": "cricothyrotomy",
+ "title": "Emergency Cricothyrotomy / Surgical Airway",
+ "domain": "General ENT",
+ "or_family_v190": "airway",
+ "linked_topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
+ "source_label": "Pasha 6e, Cummings 7e, and the Difficult Airway Society front-of-neck access guidance",
+ "indications": "Can't-intubate, can't-oxygenate (CICO) emergency after failed attempts at intubation, supraglottic airway, and face-mask ventilation, or as the first step when upper airway obstruction makes oral routes impossible. Scalpel-bougie-tube cricothyrotomy through the cricothyroid membrane is the preferred adult front-of-neck access. In young children (roughly under 10-12 years), use needle cricothyroidotomy or emergency tracheostomy instead. Laryngeal fracture or tracheal transection favors tracheostomy.",
+ "setup": [
+  "Declare CICO out loud and call for help; the decision, not the technique, is usually what is delayed",
+  "Continue 100% oxygen attempts from above throughout",
+  "Neck extended with shoulder roll if the spine allows; stand on the side of your dominant hand",
+  "Kit: #10 scalpel, bougie, 6.0 cuffed endotracheal tube, suction, capnography",
+  "Optional tracheal hook and Trousseau dilator; needle and jet set for small children"
+ ],
+ "landmarks": [
+  "Thyroid notch and laryngeal prominence",
+  "Cricothyroid membrane, about 1 cm high and 2-3 cm wide",
+  "Cricoid ring, the only complete cartilage ring",
+  "Cricothyroid arteries crossing the upper part of the membrane",
+  "Midline: thyroid isthmus lies below, over rings 2-4"
+ ],
+ "danger": [
+  "Delay in declaring CICO and hypoxic arrest",
+  "False passage anterior to the trachea or into the paratracheal tissue",
+  "Posterior tracheal wall and esophageal perforation from a deep blade",
+  "Cricothyroid artery bleeding; anterior jugular veins",
+  "Subglottic stenosis, especially in children or with prolonged use",
+  "Missed placement unless confirmed by end-tidal CO2"
+ ],
+ "steps": [
+  [
+   "Declare and position",
+   "Say 'this is a CICO situation, front-of-neck access now'. Extend the neck and keep oxygen running from above. Paralysis, if not already given, improves conditions. One person leads, one assists, and someone tracks time and saturations."
+  ],
+  [
+   "Laryngeal handshake",
+   "With the non-dominant hand, grip the larynx between thumb and middle finger to stabilize it, then slide the index finger down from the thyroid notch to feel the dip of the cricothyroid membrane above the cricoid ring. Keep this hand still for the rest of the procedure."
+  ],
+  [
+   "Palpable membrane: stab incision",
+   "Holding a #10 scalpel with the sharp edge toward you, make a transverse stab through skin and membrane into the airway in one movement. Stay in the lower part of the membrane to avoid the cricothyroid arteries. A rush of air or bubbling confirms entry."
+  ],
+  [
+   "Impalpable membrane: vertical incision",
+   "In obesity or with swelling, make an 8-10 cm vertical midline incision from the thyroid notch downward. Use both hands to bluntly separate tissue and find the larynx, then identify the membrane by feel and make the transverse stab as for the palpable case."
+  ],
+  [
+   "Rotate and open",
+   "Rotate the blade 90 degrees so the sharp edge faces caudally, and pull it gently toward you to open the incision and keep the tract straight. A tracheal hook on the cricoid or thyroid cartilage, or a dilator, can be used if available."
+  ],
+  [
+   "Bougie into trachea",
+   "Slide the coude tip of the bougie along the blade into the trachea, angled caudally, and advance 10-15 cm. Tracheal ring clicks or hold-up at the carina support placement. Remove the scalpel only once the bougie is in."
+  ],
+  [
+   "Railroad the tube",
+   "Lubricate a 6.0 cuffed endotracheal tube, rotate it over the bougie, and advance until the cuff is just inside the trachea. Avoid endobronchial intubation by not advancing too far. Remove the bougie while holding the tube."
+  ],
+  [
+   "Confirm and ventilate",
+   "Inflate the cuff, ventilate, and confirm with continuous waveform capnography and bilateral breath sounds. Rising saturations alone are not enough. Secure the tube with ties and suture, and get a chest radiograph."
+  ],
+  [
+   "Needle option in children",
+   "For young children, insert a 14- or 12-gauge cannula through the membrane aimed caudally, aspirate air to confirm, and attach to oxygen. Give brief inflows with long expiration to avoid barotrauma; this oxygenates but does not ventilate well and only buys minutes until tracheostomy."
+  ],
+  [
+   "Plan the definitive airway",
+   "Once the patient is stable, decide on conversion to a formal tracheostomy, especially if prolonged ventilation is expected or the larynx is injured. Inspect the subglottis endoscopically if stenosis is a concern. Document the event and debrief the team."
+  ]
+ ],
+ "exit_check": [
+  "Sustained waveform capnography",
+  "Tube secured with cuff below the cords and not endobronchial on chest radiograph",
+  "Hemostasis at the incision; plan for definitive airway recorded"
+ ],
+ "postop": [
+  "ICU care with tube ties checked and spare tube at bedside",
+  "Chest radiograph for position and pneumothorax",
+  "Plan conversion to tracheostomy if airway need persists",
+  "Endoscopic subglottic assessment and voice follow-up",
+  "Formal difficult-airway alert and documentation"
+ ],
+ "complications": {
+  "early": [
+   "False passage and failed airway",
+   "Bleeding from cricothyroid or anterior jugular vessels",
+   "Posterior wall or esophageal injury",
+   "Subcutaneous emphysema and pneumothorax"
+  ],
+  "late": [
+   "Subglottic stenosis",
+   "Dysphonia from cricothyroid or cord injury",
+   "Tracheocutaneous fistula or scar",
+   "Infection of the wound"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What technique do current guidelines recommend for adult CICO?",
+   "Scalpel-bougie-tube cricothyrotomy with a #10 blade, bougie, and 6.0 cuffed tube, using a vertical incision first when the membrane cannot be felt. It is faster and more reliable than cannula techniques in adults."
+  ],
+  [
+   "Why do you avoid surgical cricothyrotomy in young children?",
+   "The cricothyroid membrane is tiny, the larynx is high and soft, and the cricoid is the narrowest part of the airway, so stenosis risk is high. Use needle cricothyroidotomy and move to tracheostomy."
+  ],
+  [
+   "Where do you place the incision in the membrane?",
+   "In the lower part, because the cricothyroid arteries run across the upper portion. Incising transversely and rotating the blade caudally keeps the tract open toward the trachea."
+  ],
+  [
+   "How do you confirm the airway?",
+   "Waveform end-tidal CO2 is the standard. Breath sounds, chest rise, and saturations support it, and a chest radiograph checks depth."
+  ],
+  [
+   "When would you choose tracheostomy instead?",
+   "Suspected laryngeal fracture or laryngotracheal separation, young children, or obstruction below the cricoid. Penetrating laryngeal injury may be intubated over a flexible scope in a controlled setting if the airway allows."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 2 Laryngology (airway management, cricothyroidotomy); Ch 10 Head and Neck Trauma (ATLS airway).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 5 General Considerations of Anesthesia and Management of the Difficult Airway; Ch 6 Surgical Management of the Difficult Adult Airway.",
+  "Difficult Airway Society guidelines for management of unanticipated difficult intubation in adults (front-of-neck access, scalpel-bougie-tube)."
+ ]
+}

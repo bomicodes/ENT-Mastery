@@ -14,15 +14,15 @@ import daily_path_entry_v403  # v45.6: boots the full production patch chain so 
 
 STAGES = {"foundation", "application", "senior_decision"}
 EXPECTED_COUNTS = {
-    "Otology / Neurotology": 54,
-    "Rhinology / Allergy / Skull Base": 48,
-    "Head & Neck Oncology": 44,
+    "Otology / Neurotology": 56,
+    "Rhinology / Allergy / Skull Base": 51,
+    "Head & Neck Oncology": 52,
     "Thyroid / Parathyroid / Salivary": 35,
-    "Pediatric Otolaryngology": 43,
-    "Laryngology / Voice / Swallowing": 39,
+    "Pediatric Otolaryngology": 49,
+    "Laryngology / Voice / Swallowing": 40,
     "Facial Plastics / Trauma": 34,
     "Sleep Surgery": 24,
-    "General ENT / Emergencies": 36,
+    "General ENT / Emergencies": 40,
 }
 EXPECTED_TOTAL = sum(EXPECTED_COUNTS.values())
 

@@ -1,0 +1,128 @@
+{
+ "slug": "cricothyroid-subluxation",
+ "title": "Cricothyroid Subluxation (Adjunct to Medialization)",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Medialization Thyroplasty",
+ "source_label": "Operative Techniques in Laryngology (2024), Ch 49 Cricothyroid Subluxation",
+ "indications": "An adjunct to medialization laryngoplasty (with or without arytenoid repositioning) for unilateral vocal fold paralysis when the paralyzed fold is short and flaccid, with poor pitch range and a weak or asymmetric mucosal wave. It may be planned from preoperative assessment or chosen intraoperatively when glottic closure is good but pitch and vibration remain poor. Subluxing the cricothyroid joint on the paralyzed side pulls the cricoid forward relative to the thyroid, lengthening and tensing the fold and rotating the anterior commissure away from the paralyzed side. Do not perform when the thyroid ala is fractured or at risk of fracture from the medialization window.",
+ "setup": [
+  "Awake sedation with local anesthesia so pitch and voice can be tested during tensioning",
+  "Transnasal flexible laryngoscope on a monitor to judge fold length and closure",
+  "Standard thyroplasty exposure already completed on the paralyzed side",
+  "Permanent monofilament suture (polypropylene) on a cutting needle, fine scissors, and plating set available for alar fracture",
+  "Perform as the final step after medialization and any arytenoid procedure"
+ ],
+ "landmarks": [
+  "Inferior cornu of the thyroid cartilage",
+  "Cricothyroid joint",
+  "Cricothyroid muscle anterior and inferior to the cornu",
+  "Anterior cricoid ring near midline",
+  "Recurrent laryngeal nerve immediately posterior to the cricothyroid joint",
+  "Thyroplasty window and lower alar margin"
+ ],
+ "danger": [
+  "Recurrent laryngeal nerve injury behind the joint",
+  "Fracture of the inferior cornu",
+  "Fracture of the thyroid ala, especially near the window",
+  "Cricoid fracture or airway entry when passing the suture",
+  "Suture slippage with loss of tension"
+ ],
+ "steps": [
+  [
+   "Decide to add the subluxation",
+   "After medialization, assess the glottis and voice. If closure is good but the fold looks short with poor pitch range and a weak mucosal wave, proceed; confirm the thyroid ala is intact, because an existing or likely alar fracture is a contraindication."
+  ],
+  [
+   "Sequence the procedures",
+   "Complete the medialization implant and any arytenoid adduction or arytenopexy first so final glottic position is set. Perform the subluxation last, since it changes fold length and tension and is tuned against the finished medialization rather than before it."
+  ],
+  [
+   "Skeletonize the inferior cornu",
+   "Remove the cricothyroid muscle immediately anterior and inferior to the inferior cornu and release its soft-tissue attachments. Keep the dissection right on cartilage to protect the recurrent laryngeal nerve, which reliably passes just posterior to the cricothyroid joint."
+  ],
+  [
+   "Separate the joint",
+   "Divide the cricothyroid joint with fine scissors along the posterolateral cricoid so the cornu is completely free. Incomplete release limits forward movement of the cricoid and makes the suture tension ineffective, while dissection beyond the joint risks the nerve."
+  ],
+  [
+   "Anchor the cornu",
+   "Tie a permanent suture around the base of the freed inferior cornu. If the cornu is short, broad, or fractured, instead pass a cutting needle through the cornu itself or through the inferior thyroid cartilage edge to gain a secure anchor point."
+  ],
+  [
+   "Pass under the cricoid",
+   "Pass a second suture arm submucosally beneath the anterior cricoid ring close to midline. Follow the needle curve gently so the cricoid does not fracture and the needle stays outside the airway lumen."
+  ],
+  [
+   "Tension the suture",
+   "Tie the cornu suture to the cricoid suture and gradually increase tension while the patient sustains a vowel or performs pitch glides. A correct vector produces a pitch that rises with tension and falls as it is released, along with visible lengthening of the fold."
+  ],
+  [
+   "Set the tension",
+   "Choose the final tension by perceptual voice quality and endoscopic fold length and symmetry. Only moderate tension is usually needed; excessive pull can over-tense the fold, raise pitch unnaturally, or cut through cartilage."
+  ],
+  [
+   "Secure the knot",
+   "Tie multiple throws, because polypropylene is prone to slip, and recheck the voice after the knot is set. Confirm on endoscopy that closure from the medialization has not been disturbed by the change in laryngeal geometry."
+  ],
+  [
+   "Manage fractures",
+   "If the cornu fractures, re-anchor through adjacent cartilage and continue. If the thyroid ala fractures, reduce it and fix it with suture or a small plate, then abandon the subluxation to protect the medialization repair and the airway."
+  ],
+  [
+   "Close",
+   "Obtain hemostasis, reapproximate the strap muscles, and close in layers as for medialization laryngoplasty, with a drain only if dissection was extensive. Check the airway endoscopically before the patient leaves the room."
+  ]
+ ],
+ "exit_check": [
+  "Fold lengthened with improved pitch and voice quality on sustained vowel",
+  "Medialization closure preserved on endoscopy",
+  "Knot secure with multiple throws and no cartilage fracture"
+ ],
+ "postop": [
+  "Aftercare identical to medialization laryngoplasty",
+  "Observation for airway edema or hematoma per thyroplasty routine",
+  "Short voice rest, then voice therapy",
+  "Stroboscopy at follow-up for pitch range, fold length, and mucosal wave"
+ ],
+ "complications": {
+  "early": [
+   "Recurrent laryngeal nerve injury from joint dissection",
+   "Neck hematoma",
+   "Airway edema",
+   "Cricoid or alar fracture recognized intraoperatively"
+  ],
+  "late": [
+   "Suture slippage or pull-through with loss of pitch benefit",
+   "Over-tensioned fold with high or strained voice",
+   "Cartilage fracture with distortion",
+   "Persistent dysphonia needing revision"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What problem does cricothyroid subluxation address that medialization does not?",
+   "The short, flaccid paralyzed fold with poor pitch range and weak mucosal wave; medialization closes the gap but does not restore length or tension."
+  ],
+  [
+   "Mechanically, what does the subluxation do?",
+   "It pulls the cricoid forward relative to the thyroid on the paralyzed side, recreating the cricothyroid vector, lengthening and tensing the fold and rotating the anterior commissure away from the paralyzed side."
+  ],
+  [
+   "When is it contraindicated?",
+   "When the thyroid ala is fractured or at risk of fracture from the medialization window."
+  ],
+  [
+   "Where is the recurrent laryngeal nerve relative to the cricothyroid joint and how is it protected?",
+   "Immediately posterior to the joint; stay on cartilage when removing cricothyroid muscle and dividing the joint."
+  ],
+  [
+   "How do you confirm the correct suture vector intraoperatively?",
+   "Pitch should rise as tension increases and fall as it is released during sustained phonation, with endoscopic fold lengthening."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology, 2nd ed (2024), Ch 49 Cricothyroid Subluxation, pp 437-440",
+  "Operative Techniques in Laryngology (2024), Ch 43 Principles of Laryngeal Framework Surgery"
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "slug": "adduction-arytenopexy",
+ "title": "Adduction Arytenopexy",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Arytenoid Adduction / Reinnervation",
+ "source_label": "Operative Techniques in Laryngology (2024), Ch 48 Adduction Arytenopexy",
+ "indications": "Unilateral vocal fold paralysis with moderate to severe glottic insufficiency, a wide posterior glottic gap, or a vertical level mismatch that medialization laryngoplasty alone will not close. Unlike classic arytenoid adduction, which relies on a mobile cricoarytenoid joint, arytenopexy repositions and fixes the arytenoid directly on the cricoid facet, so it remains an option when the arytenoid is fixed in its joint. Avoid when the opposite fold abducts poorly (airway risk), in patients with high athletic airflow demands, and in early paralysis (roughly 9 months or less) where recovery is still possible.",
+ "setup": [
+  "Supine with shoulder roll and neck extended; awake sedation with local anesthesia so the patient can phonate on command",
+  "Dexamethasone about 0.2 mg/kg given at least an hour before incision to limit posterior laryngeal edema",
+  "Transnasal flexible laryngoscope on a monitor for real-time glottic view during suture tensioning",
+  "Thyroplasty set plus 4-0 polypropylene on a reverse-cutting needle, fine scissors, Freer elevators, and Gore-Tex or Silastic implant",
+  "Horizontal neck incision at the level of the mid-thyroid ala on the paralyzed side"
+ ],
+ "landmarks": [
+  "Posterior border of the thyroid ala and inferior constrictor attachment",
+  "Inferior cornu and cricothyroid joint",
+  "Piriform sinus mucosa (inflates with cheek puffing)",
+  "Posterior cricoarytenoid muscle on the back of the cricoid",
+  "Muscular process of the arytenoid",
+  "Cricoarytenoid joint capsule and cricoid facet",
+  "Recurrent laryngeal nerve just behind the cricothyroid joint"
+ ],
+ "danger": [
+  "Piriform sinus perforation during posterior ala dissection",
+  "Recurrent laryngeal nerve branches behind the cricothyroid joint",
+  "Fracture of arytenoid or cricoid from repeated passes or needle torque",
+  "Posterior laryngeal edema and early airway compromise",
+  "Overcorrection producing a strained voice or airway narrowing"
+ ],
+ "steps": [
+  [
+   "Confirm candidacy and plan",
+   "Verify on laryngoscopy and stroboscopy that the fold is paralyzed with a large posterior gap or level mismatch, the opposite fold abducts well, and at least about 9 months have passed or recovery is not expected. Plan to combine with medialization, since arytenopexy closes the posterior glottis while the implant supports the membranous fold."
+  ],
+  [
+   "Anesthesia and positioning",
+   "Use sedation with local infiltration and a standard thyroplasty exposure so the patient can phonate throughout. Give dexamethasone at least an hour beforehand because posterior edema is the main early risk. Position a flexible laryngoscope transnasally so the glottis can be watched while the suture is tensioned and tied."
+  ],
+  [
+   "Expose the posterior ala",
+   "Raise subplatysmal flaps, partially divide the strap muscles, and detach the inferior constrictor from the posterior edge of the thyroid ala with a 10 blade or cautery. Stay lateral to the posterior border while working so the underlying piriform sinus mucosa is not entered."
+  ],
+  [
+   "Release the cricothyroid joint",
+   "Identify the inferior cornu, separate it from the cricoid with fine scissors staying directly on cartilage, and elevate the inner perichondrium off the posterior ala. This frees the ala to rotate forward for exposure and keeps the dissection away from the recurrent laryngeal nerve, which runs just behind the joint."
+  ],
+  [
+   "Mobilize the piriform sinus",
+   "Elevate the piriform mucosa medially and posteriorly off the cricoid with blunt dissection. Having the patient puff the cheeks inflates the sinus and makes its boundary obvious. Continue until the fibers of the posterior cricoarytenoid muscle are seen on the back of the cricoid lamina."
+  ],
+  [
+   "Reach the muscular process",
+   "Follow the posterior cricoarytenoid fibers superiorly and anteriorly to their insertion on the muscular process of the arytenoid. Detach the lateral and posterior cricoarytenoid muscles from the process so the arytenoid can be manipulated freely, keeping the dissection tight to cartilage."
+  ],
+  [
+   "Open the joint",
+   "Incise the cricoarytenoid joint capsule widely to expose the articular facet of the cricoid, but leave the medial joint attachments intact. The aim is to see the facet well enough to place the suture precisely without fully disarticulating the arytenoid from its medial supports."
+  ],
+  [
+   "First pass through the cricoid",
+   "Pass a 4-0 polypropylene suture on a reverse-cutting needle from the outer posterior surface of the cricoid lamina so it exits through the cricoid facet. Use a single confident pass following the needle curve, as repeated attempts weaken the cartilage."
+  ],
+  [
+   "Pass through the arytenoid",
+   "Lift the arytenoid to show its articular surface and drive the needle through the center of that surface so it exits on the superior surface of the arytenoid body. Centered placement gives a balanced pull that seats the cartilage medially rather than tipping it."
+  ],
+  [
+   "Return pass",
+   "Bring the needle back from inside the cricoid just anterior to the facet exit point, under the facet, to exit on the outer cricoid anterior to the first entry. Avoid extra passes or twisting the needle, which can fracture either the arytenoid or the cricoid and lose fixation."
+  ],
+  [
+   "Slip knot and voice test",
+   "Place a slip knot and tighten gradually while the patient sustains phonation and the glottis is watched on the monitor. Tie down when voice quality is best and the posterior gap closes; this seats the arytenoid medially and lower on the facet, correcting both gap and level."
+  ],
+  [
+   "Add medialization",
+   "Create or use the thyroplasty window and support the mid-membranous fold with a Gore-Tex strip or carved Silastic implant as needed, again titrated to voice and endoscopic closure. Check that the combined repair does not narrow the airway or produce a pressed, strained voice."
+  ],
+  [
+   "Close",
+   "Achieve hemostasis, return the constrictor and strap muscles to position, and close in layers with a small passive drain if dissection was extensive. Inspect the larynx a final time for early edema or hematoma before leaving the room."
+  ]
+ ],
+ "exit_check": [
+  "Posterior glottic gap closed and vertical level matched on endoscopy with a clear, non-strained voice",
+  "Airway adequate with no early arytenoid or aryepiglottic edema or hematoma",
+  "Piriform sinus intact (no air leak on cheek puffing)"
+ ],
+ "postop": [
+  "Overnight observation in a monitored setting with head elevation for posterior laryngeal edema",
+  "Continue perioperative steroids per protocol; low threshold for repeat laryngoscopy if stridor or dyspnea develops",
+  "Voice rest briefly, then voice therapy as directed",
+  "Stroboscopy at follow-up to assess closure, level, and mucosal wave"
+ ],
+ "complications": {
+  "early": [
+   "Posterior laryngeal edema with airway obstruction, occasionally needing intubation or tracheotomy",
+   "Neck or laryngeal hematoma",
+   "Piriform sinus tear with fistula or infection",
+   "Dysphagia or aspiration"
+  ],
+  "late": [
+   "Suture pull-through or cartilage fracture with loss of correction",
+   "Overcorrection with strained voice or reduced airway",
+   "Persistent glottic insufficiency needing revision",
+   "Implant extrusion or migration"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why choose arytenopexy over classic arytenoid adduction in a patient with a fixed arytenoid?",
+   "Arytenoid adduction rotates the arytenoid via a muscular-process suture and needs a mobile cricoarytenoid joint. Arytenopexy opens the joint and sutures the arytenoid directly onto the cricoid facet, so it can reposition a fixed arytenoid."
+  ],
+  [
+   "What does medialization laryngoplasty alone fail to correct in a paralyzed fold?",
+   "A wide posterior (interarytenoid) gap and vertical level mismatch, because the implant pushes the membranous fold but does not rotate or lower the vocal process."
+  ],
+  [
+   "Name two contraindications to arytenopexy.",
+   "Poor abduction of the opposite fold (airway risk) and early paralysis that may still recover (about 9 months or less); high athletic airflow demands are a relative contraindication."
+  ],
+  [
+   "What is the main early risk after arytenoid repositioning and how is it reduced?",
+   "Posterior laryngeal edema with airway compromise; give preoperative dexamethasone, minimize dissection trauma, and observe overnight with head elevation and repeat laryngoscopy as needed."
+  ],
+  [
+   "How do you protect the piriform sinus during exposure?",
+   "Stay lateral to the posterior border of the ala when releasing the constrictor, elevate the mucosa bluntly, and have the patient puff the cheeks to inflate and define it."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology, 2nd ed (Rubin, Sataloff, Korovin, eds; 2024), Ch 48 Adduction Arytenopexy, pp 431-436",
+  "Operative Techniques in Laryngology (2024), Ch 43 Principles of Laryngeal Framework Surgery"
+ ]
+}

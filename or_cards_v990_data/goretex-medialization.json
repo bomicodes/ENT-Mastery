@@ -1,0 +1,139 @@
+{
+ "slug": "goretex-medialization",
+ "title": "GORE-TEX Medialization Laryngoplasty",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Medialization Thyroplasty",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Permanent medialization for glottic insufficiency from unilateral vocal fold paralysis, paresis, or atrophy (including bilateral atrophy or presbylaryngis), when the deficit is not expected to recover or after a reasonable waiting period. The expanded PTFE ribbon is fed through a small thyroid cartilage window and layered into the paraglottic space under real-time endoscopic and voice feedback, allowing fine adjustable medialization without carving a block implant. It does not correct a large posterior gap or a vertical level mismatch; arytenoid adduction or repositioning may be needed in those cases.",
+ "setup": [
+  "Stroboscopy to confirm glottic gap, vertical level, and posterior gap; LEMG when prognosis is uncertain.",
+  "Local anesthesia with monitored sedation, IV dexamethasone 10 to 20 mg, and flexible laryngoscope on a video monitor.",
+  "Calipers, 22-gauge needle, small dilator, 2 to 3 mm cutting burr, Beaver blade, fine forceps, and a spatula.",
+  "Expanded PTFE ribbon kept sterile and handled minimally.",
+  "Optional drain and absorbable strips for implant support."
+ ],
+ "landmarks": [
+  "Thyroid notch and midline",
+  "Inferior border of the thyroid ala and muscular tubercle",
+  "Level of the true vocal fold (approximately midway between notch and inferior border)",
+  "Outer and inner perichondrium",
+  "Paraglottic space",
+  "Ventricle above the fold"
+ ],
+ "danger": [
+  "Window placed too high (medializes false fold)",
+  "Perforation of laryngeal mucosa into the airway",
+  "Overmedialization causing airway compromise",
+  "Paraglottic edema obscuring titration",
+  "Implant extrusion or infraglottic drift"
+ ],
+ "steps": [
+  [
+   "Confirm the indication",
+   "Use for glottic insufficiency from unilateral paralysis, paresis, or atrophy, including bilateral cases. The PTFE ribbon allows fine, adjustable medialization through a small window without carving a block implant, but it will not close a large posterior gap or fix a level mismatch."
+  ],
+  [
+   "Control edema",
+   "Give IV dexamethasone (10 to 20 mg) and work efficiently, ideally about 20 minutes from incision to implant placement. Paraglottic edema from dissection distorts the voice and endoscopic picture, making titration unreliable as time passes."
+  ],
+  [
+   "Anesthesia and monitoring",
+   "Use local anesthesia with monitored sedation, about 10 mL of 1% lidocaine with epinephrine kept superficial to avoid nerve block. Pass a flexible laryngoscope on a video monitor, indwelling or as needed after nebulized topical anesthesia, so the patient can phonate during titration."
+  ],
+  [
+   "Approach",
+   "Make a 3 to 5 cm skin-crease incision near the inferior thyroid border, raise subplatysmal flaps, divide the midline raphe, and retract the strap muscles to expose the ala. Keep dissection limited to reduce edema."
+  ],
+  [
+   "Perichondrial flap and inferior border",
+   "Raise a posteriorly based outer perichondrial flap over the anterior two-thirds of the ala and clearly expose the inferior border, including both sides of the muscular tubercle. The inferior border is the reference for window placement."
+  ],
+  [
+   "Mark the pilot site",
+   "With calipers, mark a point about 3 mm above the inferior border and roughly 6 to 10 mm behind the midline, more posterior in men than in women. This approximates the level of the mid-membranous fold."
+  ],
+  [
+   "Needle localization",
+   "Bore a 22-gauge needle, or a 1 mm burr in calcified cartilage, at the mark and pass a small dilator through it while watching endoscopically. Seeing exactly where the dilator meets the fold confirms or corrects the planned window level."
+  ],
+  [
+   "Create the window",
+   "Center the window on the mid-fold at or slightly below the level of the fold, adjusting from the pilot hole; placing it too high is the most common error. Drill with a 2 to 3 mm cutting burr and light pressure, or cut soft cartilage with a Beaver blade."
+  ],
+  [
+   "Open the inner perichondrium",
+   "Incise the inner perichondrium superiorly, posteriorly, and inferiorly so the medialization is precise and ventricular mucosa is not pushed inward. Keep the anterior inner perichondrium intact to protect the airway mucosa."
+  ],
+  [
+   "Layer the implant",
+   "Feed the expanded PTFE ribbon through the window with fine forceps and tuck small loops into the paraglottic space with a spatula, building medialization progressively at the level of the free edge. Distribute loops posteriorly toward the vocal process as needed."
+  ],
+  [
+   "Titrate",
+   "Repeatedly assess voice quality, phonation time, and endoscopic glottic closure with the patient phonating. Overcorrect only as much as the estimated edema requires, since slight overmedialization settles as swelling resolves."
+  ],
+  [
+   "Support a low implant",
+   "If the implant drifts infraglottically because the window is too low or the pocket too large, prop it with small absorbable strips. For a very low fold, a sub-thyroid pathway below the ala can be used to place the ribbon."
+  ],
+  [
+   "Secure and leave a tail",
+   "Optionally suture the outer perichondrium over the window, and leave about 5 to 8 mm of ribbon outside the window. The tail makes the implant easy to find and adjust or remove at revision."
+  ],
+  [
+   "Close and aftercare",
+   "Close in layers with or without a drain. Postoperative care mirrors Silastic medialization: head elevation, steroids, airway observation as needed, voice rest per surgeon preference, and stroboscopic follow-up in a few weeks."
+  ]
+ ],
+ "exit_check": [
+  "Good glottic closure and voice on endoscopic and auditory assessment",
+  "No mucosal perforation and airway adequate on flexible view",
+  "Implant tail accessible and wound hemostatic"
+ ],
+ "postop": [
+  "Head elevation and perioperative steroids",
+  "Overnight observation if edema or airway concern",
+  "Watch for neck hematoma and stridor",
+  "Stroboscopy and voice assessment at a few weeks"
+ ],
+ "complications": {
+  "early": [
+   "Airway edema or hematoma",
+   "Mucosal perforation",
+   "Undermedialization from edema misjudgment",
+   "Wound seroma"
+  ],
+  "late": [
+   "Implant extrusion",
+   "Persistent gap, especially posterior",
+   "Overmedialization with strained voice",
+   "Granuloma"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the most common technical error in thyroplasty window placement?",
+   "Placing the window too high, which medializes the false fold or ventricle rather than the true fold."
+  ],
+  [
+   "Where is the true vocal fold relative to the external thyroid ala?",
+   "Anteriorly, about midway between the thyroid notch and the inferior border in the midline, running roughly parallel to the inferior border; the window sits a few millimeters above that border."
+  ],
+  [
+   "Why perform medialization under local anesthesia?",
+   "Real-time voice and endoscopic feedback during phonation allows precise titration of the implant."
+  ],
+  [
+   "What problem does medialization thyroplasty alone not fix?",
+   "A large posterior glottic gap or vertical level mismatch; arytenoid adduction may be added."
+  ],
+  [
+   "Advantages of GORE-TEX over a carved Silastic block?",
+   "Small window, adjustable layering without carving, and easy revision via the exposed tail."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Chapter 46: GORE-TEX Medialization Laryngoplasty (pp 415-422)"
+ ]
+}

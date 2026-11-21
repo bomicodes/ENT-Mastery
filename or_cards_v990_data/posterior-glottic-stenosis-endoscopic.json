@@ -1,0 +1,140 @@
+{
+ "slug": "posterior-glottic-stenosis-endoscopic",
+ "title": "Posterior Glottic Stenosis: Endoscopic Lysis, Microtrapdoor Flap, Lateropexy, or Posterior Cricoid Graft",
+ "domain": "Laryngology",
+ "or_family_v190": "airway",
+ "linked_topic": "Posterior Glottic Stenosis / Arytenoid Fixation",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Posterior glottic stenosis, usually from prolonged or traumatic intubation, causes dyspnea, stridor, or tracheotomy dependence and is often mistaken for bilateral vocal fold paralysis. Treatment is staged by the Bogdasarian/Olson classification: type 1 interarytenoid synechia with a posterior sinus, type 2 posterior commissure scar, type 3 unilateral cricoarytenoid fixation, and type 4 bilateral fixation. Endoscopic options range from lysis of a synechia and microtrapdoor flap to joint release with lateropexy, posterior cricoid split with cartilage graft, and, when mobility cannot be restored, ablative widening by cordotomy or arytenoidectomy.",
+ "setup": [
+  "Distinguish stenosis from paralysis: office laryngoscopy, palpation under anesthesia, and LEMG when needed.",
+  "Assess for coexisting subglottic or tracheal stenosis on CT and endoscopy.",
+  "Airway plan: existing tracheotomy with laser-safe tube, new tracheotomy, or tubeless jet ventilation.",
+  "Largest laryngoscope, microscope with CO2, right-angled scythe and microscissors, epinephrine 1:10,000 cottonoids, mitomycin C, triamcinolone 40 mg/mL.",
+  "Lateralization suture kit (endo-extralaryngeal needle) and costochondral graft setup if posterior cricoid split is planned."
+ ],
+ "landmarks": [
+  "Interarytenoid region and posterior commissure",
+  "Arytenoid cartilages and vocal processes",
+  "Cricoarytenoid joints",
+  "Posterior cricoid lamina",
+  "Postcricoid mucosa and esophagus behind the cricoid",
+  "Strap muscles for lateropexy suture"
+ ],
+ "danger": [
+  "Misdiagnosing bilateral paralysis as stenosis (or the reverse)",
+  "Laser airway fire",
+  "Perforating the posterior cricoid into the esophagus",
+  "Aspiration after ablative widening",
+  "Rescarring of raw interarytenoid surfaces"
+ ],
+ "steps": [
+  [
+   "Stage the stenosis",
+   "Classify with Bogdasarian/Olson: type 1 interarytenoid synechia with a posterior opening, type 2 posterior commissure scar without fixation, type 3 unilateral cricoarytenoid fixation, and type 4 bilateral fixation. Higher types are harder to open and less likely to recover motion with mobility-sparing techniques."
+  ],
+  [
+   "Rule out paralysis",
+   "Use LEMG when the diagnosis is unclear. Thyroarytenoid activity is normal in pure stenosis, whereas long-standing bilateral paralysis shows reduced recruitment, synkinesis, or large polyphasic potentials. The distinction decides whether releasing scar can restore motion."
+  ],
+  [
+   "Secure the airway",
+   "Ventilate through an existing tracheotomy with a laser-safe tube, perform a tracheotomy, or use tubeless jet ventilation through the laryngoscope. An endotracheal tube through the posterior glottis hides the very area being treated and should be avoided."
+  ],
+  [
+   "Expose the posterior glottis",
+   "Use the largest laryngoscope that fits; posterior exposure rarely needs counterpressure. In tracheotomized patients the scope tip can be passed between the folds to spread them and open the interarytenoid region."
+  ],
+  [
+   "Palpate before suspension",
+   "Palpate each arytenoid with the laryngoscope held high in the vestibule so the scope does not restrict joint motion. Identify the more mobile joint, which guides flap design and which side to release."
+  ],
+  [
+   "Type 1: divide the synechia",
+   "Excise the interarytenoid mucosal bridge and treat the raw surfaces with topical mitomycin C or triamcinolone (40 mg/mL) injection. If passive mobility returns, stop there; about half of these patients regain some active motion."
+  ],
+  [
+   "Type 2: raise a microtrapdoor flap",
+   "Incise the mucosa over the arytenoid opposite the more mobile joint, from near the vocal process across the arytenoid into the interarytenoid cleft. Elevate a thick mucosal flap off the underlying scar with microscissors or CO2 laser."
+  ],
+  [
+   "Remove the scar",
+   "Excise or vaporize the scar beneath the flap until passive arytenoid mobility improves on palpation. Control bleeding with 1:10,000 epinephrine cottonoids held for 1 to 3 minutes, keeping the field clear for precise work."
+  ],
+  [
+   "Redrape and secure",
+   "Lay the flap back over the ipsilateral joint and interarytenoid region, suturing it if it will not stay, so that mucosa covers the raw area. Consider topical mitomycin C on any exposed joint surface to limit rescarring."
+  ],
+  [
+   "Types 3 to 4: release the joint",
+   "Divide the interarytenoid scar with CO2 while spreading the arytenoids. If they remain fixed, release extracapsular and then intracapsular scar with a right-angled scythe, checking passive motion repeatedly until the arytenoids move."
+  ],
+  [
+   "Lateropexy",
+   "Hold the mobilized arytenoid open with an endo-extralaryngeal lateralizing suture placed at the posterior vocal fold and tied over the strap muscles. Large larynges may need a second suture or adductor botulinum toxin; remove sutures once the posterior commissure re-epithelializes."
+  ],
+  [
+   "Posterior cricoid split with graft",
+   "In selected cases, divide the interarytenoid scar and the posterior cricoid plate endoscopically with cold steel or ultrapulse CO2, staying in the midline and avoiding the postcricoid mucosa. Wedge in a costochondral cartilage graft to hold the posterior glottis open."
+  ],
+  [
+   "Ablative fallback",
+   "If joint mobility cannot be restored, widen the posterior glottis with transverse cordotomy, medial or subtotal arytenoidectomy, or subtotal arytenoidectomy with permanent suture lateralization. Counsel that airway gains come at some cost to voice and potentially swallowing."
+  ],
+  [
+   "Aftercare",
+   "Expect immediate improvement in breathing if mucosal contracture was the only problem; lack of early improvement predicts failure of mobility-sparing techniques. Plan staged reassessment, reflux therapy, and decannulation trials when the airway allows."
+  ]
+ ],
+ "exit_check": [
+  "Passive arytenoid mobility improved on palpation, or posterior glottis widened",
+  "Raw surfaces covered by flap or treated to limit rescarring",
+  "Lateralization suture or graft secure and airway plan confirmed"
+ ],
+ "postop": [
+  "Airway monitoring; keep tracheotomy until airway proven",
+  "Reflux therapy",
+  "Staged endoscopy to remove sutures and assess motion",
+  "Swallow assessment after ablative procedures",
+  "Decannulation trial once lumen and motion are adequate"
+ ],
+ "complications": {
+  "early": [
+   "Airway edema",
+   "Bleeding",
+   "Aspiration",
+   "Suture or graft displacement"
+  ],
+  "late": [
+   "Restenosis",
+   "Persistent tracheotomy dependence",
+   "Dysphonia",
+   "Chronic aspiration after arytenoidectomy"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the most common cause of posterior glottic stenosis?",
+   "Prolonged or traumatic endotracheal intubation causing interarytenoid ulceration and scar."
+  ],
+  [
+   "How do you distinguish posterior glottic stenosis from bilateral vocal fold paralysis?",
+   "Palpation of the arytenoids under anesthesia (fixed versus mobile) and LEMG (normal activity in stenosis, denervation or synkinesis in paralysis)."
+  ],
+  [
+   "Describe the Bogdasarian classification.",
+   "Type 1 interarytenoid synechia; type 2 posterior commissure scar; type 3 unilateral cricoarytenoid ankylosis; type 4 bilateral ankylosis."
+  ],
+  [
+   "Why is the microtrapdoor flap based on the side opposite the more mobile arytenoid?",
+   "So the flap covers the raw surface over the joint that matters most for recovery, keeping mucosa where rescarring would limit motion."
+  ],
+  [
+   "What adjuncts reduce rescarring after lysis?",
+   "Topical mitomycin C and intralesional triamcinolone."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Chapter 33: Posterior Glottic Stenosis: Endoscopic Approach (pp 275-288)"
+ ]
+}

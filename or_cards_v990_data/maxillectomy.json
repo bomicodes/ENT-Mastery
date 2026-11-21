@@ -1,0 +1,139 @@
+{
+ "slug": "maxillectomy",
+ "title": "Open Maxillectomy (Medial / Total, Weber-Ferguson)",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "headneck",
+ "linked_topic": "Sinonasal Malignancies",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Resection of malignant (or occasionally aggressive benign) disease arising in or invading the maxilla: upper alveolar and hard palate SCC, maxillary sinus SCC, minor salivary carcinomas, sarcomas and selected benign lesions such as extensive fibrous dysplasia or osteonecrosis. A medial maxillectomy removes the lateral nasal wall and medial maxilla (now usually endoscopic for inverted papilloma, with lateral rhinotomy for large or inaccessible tumors). An infrastructure maxillectomy removes the alveolus and palate below the infraorbital nerve; a total maxillectomy includes the orbital floor; a radical maxillectomy adds orbital exenteration when tumor invades periorbita extensively, the orbital apex or extraocular muscles. The Weber-Ferguson approach suits Brown class II to V resections. Contraindications include extensive brain, cavernous sinus, bilateral orbit, optic chiasm or carotid involvement, and patients unfit for a long anesthetic.",
+ "setup": [
+  "Stage with contrast CT (bone erosion, palate, pterygoid plates) and MRI (orbit, periorbita, perineural spread along V2 into the pterygopalatine fossa and foramen rotundum, skull base, dura), plus neck imaging and PET/CT for advanced disease; obtain histology first.",
+  "Plan resection and reconstruction at the outset: prosthodontic impressions and a surgical obturator for smaller palatal defects, or a soft tissue or bony free flap (radial forearm, fibula, DCIA, scapula) with orbital floor support and dental implants for larger Brown class II to IV defects, ideally with virtual planning and cutting guides.",
+  "Discuss with the patient facial scars, numbness of the cheek, epiphora, ectropion, diplopia, loss of the eye if exenteration may be needed, speech and swallowing with an obturator, and possible adjuvant radiation.",
+  "Airway: oral tube secured to the opposite side or a planned tracheostomy for extensive resections, free flaps or when bleeding and swelling may threaten the airway; nasogastric tube.",
+  "Ask anesthesia for controlled hypotension and head-up position for the osteotomies; have cross-matched blood, osteotomes, reciprocating and oscillating saws, bone wax, packing, and plates."
+ ],
+ "landmarks": [
+  "Piriform aperture and nasal process of the maxilla",
+  "Infraorbital rim and infraorbital nerve",
+  "Orbital floor and inferior orbital fissure",
+  "Medial canthal tendon and lacrimal sac",
+  "Nasolacrimal duct",
+  "Zygomaticomaxillary buttress",
+  "Maxillary tuberosity and pterygomaxillary junction",
+  "Internal maxillary artery in the pterygopalatine fossa"
+ ],
+ "danger": [
+  "Internal maxillary artery bleeding during posterior osteotomies",
+  "Orbital floor and globe injury; retrobulbar hematoma",
+  "Nasolacrimal duct obstruction and epiphora",
+  "Lower lid ectropion and medial canthal breakdown",
+  "Skull base and dura with high cuts",
+  "Alar base and lip notching from poor closure"
+ ],
+ "steps": [
+  [
+   "Protect the eye and mark",
+   "Place a temporary tarsorrhaphy suture to protect the cornea. Mark the incision with ink at key points: philtral column, vermilion border and alar base, so the lip and nose can be realigned exactly at closure."
+  ],
+  [
+   "Lip split and lateral rhinotomy",
+   "Incise along the philtral column through the lip (a chevron at the vermilion helps alignment), ligating the labial artery, then around the nasal sill and alar base 1 to 2 mm from the ala, and up the nasofacial junction within the nasal sidewall subunit. Cut vertically down to bone at the ala to keep its attachment and limit retraction."
+  ],
+  [
+   "Add the infraorbital limb when needed",
+   "For orbital floor or higher resections, extend along a subciliary or subtarsal crease, or use a transconjunctival approach, going through orbicularis in a preseptal plane to the rim. Avoid lateral lid extensions when possible because they increase ectropion."
+  ],
+  [
+   "Enter the nose and raise the cheek flap",
+   "Carry the incision to the piriform aperture and protect the lateral nasal mucosa with an elevator if not involved. Raise the cheek flap laterally in a subperiosteal plane, or above it where tumor breaches the anterior wall, keeping the planned soft tissue margin; sacrifice the infraorbital nerve if it lies within the resection."
+  ],
+  [
+   "Medial maxillectomy steps",
+   "For a medial maxillectomy, detach the medial canthal tendon, divide the nasolacrimal duct low near the sac, and osteotomize the nasal process of the maxilla and nasofrontal junction to mobilize the lateral nasal wall. Marsupialize the sac to prevent epiphora and reattach the medial canthal tendon precisely at closure."
+  ],
+  [
+   "Complete the soft tissue cuts first",
+   "Make the gingivobuccal, palatal and posterior soft palate incisions through and through before any bone is cut, including release of the posterior muscle attachments where possible. Once the bone is divided, bleeding makes soft tissue work slow and imprecise."
+  ],
+  [
+   "Manage the orbit",
+   "For a total maxillectomy, elevate periorbita from the orbital floor and medial wall, protecting the globe with a malleable retractor. Send periorbital frozen sections when tumor abuts it; exenteration is reserved for gross periorbital or orbital apex invasion rather than limited bony erosion."
+  ],
+  [
+   "Anterior and superior osteotomies",
+   "With hypotensive anesthesia and head up, make the anterior cuts through the alveolus (usually through an extraction socket) and the palate, then the horizontal cut (high Le Fort I level for infrastructure, or through the zygoma, orbital rim and floor and frontal process for total maxillectomy)."
+  ],
+  [
+   "Posterior osteotomy and delivery",
+   "Separate the maxilla from the pterygoid plates with a curved osteotome or through the plates with a saw, then connect the cuts and lever the specimen out with large osteotomes, freeing the remaining muscle with heavy scissors. Expect brisk bleeding from the internal maxillary artery until the specimen is out."
+  ],
+  [
+   "Control bleeding and check margins",
+   "Pack the cavity at once, then find and clip or ligate the internal maxillary artery and its branches and wax bleeding bone. Inspect the specimen and send frozen sections from the posterior, orbital and soft tissue margins, resecting the coronoid or pterygoid muscles if close."
+  ],
+  [
+   "Reconstruct",
+   "Line the cheek flap with a split-thickness skin graft and fit a surgical obturator for small to moderate palatal defects; otherwise inset a free or regional flap. Rebuild the orbital floor with bone or mesh covered by vascularized tissue when it has been resected but the eye is kept."
+  ],
+  [
+   "Layered closure",
+   "Close mucosa, muscle and skin in layers, realigning the vermilion, philtrum and nasal sill at the ink marks. Suture the alar base to bone or a plate to prevent widening, and close the medial canthal corner of any infraorbital limb carefully because it breaks down most often."
+  ]
+ ],
+ "exit_check": [
+  "Hemostasis secured in the pterygoid region and the cavity packed or flap inset; obturator stable if used",
+  "Eye protected, globe position and pupil checked, and the lid and medial canthus closed without tension",
+  "Specimen oriented with margins sent and documented"
+ ],
+ "postop": [
+  "Monitor in high-dependency or intensive care with tracheostomy and flap care as needed",
+  "Eye observations for the first 24 hours to detect retrobulbar hemorrhage or visual loss",
+  "Keep facial wounds moist; remove packing and refit the obturator at about 1 week, then an interim and later definitive prosthesis",
+  "Start mouth-opening exercises within 2 weeks to prevent trismus, and scar massage of the lower lid",
+  "Speech and swallowing therapy and tumor board review for adjuvant radiation"
+ ],
+ "complications": {
+  "early": [
+   "Hemorrhage from the internal maxillary artery",
+   "Retrobulbar hematoma or visual loss",
+   "Cerebrospinal fluid leak with high cuts",
+   "Wound breakdown at the medial canthus",
+   "Free flap compromise"
+  ],
+  "late": [
+   "Epiphora from nasolacrimal obstruction",
+   "Lower lid ectropion and enophthalmos or diplopia",
+   "Trismus",
+   "Velopharyngeal insufficiency or poor obturator fit",
+   "Nasal crusting and local recurrence"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is Ohngren's line and why does it matter?",
+   "An imaginary line from the medial canthus to the angle of the mandible; tumors above and behind it (suprastructure) have a worse prognosis because they reach the orbit, pterygopalatine and infratemporal fossae and skull base early."
+  ],
+  [
+   "When is orbital exenteration needed in a maxillary sinus cancer?",
+   "When tumor invades the periorbita extensively, orbital fat, extraocular muscles or the orbital apex. Erosion of the orbital floor bone alone with intact periorbita usually allows preservation of the eye."
+  ],
+  [
+   "How do you prevent epiphora after medial maxillectomy?",
+   "Divide the nasolacrimal duct cleanly near the sac and marsupialize or stent the sac into the nose; persistent epiphora can be treated with dacryocystorhinostomy."
+  ],
+  [
+   "When is an obturator preferred over a free flap?",
+   "For smaller palatal and alveolar defects with remaining teeth to retain it, patients unfit for long surgery, and when direct cavity surveillance is valued. Larger defects, loss of the orbital floor or much of the soft palate are better reconstructed with vascularized tissue, often bone."
+  ],
+  [
+   "What is the most common histology in maxillary sinus malignancy, and what exposure is classically linked to ethmoid adenocarcinoma?",
+   "Squamous cell carcinoma is most common in the maxillary sinus; intestinal-type adenocarcinoma of the ethmoids is associated with hardwood dust exposure."
+  ]
+ ],
+ "source_basis": [
+  "Payne K, Breik O, Praveen P, Parmar S. Maxillectomy. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 42.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, Sinonasal Malignancies, surgical management and resection types (p 309-311).",
+  "Brown JS, Shaw RJ. Reconstruction of the maxilla and midface: introducing a new classification. Lancet Oncol. 2010;11:1001-1008."
+ ]
+}

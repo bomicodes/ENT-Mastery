@@ -1,0 +1,89 @@
+{"slug": "facial-laceration-repair",
+ "title": "Complex Facial Laceration Repair (Lip, Eyelid, Ear, Parotid Duct)",
+ "domain": "Facial Trauma",
+ "or_family_v190": "facial_trauma",
+ "linked_topic": "Facial Soft-Tissue Lacerations / Burns",
+ "source_label": "Pasha 6e (Head and Neck Trauma chapter)",
+ "indications": "Facial lacerations that cross key landmarks or involve deeper structures: through-and-through or vermilion-crossing lip wounds, eyelid margin and medial canthal lacerations, auricular lacerations with exposed cartilage, and cheek wounds over the parotid or masseter where the parotid duct or facial nerve may be cut. After primary survey and clearance of airway, bleeding and cervical spine, the face tolerates delayed primary closure well because of its blood supply, but repair should be as early as practical. Go to the OR for extensive or contaminated wounds, children who cannot cooperate, suspected facial nerve or duct injury, and eyelid or lacrimal injury once ophthalmology has excluded a globe injury. Confirm tetanus status.",
+ "setup": [
+  "Document a full facial nerve exam (each branch) and sensory exam before any local anesthetic is given",
+  "Mark the vermilion border, gray line or other landmarks before injecting, since local anesthetic blurs them; prefer regional nerve blocks (infraorbital, mental, ear ring block) to limit distortion",
+  "Copious low-pressure irrigation, removal of debris and foreign bodies, and conservative debridement of only clearly devitalized tissue",
+  "Fine instruments: skin hooks, fine-toothed forceps, #15 and #11 blades, fine absorbable and nonabsorbable sutures, loupes; operating microscope and nerve stimulator for nerve or duct repair",
+  "Lacrimal probes and silicone stents or a small angiocatheter for duct cannulation as needed",
+  "Ophthalmology involved for any eyelid or periocular wound before repair"
+ ],
+ "landmarks": [
+  "Vermilion-cutaneous junction (white roll) and wet-dry vermilion line",
+  "Orbicularis oris muscle layer",
+  "Eyelid gray line, lash line, tarsal plate and puncta",
+  "Medial canthal tendon and canaliculi",
+  "Parotid duct course: middle third of a line from tragus to midpoint of the upper lip, opening opposite the upper second molar",
+  "Anterior border of the masseter; vertical line from the lateral canthus (distal limit for facial nerve repair)",
+  "Helical rim and auricular cartilage"
+ ],
+ "danger": [
+  "Vermilion step-off from misalignment of the white roll",
+  "Missed parotid duct injury leading to sialocele or salivary fistula",
+  "Missed facial nerve branch injury lateral to the lateral canthus",
+  "Missed canalicular laceration in medial lid wounds (epiphora)",
+  "Lid notching or ectropion from poor margin alignment or sutures in the orbicularis",
+  "Exposed auricular cartilage left uncovered (chondritis, deformity)"
+ ],
+ "steps": [
+  ["Examine before anesthesia",
+   "Test all facial nerve branches and record findings, look for clear saliva in a cheek wound, check the globe, eyelid closure and puncta, and examine the ear and canal. Any weakness with a wound lateral to a vertical line through the lateral canthus prompts operative exploration for primary nerve repair."],
+  ["Prepare the wound",
+   "Irrigate thoroughly, remove embedded debris to prevent traumatic tattooing, and excise only clearly nonviable tissue. Convert beveled or shelved edges to perpendicular edges where possible, since trapdoor flaps heal with pincushioning. Undermine conservatively to allow tension-free layered closure."],
+  ["Lip: place the key stitch",
+   "Before full anesthesia distorts the lip, mark the white roll. Place the first suture, nonabsorbable, exactly at the vermilion-cutaneous junction to realign the white roll, because even a 1 mm step-off is visible. Then align the wet-dry line."],
+  ["Lip: layered closure",
+   "Close the mucosa with absorbable suture, then reapproximate the orbicularis oris with buried absorbable sutures to restore oral competence and prevent a notch, then close the skin with fine sutures. Up to about one third to one half of the lip can be closed primarily; larger tissue loss needs local lip flaps."],
+  ["Eyelid margin repair",
+   "After ophthalmology clearance, align the margin first with sutures at the gray line and the posterior lid margin, then close the tarsus with partial-thickness absorbable sutures. Leave the margin sutures long and tie them away from the cornea. Close skin separately, avoiding deep sutures in the septum or orbicularis that cause retraction."],
+  ["Lid tissue loss and canthal injury",
+   "Defects up to about one quarter of the lid can usually be closed directly; a lateral canthotomy and cantholysis adds length for larger defects. For medial wounds, probe the canaliculi; a lacerated canaliculus is repaired over a silicone stent with microscopic anastomosis, ideally within a day or two."],
+  ["Ear laceration",
+   "Irrigate and debride conservatively, realign the helical rim first, and approximate cartilage with sutures through the perichondrium rather than the cartilage itself. Cover all exposed cartilage with skin by closure, wedge excision, local flap or temporary postauricular pocket, then bolster to prevent hematoma."],
+  ["Assess the parotid duct",
+   "Suspect duct injury with any cheek wound posterior to the anterior border of the masseter along the tragus to upper lip line. Cannulate Stensen's duct intraorally with a lacrimal probe or small catheter and look for it in the wound, or inject saline and watch for leakage. A buccal branch injury often accompanies it."],
+  ["Repair the parotid duct",
+   "Pass a stent from the papilla out the distal cut end, find the proximal end by milking the gland for saliva, thread the stent into it, and anastomose the duct over the stent with fine sutures under magnification. Secure the stent intraorally for about 10 to 14 days. Proximal gland injuries without a usable duct can be ligated."],
+  ["Repair the facial nerve",
+   "Under the microscope, identify both cut ends; within about 72 hours the distal stumps can still be found with a nerve stimulator, after which distal stimulation is lost. Perform tension-free epineural repair; if there is a gap, use a cable graft such as the great auricular or sural nerve. Distal medial injuries are usually observed."],
+  ["Close the skin in layers",
+   "Close dead space and take tension with buried absorbable dermal sutures, then evert the skin edges with fine interrupted or running sutures. Align natural landmarks such as the brow, nasal rim and hairline first. Avoid shaving the eyebrow, which may regrow unpredictably and is the guide for alignment."],
+  ["Dressing and documentation",
+   "Apply petrolatum ointment or a light dressing and a pressure dressing over the parotid region when the duct or gland was injured. Photograph the wounds, document nerve and duct findings, and record the plan for suture and stent removal."]
+ ],
+ "exit_check": [
+  "White roll, lid margin and helical rim aligned with no step-off",
+  "Duct stent secured and duct watertight; any nerve repair documented with both ends identified",
+  "All cartilage covered; globe and lid closure checked"
+ ],
+ "postop": [
+  "Gentle wound cleaning and ointment; facial skin sutures out at about 5 to 7 days, lid margin sutures at about 10 to 14 days",
+  "Parotid duct stent out at about 10 to 14 days; watch for sialocele",
+  "Ear bolster for several days with a recheck for hematoma",
+  "Strict sun protection and scar massage; scar revision, if needed, deferred 6 to 12 months",
+  "Facial nerve function recheck and physical therapy plan if repaired"
+ ],
+ "complications": {
+  "early": ["Wound dehiscence or infection", "Sialocele or salivary fistula", "Auricular hematoma or chondritis", "Lid margin notching or wound gaping"],
+  "late": ["Vermilion step-off or lip notching", "Hypertrophic scar or trapdoor deformity", "Persistent facial weakness or synkinesis", "Epiphora from canalicular injury", "Ectropion or lid retraction"]
+ },
+ "attending_followup": [
+  ["Which cheek lacerations need parotid duct evaluation and how is it tested?",
+   "Wounds posterior to the anterior border of the masseter along a line from tragus to the upper lip; cannulate Stensen's duct intraorally and look for the probe in the wound or inject saline for leakage."],
+  ["Which facial nerve injuries are explored and why within 72 hours?",
+   "Weakness with a wound lateral to a vertical line through the lateral canthus; distal branches can be found with a nerve stimulator only for about 72 hours before Wallerian degeneration stops conduction."],
+  ["What is the first stitch in a lip laceration crossing the vermilion?",
+   "A key stitch exactly at the vermilion-cutaneous junction (white roll), placed after marking the border before anesthetic distorts it."],
+  ["How is a sialocele after duct injury managed?",
+   "Serial aspiration and pressure dressing first, with botulinum toxin injection to the gland for persistent collections; surgery is reserved for failures."],
+  ["Which medial eyelid injuries need a canalicular repair?",
+   "Any laceration medial to the punctum or through the medial canthus; probe the canaliculi and repair over a silicone stent to prevent epiphora."]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 10, Head and Neck Trauma: soft tissue injuries, laceration, lip injury, trapdoor deformity, parotid duct injury, eyelid and lacrimal injury, auricular trauma (p 671-674)"
+ ]}

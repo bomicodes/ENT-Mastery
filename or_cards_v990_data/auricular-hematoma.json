@@ -1,0 +1,88 @@
+{"slug": "auricular-hematoma",
+ "title": "Auricular Hematoma Drainage and Bolster",
+ "domain": "General ENT",
+ "or_family_v190": "emergency",
+ "linked_topic": "Facial Soft-Tissue Lacerations / Burns",
+ "source_label": "Pasha 6e (Otology and Head and Neck Trauma chapters)",
+ "indications": "Any tense, fluctuant collection between perichondrium and auricular cartilage after blunt or shearing trauma (wrestling, boxing, rugby, falls), most often on the anterior surface where skin is tightly bound to perichondrium. Drain as soon as it is recognized, ideally within the first days, because the cartilage depends on the perichondrium for its blood supply; untreated or reaccumulated blood causes cartilage necrosis, perichondritis and fibrocartilaginous overgrowth (cauliflower ear). Very small, flat collections may be observed only if the patient can be rechecked closely. Early blood is clotted and needs incision rather than aspiration; after roughly a week it liquefies.",
+ "setup": [
+  "Usually a bedside or clinic procedure; patient supine or seated with the head turned and the ear well lit (headlight or loupes)",
+  "Ear ring block with local anesthetic (diamond pattern of about six injection points around the auricle) or targeted local infiltration",
+  "Prep the whole auricle and postauricular skin; keep the canal plugged with a cotton ball to keep prep and blood out",
+  "Tray: #15 blade, fine scissors, small curette or Freer, suction or syringe with saline, nylon or polypropylene through-and-through sutures, bolster material (dental rolls, petrolatum gauze, silicone sheets or thermoplastic splints)",
+  "Document hearing complaints and inspect the canal and tympanic membrane for associated injury before you start",
+  "Plan follow-up within 24 to 48 hours and again around day 7 before you begin"
+ ],
+ "landmarks": [
+  "Helix and helical rim",
+  "Antihelix and its superior and inferior crura",
+  "Scaphoid fossa and triangular fossa",
+  "Concha (cymba and cavum)",
+  "Tragus and antitragus",
+  "Anterior perichondrium, tightly adherent to skin",
+  "Posterior (medial) auricular skin, loosely adherent"
+ ],
+ "danger": [
+  "Cartilage necrosis from leaving blood or applying an overly tight bolster",
+  "Cutting through cartilage with a deep incision or curette",
+  "Incision across the helical rim, which leaves a visible notch",
+  "Dead space under the skin flap that allows reaccumulation",
+  "Missed perichondritis or abscess in a delayed presentation",
+  "Associated canal laceration, temporal bone fracture or ossicular injury"
+ ],
+ "steps": [
+  ["Confirm the diagnosis",
+   "Distinguish a fluctuant, effaced auricle with loss of the normal folds from simple soft-tissue swelling or perichondritis. Note the size, location (scaphoid, triangular fossa, concha), and age of the collection, because blood older than about a week may be organized or loculated and harder to evacuate completely."],
+  ["Anesthetize",
+   "Perform an ear ring block, injecting anterior, posterior, superior and inferior to the auricle so all sensory contributors are covered, then add a small amount of local infiltration along the planned incision. Avoid injecting directly into the collection, which distorts it and adds volume under the skin."],
+  ["Plan the incision",
+   "Place the incision within a natural fold, usually parallel to and just inside the helical rim along the scaphoid fossa or in the antihelical fold, so the scar hides in shadow. Make it long enough to evacuate clot fully; a needle puncture alone rarely clears organized blood and recurrence is common."],
+  ["Incise skin and perichondrium only",
+   "Cut through skin and the lifted perichondrium with a #15 blade, staying superficial to the cartilage. The perichondrium is the vascular lifeline for the cartilage, so it should be lifted with the skin as one layer, never stripped off separately."],
+  ["Evacuate the clot",
+   "Express and gently curette the clot with a small curette or Freer, sweeping in all directions under the flap. Irrigate the pocket with saline until the return is clear and inspect for loculations. Remove any obviously organized or infected tissue, preserving viable cartilage."],
+  ["Inspect the cartilage",
+   "Look at the exposed cartilage surface for fractures, devitalized fragments or neocartilage in a late presentation. Thickened, fibrotic tissue from a recurrent hematoma can be carefully shaved to restore contour, but avoid aggressive debridement of healthy cartilage."],
+  ["Redrape the flap",
+   "Lay the skin-perichondrial flap back onto the cartilage and confirm that it conforms to every fold without a residual pocket. The incision can be left partly open or loosely approximated so any further ooze drains out rather than collecting beneath the flap."],
+  ["Place the through-and-through bolster",
+   "Contour dental rolls or petrolatum gauze to the anterior concavity and to the posterior auricular surface, then pass several through-and-through mattress sutures of nylon or polypropylene through bolster, ear and bolster. This compresses the flap onto the cartilage and eliminates dead space; it is the key step against reaccumulation."],
+  ["Check bolster tension",
+   "Tie the sutures snug enough to coapt the flap but not so tight that the skin blanches, because pressure necrosis of skin and cartilage is a real complication. Alternatives include silicone sheets or thermoplastic splints molded to both surfaces and secured with transcartilaginous sutures."],
+  ["Apply an outer dressing",
+   "Fluff gauze behind the ear to support the auricle and wrap with a light mastoid dressing for the first day. Keep the ear protected from rubbing and from sleeping on the operated side."],
+  ["Follow up and remove",
+   "Recheck within one to two days for pain, swelling or skin compromise, then remove the bolster at about 5 to 7 days. Examine for reaccumulation; a recurrent small collection can be re-drained and re-bolstered, and athletes should use protective headgear on return."]
+ ],
+ "exit_check": [
+  "Auricle contour restored with all folds visible and no residual fluctuance",
+  "Bolster sutures snug but skin perfused (pink, no blanching)",
+  "Canal checked and clear; follow-up for bolster check booked"
+ ],
+ "postop": [
+  "Keep the bolster dry and in place for about 5 to 7 days",
+  "Analgesia with acetaminophen or NSAIDs; avoid sleeping on the treated ear",
+  "Return immediately for increasing pain, redness, foul drainage or new swelling",
+  "No contact sport until the bolster is out and the ear is healed, then protective headgear",
+  "Counsel that recurrent untreated collections lead to permanent cauliflower deformity"
+ ],
+ "complications": {
+  "early": ["Reaccumulation of hematoma", "Perichondritis or abscess", "Skin or cartilage pressure necrosis from a tight bolster", "Bleeding from the incision"],
+  "late": ["Cauliflower ear (fibrocartilaginous overgrowth)", "Visible scar or notch at the helical rim", "Cartilage loss with contour deformity", "Canal stenosis if the collection extended into the concha"]
+ },
+ "attending_followup": [
+  ["Why is the anterior surface of the auricle the usual site of hematoma?",
+   "Anterior skin is tightly adherent to the perichondrium, so shearing forces separate perichondrium from cartilage there; posterior skin is loose and glides, so shear is absorbed."],
+  ["What is the pathophysiology of cauliflower ear?",
+   "Blood separates the avascular cartilage from its perichondrial blood supply; cartilage necroses and the stimulated perichondrium lays down disorganized fibrous tissue and neocartilage, producing a thickened, deformed auricle."],
+  ["Why is needle aspiration alone often inadequate?",
+   "Early hematoma is clotted and gelatinous so it does not aspirate fully, and without compression the dead space refills; incision with evacuation plus a bolster has lower recurrence."],
+  ["Which pattern of injection anesthetizes the entire external ear?",
+   "An ear ring block, a diamond-shaped series of about six injections around the base of the auricle covering the auriculotemporal, great auricular, lesser occipital and auricular branch of vagus territories."],
+  ["What is the main risk of the bolster itself and how do you avoid it?",
+   "Pressure necrosis of skin and cartilage; tie the through-and-through sutures to coapt without blanching and recheck the ear within 24 to 48 hours."]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 7, Otology and Neurotology: auricular anatomy (p 334-335)",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 10, Head and Neck Trauma: regional nerve blocks, hematoma, auricular trauma (p 671-674)"
+ ]}

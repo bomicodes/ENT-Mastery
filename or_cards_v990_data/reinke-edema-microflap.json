@@ -1,0 +1,139 @@
+{
+ "slug": "reinke-edema-microflap",
+ "title": "Reinke Edema Reduction (Microflap Suction Technique ± KTP)",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Reinke Edema",
+ "source_label": "Operative Techniques in Laryngology (2024)",
+ "indications": "Polypoid corditis (Reinke edema) in a smoker or former smoker with symptomatic low-pitched, rough voice persisting despite smoking cessation, reflux treatment, and voice therapy; airway encroachment or obstructive symptoms; or overlying epithelium suspicious for dysplasia. Continued smoking is a relative contraindication because disease recurs. The aim is to reduce fold mass by evacuating the gelatinous superficial lamina propria through a lateral microflap while preserving a thin layer on the ligament and protecting the anterior commissure.",
+ "setup": [
+  "Confirm smoking cessation (or a documented plan) and counsel that pitch will rise, voice will be breathy initially, and recovery may take 6-8 weeks.",
+  "Plan unilateral vs bilateral surgery; bilateral only if incisions stay lateral and short of the anterior commissure.",
+  "Anesthesia: careful placement of a 5.0-5.5 microlaryngeal tube past bulky folds; the surgeon may need to intubate. Have a plan for a difficult airway.",
+  "Phonomicrosurgery set: largest laryngoscope that exposes the whole membranous fold, suspension arm, 0/30/70 degree telescopes, microscope with 400-mm lens, sickle knife, 30 degree elevators, straight and curved microscissors, triangular and cup forceps, fine suctions, and 1:10,000 epinephrine pledgets.",
+  "Add a 5- and 7-French suction on a high-power (liposuction-type) source, and a pulsed KTP laser with laser-safe setup if needed."
+ ],
+ "landmarks": [
+  "Superolateral surface of the fold (incision line)",
+  "Vocal process posteriorly",
+  "Point about 3 mm short of the anterior commissure",
+  "Gelatinous superficial lamina propria",
+  "Vocal ligament",
+  "Infraglottic extent of the flap"
+ ],
+ "danger": [
+  "Over-evacuation leaving a stiff scarred fold",
+  "Anterior commissure web with bilateral surgery",
+  "Flap perforation during inferior dissection",
+  "Over-trimming epithelium causing dehiscence",
+  "Difficult intubation with obstructing folds"
+ ],
+ "steps": [
+  [
+   "Confirm candidacy",
+   "Operate for symptomatic dysphonia despite reflux treatment, voice therapy, and smoking cessation, for airway encroachment, or for suspicious overlying epithelium. Continued smoking is a relative contraindication because disease recurs; cessation halts progression but does not reverse established polypoid change."
+  ],
+  [
+   "Plan unilateral vs bilateral",
+   "Decide whether to treat both folds in one stage. Bilateral surgery is acceptable only if the incisions stay lateral and stop short of the anterior commissure; otherwise stage the second side several weeks later to avoid an anterior glottic web."
+  ],
+  [
+   "Counsel on voice change",
+   "Warn that pitch will rise because fold mass is reduced, that the voice will be breathy at first because the patient is used to high subglottic driving pressure, and that recovery is slower than for most benign lesions, often 6-8 weeks with therapy."
+  ],
+  [
+   "Careful intubation",
+   "Place a 5.0-5.5 microlaryngeal tube with great care, since bulky polypoid folds leave little glottic space and can be torn or bleed. The surgeon may need to secure the airway personally, with a rigid scope available for a difficult view."
+  ],
+  [
+   "Expose and inspect",
+   "Suspend the largest laryngoscope that shows the whole membranous fold and inspect with angled telescopes for infraglottic extent and any suspicious epithelium. Have a high-power suction source ready in addition to the standard phonomicrosurgery instrument set."
+  ],
+  [
+   "Lateral incision",
+   "With a fresh sickle knife, incise the superolateral surface from the vocal process forward to within about 3 mm of the anterior commissure. In massive disease the incision can sit nearer the free edge to ease dissection and trimming of the redundant cover."
+  ],
+  [
+   "Elevate the epithelial flap",
+   "Use a 30 degree elevator to separate the thin epithelium from the gelatinous material, carrying the dissection into the infraglottis along the full membranous fold. Press laterally to see the inferior flap clearly without perforating it."
+  ],
+  [
+   "Find the ligament plane",
+   "Identify the vocal ligament at the superolateral fold and develop a plane between it and the polypoid tissue. Mild cases may need little flap elevation because the edematous material aspirates readily once the incision is made."
+  ],
+  [
+   "Suction the polypoid material",
+   "Remove the gel with a 5- or 7-French suction at strong negative pressure with the thumb port closed, retracting the flap away from the suction tip so it is not avulsed. Loculated or fibrous portions may need manual extraction with cup forceps."
+  ],
+  [
+   "Leave some superficial lamina propria",
+   "Deliberately leave a thin layer of gelatinous material on the ligament to reconstitute Reinke space. Over-evacuation produces a stiff, scarred fold with a rough, breathy voice and poor projection that is very hard to correct later."
+  ],
+  [
+   "Trim redundant epithelium",
+   "Redrape the flap and conservatively trim excess epithelium with long, smooth scissor cuts rather than short jagged ones. Trim less at first, since more can always be removed; the edges should coapt without dehiscence or exposed lamina propria."
+  ],
+  [
+   "Address the other side",
+   "If operating bilaterally, repeat on the opposite fold while keeping the anterior raw surfaces apart. A milder contralateral fold can be treated instead with noncontact KTP spots, or simply staged for a later procedure."
+  ],
+  [
+   "KTP alternative",
+   "For mild-moderate disease or office treatment, apply noncontact pulsed KTP laser to a blanching endpoint at multiple spots about 5 mm apart along the fold; typical settings are around 25-40 W with 15-ms pulses at 2-3 pulses per second."
+  ],
+  [
+   "Finish and emerge",
+   "Achieve hemostasis with epinephrine pledgets, apply topical lidocaine, and emerge smoothly. Watch for postoperative airway edema in patients whose folds were obstructing before surgery, and keep them monitored in recovery until stridor or work of breathing has been excluded."
+  ]
+ ],
+ "exit_check": [
+  "Fold mass reduced with a thin layer of superficial lamina propria left on the ligament, flap edges coapted, and anterior 3 mm of each fold untouched.",
+  "No opposing raw surfaces at the anterior commissure; hemostasis secure and airway adequate."
+ ],
+ "postop": [
+  "Voice rest for about 5-7 days, then graduated voice therapy.",
+  "Reflux therapy and analgesia; insist on smoking cessation or at least reduction.",
+  "Stroboscopy at 1-2 weeks and again at 6-8 weeks to assess wave and web formation.",
+  "Send any suspicious epithelium for histology and follow up the pathology."
+ ],
+ "complications": {
+  "early": [
+   "Airway edema in previously obstructed patients",
+   "Bleeding or hematoma",
+   "Flap dehiscence from over-trimming",
+   "Dental injury from suspension"
+  ],
+  "late": [
+   "Recurrence with continued smoking",
+   "Stiff scarred fold from over-evacuation",
+   "Anterior glottic web after bilateral surgery",
+   "Persistent breathiness or pitch outside the desired range"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the anatomic basis of Reinke edema?",
+   "Accumulation of gelatinous fluid in the superficial lamina propria (Reinke space), bounded by the epithelium and the vocal ligament, almost always associated with smoking, with reflux and phonotrauma as cofactors. It is usually bilateral."
+  ],
+  [
+   "Why leave some gelatinous material on the ligament?",
+   "Removing the entire superficial lamina propria eliminates the layer that allows the mucosal wave, producing a stiff, scarred fold. A thin residual layer reconstitutes Reinke space and preserves vibration."
+  ],
+  [
+   "How do you prevent an anterior web?",
+   "Keep incisions lateral and stop about 3 mm short of the anterior commissure; avoid opposing raw surfaces anteriorly, or stage the second side."
+  ],
+  [
+   "What voice outcome do you warn about in women?",
+   "Pitch rises after mass reduction, which most women welcome, but some patients (including those who identify with a low voice) may dislike the change; the voice may also be breathy until laryngeal driving pressures readjust with therapy."
+  ],
+  [
+   "What does the Yonekawa classification describe?",
+   "Reinke edema severity in three grades, from edema limited to the anterior or upper fold (type I) to polypoid change involving the whole fold with airway encroachment (type III). Greater severity favors suction microflap and staged or careful bilateral surgery over KTP alone."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology, 2nd ed (Rubin, Sataloff, Korovin, eds; Springer 2024), Ch 20: Reinke's Edema (pp 173-178).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: benign vocal fold mucosal disorders."
+ ]
+}

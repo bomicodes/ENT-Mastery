@@ -8,6 +8,10 @@ from daily_path_integrity_v403 import install
 from new_topic_eagle_v501 import install_eagle_topic_v501, install_eagle_refs_v501
 EAGLE_TOPIC_V501 = install_eagle_topic_v501(production.runtime_entry.data,
                                             production.runtime_entry.app_mod)
+# v99: new topics from the textbook gap review (same install pattern as Eagle).
+from new_topics_v990 import install_new_topics_v990, install_new_topics_refs_v990
+NEW_TOPICS_V990 = install_new_topics_v990(production.runtime_entry.data,
+                                          production.runtime_entry.app_mod)
 
 DAILY_PATH_INTEGRITY_V403 = install(production.runtime_entry.data,
                                     production.runtime_entry.app_mod)
@@ -45,6 +49,7 @@ TEXTBOOK_CURRICULUM_V470 = install_textbook_curriculum_v470(
 CONCEPT_CHECKS_V471 = install_concept_checks_v471(production.runtime_entry.data)
 TEXTBOOK_XREF_V472 = install_textbook_refs_v472(production.runtime_entry.data, app)
 EAGLE_REFS_V501 = install_eagle_refs_v501(production.runtime_entry.data)
+NEW_TOPICS_REFS_V990 = install_new_topics_refs_v990(production.runtime_entry.data)
 GUIDELINE_CURRENCY_V480 = install_guideline_currency_v480(production.runtime_entry.data)
 VIGNETTES_V490 = install_clinical_challenge_vignettes_v490(production.runtime_entry.data, production.runtime_entry.app_mod)
 REWRITES_V491 = install_clinical_challenge_rewrites_v491(production.runtime_entry.data, production.runtime_entry.app_mod)
@@ -91,6 +96,8 @@ from or_cards_v740 import install_or_cards_v740
 OR_CARDS_V740 = install_or_cards_v740(production.runtime_entry.data, production.runtime_entry.app_mod)
 from or_cards_v980 import install_or_cards_v980
 OR_CARDS_V980 = install_or_cards_v980(production.runtime_entry.data, production.runtime_entry.app_mod)
+from or_cards_v990 import install_or_cards_v990, install_or_steps_v990
+OR_CARDS_V990 = install_or_cards_v990(production.runtime_entry.data, production.runtime_entry.app_mod)
 from or_indications_v760 import install_or_indications_v760
 OR_INDICATIONS_V760 = install_or_indications_v760(production.runtime_entry.data)
 from or_steps_v840 import install_or_steps_v840
@@ -114,3 +121,4 @@ from or_steps_iowa_v900 import install_or_steps_iowa_v900
 OR_STEPS_IOWA_V900 = install_or_steps_iowa_v900(production.runtime_entry.data)
 from or_images_v880 import install_or_images_v880
 OR_IMAGES_V880 = install_or_images_v880(production.runtime_entry.data)
+OR_STEPS_V990 = install_or_steps_v990(production.runtime_entry.data)

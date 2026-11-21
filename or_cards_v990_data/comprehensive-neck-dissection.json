@@ -1,0 +1,148 @@
+{
+ "slug": "comprehensive-neck-dissection",
+ "title": "Radical / Modified Radical (Comprehensive) Neck Dissection",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "headneck",
+ "linked_topic": "Neck Dissection",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Comprehensive dissection removes levels I to V. A radical neck dissection also removes the sternocleidomastoid, internal jugular vein and spinal accessory nerve and is reserved for bulky nodal disease with extranodal extension directly involving those structures. A modified radical neck dissection clears the same levels but preserves one or more of them (type I spares CN XI; type II spares CN XI and IJV; type III, functional, spares all three) and is used for clinically node-positive disease that is not invading them, including salvage after radiation when the extent of disease requires it. Extended dissections add structures such as skin, hypoglossal nerve, carotid or retropharyngeal nodes. Unresectability is suggested by encasement of the carotid more than 270 degrees, prevertebral fixation or skull base extension. Selective dissections, which remove only the at-risk levels, are now preferred for most N0 and many N1 necks.",
+ "setup": [
+  "Review CT or MRI and PET/CT for node size, levels involved, extranodal extension, relation to the carotid, IJV, accessory nerve and prevertebral fascia, and the opposite neck; confirm the contralateral IJV is patent before any IJV sacrifice.",
+  "Plan the primary resection, tracheostomy and reconstruction together; preserve the facial artery, external jugular and common facial veins when a free flap is planned.",
+  "Consent specifically for shoulder dysfunction, marginal mandibular weakness, numbness, chyle leak, hematoma, facial and cerebral edema, Horner syndrome and stroke, and for sacrifice of SCM, IJV or CN XI if involved.",
+  "Position supine with a shoulder roll, head turned away and the head of the bed rotated 180 degrees from anesthesia; avoid long-acting paralysis so nerves can be stimulated.",
+  "Prepare bipolar and monopolar cautery, a nerve stimulator, vascular clamps and 5-0 or 6-0 vascular sutures, ties and clips, and closed suction drains."
+ ],
+ "landmarks": [
+  "Inferior border of the mandible and marginal mandibular nerve",
+  "Anterior bellies and posterior belly of digastric",
+  "Hypoglossal nerve deep to the digastric tendon",
+  "Internal jugular vein, carotid artery and vagus nerve in the sheath",
+  "Spinal accessory nerve crossing the IJV and entering the SCM",
+  "Cervical plexus rootlets on the prevertebral fascia",
+  "Phrenic nerve on anterior scalene",
+  "Omohyoid, clavicle, transverse cervical vessels and thoracic duct"
+ ],
+ "danger": [
+  "Spinal accessory nerve in level IIB and the posterior triangle",
+  "Phrenic nerve and brachial plexus deep to the prevertebral fascia",
+  "Thoracic duct in left level IV",
+  "IJV tears with air embolism",
+  "Hypoglossal and vagus nerves",
+  "Bilateral IJV sacrifice causing facial and cerebral edema"
+ ],
+ "steps": [
+  [
+   "Incision",
+   "Mark a curvilinear apron or hockey-stick incision from the mastoid to near the midline in a skin crease, with a posterior or vertical limb (for example a Schobinger-type design) when full access to level V is required. Keep any trifurcation away from the carotid, especially in an irradiated neck."
+  ],
+  [
+   "Raise subplatysmal flaps",
+   "Elevate flaps deep to platysma up to the mandible and down to the clavicle, staying superficial to the external jugular vein and great auricular nerve. Posteriorly, where platysma is absent, raise the flap carefully because the accessory nerve lies just beneath the dermis over the posterior triangle."
+  ],
+  [
+   "Clear level IA",
+   "Lift the fibrofatty tissue between the anterior bellies of digastric off the mylohyoid from the symphysis down to the hyoid, clipping submental vessels. Watch for anterior jugular veins, which bleed briskly if entered while working on the strap muscles."
+  ],
+  [
+   "Protect the marginal mandibular nerve and clear IB",
+   "Incise the superficial layer of deep cervical fascia low over the submandibular gland, ligate the facial vein and lift it superiorly to protect the nerve. Skeletonize the mylohyoid, controlling ranine veins, then retract it to divide the submandibular ganglion and duct, sparing the lingual and hypoglossal nerves."
+  ],
+  [
+   "Release the tail of parotid and upper limit",
+   "Divide the gland's facial artery attachments and carry the dissection across the tail of the parotid, tying the retromandibular vein only as needed. Define the superior limit along the posterior belly of digastric, which protects the hypoglossal nerve, IJV and carotid beneath it."
+  ],
+  [
+   "Unwrap the sternocleidomastoid",
+   "Lift the fascia off the SCM from front to back, clipping its perforating vessels and including the external jugular nodes, then retract the muscle laterally. In a radical neck dissection, divide the SCM at its mastoid and clavicular attachments instead so it goes with the specimen."
+  ],
+  [
+   "Find and manage the accessory nerve",
+   "Identify CN XI where it crosses the IJV under the digastric and where it enters the SCM in the upper third. Preserve it unless directly involved by tumor; lift it on a nerve hook and pass level IIB tissue beneath it off the splenius capitis and levator scapulae."
+  ],
+  [
+   "Dissect the posterior triangle",
+   "Find the nerve again behind the SCM about 1 cm above Erb's point and follow it to the trapezius. Clear level V from the trapezius border toward the SCM, staying superficial to the prevertebral fascia; preserve the deep cervical plexus branches that contribute to trapezius innervation when possible."
+  ],
+  [
+   "Define the inferior limit",
+   "Retract the omohyoid down, divide the fibrofatty tissue at the clavicle, and preserve the transverse cervical vessels. On the left, ligate lymphatic channels at the venous angle carefully and ask for a Valsalva to check for chyle; oversew any leak with nonabsorbable suture and sealant."
+  ],
+  [
+   "Sweep off the deep floor",
+   "Lift the specimen off the scalene and levator fascia toward the sheath, dividing sensory cervical rootlets but keeping above the fascia so the phrenic nerve on anterior scalene and the brachial plexus stay protected."
+  ],
+  [
+   "Open the carotid sheath",
+   "Incise the sheath along the carotid, identify the vagus, then peel the specimen off the IJV with scalpel, scissors or sponge dissection. Ligate each tributary securely; preserve the ansa cervicalis where possible, and the sympathetic trunk deep to the carotid."
+  ],
+  [
+   "Radical: ligate the IJV",
+   "When the vein must be sacrificed, check the contralateral IJV, then doubly ligate with a transfixion suture superiorly below the digastric and inferiorly above the clavicle. Avoid bilateral simultaneous ligation, or stage it, to limit facial and cerebral edema."
+  ],
+  [
+   "Deliver and orient the specimen",
+   "Free the specimen from the strap muscles and the medial sheath and deliver it in one piece. Orient it with tags or sutures by level so the pathologist can report node count, levels and extranodal extension, which determine adjuvant therapy."
+  ],
+  [
+   "Hemostasis, chyle check and closure",
+   "Irrigate, have anesthesia raise intrathoracic pressure, and control any bleeding or chyle. Place closed suction drains away from the carotid and any flap pedicle, close platysma and skin, and cover the carotid with local muscle if the neck has been irradiated and SCM was removed."
+  ]
+ ],
+ "exit_check": [
+  "Valsalva shows no bleeding or chyle, especially in left level IV",
+  "Accessory, hypoglossal, vagus, phrenic and marginal mandibular nerves seen intact unless deliberately sacrificed, and documented",
+  "Specimen oriented by level; drains working and not lying on the carotid or flap pedicle"
+ ],
+ "postop": [
+  "Monitor drains for volume and appearance; milky output that rises with feeding suggests chyle leak",
+  "Watch for neck swelling, airway compromise and hematoma, and return to theatre early for an expanding hematoma",
+  "Start shoulder physiotherapy early, especially after level IIB or V dissection or CN XI sacrifice",
+  "Remove drains when output is low and serous; check calcium if a central neck component was done",
+  "Tumor board review of node count and extranodal extension to plan adjuvant radiation or chemoradiation"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma",
+   "Chyle leak",
+   "Facial and cerebral edema or SIADH after IJV ligation",
+   "Nerve palsy: marginal mandibular, CN XI, XII, X, phrenic, Horner syndrome",
+   "Skin flap necrosis or wound breakdown in an irradiated neck"
+  ],
+  "late": [
+   "Shoulder syndrome with pain, drop and limited abduction",
+   "Carotid blowout after wound breakdown or fistula",
+   "Neck fibrosis, contour deformity and lymphedema",
+   "Numbness of the neck and earlobe",
+   "Regional recurrence"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Name the structures preserved in each type of modified radical neck dissection.",
+   "Type I preserves CN XI; type II preserves CN XI and the IJV; type III (functional) preserves CN XI, IJV and SCM. All remove levels I to V."
+  ],
+  [
+   "What is the current classification for describing a neck dissection?",
+   "A simple descriptive form: ND, side, levels removed and any nonlymphatic structures removed, for example ND (L) I to V, SCM, IJV, CN XI, replacing older terms like supraomohyoid."
+  ],
+  [
+   "How do you manage a chyle leak?",
+   "Intraoperatively oversew and seal. Postoperatively, low output is managed with drainage, pressure, head elevation and a medium-chain triglyceride or nil-by-mouth regimen; high output or failure of conservative care leads to octreotide, re-exploration, or thoracic duct embolization or ligation."
+  ],
+  [
+   "What dangers come from bilateral IJV ligation, and how are they avoided?",
+   "Severe facial edema, raised intracranial pressure, SIADH, stroke and blindness. Preserve at least one IJV, stage bilateral sacrifice by several weeks, or reconstruct the vein."
+  ],
+  [
+   "Which nerve may be injured deep to the prevertebral fascia in level IV, and how does it present?",
+   "The phrenic nerve on anterior scalene; injury causes a raised hemidiaphragm with dyspnea or atelectasis. Staying superficial to the fascia prevents it, along with brachial plexus injury."
+  ]
+ ],
+ "source_basis": [
+  "Morlandt ABP, D'Cruz A. Radical and Modified Radical Neck Dissection. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 12.",
+  "Rodriganez L, Castro A, Gavilan J. Functional Neck Dissection. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 13.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, Neck Dissection (p 275-278).",
+  "Robbins KT, et al. Neck dissection classification update. Arch Otolaryngol Head Neck Surg. 2008;134:536-538; Ferlito A, et al. Proposal for a rational classification of neck dissections. Head Neck. 2011;33:445-450."
+ ]
+}

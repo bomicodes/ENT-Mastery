@@ -1,0 +1,89 @@
+{"slug": "blepharoplasty",
+ "title": "Upper and Lower Blepharoplasty",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Blepharoplasty / Eyelid Malposition (Ptosis, Ectropion, Entropion)",
+ "source_label": "Pasha 6e (Reconstructive and Facial Plastic Surgery chapter)",
+ "indications": "Functional or aesthetic correction of dermatochalasis (excess, redundant eyelid skin), steatoblepharon or pseudoherniation of orbital fat through a lax septum, and orbicularis hypertrophy. Upper lid hooding that obstructs the superior visual field is the common functional indication and is documented with taped and untaped visual fields and photographs. Before surgery, screen for brow ptosis (which should be corrected first or the upper lid result will worsen it), true blepharoptosis (MRD-1 under about 3 mm, abnormal levator function), dry eye, lower lid laxity and mimics of fat prolapse such as festoons, malar bags, allergic or thyroid edema and a ptotic lacrimal gland. Relative contraindications include significant dry eye, uncontrolled thyroid eye disease, and unrealistic expectations.",
+ "setup": [
+  "Supine, head neutral, often under local with light sedation so the patient can open and close the eyes on command",
+  "Mark with the patient upright before any injection: upper lid crease (about 8 to 10 mm above the lash line in women, slightly lower in men) and the pinch-determined excision",
+  "Corneal protection with lubricated corneal shields or ointment; prep the full periorbita and keep both eyes in the field for symmetry",
+  "Local anesthetic with epinephrine injected superficially in small volumes; wait for vasoconstriction",
+  "Fine instruments: #15 blade, Westcott scissors, fine forceps, bipolar or needle-tip cautery, fine absorbable and nonabsorbable sutures",
+  "Confirm the preoperative ophthalmic examination is documented: acuity, Bell phenomenon, Schirmer, MRD-1, MRD-2, levator function, snap-back"
+ ],
+ "landmarks": [
+  "Upper lid crease (levator aponeurosis insertion)",
+  "Superior orbital rim and brow position",
+  "Orbital septum (fuses with levator aponeurosis above the tarsus)",
+  "Upper lid fat pads: medial and central (preaponeurotic); lacrimal gland laterally",
+  "Lower lid fat pads: medial, central, lateral; inferior oblique between medial and central",
+  "Tarsal plates (upper 8 to 9 mm, lower 4 to 5 mm) and lateral canthal tendon",
+  "Lacrimal punctum medially"
+ ],
+ "danger": [
+  "Retrobulbar hematoma with vision loss (most often after lower lid fat removal)",
+  "Overresection of upper lid skin causing lagophthalmos and exposure keratopathy",
+  "Overresection of lower lid skin or muscle causing scleral show or ectropion",
+  "Levator aponeurosis injury causing ptosis",
+  "Inferior oblique injury between the medial and central lower fat pads (diplopia)",
+  "Medial incision extension near the punctum causing webbing"
+ ],
+ "steps": [
+  ["Address the brow first",
+   "If the brow is ptotic, correct it with a brow lift or browpexy before, or at the start of, the blepharoplasty. Removing upper lid skin in a patient with brow ptosis pulls the brow further down and can create a heavy, crowded look; marking must also account for any brow change."],
+  ["Mark the upper lid",
+   "With the patient upright, mark the lid crease, then grasp redundant skin with smooth forceps (pinch test) until the lashes just begin to evert without moving the lid margin. Leave at least about 20 mm of total lid skin between brow and lashes. Taper medially short of the punctum and laterally into a crow's foot line if hooding needs correction."],
+  ["Excise upper lid skin",
+   "Incise along the markings with a #15 blade or needle-tip cautery and remove the skin ellipse, keeping hemostasis meticulous. In a heavy lid with thick skin, a thin strip of preseptal orbicularis can be taken to sharpen the crease; in thin skin, be conservative to avoid a hollow, skeletonized appearance."],
+  ["Open the septum and treat fat",
+   "Open the orbital septum and apply gentle pressure on the globe to identify prolapsing medial and central fat. Tease out only the fat that protrudes easily, clamp or cauterize its base before cutting, and check each stump for bleeding before release. A ptotic lacrimal gland laterally should be suspended to the periosteum, not excised."],
+  ["Define the crease and close the upper lid",
+   "If a sharper crease is desired, pass a few sutures from the lower skin edge to the levator aponeurosis. Do not include the septum in the closure, which tethers the lid and causes lagophthalmos. Close skin with a fine running suture; a small (1 to 2 mm) lagophthalmos at the end of the case is expected under sedation."],
+  ["Choose the lower lid approach",
+   "Use a transconjunctival approach for fat prolapse with little excess skin, which avoids an external scar and lowers retraction risk. A subciliary skin-muscle flap suits patients with true skin and muscle excess. The skin-only flap allows separate tailoring but carries more risk of vertical retraction."],
+  ["Transconjunctival access",
+   "Retract the lower lid and incise conjunctiva and lower lid retractors below the tarsus with needle-tip cautery, staying behind the septum (retroseptal) or in front of it (preseptal) by plan. Protect the globe with a retractor. Identify the medial, central and lateral fat pads and the inferior oblique between the medial and central pads."],
+  ["Remove or reposition lower lid fat",
+   "Excise conservatively only the bulging fat, clamping or cauterizing before cutting to prevent retrobulbar bleeding, or release the septum and transpose the medial and central fat over the rim into a preperiosteal or sub-SOOF pocket to efface the tear trough. The lateral pad is the one most often left behind."],
+  ["Subciliary skin-muscle flap",
+   "When excess skin is present, incise about 2 mm below the lashes, elevate a skin-muscle flap down to the rim, and treat fat as above. Redrape the flap upward and laterally with the patient looking up and mouth open, and trim only true redundancy, being conservative to avoid ectropion."],
+  ["Support the lower lid",
+   "If the snap-back or distraction test showed laxity, perform a lateral canthopexy or a lateral tarsal strip before closure to anchor the lid to the inner lateral orbital rim. Unsupported lax lids are the main reason for postoperative scleral show and ectropion."],
+  ["Hemostasis and closure",
+   "Confirm hemostasis with the patient's blood pressure at baseline before closing. Close the subciliary incision with fine sutures; the transconjunctival incision may be left unsutured or closed with a single buried absorbable suture. Remove corneal shields and check that both lids close."],
+  ["Recovery-room vision check",
+   "Before discharge, check visual acuity, pupils and pain in each eye. Severe pain, proptosis, tense lids, decreasing vision or an afferent pupillary defect suggest retrobulbar hematoma and require immediate lateral canthotomy and inferior cantholysis, then return to the OR to open the wound and control bleeding."]
+ ],
+ "exit_check": [
+  "Symmetrical crease and skin excision; lids close with no more than minimal lagophthalmos",
+  "Hemostasis confirmed with normotensive blood pressure; no tense or proptotic orbit",
+  "Vision and pupils checked bilaterally in recovery and recorded"
+ ],
+ "postop": [
+  "Cold compresses and head elevation for 48 to 72 hours; avoid straining, heavy lifting and bending",
+  "Lubricating drops by day and ointment at night until lid closure is complete",
+  "Teach warning signs of orbital hematoma (severe pain, vision change, bulging) with a direct number to call",
+  "Avoid blood thinners per plan, avoid contact lenses about 2 weeks, sun protection for scars",
+  "Suture removal at 5 to 7 days"
+ ],
+ "complications": {
+  "early": ["Retrobulbar hematoma with risk of blindness", "Chemosis and subconjunctival ecchymosis", "Temporary lagophthalmos and dry eye", "Epiphora from edema or punctal eversion", "Diplopia from inferior oblique edema or injury"],
+  "late": ["Lower lid retraction, scleral show or ectropion", "Ptosis from levator injury or unrecognized preoperative ptosis", "Hollow, overresected upper sulcus or residual lateral fat pocket", "Milia and medial webbing", "Asymmetry needing revision"]
+ },
+ "attending_followup": [
+  ["A patient has severe pain and decreasing vision 2 hours after lower blepharoplasty. What do you do?",
+   "Treat as retrobulbar hematoma: open the incisions at the bedside and perform immediate lateral canthotomy and inferior cantholysis, check intraocular pressure and vision, involve ophthalmology, and return to the OR for hemostasis. Do not delay for imaging."],
+  ["What does the snap-back test assess and how does it change the operation?",
+   "Lower lid horizontal laxity; a slow or absent return means the lid needs a lateral canthopexy or tarsal strip at the time of blepharoplasty to prevent scleral show and ectropion."],
+  ["What muscle lies between the medial and central lower lid fat pads?",
+   "The inferior oblique; injury causes diplopia, and the arcuate expansion separates the central from the lateral pad."],
+  ["How do you avoid lagophthalmos after upper blepharoplasty?",
+   "Mark with the pinch test so the lid margin does not move, leave about 20 mm of total lid skin, and never include the orbital septum in the skin closure."],
+  ["Why evaluate the brow and MRD-1 before upper blepharoplasty?",
+   "Brow ptosis worsens after upper lid skin excision and should be corrected first; a low MRD-1 with reduced levator function indicates true blepharoptosis that skin excision will not fix."]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Chapter 8, Reconstructive and Facial Plastic Surgery: Blepharoplasty, anatomy, evaluation, surgical techniques, postoperative care and complications (p 492-499)"
+ ]}

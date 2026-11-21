@@ -1,0 +1,136 @@
+{
+ "slug": "frontal-recess-draf-iia",
+ "title": "Frontal Recess Dissection (Draf I/IIa)",
+ "domain": "Rhinology",
+ "or_family_v190": "sinus",
+ "linked_topic": "Frontal Sinusotomy / Draf Procedures",
+ "source_label": "Atlas of Endoscopic Sinus and Skull Base Surgery 2e, Ch 9",
+ "indications": "Chronic rhinosinusitis with or without nasal polyps involving the frontal sinus after failed appropriate medical therapy, recurrent acute frontal sinusitis, frontal mucoceles, and access for limited frontal pathology. Draf I clears obstructing cells below the frontal ostium; Draf IIa removes all recess cells between the lamina papyracea and middle turbinate and opens the ostium. Nearly all primary cases need no more than a IIa, done after maxillary antrostomy, sphenoidotomy, and complete ethmoidectomy.",
+ "setup": [
+  "Head up 30 degrees (reverse Trendelenburg) with TIVA to reduce bleeding",
+  "Navigation registered with sagittal, coronal, and axial CT reconstructions loaded",
+  "30- and 70-degree endoscopes; frontal curettes, Bolger-Kuhn probes, giraffe through-cutting forceps, frontal Kerrison (Bachert) and mushroom punches",
+  "At least 2 mL local anesthetic with epinephrine at the superior middle turbinate attachment; 1:1000 epinephrine pledgets",
+  "Silicone or steroid-eluting stent available"
+ ],
+ "landmarks": [
+  "Agger nasi cell and its posterior wall",
+  "Anterior ethmoid artery in the skull base (posterior limit)",
+  "Frontal ostium and posterior table",
+  "Lamina papyracea laterally",
+  "Middle turbinate vertical attachment medially",
+  "Suprabullar, frontal bullar, and supraorbital ethmoid cells"
+ ],
+ "danger": [
+  "Lateral lamella of the cribriform plate medially (drift with right hand)",
+  "Skull base just posterior to the recess",
+  "Anterior ethmoid artery",
+  "Lamina papyracea and orbit laterally",
+  "Circumferential mucosal stripping causing stenosis"
+ ],
+ "steps": [
+  [
+   "Define the goal",
+   "Draf I clears cells below the frontal ostium; Draf IIa removes every recess cell between the lamina and the middle turbinate and opens the ostium. Plan for at most a IIa in nearly all primary cases, and perform it after antrostomy, sphenoidotomy, and complete ethmoidectomy have established the skull base and orbit."
+  ],
+  [
+   "Study the sagittal CT",
+   "Map the agger nasi, frontal cells (Kuhn types or IFAC agger, supra-agger, and supra-agger frontal cells), suprabullar, frontal bullar, supraorbital ethmoid, and intersinus septal cells. The anteroposterior diameter of the recess predicts difficulty; in very narrow recesses consider starting with balloon dilation."
+  ],
+  [
+   "Minimize bleeding",
+   "Raise the head about 30 degrees, use total intravenous anesthesia, inject at least 2 mL of local anesthetic with epinephrine at the superior middle turbinate attachment, and place 1:1000 epinephrine pledgets as needed. A dry field is essential for working with angled optics in a narrow space."
+  ],
+  [
+   "Use the right optics",
+   "Begin with a 30-degree scope, then switch to a 70-degree scope for the recess. Rotate the light post to lateralize the view, because a right-handed surgeon tends to drift medially toward the cribriform plate and lateral lamella."
+  ],
+  [
+   "Mark the posterior limit",
+   "Working from posterior to anterior along the skull base, identify the anterior ethmoid artery. It marks the posterior extent of the frontal dissection and the point beyond which instruments should not be pushed upward."
+  ],
+  [
+   "Find the transition zone",
+   "Look for the dark shadow of the drainage pathway, nearly always medial and posterior to the posterior wall of the agger nasi. Gently probe it with a curved suction or frontal curette and confirm with navigation before removing bone."
+  ],
+  [
+   "Remove the agger posterior wall",
+   "Take the posterior wall of the agger nasi with 45-degree front-to-back through-cutting giraffe forceps, or fracture it forward with a curette. This often exposes the frontal recess at once and shows the drainage pathway clearly."
+  ],
+  [
+   "Remove the medial wall",
+   "Cut the medial agger wall with front-to-back and side-to-side giraffe instruments, keeping in mind that the skull base lies posteriorly and the middle turbinate attachment medially. Use through-cutting instruments to preserve surrounding mucosa."
+  ],
+  [
+   "Remove the agger cap",
+   "Use a frontal Kerrison (Bachert) or 45-degree mushroom punch to take the cap from back to front up to the hard nasofrontal bone. This widens the recess more than any other single step and opens the frontal ostium."
+  ],
+  [
+   "Expand posteriorly",
+   "After re-identifying the anterior ethmoid artery, remove the ledge between any supraorbital ethmoid cell and the recess back to the skull base with a mushroom punch or giraffe forceps, so no partition remains to scar across the outflow."
+  ],
+  [
+   "Remove higher cells",
+   "Use Bolger-Kuhn probes and giraffe forceps to fracture and remove cells high in the recess or extending into the sinus, confirming position with navigation. Prefer through-cutters to avoid stripping mucosa, and use the debrider only to trim loose fragments."
+  ],
+  [
+   "Finish the opening",
+   "Trim some medial floor with a mushroom or Hosemann punch until the frontal sinus roof and posterior table are seen clearly with the 70-degree scope. Preserve mucosa circumferentially, since bare bone at the ostium promotes osteitis and stenosis."
+  ],
+  [
+   "Optional stent",
+   "In narrow or high-risk recesses place a rolled 0.25-0.5 mm silicone stent for 1-2 weeks or a steroid-eluting dissolvable implant for about 4 weeks, weighing cost and infection risk against fewer debridements and better patency."
+  ]
+ ],
+ "exit_check": [
+  "Frontal sinus roof and posterior table visible with 70-degree scope",
+  "No residual cell partitions or bone fragments in the recess",
+  "Mucosa preserved circumferentially; middle turbinate stable and medial"
+ ],
+ "postop": [
+  "High-volume saline irrigations from day 1",
+  "Topical steroid irrigation as indicated for CRSwNP",
+  "Regular endoscopic debridement, keeping the middle turbinate medialized",
+  "Remove silicone stent at 1-2 weeks"
+ ],
+ "complications": {
+  "early": [
+   "CSF leak from lateral lamella or skull base injury",
+   "Orbital injury or hematoma",
+   "Anterior ethmoid artery bleeding",
+   "Epistaxis"
+  ],
+  "late": [
+   "Frontal ostium stenosis",
+   "Middle turbinate lateralization and synechiae",
+   "Frontal mucocele",
+   "Persistent or recurrent frontal sinusitis needing Draf IIb/III"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Differentiate Draf I, IIa, IIb, and III.",
+   "I: clears cells below the ostium; IIa: opens the ostium between lamina and middle turbinate; IIb: extends medially to the septum by removing the frontal floor; III: bilateral floors, upper septum, and intersinus septum removed."
+  ],
+  [
+   "What landmark marks the posterior limit of frontal recess dissection?",
+   "The anterior ethmoid artery in the skull base."
+  ],
+  [
+   "Where is the frontal drainage pathway relative to the agger nasi?",
+   "Usually medial and posterior to the posterior wall of the agger nasi cell."
+  ],
+  [
+   "Name the IFAC anterior cells.",
+   "Agger nasi, supra-agger, and supra-agger frontal cells."
+  ],
+  [
+   "Why does a right-handed surgeon need to rotate the 70-degree scope's light post?",
+   "To lateralize the view and avoid drifting medially into the cribriform plate and lateral lamella."
+  ]
+ ],
+ "source_basis": [
+  "Atlas of Endoscopic Sinus and Skull Base Surgery, 2nd ed (Palmer, Chiu, Adappa, eds), Ch 9 Frontal Sinusotomy: Draf I and IIa, pp 67-81",
+  "Wormald PJ et al. International Frontal Sinus Anatomy Classification (IFAC), Int Forum Allergy Rhinol 2016"
+ ]
+}

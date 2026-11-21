@@ -11,7 +11,7 @@ import daily_path_entry_v403  # v45.6: boots the full production patch chain so 
 
 DOMAIN="Pediatric Otolaryngology"
 STAGES={"foundation","application","senior_decision"}
-EXPECTED_TOPICS=[
+EXPECTED_TOPICS=['Infectious and Granulomatous Cervical Lymphadenitis','Craniosynostosis and Craniofacial Syndromes','Neonatal Nasal Obstruction and Congenital Nasal Masses','Sialorrhea and Chronic Drooling','Vascular Malformations and Non-Infantile Vascular Tumors','Vascular Rings, Pulmonary Artery Sling and Congenital Tracheal Stenosis',
 "Choanal Atresia","Pediatric Aspiration","Supraglottoplasty","Laryngotracheal Reconstruction","Thyroglossal Duct Cyst",
 "Pediatric OSA / Adenotonsillar Disease","Pediatric Airway Foreign Body","Pediatric Subglottic Stenosis","Laryngomalacia","AOM / OME / Tympanostomy Decisions",
 "Laryngotracheal Cleft","Pediatric Tracheostomy / Decannulation","Pediatric Vocal Fold Immobility","Subglottic Hemangioma","Tracheomalacia / Bronchomalacia",
@@ -27,9 +27,9 @@ def main():
     data=rt.data
     modules=data.DEEP_MODULES_V6.get(DOMAIN,[])
     canonical=[m.get("topic") for m in modules if m.get("topic")]
-    if len(canonical)!=43:
-        raise AssertionError(f"Expected exactly 43 canonical Pediatric topics, found {len(canonical)}")
-    if len(set(canonical))!=43:
+    if len(canonical)!=49:
+        raise AssertionError(f"Expected exactly 49 canonical Pediatric topics, found {len(canonical)}")
+    if len(set(canonical))!=49:
         raise AssertionError("Duplicate canonical Pediatric topic names detected")
     if set(canonical)!=set(EXPECTED_TOPICS):
         missing=sorted(set(EXPECTED_TOPICS)-set(canonical)); unexpected=sorted(set(canonical)-set(EXPECTED_TOPICS))

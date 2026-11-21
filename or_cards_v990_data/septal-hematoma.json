@@ -1,0 +1,124 @@
+{
+ "slug": "septal-hematoma",
+ "title": "Septal Hematoma / Abscess Drainage",
+ "domain": "General ENT",
+ "or_family_v190": "nasal",
+ "linked_topic": "Septal Hematoma",
+ "source_label": "Pasha 6e and Cummings 7e nasal trauma chapters",
+ "indications": "Blood or pus collected between the septal cartilage and its mucoperichondrium after nasal trauma or septal surgery, or arising from infection. The cartilage depends on the overlying perichondrium for nutrition, so a collection can cause cartilage necrosis within days and leads to saddle-nose deformity, septal perforation, and in abscess, intracranial spread. Drainage is urgent and should not wait for nasal fracture reduction.",
+ "setup": [
+  "Adults: sitting or semi-recumbent with topical and local anesthesia; children usually need general anesthesia",
+  "Headlight, nasal speculum, Frazier suction, #15 blade, Freer elevator",
+  "Topical oxymetazoline and lidocaine; local with epinephrine",
+  "Absorbable quilting suture, silicone splints, or light packing",
+  "Culture swabs for abscess; CT with contrast if abscess or intracranial concern"
+ ],
+ "landmarks": [
+  "Bilateral purple, fluctuant, compressible septal bulge",
+  "Mucocutaneous junction and caudal septum",
+  "Quadrangular cartilage under the collection",
+  "Nasal floor as the dependent point",
+  "Columella and nasal tip support"
+ ],
+ "danger": [
+  "Opposing mucosal incisions on both sides cause perforation",
+  "Reaccumulation if no quilting, splint, or packing",
+  "Missed abscess or cavernous sinus thrombosis",
+  "Missed nasal fracture or non-accidental injury in children",
+  "Overlooking a hematoma by not examining inside the nose"
+ ],
+ "steps": [
+  [
+   "Make the diagnosis",
+   "Examine the septum in every nasal injury after decongestion. A hematoma looks like a smooth purple or red swelling that is fluctuant and compressible when probed with a cotton-tipped applicator, unlike a deviated septum which is firm. Needle aspiration can confirm but is not definitive treatment."
+  ],
+  [
+   "Anesthetize",
+   "Apply topical oxymetazoline and lidocaine pledgets, then infiltrate local anesthetic with epinephrine at the base of the swelling. In children or uncooperative patients, use general anesthesia so drainage is complete and the nose can be examined for fractures."
+  ],
+  [
+   "Incise",
+   "Make an incision through the mucoperichondrium at the lower part of the hematoma, parallel to the nasal floor for dependent drainage, or use a hemitransfixion incision at the caudal septum. Keep the incision long enough to allow suction and irrigation."
+  ],
+  [
+   "Bilateral collections",
+   "For bilateral hematomas, place incisions at different heights or positions on each side so they do not overlap. Opposing incisions leave cartilage bare on both sides and create a septal perforation."
+  ],
+  [
+   "Evacuate",
+   "Suction the clot and irrigate the pocket with saline. Gently elevate the mucoperichondrium with a Freer to break loculations and confirm the space is empty. Look at the cartilage: note fracture, displacement, or necrotic or missing segments."
+  ],
+  [
+   "Drain an abscess",
+   "If pus is present, send it for culture and Gram stain. Debride necrotic cartilage. Leave a small drain or a wider incision to allow ongoing drainage. Treat the infection with culture-directed systemic therapy and get contrast CT if there is concern for orbital or intracranial spread."
+  ],
+  [
+   "Reconstruct if cartilage is lost",
+   "Where cartilage is necrotic or lost, consider immediate replacement with crushed autologous septal, conchal, or rib cartilage to maintain dorsal support and reduce saddle-nose risk. This is particularly relevant in children, whose septum drives midface growth."
+  ],
+  [
+   "Prevent reaccumulation",
+   "Reapproximate the flaps to the cartilage with a running absorbable quilting suture through the septum, and add bilateral silicone splints or light packing. These close the dead space so blood or pus cannot collect again."
+  ],
+  [
+   "Address associated injuries",
+   "Treat nasal fractures as appropriate, often by closed reduction after swelling settles. In children without a clear accidental mechanism, a septal hematoma should prompt evaluation for non-accidental injury. Document the findings and photographs clearly for later reference."
+  ],
+  [
+   "Recheck early",
+   "See the patient within 24-48 hours to look for reaccumulation, which is common. Drain again if it recurs. Remove splints or packing at about 5-7 days and assess for perforation or loss of dorsal support."
+  ]
+ ],
+ "exit_check": [
+  "Septum flat on both sides with no residual fluctuance",
+  "No opposing mucosal tears",
+  "Splints or quilting suture in place to obliterate the dead space"
+ ],
+ "postop": [
+  "Review within 24-48 hours for reaccumulation",
+  "Saline sprays; avoid nose blowing and contact sports",
+  "Splint or packing removal around 5-7 days",
+  "Follow-up for saddle deformity, perforation, or obstruction; septorhinoplasty later if needed",
+  "For abscess: culture-guided therapy and watch for orbital or neurologic signs"
+ ],
+ "complications": {
+  "early": [
+   "Reaccumulation of hematoma",
+   "Abscess formation",
+   "Cavernous sinus thrombosis or meningitis",
+   "Orbital cellulitis"
+  ],
+  "late": [
+   "Saddle-nose deformity",
+   "Septal perforation",
+   "Columellar retraction and loss of tip support",
+   "Impaired midface growth in children"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why is septal hematoma an emergency?",
+   "The septal cartilage receives nutrition from the overlying mucoperichondrium. A collection separates them, so cartilage necrosis begins within days, causing saddle-nose deformity, perforation, or abscess."
+  ],
+  [
+   "How do you tell a hematoma from a deviated septum?",
+   "A hematoma is soft, compressible, and fluctuant when palpated with a cotton-tipped applicator, often bilateral and purple. A deviation is firm and fixed."
+  ],
+  [
+   "How do you avoid a perforation when draining a bilateral hematoma?",
+   "Use incisions on each side that do not overlap, then quilt or splint the flaps back to the cartilage."
+  ],
+  [
+   "What are the intracranial risks of a septal abscess?",
+   "Spread via valveless veins to the cavernous sinus, causing cavernous sinus thrombosis, meningitis, or brain abscess. Image with contrast CT and treat urgently."
+  ],
+  [
+   "What should you consider in a toddler with septal hematoma and no clear history?",
+   "Non-accidental trauma, so involve the child protection team. Also, children are at particular risk of growth disturbance, so cartilage reconstruction may be considered."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 1 Allergy and Rhinology (septal abscess); Ch 10 Head and Neck Trauma (nasal fractures, septal hematoma).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 30 Nasal Fractures."
+ ]
+}

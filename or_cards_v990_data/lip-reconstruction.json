@@ -1,0 +1,137 @@
+{
+ "slug": "lip-reconstruction",
+ "title": "Lip Wedge Excision and Lip Reconstruction (V/W, Abbe-Estlander, Karapandzic)",
+ "domain": "Facial Plastics",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Lip Cancer",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Full-thickness excision of lip cancer (usually lower-lip squamous cell carcinoma from sun exposure) or other lip lesions, with reconstruction chosen by defect width and location. Defects up to one-third of the lip close primarily with a V or W wedge; one-third to two-thirds need lip-sharing (Abbe, Estlander) or rotation-advancement (Karapandzic, staircase); larger or total defects need cheek advancement (Bernard-von Burow/Webster) or free tissue. Goals in order: clear margins, oral competence, adequate stoma, then appearance.",
+ "setup": [
+  "Supine, head on ring, face prepped widely so both lips, commissures, nasolabial folds, and chin are in field",
+  "Local with bilateral mental (or infraorbital) nerve blocks for small wedges; GA with nasal or contralateral oral tube for flaps or neck work",
+  "Mark the white roll, vermilion border, and planned excision before any epinephrine infiltration blanches landmarks",
+  "Fine instruments, #15 and #11 blades, bipolar, 4-0/5-0 absorbable for mucosa and muscle, 6-0 nonabsorbable for skin",
+  "Frozen-section or Mohs margin control arranged; plan neck management for advanced or deep primaries"
+ ],
+ "landmarks": [
+  "White roll (vermilion-cutaneous junction)",
+  "Wet-dry line of the vermilion",
+  "Mentolabial crease (lower lip) and philtral columns/Cupid's bow (upper lip)",
+  "Labial arteries deep to orbicularis, near the wet-dry line on the mucosal side",
+  "Orbicularis oris sphincter",
+  "Oral commissure and modiolus",
+  "Mental nerve exiting below the second premolar"
+ ],
+ "danger": [
+  "Malaligned white roll: even a 1 mm step-off is obvious",
+  "Failure to repair orbicularis gives notching and drooling",
+  "Labial artery injury on the pedicle side of an Abbe/Estlander flap",
+  "Microstomia from excessive lip sharing or Karapandzic closure",
+  "Crossing the mentolabial crease with a long V scar",
+  "Facial nerve branches and modiolus during wide circumoral dissection"
+ ],
+ "steps": [
+  [
+   "Mark before you inject",
+   "Tattoo or mark the white roll on both sides of the planned excision with methylene blue and a fine needle, then draw the full excision and the reconstruction. Epinephrine blanches the vermilion border within minutes, so landmarks must be fixed first or alignment becomes guesswork."
+  ],
+  [
+   "Anesthetize",
+   "Give bilateral mental nerve blocks for the lower lip (infraorbital for the upper lip) plus local infiltration with lidocaine and epinephrine along the excision lines. Wait several minutes for vasoconstriction. Under general anesthesia, still infiltrate to reduce bleeding and help define the planes."
+  ],
+  [
+   "Measure the defect",
+   "Draw clinical margins around the tumor (around 5 mm for a small well-defined squamous cell carcinoma, wider for ill-defined or recurrent tumors) and estimate the resulting defect as a fraction of total lip width. This fraction, and whether the commissure or philtrum is involved, chooses the reconstruction."
+  ],
+  [
+   "Design V or W wedge",
+   "For defects up to one-third, draw a full-thickness V with its limbs perpendicular to the vermilion at the top. Keep the apex above the mentolabial crease; if the wedge would cross it, convert to a W or a pentagonal (shield) excision so the scar stays on the lip."
+  ],
+  [
+   "Excise full thickness",
+   "Have the assistant pinch the lip on either side to compress the labial arteries. Cut through skin, orbicularis, and mucosa with a #15 or #11 blade, keeping the cuts square. Orient the specimen with a stitch for pathology and send margins for frozen section if needed."
+  ],
+  [
+   "Control the labial arteries",
+   "Release the pinch and find the labial artery on each cut edge, lying deep to the muscle close to the wet-dry line on the mucosal side. Cauterize with bipolar or tie it. Unchecked, these vessels cause expanding lip hematoma after closure."
+  ],
+  [
+   "Three-layer wedge closure",
+   "Close mucosa with absorbable interrupted sutures, then reapproximate orbicularis oris with buried absorbable sutures as the key layer for competence. Place the first skin suture exactly at the white roll, then close the vermilion and remaining skin. Slight eversion prevents a notch as the scar contracts."
+  ],
+  [
+   "Abbe lip-switch for central defects",
+   "For one-third to two-thirds central defects sparing the commissure, design a full-thickness flap from the opposite lip about half the defect width and equal in height, pedicled on the labial artery at the vermilion. Divide the free side fully, preserve a vermilion pedicle containing the artery, rotate it in, and inset in layers."
+  ],
+  [
+   "Estlander for commissure defects",
+   "When a lateral defect includes the commissure, rotate a similar triangular flap from the opposite lip around the commissure in one stage; its medial pedicle becomes the new commissure. Expect a rounded, blunted commissure that may need later commissuroplasty."
+  ],
+  [
+   "Karapandzic rotation-advancement",
+   "For central defects up to about two-thirds, make circumoral incisions from the defect around the commissures, keeping the flap width equal to the defect height. Divide skin and fat, then spread bluntly through muscle to preserve buccal and mental neurovascular bundles. Rotate the innervated flaps together and close in layers; microstomia is expected."
+  ],
+  [
+   "Larger and total defects",
+   "For defects beyond two-thirds, advance cheek tissue with Bernard-von Burow or Webster modifications, excising Burow triangles in the nasolabial and mentolabial regions. Consider a free radial forearm flap, with palmaris longus sling for support, when local tissue is inadequate or the patient has been irradiated."
+  ],
+  [
+   "Divide the pedicle",
+   "Divide the Abbe pedicle at two to three weeks under local anesthesia once the flap has picked up blood supply from its bed. Trim and inset the vermilion carefully so the white roll lines up on both lips."
+  ]
+ ],
+ "exit_check": [
+  "White roll aligned with no step-off at rest",
+  "Orbicularis repaired across the full height; no lip notch",
+  "Hemostasis of labial arteries; flap pedicle not kinked or under tension"
+ ],
+ "postop": [
+  "Soft diet; protect the flap pedicle from wide mouth opening and from utensils",
+  "Ointment to suture lines; skin sutures out around day 5-7",
+  "Review final margins; plan neck dissection or adjuvant treatment per stage",
+  "Mouth-opening exercises and stretching for microstomia after Karapandzic or multiple lip-sharing flaps",
+  "Sun protection counselling and surveillance of the remaining lip for actinic change"
+ ],
+ "complications": {
+  "early": [
+   "Lip hematoma from an uncontrolled labial artery",
+   "Wound dehiscence or flap tip congestion",
+   "Abbe pedicle avulsion or flap loss",
+   "Positive margins needing re-excision"
+  ],
+  "late": [
+   "Vermilion notching or white-roll mismatch",
+   "Microstomia affecting denture use and oral hygiene",
+   "Blunted commissure after Estlander flap",
+   "Oral incompetence and drooling",
+   "Numbness of the lip"
+  ]
+ },
+ "attending_followup": [
+  [
+   "A 40% central lower-lip defect after tumor excision: what are your options?",
+   "Between one-third and two-thirds: an Abbe lip-switch flap from the upper lip (about half the defect width, pedicled on the labial artery, divided at 2-3 weeks), a Karapandzic flap, or a staircase or bilateral advancement. Elderly patients with very lax lips may sometimes tolerate primary closure."
+  ],
+  [
+   "How wide should the Abbe flap be and why?",
+   "About half the width of the defect, with equal height. This shares tissue between the two lips so both are reduced by the same proportion, giving balanced lips and limiting microstomia."
+  ],
+  [
+   "What is the advantage of the Karapandzic flap, and its main drawback?",
+   "It rotates innervated orbicularis with its neurovascular supply preserved, so the sphincter remains sensate and competent. The main drawback is microstomia, which worsens with larger defects and can impair denture use."
+  ],
+  [
+   "Where is the labial artery and why does it matter?",
+   "It runs deep to the orbicularis near the wet-dry line on the mucosal side. It must be controlled on every cut edge and preserved within the pedicle of Abbe and Estlander flaps."
+  ],
+  [
+   "Which lip and which nodes are most at risk with lip cancer?",
+   "About 90% arise on the lower lip because of sun exposure. Lower-lip tumors drain to the submental and submandibular nodes, and midline tumors may drain bilaterally. Upper-lip and commissure tumors behave more aggressively and can drain to parotid and preauricular nodes."
+  ]
+ ],
+ "source_basis": [
+  "Simo R, Pracy P, Fernandes R (eds). Atlas of Head and Neck Surgery. Springer, 2024: Ch 24 V and W Lip Excisions; Ch 25 Lip Reconstruction with Local Flaps.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 8 Facial Plastic and Reconstructive Surgery (lip reconstruction).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Reconstruction of Facial Defects; Malignant Neoplasms of the Oral Cavity."
+ ]
+}

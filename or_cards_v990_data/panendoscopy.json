@@ -1,0 +1,140 @@
+{
+ "slug": "panendoscopy",
+ "title": "Panendoscopy (DL with Biopsy, Esophagoscopy, Bronchoscopy) for H&N Cancer",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "headneck",
+ "linked_topic": "Unknown Primary with Cervical Metastasis",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Staging examination under anesthesia for a newly diagnosed or suspected upper aerodigestive tract cancer: to obtain tissue, map the extent of the primary (mucosal spread, subsites, depth, fixation, airway involvement), judge resectability and transoral access, and look for synchronous second primaries in the larynx, hypopharynx, esophagus and airway. It is the core workup step for a cervical metastasis of unknown primary, combined with directed biopsies and palatine (and often lingual) tonsillectomy. Routine esophagoscopy and bronchoscopy are selective rather than mandatory when CT or PET/CT of the chest is negative and there are no symptoms, but remain reasonable in heavy smokers and drinkers, hypopharyngeal or cervical esophageal primaries, and any patient with dysphagia, hemoptysis or an abnormal chest image.",
+ "setup": [
+  "Have imaging done first: contrast CT or MRI of the neck and PET/CT before any biopsy, especially for an unknown primary, so biopsy inflammation does not create false-positive uptake and so PET-avid sites can be targeted.",
+  "Review flexible laryngoscopy and airway risk with anesthesia: plan a small-bore or microlaryngeal tube, jet or tubeless ventilation, or awake fiberoptic intubation or tracheostomy under local for an obstructing tumor.",
+  "Position supine with a shoulder roll and the head extended (sniffing position for laryngoscopy, more extension for rigid esophagoscopy); place a tooth guard or wet gauze over an edentulous gum.",
+  "Set up: laryngoscopes of several sizes including an anterior commissure scope and a distending pharyngoscope or diverticuloscope, 0/30/70 degree telescopes with camera, suspension arm, microscope, cup and biting forceps, suction, adrenaline patties, rigid or flexible esophagoscope and bronchoscope.",
+  "Label separate specimen pots for each biopsy site, and arrange fresh tissue for flow cytometry or HPV/EBV testing when indicated.",
+  "Plan the tumor board order of events: dental assessment before radiation, feeding tube or tracheostomy decisions, and whether a transoral resection could be done at the same anesthetic."
+ ],
+ "landmarks": [
+  "Base of tongue, vallecula and lingual tonsil",
+  "Palatine tonsils and tonsillar pillars",
+  "Nasopharynx and fossa of Rosenmuller",
+  "Epiglottis, aryepiglottic folds and false folds",
+  "True vocal folds and anterior commissure",
+  "Piriform sinuses, postcricoid region and posterior pharyngeal wall",
+  "Cricopharyngeus (upper esophageal sphincter)",
+  "Carina and mainstem bronchi"
+ ],
+ "danger": [
+  "Losing the airway in an obstructing tumor",
+  "Esophageal perforation at the cricopharyngeus or above a stricture",
+  "Dental and lip injury from the scope",
+  "Bleeding from a friable tumor into the airway",
+  "Postoperative laryngeal edema after extensive biopsy",
+  "Cervical spine injury with forced extension"
+ ],
+ "steps": [
+  [
+   "Time-out and airway plan",
+   "Confirm the side and suspected primary, review the imaging and PET findings on screen, and agree on the airway plan and a rescue tracheostomy set with anesthesia. Protect the eyes and teeth and position with a shoulder roll before the first scope is passed."
+  ],
+  [
+   "Examine the oral cavity and oropharynx",
+   "Inspect the lips, buccal mucosa, gingiva, floor of mouth, tongue, palate and tonsils in good light. Palpate the floor of mouth bimanually and feel the tonsils and base of tongue with a gloved finger, since submucosal tumors there are often felt before they are seen."
+  ],
+  [
+   "Examine the neck under relaxation",
+   "With the patient paralyzed, palpate the neck to define the size, level, mobility and fixation of nodal disease to the carotid, prevertebral fascia or skin. Record findings because they guide staging and the neck dissection plan."
+  ],
+  [
+   "Inspect the nasopharynx",
+   "Retract the soft palate with red rubber catheters, or pass a rigid telescope transnasally, and inspect the fossae of Rosenmuller, torus tubarius and roof. Take biopsies of any asymmetric or abnormal area, and directed biopsies in an unknown primary with EBV-related or level II/V disease."
+  ],
+  [
+   "Direct laryngoscopy",
+   "Insert the laryngoscope from the right side, sweep the tongue left and advance under vision to the vallecula, epiglottis, supraglottis and glottis. Work systematically around every subsite so none is skipped, and use the tube to lift or displace as needed to see the posterior commissure."
+  ],
+  [
+   "Hypopharynx and postcricoid region",
+   "Use a distending pharyngoscope to open the piriform sinuses to their apices and to view the postcricoid area and posterior pharyngeal wall, which are blind spots on clinic endoscopy. Note the inferior limit of tumor relative to the apex and esophageal inlet."
+  ],
+  [
+   "Telescope mapping",
+   "Suspend the scope and use 0, 30 and 70 degree telescopes to view the ventricle, anterior commissure, laryngeal surface of the epiglottis and subglottis. Capture images and draw a tumor map with subsite involvement, crossing of the midline and distances to key landmarks for the tumor board."
+  ],
+  [
+   "Biopsy the primary",
+   "Take deep biopsies from the edge of viable tumor rather than the necrotic center, avoiding the anterior commissure and cartilage when the lesion can be sampled elsewhere. Apply adrenaline patties to control bleeding and send fresh tissue when lymphoma or HPV testing is a question."
+  ],
+  [
+   "Unknown primary: directed biopsies and tonsillectomy",
+   "If no primary is seen, biopsy PET-avid or suspicious areas and perform bilateral palatine tonsillectomy, adding lingual tonsillectomy transorally or by robot when tonsils are negative. These yield far more than random biopsies, especially for p16-positive nodes."
+  ],
+  [
+   "Esophagoscopy when indicated",
+   "Pass a rigid esophagoscope with the neck extended, opening the cricopharyngeus gently under direct vision only, or use flexible esophagoscopy. Inspect the full esophagus for second primaries and the inferior tumor edge; never force the scope against resistance."
+  ],
+  [
+   "Bronchoscopy when indicated",
+   "Perform rigid or flexible bronchoscopy through or beside the airway to view the trachea, carina and mainstem bronchi for invasion or second primaries, especially with hemoptysis, an abnormal chest image or a subglottic or thyroid-invading tumor."
+  ],
+  [
+   "Hemostasis and airway reassessment",
+   "Recheck every biopsy site for bleeding before withdrawing, and judge the residual airway and edema after biopsy. Decide with anesthesia whether to extubate, keep intubated or perform tracheostomy, and give steroids if there is significant edema."
+  ],
+  [
+   "Document and coordinate",
+   "Write a structured operative note with the tumor map, nodal exam and images, and label specimens by site. Arrange dental review, nutrition and swallowing assessment and a tumor board slot while results are pending."
+  ]
+ ],
+ "exit_check": [
+  "Every biopsy site dry and teeth checked against the preoperative count of loose or capped teeth",
+  "Airway safe for extubation, or a tracheostomy or planned overnight intubation agreed with anesthesia",
+  "Specimens labeled by subsite and the tumor map documented with images"
+ ],
+ "postop": [
+  "Observe for stridor, airway bleeding and hemoptysis in recovery; admit high-risk airways",
+  "Watch for neck pain, chest pain, fever, crepitus or tachycardia after esophagoscopy, which suggest perforation and need contrast imaging",
+  "Clear liquids then diet as tolerated if no perforation concern",
+  "Review pathology at tumor board and arrange definitive treatment without delay"
+ ],
+ "complications": {
+  "early": [
+   "Dental or lip injury",
+   "Airway obstruction from edema or bleeding",
+   "Esophageal perforation and mediastinitis",
+   "Tongue numbness or taste change from scope pressure on the lingual nerve"
+  ],
+  "late": [
+   "Missed or delayed diagnosis from inadequate sampling",
+   "Missed synchronous second primary",
+   "Stricture or fistula after an unrecognized perforation"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why must PET/CT be done before panendoscopy in an unknown primary?",
+   "Biopsy and tonsillectomy cause inflammatory FDG uptake that can be mistaken for a primary or obscure one. Imaging first lets you target PET-avid sites, which raises the yield of directed biopsies."
+  ],
+  [
+   "What is the most likely site of an occult primary in a p16-positive level II node, and what procedure finds it most often?",
+   "The palatine tonsil and base of tongue (lingual tonsil). Palatine tonsillectomy plus lingual tonsillectomy (often transoral robotic) identifies the primary in most cases, well above random biopsies."
+  ],
+  [
+   "Where is the esophagus most likely to be perforated during rigid esophagoscopy, and how does it present?",
+   "At the cricopharyngeus/Killian dehiscence, the narrowest point. It presents with neck or chest pain, fever, tachycardia, subcutaneous emphysema; confirm with contrast swallow or CT, keep the patient nil by mouth and treat early."
+  ],
+  [
+   "Is routine esophagoscopy and bronchoscopy needed in every new HNSCC?",
+   "No. With negative chest CT or PET/CT and no symptoms, yield is low; it is used selectively for hypopharyngeal and cervical esophageal tumors, heavy tobacco and alcohol exposure, symptoms or abnormal imaging."
+  ],
+  [
+   "What is the field cancerization concept?",
+   "Tobacco and alcohol injure the whole aerodigestive mucosa, so patients carry a high risk of synchronous and metachronous second primaries, which drives panendoscopy at diagnosis and lifelong surveillance."
+  ]
+ ],
+ "source_basis": [
+  "Watson NA, Aymat A, Chevretton E, Karagama Y. Operative Pharyngoscopy and Laryngoscopy (Microlaryngoscopy). In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 3.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, Diagnostic and Ancillary Procedures (p 252-254) and Unknown Primary (p 321-322).",
+  "NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers, Occult Primary (current version)."
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "slug": "t-tube-stent-placement",
+ "title": "Montgomery T-Tube Stent Placement for Subglottic / Tracheal Stenosis",
+ "domain": "Laryngology",
+ "or_family_v190": "airway",
+ "linked_topic": "Subglottic / Tracheal Stenosis",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Tracheotomized patients with subglottic or tracheal stenosis of any cause who have failed serial endoscopic radial incisions and dilation, or who are not candidates for open resection, can be stented with a silicone Montgomery T-tube. It maintains the lumen, allows speech and nasal breathing when capped, and sits between endoscopic and open treatment; complete stenosis is not a contraindication once the lumen is opened. It is avoided in ventilator-dependent patients (the open external limb prevents positive-pressure ventilation) and when stenosis reaches the undersurface of the vocal folds, since about 7 to 8 mm of normal infraglottic airway is needed for the proximal limb.",
+ "setup": [
+  "CT and endoscopy to define stenosis length, distance from the folds, and distance to the carina.",
+  "Confirm the patient is not ventilator dependent and can manage stent care.",
+  "Suspension laryngoscope, telescope with camera held by an assistant, CO2 laser, balloon dilators.",
+  "Range of T-tubes (often size 10 to 14), long 2-0 silk, small cuffed tube (about 4.0), clamps, and lubricant.",
+  "Tracheostomy tube one size smaller than the stent available in the room."
+ ],
+ "landmarks": [
+  "Undersurface of the vocal folds",
+  "Upper and lower margins of the stenosis",
+  "Existing tracheal stoma",
+  "Proximal (short) and distal (long) limbs of the stent",
+  "Carina"
+ ],
+ "danger": [
+  "Loss of ventilation during insertion",
+  "Proximal limb too close to the folds (granulation, aspiration, glottic injury)",
+  "Kinked or folded proximal limb",
+  "Distal limb reaching the carina",
+  "Mucus plugging of an uncapped stent"
+ ],
+ "steps": [
+  [
+   "Confirm the indication",
+   "Place in tracheotomized patients with subglottic or tracheal stenosis who have failed serial radial incisions and dilation, or who are not candidates for open repair. Complete stenosis is not a contraindication once the lumen can be opened endoscopically."
+  ],
+  [
+   "Check contraindications",
+   "Avoid in ventilator-dependent patients, because the open external limb prevents effective positive-pressure ventilation, and when stenosis reaches the undersurface of the folds. About 7 to 8 mm of normal infraglottic airway is needed to seat the proximal limb safely."
+  ],
+  [
+   "Open the airway first",
+   "Perform laser radial incisions and dilation of the stenosis until the lumen accepts the selected stent diameter. An adequately opened segment makes insertion easier and reduces pressure necrosis of the mucosa."
+  ],
+  [
+   "Set up visualization",
+   "Suspend a laryngoscope and have an assistant hold a telescope with camera in the airway above the stenosis to guide placement. Ventilate through the stoma while the endoscopic view is established."
+  ],
+  [
+   "Size the stent",
+   "Choose a stent, often size 10 to 14, that matches the dilated airway and sterilize it. Note that the proximal limb is shorter than the distal limb, and plan lengths from measured distances to the folds and carina."
+  ],
+  [
+   "Place a guide suture",
+   "Tie a long 2-0 silk suture through the tip of the proximal limb. Pass the knotted end up through the stoma with a clamp so the endoscopic assistant can retrieve it through the laryngoscope, ready to pull the limb upward."
+  ],
+  [
+   "Insert the distal limb",
+   "Pass a lubricated small cuffed tube (about 4.0) through the external and distal limbs, fold the stent with a clamp, and insert the distal limb into the trachea. Advance the tube and inflate its cuff to restore ventilation."
+  ],
+  [
+   "Deliver the proximal limb",
+   "Push the proximal limb up through the stoma with a finger while the assistant pulls the guide suture under endoscopic view. Considerable force may be needed, and the ventilating tube may have to be removed briefly in a tight stoma."
+  ],
+  [
+   "Check deployment",
+   "Confirm the proximal limb is fully open and not kinked; balloon-dilate a folded limb if needed. Pass the telescope through the stent to confirm patency all the way to the distal end."
+  ],
+  [
+   "Verify clearances",
+   "The upper end should sit at least 5 to 10 mm below the vocal folds and the lower end should not reach the carina. If the stent is too close to the folds, downsize or trim the proximal limb and smooth the cut edge."
+  ],
+  [
+   "Wake the patient",
+   "Ventilate by mask or laryngeal mask airway with the external limb capped, or through the small tube in the distal limb, until spontaneous breathing returns. Then remove the small tube and cut the guide suture."
+  ],
+  [
+   "Cap the stent",
+   "Cap the external limb as soon as the patient is awake so air moves through the nose and mouth, humidifying the stent. Inability to tolerate capping is a warning sign of obstruction or malposition; a constantly uncapped stent crusts and occludes."
+  ],
+  [
+   "Hospital care",
+   "Monitor for 24 hours with perioperative dexamethasone, reflux therapy for about 2 months, cough suppression, humidification, and suctioning of both limbs every few hours. Teach saline instillation and suctioning before discharge."
+  ],
+  [
+   "Emergency planning",
+   "Keep a tracheostomy tube one size smaller than the stent at the bedside, and teach the patient and caregivers how to clear an obstructed stent or remove it and insert the tube through the stoma in an emergency."
+  ]
+ ],
+ "exit_check": [
+  "Proximal limb open, not kinked, and 5 to 10 mm below the folds",
+  "Distal limb clear of the carina and lumen patent on telescope",
+  "Patient breathing with the external limb capped"
+ ],
+ "postop": [
+  "24-hour monitoring with dexamethasone",
+  "Humidification, saline instillation, and suctioning of both limbs",
+  "Reflux therapy and cough suppression",
+  "Bedside smaller tracheostomy tube and caregiver training",
+  "Endoscopic surveillance for granulation and planned stent changes"
+ ],
+ "complications": {
+  "early": [
+   "Mucus plugging and obstruction",
+   "Malposition or kinking",
+   "Aspiration",
+   "Bleeding"
+  ],
+  "late": [
+   "Granulation at stent ends",
+   "Stent migration",
+   "Restenosis after removal",
+   "Crusting from leaving the limb uncapped"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why is a T-tube unsuitable for a ventilator-dependent patient?",
+   "The open external limb and upper airway connection leak, preventing effective positive-pressure ventilation."
+  ],
+  [
+   "How much normal airway is needed below the folds for the proximal limb?",
+   "About 7 to 8 mm, with the stent end at least 5 to 10 mm below the folds."
+  ],
+  [
+   "Why must the external limb be kept capped?",
+   "Capping allows humidified airflow through the nose and mouth; an uncapped stent dries, crusts, and obstructs."
+  ],
+  [
+   "What must be at the bedside of every T-tube patient?",
+   "A tracheostomy tube one size smaller than the stent for emergency replacement."
+  ],
+  [
+   "Which limb of the T-tube is shorter?",
+   "The proximal (upper) limb."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Chapter 34: Subglottic/Tracheal Stenosis: Endoscopic Management (pp 289-304)"
+ ]
+}

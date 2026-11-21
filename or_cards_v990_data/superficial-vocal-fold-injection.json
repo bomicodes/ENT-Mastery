@@ -1,0 +1,135 @@
+{
+ "slug": "superficial-vocal-fold-injection",
+ "title": "Superficial Vocal Fold Injection for Scar / Focal Lamina Propria Defect",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Vocal Fold Sulcus / Scar",
+ "source_label": "Operative Techniques in Laryngology (2024)",
+ "indications": "Mild to moderate vocal fold scar with little soft tissue loss, a limited sulcus, or a focal superficial lamina propria defect causing stiffness and dysphonia after a full course of voice therapy, when the goal is to restore pliability rather than add bulk. It is not a treatment for paralysis, paresis, atrophy, or sulcus vergeture, which need deep (lateral) global augmentation or framework surgery. It can be done under general anesthesia or awake through a channeled flexible laryngoscope or per-oral needle.",
+ "setup": [
+  "Review the latest stroboscopy in the room to localize the stiff, nonvibrating segment.",
+  "Choose the material: hyaluronic acid filler or dexamethasone (10 mg/mL); counsel that growth factor and matrix substitutes are investigational.",
+  "General anesthesia: small microlaryngeal tube, largest suspension laryngoscope, microscope, blunt palpation instrument, and 27-30 gauge microlaryngeal needle.",
+  "Awake option: topical anesthesia, channeled flexible laryngoscope or curved per-oral needle, and a cooperative patient.",
+  "Saline or 1:10,000 epinephrine for an infusion trial."
+ ],
+ "landmarks": [
+  "Stiff, nonvibrating segment on stroboscopy",
+  "Free edge of the membranous fold",
+  "Superficial lamina propria plane",
+  "Remote entry point 3-5 mm from the target",
+  "Vocal ligament",
+  "Anterior commissure and vocal process"
+ ],
+ "danger": [
+  "Injecting too deep (into ligament or muscle)",
+  "Extrusion through the needle hole",
+  "Overfilling and a convex edge",
+  "Negative infusion trial (tethered scar)",
+  "Coughing at emergence expressing injectate"
+ ],
+ "steps": [
+  [
+   "Select the patient",
+   "Use for mild-moderate vocal fold scar with little soft tissue loss, or a limited sulcus or focal lamina propria defect, when the goal is pliability rather than bulk. It is not for paralysis, paresis, atrophy, or sulcus vergeture, which need global augmentation."
+  ],
+  [
+   "Know the materials",
+   "Options include hyaluronic acid fillers, which mimic native lamina propria matrix, and dexamethasone (10 mg/mL), which may soften scar. Older collagen products are no longer available, and growth factor and matrix substitutes remain investigational."
+  ],
+  [
+   "Review stroboscopy",
+   "Review the latest stroboscopy in the room to localize the stiff, nonvibrating segment that needs treatment, noting its length, depth, and relationship to the free edge so the injection is placed precisely."
+  ],
+  [
+   "Expose and palpate",
+   "Under general anesthesia place the largest laryngoscope, suspend, and palpate the fold with a slightly curved blunt instrument to map the stiff area. The awake version uses a channeled flexible scope or per-oral needle with topical anesthesia."
+  ],
+  [
+   "Saline infusion trial",
+   "Infuse saline or dilute epinephrine superficially at the defect. If it lifts the epithelium and fills the area (positive trial), the defect will accept a filler; a negative trial (tethered, does not lift) suggests a minithyrotomy or open approach instead."
+  ],
+  [
+   "Clear the trial fluid",
+   "Wait several minutes or gently milk the saline out of the fold before injecting the definitive substance, so the residual trial volume does not mislead the judgment of how much filler is needed."
+  ],
+  [
+   "Choose a remote entry",
+   "Puncture the epithelium with a 27-30 gauge needle about 3-5 mm away from the target. A remote entry point creates a tunnel that seals behind the needle and limits extrusion of material back through the hole."
+  ],
+  [
+   "Tunnel superficially",
+   "Keep the needle in the most superficial plane, often visible through the thin mucosa, and tunnel it to the defect without entering the vocal ligament or thyroarytenoid muscle, where material would add bulk instead of pliability."
+  ],
+  [
+   "Inject a small volume",
+   "Deposit the material slowly into the superficial lamina propria. Typical volumes are only about 0.2-0.4 mL, determined by the size of the defect rather than a preset amount, watching the mucosa rise as it fills."
+  ],
+  [
+   "Assess the contour",
+   "Inspect at high magnification for an even fill without blanching nodules or extrusion, and confirm the free edge remains straight. Palpate gently; the treated segment should now feel softer and more mobile."
+  ],
+  [
+   "Treat additional sites",
+   "Address other focal defects through separate remote entry points if needed, avoiding repeated punctures in one spot that become escape routes for the injected material. Reassess the overall edge contour after each additional site is filled."
+  ],
+  [
+   "Finish",
+   "Apply topical lidocaine and emerge smoothly, avoiding coughing or bucking that can express the injectate through the entry site. In the awake setting, ask the patient not to clear the throat forcefully."
+  ],
+  [
+   "Aftercare and counseling",
+   "Use brief voice rest per surgeon preference, then resume voice therapy. Explain that benefit is variable, may take weeks to appear, and may require repeat injection; results depend on the amount of residual lamina propria."
+  ]
+ ],
+ "exit_check": [
+  "Positive infusion trial confirmed and filler placed superficially with an even contour and straight free edge.",
+  "No extrusion through entry sites; no deep or lateral bulking."
+ ],
+ "postop": [
+  "Brief voice rest (often 1-3 days) per surgeon preference, then voice therapy.",
+  "Stroboscopy at about 4-6 weeks to assess pliability and mucosal wave.",
+  "Counsel that repeat injections may be needed and benefit is variable.",
+  "Escalate to Gray minithyrotomy or open scar surgery if results are inadequate."
+ ],
+ "complications": {
+  "early": [
+   "Edema or temporary worsening of voice",
+   "Extrusion of material",
+   "Hematoma at the injection site",
+   "Inflammatory reaction to filler"
+  ],
+  "late": [
+   "No meaningful improvement",
+   "Overcorrection with a convex edge",
+   "Resorption requiring repeat injection",
+   "Granuloma or nodule formation"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How does superficial injection differ from injection laryngoplasty for paralysis?",
+   "Superficial injection places a small volume of soft material in the superficial lamina propria to restore pliability; injection laryngoplasty places a larger volume laterally in the paraglottic space or thyroarytenoid muscle to medialize the fold. Material placed superficially for paralysis would stiffen the fold."
+  ],
+  [
+   "What does a negative saline infusion trial tell you?",
+   "The epithelium is tethered to the ligament by scar or a sulcus vergeture, so injected material will not spread into the defect; consider a minithyrotomy, open scar release, or fat implantation instead."
+  ],
+  [
+   "Why use a remote entry site?",
+   "A tunnel 3-5 mm long seals behind the needle and reduces leakage of material back through the puncture."
+  ],
+  [
+   "What is the Ford classification of sulcus?",
+   "Type 1 physiologic (superficial lamina propria preserved), type 2 sulcus vergeture (loss of SLP along the fold), type 3 sulcus vocalis (pocket extending into or through the ligament)."
+  ],
+  [
+   "What drives outcome after scar treatment?",
+   "The amount of residual normal lamina propria, the extent of scar, patient voice demands, and adherence to postoperative voice therapy."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology, 2nd ed (Rubin, Sataloff, Korovin, eds; Springer 2024), Ch 31: Superficial Vocal Fold Injection, and Ch 40: Awake Superficial Vocal Fold Injection (pp 257-262, 353-358).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: vocal fold scar and sulcus."
+ ]
+}

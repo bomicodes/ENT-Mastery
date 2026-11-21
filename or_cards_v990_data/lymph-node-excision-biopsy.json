@@ -1,0 +1,137 @@
+{
+ "slug": "lymph-node-excision-biopsy",
+ "title": "Cervical Lymph Node Excisional Biopsy",
+ "domain": "General ENT",
+ "or_family_v190": "headneck",
+ "linked_topic": "Neck Lymphoma",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Open removal of an intact cervical node when ultrasound-guided FNA, with or without core biopsy, has been nondiagnostic or suggests lymphoma, where nodal architecture and fresh tissue for flow cytometry, cytogenetics and molecular studies are needed for subtyping. Also used for granulomatous disease (tuberculosis, atypical mycobacteria, sarcoid, cat-scratch) and persistent unexplained lymphadenopathy. It is not a first step for a suspected squamous cell carcinoma metastasis: an adult with a firm node, tobacco or HPV-related risk, or squamous cells on cytology needs a full mucosal exam, imaging and panendoscopy first, and if open biopsy is still required it should be done through an incision that can be incorporated into a neck dissection, with frozen section and consent to proceed.",
+ "setup": [
+  "Review the ultrasound and FNA or core results and mark the target node, ideally the abnormal node that was sampled, using ultrasound in the anesthetic room for small or deep nodes.",
+  "Exclude a mucosal primary in any adult with a suspicious node: flexible endoscopy, CT or MRI, and PET/CT if squamous carcinoma is possible.",
+  "Choose anesthesia: local is fine for small superficial nodes, but have a low threshold for general anesthesia for deep jugular chain, level IIB, posterior triangle or supraclavicular nodes.",
+  "Position supine with a shoulder roll, head ring and head turned away, table 30 to 45 degrees head-up; have bipolar, a nerve stimulator, self-retaining retractors and a drain available.",
+  "Agree specimen handling with pathology and microbiology beforehand: fresh tissue in saline for lymphoma, sterile fresh tissue for culture and acid-fast bacilli, and fixed tissue for routine histology."
+ ],
+ "landmarks": [
+  "Sternocleidomastoid muscle and its anterior and posterior borders",
+  "Erb's point on the posterior SCM border",
+  "Spinal accessory nerve in the posterior triangle",
+  "Posterior belly of digastric",
+  "Internal jugular vein and carotid sheath",
+  "Marginal mandibular nerve below the mandible",
+  "Great auricular nerve and external jugular vein",
+  "Thoracic duct and transverse cervical vessels in the left supraclavicular fossa"
+ ],
+ "danger": [
+  "Spinal accessory nerve, superficial in the posterior triangle",
+  "Marginal mandibular nerve in level I and upper level II",
+  "Internal jugular vein adherent to a deep node",
+  "Hypoglossal nerve deep to the digastric",
+  "Thoracic duct in the left lower neck",
+  "Violating a squamous cell carcinoma node without a plan"
+ ],
+ "steps": [
+  [
+   "Mark the node and incision",
+   "Palpate or scan the target node with the patient positioned, then mark a transverse incision in a relaxed skin tension line directly over it. Place it so it could be extended or incorporated into a later neck dissection, and keep level I incisions two fingerbreadths below the mandible."
+  ],
+  [
+   "Infiltrate and incise",
+   "Infiltrate local anesthetic with adrenaline, wait for vasoconstriction, and incise skin and subcutaneous tissue. In the anterior neck, divide platysma; in the posterior triangle there is no platysma, so the accessory nerve lies just under the skin and fat and must be expected immediately."
+  ],
+  [
+   "Raise small subplatysmal flaps",
+   "Elevate limited flaps above and below to give room without over-exposing, using skin hooks and then a small self-retaining retractor. In level I and high level II, stay deep to the investing fascia of the submandibular gland to protect the marginal mandibular nerve."
+  ],
+  [
+   "Find the sternocleidomastoid",
+   "Identify the SCM border as the reference structure for most nodes. For anterior or bulky level II and III nodes, retract the SCM laterally; for deep nodes beneath a splayed muscle, split the SCM in line with its fibres after locating the accessory nerve."
+  ],
+  [
+   "Protect the accessory nerve",
+   "In level IIB, find the nerve below the posterior digastric as it crosses superficial to the internal jugular vein near the C1 transverse process. In the posterior triangle, look for it about 1 cm above Erb's point and use a nerve stimulator before dividing anything that runs obliquely toward the trapezius."
+  ],
+  [
+   "Open the fascia over the node",
+   "Divide the deep cervical fascia directly over the node and find the capsule. Develop the plane just outside the capsule rather than through the surrounding fat, which is where the vessels and small nerves run."
+  ],
+  [
+   "Mobilize the node intact",
+   "Dissect around the node in all directions with a mix of blunt and sharp dissection and bipolar, leaving a cuff of fascia to hold so the capsule itself is not grasped or crushed. A crushed or fragmented node can make lymphoma subtyping impossible."
+  ],
+  [
+   "Control the hilum",
+   "Identify the hilar vessels on the deep surface, usually feeding from the jugular side, then ligate or coagulate them before delivering the node. Release deep attachments to the jugular vein under direct vision, dividing tissue rather than pulling the node away."
+  ],
+  [
+   "Handle the specimen correctly",
+   "Hand the node off fresh and intact without placing it in formalin. Divide it on the back table as agreed, sending fresh tissue for flow cytometry, sterile fresh tissue for culture and stains, and the rest for histology; do a touch prep or frozen section if adequacy is uncertain."
+  ],
+  [
+   "Squamous cell carcinoma on frozen section",
+   "If frozen section unexpectedly shows squamous carcinoma and the patient consented, proceed to neck dissection or close and plan definitive treatment after full staging. Do not simply leave a shelled-out tumor bed without a plan for the neck."
+  ],
+  [
+   "Hemostasis",
+   "Irrigate, ask anesthesia for a Valsalva to reveal venous bleeding, and coagulate or tie any point. Use a hemostatic agent for oozing lymphoid bed; place a small drain after deep or extensive dissection or if hemostasis is imperfect."
+  ],
+  [
+   "Close",
+   "Close platysma with interrupted absorbable sutures and skin with a subcuticular absorbable suture or glue. Check lip symmetry and shoulder shrug and abduction in recovery to document nerve function before discharge."
+  ]
+ ],
+ "exit_check": [
+  "Node removed intact and divided fresh into the agreed pathology and microbiology containers",
+  "Accessory and marginal mandibular nerves seen or stimulated where at risk, and a dry bed after Valsalva",
+  "Incision compatible with a future neck dissection"
+ ],
+ "postop": [
+  "Most patients go home the same day with wound and drain advice",
+  "Check shoulder shrug and lower lip movement and document any deficit",
+  "Review histology, flow cytometry and cultures in clinic and refer promptly to hematology, oncology or infectious disease",
+  "Start shoulder physiotherapy early if accessory nerve function is reduced"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma or seroma",
+   "Marginal mandibular weakness",
+   "Accessory nerve palsy with shoulder pain and weakness",
+   "Wound infection or dehiscence",
+   "Chyle leak after left supraclavicular biopsy"
+  ],
+  "late": [
+   "Shoulder syndrome from accessory nerve injury",
+   "Chronic sinus tract after mycobacterial node excision",
+   "Hypertrophic scar or keloid",
+   "Nondiagnostic specimen requiring repeat biopsy"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why should you avoid open biopsy of a suspected squamous carcinoma node?",
+   "Open violation may seed the neck, complicates later neck dissection and radiation fields, and has been associated with higher regional recurrence. Ultrasound FNA, a mucosal exam and panendoscopy usually find the primary without it."
+  ],
+  [
+   "What is the anatomy of the spinal accessory nerve in the posterior triangle, and what does injury cause?",
+   "It exits the posterior border of the SCM about 1 cm above Erb's point and runs superficially across the triangle on levator scapulae to the trapezius. Injury causes shoulder drop, pain, scapular winging and limited abduction above 90 degrees."
+  ],
+  [
+   "Why is fresh tissue needed for suspected lymphoma?",
+   "Flow cytometry needs viable cells, and cytogenetics and some molecular tests are best on fresh tissue; formalin precludes these. Architecture from an intact node is also needed for Hodgkin and follicular subtyping."
+  ],
+  [
+   "How is atypical mycobacterial cervical adenitis in a child best treated?",
+   "Complete surgical excision of the involved nodes gives the highest cure rate and avoids a draining sinus; incision and drainage alone should be avoided. Observation or medical therapy is reserved for cases where excision would put the facial nerve at real risk."
+  ],
+  [
+   "Which neck node in the left supraclavicular fossa suggests an infraclavicular primary?",
+   "Virchow's node, draining via the thoracic duct, raises concern for gastrointestinal, lung, breast or genitourinary malignancy, as well as lymphoma."
+  ]
+ ],
+ "source_basis": [
+  "Harries V, Hay A. Lymph Node Excision Biopsy. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 8.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 5 General Otolaryngology, neck masses (p 228-231) and Chapter 6 Head and Neck Cancer, lymphoma (p 324).",
+  "NCCN Clinical Practice Guidelines in Oncology: B-Cell Lymphomas and Hodgkin Lymphoma, principles of diagnosis (excisional biopsy preferred)."
+ ]
+}
