@@ -1,0 +1,136 @@
+{
+ "slug": "sln-block-chronic-cough",
+ "title": "Office Superior Laryngeal Nerve Block for Chronic Neurogenic Cough",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Chronic Cough / Laryngeal Hypersensitivity",
+ "source_label": "Operative Techniques in Laryngology (2024), Ch 67 Superior Laryngeal Nerve Block for Chronic Cough",
+ "indications": "Office superior laryngeal nerve block treats chronic neurogenic cough (over 8 weeks) and paralaryngeal pain or odynophonia thought to arise from laryngeal hypersensitivity mediated by the internal branch of the SLN. It follows a complete workup excluding ACE-inhibitor effect, pulmonary disease, GERD/LPR, cough-variant asthma and upper airway cough syndrome. The best candidates describe a tickle or irritative sensation that precedes cough and localizes to one posterior thyrohyoid space, where palpation reproduces the cough. The block combines a long-acting local anesthetic with a particulate corticosteroid, and responders often need repeat injections. Uncontrolled diabetes and allergy to local anesthetic or steroid are contraindications.",
+ "setup": [
+  "Patient seated upright, awake, without sedation",
+  "1 mL 0.5% bupivacaine and 1 mL triamcinolone 40 mg/mL in separate 3 mL syringes joined by a female-to-female Luer adapter",
+  "27-gauge needle, alcohol prep, gauze for pressure",
+  "Side chosen by the irritative focus or palpation trigger (left if no side stands out)",
+  "Counsel on pressure, ear referral, temporary numbness or mild dysphagia, and glucose rise in diabetics"
+ ],
+ "landmarks": [
+  "Thyroid notch",
+  "Superior border of the thyroid cartilage",
+  "Superior cornu of the thyroid cartilage",
+  "Greater cornu of the hyoid",
+  "Posterior thyrohyoid space (soft depression just anterior to the superior cornu)",
+  "Thyrohyoid membrane where the internal SLN enters with the superior laryngeal artery"
+ ],
+ "danger": [
+  "Superior laryngeal artery and vein entering with the nerve (intravascular injection)",
+  "Airway entry through the membrane",
+  "Local anesthetic systemic toxicity or embolic events from particulate steroid",
+  "Skin atrophy and hypopigmentation from superficial steroid deposition",
+  "Cumulative steroid effects (HPA suppression, hyperglycemia)"
+ ],
+ "steps": [
+  [
+   "Confirm the diagnosis",
+   "Use for neurogenic cough lasting over 8 weeks or paralaryngeal pain, after medication effect, pulmonary causes, GERD/LPR, cough-variant asthma and upper airway cough syndrome have been excluded. Do not block an incomplete workup. Uncontrolled diabetes and local anesthetic or steroid allergy are contraindications."
+  ],
+  [
+   "Pick the best candidates and side",
+   "Response is most likely when a tickle or irritative sensation precedes cough, localizes to one posterior thyrohyoid space, and palpation there triggers cough. Inject the side of the irritative focus, or the left if no side stands out."
+  ],
+  [
+   "Counsel",
+   "Explain expected pressure, temporary numbness or mild dysphagia, and referred sensation to the ipsilateral ear (often a sign of good placement). Relief usually starts in 2-3 days, and repeat blocks are common."
+  ],
+  [
+   "Draw up the injectate",
+   "Draw 1 mL of 0.5% bupivacaine (preferred for its long action) and 1 mL of triamcinolone 40 mg/mL into separate 3 mL syringes. Join them with a female-to-female Luer lock adapter. Dosing varies between centers."
+  ],
+  [
+   "Mix just before injecting",
+   "Push back and forth between the syringes until the steroid is suspended, right before injection, because the particulate steroid quickly settles. Then remove the adapter and attach a 27 g needle to the syringe holding the 2 mL mix."
+  ],
+  [
+   "Find the posterior thyrohyoid space",
+   "Palpate the thyroid notch and follow the upper border of the thyroid cartilage backward until it dips just in front of the superior cornu. This soft depression marks where the internal SLN pierces the thyrohyoid membrane."
+  ],
+  [
+   "Displace the larynx",
+   "Seat the patient upright without sedation. Push the larynx toward the injection side with the fingers of the nondominant hand from the opposite side, bringing the target closer to the skin and distracting from the needle."
+  ],
+  [
+   "Guide with the thumb",
+   "Rest the nondominant thumb on the target and insert the needle through the skin over the posterior thyrohyoid membrane. Slide the thumb beside the shaft to confirm the trajectory by touch as the needle advances."
+  ],
+  [
+   "Find the membrane",
+   "Use tactile feedback as you advance. If you hit cartilage, redirect toward the soft tissue between the hyoid and the superior thyroid cartilage. The characteristic soft resistance of the thyrohyoid membrane marks the injection depth beside the nerve."
+  ],
+  [
+   "Aspirate",
+   "Draw back to confirm there is no blood or air. No vascular flash means the tip is not in a vessel or the airway, which guards against emboli and local anesthetic toxicity."
+  ],
+  [
+   "Inject",
+   "Deposit the 2 mL mixture into the posterior thyrohyoid membrane over 5-10 seconds, then withdraw the needle and hold pressure. The patient can resume a normal diet and activity at once."
+  ],
+  [
+   "Follow up at 2 weeks",
+   "Reassess at about 2 weeks, when most responders have noticed less cough. If there is no improvement in cough or other irritable larynx symptoms, block the opposite side. If that also fails, stop further injections."
+  ],
+  [
+   "Repeat safely",
+   "Repeat responding blocks every 4-16 weeks as symptoms require. If more than 3-4 blocks a year are needed, consider dropping the steroid to limit adrenal suppression, skin atrophy or hypopigmentation, and glucose spikes in diabetics."
+  ]
+ ],
+ "exit_check": [
+  "Negative aspiration confirmed before injection",
+  "Full 2 mL deposited at the thyrohyoid membrane depth; pressure held to prevent bruising",
+  "Patient comfortable, swallowing secretions and without signs of toxicity"
+ ],
+ "postop": [
+  "Normal diet and activity immediately",
+  "Expect cough reduction in 2-3 days",
+  "Clinic review at about 2 weeks; block the contralateral side if no response, stop if both fail",
+  "Repeat responding blocks every 4-16 weeks; drop the steroid if more than 3-4 blocks a year are needed",
+  "Diabetic patients monitor glucose for a few days"
+ ],
+ "complications": {
+  "early": [
+   "Bruising and pain at the injection site",
+   "Temporary numbness or mild dysphagia",
+   "Transient hyperglycemia in diabetics",
+   "Intravascular injection with local anesthetic toxicity or emboli (rare)"
+  ],
+  "late": [
+   "Skin hypopigmentation and dermal or subcutaneous atrophy",
+   "HPA-axis suppression with frequent steroid blocks",
+   "Loss of effect requiring repeat blocks",
+   "Nonresponse prompting neuromodulators or behavioral cough suppression therapy"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Where does the internal branch of the SLN enter the larynx?",
+   "Through the thyrohyoid membrane in the posterior thyrohyoid space, between the greater cornu of the hyoid and the superior cornu of the thyroid cartilage, with the superior laryngeal vessels."
+  ],
+  [
+   "Which patient features predict a good response?",
+   "A tickle or irritative sensation preceding cough that localizes to one posterior thyrohyoid space, with cough reproduced by palpation there."
+  ],
+  [
+   "What workup must precede the block?",
+   "Exclusion of ACE-inhibitor effect, pulmonary disease, GERD/LPR, cough-variant asthma and upper airway cough syndrome, typically with chest imaging and spirometry."
+  ],
+  [
+   "Why aspirate before injecting?",
+   "To avoid intravascular deposition into the superior laryngeal vessels, which risks local anesthetic toxicity and embolization of particulate steroid."
+  ],
+  [
+   "What other treatments exist for neurogenic cough?",
+   "Neuromodulators such as gabapentin, pregabalin or low-dose amitriptyline, and behavioral cough suppression therapy with a speech-language pathologist."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (2024), Ch 67 Superior Laryngeal Nerve Block for Chronic Cough, pp 577-581"
+ ]
+}

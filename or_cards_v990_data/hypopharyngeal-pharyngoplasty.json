@@ -1,0 +1,141 @@
+{
+ "slug": "hypopharyngeal-pharyngoplasty",
+ "title": "Hypopharyngeal Pharyngoplasty for Unilateral Pharyngeal Paralysis (with Medialization and Arytenoid Adduction)",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Dysphagia / Aspiration",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Relatively young patients with unilateral high vagal paralysis (for example after skull base or vagal tumor surgery) who have symptomatic pharyngeal paralysis with ipsilateral piriform pooling and aspiration. The operation narrows the flaccid hemipharynx by resecting the redundant piriform sac and advancing the inferior constrictor, and is combined with arytenoid adduction and medialization laryngoplasty to treat the coexisting glottic insufficiency, plus cricopharyngeal myotomy when indicated. It is not suited to diffuse swallowing dysfunction, bilateral involvement, brainstem stroke or symptomatic Chiari malformation.",
+ "setup": [
+  "Preoperative FEES and modified barium swallow documenting unilateral pharyngeal weakness and pooling.",
+  "Stroboscopy to size the medialization implant.",
+  "General anesthesia with a 5.0-5.5 microlaryngeal tube.",
+  "Head neutral with shoulder roll; neck extended.",
+  "Thyroplasty and arytenoid adduction set, 2.8 mm burr, curved Mayo scissors, Babcock clamp, TA-30 stapler, 2-0 silk, 3-0 Vicryl.",
+  "Drain and plan for 24-48 hour admission; G-tube status noted."
+ ],
+ "landmarks": [
+  "Thyroid lamina and oblique line with inferior constrictor insertion",
+  "Posterior thyroid border from superior horn to cricothyroid joint",
+  "Superior laryngeal neurovascular pedicle superolaterally",
+  "Inner perichondrium over the piriform sinus",
+  "Muscular process of the arytenoid where PCA and LCA converge",
+  "Redundant piriform sac"
+ ],
+ "danger": [
+  "Injuring an uninvolved superior laryngeal pedicle",
+  "Tearing piriform mucosa during cartilage resection",
+  "Staple-line leak causing pharyngocutaneous fistula",
+  "Great vessel injury at the posterior border",
+  "Postoperative airway edema from extensive arytenoid dissection"
+ ],
+ "steps": [
+  [
+   "Select the patient",
+   "Choose a relatively young (under 65) patient with unilateral high vagal paralysis and symptomatic pharyngeal paralysis, piriform pooling and aspiration. Exclude symptomatic Chiari malformation, brainstem stroke and diffuse dysfunction (global dysmotility, bilateral fold paresis, CP achalasia, nasal regurgitation). Get FEES and a modified barium swallow beforehand."
+  ],
+  [
+   "Airway and position",
+   "Under general anesthesia, intubate with a small 5.0-5.5 microlaryngeal tube so arytenoid adduction can be done around it. Keep the head neutral with a shoulder roll behind the upper back to extend the neck."
+  ],
+  [
+   "Incision and flaps",
+   "Place a crease incision over the lower half of the thyroid cartilage, crossing the midline and reaching the posterior thyroid border. Raise subplatysmal flaps to the thyrohyoid membrane and the top of the cricoid. Avoid going too far superolaterally, to protect an uninvolved superior laryngeal pedicle."
+  ],
+  [
+   "Expose the affected ala",
+   "Divide the raphe and, staying superficial to the outer perichondrium, divide and elevate sternohyoid and thyrohyoid on the paralyzed side to show the whole lamina and the oblique line with the inferior constrictor insertion."
+  ],
+  [
+   "Free the posterior border",
+   "Finger-dissect along the posterior thyroid border with the attached constrictor, from the superior horn down to the cricothyroid joint. Then hook behind the border and rotate the larynx toward the midline, away from the great vessels."
+  ],
+  [
+   "Raise the constrictor flap",
+   "Incise the perichondrium along the oblique line and elevate it with the attached inferior constrictor as one intact musculoperichondrial sheet, back to the posterior border and from superior to inferior horn. The cricothyroid joint can stay intact. Set the flap aside laterally."
+  ],
+  [
+   "Resect posterior thyroid cartilage",
+   "Outline a posterior cartilage block with a 2.8 mm burr, about 1.5 cm tall x 1 cm wide in men and less in women (1.2 x 0.8 cm typical), keeping the inner perichondrium intact over the piriform sinus. Cut the superior horn free of the thyrohyoid ligament with curved Mayo scissors and remove the block."
+  ],
+  [
+   "Open toward the muscular process",
+   "Incise the inner perichondrium to see the lateral piriform wall, and dissect bluntly with a Kittner toward the PCA. Confirm the muscular process where PCA and LCA fibers converge. Place an arytenoid adduction suture now if planned."
+  ],
+  [
+   "Resect the piriform sac",
+   "Retract the piriform mucosa laterally with a Babcock clamp to show the redundant sac. Fire a TA-30 stapler across it flush with the muscular process. If the sac is too small for the stapler, cross-clamp, cut and oversew with running 2-0 silk before releasing."
+  ],
+  [
+   "Check for leaks",
+   "Inspect the staple line for bleeding and salivary leak. Fill the field with saline and have anesthesia Valsalva; bubbles mean the closure needs more absorbable sutures, because pharyngocutaneous fistula is the key risk."
+  ],
+  [
+   "Medialize the fold",
+   "Complete the arytenoid adduction and place the medialization implant as in standard framework surgery, sizing it from preoperative stroboscopy. The implant can be fine-tuned later, and combining these steps treats the glottic insufficiency that comes with high vagal paralysis."
+  ],
+  [
+   "Advance the constrictor",
+   "Pull the musculoperichondrial flap forward onto the thyroid lamina so its edge sits about 1.5 cm in front of the new posterior border, and suture it to thyroid perichondrium with at least three 3-0 Vicryl sutures. The constrictor moves about 2 cm forward and now wraps a narrower pharynx."
+  ],
+  [
+   "Add a myotomy if needed",
+   "The pharyngoplasty does not address the cricopharyngeus. If cricopharyngeal dysfunction is present, add a cricopharyngeal myotomy or generous myectomy in the same sitting to improve upper esophageal opening. Warn about possible esophagopharyngeal regurgitation afterward."
+  ],
+  [
+   "Close and feed carefully",
+   "Repair the straps with mattress sutures and close in layers over a drain. Give extra steroids for arytenoid edema if needed. A patient eating orally before surgery stays NPO for about 48 hours, then starts a puree after FEES confirms a safe swallow; the palate can be addressed later."
+  ]
+ ],
+ "exit_check": [
+  "Watertight piriform closure confirmed with saline and Valsalva",
+  "Arytenoid adduction tied and implant placed",
+  "Constrictor advanced and secured with at least three sutures"
+ ],
+ "postop": [
+  "Extubate sitting 45 degrees; humidified oxygen first 24 hours",
+  "Admit 24-48 hours; drain usually out on day 1",
+  "Oral feeders NPO about 48 hours, then puree after FEES confirms safety",
+  "G-tube patients resume tube feeds day 1 and are re-studied at 2-4 weeks",
+  "Extra steroids for arytenoid edema if needed"
+ ],
+ "complications": {
+  "early": [
+   "Airway compromise from paraglottic and arytenoid edema",
+   "Pharyngocutaneous fistula",
+   "Hematoma",
+   "Aspiration"
+  ],
+  "late": [
+   "Persistent dysphagia",
+   "Esophagopharyngeal regurgitation after myotomy",
+   "Implant malposition requiring revision",
+   "Persistent velopharyngeal insufficiency needing palatal procedure"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why does high vagal paralysis cause worse dysphagia than isolated RLN paralysis?",
+   "It also denervates the pharyngeal plexus, SLN sensation and often the cricopharyngeus, causing hemipharyngeal flaccidity, pooling and impaired sensation."
+  ],
+  [
+   "What does the pharyngoplasty actually do?",
+   "It removes the redundant flaccid piriform sac and advances the inferior constrictor forward, narrowing the paralyzed hemipharynx so the bolus is directed to the functioning side."
+  ],
+  [
+   "Why is the procedure combined with arytenoid adduction and medialization?",
+   "High vagal lesions leave a wide posterior glottic gap; closing it improves airway protection and voice."
+  ],
+  [
+   "How is a staple-line leak detected intraoperatively?",
+   "Saline is placed in the field and anesthesia performs Valsalva; bubbles mean additional absorbable sutures are needed."
+  ],
+  [
+   "When is cricopharyngeal myotomy added?",
+   "When there is cricopharyngeal dysfunction, since the pharyngoplasty does not address upper esophageal sphincter opening."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Ch 55 Hypopharyngeal Pharyngoplasty (pp 479-485)"
+ ]
+}

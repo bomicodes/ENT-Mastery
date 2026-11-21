@@ -14,13 +14,13 @@ import daily_path_entry_v403  # v45.6: boots the full production patch chain so 
 
 STAGES = {"foundation", "application", "senior_decision"}
 EXPECTED_COUNTS = {
-    "Otology / Neurotology": 56,
-    "Rhinology / Allergy / Skull Base": 51,
+    "Otology / Neurotology": 62,
+    "Rhinology / Allergy / Skull Base": 54,
     "Head & Neck Oncology": 52,
     "Thyroid / Parathyroid / Salivary": 35,
-    "Pediatric Otolaryngology": 49,
-    "Laryngology / Voice / Swallowing": 40,
-    "Facial Plastics / Trauma": 34,
+    "Pediatric Otolaryngology": 52,
+    "Laryngology / Voice / Swallowing": 43,
+    "Facial Plastics / Trauma": 35,
     "Sleep Surgery": 24,
     "General ENT / Emergencies": 40,
 }

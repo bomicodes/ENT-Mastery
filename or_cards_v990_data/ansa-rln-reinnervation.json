@@ -1,0 +1,140 @@
+{
+ "slug": "ansa-rln-reinnervation",
+ "title": "Ansa Cervicalis to Recurrent Laryngeal Nerve Reinnervation for Unilateral Vocal Fold Paralysis",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Arytenoid Adduction / Reinnervation",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Unilateral vocal fold paralysis with glottic insufficiency, or bothersome synkinesis after a partial recovery, in patients ideally 60 or younger with a usable ipsilateral (or contralateral) ansa cervicalis. Ansa-RLN anastomosis restores tone and bulk to the paralyzed fold, giving a medialized, non-atrophic fold with good vibratory quality, though not purposeful motion. It is combined with injection laryngoplasty to bridge the months until reinnervation. Wide posterior gaps from high vagal lesions may need additional arytenoid procedures, and thyroplasty remains a later option.",
+ "setup": [
+  "Confirm the paralyzed side on laryngoscopy and review the cause; consider LEMG for prognosis.",
+  "Check prior neck operations for ansa sacrifice and plan a contralateral ansa backup.",
+  "General anesthesia with no neuromuscular blockade during the ansa search.",
+  "Shoulder roll, mild extension, whole anterior neck prepped.",
+  "Nerve stimulator, microscope or 4.5x loupes, 8-0 nylon, fresh scalpel and tongue blade for nerve ends, jeweler's forceps.",
+  "Injection laryngoplasty setup and drain."
+ ],
+ "landmarks": [
+  "Anterior SCM border and internal jugular vein",
+  "Superior root of the ansa on the IJV",
+  "Strap muscle branches (omohyoid, sternohyoid, sternothyroid)",
+  "Posterior thyroid lamina and cricothyroid joint",
+  "RLN just deep to the inferior constrictor behind the cricothyroid joint",
+  "Ligament of Berry along the trachea"
+ ],
+ "danger": [
+  "Dividing the wrong (functioning) RLN",
+  "Tension at the anastomosis from laryngeal excursion",
+  "Injury to the hypopharynx or healthy RLN when tunneling a contralateral ansa",
+  "Hematoma under the straps",
+  "Using a donor ansa already denervated by prior surgery"
+ ],
+ "steps": [
+  [
+   "Confirm candidacy and side",
+   "Operate for unilateral paralysis, or troublesome synkinesis, in a patient ideally 60 or younger. Be cautious with a wide gap from a high vagal lesion, and in prior neck surgery that may have sacrificed the ansa; have a backup such as thyroplasty or the contralateral ansa. Verify the paralyzed side, since dividing the working RLN is catastrophic."
+  ],
+  [
+   "Anesthesia and position",
+   "Use general anesthesia, but avoid neuromuscular blockade during the ansa search so that nerve stimulation makes the strap muscles twitch. Extend the neck slightly on a shoulder roll, then prep and drape the whole anterior neck."
+  ],
+  [
+   "Incision and flaps",
+   "Make a horizontal crease incision at or slightly below the inferior edge of the cricoid. Raise small subplatysmal flaps up to the top of the thyroid cartilage and down to the sternum."
+  ],
+  [
+   "Find the ansa",
+   "Working lateral to the straps, open the fascia along the anterior SCM border to expose the internal jugular vein. Look for the superior root in the thin fascia on the vein; it can be very superficial, so enter carefully. Confirm with the stimulator as the straps twitch."
+  ],
+  [
+   "Dissect the donor branches",
+   "Follow the ansa down to its branches into omohyoid, sternohyoid and sternothyroid, and up toward the thyrohyoid membrane. One large branch is usually enough; two can be joined to one RLN if small, and some surgeons use the two or three largest. Loop it for later."
+  ],
+  [
+   "Rotate the larynx",
+   "Separate the straps in the midline and reflect them laterally. Place a single or double hook on the posterior thyroid lamina about 1 cm above the cricothyroid joint and rotate the larynx to the opposite side, drawing the joint forward."
+  ],
+  [
+   "Find the RLN",
+   "Spread vertically in the fascia just behind the cricothyroid joint to find the RLN, lifting thyroid tissue off the cricoid if it overlies the area. Separating the inferior constrictor from the lower corner of the thyroid cartilage, or a few cricopharyngeus fibers, helps, because the nerve lies just deep."
+  ],
+  [
+   "Choose the transection point",
+   "Dissect the RLN 3-4 cm inferiorly along the trachea to at least Berry ligament and divide it. For proximal injuries (vagal, aortic arch) the anastomosis can sit lower, while after thyroidectomy or in idiopathic cases join more distally to a healthy stump and shorten regrowth distance."
+  ],
+  [
+   "Transfer the ansa",
+   "Cut the chosen ansa branches low, near their muscle entry, and pass them through a tunnel behind the straps at the cricothyroid joint level. The straps can be divided for access, but they are usually kept for cosmesis."
+  ],
+  [
+   "Line up without tension",
+   "Lay the RLN alongside the ansa with about 1 cm of overlap, so swallowing excursion of the larynx will not pull on the repair, and trim the excess, usually from the RLN."
+  ],
+  [
+   "Optional vein cuff",
+   "Harvest about 1.5-2 cm of a 2 mm or larger neck vein, often the anterior jugular, and slide it onto the RLN about 1 cm from its end with jeweler's forceps. The cuff keeps debris out and concentrates neurotrophic factors."
+  ],
+  [
+   "Epineural anastomosis",
+   "Under the microscope or 4.5x loupes, recut both ends with a fresh scalpel against a tongue blade rather than scissors. Coapt with the fewest simple interrupted 8-0 nylon epineural sutures needed, usually 4 (range 3-6), then slide the cuff over the repair."
+  ],
+  [
+   "Contralateral option",
+   "If the ipsilateral ansa is unavailable, bring the contralateral ansa across, through a tunnel behind the cricoid or first ring (or in front of the trachea), avoiding the healthy RLN and the hypopharynx. Recovery takes up to about 6 months, rather than 3-4."
+  ],
+  [
+   "Bridge with injection and close",
+   "Place a drain, reapproximate the straps and close. Perform injection laryngoplasty to bridge the roughly 4 months until reinnervation tone appears. Observe overnight and restrict exercise and neck extension or turning for a week; remove the drain when output is under 25 mL a day. Thyroplasty remains available if the result is inadequate."
+  ]
+ ],
+ "exit_check": [
+  "Stimulated ansa branch confirmed before division",
+  "Tension-free epineural coaptation with about 1 cm overlap allowance",
+  "Injection laryngoplasty completed and drain placed"
+ ],
+ "postop": [
+  "Overnight observation; analgesia for 1-3 days",
+  "Restrict exercise and neck extension or turning for a week",
+  "Drain out when output under 25 mL per day",
+  "Voice improves immediately from injection, dips as it resorbs, then improves with reinnervation around 3-6 months",
+  "Thyroplasty available if the result is inadequate"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma",
+   "Wound infection",
+   "Seroma"
+  ],
+  "late": [
+   "Inadequate reinnervation with persistent insufficiency",
+   "Anastomotic dehiscence (theoretical)",
+   "Hypertrophic scar",
+   "Temporary dip in voice as the injectate resorbs"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What does successful ansa-RLN reinnervation achieve, and what does it not?",
+   "It restores tone, bulk and medial position of the fold for better voice, but does not restore purposeful abduction or adduction."
+  ],
+  [
+   "Why is injection laryngoplasty performed at the same time?",
+   "Reinnervation takes about 4-6 months to produce tone, so a temporary injection improves voice during that interval."
+  ],
+  [
+   "Why is age a selection factor?",
+   "Reinnervation results are less reliable in older patients, so it is best suited to those about 60 or younger."
+  ],
+  [
+   "What is synkinesis and why can reinnervation help?",
+   "Misdirected regeneration of adductor and abductor fibers giving uncoordinated motion; replacing RLN input with the ansa produces consistent tone."
+  ],
+  [
+   "Why should neuromuscular blockade be avoided early in the case?",
+   "So nerve stimulation produces strap muscle twitch, confirming the ansa branches."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Ch 54 Laryngeal Reinnervation for Unilateral Vocal Fold Paralysis (pp 471-477)"
+ ]
+}

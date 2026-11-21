@@ -1,0 +1,142 @@
+{
+ "slug": "translaryngeal-teflon-granuloma-removal",
+ "title": "Translaryngeal (Lateral Laryngotomy) Removal of Teflon Granuloma with Fat-Flap Reconstruction",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Unilateral Vocal Fold Paralysis",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Patients with a paralyzed vocal fold previously injected with Teflon who now have dysphonia or airway symptoms from a foreign-body granuloma that fills the paraglottic space, while the vocal ligament and free-edge mucosa remain uninvolved. An open lateral laryngotomy allows near-complete removal of the granuloma with preservation of the vibratory layers, followed in the same sitting by reconstruction of the emptied paraglottic space with a pedicled cervical fat flap, arytenoid adduction and, if the mucosa is intact, a Silastic medialization implant. Limited symptoms or extensive ligament infiltration favor endoscopic debulking instead.",
+ "setup": [
+  "Review stroboscopy and contrast CT: an enhancing paraglottic mass at the glottic level, with assessment of ligament and free-edge involvement.",
+  "Plan for an awake, sedated patient under local infiltration so phonation can guide medialization and adduction.",
+  "Transnasal flexible laryngoscope draped into the field and routed to a monitor for continuous view of the glottis.",
+  "Framework set: sagittal saw or 15 blade, laryngeal hooks, Jamison scissors, Freer and Woodson elevators, House knife, depth gauge, Silastic block, 1-mm drill.",
+  "Loupes for the granuloma plane; bipolar cautery for the fat-flap harvest.",
+  "Closed suction drain and overnight observation bed arranged."
+ ],
+ "landmarks": [
+  "Thyroid notch and midline raphe",
+  "Cricothyroid membrane level for the incision",
+  "Parasagittal laryngotomy line 5-7 mm behind midline",
+  "Paraglottic space and TA-LCA complex",
+  "Vocal ligament and conus elasticus",
+  "Muscular process of the arytenoid",
+  "Omohyoid as the lateral base of the fat flap"
+ ],
+ "danger": [
+  "Removing free-edge mucosa or vocal ligament",
+  "Mucosal tear into the airway contaminating an implant",
+  "Thermal injury devitalizing the fat flap",
+  "Tear of the adherent anterior ventricle",
+  "Airway edema after extensive paraglottic dissection"
+ ],
+ "steps": [
+  [
+   "Confirm the right candidate",
+   "Choose a symptomatic Teflon granuloma in a paralyzed fold where the vocal ligament and free-edge mucosa look uninvolved. Contrast CT should show an enhancing paraglottic mass. If the ligament is extensively infiltrated or symptoms are minimal, endoscopic treatment is the better fit. Master medialization and arytenoid adduction before attempting this."
+  ],
+  [
+   "Local anesthesia and laryngeal video",
+   "Infiltrate 10-15 mL of 1% lidocaine with 1:100,000 epinephrine from hyoid to cricoid on the operative side. Decongest and anesthetize the most patent nostril and leave a draped flexible laryngoscope in place, so the larynx and voice can be watched throughout. The awake patient will phonate on request."
+  ],
+  [
+   "Incision and flaps",
+   "Make a 7-8 cm horizontal incision in a skin crease at the cricothyroid membrane level, crossing the midline. Raise subplatysmal flaps up to the hyoid and down to the upper cricoid, and hold them back with retention hooks."
+  ],
+  [
+   "Raise the pedicled fat flap",
+   "Raise a randomly pedicled, posteriorly based flap of superficial deep cervical fascia and its overlying fat from the strap muscles, with a wide base lateral to the omohyoid. Use cold dissection and bipolar cautery only, to avoid thermal injury, and keep it under moist gauze."
+  ],
+  [
+   "Expose the hemilarynx",
+   "Divide the midline raphe to reach the thyroid lamina on the involved side. Place a single hook under the thyroid notch and rotate the larynx toward the opposite side, bringing the whole ipsilateral ala into view."
+  ],
+  [
+   "Parasagittal laryngotomy",
+   "Cut a vertical parasagittal laryngotomy 5-7 mm behind the midline on the involved side with a 15 blade or sagittal saw. Retract the lamina laterally with hooks to open wide access to the paraglottic space."
+  ],
+  [
+   "Dissect out the granuloma",
+   "Find the plane between granuloma and normal tissue, which is often hard to see; loupes help. Use Jamison scissors, Freer and Woodson elevators, and a no. 2 House knife for fine work. Avoid the anterior ventricle where it adheres. Small ventricular or subglottic mucosal tears are acceptable."
+  ],
+  [
+   "Protect what drives the voice",
+   "Preserve the vocal ligament, conus elasticus and lamina propria, since their integrity predicts the voice result. Never remove free-edge mucosa or ligament. Expect a large, empty paraglottic space after complete removal, because the granuloma usually replaces most of the TA-LCA muscle complex."
+  ],
+  [
+   "Close the laryngotomy and cut windows",
+   "Reduce the laryngotomy and secure it with two or three 2-0 Prolene sutures. Then cut a medialization window and the posterior window for arytenoid adduction, as for standard framework surgery."
+  ],
+  [
+   "Place the arytenoid adduction suture",
+   "Pass a double-armed 4-0 Prolene suture through the muscular process and bring each end through separate holes in the anterior thyroid lamina near the midline. Leave it untied for voice testing."
+  ],
+  [
+   "Trial the combination",
+   "Place a cottonoid in the paraglottic space to stand in for the fat, then press a depth gauge in the window while pulling on the adduction suture. Listen to the voice and watch the video to judge the best balance of medialization and arytenoid rotation."
+  ],
+  [
+   "Inset the fat flap",
+   "Tuck the fat flap under the straps and advance it through the posterior window into the paraglottic space, bringing its tip as far forward as the anterior commissure. Test the voice in several configurations, then fix it to thyroid and cricoid with 3-0 or 4-0 Prolene through 1-mm drill holes."
+  ],
+  [
+   "Set adduction, decide on an implant",
+   "Have the patient phonate while you adjust and then tie the adduction suture near the midline. If any mucosal tear occurred, defer the Silastic implant to avoid contamination. Otherwise measure and place one, slightly overmedialized to allow for fat atrophy."
+  ],
+  [
+   "Close and recover",
+   "Irrigate, close in layers over a closed suction drain, and observe overnight with head elevation and IV dexamethasone (8 mg, then 4 mg every 8 hours). See the patient in 2-4 weeks. Warn about gradual fat-flap atrophy, which may later need lipoinjection or a revision implant, and about a higher risk of implant extrusion."
+  ]
+ ],
+ "exit_check": [
+  "Granuloma removed with ligament, conus elasticus and free edge intact on video",
+  "Fat flap secured from posterior window to near the anterior commissure, with voice confirmed in the final configuration",
+  "Laryngotomy closed, adduction suture tied, drain in place"
+ ],
+ "postop": [
+  "Overnight observation with head elevation and pulse oximetry",
+  "IV dexamethasone 8 mg then 4 mg every 8 hours",
+  "Clinic and stroboscopy at 2-4 weeks",
+  "Long-term surveillance for fat-flap atrophy and glottic insufficiency",
+  "Revision options: lipoinjection or revision medialization implant"
+ ],
+ "complications": {
+  "early": [
+   "Airway edema or hematoma",
+   "Mucosal tear into the endolarynx",
+   "Wound infection",
+   "Arytenoid edema from adduction suture"
+  ],
+  "late": [
+   "Gradual fat-flap atrophy with recurrent glottic insufficiency",
+   "Implant exposure or extrusion (higher than routine thyroplasty)",
+   "Residual or recurrent granuloma",
+   "Persistent dysphonia from scarred lamina propria"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Which structures most determine the voice outcome after open granuloma removal?",
+   "The vocal ligament, conus elasticus and lamina propria; they must be preserved, and the free-edge mucosa is never removed."
+  ],
+  [
+   "Why is a fat flap placed into the paraglottic space?",
+   "The granuloma has usually replaced most of the TA-LCA complex, leaving a large dead space; vascularized fat restores bulk and pliability lateral to the fold."
+  ],
+  [
+   "When should the Silastic implant be deferred?",
+   "When the endolaryngeal mucosa has been torn, because contamination raises the risk of infection and extrusion."
+  ],
+  [
+   "Why overmedialize slightly when an implant is placed?",
+   "To compensate for expected atrophy of the fat flap over months to years."
+  ],
+  [
+   "When is endoscopic debulking preferred to the open approach?",
+   "When symptoms are mild or the vocal ligament is extensively infiltrated, so open removal would not preserve the vibratory layers."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Ch 50 Translaryngeal Removal of Teflon Granuloma (pp 441-446)"
+ ]
+}

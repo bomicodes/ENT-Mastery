@@ -11,6 +11,21 @@ import os
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 
+# Common shorthand residents type into OR Tomorrow search (matched as whole phrases or extra tokens).
+SEARCH_ALIASES = {
+    "pectoralis-major-flap": ["pec flap", "pec major flap", "pec major", "pmmc flap", "pmmc"],
+    "cricothyrotomy": ["cric", "crike", "surgical airway", "cricothyroidotomy"],
+    "rhytidectomy": ["facelift", "face lift"],
+    "blepharoplasty": ["bleph", "eyelid lift"],
+    "panendoscopy": ["triple endoscopy", "dle", "direct laryngoscopy esophagoscopy bronchoscopy"],
+    "comprehensive-neck-dissection": ["mrnd", "modified radical neck dissection", "radical neck dissection"],
+    "sentinel-node-biopsy": ["slnb", "sentinel lymph node biopsy"],
+    "lymph-node-excision-biopsy": ["excisional node biopsy", "lymph node biopsy", "node biopsy"],
+    "epistaxis-packing-cautery": ["nosebleed", "posterior packing", "nasal packing"],
+    "draf-iii-outside-in": ["modified lothrop", "emlp", "draf 3"],
+    "t-tube-stent-placement": ["montgomery t tube", "t tube"],
+}
+
 
 def _cards():
     out = []
@@ -47,6 +62,9 @@ def install_or_cards_v990(data, app_mod):
             m = textbook_curriculum_v470.TOPIC_OR_MAP_V470.setdefault(topic, [])
             if slug not in m:
                 m.append(slug)
+    for slug, al in SEARCH_ALIASES.items():
+        if slug in registry:
+            registry[slug]["search_aliases_v990"] = list(al)
     if getattr(app_mod, "OR_PREP_REGISTRY", None) is not registry:
         app_mod.OR_PREP_REGISTRY = registry
     return {"added": added}

@@ -1,0 +1,136 @@
+{
+ "slug": "ues-balloon-dilation",
+ "title": "Upper Esophageal Sphincter (Cricopharyngeal) Balloon Dilation: Awake Transnasal and Microdirect",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Cricopharyngeal Dysfunction",
+ "source_label": "Operative Techniques in Laryngology (2024), Ch 64 Upper Cervical Esophageal Dilation",
+ "indications": "Mechanical dilation of the upper esophageal sphincter treats outflow obstruction from cricopharyngeal muscle dysfunction (CP bar), cricopharyngeal web and radiation-associated stricture. Swallow fluoroscopy, with FEES and manometry when needed, should confirm a true UES opening problem rather than pharyngeal weakness. The best candidates have an obstructing bar with good hyolaryngeal elevation and pharyngeal squeeze; weak propulsion predicts less benefit and more pharyngeal reflux. CP dysfunction responds best to sequential double-balloon dilation, which matches the kidney-shaped UES. Awake transnasal dilation avoids general anesthesia and gives an excellent UES view; microdirect dilation under general anesthesia allows palpation of the CP, direct web treatment and botulinum injection, and helps decide on later myotomy.",
+ "setup": [
+  "Awake: moderate sedation (titrated midazolam and fentanyl) with oximetry, BP and ECG monitoring by a sedation-trained nurse or anesthesiologist",
+  "Patient seated 45-60 degrees or upright; oxymetazoline-lidocaine nasal spray or pledgets; viscous lidocaine on the scope",
+  "Video endoscope at least 60 cm long with a 2-mm working channel, flexible guidewires (two for double dilation), hemostats",
+  "Through-the-scope or over-the-wire balloons sized 13-20 mm and an inflation device with manometer",
+  "Microdirect option: general anesthesia, suspension laryngoscope, bougies or balloons, botulinum toxin available"
+ ],
+ "landmarks": [
+  "Nasal floor or middle meatus pathway",
+  "Piriform sinus and postcricoid area",
+  "Cricopharyngeal bar or web on fluoroscopy and endoscopy",
+  "Arytenoids and epiglottic tip (proximal balloon limit)",
+  "Cervical esophagus below the pharyngoesophageal segment",
+  "Gastroesophageal junction for wire placement"
+ ],
+ "danger": [
+  "Cervical esophageal perforation, especially in irradiated tissue",
+  "Mucosal tear and bleeding",
+  "Balloon riding up into the hypopharynx or larynx",
+  "Aspiration or laryngospasm under sedation",
+  "Pneumothorax or pneumomediastinum (rare)"
+ ],
+ "steps": [
+  [
+   "Confirm the target",
+   "Use VFSS (with FEES and manometry as needed) to separate a true outflow problem (CP bar or web, radiation stricture) from pharyngeal weakness. Patients with an obstructing bar and good hyolaryngeal elevation benefit most. Weak squeeze or poor elevation predicts less benefit and possibly more reflux into the pharynx. Document that discussion."
+  ],
+  [
+   "Choose setting",
+   "Awake transnasal dilation under moderate sedation avoids general anesthesia and gives the best UES view. Microdirect peroral dilation under general anesthesia allows CP palpation, web treatment and botulinum injection. Monitor pulse oximetry, blood pressure and ECG with a sedation-trained nurse or anesthesiologist."
+  ],
+  [
+   "Plan balloon sizes",
+   "For a CP bar, plan a 'series of three' about a month apart: one 18-20 mm balloon, then two 13-15 mm, then two 15-18 mm side by side (about 30 mm total) to match the kidney-shaped UES. A CP web often needs one 20 mm dilation. Choose sizes conservatively after radiation."
+  ],
+  [
+   "Sedate and anesthetize",
+   "Give titrated midazolam (about 0.03 mg/kg) and fentanyl (about 0.5 mcg/kg). Seat the patient at 45-60 degrees or upright, spray oxymetazoline-4% lidocaine or place pledgets, and lubricate a 2-mm-channel video endoscope at least 60 cm long with viscous lidocaine."
+  ],
+  [
+   "Intubate the esophagus",
+   "Pass the scope along the floor of the nose or the middle meatus to the postcricoid area. Ask the patient to tuck the chin and swallow hard while you advance through the piriform sinus into the esophagus with insufflation."
+  ],
+  [
+   "Diagnostic pass",
+   "If diagnostic esophagoscopy is planned, advance into the stomach, retroflex to view the cardia and fundus, and inspect the whole esophageal mucosa on withdrawal. Note any stricture, ring or mass that changes the dilation plan."
+  ],
+  [
+   "Place guidewires",
+   "With the scope tip in the stomach, pass the flexible guidewire through the working channel until it sits several centimeters past the tip. For double-balloon dilation, insert two wires at the same time."
+  ],
+  [
+   "Exchange the scope",
+   "Have the assistant feed the wire in as you withdraw the scope from the nose, then clamp each wire with its own hemostat at the nostril. Reinsert the scope through the same side to just above the epiglottis."
+  ],
+  [
+   "Position the balloon",
+   "Advance each balloon over its wire until it is centered across the narrowing. To target the pharyngoesophageal segment, the proximal end should be visible above the arytenoids but no higher than the tip of the epiglottis."
+  ],
+  [
+   "Inflate",
+   "Inflate to the target diameter and hold 1 minute. For two balloons, keep them side by side, either by slow simultaneous inflation or by partly inflating one before the other. Blanching and resistance to withdrawal mean the stretch is sufficient; stop for mucosal tears or bleeding."
+  ],
+  [
+   "Inspect and withdraw",
+   "Deflate, advance the balloons into the cervical esophagus, and inspect the dilated segment for the depth of any mucosal disruption. Then withdraw the scope, balloons and guidewires together for a smooth removal."
+  ],
+  [
+   "Microdirect alternative",
+   "Under general anesthesia, suspend the laryngoscope just behind the cricoid to show the postcricoid space. Place balloons or bougies across the UES under direct view and hold 1 minute. Two balloons, or a bougie plus a sidecar balloon, give double dilation, or use an anatomically shaped single UES balloon."
+  ],
+  [
+   "After the procedure",
+   "Postprocedure observation is usually unnecessary, and analgesics are rarely needed. Resume the usual diet the same day, with softer foods for 24-48 hours. Warn about chest pain, fever or emphysema suggesting perforation, and repeat the series at about monthly intervals or consider myotomy based on response."
+  ]
+ ],
+ "exit_check": [
+  "Dilated segment inspected; mucosal disruption superficial with no deep tear",
+  "No active bleeding, crepitus or new chest or neck pain",
+  "Sedation recovery with protected airway and normal oximetry"
+ ],
+ "postop": [
+  "Observation usually unnecessary; analgesics rarely needed",
+  "Resume diet the same day, with softer foods for 24-48 hours",
+  "Return immediately for chest or neck pain, fever, crepitus or hematemesis (perforation warning)",
+  "Repeat dilation in a series about a month apart; consider myotomy or botulinum based on response"
+ ],
+ "complications": {
+  "early": [
+   "Mucosal tear",
+   "Bleeding or hemoptysis",
+   "Cervical esophageal perforation",
+   "Aspiration or laryngospasm with sedation",
+   "Pneumothorax or pneumomediastinum (rare)"
+  ],
+  "late": [
+   "Recurrent obstruction needing repeat dilation",
+   "Persistent dysphagia from pharyngeal weakness",
+   "Increased pharyngeal reflux in patients with poor pharyngeal squeeze",
+   "Progression to cricopharyngeal myotomy"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why use two balloons side by side for a CP bar?",
+   "The UES is kidney-shaped rather than round, so two balloons (about 30 mm total) stretch it more physiologically than a single round balloon."
+  ],
+  [
+   "Describe the 'series of three'.",
+   "Three sessions about a month apart: a single 18-20 mm balloon, then two 13-15 mm balloons, then two 15-18 mm balloons side by side."
+  ],
+  [
+   "Who benefits least from UES dilation?",
+   "Patients with weak pharyngeal squeeze or poor hyolaryngeal elevation, whose dysphagia is driven by propulsion failure rather than outflow obstruction."
+  ],
+  [
+   "What does microdirect dilation under general anesthesia add?",
+   "Palpation of the CP to guide myotomy decisions, direct web treatment, precise botulinum injection and full postcricoid inspection."
+  ],
+  [
+   "What symptoms after dilation suggest perforation?",
+   "Chest or neck pain, fever, crepitus or subcutaneous emphysema; obtain contrast imaging and make the patient NPO."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (2024), Ch 64 Upper Cervical Esophageal Dilation (Cates, Rosen), pp 553-558"
+ ]
+}
