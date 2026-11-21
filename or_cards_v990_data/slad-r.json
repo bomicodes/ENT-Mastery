@@ -1,0 +1,142 @@
+{
+ "slug": "slad-r",
+ "title": "Selective Laryngeal Adductor Denervation-Reinnervation (SLAD-R) for Adductor Spasmodic Dysphonia",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Spasmodic Dysphonia",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Adductor spasmodic dysphonia (adductor laryngeal dystonia) in patients who have had a clear, reproducible benefit from botulinum toxin and want a durable alternative to repeated injections. Bilateral adductor branches of the RLN are divided and the distal TA stumps reinnervated with ansa cervicalis branches, while the LCA is partially myotomized. Best results are in younger, healthy patients with little tremor. It is not indicated for abductor or mixed dystonia, muscle tension or functional dysphonia, and is performed at few centers.",
+ "setup": [
+  "Confirm diagnosis and toxin response; document stroboscopy and LEMG findings as available.",
+  "Counsel extensively: breathy weak voice for 3-6 months, transient thin-liquid aspiration, strength gains by 9-12 months.",
+  "General anesthesia with EMG-monitoring tube and IV dexamethasone; avoid long-acting paralysis to allow nerve stimulation.",
+  "Bed turned 90-180 degrees, shoulder roll, both sides prepped identically.",
+  "Oscillating saw, nerve stimulator, microscope or loupes, 7-0/8-0 nonabsorbable suture, French-eye needle, 4-0 Prolene on a taper needle.",
+  "Arrange inpatient bed and speech-language pathology swallow review."
+ ],
+ "landmarks": [
+  "Carotid triangle and internal jugular vein",
+  "Superior root of the ansa on the lateral IJV wall",
+  "Thyroid lamina, oblique line and true posterior border",
+  "Inferior cornu and cricothyroid joint (preserved strut)",
+  "Adductor (TA) branch running from the posteroinferior window to mid-TA",
+  "LCA muscle and LCA branch",
+  "Piriform sinus immediately deep to the LCA"
+ ],
+ "danger": [
+  "Mistaking the oblique line for the posterior border in men",
+  "Injuring the cricothyroid joint or external SLN branch",
+  "Entering the piriform sinus during LCA myotomy",
+  "Complete LCA myotomy causing a persistent posterior glottic chink",
+  "Tension or compression of the ansa-TA anastomosis"
+ ],
+ "steps": [
+  [
+   "Select the patient",
+   "Offer SLAD-R for adductor laryngeal dystonia with a clear prior benefit from botulinum toxin, ideally in a younger, healthy patient with little tremor. Exclude abductor or mixed SD, MTD and functional dysphonia. Age over 65 and diabetes, heart disease or smoking are relative concerns. Counsel about up to 6 months of breathy voice."
+  ],
+  [
+   "Anesthesia and setup",
+   "General anesthesia with IV dexamethasone and an EMG-monitoring tube to help identify nerves (helpful but not essential). Turn the bed 90-180 degrees, extend the neck on a shoulder roll, and remember that both sides are operated identically."
+  ],
+  [
+   "Incision",
+   "Make a crease incision along the inferior border of the thyroid lamina, extended on both sides to the middle of the carotid triangle so each ansa can be mobilized. Raise subplatysmal flaps to the hyoid and just below the cricoid."
+  ],
+  [
+   "Find the ansa cervicalis",
+   "Open the loose fascia of the carotid triangle from above downward to the internal jugular vein. The superior root runs on the lateral wall of the vein, sometimes under the omohyoid. Retract SCM laterally and omohyoid medially, follow the nerve inferiorly for enough length, and tag it with a vessel loop."
+  ],
+  [
+   "Expose the thyroid ala",
+   "Divide the straps in the midline and elevate thyrohyoid off the ala. Release the thyrohyoid and sternothyroid insertions along the oblique line and lower border, preserving the external SLN branch on the cricothyroid. Confirm the true posterior border, which is easily mistaken for the oblique line in men, and rotate with a J-shaped hook."
+  ],
+  [
+   "Cut the cartilage window",
+   "With an oscillating saw (a blade may suffice in young women), cut an inferiorly based rectangular window: the posterior cut just in front of the inferior cornu leaving a strut that includes the cricothyroid joint, the superior cut halfway up the lamina, the anterior cut in front of the inferior tubercle. Go only to inner perichondrium."
+  ],
+  [
+   "Reflect the window",
+   "Mobilize the cartilage with an elevator and rotate it inferiorly to expose the paraglottic space and the TA and LCA muscles beneath. Divide any small SLN branches seen entering the paraglottic space along the inner cricothyroid, which may also carry adductor input."
+  ],
+  [
+   "Find the TA branch",
+   "Under loupes or the microscope, find the adductor branch running obliquely from the posteroinferior corner of the window toward the mid-belly of the TA, often surrounded by small vessels and fat, sometimes deep between TA and LCA."
+  ],
+  [
+   "Divide and bury the proximal stump",
+   "Tie the nerve with silk 4-5 mm from its TA entry, leaving a usable distal stump, and divide it. Retract the proximal end back to the window's posterior edge, dividing the LCA branch on the way. Fix the proximal stump outside the larynx to the posterior lamina with a French-eye needle to prevent regrowth."
+  ],
+  [
+   "Partial LCA myotomy",
+   "Divide only 15-30% of the LCA thickness at mid-belly with microscissors. Do not pass instruments deep, because the piriform sinus lies right behind. A complete myotomy risks a lasting posterior glottic chink, especially in men."
+  ],
+  [
+   "Bring in the ansa",
+   "Cut the tagged ansa branch (usually to sternohyoid or sternothyroid) distally, choosing a long one for slack, and pass it under the straps to the window. The inferior root may need division to rotate it."
+  ],
+  [
+   "Neurorrhaphy",
+   "Under high magnification, perform an epineural anastomosis between the ansa branch and the distal TA stump with 7-0 or 8-0 nonabsorbable sutures. Keep it tension-free with some slack, because the larynx moves with swallowing, voicing and neck turning."
+  ],
+  [
+   "Replace the window",
+   "Notch the posterior edge of the window about 2 x 2 mm (or rely on the saw gap) so the ansa is not compressed, then close the cartilage with interrupted 4-0 Prolene on a taper needle, through perichondrium if cartilage tears. Repeat everything on the other side."
+  ],
+  [
+   "Close and recover",
+   "Close straps in the midline and skin over a Penrose drain, removed the next day. Start a soft diet with thickened liquids under SLP guidance, since thin-liquid aspiration is common at first, and discharge on about day 2 with a steroid taper. Expect a breathy voice for 3-6 months and strength gains by 9-12 months."
+  ]
+ ],
+ "exit_check": [
+  "TA and LCA branches divided bilaterally with proximal stumps fixed outside the larynx",
+  "Tension-free ansa-to-distal-TA neurorrhaphy on both sides",
+  "Windows replaced with relief notch, drains placed"
+ ],
+ "postop": [
+  "Inpatient stay with IV dexamethasone, then steroid taper on discharge",
+  "Penrose drain removed postoperative day 1",
+  "Soft diet with thickened liquids and SLP swallow guidance",
+  "Expect large mid-cord gap with normal abduction early; reassess at 3-6 and 9-12 months",
+  "Vocal hygiene and reflux control for long-term voice quality"
+ ],
+ "complications": {
+  "early": [
+   "Thin-liquid dysphagia and aspiration",
+   "Breathy, weak voice",
+   "Hematoma",
+   "Airway edema"
+  ],
+  "late": [
+   "Persistent breathiness or posterior glottic chink",
+   "Recurrent spasm from regrowth of the proximal stump",
+   "Secondary muscle tension dysphonia",
+   "Reduced pitch and loudness range"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the rationale for reinnervating the TA rather than simply dividing its nerve?",
+   "Reinnervation with the ansa restores tone and bulk without carrying the dystonic signal, preventing atrophy and reinnervation by aberrant adductor fibers."
+  ],
+  [
+   "Why is the proximal RLN adductor stump buried outside the larynx?",
+   "To prevent the dystonic fibers from regrowing into the TA and causing recurrent spasm."
+  ],
+  [
+   "Why is the LCA myotomy kept partial?",
+   "Complete myectomy produced lasting posterior glottic gaps, especially in men, from arytenoid lateralization."
+  ],
+  [
+   "What patient features predict a good outcome?",
+   "Adductor-type SD with good prior botulinum toxin response, younger age, good health and minimal tremor."
+  ],
+  [
+   "What does early postoperative laryngoscopy usually show?",
+   "Normal abduction with a large mid-membranous glottic gap that closes as reinnervation develops over about 3-6 months."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Ch 53 Selective Laryngeal Adductor Denervation and Reinnervation (pp 463-470)"
+ ]
+}

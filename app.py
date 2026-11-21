@@ -316,6 +316,9 @@ def _or_rank(q):
     for slug,x in OR_PREP_REGISTRY.items():
         ns=_norm_or_text(slug); nt=_norm_or_text(x.get("title",""))
         slug_tokens=ns.split(); title_tokens=nt.split(); all_tokens=set(slug_tokens+title_tokens)
+        aliases=[_norm_or_text(a) for a in (x.get("search_aliases_v990") or [])]
+        if nq in aliases: ranked.append((100,slug,x)); continue
+        for a in aliases: all_tokens.update(a.split())
         score=0
         if nq==ns or nq==nt: score=100
         elif all(t in all_tokens for t in qt): score=94 if all(t in title_tokens for t in qt) else 88

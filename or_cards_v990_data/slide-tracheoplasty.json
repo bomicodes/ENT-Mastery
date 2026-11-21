@@ -1,0 +1,143 @@
+{
+ "slug": "slide-tracheoplasty",
+ "title": "Slide Tracheoplasty (Cervical or Bypass-Assisted)",
+ "domain": "Laryngology",
+ "or_family_v190": "airway",
+ "linked_topic": "Subglottic / Tracheal Stenosis",
+ "source_label": "Operative Techniques in Laryngology (2024), Ch 60 Slide Tracheoplasty",
+ "indications": "Slide tracheoplasty treats complete tracheal rings, short- and long-segment tracheal stenosis, subglottic or multilevel stenosis, A-frame deformity after tracheostomy, tracheoesophageal fistula and revision airway cases. Splitting the stenotic segment and sliding the two halves over each other roughly doubles the circumference and quadruples the cross-sectional area while shortening the trachea by only half the stenotic length, so it handles longer lesions than resection with primary anastomosis. Cervical lesions can be done through the neck without bypass; complete rings and distal-third disease need sternotomy and cardiopulmonary bypass. Relative contraindications include prior low tracheal surgery, prior TEF or esophageal atresia repair, prior slide or resection, and laryngotracheal cleft repair.",
+ "setup": [
+  "Microlaryngoscopy and bronchoscopy set ready at the start, with rigid and flexible scopes, telescopes and needles for transtracheal mapping",
+  "Supine with shoulder roll; intubate through an existing stoma or orally and decide single-stage versus two-stage (keep stoma) before prepping",
+  "Sterile cross-field anesthesia circuit and reinforced tubes to ventilate the distal trachea once divided",
+  "Double-armed running PDS (5-0 or 6-0 for small children, 4-0 for older children and adults), nerve hooks, fibrin sealant, Kittner dissectors",
+  "Cardiothoracic team and bypass circuit with sternal saw for complete rings or distal-third disease; cervical collar and ICU bed booked"
+ ],
+ "landmarks": [
+  "Hyoid to sternal notch and midline raphe of the strap muscles",
+  "Cricoid and first tracheal rings",
+  "Upper and lower limits of the stenosis marked by transtracheal needles",
+  "Lateral tracheal vascular pedicles",
+  "Tracheoesophageal party wall and esophagus",
+  "Recurrent laryngeal nerves in the tracheoesophageal grooves",
+  "Carina (lower limit of dissection)"
+ ],
+ "danger": [
+  "Recurrent laryngeal nerves during lateral and posterior tracheal mobilization",
+  "Lateral blood supply: circumferential stripping in older children and adults risks dehiscence",
+  "Esophageal injury while separating the posterior tracheal wall",
+  "Anastomotic tension leading to dehiscence",
+  "Figure-of-8 collapse at the anastomosis",
+  "Loss of ventilation during the switch between cross-field and translaryngeal tubes"
+ ],
+ "steps": [
+  [
+   "Indication and bypass decision",
+   "Consider for complete tracheal rings, short- or long-segment tracheal stenosis, subglottic or multilevel stenosis, A-frame deformity, TEF or revision cases. Be cautious after prior low tracheal surgery, TEF or atresia repair, prior slide or resection, or cleft repair. Complete rings and distal-third disease need cardiopulmonary bypass; cervical lesions can be done without it."
+  ],
+  [
+   "Endoscopy first",
+   "Begin with microlaryngoscopy and bronchoscopy to confirm the anatomy and measure the lesion. Look for any interval change, such as active infection or inflammation, which can be a reason to cancel. Note any other airway levels that need treatment."
+  ],
+  [
+   "Airway and position",
+   "Intubate through an existing stoma or orally, place a shoulder roll and extend the neck, then prep from chin to xiphoid if bypass may be needed. Decide now whether an existing stoma will be excised (single stage) or preserved for a two-stage repair."
+  ],
+  [
+   "Incision and exposure",
+   "Make a mid-neck crease incision, or excise a stoma for a single-stage repair. Raise subplatysmal flaps from the hyoid to the sternum and separate the straps in the midline to expose the trachea. Plan a sternal split if bypass is used."
+  ],
+  [
+   "Mobilize the trachea",
+   "Expose the trachea down to the carina in a 270-degree fashion, keeping the lateral vascular attachments. Infants with complete rings tolerate circumferential dissection, but in older children and adults avoid it to protect healing."
+  ],
+  [
+   "Map the lesion",
+   "With flexible or rigid endoscopy running, pass a 27- or 30-gauge needle through the anterior tracheal wall at the upper and lower limits of the disease. Confirm each needle position on the endoscopic view before marking it."
+  ],
+  [
+   "Divide at the midpoint",
+   "Transect the trachea horizontally with a 15 blade at the middle of the diseased segment. Move ventilation to a tube placed across the field into the distal trachea, and plan the later anterior and posterior split lines."
+  ],
+  [
+   "Separate from the esophagus",
+   "Free the posterior tracheal wall from the esophagus with cautery or blunt Kittner dissection. Mobilize both upper and lower segments enough to slide over each other without tension, keeping the lateral blood supply intact."
+  ],
+  [
+   "Split the segments",
+   "Divide the distal segment in the posterior midline and the proximal segment in the anterior midline, each through the full length of the abnormal trachea into normal tissue, often with a bevel."
+  ],
+  [
+   "Trim the ends",
+   "Excise small wedges at the proximal and distal ends so the anastomosis transitions smoothly without dog-ears. A small mid-segment resection can be added if the surgeon thinks it will improve the lumen or the fit."
+  ],
+  [
+   "Run the anastomosis",
+   "Close with a double-armed running PDS (5-0 or 6-0 in small children, 4-0 in older children and adults), starting posterodistal and finishing anteroproximal. Slide the distal segment over the proximal as you go, using nerve hooks to keep the line airtight."
+  ],
+  [
+   "Switch ventilation and detension",
+   "Once half to two-thirds of the anastomosis is complete, pull back the field tube and return to translaryngeal intubation. If tension seems excessive, place internal Grillo sutures from the distal trachea to the hyoid to offload the suture line."
+  ],
+  [
+   "Test and inspect",
+   "Irrigate, flood the field and leak-test, repairing small leaks with single sutures, then cover with fibrin sealant. Inspect endoscopically for a figure-of-8 deformity, and evert it with a mattress suture across the line if present. Stent with a cut T-tube or bronchial stent only if needed."
+  ],
+  [
+   "Close and follow",
+   "Close the straps, drain above them and close in layers. Cervical cases may be extubated on the table and kept in midline with a collar; bypass cases stay intubated 24-48 hours. Humidify aggressively and survey endoscopically for granulation, restenosis or figure-of-8 collapse, treated with dilation or a 4-8 week stent."
+  ]
+ ],
+ "exit_check": [
+  "Airtight anastomosis on flooded leak test, with fibrin sealant over the line",
+  "Endoscopy shows an open lumen without significant figure-of-8 collapse; any stent position confirmed",
+  "Tension acceptable with neck in neutral; Grillo or release sutures placed if needed and drain above the straps"
+ ],
+ "postop": [
+  "Cervical cases may be extubated on the table or kept intubated overnight in ICU; bypass cases usually stay intubated 24-48 hours",
+  "Cervical collar keeps the neck midline and prevents hyperextension",
+  "Frequent humidification and pulmonary toilet to prevent mucous plugging",
+  "Scheduled endoscopic surveillance for granulation, restenosis and figure-of-8 deformity; remove any temporary stent as planned",
+  "Check vocal fold mobility before and after extubation"
+ ],
+ "complications": {
+  "early": [
+   "Anastomotic dehiscence (most feared; usually immediate revision)",
+   "Air leak, subcutaneous emphysema or pneumothorax",
+   "Mucous plugging of the airway",
+   "Recurrent laryngeal nerve paresis (about 1-2%, usually unilateral and often recovers)"
+  ],
+  "late": [
+   "Figure-of-8 deformity needing a temporary stent for 4-8 weeks",
+   "Granulation tissue at the suture line",
+   "Restenosis, managed with balloon dilation after the anastomosis matures",
+   "Persistent unilateral vocal fold paralysis needing medialization"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why does slide tracheoplasty beat resection for long-segment stenosis?",
+   "Overlapping the split segments doubles circumference and roughly quadruples cross-sectional area while shortening the trachea only by half the stenotic length, so long lesions can be treated without excessive anastomotic tension."
+  ],
+  [
+   "Which split goes where?",
+   "The distal segment is divided in the posterior midline and the proximal segment in the anterior midline, each carried into normal trachea, then the distal segment slides over the proximal one."
+  ],
+  [
+   "When is cardiopulmonary bypass required?",
+   "For complete tracheal rings and distal-third tracheal disease; isolated cervical lesions can be repaired through the neck without bypass."
+  ],
+  [
+   "What is a figure-of-8 deformity and how is it treated?",
+   "Inward curling of the anastomotic edges creating an 8-shaped lumen. It is often asymptomatic and relaxes; evert it with a mattress suture intraoperatively, or stent for 4-8 weeks if symptomatic."
+  ],
+  [
+   "What is the most feared complication and how do you prevent it?",
+   "Dehiscence, more likely with poor blood supply or prior low tracheal surgery. Prevent it with adequate mobilization, preserved lateral vascular attachments, and tension relief such as Grillo sutures; treat with early revision."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (2024), Ch 60 Slide Tracheoplasty (de Alarcon), pp 525-531",
+  "Operative Techniques in Laryngology (2024), Ch 59 Tracheal Stenosis: Resection and Primary Anastomosis (related chapter)"
+ ]
+}

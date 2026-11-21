@@ -1,0 +1,141 @@
+{
+ "slug": "combined-laryngocele-excision",
+ "title": "External (Transthyroid) Excision of Combined Laryngocele",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Laryngocele",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Combined laryngoceles, in which a dilated saccule extends from the ventricle through the thyrohyoid membrane into the neck, that cause hoarseness, airway obstruction, infection (laryngopyocele), a visible neck mass, or concern for an underlying ventricular or supraglottic neoplasm. These are removed through an external transthyroid approach that excises both components and the saccular base with a cuff of ventricular mucosa. Purely internal laryngoceles are usually managed endoscopically. Microlaryngoscopy is mandatory first, especially in smokers and drinkers, to exclude a tumor obstructing the saccular orifice.",
+ "setup": [
+  "Valsalva-phase contrast CT to map the internal and external components through the thyrohyoid membrane.",
+  "Microlaryngoscopy set with 30- and 70-degree telescopes and biopsy instruments, performed before the neck stage.",
+  "Cuffed oral tube; coordinate with anesthesia to deflate the cuff and give positive pressure to distend the sac.",
+  "Neck tray with skin and dural hooks, Babcock clamp, Kittners, Kerrison rongeur, 4-0 chromic, silk ties and PDS.",
+  "Closed suction drain; tracheotomy tray available.",
+  "Treat an infected laryngopyocele before definitive excision."
+ ],
+ "landmarks": [
+  "Thyroid notch and upper border of thyroid ala",
+  "Thyrohyoid membrane where the external sac emerges",
+  "Internal branch of the SLN and superior laryngeal vessels at the posterior membrane",
+  "Strap muscles (sternohyoid, omohyoid, thyrohyoid)",
+  "Paraglottic space deep to the ala",
+  "Saccular base in the anterior ventricle about 3-5 mm behind midline, halfway up the lamina"
+ ],
+ "danger": [
+  "Internal SLN injury at the posterior thyrohyoid membrane",
+  "Rupturing the sac and losing the dissection plane",
+  "Leaving the saccular base, causing recurrence",
+  "Missing a ventricular carcinoma",
+  "Postoperative hematoma or edema compressing the airway"
+ ],
+ "steps": [
+  [
+   "Confirm indication and imaging",
+   "Operate for a symptomatic combined laryngocele (hoarseness or airway compromise) or suspected malignancy, and selectively for cosmesis. Review Valsalva-phase CT for an air-filled dumbbell passing through the thyrohyoid membrane. For bilateral lesions, consider staging the two sides so both internal SLN branches are not at risk at once."
+  ],
+  [
+   "Endoscopy first",
+   "Perform microlaryngoscopy with 30- and 70-degree telescopes to inspect the anterior false fold and ventricle, where an obstructing tumor could cause the laryngocele. Biopsy anything suspicious before proceeding with excision."
+  ],
+  [
+   "Incision and flaps",
+   "Make a 5-7 cm horizontal incision in a deep crease at the upper border of the thyroid cartilage. Raise subplatysmal flaps from the upper cricoid to just above the hyoid and hold the skin with hooks; dural hooks clipped to the drapes work well."
+  ],
+  [
+   "Expose the thyroid ala",
+   "Divide the midline raphe from hyoid to cricoid. On the lesion side, divide the sternohyoid, omohyoid and thyrohyoid near their upper attachments, leaving a fascial cuff on the hyoid for repair. Smaller lesions can be handled by retracting the straps instead."
+  ],
+  [
+   "Rotate the larynx",
+   "Place a single-prong hook at the thyroid notch and rotate the ipsilateral hemilarynx toward you to expose the thyrohyoid region where the external sac emerges. Keep traction gentle, because the superior laryngeal pedicle lies at the posterior edge of this field."
+  ],
+  [
+   "Find and distend the sac",
+   "Ask anesthesia to deflate the cuff and give positive pressure to inflate the laryngocele. Remove the soft tissue over it until the glistening capsule shows, leaving a little tissue at the top to grasp with a Babcock clamp."
+  ],
+  [
+   "Free the external component",
+   "With gentle traction, define the extralaryngeal capsule mostly by blunt dissection with Kittners, using a hemostat or 15 blade for bands. Hug the capsule, especially posteriorly at the thyrohyoid membrane, where the internal SLN and superior laryngeal vessels lie right beside it. Define the back wall before going inside."
+  ],
+  [
+   "Open a cartilage window",
+   "Raise an inferiorly based outer perichondrial flap from the superior border of the thyroid ala. Mark a triangle of cartilage with its base at the upper border and apex halfway down the lamina, remove it with a blade or Kerrison rongeur, and excise the inner perichondrium beneath. Save the cartilage for replacement."
+  ],
+  [
+   "Follow the internal component",
+   "Dissect inferiorly into the paraglottic space through the window, sharply dividing ventricularis and aryepiglottic muscle fibers off the capsule. Keep the capsule intact so the whole sac comes out in one piece, and follow it until it narrows toward its origin."
+  ],
+  [
+   "Locate the saccular base",
+   "The sac ends at the base of the saccule in the anterior ventricular mucosa. Externally this lies about 3-5 mm behind the thyroid midline, halfway up the lamina. Some surgeons instead tease the entire internal portion up through the thyrohyoid membrane without removing cartilage."
+  ],
+  [
+   "Remove the base with a mucosal cuff",
+   "Enter the airway and excise a cuff of ventricular mucosa around the saccular opening, then close the defect with a figure-of-eight 4-0 chromic suture. If the base cannot be seen clearly, clamp it and tie it with silk before removing the specimen. A retained base is the usual cause of recurrence."
+  ],
+  [
+   "Reconstruct",
+   "If possible, replace the removed cartilage with PDS on a taper needle. Irrigate and close in layers: outer perichondrium to the upper lamina, reattach the three strap muscles, and close as much of the thyrohyoid membrane defect as practical."
+  ],
+  [
+   "Drain and protect the airway",
+   "Leave a closed suction drain under the strap layer, since the submuscular dissection is extensive and hematoma can compress the airway. A tracheotomy is rarely needed but can be added if edema threatens the airway at the end of the case."
+  ],
+  [
+   "Postoperative care",
+   "Observe overnight with pulse oximetry, head elevation and IV dexamethasone (8 mg, then 4 mg every 8 hours), and advance diet as tolerated. Watch for laryngeal edema or hematoma, recurrence, and SLN sensory injury causing dysphagia or aspiration, which older patients tolerate poorly."
+  ]
+ ],
+ "exit_check": [
+  "Sac removed intact with its saccular base and a mucosal cuff",
+  "Ventricular mucosal defect closed and airway watertight",
+  "Straps reattached, drain placed, airway assessed before extubation"
+ ],
+ "postop": [
+  "Overnight observation with pulse oximetry and head elevation",
+  "IV dexamethasone 8 mg then 4 mg every 8 hours",
+  "Advance diet as tolerated; watch for cough or aspiration",
+  "Drain removal when output is low",
+  "Review pathology to exclude neoplasm"
+ ],
+ "complications": {
+  "early": [
+   "Laryngeal edema or hemorrhage with airway compromise",
+   "Neck hematoma",
+   "Seroma",
+   "Aspiration from internal SLN injury"
+  ],
+  "late": [
+   "Recurrence from retained saccular base",
+   "Dysphagia or aspiration from sensory loss, worse in elderly patients",
+   "Hoarseness",
+   "Neck scar"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What anatomic structure gives a laryngocele its origin?",
+   "The saccule (appendix) of the laryngeal ventricle; a laryngocele is an air-filled dilation of it."
+  ],
+  [
+   "Why must every adult with a laryngocele undergo laryngoscopy?",
+   "A ventricular or supraglottic carcinoma can obstruct the saccular orifice and cause a laryngocele, so a tumor must be excluded."
+  ],
+  [
+   "What is the most common cause of recurrence?",
+   "Incomplete removal of the saccular base, which is avoided by excising it with a cuff of ventricular mucosa."
+  ],
+  [
+   "Which nerve is at greatest risk and where?",
+   "The internal branch of the superior laryngeal nerve, where it pierces the thyrohyoid membrane posteriorly beside the sac."
+  ],
+  [
+   "How do you distinguish internal from combined laryngoceles and how does this change management?",
+   "Internal ones stay within the thyrohyoid membrane and are usually removed endoscopically; combined ones cross it into the neck and are usually removed externally."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Ch 51 Excision of Combined Laryngocele (pp 447-453)"
+ ]
+}

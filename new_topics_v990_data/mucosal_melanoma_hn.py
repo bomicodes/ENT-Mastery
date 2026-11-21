@@ -82,7 +82,7 @@ TOPIC = {
   "or_slugs": [],
   "concept_check": {
     "topic": "Mucosal Melanoma of the Head and Neck",
-    "stem": "A 68-year-old has 3 months of left nasal obstruction and epistaxis. Endoscopy shows a dark polypoid mass on the anterior septum. Biopsy shows malignant cells positive for S-100, SOX10 and HMB-45. Imaging shows no bone erosion and no nodal or distant disease.",
+    "stem": "A 68-year-old man presents with 3 months of left nasal obstruction and recurrent epistaxis. Endoscopy shows a dark, polypoid mass arising from the anterior nasal septum. Biopsy shows malignant cells positive for S-100, SOX10 and HMB-45. CT and MRI show the tumor confined to the mucosa with no bone or cartilage erosion, and PET-CT shows no nodal or distant disease. What is the correct AJCC 8th edition stage?",
     "choices": [
       "T1N0M0, stage I",
       "T2N0M0, stage II",
@@ -90,86 +90,86 @@ TOPIC = {
       "T4aN0M0, stage IVA"
     ],
     "answer": 2,
-    "explanation": "AJCC 8 mucosal melanoma staging has no T1 or T2. Disease limited to mucosa and immediately underlying soft tissue is T3, and T3N0M0 is stage III.",
+    "explanation": "AJCC 8th edition staging for head and neck mucosal melanoma has no T1 or T2 categories, reflecting the aggressive biology of even small tumors. Disease limited to the mucosa and immediately underlying soft tissue, as here, is T3, and T3N0M0 is stage III. Involvement of deep soft tissue, cartilage, bone or overlying skin makes it T4a. Staging is anatomic, so tumor thickness and Breslow depth play no part.",
     "why_wrong": [
-      "There is no T1 category for mucosal melanoma.",
-      "There is no T2 category for mucosal melanoma.",
+      "There is no T1 category in mucosal melanoma staging, so stage I does not exist.",
+      "There is no T2 category in mucosal melanoma staging, so stage II does not exist.",
       "Correct.",
-      "T4a requires deep soft tissue, cartilage, bone or overlying skin involvement."
+      "T4a requires deep soft tissue, cartilage, bone or overlying skin involvement, which is absent."
     ],
-    "board_pearl": "Mucosal melanoma starts at stage III.",
-    "curveball": "What does any regional nodal disease make the stage, regardless of T3 or T4a?",
-    "curveball_answer": "Stage IVA (N1 with T3 or T4a).",
+    "board_pearl": "Head and neck mucosal melanoma starts at T3 and stage III: there is no T1, T2, stage I or stage II.",
+    "curveball": "Neck ultrasound-guided FNA later shows a positive level II node. What does any nodal disease make the stage, regardless of T3 or T4a?",
+    "curveball_answer": "Any regional nodal metastasis (N1) with a T3 or T4a primary is stage IVA. T4b disease, which involves the brain, dura, skull base, lower cranial nerves, masticator space, carotid, prevertebral space or mediastinum, is stage IVB with any N, and distant metastasis is stage IVC.",
     "learning_stage": "foundation",
     "focus": "diagnosis"
   },
   "ladder": [
     {
       "topic": "Mucosal Melanoma of the Head and Neck",
-      "stem": "A resident presenting a sinonasal mucosal melanoma case states that the Breslow depth of 4 mm on biopsy places the patient at high risk and mandates sentinel node biopsy.",
+      "stem": "A 71-year-old woman has a newly resected sinonasal mucosal melanoma of the left middle turbinate. At tumor board the presenting resident states that the 4-mm Breslow depth on the specimen places her at high risk and mandates sentinel lymph node biopsy, as it would for cutaneous melanoma. Her neck is clinically and radiographically negative. Which statement about the role of tumor depth in her case is correct?",
       "choices": [
-        "Correct, depth predicts nodal risk as in cutaneous melanoma",
-        "Incorrect, depth of invasion does not carry the same prognostic weight in mucosal melanoma",
-        "Correct, but only for oral cavity primaries",
-        "Incorrect, Clark level rather than Breslow depth is used"
+        "Depth predicts nodal risk as in skin, so sentinel biopsy is indicated",
+        "Depth lacks the prognostic weight it has in cutaneous melanoma",
+        "Depth predicts nodal risk only for oral cavity primaries",
+        "Clark level, rather than Breslow depth, should be used"
       ],
       "answer": 1,
-      "explanation": "Unlike cutaneous melanoma, depth of invasion does not predict prognosis in mucosal melanoma, and the AJCC mucosal system is anatomic rather than depth-based. Sentinel node biopsy is not standard for sinonasal disease.",
+      "explanation": "Unlike cutaneous melanoma, depth of invasion does not carry reliable prognostic weight in mucosal melanoma, partly because there is no consistent anatomic reference point such as the papillary dermis in mucosa. The AJCC mucosal system is therefore anatomic, based on extent into soft tissue, cartilage, bone and critical structures. Sentinel lymph node biopsy is not standard for sinonasal disease, which has complex retropharyngeal drainage, and elective neck dissection is not recommended.",
       "why_wrong": [
-        "Depth-based staging belongs to cutaneous melanoma.",
+        "Depth-based staging and sentinel biopsy decisions belong to cutaneous melanoma, not sinonasal disease.",
         "Correct.",
-        "Depth is not the prognostic driver at any mucosal site.",
-        "Neither Clark level nor Breslow depth is used for mucosal staging."
+        "Depth is not the prognostic driver at any mucosal site, including the oral cavity.",
+        "Neither Clark level nor Breslow depth is used for mucosal melanoma staging."
       ],
-      "board_pearl": "Mucosal melanoma staging is anatomic, not depth-based.",
-      "curveball": "Which sinonasal subsite carries the worst prognosis?",
-      "curveball_answer": "The paranasal sinuses (nasal cavity is best).",
+      "board_pearl": "Mucosal melanoma staging is anatomic, not depth-based, and sentinel node biopsy is not standard for sinonasal primaries.",
+      "curveball": "Within the sinonasal tract, which subsite carries the worst prognosis and which carries the best?",
+      "curveball_answer": "Paranasal sinus primaries carry the worst prognosis, because they present later with more extensive bone and skull base involvement and are harder to resect with clear margins. Nasal cavity primaries do best, since obstruction and epistaxis bring them to attention earlier when they are more often completely resectable.",
       "learning_stage": "foundation",
       "focus": "mechanism"
     },
     {
       "topic": "Mucosal Melanoma of the Head and Neck",
-      "stem": "A 72-year-old had endoscopic resection of a right inferior turbinate mucosal melanoma with negative margins. The neck is clinically and radiographically negative and PET shows no distant disease. She asks what further treatment is recommended.",
+      "stem": "A 72-year-old woman underwent endoscopic resection of a right inferior turbinate mucosal melanoma with negative margins. Final pathology shows no bone involvement. The neck is clinically and radiographically negative, and PET-CT shows no distant disease. At her postoperative visit she asks what further treatment the tumor board will recommend. Which is the most appropriate recommendation?",
       "choices": [
         "Elective bilateral neck dissection",
-        "Consider adjuvant radiation to the primary site for local control, with close surveillance",
-        "Adjuvant whole-brain radiation",
-        "No surveillance needed after negative margins"
+        "Adjuvant radiation to the primary site with close surveillance",
+        "Adjuvant prophylactic whole-brain radiation",
+        "No further treatment or surveillance after negative margins"
       ],
       "answer": 1,
-      "explanation": "Adjuvant radiation improves local and regional control after resection of mucosal melanoma, although overall survival benefit has not been shown. Elective neck dissection is not recommended for sinonasal disease, and surveillance is essential.",
+      "explanation": "After resection of sinonasal mucosal melanoma, adjuvant radiation to the primary site is commonly recommended because it improves local and regional control, although an overall survival benefit has not been shown. Elective neck dissection is not recommended for sinonasal primaries with an N0 neck. Surveillance with endoscopy and regular imaging is essential because local recurrence and distant metastasis are frequent even after negative margins. Systemic adjuvant therapy may be discussed, ideally within a trial.",
       "why_wrong": [
         "Elective neck dissection is not recommended for sinonasal primaries with an N0 neck.",
         "Correct.",
-        "Prophylactic brain radiation has no role.",
-        "Local and distant recurrence are frequent even after negative margins."
+        "Prophylactic brain radiation has no role in resected mucosal melanoma.",
+        "Local and distant recurrence are frequent even after negative margins, so surveillance is essential."
       ],
-      "board_pearl": "Adjuvant RT in mucosal melanoma improves locoregional control, not survival.",
-      "curveball": "Which mucosal subsite might justify considering elective neck treatment?",
-      "curveball_answer": "Oral cavity primaries, which have higher rates of nodal disease than sinonasal tumors.",
+      "board_pearl": "Adjuvant radiation in mucosal melanoma improves locoregional control, not overall survival.",
+      "curveball": "Which head and neck mucosal subsite might justify considering elective neck treatment, and why?",
+      "curveball_answer": "Oral cavity mucosal melanoma, most often of the hard palate and maxillary gingiva, has higher rates of nodal disease at presentation and occult nodal metastasis than sinonasal tumors. Elective neck dissection of levels I-III may therefore be considered for oral primaries, whereas it is generally not recommended for sinonasal disease.",
       "learning_stage": "application",
       "focus": "management"
     },
     {
       "topic": "Mucosal Melanoma of the Head and Neck",
-      "stem": "A 65-year-old has a sphenoid mucosal melanoma invading the dura and cavernous sinus, with multiple new lung nodules on staging. Molecular testing shows a KIT exon 11 mutation and BRAF wild type.",
+      "stem": "A 65-year-old man presents with headache and right-sided diplopia. MRI shows a sphenoid sinus mucosal melanoma invading the dura and right cavernous sinus, and staging CT shows multiple new bilateral lung nodules, one of which is biopsy-confirmed melanoma. Molecular testing shows a KIT exon 11 mutation and BRAF wild-type status. Which is the most appropriate treatment?",
       "choices": [
         "Craniofacial resection followed by radiation",
-        "BRAF/MEK inhibitor therapy",
-        "Systemic therapy with checkpoint inhibition, with imatinib as a KIT-directed option, and palliative local therapy as needed",
-        "Observation only"
+        "BRAF/MEK inhibitor combination therapy",
+        "Checkpoint inhibition, imatinib as an option, local palliation",
+        "Observation and supportive care only"
       ],
       "answer": 2,
-      "explanation": "T4b disease with lung metastases (stage IVC) is not a surgical problem. Systemic therapy is the mainstay, including checkpoint inhibitors, and KIT-mutated tumors may respond to imatinib. Local radiation can palliate symptoms.",
+      "explanation": "Dural and cavernous sinus invasion is T4b, and biopsy-proven lung metastases make this stage IVC disease, which is not a surgical problem because distant metastasis drives survival. Systemic therapy is the mainstay, with PD-1 or combined PD-1/CTLA-4 checkpoint blockade. KIT alterations are enriched in mucosal melanoma, and KIT exon 11 or 13 mutated tumors may respond to imatinib. Local radiation can palliate pain, bleeding or cranial neuropathy.",
       "why_wrong": [
-        "Radical surgery does not help when distant disease is present.",
-        "The tumor is BRAF wild type, so BRAF/MEK inhibitors do not apply.",
+        "Radical skull base surgery does not improve outcome when distant disease is present.",
+        "The tumor is BRAF wild type, so BRAF/MEK inhibitors offer no targeted benefit.",
         "Correct.",
-        "Active systemic options exist and should be offered."
+        "Active systemic options exist and should be offered to a patient fit for treatment."
       ],
-      "board_pearl": "KIT alterations are enriched in mucosal melanoma and can be targeted with imatinib.",
-      "curveball": "How do checkpoint inhibitor response rates in mucosal melanoma compare with cutaneous?",
-      "curveball_answer": "They are lower in mucosal melanoma.",
+      "board_pearl": "Mucosal melanoma is KIT-enriched and BRAF-poor, and KIT-mutated tumors can respond to imatinib.",
+      "curveball": "He asks how likely checkpoint inhibitors are to work for him compared with skin melanoma. How do response rates compare?",
+      "curveball_answer": "Response rates to PD-1 and combined PD-1/CTLA-4 checkpoint blockade are lower in mucosal melanoma than in cutaneous melanoma, likely reflecting its lower tumor mutational burden and lack of UV-driven mutations. Durable responses still occur, so checkpoint blockade remains a standard first-line option, with clinical trials encouraged.",
       "learning_stage": "senior_decision",
       "focus": "pharmacology"
     }
@@ -177,30 +177,30 @@ TOPIC = {
   "vignettes": [
     {
       "topic": "Mucosal Melanoma of the Head and Neck",
-      "stem": "A 60-year-old has a flat, irregular, slowly enlarging dark patch on the hard palate first noticed by her dentist 4 months ago. She has no history of amalgam restorations in that area.",
+      "stem": "A 60-year-old woman is referred by her dentist for a flat, irregular, slowly enlarging dark brown-black patch on the left hard palate first noticed 4 months ago. It has uneven borders and variable color, and it is not raised or ulcerated. She has no amalgam restorations or history of trauma in that area, and no other oral pigmentation. Which is the most appropriate next step?",
       "choices": [
-        "Reassure as physiologic pigmentation",
-        "Repeat photograph in 6 months",
-        "Incisional biopsy",
+        "Reassure her that this is physiologic pigmentation",
+        "Repeat a clinical photograph in 6 months",
+        "Incisional biopsy of the pigmented lesion",
         "Laser ablation without biopsy"
       ],
       "answer": 2,
-      "explanation": "The hard palate is the most common oral site of mucosal melanoma. Any new, enlarging or irregular pigmented oral lesion should be biopsied promptly rather than watched or destroyed.",
+      "explanation": "The hard palate and maxillary gingiva are the most common oral sites of mucosal melanoma, which often begins as a flat, irregular pigmented macule before nodular growth. Any new, enlarging or irregular pigmented oral lesion without an obvious benign explanation should be biopsied promptly. Incisional biopsy of a large lesion establishes the diagnosis and guides staging and resection. Watching risks progression of a highly aggressive tumor, and ablation destroys diagnostic tissue.",
       "why_wrong": [
-        "Physiologic pigmentation is symmetric and stable, not enlarging.",
-        "Delay risks progression of a highly aggressive tumor.",
+        "Physiologic pigmentation is diffuse, symmetric and stable rather than an enlarging irregular patch.",
+        "Delaying biopsy risks progression of a highly aggressive tumor with frequent distant spread.",
         "Correct.",
-        "Ablation destroys the tissue needed for diagnosis and staging."
+        "Ablation destroys the tissue needed for diagnosis, margin assessment and staging."
       ],
-      "board_pearl": "Palate and maxillary gingiva are the classic oral mucosal melanoma sites.",
-      "curveball": "What benign mimic should be considered next to a filled tooth?",
-      "curveball_answer": "Amalgam tattoo.",
+      "board_pearl": "The hard palate and maxillary gingiva are the classic oral mucosal melanoma sites. Biopsy any enlarging pigmented lesion.",
+      "curveball": "A similar flat gray-blue macule sits on the gingiva directly next to a tooth with an old filling. What benign mimic should be considered?",
+      "curveball_answer": "An amalgam tattoo, which is implanted dental amalgam in the mucosa, is the most common localized oral pigmented lesion. It is usually stable and gray-blue and lies next to restored teeth, and a radiograph may show radiopaque particles. Biopsy is still indicated if it enlarges or the history is unclear.",
       "learning_stage": "foundation",
       "focus": "diagnosis"
     },
     {
       "topic": "Mucosal Melanoma of the Head and Neck",
-      "stem": "A nasal mass biopsy is read as a poorly differentiated malignant neoplasm. The mass is fleshy and nonpigmented. Cytokeratin is negative, and the pathologist asks which panel to add.",
+      "stem": "A 58-year-old man presents with right nasal obstruction and epistaxis. Endoscopic biopsy of a fleshy, nonpigmented polypoid mass is read as a poorly differentiated malignant neoplasm. Pan-cytokeratin is negative, and the pathologist calls to ask which immunohistochemical panel should be added before tumor board. Which panel is most appropriate to add?",
       "choices": [
         "S-100, SOX10, HMB-45 and Melan-A",
         "p16 and HPV in situ hybridization",
@@ -208,62 +208,62 @@ TOPIC = {
         "Chromogranin alone"
       ],
       "answer": 0,
-      "explanation": "Amelanotic mucosal melanoma is common and easily mistaken for other small round blue cell or undifferentiated tumors. Melanocytic markers (S-100, SOX10, HMB-45, Melan-A) confirm the diagnosis.",
+      "explanation": "A cytokeratin-negative, poorly differentiated sinonasal tumor raises a broad differential that includes amelanotic mucosal melanoma, lymphoma, olfactory neuroblastoma, rhabdomyosarcoma and other small round blue cell tumors. Amelanotic melanoma is common in the sinonasal tract and easily misread, so melanocytic markers including S-100, SOX10, HMB-45 and Melan-A should be added. S-100 and SOX10 are sensitive, while HMB-45 and Melan-A add specificity. Lymphoid and neuroendocrine markers complete the panel.",
       "why_wrong": [
         "Correct.",
-        "HPV markers address squamous carcinoma subtypes, and cytokeratin is negative.",
-        "These are thyroid and lung markers.",
-        "Chromogranin alone cannot separate neuroendocrine tumors from melanoma, and olfactory neuroblastoma is S-100 positive only in sustentacular cells."
+        "HPV markers address squamous carcinoma subtypes, and this tumor is cytokeratin negative.",
+        "Thyroglobulin and TTF-1 are thyroid and lung markers that do not address this differential.",
+        "Chromogranin alone cannot distinguish neuroendocrine tumors from melanoma or other mimics."
       ],
-      "board_pearl": "Amelanotic does not mean not melanoma: always include melanocytic markers.",
-      "curveball": "Which melanocytic marker is most sensitive but least specific?",
-      "curveball_answer": "S-100.",
+      "board_pearl": "Amelanotic does not mean not melanoma: always include melanocytic markers for an undifferentiated sinonasal tumor.",
+      "curveball": "Which melanocytic marker is the most sensitive but least specific, and which is most useful in spindle cell melanoma?",
+      "curveball_answer": "S-100 is the most sensitive melanocytic marker but the least specific, because it also stains nerve sheath tumors, Langerhans cells and the sustentacular cells of olfactory neuroblastoma. SOX10 is similarly sensitive and especially helpful in spindle cell or desmoplastic melanoma, where HMB-45 and Melan-A are often negative.",
       "learning_stage": "application",
       "focus": "workup"
     },
     {
       "topic": "Mucosal Melanoma of the Head and Neck",
-      "stem": "A patient with newly diagnosed sinonasal mucosal melanoma asks what is most likely to determine her long-term survival after successful resection and radiation.",
+      "stem": "A 63-year-old woman with newly diagnosed sinonasal mucosal melanoma of the nasal cavity is scheduled for endoscopic resection followed by adjuvant radiation. Staging PET-CT shows no nodal or distant disease. At her preoperative counseling visit she asks what is most likely to determine whether she is alive in 5 years after successful local treatment. Which factor is most likely to determine her long-term survival?",
       "choices": [
         "Whether she develops regional nodal recurrence",
         "Whether she develops distant metastasis",
-        "Whether margins were obtained by open versus endoscopic approach",
-        "The tumor's Breslow thickness"
+        "Whether resection is open or endoscopic",
+        "The Breslow thickness of her tumor"
       ],
       "answer": 1,
-      "explanation": "Most patients with mucosal melanoma die of distant metastasis despite local control. Counseling should be frank about the high risk of distant failure and the need for systemic staging and surveillance.",
+      "explanation": "Most patients with mucosal melanoma die of distant metastasis, often to lung, liver, bone and brain, despite good local control from surgery and radiation. Distant failure therefore dominates survival, and five-year survival is only about 20-30% in contemporary series. Counseling should be frank about this risk and explain the need for systemic staging, regular surveillance imaging and access to systemic therapy if metastasis occurs. Surgical approach matters less than negative margins.",
       "why_wrong": [
-        "Nodal recurrence occurs but is not the dominant cause of death.",
+        "Nodal recurrence occurs but is not the dominant cause of death in mucosal melanoma.",
         "Correct.",
-        "Approach matters less than achieving negative margins and does not determine distant spread.",
-        "Depth does not predict prognosis in mucosal disease."
+        "Approach matters less than negative margins and does not determine distant spread.",
+        "Depth of invasion does not reliably predict prognosis in mucosal melanoma."
       ],
-      "board_pearl": "Distant failure dominates mucosal melanoma outcomes.",
-      "curveball": "Roughly what five-year survival is quoted?",
-      "curveball_answer": "About 20-30% in contemporary series (some texts quote 10-15%).",
+      "board_pearl": "Distant metastasis, not local or nodal failure, dominates survival in mucosal melanoma.",
+      "curveball": "She asks what her overall chance of being alive at 5 years is. What five-year survival figures are quoted?",
+      "curveball_answer": "Contemporary series quote five-year overall survival of roughly 20-30% for head and neck mucosal melanoma, while some texts such as Pasha cite 10-15%. Nasal cavity primaries do better than paranasal sinus primaries, and survival falls further with T4 disease, nodal metastasis or positive margins.",
       "learning_stage": "application",
       "focus": "counseling"
     },
     {
       "topic": "Mucosal Melanoma of the Head and Neck",
-      "stem": "A 75-year-old has a mucosal melanoma of the left nasal cavity with erosion of the medial maxillary wall but no orbital, skull base or dural involvement. The neck has one 2-cm level II node that is FNA-positive. PET shows no distant disease.",
+      "stem": "A 75-year-old man presents with left nasal obstruction and bloody discharge. Endoscopy shows a pigmented mass filling the left nasal cavity, and biopsy confirms mucosal melanoma. CT shows erosion of the medial maxillary wall but no orbital, skull base or dural involvement. A 2-cm left level II node is FNA-positive, and PET-CT shows no distant disease. What is the correct stage and most appropriate treatment?",
       "choices": [
-        "T3N1, stage III, resection alone",
-        "T4aN1, stage IVA, resection plus therapeutic neck dissection and adjuvant radiation",
-        "T4bN1, stage IVB, palliative therapy only",
-        "T4aN0, stage IVA, elective neck irradiation"
+        "T3N1, stage III; resection alone",
+        "T4aN1, stage IVA; resection, therapeutic neck dissection, adjuvant RT",
+        "T4bN1, stage IVB; palliative therapy only",
+        "T4aN0, stage IVA; elective neck irradiation"
       ],
       "answer": 1,
-      "explanation": "Bone involvement makes the tumor T4a, and a positive node is N1, so the stage is IVA. A resectable tumor with a clinically positive neck is treated with resection, therapeutic neck dissection and adjuvant radiation, with systemic therapy discussion.",
+      "explanation": "Bone involvement of the medial maxillary wall makes the primary T4a, and a cytologically confirmed node is N1, so the stage is T4aN1M0, stage IVA. A resectable primary with a clinically positive neck is treated with resection with negative margins, therapeutic neck dissection and adjuvant radiation for locoregional control. Systemic therapy should also be discussed given the high risk of distant failure. Elective neck treatment applies only to the N0 neck, which is not the case here.",
       "why_wrong": [
-        "Bone erosion upgrades to T4a.",
+        "Bone erosion upgrades the primary from T3 to T4a, and N1 disease is not stage III.",
         "Correct.",
-        "T4b requires brain, dura, skull base, lower cranial nerves, masticator space, carotid, prevertebral or mediastinal involvement.",
-        "The node is positive on FNA, so this is N1 and requires therapeutic dissection."
+        "T4b requires brain, dura, skull base, lower cranial nerve, masticator, carotid, prevertebral or mediastinal involvement.",
+        "The node is FNA-positive, so this is N1 and needs therapeutic dissection, not elective treatment."
       ],
-      "board_pearl": "Bone, cartilage, deep soft tissue or skin = T4a.",
-      "curveball": "When is neck dissection indicated in sinonasal mucosal melanoma?",
-      "curveball_answer": "Therapeutically, for clinically positive nodes, not electively.",
+      "board_pearl": "In mucosal melanoma, bone, cartilage, deep soft tissue or skin involvement makes the primary T4a.",
+      "curveball": "In sinonasal mucosal melanoma, when is neck dissection indicated, and which nodes are at particular risk?",
+      "curveball_answer": "Neck dissection is indicated therapeutically for clinically or cytologically positive nodes, not electively for the N0 neck. Sinonasal mucosa drains to the retropharyngeal and level II nodes, so imaging should specifically assess the retropharyngeal space, which a standard neck dissection does not address.",
       "learning_stage": "senior_decision",
       "focus": "management"
     }

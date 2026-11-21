@@ -88,94 +88,94 @@ TOPIC = {
   "or_slugs": [],
   "concept_check": {
     "topic": "Laryngeal Webs (Congenital and Acquired)",
-    "stem": "A 42-year-old singer underwent bilateral microflap excision of vocal fold lesions reaching the anterior commissure at one sitting. Six weeks later her voice is higher-pitched and strained. Laryngoscopy shows a thin membrane joining the anterior third of both folds.",
+    "stem": "A 42-year-old woman who sings professionally underwent microlaryngoscopy with bilateral microflap excision of vocal fold lesions extending to the anterior commissure at a single sitting. Six weeks later she reports that her voice is higher-pitched, strained and tires quickly. Laryngoscopy shows a thin membrane joining the anterior third of both vocal folds. What is the most likely mechanism of this finding?",
     "choices": [
       "Laryngopharyngeal reflux causing interarytenoid pachydermia",
       "Opposing raw mucosal surfaces at the anterior commissure healing together",
       "Bilateral recurrent laryngeal nerve paresis from intubation",
-      "Recurrence of the original benign lesions"
+      "Recurrence of the original benign vocal fold lesions"
     ],
     "answer": 1,
-    "explanation": "Removing epithelium from both sides of the anterior commissure at the same operation leaves two raw surfaces in contact, which bridge with scar and form an anterior glottic web. The web shortens vibrating length and raises pitch.",
+    "explanation": "Removing epithelium from both sides of the anterior commissure at the same operation leaves two raw surfaces in contact. During healing, granulation tissue bridges the gap and matures into scar, forming an acquired anterior glottic web. The web shortens the vibrating length of the folds, which raises pitch and causes strain and vocal fatigue. This is why bilateral anterior commissure procedures are staged or one side is left intact, and why the defect is not simply re-divided without a keel.",
     "why_wrong": [
-      "Pachydermia is posterior and does not join the anterior folds.",
+      "Pachydermia forms in the posterior interarytenoid area and does not bridge the anterior folds.",
       "Correct.",
-      "Nerve paresis changes mobility, not a membrane bridging the folds.",
-      "Recurrent lesions are discrete masses, not a bridging membrane."
+      "Nerve paresis changes fold mobility but does not create a membrane joining the folds.",
+      "Recurrent lesions are discrete masses on the fold, not a bridging membrane at the commissure."
     ],
-    "board_pearl": "Stage bilateral anterior commissure procedures to prevent webs.",
-    "curveball": "How is this prevented when papilloma involves both sides of the anterior commissure?",
-    "curveball_answer": "Treat one side of the commissure (or divide at the midline and debulk one side) per session, leaving intact mucosa on the other side.",
+    "board_pearl": "Avoid opposing raw surfaces at the anterior commissure: stage bilateral anterior commissure procedures to prevent webs.",
+    "curveball": "Another patient has recurrent respiratory papillomatosis on both sides of the anterior commissure. How is web formation avoided during debulking?",
+    "curveball_answer": "Treat one side of the anterior commissure per session, or debulk to the midline on one side only, leaving intact mucosa on the opposite side. The second side is treated at a later procedure, after the first has fully remucosalized, typically several weeks later, so two raw surfaces are never in contact at the same time.",
     "learning_stage": "foundation",
     "focus": "mechanism"
   },
   "ladder": [
     {
       "topic": "Laryngeal Webs (Congenital and Acquired)",
-      "stem": "A 3-week-old has had a weak, hoarse cry since birth but feeds and breathes comfortably. Flexible laryngoscopy shows a thin anterior glottic web joining about 30% of the vocal folds.",
+      "stem": "A 3-week-old boy is seen in the pediatric otolaryngology clinic for a weak, hoarse cry since birth. He feeds well, is gaining weight and has no stridor, retractions or cyanosis. Flexible laryngoscopy shows a thin anterior glottic web involving about 30% of the vocal fold length, with normal mobility. Which is the most appropriate next step?",
       "choices": [
-        "Urgent tracheotomy",
-        "Open laryngofissure with keel",
-        "Genetic testing for 22q11.2 deletion and observation of the web",
+        "Urgent tracheotomy to secure the airway",
+        "Open laryngofissure with keel placement",
+        "22q11.2 deletion testing with observation of the web",
         "Endoscopic laser division in the neonatal period"
       ],
       "answer": 2,
-      "explanation": "This is a Cohen type 1 web with a stable airway. Repair can wait, but the strong association with 22q11.2 deletion means every child with a congenital web should be tested, with cardiac evaluation if positive.",
+      "explanation": "A thin web involving under 35% of the glottis is a Cohen type 1 web, and with a stable airway repair can be deferred and the child observed. Congenital anterior glottic webs are strongly associated with 22q11.2 deletion (velocardiofacial syndrome), so every child with a congenital web should be tested. A positive result prompts cardiac, calcium and immune evaluation. Early surgery offers little benefit, because a thin web divided without a keel tends to re-form.",
       "why_wrong": [
-        "The airway is stable, so tracheotomy is not needed.",
-        "Open repair is for thick webs with subglottic extension.",
+        "The airway is stable without stridor or retractions, so tracheotomy is not needed.",
+        "Open repair is reserved for thick webs with subglottic extension or complete stenosis.",
         "Correct.",
-        "A small web with good airway does not require neonatal surgery and division alone tends to re-form."
+        "A small web with a good airway needs no neonatal surgery, and simple division tends to re-form."
       ],
-      "board_pearl": "Congenital anterior glottic web is a classic first sign of velocardiofacial syndrome.",
-      "curveball": "What two other evaluations follow a positive 22q11.2 result?",
-      "curveball_answer": "Echocardiography for conotruncal defects and serum calcium for hypoparathyroidism (plus immune evaluation).",
+      "board_pearl": "A congenital anterior glottic web can be the first sign of 22q11.2 deletion: test every child.",
+      "curveball": "His 22q11.2 deletion test returns positive. Which other evaluations should follow?",
+      "curveball_answer": "He needs echocardiography to look for conotruncal heart defects such as tetralogy of Fallot or interrupted aortic arch, and serum calcium and parathyroid hormone for hypoparathyroidism. An immune evaluation including T-cell counts is also needed, with genetics, feeding and palatal assessment for velopharyngeal insufficiency.",
       "learning_stage": "foundation",
       "focus": "pediatrics"
     },
     {
       "topic": "Laryngeal Webs (Congenital and Acquired)",
-      "stem": "A 55-year-old has a thick anterior glottic web reaching 60% of the fold length after laser excision of bilateral papilloma, now in remission for 2 years. Under anesthesia the web does not extend below the inferior edge of the true folds and the posterior commissure is normal.",
+      "stem": "A 55-year-old man has a weak voice and mild exertional dyspnea after multiple laser excisions of bilateral recurrent respiratory papillomatosis, which has been in remission for 2 years. Microlaryngoscopy shows a thick anterior glottic web involving 60% of the fold length. It does not extend below the inferior edge of the true folds, and the posterior commissure is normal. Which is the most appropriate repair?",
       "choices": [
-        "Simple CO2 laser division in the midline",
-        "Endoscopic division with transcervically fixed Silastic keel",
+        "Simple CO2 laser division of the web in the midline",
+        "Endoscopic division with a transcervically fixed Silastic keel",
         "Laryngofissure with skin graft and long-term stent",
-        "Observation with voice therapy"
+        "Observation with voice therapy alone"
       ],
       "answer": 1,
-      "explanation": "A thick or long web confined to the glottis with a normal posterior commissure is suited to endoscopic repair. A keel fixed through the neck keeps the raw edges apart until remucosalization and is then removed.",
+      "explanation": "A thick or long web confined to the glottis, with no subglottic extension and a normal posterior commissure, is suited to endoscopic repair. The web is divided and a Silastic keel is sized and fixed with sutures through the cricothyroid membrane and above the anterior commissure. The keel keeps the raw edges apart while they remucosalize and is removed endoscopically after about 2-4 weeks. Simple division without a keel lets the raw surfaces reunite.",
       "why_wrong": [
-        "Simple division recreates the opposing raw surfaces and the web re-forms.",
+        "Simple division recreates opposing raw surfaces at the commissure, so the web re-forms.",
         "Correct.",
         "Open repair is reserved for subglottic extension over about 5 mm or complete stenosis.",
-        "A thick web of this size will not improve with therapy alone."
+        "A thick web involving 60% of the glottis will not improve with voice therapy alone."
       ],
-      "board_pearl": "Endoscopic keel criteria: no subglottic extension and a normal posterior commissure.",
-      "curveball": "Where should the keel sit superiorly and posteriorly?",
-      "curveball_answer": "From the cricothyroid membrane up to 2-3 mm above the anterior commissure, with the posterior edge at the vocal processes and clear of the posterior commissure.",
+      "board_pearl": "Endoscopic keel repair suits webs without subglottic extension and with a normal posterior commissure.",
+      "curveball": "When the keel is fixed, where should it sit superiorly, inferiorly and posteriorly?",
+      "curveball_answer": "The keel should span from the cricothyroid membrane inferiorly to about 2-3 mm above the anterior commissure superiorly. Its posterior edge should reach the vocal processes but stay clear of the posterior commissure, so the divided surfaces are separated along their full length without creating new posterior scarring.",
       "learning_stage": "application",
       "focus": "surgery"
     },
     {
       "topic": "Laryngeal Webs (Congenital and Acquired)",
-      "stem": "A 2-year-old with 22q11.2 deletion had a tracheotomy at birth for a Cohen type 4 web. Endoscopy shows a thick web involving 80% of the glottis with an anterior subglottic cartilaginous plate narrowing the subglottis. Parents ask about decannulation.",
+      "stem": "A 2-year-old girl with 22q11.2 deletion has had a tracheotomy since birth for a Cohen type 4 congenital glottic web. Her parents ask about decannulation. Microlaryngoscopy and bronchoscopy show a thick web involving 80% of the glottis, continuous with an anterior subglottic cartilaginous plate that narrows the subglottis. Her cardiac repair is complete. Which is the most appropriate management?",
       "choices": [
         "Repeated endoscopic CO2 laser division with mitomycin C",
-        "Open laryngofissure, web division with mucosal pexy to recreate the anterior commissure, keel and anterior graft as needed",
-        "Wait until adolescence before any repair",
+        "Open laryngofissure, web division, commissure reconstruction and keel",
+        "Defer any repair until adolescence",
         "Balloon dilation of the subglottis alone"
       ],
       "answer": 1,
-      "explanation": "Thick webs with subglottic extension behave like partial atresia. Laser division alone recurs, so open repair recreating the anterior commissure, temporary keel and anterior cartilage graft for subglottic narrowing is used to aim for decannulation.",
+      "explanation": "Thick congenital webs that extend into the subglottis with an anterior cartilaginous plate behave like partial laryngeal atresia rather than a simple membrane. Endoscopic laser division alone reliably recurs. Open laryngofissure allows web division with mucosal pexy to recreate the anterior commissure, temporary keel placement and an anterior cartilage graft to expand the narrowed subglottis, aiming for decannulation. Repair at this age is appropriate once comorbidities are stable.",
       "why_wrong": [
-        "Laser division of thick webs with a cartilaginous plate recurs.",
+        "Laser division of a thick web with a cartilaginous subglottic plate re-forms despite mitomycin.",
         "Correct.",
-        "There is no need to delay repair this long, and it prolongs tracheotomy risk.",
-        "Dilation does not address the glottic web or cartilaginous plate."
+        "Delaying repair to adolescence prolongs tracheotomy risks and speech delay without benefit.",
+        "Dilation does not address the glottic web or the cartilaginous subglottic plate."
       ],
-      "board_pearl": "Thick congenital web plus subglottic plate is an open airway reconstruction problem.",
-      "curveball": "When is reconstruction delayed until about age 4 or older?",
-      "curveball_answer": "In complete laryngeal atresia with a small solid cricoid, which usually needs multiple staged resection and expansion procedures.",
+      "board_pearl": "A thick congenital web with an anterior subglottic plate is an open airway reconstruction problem, not an endoscopic one.",
+      "curveball": "In which congenital laryngeal anomaly is reconstruction usually delayed until about age 4 or older, and why?",
+      "curveball_answer": "Reconstruction is usually delayed in complete laryngeal atresia, where failure of recanalization leaves a small solid cricoid. These children live with a tracheotomy placed at birth or during an EXIT procedure, and repair requires multiple staged resection and expansion procedures that are more successful in a larger airway.",
       "learning_stage": "senior_decision",
       "focus": "management"
     }
@@ -183,7 +183,7 @@ TOPIC = {
   "vignettes": [
     {
       "topic": "Laryngeal Webs (Congenital and Acquired)",
-      "stem": "A prenatal ultrasound at 24 weeks shows enlarged echogenic lungs, inverted diaphragms, a dilated fluid-filled trachea and early hydrops.",
+      "stem": "A 29-year-old woman has a routine prenatal ultrasound at 24 weeks of gestation. It shows bilaterally enlarged echogenic lungs, flattened and inverted diaphragms, a dilated fluid-filled trachea and bronchi, and early fetal ascites suggesting hydrops. The heart appears compressed and centrally placed. Fetal MRI is planned. What is the most likely diagnosis?",
       "choices": [
         "Congenital pulmonary airway malformation",
         "Congenital diaphragmatic hernia",
@@ -191,85 +191,85 @@ TOPIC = {
         "Bronchopulmonary sequestration"
       ],
       "answer": 2,
-      "explanation": "Obstruction of the upper airway traps lung fluid, so the lungs enlarge and become echogenic, the diaphragm flattens or inverts and the distal airway dilates. Causes include laryngeal atresia, tracheal atresia and obstructing cysts or webs.",
+      "explanation": "Obstruction of the fetal upper airway traps the fluid normally secreted by the lungs, so both lungs enlarge and become echogenic, the diaphragms flatten or invert, the distal airway dilates and venous return is impaired, causing hydrops. This is congenital high airway obstruction syndrome (CHAOS). Causes include laryngeal atresia, tracheal atresia and obstructing webs or cysts. Prenatal diagnosis allows delivery planning with an EXIT procedure to secure the airway.",
       "why_wrong": [
-        "CPAM is usually unilateral and cystic and does not dilate the trachea.",
-        "Hernia shows abdominal contents in the chest, not bilateral large lungs.",
+        "CPAM is usually unilateral and cystic and does not dilate the trachea and bronchi.",
+        "Diaphragmatic hernia shows abdominal contents in the chest, not bilaterally enlarged lungs.",
         "Correct.",
-        "Sequestration is a focal mass with a systemic feeding vessel."
+        "Sequestration is a focal lung mass with a systemic arterial feeding vessel."
       ],
-      "board_pearl": "CHAOS diagnosed prenatally allows an EXIT procedure to secure the airway on placental support.",
-      "curveball": "What airway is typically established during the EXIT procedure in laryngeal atresia?",
-      "curveball_answer": "A tracheotomy, since the larynx cannot be intubated.",
+      "board_pearl": "CHAOS: bilateral large echogenic lungs, inverted diaphragms and a dilated trachea. Plan an EXIT delivery.",
+      "curveball": "During the EXIT procedure the cause proves to be laryngeal atresia. What airway is typically established on placental support?",
+      "curveball_answer": "A tracheotomy is performed while the fetus remains on placental circulation, because an atretic larynx cannot be intubated. Bronchoscopy through the tracheotomy confirms position, the airway is secured and the cord is then clamped. Laryngeal reconstruction is deferred until the child is older and the airway larger.",
       "learning_stage": "application",
       "focus": "imaging"
     },
     {
       "topic": "Laryngeal Webs (Congenital and Acquired)",
-      "stem": "A 30-year-old man had a thyroid cartilage fracture in a motorcycle crash 4 months ago. He now has a weak voice and exertional stridor. Endoscopy shows fusion of the anterior two-thirds of the glottis with scar extending 8 mm into the subglottis.",
+      "stem": "A 30-year-old man had a thyroid cartilage fracture in a motorcycle crash 4 months ago that was managed without surgery. He now has a weak, breathy voice and stridor on exertion. Microlaryngoscopy shows fusion of the anterior two-thirds of the glottis with dense scar extending 8 mm below the vocal folds into the subglottis. The arytenoids are mobile. Which is the most appropriate repair?",
       "choices": [
-        "Endoscopic division with keel",
-        "Open laryngofissure with scar division, mucosal resurfacing and keel or stent",
+        "Endoscopic division with a Silastic keel",
+        "Open laryngofissure with mucosal resurfacing and keel",
         "CO2 laser posterior cordotomy",
-        "Serial balloon dilation"
+        "Serial endoscopic balloon dilation"
       ],
       "answer": 1,
-      "explanation": "Subglottic extension beyond about 5 mm exceeds what endoscopic keel repair handles reliably. Open laryngofissure allows scar division, preservation of mucosa for resurfacing, and short-term keel or stent placement.",
+      "explanation": "Subglottic extension beyond about 5 mm exceeds what endoscopic keel repair handles reliably. An open laryngofissure gives direct access to divide the scar precisely in the midline, preserve and advance mucosa to resurface the raw edges, and place a keel or short-term stent while healing occurs. Local mucosal resurfacing gives better voice than skin grafting. Cordotomy and dilation do not treat a thick anterior fusion.",
       "why_wrong": [
-        "Endoscopic repair is for webs that do not extend below the true folds.",
+        "Endoscopic keel repair is for webs that do not extend below the true vocal folds.",
         "Correct.",
-        "Cordotomy enlarges the posterior glottis but does not treat an anterior web and worsens voice.",
-        "Dilation does not hold for a thick fused glottic web."
+        "Cordotomy enlarges the posterior glottis but does not treat the anterior web and worsens voice.",
+        "Dilation does not hold for a thick, mature fused glottic web with subglottic scar."
       ],
-      "board_pearl": "Mucosal resurfacing gives better voice than skin graft in open web repair.",
-      "curveball": "When is an epiglottic flap added?",
-      "curveball_answer": "When the anteroposterior glottic dimension is reduced by more than about 50%, the epiglottis is pulled down after dividing the thyroepiglottic ligament.",
+      "board_pearl": "Web with more than about 5 mm subglottic extension: open repair, with mucosal resurfacing giving better voice than skin graft.",
+      "curveball": "At laryngofissure the anteroposterior glottic dimension is reduced by more than half. What additional maneuver can restore it?",
+      "curveball_answer": "An epiglottic flap can be used: the thyroepiglottic ligament is divided and the petiole of the epiglottis is pulled down and sutured into the anterior laryngofissure. This advances healthy tissue into the anterior commissure region and restores the anteroposterior dimension when it is reduced by more than about 50%.",
       "learning_stage": "senior_decision",
       "focus": "surgery"
     },
     {
       "topic": "Laryngeal Webs (Congenital and Acquired)",
-      "stem": "A 48-year-old woman has a thin anterior glottic web without known prior surgery, intubation or trauma. She also has chronic crusting rhinitis and a saddle-nose deformity.",
+      "stem": "A 48-year-old woman presents with 6 months of hoarseness. Laryngoscopy shows a thin anterior glottic web, and she has no history of laryngeal surgery, intubation or neck trauma. She also reports chronic nasal crusting and recurrent epistaxis, and examination shows a saddle-nose deformity. Her creatinine is mildly elevated and urinalysis shows blood. Which is the most appropriate next step?",
       "choices": [
-        "Proceed directly to endoscopic division and keel",
-        "Check ANCA and evaluate for granulomatosis with polyangiitis before repair",
-        "Attribute it to reflux and start a proton pump inhibitor only",
-        "Diagnose a congenital web and test for 22q11.2 deletion"
+        "Proceed to endoscopic web division with keel",
+        "Check ANCA and evaluate for granulomatosis with polyangiitis",
+        "Start a proton pump inhibitor for reflux only",
+        "Test for 22q11.2 deletion as a congenital web"
       ],
       "answer": 1,
-      "explanation": "Unexplained glottic scarring calls for evaluation of inflammatory causes such as GPA, sarcoid and amyloid. Nasal crusting and saddle nose strongly suggest GPA, which should be controlled before any repair.",
+      "explanation": "An acquired glottic web without surgery, intubation or trauma calls for evaluation of inflammatory and infiltrative causes such as granulomatosis with polyangiitis, sarcoidosis and amyloidosis. Nasal crusting, saddle nose and hematuria with rising creatinine strongly suggest GPA, so ANCA testing (PR3) and tissue biopsy are needed. Systemic disease must be controlled with immunosuppression before any airway repair, because operating on active disease leads to recurrence and misses kidney involvement.",
       "why_wrong": [
-        "Operating on active GPA risks recurrence and misses systemic disease.",
+        "Operating on active GPA risks web recurrence and misses dangerous systemic disease.",
         "Correct.",
-        "Reflux does not explain the nasal findings or an anterior web.",
-        "Congenital webs present in infancy, and the systemic findings point elsewhere."
+        "Reflux does not explain the nasal findings, hematuria or an anterior glottic web.",
+        "Congenital webs present in infancy, and her systemic findings point to vasculitis."
       ],
-      "board_pearl": "No history of injury plus a web means look for GPA, sarcoid or amyloid.",
-      "curveball": "Which airway subsite is GPA most classically associated with?",
-      "curveball_answer": "The subglottis (subglottic stenosis).",
+      "board_pearl": "A glottic web with no history of injury means look for GPA, sarcoidosis or amyloidosis.",
+      "curveball": "Which airway subsite is granulomatosis with polyangiitis most classically associated with, and how is it often managed?",
+      "curveball_answer": "GPA classically causes subglottic stenosis, which can occur even when systemic disease is quiet. It is often managed endoscopically with radial incisions, steroid injection and dilation, repeated as needed, combined with systemic immunosuppression. Open resection is reserved for refractory cases with disease in remission.",
       "learning_stage": "application",
       "focus": "workup"
     },
     {
       "topic": "Laryngeal Webs (Congenital and Acquired)",
-      "stem": "A newborn has aphonia and severe stridor with retractions immediately after delivery. Rigid laryngoscopy shows a thick web closing about 90% of the glottis, and a 2.5 ETT cannot pass.",
+      "stem": "A term newborn girl has aphonia and severe inspiratory stridor with suprasternal retractions immediately after delivery, and her saturations are falling despite mask ventilation. Rigid laryngoscopy in the delivery suite shows a thick web closing about 90% of the glottis, and a 2.5 endotracheal tube cannot pass. What is the correct Cohen classification and most appropriate management?",
       "choices": [
-        "Cohen type 2 web, observe",
-        "Cohen type 3 web, endoscopic division",
-        "Cohen type 4 web, secure the airway with tracheotomy",
-        "Laryngomalacia, supraglottoplasty"
+        "Cohen type 2 web; observe",
+        "Cohen type 3 web; endoscopic division",
+        "Cohen type 4 web; secure the airway with tracheotomy",
+        "Laryngomalacia; supraglottoplasty"
       ],
       "answer": 2,
-      "explanation": "A web involving 75-99% of the glottis is Cohen type 4 and causes aphonia and severe obstruction. The immediate priority is a secure airway, usually tracheotomy, with definitive reconstruction later.",
+      "explanation": "The Cohen classification grades congenital webs by glottic involvement: type 1 under 35%, type 2 35-50%, type 3 50-75% and type 4 75-99%. A web closing about 90% of the glottis is type 4, which causes aphonia and severe obstruction at birth and often extends into the subglottis. When even a small tube cannot pass, the immediate priority is a secure airway by tracheotomy, with definitive open reconstruction later in childhood.",
       "why_wrong": [
-        "Type 2 involves 35-50% and is not this severe.",
-        "Type 3 is 50-75%, and endoscopic division in a crashing neonate is not the first step.",
+        "Type 2 involves 35-50% of the glottis and does not cause this degree of obstruction.",
+        "Type 3 is 50-75%, and endoscopic division in a desaturating neonate is not first.",
         "Correct.",
-        "Laryngomalacia is supraglottic collapse with a normal glottis."
+        "Laryngomalacia is supraglottic collapse with a normal glottis and a normal cry."
       ],
-      "board_pearl": "Cohen type 4 webs (75-99%) usually need early tracheotomy.",
-      "curveball": "What associated subsite abnormality is common in type 3 and 4 webs?",
-      "curveball_answer": "Subglottic extension with an anterior cartilaginous plate, behaving like subglottic stenosis.",
+      "board_pearl": "Cohen cut points are 35, 50 and 75%. Type 4 webs (75-99%) usually need early tracheotomy.",
+      "curveball": "Which associated subglottic abnormality is common in Cohen type 3 and 4 webs, and why does it matter for repair?",
+      "curveball_answer": "Type 3 and 4 webs often extend into the subglottis as an anterior cartilaginous plate, so the lesion behaves like subglottic stenosis or partial atresia. This means endoscopic division alone fails, and repair usually requires open laryngofissure with commissure reconstruction, keel and an anterior cartilage graft.",
       "learning_stage": "foundation",
       "focus": "diagnosis"
     }

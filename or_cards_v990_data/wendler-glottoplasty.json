@@ -1,0 +1,139 @@
+{
+ "slug": "wendler-glottoplasty",
+ "title": "Wendler Glottoplasty for Transfeminine Voice",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Gender-Affirming Voice and Laryngeal Surgery",
+ "source_label": "Operative Techniques in Laryngology (2024), Ch 61 Wendler Glottoplasty for Transfeminine Voice",
+ "indications": "Wendler glottoplasty raises speaking pitch for transfeminine patients by creating a controlled anterior glottic web that shortens the vibrating length of the membranous folds. It is offered after a course of voice therapy with an experienced voice SLP when the patient still perceives the voice as gender-incongruent, particularly when pitch drops under distraction, laughter, coughing or fatigue. Pitch alone is not a criterion, and surgery changes only fundamental frequency, not resonance, intonation or other gender cues. Reported pitch elevation ranges from about 20 to 110 Hz, greater in patients under 40 and with continued therapy, mostly through loss of the lower register. Counsel about possible roughness, pitch instability, web dehiscence, granuloma and anterior gap. Chondrolaryngoplasty, if desired, is staged separately.",
+ "setup": [
+  "General anesthesia with 10 mg IV dexamethasone before suspension",
+  "5.0 laser-safe tube if using CO2 laser; jet ventilation as an option for a wider glottic view",
+  "Laryngoscope that exposes the anterior commissure to both vocal processes (Kantor-Berci style with telescope helps suturing)",
+  "CO2 laser with micromanipulator or cold microinstruments, microflap elevator, microscissors, laryngeal ruler",
+  "Four 4-0 Vicryl sutures on RB-1 needles straightened to a quarter curve, laryngeal needle driver and knot pusher"
+ ],
+ "landmarks": [
+  "Anterior commissure",
+  "Vocal processes (posterior limit of the membranous fold)",
+  "Junction of the anterior 40% of the membranous fold",
+  "Superior surface and free edge of the vocal fold",
+  "Inferior arcuate line on the medial surface",
+  "Vocal ligament"
+ ],
+ "danger": [
+  "Incomplete exposure of the anterior commissure, leading to a short or uneven web",
+  "Asymmetric de-epithelialization causing vertical mismatch and roughness",
+  "Removing superior and infraglottic mucosa beyond the medial surface (associated with worse voice quality)",
+  "Injury to the vocal ligament and deep scarring",
+  "Endotracheal tube or early intubation splitting the healing web"
+ ],
+ "steps": [
+  [
+   "Confirm candidacy",
+   "Offer surgery after voice therapy with an experienced voice SLP has built feminine speaking patterns and reduced laryngeal tension, when the voice still slips under distraction, laughter or fatigue. Speaking pitch is not itself a criterion. Set goals around the patient's own perception, and explain that pitch is only one gender cue."
+  ],
+  [
+   "Counsel on outcomes",
+   "Expect pitch elevation of roughly 20-110 Hz, more in patients under 40 and with therapy, mostly through loss of the lower register. Possible problems are roughness, pitch instability, web dehiscence, granuloma and an anterior gap. Patients who remain tense may stay aphonic for longer. Stage any chondrolaryngoplasty separately."
+  ],
+  [
+   "Anesthesia",
+   "Give 10 mg IV dexamethasone before suspension to limit edema. Intubate with a 5.0 laser-safe tube if the CO2 laser will be used; high-frequency jet ventilation is an option for wider glottic exposure."
+  ],
+  [
+   "Expose the whole membranous glottis",
+   "Suspend a laryngoscope that shows the anterior commissure to both vocal processes, which is essential for measuring and for building a complete web. A Kantor-Berci style scope with an integrated telescope can make suturing easier."
+  ],
+  [
+   "Measure",
+   "Measure the membranous fold from vocal process to anterior commissure with the CO2 laser aiming beam or a ruler, and mark the anterior 40% on each side as the planned web."
+  ],
+  [
+   "Incise the free edge",
+   "Incise the epithelium along the free edge of the anterior 40% of each membranous fold with the laser or cold instruments. Alternatively, ablate the mucosa to be removed with the laser. Keep the two sides symmetric so the web forms evenly."
+  ],
+  [
+   "Elevate the mucosa",
+   "With a microflap elevator, raise the superior-surface mucosa in a superficial plane, then the medial-surface mucosa either superficially or deeper against the vocal ligament. Take extra tissue at the inferior arcuate line so the undersurfaces meet and granulation is less likely."
+  ],
+  [
+   "De-epithelialize the medial surfaces",
+   "Remove the medial mucosa off the vocal ligament on both sides with laser or scissors. Removing only medial mucosa, not superior and infraglottic mucosa as well, has been associated with less roughness."
+  ],
+  [
+   "Prepare the sutures",
+   "Straighten four 4-0 Vicryl sutures on RB-1 needles from a half curve to a quarter curve, so they can be driven through each fold inside the laryngoscope. Load them on a laryngeal needle driver and confirm the reach before starting."
+  ],
+  [
+   "Place symmetric bites",
+   "Pass two sutures at the midpoint of the raw area and two just behind it, taking mirror-image bites on each side so upper and lower fold masses line up. Bites placed behind the defect help prevent a neo-commissure granuloma."
+  ],
+  [
+   "Tie in two layers",
+   "Tie the inferior suture ends first and pull the knots below the glottic plane by drawing on the superior ends. Then tie the superior ends to bring the anterior folds together in the midline."
+  ],
+  [
+   "Discharge and voice rest",
+   "Send the patient home the same day without routine postoperative steroids. Order complete voice rest for about 1 week (some prefer 2), with acid suppression and saline nebulization favored by some surgeons. Expect voice to return within about a month."
+  ],
+  [
+   "Protect the web",
+   "Avoid elective intubation for 2 months, and use a 6.0 or smaller tube afterward if possible, because a tube can split the healing web. Edema, erythema and suture debris should settle by 2 months; final voice takes 2 months or more."
+  ],
+  [
+   "Restart therapy and manage failures",
+   "Resume voice therapy after the rest period to stabilize the new pitch range and resonance, since surgery alone changes only pitch. Revise a disrupted web by repeating the same steps, and treat suture granulomas as for other laryngeal granulomas."
+  ]
+ ],
+ "exit_check": [
+  "Symmetric web over the anterior 40% of both membranous folds with knots below the glottic plane",
+  "Sutures tied securely with no exposed raw surface left at the free edge",
+  "Posterior glottis and airway widely patent"
+ ],
+ "postop": [
+  "Same-day discharge; routine postoperative steroids are not needed",
+  "Complete voice rest about 1 week (some surgeons use 2) to protect the suture line",
+  "Acid suppression and saline nebulization are reasonable adjuncts",
+  "Avoid elective intubation for 2 months; use a 6.0 or smaller tube thereafter",
+  "Resume voice therapy after rest; expect usable voice within a month and final result at 2 months or later"
+ ],
+ "complications": {
+  "early": [
+   "Laryngeal edema and transient aphonia (longer with residual muscle tension)",
+   "Suture line dehiscence with incomplete web",
+   "Suture debris and fibrin on the folds"
+  ],
+  "late": [
+   "Suture granuloma at the neo-commissure",
+   "Roughness, reduced loudness or pitch instability",
+   "Anterior glottic gap causing asthenia",
+   "Insufficient pitch rise or web disruption needing revision"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How does Wendler glottoplasty raise pitch?",
+   "It creates an anterior web that shortens the vibrating membranous fold length, raising fundamental frequency, mainly by eliminating the lower register."
+  ],
+  [
+   "What length of fold is webbed?",
+   "About the anterior 40% of the membranous fold on each side, measured from anterior commissure to vocal process."
+  ],
+  [
+   "Why place sutures just behind the raw area and take extra tissue at the inferior arcuate line?",
+   "Posterior bites and approximated undersurfaces reduce neo-commissure and undersurface granuloma formation."
+  ],
+  [
+   "How does it compare with cricothyroid approximation?",
+   "CTA raises pitch by tension, which can relax over time; Wendler shortens the vibrating segment and is generally more durable, with a risk of roughness."
+  ],
+  [
+   "What perioperative airway precaution do you give the patient?",
+   "Avoid elective intubation for 2 months and request a 6.0 or smaller tube later, since a large tube can split the web."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (2024), Ch 61 Wendler Glottoplasty for Transfeminine Voice, pp 533-540"
+ ]
+}

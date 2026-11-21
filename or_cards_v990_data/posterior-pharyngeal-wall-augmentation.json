@@ -1,0 +1,136 @@
+{
+ "slug": "posterior-pharyngeal-wall-augmentation",
+ "title": "Awake Posterior Pharyngeal Wall Augmentation (Injection Pharyngoplasty) for Velopharyngeal Insufficiency",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Velopharyngeal Insufficiency",
+ "source_label": "Operative Techniques in Laryngology (2024), Ch 63 Awake Posterior Pharyngeal Wall Augmentation for Velopharyngeal Insufficiency",
+ "indications": "Awake injection augmentation of the posterior pharyngeal wall treats mild to moderate, partial or unilateral velopharyngeal insufficiency causing hypernasality, nasal regurgitation or dysphagia. It is particularly useful in adults with acquired VPI after stroke, cranial neuropathy, skull base or oropharyngeal cancer treatment, or radiation, who are poor candidates for a pharyngeal flap or sphincter pharyngoplasty. A temporary gel is a sensible trial for a new or possibly recovering deficit, and calcium hydroxylapatite is used for durable augmentation. Complete or bilateral palatal paralysis creates too large a gap for injection alone. Real-time endoscopic feedback during speech and swallowing is the main advantage of the awake technique.",
+ "setup": [
+  "Patient seated upright in office, procedure room or OR; topical anesthesia with or without light sedation",
+  "Oxymetazoline and 4% plain lidocaine (50:50) spray and pledgets for both nasal passages",
+  "Flexible endoscope with working channel (preferred) or rigid 0- or 30-degree telescope, with suction available",
+  "Augmentation material: temporary hyaluronic acid or carboxymethylcellulose gel, or calcium hydroxylapatite for durable effect",
+  "Long 25-gauge needle bendable 30-45 degrees, curved Abraham cannula, tongue depressor or gauze for peroral access"
+ ],
+ "landmarks": [
+  "Middle meatus on the side of the VPI (best endoscopic window)",
+  "Velum and its closure pattern during speech and swallow",
+  "Lateral pharyngeal walls",
+  "Passavant ridge on the posterior pharyngeal wall",
+  "Mapped residual gap",
+  "Expected course of the internal carotid artery lateral and posterior to the injection sites"
+ ],
+ "danger": [
+  "Intravascular, especially carotid, injection at lateral sites",
+  "Deep injection into the prevertebral space",
+  "Multiple puncture sites promoting extrusion",
+  "Overcorrection causing obstructive sleep apnea or hyponasality",
+  "Aspiration while the pharynx is anesthetized"
+ ],
+ "steps": [
+  [
+   "Select the patient",
+   "Inject for partial or unilateral VPI with hypernasality, nasal regurgitation or dysphagia, especially in adults after stroke, cancer resection or radiation who are poor candidates for a pharyngeal flap or sphincter pharyngoplasty. Complete or bilateral palatal weakness leaves too large a gap for injection alone."
+  ],
+  [
+   "Choose the material",
+   "For a new cause that may improve, trial a temporary hyaluronic acid or carboxymethylcellulose gel. For persistent VPI or after a good trial, use calcium hydroxylapatite, which lasts about 12 months and can be repeated. Fat is autologous but needs a large needle and usually general anesthesia, which loses awake feedback."
+  ],
+  [
+   "Setting",
+   "Perform the procedure under topical anesthesia, with or without light sedation, in the office, a procedure suite or the OR. Seat the patient upright. Awake feedback with speech and swallowing during the case is the main advantage over general anesthesia."
+  ],
+  [
+   "Prepare the nose",
+   "Examine both nostrils for septal deviation or turbinate hypertrophy. Spray and then place pledgets soaked in a 50:50 mix of oxymetazoline and 4% plain lidocaine, and allow several minutes before removing them."
+  ],
+  [
+   "Pass the endoscope",
+   "Pass a flexible scope (ideally with a working channel) or a rigid 0- or 30-degree telescope through the middle meatus on the side of the VPI for the most direct view."
+  ],
+  [
+   "Map the gap dynamically",
+   "Watch velopharyngeal closure during speech and swallowing to find the exact location and size of the gap and the target spot on the posterior wall. This precise mapping matters more than anything else."
+  ],
+  [
+   "Topicalize the target",
+   "Drip 4% plain lidocaine through the scope's working channel onto the planned injection site. Or apply it perorally by spray, atomizer or a curved Abraham cannula passed up into the nasopharynx just before the needle goes in."
+  ],
+  [
+   "Choose the route",
+   "Transnasally, the needle can go through either nostril. Perorally, rehearse the angle with a curved cannula and bend a long 25-gauge needle about 30-45 degrees. Depress the tongue or have the patient pull it forward with gauze to clear the tongue base."
+  ],
+  [
+   "Prevent intravascular injection",
+   "Before injecting, especially at lateral sites, draw back on the syringe and confirm there is no vascular flash. Carotid injection is rare but catastrophic, so plan each site with the vessel course in mind."
+  ],
+  [
+   "Inject at Passavant ridge",
+   "Under continuous endoscopic view, inject submucosally into the posterior pharyngeal wall at the level of Passavant ridge, right at or next to the mapped gap. Place the material as superficially as possible and inject slowly."
+  ],
+  [
+   "Use few sites",
+   "Inject through as few separate punctures as possible, because each extra site raises the risk that augmentation material extrudes. If the scope has a channel, use suction to clear secretions and any extruded material during the case."
+  ],
+  [
+   "Reassess and top up",
+   "Recheck velopharyngeal closure between injections and treat any persistent gap. Slight overinjection allows for some absorption. Bleeding at the needle entry is usually minimal and stops on its own without intervention."
+  ],
+  [
+   "Aftercare and follow-up",
+   "Keep the patient NPO for 2 hours until the topical anesthetic wears off, then resume the usual diet with over-the-counter analgesics. Warn that multifactorial dysphagia may persist. A rare prevertebral inflammatory reaction can last up to about 3 weeks. Reinject when benefit fades."
+  ]
+ ],
+ "exit_check": [
+  "Improved or complete velopharyngeal closure on endoscopy during speech and swallow",
+  "No extruded material or active bleeding at puncture sites",
+  "Patient tolerating secretions without distress"
+ ],
+ "postop": [
+  "NPO for 2 hours until topical anesthesia wears off, then usual diet",
+  "Over-the-counter analgesics; same-day discharge",
+  "Counsel that multifactorial dysphagia may persist despite improved closure",
+  "Report fever, severe neck pain or stiffness, or worsening swallowing promptly",
+  "Reassess speech and swallow; reinject when effect fades (hydroxylapatite about 12 months)"
+ ],
+ "complications": {
+  "early": [
+   "Minor bleeding at the needle entry",
+   "Neck pain or stiffness",
+   "Prevertebral inflammatory reaction or infection lasting up to about 3 weeks",
+   "Extrusion of material"
+  ],
+  "late": [
+   "Early absorption with loss of benefit",
+   "Incomplete closure of the VPI",
+   "Obstructive sleep apnea or snoring from overaugmentation",
+   "Need for repeat injection or conversion to flap or sphincter pharyngoplasty"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Which patients are best suited to posterior pharyngeal wall injection?",
+   "Mild to moderate, partial or unilateral VPI with a small mapped gap; large gaps from complete or bilateral palatal paralysis need a pharyngeal flap or sphincter pharyngoplasty."
+  ],
+  [
+   "Where is the material placed?",
+   "Submucosally and superficially in the posterior pharyngeal wall at Passavant ridge, directly at or adjacent to the mapped gap."
+  ],
+  [
+   "Why do this awake?",
+   "Real-time endoscopic assessment of closure during speech and swallowing lets you target and titrate the injection precisely."
+  ],
+  [
+   "What catastrophic complication is guarded against, and how?",
+   "Intravascular carotid injection; plan sites with the vessel course in mind and draw back for a vascular flash before each injection."
+  ],
+  [
+   "How do you choose material?",
+   "Temporary gel for a trial or possibly recovering deficit; calcium hydroxylapatite for persistent VPI (about 12 months); fat is autologous but usually requires general anesthesia and a large needle."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (2024), Ch 63 Awake Posterior Pharyngeal Wall Augmentation for Velopharyngeal Insufficiency (Young, Rosen), pp 549-552"
+ ]
+}

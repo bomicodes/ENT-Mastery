@@ -93,192 +93,192 @@ TOPIC = {
     ],
     "case_label": "Painless multilocular expansile lucency of the posterior mandible with root resorption in a 32-year-old",
     "or_slugs": [],
-    "concept_check": {
-        "topic": T,
-        "stem": "A 34-year-old man has slow, painless swelling of the left mandibular angle. Panorex shows a multilocular 'soap-bubble' radiolucency of the posterior body and ramus with resorption of the molar roots. Biopsy shows islands of palisaded columnar cells with reverse nuclear polarization.",
-        "choices": [
-            "Enucleation and curettage with 6-month panorex follow-up",
-            "Resection with about 1-2 cm bony margins and immediate reconstruction",
-            "Marsupialization followed by observation",
-            "Primary radiotherapy",
-        ],
-        "answer": 1,
-        "explanation": "This is conventional (solid/multicystic) ameloblastoma. It infiltrates medullary bone beyond its radiographic edge, so resection with 1-2 cm bony margins is standard. Conservative curettage carries recurrence approaching 60%.",
-        "why_wrong": [
-            "Curettage leaves medullary tumor behind, and recurrence after conservative treatment is very high.",
-            "Correct.",
-            "Marsupialization is for large cysts such as dentigerous cysts or OKC, not solid infiltrative tumors.",
-            "Ameloblastoma is relatively radioresistant, and radiation is reserved for unresectable cases.",
-        ],
-        "board_pearl": "Ameloblastoma: posterior mandible, soap bubble, root resorption, reverse polarity. Treat with resection with bony margins and follow for life.",
-        "curveball": "Which molecular finding is most common in mandibular ameloblastoma and can be targeted?",
-        "curveball_answer": "BRAF V600E, targetable with BRAF (with or without MEK) inhibitors for recurrent or unresectable disease.",
-        "learning_stage": "application",
-        "focus": "management",
+  "concept_check": {
+    "topic": "Jaw Cysts and Odontogenic Tumors",
+    "stem": "A 34-year-old man presents with slow, painless swelling of the left mandibular angle over 18 months. Lower lip sensation is normal. Panorex shows a multilocular 'soap-bubble' radiolucency of the posterior mandibular body and ramus with resorption of the molar roots. Incisional biopsy shows islands of odontogenic epithelium with peripheral palisaded columnar cells showing reverse nuclear polarization. Which is the most appropriate management?",
+    "choices": [
+      "Enucleation and curettage with 6-month panorex follow-up",
+      "Resection with 1-2 cm bony margins and immediate reconstruction",
+      "Marsupialization followed by observation",
+      "Primary external beam radiotherapy"
+    ],
+    "answer": 1,
+    "explanation": "Palisaded columnar cells with reverse nuclear polarity in a multilocular posterior mandibular lucency is conventional (solid/multicystic) ameloblastoma. The tumor permeates medullary bone beyond its radiographic edge, so resection with about 1-2 cm bony margins, usually segmental here, with immediate reconstruction is standard. Conservative curettage leaves microscopic tumor in the marrow and carries recurrence approaching 60%. Follow-up is lifelong because recurrences can appear decades later.",
+    "why_wrong": [
+      "Curettage leaves medullary tumor behind, so recurrence after conservative treatment approaches 60%.",
+      "Correct.",
+      "Marsupialization suits large cysts such as dentigerous cysts or OKC, not a solid infiltrative tumor.",
+      "Ameloblastoma is relatively radioresistant, so radiation is reserved for unresectable or inoperable disease."
+    ],
+    "board_pearl": "Ameloblastoma: posterior mandible, soap-bubble lucency, root resorption, reverse polarity. Resect with bony margins and follow for life.",
+    "curveball": "Ten years later he has an unresectable recurrence. Which molecular alteration is most common in mandibular ameloblastoma and can be targeted?",
+    "curveball_answer": "BRAF V600E is present in most mandibular ameloblastomas and is a therapeutic target. BRAF inhibitors such as dabrafenib, with or without the MEK inhibitor trametinib, have produced marked responses in recurrent or unresectable disease and are being studied as neoadjuvant therapy to shrink tumors before resection.",
+    "learning_stage": "application",
+    "focus": "management"
+  },
+  "ladder": [
+    {
+      "topic": "Jaw Cysts and Odontogenic Tumors",
+      "stem": "A 22-year-old woman is referred by her dentist after a routine panorex taken before wisdom tooth extraction. She has no pain or swelling. The film shows a well-defined, corticated, unilocular radiolucency surrounding the crown of an impacted right mandibular third molar, attaching at the cementoenamel junction. The tooth roots are intact. What is the most likely diagnosis?",
+      "choices": [
+        "Odontogenic keratocyst",
+        "Radicular (periapical) cyst",
+        "Dentigerous cyst",
+        "Nasopalatine duct cyst"
+      ],
+      "answer": 2,
+      "explanation": "A unilocular pericoronal lucency that attaches at the cementoenamel junction of an unerupted tooth is the classic dentigerous cyst, the most common developmental odontogenic cyst. It forms from fluid accumulation between the reduced enamel epithelium and the crown, most often around mandibular third molars and maxillary canines. Treatment is enucleation with removal of the tooth. Because OKC and unicystic ameloblastoma can look identical, the specimen must always be sent for histology.",
+      "why_wrong": [
+        "OKC can mimic this but tends to extend along the bone and needs histology for diagnosis.",
+        "Radicular cysts sit at the apex of a nonvital erupted tooth, not around an unerupted crown.",
+        "Correct.",
+        "Nasopalatine duct cysts are midline anterior maxillary lesions between the central incisors."
+      ],
+      "board_pearl": "Crown of an unerupted tooth points to a dentigerous cyst. Apex of a dead tooth points to a radicular cyst.",
+      "curveball": "The enucleated specimen is sent for pathology. Which odontogenic tumor can arise in the wall of a dentigerous cyst?",
+      "curveball_answer": "Unicystic ameloblastoma can arise within the lining of a dentigerous cyst, and roughly 17% of ameloblastomas are associated with one. Rarely, squamous cell carcinoma or mucoepidermoid carcinoma also arises in the cyst wall, which is why every enucleated pericoronal cyst needs histologic review.",
+      "learning_stage": "foundation",
+      "focus": "diagnosis"
     },
-    "ladder": [
-        {
-            "topic": T,
-            "stem": "A 22-year-old has an asymptomatic, well-defined unilocular radiolucency surrounding the crown of an impacted mandibular third molar. The lucency attaches at the cementoenamel junction.",
-            "choices": [
-                "Odontogenic keratocyst",
-                "Radicular cyst",
-                "Dentigerous cyst",
-                "Nasopalatine duct cyst",
-            ],
-            "answer": 2,
-            "explanation": "A pericoronal lucency attached at the cementoenamel junction of an unerupted tooth is the classic dentigerous cyst, the most common developmental odontogenic cyst.",
-            "why_wrong": [
-                "OKC can mimic this but is usually multilocular or extends along the bone, and needs histology to diagnose.",
-                "Radicular cysts sit at the apex of a nonvital erupted tooth, not around a crown.",
-                "Correct.",
-                "Nasopalatine duct cysts are midline maxillary between the central incisors.",
-            ],
-            "board_pearl": "Crown of an unerupted tooth suggests dentigerous cyst. Apex of a dead tooth suggests radicular cyst.",
-            "curveball": "What tumor can arise in the wall of a dentigerous cyst?",
-            "curveball_answer": "Ameloblastoma (unicystic). About 17% of ameloblastomas are associated with a dentigerous cyst.",
-            "learning_stage": "foundation",
-            "focus": "diagnosis",
-        },
-        {
-            "topic": T,
-            "stem": "A 13-year-old has three separate jaw cysts. Histology of one shows a thin corrugated parakeratinized lining with a palisaded basal layer. Exam shows palmar pits.",
-            "choices": [
-                "Order a skull film or CT for falx calcification, examine the skin and refer for genetics",
-                "Recommend adjuvant radiotherapy to the mandible",
-                "Reassure, because syndromic cysts do not recur",
-                "Start a bisphosphonate",
-            ],
-            "answer": 0,
-            "explanation": "Multiple OKCs in a child plus palmar pits indicate Gorlin (nevoid basal cell carcinoma) syndrome, an autosomal dominant PTCH1 disorder. The workup includes skin exam for BCCs, imaging for falx calcification and rib anomalies, and genetic counseling.",
-            "why_wrong": [
-                "Correct.",
-                "Radiation is avoided in Gorlin because it induces numerous basal cell carcinomas.",
-                "Syndromic OKCs recur and new ones keep forming, so long-term surveillance is needed.",
-                "Bisphosphonates have no role in OKC.",
-            ],
-            "board_pearl": "Gorlin: OKCs, BCCs, palmar and plantar pits, falx calcification, bifid ribs. Avoid radiation.",
-            "curveball": "Which OKC look-alike is not syndromic and rarely recurs?",
-            "curveball_answer": "The orthokeratinized odontogenic cyst, with about 2% recurrence.",
-            "learning_stage": "application",
-            "focus": "workup",
-        },
-        {
-            "topic": T,
-            "stem": "A 40-year-old has a biopsy-proven 5-cm odontogenic keratocyst of the mandibular body and ramus that thins the inferior border. You want to preserve continuity and lower lip sensation.",
-            "choices": [
-                "Segmental mandibulectomy with fibula free flap as first-line",
-                "Enucleation alone with no adjunct",
-                "Observation with yearly panorex",
-                "Decompression first, then enucleation with peripheral ostectomy or Carnoy solution",
-            ],
-            "answer": 3,
-            "explanation": "Large OKCs can be decompressed so they shrink and the cortex thickens. A later enucleation with an adjunct (peripheral ostectomy or Carnoy) lowers recurrence below 10%, compared with up to 62.5% for enucleation alone. Resection is kept for multiply recurrent disease.",
-            "why_wrong": [
-                "Segmental resection is overtreatment as first-line for a primary OKC and is kept for recurrent or very aggressive disease.",
-                "Enucleation alone has the highest recurrence because satellite cysts remain.",
-                "OKC is aggressive and keeps enlarging, so observation risks fracture and nerve injury.",
-                "Correct.",
-            ],
-            "board_pearl": "For OKC, add an adjunct: peripheral ostectomy or Carnoy. Decompress big ones first.",
-            "curveball": "What hazard of Carnoy solution must be guarded against intraoperatively?",
-            "curveball_answer": "Injury to the exposed inferior alveolar nerve and soft tissues. Limit contact time and protect the nerve.",
-            "learning_stage": "senior_decision",
-            "focus": "surgery",
-        },
-    ],
-    "vignettes": [
-        {
-            "topic": T,
-            "stem": "A 16-year-old girl has a slowly enlarging anterior maxillary swelling. Panorex shows a well-defined lucency with fine calcifications around an impacted canine.",
-            "choices": [
-                "Ameloblastoma",
-                "Calcifying epithelial odontogenic tumor (Pindborg)",
-                "Odontogenic myxoma",
-                "Adenomatoid odontogenic tumor",
-            ],
-            "answer": 3,
-            "explanation": "AOT is the 'two-thirds tumor': mostly female, maxillary, associated with an impacted canine and in teenagers. It is encapsulated, treated by enucleation and rarely recurs.",
-            "why_wrong": [
-                "Ameloblastoma is usually posterior mandible in adults and is radiolucent without calcifications.",
-                "Pindborg tumor is usually posterior mandible with an impacted molar and amyloid-like deposits.",
-                "Myxoma is a posterior jaw lucency with 'tennis racket' septa and no calcifications.",
-                "Correct.",
-            ],
-            "board_pearl": "AOT = two thirds: female, maxilla, canine, teens. Enucleate.",
-            "curveball": "Which lucent-opaque odontogenic lesion shows ghost cells?",
-            "curveball_answer": "The calcifying odontogenic cyst (Gorlin cyst).",
-            "learning_stage": "foundation",
-            "focus": "diagnosis",
-        },
-        {
-            "topic": T,
-            "stem": "A 28-year-old has a multilocular lucency of the left mandible. Before planned incisional biopsy, the resident asks what step should come first.",
-            "choices": [
-                "Needle aspiration of the lesion",
-                "Bone scan",
-                "Excision of the overlying mucosa",
-                "PET-CT",
-            ],
-            "answer": 0,
-            "explanation": "A jaw lucency should be aspirated before biopsy to exclude a vascular lesion such as an intraosseous AVM or aneurysmal bone cyst, which can bleed briskly. Aspirate content also gives clues, for example keratin in OKC.",
-            "why_wrong": [
-                "Correct.",
-                "A bone scan does not separate vascular from nonvascular lesions and does not change biopsy safety.",
-                "Mucosal excision does not reach the lesion and gives no diagnostic information.",
-                "PET-CT is not part of the workup for a benign-appearing jaw lucency.",
-            ],
-            "board_pearl": "Aspirate before you cut. Blood return means stop and image the vasculature.",
-            "curveball": "What aspirate appearance suggests an odontogenic keratocyst?",
-            "curveball_answer": "Thick cheesy white keratin debris, with low soluble protein.",
-            "learning_stage": "application",
-            "focus": "workup",
-        },
-        {
-            "topic": T,
-            "stem": "A 19-year-old has a biopsy reported as unicystic ameloblastoma arising in what looked like a dentigerous cyst. Final pathology of the enucleated specimen shows tumor infiltrating the fibrous cyst wall.",
-            "choices": [
-                "No further treatment, because unicystic lesions never recur",
-                "Radiotherapy to the bed",
-                "Treat as conventional ameloblastoma with resection with bony margins",
-                "Repeat curettage only",
-            ],
-            "answer": 2,
-            "explanation": "Enucleation is adequate for unicystic ameloblastoma only when it is confined to the lumen (luminal or intraluminal). Mural invasion behaves like conventional ameloblastoma and needs resection with margins.",
-            "why_wrong": [
-                "Unicystic ameloblastoma recurs in 10-20%, and more with mural invasion.",
-                "Radiation is not standard for resectable ameloblastoma.",
-                "Correct.",
-                "Curettage does not clear infiltrating medullary tumor.",
-            ],
-            "board_pearl": "Unicystic ameloblastoma: luminal means enucleate. Mural means resect.",
-            "curveball": "What is a malignant (metastasizing) ameloblastoma?",
-            "curveball_answer": "Histologically benign ameloblastoma that metastasizes, usually to lung, as opposed to ameloblastic carcinoma, which has cytologic atypia.",
-            "learning_stage": "senior_decision",
-            "focus": "management",
-        },
-        {
-            "topic": T,
-            "stem": "A 45-year-old Black woman has an incidental mixed lucent-opaque lesion at the apices of her anterior mandibular teeth. The teeth test vital and she has no symptoms.",
-            "choices": [
-                "Extract the involved teeth",
-                "Incisional biopsy",
-                "Segmental mandibulectomy",
-                "Observation",
-            ],
-            "answer": 3,
-            "explanation": "Periapical cemento-osseous dysplasia is a reactive lesion with vital teeth, most common in Black women. It is observed, because biopsy or extraction into this poorly vascular bone risks osteomyelitis.",
-            "why_wrong": [
-                "The teeth are vital and healthy, and extraction risks infection of the dysplastic bone.",
-                "Biopsy is unnecessary for a classic appearance and risks infection.",
-                "Resection is grossly excessive for a benign reactive lesion.",
-                "Correct.",
-            ],
-            "board_pearl": "Vital teeth plus a periapical mixed lesion in a middle-aged Black woman suggests cemento-osseous dysplasia. Leave it alone.",
-            "curveball": "Which radiopaque lesion is fused to a mandibular molar root and is removed with the tooth?",
-            "curveball_answer": "Cementoblastoma.",
-            "learning_stage": "application",
-            "focus": "imaging",
-        },
-    ],
+    {
+      "topic": "Jaw Cysts and Odontogenic Tumors",
+      "stem": "A 13-year-old boy is referred after a panorex shows three separate radiolucent jaw cysts. Enucleation of one shows a thin, corrugated parakeratinized lining with a palisaded basal layer. On examination he has frontal bossing and several small pits on his palms. His father had 'many skin cancers' removed. Which is the most appropriate next step in his workup?",
+      "choices": [
+        "Image for falx calcification, examine the skin and refer for genetics",
+        "Give adjuvant radiotherapy to the mandible",
+        "Reassure the family because syndromic cysts do not recur",
+        "Start a bisphosphonate to stabilize the jaw"
+      ],
+      "answer": 0,
+      "explanation": "Multiple odontogenic keratocysts in a child with palmar pits, frontal bossing and a family history of skin cancers indicate Gorlin (nevoid basal cell carcinoma) syndrome, an autosomal dominant PTCH1 disorder. Workup includes full skin examination for basal cell carcinomas, imaging for falx calcification and bifid ribs, and genetic counseling for the family. CT is used sparingly and radiation avoided because ionizing radiation induces numerous basal cell carcinomas in these patients.",
+      "why_wrong": [
+        "Correct.",
+        "Radiation is avoided in Gorlin syndrome because it induces numerous basal cell carcinomas in the field.",
+        "Syndromic OKCs recur and new ones keep forming, so long-term surveillance is needed.",
+        "Bisphosphonates have no role in treating or preventing odontogenic keratocysts."
+      ],
+      "board_pearl": "Gorlin syndrome: multiple OKCs, BCCs, palmar and plantar pits, falx calcification, bifid ribs. Avoid radiation.",
+      "curveball": "A 30-year-old's jaw cyst has a keratin-filled lining that is orthokeratinized rather than parakeratinized. How does this change counseling?",
+      "curveball_answer": "An orthokeratinized odontogenic cyst is a distinct entity from OKC. It is not associated with Gorlin syndrome or PTCH1, lacks the palisaded basal layer, and recurs in only about 2% of cases after simple enucleation, so adjuncts and intensive surveillance are not needed.",
+      "learning_stage": "application",
+      "focus": "workup"
+    },
+    {
+      "topic": "Jaw Cysts and Odontogenic Tumors",
+      "stem": "A 40-year-old woman has a biopsy-proven 5-cm odontogenic keratocyst of the right mandibular body and ramus. CT shows marked thinning of the inferior border and the cyst abutting the inferior alveolar canal. Lower lip sensation is normal. She wants to avoid a mandibular resection and to preserve lip sensation. Which is the most appropriate surgical plan?",
+      "choices": [
+        "Segmental mandibulectomy with fibula free flap",
+        "Enucleation alone with no adjunct",
+        "Observation with yearly panorex",
+        "Decompression, then enucleation with peripheral ostectomy or Carnoy"
+      ],
+      "answer": 3,
+      "explanation": "Large OKCs can be decompressed through a small window with a drain so the cyst shrinks, the cortex thickens and the inferior alveolar nerve moves away from the lining. A later definitive enucleation with an adjunct, either peripheral ostectomy or Carnoy solution, treats satellite cysts and lowers recurrence below 10%, compared with up to 62.5% for enucleation alone. Segmental resection with about 1-cm margins is reserved for multiply recurrent disease.",
+      "why_wrong": [
+        "Segmental resection is overtreatment for a primary OKC and is reserved for multiply recurrent disease.",
+        "Enucleation alone has the highest recurrence because satellite cysts in the bony wall remain.",
+        "OKC keeps enlarging, so observation risks pathologic fracture and inferior alveolar nerve injury.",
+        "Correct."
+      ],
+      "board_pearl": "OKC: always add an adjunct (peripheral ostectomy or Carnoy) to enucleation, and decompress large cysts first.",
+      "curveball": "At the definitive operation Carnoy solution is planned for the cavity. What intraoperative hazard must be guarded against?",
+      "curveball_answer": "Carnoy solution is a caustic fixative that can injure the exposed inferior alveolar nerve and surrounding soft tissue. Contact time is limited to a few minutes, the nerve is protected or isolated, and the field is irrigated afterward. Modified Carnoy without chloroform is now used in many centers.",
+      "learning_stage": "senior_decision",
+      "focus": "surgery"
+    }
+  ],
+  "vignettes": [
+    {
+      "topic": "Jaw Cysts and Odontogenic Tumors",
+      "stem": "A 16-year-old girl presents with a slowly enlarging, painless swelling of the anterior left maxilla over a year. Her permanent left canine never erupted. Panorex shows a well-defined, corticated unilocular lucency containing fine snowflake calcifications surrounding the crown of the impacted canine and extending past the cementoenamel junction. What is the most likely diagnosis?",
+      "choices": [
+        "Ameloblastoma",
+        "Calcifying epithelial odontogenic tumor (Pindborg)",
+        "Odontogenic myxoma",
+        "Adenomatoid odontogenic tumor"
+      ],
+      "answer": 3,
+      "explanation": "Adenomatoid odontogenic tumor is the 'two-thirds tumor': about two thirds occur in females, in the maxilla, in association with an impacted tooth (usually the canine) and in teenagers. It is a well-encapsulated lesion that often contains fine snowflake calcifications and characteristically extends beyond the cementoenamel junction, unlike a dentigerous cyst. Simple enucleation is curative and recurrence is rare, so aggressive resection should be avoided.",
+      "why_wrong": [
+        "Ameloblastoma is usually a posterior mandibular lucency in adults without internal calcifications.",
+        "Pindborg tumor usually affects the posterior mandible near an impacted molar, with amyloid-like deposits.",
+        "Myxoma is a posterior jaw lucency with 'tennis racket' septa and no calcifications.",
+        "Correct."
+      ],
+      "board_pearl": "AOT is the two-thirds tumor: female, maxilla, impacted canine, teenagers. Enucleate; it rarely recurs.",
+      "curveball": "A different mixed lucent-opaque jaw lesion shows ghost cells on histology. What is it, and what does it look like radiographically?",
+      "curveball_answer": "Ghost cells, anucleate keratinized epithelial cells, characterize the calcifying odontogenic cyst (Gorlin cyst). It appears as a well-defined unilocular lucency with variable flecks of calcification, often in the anterior jaws, and is treated with enucleation. Its solid counterpart, dentinogenic ghost cell tumor, is more aggressive.",
+      "learning_stage": "foundation",
+      "focus": "diagnosis"
+    },
+    {
+      "topic": "Jaw Cysts and Odontogenic Tumors",
+      "stem": "A 28-year-old man presents with painless expansion of the left mandibular body. Panorex shows a multilocular radiolucency, and contrast CT shows an expansile lesion with thinned cortices. He is booked for an incisional biopsy in clinic, and the resident asks what should be done before cutting into the lesion. Which is the most appropriate step before incisional biopsy?",
+      "choices": [
+        "Needle aspiration of the lesion",
+        "Technetium bone scan",
+        "Excision of the overlying gingival mucosa",
+        "Whole-body PET-CT"
+      ],
+      "answer": 0,
+      "explanation": "Every jaw radiolucency should be aspirated with a needle before incisional biopsy to exclude a vascular lesion such as an intraosseous arteriovenous malformation or aneurysmal bone cyst, which can bleed briskly or catastrophically when opened. Return of blood means stop and obtain vascular imaging. The aspirate also gives diagnostic clues, such as cheesy keratin in an OKC or straw-colored fluid in a dentigerous cyst. Bone scan and PET do not change biopsy safety.",
+      "why_wrong": [
+        "Correct.",
+        "A bone scan does not separate vascular from nonvascular lesions and does not change biopsy safety.",
+        "Mucosal excision does not reach the intraosseous lesion and gives no diagnostic information.",
+        "PET-CT is not part of the workup for a benign-appearing jaw lucency."
+      ],
+      "board_pearl": "Aspirate a jaw lucency before you cut. Bright blood return means stop and image the vasculature.",
+      "curveball": "The aspirate returns thick, creamy white material rather than blood. What lesion does this suggest, and why?",
+      "curveball_answer": "Thick, cheesy white aspirate suggests an odontogenic keratocyst, because its parakeratinized lining sheds keratin debris into the lumen. Analysis typically shows low soluble protein (under about 4 g/dL) compared with other odontogenic cysts. Histology is still required, and treatment includes an adjunct to lower recurrence.",
+      "learning_stage": "application",
+      "focus": "workup"
+    },
+    {
+      "topic": "Jaw Cysts and Odontogenic Tumors",
+      "stem": "A 19-year-old man underwent enucleation of a pericoronal mandibular lesion around an impacted third molar that looked like a dentigerous cyst on panorex. Final pathology reports unicystic ameloblastoma, with tumor islands infiltrating from the lining into the fibrous cyst wall. Margins cannot be assessed. He is now healing well. Which is the most appropriate next step?",
+      "choices": [
+        "No further treatment because unicystic lesions never recur",
+        "Adjuvant radiotherapy to the surgical bed",
+        "Resection with bony margins as for conventional ameloblastoma",
+        "Repeat curettage of the cavity only"
+      ],
+      "answer": 2,
+      "explanation": "Enucleation is adequate for unicystic ameloblastoma only when tumor is confined to the lining or lumen (luminal and intraluminal subtypes). When tumor infiltrates the fibrous wall (mural subtype), it behaves like conventional ameloblastoma, with recurrence rising sharply after enucleation alone. It therefore needs resection with bony margins, typically about 1 cm, with reconstruction as needed and long-term radiographic surveillance.",
+      "why_wrong": [
+        "Unicystic ameloblastoma recurs in 10-20% overall, and more often when there is mural invasion.",
+        "Radiation is not standard treatment for resectable ameloblastoma, which is relatively radioresistant.",
+        "Correct.",
+        "Curettage does not reliably clear tumor that has infiltrated the cyst wall and bone."
+      ],
+      "board_pearl": "Unicystic ameloblastoma: luminal or intraluminal means enucleation suffices. Mural invasion means resect with margins.",
+      "curveball": "Years later he develops lung nodules showing histologically benign-appearing ameloblastoma. What is this entity called, and how does it differ from ameloblastic carcinoma?",
+      "curveball_answer": "This is metastasizing (malignant) ameloblastoma: a tumor that looks histologically benign in both the primary and the metastasis, most often in the lung. Ameloblastic carcinoma, by contrast, shows cytologic malignant features such as atypia and high mitotic activity in the primary or recurrence, whether or not it has metastasized.",
+      "learning_stage": "senior_decision",
+      "focus": "management"
+    },
+    {
+      "topic": "Jaw Cysts and Odontogenic Tumors",
+      "stem": "A 45-year-old Black woman has an incidental finding on a dental panorex. She has no pain, swelling or sensory change. The film shows a well-defined mixed lucent and opaque lesion at the apices of her mandibular incisors, with an intact periodontal ligament space. All the involved teeth test vital on pulp testing, and none are restored. What is the most appropriate management?",
+      "choices": [
+        "Extract the involved incisors",
+        "Incisional biopsy of the lesion",
+        "Segmental mandibulectomy",
+        "Clinical and radiographic observation"
+      ],
+      "answer": 3,
+      "explanation": "A mixed lucent-opaque lesion at the apices of vital anterior mandibular teeth in a middle-aged Black woman is periapical cemento-osseous dysplasia, a benign reactive fibro-osseous process. It is diagnosed radiographically and observed. Biopsy or extraction into this poorly vascular, dense bone risks secondary osteomyelitis, so procedures are avoided. The key pitfall is mistaking an early lucent lesion for a periapical abscess and performing root canal therapy on a vital tooth.",
+      "why_wrong": [
+        "The teeth are vital and healthy, and extraction risks infection of the dysplastic bone.",
+        "Biopsy is unnecessary for the classic appearance and risks osteomyelitis in poorly vascular bone.",
+        "Resection is grossly excessive for a benign, reactive and self-limited lesion.",
+        "Correct."
+      ],
+      "board_pearl": "Vital teeth with a periapical mixed lesion in a middle-aged Black woman: cemento-osseous dysplasia. Leave it alone.",
+      "curveball": "A different patient has a painful radiopaque mass fused to the root of a mandibular first molar. What is it and how is it treated?",
+      "curveball_answer": "This is a cementoblastoma, a true benign neoplasm of cementoblasts that fuses to the root, causes pain and expansion, and has a radiolucent rim around the opaque mass. Treatment is excision of the mass together with the involved tooth, because leaving the tooth behind leads to recurrence.",
+      "learning_stage": "application",
+      "focus": "imaging"
+    }
+  ],
 }

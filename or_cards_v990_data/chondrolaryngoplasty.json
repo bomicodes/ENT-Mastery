@@ -1,0 +1,139 @@
+{
+ "slug": "chondrolaryngoplasty",
+ "title": "Chondrolaryngoplasty (Thyroid Cartilage Reduction), Open and Transoral",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Gender-Affirming Voice and Laryngeal Surgery",
+ "source_label": "Operative Techniques in Laryngology (2024), Ch 62 Chondrolaryngoplasty",
+ "indications": "Chondrolaryngoplasty reduces a prominent thyroid notch and laryngeal prominence, most often for gender dysphoria in transfeminine patients, sometimes combined with other facial feminization procedures. Patients should understand that some cartilage may remain visible or palpable, that the voice should not change, and that voice goals are addressed separately with therapy or glottoplasty. The open cervical approach is standard; a transoral vestibular approach avoids a neck scar and pairs well with mandibular contouring. Unrealistic expectations that persist after counseling are a caution. The defining safety principle is localizing the anterior commissure before any cartilage is removed.",
+ "setup": [
+  "General anesthesia through an LMA with a bronchoscopy adaptor so a flexible laryngoscope can view the glottis during the case",
+  "Bed turned 180 degrees; dexamethasone and glycopyrrolate given; neck extended on a shoulder roll",
+  "Incision premarked in a high relaxed skin tension line near the cervicomental angle; lidocaine with epinephrine infiltration",
+  "Fresh 15 blades, narrow malleable retractor, Freer elevators, Weitlaner retractors, 22-gauge spinal needle, drill or rongeur for calcified cartilage",
+  "Transoral option: armored tube, Deaver retractors, angled Beaver blade or ultrasonic bone aspirator, airway exchange catheter to switch to LMA"
+ ],
+ "landmarks": [
+  "Thyroid notch and superior border of the alae",
+  "Midline strap muscle raphe",
+  "Thyroid cartilage perichondrium (most adherent at the notch)",
+  "Petiole of the epiglottis",
+  "Anterior commissure level, marked by needle localization",
+  "Inferior border of the thyroid cartilage"
+ ],
+ "danger": [
+  "Anterior commissure detachment, causing permanent pitch lowering and dysphonia",
+  "Entry into the endolarynx at the notch, causing edema or airway issues",
+  "Over-resection of the posterior cartilage table",
+  "Mental nerves during transoral vestibular exposure",
+  "Breaching the neck skin from the transoral tunnel"
+ ],
+ "steps": [
+  [
+   "Indication and counseling",
+   "Operate for gender dysphoria related to a prominent thyroid notch. Explain that some cartilage will remain visible or palpable, that the voice should not change, and that voice goals need therapy or glottoplasty, staged separately. Caution patients whose unrealistic expectations persist after counseling."
+  ],
+  [
+   "Plan the incision",
+   "Mark the incision before surgery in a relaxed skin tension line as high as possible, ideally near the cervicomental junction. A higher incision hides better but may need to be longer; agree on the tradeoff with the patient. Infiltrate with lidocaine with epinephrine."
+  ],
+  [
+   "Airway setup",
+   "Use general anesthesia through an LMA with a bronchoscopy adaptor so a flexible laryngoscope can be passed during the case. Turn the bed 180 degrees, give dexamethasone and glycopyrrolate to aid scoping, and extend the neck on a shoulder roll."
+  ],
+  [
+   "Reach the cartilage",
+   "Dissect to the straps, divide the midline raphe and retract the straps laterally with Weitlaners or hooks. Expose the cartilage from the notch and superior alae down to the inferior border in the midline."
+  ],
+  [
+   "Elevate perichondrium front and back",
+   "Incise perichondrium in the midline and along the upper border of each ala. Raise posteriorly based flaps over the upper and central anterior cartilage, then elevate the perichondrium on the back of the upper border. Take great care at the notch, where it adheres most and airway entry causes edema."
+  ],
+  [
+   "Localize the anterior commissure",
+   "With the flexible scope through the LMA, pass a 22-gauge needle through the midline cartilage, starting at mid-height and moving upward, until it enters the larynx above the anterior commissure, ideally at or above the petiole. This is the critical safety step."
+  ],
+  [
+   "Mark the safe line",
+   "Leave the needle in place (safest) or mark the level with cautery rather than ink, which smears. This line marks the lower limit of resection for the rest of the case. The scope can then be removed."
+  ],
+  [
+   "Resect the prominence",
+   "Remove the protruding superior-anterior cartilage, focused around the notch, staying at least 2-3 mm above the marked level. Use a fresh 15 blade against a narrow malleable retractor placed behind the upper border; a drill or rongeur helps in calcified cartilage. The strip is usually wider near the midline."
+  ],
+  [
+   "Smooth the edges",
+   "Contour any sharp anterior ledge conservatively with a blade or drill so it is less palpable. Concentrate removal on the anterior edge and keep the posterior table, so the endolarynx is never entered, especially near the notch."
+  ],
+  [
+   "Check the profile",
+   "Remove the retractors, redrape the skin flaps, and judge the result by looking at the profile and palpating, then resect more if needed. Re-scope to confirm the anterior commissure is still attached."
+  ],
+  [
+   "Close",
+   "Irrigate the bed thoroughly and close in multiple layers with absorbable sutures, laying the perichondrium back in place (it usually needs no formal repair). Reapproximate the straps in the midline. A drain is usually unnecessary."
+  ],
+  [
+   "Transoral alternative",
+   "For a scarless approach, often combined with jaw contouring, start with an armored tube. Use a lower gingivobuccal incision with subperiosteal mandibular exposure, keeping the mental nerves, then tunnel subplatysmally to the larynx without breaching the neck skin, using Deaver retractors."
+  ],
+  [
+   "Transoral resection",
+   "Exchange to an LMA over an airway exchange catheter for needle localization, then cut obliquely superolateral with an angled Beaver blade, or an ultrasonic aspirator if ossified. Reapproximate the soft tissue, close the mucosa and apply a pressure wrap for 24 hours."
+  ],
+  [
+   "Aftercare and the complication to avoid",
+   "Discharge the same day with simple analgesia, no lifting over 10 pounds for 7-10 days, scar massage and sun protection for 12-18 months, and a soft diet for a week after transoral access. Anterior commissure detachment, which permanently lowers pitch and is hard to repair, is the disaster this technique is built to prevent."
+  ]
+ ],
+ "exit_check": [
+  "Repeat flexible laryngoscopy confirms the anterior commissure is intact and the endolarynx was not entered",
+  "Acceptable profile on inspection and palpation with no sharp ledge",
+  "Hemostasis, straps reapproximated in the midline and layered closure"
+ ],
+ "postop": [
+  "Same-day discharge with over-the-counter analgesia; opioids rarely needed",
+  "No lifting over 10 pounds for 7-10 days",
+  "Scar massage and strict sun protection for 12-18 months (open approach)",
+  "Transoral approach: soft diet and pressure wrap for 24 hours, soft diet for 1 week, gentle brushing and rinses from 1 week"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma or seroma",
+   "Temporary dysphonia",
+   "Temporary dysphagia or odynophagia",
+   "Laryngeal edema if the endolarynx was entered"
+  ],
+  "late": [
+   "Anterior commissure detachment with permanent pitch lowering (disastrous, poorly repairable)",
+   "Residual or recurrent prominence from under-resection",
+   "Hypertrophic or visible scar",
+   "Mental nerve hypoesthesia after transoral access"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the key safety step in chondrolaryngoplasty?",
+   "Needle localization of the anterior commissure under flexible laryngoscopy through the LMA before resecting cartilage, with resection kept 2-3 mm above that level."
+  ],
+  [
+   "Where does the anterior commissure lie relative to the thyroid cartilage?",
+   "Roughly at the midpoint of the anterior thyroid cartilage height in the midline, lower than many expect, which is why the needle is walked upward from mid-height."
+  ],
+  [
+   "Why is detachment of the anterior commissure so serious?",
+   "Loss of anterior fold attachment lowers pitch and causes dysphonia, worsening gender dysphoria; repair is difficult with limited success."
+  ],
+  [
+   "Why use an LMA rather than an endotracheal tube?",
+   "It allows a flexible scope to see the glottis and anterior commissure during the case, which a tube would obscure."
+  ],
+  [
+   "Does chondrolaryngoplasty change pitch?",
+   "No; if done correctly the vocal folds are untouched. Pitch goals need voice therapy or glottoplasty, staged separately."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (2024), Ch 62 Chondrolaryngoplasty, pp 541-547"
+ ]
+}

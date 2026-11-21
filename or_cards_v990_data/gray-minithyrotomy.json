@@ -1,0 +1,141 @@
+{
+ "slug": "gray-minithyrotomy",
+ "title": "Gray Minithyrotomy with Fat Implantation for Vocal Fold Scar and Sulcus",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Vocal Fold Sulcus / Scar",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Vocal fold scar or sulcus deformity with loss of superficial lamina propria pliability, stiff cover and poor mucosal wave, in a patient with normal vocal fold mobility who has failed voice therapy. A small window drilled through the thyroid cartilage gives access to the subepithelial plane without a mucosal incision, allowing release of the scar and implantation of autologous fat along the length of the fold under endoscopic view. It is not a treatment for paralysis or atrophy-related glottic insufficiency, and patients should expect improvement rather than a normal voice.",
+ "setup": [
+  "Stroboscopy mapping the stiff segment; voice therapy completed.",
+  "Counsel that results vary and may fade if fat resorbs.",
+  "General anesthesia with 5.0 cuffed tube; IV dexamethasone 10-12 mg before starting.",
+  "Suspension laryngoscope with draped arm, 0- and 30-degree telescopes, continuous video visible to surgeon and assistant.",
+  "1-3 mm cutting burr, 22-27 g needles, Marchal dilator, Gimmick elevator, Bellucci scissors, alligator forceps, fibrin glue or bone wax.",
+  "Optional 16 g angiocatheter and 3 mL syringe for fat injection."
+ ],
+ "landmarks": [
+  "Thyroid prow at the glottic level",
+  "Outer perichondrium flap",
+  "Anterior commissure (needle localization)",
+  "Minithyrotomy 3-5 mm off midline at fold level",
+  "Subepithelial (superficial lamina propria) plane",
+  "Long axis of the vocal fold toward the vocal process"
+ ],
+ "danger": [
+  "Drilling perpendicular to the lamina instead of along the fold axis",
+  "Large epithelial tear causing graft extrusion",
+  "Oversized pocket letting the graft migrate superolaterally",
+  "Undercorrection with too little fat",
+  "Edema from full-length dissection"
+ ],
+ "steps": [
+  [
+   "Indication and expectations",
+   "Use for loss of cover pliability (scar or sulcus) with normal fold motion. It accesses the subepithelial plane without an epithelial incision but does not fix epithelium and gives little medialization, so it is not a paralysis or atrophy operation. Counsel that results can fade if fat resorbs."
+  ],
+  [
+   "Anesthesia",
+   "Use general anesthesia for stillness. Intubate with a 5.0 cuffed tube so the whole membranous fold is visible, and give 10-12 mg IV dexamethasone before starting, because edema builds quickly during full-length dissection."
+  ],
+  [
+   "Suspend and inspect",
+   "Suspend a laryngoscope that shows the anterior commissure to the vocal process. Inspect with a 0-degree (or 30-degree) telescope and correlate with stroboscopy. Make sure the scope tip does not evert the folds and distort where the vibratory edge appears."
+  ],
+  [
+   "Set up video and drape",
+   "Drape the suspension arm, which will be bumped. Run continuous video through the microscope or an assistant-held telescope, with monitors visible to both surgeon and assistant. A right-handed surgeon usually works from the patient's right."
+  ],
+  [
+   "Neck incision",
+   "Make a 2-3 cm horizontal incision over the thyroid prow at the expected glottic level. Divide the straps in the midline and sweep tissue off the cartilage with a Kittner, using cautery sparingly to protect the fat."
+  ],
+  [
+   "Harvest the fat",
+   "Take fat from the incision area, no more than 1-2 mL per fold, as homogeneous strips about the length of the fold (8-15 mm). Handle it gently, avoid heat, trim fascial strands, and keep it in saline."
+  ],
+  [
+   "Elevate perichondrium",
+   "Incise the outer perichondrium of the thyroid cartilage in the midline and elevate it superolaterally to expose about 1 cm2 on each side of the prow. Keep the flap intact so it can be laid back over the minithyrotomy at closure."
+  ],
+  [
+   "Needle-localize the glottis",
+   "Pass the finest needle that will penetrate (27 g, working up to 22 g) through the midline thyroid cartilage while the assistant watches it enter near the anterior commissure. Reposition until the glottic level is confirmed and mark it; with experience, angle the needle to rehearse the tunnel path."
+  ],
+  [
+   "Drill the minithyrotomy",
+   "Center a 1-3 mm cutting burr about 3-5 mm off midline at fold level, and angle the tunnel along the long axis of the fold, oblique rather than perpendicular to the lamina. Stop as soon as the inner cortex gives, and smooth the inner edge with a middle ear curette to avoid a saucerized hole."
+  ],
+  [
+   "Enter the subepithelial plane",
+   "Enter gently with a blunt fine probe such as a Marchal dilator, confirming endoscopically that its tip lies just under the epithelium. This orients you to the plane and the fold's axis."
+  ],
+  [
+   "Release the scar",
+   "Dissect mostly with blunt tympanoplasty instruments such as the Gimmick elevator; the sharp duckbill can easily tear mucosa. Reserve Bellucci scissors for dense adhesions. Pinhole perforations are acceptable, but stop and return later if there is a large tear."
+  ],
+  [
+   "Limit the pocket",
+   "Keep the pocket to the diseased segment mapped on stroboscopy and palpation. Normal superficial lamina propria separates very easily, and an oversized pocket, especially one running laterally onto the superior surface, lets the graft migrate under phonatory forces."
+  ],
+  [
+   "Place the fat",
+   "Insert one strip per side. Pull its leading (posterior) edge with alligator forceps and push with a probe, while the assistant smooths the medial edge with a microinstrument. Alternatively, inject the fat through a 16-gauge angiocatheter sheath from a 3 mL syringe. Do not undercorrect, since too little fat causes most failures."
+  ],
+  [
+   "Close and recover",
+   "Seal the tunnel with fibrin glue or bone wax, lay back the perichondrium, irrigate, and close, adding a rubber band drain only if needed. Discharge the same day on steroids with head elevation and a week of voice rest. Expect about a month of phonatory recovery, with review at 2-4 weeks."
+  ]
+ ],
+ "exit_check": [
+  "Pocket limited to the diseased segment with fat filling it",
+  "Epithelium intact or only pinhole perforations",
+  "Tunnel sealed and perichondrium replaced"
+ ],
+ "postop": [
+  "Same-day discharge in most patients",
+  "IV steroids and head elevation",
+  "One week of voice rest",
+  "Review at 2-4 weeks with stroboscopy",
+  "Phonatory recovery of about a month; monitor for late fade from fat resorption"
+ ],
+ "complications": {
+  "early": [
+   "Vocal fold epithelial perforation",
+   "Laryngeal edema",
+   "Neck hematoma",
+   "Graft extrusion"
+  ],
+  "late": [
+   "Suboptimal voice improvement",
+   "Deterioration from fat resorption",
+   "Graft migration",
+   "Persistent stiffness from epithelial or deep changes"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What layer is targeted by the Gray minithyrotomy?",
+   "The superficial lamina propria (Reinke space), the layer lost or scarred in sulcus and scar."
+  ],
+  [
+   "Why angle the minithyrotomy along the axis of the fold?",
+   "Dissection must run lengthwise along the fold; a perpendicular tunnel gives poor reach and risks perforation."
+  ],
+  [
+   "Why is this not an operation for vocal fold paralysis?",
+   "It provides little medialization; paralysis needs injection, thyroplasty or reinnervation."
+  ],
+  [
+   "What is the most common reason for failure?",
+   "Too little fat placed, so undercorrection should be avoided."
+  ],
+  [
+   "Name the sulcus types and which most impairs vibration.",
+   "Type I physiologic, type II sulcus vergeture and type III sulcus vocalis; types II and III are pathologic, with type III, extending into the ligament, the most severe."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Ch 56 The Gray Minithyrotomy for Vocal Fold Scar/Sulcus Deformity (pp 487-493)"
+ ]
+}
