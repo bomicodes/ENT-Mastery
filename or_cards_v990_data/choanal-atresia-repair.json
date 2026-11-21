@@ -1,0 +1,123 @@
+{
+ "slug": "choanal-atresia-repair",
+ "title": "Endoscopic Choanal Atresia Repair With Cross-Over Mucosal Flaps",
+ "domain": "Rhinology",
+ "or_family_v190": "pediatric",
+ "linked_topic": "Choanal Atresia",
+ "source_label": "Atlas of Endoscopic Sinus and Skull Base Surgery 2e, Ch 5",
+ "indications": "Bilateral choanal atresia in a neonate, which presents with cyclic cyanosis relieved by crying and needs a secure oral airway (McGovern nipple or intubation) until repair, and symptomatic unilateral atresia, which usually presents later with unilateral rhinorrhea and obstruction. The endoscopic transnasal approach with posterior septectomy and cross-over mucosal flaps covers raw bone in the new choana and avoids routine stenting. Screen every child for CHARGE association and other airway anomalies before surgery.",
+ "setup": [
+  "Supine with head slightly extended, oral RAE tube secured to the lower lip",
+  "0-degree 2.7 mm or 4 mm endoscope and delicate instruments, including otologic instruments for neonates",
+  "Micro Kerrison punches, through-cutting forceps, small drill and microdebrider",
+  "Topical decongestant pledgets for at least 5 minutes; saline or local anesthetic for submucosal infiltration",
+  "Fibrin glue or soft anchored pack with tie suture available"
+ ],
+ "landmarks": [
+  "Atretic plate (bony, mixed, or membranous)",
+  "Vomer medially and medial pterygoid plate laterally",
+  "Posterior septum and its free edge",
+  "Nasal floor and inferior turbinate tail",
+  "Level of the middle turbinate lower edge (superior limit)",
+  "Nasopharynx beyond the plate"
+ ],
+ "danger": [
+  "Skull base and sphenoid above the level of the middle turbinate",
+  "Drilling posteriorly toward the cervical spine or into the nasopharyngeal wall",
+  "Sphenopalatine and pterygoid vessels laterally",
+  "Bare bone left uncovered, promoting restenosis",
+  "Mucosal trauma from postoperative suction catheters"
+ ],
+ "steps": [
+  [
+   "Review CT",
+   "On axial and coronal CT, define whether the plate is bony, mixed, or membranous (medial pterygoid plate laterally, thickened vomer medially), unilateral or bilateral, and whether septal deviation narrows the field. Evaluate for CHARGE features and other anomalies before scheduling surgery."
+  ],
+  [
+   "Prepare a small nose",
+   "Use a 0-degree scope and delicate, even otologic, instruments. Decongest with pledgets for at least 5 minutes, then gently outfracture the inferior turbinate under a cotton pledget to widen the working corridor without tearing mucosa."
+  ],
+  [
+   "Start on the roomier side",
+   "In bilateral cases begin on the side with more space. Infiltrate the posterior septal and nasal floor mucosa with saline or local anesthetic to lift it off the bone and make the flaps easier to elevate cleanly."
+  ],
+  [
+   "Draw the first flap",
+   "Make a vertical transfixing septal incision about 1 cm in front of the plate. For a left atresia, carry it as an L down onto the nasal floor toward the inferior turbinate tail (a J on the right) to create a floor-based mucosal flap."
+  ],
+  [
+   "Shape the opposite flap",
+   "On the other side of the septum, turn the upper end of the vertical cut back along the level of the middle turbinate free edge to the end of the septum and open into the nasopharynx. This creates a roof-based flap that will line the top of the new choana."
+  ],
+  [
+   "Elevate and protect the flaps",
+   "Raise both flaps in the subperichondrial and subperiosteal plane, reflect the atretic-side flap up and out of the way, and preserve the opposite flap carefully. Pharyngeal mucosa on the back of the plate can be removed together with the bone."
+  ],
+  [
+   "Resect the posterior septum and plate",
+   "Remove the posterior bony-cartilaginous septum (vomer) and the atretic plate with a micro Kerrison, drill, through-cutting forceps, or microdebrider. Stay below the lower edge of the middle turbinate to keep away from the sphenoid and skull base."
+  ],
+  [
+   "Take the lateral pterygoid bar",
+   "Separate pharyngeal from nasal mucosa at the lateral edge with an angled elevator, then remove the thickened medial pterygoid extension with a Kerrison, drill, or curette. Widening laterally gives the largest opening and reduces restenosis."
+  ],
+  [
+   "Trim and place the flaps",
+   "Trim redundant mucosa and drape the flaps so the floor-based and roof-based flaps cross over and cover both the floor and roof of the new common choana, leaving no raw bone exposed to form granulation and scar."
+  ],
+  [
+   "Secure the flaps",
+   "Hold the flaps with fibrin glue or a soft anchored pack tied to a suture that is taped to the nose and removed after 1 to 2 days. Stents are not used, since they cause granulation, pressure necrosis, and care burden without improving patency."
+  ]
+ ],
+ "exit_check": [
+  "Wide common posterior choana with a scope passing freely into the nasopharynx",
+  "Flaps covering floor and roof with no exposed bone",
+  "Hemostasis and secure pack or glue fixation"
+ ],
+ "postop": [
+  "Saline washes at least three times daily for a month (about 1 mL per side in newborns)",
+  "Tapering topical steroid drops for about 3 weeks",
+  "No suction catheters into the nose in the early weeks",
+  "Endoscopy at about 10 days, then periodically for a year"
+ ],
+ "complications": {
+  "early": [
+   "Bleeding",
+   "Airway obstruction from pack displacement in a neonate",
+   "Flap displacement",
+   "CSF leak if dissection strays superiorly"
+  ],
+  "late": [
+   "Restenosis from granulation or scar",
+   "Synechiae",
+   "Obstruction from posterior inferior turbinate enlargement into the septal window, treated with partial turbinectomy",
+   "Persistent symptoms from associated CHARGE anomalies"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How does bilateral choanal atresia present in a newborn and how do you secure the airway?",
+   "Cyclic cyanosis relieved by crying, inability to pass a catheter; use an oral airway or McGovern nipple, intubating if needed, until repair."
+  ],
+  [
+   "What proportion of atretic plates are mixed bony-membranous and what borders it?",
+   "Most are mixed (about 70%), with pure bony less common and pure membranous rare; the vomer is medial and the medial pterygoid plate lateral."
+  ],
+  [
+   "List the CHARGE components.",
+   "Coloboma, Heart defects, Atresia of the choanae, Retardation of growth and development, Genitourinary anomalies, Ear anomalies and deafness (CHD7)."
+  ],
+  [
+   "Why perform a posterior septectomy?",
+   "It creates a single large common choana that resists restenosis better than two separate openings and provides the mucosa for cross-over flaps."
+  ],
+  [
+   "What is the superior limit of dissection and why?",
+   "The lower edge of the middle turbinate, to stay below the sphenoid and skull base."
+  ]
+ ],
+ "source_basis": [
+  "Atlas of Endoscopic Sinus and Skull Base Surgery, 2nd ed (Palmer, Chiu, Adappa, eds), Ch 5 Endoscopic Repair of Choanal Atresia, pp 33-38"
+ ]
+}

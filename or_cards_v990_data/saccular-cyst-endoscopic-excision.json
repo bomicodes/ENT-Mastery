@@ -1,0 +1,135 @@
+{
+ "slug": "saccular-cyst-endoscopic-excision",
+ "title": "Endoscopic CO2 Laser Excision of Saccular Cyst",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Laryngocele",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Saccular cysts are mucus-filled dilations of the laryngeal saccule that do not communicate with the laryngeal lumen (unlike a laryngocele). Excise for hoarseness, airway obstruction, dysphagia, or concern for an underlying malignancy, especially in smokers where a carcinoma can obstruct the saccule. Lateral cysts bulge the false fold and aryepiglottic fold; anterior cysts project from the anterior ventricle. Most adult cysts confined to the larynx are suited to transoral CO2 laser excision; observation with photodocumentation or interval CT is reasonable in asymptomatic nonsmokers or frail patients, and substantial extralaryngeal extension favors an open approach.",
+ "setup": [
+  "Fine-cut (1 to 1.5 mm) contrast CT to confirm a fluid-filled cyst, define lateral versus anterior type, and show extension through the thyrohyoid membrane.",
+  "Airway plan for large cysts: discuss awake techniques or standby tracheotomy if the supraglottis is significantly obstructed.",
+  "Laser-safe 5.0 to 5.5 tube, saline-filled cuff, eye and face protection, and low FiO2.",
+  "Lindholm or bivalved supraglottic laryngoscope, microscope with CO2 micromanipulator, platform and 5-French suctions, bipolar laryngeal cautery, and microscissors.",
+  "Prepare an epiglottic traction suture if the epiglottis obscures the view."
+ ],
+ "landmarks": [
+  "False vocal fold",
+  "Aryepiglottic fold",
+  "Laryngeal ventricle and saccule",
+  "True vocal fold (protect)",
+  "Paraglottic space",
+  "Thyrohyoid membrane (external extension)"
+ ],
+ "danger": [
+  "Laser fire near the supraglottic tube",
+  "Thermal or mechanical injury to the true vocal fold",
+  "Deep paraglottic dissection at or below the true fold",
+  "Leaving ventricular mucosa (recurrence)",
+  "Postoperative supraglottic edema in large dissections"
+ ],
+ "steps": [
+  [
+   "Confirm the indication",
+   "Excise for hoarseness, airway compromise, or concern for malignancy, especially in smokers where a ventricular carcinoma may obstruct the saccule. Asymptomatic nonsmokers or frail patients can be observed with photodocumentation or interval imaging, accepting a small chance of growth."
+  ],
+  [
+   "Image first",
+   "Review fine-cut contrast CT to confirm a fluid-filled cyst rather than an air-filled laryngocele or solid tumor, classify it as lateral or anterior, and look for extension through the thyrohyoid membrane. Substantial neck extension or pediatric cysts with external extension favor an open approach."
+  ],
+  [
+   "Laser-safe airway",
+   "Intubate with a 5.0 to 5.5 laser-protected tube with a saline-filled cuff and set up standard laser precautions. With a large obstructing cyst, coordinate the induction plan with anesthesia and have tracheotomy equipment ready."
+  ],
+  [
+   "Wide supraglottic exposure",
+   "Seat a Lindholm or bivalved laryngoscope in the vallecula to spread the supraglottis, adding an epiglottic traction suture if needed. Under anesthesia the cyst may look smaller than in clinic, so look for fullness low in the aryepiglottic fold and false fold."
+  ],
+  [
+   "Curvilinear incision",
+   "Make a curvilinear CO2 laser incision through the mucosa over the lateral false fold, staying superficial to the cyst wall. For large lateral cysts add a relaxing cut into the aryepiglottic fold to widen access to the superior and lateral poles."
+  ],
+  [
+   "Dissect laterally on the wall",
+   "Retract the mucosa medially and develop the lateral cyst wall bluntly with a 5-French suction or dull elevator. Staying exactly on the wall keeps the cyst intact, which makes complete removal much easier than chasing a collapsed sac."
+  ],
+  [
+   "Control bleeding",
+   "Use suction and bipolar laryngeal cautery for the larger supraglottic vessels, which the CO2 laser does not reliably seal. Keeping the field dry preserves the plane around the cyst and avoids rupture."
+  ],
+  [
+   "Free the inferior pole",
+   "Continue blunt dissection around the inferior aspect of the cyst toward the ventricle, using microscissors as needed. This is where the cyst connects to its saccular origin and where most of the remaining attachment lies."
+  ],
+  [
+   "Protect the true fold",
+   "Shield the true vocal fold with a platform suction while making the anterior and posterior laser cuts that release the specimen. Thermal or mechanical injury here produces dysphonia that outweighs the benefit of the excision."
+  ],
+  [
+   "Remove ventricular mucosa",
+   "Include the attached ventricular and false fold mucosa with the specimen, trimming part of the false fold if needed for exposure. Leaving saccular or ventricular lining behind is the main cause of recurrence."
+  ],
+  [
+   "Respect the paraglottic limit",
+   "Do not dissect deep into the paraglottic space at or below the level of the true fold. Deep dissection there risks injury to the thyroarytenoid muscle and recurrent laryngeal nerve branches without improving cure."
+  ],
+  [
+   "Rest the tongue",
+   "In longer cases release suspension periodically to limit lingual nerve compression, tongue numbness, and taste change from prolonged pressure. Re-suspend, re-establish exposure of the bed, and confirm hemostasis before the final inspection."
+  ],
+  [
+   "Final inspection and pathology",
+   "Inspect the bed with angled telescopes for residual lining and bleeding, then send the specimen for histology to exclude carcinoma, which can coexist with or cause a saccular cyst in smokers."
+  ]
+ ],
+ "exit_check": [
+  "Cyst removed with ventricular lining and no residual sac on telescope",
+  "True vocal fold uninjured",
+  "Hemostasis and supraglottic airway patent"
+ ],
+ "postop": [
+  "Usually outpatient; admit for airway observation after extensive dissection",
+  "Reflux therapy to limit granulation",
+  "Normal diet as tolerated",
+  "Office laryngoscopy in a few weeks; image if recurrence suspected"
+ ],
+ "complications": {
+  "early": [
+   "Supraglottic edema and airway compromise",
+   "Bleeding",
+   "Tongue numbness or taste change",
+   "Laser injury"
+  ],
+  "late": [
+   "Recurrence (often needs open re-excision)",
+   "Dysphonia from true fold injury",
+   "Granulation tissue",
+   "Missed carcinoma"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How does a saccular cyst differ from a laryngocele?",
+   "A saccular cyst is mucus-filled and does not communicate with the laryngeal lumen; a laryngocele is an air-filled dilation of the saccule that does communicate."
+  ],
+  [
+   "Why must you consider cancer in an adult smoker with a saccular cyst or laryngocele?",
+   "A ventricular or supraglottic carcinoma can obstruct the saccular orifice; the specimen and ventricle must be examined histologically."
+  ],
+  [
+   "What is the key technical step to prevent recurrence?",
+   "Removing the cyst together with its ventricular and saccular mucosal lining."
+  ],
+  [
+   "When is an open external approach favored?",
+   "Large cysts extending through the thyrohyoid membrane into the neck, pediatric cysts with external extension, or recurrence after endoscopic excision."
+  ],
+  [
+   "Why use bipolar cautery during supraglottic dissection?",
+   "The CO2 laser does not seal larger supraglottic vessels."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Chapter 27: Endoscopic Excision of Saccular Cyst (pp 225-230)"
+ ]
+}

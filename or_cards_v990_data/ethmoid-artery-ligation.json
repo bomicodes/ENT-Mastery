@@ -1,0 +1,131 @@
+{
+ "slug": "ethmoid-artery-ligation",
+ "title": "Anterior and Posterior Ethmoid Artery Ligation (endoscopic and external)",
+ "domain": "Rhinology",
+ "or_family_v190": "sinus",
+ "linked_topic": "Epistaxis Surgical Control",
+ "source_label": "Atlas of Endoscopic Sinus and Skull Base Surgery 2e, Ch 4",
+ "indications": "Control of the anterior and posterior ethmoid arteries for epistaxis from the ethmoid (internal carotid) territory, typically superior or posterior bleeding that persists despite sphenopalatine artery ligation, after trauma, or when angiographic embolization is unsafe because these branches arise from the ophthalmic artery. Also performed endonasally as a devascularizing step during anterior skull base tumor resection. For epistaxis, an external or endoscope-assisted orbital approach is preferred over a full endoscopic ethmoidectomy, which puts the skull base at risk merely to avoid a small scar.",
+ "setup": [
+  "Supine, head up 15-30 degrees, eyes taped but exposed in the field for globe checks",
+  "Navigation registered for endoscopic cases; 0- and angled endoscopes, diamond burs, bipolar forceps, and clip appliers",
+  "External set: Lynch or transcaruncular incision, Freer elevators, thin malleable retractors, loupes or 0-degree scope",
+  "Local anesthetic with epinephrine for infiltration and topical decongestion",
+  "Lateral canthotomy and cantholysis instruments open on the back table"
+ ],
+ "landmarks": [
+  "Anterior ethmoid foramen notch between superior oblique and medial rectus on coronal CT",
+  "AEA one cell behind the frontal ostium, between bulla and basal lamellae",
+  "PEA at the junction of the sphenoid roof and posterior ethmoid",
+  "Frontoethmoid suture line along the medial orbital wall",
+  "Anterior lacrimal crest and lacrimal sac",
+  "24-12-6 mm rule: AEA, PEA, optic nerve"
+ ],
+ "danger": [
+  "Optic nerve only about 6 mm behind the PEA",
+  "Artery retracting into the orbit with expanding hematoma",
+  "Skull base fracture or CSF leak from monopolar use or aggressive dissection",
+  "Lateral lamella of the cribriform plate where the AEA enters",
+  "Medial canthal webbing after poorly designed Lynch incision"
+ ],
+ "steps": [
+  [
+   "Pick the route",
+   "For skull base tumors, control the vessels endonasally as part of the resection. For epistaxis, favor an external endoscope-assisted approach rather than a full ethmoidectomy, because clearing the entire skull base simply to avoid a small scar exposes the patient to CSF leak and orbital injury."
+  ],
+  [
+   "Map the artery on CT",
+   "On the first coronal cut behind the globe, find the notch in the lamina between the superior oblique and medial rectus marking the anterior ethmoid foramen. Note whether the artery hangs below the skull base on a mesentery (about one-third of patients) and whether a suprabullar recess is present."
+  ],
+  [
+   "Expose the skull base endonasally",
+   "Perform uncinectomy, frontal recess dissection, bulla removal, posterior ethmoidectomy, and sphenoidotomy, then clear every cell along the skull base from the sphenoid roof to the frontal ostium. Add a Draf III when complete anterior skull base exposure is needed for tumor work."
+  ],
+  [
+   "Dissect between septations",
+   "Move the debrider or curette in and out between the skull base partitions rather than sweeping across them. An artery on a mesentery can run within a septation, and a lateral sweep may avulse it, causing brisk bleeding and retraction toward the orbit."
+  ],
+  [
+   "Find the vessels",
+   "The AEA usually sits one cell behind the frontal ostium, between the bulla and basal lamellae, running obliquely from posterolateral to anteromedial. The PEA lies at the junction of the sphenoid roof and posterior ethmoid and is smaller. Confirm both with navigation before working on them."
+  ],
+  [
+   "Thin the bony canal",
+   "Use a diamond bur to thin the bone over a broad front at the midpoint of the ethmoid roof, away from the orbit. Working medially keeps the artery from being transected at the lamina, where its cut end can retract into the orbit and form a hematoma."
+  ],
+  [
+   "Coagulate",
+   "Expose a short segment and apply bipolar forceps; clips are difficult because the vessel remains partly encased in bone. Never use monopolar cautery on the skull base, which can fracture it and cause a CSF leak. Repeat the process on the PEA if needed."
+  ],
+  [
+   "External incision",
+   "For external ligation, inject and make a curved Lynch incision midway between the medial canthus and nasal dorsum, with a notch or W-plasty at the canthus to prevent webbing, or use a transcaruncular incision. Carry the incision directly to bone."
+  ],
+  [
+   "Subperiosteal orbital dissection",
+   "Elevate the periosteum off the medial orbital wall, control diploic veins with bipolar, and retract orbital contents laterally with a thin malleable. Continue posteriorly past the lacrimal sac along the frontoethmoid suture using loupes or a 0-degree endoscope for magnification and light."
+  ],
+  [
+   "Use the 24-12-6 rule",
+   "Along the frontoethmoid suture, the AEA lies about 24 mm behind the anterior lacrimal crest, the PEA about 12 mm further back, and the optic nerve about 6 mm behind the PEA. Clip or bipolar the AEA, and the PEA only if needed, and go no further posteriorly."
+  ],
+  [
+   "Close",
+   "Release retraction, confirm hemostasis, and close the periosteum and deep layers precisely before a standard fine facial skin closure. Accurate layered closure at the canthus minimizes webbing and visible scarring from the Lynch incision."
+  ],
+  [
+   "Watch the eye",
+   "Check visual acuity, pupils, and motility hourly for about 6 hours. If the AEA retracts and an orbital hematoma expands intraoperatively, decompress endoscopically; if vision is threatened after surgery, perform lateral canthotomy and cantholysis immediately and then consider formal decompression."
+  ]
+ ],
+ "exit_check": [
+  "Bleeding controlled with the target vessel coagulated or clipped",
+  "Globe soft with normal pupil and no proptosis",
+  "No CSF leak at the skull base"
+ ],
+ "postop": [
+  "Hourly vision, pupil, and motility checks for about 6 hours",
+  "Head elevation, avoid straining and nose blowing",
+  "Saline irrigations after endoscopic approach",
+  "Incision care and suture removal for external approach"
+ ],
+ "complications": {
+  "early": [
+   "Orbital hematoma with risk to vision",
+   "CSF leak from skull base injury",
+   "Rebleeding",
+   "Diplopia from medial rectus or superior oblique (trochlear) disturbance"
+  ],
+  "late": [
+   "Medial canthal webbing or visible scar",
+   "Epiphora from lacrimal injury",
+   "Mucocele or frontal recess stenosis",
+   "Persistent epistaxis from other territories"
+  ]
+ },
+ "attending_followup": [
+  [
+   "State the 24-12-6 rule.",
+   "From the anterior lacrimal crest along the frontoethmoid suture: AEA about 24 mm, PEA about 12 mm further, optic nerve about 6 mm behind the PEA."
+  ],
+  [
+   "Why is embolization not used for ethmoid artery bleeding?",
+   "The ethmoid arteries arise from the ophthalmic artery (internal carotid system), so embolization risks central retinal artery occlusion and blindness."
+  ],
+  [
+   "How do you predict a dangerous low-hanging AEA on CT?",
+   "Look for the artery traveling on a mesentery below the ethmoid roof, often with a suprabullar recess; this occurs in roughly one-third of patients."
+  ],
+  [
+   "Why bipolar and not monopolar on the skull base?",
+   "Monopolar current can fracture the thin skull base and cause a CSF leak or intracranial injury."
+  ],
+  [
+   "An expanding orbital hematoma develops after AEA injury with a falling acuity. Next step?",
+   "Immediate lateral canthotomy and inferior cantholysis, followed by endoscopic medial orbital decompression if needed."
+  ]
+ ],
+ "source_basis": [
+  "Atlas of Endoscopic Sinus and Skull Base Surgery, 2nd ed (Palmer, Chiu, Adappa, eds), Ch 4 Endoscopic and Open Anterior/Posterior Ethmoid Artery Ligation, pp 25-32"
+ ]
+}

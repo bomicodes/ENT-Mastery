@@ -1,0 +1,136 @@
+{
+ "slug": "sentinel-node-biopsy",
+ "title": "Sentinel Lymph Node Biopsy (Melanoma / Early Oral Cancer)",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "headneck",
+ "linked_topic": "Sentinel Lymph Node Biopsy in Oral Cavity Cancer",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "A staging operation for the clinically and radiologically node-negative neck. In cutaneous melanoma it is discussed and offered for T1b and thicker tumors (Breslow 0.8 mm or more, or under 0.8 mm with ulceration) and considered for thinner tumors with other high-risk features; it remains useful for staging thick (T4) melanoma. It is standard staging for Merkel cell carcinoma and selectively used for high-risk cutaneous SCC. In cT1-T2 N0 oral cavity SCC that can be resected transorally without a free flap, it is an accepted alternative to elective neck dissection in experienced centers, with similar survival and less morbidity. It is not suitable for clinically node-positive necks, and an elective neck dissection is often preferred when the neck must be entered anyway for a free flap or when the patient may not tolerate a second operation.",
+ "setup": [
+  "Confirm cN0 with ultrasound (with FNA of any suspicious node), CT or MRI; for melanoma, review Breslow depth, ulceration and mitotic rate on the diagnostic biopsy.",
+  "Lymphoscintigraphy: four peritumoral intradermal or submucosal Tc-99m colloid (or tilmanocept) injections 1 to 2 mm from the lesion, without prior local anesthetic infiltration, then dynamic and static imaging plus SPECT/CT, on the day of or the day before surgery.",
+  "Review the images with nuclear medicine before surgery to agree the number, levels, sides and echelon of the hot nodes, including parotid, contralateral or unexpected basins.",
+  "Equipment: calibrated collimated handheld gamma probe, a recording board for counts per node, optical tracer (blue dye or ICG with near-infrared camera) if used, and a facial nerve monitor if a parotid node is expected.",
+  "Book a provisional completion neck dissection within about 3 weeks for oral cancer in case serial sectioning is positive, and consent for a 20 to 40 percent chance of further surgery."
+ ],
+ "landmarks": [
+  "Primary tumor or wide local excision site",
+  "Anterior border of sternocleidomastoid",
+  "Posterior belly of digastric (level II nodes lie between it and SCM)",
+  "Omohyoid crossing the internal jugular vein (level III nodes)",
+  "Submandibular gland and marginal mandibular nerve (level I)",
+  "Parotid tail and facial nerve for preauricular and parotid basins",
+  "Spinal accessory nerve for posterior neck and occipital basins"
+ ],
+ "danger": [
+  "Shine-through from a nearby primary masking a level I sentinel node",
+  "Marginal mandibular nerve in level I",
+  "Facial nerve branches in a parotid sentinel node",
+  "Spinal accessory nerve in level II and V",
+  "Leaving a hot node behind",
+  "Disrupting the lymphatics by doing the wide excision first"
+ ],
+ "steps": [
+  [
+   "Position and survey",
+   "Position the patient supine with a shoulder roll and head turned. Sweep the gamma probe slowly in a crosshatch pattern over every basin seen on imaging, both sides of the neck for midline tumors, and mark each hot spot on the skin."
+  ],
+  [
+   "Inject optical tracer",
+   "After induction, inject blue dye or ICG at four peritumoral sites as for the radiotracer, about 0.5 to 1 mL in total per site, then change gloves. Proceed promptly because these tracers move through the sentinel nodes quickly into second-echelon nodes."
+  ],
+  [
+   "Manage shine-through",
+   "When the primary lies close to the basin, as with floor of mouth tumors and level I, consider resecting the primary first or shielding it so its activity does not swamp the probe. For melanoma, take the sentinel nodes before the wide local excision so lymphatics are not disrupted."
+  ],
+  [
+   "Plan the incision",
+   "Place a short incision directly over each hot spot in a skin crease, sited so it can be incorporated into a later neck dissection or parotidectomy. Separate small incisions may be used for different basins, and the scar need not be excised later."
+  ],
+  [
+   "Approach the node",
+   "Raise a small subplatysmal flap, find the anterior border of the SCM and retract it, or split it along its fibres for deep nodes. Repeatedly point the probe into the wound to steer the dissection toward the highest count."
+  ],
+  [
+   "Confirm in vivo",
+   "Before removal, confirm the node is hot with the probe aimed away from the primary and, if using a dye, that it is blue or fluorescent or fed by a stained lymphatic. Level II nodes usually lie between SCM and digastric; level III nodes near the omohyoid and IJV."
+  ],
+  [
+   "Excise with minimal handling",
+   "Free the node with a small cuff of surrounding fat, controlling the hilar vessels with clips or bipolar. Avoid grasping or cutting the capsule, because pathology will serially section the whole node."
+  ],
+  [
+   "Count ex vivo",
+   "Record an average count over 5 to 10 seconds for each excised node. A node counts as sentinel if it is at least ten times background and at least 10 percent of the hottest node; label each with count, color, size and location."
+  ],
+  [
+   "Check the bed",
+   "Recount the wound bed after every node. Continue to look for further nodes until the residual bed count is below 10 percent of the hottest ex vivo count, and remove any clinically suspicious node even if it is not hot."
+  ],
+  [
+   "Hemostasis and closure",
+   "Achieve careful hemostasis, with a low threshold for a small drain, and close in layers so the plane is easy to re-enter at completion dissection. A hematoma or lump complicates both surveillance and later surgery."
+  ],
+  [
+   "Treat the primary",
+   "Perform the transoral excision of the oral primary with clear margins, or the melanoma wide local excision with margins set by Breslow depth, after the sentinel nodes are out. Use local, regional or primary closure, avoiding flaps that would redirect drainage before mapping."
+  ],
+  [
+   "Act on pathology",
+   "Serial sectioning with immunohistochemistry takes several days. A positive oral cancer sentinel node leads to a completion neck dissection, ideally within 3 weeks; for melanoma, a positive node now usually leads to ultrasound surveillance or adjuvant systemic therapy rather than routine completion dissection."
+  ]
+ ],
+ "exit_check": [
+  "Every basin on lymphoscintigraphy explored and the residual bed count below 10 percent of the hottest node",
+  "Each node labeled with ex vivo count, color, location and sent for serial sectioning",
+  "Marginal mandibular, facial and accessory nerve function intact"
+ ],
+ "postop": [
+  "Usually day surgery or a single night; drain out when output is low",
+  "Warn that blue dye can tint urine and skin for a day or two",
+  "Review serial sectioning results at tumor board within a week",
+  "Keep the provisional completion neck dissection date for oral cancer until results are known",
+  "Long-term ultrasound and clinical surveillance of the neck"
+ ],
+ "complications": {
+  "early": [
+   "Hematoma or seroma",
+   "Marginal mandibular or accessory nerve weakness",
+   "Allergic reaction to blue dye, including anaphylaxis",
+   "Skin tattooing from blue dye"
+  ],
+  "late": [
+   "False-negative result with regional recurrence (about 5 to 14 percent in oral cancer)",
+   "Scarring making completion dissection harder after delay",
+   "Lymphedema or numbness"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Which melanoma patients should be offered SLNB?",
+   "Those with T1b or thicker tumors (Breslow 0.8 mm or more, or under 0.8 mm with ulceration); it is considered for T1a with other high-risk features. Its main value is staging and selection for adjuvant therapy."
+  ],
+  [
+   "What did MSLT-II show?",
+   "In melanoma with a positive sentinel node, immediate completion lymph node dissection did not improve melanoma-specific survival compared with nodal ultrasound surveillance, though it improved regional control. Routine completion dissection is therefore no longer standard."
+  ],
+  [
+   "What is shine-through and when does it matter in oral cancer?",
+   "The intense radioactivity at the injection site overwhelms the probe for nearby nodes, mainly level I nodes with floor of mouth tumors. It lowers sensitivity; resecting the primary first, SPECT/CT, collimated probes and fluorescent tracers help."
+  ],
+  [
+   "Which oral cancers are suitable for SLNB?",
+   "cT1-T2 N0 tumors that can be removed transorally without free flap reconstruction. When a neck dissection is needed for reconstruction access or the depth of invasion makes nodal risk high, elective neck dissection is usually done instead."
+  ],
+  [
+   "What depth of invasion threshold makes the neck worth treating in oral tongue cancer?",
+   "Occult nodal risk rises sharply above about 3 to 4 mm; elective neck treatment (END or SLNB) is recommended for DOI greater than 4 mm and considered for 2 to 4 mm, per NCCN."
+  ]
+ ],
+ "source_basis": [
+  "Schilling C, Sawhney R. Sentinel Lymph Node Dissection. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 14.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, Oral Cancer (p 280) and Cutaneous Melanoma, Lymphatic Mapping/Sentinel Lymph Node Biopsy (p 318-320).",
+  "Faries MB, et al. Completion dissection or observation for sentinel-node metastasis in melanoma (MSLT-II). N Engl J Med. 2017;376:2211-2222.",
+  "NCCN Clinical Practice Guidelines in Oncology: Melanoma: Cutaneous; and Head and Neck Cancers (current versions)."
+ ]
+}

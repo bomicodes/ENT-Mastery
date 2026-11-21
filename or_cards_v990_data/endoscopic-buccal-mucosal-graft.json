@@ -1,0 +1,139 @@
+{
+ "slug": "endoscopic-buccal-mucosal-graft",
+ "title": "Endoscopic Buccal Mucosal Grafting of the Glottis",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Vocal Fold Sulcus / Scar",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Full-thickness buccal mucosa can resurface membranous vocal fold mucosal defects larger than about 5 mm after resection of carcinoma, papilloma, or scar, to prevent or treat an anterior glottic web, or as primary reconstruction after selected T1a cordectomy. Thin grafts replace mucosa only; thicker grafts add bulk after vocalis resection. The graft is held against the recipient bed with a Silastic-backed transcervical suture bolster for about 2 weeks. Adequate transoral exposure of the full fold is required.",
+ "setup": [
+  "Confirm exposure in clinic or at prior laryngoscopy; poor exposure is a contraindication.",
+  "Plan for resection margins first when grafting after cancer surgery.",
+  "Suspension microlaryngoscopy set, microscope, cup forceps, and microinstruments.",
+  "Oral harvest tray: cheek retractor, 15 blade, lidocaine with epinephrine, fine suture.",
+  "Reinforced 0.4 mm Silastic sheeting, 5-0 chromic, 2-0 polypropylene, 19 to 20 gauge hollow needles (or Lichtenberger needle carrier)."
+ ],
+ "landmarks": [
+  "Membranous vocal fold defect",
+  "Anterior commissure",
+  "Ventricle above the mid-membranous fold",
+  "Thyroid cartilage and cricothyroid membrane",
+  "Parotid (Stensen) duct papilla",
+  "Oral commissure"
+ ],
+ "danger": [
+  "Injury to the parotid duct at harvest",
+  "Harvest too close to the oral commissure",
+  "Graft dislodgement when peeling Silastic",
+  "Needle passage too high or low relative to the fold",
+  "Airway edema after extubation"
+ ],
+ "steps": [
+  [
+   "Confirm the indication",
+   "Use for membranous vocal fold mucosal defects larger than about 5 mm after resection of cancer, papilloma, or scar, to prevent or treat an anterior web, or as primary reconstruction after selected T1a resection. Confirm adequate transoral exposure, since the graft and needles must be placed under direct vision."
+  ],
+  [
+   "Prepare the recipient bed",
+   "At the primary resection or web lysis, create a clean raw recipient surface on the membranous fold under suspension microlaryngoscopy. Achieve hemostasis, because a hematoma under the graft will prevent take."
+  ],
+  [
+   "Measure the defect",
+   "Measure the defect; most grafts are about 1 x 1 cm. Thin grafts of 0.5 to 1 mm replace mucosa only, while thicker grafts of about 2 mm add bulk after vocalis resection. Plan the harvest size accordingly."
+  ],
+  [
+   "Harvest buccal mucosa",
+   "Remove the laryngoscope, evert the cheek, and infiltrate lidocaine with epinephrine. Harvest a full-thickness graft with a 15 blade, staying below the parotid duct papilla and at least 1.5 cm behind the oral commissure; the donor site can be left to heal or closed."
+  ],
+  [
+   "Mount the graft",
+   "Cut a 1.5 x 1.5 cm square of 0.4 mm reinforced Silastic and lay the graft mucosal side against it with the raw side facing up. Tack the corners with 5-0 chromic so the graft and sheet move as one unit."
+  ],
+  [
+   "Place the holding suture",
+   "Pass a 2-0 polypropylene suture through the graft and sheet and back, leaving both long ends on the raw side. These ends will be pulled out through the neck to draw the construct firmly onto the recipient bed."
+  ],
+  [
+   "Reinsert the laryngoscope",
+   "Replace and suspend the laryngoscope and clear blood and debris from the defect under the microscope. Confirm the recipient bed is still dry and the full defect is visible before passing needles."
+  ],
+  [
+   "Pass transcervical needles",
+   "Insert one 19 to 20 gauge needle through the thyroid cartilage or cricothyroid membrane below the fold, and a second through the thyroid cartilage into the ventricle above the mid-membranous fold, angled slightly upward. Flush both needles to clear cartilage debris from the lumen."
+  ],
+  [
+   "Thread the suture",
+   "Using cup forceps under magnification, thread each polypropylene end through a hollow needle and out to the neck; a Lichtenberger needle carrier is an alternative. Withdraw the needles, leaving the suture ends exiting the skin."
+  ],
+  [
+   "Seat the graft",
+   "Pull the sutures to draw the Silastic-backed graft into the larynx and against the defect, then confirm with telescopes that the graft covers the raw area and sits at the free edge without folding."
+  ],
+  [
+   "Tie externally",
+   "Thread both suture ends through a second Silastic square on the neck skin and tie with enough tension to immobilize the sandwich of Silastic, graft, fold, cartilage, and skin. Too little tension allows shear; too much causes skin necrosis."
+  ],
+  [
+   "Extubate carefully",
+   "Extubate gently, avoiding bucking that could shear the graft, and observe the airway, discharging once breathing is stable. Start reflux therapy and advise avoiding forceful coughing and throat clearing during the healing period."
+  ],
+  [
+   "Second stage at 2 weeks",
+   "Under brief anesthesia, cut the external suture, divide the chromic tacks, and peel the Silastic off the graft gently so the graft is not dislodged. Inspect for take and trim any redundant edges."
+  ],
+  [
+   "Follow-up",
+   "Expect graft swelling and limited voice at 1 week, followed by revascularization and gradual gains in pliability over the next month. Follow with stroboscopy and voice therapy as needed to optimize closure and vibration."
+  ]
+ ],
+ "exit_check": [
+  "Graft seated flat against the defect on angled telescope",
+  "External bolster tied with appropriate tension",
+  "Donor site hemostatic and parotid duct intact"
+ ],
+ "postop": [
+  "Airway observation after extubation",
+  "Reflux therapy and avoid forceful cough or throat clearing",
+  "Silastic removal at about 2 weeks",
+  "Stroboscopy and voice therapy over the following months"
+ ],
+ "complications": {
+  "early": [
+   "Airway edema",
+   "Graft displacement or hematoma",
+   "Neck skin pressure injury from bolster",
+   "Donor site bleeding"
+  ],
+  "late": [
+   "Graft failure or contracture",
+   "Recurrent web",
+   "Persistent dysphonia or stiffness",
+   "Parotid duct stenosis if injured"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why use buccal mucosa for vocal fold resurfacing?",
+   "It is readily available, thin and pliable, epithelialized with a lamina propria that can revascularize, and leaves a well-tolerated donor site."
+  ],
+  [
+   "What structures limit the buccal harvest site?",
+   "The parotid duct papilla superiorly and the oral commissure anteriorly (stay at least 1.5 cm behind it)."
+  ],
+  [
+   "When is a thicker graft chosen?",
+   "After vocalis resection, when bulk is needed in addition to mucosal coverage."
+  ],
+  [
+   "What keeps the graft in place during healing?",
+   "A Silastic sandwich held by transcervical polypropylene sutures tied over a second Silastic square on the neck."
+  ],
+  [
+   "When is the bolster removed?",
+   "At about 2 weeks under brief anesthesia, peeling the Silastic off without dislodging the graft."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Chapter 29: Buccal Mucosal Grafting in the Larynx (pp 239-246)"
+ ]
+}

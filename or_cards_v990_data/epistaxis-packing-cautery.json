@@ -1,0 +1,132 @@
+{
+ "slug": "epistaxis-packing-cautery",
+ "title": "Epistaxis Control: Cautery and Anterior/Posterior Packing",
+ "domain": "General ENT",
+ "or_family_v190": "nasal",
+ "linked_topic": "Epistaxis",
+ "source_label": "Pasha 6e, Cummings 7e, and the AAO-HNS clinical practice guideline on nosebleed",
+ "indications": "Nosebleed that does not stop with first aid, or recurrent bleeding with a visible source. Work up a stepwise ladder: firm sustained compression, topical vasoconstriction, localization by anterior rhinoscopy or nasal endoscopy, targeted cautery, then resorbable or nonresorbable anterior packing, and posterior packing for posterior bleeds. Persistent bleeding despite packing, or bleeding after removal, moves to endoscopic sphenopalatine artery ligation or embolization.",
+ "setup": [
+  "Patient sitting upright and leaning forward; staff in gowns, masks, and eye protection",
+  "Check vitals, establish IV access for heavy bleeding, and send CBC, coagulation, and type and screen when indicated",
+  "Headlight, Frazier suction, nasal speculum, bayonet forceps, rigid endoscope if available",
+  "Pledgets with oxymetazoline and lidocaine; silver nitrate sticks; bipolar for endoscopic cautery",
+  "Resorbable agents, expandable sponges or balloon packs, and Foley catheter or dual-balloon device for posterior bleeding"
+ ],
+ "landmarks": [
+  "Kiesselbach's plexus on the anterior septum (Little's area)",
+  "Anterior and posterior ethmoid arteries from the ophthalmic artery",
+  "Sphenopalatine artery entering behind the middle turbinate",
+  "Woodruff's plexus on the posterior lateral wall",
+  "Nasal floor as the track for packing",
+  "Choana and nasopharynx for posterior packs"
+ ],
+ "danger": [
+  "Bilateral opposing septal cautery causes perforation",
+  "Pressure necrosis of the ala or columella from packing ties or catheters",
+  "Posterior packs cause hypoxia and hypoventilation in vulnerable patients",
+  "Aspiration of a dislodged pack",
+  "Missing a tumor or juvenile angiofibroma in an adolescent male",
+  "Stopping anticoagulants without weighing thrombotic risk"
+ ],
+ "steps": [
+  [
+   "First aid compression",
+   "Have the patient sit forward and pinch the soft lower nose firmly for at least five minutes without checking, while spitting blood out rather than swallowing it. Many anterior bleeds stop with this alone. Apply ice and spray vasoconstrictor if available while assessing the patient."
+  ],
+  [
+   "Assess and resuscitate",
+   "Check airway, blood pressure, and pulse; place IV access for heavy bleeding. Ask about anticoagulants and antiplatelets, bleeding disorders, HHT, prior surgery, and cocaine use. Labs are needed for heavy or recurrent bleeding, anticoagulation, or suspected coagulopathy rather than for every patient."
+  ],
+  [
+   "Clear and decongest",
+   "Ask the patient to blow out clots, then suction. Place cotton pledgets soaked in oxymetazoline and lidocaine along the septum and floor for several minutes. Topical tranexamic acid on a pledget is an option that can reduce re-bleeding."
+  ],
+  [
+   "Find the source",
+   "Look with headlight and speculum at the anterior septum first. If no anterior source is seen, use a rigid endoscope to examine the posterior septum, lateral wall behind the middle turbinate, and nasopharynx. A defined source allows targeted treatment instead of blind packing."
+  ],
+  [
+   "Chemical cautery",
+   "Apply silver nitrate to a visible vessel, working from the periphery inward to stop feeder flow before touching the center. Hold for a few seconds and avoid excess. Cauterize only one side of the septum at a time to prevent perforation, and pat the area dry afterward."
+  ],
+  [
+   "Bipolar for posterior sources",
+   "Under endoscopic view, treat posterior septal or lateral wall bleeding with suction bipolar or electrocautery after local anesthetic infiltration. This can avoid a posterior pack. Escalate to the OR for SPA ligation if the field is too bloody to work."
+  ],
+  [
+   "Resorbable packing",
+   "For diffuse oozing, or for patients on anticoagulants, with bleeding disorders, or with HHT, use resorbable materials such as thrombin-gelatin matrix, oxidized cellulose, or absorbable sponge. These avoid removal trauma and re-bleeding when nonresorbable packs come out."
+  ],
+  [
+   "Anterior pack",
+   "Lubricate an expandable sponge or balloon pack and insert it straight back along the nasal floor, not upward. Hydrate the sponge with saline or inflate the balloon to fill the cavity. Tape the strings to the cheek. Pack the opposite side if bleeding persists, for septal counterpressure."
+  ],
+  [
+   "Posterior Foley pack",
+   "Pass a 12-14 French Foley catheter through the nose until the tip is seen in the oropharynx, then withdraw slightly. Inflate with about 10-15 mL of saline, pull forward to seat it in the choana, then place an anterior pack. Secure with a padded clamp clear of the ala to avoid necrosis."
+  ],
+  [
+   "Dual-balloon devices",
+   "Commercial anterior-posterior balloon catheters seat a posterior balloon in the nasopharynx and an anterior balloon in the cavity. Inflate the posterior balloon first, pull forward gently, then inflate the anterior. Inflate to stop the bleeding without blanching the mucosa."
+  ],
+  [
+   "Escalate if it fails",
+   "Admit patients with posterior packs for monitored observation with pulse oximetry. Bleeding through packs, re-bleeding on removal, or repeated transfusion requirement triggers endoscopic sphenopalatine (with or without anterior ethmoid) ligation or angiographic embolization, chosen by expertise and patient factors."
+  ]
+ ],
+ "exit_check": [
+  "No ongoing bleeding in the posterior pharynx",
+  "Packs secure, with no pressure on the ala or columella",
+  "Patient educated about pack type and removal date, with documented plan"
+ ],
+ "postop": [
+  "Nonresorbable packs removed after about 1-3 days with a check for re-bleeding",
+  "Saline spray, humidification, and petroleum ointment to the anterior septum",
+  "Blood pressure control; coordinate antithrombotic management with the prescribing team",
+  "Endoscopy for recurrent unilateral bleeding to exclude neoplasm",
+  "Return precautions for re-bleeding, fever, or breathing problems"
+ ],
+ "complications": {
+  "early": [
+   "Re-bleeding on pack removal",
+   "Hypoxia with posterior packing",
+   "Alar or columellar pressure necrosis",
+   "Aspiration of a pack",
+   "Sinusitis or otitis from blocked drainage"
+  ],
+  "late": [
+   "Septal perforation from cautery",
+   "Synechiae",
+   "Recurrent epistaxis",
+   "Columellar or alar scarring"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Where do most nosebleeds come from?",
+   "About 90% are anterior, from Kiesselbach's plexus on the anterior septum, formed by the anterior ethmoid, sphenopalatine, greater palatine, and superior labial arteries. Posterior bleeds come from sphenopalatine branches and Woodruff's plexus."
+  ],
+  [
+   "Your patient is on warfarin with a non-life-threatening bleed. Do you stop it?",
+   "Not routinely. Treat locally, preferring resorbable packing, and check INR. Stopping or reversing anticoagulation is reserved for life-threatening bleeding or a markedly raised INR, and is coordinated with the prescriber."
+  ],
+  [
+   "Why cauterize only one side of the septum at a time?",
+   "Bilateral cautery of opposing areas compromises the septal cartilage blood supply from both sides, risking necrosis and perforation."
+  ],
+  [
+   "What are the risks of posterior packing?",
+   "Hypoxia and hypoventilation, especially in the elderly and those with lung disease or sleep apnea, as well as aspiration, alar necrosis, and arrhythmia. Patients are admitted for monitored observation."
+  ],
+  [
+   "When do you escalate beyond packing?",
+   "Bleeding that continues despite proper packing or recurs on removal. Endoscopic sphenopalatine artery ligation and embolization are both effective; embolization carries a small stroke risk."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 1 Allergy and Rhinology (epistaxis).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 47 Epistaxis.",
+  "Tunkel DE, et al. Clinical Practice Guideline: Nosebleed (Epistaxis). Otolaryngol Head Neck Surg. 2020;162(1S):S1-S38."
+ ]
+}

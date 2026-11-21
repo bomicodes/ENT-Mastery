@@ -1,0 +1,140 @@
+{
+ "slug": "sulcus-scar-fat-graft",
+ "title": "Vocal Fold Scar / Sulcus Surgery (Hydrodissection, Excision, Fat Graft Implantation)",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Vocal Fold Sulcus / Scar",
+ "source_label": "Operative Techniques in Laryngology (2024)",
+ "indications": "Vocal fold scar, sulcus vocalis, or sulcus vergeture causing meaningful functional limitation that persists after treatment of reflux and allergy and a full course of voice therapy. Small focal sulci can be excised and the edges reapproximated; larger defects are treated by raising a mucosal pocket, releasing scar, and implanting autologous fat, with sutured closure. Expectations must be modest: surgery improves pliability and closure but rarely restores a normal mucosal wave. Alternatives include superficial injection and the Gray minithyrotomy.",
+ "setup": [
+  "Document stroboscopy, acoustic and perceptual measures, and patient-reported voice handicap; counsel about modest and variable benefit.",
+  "Anesthesia plan: total intravenous anesthesia with a small (5.0-5.5) microlaryngeal tube, full paralysis for suspension, and a smooth emergence; confirm dentition and neck mobility for exposure.",
+  "Phonomicrosurgery set: largest laryngoscope that exposes the whole membranous fold, suspension arm, 0/30/70 degree telescopes, microscope with 400-mm lens, sickle knife, 30 degree elevators, straight and curved microscissors, triangular and cup forceps, fine suctions, and 1:10,000 epinephrine pledgets.",
+  "Add a 27-gauge injector, spear knife, microlaryngeal needle holder, knot pusher, and microsuture (about 18 inches long to allow external knot tying).",
+  "Prepare and drape a fat donor site (axilla at the anterior axillary line, earlobe, or periumbilical)."
+ ],
+ "landmarks": [
+  "Sulcus or scar line on the medial fold",
+  "Upper and lower lips of the sulcus",
+  "Vocal ligament",
+  "Superficial lamina propria",
+  "Anterior commissure",
+  "Vocal process",
+  "Mucosal bridge (if present)"
+ ],
+ "danger": [
+  "Flap fenestration losing graft retention",
+  "Rounded free edge after sulcus excision",
+  "Strangulating sutures causing necrosis",
+  "Fat extrusion from the pocket",
+  "Overexpectation of vibratory restoration"
+ ],
+ "steps": [
+  [
+   "Exhaust nonsurgical care",
+   "Treat reflux and allergy and complete voice and singing therapy. Operate only when meaningful functional limitation persists, and set modest expectations: surgery improves closure and pliability but rarely restores a normal mucosal wave."
+  ],
+  [
+   "Diagnostic laryngoscopy",
+   "Expose the whole membranous fold with the largest laryngoscope; inspect with angled telescopes and palpate to judge stiffness, and look for associated cysts, fibrous masses, or a mucosal bridge that may need treatment at the same time."
+  ],
+  [
+   "Hydrodissect",
+   "Infuse 1:10,000 epinephrine subepithelially with a 27-gauge injector. Healthy superficial lamina propria expands while tethered scar or sulcus stays down, outlining the defect and its severity and guiding the choice of excision or pocket implantation."
+  ],
+  [
+   "Option 1: excise and reapproximate",
+   "For small focal sulci, incise at the upper and lower junctions with normal epithelium, excise the invaginated epithelium, raise superior and inferior flaps, and suture the edges together. Beware later rounding of the free edge after excision."
+  ],
+  [
+   "Option 2: fat graft pocket incision",
+   "For a larger defect, make a sickle or spear knife incision just lateral to the scar, longer than the defect, leaving enough mucosa on both sides of the incision to hold sutures securely."
+  ],
+  [
+   "Elevate without fenestration",
+   "Elevate the mucosa slowly off the ligament and scar with fine elevators and scissors. A perforated or fenestrated flap undermines graft retention and lets the fat extrude, so work patiently through dense adhesions."
+  ],
+  [
+   "Release scar",
+   "Remove any associated lesion or dense scar and create a wide pocket in both the anteroposterior and vertical dimensions, extending beyond the stiff segment so the graft can spread and restore a full contour."
+  ],
+  [
+   "Harvest fat",
+   "Through a small incision (axilla at the anterior axillary line, earlobe, or umbilicus), excise subcutaneous fat sharply without cautery or dermis, then dice it into roughly 1 mm cubes to optimize graft survival and placement."
+  ],
+  [
+   "Pre-place the suture",
+   "Pass a microsuture through the medial and lateral mucosal edges in separate bites about 1-1.5 mm from each edge using a microlaryngeal needle holder, but do not tie yet, leaving the pocket open for grafting."
+  ],
+  [
+   "Pack the pocket",
+   "Place small fat pieces into the pocket with cup forceps or a fine instrument until the contour of the free edge is restored, slightly correcting the defect without overfilling, since excess fat makes the edge convex and stiff while a modest overcorrection allows for some resorption."
+  ],
+  [
+   "Tie down the laryngoscope",
+   "Throw a knot outside the scope and slide it down with a knot pusher, or use a preformed slip knot; tighten with alligators so the edges meet without strangulating tissue, leaving about a 1-mm gap between knot and mucosa. Add two throws and cut 2-3 mm long."
+  ],
+  [
+   "Check stability",
+   "Palpate the free edge with moderate pressure to confirm the fat stays in the pocket and does not extrude through the suture line or any perforation, and that the edge is straight."
+  ],
+  [
+   "Mucosal bridge",
+   "If a mucosal bridge causes diplophonia, divide or excise it as part of the procedure, taking care not to create raw opposing surfaces that could form a web, and trimming the bridge remnants flush with the surrounding epithelium."
+  ],
+  [
+   "Close the case",
+   "Apply topical lidocaine, close the donor site in layers, and emerge smoothly to avoid coughing that could disrupt the suture line or express the graft. Note the fat volume used and sulcus type for later comparison."
+  ]
+ ],
+ "exit_check": [
+  "Pocket packed with diced fat, edges sutured without strangulation, and graft stable on palpation with a straight free edge.",
+  "Associated lesions and any mucosal bridge addressed; donor site closed and hemostatic."
+ ],
+ "postop": [
+  "Voice rest for about 1 week, then stroboscopic review.",
+  "Intensive, prolonged voice therapy; improvement may continue over months.",
+  "Reflux and allergy management; donor site wound care.",
+  "Consider superficial injection or Gray minithyrotomy for residual stiffness or diffuse scar."
+ ],
+ "complications": {
+  "early": [
+   "Fat extrusion or suture dehiscence",
+   "Edema with temporarily worse voice",
+   "Donor site hematoma or infection",
+   "Bleeding"
+  ],
+  "late": [
+   "Fat resorption with loss of correction",
+   "Persistent or worsened stiffness",
+   "Rounded or irregular free edge",
+   "Anterior web or persistent diplophonia"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the Ford classification of sulcus?",
+   "Type 1 physiologic sulcus (SLP preserved), type 2 sulcus vergeture (linear loss of SLP with epithelium adherent to ligament), type 3 sulcus vocalis (pocket into or through the ligament). Types 2 and 3 are pathologic."
+  ],
+  [
+   "Why is scar so hard to treat?",
+   "Scar replaces the layered superficial lamina propria with disorganized collagen and loss of hyaluronic acid and elastin; no current technique fully regenerates normal layered structure, so surgery aims to improve pliability and closure."
+  ],
+  [
+   "Why dice fat into small cubes and avoid cautery?",
+   "Small atraumatically handled pieces survive better and fill the pocket evenly; cautery and dermis damage graft viability and increase resorption or stiffness."
+  ],
+  [
+   "What is the Gray minithyrotomy?",
+   "An external approach through a small window in the thyroid lamina to elevate and release scar or place material in the superficial lamina propria from the lateral side, avoiding a mucosal incision on the vibratory edge."
+  ],
+  [
+   "What happens if the flap is fenestrated?",
+   "The graft cannot be retained and extrudes through the perforation; dissect slowly, and close any hole if possible before packing."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology, 2nd ed (Rubin, Sataloff, Korovin, eds; Springer 2024), Ch 25: Vocal Fold Scar and Sulcus Deformities of the Vocal Fold (pp 207-218).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: vocal fold scar and sulcus."
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "slug": "vocal-fold-polyp-excision",
+ "title": "Vocal Fold Polyp and Reactive Lesion Excision (Microflap vs Truncation)",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Vocal Fold Polyp / Cyst",
+ "source_label": "Operative Techniques in Laryngology (2024)",
+ "indications": "A unilateral hemorrhagic, gelatinous, or fibrous vocal fold polyp causing dysphonia that persists after voice therapy, reflux and allergy control, and hydration, or a lesion suspicious enough to need tissue. A large pedunculated polyp rarely regresses and can go to surgery after a brief (2-3 week) course of therapy and reduced voice use. The goal is to remove only pathologic tissue in the superficial lamina propria, preserve normal epithelium and ligament, and leave a straight vibratory edge; a contralateral reactive lesion is often left to regress.",
+ "setup": [
+  "Review preoperative stroboscopy in the room: polyp size, base (sessile vs pedunculated), feeding vessels, and the opposite reactive lesion.",
+  "Decide in advance whether a contralateral reactive lesion will be treated and document that discussion with the patient.",
+  "Anesthesia plan: total intravenous anesthesia with a small (5.0-5.5) microlaryngeal tube, full paralysis for suspension, and a smooth emergence; confirm dentition and neck mobility for exposure.",
+  "Position with neck flexion and head extension (sniffing); protect teeth with a guard and suspend the laryngoscope.",
+  "Phonomicrosurgery set: largest laryngoscope that exposes the whole membranous fold, suspension arm, 0/30/70 degree telescopes, microscope with 400-mm lens, sickle knife, 30 degree elevators, straight and curved microscissors, triangular and cup forceps, fine suctions, and 1:10,000 epinephrine pledgets.",
+  "Have an angiolytic laser (pulsed KTP or 445 nm) available if a feeding varix needs treatment, with laser-safe tube and safety timeout if used."
+ ],
+ "landmarks": [
+  "Free (vibratory) edge of the membranous fold",
+  "Superior surface and lateral junction of polyp with normal mucosa",
+  "Superficial lamina propria (Reinke space)",
+  "Vocal ligament",
+  "Anterior commissure",
+  "Vocal process",
+  "Feeding vessels on the superior surface"
+ ],
+ "danger": [
+  "Over-traction pulling normal mucosa into the cut (divot)",
+  "Entry into the vocal ligament",
+  "Subepithelial infusion blurring polyp margins",
+  "Untreated feeding varix causing rebleed",
+  "Bilateral anterior raw surfaces risking web"
+ ],
+ "steps": [
+  [
+   "Select the lesion",
+   "Operate on a polyp that persists despite voice therapy and reflux or allergy treatment. A large pedunculated polyp can proceed after only 2-3 weeks of therapy and voice reduction because it seldom resolves. Decide preoperatively whether any contralateral reactive lesion will be treated at all."
+  ],
+  [
+   "Standard microlaryngoscopy setup",
+   "Use a small microlaryngeal tube, neck flexion with head extension, and the largest laryngoscope that exposes the entire membranous fold. Suspend, inspect with 0, 30, and 70 degree telescopes for infraglottic extension and vessels, then switch to high-power microscopy for the dissection."
+  ],
+  [
+   "Topical vasoconstriction only",
+   "Place a 1:10,000 epinephrine pledget on the polyp for a minute or two. Do not perform subepithelial infusion: the fluid blurs the boundary between polyp and normal fold and leads to over- or under-resection of the lesion."
+  ],
+  [
+   "Choose the approach",
+   "Use a microflap when healthy mucosa covers the polyp and can be preserved. Use truncation for a pedunculated or sessile polyp with little normal covering mucosa. In both, the aim is to remove only pathologic tissue and keep the edge straight."
+  ],
+  [
+   "Microflap: incise laterally",
+   "Incise the epithelium on the superior surface with a sickle knife at the junction of the lateral polyp edge and normal mucosa. Elevate the flap medially with a 30 degree elevator to expose the gelatinous or hemorrhagic contents beneath the thin overlying epithelium."
+  ],
+  [
+   "Microflap: evacuate contents",
+   "Remove the polyp material with fine micro-suction or a 1-mm cup forceps, or sweep it medially with the elevator to preserve more inferior flap mucosa. Stay within the superficial lamina propria and do not expose or enter the vocal ligament."
+  ],
+  [
+   "Microflap: trim and redrape",
+   "Redrape the flap and trim only epithelium that is adherent to polyp material, very thin and atrophic, or so redundant it will not heal as normal cover. Redrape again and palpate under the flap for any residual polyp material."
+  ],
+  [
+   "Truncation: grasp correctly",
+   "Grasp the polyp with small triangular forceps and pull it gently medially, holding perpendicular to the long axis of the fold. Excess traction draws normal mucosa into the cut and leaves a divot, so keep tension light and controlled."
+  ],
+  [
+   "Truncation: cut at the base",
+   "Cut flush with the free edge using straight or slightly curved microscissors curved away from the fold. Some surgeons incise the upper and lower epithelial attachments separately first, which limits over-excision of normal mucosa at the base."
+  ],
+  [
+   "Remove dog-ears",
+   "Inspect again after a few minutes of an epinephrine pledget. Remove residual tags with a 1-mm cup forceps, or straddle tiny tags with open curved scissors and close them with gentle lateral pressure so no excess tissue is taken."
+  ],
+  [
+   "Palpate the result",
+   "Palpate with the back of a curved elevator or alligator. Remove remaining fibrous or gelatinous material conservatively to prevent early recurrence. The finished edge should be straight and smooth, with no soft tissue defect along the vibratory margin."
+  ],
+  [
+   "Treat associated vessels",
+   "Address a feeding varix or ectasia at the same sitting, by cold dissection or angiolytic laser to a darkening endpoint, because untreated abnormal vessels can rebleed and drive recurrence of the polyp."
+  ],
+  [
+   "Reactive lesion options",
+   "The opposite reactive lesion often regresses with therapy once the primary polyp is removed. If treated, use a microflap for circumscribed lesions, or truncation, dexamethasone injection, or noncontact KTP to blanching for broad shallow lesions. Avoid bilateral anterior raw surfaces."
+  ],
+  [
+   "Close the case",
+   "Spray 4% topical lidocaine on the larynx to reduce coughing, remove the laryngoscope, and coordinate a smooth emergence without bucking or straining against the tube, which could bleed into the fresh surgical site."
+  ]
+ ],
+ "exit_check": [
+  "Straight, smooth vibratory edge on palpation with no residual polyp material, divot, or exposed ligament.",
+  "Any feeding vessel treated; contralateral reactive lesion managed per the preoperative plan; hemostasis confirmed."
+ ],
+ "postop": [
+  "Voice rest for about 2-7 days depending on wound size, then graduated voice use.",
+  "Stroboscopy at the first visit (about 1-2 weeks) to confirm healing and mucosal wave.",
+  "Speech-language pathology voice therapy to address phonotraumatic behaviors and prevent recurrence.",
+  "Continue reflux and allergy management, hydration, and avoidance of smoking and shouting."
+ ],
+ "complications": {
+  "early": [
+   "Bleeding into the operative site or hematoma",
+   "Dental or oral injury from suspension",
+   "Tongue numbness or taste change from laryngoscope pressure",
+   "Laryngospasm or coughing at emergence"
+  ],
+  "late": [
+   "Recurrence, especially with untreated vessels or continued phonotrauma",
+   "Vocal fold scar or stiffness with poor mucosal wave",
+   "Divot or irregular edge causing breathiness",
+   "Anterior glottic web after bilateral anterior surgery"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why avoid subepithelial infusion for a polyp but use it for leukoplakia?",
+   "In a polyp the injected fluid mixes with gelatinous polyp material and blurs the boundary with normal superficial lamina propria, causing over- or under-resection. In leukoplakia infusion lifts the epithelium off the ligament and helps show whether disease is tethered (possible invasion)."
+  ],
+  [
+   "How do you choose between a microflap and truncation?",
+   "Microflap when there is healthy covering mucosa that can be preserved over a subepithelial mass; truncation for a pedunculated or sessile polyp with little normal epithelium. Both aim to remove only diseased tissue and keep a straight edge."
+  ],
+  [
+   "How does a polyp differ from nodules and a cyst?",
+   "Nodules are bilateral, symmetric, at the junction of the anterior and middle thirds and respond to therapy. Polyps are usually unilateral, exophytic, often hemorrhagic or gelatinous and frequently need surgery. Cysts are encapsulated in the superficial lamina propria, often abut the ligament, and need microflap removal of an intact cyst."
+  ],
+  [
+   "What is the most common technical error in truncation?",
+   "Pulling too hard on the polyp, which drags normal mucosa into the scissor cut and leaves a divot and soft tissue defect with breathy voice. Use light perpendicular traction and cut flush."
+  ],
+  [
+   "What do you do with a contralateral reactive lesion?",
+   "Usually leave it; it often resolves with voice therapy after the primary lesion is removed. If treated, avoid creating raw opposing surfaces near the anterior commissure to prevent a web."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology, 2nd ed (Rubin, Sataloff, Korovin, eds; Springer 2024), Ch 18: Vocal Fold Polyp and Reactive Lesion: Phonomicrosurgery (pp 155-164).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: benign vocal fold mucosal disorders."
+ ]
+}

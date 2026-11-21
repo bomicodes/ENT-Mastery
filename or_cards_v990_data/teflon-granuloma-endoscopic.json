@@ -1,0 +1,135 @@
+{
+ "slug": "teflon-granuloma-endoscopic",
+ "title": "Endoscopic CO2 Laser Debulking of Teflon Granuloma",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Injection Laryngoplasty",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Patients previously injected with polytetrafluoroethylene (Teflon) paste for glottic insufficiency who develop progressive dysphonia, a stiff convex vocal fold, or airway narrowing from a foreign-body giant cell granuloma, sometimes decades after injection. Surgery is indicated when the mass distorts the free edge, bulges into the subglottis, or threatens the airway, or when poor voice reflects misplaced injectate. The goal is subtotal endoscopic debulking through a lateral cordotomy that restores a straight edge while preserving the medial cover; complete removal is rarely possible, and expectations must be set accordingly.",
+ "setup": [
+  "Review stroboscopy and CT: Teflon is hyperdense and the granuloma may extend into the paraglottic space and infraglottis; exclude malignancy if the picture is atypical.",
+  "Counsel that the aim is improvement, not normal voice, and that staged procedures or later augmentation may be needed.",
+  "Laser-safe airway: small laser-resistant cuffed tube with saline-filled cuff, wet eye and face protection, FiO2 kept as low as tolerated, and staff laser precautions.",
+  "Largest laryngoscope that exposes the full fold, microscope with CO2 micromanipulator, angled telescopes, and microlaryngeal cold instruments.",
+  "Have epinephrine cottonoids and a platform suction available for retraction and hemostasis."
+ ],
+ "landmarks": [
+  "Free edge of the true vocal fold",
+  "Superior (lateral) surface of the fold for the cordotomy",
+  "Ventricle and false fold",
+  "Paraglottic space lateral to the vocalis",
+  "Infraglottic contour (inverted cone)",
+  "Vocal process and anterior commissure limits"
+ ],
+ "danger": [
+  "Airway fire with laser near the tube",
+  "Buttonholing or stripping the medial mucosa and lamina propria",
+  "Overly aggressive removal causing a concave, scarred fold",
+  "Laser injury to the opposite fold or anterior commissure",
+  "Unrecognized malignancy masquerading as granuloma"
+ ],
+ "steps": [
+  [
+   "Confirm the indication",
+   "Operate when an expanding Teflon granuloma causes dysphonia, a stiff convex fold, or airway compromise, especially once it reaches the medial edge or bulges below the fold. Explain beforehand that complete endoscopic removal is generally not achievable and that the plan is subtotal debulking to improve shape and vibration."
+  ],
+  [
+   "Understand the lesion",
+   "Teflon particles provoke a giant cell foreign-body reaction that can enlarge years after injection, sometimes triggered by later intubation. Poor voice may also come simply from injectate placed too superficially or too high, so review stroboscopy and imaging to decide whether the problem is mass effect, stiffness, or malposition."
+  ],
+  [
+   "Laser-safe airway",
+   "Intubate with a small laser-protected cuffed tube, fill the cuff with saline, protect the eyes and face with wet covers, and keep inspired oxygen as low as safely possible. Confirm that the whole team knows the laser fire protocol before activating the beam."
+  ],
+  [
+   "Define the extent",
+   "After suspension, palpate the fold to feel the firm paraglottic mass and use 0- and 30- or 70-degree telescopes to map its vertical extent, including infraglottic bulging and any spread toward the false fold. This map guides how far inferiorly the debulking must go."
+  ],
+  [
+   "Set the laser",
+   "Use the CO2 micromanipulator at roughly 4 to 8 W in superpulse or intermittent mode (around 0.1 s on and 0.5 s off) with a small spot. Low, interrupted energy limits char and thermal spread to the overlying cover that must be preserved."
+  ],
+  [
+   "Mark and open the cordotomy",
+   "Outline a cordotomy on the lateral superior surface of the true fold with spaced laser marks, well away from the free edge. Incise along the marks so the medial mucosa and lamina propria stay as an intact flap over the mass."
+  ],
+  [
+   "Find the Teflon",
+   "Dissect laterally with laser and cold instruments through the fold until the granuloma is reached. Teflon characteristically sparkles or glitters when vaporized, which confirms the correct plane and distinguishes it from normal thyroarytenoid muscle."
+  ],
+  [
+   "Vaporize medially first",
+   "Ablate the paraglottic mass evenly from superior to inferior, starting with the most medial portion that distorts the vibratory edge. Work in layers rather than drilling a single deep crater, and suction smoke and debris continuously."
+  ],
+  [
+   "Protect the cover",
+   "Retract the medial mucosa with a platform suction or microforceps while lasering, and periodically redrape it to judge the edge and infraglottic contour. Any perforation of this cover risks scar and a poorer voice result."
+  ],
+  [
+   "Shape, do not chase",
+   "Stop once the fold has a straight free edge and a normal inverted-cone infraglottic profile, rather than chasing every Teflon particle. Residual material deep in the paraglottic space is accepted; overresection produces a concave, stiff fold that is hard to salvage."
+  ],
+  [
+   "Close",
+   "Redrape the fold soft tissue over the residual mass and check the contour with telescopes. Suturing the cordotomy is usually unnecessary, as the redraped tissue heals well when the cover is intact."
+  ],
+  [
+   "Counsel on alternatives",
+   "Open removal through a lateral laryngotomy often violates the adherent mucosa and gives disappointing voice. Later medialization or augmentation of a scarred remnant gives only modest gains, so the endoscopic subtotal debulking remains the first choice for most patients."
+  ],
+  [
+   "Aftercare",
+   "Give reflux therapy and voice rest per surgeon preference, then follow with stroboscopy to judge closure and pliability. Secondary augmentation or framework medialization can be considered once healing is complete if a glottic gap remains."
+  ]
+ ],
+ "exit_check": [
+  "Straight free edge and restored infraglottic contour on angled telescope",
+  "Medial cover intact without buttonhole",
+  "Hemostasis and no laser char left on the opposite fold"
+ ],
+ "postop": [
+  "Usually outpatient; observe airway if debulking was extensive",
+  "Reflux therapy and short voice rest",
+  "Stroboscopy at several weeks to assess edge and mucosal wave",
+  "Consider staged debulking or augmentation if residual gap or mass"
+ ],
+ "complications": {
+  "early": [
+   "Airway edema",
+   "Laser airway fire",
+   "Bleeding",
+   "Mucosal tear of the cover"
+  ],
+  "late": [
+   "Persistent or worse dysphonia from scar",
+   "Regrowth of granuloma",
+   "Glottic insufficiency after overresection",
+   "Anterior web if anterior commissure injured"
+  ]
+ },
+ "attending_followup": [
+  [
+   "Why did Teflon fall out of use for vocal fold injection?",
+   "It provokes a chronic foreign-body giant cell granuloma that can enlarge and stiffen the fold years later, and it is permanent and hard to remove; current practice uses temporary agents or framework surgery."
+  ],
+  [
+   "What intraoperative sign confirms you have reached Teflon?",
+   "The material sparkles or glitters as it is vaporized by the CO2 laser."
+  ],
+  [
+   "What is the endpoint of debulking?",
+   "A straight free edge and normal inverted-cone infraglottic contour with preserved cover, not removal of every particle."
+  ],
+  [
+   "Why approach through a lateral superior cordotomy rather than the medial edge?",
+   "It keeps the medial mucosa and lamina propria intact as a vibratory cover, which an incision at the edge would scar."
+  ],
+  [
+   "What imaging finding suggests Teflon granuloma on CT?",
+   "A hyperdense paraglottic mass at the level of the fold, reflecting the dense injectate."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Chapter 26: Endoscopic Management of Teflon Granuloma (pp 219-224)"
+ ]
+}

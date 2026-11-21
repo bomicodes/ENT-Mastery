@@ -1,0 +1,136 @@
+{
+ "slug": "partial-glossectomy",
+ "title": "Transoral Partial Glossectomy",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "headneck",
+ "linked_topic": "Oral Tongue SCC",
+ "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
+ "indications": "Primary surgical treatment for oral tongue squamous cell carcinoma (and selected premalignant or other malignant lesions) that can be removed through the mouth with a three-dimensional margin, usually T1 to small T2 tumors of the lateral or ventral tongue, up to about one-third of the tongue. Surgery is the preferred primary treatment for oral cavity cancer. Depth of invasion drives the AJCC 8th edition T stage and the neck plan: elective neck dissection or sentinel node biopsy is recommended for depth of invasion over about 4 mm and considered for 2 to 4 mm. Larger tumors, deep extrinsic muscle invasion, floor of mouth extension communicating with the neck, or mandibular involvement need a combined transcervical or pull-through approach and often free flap reconstruction.",
+ "setup": [
+  "Stage with examination, biopsy, contrast MRI (best for depth of invasion and midline extension) or CT, and imaging of the neck; PET/CT for higher-stage disease.",
+  "Plan the neck at the same sitting: selective neck dissection levels I to III (or I to IV) by depth of invasion, or sentinel node biopsy before the primary in suitable cN0 patients.",
+  "Dental review and planned extractions of mobile or obstructing molars; discuss speech, swallowing and taste changes and the possibility of further margin surgery or adjuvant radiation.",
+  "Nasotracheal intubation or an oral tube fixed to the opposite side; shoulder roll, head ring, mouth gag or bite block, cheek retractors and a tongue traction suture.",
+  "Instruments: cold steel, needlepoint monopolar, bipolar, ultrasonic or CO2 laser (with laser-safe tube and precautions if laser is used), skin hooks, clips and ties, marking sutures and a pathology orientation diagram."
+ ],
+ "landmarks": [
+  "Tumor edges by sight and palpation",
+  "Lateral tongue, ventral surface and floor of mouth junction",
+  "Midline septum of the tongue",
+  "Lingual artery and veins deep in the tongue",
+  "Lingual nerve and submandibular duct in the floor of mouth",
+  "Hypoglossal nerve on hyoglossus",
+  "Mylohyoid muscle beneath the floor of mouth"
+ ],
+ "danger": [
+  "Inadequate deep margin",
+  "Lingual artery hemorrhage, often delayed",
+  "Lingual nerve and submandibular duct in the floor of mouth",
+  "Tethering the tongue to the floor of mouth on closure",
+  "Distorting the tumor with local anesthetic or over-retraction before marking",
+  "Airway swelling after a large resection"
+ ],
+ "steps": [
+  [
+   "Expose",
+   "Extend the neck on a shoulder roll, place a mouth gag and cheek retractors, and pass a heavy silk traction suture through the tip or dorsum of the tongue away from the tumor. Protect the lips and teeth throughout, and use dental extractions if posterior access is poor."
+  ],
+  [
+   "Assess before infiltration",
+   "Inspect and palpate the tumor before any local anesthetic so the edges are not blurred. Correlate palpable size and depth with imaging, and check the floor of mouth, midline and tongue base for extension that would change the approach."
+  ],
+  [
+   "Mark the margins",
+   "With the tongue relaxed, mark a 1 cm mucosal margin around the visible and palpable tumor edge, allowing for the curve of the lateral and ventral surfaces and the floor of mouth. Score the mark with needlepoint cautery so it does not wash away."
+  ],
+  [
+   "Local anesthetic and blocks",
+   "After marking, infiltrate outside the margin with local anesthetic and adrenaline to limit bleeding, or use a lingual nerve block for postoperative analgesia. Keep injections away from the tumor itself."
+  ],
+  [
+   "Begin the mucosal cut",
+   "Incise along the marked perimeter with cold steel, cautery, ultrasonic device or CO2 laser. Keep tension on the tissue with skin hooks or stay sutures rather than grasping the specimen directly, which can crush or tear it."
+  ],
+  [
+   "Develop the deep margin",
+   "Deepen from the periphery toward the center to create a boat-hull shaped specimen with about 1 cm of normal tissue in all three dimensions. Repeatedly palpate the tumor through the specimen so the deep cut stays well away, especially through the intrinsic muscle fibers."
+  ],
+  [
+   "Control the lingual vessels",
+   "Identify and secure lingual artery branches with clips or ties as they are met rather than relying on cautery alone, since delayed bleeding from the lingual artery is the main early danger. Coagulate smaller vessels with bipolar as you go."
+  ],
+  [
+   "Orient the specimen",
+   "Before or as the specimen comes free, place clearly visible nonabsorbable marking sutures (for example anterior and superior) and record them on a diagram. Photograph the specimen in situ if helpful, and do not let it be cut on the back table without orientation."
+  ],
+  [
+   "Check margins",
+   "Inspect the specimen surface and palpate it for close areas, then take specimen-based frozen sections from the closest mucosal and deep margins rather than random bed biopsies. Re-excise any involved area immediately and label the new margin as final."
+  ],
+  [
+   "Hemostasis with blood pressure restored",
+   "Ask anesthesia to return blood pressure to baseline, lower the head and perform a Valsalva, then deal with every bleeding point. This reveals vessels that were controlled only by hypotension or adrenaline."
+  ],
+  [
+   "Manage the defect",
+   "Small lateral defects can be closed primarily if this does not tether the tongue; moderate defects often heal best by secondary intention, with a resorbable hemostatic sheet or dressing sutured in. Defects that open into the neck or remove substantial floor of mouth need a local or free flap."
+  ],
+  [
+   "Address the neck and airway",
+   "Proceed to sentinel node biopsy (done first) or selective neck dissection as planned. Judge airway swelling at the end; most partial glossectomies need no tracheostomy, but extensive resections or combined neck and floor of mouth work may require one."
+  ]
+ ],
+ "exit_check": [
+  "Specimen oriented with sutures and diagram, and all margins clear on frozen section or re-excised",
+  "No bleeding at normal blood pressure with the head down and Valsalva",
+  "Tongue mobile and not tethered to the floor of mouth; airway plan agreed"
+ ],
+ "postop": [
+  "Short inpatient stay to watch for bleeding and airway swelling; return to theatre promptly for active lingual bleeding",
+  "Generous multimodal analgesia; nasogastric feeding briefly if swallowing is too painful",
+  "Early speech and swallowing therapy with tongue range-of-motion exercises",
+  "Tumor board review of margins, depth of invasion, perineural and lymphovascular invasion and nodes to decide on re-excision or adjuvant radiation or chemoradiation"
+ ],
+ "complications": {
+  "early": [
+   "Postoperative bleeding, especially from the lingual artery",
+   "Airway swelling",
+   "Pain and poor oral intake",
+   "Lingual nerve numbness or submandibular duct obstruction"
+  ],
+  "late": [
+   "Close or positive margins requiring re-excision or adjuvant therapy",
+   "Tethering and reduced tongue mobility affecting speech and swallowing",
+   "Local or regional recurrence",
+   "Altered taste"
+  ]
+ },
+ "attending_followup": [
+  [
+   "How is depth of invasion used in AJCC 8th edition oral cavity staging?",
+   "T1 is 2 cm or less with DOI 5 mm or less; T2 is 2 cm or less with DOI over 5 mm up to 10 mm, or 2 to 4 cm with DOI 10 mm or less; T3 is over 4 cm or DOI over 10 mm. DOI is measured from the basement membrane of adjacent normal mucosa, unlike tumor thickness."
+  ],
+  [
+   "What margin is considered clear on final pathology?",
+   "NCCN considers 5 mm or more from the invasive front clear and less than 5 mm close. A 1 cm mucosal margin is planned in the OR because the specimen shrinks substantially after removal and fixation."
+  ],
+  [
+   "What is the evidence for elective neck dissection in early oral cancer?",
+   "D'Cruz et al. (NEJM 2015) showed better overall and disease-free survival with elective neck dissection than watchful waiting in cT1-T2 N0 oral cancer, so the neck is treated unless depth of invasion is very shallow."
+  ],
+  [
+   "Why are specimen-driven frozen margins preferred over tumor-bed sampling?",
+   "Bed biopsies may not correspond to the true closest margin and do not reliably clear the final margin; inspecting the specimen and sampling its closest surfaces better predicts local control."
+  ],
+  [
+   "Which adverse pathology features call for adjuvant chemoradiation versus radiation alone?",
+   "Positive margins or extranodal extension warrant concurrent chemoradiation; other features such as pT3-4, pN2-3, close margins, perineural or lymphovascular invasion and level IV or V nodes usually warrant radiation."
+  ]
+ ],
+ "source_basis": [
+  "Tahim A, Sadiq Z. Transoral Partial Glossectomy. In: Simo R, Pracy P, Fernandes R, eds. Atlas of Head and Neck Surgery. Springer; 2024: chapter 26.",
+  "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes, eds. Springer; 2024), chapter 27, floor of mouth resection.",
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6th ed. Plural; Chapter 6 Head and Neck Cancer, Oral Cancer (p 280-282).",
+  "D'Cruz AK, et al. Elective versus therapeutic neck dissection in node-negative oral cancer. N Engl J Med. 2015;373:521-529; NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers (current version); AJCC Cancer Staging Manual, 8th ed."
+ ]
+}

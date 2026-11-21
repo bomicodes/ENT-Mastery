@@ -4,7 +4,7 @@ import runtime_entry as rt
 import daily_path_entry_v403  # v45.6: boots the full production patch chain so runtime_entry.data/.app below reflect ALL applied patches, not just those runtime_entry.py itself applies
 DOMAIN="General ENT / Emergencies"
 STAGES={"foundation","application","senior_decision"}
-EXPECTED={
+EXPECTED={'Acute Pharyngotonsillitis and Infectious Mononucleosis','HIV-Associated Head and Neck Disease','Noninfectious Lymphadenopathy and Periodic Fever Syndromes','Temporomandibular Joint Disorders',
 "Postoperative Neck Hematoma","Peritonsillar Abscess","Deep Neck Abscess Drainage","Caustic Ingestion","Airway Foreign Body",
 "Chyle Leak","Common ENT Consult Triage / Disposition","ENT Perioperative Anesthesia / Difficult Airway Planning","Esophageal Foreign Body","Hemostasis / Coagulopathy / Antithrombotic Management in ENT",
 "Post-Tonsillectomy Hemorrhage","Deep Neck Space Infection","Tracheostomy Emergency","Epistaxis","Ludwig Angina",
@@ -28,7 +28,7 @@ def _quality(q):
 def main():
  d=rt.data; failures=[]
  canonical=[m.get("topic") for m in d.DEEP_MODULES_V6.get(DOMAIN,[]) if m.get("topic")]
- if len(canonical)!=36: failures.append(f"expected 36 canonical topics, found {len(canonical)}")
+ if len(canonical)!=40: failures.append(f"expected 40 canonical topics, found {len(canonical)}")
  if len(set(canonical))!=len(canonical): failures.append("duplicate canonical topic names")
  if set(canonical)!=EXPECTED:
   failures.append(f"canonical set drift; missing={sorted(EXPECTED-set(canonical))}; extra={sorted(set(canonical)-EXPECTED)}")

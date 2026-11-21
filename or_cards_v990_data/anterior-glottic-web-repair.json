@@ -1,0 +1,139 @@
+{
+ "slug": "anterior-glottic-web-repair",
+ "title": "Anterior Glottic Web Division: Endoscopic Flap or Keel",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Vocal Fold Sulcus / Scar",
+ "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
+ "indications": "Anterior glottic webs, congenital or acquired after anterior commissure surgery, trauma, intubation, or radiation, cause a high-pitched strained voice, dysphonia, or airway restriction depending on their length and thickness. Repair is indicated for functional limitation. Small thin webs are divided with an endoscopic mucosal flap that resurfaces one raw side; large or thick webs without enough mucosa need division with placement of a keel to keep the raw surfaces apart while they re-epithelialize, requiring a second procedure for keel removal. Surgery is deferred with uncontrolled reflux, with no functional complaint, and relatively with active glottic papilloma.",
+ "setup": [
+  "Office stroboscopy and voice recording to document pitch, quality, and web length.",
+  "Workup for unexplained webs: consider GPA, sarcoidosis, and amyloidosis; check for subglottic or supraglottic stenosis.",
+  "Control reflux before surgery.",
+  "Suspension microlaryngoscopy set with anterior commissure laryngoscope, angled telescopes, microscope with CO2, cold instruments, fine absorbable suture and needle holders.",
+  "For keel repair: Silastic keel, 18-gauge needles, 0 polypropylene, buttons, and an apneic or jet ventilation plan for removal."
+ ],
+ "landmarks": [
+  "Anterior commissure",
+  "Free edges of both true folds",
+  "Inner surface of the thyroid cartilage",
+  "Subglottic extension of the web",
+  "Supraglottic extension and petiole",
+  "Cricothyroid membrane for transcervical needles"
+ ],
+ "danger": [
+  "Re-webbing from opposed raw surfaces at the commissure",
+  "Stripping lamina propria during division",
+  "Laser fire near the tube",
+  "Keel malposition or displacement into the airway",
+  "Missed subglottic stenosis"
+ ],
+ "steps": [
+  [
+   "Assess the web",
+   "Measure the web anteroposteriorly and vertically into the supraglottis and subglottis with angled telescopes, and look for associated cartilage framework distortion, subglottic stenosis, or supraglottic scar. In unexplained webs, exclude GPA, sarcoidosis, and amyloidosis before committing to surgery."
+  ],
+  [
+   "Confirm indications",
+   "Treat for airway restriction, elevated pitch, or dysphonia that limits the patient. Avoid surgery without functional limitation or with uncontrolled reflux, and be cautious with active glottic papilloma, because ongoing inflammation or disease at the commissure drives recurrent webbing."
+  ],
+  [
+   "Choose the technique",
+   "Small thin webs suit an endoscopic mucosal flap that resurfaces one side. Large or thick webs without enough tissue for a flap need division with keel placement, which keeps the raw surfaces apart but requires a second procedure for removal; discuss both options beforehand."
+  ],
+  [
+   "Flap: expose and infuse",
+   "Suspend an anterior commissure laryngoscope for full exposure and infuse dilute epinephrine and saline into the web. Infusion thickens and separates the layers, making flap elevation easier and reducing bleeding that would obscure the anterior commissure."
+  ],
+  [
+   "Flap: asymmetric incision",
+   "Incise asymmetrically along one fold's free edge or superior surface so that the web tissue becomes a mucosal flap attached to the opposite fold. Release the division fully to the anterior commissure so no residual bridge remains."
+  ],
+  [
+   "Flap: prepare the bed",
+   "Remove mucosa from the flap's undersurface and from the receiving subglottic surface near the anterior commissure, using cold steel or low-power defocused CO2. Avoid fenestrating the flap, because a hole lets raw surfaces meet and re-form the web."
+  ],
+  [
+   "Flap: secure",
+   "Drape the flap around the free edge onto the prepared bed and secure it with one or two absorbable 5-0 or 6-0 sutures; fibrin glue alone usually does not hold. Some surgeons apply topical mitomycin C to the opposite raw surface to reduce scar."
+  ],
+  [
+   "Keel: divide the web",
+   "For keel repair, divide the web exactly in the midline under lateral tension, using microscissors, a sickle knife, or the smallest-spot CO2 setting. Preserve the lamina propria on both sides to protect future vibration."
+  ],
+  [
+   "Keel: groove the cartilage",
+   "Use the CO2 laser to make a shallow groove, about 1 mm deep, on the inner thyroid cartilage from roughly 3 to 4 mm above to 4 to 5 mm below the anterior commissure. The groove seats the keel flush so it cannot slide."
+  ],
+  [
+   "Keel: size it",
+   "Mark a telescope shaft at the upper and lower limits of the raw area to measure the required keel height, then trim the Silastic keel to fit. Test the fit with heavy cup forceps before fixation."
+  ],
+  [
+   "Keel: pass sutures",
+   "Have an assistant pass 18-gauge needles from the neck into the larynx above and below the commissure under endoscopic view, threading 0 polypropylene out to the skin. Place the upper needle first, as it is harder to pass through calcified thyroid cartilage."
+  ],
+  [
+   "Keel: fix it",
+   "Thread the sutures through the keel spine, guide it into position with equal tension on both ends, and confirm placement with angled telescopes. Tie over buttons on the neck, or bury the buttons if the keel is to stay longer."
+  ],
+  [
+   "Keel removal",
+   "Remove the keel after about 10 to 14 days under apneic or jet anesthesia so an endotracheal tube does not disturb the healing site. Cut the external sutures and extract the keel endoscopically with cup forceps."
+  ],
+  [
+   "Alternatives and aftercare",
+   "Serial awake office debridement after division is an alternative in tolerant patients. Expect a week or more of discomfort and globus with a keel in place; treat reflux, and follow with stroboscopy to detect early re-webbing."
+  ]
+ ],
+ "exit_check": [
+  "Web fully divided to the anterior commissure",
+  "Flap sutured without fenestration, or keel seated in groove and confirmed on angled telescope",
+  "Airway adequate and hemostasis secured"
+ ],
+ "postop": [
+  "Reflux therapy",
+  "Voice rest per surgeon practice",
+  "Keel removal at about 10 to 14 days",
+  "Stroboscopy follow-up for re-webbing"
+ ],
+ "complications": {
+  "early": [
+   "Airway edema",
+   "Keel displacement",
+   "Suture or button site problems",
+   "Bleeding"
+  ],
+  "late": [
+   "Recurrent web",
+   "Persistent dysphonia",
+   "Granulation at commissure",
+   "Glottic scar and reduced vibration"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the most common cause of an acquired anterior glottic web?",
+   "Surgery or injury creating opposing raw surfaces at the anterior commissure, such as bilateral simultaneous lesion excision."
+  ],
+  [
+   "How do you prevent web formation when operating on bilateral anterior lesions?",
+   "Stage the sides or preserve a mucosal bridge at the anterior commissure so that opposed raw surfaces do not heal together."
+  ],
+  [
+   "Why is the mucosal flap incision placed asymmetrically?",
+   "So the web mucosa remains pedicled on one fold and can resurface the raw edge of the other, preventing raw-to-raw contact."
+  ],
+  [
+   "What systemic diseases should be excluded with an unexplained web or subglottic involvement?",
+   "GPA, sarcoidosis, and amyloidosis."
+  ],
+  [
+   "How long does a keel typically stay in?",
+   "About 10 to 14 days, then it is removed endoscopically without an endotracheal tube."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Chapter 28: Anterior Glottic Web (pp 231-238)"
+ ]
+}

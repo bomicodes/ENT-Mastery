@@ -1,0 +1,136 @@
+{
+ "slug": "penetrating-neck-exploration",
+ "title": "Neck Exploration for Penetrating Trauma",
+ "domain": "Facial Trauma",
+ "or_family_v190": "emergency",
+ "linked_topic": "Penetrating and Blunt Neck Trauma",
+ "source_label": "Pasha 6e and Cummings 7e penetrating neck trauma chapters",
+ "indications": "Penetrating injury that breaches the platysma. Hard signs (pulsatile bleeding, expanding hematoma, bruit or thrill, absent pulse, shock, neurologic deficit, air bubbling from the wound, massive hemoptysis, airway compromise) mandate immediate operative exploration. Stable patients without hard signs undergo CT angiography with targeted endoscopy or esophagography rather than mandatory exploration, the so-called no-zone approach. Zones still guide exposure: zone I may need sternotomy and zone III endovascular control.",
+ "setup": [
+  "ATLS primary survey; secure the airway early, by intubation or surgical airway, before a hematoma distorts anatomy",
+  "Do not probe or remove impaled objects outside the OR; direct pressure for bleeding",
+  "Supine, shoulder roll if the cervical spine is cleared, head turned away",
+  "Prep the neck, both sides, chest for sternotomy, and a thigh for saphenous vein graft",
+  "Vascular instruments, shunts, Fogarty catheters, rigid and flexible endoscopes, thoracic and vascular surgery help available"
+ ],
+ "landmarks": [
+  "Platysma: violation defines a deep injury",
+  "Zone I: clavicles/sternal notch to cricoid",
+  "Zone II: cricoid to mandibular angle",
+  "Zone III: angle to skull base",
+  "Anterior border of sternocleidomastoid and carotid sheath",
+  "Common, internal, and external carotid arteries; internal jugular vein",
+  "Vagus, hypoglossal, and recurrent laryngeal nerves",
+  "Pharynx, esophagus, larynx, and trachea"
+ ],
+ "danger": [
+  "Losing the airway while waiting for imaging",
+  "Releasing tamponade before proximal and distal control",
+  "Air embolism from an open internal jugular vein",
+  "Missed esophageal injury, the most lethal delayed miss",
+  "Carotid ligation in a patient with stroke risk",
+  "Vagus and hypoglossal nerve injury during vascular control"
+ ],
+ "steps": [
+  [
+   "Secure the airway",
+   "Intubate early under controlled conditions, ideally with a surgeon gowned and ready to perform a cricothyrotomy or tracheostomy. With a tracheal wound, a tube can be passed directly through the defect. Avoid bag-mask ventilation with an airway injury because it worsens subcutaneous emphysema."
+  ],
+  [
+   "Choose the approach",
+   "Stable patient without hard signs: CT angiography first, with endoscopy or esophagography for concerning tracks. Hard signs or instability: straight to the OR. Note the zone of injury to plan exposure, but let the clinical and imaging findings, not the zone alone, decide exploration."
+  ],
+  [
+   "Keep pressure on",
+   "Have an assistant maintain direct finger pressure on any bleeding wound until you are ready for control. A Foley catheter inserted into the tract and inflated can tamponade bleeding in zone I or III, buying time for imaging or endovascular treatment."
+  ],
+  [
+   "Incise along the SCM",
+   "Make an incision along the anterior border of the sternocleidomastoid from mastoid toward the sternal notch, extending as needed. Bilateral injuries can be approached with bilateral incisions or a collar incision. Divide the platysma and retract the muscle laterally to open the carotid sheath."
+  ],
+  [
+   "Get proximal and distal control",
+   "Expose the common carotid low in the neck before approaching the injury, then the internal and external carotids above. Loop each with vessel loops. Only then release tamponade and open the hematoma. Ligate the facial vein to widen exposure."
+  ],
+  [
+   "Manage the carotid",
+   "Repair simple lacerations primarily; use a patch or interposition vein graft for larger defects, with a temporary shunt if needed. Ligation is reserved for uncontrollable bleeding or unrepairable injury, ideally not in the presence of stroke. The external carotid can be tied safely."
+  ],
+  [
+   "Manage the jugular vein",
+   "Repair the internal jugular vein laterally if simple, otherwise ligate it, which is well tolerated on one side. Place the patient head-down and keep the vein compressed during repair to prevent air embolism."
+  ],
+  [
+   "Explore the aerodigestive tract",
+   "Inspect the pharynx and esophagus by palpation and direct view, with intraoperative endoscopy, air insufflation under saline, or dye via a nasogastric tube to find small leaks. Look at the larynx and trachea for mucosal tears, cartilage fractures, or bubbling."
+  ],
+  [
+   "Repair pharynx and esophagus",
+   "Debride devitalized edges and close in two layers with absorbable sutures. Buttress with sternocleidomastoid or strap muscle, especially if adjacent to a vascular repair, and drain widely. Feed through a nasogastric tube and confirm healing with a contrast study before oral feeding."
+  ],
+  [
+   "Repair larynx and trachea",
+   "Close simple tracheal lacerations with absorbable sutures. Extensive injuries need a tracheostomy placed below the injury, with laryngeal fracture repair or stenting as indicated. Inspect the recurrent laryngeal nerves along the tracheoesophageal groove."
+  ],
+  [
+   "Zone I and III adjuncts",
+   "For zone I great vessel injuries, involve thoracic surgery for sternotomy or a clavicular approach. For high zone III carotid or vertebral injuries, use endovascular embolization or stenting; mandibular subluxation or osteotomy can improve open exposure if needed."
+  ],
+  [
+   "Irrigate and close",
+   "Irrigate, achieve hemostasis, and place suction drains away from vascular repairs and next to aerodigestive repairs. Close the platysma and skin. Record the trajectory and every structure inspected. Repeat endoscopy or imaging later if any structure could not be fully assessed."
+  ]
+ ],
+ "exit_check": [
+  "Proximal and distal vessels controlled and repaired; distal pulses checked",
+  "Aerodigestive tract fully inspected with leak test",
+  "Airway secure and drains positioned"
+ ],
+ "postop": [
+  "ICU care with neurologic checks after carotid repair",
+  "Contrast swallow before oral intake after pharyngoesophageal repair",
+  "Monitor drain output for saliva, chyle, or blood",
+  "Laryngoscopy for voice change or aspiration",
+  "Tetanus status updated"
+ ],
+ "complications": {
+  "early": [
+   "Recurrent hemorrhage",
+   "Stroke or carotid thrombosis",
+   "Airway loss or edema",
+   "Pharyngeal or esophageal leak with mediastinitis"
+  ],
+  "late": [
+   "Pseudoaneurysm or arteriovenous fistula",
+   "Laryngotracheal stenosis",
+   "Cranial nerve deficits (X, XII, recurrent laryngeal)",
+   "Pharyngocutaneous fistula or stricture"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What are the hard signs of vascular injury in neck trauma?",
+   "Pulsatile bleeding, expanding hematoma, bruit or thrill, absent or reduced pulse, shock, and new neurologic deficit; air bubbling from the wound and massive hemoptysis indicate aerodigestive injury. Hard signs mean immediate exploration."
+  ],
+  [
+   "What does the no-zone approach mean?",
+   "Management is based on signs and CT angiography rather than the zone. Stable patients without hard signs get imaging and selective endoscopy; mandatory exploration had high negative rates."
+  ],
+  [
+   "Define the neck zones and their challenges.",
+   "Zone I: sternal notch to cricoid, great vessels and thoracic inlet, may need sternotomy. Zone II: cricoid to angle, easiest to expose. Zone III: angle to skull base, difficult exposure, often endovascular."
+  ],
+  [
+   "Which injury is most dangerous to miss?",
+   "Esophageal injury, because delayed diagnosis leads to mediastinitis and high mortality. Combine CT, esophagography, and endoscopy as needed."
+  ],
+  [
+   "When would you ligate the carotid?",
+   "When it cannot be repaired and bleeding cannot be otherwise controlled, ideally in a patient without stroke. Repair or shunting is preferred, and ligation in a patient with stroke risks worsening the infarct."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 10 Head and Neck Trauma (penetrating neck trauma, zones of injury, laryngeal trauma).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 120 Penetrating and Blunt Trauma to the Neck; Ch 66 Laryngeal and Esophageal Trauma."
+ ]
+}

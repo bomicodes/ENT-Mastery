@@ -1,0 +1,135 @@
+{
+ "slug": "vocal-process-granuloma-excision",
+ "title": "Vocal Process Granuloma Excision",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Vocal Process Granuloma",
+ "source_label": "Operative Techniques in Laryngology (2024)",
+ "indications": "Contact or intubation granuloma of the vocal process that needs tissue to exclude malignancy or specific infection (tuberculosis, fungal, Klebsiella), causes airway obstruction, or persists or enlarges despite maximal reflux therapy, voice and cough behavioral therapy, and treatment of glottic insufficiency. Most granulomas regress without surgery, and excision without addressing the drivers almost guarantees recurrence. The procedure removes the exophytic lesion at its stalk without exposing arytenoid perichondrium.",
+ "setup": [
+  "Confirm the full nonsurgical program (high-dose PPI, behavioral and cough therapy) and evaluate for glottic insufficiency (bowing, paresis, atrophy).",
+  "For recurrent granuloma, consider botulinum toxin into the ipsilateral TA-LCA complex a few days before surgery.",
+  "Anesthesia: small (5.0) tube placed by the surgeon if the granuloma is large, kept anterior; plan for possible airway obstruction at induction.",
+  "Posterior commissure laryngoscope plus standard phonomicrosurgery set, curved alligators, microscissors, and 1-mm cup forceps.",
+  "Have CO2 or pulsed KTP laser and injection augmentation material available if planned, with laser safety precautions."
+ ],
+ "landmarks": [
+  "Vocal process of the arytenoid",
+  "Medial arytenoid surface and perichondrium",
+  "Granuloma stalk",
+  "Posterior membranous fold",
+  "Interarytenoid region",
+  "Endotracheal tube position (anterior)"
+ ],
+ "danger": [
+  "Exposing arytenoid perichondrium (recurrence)",
+  "Digging into the vocal process cartilage",
+  "Shearing the granuloma off at intubation",
+  "Removing normal surrounding mucosa",
+  "Ignoring glottic insufficiency or reflux"
+ ],
+ "steps": [
+  [
+   "Reserve surgery",
+   "Operate only to exclude malignancy or infection such as tuberculosis or Klebsiella, for airway obstruction, or for persistent or enlarging lesions after reflux treatment, voice and cough therapy, and correction of glottic insufficiency. Surgery without addressing causes almost guarantees recurrence."
+  ],
+  [
+   "Understand the goal",
+   "Recurrence depends on a race between inflamed arytenoid perichondrium and healing mucosa. Every step should preserve surrounding normal mucosa, avoid touching the perichondrium, and leave the smallest possible wound so epithelium covers it quickly."
+  ],
+  [
+   "Consider preoperative botulinum toxin",
+   "For recurrent granuloma, inject botulinum toxin into the ipsilateral thyroarytenoid-lateral cricoarytenoid complex, ideally a few days before surgery, so the arytenoids are chemically rested and do not hammer together while the wound heals."
+  ],
+  [
+   "Protect the lesion at intubation",
+   "For a large granuloma the surgeon may intubate to avoid shearing it off and losing the specimen. Use a small 5.0 tube and keep it anterior so the posterior glottis and the lesion base remain unobstructed during the case."
+  ],
+  [
+   "Expose the posterior glottis",
+   "Use a posterior commissure laryngoscope angled to hold the tube anteriorly, giving a full view of the arytenoid, vocal process, and posterior membranous fold on the involved side. Suspend and bring in the microscope at high power."
+  ],
+  [
+   "Define the stalk",
+   "Under high magnification retract the granuloma gently, or pass a small curved alligator between the lesion and the arytenoid, to identify the size and exact site of the stalk before any cut is made."
+  ],
+  [
+   "Grasp the stalk medially",
+   "Grasp the stalk at its most medial point with a curved alligator curved away from the lesion side, and retract it gently toward the midline so the attachment is put on light tension without tearing adjacent mucosa."
+  ],
+  [
+   "Cut flush",
+   "Divide the stalk just lateral to the alligator with microscissors curved in the same direction, delivering the granuloma intact for pathology without digging into the vocal process or stripping perichondrium."
+  ],
+  [
+   "Laser alternative",
+   "Alternatively ablate or excise with CO2 or pulsed KTP laser (the KTP option can be performed awake in the office), deliberately leaving a small cuff of granuloma at the base so arytenoid perichondrium is not exposed."
+  ],
+  [
+   "Hemostasis and residue",
+   "Apply 1:10,000 epinephrine pledgets; bleeding is usually trivial. Palpate and inspect, removing only obvious exophytic residual granulation with a 1-mm cup forceps without taking normal mucosa or reaching deep into the base."
+  ],
+  [
+   "Treat glottic insufficiency",
+   "Assess for bowing, paresis, or atrophy, since compensatory hyperadduction of the posterior glottis drives recurrent granuloma. Perform injection augmentation at the same sitting when glottic closure is incomplete, so the patient no longer needs to squeeze the posterior glottis to phonate."
+  ],
+  [
+   "Optional adjuncts",
+   "Botulinum toxin can be given intraoperatively lateral to the vocal process into the TA-LCA complex if not done before surgery. Some surgeons inject local steroid into the base, although its effect on healing and recurrence is uncertain."
+  ],
+  [
+   "Close the case",
+   "Apply topical lidocaine to limit coughing and throat clearing at emergence, remove the laryngoscope, and arrange a smooth extubation; send the specimen labeled for histology and, when indicated, cultures or special stains to exclude carcinoma and specific infection."
+  ]
+ ],
+ "exit_check": [
+  "Granuloma removed at the stalk with no exposed perichondrium or cartilage and normal surrounding mucosa preserved.",
+  "Glottic insufficiency addressed (augmentation) and botulinum toxin given if planned; specimen sent for histology."
+ ],
+ "postop": [
+  "Voice rest for about 6-10 days, then speech therapy focused on hard glottal attack, throat clearing, and cough suppression.",
+  "Reflux treatment and behavior modification for all patients.",
+  "Office laryngoscopy at 2-4 weeks and periodically for recurrence.",
+  "For repeated recurrence despite compliance, consider pH-impedance testing on therapy and antireflux surgery evaluation."
+ ],
+ "complications": {
+  "early": [
+   "Minor bleeding",
+   "Aspiration or weak cough after botulinum toxin",
+   "Laryngospasm at emergence",
+   "Dental injury"
+  ],
+  "late": [
+   "Recurrence (common, especially without addressing causes)",
+   "Arytenoid chondritis or perichondritis",
+   "Posterior glottic scar",
+   "Missed carcinoma if no histology"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What are the main causes of vocal process granuloma?",
+   "Laryngopharyngeal reflux, phonotrauma (hard glottal attack, low pitch, throat clearing, chronic cough), endotracheal intubation injury, and glottic insufficiency with compensatory posterior hyperadduction."
+  ],
+  [
+   "Why is surgery a last resort?",
+   "Most granulomas regress with reflux and behavioral therapy, and recurrence after excision is common because the inflamed perichondrium and ongoing trauma persist. Surgery is for diagnosis, airway compromise, or refractory lesions."
+  ],
+  [
+   "How does botulinum toxin help?",
+   "Injected into the TA-LCA complex it weakens adduction so the vocal processes stop striking each other while the wound epithelializes, lowering recurrence."
+  ],
+  [
+   "Why leave a cuff of tissue at the base with laser?",
+   "Exposing the perichondrium invites a new granuloma or chondritis; a small cuff lets the mucosa heal over it."
+  ],
+  [
+   "What lesion in this location should raise concern?",
+   "Any atypical, ulcerated, or rapidly growing posterior glottic lesion, especially in a smoker, needs biopsy to exclude squamous cell carcinoma; granulomatous infection is also on the differential."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology, 2nd ed (Rubin, Sataloff, Korovin, eds; Springer 2024), Ch 21: Vocal Fold Granuloma (pp 179-184).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: benign vocal fold mucosal disorders and laryngopharyngeal reflux."
+ ]
+}

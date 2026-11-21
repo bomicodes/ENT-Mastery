@@ -1,0 +1,131 @@
+{
+ "slug": "pectoralis-major-flap",
+ "title": "Pectoralis Major Myocutaneous Flap",
+ "domain": "Head & Neck Oncology",
+ "or_family_v190": "reconstruction",
+ "linked_topic": "Reconstruction Selection After Head & Neck Ablation",
+ "source_label": "Pasha 6e and Cummings 7e reconstruction chapters",
+ "indications": "Reliable pedicled myocutaneous or muscle-only flap from the chest for head and neck defects when free tissue transfer is unsuitable, unavailable, or has failed. Common uses: pharyngeal reinforcement or onlay after salvage laryngectomy, pharyngocutaneous fistula repair, oral cavity and oropharyngeal defects, coverage of exposed carotid or plates, and neck soft-tissue replacement. Reach extends to about the zygoma; it is bulky and can pull down on reconstructions.",
+ "setup": [
+  "Supine with shoulder roll; chest prepped from neck to below the costal margin and across to the sternum, both sides if needed",
+  "Mark the pedicle line before draping: acromion to xiphoid, then a perpendicular from the midclavicle",
+  "Arm on an armboard or tucked so the pectoralis can be relaxed and the humeral insertion reached",
+  "Monopolar, bipolar, lighted retractors, large drains for chest and neck",
+  "Decide skin paddle versus muscle-only flap; in women plan the paddle and incision around the inframammary fold"
+ ],
+ "landmarks": [
+  "Clavicle and its midpoint",
+  "Acromion, xiphoid, and sternal border",
+  "Pectoral branch of the thoracoacromial artery on the deep surface of the muscle",
+  "Lateral pectoral nerve running with the pedicle; medial pectoral nerve through pectoralis minor",
+  "Pectoralis minor in the plane deep to the flap",
+  "Humeral insertion of pectoralis major",
+  "Deltopectoral groove and cephalic vein"
+ ],
+ "danger": [
+  "Thoracoacromial pedicle on the deep surface: never cut on the undersurface without seeing it",
+  "Skin paddle beyond the inferior muscle edge is random and may necrose",
+  "Do not violate the deltopectoral flap territory in case a backup is needed",
+  "Shearing of the skin paddle off the muscle",
+  "Pneumothorax with dissection near the ribs or intercostals",
+  "Tight clavicular tunnel or pedicle twist compressing the vessels"
+ ],
+ "steps": [
+  [
+   "Plan the flap",
+   "Draw a line from acromion to xiphoid and a perpendicular from the midclavicle; the pedicle runs along these. Measure from the clavicle to the furthest part of the defect and add slack. Center the skin paddle over the muscle medial and inferior to the nipple, with the paddle sized to the defect."
+  ],
+  [
+   "Incise the paddle and access",
+   "Incise around the skin paddle down to muscle and bevel outward to capture more perforators. Extend the access incision laterally and up toward the axilla, staying lateral to the deltopectoral flap territory; in women, use the inframammary fold and raise breast tissue off the muscle."
+  ],
+  [
+   "Fix the paddle",
+   "Tack the skin paddle edges to the underlying pectoralis fascia with several absorbable sutures early. The perforators between skin and muscle are delicate, and shearing during elevation and passage through the tunnel is a common reason for paddle loss."
+  ],
+  [
+   "Expose the muscle",
+   "Elevate the skin and fat off the anterior surface of the pectoralis major over the planned muscle width, superiorly toward the clavicle and laterally to the free edge. Leave enough of the upper chest skin intact to allow later donor closure and to protect a deltopectoral option."
+  ],
+  [
+   "Enter the subpectoral plane",
+   "At the inferolateral border, lift the free edge of pectoralis major and dissect bluntly in the loose plane between pectoralis major and minor. This avascular plane opens easily with a finger. Look up at the undersurface: the thoracoacromial pedicle is visible on the deep fascia of pectoralis major."
+  ],
+  [
+   "Release inferiorly and medially",
+   "Divide the muscle inferiorly and along the sternal origin, ligating the internal mammary perforators as they enter medially. Stay superficial to the ribs and intercostals to avoid pneumothorax. Lift the flap superiorly, watching the pedicle on the undersurface throughout."
+  ],
+  [
+   "Narrow the pedicle",
+   "Divide the lateral muscle and humeral portion under direct vision, keeping a strip of muscle around the thoracoacromial vessels. Dividing the lateral pectoral nerve lets the muscle atrophy and reduces bulk. A muscle cuff protects the pedicle; skeletonizing it gains length but raises risk."
+  ],
+  [
+   "Create the tunnel",
+   "Make a wide subcutaneous tunnel from the chest over the clavicle into the neck, at least four fingerbreadths wide, superficial to the clavicle. A tight tunnel or sharp edge compresses the pedicle. Passing the flap under the clavicle is an option for extra reach in experienced hands."
+  ],
+  [
+   "Pass and orient",
+   "Pass the flap through the tunnel without twisting, checking the pedicle orientation at each stage. Confirm the paddle bleeds at the edges and the muscle is pink. Avoid tension: if it does not reach comfortably, gain length before insetting rather than pulling it."
+  ],
+  [
+   "Inset",
+   "Inset the paddle into the pharyngeal or oral defect with watertight interrupted sutures, or lay the muscle over a pharyngeal closure or carotid as an onlay. Suspend the flap to deep tissues so its weight does not drag on the suture line and cause dehiscence."
+  ],
+  [
+   "Close the donor site",
+   "Place suction drains in the chest and neck. Close the chest primarily by undermining the skin; a large paddle may need a skin graft or local advancement. Keep the pedicle free of compression from neck closure or dressings."
+  ]
+ ],
+ "exit_check": [
+  "Pedicle untwisted with no tension and no compression at the clavicle",
+  "Paddle bleeds at the edges; inset watertight",
+  "Drains in chest and neck; no pneumothorax on examination or imaging if concerned"
+ ],
+ "postop": [
+  "Flap checks of the skin paddle color and capillary refill",
+  "Avoid tight trach ties or dressings across the pedicle",
+  "Drains until output falls; watch for chest hematoma",
+  "Shoulder and chest physiotherapy, especially if CN XI is also at risk",
+  "Swallow study before oral feeding after pharyngeal reconstruction"
+ ],
+ "complications": {
+  "early": [
+   "Partial skin paddle necrosis",
+   "Hematoma or seroma at chest or neck",
+   "Wound dehiscence and pharyngocutaneous fistula",
+   "Pneumothorax"
+  ],
+  "late": [
+   "Neck bulk and contour deformity",
+   "Downward traction on the reconstruction",
+   "Shoulder weakness and breast asymmetry",
+   "Hair-bearing skin in the pharynx or mouth"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What is the blood supply of the pectoralis major flap?",
+   "The pectoral branch of the thoracoacromial artery, which runs on the deep surface of the muscle. Secondary supply comes from the lateral thoracic artery and internal mammary perforators, which are divided during harvest."
+  ],
+  [
+   "Where is the pedicle on the surface of the chest?",
+   "Along a line from the acromion to the xiphoid and a perpendicular from the midclavicle. The paddle is centered medial and inferior to the nipple over muscle."
+  ],
+  [
+   "How can you reduce the bulk of the flap?",
+   "Divide the lateral pectoral nerve so the muscle atrophies, harvest a narrower muscle cuff, or use a muscle-only flap with a skin graft or mucosalization."
+  ],
+  [
+   "What is the role of the flap in salvage laryngectomy?",
+   "After chemoradiation, an onlay of vascularized muscle over the pharyngeal closure lowers the rate and severity of pharyngocutaneous fistula. A pectoralis onlay and free-tissue onlay are both accepted options."
+  ],
+  [
+   "Which flap must you protect during harvest, and why?",
+   "The deltopectoral flap, based on internal mammary perforators. Keep the incisions lateral and avoid undermining its territory so it remains available as a backup."
+  ]
+ ],
+ "source_basis": [
+  "Pasha R, Golub JS. Otolaryngology-Head and Neck Surgery: Clinical Reference Guide, 6e: Ch 8 Facial Plastic and Reconstructive Surgery (pectoralis major flap); Ch 6 Head and Neck Cancer (laryngectomy reconstruction).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: Ch 98 Reconstruction of the Oropharynx; Ch 103 Reconstruction of the Hypopharynx and Esophagus."
+ ]
+}

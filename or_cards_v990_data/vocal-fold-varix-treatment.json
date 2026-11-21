@@ -1,0 +1,135 @@
+{
+ "slug": "vocal-fold-varix-treatment",
+ "title": "Vocal Fold Varix / Ectasia Treatment (Cold Resection, CO2, or Angiolytic Laser)",
+ "domain": "Laryngology",
+ "or_family_v190": "laryngology",
+ "linked_topic": "Benign Vocal Fold Lesions",
+ "source_label": "Operative Techniques in Laryngology (2024)",
+ "indications": "Abnormal vocal fold vessels (varix or ectasia) that have caused hemorrhage, especially recurrent hemorrhage, that produce dysphonia from position on or near the vibratory margin, that engorge with heavy voice use, or that feed a polyp or other phonotraumatic lesion. Normal vessels are fine and run parallel to the edge; abnormal vessels are enlarged (often over 1 mm), tortuous, or transverse. Options are cold microdissection and resection, low-power CO2 laser for lateral vessels, or angiolytic laser (pulsed KTP or 445 nm), in the OR or office.",
+ "setup": [
+  "Review stroboscopy for vessel location, hemorrhage history, and associated lesions; time surgery after any acute hemorrhage has resolved.",
+  "Hold anticoagulants, antiplatelets, and supplements with bleeding effects for at least a week if medically safe.",
+  "Laser-safe 5.0 tube, laser safety timeout, wet towels and eye protection if a laser may be used.",
+  "Phonomicrosurgery set plus right-angled vascular knife, fine scissors, and an angiolytic laser with 0.3-0.4 mm fiber.",
+  "Avoid applying epinephrine until vessels are mapped."
+ ],
+ "landmarks": [
+  "Abnormal vessel course (transverse or enlarged)",
+  "Vibratory margin (medial half of the superior surface)",
+  "Superior surface lateral to the vibratory margin",
+  "Anterior commissure and mid-fold",
+  "Vocal process",
+  "Infraglottic surface"
+ ],
+ "danger": [
+  "Epinephrine before mapping hiding vessels",
+  "Heavy counterpressure collapsing vessels",
+  "CO2 or thermal injury at the vibratory margin",
+  "Epithelial damage leading to scar",
+  "Airway fire with laser use"
+ ],
+ "steps": [
+  [
+   "Treat only selected vessels",
+   "Operate for hemorrhage (especially recurrent), dysphonia from a vessel on or near the vibratory margin, or a vessel that engorges with heavy voice use. Normal vessels are small (under about 1 mm) and run parallel to the edge; abnormal ones are enlarged or transverse."
+  ],
+  [
+   "Recognize relative contraindications",
+   "Premenstrual-only ectasias without bleeding can often be managed hormonally. Hereditary hemorrhagic telangiectasia and minimally symptomatic lesions in coloratura sopranos are relative contraindications because of the risk of creating stiffness that costs more voice than the vessel."
+  ],
+  [
+   "Airway setup",
+   "Intubate with a 5.0 laser-safe tube so a laser can be used safely if needed, fill the cuff with saline, keep inspired oxygen as low as tolerated, and run a formal laser safety timeout with eye protection and wet towels."
+  ],
+  [
+   "Exposure without distortion",
+   "Use the largest laryngoscope that shows the whole fold and avoid heavy external counterpressure, which slackens the fold and collapses the vessels. Inspect with 0, 30, and 70 degree telescopes, especially at the anterior commissure, mid-fold, vocal process, and infraglottic surface."
+  ],
+  [
+   "Avoid early vasoconstrictors",
+   "Do not apply topical or injected epinephrine before mapping, because the abnormal vessel may shrink or disappear, making it hard to find and impossible to judge the endpoint of treatment."
+  ],
+  [
+   "Palpate for associated lesions",
+   "Palpate for scar, sulcus, polyp, or cyst, which often accompany a varix and may need treatment at the same sitting, so the vessel and its associated phonotraumatic lesion are dealt with together."
+  ],
+  [
+   "Cold resection: incise beside the vessel",
+   "Make a tiny superficial epithelial incision immediately lateral to the vessel with a vascular knife held parallel to it. A sickle knife is rarely needed, and the incision should be just large enough to pass the knife under the vessel."
+  ],
+  [
+   "Cold resection: elevate",
+   "Turn the right-angled vascular knife under the vessel, hugging it, and run it anteriorly and posteriorly to isolate the abnormal segment with minimal epithelial disruption, much like passing a right-angle clamp under a vein."
+  ],
+  [
+   "Cold resection: divide",
+   "Cut the anterior and posterior ends with scissors or a brief laser pulse and send the vessel for pathology. Let small deep feeders bleed until the resection is complete, then apply an epinephrine pledget for hemostasis."
+  ],
+  [
+   "CO2 laser option",
+   "Reserve CO2 for vessels lateral to the medial half of the fold; use low power (about 1-2 W, 0.1 s, slightly defocused), keep the beam tangential to the edge, and expect higher recurrence because CO2 does not reliably seal vessels larger than about 0.6 mm."
+  ],
+  [
+   "Angiolytic laser option",
+   "With a pulsed KTP or blue (445 nm) laser through a 0.3-0.4 mm fiber, start several millimeters away in noncontact mode and approach until the vessel darkens, treating multiple spots along its length while sparing the overlying epithelium."
+  ],
+  [
+   "Hemostasis",
+   "Bleeding is usually minimal and stops with epinephrine pledgets. Cautery or laser coagulation is acceptable lateral to the vibratory margin if needed, but avoid thermal energy on the medial vibratory edge."
+  ],
+  [
+   "Finish and emerge",
+   "Recheck the fold for residual abnormal vessels and epithelial integrity, apply topical lidocaine, and emerge smoothly without coughing, which can provoke new hemorrhage in the treated fold. Document the vessels treated and the endpoint reached to compare with postoperative stroboscopy."
+  ]
+ ],
+ "exit_check": [
+  "All targeted abnormal vessels resected or darkened with intact overlying epithelium and no thermal injury at the vibratory margin.",
+  "Associated polyp, cyst, or scar addressed; laser safety completed and hemostasis secure."
+ ],
+ "postop": [
+  "Voice rest up to about 1 week if the vibratory margin was treated, or 1-3 days if only the superior surface was treated.",
+  "Gentle voice use for 3-4 weeks before loud speaking or singing; voice therapy for phonotraumatic behaviors.",
+  "Resume anticoagulant medicines only when safe and after discussion with the prescribing physician.",
+  "Stroboscopy at follow-up to check for recanalization, recurrence, or stiffness."
+ ],
+ "complications": {
+  "early": [
+   "Hemorrhage into the fold",
+   "Thermal epithelial injury",
+   "Airway fire (laser)",
+   "Dental or suspension injury"
+  ],
+  "late": [
+   "Recanalization or recurrence of the vessel",
+   "Stiffness or scar with reduced mucosal wave",
+   "New vessels elsewhere",
+   "Persistent dysphonia from associated lesions"
+  ]
+ },
+ "attending_followup": [
+  [
+   "A singer has sudden voice loss while singing; what is the likely diagnosis and immediate plan?",
+   "Vocal fold hemorrhage, often from a varix. Strict voice rest, stroboscopy, stop anticoagulant medicines and supplements if safe, and treat reflux or cough; surgery is considered for recurrent hemorrhage or a persistent symptomatic varix after resolution."
+  ],
+  [
+   "Why does an angiolytic laser suit this lesion?",
+   "Pulsed KTP (532 nm) and blue (445 nm) light is absorbed by oxyhemoglobin, coagulating the vessel while largely sparing the overlying epithelium and superficial lamina propria."
+  ],
+  [
+   "Why avoid epinephrine early?",
+   "Vasoconstriction can make the abnormal vessel disappear, so it cannot be mapped or its treatment endpoint judged."
+  ],
+  [
+   "When is CO2 laser acceptable?",
+   "Only for vessels lateral to the vibratory margin, at low power and tangential beam, because thermal spread at the margin causes scar and CO2 does not seal larger vessels well."
+  ],
+  [
+   "What hormonal factor affects vocal fold vessels?",
+   "Premenstrual vascular engorgement; ectasias that are symptomatic only premenstrually without hemorrhage can often be managed with hormonal strategies and voice modification."
+  ]
+ ],
+ "source_basis": [
+  "Operative Techniques in Laryngology, 2nd ed (Rubin, Sataloff, Korovin, eds; Springer 2024), Ch 24: Vascular Lesions of the Vocal Fold: Phonomicrosurgery (pp 199-206).",
+  "Cummings Otolaryngology-Head and Neck Surgery, 7e: vocal fold hemorrhage and benign vascular lesions; laser safety in laryngeal surgery."
+ ]
+}

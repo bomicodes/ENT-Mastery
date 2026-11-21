@@ -1,0 +1,135 @@
+{
+ "slug": "draf-iii-outside-in",
+ "title": "Draf III / Modified Endoscopic Lothrop (outside-in technique)",
+ "domain": "Rhinology",
+ "or_family_v190": "sinus",
+ "linked_topic": "Frontal Sinusotomy / Draf Procedures",
+ "source_label": "Atlas of Endoscopic Sinus and Skull Base Surgery 2e, Ch 11",
+ "indications": "Eosinophilic chronic rhinosinusitis, AERD, and extensive polyposis with lower airway disease; recalcitrant or iatrogenic frontal sinus disease after failed Draf II; failed frontal obliteration; frontal mucoceles; and access for frontal or anterior skull base tumors. The outside-in technique defines the lateral limits and the first olfactory neuron before drilling, so the frontal sinus is entered safely. Defer while disease still requires systemic steroids for control. The only anatomic contraindication is less than about 5 mm from the posterior table to the skin in front of the frontal beak.",
+ "setup": [
+  "Shoulder roll to extend the neck, 15-20 degrees reverse Trendelenburg",
+  "TIVA targeting heart rate about 55-65 and MAP near 60",
+  "Ropivacaine with adrenaline pledgets and injection at septum, beak, and axilla",
+  "Navigation; 0-, 30-, and 70-degree scopes; 15-degree self-irrigating drill with 4.5 mm or larger diamond burs; bent-needle cautery; Kerrison punches",
+  "0.5 mm silicone sheet, NasoPore, and dexamethasone for dressing"
+ ],
+ "landmarks": [
+  "Medial orbital wall (after anterior ethmoidectomy)",
+  "Frontal process of the maxilla and overlying skin periosteum (lateral limit)",
+  "First olfactory neuron on the septum (posterior limit)",
+  "Frontal beak and intersinus septum",
+  "Posterior table of the frontal sinus",
+  "Perpendicular plate 'T' with the olfactory fossa"
+ ],
+ "danger": [
+  "Olfactory fossa and cribriform plate posteriorly",
+  "Posterior table dehiscence and dura",
+  "Lamina papyracea dehiscence and orbit",
+  "Skin of the nasal dorsum from overdrilling anteriorly",
+  "Circumferential bone exposure leading to neo-ostium stenosis"
+ ],
+ "steps": [
+  [
+   "Select the patient",
+   "Confirm a fitting indication such as eosinophilic CRS, AERD, extensive polyposis with lower airway disease, failed prior frontal surgery or obliteration, or tumor access. Wait until disease is controlled without systemic steroids, and confirm at least about 5 mm from posterior table to skin in front of the beak."
+  ],
+  [
+   "Review imaging",
+   "Assess frontal sinus size, intersinus septum position, beak thickness, how far the olfactory fossa projects into the sinus, posterior table and lamina dehiscence, and septal deviation or a large swell body. These features define the safe drilling corridor and how much septum must be removed."
+  ],
+  [
+   "Position and anesthesia",
+   "Extend the neck with a shoulder roll, use 15-20 degrees reverse Trendelenburg, and run TIVA with heart rate about 55-65 and MAP near 60. Place ropivacaine-adrenaline pledgets and inject the septum, beak region, and middle turbinate axilla."
+  ],
+  [
+   "Identify the orbit",
+   "Perform at least an anterior ethmoidectomy to see the medial orbital wall on both sides before any drilling, and complete sphenoethmoidectomies as indicated by disease. The orbital wall is the lateral reference for the whole frontal opening."
+  ],
+  [
+   "Make mucosal incisions",
+   "With bent-needle cautery, start below the sinus in line with the anterior table, cut down the frontal process of the maxilla in the plane of the medial orbital wall, and make staggered septal incisions that include the swell body. Push the needle through the septum to mark the other side."
+  ],
+  [
+   "Raise flaps to the olfactory neuron",
+   "Elevate mucosa from the beak, frontal floor, frontal process, and septum back to the first olfactory neuron, which is the posterior limit. Do not confuse it with a small laterally running emissary vein just in front of it."
+  ],
+  [
+   "Create the septal window",
+   "Open the upper septum with a 2 mm Kerrison and heavy scissors, leaving a small crest under the sinus for orientation. Remove the septal mucosa within the window and cauterize the mucosal edges to limit bleeding."
+  ],
+  [
+   "Define the lateral limits",
+   "Drill the septal crest, then the lateral wall on both sides up to the whiter, bleeding periosteum beneath the skin over the frontal process, and remove the triangle of bone above the middle turbinate axilla. This outside-in step sets the safe boundaries before the sinus is entered."
+  ],
+  [
+   "Drill the beak",
+   "Using the 15-degree self-irrigating drill with a 4.5 mm or larger diamond bur, sweep in a broad inverted-U arc on a superior-anterior trajectory between the defined limits. Thin the beak broadly before breaking into the frontal sinus mucosa rather than drilling a narrow hole."
+  ],
+  [
+   "Open and square off",
+   "Use the bur's equator to remove the remaining beak and floor, connect both frontal recesses with a Kerrison, remove the intersinus septum, and follow the orbital wall up into the roof on each side. The goal is a wide, smooth common opening."
+  ],
+  [
+   "Clear the upper septum",
+   "Drill the superior bony septum back to the first olfactory neuron to reveal the 'T' formed by the perpendicular plate and the olfactory fossa. Trim the heads of the middle turbinates behind the septal window if they crowd the opening."
+  ],
+  [
+   "Graft and dress",
+   "Cover exposed bone of the frontal process with thin free mucosal grafts harvested shallowly from the posterior inferior turbinate. Then place a shaped 0.5 mm silicone sheet over the grafts with NasoPore support soaked in dexamethasone."
+  ],
+  [
+   "Aftercare",
+   "Discharge the same day with high-volume saline irrigations from day 1 and a short oral steroid course. Keep the silicone in place for at least 3 weeks, use NSAIDs for dorsal or periorbital swelling, review at about 3 and 12 weeks, and inject a fibrotic web at the beak with triamcinolone."
+  ]
+ ],
+ "exit_check": [
+  "Wide common frontal opening with both sinuses, posterior table, and roof seen with angled scope",
+  "Olfactory fossa 'T' identified and preserved; no CSF leak",
+  "Exposed bone covered with mucosal grafts and silicone sheet secured"
+ ],
+ "postop": [
+  "High-volume saline irrigations from day 1; budesonide irrigations as indicated",
+  "Short oral steroid course; NSAIDs for dorsal or periorbital swelling",
+  "Silicone sheet left at least 3 weeks",
+  "Endoscopic review at about 3 and 12 weeks; triamcinolone injection for early fibrotic web"
+ ],
+ "complications": {
+  "early": [
+   "CSF leak from olfactory fossa or posterior table",
+   "Orbital injury",
+   "Bleeding",
+   "Dorsal or periorbital swelling"
+  ],
+  "late": [
+   "Neo-ostium stenosis or closure (most common failure mode)",
+   "Anosmia or hyposmia",
+   "Recurrent polyposis",
+   "Skin dimpling or dorsal deformity from overdrilling"
+  ]
+ },
+ "attending_followup": [
+  [
+   "What defines the limits of a Draf III opening?",
+   "Laterally the skin periosteum over the frontal process of the maxilla (both sides), anteriorly the anterior table, posteriorly the first olfactory neuron and posterior table."
+  ],
+  [
+   "What is the anatomic contraindication to Draf III?",
+   "An anteroposterior distance under about 5 mm from the posterior table to the skin in front of the beak."
+  ],
+  [
+   "What advantage does the outside-in technique have over inside-out?",
+   "Lateral and posterior boundaries are defined before entering the sinus, so it works in small or scarred sinuses without needing to find the frontal recess first."
+  ],
+  [
+   "What reduces neo-ostium stenosis?",
+   "A maximally wide opening and covering exposed bone with free mucosal grafts plus a silicone sheet for several weeks."
+  ],
+  [
+   "Name the other chief alternative for failed frontal surgery.",
+   "Osteoplastic flap with or without obliteration, now largely reserved for lateral frontal disease or anatomy not reachable endoscopically."
+  ]
+ ],
+ "source_basis": [
+  "Atlas of Endoscopic Sinus and Skull Base Surgery, 2nd ed (Palmer, Chiu, Adappa, eds), Ch 11 Frontal Sinusotomy: Draf III, pp 93-100"
+ ]
+}
