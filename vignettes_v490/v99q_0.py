@@ -568,7 +568,7 @@ VIGNETTES = [
       "Perichondritis follows high helical or scaphal piercing, acupuncture, surgery, burns or frostbite. It is usually caused by Pseudomonas aeruginosa or Staphylococcus aureus and spares the lobule, which has no cartilage; children need IV antipseudomonal therapy. Any collection must be drained, because suppuration destroys cartilage and leaves a cauliflower ear. Relapsing polychondritis also spares the lobule but is recurrent and bilateral, involves the nose, airway or joints, and is treated with steroids.",
       "Post-piercing perichondritis: cover Pseudomonas and S. aureus, and drain any collection.",
       "How is a traumatic auricular hematoma in a wrestler managed?",
-      "By incision and drainage under sterile conditions, followed by a contoured through-and-through bolster and frequent rechecks for reaccumulation. Prompt drainage prevents perichondritis and cauliflower ear.",
+      "By incision and drainage under sterile conditions, followed by a contoured through-and-through bolster or quilting sutures and frequent rechecks for reaccumulation. Prompt drainage prevents perichondritis and cauliflower ear.",
       "application", "management"),
 
     # ---------------- AIED ----------------

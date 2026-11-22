@@ -1202,7 +1202,7 @@ VIGNETTES = [
         ],
         "board_pearl": "Facial frostbite: rapid rewarming at 40-42 C for 15-30 minutes, no early debridement.",
         "curveball": "A wrestler has a tense fluctuant swelling of the anterior auricle after a match. How is it treated?",
-        "curveball_answer": "An auricular hematoma is incised and drained promptly and bolstered, for example with through-and-through mattress sutures. Aspiration alone tends to reaccumulate, and undrained blood leads to cauliflower ear.",
+        "curveball_answer": "An auricular hematoma is incised and drained promptly, then the dead space is closed with a through-and-through bolster or quilting sutures. Aspiration alone tends to reaccumulate, and undrained blood leads to cauliflower ear.",
         "learning_stage": "foundation",
         "focus": "management",
     },

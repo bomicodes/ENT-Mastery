@@ -59,7 +59,7 @@ TOPIC = {
     "**Debridement**: remove all soft, gray, necrotic cartilage back to bleeding viable cartilage, preserving as much framework as possible.",
     "**Bolster**: through-and-through bolsters (dental rolls or silicone) close dead space and press perichondrium back onto cartilage so it can revascularize (K.J. Lee 12e, Ch 22).",
     "**Drains and irrigation**: a small drain or irrigation catheter can be used for extensive abscess cavities.",
-    "**Hematoma prevention**: prompt drainage of traumatic auricular hematoma with a bolster prevents secondary infection and cauliflower ear (K.J. Lee 12e, Ch 22).",
+    "**Hematoma prevention**: prompt incision and drainage of traumatic auricular hematoma with a bolster or quilting sutures prevents secondary infection and cauliflower ear (K.J. Lee 12e, Ch 22).",
     "**Delayed reconstruction**: wait for infection to clear fully before reconstructing a collapsed ear with cartilage grafts."
   ]),
   "teach": "\n".join([
@@ -145,7 +145,7 @@ TOPIC = {
       ],
       "board_pearl": "Auricular abscess: I&D, debride cartilage, bolster, cover Pseudomonas, 2-4 weeks.",
       "curveball": "Why does untreated auricular hematoma lead to cauliflower ear even without infection?",
-      "curveball_answer": "Auricular cartilage receives nutrients by diffusion from the perichondrium. A hematoma separates the two, so cartilage necroses while the perichondrium lays down new disorganized cartilage and fibrosis. Prompt drainage with a bolster prevents this.",
+      "curveball_answer": "Auricular cartilage receives nutrients by diffusion from the perichondrium. A hematoma separates the two, so cartilage necroses while the perichondrium lays down new disorganized cartilage and fibrosis. Prompt incision and drainage with a bolster or quilting sutures prevents this.",
       "learning_stage": "application",
       "focus": "management"
     },

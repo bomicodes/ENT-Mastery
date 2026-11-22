@@ -5,12 +5,12 @@
  "or_family_v190": "emergency",
  "linked_topic": "Facial Soft-Tissue Lacerations / Burns",
  "source_label": "Pasha 6e (Otology and Head and Neck Trauma chapters)",
- "indications": "Any tense, fluctuant collection between perichondrium and auricular cartilage after blunt or shearing trauma (wrestling, boxing, rugby, falls), most often on the anterior surface where skin is tightly bound to perichondrium. Drain as soon as it is recognized, ideally within the first days, because the cartilage depends on the perichondrium for its blood supply; untreated or reaccumulated blood causes cartilage necrosis, perichondritis and fibrocartilaginous overgrowth (cauliflower ear). The standard treatment is incision, drainage and a through-and-through bolster. Needle aspiration alone is not recommended because the collection reaccumulates without compression of the dead space.",
+ "indications": "Any tense, fluctuant collection between perichondrium and auricular cartilage after blunt or shearing trauma (wrestling, boxing, rugby, falls), most often on the anterior surface where skin is tightly bound to perichondrium. Drain as soon as it is recognized, ideally within the first days, because the cartilage depends on the perichondrium for its blood supply; untreated or reaccumulated blood causes cartilage necrosis, perichondritis and fibrocartilaginous overgrowth (cauliflower ear). The standard treatment is incision and drainage followed by compression of the dead space, either with a through-and-through bolster or with quilting sutures. Needle aspiration alone is not recommended because the collection reaccumulates without compression of the dead space.",
  "setup": [
   "Usually a bedside or clinic procedure; patient supine or seated with the head turned and the ear well lit (headlight or loupes)",
   "Ear ring block with local anesthetic (diamond pattern of about six injection points around the auricle) or targeted local infiltration",
   "Prep the whole auricle and postauricular skin; keep the canal plugged with a cotton ball to keep prep and blood out",
-  "Tray: #15 blade, fine scissors, small curette or Freer, suction or syringe with saline, nylon or polypropylene through-and-through sutures, bolster material (dental rolls, petrolatum gauze, silicone sheets or thermoplastic splints)",
+  "Tray: #15 blade, fine scissors, small curette or Freer, suction or syringe with saline, nylon or polypropylene through-and-through (bolster or quilting) sutures, bolster material (dental rolls, petrolatum gauze, silicone sheets or thermoplastic splints)",
   "Document hearing complaints and inspect the canal and tympanic membrane for associated injury before you start",
   "Plan follow-up within 24 to 48 hours and again around day 7 before you begin"
  ],
@@ -61,12 +61,12 @@
    "Lay the skin-perichondrial flap back onto the cartilage and confirm that it conforms to every fold without a residual pocket. The incision can be left partly open or loosely approximated so any further ooze drains out rather than collecting beneath the flap."
   ],
   [
-   "Place the through-and-through bolster",
-   "Contour dental rolls or petrolatum gauze to the anterior concavity and to the posterior auricular surface, then pass several through-and-through mattress sutures of nylon or polypropylene through bolster, ear and bolster. This compresses the flap onto the cartilage and eliminates dead space; it is the key step against reaccumulation."
+   "Close the dead space: bolster or quilting sutures",
+   "Either contour dental rolls or petrolatum gauze to the anterior concavity and the posterior surface and pass several through-and-through mattress sutures of nylon or polypropylene through bolster, ear and bolster, or place quilting sutures: through-and-through mattress sutures that follow the auricular contours without a bolster. Both press the flap onto the cartilage and close the dead space, the key step against reaccumulation."
   ],
   [
-   "Check bolster tension",
-   "Tie the sutures snug enough to coapt the flap but not so tight that the skin blanches, because pressure necrosis of skin and cartilage is a real complication. Alternatives include silicone sheets or thermoplastic splints molded to both surfaces and secured with transcartilaginous sutures."
+   "Check suture tension",
+   "Tie the bolster or quilting sutures snug enough to coapt the flap but not so tight that the skin blanches, because pressure necrosis of skin and cartilage is a real complication. Quilting avoids bolster pressure points and lets you inspect the skin. Silicone sheets or thermoplastic splints secured with transcartilaginous sutures are other options."
   ],
   [
    "Apply an outer dressing",
@@ -74,7 +74,7 @@
   ],
   [
    "Follow up and remove",
-   "Recheck within one to two days for pain, swelling or skin compromise, then remove the bolster at about 5 to 7 days. Examine for reaccumulation; a recurrent small collection can be re-drained and re-bolstered, and athletes should use protective headgear on return."
+   "Recheck within one to two days for pain, swelling or skin compromise, then remove the bolster or quilting sutures at about 5 to 7 days. Examine for reaccumulation; a recurrent small collection can be re-drained and re-bolstered, and athletes should use protective headgear on return."
   ]
  ],
  "exit_check": [
@@ -113,16 +113,16 @@
    "Blood separates the avascular cartilage from its perichondrial blood supply; cartilage necroses and the stimulated perichondrium lays down disorganized fibrous tissue and neocartilage, producing a thickened, deformed auricle."
   ],
   [
-   "Why incise, drain and bolster rather than aspirate?",
-   "Aspiration alone leaves dead space under the perichondrium, so blood reaccumulates and cartilage necrosis and cauliflower ear follow. Incision with complete evacuation of clot, irrigation, and a through-and-through bolster that holds the perichondrium against the cartilage is the standard of care and has the lowest recurrence."
+   "Why incise, drain and close the dead space rather than aspirate?",
+   "Aspiration alone leaves dead space under the perichondrium, so blood reaccumulates and cartilage necrosis and cauliflower ear follow. Incision with complete evacuation and irrigation, then a through-and-through bolster or quilting sutures to hold the perichondrium against the cartilage, is the standard of care and has the lowest recurrence."
   ],
   [
    "Which pattern of injection anesthetizes the entire external ear?",
    "An ear ring block, a diamond-shaped series of injections around the base of the auricle covering the auriculotemporal, great auricular and lesser occipital territories. The concha and canal, supplied partly by the auricular branch of the vagus (Arnold nerve), often need separate local infiltration."
   ],
   [
-   "What is the main risk of the bolster itself and how do you avoid it?",
-   "Pressure necrosis of skin and cartilage; tie the through-and-through sutures to coapt without blanching and recheck the ear within 24 to 48 hours."
+   "What is the main risk of the bolster and how do quilting sutures compare?",
+   "Pressure necrosis of skin and cartilage. Tie the sutures to coapt without blanching and recheck within 24 to 48 hours. Quilting sutures follow the ear's contours without a bolster, avoid pressure points and leave the skin visible, with recurrence rates similar to bolsters."
   ]
  ],
  "source_basis": [
