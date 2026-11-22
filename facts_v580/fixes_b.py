@@ -363,7 +363,7 @@ FIXES = {
         {"front": "Mouth opening with a nasal CPAP mask: effect on delivered air?",
          "back": "Escapes through the mouth (oral leak)"}]},
     "v490-sleep-1-11": {"mode": "split", "cards": [
-        {"front": "HNS candidate meeting all criteria except BMI over 40: next step?",
+        {"front": "Hypoglossal nerve stimulator candidate meeting all criteria except BMI over 40: next step?",
          "back": "Weight reduction (e.g., tirzepatide), then reassess"},
         {"front": "Hypoglossal nerve stimulation label: AHI range?",
          "back": "About 15-100 events/h"},
@@ -393,12 +393,12 @@ FIXES = {
         {"front": "After multilevel sleep surgery in severe OSA: analgesic strategy?",
          "back": "Multimodal, opioid-sparing"}]},
     "v490-sleep-1-61": {"mode": "trim", "cards": [
-        {"front": "Loss of HNS benefit despite good protrusion and adherence after weight gain: next step?",
+        {"front": "Loss of hypoglossal nerve stimulator benefit despite good protrusion and adherence after weight gain: next step?",
          "back": "Weight loss therapy (e.g., tirzepatide), then retest"}]},
     "v490-sleep-1-62": {"mode": "split", "cards": [
-        {"front": "HNS: strong tongue protrusion but stimulation at the wrong respiratory phase: likely problem?",
+        {"front": "Hypoglossal nerve stimulator: strong tongue protrusion but stimulation at the wrong respiratory phase: likely problem?",
          "back": "Respiratory sensing failure (e.g., lead displacement)"},
-        {"front": "HNS stimulation out of phase: what does strong protrusion when stimulating confirm?",
+        {"front": "Hypoglossal nerve stimulation out of phase: what does strong protrusion when stimulating confirm?",
          "back": "Cuff, nerve, and generator output are intact"}]},
     "v490-sleep-1-79": {"mode": "hook", "cards": [
         {"front": "Obesity hypoventilation patient becomes obtunded and acidotic on oxygen alone: mechanism?",
