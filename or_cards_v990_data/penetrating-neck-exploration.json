@@ -28,7 +28,7 @@
   "Releasing tamponade before proximal and distal control",
   "Air embolism from an open internal jugular vein",
   "Missed esophageal injury, the most lethal delayed miss",
-  "Carotid ligation in a patient with stroke risk",
+  "Carotid ligation when repair was feasible, with a high stroke risk",
   "Vagus and hypoglossal nerve injury during vascular control"
  ],
  "steps": [
@@ -54,7 +54,7 @@
   ],
   [
    "Manage the carotid",
-   "Repair simple lacerations primarily; use a patch or interposition vein graft for larger defects, with a temporary shunt if needed. Ligation is reserved for uncontrollable bleeding or unrepairable injury, ideally not in the presence of stroke. The external carotid can be tied safely."
+   "Repair simple lacerations primarily; use a patch or interposition vein graft for larger defects, with a temporary shunt if needed. Repair is preferred even when a neurologic deficit is present, and ligation is reserved for uncontrollable bleeding, an unrepairable injury, or a comatose patient with no back-bleeding from the internal carotid. The external carotid can be tied safely."
   ],
   [
    "Manage the jugular vein",
@@ -126,7 +126,7 @@
   ],
   [
    "When would you ligate the carotid?",
-   "When it cannot be repaired and bleeding cannot be otherwise controlled, ideally in a patient without stroke. Repair or shunting is preferred, and ligation in a patient with stroke risks worsening the infarct."
+   "When it cannot be repaired and bleeding cannot be otherwise controlled, or in a comatose patient with no distal back-bleeding. Otherwise repair, with a shunt if needed, is preferred even with a neurologic deficit, since ligation carries a high stroke and death rate."
   ]
  ],
  "source_basis": [

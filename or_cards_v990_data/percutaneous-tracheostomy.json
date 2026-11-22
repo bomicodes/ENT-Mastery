@@ -72,7 +72,7 @@
   ],
   [
    "Secure the tube",
-   "Suture the flange and apply ties that admit one finger. The fresh tract is unstable and closes immediately if the tube slips out, so a team member holds the tube until it is fixed. Adjust cuff pressure to no more than 25 cm H2O with a manometer."
+   "Suture the flange and apply ties that admit one finger. The fresh tract is unstable and closes immediately if the tube slips out, so a team member holds the tube until it is fixed. Adjust cuff pressure to 20 to 30 cm H2O with a manometer."
   ],
   [
    "Bleeding and conversion",
@@ -81,7 +81,7 @@
  ],
  "exit_check": [
   "Waveform capnography and bronchoscopic view of the carina through the tracheostomy tube",
-  "Cuff pressure 25 cm H2O or less and tube secured with sutures and ties",
+  "Cuff pressure 20 to 30 cm H2O and tube secured with sutures and ties",
   "Obturator, spare tubes, and bedside airway sign in place before handover"
  ],
  "postop": [
@@ -125,7 +125,7 @@
   ],
   [
    "What cuff pressure is safe and why?",
-   "No more than about 25 cm H2O. Higher pressure exceeds mucosal capillary perfusion pressure and causes ischemic necrosis, leading to stenosis or fistula."
+   "About 20 to 30 cm H2O: enough to seal and limit aspiration, but not above about 30 cm H2O, which exceeds mucosal capillary perfusion pressure and causes ischemic necrosis, leading to stenosis or fistula."
   ]
  ],
  "source_basis": [

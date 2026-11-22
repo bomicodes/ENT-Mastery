@@ -38,8 +38,9 @@ TOPIC = {'domain': 'Head & Neck Oncology',
                'finding (Sinus Atlas 2e, Ch 30)',
  'pathophysiology': '**Chordoma histology**: physaliphorous (soap-bubble, vacuolated) cells in a '
                     'myxoid matrix. Brachyury, cytokeratin and EMA positivity separate it from '
-                    'chondrosarcoma (brachyury negative, keratin negative). Subtypes are classic, '
-                    'chondroid and dedifferentiated (Sinus Atlas 2e, Ch 30)\n'
+                    'chondrosarcoma (brachyury negative, keratin negative). Subtypes are conventional, '
+                    'chondroid, poorly differentiated (SMARCB1/INI1 loss, mainly children and young '
+                    'adults, aggressive) and dedifferentiated (Sinus Atlas 2e, Ch 30)\n'
                     '**Chondrosarcoma subtypes**: conventional (grades 1-3), mesenchymal, clear '
                     'cell and dedifferentiated. Grade drives behavior, and the myxoid variant '
                     'carries the worst prognosis (Cummings 7e, Ch 115 / Sinus Atlas 2e, Ch 30)\n'

@@ -14,7 +14,7 @@ TOPIC = {
     "**Taste buds**: clusters of receptor cells that turn over about every 10 days, which explains why radiation and chemotherapy disrupt taste and why recovery is often possible.",
     "**No taste map**: all five qualities are detected across all taste-bud regions. Regional threshold differences are very small (K.J. Lee 12e, Ch 27).",
     "**Saliva is required**: tastants must dissolve in saliva to reach receptors, so xerostomia directly impairs taste (Pasha 6e, Ch 5).",
-    "**Central pathway**: all gustatory fibers synapse in the rostral nucleus tractus solitarius, then project through the thalamus (ventral posteromedial nucleus) to the insular and frontal operculum cortex.",
+    "**Central pathway**: all gustatory fibers (VII, IX, X) synapse in the rostral (gustatory) nucleus tractus solitarius in the medulla, then ascend mainly ipsilaterally through the thalamus (ventral posteromedial nucleus) to the insula and frontal operculum.",
     "**Bilateral redundancy**: each side of the tongue is innervated separately, and overlapping CN VII and IX fields compensate for a single-nerve loss."
   ]),
   "pathophysiology": "\n".join([
@@ -156,7 +156,7 @@ TOPIC = {
     },
     {
       "topic": "Taste (Gustatory) Disorders",
-      "stem": "A 68-year-old man with hypertension started a new medication 6 weeks ago and now has a persistent metallic and salty taste with reduced appetite and 3 kg weight loss. His oral exam shows no candidiasis or dental disease, and smell testing is normal. He also takes atorvastatin, which is unchanged. Which is the most appropriate next step?",
+      "stem": "A 68-year-old man with hypertension started captopril 6 weeks ago and now has a persistent metallic and salty taste with reduced appetite and 3 kg weight loss. His oral exam shows no candidiasis or dental disease, and smell testing is normal. He also takes atorvastatin, which is unchanged. Which is the most appropriate next step?",
       "choices": [
         "Start zinc gluconate and recheck in 3 months",
         "Order MRI of the brain and skull base",
@@ -164,7 +164,7 @@ TOPIC = {
         "Refer for olfactory training"
       ],
       "answer": 2,
-      "explanation": "ACE inhibitors, especially captopril, are a classic cause of metallic or salty dysgeusia, and the timing after a new antihypertensive fits. When the medication is the likely cause, the first step is to coordinate a switch to another drug class and observe for recovery. Smell is normal and the oral exam is clean, which lowers the yield of other tests. Weight loss makes timely action important.",
+      "explanation": "ACE inhibitors, especially captopril with its sulfhydryl group, are a classic cause of metallic or salty dysgeusia, and the timing after starting the drug fits. When the medication is the likely cause, the first step is to coordinate a switch to another drug class and observe for recovery. Smell is normal and the oral exam is clean, which lowers the yield of other tests. Weight loss makes timely action important.",
       "why_wrong": [
         "Zinc does not address a reversible medication cause.",
         "MRI is not indicated for drug-timed dysgeusia without neurologic signs.",

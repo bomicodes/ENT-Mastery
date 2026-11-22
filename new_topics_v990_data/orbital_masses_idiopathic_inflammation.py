@@ -31,7 +31,7 @@ TOPIC = {
     "**Idiopathic orbital inflammation**: periorbital pain, proptosis, motility restriction, lid swelling and chemosis, often unilateral and abrupt (K.J. Lee 12e, Ch 58).",
     "**Carotid-cavernous fistula**: pulsatile exophthalmos, corkscrew dilated conjunctival vessels and an orbital bruit, often after trauma (K.J. Lee 12e, Ch 58).",
     "**Direction of displacement**: inferomedial displacement points to the lacrimal gland, inferior displacement to frontal or roof lesions, lateral displacement to ethmoid mucocele or tumor.",
-    "**Infection clues**: orbital cellulitis without ophthalmoplegia vs reduced motility suggesting abscess. Fungal orbital disease in an immunocompromised patient is a surgical emergency (K.J. Lee 12e, Ch 58).",
+    "**Infection clues**: preseptal cellulitis spares motility, pupils and vision. Proptosis, ophthalmoplegia, pain on eye movement or reduced acuity means postseptal disease (orbital cellulitis or subperiosteal or orbital abscess) and needs contrast CT. Fungal orbital disease in an immunocompromised patient is a surgical emergency (K.J. Lee 12e, Ch 58).",
     "**Systemic clues**: thyroid symptoms for thyroid eye disease, renal and sinus disease for GPA, known primary cancer for metastasis (K.J. Lee 12e, Ch 58)."
   ]),
   "localize": "\n".join([
@@ -46,7 +46,7 @@ TOPIC = {
     "**Cavernous venous malformation on MRI**: well-circumscribed enhancing mass, T2 hyperintense, classically with progressive patchy filling on dynamic contrast (Cummings 7e, Ch 49).",
     "**Idiopathic orbital inflammation on imaging**: ill-defined infiltrative enhancement, or myositis that involves the muscle tendon, in contrast to the tendon-sparing belly enlargement of thyroid eye disease.",
     "**Carotid-cavernous fistula**: CTA, MRA or orbital Doppler show an enlarged superior ophthalmic vein, but catheter angiography is the gold standard (K.J. Lee 12e, Ch 58).",
-    "**Labs**: thyroid function and antibodies, ANCA (c-ANCA tracks GPA activity), IgG4, ACE, and CBC as directed by the differential (K.J. Lee 12e, Ch 58).",
+    "**Labs**: thyroid function and antibodies, ANCA (c-ANCA/PR3 for GPA, though titers track activity poorly), IgG4, ACE, and CBC as directed by the differential (K.J. Lee 12e, Ch 58).",
     "**Biopsy rules**: biopsy atypical, steroid-refractory or recurrent inflammation to exclude lymphoma, IgG4-related disease and GPA. Avoid incisional biopsy of a suspected lacrimal pleomorphic adenoma (excise intact).",
     "**Metastasis**: a complete systemic evaluation for the primary, since breast and prostate lead the list (K.J. Lee 12e, Ch 58)."
   ]),
@@ -65,7 +65,7 @@ TOPIC = {
     "**Steps**: wide maxillary antrostomy and total ethmoidectomy, remove the lamina papyracea, open periorbita, retract the medial rectus dynamically, and dissect the tumor capsule bluntly (Cummings 7e, Ch 49).",
     "**Protect**: the inferior division of CN III and the inferomedial muscular trunk in the posterior medial intraconal space (Cummings 7e, Ch 49).",
     "**External orbitotomy**: medial or lateral orbitotomy for superolateral lesions, lacrimal gland tumors and lesions above the optic nerve (K.J. Lee 12e, Ch 58).",
-    "**Sinonasal malignancy into the orbit**: en bloc resection with orbital exenteration is usually indicated when periorbita and orbital fat are invaded (K.J. Lee 12e, Ch 58).",
+    "**Sinonasal malignancy into the orbit**: bone erosion or periorbital involvement alone can usually be resected with the periorbita while preserving the eye. Exenteration is generally reserved for invasion of orbital fat beyond the periorbita, extraocular muscles, the orbital apex or the globe (K.J. Lee 12e, Ch 58).",
     "**Complications**: diplopia from medial rectus or CN III injury, enophthalmos, visual loss and CSF leak with apex work."
   ]),
   "teach": "\n".join([
@@ -85,7 +85,7 @@ TOPIC = {
     "Shields JA, Shields CL, Scartozzi R. Ophthalmology 2004;111:997-1008 (survey of 1264 orbital tumors and simulating lesions: distribution of benign, malignant and inflammatory lesions)",
     "Yuen SJ, Rubin PA. Arch Ophthalmol 2003;121:491-499 (idiopathic orbital inflammation: clinical patterns, high steroid response, frequent recurrence)",
     "Barrow DL et al. J Neurosurg 1985;62:248-256 (classification of carotid-cavernous fistulas, direct type A vs dural types B-D)",
-    "Bleier BS et al. Int Forum Allergy Rhinol 2016;6:156-161 (multicenter endoscopic endonasal orbital cavernous hemangioma resection outcomes)"
+    "El Rassi E, Adappa ND, Battaglia P, et al. Int Forum Allergy Rhinol 2019;9:804-812 (international CHEER staging system for exclusively endonasal resection of orbital cavernous hemangioma)"
   ],
   "case_label": "Sudden painful unilateral proptosis with restricted gaze in a 38-year-old",
   "or_slugs": [],

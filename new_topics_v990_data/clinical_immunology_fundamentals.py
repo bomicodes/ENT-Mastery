@@ -15,7 +15,7 @@ TOPIC = {
     "**T cells**: mature in the thymus and carry CD2 and CD3. CD4 helpers (about 60%) recognize antigen on MHC II, and CD8 cytotoxic cells (20-30%) recognize antigen on MHC I (K.J. Lee 12e, Ch 59).",
     "**MHC classes**: MHC I is on nearly all nucleated cells and presents intracellular antigen. MHC II is on antigen-presenting cells (dendritic cells, macrophages, B cells) and presents processed external antigen (K.J. Lee 12e, Ch 59).",
     "**Complement**: opsonization, chemotaxis, cell lysis and agglutination. IgG and IgM fix complement through the classical pathway (K.J. Lee 12e, Ch 59).",
-    "**Regulatory T cells**: CD4+CD25+ cells suppress effector T cells and APCs, prevent autoimmunity and mediate tolerance, central to the effect of allergen immunotherapy (K.J. Lee 12e, Ch 59)."
+    "**Regulatory T cells**: CD4+CD25+ FOXP3+ cells suppress effector T cells and APCs, prevent autoimmunity and mediate tolerance, central to the effect of allergen immunotherapy (K.J. Lee 12e, Ch 59)."
   ]),
   "pathophysiology": "\n".join([
     "**Antibody structure**: two identical heavy and two identical light chains (kappa or lambda) linked by disulfide bonds. The Fab variable region binds antigen and the Fc constant region binds cells and complement and sets the class (K.J. Lee 12e, Ch 59).",
@@ -24,6 +24,7 @@ TOPIC = {
     "**IgA**: predominant antibody in secretions (saliva, tracheobronchial mucus). Secretory IgA is a dimer with J chain and secretory component, which protects it from proteolysis (K.J. Lee 12e, Ch 59).",
     "**IgD and IgE**: IgD sits on naive B-cell surfaces. IgE is the least abundant class and binds mast cells and basophils to mediate type I hypersensitivity (K.J. Lee 12e, Ch 59).",
     "**TH1 vs TH2**: TH1 cells make IL-2 and IFN-gamma for microbial immunity. TH2 cells make IL-4, IL-5 and IL-13, which drive IgE class switching (IL-4, IL-13) and eosinophils (IL-5) (K.J. Lee 12e, Ch 59).",
+    "**Epithelial alarmins and ILC2s**: injured or allergen-exposed epithelium releases TSLP, IL-25 and IL-33, which activate type 2 innate lymphoid cells to make IL-5 and IL-13 without antigen specificity. This upstream loop sustains type 2 polyp inflammation and is the target of tezepelumab (anti-TSLP) (Cummings 7e, Ch 35).",
     "**Regulatory cytokines**: IL-10 and TGF-beta from Tregs and macrophages suppress APCs and cytokine production, the tolerance signals induced by immunotherapy (K.J. Lee 12e, Ch 59)."
   ]),
   "recognize": "\n".join([
@@ -53,7 +54,7 @@ TOPIC = {
     "**Late phase targets**: intranasal corticosteroids suppress the eosinophilic late-phase response and congestion. Leukotriene receptor antagonists block a newly formed lipoxygenase mediator (K.J. Lee 12e, Ch 59).",
     "**Immunotherapy mechanism**: repeated allergen dosing induces Tregs, IL-10 and TGF-beta, a shift from TH2 toward TH1, and blocking allergen-specific IgG4 (K.J. Lee 12e, Ch 59).",
     "**Biologics map to cytokines**: omalizumab binds IgE, mepolizumab targets IL-5, and dupilumab blocks the IL-4 receptor alpha shared by IL-4 and IL-13. All three are approved for CRS with nasal polyps.",
-    "**Anaphylaxis**: intramuscular epinephrine is first-line. Antihistamines and steroids are adjuncts only.",
+    "**Anaphylaxis**: intramuscular epinephrine 1 mg/mL, 0.01 mg/kg up to 0.5 mg in adults (0.3 mg in children), into the anterolateral thigh, repeated every 5-15 minutes as needed. Antihistamines and steroids are adjuncts only.",
     "**Humoral immunodeficiency**: immunoglobulin replacement for proven antibody deficiency such as CVID, with immunology referral."
   ]),
   "operate": "\n".join([

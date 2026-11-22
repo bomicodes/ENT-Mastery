@@ -17,8 +17,8 @@ TOPIC = {
   ]),
   "pathophysiology": "\n".join([
     "**Gross classification**: A pure EA, B EA with proximal fistula, C EA with distal fistula, D EA with proximal and distal fistulas, E H-type fistula without atresia (Bluestone & Stool 5e, Ch 108).",
-    "**Tracheomalacia**: present in about 75% after repair, clinically significant in about 10-20%, and worst at the old fistula site in the distal trachea (Bluestone & Stool 5e, Ch 108).",
-    "**Laryngeal cleft link**: over 6% of TEF patients have a laryngeal cleft, often found only when aspiration persists after repair (Bluestone & Stool 5e, Ch 108).",
+    "**Tracheomalacia**: present in up to about 75% after repair, clinically significant in about 10-20%, and worst at the old fistula site in the distal trachea (Bluestone & Stool 5e, Ch 108).",
+    "**Laryngeal cleft link**: a small but important minority of EA/TEF patients (several percent in published series) have a laryngeal cleft, and conversely about a fifth or more of cleft patients have TEF. Clefts are often found only when aspiration persists after repair (Bluestone & Stool 5e, Ch 108).",
     "**Postoperative problems**: anastomotic leak and stricture, recurrent fistula, residual tracheal diverticulum or pouch, reflux and vocal fold paralysis from recurrent laryngeal nerve injury (Bluestone & Stool 5e, Ch 108).",
     "**Reflux drives stricture**: acid exposure on the anastomosis promotes recurrent stricture, which is why acid suppression is routine in infancy after repair (ESPGHAN-NASPGHAN 2016).",
     "**Spitz risk groups**: survival falls with birth weight under 1500 g and major congenital heart disease. Infants with both had about 22% survival in the 1994 series, with better outcomes in later cohorts (Spitz 1994)."
@@ -52,6 +52,7 @@ TOPIC = {
     "**Stricture**: balloon or bougie dilation, with treatment of reflux. Refractory strictures may need steroid injection, stenting or resection (ESPGHAN-NASPGHAN 2016).",
     "**Acid suppression**: current guidelines recommend acid suppression after repair through the first year of life, then reassessment (ESPGHAN-NASPGHAN 2016, current).",
     "**Tracheomalacia**: most improve with growth. Severe disease with dying spells, recurrent pneumonia or ventilator dependence needs aortopexy, posterior tracheopexy or tracheotomy with long-term ventilation (Bluestone & Stool 5e, Ch 108).",
+    "**Anastomotic leak**: occurs in roughly 10-20% after primary repair and most minor leaks seal with chest drainage, a pause in oral feeding and nutritional support, but a leak raises the later risk of stricture and recurrent fistula (ESPGHAN-NASPGHAN 2016).",
     "**Long-term follow-up**: multidisciplinary clinics follow airway, swallowing, growth, reflux and surveillance endoscopy into adulthood (ESPGHAN-NASPGHAN 2016)."
   ]),
   "operate": "\n".join([
@@ -172,7 +173,7 @@ TOPIC = {
       ],
       "board_pearl": "TEF malacia with dying spells needs surgery: posterior tracheopexy for membranous intrusion, aortopexy for anterior collapse.",
       "curveball": "After tracheopexy she still aspirates thin liquids, with a normal anastomosis and no recurrent fistula on bronchoscopy. What lesion should be specifically sought?",
-      "curveball_answer": "Look for a laryngeal cleft by palpating the interarytenoid area with a probe during rigid laryngoscopy, because over 6% of TEF patients have one and it is easily missed. Also check vocal fold mobility. A swallow study helps grade aspiration.",
+      "curveball_answer": "Look for a laryngeal cleft by palpating the interarytenoid area with a probe during rigid laryngoscopy, because clefts cluster with TEF and are easily missed. Also check vocal fold mobility. A swallow study helps grade aspiration.",
       "learning_stage": "senior_decision",
       "focus": "surgery"
     }
@@ -266,7 +267,7 @@ TOPIC = {
       ],
       "board_pearl": "Weak cry and aspiration after TEF repair: scope for vocal fold paralysis, and document mobility preoperatively.",
       "curveball": "Laryngoscopy shows normal fold mobility, but she still coughs with every feed of thin liquid. Which lesion should be suspected next?",
-      "curveball_answer": "A laryngeal cleft, present in over 6% of TEF patients, should be sought with rigid laryngoscopy and interarytenoid palpation. Also consider a recurrent fistula or anastomotic problem. An instrumental swallow study helps define the level of aspiration.",
+      "curveball_answer": "A laryngeal cleft, which clusters with TEF, should be sought with rigid laryngoscopy and interarytenoid palpation. Also consider a recurrent fistula or anastomotic problem. An instrumental swallow study helps define the level of aspiration.",
       "learning_stage": "foundation",
       "focus": "management"
     }

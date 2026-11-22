@@ -11,6 +11,7 @@ TOPIC = {
         "**CI first rule**: whenever the cochlear nerve is anatomically and functionally intact, a cochlear implant outperforms an ABI. This applies to stable or irradiated NF2 tumors and hearing-preservation resections (Cummings 7e, Ch 163)",
         "**NF2 outcomes**: most users gain sound awareness and better lipreading, but open-set speech is uncommon (about 10%) and up to a third stop using the device (Cummings 7e, Ch 163, Otto 2002)",
         "**Nontumor outcomes**: adults without NF2 do far better, with open-set sentence scores around 59% in some series. This suggests NF2 itself damages the cochlear nucleus (Colletti 2009, Cummings 7e, Ch 163)",
+        "**Nomenclature**: the 2022 consensus renamed NF2 as NF2-related schwannomatosis. Boards and older literature still use NF2 (Plotkin et al. Genet Med 2022)",
         "**Team**: neurotology, neurosurgery, audiology, neurophysiology and anesthesia share candidacy, surgery, intraoperative mapping and activation (Cummings 7e, Ch 163)",
     ]),
     "physiology": "\n".join([
@@ -57,6 +58,7 @@ TOPIC = {
         "**Programming**: deactivate electrodes that give nonauditory sensations and pitch-rank the rest. Expect repeated fittings over the first year (Cummings 7e, Ch 163)",
         "**Nonauditory stimulation**: reported in up to 42%, persistent in about 9%. It is handled by switching off electrodes or changing stimulation settings (Cummings 7e, Ch 163)",
         "**CSF leak**: 3-11%, usually managed with pressure dressing, bed rest and a lumbar drain, with re-exploration if it persists (Cummings 7e, Ch 163)",
+        "**Bevacizumab in NF2**: it can shrink tumors and stabilize hearing in some patients, which keeps the cochlear nerve available longer and widens the window for a CI instead of an ABI (Plotkin et al. N Engl J Med 2009)",
         "**Rehabilitation**: intensive auditory training. NF2 users should be counseled that lipreading support is the main expected benefit (Otto 2002)",
     ]),
     "operate": "\n".join([
@@ -82,6 +84,8 @@ TOPIC = {
     "literature_refs": [
         "Otto SR, Brackmann DE, Hitselberger WE, Shannon RV, Kuchta J. J Neurosurg 2002;96:1063-1071 (multichannel ABI in 61 NF2 patients: most gained sound awareness and lipreading benefit, few open-set)",
         "Colletti V, Shannon R, Carner M, Veronese S, Colletti L. Otol Neurotol 2009;30:614-618 (nontumor adult ABI users achieved much better speech recognition than NF2 users)",
+        "Plotkin SR, Messiaen L, Legius E, et al. Genet Med 2022;24:1967-1977 (updated diagnostic criteria and nomenclature, NF2-related schwannomatosis)",
+        "Plotkin SR, Stemmer-Rachamimov AO, Barker FG, et al. N Engl J Med 2009;361:358-367 (bevacizumab produced tumor shrinkage and hearing response in progressive NF2 vestibular schwannomas)",
         "Sennaroglu L, Colletti V, Lenarz T, et al. Cochlear Implants Int 2016;17:163-171 (consensus on pediatric ABI indications in inner ear malformations and choosing CI versus ABI)",
     ],
     "case_label": "Deaf toddler with no cochlea on imaging and no benefit from hearing aids",
@@ -143,7 +147,7 @@ TOPIC = {
                 "Lipreading training alone without a device",
             ],
             "answer": 0,
-            "explanation": "When the cochlear nerve is intact, a cochlear implant gives better speech results than an ABI, even in NF2. A stable or irradiated tumor with an anatomically present nerve and a positive promontory test makes her a CI candidate, and open-set speech in this group can approach 70% in good cases. ABI is reserved for proven nerve loss. MRI surveillance is planned with the magnet considered.",
+            "explanation": "When the cochlear nerve is intact, a cochlear implant gives better speech results than an ABI, even in NF2. A stable or irradiated tumor with an anatomically present nerve and a positive promontory test makes her a CI candidate, and many in this group reach open-set speech, though results vary and can decline with tumor progression. ABI is reserved for proven nerve loss. MRI surveillance is planned with the magnet considered.",
             "why_wrong": [
                 "Correct.",
                 "ABI results are poorer and it is reserved for absent or nonfunctional nerves.",
@@ -209,7 +213,7 @@ TOPIC = {
             "stem": "A 41-year-old man underwent translabyrinthine vestibular schwannoma resection with auditory brainstem implant placement 5 days ago. He now has clear fluid draining from his nose when he leans forward, which has persisted despite a pressure dressing and 48 hours of bed rest with head elevation. He is afebrile with no meningeal signs. Which is the most appropriate next step?",
             "choices": [
                 "Immediate wound re-exploration and explant",
-                "Discharge with prophylactic antibiotics alone",
+                "Oral acetazolamide and discharge home",
                 "Observation alone for another 2 weeks",
                 "Lumbar drain placement",
             ],
@@ -217,7 +221,7 @@ TOPIC = {
             "explanation": "CSF leak occurs in about 3-11% of ABI procedures and usually drains through the eustachian tube as rhinorrhea after translabyrinthine surgery. When conservative measures fail, a lumbar drain for several days usually seals the leak. Surgical re-exploration with repacking of the eustachian tube and fat graft is reserved for failure of drainage. Explanting the device is not needed for a leak.",
             "why_wrong": [
                 "Re-exploration comes after failed drainage, and explant is unnecessary.",
-                "Antibiotics do not close the leak or replace definitive management.",
+                "Acetazolamide alone rarely seals an active leak, and discharge risks meningitis.",
                 "Prolonged observation of an ongoing leak raises meningitis risk.",
                 "Correct.",
             ],
@@ -254,7 +258,7 @@ TOPIC = {
             "topic": T,
             "stem": "A 45-year-old woman with neurofibromatosis type 2 is scheduled for initial activation of her auditory brainstem implant 6 weeks after translabyrinthine surgery. She has a history of vasovagal episodes. The audiologist asks the otolaryngology team what safeguards are required for the session. Which precaution is most important during initial activation?",
             "choices": [
-                "Prophylactic intravenous antibiotics before stimulation",
+                "General anesthesia for activation in all adults",
                 "Performing activation within 48 hours of surgery",
                 "Continuous cardiac monitoring with resuscitation equipment available",
                 "Preactivation MRI of the brain with the magnet in place",
@@ -262,7 +266,7 @@ TOPIC = {
             "answer": 2,
             "explanation": "Initial ABI stimulation can spread to vagal and other brainstem structures and cause bradycardia, throat tightness, dizziness or syncope. Activation is therefore done with continuous cardiac monitoring and a team able to resuscitate. It is timed about 6 weeks after surgery once healing and edema have settled. Each electrode is tested at low levels and increased slowly while symptoms are watched.",
             "why_wrong": [
-                "Antibiotics have no role in device activation.",
+                "Adults are activated awake so they can report auditory and nonauditory percepts.",
                 "Activation waits about 6 weeks for healing and edema to settle.",
                 "Correct.",
                 "MRI with the magnet in place causes artifact and is not part of activation.",

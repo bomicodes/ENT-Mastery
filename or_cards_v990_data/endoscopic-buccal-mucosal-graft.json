@@ -4,11 +4,11 @@
  "domain": "Laryngology",
  "or_family_v190": "laryngology",
  "linked_topic": "Vocal Fold Sulcus / Scar",
- "source_label": "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024)",
- "indications": "Full-thickness buccal mucosa can resurface membranous vocal fold mucosal defects larger than about 5 mm after resection of carcinoma, papilloma, or scar, to prevent or treat an anterior glottic web, or as primary reconstruction after selected T1a cordectomy. Thin grafts replace mucosa only; thicker grafts add bulk after vocalis resection. The graft is held against the recipient bed with a Silastic-backed transcervical suture bolster for about 2 weeks. Adequate transoral exposure of the full fold is required.",
+ "source_label": "Operative Techniques in Laryngology (Rosen and Simpson, eds, 2024), Ch 29 Buccal Mucosal Grafting in the Larynx",
+ "indications": "Full-thickness buccal mucosa can resurface membranous vocal fold mucosal defects larger than about 5 mm after resection of carcinoma, papilloma, or scar, to prevent or treat an anterior glottic web, or as primary reconstruction after selected T1a cordectomy. Thin grafts replace mucosa only; thicker grafts add bulk after vocalis resection. The graft is held against the recipient bed with a Silastic-backed transcervical suture bolster for about 2 weeks. Adequate transoral exposure of the full fold is required. Contraindications include cartilaginous anterior stenosis, uncertain cancer margins (the graft hides the surveillance site), and T1b disease, and prior radiation or poor healing raises the risk of graft failure.",
  "setup": [
   "Confirm exposure in clinic or at prior laryngoscopy; poor exposure is a contraindication.",
-  "Plan for resection margins first when grafting after cancer surgery.",
+  "After cancer resection, frozen-section margins must be clear before grafting.",
   "Suspension microlaryngoscopy set, microscope, cup forceps, and microinstruments.",
   "Oral harvest tray: cheek retractor, 15 blade, lidocaine with epinephrine, fine suture.",
   "Reinforced 0.4 mm Silastic sheeting, 5-0 chromic, 2-0 polypropylene, 19 to 20 gauge hollow needles (or Lichtenberger needle carrier)."
@@ -35,7 +35,7 @@
   ],
   [
    "Prepare the recipient bed",
-   "At the primary resection or web lysis, create a clean raw recipient surface on the membranous fold under suspension microlaryngoscopy. Achieve hemostasis, because a hematoma under the graft will prevent take."
+   "Create a clean raw surface on the membranous fold under suspension microlaryngoscopy and confirm clear frozen margins after cancer resection. When both folds are raw, graft only one side, since the other heals secondarily, and do not span the anterior commissure, which blunts it. Achieve hemostasis so no hematoma lifts the graft."
   ],
   [
    "Measure the defect",
@@ -43,7 +43,7 @@
   ],
   [
    "Harvest buccal mucosa",
-   "Remove the laryngoscope, evert the cheek, and infiltrate lidocaine with epinephrine. Harvest a full-thickness graft with a 15 blade, staying below the parotid duct papilla and at least 1.5 cm behind the oral commissure; the donor site can be left to heal or closed."
+   "Remove the laryngoscope, evert the cheek, and infiltrate lidocaine with epinephrine. Harvest a full-thickness graft with a 15 blade below the parotid duct papilla and at least 1.5 cm behind the oral commissure, without going deep to buccinator. Trim fat from the deep surface and close the donor site with chromic."
   ],
   [
    "Mount the graft",
@@ -134,6 +134,6 @@
   ]
  ],
  "source_basis": [
-  "Operative Techniques in Laryngology (Rubin, Sataloff, Korovin 2024), Chapter 29: Buccal Mucosal Grafting in the Larynx (pp 239-246)"
+  "Rosen CA, Simpson CB. Operative Techniques in Laryngology, 2nd ed (2024), Chapter 29 (Woo P): Buccal Mucosal Grafting in the Larynx (pp 239-244)"
  ]
 }

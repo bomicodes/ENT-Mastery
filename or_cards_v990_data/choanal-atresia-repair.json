@@ -5,7 +5,7 @@
  "or_family_v190": "pediatric",
  "linked_topic": "Choanal Atresia",
  "source_label": "Atlas of Endoscopic Sinus and Skull Base Surgery 2e, Ch 5",
- "indications": "Bilateral choanal atresia in a neonate, which presents with cyclic cyanosis relieved by crying and needs a secure oral airway (McGovern nipple or intubation) until repair, and symptomatic unilateral atresia, which usually presents later with unilateral rhinorrhea and obstruction. The endoscopic transnasal approach with posterior septectomy and cross-over mucosal flaps covers raw bone in the new choana and avoids routine stenting. Screen every child for CHARGE association and other airway anomalies before surgery.",
+ "indications": "Bilateral choanal atresia in a neonate, which presents with cyclic cyanosis relieved by crying and needs a secure oral airway (McGovern nipple or intubation) until repair, and symptomatic unilateral atresia, which is about twice as common, more often right-sided, and usually presents later with unilateral mucoid rhinorrhea and obstruction. The endoscopic transnasal approach with posterior septectomy and cross-over mucosal flaps covers raw bone in the new choana and avoids routine stenting. Screen every child for CHARGE association and other airway anomalies before surgery.",
  "setup": [
   "Supine with head slightly extended, oral RAE tube secured to the lower lip",
   "0-degree 2.7 mm or 4 mm endoscope and delicate instruments, including otologic instruments for neonates",
@@ -67,7 +67,7 @@
   ],
   [
    "Secure the flaps",
-   "Hold the flaps with fibrin glue or a soft anchored pack tied to a suture that is taped to the nose and removed after 1 to 2 days. Stents are not used, since they cause granulation, pressure necrosis, and care burden without improving patency."
+   "Hold the flaps with fibrin glue or a soft anchored pack tied to a suture that is taped to the nose and removed after 1 to 2 days. Routine stenting is avoided with this flap technique, because stents cause granulation, pressure necrosis, and care burden without clearly improving patency."
   ]
  ],
  "exit_check": [

@@ -5,7 +5,7 @@
  "or_family_v190": "headneck",
  "linked_topic": "Oral Tongue SCC",
  "source_label": "Atlas of Head and Neck Surgery (Simo, Pracy, Fernandes 2024) and Pasha 6e",
- "indications": "Primary surgical treatment for oral tongue squamous cell carcinoma (and selected premalignant or other malignant lesions) that can be removed through the mouth with a three-dimensional margin, usually T1 to small T2 tumors of the lateral or ventral tongue, up to about one-third of the tongue. Surgery is the preferred primary treatment for oral cavity cancer. Depth of invasion drives the AJCC 8th edition T stage and the neck plan: elective neck dissection or sentinel node biopsy is recommended for depth of invasion over about 4 mm and considered for 2 to 4 mm. Larger tumors, deep extrinsic muscle invasion, floor of mouth extension communicating with the neck, or mandibular involvement need a combined transcervical or pull-through approach and often free flap reconstruction.",
+ "indications": "Primary surgical treatment for oral tongue squamous cell carcinoma (and selected premalignant or other malignant lesions) that can be removed through the mouth with a three-dimensional margin, usually T1 to small T2 tumors of the lateral or ventral tongue, up to about one-third of the tongue. Surgery is the preferred primary treatment for oral cavity cancer. Depth of invasion drives the AJCC 8th edition T stage and the neck plan: elective neck dissection or sentinel node biopsy is recommended once depth of invasion exceeds about 3 to 4 mm (NCCN uses more than 3 mm) and decided case by case below that, with observation reasonable only for very shallow lesions under about 2 mm. Larger tumors, deep extrinsic muscle invasion, floor of mouth extension communicating with the neck, or mandibular involvement need a combined transcervical or pull-through approach and often free flap reconstruction.",
  "setup": [
   "Stage with examination, biopsy, contrast MRI (best for depth of invasion and midline extension) or CT, and imaging of the neck; PET/CT for higher-stage disease.",
   "Plan the neck at the same sitting: selective neck dissection levels I to III (or I to IV) by depth of invasion, or sentinel node biopsy before the primary in suitable cN0 patients.",
@@ -112,7 +112,7 @@
   ],
   [
    "What margin is considered clear on final pathology?",
-   "NCCN considers 5 mm or more from the invasive front clear and less than 5 mm close. A 1 cm mucosal margin is planned in the OR because the specimen shrinks substantially after removal and fixation."
+   "Traditionally 5 mm or more from the invasive front is clear and less than 5 mm close, although recent oral tongue data suggest a smaller cut-off of about 1 to 2 mm still gives good local control. A 1 cm mucosal margin is planned in the OR because the specimen shrinks substantially after removal and fixation."
   ],
   [
    "What is the evidence for elective neck dissection in early oral cancer?",

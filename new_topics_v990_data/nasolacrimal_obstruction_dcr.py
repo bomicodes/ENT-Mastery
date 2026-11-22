@@ -52,7 +52,7 @@ TOPIC = {
     "**Congenital NLDO**: observation and lacrimal sac (Crigler) massage, since most resolve by 12 months. Probing for persistence, with silicone intubation or balloon dacryoplasty for failures",
     "**Dacryocystocele**: massage and probing. Endoscopic marsupialization of the intranasal cyst for airway obstruction, infection or failed probing",
     "**Acute dacryocystitis**: systemic antibiotics as treatment for active infection and warm compresses, with drainage of an abscess. Plan DCR after the infection settles",
-    "**Adult NLDO**: endoscopic or external DCR. Endoscopic anatomic success is about 95-97%, with functional (symptom-free) success lower at about 81% (Cummings 7e, Ch 49)",
+    "**Adult NLDO**: endoscopic or external DCR. For anatomic obstruction, expect about 95-97% success (dye flows and the patient is symptom-free). Functional obstruction reaches similar patency, but only about 81% report complete symptom relief because the pump problem persists (Cummings 7e, Ch 49)",
     "**Endoscopic vs external vs laser**: long-term success is about 92% endoscopic and 94% external, while laser-only DCR without mucosal flaps performs poorly at about 38% (Cummings 7e, Ch 49)",
     "**Canalicular obstruction**: DCR alone fails. Conjunctivodacryocystorhinostomy with a Lester Jones glass tube bypasses the canaliculi",
     "**Functional obstruction**: DCR with intubation helps many patients, but counsel that symptom relief is less predictable than in anatomic obstruction (Cummings 7e, Ch 49)",
@@ -62,10 +62,10 @@ TOPIC = {
     "**Bone removal**: remove the frontal process of the maxilla with a Kerrison or Hajek-Koffler punch and DCR bur, then lift away the thin lacrimal bone. Expose the entire sac including the fundus above the axilla (Cummings 7e, Ch 49)",
     "**Agger nasi**: open the agger nasi cell, because it lies medial to the upper sac and its mucosa can help line the opening (Cummings 7e, Ch 49)",
     "**Sac opening**: tent the sac medially with a Bowman probe through a canaliculus, incise vertically, and create anterior and posterior flaps so the sac lies flat against the lateral nasal wall (Sinus Atlas 2e, Ch 17)",
-    "**Mucosa to mucosa**: appose sac flaps to nasal mucosa for healing by primary intention, the key to long-term patency. Septoplasty is needed for access in about half of cases (Cummings 7e, Ch 49)",
+    "**Mucosa to mucosa**: appose sac flaps to nasal mucosa for healing by primary intention, the key to long-term patency. About half of endoscopic DCRs need an additional nasal procedure, most often a high septoplasty when the axilla cannot be seen (Cummings 7e, Ch 49)",
     "**Stents**: silicone (Crawford) tubes are optional in primary cases, help with a tight common canaliculus, and are usually removed at about 4 weeks. Overly tight tubes cheese-wire the puncta. Mitomycin C has unproven benefit (Sinus Atlas 2e, Ch 17)",
     "**Complications**: about 5% overall, including bleeding, orbital fat exposure (leave it alone), granulation (topical or injected steroid), synechiae, and air reflux into the eye with CPAP (Cummings 7e, Ch 49)",
-    "**Revision**: failure is usually from inadequate exposure of the upper sac and common canaliculus. Revise by recutting flaps, clearing bone, and considering a free mucosal graft. Revision patency is about 91% (Cummings 7e, Ch 49)",
+    "**Revision**: failure is usually from inadequate exposure of the upper sac and common canaliculus. Get a preoperative dacryocystogram, because a normal-sized sac predicts primary-level success while a scarred, contracted sac does worse. Revise by recutting flaps, clearing bone, and considering a free mucosal graft. Revision anatomic patency is about 91%, with about 87% functional success (Cummings 7e, Ch 49)",
   ]),
   "teach": "\n".join([
     "**Sac is high**: the upper third of the sac lies above the middle turbinate axilla, so a DCR that stays low will fail",
@@ -170,7 +170,7 @@ TOPIC = {
         "Botulinum toxin to the lacrimal gland"
       ],
       "answer": 1,
-      "explanation": "Primary DCR failure is usually caused by inadequate exposure of the upper sac and common canaliculus, leaving an ostium that is too low and too small and scars closed. Revision removes the remaining bone up to and above the axilla, fully opens the sac along its length, and recreates mucosal flaps for primary apposition, with an optional free mucosal graft. Because the canaliculi are patent, a bypass tube is not needed. Revision patency is about 91%.",
+      "explanation": "Primary DCR failure is usually caused by inadequate exposure of the upper sac and common canaliculus, leaving an ostium that is too low and too small and scars closed. Revision removes the remaining bone up to and above the axilla, fully opens the sac along its length, and recreates mucosal flaps for primary apposition, with an optional free mucosal graft. Because the canaliculi are patent, a bypass tube is not needed. A preoperative dacryocystogram showing a normal-sized sac predicts success.",
       "why_wrong": [
         "A Jones tube is for canalicular obstruction, and his canaliculi are patent.",
         "Correct.",

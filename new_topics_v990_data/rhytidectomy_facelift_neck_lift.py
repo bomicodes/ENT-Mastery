@@ -41,7 +41,7 @@ TOPIC = {
     "**Zygomatic branches**: become superficial near the zygomaticus major origin. Deep-plane dissection stays on top of the zygomaticus muscles (Cummings 7e, Ch 24)."
   ]),
   "workup": "\n".join([
-    "**Medical clearance**: control hypertension preoperatively because blood pressure above 150/100 roughly triples hematoma risk (Cummings 7e, Ch 24).",
+    "**Medical clearance**: control hypertension preoperatively because blood pressure above 150/100 raises hematoma relative risk about 2.6-fold, and male sex raises it further (Cummings 7e, Ch 24).",
     "**Medications**: stop aspirin, NSAIDs, fish oil, vitamin E, ginkgo and similar supplements about 2 weeks before and 1 week after surgery (Cummings 7e, Ch 24).",
     "**Smoking**: smokers have about 12-fold higher skin slough risk. Require cessation at least 2 weeks before and after, and confirm with cotinine testing if doubtful (Cummings 7e, Ch 24).",
     "**Expectations**: explain that the neck and jowls improve most and the melolabial fold least. Discuss scars, numbness, swelling and recovery time.",
@@ -50,12 +50,12 @@ TOPIC = {
   ]),
   "manage": "\n".join([
     "**SMAS techniques**: long skin flap (about 6-7 cm) plus SMAS plication (folding) or imbrication (excision and suture). Lower nerve risk, reliable jowl and neck result (Cummings 7e, Ch 24).",
-    "**Deep plane**: short skin flap then sub-SMAS dissection past the Hamra line with ligament release. Better midface and melolabial effect and a thicker, better-perfused flap with less hematoma, at higher motor nerve risk (Cummings 7e, Ch 24).",
+    "**Deep plane**: short skin flap (3-5 cm) then sub-SMAS dissection past the Hamra line with release of zygomatic and masseteric ligaments. Better midface and melolabial effect and a thicker, better-perfused composite flap (some series report fewer hematomas and less slough), at higher motor nerve exposure (Cummings 7e, Ch 24).",
     "**Neck options**: submental liposuction for fat, anterior platysmaplasty for bands, lateral platysma suspension and platysmal sling for ptotic submandibular glands (Pasha 6e, Ch 8, p 502).",
     "**Hematoma rescue**: expanding hematoma needs urgent return to the OR for evacuation and hemostasis. Small late collections can be aspirated. Drains reduce seroma but not hematoma (Cummings 7e, Ch 24).",
     "**Blood pressure control**: antiemetics, analgesia, clonidine or other antihypertensives and smooth extubation lower postoperative hematoma rates (Cummings 7e, Ch 24).",
     "**Skin slough**: manage conservatively with local wound care, leave the eschar as a biologic dressing and delay scar revision until mature (Cummings 7e, Ch 24).",
-    "**Hypertrophic scars**: intralesional triamcinolone 10-20 mg/mL (Cummings 7e, Ch 24)."
+    "**Hypertrophic scars**: intralesional triamcinolone (often 10 mg/mL, up to 40 mg/mL for keloid) in small aliquots, repeated every 4-6 weeks, avoiding atrophy and telangiectasia from overinjection (Cummings 7e, Ch 24)."
   ]),
   "operate": "\n".join([
     "**Incision**: temporal (in or along the tuft), preauricular or retrotragal, around the lobule, up the postauricular sulcus and into the occipital hairline. Do not raise the temporal tuft above the helical root (Cummings 7e, Ch 24).",
@@ -71,7 +71,7 @@ TOPIC = {
     "**GAN at 6.5**: the great auricular nerve crosses the SCM about 6.5 cm below the external auditory canal. Stay superficial there.",
     "**Smokers slough 12x**: smoking raises skin necrosis risk about 12-fold. No cessation, no long flap.",
     "**Neck best, fold worst**: promise the neck and jowl result, under-promise the melolabial fold.",
-    "**Deep plane trade-off**: better midface and less hematoma, but more motor nerve risk."
+    "**Deep plane trade-off**: better midface and a thicker, better-perfused flap, but more motor nerve exposure."
   ]),
   "tags": ["facelift", "rhytidectomy", "SMAS", "deep plane", "neck lift", "platysmaplasty", "great auricular nerve", "hematoma", "facial plastics"],
   "source_basis": ["Cummings 7e Ch 24", "Pasha 6e Ch 8"],
@@ -215,10 +215,10 @@ TOPIC = {
         "Better melolabial fold effect with higher motor nerve risk"
       ],
       "answer": 3,
-      "explanation": "The deep-plane lift uses a short skin flap and enters the sub-SMAS plane past the line from the lateral canthus to the mandibular angle, releasing zygomatic and masseteric ligaments. This moves the malar fat and improves the melolabial fold more than plication. The thicker composite flap has fewer hematomas and better perfusion. The trade-off is greater exposure of facial nerve branches.",
+      "explanation": "The deep-plane lift uses a short skin flap and enters the sub-SMAS plane past the line from the lateral canthus to the mandibular angle, releasing zygomatic and masseteric ligaments. This moves the malar fat and improves the melolabial fold more than plication. The thicker composite flap is better perfused and has not been shown to raise hematoma risk. The trade-off is greater exposure of facial nerve branches.",
       "why_wrong": [
         "Deep plane uses a short skin flap and carries higher motor risk.",
-        "Deep plane has lower hematoma risk and a thicker flap.",
+        "Deep plane uses a thicker composite flap, and hematoma risk is not higher.",
         "The two techniques differ in midface effect and nerve risk.",
         "Correct."
       ],

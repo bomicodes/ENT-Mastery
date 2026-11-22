@@ -54,6 +54,7 @@ TOPIC = {
     "**Sliding genioplasty indications**: vertical lower-third deficiency, severe retrusion, retrusion with asymmetry, need for shortening, or failed implant (K.J. Lee 12e, Ch 54).",
     "**Retrognathia with Class II bite**: orthodontics plus sagittal split osteotomy or distraction osteogenesis. A chin implant alone is camouflage only (K.J. Lee 12e, Ch 54).",
     "**Implant materials**: silicone (Silastic) is most common and forms a capsule, so it is easy to remove. ePTFE and porous polyethylene allow tissue ingrowth, giving better fixation but harder removal (K.J. Lee 12e, Ch 54).",
+    "**Soft-tissue bonus of osteotomy**: advancing the bony chin carries the attached geniohyoid, genioglossus and anterior digastric forward, which tightens the submental tissues and can sharpen the cervicomental angle, a benefit an implant cannot give (Cummings 7e, Ch 27).",
     "**Expect less than implant thickness**: final augmentation is roughly 70% of implant thickness because of bone resorption and soft-tissue settling (K.J. Lee 12e, Ch 54).",
     "**Malar augmentation**: implant for volume deficiency or as a facelift adjunct. Fillers or fat for mild cases, and osteotomy for malpositioned fracture segments (K.J. Lee 12e, Ch 54)."
   ]),

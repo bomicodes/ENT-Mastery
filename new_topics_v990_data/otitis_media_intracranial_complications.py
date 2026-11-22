@@ -80,7 +80,11 @@ TOPIC = {'domain': 'Otology / Neurotology',
              'Complications and Sequelae of Otitis Media)\n'
              '**Imaging signs**: empty delta sign (filling defect in a contrast-rimmed sinus) on '
              'contrast CT, absent flow on MRV. Subdural empyema is a crescent, epidural abscess is '
-             'a lens (Pasha 6e, Ch 7)',
+             'a lens (Pasha 6e, Ch 7)\n'
+             '**Abscess on MRI**: a mature abscess is a thin, smooth ring-enhancing lesion whose '
+             'center restricts on diffusion-weighted imaging (bright DWI, dark ADC). That pattern '
+             'separates pus from a necrotic tumor, which usually does not restrict centrally, and '
+             'serial DWI helps track response',
  'workup': '**Image before lumbar puncture**: contrast CT temporal bone/head plus MRI with '
            'gadolinium and MRV. LP only after excluding mass effect or raised ICP from a mass '
            '(Bluestone & Stool 5e, Complications and Sequelae of Otitis Media)\n'

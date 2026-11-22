@@ -40,11 +40,6 @@
   "text": "**Semon law**: With progressive compressive injury to the recurrent laryngeal nerve the abductor (posterior cricoarytenoid) fails before the adductors, and on recovery the adductors return before the abductor. (K.J. Lee 12e, Ch 1, p 43)"
  },
  {
-  "topic": "Olfactory Dysfunction",
-  "field": "recognize",
-  "text": "**Kallmann syndrome**: Congenital anosmia with hypogonadotropic hypogonadism from failed migration of GnRH neurons with the olfactory placode; consider in a patient with lifelong anosmia and delayed puberty. (K.J. Lee 12e, Ch 1, p 18)"
- },
- {
   "topic": "Benign Sinonasal Tumor Framework",
   "field": "recognize",
   "text": "**Gardner syndrome**: Autosomal dominant (APC) syndrome of multiple osteomas of the skull, mandible and paranasal sinuses with soft-tissue fibromas, epidermoid cysts and colonic polyps that almost inevitably become malignant; multiple craniofacial osteomas should prompt GI evaluation. (K.J. Lee 12e, Ch 1, p 14)"
@@ -52,7 +47,7 @@
  {
   "topic": "Sleep-Related Hypoventilation",
   "field": "recognize",
-  "text": "**Ondine curse**: Loss of automatic respiratory drive with apnea/hypoventilation most evident in sleep (congenital or acquired central alveolar hypoventilation); patients breathe adequately only when awake and voluntarily. (K.J. Lee 12e, Ch 1, p 24)"
+  "text": "**Ondine curse**: Loss of automatic respiratory drive with apnea/hypoventilation most evident in sleep (congenital or acquired central alveolar hypoventilation). Patients breathe adequately only when awake and voluntarily. (K.J. Lee 12e, Ch 1, p 24)"
  },
  {
   "topic": "Ménière Disease",
@@ -67,7 +62,7 @@
  {
   "topic": "Systemic Disease of the Nose / Sinuses",
   "field": "recognize",
-  "text": "**Lethal midline granuloma differential**: Midline destructive lesions of the nose and palate include extranodal NK/T-cell lymphoma (formerly polymorphic reticulosis), granulomatosis with polyangiitis, cocaine-induced midline destructive lesion and idiopathic midline destructive disease; localized lymphoma has historically been treated with radiation (about 50 Gy) and disseminated disease with chemotherapy. (K.J. Lee 12e, Ch 1, p 20)"
+  "text": "**Lethal midline granuloma differential**: Midline destructive lesions of the nose and palate include extranodal NK/T-cell lymphoma (formerly polymorphic reticulosis), granulomatosis with polyangiitis, cocaine-induced midline destructive lesion and idiopathic midline destructive disease. Localized lymphoma has historically been treated with radiation (about 50 Gy) and disseminated disease with chemotherapy. (K.J. Lee 12e, Ch 1, p 20)"
  },
  {
   "topic": "Microtia / Aural Atresia",
@@ -77,7 +72,7 @@
  {
   "topic": "Systemic / Granulomatous Disease Manifestations in ENT",
   "field": "recognize",
-  "text": "**Sturge-Weber syndrome**: V1-distribution port-wine stain with ipsilateral leptomeningeal venous angiomatosis causing seizures, hemiparesis, glaucoma and tram-track intracranial calcifications; oral and nasal mucosal angiomatous involvement may bleed during surgery. (K.J. Lee 12e, Ch 1, p 32)"
+  "text": "**Sturge-Weber syndrome**: V1-distribution port-wine stain with ipsilateral leptomeningeal venous angiomatosis causing seizures, hemiparesis, glaucoma and tram-track intracranial calcifications. Oral and nasal mucosal angiomatous involvement may bleed during surgery. (K.J. Lee 12e, Ch 1, p 32)"
  },
  {
   "topic": "CF / Primary Ciliary Dyskinesia Sinonasal Disease",
@@ -102,12 +97,12 @@
  {
   "topic": "Palatal Surgery",
   "field": "operate",
-  "text": "**Uvulopalatal flap and CAPSO**: The uvulopalatal flap denudes the lingual surface of the uvula/palate and folds the uvula back onto the soft palate, sparing muscle so pain and velopharyngeal dysfunction are less than UPPP; avoid in a thick palate (the bulky flap causes gagging). Cautery-assisted palatal stiffening (CAPSO) removes a diamond-shaped mucosal strip in the office to scar and stiffen the palate; it helps snoring but not OSA. (K.J. Lee 12e, Ch 2, p 62)"
+  "text": "**Uvulopalatal flap and CAPSO**: The uvulopalatal flap denudes the lingual surface of the uvula/palate and folds the uvula back onto the soft palate, sparing muscle so pain and velopharyngeal dysfunction are less than UPPP. Avoid in a thick palate (the bulky flap causes gagging). Cautery-assisted palatal stiffening (CAPSO) removes a diamond-shaped mucosal strip in the office to scar and stiffen the palate. It helps snoring but not OSA. (K.J. Lee 12e, Ch 2, p 62)"
  },
  {
   "topic": "Palatal Surgery",
   "field": "manage",
-  "text": "**UPPP outcomes and complications**: Unselected UPPP succeeds in about 50%; with Friedman-guided selection (tonsils 2-4, palate position I-II) long-term success over 85% is reported. Complications include velopharyngeal insufficiency and nasopharyngeal stenosis from over-resection of posterior pillar/levator tissue. (K.J. Lee 12e, Ch 2, p 62)"
+  "text": "**UPPP outcomes and complications**: Unselected UPPP succeeds in about 50%. With Friedman-guided selection, success is much higher: K.J. Lee quotes over 85% long term for tonsils 2-4 with palate position I-II, while Friedman's own stage I data (palate position I-II, tonsils 3-4, BMI under 40) show about 80%. Complications include velopharyngeal insufficiency and nasopharyngeal stenosis from over-resection of posterior pillar/levator tissue. (K.J. Lee 12e, Ch 2, p 62)"
  },
  {
   "topic": "Tongue Base Surgery",
@@ -122,17 +117,17 @@
  {
   "topic": "Tracheostomy as Definitive OSA Therapy",
   "field": "recognize",
-  "text": "**Postoperative monitoring after OSA surgery**: Routine ICU admission for all OSA surgery is not supported; monitored admission is reserved for severe symptomatic OSA with very high AHI, significant cardiovascular comorbidity, or major tongue-base surgery. (K.J. Lee 12e, Ch 2, p 65-66)"
+  "text": "**Postoperative monitoring after OSA surgery**: Routine ICU admission for all OSA surgery is not supported. Monitored admission is reserved for severe symptomatic OSA with very high AHI, significant cardiovascular comorbidity, or major tongue-base surgery. (K.J. Lee 12e, Ch 2, p 65-66)"
  },
  {
   "topic": "Residual OSA After Surgery",
   "field": "teach",
-  "text": "**Defining surgical success**: Success should combine an AHI reduction to less than 50% of baseline with improvement in bed-partner reported apneas/snoring, validated daytime sleepiness scores, comorbidities such as hypertension, and quality-of-life measures. (K.J. Lee 12e, Ch 2, p 66)"
+  "text": "**Defining surgical success**: Success should combine an AHI reduction to less than 50% of baseline with improvement in bed-partner reported apneas/snoring, validated daytime sleepiness scores, comorbidities such as hypertension, and quality-of-life measures. Most surgical studies use the Sher criterion: an AHI reduction of 50% or more to an AHI below 20. (K.J. Lee 12e, Ch 2, p 66)"
  },
  {
   "topic": "Laser / Energy Safety in Otolaryngology",
   "field": "physiology",
-  "text": "**Laser physics and tissue interaction**: Stimulated emission in a resonant cavity (one fully and one partially reflective mirror) requires population inversion and yields monochromatic, coherent, collimated light. Only absorbed light affects tissue; the wound has a central vaporization zone, a necrosis zone and a rim of reversible thermal damage. Surgeon-controlled variables are power, spot size and exposure time, and tissue effect tracks energy density (J/cm2); short high-energy pulses shorter than the tissue thermal relaxation time limit collateral heat. (K.J. Lee 12e, Ch 3, p 68-69)"
+  "text": "**Laser physics and tissue interaction**: Stimulated emission in a resonant cavity (one fully and one partially reflective mirror) requires population inversion and yields monochromatic, coherent, collimated light. Only absorbed light affects tissue. The wound has a central vaporization zone, a necrosis zone and a rim of reversible thermal damage. Surgeon-controlled variables are power, spot size and exposure time, and tissue effect tracks energy density (J/cm2). Short high-energy pulses shorter than the tissue thermal relaxation time limit collateral heat. (K.J. Lee 12e, Ch 3, p 68-69)"
  },
  {
   "topic": "Laser / Energy Safety in Otolaryngology",
@@ -142,12 +137,12 @@
  {
   "topic": "Laser / Energy Safety in Otolaryngology",
   "field": "physiology",
-  "text": "**Delivery and laser-specific properties**: CO2 (10.6 µm, invisible, needs a coaxial helium-neon aiming beam) cannot travel through standard optical fiber and uses articulated arms or hollow flexible waveguides; it is precise with good small-vessel hemostasis. Nd:YAG (1.064 µm) passes through fibers and flexible scopes, coagulates about 4 mm deep (good for palliating obstructing tracheobronchial/esophageal tumors and vascular/lymphatic malformations) but is imprecise. Er:YAG cuts cleanly with minimal thermal spread but poor hemostasis. KTP is fiber-deliverable with excellent hemostasis. (K.J. Lee 12e, Ch 3, p 69-71)"
+  "text": "**Delivery and laser-specific properties**: CO2 (10.6 µm, invisible, needs a coaxial helium-neon aiming beam) cannot travel through standard optical fiber and uses articulated arms or hollow flexible waveguides. It is precise with good small-vessel hemostasis. Nd:YAG (1.064 µm) passes through fibers and flexible scopes, coagulates about 4 mm deep (good for palliating obstructing tracheobronchial/esophageal tumors and vascular/lymphatic malformations) but is imprecise. Er:YAG cuts cleanly with minimal thermal spread but poor hemostasis. KTP is fiber-deliverable with excellent hemostasis. (K.J. Lee 12e, Ch 3, p 69-71)"
  },
  {
   "topic": "Laser / Energy Safety in Otolaryngology",
   "field": "teach",
-  "text": "**Eye injury depends on wavelength**: Visible and near-infrared light (KTP, Nd:YAG) passes the clear media and burns the retina, whereas far-infrared CO2 light is absorbed by water and injures the cornea and lens. Patients get moist saline eye pads and staff wear wavelength-specific eyewear; also lower FiO2 to the minimum and avoid nitrous oxide when lasing in the airway, use laser-specific or metal tubes rather than PVC, and evacuate plume. (K.J. Lee 12e, Ch 3, p 73)"
+  "text": "**Eye injury depends on wavelength**: Visible and near-infrared light (KTP, Nd:YAG) passes the clear media and burns the retina, whereas far-infrared CO2 light is absorbed by water and injures the cornea and lens. Patients get moist saline eye pads and staff wear wavelength-specific eyewear. Also lower FiO2 to the minimum and avoid nitrous oxide when lasing in the airway, use laser-specific or metal tubes rather than PVC, and evacuate plume. (K.J. Lee 12e, Ch 3, p 73)"
  },
  {
   "topic": "Aging Face / Injectables / Resurfacing",
@@ -157,17 +152,17 @@
  {
   "topic": "Aging Face / Injectables / Resurfacing",
   "field": "workup",
-  "text": "**Laser resurfacing contraindications and complications**: Avoid ablative resurfacing after isotretinoin within the prior 1-2 years, in scleroderma, active acne, prior facial burns, or prior head and neck radiation (all impair reepithelialization). Complications are prolonged erythema, scarring and dyschromia, with higher pigmentary risk in Fitzpatrick III and darker skin. (K.J. Lee 12e, Ch 3, p 72)"
+  "text": "**Laser resurfacing contraindications and complications**: Avoid ablative resurfacing after isotretinoin within the prior 1-2 years, in scleroderma, active acne, prior facial burns, or prior head and neck radiation (all impair reepithelialization). This is the book view. The 2017 ASDS consensus found insufficient evidence to delay superficial peels, nonablative lasers or fractional ablative lasers after isotretinoin, but still advises against fully ablative laser and mechanical dermabrasion on or soon after it. Complications are prolonged erythema, scarring and dyschromia, with higher pigmentary risk in Fitzpatrick III and darker skin. (K.J. Lee 12e, Ch 3, p 72)"
  },
  {
   "topic": "Tongue Base Surgery",
   "field": "localize",
-  "text": "**Lingual neurovascular bundle location**: During tongue-base radiofrequency or resection, the hypoglossal nerve-lingual artery bundle lies about 2.7 cm deep and 1.6 cm lateral to the foramen cecum; staying near the midline protects it. Tongue-base and palatal radiofrequency yields about a 45% long-term RDI reduction and can be repeated. (K.J. Lee 12e, Ch 3, p 74)"
+  "text": "**Lingual neurovascular bundle location**: During tongue-base radiofrequency or resection, the hypoglossal nerve-lingual artery bundle lies about 2.7 cm deep and 1.6 cm lateral to the foramen cecum. Staying near the midline protects it. Tongue-base and palatal radiofrequency yields about a 45% long-term RDI reduction and can be repeated. (K.J. Lee 12e, Ch 3, p 74)"
  },
  {
   "topic": "Laser / Energy Safety in Otolaryngology",
   "field": "physiology",
-  "text": "**Radiofrequency (Coblation) mechanism**: Radiofrequency energy in a conductive medium creates an ionized plasma layer that breaks molecular bonds at roughly 40-100 °C, removing or shrinking tissue with less thermal spread than electrocautery; Coblation tonsillectomy has pain and hemorrhage outcomes comparable to or better than electrocautery. (K.J. Lee 12e, Ch 3, p 73)"
+  "text": "**Radiofrequency (Coblation) mechanism**: Radiofrequency energy in a conductive medium creates an ionized plasma layer that breaks molecular bonds at roughly 40-100 °C, removing or shrinking tissue with less thermal spread than electrocautery. Coblation tonsillectomy has pain and hemorrhage outcomes comparable to or better than electrocautery. (K.J. Lee 12e, Ch 3, p 73)"
  },
  {
   "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
@@ -177,7 +172,7 @@
  {
   "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
   "field": "recognize",
-  "text": "**Aspiration pneumonitis (Mendelson syndrome)**: Risk rises with gastric volume over 200 mL and pH under 2.5; aspiration occurs past cuffed tubes in up to 5%. Lavage does not help; care is supportive. Sodium citrate, H2 blockers raise gastric pH preoperatively. (K.J. Lee 12e, Ch 4, p 92)"
+  "text": "**Aspiration pneumonitis (Mendelson syndrome)**: K.J. Lee links high risk to gastric contents over 200 mL with pH under 2.5, but the classic risk threshold is over 25 mL (about 0.4 mL/kg) with pH under 2.5. Aspiration occurs past cuffed tubes in up to 5%. Lavage does not help, and care is supportive. Sodium citrate and H2 blockers raise gastric pH preoperatively. (K.J. Lee 12e, Ch 4, p 92)"
  },
  {
   "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
@@ -197,17 +192,17 @@
  {
   "topic": "Pain Management in the Head & Neck Patient",
   "field": "manage",
-  "text": "**Opioid and nonopioid specifics**: Hydromorphone is about 5 times morphine potency and causes less pruritus and nausea (preferred PCA). Morphine releases histamine and its glucuronides accumulate in renal failure. Codeine needs CYP2D6 activation: ultrarapid metabolizers (1-2%) risk toxicity and poor metabolizers (5-10%) get no effect. Meperidine is avoided (serotonin syndrome with MAOIs) except low-dose for shivering. Ketorolac is limited to short courses and avoided with renal failure, bleeding risk and AERD; liposomal bupivacaine lasts up to 72 h but interferes with postoperative nerve assessment. (K.J. Lee 12e, Ch 4, p 86-89)"
+  "text": "**Opioid and nonopioid specifics**: Hydromorphone is about 5 times morphine potency and causes less pruritus and nausea (preferred PCA). Morphine releases histamine and its glucuronides accumulate in renal failure. Codeine needs CYP2D6 activation: ultrarapid metabolizers (1-2%) risk toxicity and poor metabolizers (5-10%) get no effect. For this reason the FDA contraindicates codeine and tramadol in children under 12 and after tonsillectomy or adenoidectomy in anyone under 18. Meperidine is avoided (serotonin syndrome with MAOIs) except low-dose for shivering. Ketorolac is limited to short courses and avoided with renal failure, bleeding risk and AERD. Liposomal bupivacaine lasts up to 72 h but interferes with postoperative nerve assessment. (K.J. Lee 12e, Ch 4, p 86-89)"
  },
  {
   "topic": "Pain Management in the Head & Neck Patient",
   "field": "manage",
-  "text": "**PONV prophylaxis**: PONV affects about one third of untreated patients; risk factors are female sex, prior PONV/motion sickness, nonsmoking, younger age (<40) and postoperative opioids. Each prophylactic class lowers risk about 20-25%, so high-risk patients get multimodal prophylaxis: dexamethasone, 5-HT3 antagonist before emergence, transdermal scopolamine placed hours before surgery, NK-1 antagonists (aprepitant), opioid sparing and gastric suctioning of swallowed blood; low-dose droperidol needs ECG monitoring for QT prolongation. (K.J. Lee 12e, Ch 4, p 89-90)"
+  "text": "**PONV prophylaxis**: PONV affects about one third of untreated patients. Risk factors are female sex, prior PONV/motion sickness, nonsmoking, younger age (<40) and postoperative opioids. Each prophylactic class lowers risk about 20-25%, so high-risk patients get multimodal prophylaxis: dexamethasone, 5-HT3 antagonist before emergence, transdermal scopolamine placed hours before surgery, NK-1 antagonists (aprepitant), opioid sparing and gastric suctioning of swallowed blood. Low-dose droperidol needs ECG monitoring for QT prolongation. (K.J. Lee 12e, Ch 4, p 89-90)"
  },
  {
   "topic": "Otosclerosis / Stapes Fixation",
   "field": "operate",
-  "text": "**Local anesthesia pitfalls in middle ear surgery**: Inject at the bony-cartilaginous junction of the canal (for example at 6 points around the canal so each later stick is already numb); lidocaine that diffuses into the middle ear can cause transient facial paralysis via a dehiscent facial nerve, or violent vertigo with nystagmus about 45 minutes later through the oval or round window. Both resolve, but avoid infiltrating bony canal skin for simple myringotomy. (K.J. Lee 12e, Ch 4, p 97-99)"
+  "text": "**Local anesthesia pitfalls in middle ear surgery**: Inject at the bony-cartilaginous junction of the canal (for example at 6 points around the canal so each later stick is already numb). Lidocaine that diffuses into the middle ear can cause transient facial paralysis via a dehiscent facial nerve, or violent vertigo with nystagmus about 45 minutes later through the oval or round window. Both resolve, but avoid infiltrating bony canal skin for simple myringotomy. (K.J. Lee 12e, Ch 4, p 97-99)"
  },
  {
   "topic": "Hemostasis / Coagulopathy / Antithrombotic Management in ENT",
@@ -232,7 +227,7 @@
  {
   "topic": "Hemostasis / Coagulopathy / Antithrombotic Management in ENT",
   "field": "manage",
-  "text": "**DOAC hold times**: For standard-risk procedures hold rivaroxaban, apixaban and edoxaban about 24 h (48 h if CrCl under 50 for rivaroxaban/apixaban) and dabigatran about 48 h (it is 80% renally cleared); DOACs need no bridging. Low-risk procedures (skin biopsy, endoscopy without biopsy, dental work) usually proceed on aspirin/clopidogrel; otherwise antiplatelets are stopped 7-10 days before elective surgery. (K.J. Lee 12e, Ch 5, p 110-113)"
+  "text": "**DOAC hold times**: For standard-risk procedures hold rivaroxaban, apixaban and edoxaban about 24 h (48 h if CrCl under 50 for rivaroxaban/apixaban) and dabigatran about 48 h (it is 80% renally cleared). DOACs need no bridging. Low-risk procedures (skin biopsy, endoscopy without biopsy, dental work) usually proceed on aspirin or clopidogrel. Otherwise the book stops antiplatelets 7-10 days before elective surgery, while current ACCP 2022 guidance stops clopidogrel about 5 days (prasugrel 7) before surgery and often continues aspirin, in coordination with cardiology. (K.J. Lee 12e, Ch 5, p 110-113)"
  },
  {
   "topic": "Hemostasis / Coagulopathy / Antithrombotic Management in ENT",
@@ -252,17 +247,17 @@
  {
   "topic": "Facial Pain / Headache vs Rhinogenic Disease",
   "field": "manage",
-  "text": "**Migraine abortive and preventive therapy**: Abortives (triptans, ergots, NSAIDs, combination analgesics, antiemetics) work best within about 15 minutes of onset; avoid opioids and butalbital as first line and limit OTC analgesic overuse. Prophylaxis is indicated for frequent attacks (more than 2 per month or abortives more than twice weekly), prolonged or disabling attacks, or abortive failure: antiepileptics (topiramate), beta blockers, tricyclics, calcium channel blockers, botulinum toxin; supplements include magnesium, riboflavin and coenzyme Q10. (K.J. Lee 12e, Ch 6, p 121)"
+  "text": "**Migraine abortive and preventive therapy**: Abortives (triptans, ergots, NSAIDs, combination analgesics, antiemetics) work best within about 15 minutes of onset. Avoid opioids and butalbital as first line and limit OTC analgesic overuse. Prophylaxis is indicated for frequent attacks (more than 2 per month or abortives more than twice weekly), prolonged or disabling attacks, or abortive failure. Options are antiepileptics (topiramate), beta blockers, tricyclics, calcium channel blockers and botulinum toxin (for chronic migraine), and supplements include magnesium, riboflavin and coenzyme Q10. The book predates CGRP-targeted drugs: current AHS guidance adds CGRP monoclonal antibodies for prevention and gepants for acute treatment and prevention. (K.J. Lee 12e, Ch 6, p 121)"
  },
  {
   "topic": "Facial Pain / Headache vs Rhinogenic Disease",
   "field": "recognize",
-  "text": "**Cluster headache**: Severe strictly unilateral orbital/temporal pain lasting 15-180 minutes, up to 8 times a day, often nocturnal, with ipsilateral tearing, conjunctival injection, congestion, rhinorrhea, sweating, miosis and ptosis. Episodic form has remissions of at least 1 month; chronic form does not. Abort with 100% oxygen (about 8 L/min by mask for 10 min) or triptans (intranasal or injected); verapamil is the main preventive, with lithium and topiramate; refractory cases may get occipital nerve block, sphenopalatine ganglion stimulation or hypothalamic deep brain stimulation. (K.J. Lee 12e, Ch 6, p 122-123)"
+  "text": "**Cluster headache**: Severe strictly unilateral orbital/temporal pain lasting 15-180 minutes, up to 8 times a day, often nocturnal, with ipsilateral tearing, conjunctival injection, congestion, rhinorrhea, sweating, miosis and ptosis. The episodic form has remissions of at least 3 months, and the chronic form does not. Abort attacks with 100% oxygen or triptans (intranasal or injected). K.J. Lee gives oxygen at about 8 L/min for 10 min, but current AHS guidance uses 12-15 L/min by non-rebreather mask for about 15 minutes. Verapamil is the main preventive, with lithium and topiramate. Refractory cases may get occipital nerve block, sphenopalatine ganglion stimulation or hypothalamic deep brain stimulation. (K.J. Lee 12e, Ch 6, p 122-123)"
  },
  {
   "topic": "Tinnitus",
   "field": "workup",
-  "text": "**Dural arteriovenous fistula**: A dural AV shunt, often after transverse/sigmoid sinus thrombosis, presenting with pulsatile tinnitus, proptosis, papilledema or hemorrhage. Retrograde cortical venous drainage marks high hemorrhage risk and needs urgent treatment (Borden I drains to a sinus, about 2% aggressive; II adds cortical reflux, about 39%; III drains directly into cortical veins, about 79%); hemorrhage carries roughly 30% mortality. Pulsatile tinnitus workup should include vascular imaging (CTA/MRA or angiography) for this. (K.J. Lee 12e, Ch 6, p 130-131)"
+  "text": "**Dural arteriovenous fistula**: A dural AV shunt, often after transverse/sigmoid sinus thrombosis, presenting with pulsatile tinnitus, proptosis, papilledema or hemorrhage. Retrograde cortical venous drainage marks high hemorrhage risk and needs urgent treatment (Borden I drains to a sinus, about 2% aggressive, II adds cortical reflux, about 39%, III drains directly into cortical veins, about 79%). Hemorrhage carries roughly 30% mortality. Pulsatile tinnitus workup should include vascular imaging (CTA/MRA or angiography) for this. (K.J. Lee 12e, Ch 6, p 130-131)"
  },
  {
   "topic": "CSF Rhinorrhea",
@@ -282,7 +277,7 @@
  {
   "topic": "Lateral Skull-Base Tumor Framework",
   "field": "workup",
-  "text": "**Meningioma imaging signs**: Meningiomas are extra-axial, dural-based, T1 isointense and T2 hyperintense with homogeneous enhancement, a dural tail, a CSF cleft at the brain interface, adjacent hyperostosis, and a prolonged venous-phase angiographic blush ('mother-in-law' sign); about 7% are WHO grade 2 and 2.4% grade 3. (K.J. Lee 12e, Ch 6, p 135-136)"
+  "text": "**Meningioma imaging signs**: Meningiomas are extra-axial, dural-based, T1 isointense and T2 hyperintense with homogeneous enhancement, a dural tail, a CSF cleft at the brain interface, adjacent hyperostosis, and a prolonged venous-phase angiographic blush ('mother-in-law' sign). About 7% are WHO grade 2 and 2.4% grade 3. (K.J. Lee 12e, Ch 6, p 135-136)"
  },
  {
   "topic": "Central Vestibular Disorders",
@@ -292,12 +287,12 @@
  {
   "topic": "Audiologic Electrophysiology / ABR-OAE-ECoG",
   "field": "teach",
-  "text": "**ABR generators and lesion patterns**: Classic generators: wave I distal eighth nerve, II proximal nerve/cochlear nucleus, III superior olivary complex, IV lateral lemniscus, V inferior colliculus. Vestibular schwannomas typically prolong I-III (nerve to caudal pons), whereas MS more often prolongs III-V; ABR is abnormal in about 90% of vestibular schwannomas and a third of MS patients. (K.J. Lee 12e, Ch 6, p 129)"
+  "text": "**ABR generators and lesion patterns**: Classic (Jewett) generators are wave I distal eighth nerve, II proximal nerve or cochlear nucleus, III superior olivary complex, IV lateral lemniscus and V inferior colliculus. Intraoperative recordings (Moller) revise this: wave II is the proximal nerve, III mainly the cochlear nucleus, IV the superior olivary complex and V the lateral lemniscus where it ends at the inferior colliculus. Vestibular schwannomas typically prolong I-III (nerve to caudal pons), whereas MS more often prolongs III-V. ABR is abnormal in about 90% of vestibular schwannomas and a third of MS patients. (K.J. Lee 12e, Ch 6, p 129)"
  },
  {
   "topic": "Penetrating and Blunt Neck Trauma",
   "field": "manage",
-  "text": "**Blunt cervical artery dissection**: Vertebral or carotid dissection from blunt trauma or transverse foramen fracture can cause posterior circulation or hemispheric stroke. Treatment is antithrombotic (heparin then warfarin for about 3 months, or antiplatelet therapy when bleeding risk is high), with endovascular stenting or sacrifice for selected lesions; most heal within about 6 weeks. (K.J. Lee 12e, Ch 6, p 131-132)"
+  "text": "**Blunt cervical artery dissection**: Vertebral or carotid dissection from blunt trauma or transverse foramen fracture can cause posterior circulation or hemispheric stroke. K.J. Lee gives heparin then warfarin for about 3 months, with antiplatelet therapy when bleeding risk is high. **Current view**: trials (CADISS, TREAT-CAD) and trauma guidelines show antiplatelet therapy, usually aspirin, works as well as anticoagulation, so it is the usual first-line choice. Endovascular stenting or sacrifice is reserved for selected lesions, and most heal within about 6 weeks. (K.J. Lee 12e, Ch 6, p 131-132)"
  },
  {
   "topic": "ENT Fluids / Electrolytes / Nutrition",
@@ -307,7 +302,7 @@
  {
   "topic": "Systemic / Granulomatous Disease Manifestations in ENT",
   "field": "recognize",
-  "text": "**Multiple sclerosis in ENT**: Relapsing CNS demyelination (peak about 35 years, women) presenting to ENT as trigeminal neuralgia in a young patient, vertigo, sudden hearing loss or internuclear ophthalmoplegia. MRI shows T2/FLAIR periventricular lesions perpendicular to the ventricles (Dawson fingers) with open-ring enhancement; CSF shows oligoclonal bands and IgG index over 0.7. (K.J. Lee 12e, Ch 6, p 126-127)"
+  "text": "**Multiple sclerosis in ENT**: Relapsing CNS demyelination (peak about 35 years, women) presenting to ENT as trigeminal neuralgia in a young patient, vertigo, sudden hearing loss or internuclear ophthalmoplegia. MRI shows T2/FLAIR periventricular lesions perpendicular to the ventricles (Dawson fingers) with open-ring enhancement. CSF shows oligoclonal bands and IgG index over 0.7. (K.J. Lee 12e, Ch 6, p 126-127)"
  },
  {
   "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
@@ -322,12 +317,12 @@
  {
   "topic": "Tracheostomy Emergency",
   "field": "recognize",
-  "text": "**Apnea after relief of chronic obstruction**: A patient with chronic CO2 retention from upper airway obstruction may depend on hypoxic drive; sudden relief with tracheotomy and oxygen can remove that drive and cause apnea (CO2 narcosis), so be ready to ventilate until CO2 falls. Pneumomediastinum and pneumothorax are classic early tracheotomy complications; in children the innominate artery crosses at the sternal notch, higher than in adults, and about 10% of people have a thyroidea ima artery ascending on the anterior trachea. (K.J. Lee 12e, Ch 7, p 148-150)"
+  "text": "**Apnea after relief of chronic obstruction**: A patient with chronic CO2 retention from upper airway obstruction may depend on hypoxic drive. Sudden relief with tracheotomy and oxygen can remove that drive and cause apnea (CO2 narcosis), so be ready to ventilate until CO2 falls. Pneumomediastinum and pneumothorax are classic early tracheotomy complications. In children the innominate artery crosses at the sternal notch, higher than in adults, and about 10% of people have a thyroidea ima artery ascending on the anterior trachea. (K.J. Lee 12e, Ch 7, p 148-150)"
  },
  {
   "topic": "Tracheobronchial Endoscopy Principles",
   "field": "localize",
-  "text": "**Tracheobronchial and mediastinal landmarks**: Adult trachea is 10-12 cm long with 16-20 rings and bifurcates at T4-T5 about 6 cm below the sternal notch; the right main bronchus is wider, shorter and more vertical. The right upper lobe bronchus lies above the right pulmonary artery. The esophagus narrows at the cricopharyngeus, aortic arch, left main bronchus and diaphragm. Approximate rigid bronchoscope sizes: 3 mm premature, 3.5 mm at 6 months, 4 mm at 18 months, 5 mm at 5 years, 6 mm at 10 years, 7 mm adult. In mediastinoscopy dissect deep to the pretracheal fascia. (K.J. Lee 12e, Ch 7, p 149-151, 154)"
+  "text": "**Tracheobronchial and mediastinal landmarks**: Adult trachea is 10-12 cm long with 16-20 rings and bifurcates at T4-T5 about 6 cm below the sternal notch. The right main bronchus is wider, shorter and more vertical. The right upper lobe bronchus lies above the right pulmonary artery. The esophagus narrows at the cricopharyngeus, aortic arch, left main bronchus and diaphragm. Approximate rigid bronchoscope sizes: 3 mm premature, 3.5 mm at 6 months, 4 mm at 18 months, 5 mm at 5 years, 6 mm at 10 years, 7 mm adult. In mediastinoscopy dissect deep to the pretracheal fascia. (K.J. Lee 12e, Ch 7, p 149-151, 154)"
  },
  {
   "topic": "Unilateral Vocal Fold Paralysis",
@@ -402,7 +397,7 @@
  {
   "topic": "Allergic Rhinitis",
   "field": "manage",
-  "text": "**Intranasal steroid and anticholinergic specifics**: Intranasal steroids cause epistaxis and rarely septal perforation but no meaningful cataract or IOP effect; fluticasone furoate and mometasone are approved from age 2, most others from 6, and budesonide carries pregnancy approval; mometasone and budesonide hold polyp indications. Ipratropium (0.03% or 0.06%) is the only nasal anticholinergic and treats watery rhinorrhea (vasomotor, viral, gustatory) without affecting congestion. (K.J. Lee 12e, Ch 10, p 192-193)"
+  "text": "**Intranasal steroid and anticholinergic specifics**: Intranasal steroids cause epistaxis and rarely septal perforation but no meaningful cataract or IOP effect. Mometasone, fluticasone furoate and triamcinolone are approved from age 2, fluticasone propionate from 4, and budesonide from 6. Budesonide has the most favorable pregnancy data. Mometasone and exhalation-delivered fluticasone (Xhance) carry US nasal polyp indications. Ipratropium (0.03% or 0.06%) is the only nasal anticholinergic and treats watery rhinorrhea (vasomotor, viral, gustatory) without affecting congestion. (K.J. Lee 12e, Ch 10, p 192-193)"
  },
  {
   "topic": "Hemostasis / Coagulopathy / Antithrombotic Management in ENT",
@@ -412,7 +407,7 @@
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "pathophysiology",
-  "text": "**Other ototoxic drug classes**: Loop diuretics (furosemide, ethacrynic acid) cause usually transient loss via the stria vascularis; give infusions slowly rather than as boluses and beware synergy with aminoglycosides. Salicylates (typically over about 2.7 g/day of aspirin) cause reversible flat hearing loss and tinnitus that resolve with clearance. Quinine/chloroquine cause cochlear vasculitis and can cause congenital SNHL in exposed fetuses. Cisplatin and carboplatin cause permanent 4-8 kHz loss in over half of patients; monitor including ultra-high frequencies. Aminoglycoside susceptibility is markedly increased by the mitochondrial 12S rRNA A1555G mutation. (K.J. Lee 12e, Ch 10, p 196-198)"
+  "text": "**Other ototoxic drug classes**: Loop diuretics (furosemide, ethacrynic acid) cause usually transient loss via the stria vascularis. Give infusions slowly rather than as boluses and beware synergy with aminoglycosides. Salicylates (typically over about 2.7 g/day of aspirin) cause reversible flat hearing loss and tinnitus that resolve with clearance. Quinine/chloroquine cause cochlear vasculitis and can cause congenital SNHL in exposed fetuses. Cisplatin and carboplatin cause permanent 4-8 kHz loss in over half of patients. Monitor including ultra-high frequencies. Aminoglycoside susceptibility is markedly increased by the mitochondrial 12S rRNA A1555G mutation. (K.J. Lee 12e, Ch 10, p 196-198)"
  },
  {
   "topic": "Head & Neck Radiation Toxicity / Survivorship",
@@ -422,17 +417,17 @@
  {
   "topic": "Oral Manifestations of Systemic Disease",
   "field": "manage",
-  "text": "**Recurrent aphthous stomatitis**: Affects 20-50% of people; potent topical steroids (0.05% clobetasol or fluocinonide) outperform triamcinolone; tetracycline rinses reduce ulcer size and pain; amlexanox 5% paste speeds healing without preventing recurrences; viscous lidocaine for pain. (K.J. Lee 12e, Ch 10, p 200)"
+  "text": "**Recurrent aphthous stomatitis**: Affects 20-50% of people. Potent topical steroids (0.05% clobetasol or fluocinonide) outperform triamcinolone. Tetracycline rinses reduce ulcer size and pain. Amlexanox 5% paste speeds healing without preventing recurrences. Viscous lidocaine for pain. (K.J. Lee 12e, Ch 10, p 200)"
  },
  {
   "topic": "Systemic Therapy Foundations in Head & Neck Cancer",
   "field": "manage",
-  "text": "**Cetuximab toxicities**: Cetuximab (anti-EGFR) causes acneiform rash, fatigue and hypomagnesemia; it can be given with radiation, with platinum, or as monotherapy after platinum failure. (K.J. Lee 12e, Ch 10, p 189-190)"
+  "text": "**Cetuximab toxicities**: Cetuximab (anti-EGFR) causes acneiform rash, fatigue and hypomagnesemia. It can be given with radiation, with platinum, or as monotherapy after platinum failure. (K.J. Lee 12e, Ch 10, p 189-190)"
  },
  {
   "topic": "Systemic / Granulomatous Disease Manifestations in ENT",
   "field": "manage",
-  "text": "**Biologics for vasculitides**: Rituximab (anti-CD20, B-cell depletion) is now standard for moderate-severe granulomatosis with polyangiitis; mepolizumab (anti-IL-5) is approved for eosinophilic granulomatosis with polyangiitis; tocilizumab (anti-IL-6 receptor) for giant cell arteritis; infliximab (anti-TNF) is used in relapsing polychondritis. (K.J. Lee 12e, Ch 10, p 190)"
+  "text": "**Biologics for vasculitides**: Rituximab (anti-CD20, B-cell depletion) is now standard for moderate-severe granulomatosis with polyangiitis. Mepolizumab (anti-IL-5) is approved for eosinophilic granulomatosis with polyangiitis. Tocilizumab (anti-IL-6 receptor) for giant cell arteritis. Infliximab (anti-TNF) is used in relapsing polychondritis. (K.J. Lee 12e, Ch 10, p 190)"
  },
  {
   "topic": "Cutaneous Squamous Cell Carcinoma of the Head & Neck",
@@ -442,7 +437,7 @@
  {
   "topic": "CF / Primary Ciliary Dyskinesia Sinonasal Disease",
   "field": "pathophysiology",
-  "text": "**CFTR mutations and modulators**: Autosomal recessive CFTR chloride channel defect; delta F508 accounts for about 70% of alleles and G551D (a gating mutation, about 5%) is the original target of the potentiator ivacaftor, which improves lung function and exacerbation rates. (K.J. Lee 12e, Ch 10, p 201)"
+  "text": "**CFTR mutations and modulators**: Autosomal recessive CFTR chloride channel defect. Delta F508 accounts for about 70% of alleles and G551D (a gating mutation, about 5%) is the original target of the potentiator ivacaftor, which improves lung function and exacerbation rates. Elexacaftor-tezacaftor-ivacaftor (FDA 2019) now treats patients with at least one F508del allele, and it also improves sinonasal symptoms and CT findings. (K.J. Lee 12e, Ch 10, p 201)"
  },
  {
   "topic": "Acute Sialadenitis / Sjögren",
@@ -452,12 +447,12 @@
  {
   "topic": "Oral Manifestations of Systemic Disease",
   "field": "recognize",
-  "text": "**Oral candidiasis forms and treatment threshold**: Four forms: pseudomembranous (thrush, wipes off to raw red base, most common), atrophic/erythematous (red depapillated tongue), angular cheilitis, and hyperplastic (thick plaque that does not wipe off, rarest). Confirm with KOH or PAS. With CD4 over 200 use topical nystatin; under 200 use systemic fluconazole, watching for azole resistance after repeated courses. (K.J. Lee 12e, Ch 11, p 208)"
+  "text": "**Oral candidiasis forms and treatment threshold**: Four forms: pseudomembranous (thrush, wipes off to raw red base, most common), atrophic/erythematous (red depapillated tongue), angular cheilitis, and hyperplastic (thick plaque that does not wipe off, rarest). Confirm with KOH or PAS. With CD4 over 200 use topical nystatin. Under 200 use systemic fluconazole, watching for azole resistance after repeated courses. (K.J. Lee 12e, Ch 11, p 208)"
  },
  {
   "topic": "Oral Manifestations of Systemic Disease",
   "field": "recognize",
-  "text": "**HIV periodontal disease and oral histoplasmosis**: Linear gingival erythema (fiery marginal band out of proportion to plaque) and necrotizing ulcerative gingivitis/periodontitis strongly suggest HIV; treat with chlorhexidine, debridement and dental care, and biopsy when bone loss exceeds mucosal disease (lymphoma, bacillary angiomatosis). Oral histoplasmosis (Ohio River valley) produces painful granulomatous ulcers, is AIDS-defining, and needs biopsy/culture and amphotericin or itraconazole. (K.J. Lee 12e, Ch 11, p 208-209)"
+  "text": "**HIV periodontal disease and oral histoplasmosis**: Linear gingival erythema (fiery marginal band out of proportion to plaque) and necrotizing ulcerative gingivitis/periodontitis strongly suggest HIV. Treat with chlorhexidine, debridement and dental care, and biopsy when bone loss exceeds mucosal disease (lymphoma, bacillary angiomatosis). Oral histoplasmosis (Ohio River valley) produces painful granulomatous ulcers, is AIDS-defining, and needs biopsy/culture and amphotericin or itraconazole. (K.J. Lee 12e, Ch 11, p 208-209)"
  },
  {
   "topic": "Immunocompromised Host in Otolaryngology",
@@ -467,27 +462,27 @@
  {
   "topic": "Neck Lymphoma",
   "field": "recognize",
-  "text": "**HIV-associated lymphomas**: Lymphoma is the second most common HIV malignancy (up to 19%): diffuse large B-cell most common, then Burkitt (doubling time 24-48 h, unrelated to CD4 count, rarely jaw-based outside endemic Africa). Plasmablastic lymphoma typically arises in the oral cavity of HIV patients and should trigger HIV testing; prognosis is poor. HIV Hodgkin lymphoma presents later with mixed cellularity or lymphocyte-depleted histology. Open biopsy is preferred to define subtype; treatment is chemotherapy (R-CHOP or R-EPOCH) with concurrent ART. (K.J. Lee 12e, Ch 11, p 211-213)"
+  "text": "**HIV-associated lymphomas**: Lymphoma is the second most common HIV malignancy (up to 19%): diffuse large B-cell most common, then Burkitt (doubling time 24-48 h, unrelated to CD4 count, rarely jaw-based outside endemic Africa). Plasmablastic lymphoma typically arises in the oral cavity of HIV patients and should trigger HIV testing. Prognosis is poor. HIV Hodgkin lymphoma presents later with mixed cellularity or lymphocyte-depleted histology. Open biopsy is preferred to define subtype. Treatment is chemotherapy (R-CHOP or R-EPOCH) with concurrent ART. (K.J. Lee 12e, Ch 11, p 211-213)"
  },
  {
   "topic": "Systemic / Granulomatous Disease Manifestations in ENT",
   "field": "workup",
-  "text": "**EGPA (Churg-Strauss) criteria**: Asthma typically precedes vasculitis by 3-9 years, progressing through allergic, eosinophilic (Loeffler-type) and vasculitic phases; about 70% have sinonasal disease. pANCA/MPO is positive in only about 50%. ACR 1990 criteria (4 of 6): asthma, eosinophils over 10%, mononeuropathy/polyneuropathy, migratory pulmonary infiltrates, paranasal sinus abnormality, and extravascular eosinophils on biopsy. (K.J. Lee 12e, Ch 12, p 220)"
+  "text": "**EGPA (Churg-Strauss) criteria**: Asthma typically precedes vasculitis by 3-9 years, progressing through allergic, eosinophilic (Loeffler-type) and vasculitic phases. About 70% have sinonasal disease. pANCA/MPO is positive in only about 50%. ACR 1990 criteria (4 of 6): asthma, eosinophils over 10%, mononeuropathy/polyneuropathy, migratory pulmonary infiltrates, paranasal sinus abnormality, and extravascular eosinophils on biopsy. The 2022 ACR/EULAR classification criteria now replace the 1990 set: obstructive airway disease +3, nasal polyps +3, mononeuritis multiplex +1, eosinophils at least 1×10⁹/L +5, extravascular eosinophilic inflammation on biopsy +2, cANCA/PR3 −3 and hematuria −1, with a score of 6 or more classifying EGPA. (K.J. Lee 12e, Ch 12, p 220)"
  },
  {
   "topic": "Systemic / Granulomatous Disease Manifestations in ENT",
   "field": "recognize",
-  "text": "**Lupus and Behçet in the head and neck**: SLE can cause laryngotracheal perichondritis with vocal fold thickening, nasal crusting and septal perforation; discoid lupus affects only skin/mucosa; specific serology is anti-dsDNA and anti-Sm. Behçet disease requires recurrent oral aphthae (3 or more per year) plus two of genital ulcers, uveitis, skin lesions (erythema nodosum) or a positive pathergy test; it can cause progressive SNHL and vasculitis of vessels of any size. (K.J. Lee 12e, Ch 12, p 221-222)"
+  "text": "**Lupus and Behçet in the head and neck**: SLE can cause laryngotracheal perichondritis with vocal fold thickening, nasal crusting and septal perforation. Discoid lupus affects only skin/mucosa. Specific serology is anti-dsDNA and anti-Sm. Behçet disease requires recurrent oral aphthae (3 or more per year) plus two of genital ulcers, uveitis, skin lesions (erythema nodosum) or a positive pathergy test. It can cause progressive SNHL and vasculitis of vessels of any size. (K.J. Lee 12e, Ch 12, p 221-222)"
  },
  {
   "topic": "Systemic Disease of the Nose / Sinuses",
   "field": "recognize",
-  "text": "**Septal perforation site clues and other infections**: Syphilis classically perforates the bony septum, whereas most other causes (cocaine, GPA, trauma) involve cartilage. Leprosy (Mycobacterium leprae, grows best at 27-33 °C) favors cool tissues and causes early nasal disease and saddle nose; treat with dapsone plus rifampin and clofazimine. Rhinosporidiosis (South India, Sri Lanka) causes friable 'strawberry' nasal polyps requiring excision. (K.J. Lee 12e, Ch 12, p 227, 229, 231)"
+  "text": "**Septal perforation site clues and other infections**: Syphilis classically perforates the bony septum, whereas most other causes (cocaine, GPA, trauma) involve cartilage. Leprosy (Mycobacterium leprae, grows best at 27-33 °C) favors cool tissues and causes early nasal disease and saddle nose. Treat with dapsone plus rifampin and clofazimine. Rhinosporidiosis (South India, Sri Lanka) causes friable 'strawberry' nasal polyps requiring excision. (K.J. Lee 12e, Ch 12, p 227, 229, 231)"
  },
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "recognize",
-  "text": "**Otosyphilis and tuberculous otitis**: Otosyphilis causes fluctuating, often bilateral SNHL with tinnitus and vertigo, sometimes positive Hennebert sign and Tullio phenomenon; screen with RPR/VDRL and confirm with FTA-ABS; treat with penicillin (IV for tertiary/neurosyphilis) plus steroids, and report the case. Tuberculous otitis gives painless watery otorrhea with multiple TM perforations and pale granulation. (K.J. Lee 12e, Ch 12, p 228-230)"
+  "text": "**Otosyphilis and tuberculous otitis**: Otosyphilis causes fluctuating, often bilateral SNHL with tinnitus and vertigo, sometimes with a positive Hennebert sign and Tullio phenomenon. Screen with RPR/VDRL and confirm with FTA-ABS. K.J. Lee reserves IV penicillin for tertiary/neurosyphilis, but current CDC guidance treats otosyphilis at any stage as neurosyphilis (IV aqueous penicillin G for 10-14 days), usually with steroids, and the case is reported. Tuberculous otitis gives painless watery otorrhea with multiple TM perforations and pale granulation. (K.J. Lee 12e, Ch 12, p 228-230)"
  },
  {
   "topic": "Acute / Chronic Laryngopharyngitis",
@@ -497,17 +492,17 @@
  {
   "topic": "Immunodeficiency-Associated Chronic Rhinosinusitis",
   "field": "recognize",
-  "text": "**Chronic granulomatous disease and phagocyte disorders**: CGD (about two thirds X-linked, one third autosomal recessive) impairs phagocyte oxidative killing, causing recurrent abscesses and granulomas from catalase-positive bacteria and fungi; diagnose with neutrophil function testing; manage with TMP-SMX and itraconazole prophylaxis, interferon gamma, avoidance of live vaccines (including BCG), and stem cell transplant for cure. Chédiak-Higashi (autosomal recessive: albinism, neutropenia, neuropathy) and Job (hyper-IgE with recurrent staphylococcal cold abscesses) belong in this differential. (K.J. Lee 12e, Ch 12, p 231-232)"
+  "text": "**Chronic granulomatous disease and phagocyte disorders**: CGD (about two thirds X-linked, one third autosomal recessive) impairs phagocyte oxidative killing, causing recurrent abscesses and granulomas from catalase-positive bacteria and fungi. Diagnose it with neutrophil function testing (dihydrorhodamine or nitroblue tetrazolium). Long-term care is directed by immunology and includes interferon gamma, avoidance of live vaccines (including BCG), and stem cell transplant for cure. Chédiak-Higashi (autosomal recessive: albinism, neutropenia, neuropathy) and Job (hyper-IgE with recurrent staphylococcal cold abscesses) belong in this differential. (K.J. Lee 12e, Ch 12, p 231-232)"
  },
  {
   "topic": "Oral Manifestations of Systemic Disease",
   "field": "recognize",
-  "text": "**Lobular capillary hemangioma (pyogenic granuloma)**: A friable, bleeding, noninfectious lobular capillary proliferation of gingiva, lip, tongue or nasal septum, often after trauma and hormonally driven in pregnancy (pregnancy lesions usually regress postpartum); otherwise excise, cauterize or laser, completely to prevent recurrence. (K.J. Lee 12e, Ch 12, p 225)"
+  "text": "**Lobular capillary hemangioma (pyogenic granuloma)**: A friable, bleeding, noninfectious lobular capillary proliferation of gingiva, lip, tongue or nasal septum, often after trauma and hormonally driven in pregnancy (pregnancy lesions usually regress postpartum). Otherwise excise, cauterize or laser, completely to prevent recurrence. (K.J. Lee 12e, Ch 12, p 225)"
  },
  {
   "topic": "Temporal Bone Anatomy",
   "field": "localize",
-  "text": "**Named surgical landmarks**: Körner septum (petrosquamous lamina) separates squamous from petrous air cells and can be mistaken for the antrum medial wall, leaving disease unopened. The ponticulus is the ridge between the oval window niche and sinus tympani; the subiculum lies between the round window niche and sinus tympani. Notch of Rivinus is the superior gap in the tympanic ring medial to which lies the pars flaccida. The solid angle is formed by the three semicircular canals; Citelli angle is the sinodural angle. (K.J. Lee 12e, Ch 13, p 234-236)"
+  "text": "**Named surgical landmarks**: Körner septum (petrosquamous lamina) separates squamous from petrous air cells and can be mistaken for the antrum medial wall, leaving disease unopened. The ponticulus is the ridge between the oval window niche and sinus tympani. The subiculum lies between the round window niche and sinus tympani. Notch of Rivinus is the superior gap in the tympanic ring medial to which lies the pars flaccida. The solid angle is formed by the three semicircular canals. Citelli angle is the sinodural angle. (K.J. Lee 12e, Ch 13, p 234-236)"
  },
  {
   "topic": "Temporal Bone Anatomy",
@@ -517,22 +512,22 @@
  {
   "topic": "Temporal Bone Anatomy",
   "field": "teach",
-  "text": "**Temporal bone numbers**: Only about one third of people have a pneumatized petrous apex; tympanic facial nerve dehiscence is reported in 20-30%; absent stapedius tendon/pyramidal eminence about 1%; IAC diameter upper limit about 8 mm; cochlear aqueduct averages 6.2 mm, connecting the basal-turn scala tympani to the posterior fossa subarachnoid space. TM area is about 70-80 mm2 with an effective vibrating area of about 55 mm2; stapes footplate about 1.4 x 3 mm. (K.J. Lee 12e, Ch 13, p 236-237, 248)"
+  "text": "**Temporal bone numbers**: Only about one third of people have a pneumatized petrous apex. Tympanic facial nerve dehiscence is reported in 20-30%. Absent stapedius tendon/pyramidal eminence about 1%. IAC diameter upper limit about 8 mm. Cochlear aqueduct averages 6.2 mm, connecting the basal-turn scala tympani to the posterior fossa subarachnoid space. TM area is about 70-80 mm2 with an effective vibrating area of about 55 mm2. Stapes footplate about 1.4 x 3 mm. (K.J. Lee 12e, Ch 13, p 236-237, 248)"
  },
  {
   "topic": "Temporal Bone Anatomy",
   "field": "physiology",
-  "text": "**Ossicular ligaments, joints and middle ear muscles**: The malleoincudal and incudostapedial joints are diarthrodial, while the stapediovestibular joint (annular ligament) is a syndesmosis. Tensor tympani runs from the cochleariform process to the medial manubrium (V3) and pulls the malleus medially; stapedius from the pyramidal process usually inserts on the posterior stapes neck (VII). The anterior malleal ligament passes through the petrotympanic fissure. (K.J. Lee 12e, Ch 13, p 238-239)"
+  "text": "**Ossicular ligaments, joints and middle ear muscles**: The malleoincudal and incudostapedial joints are diarthrodial, while the stapediovestibular joint (annular ligament) is a syndesmosis. Tensor tympani runs from the cochleariform process to the medial manubrium (V3) and pulls the malleus medially. Stapedius from the pyramidal process usually inserts on the posterior stapes neck (VII). The anterior malleal ligament passes through the petrotympanic fissure. (K.J. Lee 12e, Ch 13, p 238-239)"
  },
  {
   "topic": "Microtia / Aural Atresia",
   "field": "pathophysiology",
-  "text": "**Ossicular and canal embryology**: Malleus head/neck and incus body/short process derive from Meckel (first arch) cartilage; the manubrium and long process of incus from Reichert (second arch) cartilage; the stapes superstructure from the second arch around the stapedial artery, while the footplate vestibular surface and annular ligament come from otic capsule mesenchyme. The canal forms from a solid ectodermal core that canalizes from about week 21 to 28, so a normal auricle with canal atresia indicates a late (about 28-week) insult after ossicles have formed, whereas microtia signals an early arch defect with likely middle ear and facial nerve anomalies. (K.J. Lee 12e, Ch 13, p 243-245, 248)"
+  "text": "**Ossicular and canal embryology**: Malleus head/neck and incus body/short process derive from Meckel (first arch) cartilage. The manubrium and long process of incus from Reichert (second arch) cartilage. The stapes superstructure from the second arch around the stapedial artery, while the footplate vestibular surface and annular ligament come from otic capsule mesenchyme. The canal forms from a solid ectodermal core that canalizes from about week 21 to 28, so a normal auricle with canal atresia indicates a late (about 28-week) insult after ossicles have formed, whereas microtia signals an early arch defect with likely middle ear and facial nerve anomalies. (K.J. Lee 12e, Ch 13, p 243-245, 248)"
  },
  {
   "topic": "Congenital Inner-Ear Malformations",
   "field": "pathophysiology",
-  "text": "**Inner ear developmental timeline**: The otic placode appears in week 3 and becomes the otocyst by week 4; the endolymphatic duct/sac appears first and is the last to stop growing. Semicircular canals and utricle (pars superior) are formed by week 8, before the saccule and cochlea (pars inferior); the cochlea reaches 2.5 turns by week 12 and the membranous labyrinth is complete by about week 15. The otic capsule ossifies from 14 centers between weeks 15 and 23, with the fissula ante fenestram the last area (and may stay cartilaginous, the classic otosclerosis site). Labyrinthine anomalies are rare because the structure is phylogenetically old. (K.J. Lee 12e, Ch 13, p 246-248)"
+  "text": "**Inner ear developmental timeline**: The otic placode appears in week 3 and becomes the otocyst by week 4. The endolymphatic duct/sac appears first and is the last to stop growing. Semicircular canals and utricle (pars superior) are formed by week 8, before the saccule and cochlea (pars inferior). The cochlea reaches 2.5 turns by about weeks 8-12 (sources differ) and the membranous labyrinth is complete by about week 15. The otic capsule ossifies from 14 centers between weeks 15 and 23, with the fissula ante fenestram the last area (and may stay cartilaginous, the classic otosclerosis site). Labyrinthine anomalies are rare because the structure is phylogenetically old. (K.J. Lee 12e, Ch 13, p 246-248)"
  },
  {
   "topic": "Audiogram Interpretation",
@@ -552,7 +547,7 @@
  {
   "topic": "Tympanometry / Acoustic Reflexes",
   "field": "workup",
-  "text": "**Normative values and reflex rules**: Adult norms: static admittance 0.3-1.7 mL, tympanometric width 50-114 daPa, ear canal volume 0.9-2.0 mL (children 3-10 y: 0.25-1.05 mL, 80-160 daPa, 0.3-0.9 mL); a broad width marks reduced mobility, and type C is peak pressure below -100 daPa (adults) or -150 daPa (children). Reflex thresholds are normally 70-100 dB HL (about 70 dB SL); a reflex is absent if there is any significant conductive loss in the probe ear or over about 65 dB HL loss in the stimulated ear. Ossicular discontinuity can give an Ad tracing with a high-frequency-predominant conductive loss. (K.J. Lee 12e, Ch 14, p 274-276)"
+  "text": "**Normative values and reflex rules**: Adult norms: static admittance 0.3-1.7 mL, tympanometric width 50-114 daPa, ear canal volume 0.9-2.0 mL (children 3-10 y: 0.25-1.05 mL, 80-160 daPa, 0.3-0.9 mL). A broad width marks reduced mobility, and type C is peak pressure below -100 daPa (adults) or -150 daPa (children). Reflex thresholds are normally 70-100 dB HL (about 70 dB SL). A reflex is absent if there is any significant conductive loss in the probe ear or over about 65 dB HL loss in the stimulated ear. Ossicular discontinuity can give an Ad tracing with a high-frequency-predominant conductive loss. (K.J. Lee 12e, Ch 14, p 274-276)"
  },
  {
   "topic": "Audiologic Electrophysiology / ABR-OAE-ECoG",
@@ -567,12 +562,12 @@
  {
   "topic": "Pediatric Hearing Loss Workup",
   "field": "workup",
-  "text": "**Behavioral audiometry by developmental age**: Behavioral observation audiometry for developmental age up to about 6 months (unconditioned, gives minimal response levels above true threshold, unreliable); visual reinforcement audiometry or conditioned orienting response from about 6 to 30 months (localizing to the correct side requires hearing symmetric within about 30 dB); conditioned play audiometry from about 30 months, usually with insert earphones. Use a 1000-Hz probe tone for tympanometry under 6 months. A present reflex with a normal tympanogram excludes severe SNHL. (K.J. Lee 12e, Ch 14, p 285-288)"
+  "text": "**Behavioral audiometry by developmental age**: Behavioral observation audiometry for developmental age up to about 6 months (unconditioned, gives minimal response levels above true threshold, unreliable). Visual reinforcement audiometry or conditioned orienting response from about 6 to 30 months (localizing to the correct side requires hearing symmetric within about 30 dB). Conditioned play audiometry from about 30 months, usually with insert earphones. Use a 1000-Hz probe tone for tympanometry under 6 months. A present reflex with a normal tympanogram excludes severe SNHL. (K.J. Lee 12e, Ch 14, p 285-288)"
  },
  {
   "topic": "Pediatric Hearing Loss Workup",
   "field": "workup",
-  "text": "**Screening details and risk indicators**: About 50% of congenital hearing loss has no risk indicator, hence universal screening. Well babies may be screened with OAE or AABR, but NICU infants must be screened with ABR because of auditory neuropathy risk. JCIH risk indicators include caregiver concern, family history, NICU stay over 5 days, ECMO, ventilation, ototoxic drugs or loop diuretics, hyperbilirubinemia needing exchange transfusion, in utero TORCH/CMV infection, craniofacial anomalies, syndromic stigmata (white forelock), neurodegenerative disease, culture-positive meningitis, temporal bone fracture and chemotherapy; children with delayed-onset risk factors need surveillance even after passing. (K.J. Lee 12e, Ch 14, p 289-290)"
+  "text": "**Screening details and risk indicators**: About 50% of congenital hearing loss has no risk indicator, hence universal screening. Well babies may be screened with OAE or AABR, but NICU infants must be screened with ABR because of auditory neuropathy risk. JCIH risk indicators include caregiver concern, family history, NICU stay over 5 days, ECMO, ventilation, ototoxic drugs or loop diuretics, hyperbilirubinemia needing exchange transfusion, in utero TORCH/CMV infection, craniofacial anomalies, syndromic stigmata (white forelock), neurodegenerative disease, culture-positive meningitis, temporal bone fracture and chemotherapy. Children with delayed-onset risk factors need surveillance even after passing. (K.J. Lee 12e, Ch 14, p 289-290)"
  },
  {
   "topic": "Pediatric Hearing Loss Workup",
@@ -637,7 +632,7 @@
  {
   "topic": "Mandibular Biomechanics and Occlusion",
   "field": "physiology",
-  "text": "**Universal tooth numbering (US)**: there are 32 adult teeth, numbered 1 to 32. Tooth 1 is the right maxillary third molar; numbering runs across the upper arch to tooth 16 (left maxillary third molar), then drops to 17 (left mandibular third molar) and runs back to 32 (right mandibular third molar). **Overjet** is horizontal overlap and **overbite** is vertical overlap of the maxillary incisors over the mandibular incisors. (Cummings 7e, Ch 20, p 291-292)"
+  "text": "**Universal tooth numbering (US)**: there are 32 adult teeth, numbered 1 to 32. Tooth 1 is the right maxillary third molar. Numbering runs across the upper arch to tooth 16 (left maxillary third molar), then drops to 17 (left mandibular third molar) and runs back to 32 (right mandibular third molar). **Overjet** is horizontal overlap and **overbite** is vertical overlap of the maxillary incisors over the mandibular incisors. (Cummings 7e, Ch 20, p 291-292)"
  },
  {
   "topic": "ZMC / Orbital Trauma",
@@ -657,7 +652,7 @@
  {
   "topic": "Frontal Sinus Fracture",
   "field": "operate",
-  "text": "**Access details**: when a long pericranial flap may be needed, for frontal sinus obliteration or anterior fossa repair, keep the coronal incision superficial to the pericranium. Then incise the pericranium further back to create a long, anteriorly based flap. A supraorbital nerve running through a true foramen, rather than a notch, must be freed by osteotomizing the foramen's lower lip. A 6-foot Caldwell radiograph can serve as a template for an osteoplastic flap. Frontal sinuses are absent in about 15% of people. (Cummings 7e, Ch 20, p 287, 293, 296-297)"
+  "text": "**Access details**: when a long pericranial flap may be needed, for frontal sinus obliteration or anterior fossa repair, keep the coronal incision superficial to the pericranium. Then incise the pericranium further back to create a long, anteriorly based flap. A supraorbital nerve running through a true foramen, rather than a notch, must be freed by osteotomizing the foramen's lower lip. A 6-foot Caldwell radiograph can serve as a template for an osteoplastic flap. Paired frontal sinuses are present in only about 85% of people, because one or both may be absent or hypoplastic. (Cummings 7e, Ch 20, p 287, 293, 296-297)"
  },
  {
   "topic": "Structured Facial Trauma Examination",
@@ -717,7 +712,7 @@
  {
   "topic": "Aging Face / Injectables / Resurfacing",
   "field": "workup",
-  "text": "**Peel contraindications**: these include confirmed malignancy (except very superficial BCC), unstable psychiatric status and true allergy. For phenol, add cardiac, hepatic or renal disease. Isotretinoin taken within the prior 6 months contraindicates dermabrasion, because it reduces the pilosebaceous units needed for healing; some wait a full year before any facial resurfacing. Telangiectasias and large pores do not improve and may look worse. Nevi can darken. Port-wine stains, hemangiomas and neurofibromas do not respond. (Cummings 7e, Ch 23, p 352-353, 360)"
+  "text": "**Peel contraindications**: These include confirmed malignancy (except very superficial BCC), unstable psychiatric status and true allergy. For phenol, add cardiac, hepatic or renal disease. In the book, isotretinoin taken within the prior 6 months contraindicates dermabrasion, because it reduces the pilosebaceous units needed for healing, and some wait a full year before any facial resurfacing. The 2017 ASDS consensus still advises against mechanical dermabrasion on or soon after isotretinoin but found no evidence to delay superficial peels. Telangiectasias and large pores do not improve and may look worse. Nevi can darken. Port-wine stains, hemangiomas and neurofibromas do not respond. (Cummings 7e, Ch 23, p 352-353, 360)"
  },
  {
   "topic": "Aging Face / Injectables / Resurfacing",
@@ -767,7 +762,7 @@
  {
   "topic": "Septal Deviation",
   "field": "operate",
-  "text": "**Septoplasty technique specifics**: the Killian incision is about 1 to 2 cm behind the caudal margin; a hemitransfixion incision can convert to a full transfixion. Preserve at least a 1-cm dorsal and 1-cm caudal L-strut, including the nasal spine. Before removing bony septum, make a superior cut so twisting the perpendicular plate does not fracture the cribriform plate. Reset cartilage displaced off the maxillary crest into the groove and suture it to the spine periosteum. A one-sided crest spur can be shaved with a 2-mm osteotome. Use crushed cartilage as an interposition barrier, close even unilateral flap tears, and quilt with 5-0 plain to prevent hematoma. (Cummings 7e, Ch 29, p 447-450)"
+  "text": "**Septoplasty technique specifics**: the Killian incision is about 1 to 2 cm behind the caudal margin. A hemitransfixion incision can convert to a full transfixion. Preserve at least a 1-cm dorsal and 1-cm caudal L-strut, including the nasal spine. Before removing bony septum, make a superior cut so twisting the perpendicular plate does not fracture the cribriform plate. Reset cartilage displaced off the maxillary crest into the groove and suture it to the spine periosteum. A one-sided crest spur can be shaved with a 2-mm osteotome. Use crushed cartilage as an interposition barrier, close even unilateral flap tears, and quilt with 5-0 plain to prevent hematoma. (Cummings 7e, Ch 29, p 447-450)"
  },
  {
   "topic": "Septal Deviation",
@@ -792,7 +787,7 @@
  {
   "topic": "Nasal Fracture",
   "field": "workup",
-  "text": "**Imaging and exam evidence**: plain nasal films had a 66% false-positive rate (suture lines, vascular grooves). Only about 15% of nasal fractures heal by ossification, so films cannot date injuries, and they miss cartilage. In a series of 100 patients, films never changed management. Brown-Gruss maneuvers press the upper, middle and lower vaults to expose infrastructure instability; lower-vault compression showing tip hyperrotation suggests caudal septal or tip-support disruption. Photograph in the Frankfort horizontal. Recheck smell after swelling resolves, since post-traumatic anosmia occurs in up to about 5% of head injuries. (Cummings 7e, Ch 30, p 460-461)"
+  "text": "**Imaging and exam evidence**: plain nasal films had a 66% false-positive rate (suture lines, vascular grooves). Only about 15% of nasal fractures heal by ossification, so films cannot date injuries, and they miss cartilage. In a series of 100 patients, films never changed management. Brown-Gruss maneuvers press the upper, middle and lower vaults to expose infrastructure instability. Lower-vault compression showing tip hyperrotation suggests caudal septal or tip-support disruption. Photograph in the Frankfort horizontal. Recheck smell after swelling resolves, since post-traumatic anosmia occurs in up to about 5% of head injuries. (Cummings 7e, Ch 30, p 460-461)"
  },
  {
   "topic": "Nasal Fracture",
@@ -817,7 +812,7 @@
  {
   "topic": "Rhinoplasty Tip Mechanics",
   "field": "teach",
-  "text": "**Profile targets and timeline**: aim for the tip-defining point about 1 to 2 mm above the cartilaginous dorsum, which creates a supratip break; a gentle 2 to 3 mm slope is acceptable. In women, a slightly more open nasolabial angle and a subtle columellar double break are desirable. Shape columellar struts with a gentle curve and stop them short of the tip skin to avoid a tent-pole look. The final result takes about 12 to 18 months to settle. Remove the external splint at 5 to 7 days. (Cummings 7e, Ch 31, p 500-502, 509)"
+  "text": "**Profile targets and timeline**: aim for the tip-defining point about 1 to 2 mm above the cartilaginous dorsum, which creates a supratip break. A gentle 2 to 3 mm slope is acceptable. In women, a slightly more open nasolabial angle and a subtle columellar double break are desirable. Shape columellar struts with a gentle curve and stop them short of the tip skin to avoid a tent-pole look. The final result takes about 12 to 18 months to settle. Remove the external splint at 5 to 7 days. (Cummings 7e, Ch 31, p 500-502, 509)"
  },
  {
   "topic": "Open Rhinoplasty Fundamentals",
@@ -827,7 +822,7 @@
  {
   "topic": "Rhinoplasty Graft Selection",
   "field": "operate",
-  "text": "**Costal cartilage handling**: harvest straight segments from the 6th to 8th ribs (inframammary incision in women). Carve concentrically from the central core, or use oblique symmetric cuts, to limit warping, the main complication. Soak in saline for about 30 minutes to reveal warping before placement. The ideal age for rib grafting is about 30 to 50 years; younger cartilage is softer but warps more, and older cartilage may be calcified. Save perichondrium for camouflage. Irradiated homologous rib is an alternative. A warped rib graft usually needs replacement or recarving rather than observation. (Cummings 7e, Ch 33, p 534, 542); (Cummings 7e, Ch 34, p 546)"
+  "text": "**Costal cartilage handling**: harvest straight segments from the 6th to 8th ribs (inframammary incision in women). Carve concentrically from the central core, or use oblique symmetric cuts, to limit warping, the main complication. Soak in saline for about 30 minutes to reveal warping before placement. The ideal age for rib grafting is about 30 to 50 years. Younger cartilage is softer but warps more, and older cartilage may be calcified. Save perichondrium for camouflage. Irradiated homologous rib is an alternative. A warped rib graft usually needs replacement or recarving rather than observation. (Cummings 7e, Ch 33, p 534, 542) (Cummings 7e, Ch 34, p 546)"
  },
  {
   "topic": "Functional Septorhinoplasty",
@@ -842,7 +837,7 @@
  {
   "topic": "Allergic Rhinitis",
   "field": "manage",
-  "text": "**Drug-specific facts**: first-generation antihistamines sedate about 20% of patients. H1 antihistamines are inverse agonists, not true antagonists. Intranasal azelastine mainly causes bitter taste. Ipratropium controls watery rhinorrhea but not sneezing or congestion. Cromolyn 4% is very safe in children but needs dosing 4 to 6 times a day. Montelukast is approved for seasonal and perennial allergic rhinitis. Oral phenylephrine performed no better than placebo in a meta-analysis. Phenylpropanolamine was withdrawn for hemorrhagic stroke risk. Limit topical decongestants to short courses. (Cummings 7e, Ch 35, p 579-580)"
+  "text": "**Drug-specific facts**: first-generation antihistamines sedate about 20% of patients. H1 antihistamines are inverse agonists, not true antagonists. Intranasal azelastine mainly causes bitter taste. Ipratropium controls watery rhinorrhea but not sneezing or congestion. Cromolyn 4% is very safe in children but needs dosing 4 to 6 times a day. Montelukast is approved for seasonal and perennial allergic rhinitis, but since 2020 it has carried an FDA boxed warning for neuropsychiatric events, so it is reserved for patients with inadequate response to or intolerance of other therapies. Oral phenylephrine performed no better than placebo in a meta-analysis. Phenylpropanolamine was withdrawn for hemorrhagic stroke risk. Limit topical decongestants to short courses. (Cummings 7e, Ch 35, p 579-580)"
  },
  {
   "topic": "Allergic Rhinitis",
@@ -887,7 +882,7 @@
  {
   "topic": "Olfactory Dysfunction",
   "field": "manage",
-  "text": "**Prognosis by cause**: in one prospective cohort, postinfectious loss improved meaningfully in about 46% of anosmic and 35% of hyposmic patients. Younger age, female sex, nonsmoking and parosmia predict better recovery. Post-traumatic loss follows 5% to 10% of adult head injuries and is often complete anosmia that does not fluctuate. It may be worse after occipital blows (coup-contrecoup) and is usually immediate but can be delayed. Some recovery occurs in only about 30%. Mechanisms are obstruction, shearing of olfactory fila at the cribriform plate, and contusion of the bulb or frontal lobe; MRI lesion patterns predict severity. (Cummings 7e, Ch 36, p 592-593)"
+  "text": "**Prognosis by cause**: in one prospective cohort, postinfectious loss improved meaningfully in about 46% of anosmic and 35% of hyposmic patients. Younger age, female sex, nonsmoking and parosmia predict better recovery. Post-traumatic loss follows 5% to 10% of adult head injuries and is often complete anosmia that does not fluctuate. It may be worse after occipital blows (coup-contrecoup) and is usually immediate but can be delayed. Some recovery occurs in only about 30%. Mechanisms are obstruction, shearing of olfactory fila at the cribriform plate, and contusion of the bulb or frontal lobe. MRI lesion patterns predict severity. (Cummings 7e, Ch 36, p 592-593)"
  },
  {
   "topic": "Olfactory Dysfunction",
@@ -897,7 +892,7 @@
  {
   "topic": "Olfactory Dysfunction",
   "field": "manage",
-  "text": "**Treatment evidence**: olfactory training uses four odors (flowery, fruity, spicy, resinous; classically rose, lemon, clove, eucalyptus) twice daily for months. A meta-analysis of 13 studies showed gains in threshold, discrimination and identification for postinfectious, post-traumatic and idiopathic loss. Consensus guidance (PPOD) does not recommend systemic corticosteroids for non-CRS smell loss. Intranasal calcium buffers (e.g., sodium citrate) and topical vitamin A with training have limited supportive data. For intractable phantosmia, options escalate from saline drops and topical cocaine to excision of olfactory epithelium or bulbectomy as a high-risk last resort at major centers. (Cummings 7e, Ch 36, p 599-602)"
+  "text": "**Treatment evidence**: olfactory training uses four odors (flowery, fruity, spicy, resinous, classically rose, lemon, clove, eucalyptus) twice daily for months. A meta-analysis of 13 studies showed gains in threshold, discrimination and identification for postinfectious, post-traumatic and idiopathic loss. Consensus guidance (PPOD) does not recommend systemic corticosteroids for non-CRS smell loss. Intranasal calcium buffers (e.g., sodium citrate) and topical vitamin A with training have limited supportive data. For intractable phantosmia, options escalate from saline drops and topical cocaine to excision of olfactory epithelium or bulbectomy as a high-risk last resort at major centers. (Cummings 7e, Ch 36, p 599-602)"
  },
  {
   "topic": "Objective Assessment of Nasal Function",
@@ -912,7 +907,7 @@
  {
   "topic": "Objective Assessment of Nasal Function",
   "field": "workup",
-  "text": "**Acoustic rhinometry**: reflected sound measures cross-sectional area along about the first 6 cm. The first notch is the nasal valve and the second the inferior turbinate head; one of these is the minimal cross-sectional area (MCA, about 0.5 to 0.6 cm² in adults, about 0.3 cm² at age 3 to 6). It needs only breath-holding, so it suits children, and it correlates with CT. It is unreliable past a severe narrowing, and nosepiece seal, swallowing and palate motion add error. (Cummings 7e, Ch 37, p 612)"
+  "text": "**Acoustic rhinometry**: reflected sound measures cross-sectional area along about the first 6 cm. The first notch is the nasal valve and the second the inferior turbinate head. One of these is the minimal cross-sectional area (MCA, about 0.5 to 0.6 cm² in adults, about 0.3 cm² at age 3 to 6). It needs only breath-holding, so it suits children, and it correlates with CT. It is unreliable past a severe narrowing, and nosepiece seal, swallowing and palate motion add error. (Cummings 7e, Ch 37, p 612)"
  },
  {
   "topic": "Objective Assessment of Nasal Function",
@@ -932,17 +927,17 @@
  {
   "topic": "Medialization Thyroplasty",
   "field": "operate",
-  "text": "**Mucosal leak check**: before seating the implant, fill the wound with saline while the patient phonates; bubbling means the endolaryngeal mucosa has been breached and the implant should not be placed (extrusion/infection risk). Early postoperative intubation can displace the implant or erode the mucosa. (Cummings 7e, Ch 62, pp 914–915)"
+  "text": "**Mucosal leak check**: before seating the implant, fill the wound with saline while the patient phonates. Bubbling means the endolaryngeal mucosa has been breached and the implant should not be placed (extrusion/infection risk). Early postoperative intubation can displace the implant or erode the mucosa. (Cummings 7e, Ch 62, pp 914–915)"
  },
  {
   "topic": "Medialization Thyroplasty",
   "field": "manage",
-  "text": "**Disposition**: isolated thyroplasty can usually be done as an outpatient; overnight observation is advised for bilateral procedures, obstructive sleep apnea, anticoagulation requiring bridging, other high-risk comorbidity, and thyroplasty combined with arytenoid adduction (higher airway-edema risk). Airway compromise is the most serious complication. (Cummings 7e, Ch 62, pp 910, 914)"
+  "text": "**Disposition**: isolated thyroplasty can usually be done as an outpatient. Overnight observation is advised for bilateral procedures, obstructive sleep apnea, anticoagulation requiring bridging, other high-risk comorbidity, and thyroplasty combined with arytenoid adduction (higher airway-edema risk). Airway compromise is the most serious complication. (Cummings 7e, Ch 62, pp 910, 914)"
  },
  {
   "topic": "Unilateral Vocal Fold Paralysis",
   "field": "workup",
-  "text": "**Stroboscopy caveat**: the mucosal wave is a passive phenomenon driven by fold tension and subglottic pressure, so an absent or asymmetric wave does not prove denervation. LEMG is the only test of motor-unit integrity; immobility with normal voluntary EMG suggests synkinesis, cricoarytenoid ankylosis or a scar web, separated by palpating the vocal process at direct laryngoscopy. (Cummings 7e, Ch 62, p 907)"
+  "text": "**Stroboscopy caveat**: the mucosal wave is a passive phenomenon driven by fold tension and subglottic pressure, so an absent or asymmetric wave does not prove denervation. LEMG is the only test of motor-unit integrity. Immobility with normal voluntary EMG suggests synkinesis, cricoarytenoid ankylosis or a scar web, separated by palpating the vocal process at direct laryngoscopy. (Cummings 7e, Ch 62, p 907)"
  },
  {
   "topic": "Arytenoid Adduction / Reinnervation",
@@ -1002,17 +997,17 @@
  {
   "topic": "Subglottic / Tracheal Stenosis",
   "field": "manage",
-  "text": "**Endoscopic vs open selection**: endoscopic treatment suits Myer-Cotton I–II, short-segment lesions with an intact cricotracheal framework; it fares poorly with vertical scar over 1 cm, circumferential cicatricial scar, tracheomalacia or cartilage loss, prior severe tracheostomy infection, or posterior inlet scar with arytenoid fixation. Tracheal/cricotracheal resection gives excellent decannulation but is less successful for stenosis longer than about six rings, where augmentation laryngotracheoplasty is preferred. Idiopathic stenosis needs fewer reoperations (about 25%) than intubation/trauma cases (35–54%). Stage circumferential endoscopic resections 2–4 weeks apart to avoid a circumferential raw surface; mitomycin C evidence is mixed. Stabilize autoimmune disease (e.g., GPA) before repair. (Cummings 7e, Ch 67, pp 955–957, 961)"
+  "text": "**Endoscopic vs open selection**: endoscopic treatment suits Myer-Cotton I–II, short-segment lesions with an intact cricotracheal framework. It fares poorly with vertical scar over 1 cm, circumferential cicatricial scar, tracheomalacia or cartilage loss, prior severe tracheostomy infection, or posterior inlet scar with arytenoid fixation. Tracheal/cricotracheal resection gives excellent decannulation but is less successful for stenosis longer than about six rings, where augmentation laryngotracheoplasty is preferred. Idiopathic stenosis needs fewer reoperations (about 25%) than intubation/trauma cases (35–54%). Stage circumferential endoscopic resections 2–4 weeks apart to avoid a circumferential raw surface. Mitomycin C evidence is mixed. Stabilize autoimmune disease (e.g., GPA) before repair. (Cummings 7e, Ch 67, pp 955–957, 961)"
  },
  {
   "topic": "Subglottic / Tracheal Stenosis",
   "field": "teach",
-  "text": "**Stents**: mucosal capillary flow stops at about 20–40 mm Hg where mucosa lies on cartilage, so stents trade support for ischemic ulceration, infection and granulation. Duration: 1–3 weeks for mucosal healing/graft take, 6–8 weeks to splint an adequate framework, months (up to 14) when the framework is deficient and mature scar must form. Montgomery T-tube (hollow, allows phonation, single lumen so obstruction risk), Aboulker stent (fixed to a metal tracheostomy tube), and soft finger-cot stents are the classic options; solid stents lower aspiration risk. (Cummings 7e, Ch 67, pp 957–958)"
+  "text": "**Stents**: mucosal capillary flow stops at about 20–40 mm Hg where mucosa lies on cartilage, so stents trade support for ischemic ulceration, infection and granulation. Duration: 1–3 weeks for mucosal healing/graft take, 6–8 weeks to splint an adequate framework, months (up to 14) when the framework is deficient and mature scar must form. Montgomery T-tube (hollow, allows phonation, single lumen so obstruction risk), Aboulker stent (fixed to a metal tracheostomy tube), and soft finger-cot stents are the classic options. Solid stents lower aspiration risk. (Cummings 7e, Ch 67, pp 957–958)"
  },
  {
   "topic": "Posterior Glottic Stenosis / Arytenoid Fixation",
   "field": "operate",
-  "text": "**Procedures**: type I (interarytenoid band) usually responds to CO2 laser division plus steroid injection; joint fixation historically needed arytenoidectomy — Woodman external approach (removes all but the vocal process, which is sutured laterally about 5 mm in women and 6 mm in men) or Ossoff endoscopic laser arytenoidectomy (removes all but the muscular process; risk of perichondritis). Alternatives: lysis of cricoarytenoid adhesions with abduction stenting (mobility returned in about 90% in one report), endoscopic posterior cricoid split with rib graft (90–100% decannulation in children with grades III–IV). A temporarily plugged tracheostomy helps reveal true abduction during evaluation. (Cummings 7e, Ch 67, pp 958–959)"
+  "text": "**Procedures**: type I (interarytenoid band) usually responds to CO2 laser division plus steroid injection. Joint fixation historically needed arytenoidectomy — Woodman external approach (removes all but the vocal process, which is sutured laterally about 5 mm in women and 6 mm in men) or Ossoff endoscopic laser arytenoidectomy (removes all but the muscular process, risk of perichondritis). Alternatives: lysis of cricoarytenoid adhesions with abduction stenting (mobility returned in about 90% in one report), endoscopic posterior cricoid split with rib graft (90–100% decannulation in children with grades III–IV). A temporarily plugged tracheostomy helps reveal true abduction during evaluation. (Cummings 7e, Ch 67, pp 958–959)"
  },
  {
   "topic": "Esophageal Disease for the Otolaryngologist",
@@ -1037,47 +1032,47 @@
  {
   "topic": "Transnasal Esophagoscopy",
   "field": "workup",
-  "text": "**Indications (ABEA 2007)**: esophageal — dysphagia, symptoms persisting on antireflux therapy, Barrett screening, evaluation/biopsy of radiographic abnormalities, GERD of 5 or more years; extraesophageal — chronic cough, head and neck cancer panendoscopy/biopsy, moderate–severe LPR, globus; plus procedures. Other uses: screening head and neck cancer patients (esophagitis about 63%, stricture about 23%, only 13% normal in one series; screened second esophageal primaries found earlier), caustic ingestion follow-up, varices, prebariatric evaluation, flap monitoring. TNE vs sedated EGD: sensitivity about 89%, specificity 97%; IV sedation causes over half of conventional EGD adverse events. (Cummings 7e, Ch 69, pp 993–995)"
+  "text": "**Indications (ABEA 2007)**: esophageal — dysphagia, symptoms persisting on antireflux therapy, Barrett screening, evaluation/biopsy of radiographic abnormalities, GERD of 5 or more years. Extraesophageal — chronic cough, head and neck cancer panendoscopy/biopsy, moderate–severe LPR, globus. Plus procedures. Other uses: screening head and neck cancer patients (esophagitis about 63%, stricture about 23%, only 13% normal in one series, screened second esophageal primaries found earlier), caustic ingestion follow-up, varices, prebariatric evaluation, flap monitoring. TNE vs sedated EGD: sensitivity about 89%, specificity 97%. IV sedation causes over half of conventional EGD adverse events. (Cummings 7e, Ch 69, pp 993–995)"
  },
  {
   "topic": "Transnasal Esophagoscopy",
   "field": "physiology",
-  "text": "**Distances from the nasal ala**: esophageal inlet about 18 cm; aortic arch compression about 24–26 cm (pulsatile, anterolateral); left mainstem bronchus about 29–30 cm (anterior); diaphragmatic pinch about 41–43 cm; GEJ about 40 cm; esophageal body about 18–22 cm long. Gastric rugae extending more than 2 cm above the diaphragmatic impression indicate hiatal hernia; retroflexion (rotate 180 degrees, deflect tip 210 degrees) shows sliding vs paraesophageal hernia. Normal esophageal transit is under 13 seconds. Scopes are 3.1–5.3 mm (conventional 10–12 mm). (Cummings 7e, Ch 69, pp 993, 995–996)"
+  "text": "**Distances from the nasal ala**: esophageal inlet about 18 cm. Aortic arch compression about 24–26 cm (pulsatile, anterolateral). Left mainstem bronchus about 29–30 cm (anterior). Diaphragmatic pinch about 41–43 cm. GEJ about 40 cm. Esophageal body about 18–22 cm long. Gastric rugae extending more than 2 cm above the diaphragmatic impression indicate hiatal hernia. Retroflexion (rotate 180 degrees, deflect tip 210 degrees) shows sliding vs paraesophageal hernia. Normal esophageal transit is under 13 seconds. Scopes are 3.1–5.3 mm (conventional 10–12 mm). (Cummings 7e, Ch 69, pp 993, 995–996)"
  },
  {
   "topic": "Transnasal Esophagoscopy",
   "field": "operate",
-  "text": "**Technique and safety**: decongest/anesthetize the wider side (oxymetazoline with 4% lidocaine or 2% tetracaine); avoid over-anesthetizing the hypopharynx, which causes aspiration and coughing; NPO 3 hours before and 60–90 minutes after. Sit upright, flexed forward, neck extended for nasal passage, then flex the neck and have the patient swallow at the postcricoid level. Resistance at the UES suggests a Zenker diverticulum or hypertonic cricopharyngeus — insufflate and rotate rather than push. Success is 83–99% (failure mainly a tight nose); epistaxis 0.85–2%; perforation is extraordinarily rare. Through the channel: biopsy, guidewire for balloon dilation, TEP, PEG, laser, LES botulinum toxin. (Cummings 7e, Ch 69, pp 994–996)"
+  "text": "**Technique and safety**: decongest/anesthetize the wider side (oxymetazoline with 4% lidocaine or 2% tetracaine). Avoid over-anesthetizing the hypopharynx, which causes aspiration and coughing. NPO 3 hours before and 60–90 minutes after. Sit upright, flexed forward, neck extended for nasal passage, then flex the neck and have the patient swallow at the postcricoid level. Resistance at the UES suggests a Zenker diverticulum or hypertonic cricopharyngeus — insufflate and rotate rather than push. Success is 83–99% (failure mainly a tight nose). Epistaxis 0.85–2%. Perforation is extraordinarily rare. Through the channel: biopsy, guidewire for balloon dilation, TEP, PEG, laser, LES botulinum toxin. (Cummings 7e, Ch 69, pp 994–996)"
  },
  {
   "topic": "Zenker Diverticulum",
   "field": "overview",
-  "text": "**Epidemiology and side**: annual incidence about 2 per 100,000, men 2–3 times more than women, mostly elderly; up to 1 in 1000 upper GI studies. About two-thirds are midline, about 25% bulge left and 10% right (left carotid lies more laterally and the cervical esophagus curves left), so open approaches use a left neck incision unless imaging shows a right-sided sac. Other pharyngoesophageal weak points: Laimer triangle (below the cricopharyngeus) and Killian-Jamieson space. Boyce sign = neck swelling that gurgles on palpation. (Cummings 7e, Ch 70, pp 998–999)"
+  "text": "**Epidemiology and side**: annual incidence about 2 per 100,000, men 2–3 times more than women, mostly elderly. Up to 1 in 1000 upper GI studies. About two-thirds are midline, about 25% bulge left and 10% right (left carotid lies more laterally and the cervical esophagus curves left), so open approaches use a left neck incision unless imaging shows a right-sided sac. Other pharyngoesophageal weak points: Laimer triangle (below the cricopharyngeus) and Killian-Jamieson space. Boyce sign = neck swelling that gurgles on palpation. (Cummings 7e, Ch 70, pp 998–999)"
  },
  {
   "topic": "Zenker Diverticulum",
   "field": "operate",
-  "text": "**Endoscopic staple diverticulostomy (ESD) details**: Weerda bivalved laryngoscope, telescope inspection and biopsy of any pouch lesion; traction sutures help with small (under 2–2.5 cm) or large (over 3.5 cm, multiple firings) sacs; the cartridge blade goes in the esophageal lumen and the anvil in the pouch. Same-day discharge after 3–4 hours' observation for fever, chest/back pain, emphysema or tachycardia; clear liquids that night. Routine postoperative esophagram is unnecessary (a residual nonretaining pouch is expected). Limits: kyphosis, cervical osteophytes, small mouth opening, and small (under 2 cm) pouches where the myotomy may be incomplete. For 1–2 cm pouches, myotomy alone may suffice in open surgery. (Cummings 7e, Ch 70, pp 1000–1004)"
+  "text": "**Endoscopic staple diverticulostomy (ESD) details**: Weerda bivalved laryngoscope, telescope inspection and biopsy of any pouch lesion. Traction sutures help with small (under 2–2.5 cm) or large (over 3.5 cm, multiple firings) sacs. The cartridge blade goes in the esophageal lumen and the anvil in the pouch (Operative Techniques in Laryngology places the longer anvil in the esophagus instead). Same-day discharge after 3–4 hours' observation for fever, chest/back pain, emphysema or tachycardia. Clear liquids that night. Routine postoperative esophagram is unnecessary (a residual nonretaining pouch is expected). Limits: kyphosis, cervical osteophytes, small mouth opening, and small (under 2 cm) pouches where the myotomy may be incomplete. For 1–2 cm pouches, myotomy alone may suffice in open surgery. (Cummings 7e, Ch 70, pp 1000–1004)"
  },
  {
   "topic": "Tracheobronchial Endoscopy Principles",
   "field": "workup",
-  "text": "**Diagnostic bronchoscopy numbers**: topical 1% lidocaine is preferred (no added anesthesia from higher concentration and twice the volume before the 6–8 mg/kg toxic limit). BAL wedges in a segmental bronchus with 20–60 mL aliquots to 100–300 mL total; complications 0–2.3%, transient fever in up to 30%. Transbronchial biopsy carries about a 5% pneumothorax risk (cryobiopsy higher, about 9.5%). EBUS-TBNA staging sensitivity about 88–93%, equivalent or better than cervical mediastinoscopy, and is now the preferred minimally invasive mediastinal staging tool; sample nodes over 5 mm. Navigation yield improves with a CT 'bronchus sign'. (Cummings 7e, Ch 71, pp 1007–1010)"
+  "text": "**Diagnostic bronchoscopy numbers**: topical 1% lidocaine is preferred (no added anesthesia from higher concentration and twice the volume before the 6–8 mg/kg toxic limit). BAL wedges in a segmental bronchus with 20–60 mL aliquots to 100–300 mL total. Complications 0–2.3%, transient fever in up to 30%. Transbronchial biopsy carries about a 5% pneumothorax risk (cryobiopsy higher, about 9.5%). EBUS-TBNA staging sensitivity about 88–93%, equivalent or better than cervical mediastinoscopy, and is now the preferred minimally invasive mediastinal staging tool. Sample nodes over 5 mm. Navigation yield improves with a CT 'bronchus sign'. (Cummings 7e, Ch 71, pp 1007–1010)"
  },
  {
   "topic": "Tracheobronchial Endoscopy Principles",
   "field": "manage",
-  "text": "**Central airway obstruction toolkit**: the rigid bronchoscope is the instrument of choice (ventilates, core-out with the barrel, large suction, tamponade). Cold techniques — mechanical debulking, microdebrider (long 37–45 cm blades), cryotherapy (no fire risk, ideal for organic foreign bodies, clots and mucus plugs; delayed effect, carcinoids may be cryoresistant). Thermal — Nd:YAG laser (keep under 40 W, 0.5–1 s pulses, fire parallel to the wall), electrocautery, argon plasma coagulation (noncontact, shallow; requires FiO2 below 0.4). Stents: silicone (need rigid scope; migrate more) vs self-expanding metallic; all risk mucus impaction, granulation, migration — survey at about 4–6 weeks. Rigid bronchoscopy removes foreign bodies more reliably than flexible. (Cummings 7e, Ch 71, pp 1010–1014)"
+  "text": "**Central airway obstruction toolkit**: the rigid bronchoscope is the instrument of choice (ventilates, core-out with the barrel, large suction, tamponade). Cold techniques — mechanical debulking, microdebrider (long 37–45 cm blades), cryotherapy (no fire risk, ideal for organic foreign bodies, clots and mucus plugs, delayed effect, carcinoids may be cryoresistant). Thermal — Nd:YAG laser (keep under 40 W, 0.5–1 s pulses, fire parallel to the wall), electrocautery, argon plasma coagulation (noncontact, shallow, requires FiO2 below 0.4). Stents: silicone (need rigid scope, migrate more) vs self-expanding metallic. All risk mucus impaction, granulation, migration — survey at about 4–6 weeks. Rigid bronchoscopy removes foreign bodies more reliably than flexible. (Cummings 7e, Ch 71, pp 1010–1014)"
  },
  {
   "topic": "Systemic Therapy Foundations in Head & Neck Cancer",
   "field": "pathophysiology",
-  "text": "**HNSCC genomics (TCGA, 279 tumors)**: alterations cluster in cell-cycle (TP53, CDKN2A, MYC — the most commonly altered pathway, present in essentially all tumors), mitogenic (EGFR, RAS, PI3K), differentiation (NOTCH1) and apoptotic pathways. TP53 is the most commonly mutated gene (about 47–72%), occurs early in dysplasia, is tobacco-associated, inversely related to HPV, and disruptive mutations predict worse survival. CDKN2A (9p21; p16/p14ARF) is lost in about 57% of HPV-negative tumors but intact in HPV-positive ones (E7 inactivates Rb). PIK3CA is the most frequently altered oncogene, especially in HPV-positive tumors (about 56%). EGFR is overexpressed in over 90% and predicts worse outcome, but unlike lung cancer it is rarely mutated in the kinase domain — one reason EGFR tyrosine kinase inhibitors work poorly. HPV-positive tumors carry fewer mutations. (Cummings 7e, Ch 73, pp 1033–1037)"
+  "text": "**HNSCC genomics (TCGA, 279 tumors)**: alterations cluster in cell-cycle (TP53, CDKN2A, MYC — the most commonly altered pathway, present in essentially all tumors), mitogenic (EGFR, RAS, PI3K), differentiation (NOTCH1) and apoptotic pathways. TP53 is the most commonly mutated gene (about 47–72%), occurs early in dysplasia, is tobacco-associated, inversely related to HPV, and disruptive mutations predict worse survival. CDKN2A (9p21, p16/p14ARF) is lost in about 57% of HPV-negative tumors but intact in HPV-positive ones (E7 inactivates Rb). PIK3CA is the most frequently altered oncogene, especially in HPV-positive tumors (about 56%). EGFR is overexpressed in over 90% and predicts worse outcome, but unlike lung cancer it is rarely mutated in the kinase domain — one reason EGFR tyrosine kinase inhibitors work poorly. HPV-positive tumors carry fewer mutations. (Cummings 7e, Ch 73, pp 1033–1037)"
  },
  {
   "topic": "Systemic Therapy Foundations in Head & Neck Cancer",
   "field": "teach",
-  "text": "**Gene therapy in HNSCC**: strategies replace a defective gene (e.g., adenoviral wild-type p53 — Advexin in US trials; Gendicine approved in China), use conditionally replicating oncolytic viruses that lyse p53-deficient cells (ONYX-015), or suppress oncogenes; delivery is by direct DNA/RNA injection, nonviral vectors (liposomes, nanoparticles) or viral vectors (adenovirus, AAV, retrovirus, lentivirus). Adenovirus does not integrate and is immunogenic; retroviruses integrate but need dividing cells. (Cummings 7e, Ch 72, pp 1017–1030)"
+  "text": "**Gene therapy in HNSCC**: strategies replace a defective gene (e.g., adenoviral wild-type p53 — Advexin in US trials, Gendicine approved in China), use conditionally replicating oncolytic viruses that lyse p53-deficient cells (ONYX-015), or suppress oncogenes. Delivery is by direct DNA/RNA injection, nonviral vectors (liposomes, nanoparticles) or viral vectors (adenovirus, AAV, retrovirus, lentivirus). Adenovirus does not integrate and is immunogenic. Retroviruses integrate but need dividing cells. (Cummings 7e, Ch 72, pp 1017–1030)"
  },
  {
   "topic": "HPV-Associated Oropharyngeal SCC",
@@ -1092,12 +1087,12 @@
  {
   "topic": "Radiation Therapy Principles for Head & Neck Surgeons",
   "field": "physiology",
-  "text": "**Dose to control disease**: subclinical/microscopic disease needs about 50 Gy, positive margins about 60 Gy, and large (T3–T4) tumors about 70 Gy or more in 2-Gy fractions; tumor control probability depends on both dose and the number of clonogens (volume). (Cummings 7e, Ch 75, p 1057)"
+  "text": "**Dose to control disease**: subclinical/microscopic disease needs about 50 Gy, positive margins about 60 Gy in this text (current postoperative practice gives about 66 Gy to positive margins or ENE), and large (T3–T4) tumors about 70 Gy or more in 2-Gy fractions. Tumor control probability depends on both dose and the number of clonogens (volume). (Cummings 7e, Ch 75, p 1057)"
  },
  {
   "topic": "Radiation Therapy Principles for Head & Neck Surgeons",
   "field": "localize",
-  "text": "**IMRT by site**: in nasopharynx, randomized trials showed IMRT equals conventional control and better preserves salivary flow; in sinus cancer IMRT lowers optic nerve dose and severe dry-eye syndrome; in oropharynx, nearly all failures after careful IMRT are in-field in high-dose volumes (marginal misses occur mainly at the match line with an anterior low-neck field). IMRT increases skin dose because of multiple beams unless skin is contoured as an avoidance structure. (Cummings 7e, Ch 75, pp 1063–1065, 1067)"
+  "text": "**IMRT by site**: in nasopharynx, randomized trials showed IMRT equals conventional control and better preserves salivary flow. In sinus cancer IMRT lowers optic nerve dose and severe dry-eye syndrome. In oropharynx, nearly all failures after careful IMRT are in-field in high-dose volumes (marginal misses occur mainly at the match line with an anterior low-neck field). IMRT increases skin dose because of multiple beams unless skin is contoured as an avoidance structure. (Cummings 7e, Ch 75, pp 1063–1065, 1067)"
  },
  {
   "topic": "Carotid Blowout Syndrome",
@@ -1107,12 +1102,12 @@
  {
   "topic": "Local Flap Reconstruction",
   "field": "physiology",
-  "text": "**Flap perfusion concepts**: widening a random flap's base does not allow a longer flap, because added vessels have the same perfusion pressure — survival length is set by perfusion pressure vs critical closing pressure. Septocutaneous (direct cutaneous) arteries run parallel to the skin and supply large territories; musculocutaneous perforators supply smaller ones. Four zones of failure: I macrocirculation (pedicle; delay acts here), II capillary (no-reflow, sludging — less if hematocrit under 30%), III interstitial (edema, lymphatic loss), IV cellular. Sympathetic denervation causes vasoconstriction until norepinephrine is depleted at 24–48 hours. Neovascularization begins at 3–4 days and can permit pedicle division by about 7 days. Creep and stress relaxation explain tissue expansion and serial excision. (Cummings 7e, Ch 77, pp 1090–1094)"
+  "text": "**Flap perfusion concepts**: widening a random flap's base does not allow a longer flap, because added vessels have the same perfusion pressure — survival length is set by perfusion pressure vs critical closing pressure. Septocutaneous (direct cutaneous) arteries run parallel to the skin and supply large territories. Musculocutaneous perforators supply smaller ones. Four zones of failure: I macrocirculation (pedicle, delay acts here), II capillary (no-reflow, sludging — less if hematocrit under 30%), III interstitial (edema, lymphatic loss), IV cellular. Sympathetic denervation causes vasoconstriction until norepinephrine is depleted at 24–48 hours. Neovascularization begins at 3–4 days and can permit pedicle division by about 7 days. Creep and stress relaxation explain tissue expansion and serial excision. (Cummings 7e, Ch 77, pp 1090–1094)"
  },
  {
   "topic": "Free-Flap Monitoring / Compromise / Salvage",
   "field": "manage",
-  "text": "**Salvage adjuncts**: after thrombectomy and revision, intra-arterial thrombolytics (urokinase/tPA) treat capillary microemboli (systemic heparin does not dissolve formed thrombus); UW-solution washout helps more during secondary than primary ischemia; medicinal leeches relieve venous congestion through salivary anticoagulants (hirudin) but require prophylaxis against Aeromonas hydrophila; hyperbaric oxygen can prolong viability only after the thrombus is cleared. A transcutaneous O2 over 90 mm Hg in a congested flap signals the need for intervention. (Cummings 7e, Ch 77, pp 1096–1098)"
+  "text": "**Salvage adjuncts**: after thrombectomy and revision, intra-arterial thrombolytics (urokinase/tPA) treat capillary microemboli, because systemic heparin does not dissolve formed thrombus. UW-solution washout helps more during secondary than primary ischemia. Medicinal leeches relieve venous congestion through salivary anticoagulants (hirudin) but carry a risk of Aeromonas hydrophila infection. Hyperbaric oxygen can prolong viability only after the thrombus is cleared. A transcutaneous O2 over 90 mm Hg in a congested flap signals the need for intervention. (Cummings 7e, Ch 77, pp 1096–1098)"
  },
  {
   "topic": "Free-Flap Monitoring / Compromise / Salvage",
@@ -1127,27 +1122,27 @@
  {
   "topic": "Nonallergic Rhinitis / Rhinitis Medicamentosa",
   "field": "recognize",
-  "text": "**Pregnancy rhinitis**: nasal congestion that affects about 20% of pregnant women, usually in the later trimesters, and resolves within about 2 weeks of delivery. Smoking is the only known risk factor; it is associated with asthma and reduced quality of life. Hypothyroidism and acromegaly are other hormonal causes (Cummings 7e, Ch 39, p 637)."
+  "text": "**Pregnancy rhinitis**: nasal congestion that affects about 20% of pregnant women, usually in the later trimesters, and resolves within about 2 weeks of delivery. Smoking is the only known risk factor. It is associated with asthma and reduced quality of life. Hypothyroidism and acromegaly are other hormonal causes (Cummings 7e, Ch 39, p 637)."
  },
  {
   "topic": "Nonallergic Rhinitis / Rhinitis Medicamentosa",
   "field": "recognize",
-  "text": "**Atrophic rhinitis, primary vs secondary**: primary disease occurs mainly in developing, subtropical/temperate regions and is associated with Klebsiella ozaenae (also Staphylococcus, Proteus mirabilis, E. coli). Secondary disease follows surgical overresection (empty nose syndrome), granulomatous disease or radiation; rhinitis medicamentosa can also be grouped here. Symptoms are paradoxical obstruction, dryness and crusting (Cummings 7e, Ch 39, p 639)."
+  "text": "**Atrophic rhinitis, primary vs secondary**: primary disease occurs mainly in developing, subtropical/temperate regions and is associated with Klebsiella ozaenae (also Staphylococcus, Proteus mirabilis, E. coli). Secondary disease follows surgical overresection (empty nose syndrome), granulomatous disease or radiation. Rhinitis medicamentosa can also be grouped here. Symptoms are paradoxical obstruction, dryness and crusting (Cummings 7e, Ch 39, p 639)."
  },
  {
   "topic": "Nonallergic Rhinitis / Rhinitis Medicamentosa",
   "field": "recognize",
-  "text": "**Occupational rhinitis**: classified as primary occupational rhinitis (new symptoms after starting a job) or work-exacerbated rhinitis (preexisting rhinitis made worse at work). High-molecular-weight agents (>10 kDa; plant, animal, microbial) tend to cause IgE-mediated disease, while low-molecular-weight agents (<10 kDa; diisocyanates, anhydrides, metals) act through less defined, often nonallergic, mechanisms and can be triggered by a single high-dose exposure. Its severity predicts the severity of occupational asthma; reviewing the safety data sheet for workplace chemicals helps (Cummings 7e, Ch 39, pp 639–640)."
+  "text": "**Occupational rhinitis**: classified as primary occupational rhinitis (new symptoms after starting a job) or work-exacerbated rhinitis (preexisting rhinitis made worse at work). High-molecular-weight agents (>10 kDa, plant, animal, microbial) tend to cause IgE-mediated disease, while low-molecular-weight agents (<10 kDa, diisocyanates, anhydrides, metals) act through less defined, often nonallergic, mechanisms and can be triggered by a single high-dose exposure. Its severity predicts the severity of occupational asthma. Reviewing the safety data sheet for workplace chemicals helps (Cummings 7e, Ch 39, pp 639–640)."
  },
  {
   "topic": "Nonallergic Rhinitis / Rhinitis Medicamentosa",
   "field": "workup",
-  "text": "**Diagnostic aids**: a validated questionnaire found that onset after age 35, no family history of allergy, no outdoor or cat-triggered symptoms, and symptoms with perfumes/fragrances gave a 96% likelihood of NAR. Cold dry air provocation is more specific for NAR than histamine challenge. Nasal cytology alone cannot separate NAR from AR, but eosinophils suggest NARES, mast cells suggest NARMA and neutrophils suggest NARNA (Cummings 7e, Ch 39, pp 640–641)."
+  "text": "**Diagnostic aids**: a validated questionnaire found that onset after age 35, no family history of allergy, no outdoor or cat-triggered symptoms, and symptoms with perfumes/fragrances gave a 96% likelihood of NAR. Cold dry air provocation is more specific for NAR than histamine challenge. Nasal cytology alone cannot separate NAR from AR, but eosinophils suggest NARES, mast cells suggest NARMA and neutrophils suggest NARNE (Cummings 7e, Ch 39, pp 640–641)."
  },
  {
   "topic": "Nonallergic Rhinitis / Rhinitis Medicamentosa",
   "field": "manage",
-  "text": "**Capsaicin and botulinum toxin**: topical capsaicin, a TRPV1 agonist, desensitizes nociceptive C fibers by Ca2+-mediated afferent atrophy and improved idiopathic rhinitis symptoms for up to 36 weeks in a Cochrane review; mucosal burning limits tolerance. Botulinum toxin injected into the inferior/middle turbinate heads lowers rhinorrhea only, for up to about 12 weeks (Cummings 7e, Ch 39, pp 637, 641–642)."
+  "text": "**Capsaicin and botulinum toxin**: topical capsaicin, a TRPV1 agonist, desensitizes nociceptive C fibers by Ca2+-mediated afferent atrophy and improved idiopathic rhinitis symptoms for up to 36 weeks in a Cochrane review. Mucosal burning limits tolerance. Botulinum toxin injected into the inferior/middle turbinate heads lowers rhinorrhea only, for up to about 12 weeks (Cummings 7e, Ch 39, pp 637, 641–642)."
  },
  {
   "topic": "Nonallergic Rhinitis / Rhinitis Medicamentosa",
@@ -1167,12 +1162,12 @@
  {
   "topic": "Orbital Complications of Sinusitis",
   "field": "pathophysiology",
-  "text": "**Age and sinus development**: orbital complications cluster in children younger than about 7, because the ethmoids are the most developed sinuses at birth. Intracranial complications cluster in adolescents, because the frontal sinus first appears radiographically around age 5 and enlarges through puberty. The sphenoid develops last (around age 6) and is rarely the source. Overall, complications occur in about 1 per 95,000 pediatric admissions and are more common in males (Cummings 7e, Ch 40, p 647)."
+  "text": "**Age and sinus development**: orbital complications cluster in children younger than about 7, because the ethmoids are the most developed sinuses at birth. Intracranial complications cluster in adolescents, because the frontal sinus first appears radiographically around age 5 and enlarges through puberty. The sphenoid pneumatizes through later childhood and is rarely the source. Overall, complications occur in about 1 per 95,000 pediatric admissions and are more common in males (Cummings 7e, Ch 40, p 647)."
  },
  {
   "topic": "Orbital Complications of Sinusitis",
   "field": "pathophysiology",
-  "text": "**Microbiology of complicated sinusitis**: unlike routine ABRS, complicated cases are often polymicrobial (about 75% in one series), with Streptococcus anginosus (formerly milleri) the most common isolate (about 18.5%), followed by S. aureus (12.4%) and beta-hemolytic streptococci. MRSA appears in about 6% of orbital complications; Peptostreptococcus and Prevotella are the main anaerobes (Cummings 7e, Ch 40, p 647)."
+  "text": "**Microbiology of complicated sinusitis**: unlike routine ABRS, complicated cases are often polymicrobial (about 75% in one series), with Streptococcus anginosus (formerly milleri) the most common isolate (about 18.5%), followed by S. aureus (12.4%) and beta-hemolytic streptococci. MRSA appears in about 6% of orbital complications. Peptostreptococcus and Prevotella are the main anaerobes (Cummings 7e, Ch 40, p 647)."
  },
  {
   "topic": "Intracranial Complications of Sinusitis",
@@ -1267,7 +1262,7 @@
  {
   "topic": "Revision FESS",
   "field": "pathophysiology",
-  "text": "**Technical causes of primary ESS failure**: middle turbinate lateralization; a middle meatal antrostomy that misses the natural ostium (recirculation); maxillary ostial stenosis; ethmoid adhesions; incomplete 'central' ethmoidectomy that leaves partitions along the lamina, skull base and middle turbinate; and frontal recess scarring. Misdiagnosed migraine or neuralgia is a nontechnical cause. In a 61,339-patient cohort, 6.65% had revision ESS; nasal polyps and female sex each raised the odds (aOR about 1.2) (Cummings 7e, Ch 44, p 708)."
+  "text": "**Technical causes of primary ESS failure**: middle turbinate lateralization. A middle meatal antrostomy that misses the natural ostium (recirculation). Maxillary ostial stenosis. Ethmoid adhesions. Incomplete 'central' ethmoidectomy that leaves partitions along the lamina, skull base and middle turbinate. And frontal recess scarring. Misdiagnosed migraine or neuralgia is a nontechnical cause. In a 61,339-patient cohort, 6.65% had revision ESS. Nasal polyps and female sex each raised the odds (aOR about 1.2) (Cummings 7e, Ch 44, p 708)."
  },
  {
   "topic": "CRSwNP",
@@ -1297,17 +1292,17 @@
  {
   "topic": "Revision FESS",
   "field": "operate",
-  "text": "**Revision technique rules**: in revision frontal surgery, first remove every residual bony partition; dilation or drilling only complements this. Avoid balloon-only revision when partitions remain, since retained mucosa can be trapped against the lamina or skull base. For neo-osteogenesis or circumferential scarring, use nonanatomic procedures: Draf III/modified Lothrop, maxillary mega-antrostomy, or transseptal sphenoidotomy (posterosuperior septectomy, full removal of the sphenoid face and drilling of the intersinus septum into one common opening, with optional floor 'nasalization'). Cover exposed bone with mucosal grafts when possible (Cummings 7e, Ch 45, pp 715–716)."
+  "text": "**Revision technique rules**: in revision frontal surgery, first remove every residual bony partition. Dilation or drilling only complements this. Avoid balloon-only revision when partitions remain, since retained mucosa can be trapped against the lamina or skull base. For neo-osteogenesis or circumferential scarring, use nonanatomic procedures: Draf III/modified Lothrop, maxillary mega-antrostomy, or transseptal sphenoidotomy (posterosuperior septectomy, full removal of the sphenoid face and drilling of the intersinus septum into one common opening, with optional floor 'nasalization'). Cover exposed bone with mucosal grafts when possible (Cummings 7e, Ch 45, pp 715–716)."
  },
  {
   "topic": "Revision FESS",
   "field": "workup",
-  "text": "**Host factors to screen before revising**: AERD (polyp recurrence 36–96%; aspirin desensitization about 1 month after surgery, once polyps and eosinophilia are controlled); GPA, sarcoidosis and EGPA (surgery can worsen GPA and sarcoid; get rheumatology/immunology input first); CF or PCD; immunodeficiency (CRS prevalence rises when CD4 falls below 50 cells/mm3); continued smoking; and poor adherence. Think of atypical adult CF with poorly pneumatized sinuses, Pseudomonas colonization, neo-osteogenesis, GI or non-asthma lung disease, or a family history; endoscopic medial maxillectomy may suit these patients (Cummings 7e, Ch 45, pp 713–714)."
+  "text": "**Host factors to screen before revising**: AERD (polyp recurrence 36–96%, aspirin desensitization about 1 month after surgery, once polyps and eosinophilia are controlled). GPA, sarcoidosis and EGPA (surgery can worsen GPA and sarcoid, get rheumatology/immunology input first). CF or PCD. Immunodeficiency (CRS prevalence rises when CD4 falls below 50 cells/mm3). Continued smoking. And poor adherence. Think of atypical adult CF with poorly pneumatized sinuses, Pseudomonas colonization, neo-osteogenesis, GI or non-asthma lung disease, or a family history. Endoscopic medial maxillectomy may suit these patients (Cummings 7e, Ch 45, pp 713–714)."
  },
  {
   "topic": "Revision FESS",
   "field": "teach",
-  "text": "**Unexpected neoplasia and iatrogenic leak**: unsuspected neoplasm turns up in about 0.46% of bilateral inflammatory CRS specimens. Never perform a major oncologic resection on the basis of a frozen section; refer with a detailed description of attachment sites if needed. An intraoperatively recognized skull base breach should be repaired at once unless intracranial injury needs imaging first. Postoperative clear rhinorrhea calls for β2-transferrin or β-trace testing and early repair because of meningitis risk. The SPA territory can be embolized, but ethmoidal arteries (ophthalmic branches) cannot, and medical lowering of orbital pressure alone is inadequate for orbital hematoma (Cummings 7e, Ch 45, pp 716–717)."
+  "text": "**Unexpected neoplasia and iatrogenic leak**: unsuspected neoplasm turns up in about 0.46% of bilateral inflammatory CRS specimens. Never perform a major oncologic resection on the basis of a frozen section. Refer with a detailed description of attachment sites if needed. An intraoperatively recognized skull base breach should be repaired at once unless intracranial injury needs imaging first. Postoperative clear rhinorrhea calls for β2-transferrin or β-trace testing and early repair because of meningitis risk. The SPA territory can be embolized, but ethmoidal arteries (ophthalmic branches) cannot, and medical lowering of orbital pressure alone is inadequate for orbital hematoma (Cummings 7e, Ch 45, pp 716–717)."
  },
  {
   "topic": "Frontal Sinusotomy / Draf Procedures",
@@ -1347,7 +1342,7 @@
  {
   "topic": "Epistaxis",
   "field": "workup",
-  "text": "**Resuscitation and coagulopathy numbers**: tachycardia is the earliest sign of acute blood loss. Consider transfusion at hemoglobin of 7 g/dL or lower (8 g/dL with cardiovascular disease or after cardiac/orthopedic surgery). Platelet goals are >50,000/µL with active bleeding and >10,000/µL to prevent spontaneous bleeding. Antiplatelet effects last 7–10 days (NSAIDs reverse more readily with platelets). Use desmopressin for uremia and for von Willebrand types 1 and 2A. Warfarin users make up about 8% of ED epistaxis visits: reverse only if supratherapeutic, with FFP (vitamin K acts slower and delays re-anticoagulation for about a week). Alcohol lowers fibrinogen. Routine coagulation labs are not needed without suggestive history (Cummings 7e, Ch 47, pp 735–738)."
+  "text": "**Resuscitation and coagulopathy numbers**: tachycardia is the earliest sign of acute blood loss. Consider transfusion at hemoglobin of 7 g/dL or lower (8 g/dL with cardiovascular disease or after cardiac/orthopedic surgery). Platelet goals are >50,000/µL with active bleeding and >10,000/µL to prevent spontaneous bleeding. Antiplatelet effects last 7–10 days (NSAIDs reverse more readily with platelets). Use desmopressin for uremia and for von Willebrand types 1 and 2A. Warfarin users make up about 8% of ED epistaxis visits: Cummings reverses only if supratherapeutic, with FFP (vitamin K acts slower and delays re-anticoagulation for about a week). Current practice, including the 2020 AAO-HNSF epistaxis guideline, avoids stopping or reversing anticoagulation unless bleeding is life-threatening, and then uses 4-factor PCC with IV vitamin K rather than FFP. Alcohol lowers fibrinogen. Routine coagulation labs are not needed without suggestive history (Cummings 7e, Ch 47, pp 735–738)."
  },
  {
   "topic": "Epistaxis",
@@ -1367,12 +1362,12 @@
  {
   "topic": "Epistaxis",
   "field": "teach",
-  "text": "**Outcome and pediatric pearls**: in a UK national study epistaxis carried a 13.9% recurrence rate and measurable 30-day mortality, a marker of comorbidity. Pediatric epistaxis is almost always anterior, from digital trauma, and self-limited; use moisturization and silver nitrate in cooperative children. Screen children with recurrent severe bleeding for hemophilia or von Willebrand disease, and consider JNA in any adolescent male with unilateral obstruction and bleeding. Most guides favor a short antistaphylococcal course while packing is in place, although a systematic review of 990 patients found no toxic shock without prophylaxis (Cummings 7e, Ch 47, pp 733, 740, 742)."
+  "text": "**Outcome and pediatric pearls**: in a UK national study epistaxis carried a 13.9% recurrence rate and measurable 30-day mortality, a marker of comorbidity. Pediatric epistaxis is almost always anterior, from digital trauma, and self-limited. Use moisturization and silver nitrate in cooperative children. Screen children with recurrent severe bleeding for hemophilia or von Willebrand disease, and consider JNA in any adolescent male with unilateral obstruction and bleeding. Routine antistaphylococcal coverage for nasal packing is not supported by evidence: a systematic review of 990 patients found no toxic shock without it (Cummings 7e, Ch 47, pp 733, 740, 742)."
  },
  {
   "topic": "CSF Rhinorrhea",
   "field": "recognize",
-  "text": "**Spontaneous-leak profile in numbers**: anterior spontaneous leaks are 77% female, typically aged 45–65 (mean 57–60), with BMI around 35–38. In one series 82% had elevated BMI, and 72% met modified Dandy criteria for idiopathic intracranial hypertension. Empty sella occurred in 100% of spontaneous vs 11% of nonspontaneous leaks. Imaging shows arachnoid pits (79%), empty sella (50%), meningoencephalocele (50%) and dural ectasia (35%). A classic history is a diffuse headache that eases when the drip starts and returns when it stops (Cummings 7e, Ch 48, p 747)."
+  "text": "**Spontaneous-leak profile in numbers**: anterior spontaneous leaks are 77% female, typically aged 45–65 (mean 57–60), with BMI around 35–38. In one series 82% had elevated BMI, and 72% met modified Dandy criteria for idiopathic intracranial hypertension. In one series empty sella occurred in 100% of spontaneous vs 11% of nonspontaneous leaks. Across series, imaging shows arachnoid pits (79%), empty or partially empty sella (50%), meningoencephalocele (50%) and dural ectasia (35%). A classic history is a diffuse headache that eases when the drip starts and returns when it stops (Cummings 7e, Ch 48, p 747)."
  },
  {
   "topic": "CSF Rhinorrhea",
@@ -1402,7 +1397,7 @@
  {
   "topic": "Thyroid Eye Disease / Graves Ophthalmopathy",
   "field": "manage",
-  "text": "**Post-decompression complications**: do not pack postoperative epistaxis at the bedside because orbital contents are exposed; return to the OR instead. Retrobulbar hematoma can still threaten vision and may need canthotomy/cantholysis. Give intraoperative and tapered postoperative steroids against edema-related optic neuropathy. Sinusitis or mucocele from herniated orbital fat can appear decades later. SNOT-22 improves at 1 year, so sinonasal function is not harmed long term (Cummings 7e, Ch 49, pp 767–768)."
+  "text": "**Post-decompression complications**: do not pack postoperative epistaxis at the bedside because orbital contents are exposed. Return to the OR instead. Retrobulbar hematoma can still threaten vision and may need canthotomy/cantholysis. Give intraoperative and tapered postoperative steroids against edema-related optic neuropathy. Sinusitis or mucocele from herniated orbital fat can appear decades later. SNOT-22 improves at 1 year, so sinonasal function is not harmed long term (Cummings 7e, Ch 49, pp 767–768)."
  },
  {
   "topic": "Orbital Apex Syndrome",
@@ -1412,7 +1407,7 @@
  {
   "topic": "Orbital Apex Syndrome",
   "field": "workup",
-  "text": "**Orbital masses reaching endonasal surgery**: the most common benign adult orbital tumor is cavernous hemangioma (cavernous venous malformation; 5–15%), which is well circumscribed, enhancing and T2 bright. Schwannoma and solitary fibrous tumor follow. Orbital pseudotumor can mimic a mass (11%), and lymphoid hyperplasia on biopsy warrants surveillance for lymphoma. Non-Hodgkin lymphoma is the most common adult orbital malignancy (about 10%). Lesions medial to the optic nerve, extraconal or intraconal, suit a purely endonasal approach (Cummings 7e, Ch 49, pp 769–770)."
+  "text": "**Orbital masses reaching endonasal surgery**: the most common benign adult orbital tumor is cavernous hemangioma (cavernous venous malformation, 5–15%), which is well circumscribed, enhancing and T2 bright. Schwannoma and solitary fibrous tumor follow. Orbital pseudotumor can mimic a mass (11%), and lymphoid hyperplasia on biopsy warrants surveillance for lymphoma. Non-Hodgkin lymphoma is the most common adult orbital malignancy (about 10%). Lesions medial to the optic nerve, extraconal or intraconal, suit a purely endonasal approach (Cummings 7e, Ch 49, pp 769–770)."
  },
  {
   "topic": "Sinonasal Inverted Papilloma",
@@ -1447,17 +1442,17 @@
  {
   "topic": "Systemic Disease of the Nose / Sinuses",
   "field": "manage",
-  "text": "**GPA course and nasal care**: untreated active GPA killed more than 80% within 3 years (mean survival under 6 months). Induction uses steroids plus cyclophosphamide or rituximab (methotrexate for minor disease), and maintenance uses azathioprine, methotrexate or rituximab. About 85–90% enter remission, but about 50% relapse within 5 years. S. aureus nasal carriage independently predicts relapse, and TMP-SMX prophylaxis reduces respiratory infections. Use topical saline/antibiotic irrigations and steroids. CT abnormalities alone are not a surgical indication, and nasal reconstruction should wait until the disease has been inactive for 6–12 months (Cummings 7e, Ch 51, pp 789–790)."
+  "text": "**GPA course and nasal care**: untreated active GPA killed more than 80% within 3 years (mean survival under 6 months). Induction uses steroids plus cyclophosphamide or rituximab (methotrexate for minor disease), and maintenance uses azathioprine, methotrexate or rituximab. About 85–90% enter remission, but about 50% relapse within 5 years. S. aureus nasal carriage independently predicts relapse. Use topical saline/antibiotic irrigations and steroids. CT abnormalities alone are not a surgical indication, and nasal reconstruction should wait until the disease has been inactive for 6–12 months (Cummings 7e, Ch 51, pp 789–790)."
  },
  {
   "topic": "Systemic Disease of the Nose / Sinuses",
   "field": "recognize",
-  "text": "**Sarcoidosis and EGPA numbers**: on careful history, 61% of sarcoid patients report nasal symptoms, with obstruction the most common ENT complaint. The mucosa has a 'strawberry skin' look (submucosal granulomas on red mucosa), ACE is raised in about 80%, and biopsy of submucosal nodules has high yield. EGPA is ANCA-positive in only about 40% (p-ANCA/MPO, which goes with renal disease, pulmonary hemorrhage and mononeuritis). It runs prodromal (asthma/atopy), eosinophilic and vasculitic phases, with nasal involvement in 60–70% and polyps in 75%. ACR criteria include eosinophilia over 10%, neuropathy, migratory pulmonary infiltrates, sinus abnormality and extravascular eosinophils on biopsy (4 or more: sensitivity 85%, specificity 99.7%). EGPA is treated with steroids, rituximab and mepolizumab (Cummings 7e, Ch 51, pp 790–791)."
+  "text": "**Sarcoidosis and EGPA numbers**: on careful history, 61% of sarcoid patients report nasal symptoms, with obstruction the most common ENT complaint. The mucosa has a 'strawberry skin' look (submucosal granulomas on red mucosa), ACE is raised in about 80%, and biopsy of submucosal nodules has high yield. EGPA is ANCA-positive in only about 40% (p-ANCA/MPO, which goes with renal disease, pulmonary hemorrhage and mononeuritis). It runs prodromal (asthma/atopy), eosinophilic and vasculitic phases, with nasal involvement in 60–70% and polyps in 75%. The older ACR 1990 criteria (now replaced by the 2022 ACR/EULAR criteria) include eosinophilia over 10%, neuropathy, migratory pulmonary infiltrates, sinus abnormality and extravascular eosinophils on biopsy (4 or more: sensitivity 85%, specificity 99.7%). EGPA is treated with steroids, rituximab and mepolizumab (Cummings 7e, Ch 51, pp 790–791)."
  },
  {
   "topic": "Mucocele",
   "field": "recognize",
-  "text": "**Paranasal sinus cholesterol granuloma**: an expansile cyst most often in the frontal (also maxillary) sinus. It probably arises from obstructed, hypoventilated air cells with hemorrhage, hemosiderin and cholesterol crystals that provoke a foreign-body granulomatous reaction; only about 25% have prior trauma or surgery. It is T1 and T2 hyperintense on MRI, unlike a typical mucocele (T1 variable). Treat by endoscopic marsupialization or excision (Cummings 7e, Ch 51, p 793)."
+  "text": "**Paranasal sinus cholesterol granuloma**: an expansile cyst most often in the frontal (also maxillary) sinus. It probably arises from obstructed, hypoventilated air cells with hemorrhage, hemosiderin and cholesterol crystals that provoke a foreign-body granulomatous reaction. Only about 25% have prior trauma or surgery. It is T1 and T2 hyperintense on MRI, unlike a typical mucocele (T1 variable). Treat by endoscopic marsupialization or excision (Cummings 7e, Ch 51, p 793)."
  },
  {
   "topic": "Facial Pain / Headache vs Rhinogenic Disease",
@@ -1647,7 +1642,7 @@
  {
   "topic": "Acute Otitis Externa",
   "field": "manage",
-  "text": "**Neomycin contact dermatitis and chronic otitis externa**: If AOE gets worse on neomycin-containing drops, with more redness, itching and excoriation, suspect allergic contact dermatitis. Neomycin is the most common topical sensitizer. Switch to a quinolone or aminoglycoside-steroid drop and stop the neomycin. Chronic otitis externa (itch-scratch cycle) responds to frequent cleaning plus topical fluorinated steroids. The differential includes otomycosis, seborrheic dermatitis, psoriasis, contact dermatitis and canal carcinoma. Long-standing disease can cause *pachyderma*, a thickened, stenotic canal with a blunted anterior sulcus, which requires canalplasty with a split-thickness graft. (Bluestone & Stool 5e, Ch \"Diseases of the External Ear\", p 624-625, 628)"
+  "text": "**Neomycin contact dermatitis and chronic otitis externa**: If AOE gets worse on neomycin-containing drops, with more redness, itching and excoriation, suspect allergic contact dermatitis. Neomycin is the most common topical sensitizer. Stop the neomycin and switch to a fluoroquinolone (with or without steroid) drop. Avoid other aminoglycoside drops, which cross-react with neomycin. Chronic otitis externa (itch-scratch cycle) responds to frequent cleaning plus topical fluorinated steroids. The differential includes otomycosis, seborrheic dermatitis, psoriasis, contact dermatitis and canal carcinoma. Long-standing disease can cause *pachyderma*, a thickened, stenotic canal with a blunted anterior sulcus, which requires canalplasty with a split-thickness graft. (Bluestone & Stool 5e, Ch \"Diseases of the External Ear\", p 624-625, 628)"
  },
  {
   "topic": "Auricular Reconstruction",
@@ -1687,7 +1682,7 @@
  {
   "topic": "Tympanostomy Tube Indications",
   "field": "manage",
-  "text": "**Retained tube removal and refractory otorrhea**: Consider removing a retained tube at about age 6 or older when the other ear has been disease-free for a year or more (ET function is usually symmetric in children, but not in adults). Also consider removal for recurrent otorrhea not prevented by prophylaxis, chronic otorrhea, or a tube embedded in refractory granulation tissue. Freshen the edges and patch the defect (paper or Steri-Strip). Tubes retained for 2 years or more in children 7 years or older have high complication rates. For otorrhea that fails drops, culture the aspirate: the usual AOM organisms are found in winter and in infants, Pseudomonas in summer and in older children. Most refractory cases clear with culture-directed IV antibiotics, without mastoidectomy. (Bluestone & Stool 5e, Ch \"Otitis Media and Eustachian Tube Dysfunction\", p 729-731)"
+  "text": "**Retained tube removal and refractory otorrhea**: Consider removing a retained tube at about age 6 or older when the other ear has been disease-free for a year or more (ET function is usually symmetric in children, but not in adults). Also consider removal for recurrent otorrhea, chronic otorrhea, or a tube embedded in refractory granulation tissue. Freshen the edges and patch the defect (paper or Steri-Strip). Tubes retained for 2 years or more in children 7 years or older have high complication rates. For otorrhea that fails drops, culture the aspirate: the usual AOM organisms are found in winter and in infants, Pseudomonas in summer and in older children. Most refractory cases clear with culture-directed IV antibiotics, without mastoidectomy. (Bluestone & Stool 5e, Ch \"Otitis Media and Eustachian Tube Dysfunction\", p 729-731)"
  },
  {
   "topic": "Eustachian Tube Dysfunction",
@@ -1727,7 +1722,7 @@
  {
   "topic": "Chronic Otitis Media / Cholesteatoma",
   "field": "manage",
-  "text": "**CSOM without cholesteatoma in children**: Pseudomonas was isolated in 38 of 40 children with CSOM, often with S. aureus. Treat in steps: aural toilet with daily suction and a topical quinolone, then add an oral agent, then admit for a parenteral antipseudomonal beta-lactam (ceftazidime, or ticarcillin-clavulanate when S. aureus is also present) with daily aspiration and drops. This usually avoids mastoidectomy. Surgery is reserved for failures, cholesteatoma or complications. Persistent drainage despite this regimen suggests hidden cholesteatoma. (Bluestone & Stool 5e, Ch \"Complications and Sequelae of Otitis Media\", p 784, 830) (Bluestone & Stool 5e, Ch \"Otitis Media and Eustachian Tube Dysfunction\", p 677)"
+  "text": "**CSOM without cholesteatoma in children**: Pseudomonas was isolated in 38 of 40 children with CSOM, often with S. aureus. Treat in steps: aural toilet with daily suction and a topical quinolone, then add an oral agent, then admit for a parenteral antipseudomonal beta-lactam (ceftazidime, or, when S. aureus is also present, the book's ticarcillin-clavulanate, which is no longer marketed in the US and is usually replaced by piperacillin-tazobactam) with daily aspiration and drops. This usually avoids mastoidectomy. Surgery is reserved for failures, cholesteatoma or complications. Persistent drainage despite this regimen suggests hidden cholesteatoma. (Bluestone & Stool 5e, Ch \"Complications and Sequelae of Otitis Media\", p 784, 830) (Bluestone & Stool 5e, Ch \"Otitis Media and Eustachian Tube Dysfunction\", p 677)"
  },
  {
   "topic": "Tympanic Membrane Perforation",
@@ -1802,12 +1797,12 @@
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "manage",
-  "text": "**Temporal bone fibrous dysplasia management and leukemia**: Fibrous dysplasia starts around age 10. It is monostotic in about 70%, and CT shows ground glass with the otic capsule 'floating'. *Never irradiate it*: radiation raises the sarcoma risk about 400-fold, against a baseline malignant change of about 1 in 200. Treat conservatively and recontour bone only for function or deformity. For canal stenosis, transcanal canalplasty restenosed in 89%, whereas postauricular canalplasty with (usually canal-wall-down) mastoidectomy, an oversized canal, skin grafting and a meatoplasty had no restenosis. *Leukemia* involves the temporal bone in about 20% (infiltration, hemorrhage, infection) and can present as otitis or mastoiditis; it is treated by treating the leukemia. (Bluestone & Stool 5e, Ch \"Tumors of the Ear and Temporal Bone\", p 905-908)"
+  "text": "**Temporal bone fibrous dysplasia management and leukemia**: Fibrous dysplasia starts around age 10. It is monostotic in about 70%, and CT shows ground glass with the otic capsule 'floating'. *Never irradiate it*: radiation raises the sarcoma risk about 400-fold, against a baseline malignant change of about 1 in 200. Treat conservatively and recontour bone only for function or deformity. For canal stenosis, transcanal canalplasty restenosed in 89%, whereas postauricular canalplasty with (usually canal-wall-down) mastoidectomy, an oversized canal, skin grafting and a meatoplasty had no restenosis. *Leukemia* involves the temporal bone in about 20% (infiltration, hemorrhage, infection) and can present as otitis or mastoiditis. It is treated by treating the leukemia. (Bluestone & Stool 5e, Ch \"Tumors of the Ear and Temporal Bone\", p 905-908)"
  },
  {
   "topic": "Tracheal Malignancy",
   "field": "overview",
-  "text": "**Epidemiology**: In adults about 90% of primary tracheal tumors are malignant, whereas in children about 80% are benign. SCC and adenoid cystic carcinoma together make up roughly 75% of primary malignancies. Tracheal SCC is smoking-related (about 90%), with synchronous or metachronous respiratory tract cancers in about 30%; an SCC centered on the membranous wall should raise concern for invasion from an esophageal primary. (Cummings 7e, Ch 112, p 1719)"
+  "text": "**Epidemiology**: In adults about 90% of primary tracheal tumors are malignant, whereas in children about 80% are benign. SCC and adenoid cystic carcinoma together make up roughly 75% of primary malignancies. Tracheal SCC is smoking-related (about 90%), with synchronous or metachronous respiratory tract cancers in about 30%. An SCC centered on the membranous wall should raise concern for invasion from an esophageal primary. (Cummings 7e, Ch 112, p 1719)"
  },
  {
   "topic": "Tracheal Malignancy",
@@ -1822,7 +1817,7 @@
  {
   "topic": "Tracheal Malignancy",
   "field": "manage",
-  "text": "**Secondary tracheal involvement**: Of the cancers that invade the trachea directly, only lung and thyroid cancer offer cure by resection. For thyroid cancer, options include shaving versus segmental resection; complete resection gave about 78% 5-year survival versus 44% for incomplete resection in one series. Esophageal, mediastinal and head and neck cancers invading the trachea are treated palliatively. Anaplastic thyroid cancer and lymphoma involving the trachea should not be resected. (Cummings 7e, Ch 112, p 1720) (Cummings 7e, Ch 112, p 1721)"
+  "text": "**Secondary tracheal involvement**: Of the cancers that invade the trachea directly, only lung and thyroid cancer offer cure by resection. For thyroid cancer, options include shaving versus segmental resection. Complete resection gave about 78% 5-year survival versus 44% for incomplete resection in one series. Esophageal, mediastinal and head and neck cancers invading the trachea are treated palliatively. Anaplastic thyroid cancer and lymphoma involving the trachea should not be resected. (Cummings 7e, Ch 112, p 1720) (Cummings 7e, Ch 112, p 1721)"
  },
  {
   "topic": "Tracheal Malignancy",
@@ -1872,12 +1867,12 @@
  {
   "topic": "Carotid Body Paraganglioma",
   "field": "manage",
-  "text": "**RT and observation**: Fractionated RT gives about 94-97% local control. It stops growth but shrinks only about a quarter of tumors; risks include carotid atherosclerosis and radiation-induced malignancy, so it is usually reserved for older or poor-risk patients. Untreated carotid PGLs grow slowly (median doubling time about 7 years, about 2 cm per 5 years), but about one third of observed patients develop new cranial neuropathies. (Cummings 7e, Ch 115, p 1761)"
+  "text": "**RT and observation**: Fractionated RT gives about 94-97% local control. It stops growth but shrinks only about a quarter of tumors. Its risks include carotid atherosclerosis and radiation-induced malignancy, so it is usually reserved for older or poor-risk patients. Untreated carotid PGLs grow slowly. Jansen found a median doubling time of about 7 years, and Farr's older estimate was about 2 cm per 5 years, but serial-imaging series show growth nearer 1 mm per year, and many tumors do not grow at all. About one third of observed patients develop new cranial neuropathies. (Cummings 7e, Ch 115, p 1761)"
  },
  {
   "topic": "Parapharyngeal Space Tumor",
   "field": "pathophysiology",
-  "text": "**Neurogenic tumor pathology**: Schwannomas are encapsulated and show Antoni A (dense spindle, Verocay bodies) and Antoni B (loose) areas. FNA is diagnostic in only about 20%. Asymptomatic tumors without a deficit can be observed. Resection usually costs the nerve of origin, although enucleation can sometimes spare function. Neurofibromas are unencapsulated and intertwined with the nerve; in NF1 they are multiple and have a higher malignant transformation risk. Lifetime MPNST risk in NF1 is up to about 13%. (Cummings 7e, Ch 115, p 1763) (Cummings 7e, Ch 115, p 1764) (Cummings 7e, Ch 115, p 1772)"
+  "text": "**Neurogenic tumor pathology**: Schwannomas are encapsulated and show Antoni A (dense spindle, Verocay bodies) and Antoni B (loose) areas. FNA is diagnostic in only about 20%. Asymptomatic tumors without a deficit can be observed. Resection usually costs the nerve of origin, although enucleation can sometimes spare function. Neurofibromas are unencapsulated and intertwined with the nerve. In NF1 they are multiple and have a higher malignant transformation risk. Lifetime MPNST risk in NF1 is up to about 13%. (Cummings 7e, Ch 115, p 1763) (Cummings 7e, Ch 115, p 1764) (Cummings 7e, Ch 115, p 1772)"
  },
  {
   "topic": "Neck Lymphoma",
@@ -1922,12 +1917,12 @@
  {
   "topic": "Penetrating and Blunt Neck Trauma",
   "field": "pathophysiology",
-  "text": "**Ballistics**: High-velocity missiles (>610 m/s; military rifles about 760 m/s) create a temporary cavity up to 30 times the missile diameter, so viscera can be injured without direct contact. Shotguns are low velocity (about 300 m/s), but at close range the shot mass acts like a rifle injury. Birdshot (≤3.5 mm) seriously injures to about 12 m, whereas buckshot pellets act like handgun bullets to about 150 m; remove wadding from the wound. In Ordog's classification, mortality ranges from 0% for type 0 (skin) to 85-90% for type III (point blank). Use MRI for retained pellets only when the metal is known to be nonferromagnetic. (Cummings 7e, Ch 120, p 1840) (Cummings 7e, Ch 120, p 1841) (Cummings 7e, Ch 120, p 1842)"
+  "text": "**Ballistics**: High-velocity missiles (>610 m/s, military rifles about 760 m/s) create a temporary cavity up to 30 times the missile diameter, so viscera can be injured without direct contact. Shotguns are low velocity (about 300 m/s), but at close range the shot mass acts like a rifle injury. Birdshot (≤3.5 mm) seriously injures to about 12 m, whereas buckshot pellets act like handgun bullets to about 150 m. Remove wadding from the wound. In Ordog's classification, mortality ranges from 0% for type 0 (skin) to 85-90% for type III (point blank). Use MRI for retained pellets only when the metal is known to be nonferromagnetic. (Cummings 7e, Ch 120, p 1840) (Cummings 7e, Ch 120, p 1841) (Cummings 7e, Ch 120, p 1842)"
  },
  {
   "topic": "Penetrating and Blunt Neck Trauma",
   "field": "operate",
-  "text": "**Vascular exposure**: Approach zone I injuries on the right through a median sternotomy and on the left through a left anterior thoracotomy. For zone III ICA bleeding, use Foley/Fogarty balloon tamponade, or pass a No. 4 Fogarty through a shunt beyond the injury; mandibulotomy or endovascular embolization may be needed. Ligate ECA branches and veins freely, but if both IJVs are injured, repair one. Ligate the CCA/ICA only for irreparable injury or a comatose patient with fixed pupils. In a hematoma, find the carotid by tracing the facial or superior thyroid artery retrograde. (Cummings 7e, Ch 120, p 1843) (Cummings 7e, Ch 120, p 1848)"
+  "text": "**Vascular exposure**: Approach zone I injuries on the right through a median sternotomy and on the left through a left anterior thoracotomy. For zone III ICA bleeding, use Foley/Fogarty balloon tamponade, or pass a No. 4 Fogarty through a shunt beyond the injury. Mandibulotomy or endovascular embolization may be needed. Ligate ECA branches and veins freely, but if both IJVs are injured, repair one. Ligate the CCA/ICA only for irreparable injury or a comatose patient with fixed pupils. In a hematoma, find the carotid by tracing the facial or superior thyroid artery retrograde. (Cummings 7e, Ch 120, p 1843) (Cummings 7e, Ch 120, p 1848)"
  },
  {
   "topic": "Graves Disease / Toxic Goiter",
@@ -1957,17 +1952,17 @@
  {
   "topic": "Primary Hyperparathyroidism",
   "field": "recognize",
-  "text": "**Normocalcemic PHPT**: Calcium (total and ionized) is persistently normal with elevated PTH. Diagnose it only after excluding secondary causes, especially vitamin D deficiency (which can mask hypercalcemic PHPT) and renal calcium leak (thiazide trial). It is considered an early form of PHPT; monitor and operate on progression. (Cummings 7e, Ch 123, p 1902)"
+  "text": "**Normocalcemic PHPT**: Calcium (total and ionized) is persistently normal with elevated PTH. Diagnose it only after excluding secondary causes, especially vitamin D deficiency (which can mask hypercalcemic PHPT) and renal calcium leak (thiazide trial). It is considered an early form of PHPT. Monitor and operate on progression. (Cummings 7e, Ch 123, p 1902)"
  },
  {
   "topic": "Primary Hyperparathyroidism",
   "field": "workup",
-  "text": "**Sestamibi mechanics**: Tc-99m sestamibi is retained by mitochondria-rich parathyroid tissue. Images at about 10 minutes and 2 hours show parathyroid activity persisting after the thyroid washes out, and SPECT improves detection of small glands. Sestamibi is weak for multigland hyperplasia, and thyroid nodules or nodes can cause false positives. 4D-CT finds more than half of glands missed by sestamibi and US. For intraoperative PTH, draw the post-excision sample at 10-15 minutes (not earlier, because handling causes a spike); a 50% drop predicts cure. Postoperative hypocalcemia peaks at about 48 h. (Cummings 7e, Ch 123, p 1904) (Cummings 7e, Ch 123, p 1905) (Cummings 7e, Ch 123, p 1906)"
+  "text": "**Sestamibi mechanics**: Tc-99m sestamibi is retained by mitochondria-rich parathyroid tissue. Images at about 10 minutes and 2 hours show parathyroid activity persisting after the thyroid washes out, and SPECT improves detection of small glands. Sestamibi is weak for multigland hyperplasia, and thyroid nodules or nodes can cause false positives. 4D-CT finds more than half of glands missed by sestamibi and US. For intraoperative PTH, draw the post-excision sample at 10-15 minutes (not earlier, because handling causes a spike). A 50% drop predicts cure. Postoperative hypocalcemia peaks at about 48 h. (Cummings 7e, Ch 123, p 1904) (Cummings 7e, Ch 123, p 1905) (Cummings 7e, Ch 123, p 1906)"
  },
  {
   "topic": "Thyroid Eye Disease / Graves Ophthalmopathy",
   "field": "workup",
-  "text": "**Imaging and labs**: CT or MRI shows extraocular muscle enlargement in about 70% of patients: fusiform 2-8-fold belly enlargement sparing the tendons, bilateral in 90%, inferior and medial recti most often. Patients under 40 tend toward fat expansion and those over 60 toward muscle swelling; apical crowding without much proptosis carries the highest risk of compressive optic neuropathy. TRAb is detected in about 98% of untreated Graves patients. Grading systems are NOSPECS, EUGOGO CAS (active if ≥3/7 initially or ≥4/10 on follow-up), and VISA. (Cummings 7e, Ch 125, p 1919) (Cummings 7e, Ch 125, p 1920)"
+  "text": "**Imaging and labs**: CT or MRI shows extraocular muscle enlargement in about 70% of patients: fusiform 2-8-fold belly enlargement sparing the tendons, bilateral in 90%, inferior and medial recti most often. Patients under 40 tend toward fat expansion and those over 60 toward muscle swelling. Apical crowding without much proptosis carries the highest risk of compressive optic neuropathy. TRAb is detected in about 98% of untreated Graves patients. Grading systems are NOSPECS, EUGOGO CAS (active if ≥3/7 initially or ≥4/10 on follow-up), and VISA. (Cummings 7e, Ch 125, p 1919) (Cummings 7e, Ch 125, p 1920)"
  },
  {
   "topic": "Temporal Bone Anatomy",
@@ -1992,7 +1987,7 @@
  {
   "topic": "Eustachian Tube Dysfunction",
   "field": "physiology",
-  "text": "**Tube anatomy**: The ET runs at about 45 degrees from the middle ear to the torus tubarius. The bony proximal third lies in the petrous bone, and the distal two thirds are fibrocartilaginous and closed at rest. The isthmus (narrowest point) is at the bony-cartilaginous junction. The tensor veli palatini opens the tube by pulling its lateral membranous wall. The ICA lies medial to the tympanic orifice, where the bone may be dehiscent. (Cummings 7e, Ch 126, p 1932)"
+  "text": "**Tube anatomy**: The ET runs at about 45 degrees from the middle ear to the torus tubarius. The bony proximal third lies in the petrous bone, and the distal two thirds are fibrocartilaginous and closed at rest. The isthmus (narrowest point) is classically placed at the bony-cartilaginous junction, although histologic studies put it just inside the cartilaginous portion. The tensor veli palatini opens the tube by pulling its lateral membranous wall. The ICA lies medial to the tympanic orifice, where the bone may be dehiscent. (Cummings 7e, Ch 126, p 1932)"
  },
  {
   "topic": "Auditory Neuroanatomy / Cochlear Physiology",

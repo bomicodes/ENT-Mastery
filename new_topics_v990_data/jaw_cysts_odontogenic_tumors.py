@@ -26,7 +26,7 @@ TOPIC = {
         "**Ameloblastoma histology**: islands of palisaded columnar cells with reverse polarization of nuclei and stellate reticulum-like centers. About 17% arise in association with a dentigerous cyst (Cummings 7e Ch 88)",
         "**Malignant variants**: metastasizing (malignant) ameloblastoma has benign histology but metastasizes, usually to lung. Ameloblastic carcinoma has cytologic malignancy (Cummings 7e Ch 88)",
         "**Mixed lesions**: calcifying odontogenic cyst (ghost cells), Pindborg tumor (CEOT, amyloid-like deposits that may calcify), adenomatoid odontogenic tumor and odontomas all produce lucent-opaque images (Pasha 6e Ch 5)",
-        "**Fibro-osseous mimics**: fibrous dysplasia (GNAS, ground glass, blends into bone) versus ossifying fibroma (sharply circumscribed, shells out). Central giant cell granuloma may mimic a brown tumor (K.J. Lee 12e Ch 39)",
+        "**Fibro-osseous mimics**: fibrous dysplasia (GNAS, ground glass, blends into bone) versus ossifying fibroma (sharply circumscribed, shells out). Central giant cell granuloma may mimic a brown tumor. Ossifying fibroma with primary hyperparathyroidism suggests hyperparathyroidism-jaw tumor syndrome (CDC73), which carries a parathyroid carcinoma risk (K.J. Lee 12e Ch 39)",
     ]),
     "recognize": "\n".join([
         "**Presentation**: painless expansion, tooth displacement or loosening, or an incidental panorex finding. Paresthesia, trismus, rapid growth or loose teeth suggest malignancy (Bluestone & Stool 5e, Tumors of the Mouth and Pharynx)",

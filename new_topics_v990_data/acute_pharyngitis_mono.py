@@ -84,12 +84,14 @@ TOPIC = {'domain': 'General ENT / Emergencies',
            '**Other tests**: NAAT or Thayer-Martin culture for gonorrhea, HIV RNA when acute HIV '
            'is suspected, and contrast CT if abscess or Lemierre syndrome is suspected',
  'manage': '**GAS treatment**: penicillin V or amoxicillin for 10 days (or one IM benzathine '
-           'penicillin dose). For penicillin allergy use cephalexin, clindamycin or azithromycin '
-           '(Shulman 2012)\n'
+           'penicillin dose). For penicillin allergy use cephalexin (if the reaction was not '
+           'anaphylactic), clindamycin or a 5-day azithromycin course, noting rising macrolide '
+           'resistance (Shulman 2012)\n'
            '**Carriers**: chronic GAS carriers generally do not need treatment and are not a '
            'significant transmission or rheumatic fever risk (Shulman 2012)\n'
            '**Mononucleosis**: supportive care with fluids, analgesia and rest. Avoid amoxicillin '
-           'and ampicillin, which cause a rash in most patients (Bluestone & Stool 5e)\n'
+           'and ampicillin, which trigger a rash in many patients (historically up to 90%, about '
+           '30% in recent series) (Bluestone & Stool 5e)\n'
            '**Mono steroids**: reserve corticosteroids for impending airway obstruction, hemolytic '
            'anemia or severe thrombocytopenia, not routine symptom relief (Pasha 6e, Ch 5)\n'
            '**Return to sport**: avoid contact sports for at least 3-4 weeks from onset because of '
@@ -109,7 +111,8 @@ TOPIC = {'domain': 'General ENT / Emergencies',
             'pole, with antibiotics. Quinsy tonsillectomy is an option for recurrent cases\n'
             '**Tonsillectomy indications**: recurrent throat infection meeting Paradise criteria '
             '(7 in 1 year, 5 per year for 2 years, or 3 per year for 3 years) per the AAO-HNS '
-            'guideline (Mitchell 2019)\n'
+            'guideline. Each episode must be documented with sore throat plus fever over 38.3 C, '
+            'cervical adenopathy, tonsillar exudate or a positive GAS test (Mitchell 2019)\n'
             '**Unilateral adult tonsil**: an enlarging or ulcerated tonsil, or persistent '
             'unilateral throat pain with otalgia, needs biopsy or excisional tonsillectomy to '
             'exclude lymphoma or carcinoma (Pasha 6e, Ch 5)',
@@ -278,12 +281,12 @@ TOPIC = {'domain': 'General ENT / Emergencies',
                             'with IV steroids, humidification and a nasopharyngeal airway, managed '
                             'in a monitored setting with surgical airway backup available. Acute '
                             'tonsillectomy, intubation or tracheotomy is reserved for failure of '
-                            'these measures. Ampicillin is contraindicated because it causes a '
-                            'rash in most mono patients and does nothing for the airway.',
+                            'these measures. Ampicillin is avoided because it often triggers a '
+                            'rash in mono patients and does nothing for the airway.',
              'why_wrong': ['Acute tonsillectomy is reserved for failure of medical airway '
                            'management.',
                            'Correct.',
-                           'Ampicillin causes rash in mono and leaves the threatened airway '
+                           'Ampicillin often causes rash in mono and leaves the threatened airway '
                            'unmanaged.',
                            'Tracheotomy is reserved for failure of less invasive airway measures.'],
              'board_pearl': 'Steroids in mononucleosis are for airway obstruction, hemolytic '
@@ -314,7 +317,7 @@ TOPIC = {'domain': 'General ENT / Emergencies',
                                'adherent membrane can be dislodged into the airway and bleeds when '
                                'disturbed. Cardiac monitoring is essential because toxin-mediated '
                                'myocarditis and later neuropathy cause most deaths and morbidity. '
-                               'Close contacts also need evaluation and prophylaxis.',
+                               'Close contacts need public health evaluation and vaccination review.',
                 'why_wrong': ['Outpatient care ignores the airway threat and toxin-mediated '
                               'myocarditis risk.',
                               'Steroids do not neutralize diphtheria toxin or treat the infection.',
@@ -325,9 +328,9 @@ TOPIC = {'domain': 'General ENT / Emergencies',
                                'monitor for myocarditis and neuropathy.',
                 'curveball': 'Which laboratory test confirms the organism and its pathogenic '
                              'potential?',
-                'curveball_answer': 'Culture of the membrane on tellurite-containing media '
-                                    '(Loeffler or Tinsdale) identifies Corynebacterium '
-                                    'diphtheriae. Toxin production must then be confirmed, '
+                'curveball_answer': 'Culture of the membrane on Loeffler medium and a '
+                                    'tellurite medium (Tinsdale or cystine-tellurite blood agar) '
+                                    'identifies Corynebacterium diphtheriae. Toxin production must then be confirmed, '
                                     'classically by the Elek test or by PCR for the tox gene. '
                                     'Antitoxin should not be delayed while awaiting results.',
                 'learning_stage': 'application',
@@ -376,7 +379,7 @@ TOPIC = {'domain': 'General ENT / Emergencies',
                         'positive. Which is the most appropriate interpretation and plan?',
                 'choices': ['Recurrent true GAS infection, so proceed to tonsillectomy',
                             'Penicillin-resistant GAS requiring vancomycin',
-                            'Mandatory rheumatic fever prophylaxis',
+                            'Echocardiogram to screen for rheumatic carditis',
                             'Likely chronic GAS carrier with viral infections, no eradication'],
                 'answer': 3,
                 'explanation': 'Viral symptoms such as cough and coryza with positive cultures, '
@@ -391,7 +394,7 @@ TOPIC = {'domain': 'General ENT / Emergencies',
                               'tonsillectomy criteria.',
                               'GAS remains universally susceptible to penicillin, so vancomycin is '
                               'not needed.',
-                              'Carriers are not at significant risk of acute rheumatic fever.',
+                              'Carriers are not at significant risk of rheumatic fever, so carditis screening is not indicated.',
                               'Correct.'],
                 'board_pearl': 'Positive GAS culture with cough and coryza suggests carriage plus '
                                'viral infection, not true strep pharyngitis.',

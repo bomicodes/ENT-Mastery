@@ -5,7 +5,7 @@
  "or_family_v190": "otology",
  "linked_topic": "Hearing Aids and Bone-Conduction Devices",
  "source_label": "Pasha 6e and Cummings 7e (Implantable Hearing Devices)",
- "indications": "Conductive or mixed hearing loss when conventional air-conduction aids cannot be worn or fail: congenital aural atresia or microtia, chronically draining ears or open mastoid cavities aggravated by occlusion, canal stenosis, and ossicular anomalies not suitable for ossiculoplasty. Also single-sided deafness with normal contralateral bone conduction (bone-conduction thresholds on the better side within device fitting range). Candidates should trial the processor on a headband or test rod preoperatively. Implantation is generally done at age 5 or older with at least about 3 mm of cortical bone; younger or thin-skulled children use a Softband or a two-stage approach. Poor hygiene, inability to care for the abutment, and heavy radiation to the site increase failure risk.",
+ "indications": "Conductive or mixed hearing loss when conventional air-conduction aids cannot be worn or fail: congenital aural atresia or microtia, chronically draining ears or open mastoid cavities aggravated by occlusion, canal stenosis, and ossicular anomalies not suitable for ossiculoplasty. Also single-sided deafness when the better ear has normal hearing (air conduction about 20 dB HL or better), with sound routed across the skull to that cochlea. Candidates should trial the processor on a headband or test rod preoperatively. Implantation is generally done at age 5 or older with at least about 3 mm of cortical bone; younger or thin-skulled children use a Softband or a two-stage approach. Poor hygiene, inability to care for the abutment, and heavy radiation to the site increase failure risk.",
  "setup": [
   "General anesthesia (local with sedation is suitable for many adults); supine, head turned, hair shaved over a small area behind the ear",
   "Preoperative headband or test-rod trial documented; audiogram confirming bone-conduction thresholds in device range",
@@ -102,7 +102,7 @@
  "attending_followup": [
   [
    "Who qualifies for a bone-anchored implant for single-sided deafness?",
-   "Patients with profound unilateral SNHL and normal hearing in the other ear. The device transmits sound from the deaf side to the hearing cochlea, improving the head shadow effect but not localization."
+   "Patients with severe to profound unilateral SNHL and normal hearing in the other ear (air conduction about 20 dB HL or better). The device routes sound from the deaf side across the skull to the hearing cochlea, overcoming the head shadow effect, but it does not restore binaural hearing or sound localization."
   ],
   [
    "Why two-stage surgery in young children?",

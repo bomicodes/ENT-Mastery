@@ -52,7 +52,7 @@ TOPIC = {
   "manage": "\n".join([
     "**Timing**: TracMan randomized early (days 1-4) vs late (after day 10) tracheotomy and found no 30-day mortality benefit. Meta-analyses show shorter ICU stay and less sedation with early tracheotomy (Young et al. JAMA 2013, Hosokawa et al. Crit Care 2015).",
     "**Tube selection**: use the smallest tube that ventilates adequately. Choose an extended-length tube for a thick obese neck or a distal lesion (Cummings 7e, Ch 7).",
-    "**Cuff care**: keep cuff pressure at the lowest level that seals, generally under 25-30 mm Hg, and check it routinely (Mitchell et al. Otolaryngol Head Neck Surg 2013).",
+    "**Cuff care**: keep cuff pressure at the lowest level that seals, commonly targeted at 20-30 cm H2O (about 15-22 mm Hg), below mucosal perfusion pressure, and check it with a manometer every shift (Mitchell et al. Otolaryngol Head Neck Surg 2013).",
     "**First tube change**: around days 3-5 for open tracheotomy and not before about day 10 after PDT because of false-passage risk (Cummings 7e, Ch 7).",
     "**Accidental decannulation**: if the tube cannot be replaced through an immature stoma, intubate orally rather than forcing reinsertion (Cummings 7e, Ch 7).",
     "**TIF rescue**: overinflate the cuff or pass an ETT beyond the bleed, apply digital anterior compression through the stoma, then emergency sternotomy with innominate ligation or endovascular stent graft. Open repair carries about 50% mortality (Cummings 7e, Ch 7).",
@@ -72,7 +72,8 @@ TOPIC = {
     "**Bleeding at 3-4 weeks = TIF**: a small sentinel bleed earns bronchoscopy in the OR, not reassurance (Cummings 7e, Ch 7).",
     "**Immature tract = intubate from above**: if the tube falls out before about day 5 (open) or day 10 (PDT), oral intubation beats blind reinsertion (Cummings 7e, Ch 7).",
     "**Distress sequence 'inner, suction, change'**: remove the inner cannula, pass a suction catheter, then change the tube (Mitchell et al. Otolaryngol Head Neck Surg 2013).",
-    "**Speaking valve only with cuff down**: a valve on an inflated cuff means the patient cannot exhale (Cummings 7e, Ch 7)."
+    "**Speaking valve only with cuff down**: a valve on an inflated cuff means the patient cannot exhale (Cummings 7e, Ch 7).",
+    "**Know the anatomy at the bedside**: a bedhead sign should state whether the upper airway is patent. After total laryngectomy the stoma is the only airway, so oral intubation is impossible and oxygen goes to the stoma (National Tracheostomy Safety Project, McGrath et al. Anaesthesia 2012)."
   ]),
   "tags": ["tracheotomy", "tracheostomy", "percutaneous dilational tracheostomy", "tracheoinnominate fistula", "decannulation", "airway"],
   "source_basis": ["Cummings 7e Ch 7"],
@@ -80,7 +81,8 @@ TOPIC = {
   "literature_refs": [
     "Young D et al. JAMA 2013;309:2121-2129 (TracMan: early vs late tracheostomy in ventilated ICU adults, no difference in 30-day mortality)",
     "Hosokawa K et al. Crit Care 2015;19:424 (meta-analysis: systematic review of RCTs, early tracheotomy linked to shorter sedation and ICU stay and lower long-term mortality)",
-    "Mitchell RB et al. Otolaryngol Head Neck Surg 2013;148:6-20 (AAO-HNS clinical consensus statement on tracheostomy care)"
+    "Mitchell RB et al. Otolaryngol Head Neck Surg 2013;148:6-20 (AAO-HNS clinical consensus statement on tracheostomy care)",
+    "McGrath BA et al. Anaesthesia 2012;67:1025-1041 (National Tracheostomy Safety Project algorithms for tracheostomy and laryngectomy airway emergencies)"
   ],
   "case_label": "Massive stomal bleeding three weeks after a low tracheotomy in a ventilated patient",
   "or_slugs": [],

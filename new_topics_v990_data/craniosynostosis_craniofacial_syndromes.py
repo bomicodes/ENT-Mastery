@@ -85,7 +85,8 @@ TOPIC = {'domain': 'Pediatric Otolaryngology',
              '**Hemifacial microsomia mandible (Pruzansky-Kaban)**: I small but normal shape, IIA '
              'abnormal ramus with functional TMJ, IIB abnormal ramus with displaced TMJ, III '
              'absent ramus and TMJ (Bluestone & Stool 5e, Ch 19)\n'
-             '**Tessier clefts**: numbered 0 (midline) to 30 (mandibular) around the orbit. Cleft '
+             '**Tessier clefts**: numbered 0 to 14 around the orbit like a clock (facial clefts '
+             '0-7 below, cranial extensions 8-14 above), with 30 the midline mandibular cleft. Cleft '
              '7 (macrostomia) is the most common rare facial cleft and belongs to the hemifacial '
              'microsomia spectrum, while Treacher Collins is bilateral 6-7-8 (Bluestone & Stool '
              '5e, Cleft chapter)',
@@ -107,7 +108,11 @@ TOPIC = {'domain': 'Pediatric Otolaryngology',
            '5e, Ch 3 / Pasha 6e, Ch 9)\n'
            '**Before elective surgery**: exclude a syndrome conferring surgical risk (22q11 '
            'carotids, bleeding diathesis in Noonan, cervical instability) (Bluestone & Stool 5e, '
-           'Ch 3)',
+           'Ch 3)\n'
+           '**Raised ICP screen**: fundoscopy for papilledema in every synostosis patient. Risk '
+           'is highest with multisuture and syndromic forms (Crouzon, Pfeiffer cloverleaf skull), '
+           'which also carry Chiari I malformation and hydrocephalus, so MRI is often added '
+           '(Cummings 7e, Ch 187)',
  'manage': '**Deformational plagiocephaly**: affects about 20-50% of infants since Back-to-Sleep, '
            'with torticollis in about 20%. Repositioning, tummy time and physiotherapy first. '
            'Helmets work best started before about 6 months and worn 3-6 months (Cummings 7e, Ch '
@@ -469,8 +474,8 @@ TOPIC = {'domain': 'Pediatric Otolaryngology',
                                'amplification as needed and cervical spine evaluation before any '
                                'neck extension. Costochondral grafting and ear reconstruction are '
                                'later procedures.',
-                'why_wrong': ['Early distraction has not been shown to improve growth and may '
-                              'restrict it.',
+                'why_wrong': ['Early distraction has not been shown to improve long-term mandibular '
+                              'growth without a functional need.',
                               'Correct.',
                               'Costochondral grafting is for Kaban III mandibles, typically at '
                               'about 5 years or later.',

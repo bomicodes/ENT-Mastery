@@ -9,6 +9,7 @@
  "setup": [
   "Office stroboscopy and voice recording to document pitch, quality, and web length.",
   "Workup for unexplained webs: consider GPA, sarcoidosis, and amyloidosis; check for subglottic or supraglottic stenosis.",
+  "Congenital anterior webs: test for 22q11.2 deletion (velocardiofacial syndrome), which is strongly associated, and screen for cardiac anomalies and an associated subglottic stenosis before planning repair.",
   "Control reflux before surgery.",
   "Suspension microlaryngoscopy set with anterior commissure laryngoscope, angled telescopes, microscope with CO2, cold instruments, fine absorbable suture and needle holders.",
   "For keel repair: Silastic keel, 18-gauge needles, 0 polypropylene, buttons, and an apneic or jet ventilation plan for removal."
@@ -114,7 +115,7 @@
  "attending_followup": [
   [
    "What is the most common cause of an acquired anterior glottic web?",
-   "Surgery or injury creating opposing raw surfaces at the anterior commissure, such as bilateral simultaneous lesion excision."
+   "Surgery or injury creating opposing raw surfaces at the anterior commissure, such as bilateral simultaneous lesion excision. Congenital anterior webs, by contrast, are strongly linked to 22q11.2 deletion and often extend into the subglottis."
   ],
   [
    "How do you prevent web formation when operating on bilateral anterior lesions?",

@@ -5,7 +5,7 @@
  "or_family_v190": "sinus",
  "linked_topic": "Traumatic Optic Neuropathy and Optic Nerve Decompression",
  "source_label": "Cummings 7e and Pasha 6e",
- "indications": "Orbital decompression of the medial and inferior walls is used for thyroid eye disease with compressive optic neuropathy that has not responded to high-dose corticosteroids (urgent), for corneal exposure, and electively for disfiguring proptosis once the disease has been stable and inactive for about 6 months. It is often combined with lateral wall decompression by oculoplastics. Optic nerve decompression of the canal is considered for compressive optic neuropathy from fibro-osseous lesions, tumors, or Graves disease at the apex, and selectively for traumatic optic neuropathy with bony impingement or worsening vision, where evidence is mixed and treatment must be individualized.",
+ "indications": "Orbital decompression of the medial and inferior walls is used for thyroid eye disease with compressive optic neuropathy that has not responded to high-dose corticosteroids (urgent), for corneal exposure, and electively for disfiguring proptosis once the disease has been stable and inactive for about 6 months. It is often combined with lateral wall decompression by oculoplastics. Medical options such as intravenous methylprednisolone, orbital radiation and teprotumumab (an IGF-1 receptor antibody that can reduce proptosis in active disease) are weighed with ophthalmology and endocrinology before surgery. Optic nerve decompression of the canal is considered for compressive optic neuropathy from fibro-osseous lesions, tumors, or Graves disease at the apex, and selectively for traumatic optic neuropathy with bony impingement or worsening vision, where evidence is mixed and treatment must be individualized.",
  "setup": [
   "Full ophthalmology assessment: visual acuity, color vision, pupils, visual fields, exophthalmometry, motility and baseline diplopia",
   "Fine-cut CT of the sinuses and orbits for navigation; MRI orbits for optic neuropathy work-up",
@@ -65,7 +65,7 @@
   ],
   [
    "Drill the canal",
-   "Thin the optic strut and the medial canal wall with a coarse diamond burr, working laterally to medially with constant irrigation to avoid heat injury. Lift the thin shell away from the nerve inferomedially with a fine elevator and remove it, decompressing about half the circumference of the canal."
+   "Thin the medial wall of the canal with a coarse diamond burr, from the apex back toward the tuberculum, with constant irrigation to avoid heat injury. Leave the optic strut and the opticocarotid recess bone alone, since the carotid lies just beneath. Lift the thin shell away from the nerve inferomedially with a fine elevator and remove it, decompressing about half the circumference of the canal."
   ],
   [
    "Nerve sheath",

@@ -30,6 +30,7 @@ TOPIC = {
     "**Periodontal**: linear gingival erythema, necrotizing ulcerative gingivitis or periodontitis, and major aphthae that may need biopsy to exclude CMV, HSV, histoplasmosis or lymphoma (Cummings 7e, Ch 10)",
     "**Kaposi sarcoma**: purple to red macules, plaques or nodules on the hard palate, gingiva or skin. Bacillary angiomatosis (Bartonella) looks similar (Cummings 7e, Ch 10, pp 161-163)",
     "**Lymphoma**: rapidly enlarging neck mass, extranodal oral or sinonasal mass, B symptoms. Most AIDS-related NHL presents at stage III-IV (Cummings 7e, Ch 10, pp 164-166)",
+    "**Neck nodes**: persistent generalized lymphadenopathy (nodes over 1 cm at two or more extrainguinal sites for over 3 months) is common and benign. A dominant, asymmetric, rapidly growing or matted node needs FNA with AFB and fungal studies, or excision, to exclude mycobacterial adenitis and lymphoma (K.J. Lee 12e, Ch 11)",
     "**Ear**: sudden or progressive SNHL, vertigo or tinnitus in an HIV patient should trigger syphilis serology (Cummings 7e, Ch 10, pp 173-174)",
   ]),
   "localize": "\n".join([
@@ -107,7 +108,7 @@ TOPIC = {
     ],
     "board_pearl": "Bilateral multicystic parotid enlargement with cervical adenopathy in a young adult: test for HIV before anything else.",
     "curveball": "The FNA is sent for viral studies as well as cytology. What does BLEC cyst fluid characteristically contain?",
-    "curveball_answer": "BLEC fluid contains high levels of HIV RNA (p24 antigen and viral load often higher than plasma), along with lymphocytes, histiocytes and squamous or glandular epithelial cells. Cytology should be benign and polymorphous; a monomorphous lymphoid population raises concern for lymphoma and needs flow cytometry or excision.",
+    "curveball_answer": "BLEC fluid contains HIV p24 antigen and HIV RNA, along with lymphocytes, histiocytes and squamous or glandular epithelial cells. Cytology should be benign and polymorphous. A monomorphous lymphoid population raises concern for lymphoma and needs flow cytometry or excision.",
     "learning_stage": "application",
     "focus": "workup"
   },

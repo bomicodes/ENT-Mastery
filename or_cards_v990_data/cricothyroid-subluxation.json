@@ -5,13 +5,13 @@
  "or_family_v190": "laryngology",
  "linked_topic": "Medialization Thyroplasty",
  "source_label": "Operative Techniques in Laryngology (2024), Ch 49 Cricothyroid Subluxation",
- "indications": "An adjunct to medialization laryngoplasty (with or without arytenoid repositioning) for unilateral vocal fold paralysis when the paralyzed fold is short and flaccid, with poor pitch range and a weak or asymmetric mucosal wave. It may be planned from preoperative assessment or chosen intraoperatively when glottic closure is good but pitch and vibration remain poor. Subluxing the cricothyroid joint on the paralyzed side pulls the cricoid forward relative to the thyroid, lengthening and tensing the fold and rotating the anterior commissure away from the paralyzed side. Do not perform when the thyroid ala is fractured or at risk of fracture from the medialization window.",
+ "indications": "An adjunct to medialization laryngoplasty (with or without arytenoid repositioning) for unilateral vocal fold paralysis when the paralyzed fold is short and flaccid, with poor pitch range and a weak or asymmetric mucosal wave. It may be planned from preoperative assessment or chosen intraoperatively when glottic closure is good but pitch and vibration remain poor. Subluxing the cricothyroid joint on the paralyzed side draws the inferior thyroid cornu anteriorly over the cricoid, recreating the cricothyroid muscle vector. This rotates the anterior commissure attachment away from the cricoarytenoid joint, lengthening and tensing the fold. Do not perform when the thyroid ala is fractured or at risk of fracture from the medialization window.",
  "setup": [
   "Awake sedation with local anesthesia so pitch and voice can be tested during tensioning",
   "Transnasal flexible laryngoscope on a monitor to judge fold length and closure",
   "Standard thyroplasty exposure already completed on the paralyzed side",
-  "Permanent monofilament suture (polypropylene) on a cutting needle, fine scissors, and plating set available for alar fracture",
-  "Perform as the final step after medialization and any arytenoid procedure"
+  "2-0 polypropylene on a narrow semicircle needle, right-angle (vascular) clamp, fine scissors or Cottle elevator, a cutting needle for direct cartilage anchoring, and a plating set for alar fracture",
+  "Separate the joint during the exposure, then complete medialization and any arytenoid procedure, and place and tension the subluxation suture last"
  ],
  "landmarks": [
   "Inferior cornu of the thyroid cartilage",
@@ -35,27 +35,27 @@
   ],
   [
    "Sequence the procedures",
-   "Complete the medialization implant and any arytenoid adduction or arytenopexy first so final glottic position is set. Perform the subluxation last, since it changes fold length and tension and is tuned against the finished medialization rather than before it."
+   "Skeletonize the cornu and separate the cricothyroid joint during the initial exposure, then complete the medialization implant and any arytenoid adduction or arytenopexy so final glottic position is set. Place and tension the subluxation suture last, since it changes fold length and is tuned against the finished medialization."
   ],
   [
    "Skeletonize the inferior cornu",
-   "Remove the cricothyroid muscle immediately anterior and inferior to the inferior cornu and release its soft-tissue attachments. Keep the dissection right on cartilage to protect the recurrent laryngeal nerve, which reliably passes just posterior to the cricothyroid joint."
+   "Remove the cricothyroid muscle immediately anterior and inferior to the inferior cornu, release the inferior constrictor from its posterior surface, and clear soft tissue over the midline cricoid. Bipolar helps hemostasis. Stay right on cartilage, because the recurrent laryngeal nerve passes just posterior to the cricothyroid joint."
   ],
   [
    "Separate the joint",
-   "Divide the cricothyroid joint with fine scissors along the posterolateral cricoid so the cornu is completely free. Incomplete release limits forward movement of the cricoid and makes the suture tension ineffective, while dissection beyond the joint risks the nerve."
+   "Place scissor blades against the posterolateral cricoid with the tips straddling the cricothyroid joint and divide it, or use a Cottle elevator. Scissors are less likely to fracture the cornu. Incomplete release limits anterior movement of the cornu, while dissection beyond the joint risks the nerve."
   ],
   [
    "Anchor the cornu",
-   "Tie a permanent suture around the base of the freed inferior cornu. If the cornu is short, broad, or fractured, instead pass a cutting needle through the cornu itself or through the inferior thyroid cartilage edge to gain a secure anchor point."
+   "Pass 2-0 polypropylene around the neck of the freed inferior cornu with a narrow semicircle needle or right-angle clamp, positioned as high on the neck as possible, and tie it leaving equal limbs. If the cornu is short, broad, or fractured, pass a cutting needle through the cornu or inferior thyroid cartilage edge instead."
   ],
   [
    "Pass under the cricoid",
-   "Pass a second suture arm submucosally beneath the anterior cricoid ring close to midline. Follow the needle curve gently so the cricoid does not fracture and the needle stays outside the airway lumen."
+   "Pass the needled limb submucosally beneath the anterior cricoid ring at the midline. Follow the needle curve gently so the cricoid does not fracture and the needle stays outside the airway lumen. Leave the free limb from the cornu knot ready for tying."
   ],
   [
    "Tension the suture",
-   "Tie the cornu suture to the cricoid suture and gradually increase tension while the patient sustains a vowel or performs pitch glides. A correct vector produces a pitch that rises with tension and falls as it is released, along with visible lengthening of the fold."
+   "Bring the free cornu limb to the cricoid limb and sequentially increase and decrease tension while the patient sustains a vowel. A correct vector produces pitch that rises with tension and falls as it is released, with visible fold lengthening. If no pitch change occurs, reposition the suture."
   ],
   [
    "Set the tension",
@@ -63,11 +63,11 @@
   ],
   [
    "Secure the knot",
-   "Tie multiple throws, because polypropylene is prone to slip, and recheck the voice after the knot is set. Confirm on endoscopy that closure from the medialization has not been disturbed by the change in laryngeal geometry."
+   "Use an initial slip knot to hold the chosen tension, then add several throws, because polypropylene is prone to slip. Recheck the voice after the knot is set and confirm on endoscopy that closure from the medialization has not been disturbed by the change in laryngeal geometry."
   ],
   [
    "Manage fractures",
-   "If the cornu fractures, re-anchor through adjacent cartilage and continue. If the thyroid ala fractures, reduce it and fix it with suture or a small plate, then abandon the subluxation to protect the medialization repair and the airway."
+   "If the inferior cornu fractures, place a suture through thyroid cartilage near the fracture line and use it in the same way to complete the subluxation. If the thyroid ala fractures, reduce and fix it and reconsider tensioning, since alar fracture is a contraindication to the subluxation."
   ],
   [
    "Close",
@@ -106,7 +106,7 @@
   ],
   [
    "Mechanically, what does the subluxation do?",
-   "It pulls the cricoid forward relative to the thyroid on the paralyzed side, recreating the cricothyroid vector, lengthening and tensing the fold and rotating the anterior commissure away from the paralyzed side."
+   "It draws the inferior thyroid cornu anteriorly relative to the cricoid on the paralyzed side, recreating the cricothyroid muscle vector. The anterior commissure attachment moves away from the cricoarytenoid joint, lengthening and tensing the fold."
   ],
   [
    "When is it contraindicated?",
@@ -114,7 +114,7 @@
   ],
   [
    "Where is the recurrent laryngeal nerve relative to the cricothyroid joint and how is it protected?",
-   "Immediately posterior to the joint; stay on cartilage when removing cricothyroid muscle and dividing the joint."
+   "Immediately posterior to the joint. Stay on cartilage when removing cricothyroid and inferior constrictor fibers and dividing the joint, and favor bipolar for hemostasis."
   ],
   [
    "How do you confirm the correct suture vector intraoperatively?",
@@ -122,7 +122,7 @@
   ]
  ],
  "source_basis": [
-  "Operative Techniques in Laryngology, 2nd ed (2024), Ch 49 Cricothyroid Subluxation, pp 437-440",
+  "Rosen CA, Simpson CB. Operative Techniques in Laryngology, 2nd ed (2024), Ch 49 Cricothyroid Subluxation, pp 437-440",
   "Operative Techniques in Laryngology (2024), Ch 43 Principles of Laryngeal Framework Surgery"
  ]
 }
