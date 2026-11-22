@@ -12,6 +12,7 @@
     <div class="cards-start-num"><b>{{ sm.due_now }}</b><span>due now</span></div>
     <div class="cards-start-num"><b>{{ sm.new_left_today }}</b><span>new left today</span></div>
     {% if sm.days_left is not none %}<div class="cards-start-num"><b>{{ sm.days_left }}</b><span>days to exam</span></div>{% endif %}
+    <a class="cards-missed-link" href="/cards/missed">Review missed cards by topic →</a>
     <a class="case-btn cards-go" href="/cards/study">{% if sm.due_now or sm.new_left_today %}Start review →{% else %}Open deck →{% endif %}</a>
   </div>
 </section>

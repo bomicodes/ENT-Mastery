@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Missed flashcards · ENT Mastery{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='exam_v531.css', v=ASSET_V) }}">
+<div class="breadcrumb"><a href="/">Home</a> / <a href="/cards">Flashcards</a> / Missed</div>
+<section class="card">
+  <h1>Missed flashcards</h1>
+  <p class="muted">Cards you marked <b>Again</b> in the last 30 days, grouped by the curriculum topic they test. The topics you miss most are first. Read the topic, then go back to the deck.</p>
+  {% if not groups %}<p>No missed cards in the last 30 days. <a href="/cards/study">Start a review →</a></p>{% endif %}
+</section>
+{% for g in groups %}
+<section class="card cards-missed-topic">
+  <h2>{% if g.learn_link %}<a href="{{ g.learn_link }}">{{ g.topic }}</a>{% else %}{{ g.topic }}{% endif %}</h2>
+  <p class="muted">{{ g.domain }} · missed {{ g.misses }}× across {{ g.cards|length }} card{{ '' if g.cards|length == 1 else 's' }}</p>
+  {% if g.learn_link %}<p><a class="case-btn" href="{{ g.learn_link }}">Read the curriculum →</a></p>{% endif %}
+  <ul>
+  {% for c in g.cards %}
+    <li><b>{{ c.stem }}</b><br><span>{{ c.answer }}</span>{% if c.link %} · <a href="{{ c.link }}">board question</a>{% endif %}</li>
+  {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+{% endblock %}
