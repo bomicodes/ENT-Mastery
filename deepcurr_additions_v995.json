@@ -483,5 +483,80 @@
   "topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
   "field": "teach",
   "text": "**Sedation continuum and MAC**: Per ASA, sedation runs from minimal (anxiolysis) to moderate (purposeful response to voice or light touch) to deep (purposeful response only to painful stimulation) to general anesthesia (unarousable). Airway intervention may be needed at deep sedation and beyond. Monitored anesthesia care is a *service* by a qualified anesthesia provider, not a particular depth of sedation. Related pearls: hydromorphone is about 5 times as potent as morphine; remifentanil is ultra-short acting for TIVA; sugammadex encapsulates rocuronium or vecuronium, allowing quick reversal before nerve monitoring. (Pasha 6e, Ch 11, pp 695-697)"
+ },
+ {
+  "topic": "Aging Face / Injectables / Resurfacing",
+  "field": "physiology",
+  "text": "**Toxin preparation and time course**: Botox is a lyophilized complex supplied in 100 U or 200 U vials, each 100 U carrying 0.5 mg human albumin and 0.9 mg sodium chloride. Effect begins within 6-36 hours, reaches its maximum by 7-14 days and lasts 3-4 months; function returns as axonal sprouts and new neuromuscular junctions replace the blocked ones over 3-6 months. (K.J. Lee 12e, Ch 54, p 1048)"
+ },
+ {
+  "topic": "Aging Face / Injectables / Resurfacing",
+  "field": "manage",
+  "text": "**Toxin contraindications and interactions**: avoid toxin in pregnancy or lactation, albumin hypersensitivity, and neuromuscular junction disease (myasthenia gravis, Lambert-Eaton). Drugs that add to junctional blockade (aminoglycosides, penicillamine, quinine, calcium channel blockers) are listed as contraindications, and aspirin or anticoagulation raises bruising risk. Unrealistic expectations are a contraindication too. (K.J. Lee 12e, Ch 54, p 1049)"
+ },
+ {
+  "topic": "Aging Face / Injectables / Resurfacing",
+  "field": "recognize",
+  "text": "**Toxin complications by type**: local effects are pain, edema, erythema, ecchymosis, headache, short-term hyperesthesia and eyelid ptosis. Immunologic: an acute type 1 reaction. Systemic: nausea, fatigue, malaise, flulike symptoms and distant rash. Therapeutic failure comes from circulating neutralizing antibodies. Deep periorbital injection can also cause lagophthalmos. (K.J. Lee 12e, Ch 54, p 1049; Cummings 7e, Ch 26)"
+ },
+ {
+  "topic": "Spasmodic Dysphonia",
+  "field": "operate",
+  "text": "**Laryngeal toxin preparation**: reconstitute the 100 U Botox vial with preservative-free saline to the needed concentration (insert range about 1.25-10 U per 0.1 mL). Inject 0.1 mL per fold (0.2 mL is acceptable and does not threaten the airway). Mix and transfer with a 21 g or larger needle, then inject through an insulated 26-27 g EMG needle. Laryngoscopy-guided injection without EMG needs slightly higher doses. (Operative Techniques in Laryngology 2024, Ch 39, p 345-347)"
+ },
+ {
+  "topic": "Spasmodic Dysphonia",
+  "field": "manage",
+  "text": "**Dose range and bilateral versus unilateral injection**: there is no standard dose. Bilateral adductor doses range from about 0.3 to 15 U per TA-LCA complex, but most patients are controlled with 0.625-2.5 U per side. Unilateral injection can give similar relief, usually at a higher dose and for a shorter time. Bilateral PCA injection is usually staggered, although simultaneous injection with unequal doses has been reported as reasonably safe. After the first PCA injection, the dose for the second side is lowered in proportion to the weakness seen. (Operative Techniques in Laryngology 2024, Ch 39, p 345)"
+ },
+ {
+  "topic": "Spasmodic Dysphonia",
+  "field": "teach",
+  "text": "**The breathy phase is the price of duration**: after injection there are several days of marked weakness, then a 3-4 month plateau of milder weakness that gives the benefit. In adductor SD, the length of the breathy phase roughly tracks the length of benefit, so cutting the dose to shorten breathiness also shortens relief. Supraglottic injection avoids the breathy phase in up to 76% and suits professional voice users. Abductor SD carries the risk of dyspnea instead. (Operative Techniques in Laryngology 2024, Ch 39, p 344-345)"
+ },
+ {
+  "topic": "Spasmodic Dysphonia",
+  "field": "manage",
+  "text": "**Aftercare and the nonresponder**: patients go home right away with no voice restrictions, but nothing by mouth for 60-90 minutes after laryngeal anesthesia. Warn them about breathiness and dysphagia to liquids after TA-LCA injection, and about dyspnea and stridor after the second PCA side. Failure is usually technical. Antibody resistance is very rare; test with an antibody assay or a frontalis test injection. (Operative Techniques in Laryngology 2024, Ch 39, p 344, 348)"
+ },
+ {
+  "topic": "Spasmodic Dysphonia",
+  "field": "localize",
+  "text": "**PCA injection route**: rotate the larynx by hand, pass the EMG needle behind the posterior edge of the thyroid lamina and advance it to the cricoid. The alternative is a transcricoid pass. A sniff fires the PCA and produces an EMG burst, and the toxin is given at that point. Adductor injections go through the cricothyroid membrane into the TA-vocalis complex. (Cummings 7e, Ch 57)"
+ },
+ {
+  "topic": "Bilateral Vocal Fold Immobility",
+  "field": "manage",
+  "text": "**Adductor toxin as a temporizing airway option**: early in bilateral vocal fold paralysis, about 2.5 U into each TA-LCA complex (staged if acute airway worsening is a concern) widens the posterior glottis within days, and the effect lasts about 3 months. (Operative Techniques in Laryngology 2024, Ch 39, p 346)"
+ },
+ {
+  "topic": "Vocal Process Granuloma",
+  "field": "manage",
+  "text": "**Toxin dosing for granuloma**: doses into one or both TA-LCA complexes range from 1.25 to 20 U, and 5 U on one side is usually enough. One treatment, alone or with excision, usually lets the granuloma resolve. Warn patients that the voice will be very weak and breathy for months. Toxin may backfire when glottic insufficiency drives the contact lesion. (Operative Techniques in Laryngology 2024, Ch 39, p 346)"
+ },
+ {
+  "topic": "Cricopharyngeal Dysfunction",
+  "field": "manage",
+  "text": "**Cricopharyngeal toxin specifics**: 50-100 U split among 3-4 sites, injected in the office or the OR, lasts about 5-6 months. Spread into the intrinsic laryngeal muscles can cause vocal fold paralysis. Because 73% of patients who failed toxin improved after myotomy, a poor toxin response does not predict a poor myotomy result. (K.J. Lee 12e, Ch 50, p 917)"
+ },
+ {
+  "topic": "TEP and Alaryngeal Speech",
+  "field": "manage",
+  "text": "**Toxin for pharyngoesophageal spasm**: if hypertonicity persists despite speech therapy, confirm and localize the hypertonic PE segment with videofluoroscopy, mark it on the skin, and inject the constrictor region with 100 U Botox (or 400 U Dysport), ideally through a hollow EMG needle. A lidocaine block is a useful diagnostic test. The benefit often lasts once fluent speech is learned, so myotomy is rarely needed. (Cummings 7e, Ch 111)"
+ },
+ {
+  "topic": "Sialorrhea and Chronic Drooling",
+  "field": "manage",
+  "text": "**Salivary toxin dosing and drawbacks**: published doses vary, about 10-30 U per submandibular gland and 15-40 U per parotid, usually at two sites per gland. Ultrasound guidance may reduce adverse effects such as temporary dysphagia, neck pain, diarrhea and altered gait. Drawbacks are general anesthesia in many children, reinjection every 3-4 months, and possible loss of effect with repeated doses. Type B can be used when type A fails. (Bluestone & Stool, Management of Drooling; Pasha 6e, Ch 9, p 577)"
+ },
+ {
+  "topic": "Sialorrhea and Chronic Drooling",
+  "field": "recognize",
+  "text": "**What to warn about after salivary toxin**: toxin cleaves SNAP-25 at the parasympathetic secretory endings. Gland denervation starts 2-3 days after injection and lasts about 3-9 months, depending on the product. About 10% of patients do not respond at any dose. Spread into the neck muscles can cause dysphagia, aspiration pneumonia and distant weakness. Saliva becomes more acidic as well as scant, so these children need dental care. Repeated injection shrinks the glands on ultrasound. (Cummings 7e, Ch 205)"
+ },
+ {
+  "topic": "Facial Soft-Tissue Lacerations / Burns",
+  "field": "manage",
+  "text": "**Toxin for parotid duct and gland injury**: for a persistent sialocele after aspiration and pressure dressing, consider botulinum toxin injection into the gland. A salivary fistula can be excised with toxin injection and a compression dressing. If the duct cannot be repaired, ligating it and injecting toxin produces a temporary parotitis and then gland atrophy. (Pasha 6e, Ch 10, p 673)"
  }
 ]
