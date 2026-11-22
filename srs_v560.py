@@ -305,6 +305,18 @@ class Catalog:
         return None
 
     def render(self, cid):
+        out = self._render(cid)
+        if out:
+            meta = self.cards.get(cid) or {}
+            concept = meta.get("concept_id") or ""
+            if concept:
+                from urllib.parse import quote
+                # v99: every card links back to the curriculum topic it tests
+                out["learn_link"] = "/concept/id/" + quote(concept, safe="")
+                out["learn_label"] = "Learn the topic: " + (out.get("topic") or "curriculum")
+        return out
+
+    def _render(self, cid):
         meta = self.cards.get(cid)
         q = self.source(cid)
         if not meta or not q:
@@ -614,6 +626,27 @@ def install_srs_v560(app, data, app_mod=None):
         card["intervals"] = preview_intervals(row, exam=exam_ts(get_settings(u)))
         return {"done": False, "card": card, "counts": counts}
 
+    def cards_missed():
+        """v99: cards rated Again in the last 30 days, grouped by curriculum topic."""
+        u = uid()
+        since = time.time() - 30 * DAY
+        rows = _rows("SELECT card_id, MAX(ts) AS last, COUNT(*) AS n FROM srs_log WHERE user_id=? AND rating=1 AND ts>=? "
+                     "GROUP BY card_id ORDER BY last DESC", (u, since))
+        topics = {}
+        for r in rows:
+            c = catalog.render(r["card_id"])
+            if not c:
+                continue
+            key = c.get("learn_link") or c.get("topic") or ""
+            t = topics.setdefault(key, {"topic": c.get("topic") or "", "domain": c.get("domain") or "",
+                                        "learn_link": c.get("learn_link"), "cards": [], "misses": 0, "last": 0})
+            t["cards"].append({"stem": c.get("stem"), "answer": c.get("answer"), "link": c.get("link"),
+                               "n": int(r["n"] or 0)})
+            t["misses"] += int(r["n"] or 0)
+            t["last"] = max(t["last"], float(r["last"] or 0))
+        groups = sorted(topics.values(), key=lambda t: (-t["misses"], -t["last"]))
+        return render_template("cards_missed_v990.html", groups=groups)
+
     def api_next():
         return jsonify(_payload(uid()))
 
@@ -684,6 +717,7 @@ def install_srs_v560(app, data, app_mod=None):
         ("/cards", "cards_home_v560", cards_home, ["GET"]),
         ("/cards/settings", "cards_settings_v560", cards_settings, ["POST"]),
         ("/cards/study", "cards_study_v560", cards_study, ["GET"]),
+        ("/cards/missed", "cards_missed_v990", cards_missed, ["GET"]),
         ("/api/cards/next", "api_cards_next_v560", api_next, ["GET"]),
         ("/api/cards/rate", "api_cards_rate_v560", api_rate, ["POST"]),
         ("/api/cards/pack", "api_cards_pack_v600", api_pack, ["GET"]),

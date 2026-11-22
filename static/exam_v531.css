@@ -136,3 +136,11 @@
 .qx-tracing[hidden]{display:none}
 /* v57 audit: review list sits under the domain card, left-aligned, not a nested card */
 .ex-review{margin:24px 0 32px;max-width:900px;background:none;border:0;border-radius:0;box-shadow:none;overflow:visible}
+
+/* v99: flashcards link back to the curriculum */
+.cards-learn{display:block;margin-top:.5rem;font-weight:600}
+.cards-missed{margin-top:1rem}
+.cards-missed ul{margin:.5rem 0 .75rem 1.1rem}
+.cards-missed-link{display:inline-block;margin-right:1rem}
+.cards-missed-topic ul{margin:.5rem 0 0 1.1rem}
+.cards-missed-topic li{margin-bottom:.5rem}

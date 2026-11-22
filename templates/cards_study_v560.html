@@ -16,6 +16,7 @@
       <p class="cards-pearl" id="cs-pearl"></p>
       <p class="cards-why" id="cs-why"></p>
       <a id="cs-link" href="#" target="_blank" rel="noopener">Open the full question ↗</a>
+      <a id="cs-learn" class="cards-learn" href="#" target="_blank" rel="noopener" hidden></a>
     </div>
     <div class="cards-actions">
       <button type="button" class="cards-flip-btn" id="cs-flip">Show answer <kbd>space</kbd></button>
@@ -35,6 +36,12 @@
   </section>
   <p class="muted cards-error" id="cs-error" hidden>Could not reach the server, and no cards are saved on this device yet. Open this page once while online to save a pack for offline study.</p>
   <p class="cards-offline" id="cs-offline" hidden></p>
+  <section class="card cards-missed" id="cs-missed" hidden>
+    <h2>Missed this session</h2>
+    <p class="muted">Topics behind the cards you marked Again. Open one to read the curriculum.</p>
+    <ul id="cs-missed-list"></ul>
+    <p><a href="/cards/missed">All cards missed in the last 30 days →</a></p>
+  </section>
 </div>
 <script>
 (function(){
@@ -59,6 +66,7 @@
     $('cs-pearl').innerHTML=card.pearl?'<b>Board pearl.</b> '+esc(card.pearl):''; const hk=$('cs-hook'); hk.hidden=!card.hook; hk.innerHTML=card.hook?'<b>Remember it:</b> '+esc(card.hook):'';
     $('cs-why').textContent=card.why||'';
     $('cs-link').href=card.link; $('cs-link').textContent=(card.link_label||'Open the full question')+' ↗';
+    var ln=$('cs-learn'); ln.hidden=!card.learn_link; if(card.learn_link){ ln.href=card.learn_link; ln.textContent=(card.learn_label||'Learn the topic')+' ↗'; }
     for(var r=1;r<=4;r++){ $('iv'+r).textContent=(card.intervals||{})[r]||''; }
     window.scrollTo({top:0,behavior:'smooth'});
   }
@@ -90,8 +98,13 @@
     banner(); nextLocal(); }
   function load(){ sync().then(function(){ return fetch('/api/cards/next',{credentials:'same-origin'}); })
     .then(function(r){ if(!r.ok)throw new Error(r.status); return r.json(); }).then(function(p){ show(p); savePack(); banner(); }).catch(goOffline); }
+  var missed={};
+  function noteMiss(c){ if(!c||!c.learn_link)return; var k=c.learn_link; missed[k]=missed[k]||{topic:c.topic,link:k,n:0}; missed[k].n++;
+    var items=Object.keys(missed).map(function(x){return missed[x]}).sort(function(a,b){return b.n-a.n});
+    $('cs-missed-list').innerHTML=items.map(function(m){return '<li><a href="'+esc(m.link)+'" target="_blank" rel="noopener">'+esc(m.topic)+'</a> <span class="muted">· missed '+m.n+'×</span></li>'}).join('');
+    $('cs-missed').hidden=false; }
   function rate(r){
-    if(!card||!flipped||busy)return; busy=true; done++;
+    if(!card||!flipped||busy)return; if(r===1)noteMiss(card); busy=true; done++;
     if(offline){ busy=false; rateOffline(r); return; }
     fetch('/api/cards/rate',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({card_id:card.id,rating:r})})
       .then(function(x){ if(!x.ok)throw new Error(x.status); return x.json(); }).then(show)

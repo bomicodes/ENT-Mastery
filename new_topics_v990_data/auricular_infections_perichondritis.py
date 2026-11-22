@@ -50,14 +50,14 @@ TOPIC = {
     "**Perichondritis without abscess**: oral antipseudomonal therapy, typically a fluoroquinolone such as ciprofloxacin, with close follow-up in 24-48 hours to detect abscess (K.J. Lee 12e, Ch 22).",
     "**Infected cartilage piercing**: remove the jewelry so the tract can drain, because a retained stud keeps a foreign body and seals in pus (Keene 2004).",
     "**Severe infection or immunocompromise**: IV coverage of Staphylococcus, Streptococcus and Pseudomonas (K.J. Lee 12e, Ch 22).",
-    "**Abscess**: incision and drainage with debridement of necrotic cartilage, then bolsters. Treat for 2-4 weeks to limit cauliflower deformity (K.J. Lee 12e, Ch 22).",
+    "**Abscess**: incision and drainage with debridement of necrotic cartilage, then bolsters or quilting sutures. Treat for 2-4 weeks to limit cauliflower deformity (K.J. Lee 12e, Ch 22).",
     "**Ramsay Hunt**: valacyclovir 1000 mg every 8 hours for 7 days plus high-dose steroids (1 mg/kg/day for 14 days) for facial palsy or SNHL. Surgical decompression is not advised (K.J. Lee 12e, Ch 22).",
     "**Fungal**: topical antifungals for mild disease and IV therapy for severe or disseminated disease, with infectious disease input (K.J. Lee 12e, Ch 22)."
   ]),
   "operate": "\n".join([
     "**Incision placement**: incise along the helical rim or within natural folds (scapha, antihelix) to hide the scar.",
     "**Debridement**: remove all soft, gray, necrotic cartilage back to bleeding viable cartilage, preserving as much framework as possible.",
-    "**Bolster**: through-and-through bolsters (dental rolls or silicone) close dead space and press perichondrium back onto cartilage so it can revascularize (K.J. Lee 12e, Ch 22).",
+    "**Bolster or quilting**: through-and-through bolsters (dental rolls or silicone) or quilting sutures close dead space and press perichondrium back onto cartilage so it can revascularize (K.J. Lee 12e, Ch 22).",
     "**Drains and irrigation**: a small drain or irrigation catheter can be used for extensive abscess cavities.",
     "**Hematoma prevention**: prompt incision and drainage of traumatic auricular hematoma with a bolster or quilting sutures prevents secondary infection and cauliflower ear (K.J. Lee 12e, Ch 22).",
     "**Delayed reconstruction**: wait for infection to clear fully before reconstructing a collapsed ear with cartilage grafts."
@@ -98,7 +98,7 @@ TOPIC = {
     ],
     "board_pearl": "Cartilage piercing perichondritis is Pseudomonas until proven otherwise.",
     "curveball": "She is treated with oral cephalexin and returns in 3 days with a fluctuant helix. What is the next step?",
-    "curveball_answer": "Cephalexin does not cover Pseudomonas, and fluctuance means abscess. She needs incision and drainage with culture and debridement of necrotic cartilage, bolster placement, and antipseudomonal therapy continued for 2-4 weeks to limit cauliflower deformity.",
+    "curveball_answer": "Cephalexin does not cover Pseudomonas, and fluctuance means abscess. She needs incision and drainage with culture and debridement of necrotic cartilage, a bolster or quilting sutures, and antipseudomonal therapy continued for 2-4 weeks to limit cauliflower deformity.",
     "learning_stage": "foundation",
     "focus": "diagnosis"
   },
@@ -136,14 +136,14 @@ TOPIC = {
         "Immediate cartilage graft reconstruction"
       ],
       "answer": 0,
-      "explanation": "An infected auricular hematoma has become a perichondrial abscess. Pus lifts the perichondrium and cuts the cartilage off from its blood supply, so drainage, debridement of nonviable cartilage and bolsters to reapproximate the perichondrium are needed. Pseudomonas is the most common abscess isolate, so therapy must cover it and continue for 2-4 weeks. This sequence limits cauliflower deformity.",
+      "explanation": "An infected auricular hematoma has become a perichondrial abscess. Pus lifts the perichondrium and cuts the cartilage off from its blood supply, so drainage, debridement of nonviable cartilage and bolsters or quilting sutures to reapproximate the perichondrium are needed. Pseudomonas is the most common abscess isolate, so therapy must cover it and continue for 2-4 weeks. This sequence limits cauliflower deformity.",
       "why_wrong": [
         "Correct.",
         "Aspiration alone recurs, and cephalexin misses Pseudomonas.",
         "Compresses and steroids do not treat an abscess.",
         "Reconstruction waits until infection has fully cleared."
       ],
-      "board_pearl": "Auricular abscess: I&D, debride cartilage, bolster, cover Pseudomonas, 2-4 weeks.",
+      "board_pearl": "Auricular abscess: I&D, debride cartilage, bolster or quilt, cover Pseudomonas, 2-4 weeks.",
       "curveball": "Why does untreated auricular hematoma lead to cauliflower ear even without infection?",
       "curveball_answer": "Auricular cartilage receives nutrients by diffusion from the perichondrium. A hematoma separates the two, so cartilage necroses while the perichondrium lays down new disorganized cartilage and fibrosis. Prompt incision and drainage with a bolster or quilting sutures prevents this.",
       "learning_stage": "application",
@@ -253,14 +253,14 @@ TOPIC = {
         "Pack the cavity open without bolsters"
       ],
       "answer": 1,
-      "explanation": "Necrotic cartilage harbors infection and will not survive, so it must be removed back to firm, viable cartilage while preserving as much framework as possible. Through-and-through bolsters then close dead space and press the perichondrium back onto the cartilage so it can be nourished again. Incisions along the helical rim or natural folds hide scars. Antipseudomonal therapy continues for 2-4 weeks.",
+      "explanation": "Necrotic cartilage harbors infection and will not survive, so it must be removed back to firm, viable cartilage while preserving as much framework as possible. Through-and-through bolsters or quilting sutures then close dead space and press the perichondrium back onto the cartilage so it can be nourished again. Incisions along the helical rim or natural folds hide scars. Antipseudomonal therapy continues for 2-4 weeks.",
       "why_wrong": [
         "Leaving necrotic cartilage keeps a nidus for ongoing infection.",
         "Correct.",
         "Removing all cartilage causes severe collapse and is unnecessary.",
         "Open packing without bolsters allows reaccumulation and fibrosis."
       ],
-      "board_pearl": "Debride to viable cartilage, preserve framework, bolster perichondrium back down.",
+      "board_pearl": "Debride to viable cartilage, preserve framework, bolster or quilt the perichondrium back down.",
       "curveball": "When should reconstruction of a collapsed auricle be planned after severe chondritis?",
       "curveball_answer": "Reconstruction is delayed until infection has fully resolved and tissues have softened, typically many months later. Rib or contralateral conchal cartilage grafts are then used, since operating in an infected bed risks graft loss and recurrent chondritis.",
       "learning_stage": "application",
