@@ -500,11 +500,6 @@
   "text": "**Named prognostic systems**: MACIS (Metastasis, Age, Completeness of resection, Invasion, Size) and AMES (Age - men >40/women >50, Metastasis, Extent, Size >=5 cm) stratify survival risk; the ATA system stratifies recurrence risk. Papillary carcinoma has about 95% 5-year survival; follicular 70-85%; Hurthle cell worse (about 50% in Pasha). (Pasha 6e, Ch 3, pp 133-137)"
  },
  {
-  "topic": "Differentiated Thyroid Cancer",
-  "field": "operate",
-  "text": "**Remote-access thyroidectomy**: transoral endoscopic (vestibular), transaxillary, and other endoscopic/robotic approaches avoid a neck scar but require special training, lengthen operative time, add access-site morbidity, and gas insufflation can cause subcutaneous or mediastinal emphysema. (Pasha 6e, Ch 3, p 139)"
- },
- {
   "topic": "Medullary Thyroid Cancer",
   "field": "manage",
   "text": "**Extent of neck surgery**: without clinical nodal disease, total thyroidectomy plus prophylactic central neck dissection; with neck disease, add therapeutic ipsilateral lateral dissection, and consider contralateral lateral dissection when preoperative calcitonin exceeds about 200 pg/mL. Check calcitonin and CEA 2-3 months postop, then every 6-12 months. Pentagastrin/calcium stimulation increases calcitonin specificity. Nodal involvement is present in about 50-60%. (Pasha 6e, Ch 3, pp 137-138)"
