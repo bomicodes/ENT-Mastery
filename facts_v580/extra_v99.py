@@ -1803,7 +1803,7 @@ EXTRA = [
 {
 "qid": "v490-facial-plastics-2-5",
 "front": "Auricular hematoma treatment?",
-"back": "Incision and drainage with a through-and-through bolster."
+"back": "Incision and drainage, then a through-and-through bolster or quilting sutures."
 },
 {
 "qid": "v490-facial-plastics-2-3",
