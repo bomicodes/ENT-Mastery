@@ -5,7 +5,7 @@ TOPIC = {
   "topic": T,
   "overview": "\n".join([
     "**Big picture**: vestibular schwannoma is the most common CPA mass, but meningioma, epidermoid, arachnoid cyst, lipoma, other cranial nerve schwannomas, vascular lesions and metastases must be recognized because treatment differs (Cummings 7e, Ch 179).",
-    "**Meningioma**: the second most common CPA tumor, arising from arachnoid cap cells. Up to 18% of intracranial tumors overall but only about 3% of CPA tumors (Cummings 7e, Ch 179).",
+    "**Meningioma**: the second most common CPA tumor, arising from arachnoid cap cells. Cummings cites up to 18% of intracranial tumors and about 3% of CPA tumors, while most series give 3-10% of CPA masses and current US registry data show meningioma is now the most common primary CNS tumor, close to 40% (Cummings 7e, Ch 179, Ostrom et al. Neuro Oncol 2023).",
     "**Epidermoid (primary cholesteatoma)**: congenital squamous rest filled with keratin that insinuates around the brainstem. Usually presents in the 2nd to 4th decades (Cummings 7e, Ch 179).",
     "**Cystic and fatty lesions**: arachnoid cysts and lipomas are usually managed without excision, so imaging diagnosis spares patients unnecessary surgery (Cummings 7e, Ch 179).",
     "**Other schwannomas**: vestibular schwannomas are about 95% of intracranial schwannomas. Trigeminal is next, followed by jugular foramen (IX-XI) and hypoglossal schwannomas (Cummings 7e, Ch 179).",
@@ -53,7 +53,7 @@ TOPIC = {
   "manage": "\n".join([
     "**Small asymptomatic meningioma**: serial MRI observation is reasonable, especially in older patients, since many grow slowly (Cummings 7e, Ch 179).",
     "**Symptomatic or growing meningioma**: microsurgical resection with removal of involved dura and bone. Stereotactic radiosurgery suits small tumors, residual disease or poor surgical candidates (Cummings 7e, Ch 179).",
-    "**Grade 2-3 meningioma**: higher recurrence, so adjuvant radiation is considered after resection (Louis 2021, Cummings 7e, Ch 179).",
+    "**Grade 2-3 meningioma**: grade 3 receives adjuvant radiation after resection, and grade 2 usually does after subtotal resection. After gross total resection of grade 2, radiation versus surveillance is still being tested in randomized trials such as ROAM/EORTC-1308 (Louis 2021, Cummings 7e, Ch 179).",
     "**Epidermoid**: requires excision, but adherent capsule on brainstem and vessels can be left to avoid deficits, accepting slow recurrence (Cummings 7e, Ch 179).",
     "**Arachnoid cyst**: most need no treatment. Symptomatic cysts are drained or fenestrated through a retrolabyrinthine exposure, not excised (Cummings 7e, Ch 179).",
     "**Lipoma**: observe. Resection risks CN VII and VIII because fat is interwoven with the nerves (Cummings 7e, Ch 179).",
@@ -79,6 +79,7 @@ TOPIC = {
   "textbook_refs": ["Cummings Otolaryngology 7e, Ch 179 (pp 2702-2715)"],
   "literature_refs": [
     "Louis DN et al. Neuro Oncol 2021;23:1231-1251 (WHO 2021 CNS classification: within-type grading, brain invasion as grade 2 criterion, TERT and CDKN2A/B as grade 3 criteria for meningioma)",
+    "Ostrom QT et al. Neuro Oncol 2023;25(Suppl 4):iv1-iv99 (CBTRUS statistical report: meningioma is the most common primary brain and CNS tumor in the US)",
     "Simpson D. J Neurol Neurosurg Psychiatry 1957;20:22-39 (extent of meningioma resection predicts recurrence, origin of the Simpson grades)",
     "Smirniotopoulos JG et al. Radiographics 1993;13:1131-1147 (radiologic-pathologic correlation of CPA masses)"
   ],

@@ -38,7 +38,7 @@ TOPIC = {'domain': 'Head & Neck Oncology',
                     '**High-risk sites**: floor of mouth, ventrolateral tongue and the retromolar '
                     'trigone and soft palate complex (Cummings 7e Ch 87)\n'
                     '**Lichen planus**: CD8 T-cell attack on basal keratinocytes, giving sawtooth '
-                    'rete ridges, Civatte bodies and linear fibrinogen on DIF. Erosive forms have '
+                    'rete ridges, Civatte bodies and shaggy fibrinogen along the basement membrane on DIF. Erosive forms have '
                     'a small transformation risk (under 1% to about 5%) (Cummings 7e Ch 87)\n'
                     '**Submucous fibrosis**: areca nut causes progressive collagen bands with '
                     'trismus and transforms in up to about 7.6% (reported up to 30% in some '
@@ -71,7 +71,7 @@ TOPIC = {'domain': 'Head & Neck Oncology',
               'which is mostly palatal or gingival with about 15% 5-year survival (Cummings 7e Ch '
               '87)\n'
               '**Necrotizing sialometaplasia**: a deep, painless palatal ulcer after trauma, '
-              'injection or intubation that heals in 3-6 weeks. Histology mimics SCC or '
+              'injection or intubation that heals on its own, usually within about 3-10 weeks (Cummings cites 3-6, K.J. Lee 6-10). Histology mimics SCC or '
               'mucoepidermoid carcinoma (Cummings 7e Ch 90)',
  'localize': '**Floor of mouth and ventrolateral tongue**: highest-risk sites for leukoplakia to '
              'transform (Cummings 7e Ch 87)\n'
@@ -334,8 +334,8 @@ TOPIC = {'domain': 'Head & Neck Oncology',
                 'answer': 3,
                 'explanation': 'Necrotizing sialometaplasia is a self-limited ischemic necrosis of '
                                'palatal minor salivary glands after trauma, injection or '
-                               'intubation, and about 77% occur on the palate. It heals on its own '
-                               'in about 3-6 weeks. Squamous metaplasia and pseudoepitheliomatous '
+                               'intubation, and about 77% occur on the palate. It heals on its own, '
+                               'usually within about 3-10 weeks. Squamous metaplasia and pseudoepitheliomatous '
                                'hyperplasia can mimic SCC or mucoepidermoid carcinoma, so '
                                'preserved lobular architecture and review by an experienced '
                                'pathologist are essential. Once confirmed, observation avoids a '
@@ -349,10 +349,10 @@ TOPIC = {'domain': 'Head & Neck Oncology',
                               'Correct.'],
                 'board_pearl': 'Palatal ulcer after injection or intubation with SCC-like '
                                'pathology: think necrotizing sialometaplasia and watch it heal.',
-                'curveball': 'At 10 weeks the ulcer is still present and has not shrunk. What is '
+                'curveball': 'At 12 weeks the ulcer is still present and has not shrunk. What is '
                              'the next step, and why?',
                 'curveball_answer': 'Rebiopsy the lesion with a deeper, generous specimen. '
-                                    'Necrotizing sialometaplasia should heal within about 3-6 '
+                                    'Necrotizing sialometaplasia should heal within about 10 '
                                     'weeks, so persistent nonhealing argues against it and raises '
                                     'concern for SCC, mucoepidermoid carcinoma or another minor '
                                     'salivary malignancy that the first biopsy missed.',

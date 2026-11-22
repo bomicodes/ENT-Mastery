@@ -50,7 +50,7 @@ TOPIC = {
     ]),
     "workup": "\n".join([
         "**Bedside**: otomicroscopy of the hypotympanum, auscultation of ear, mastoid, orbit and neck, jugular compression and head turning, fundus exam and audiogram (Cummings 7e, Ch 153)",
-        "**First imaging**: CTA or CTA/CTV of the head and temporal bone shows sigmoid wall defects, jugular bulb anomalies, aberrant ICA, glomus tumors and sinus stenosis. It finds a relevant cause in roughly 20-30% (Cummings 7e, Ch 153)",
+        "**First imaging**: CTA or CTA/CTV of the head and temporal bone shows sigmoid wall defects, jugular bulb anomalies, aberrant ICA, glomus tumors and sinus stenosis. Across series a cause is found in about 29-72%, and in one CTA/V series 80%. MRI with MRA/MRV is an acceptable radiation-free alternative when exam is normal (Cummings 7e, Ch 153)",
         "**Suspected IIH**: MRI/MRV (empty sella, flattened globes, transverse sinus stenosis), ophthalmology exam and LP. Opening pressure of at least 25 cm H2O in adults supports the diagnosis (Friedman 2013)",
         "**Arterial suspicion**: carotid duplex when the sound is unchanged by compression and risk factors exist. Add CTA or MRA of the neck for dissection or fibromuscular dysplasia (Cummings 7e, Ch 153)",
         "**DAVF**: CTA and MRA can miss small fistulas. Persistent objective bruit or high suspicion warrants catheter angiography with selective ICA, ECA and vertebral injections, which remains the gold standard (Cummings 7e, Ch 136, Ch 153)",
@@ -64,7 +64,7 @@ TOPIC = {
         "**Carotid disease**: endarterectomy or stenting for significant stenosis usually relieves the tinnitus. Dissection gets antithrombotic therapy (Cummings 7e, Ch 153)",
         "**DAVF treatment threshold**: a tolerable bruit without CVD, deficit or hemorrhage can be observed with repeat imaging. Treat for disabling bruit, CVD, neurologic deficit or prior hemorrhage (Cummings 7e, Ch 136)",
         "**DAVF technique**: transarterial liquid embolic (Onyx), transvenous coiling of the involved sinus segment, or both. Particle embolization alone is usually palliative. Surgery or radiosurgery for lesions endovascular routes cannot close. Follow with angiography because recurrence is common (Cummings 7e, Ch 136)",
-        "**Direct CCF**: transarterial closure with detachable balloons or coils, with liquid embolic or a covered stent when needed, preserving the ICA when possible (Cummings 7e, Ch 136)",
+        "**Direct CCF**: endovascular closure of the fistula while preserving the ICA when possible. Detachable coils, often with liquid embolic, are now standard, delivered transarterially or transvenously (inferior petrosal sinus or superior ophthalmic vein). Detachable balloons were the classic tool but are no longer available in the US. Covered stents or flow diverters are options for selected tears (Cummings 7e, Ch 136)",
         "**Indirect CCF**: observation and intermittent manual carotid compression for mild cases, since many close spontaneously. Progressive vision loss, raised intraocular pressure or CVD needs transvenous coiling through the inferior petrosal sinus or ECA embolization (Cummings 7e, Ch 136)",
     ]),
     "operate": "\n".join([
@@ -73,7 +73,7 @@ TOPIC = {
         "**Glomus tympanicum**: transcanal or postauricular excision for lesions with visible margins. Glomus jugulare needs skull base planning, preoperative embolization of ascending pharyngeal feeders and lower cranial nerve counseling (Cummings 7e, Ch 153)",
         "**Aberrant ICA and persistent stapedial artery**: recognize and leave alone. If met unexpectedly at surgery, stop and close. Biopsy can cause catastrophic bleeding (Cummings 7e, Ch 153)",
         "**Endovascular DAVF closure**: an interventional neuroradiology procedure. Pearls for the otologist are cranial nerve palsies from embolic reflux through dangerous ECA-ICA anastomoses and the need to protect normal venous outflow (Cummings 7e, Ch 136)",
-        "**Direct CCF**: balloon or coil closure via the ICA. ICA sacrifice is a fallback only after a balloon occlusion test confirms collateral flow (Cummings 7e, Ch 136)",
+        "**Direct CCF**: coil or liquid embolic closure of the fistula, transarterial or transvenous. ICA sacrifice is a fallback only after a balloon occlusion test confirms collateral flow (Cummings 7e, Ch 136)",
     ]),
     "teach": "\n".join([
         "**Pulse or not?**: ask whether the sound beats with the heart. Pulse-synchronous means vessels and needs imaging. Clicking means muscle or tube",
@@ -161,7 +161,7 @@ TOPIC = {
                 "Surgery without an angiographic diagnosis risks a dangerous, untreated fistula.",
                 "Correct.",
             ],
-            "board_pearl": "Normal CTA does not exclude DAVF; objective bruit warrants catheter angiography.",
+            "board_pearl": "Normal CTA does not exclude DAVF. Objective bruit warrants catheter angiography.",
             "curveball": "Angiography shows a DAVF fed by occipital artery branches. Which drainage finding most raises hemorrhage risk?",
             "curveball_answer": "Retrograde flow into cortical veins. Cortical venous drainage causes venous hypertension, deficits and parenchymal or subarachnoid hemorrhage and marks a high-risk lesion in the Borden and Cognard systems. Drainage only into the sinus in an antegrade direction carries low risk.",
             "learning_stage": "application",
@@ -211,7 +211,7 @@ TOPIC = {
             ],
             "board_pearl": "Pulsatile proptosis, chemosis and orbital bruit after head trauma means direct CCF.",
             "curveball": "Which imaging finding on contrast CT most supports this diagnosis before angiography?",
-            "curveball_answer": "An enlarged superior ophthalmic vein with a bulging, enlarged cavernous sinus and proptosis. Extraocular muscles may be swollen from venous congestion. Catheter angiography then confirms the direct shunt and guides balloon or coil closure.",
+            "curveball_answer": "An enlarged superior ophthalmic vein with a bulging, enlarged cavernous sinus and proptosis. Extraocular muscles may be swollen from venous congestion. Catheter angiography then confirms the direct shunt and guides endovascular coil or liquid embolic closure.",
             "learning_stage": "application",
             "focus": "diagnosis",
         },
@@ -228,7 +228,7 @@ TOPIC = {
             "explanation": "This is an indirect (dural) carotid-cavernous fistula, the typical low-flow lesion of older women. Many close spontaneously, sometimes after angiography or air travel, and intermittent manual compression of the carotid and jugular can encourage closure. With normal vision and pressure and no cortical venous drainage, conservative care with close ophthalmology follow-up is appropriate. Treatment, usually transvenous coiling through the inferior petrosal sinus, is reserved for progression.",
             "why_wrong": [
                 "Correct.",
-                "Balloon closure via the ICA is for high-flow direct fistulas, not mild dural ones.",
+                "ICA occlusion is never first-line, and urgent intervention is not needed for a mild dural fistula.",
                 "Open or endoscopic cavernous sinus surgery is not a treatment for dural CCF.",
                 "Carotid ligation is obsolete, risks stroke and leaves meningeal feeders.",
             ],

@@ -33,7 +33,7 @@ TOPIC = {'domain': 'Head & Neck Oncology',
                'canal (inferior alveolar nerve) close to the ridge surface and removes the height '
                'that protects against fracture after marginal mandibulectomy (Cummings 7e, Ch 91)\n'
                '**Lymphatics**: buccal to levels IA/IB (including perifacial/buccinator nodes) and '
-               'IIA. Hard palate to IIA, III and retropharyngeal nodes. RMT and alveolus mainly to '
+               'IIA. Hard palate to IB, IIA and retropharyngeal nodes (bilaterally when it nears the midline). RMT and alveolus mainly to '
                'IB-II (Pasha 6e, Ch 6)',
  'pathophysiology': '**Mandibular invasion routes**: tumor enters at the point of contact, through '
                     'the occlusal ridge in edentulous jaws and through tooth sockets/periodontal '
@@ -371,7 +371,7 @@ TOPIC = {'domain': 'Head & Neck Oncology',
                                'clinically and histologically. Preserved lobular architecture with '
                                'squamous metaplasia of ducts is the key clue, and review by an '
                                'experienced pathologist prevents overtreatment. The ulcer heals on '
-                               'its own within several weeks, so management is observation with '
+                               'its own, usually within about 3-10 weeks, so management is observation with '
                                'close follow-up and no palatal resection.',
                 'why_wrong': ['Correct.',
                               'Metaplasia within preserved lobules distinguishes it from SCC, so '
@@ -382,7 +382,7 @@ TOPIC = {'domain': 'Head & Neck Oncology',
                               'hosts, not a post-dental crater.'],
                 'board_pearl': 'Palatal ulcer differential: SCC, minor salivary carcinoma, '
                                'necrotizing sialometaplasia, invasive fungal disease and lymphoma.',
-                'curveball': 'At follow-up the ulcer has not healed after about 8 weeks. What '
+                'curveball': 'At follow-up the ulcer has not healed after about 12 weeks. What '
                              'should be done next?',
                 'curveball_answer': 'Persistent nonhealing argues against necrotizing '
                                     'sialometaplasia, so the lesion should be rebiopsied with a '

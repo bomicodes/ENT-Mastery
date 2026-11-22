@@ -45,7 +45,8 @@ TOPIC = {
   ]),
   "manage": "\n".join([
     "**Primary surgery**: complete resection with negative margins is the cornerstone, often by endoscopic endonasal approach when margins are achievable, or open approaches as needed (Pasha 6e, Ch 6).",
-    "**Adjuvant radiation**: improves locoregional control but has not been shown to improve overall survival. High-dose conventional fractionation (over 54 Gy) is cited (K.J. Lee 12e, Ch 43, Owens 2003).",
+    "**Adjuvant radiation**: improves local control but has not been shown to improve overall survival. It is offered to most resected patients, and both conventional and hypofractionated schedules are used (K.J. Lee 12e, Ch 43, Owens 2003).",
+    "**Adjuvant systemic therapy**: high recurrence risk after resection has led many centers to offer adjuvant PD-1 blockade or enrollment in a trial, although mucosal patients were excluded from or few in the pivotal adjuvant melanoma trials, so the benefit is extrapolated rather than proven (NCCN Head and Neck Cancers, mucosal melanoma).",
     "**Neck**: therapeutic neck dissection for clinically positive nodes. Elective neck dissection is generally not recommended for sinonasal disease, though it may be considered for oral cavity primaries with higher occult nodal rates (K.J. Lee 12e, Ch 43).",
     "**Systemic therapy**: PD-1 or combined PD-1/CTLA-4 checkpoint blockade for unresectable or metastatic disease, with lower response rates than in cutaneous melanoma (Pasha 6e, Ch 6).",
     "**Targeted therapy**: imatinib for KIT-mutated tumors, BRAF/MEK inhibitors for the minority with BRAF V600 mutation (Pasha 6e, Ch 6, Carvajal 2011).",

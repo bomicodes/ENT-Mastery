@@ -16,7 +16,7 @@ TOPIC = {
     "**SCALP layers**: skin, subcutaneous tissue, galea aponeurosis, loose areolar tissue and pericranium. Coronal and pretrichial lifts work subgaleal, endoscopic lifts work subperiosteal and midforehead or direct lifts work subcutaneous (Pasha 6e, Ch 8, p 504).",
     "**Blood supply**: supraorbital and supratrochlear arteries (ophthalmic, internal carotid system) and the frontal branch of the superficial temporal artery (external carotid system) (Cummings 7e, Ch 25).",
     "**Sensation**: supraorbital and supratrochlear nerves (V1) supply forehead and scalp. The deep supraorbital branch runs just above the periosteum toward the parietal scalp. Zygomaticotemporal nerve (V2) supplies the temple (Cummings 7e, Ch 25).",
-    "**Orbital retaining ligament**: attaches 2-3 mm above the inferior supraorbital rim and separates brow from upper lid. It must be released for the brow to move (Cummings 7e, Ch 25)."
+    "**Orbital retaining ligament**: inserts on the supraorbital rim 2-3 mm above its inferior (orbital) edge and separates brow from upper lid. It must be released for the brow to move (Cummings 7e, Ch 25)."
   ]),
   "pathophysiology": "\n".join([
     "**Lateral brow ptosis first**: the lateral brow lacks frontalis support beyond the temporal fusion line, so it descends first and produces lateral hooding (Cummings 7e, Ch 25).",
@@ -34,7 +34,7 @@ TOPIC = {
     "**Photography**: standardized frontal, oblique and lateral views at rest and with animation for planning and consent."
   ]),
   "localize": "\n".join([
-    "**Frontal branch of the facial nerve**: travels deep to the temporoparietal fascia (superficial temporal fascia) over the temple. Dissect directly on the deep temporal fascia so the nerve rides up safely in the flap (Cummings 7e, Ch 25).",
+    "**Frontal branch of the facial nerve**: travels within the undersurface of the temporoparietal fascia (superficial temporal fascia) over the temple, along Pitanguy line from 0.5 cm below the tragus to 1.5 cm above the lateral brow. Dissect directly on the deep temporal fascia so the nerve rides up safely in the flap (Cummings 7e, Ch 25).",
     "**Sentinel vein**: a zygomaticotemporal vein branch piercing the deep temporal fascia about 1 cm lateral to the lateral orbital rim. The frontal branch lies just superficial to it, so cauterize it only near its base (Cummings 7e, Ch 25).",
     "**Conjoint tendon**: fusion of the temporal and frontal layers along the temporal line. Divide it to connect the temporal and central pockets during endoscopic lift (Cummings 7e, Ch 25).",
     "**Supraorbital bundle**: exits a notch or foramen at about the medial limbus. Switch to careful spreading about 1-2 cm above the rim to preserve it and the supratrochlear bundle medially (Cummings 7e, Ch 25).",
@@ -56,7 +56,7 @@ TOPIC = {
     "**Facial paralysis or unilateral ptosis**: direct brow lift (incision at the upper brow hairs) gives the most precise elevation and preserves scalp sensation. Bushy brows hide the scar best (Cummings 7e, Ch 25).",
     "**Mild lateral ptosis during blepharoplasty**: internal browpexy through the lid crease incision sutures brow fat and orbicularis to periosteum higher up (Cummings 7e, Ch 25).",
     "**Lateral hooding only**: temporal lift through a hair-bearing temporal incision improves the lateral brow but not the medial brow or glabella (Cummings 7e, Ch 25, Table 25.1).",
-    "**Nonsurgical adjuncts**: botulinum toxin to depressors (about 20 units glabellar total, 4-6 units lateral orbicularis per side) and hyaluronic acid filler above the rim. Do not inject the frontalis after a lift (Cummings 7e, Ch 25)."
+    "**Nonsurgical adjuncts**: botulinum toxin to depressors (about 20 units onabotulinumtoxinA glabellar total, plus a few units to the lateral orbicularis under the brow tail for a chemical lateral brow lift) and hyaluronic acid filler above the rim. Do not inject the frontalis after a lift (Cummings 7e, Ch 25)."
   ]),
   "operate": "\n".join([
     "**Endoscopic technique**: central and temporal scalp incisions, subperiosteal central pocket, temporal dissection on the deep temporal fascia, division of the conjoint tendon and release of periosteum at the arcus marginalis (Cummings 7e, Ch 25).",
@@ -130,7 +130,7 @@ TOPIC = {
       ],
       "board_pearl": "Corrugator makes vertical lines, procerus and frontalis make horizontal lines.",
       "curveball": "Which complication is most feared when injecting glabellar toxin too close to the orbital rim?",
-      "curveball_answer": "Upper eyelid ptosis from toxin diffusing to the levator palpebrae, about 1% after glabellar injection. The orbital retaining ligament seal is incomplete around the neurovascular bundles, so stay above the rim.",
+      "curveball_answer": "Upper eyelid ptosis from toxin diffusing to the levator palpebrae, reported in roughly 1-5% after glabellar injection. Stay about 1 cm above the bony rim at the midpupillary line, and apraclonidine drops can temporarily raise the lid by stimulating Muller muscle while it wears off.",
       "learning_stage": "foundation",
       "focus": "anatomy"
     },
@@ -147,7 +147,7 @@ TOPIC = {
       "explanation": "Paralytic unilateral brow ptosis is the classic indication for a direct brow lift. It gives the most precise elevation, can be done on one side, and preserves scalp sensation. Thick brow hair hides the scar. Endoscopic and coronal lifts are poor choices in a bald man and are bilateral operations for cosmetic ptosis.",
       "why_wrong": [
         "Correct.",
-        "Endoscopic lift is contraindicated by baldness and offers less fine control.",
+        "Endoscopic lift is relatively contraindicated by baldness and offers less precise unilateral control.",
         "Coronal lift leaves a visible scar in a bald scalp and lifts both sides.",
         "Blepharoplasty alone will not lift a paralyzed brow and may worsen it."
       ],
@@ -217,7 +217,7 @@ TOPIC = {
       "answer": 3,
       "explanation": "In a balding man, scalp incisions are visible and the endoscopic and coronal approaches are relatively contraindicated. A midforehead lift places the incision in a deep existing crease, which camouflages well in thin, dry skin. Dissection is subcutaneous, which preserves forehead sensation. Thick oily skin is a relative contraindication because the scar shows.",
       "why_wrong": [
-        "Endoscopic lift is contraindicated by male-pattern baldness and unstable hairline.",
+        "Endoscopic lift is relatively contraindicated by male-pattern baldness and an unstable hairline.",
         "Coronal incision shows in a bald scalp and raises the hairline.",
         "Pretrichial incision has no hairline to hide in when the patient is bald.",
         "Correct."

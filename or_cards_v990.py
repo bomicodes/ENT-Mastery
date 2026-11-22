@@ -81,9 +81,12 @@ def install_or_steps_v990(data):
         if not c:
             missing.append(slug)
             continue
-        steps = [[str(t), " ".join(str(d).split())] for t, d in r["steps"]]
-        c["steps_v840"] = steps
-        c["steps"] = [f"{t}. {d}" for t, d in steps]
+        if r.get("steps"):
+            steps = [[str(t), " ".join(str(d).split())] for t, d in r["steps"]]
+            c["steps_v840"] = steps
+            c["steps"] = [f"{t}. {d}" for t, d in steps]
+        for k, v in (r.get("fields") or {}).items():
+            c[k] = v
         lab = r["source_label"]
         c["steps_source_v840"] = lab[:1].upper() + lab[1:]
         if r.get("title"):

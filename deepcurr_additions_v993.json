@@ -27,7 +27,7 @@
  {
   "topic": "Endoscopic Pituitary / Anterior Skull Base Approach",
   "field": "manage",
-  "text": "**Postoperative diabetes insipidus criteria**: After sellar surgery, urine output above 2-3 mL/kg over 2 hours suggests DI. It is confirmed by serum sodium above 150 mEq/L with dilute urine (specific gravity under 1.005, osmolality 50-150 mOsm/kg). Mild DI is managed with fluid and electrolyte replacement. Desmopressin is given for persistent DI, severe dehydration or sodium disturbance, or troublesome polyuria and thirst. Postoperative DI is usually self-limited. Patients at risk of cortisol deficiency get perioperative stress steroids. (Bluestone & Stool 5e, Ch 115, p 1938)"
+  "text": "**Postoperative diabetes insipidus criteria**: After sellar surgery, urine output above 2-3 mL/kg/h for 2 consecutive hours suggests DI. It is confirmed by serum sodium above 150 mEq/L with dilute urine (specific gravity under 1.005, osmolality 50-150 mOsm/kg). Mild DI is managed with fluid and electrolyte replacement. Desmopressin is given for persistent DI, severe dehydration or sodium disturbance, or troublesome polyuria and thirst. Postoperative DI is usually self-limited. Patients at risk of cortisol deficiency get perioperative stress steroids. (Bluestone & Stool 5e, Ch 115, p 1938)"
  },
  {
   "topic": "Endoscopic Pituitary / Anterior Skull Base Approach",
@@ -57,7 +57,7 @@
  {
   "topic": "Neonatal Nasal Obstruction and Congenital Nasal Masses",
   "field": "operate",
-  "text": "**Dermoid with skull base extension**: Nasal dermoids make up about 61% of congenital midline nasal masses, and 5-45% extend intracranially at the foramen cecum or crista galli. A bifid crista on CT is suggestive but not diagnostic, because the infant crista may be unossified; MRI is the study of choice. Incomplete excision of the cyst or tract recurs in 50-100%. Excise a skin punctum, use an external rhinoplasty approach for extracranial disease, and follow an intracranial tract endonasally, drilling the skull base to dura and marsupializing any extradural part. If a dural tract biopsy shows dermal elements, a craniotomy is needed for complete removal. (Bluestone & Stool 5e, Ch 115, p 1931-1932)"
+  "text": "**Dermoid with skull base extension**: Nasal dermoids make up about 61% of congenital midline nasal masses, and 5-45% extend intracranially at the foramen cecum or crista galli. A bifid crista on CT is suggestive but not diagnostic, because the infant crista may be unossified. MRI is the study of choice. Incomplete excision of the cyst or tract recurs in 50-100%. Excise a skin punctum, use an external rhinoplasty approach for extracranial disease, and follow an intracranial tract endonasally, drilling the skull base to dura and marsupializing any extradural part. If a dural tract biopsy shows dermal elements, a craniotomy is needed for complete removal. (Bluestone & Stool 5e, Ch 115, p 1931-1932)"
  },
  {
   "topic": "Neonatal Nasal Obstruction and Congenital Nasal Masses",
@@ -92,7 +92,7 @@
  {
   "topic": "Pediatric Speech Disorders",
   "field": "workup",
-  "text": "**Language referral indicators by age**: Refer for full speech-language evaluation when a child falls at or below about the 10th percentile. At 12 months, the trigger is no response to at least one familiar word in a familiar setting, or little interest in communicating with a caregiver. At 24-36 months, it is fewer than 50 words or no two-word combinations (Language Development Survey); 50-60% of these toddlers still score at or below the 10th percentile at ages 3-5. A 3-year-old speaking mainly single words, or a 4-year-old who cannot hold a simple conversation in roughly three-word utterances, should be referred. Verify hearing on the day of testing, because transient conductive loss is common. (Bluestone & Stool 5e, Ch 116, p 1945-1946)"
+  "text": "**Language referral indicators by age**: Refer for full speech-language evaluation when a child falls at or below about the 10th percentile. At 12 months, the trigger is no response to at least one familiar word in a familiar setting, or little interest in communicating with a caregiver. At 24-36 months, it is fewer than 50 words or no two-word combinations (Language Development Survey). 50-60% of these toddlers still score at or below the 10th percentile at ages 3-5. A 3-year-old speaking mainly single words, or a 4-year-old who cannot hold a simple conversation in roughly three-word utterances, should be referred. Verify hearing on the day of testing, because transient conductive loss is common. (Bluestone & Stool 5e, Ch 116, p 1945-1946)"
  },
  {
   "topic": "Pediatric Speech Disorders",
@@ -117,12 +117,12 @@
  {
   "topic": "Velopharyngeal Insufficiency",
   "field": "pathophysiology",
-  "text": "**Post-adenoidectomy and post-palatoplasty VPI**: In this text, VPI after adenoidectomy occurs in about 1 in 1200 children. Risk rises with a repaired cleft or submucous cleft, oromotor delay, generalized hypotonia, intellectual disability, a family history of clefting or VPI, and preoperative nasal regurgitation or hypernasality; superior-half (partial) adenoidectomy reduces it. Even after palatoplasty, 20-30% of cleft patients still have VPI. Very large tonsils whose upper poles project between the velum and pharyngeal wall can also cause VPI. (Bluestone & Stool 5e, Ch 117, p 1963-1964)"
+  "text": "**Post-adenoidectomy and post-palatoplasty VPI**: In this text, VPI after adenoidectomy occurs in about 1 in 1200 children. Risk rises with a repaired cleft or submucous cleft, oromotor delay, generalized hypotonia, intellectual disability, a family history of clefting or VPI, and preoperative nasal regurgitation or hypernasality. Superior-half (partial) adenoidectomy reduces it. Even after palatoplasty, 20-30% of cleft patients still have VPI. Very large tonsils whose upper poles project between the velum and pharyngeal wall can also cause VPI. (Bluestone & Stool 5e, Ch 117, p 1963-1964)"
  },
  {
   "topic": "Velopharyngeal Insufficiency",
   "field": "operate",
-  "text": "**Pharyngeal flap: airway safety and technique**: Adenotonsillar hypertrophy is the most common problem complicating recovery from a pharyngeal flap. Remove enlarged tonsils and adenoids first and wait 4-6 weeks. In retrognathic children, especially those who needed a tracheotomy in infancy, get a sleep study and consider waiting for growth; otherwise the flap may need takedown, CPAP or tracheotomy. The superiorly based flap is raised on prevertebral fascia with its base near the C1 arch and is sized to the gap. A flap that is too narrow leaves VPI, and one that is too wide or whose ports scar down causes hyponasality and OSA. Poor lateral wall motion before surgery is not a contraindication. (Bluestone & Stool 5e, Ch 117, p 1968)"
+  "text": "**Pharyngeal flap: airway safety and technique**: Adenotonsillar hypertrophy is the most common problem complicating recovery from a pharyngeal flap. Remove enlarged tonsils and adenoids first and wait 4-6 weeks. In retrognathic children, especially those who needed a tracheotomy in infancy, get a sleep study and consider waiting for growth. Otherwise the flap may need takedown, CPAP or tracheotomy. The superiorly based flap is raised on prevertebral fascia with its base near the C1 arch and is sized to the gap. A flap that is too narrow leaves VPI, and one that is too wide or whose ports scar down causes hyponasality and OSA. Poor lateral wall motion before surgery is not a contraindication. (Bluestone & Stool 5e, Ch 117, p 1968)"
  },
  {
   "topic": "Velopharyngeal Insufficiency",
@@ -147,12 +147,12 @@
  {
   "topic": "Vocal Fold Nodules",
   "field": "recognize",
-  "text": "**Nodules in children**: Nodules are the most common cause of childhood dysphonia (about 50% of dysphonic children; 56% in a 599-patient series), with a prepubertal male predominance. Most resolve with voice therapy, hydration and patience, and even children 4 and younger can benefit from direct therapy. Surgery is not first-line and is considered only for persistent nodules that impair intelligibility in a motivated family. On stroboscopy, preserved mucosal wave favors a nodule, while an adynamic segment suggests a cyst or other lesion. (Bluestone & Stool 5e, Ch 118, p 1953, 1978-1979)"
+  "text": "**Nodules in children**: Nodules are the most common cause of childhood dysphonia (about 50% of dysphonic children, 56% in a 599-patient series), with a prepubertal male predominance. Most resolve with voice therapy, hydration and patience, and even children 4 and younger can benefit from direct therapy. Surgery is not first-line and is considered only for persistent nodules that impair intelligibility in a motivated family. On stroboscopy, preserved mucosal wave favors a nodule, while an adynamic segment suggests a cyst or other lesion. (Bluestone & Stool 5e, Ch 118, p 1953, 1978-1979)"
  },
  {
   "topic": "Pediatric Vocal Fold Immobility",
   "field": "manage",
-  "text": "**Pediatric medialization ladder**: Left fold palsy after PDA ligation causes a breathy voice and aspiration of thin liquids. Injection medialization can be done even in infants, using temporary gels for immediate airway protection or fat or calcium hydroxylapatite for longer effect; check the swallow afterward with a modified barium swallow. School-aged children start with voice therapy. Younger children get injection if therapy fails, while older children and adolescents can have framework surgery with implants that can be upsized as the larynx grows (adolescents may tolerate it under local anesthesia). Ansa-to-RLN reinnervation adds tone. Voice therapy is still needed after surgery, because compensatory hyperfunction persists after the gap is closed. (Bluestone & Stool 5e, Ch 118, p 1979-1980)"
+  "text": "**Pediatric medialization ladder**: Left fold palsy after PDA ligation causes a breathy voice and aspiration of thin liquids. Injection medialization can be done even in infants, using temporary gels for immediate airway protection or fat or calcium hydroxylapatite for longer effect. Check the swallow afterward with a modified barium swallow. School-aged children start with voice therapy. Younger children get injection if therapy fails, while older children and adolescents can have framework surgery with implants that can be upsized as the larynx grows (adolescents may tolerate it under local anesthesia). Ansa-to-RLN reinnervation adds tone. Voice therapy is still needed after surgery, because compensatory hyperfunction persists after the gap is closed. (Bluestone & Stool 5e, Ch 118, p 1979-1980)"
  },
  {
   "topic": "Pediatric Hearing Loss Workup",
@@ -232,17 +232,17 @@
  {
   "topic": "Muscle Tension Dysphonia",
   "field": "workup",
-  "text": "**Koufman–Blalock MTD classes**: Class I is an isometric pattern with an enlarged posterior glottic gap, a high larynx and palpable neck tension; it is common with nodules. Class II is lateral (side-to-side) supraglottic constriction with the false folds adducted; at its extreme the patient phonates on the false folds (plica ventricularis), often as compensation after laryngitis or surgery. Class III is anteroposterior constriction in which the epiglottis and arytenoids hide at least 50% of the glottis. Class IV is complete AP contact of the epiglottis and arytenoids. (Cummings 7e, Ch 58, p 848)"
+  "text": "**Koufman–Blalock MTD classes**: Class I is an isometric pattern with an enlarged posterior glottic gap, a high larynx and palpable neck tension. It is common with nodules. Class II is lateral (side-to-side) supraglottic constriction with the false folds adducted. At its extreme the patient phonates on the false folds (plica ventricularis), often as compensation after laryngitis or surgery. Class III is anteroposterior constriction in which the epiglottis and arytenoids hide at least 50% of the glottis. Class IV is complete AP contact of the epiglottis and arytenoids. (Cummings 7e, Ch 58, p 848)"
  },
  {
   "topic": "Professional Voice",
   "field": "manage",
-  "text": "**Systemic corticosteroids for performers**: steroids are appropriate when the risk of permanent damage is low: edema from episodic overuse, mild-to-moderate laryngitis, allergic edema, and (empirically) hemorrhage. If the performance is within 24 hours, give dexamethasone 4 mg plus methylprednisolone 60 mg IM; in subacute cases, give a 3–5 day oral burst with a rapid taper. Never use them for the first time just before a performance, because idiosyncratic voice worsening or mood effects can occur; trial them before a studio session instead. Avoid inhaled or topically applied laryngeal steroids, which irritate the mucosa and promote Candida. (Cummings 7e, Ch 58, p 850)"
+  "text": "**Systemic corticosteroids for performers**: steroids are appropriate when the risk of permanent damage is low: edema from episodic overuse, mild-to-moderate laryngitis, allergic edema, and (empirically) hemorrhage. If the performance is within 24 hours, give dexamethasone 4 mg plus methylprednisolone 60 mg IM. In subacute cases, give a 3–5 day oral burst with a rapid taper. Never use them for the first time just before a performance, because idiosyncratic voice worsening or mood effects can occur. Trial them before a studio session instead. Avoid inhaled or topically applied laryngeal steroids, which irritate the mucosa and promote Candida. (Cummings 7e, Ch 58, p 850)"
  },
  {
   "topic": "Professional Voice",
   "field": "manage",
-  "text": "**Medications singers should avoid**: avoid sedating antihistamines and antihistamine-decongestant combinations because they dry the mucosa; treat allergy with nasal steroids, nonsedating agents or immunotherapy. Avoid aspirin because of hemorrhage risk. Avoid topical anesthetic throat sprays: they let the singer overwork an injured fold, so a singer who cannot perform without one should not perform. Menthol dries the mucosa and can become a habit. Guaifenesin may thin secretions. Beta-blockers for stage fright should be used only rarely, never routinely, because they blunt performance. Hydrate to pale urine (at least about 64 oz a day, more when flying). (Cummings 7e, Ch 58, p 848–850)"
+  "text": "**Medications singers should avoid**: avoid sedating antihistamines and antihistamine-decongestant combinations because they dry the mucosa. Treat allergy with nasal steroids, nonsedating agents or immunotherapy. Avoid aspirin because of hemorrhage risk. Avoid topical anesthetic throat sprays: they let the singer overwork an injured fold, so a singer who cannot perform without one should not perform. Menthol dries the mucosa and can become a habit. Guaifenesin may thin secretions. Beta-blockers for stage fright should be used only rarely, never routinely, because they blunt performance. Hydrate to pale urine (at least about 64 oz a day, more when flying). (Cummings 7e, Ch 58, p 848–850)"
  },
  {
   "topic": "Professional Voice",
@@ -252,12 +252,12 @@
  {
   "topic": "Professional Voice",
   "field": "manage",
-  "text": "**Vocal fold varix**: varices occur mostly in female professional singers and may enlarge before and during menses, raising the risk of hemorrhage. Assess their functional impact with serial stroboscopy across the menstrual cycle. First-line care is hydration, avoiding caffeine, and voice therapy; hormonal manipulation is unproven. Treat with surgery or laser for recurrent hemorrhage, enlargement, or persistent dysphonia despite maximal behavioral care. In the OR, apply 1:10,000 epinephrine and coagulate the feeding and then the draining vessels with a defocused 1–2 W CO2, KTP or PDL laser, sparing the medial vibratory surface. (Cummings 7e, Ch 58, p 849, 852)"
+  "text": "**Vocal fold varix**: varices occur mostly in female professional singers and may enlarge before and during menses, raising the risk of hemorrhage. Assess their functional impact with serial stroboscopy across the menstrual cycle. First-line care is hydration, avoiding caffeine, and voice therapy. Hormonal manipulation is unproven. Treat with surgery or laser for recurrent hemorrhage, enlargement, or persistent dysphonia despite maximal behavioral care. In the OR, apply 1:10,000 epinephrine and coagulate the feeding and then the draining vessels with a defocused 1–2 W CO2, KTP or PDL laser, sparing the medial vibratory surface. (Cummings 7e, Ch 58, p 849, 852)"
  },
  {
   "topic": "Professional Voice",
   "field": "operate",
-  "text": "**Post-microflap recovery phases**: give 5–7 days of complete voice rest for limited dissection, or 10–14 days for extensive or revision surgery. Next, with SLP guidance, start at about 5 minutes of talking and double it daily, reaching full conversation by weeks 3–4; repeat stroboscopy at 2–3 weeks. From months 2–3, singing reeducation with a pedagogue follows. Most patients return to professional activity at about 3 months, and follow-up runs to about 24 months. Intubate gently with the smallest tube, done by the surgeon or an experienced anesthesiologist. (Cummings 7e, Ch 58, p 852–853)"
+  "text": "**Post-microflap recovery phases**: give 5–7 days of complete voice rest for limited dissection, or 10–14 days for extensive or revision surgery. Next, with SLP guidance, start at about 5 minutes of talking and double it daily, reaching full conversation by weeks 3–4. Repeat stroboscopy at 2–3 weeks. From months 2–3, singing reeducation with a pedagogue follows. Most patients return to professional activity at about 3 months, and follow-up runs to about 24 months. Intubate gently with the smallest tube, done by the surgeon or an experienced anesthesiologist. (Cummings 7e, Ch 58, p 852–853)"
  },
  {
   "topic": "Professional Voice",
@@ -277,7 +277,7 @@
  {
   "topic": "Leukoplakia / Laryngeal Dysplasia",
   "field": "workup",
-  "text": "**Narrow-band imaging**: NBI filters white light down to blue and green bands that hemoglobin absorbs, which highlights the microvessels under leukoplakia and directs biopsy to the most suspicious area. The Ni vascular classification reached about 89% sensitivity and 93% specificity. The simpler ELS scheme separates longitudinal vessel changes (benign) from perpendicular changes such as dots and loops (papilloma, dysplasia, cancer); in one study it reached 100% sensitivity and 95% specificity. NBI also finds second primaries in the oropharynx and hypopharynx better than white light. (Cummings 7e, Ch 54, p 817)"
+  "text": "**Narrow-band imaging**: NBI filters white light down to blue and green bands that hemoglobin absorbs, which highlights the microvessels under leukoplakia and directs biopsy to the most suspicious area. The Ni vascular classification reached about 89% sensitivity and 93% specificity. The simpler ELS scheme separates longitudinal vessel changes (benign) from perpendicular changes such as dots and loops (papilloma, dysplasia, cancer). In one study it reached 100% sensitivity and 95% specificity. NBI also finds second primaries in the oropharynx and hypopharynx better than white light. (Cummings 7e, Ch 54, p 817)"
  },
  {
   "topic": "Velopharyngeal Insufficiency",
@@ -292,12 +292,12 @@
  {
   "topic": "Laser / Energy Safety in Otolaryngology",
   "field": "physiology",
-  "text": "**Extinction length by laser**: CO2 (10.6 µm) is absorbed by water within about 0.03 mm regardless of tissue color, with negligible scatter; it is invisible and needs a coaxial helium-neon aiming beam. Nd:YAG (1064 nm) passes through clear fluid (extinction about 40 mm in water, 2–4 mm in tissue), scatters up to 40% backward, and coagulates up to about 4 mm deep, so it is not precise. Argon (488/514 nm) passes through clear media and is absorbed by hemoglobin and pigment; white bone reflects it, so a drop of blood is placed on the stapes in stapedotomy. (Cummings 7e, Ch 59, p 860–862)"
+  "text": "**Extinction length by laser**: CO2 (10.6 µm) is absorbed by water within about 0.03 mm regardless of tissue color, with negligible scatter. It is invisible and needs a coaxial helium-neon aiming beam. Nd:YAG (1064 nm) passes through clear fluid (extinction about 40 mm in water, 2–4 mm in tissue), scatters up to 40% backward, and coagulates up to about 4 mm deep, so it is not precise. Argon (488/514 nm) passes through clear media and is absorbed by hemoglobin and pigment. White bone reflects it, so a drop of blood is placed on the stapes in stapedotomy. (Cummings 7e, Ch 59, p 860–862)"
  },
  {
   "topic": "Laser / Energy Safety in Otolaryngology",
   "field": "teach",
-  "text": "**Fiber and vascular lasers**: KTP (532 nm) is frequency-doubled Nd:YAG; it targets oxyhemoglobin (peak about 542 nm), passes through fibers and scopes as small as 3 mm, and its pulsed mode is angiolytic. The 585-nm PDL (oxyhemoglobin peak about 577 nm, roughly 400 µs pulses) was the original office laser but is no longer made, leaving KTP as the main office laser for papilloma, polyps, ectasia and varices. Thulium (2013 nm, water) is fiber-delivered, more hemostatic but less precise than CO2, and more ablative than KTP. Er:YAG (2.94 µm) cuts cleanly with almost no hemostasis. Ho:YAG (2.1 µm) is fiber-delivered for sinus work. Photodynamic therapy activates hematoporphyrin with 630-nm red light. (Cummings 7e, Ch 59, p 861–863)"
+  "text": "**Fiber and vascular lasers**: KTP (532 nm) is frequency-doubled Nd:YAG. It targets oxyhemoglobin (peak about 542 nm), passes through fibers and scopes as small as 3 mm, and its pulsed mode is angiolytic. The 585-nm PDL (oxyhemoglobin peak about 577 nm, roughly 400 µs pulses) was the original office laser but is no longer made, leaving KTP as the main office laser for papilloma, polyps, ectasia and varices. Thulium (2013 nm, water) is fiber-delivered, more hemostatic but less precise than CO2, and more ablative than KTP. Er:YAG (2.94 µm) cuts cleanly with almost no hemostasis. Ho:YAG (2.1 µm) is fiber-delivered for sinus work. Photodynamic therapy activates hematoporphyrin with 630-nm red light. (Cummings 7e, Ch 59, p 861–863)"
  },
  {
   "topic": "Laser / Energy Safety in Otolaryngology",
@@ -307,7 +307,7 @@
  {
   "topic": "Laser / Energy Safety in Otolaryngology",
   "field": "manage",
-  "text": "**Program-level safety**: hospitals need a laser safety officer and a multidisciplinary committee that credentials each user for each laser and reviews complications. Use two suctions, one for smoke and one for the field, with in-line filters. Suction continuously with a closed circuit, but only intermittently with open or jet ventilation, which is held while the laser fires. HPV DNA has been found in laser plume, but clinical transmission has not been documented. Cummings cites FiO2 below 40% with no N2O; current fire-safety guidance is FiO2 of 30% or less. (Cummings 7e, Ch 59, p 865–867)"
+  "text": "**Program-level safety**: hospitals need a laser safety officer and a multidisciplinary committee that credentials each user for each laser and reviews complications. Use two suctions, one for smoke and one for the field, with in-line filters. Suction continuously with a closed circuit, but only intermittently with open or jet ventilation, which is held while the laser fires. HPV DNA has been found in laser plume, but clinical transmission has not been documented. Cummings cites FiO2 below 40% with no N2O. Current fire-safety guidance is FiO2 of 30% or less. (Cummings 7e, Ch 59, p 865–867)"
  },
  {
   "topic": "Benign Vocal Fold Lesions",
@@ -322,17 +322,17 @@
  {
   "topic": "Vocal Fold Polyp / Cyst",
   "field": "recognize",
-  "text": "**Mucous retention vs epidermoid cyst behavior**: a mucous retention (ductal) cyst arises just below the free margin and projects medially, so it is often mistaken for a nodule or polyp. It limits the voice less than its appearance suggests and need not follow voice overuse. An epidermoid cyst projects less, is harder to see when small, and limits the voice more than expected, with upper-range diplophonia and an abrupt breakdown at a specific pitch. When a cyst ruptures, a small opening leaves an open cyst; an opening as large as the cyst leaves a sulcus. Two parallel sulci from one cyst form a mucosal bridge. (Cummings 7e, Ch 60, p 878, 881)"
+  "text": "**Mucous retention vs epidermoid cyst behavior**: a mucous retention (ductal) cyst arises just below the free margin and projects medially, so it is often mistaken for a nodule or polyp. It limits the voice less than its appearance suggests and need not follow voice overuse. An epidermoid cyst projects less, is harder to see when small, and limits the voice more than expected, with upper-range diplophonia and an abrupt breakdown at a specific pitch. When a cyst ruptures, a small opening leaves an open cyst. An opening as large as the cyst leaves a sulcus. Two parallel sulci from one cyst form a mucosal bridge. (Cummings 7e, Ch 60, p 878, 881)"
  },
  {
   "topic": "Vocal Fold Nodules",
   "field": "recognize",
-  "text": "**Sensitive singing-voice signs**: the speaking voice is an insensitive test for small nodules. Look instead for loss of soft high notes, delayed onset with momentary air escape, need for longer warm-ups, reduced endurance, and more day-to-day variability than training would predict. At high pitch the nodules may stop vibrating while short segments in front of or behind them still vibrate. Reserve the term nodules for chronic lesions; acute swellings that clear with brief rest are not nodules. (Cummings 7e, Ch 60, p 875)"
+  "text": "**Sensitive singing-voice signs**: the speaking voice is an insensitive test for small nodules. Look instead for loss of soft high notes, delayed onset with momentary air escape, need for longer warm-ups, reduced endurance, and more day-to-day variability than training would predict. At high pitch the nodules may stop vibrating while short segments in front of or behind them still vibrate. Reserve the term nodules for chronic lesions. Acute swellings that clear with brief rest are not nodules. (Cummings 7e, Ch 60, p 875)"
  },
  {
   "topic": "Vocal Process Granuloma",
   "field": "manage",
-  "text": "**Contact granuloma specifics**: the lesion occurs mainly in men, often with a habitually low, held-back voice, throat clearing, and unilateral pain over the mid-thyroid cartilage referred to the ear. The opposite vocal process often fits into the cleft of a bilobed lesion. Start empiric antireflux therapy even without symptoms. Most granulomas mature, become pedunculated and fall off within 3–6 months. Office options are depot steroid injection into and around the base, or inhaled triamcinolone or mometasone, reassessed every 6–8 weeks. Surgery is a last resort because recurrence is predictable; if needed, remove only a mature pedunculated lesion and leave the base. (Cummings 7e, Ch 60, p 885–887)"
+  "text": "**Contact granuloma specifics**: the lesion occurs mainly in men, often with a habitually low, held-back voice, throat clearing, and unilateral pain over the mid-thyroid cartilage referred to the ear. The opposite vocal process often fits into the cleft of a bilobed lesion. Start empiric antireflux therapy even without symptoms. Most granulomas mature, become pedunculated and fall off within 3–6 months. Office options are depot steroid injection into and around the base, or inhaled triamcinolone or mometasone, reassessed every 6–8 weeks. Surgery is a last resort because recurrence is predictable. If needed, remove only a mature pedunculated lesion and leave the base. (Cummings 7e, Ch 60, p 885–887)"
  },
  {
   "topic": "Vocal Process Granuloma",
@@ -402,7 +402,7 @@
  {
   "topic": "Cutaneous Melanoma of the Head & Neck",
   "field": "workup",
-  "text": "**Sentinel node pitfalls in the head and neck**: Excise the primary before running the gamma probe, because the primary sits so close to the basins that its shine-through can hide the sentinel node. Frozen section of melanoma sentinel nodes has a 5-10% false-negative rate and is not recommended, so send each node for permanent serial sections with immunohistochemistry. In one series 21% of positive nodes were negative on the first H&E. Clinical prediction of drainage disagreed with lymphoscintigraphy in 34% of head and neck cases. MSLT-I data suggest a learning curve of about 55 cases to reach 95% accuracy. Elective neck dissection gave no survival benefit in randomized trials and has been replaced by sentinel node biopsy. (Cummings 7e, Ch 80, p 1132-1133)"
+  "text": "**Sentinel node pitfalls in the head and neck**: Excise the primary before running the gamma probe, because the primary sits so close to the basins that its shine-through can hide the sentinel node. Frozen section of melanoma sentinel nodes has a 5-10% false-negative rate and is not recommended, so send each node for permanent serial sections with immunohistochemistry. In one series 21% of positive nodes were negative on the first H&E. Clinical prediction of drainage disagreed with lymphoscintigraphy in 34% of head and neck cases. MSLT-I data suggest a learning curve of about 55 cases to reach 95% accuracy. Elective neck dissection gave no survival benefit in randomized trials and has been replaced by sentinel node biopsy. After a positive sentinel node, MSLT-II and DeCOG-SLT showed no survival benefit from completion dissection, so nodal ultrasound surveillance is now standard for most patients. (Cummings 7e, Ch 80, p 1132-1133)"
  },
  {
   "topic": "Cutaneous Melanoma of the Head & Neck",
@@ -467,7 +467,7 @@
  {
   "topic": "Age-Related Hearing Loss / Presbycusis",
   "field": "teach",
-  "text": "**Hearing loss and dementia numbers**: In cohort studies, mild hearing loss doubles dementia risk, moderate loss triples it and severe loss raises it about fivefold, and an effect is seen from as young as 55. Over 11 years of follow-up, hazard ratios rose from 1.89 to 4.94 from mild to severe loss, and each 25 dB of loss equaled about 7 years of cognitive aging. The 2017 Lancet Commission ranked age-related hearing loss as the largest potentially modifiable dementia risk factor. Cummings 7e notes that randomized proof that treatment prevents decline was still lacking at the time. (Cummings 7e, Ch 133, p 2013); (Cummings 7e, Ch 132, p 2007)"
+  "text": "**Hearing loss and dementia numbers**: In cohort studies, mild hearing loss doubles dementia risk, moderate loss triples it and severe loss raises it about fivefold, and an effect is seen from as young as 55. Over 11 years of follow-up, hazard ratios rose from 1.89 to 4.94 from mild to severe loss, and each 25 dB of loss equaled about 7 years of cognitive aging. The 2017 Lancet Commission ranked age-related hearing loss as the largest potentially modifiable dementia risk factor, and the 2024 update kept it among the largest. Cummings 7e notes that randomized proof that treatment prevents decline was still lacking at the time. The ACHIEVE trial (2023) then found that a hearing intervention did not slow 3-year cognitive decline overall, but slowed it by about 48% in older adults at higher dementia risk. (Cummings 7e, Ch 133, p 2013) (Cummings 7e, Ch 132, p 2007)"
  },
  {
   "topic": "Age-Related Hearing Loss / Presbycusis",
@@ -477,7 +477,7 @@
  {
   "topic": "Hearing Aids and Bone-Conduction Devices",
   "field": "teach",
-  "text": "**Access barriers in older adults**: In 2016 the average monthly Social Security benefit was $1360, against about $4700 for a pair of hearing aids, which traditionally cost $2000-4000 per device. Traditional aids are not covered by Medicare. Hearing aid manuals average close to a 10th-grade reading level, while inadequate health literacy is below 6th grade, and only about 3% of older adults have proficient health literacy. The OTC Hearing Aid Act (signed August 2017) created an FDA over-the-counter category, and in trials self-fitted or low-cost devices with counseling gave benefits similar to conventional fitting. (Cummings 7e, Ch 133, p 2011-2012, 2015-2017)"
+  "text": "**Access barriers in older adults**: In 2016 the average monthly Social Security benefit was $1360, against about $4700 for a pair of hearing aids, which traditionally cost $2000-4000 per device. Traditional aids are not covered by Medicare. Hearing aid manuals average close to a 10th-grade reading level, while inadequate health literacy is below 6th grade, and only about 3% of older adults have proficient health literacy. The OTC Hearing Aid Act (signed August 2017) led to the FDA over-the-counter hearing aid rule for adults with perceived mild-to-moderate loss, in effect since October 2022, and in trials self-fitted or low-cost devices with counseling gave benefits similar to conventional fitting. (Cummings 7e, Ch 133, p 2011-2012, 2015-2017)"
  },
  {
   "topic": "Cochlear Implant Candidacy",
@@ -517,7 +517,7 @@
  {
   "topic": "Superior Canal Dehiscence",
   "field": "workup",
-  "text": "**VEMP numbers**: In dehiscence, cervical VEMP thresholds are abnormally low, 65 dB HL or less. In confirmed cases the mean threshold was about 67 dB (plus or minus 10) vs about 82 dB HL (plus or minus 5) in unaffected ears. Cervical VEMP tests the saccule and inferior vestibular nerve, and ocular VEMP tests the utricle and superior vestibular nerve, so together they can show which nerve division is involved. For example, ocular VEMP is lost after superior vestibular nerve section while cervical VEMP remains. (Cummings 7e, Ch 134, p 2032)"
+  "text": "**VEMP numbers**: In dehiscence, cervical VEMP thresholds are abnormally low (this text uses 65 dB HL or less, versus the 85-95 dB HL normally needed). In confirmed cases the mean threshold was about 67 dB (plus or minus 10) vs about 82 dB HL (plus or minus 5) in unaffected ears. Cervical VEMP tests the saccule and inferior vestibular nerve, and ocular VEMP tests the utricle and superior vestibular nerve, so together they can show which nerve division is involved. For example, ocular VEMP is lost after superior vestibular nerve section while cervical VEMP remains. (Cummings 7e, Ch 134, p 2032)"
  },
  {
   "topic": "Carotid Blowout Syndrome",
@@ -562,12 +562,12 @@
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "workup",
-  "text": "**GPA ear disease and ANCA yield**: The ear is involved in roughly 20-60% of GPA and can be the first or only site; it is unusual among autoimmune diseases in affecting both the middle ear (eustachian tube obstruction, effusion, granulation) and the inner ear, with SNHL in up to about a third of those with hearing loss. PR3/c-ANCA is more than 95% specific, and is positive in over 90% of active systemic disease but in only about 65-70% of limited (ear or head-and-neck only) disease, so a negative ANCA and a nondiagnostic small ear biopsy do not exclude it; repeat biopsy and clinical correlation are often needed. (Cummings 7e, Ch 151, p 2295-2297; Ch 156, p 2368)"
+  "text": "**GPA ear disease and ANCA yield**: The ear is involved in roughly 20-60% of GPA and can be the first or only site. It is unusual among autoimmune diseases in affecting both the middle ear (eustachian tube obstruction, effusion, granulation) and the inner ear, with SNHL in up to about a third of those with hearing loss. PR3/c-ANCA is more than 95% specific, and is positive in over 90% of active systemic disease but in only about 65-70% of limited (ear or head-and-neck only) disease, so a negative ANCA and a nondiagnostic small ear biopsy do not exclude it. Repeat biopsy and clinical correlation are often needed. (Cummings 7e, Ch 151, p 2295-2297, Ch 156, p 2368)"
  },
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "pathophysiology",
-  "text": "**Paget disease hearing loss is not ossicular fixation**: Hearing loss occurs in a large minority to about half of patients with skull involvement and is usually mixed, with a downsloping bone-conduction curve and fairly flat air thresholds; the facial nerve is spared. Temporal bone studies show the conductive component is not caused by stapes or ossicular fixation and the SNHL is not from cochlear nerve compression; the loss tracks reduced mineral density of the cochlear capsule on quantitative CT. Stapes or ossicular surgery is therefore rarely worthwhile; bisphosphonates (or calcitonin) treat the disease and may stabilize SNHL. Clues favoring Paget over otosclerosis: onset in the sixth decade, larger downsloping SNHL, enlarging calvarium, tortuous superficial temporal artery, and high alkaline phosphatase. (Cummings 7e, Ch 151, p 2304; Ch 152, p 2321)"
+  "text": "**Paget disease hearing loss is not ossicular fixation**: Hearing loss occurs in a large minority to about half of patients with skull involvement and is usually mixed, with a downsloping bone-conduction curve and fairly flat air thresholds. The facial nerve is spared. Temporal bone studies show the conductive component is not caused by stapes or ossicular fixation and the SNHL is not from cochlear nerve compression. The loss tracks reduced mineral density of the cochlear capsule on quantitative CT. Stapes or ossicular surgery is therefore rarely worthwhile. Bisphosphonates (or calcitonin) treat the disease and may stabilize SNHL. Clues favoring Paget over otosclerosis: onset in the sixth decade, larger downsloping SNHL, enlarging calvarium, tortuous superficial temporal artery, and high alkaline phosphatase. (Cummings 7e, Ch 151, p 2304, Ch 152, p 2321)"
  },
  {
   "topic": "Otologic Manifestations of Systemic Disease",
@@ -577,12 +577,12 @@
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "manage",
-  "text": "**Fibrous dysplasia of the temporal bone: management**: About 100 temporal bone cases are reported (70% monostotic, 23% polyostotic, 7% McCune-Albright), presenting in the second-third decade as painless bony swelling with canal stenosis. Surgery is limited to biopsy and relief of function; restenosis after simple canalplasty is common, and a canal-wall-down mastoidectomy with wide canalplasty and skin grafting gives more durable patency. Radiotherapy is contraindicated because it raises the risk of sarcomatous change (baseline about 0.4%). Follow long term for facial nerve involvement and progression to SNHL. (Cummings 7e, Ch 151, p 2305-2306)"
+  "text": "**Fibrous dysplasia of the temporal bone: management**: About 100 temporal bone cases are reported (70% monostotic, 23% polyostotic, 7% McCune-Albright), presenting in the second-third decade as painless bony swelling with canal stenosis. Surgery is limited to biopsy and relief of function. Restenosis after simple canalplasty is common, and a canal-wall-down mastoidectomy with wide canalplasty and skin grafting gives more durable patency. Radiotherapy is contraindicated because it raises the risk of sarcomatous change (baseline about 0.4%). Follow long term for facial nerve involvement and progression to SNHL. (Cummings 7e, Ch 151, p 2305-2306)"
  },
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "teach",
-  "text": "**Osteopetrosis and recurrent facial palsy**: Any child or young adult with recurrent Bell-like facial palsy should be imaged for osteopetrosis: in the dominant adult (Albers-Schonberg, often CLCN7) form the temporal bone is sclerotic with narrowed eustachian tube, EAC and IAC, ossicles jammed by periosteal overgrowth and obliterated window niches, and each palsy tends to leave more residual weakness; total facial nerve decompression has been advocated. In the malignant recessive infantile form (often TCIRG1), the tympanic facial nerve is consistently dehiscent and may herniate into the oval window niche, and bone marrow transplant is the only effective treatment. (Cummings 7e, Ch 151, p 2305-2307)"
+  "text": "**Osteopetrosis and recurrent facial palsy**: Any child or young adult with recurrent Bell-like facial palsy should be imaged for osteopetrosis: in the dominant adult (Albers-Schonberg, often CLCN7) form the temporal bone is sclerotic with narrowed eustachian tube, EAC and IAC, ossicles jammed by periosteal overgrowth and obliterated window niches, and each palsy tends to leave more residual weakness. Total facial nerve decompression has been advocated. In the malignant recessive infantile form (often TCIRG1), the tympanic facial nerve is consistently dehiscent and may herniate into the oval window niche, and bone marrow transplant is the only effective treatment. (Cummings 7e, Ch 151, p 2305-2307)"
  },
  {
   "topic": "Otologic Manifestations of Systemic Disease",
@@ -592,7 +592,7 @@
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "workup",
-  "text": "**Temporal bone metastases and meningeal carcinomatosis**: Metastases arrive hematogenously, most often from breast, then lung, prostate and skin; they favor the petrous apex and IAC while the otic capsule resists invasion, and prostate or breast deposits may be osteoblastic. Meningeal carcinomatosis commonly presents with rapidly progressive SNHL that mimics a CPA tumor when unilateral or immune-mediated inner ear disease when bilateral; diagnose with CSF cytology. (Cummings 7e, Ch 151, p 2301-2302)"
+  "text": "**Temporal bone metastases and meningeal carcinomatosis**: Metastases arrive hematogenously, most often from breast, then lung, prostate and skin. They favor the petrous apex and IAC while the otic capsule resists invasion, and prostate or breast deposits may be osteoblastic. Meningeal carcinomatosis commonly presents with rapidly progressive SNHL that mimics a CPA tumor when unilateral or immune-mediated inner ear disease when bilateral. Diagnose with CSF cytology. (Cummings 7e, Ch 151, p 2301-2302)"
  },
  {
   "topic": "Otologic Manifestations of Systemic Disease",
@@ -602,17 +602,17 @@
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "recognize",
-  "text": "**Multiple sclerosis and the ear**: SNHL occurs in about 4-10% of patients with MS and is often sudden and unilateral, recovering over days to weeks; word recognition may be poor out of proportion to thresholds and acoustic reflex patterns can be abnormal. ABR abnormalities (prolonged latencies, poor morphology, rate-sensitive changes) are common, and MRI may show plaques in the cochlear nucleus or inferior colliculus. Vertigo in MS usually reflects central vestibular pathway plaques with normal end organs. (Cummings 7e, Ch 152, p 2318; Ch 151, p 2309)"
+  "text": "**Multiple sclerosis and the ear**: SNHL occurs in about 4-10% of patients with MS and is often sudden and unilateral, recovering over days to weeks. Word recognition may be poor out of proportion to thresholds and acoustic reflex patterns can be abnormal. ABR abnormalities (prolonged latencies, poor morphology, rate-sensitive changes) are common, and MRI may show plaques in the cochlear nucleus or inferior colliculus. Vertigo in MS usually reflects central vestibular pathway plaques with normal end organs. (Cummings 7e, Ch 152, p 2318, Ch 151, p 2309)"
  },
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "pathophysiology",
-  "text": "**Hematologic and vascular causes of SNHL**: SNHL is reported in about 22% of patients with sickle cell disease and may be sudden during crises. Waldenstrom macroglobulinemia causes hyperviscosity with progressive or sudden SNHL that may respond to alkylating agents or plasmapheresis; cryoglobulinemia and polyarteritis nodosa (necrotizing small-medium artery vasculitis, SNHL sometimes preceding systemic disease, facial palsy) are other causes. Cardiopulmonary bypass slightly raises the risk of sudden SNHL (emboli or hypoperfusion). AICA occlusion gives vertigo, SNHL, facial palsy, ipsilateral facial pain-temperature loss and Horner syndrome because AICA usually supplies the labyrinthine artery. (Cummings 7e, Ch 152, p 2319-2320)"
+  "text": "**Hematologic and vascular causes of SNHL**: SNHL is reported in about 22% of patients with sickle cell disease and may be sudden during crises. Waldenstrom macroglobulinemia causes hyperviscosity with progressive or sudden SNHL that may respond to alkylating agents or plasmapheresis. Cryoglobulinemia and polyarteritis nodosa (necrotizing small-medium artery vasculitis, SNHL sometimes preceding systemic disease, facial palsy) are other causes. Cardiopulmonary bypass slightly raises the risk of sudden SNHL (emboli or hypoperfusion). AICA occlusion gives vertigo, SNHL, facial palsy, ipsilateral facial pain-temperature loss and Horner syndrome because AICA usually supplies the labyrinthine artery. (Cummings 7e, Ch 152, p 2319-2320)"
  },
  {
   "topic": "Otologic Manifestations of Systemic Disease",
   "field": "recognize",
-  "text": "**Lupus and Susac syndrome**: SNHL is reported in 15-66% of patients with SLE, typically bilateral, symmetric and high-frequency, often subclinical and unrelated to disease severity. Susac syndrome (RED-M: retinopathy with branch retinal artery occlusions, encephalopathy with corpus callosum lesions, deafness from microangiopathy) mostly affects women aged 20-40; the loss is fluctuating, asymmetric and worst in the low-mid frequencies because the apical cochlear arterioles are occluded. Neurologic features often burn out over 2-4 years, but hearing loss usually persists; treatment is immunosuppression, with cochlear implantation if needed. (Cummings 7e, Ch 156, p 2368-2369; Ch 151, p 2309)"
+  "text": "**Lupus and Susac syndrome**: SNHL is reported in 15-66% of patients with SLE, typically bilateral, symmetric and high-frequency, often subclinical and unrelated to disease severity. Susac syndrome (RED-M: retinopathy with branch retinal artery occlusions, encephalopathy with corpus callosum lesions, deafness from microangiopathy) mostly affects women aged 20-40. The loss is fluctuating, asymmetric and worst in the low-mid frequencies because the apical cochlear arterioles are occluded. Neurologic features often burn out over 2-4 years, but hearing loss usually persists. Treatment is immunosuppression, with cochlear implantation if needed. (Cummings 7e, Ch 156, p 2368-2369, Ch 151, p 2309)"
  },
  {
   "topic": "Facial Paralysis",
@@ -627,17 +627,17 @@
  {
   "topic": "Sudden Sensorineural Hearing Loss",
   "field": "recognize",
-  "text": "**Natural history and prognostic factors**: Incidence is about 5-20 per 100,000 per year with a peak in the sixth decade; bilateral involvement is rare. Without treatment roughly 30-65% recover partially or fully, and most recovery happens in the first 2 weeks; little meaningful recovery occurs after 3 months. Worse prognosis: more severe or profound loss, flat or downsloping configuration, vertigo (especially with a downsloping loss), poor word recognition, and age (children and adults over 40 do worse); upsloping and midfrequency losses do best. Vertigo accompanies about 40%. (Cummings 7e, Ch 152, p 2323-2324)"
+  "text": "**Natural history and prognostic factors**: Incidence is about 5-20 per 100,000 per year with a peak in the sixth decade. Bilateral involvement is rare. Without treatment roughly 30-65% recover partially or fully, and most recovery happens in the first 2 weeks. Little meaningful recovery occurs after 3 months. Worse prognosis: more severe or profound loss, flat or downsloping configuration, vertigo (especially with a downsloping loss), poor word recognition, and age (children and adults over 40 do worse). Upsloping and midfrequency losses do best. Vertigo accompanies about 40%. (Cummings 7e, Ch 152, p 2323-2324)"
  },
  {
   "topic": "Sudden Sensorineural Hearing Loss",
   "field": "workup",
-  "text": "**Vestibular schwannoma yield and MRI alternatives**: About 10-20% of vestibular schwannomas present with sudden SNHL, and roughly 3-10% of sudden SNHL patients who undergo MRI harbor one; no clinical feature reliably separates them, and recovery (spontaneous or on steroids) does not exclude a tumor. Gadolinium MRI is the most sensitive test and is more cost-effective than ABR followed by MRI, because ABR misses small tumors. When MRI is impossible (e.g., pacemaker), fine-cut temporal bone CT with contrast can detect lesions larger than about 1.5 cm. (Cummings 7e, Ch 152, p 2324)"
+  "text": "**Vestibular schwannoma yield and MRI alternatives**: About 10-20% of vestibular schwannomas present with sudden SNHL, and roughly 3-10% of sudden SNHL patients who undergo MRI harbor one. No clinical feature reliably separates them, and recovery (spontaneous or on steroids) does not exclude a tumor. Gadolinium MRI is the most sensitive test and is more cost-effective than ABR followed by MRI, because ABR misses small tumors. When MRI is impossible (e.g., pacemaker), fine-cut temporal bone CT with contrast can detect lesions larger than about 1.5 cm. (Cummings 7e, Ch 152, p 2324)"
  },
  {
   "topic": "Sudden Sensorineural Hearing Loss",
   "field": "manage",
-  "text": "**Steroid evidence and dosing**: Steroids remain standard despite mixed RCT data: Wilson's double-blind trial found 78% complete or partial recovery with steroids versus 38% with placebo in nonprofound losses (all midfrequency losses recovered regardless, and losses over 90 dB showed no benefit), while later RCTs and Cochrane-style meta-analyses found no clear effect. A common regimen is prednisone about 1 mg/kg/day (maximum 60 mg) as a single morning dose for 10-14 days with a taper, after counseling on side effects; intratympanic steroids suit patients with diabetes, glaucoma or cataracts. (Cummings 7e, Ch 152, p 2325-2326)"
+  "text": "**Steroid evidence and dosing**: Steroids remain standard despite mixed RCT data: Wilson's double-blind trial found 78% complete or partial recovery with steroids versus 38% with placebo in nonprofound losses (all midfrequency losses recovered regardless, and losses over 90 dB showed no benefit), while later RCTs and Cochrane-style meta-analyses found no clear effect. A common regimen is prednisone about 1 mg/kg/day (maximum 60 mg) as a single morning dose for 10-14 days with a taper, after counseling on side effects. Intratympanic steroids suit patients with diabetes, glaucoma or cataracts. (Cummings 7e, Ch 152, p 2325-2326)"
  },
  {
   "topic": "Sudden Sensorineural Hearing Loss",
@@ -647,67 +647,67 @@
  {
   "topic": "Sudden Sensorineural Hearing Loss",
   "field": "workup",
-  "text": "**Infectious causes worth targeting**: Syphilis accounts for 2% or fewer of sudden SNHL but can occur at any stage and should be reconsidered in HIV. Lyme titers were positive in about 21% of sudden SNHL in one large study, yet treated seropositive patients did no better than seronegative ones; Cummings notes Lyme does not appear to cause inner ear disease in North America, so testing is reserved for European or strongly suggestive exposures. About 28% report a viral URI in the prior month; mumps SNHL is almost always unilateral, starts 4-5 days after parotitis and can occur without parotitis, and Lassa fever causes sudden SNHL in about two-thirds of patients. (Cummings 7e, Ch 152, p 2314, 2324; Ch 156, p 2366)"
+  "text": "**Infectious causes worth targeting**: Syphilis accounts for 2% or fewer of sudden SNHL but can occur at any stage and should be reconsidered in HIV. Lyme titers were positive in about 21% of sudden SNHL in one large study, yet treated seropositive patients did no better than seronegative ones. Cummings notes Lyme does not appear to cause inner ear disease in North America, so testing is reserved for European or strongly suggestive exposures. About 28% report a viral URI in the prior month. Mumps SNHL is almost always unilateral, starts 4-5 days after parotitis and can occur without parotitis, and Lassa fever causes sudden SNHL in about two-thirds of patients. (Cummings 7e, Ch 152, p 2314, 2324, Ch 156, p 2366)"
  },
  {
   "topic": "Sudden Sensorineural Hearing Loss",
   "field": "operate",
-  "text": "**Intratympanic steroid technique**: With the patient supine and head turned so the ear faces the ceiling, inject enough to fill the middle ear (about 0.3-0.5 mL) through an anesthetized drum, then keep the head still for 15-30 minutes without swallowing, talking or yawning so drug stays on the round window. Typical agents are dexamethasone (about 10-24 mg/mL) or methylprednisolone 62.5 mg/mL; methylprednisolone reaches the highest perilymph levels but can burn, which a small amount of 1% lidocaine reduces. Injection doses are variable because drug leaks down the eustachian tube; a tympanostomy tube helps repeated dosing, and Gelfoam or wick devices can prolong round window contact. Salvage works best started soon after oral therapy fails, ideally within about 2 weeks of failure. (Cummings 7e, Ch 158, p 2385-2388)"
+  "text": "**Intratympanic steroid technique**: With the patient supine and head turned so the ear faces the ceiling, inject enough to fill the middle ear (about 0.3-0.5 mL) through an anesthetized drum, then keep the head still for 15-30 minutes without swallowing, talking or yawning so drug stays on the round window. Typical agents are dexamethasone (about 10-24 mg/mL) or methylprednisolone 62.5 mg/mL. Methylprednisolone reaches the highest perilymph levels but can burn, which a small amount of 1% lidocaine reduces. Injection doses are variable because drug leaks down the eustachian tube. A tympanostomy tube helps repeated dosing, and Gelfoam or wick devices can prolong round window contact. Salvage works best started soon after oral therapy fails, ideally within about 2 weeks of failure. (Cummings 7e, Ch 158, p 2385-2388)"
  },
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "pathophysiology",
-  "text": "**Radiation-induced SNHL**: When the cochlea is in the field, about half of patients develop SNHL (about 50% after nasopharyngeal cancer RT, 53% after parotid RT, 14-23% after pediatric brain tumor RT). Fractionated doses below about 45 Gy are generally tolerated, with risk rising above 45-60 Gy, especially with cisplatin (nasopharyngeal cancer cochlear doses over about 48 Gy), older age and preexisting loss. Onset is delayed 0.5-2 years and progressive, so audiometric follow-up for at least 10 years is advised; stereotactic radiosurgery cochlear doses as low as about 4 Gy are linked to worse hearing at 1 year. (Cummings 7e, Ch 152, p 2317-2318; Ch 157, p 2379)"
+  "text": "**Radiation-induced SNHL**: When the cochlea is in the field, about half of patients develop SNHL (about 50% after nasopharyngeal cancer RT, 53% after parotid RT, 14-23% after pediatric brain tumor RT). Fractionated doses below about 45 Gy are generally tolerated, with risk rising above 45-60 Gy, especially with cisplatin (nasopharyngeal cancer cochlear doses over about 48 Gy), older age and preexisting loss. Onset is delayed 0.5-2 years and progressive, so audiometric follow-up for at least 10 years is advised. Stereotactic radiosurgery cochlear doses as low as about 4 Gy are linked to worse hearing at 1 year. (Cummings 7e, Ch 152, p 2317-2318, Ch 157, p 2379)"
  },
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "recognize",
-  "text": "**Opioid and PDE-5 inhibitor hearing loss**: Abuse of hydrocodone-acetaminophen (also reported with propoxyphene, methadone and heroin) can cause rapidly progressive, usually bilateral, severe-to-profound SNHL that does not respond to corticosteroids; these patients do very well with cochlear implants. Acetaminophen itself may be the culprit. After an FDA review of 29 reports, PDE-5 inhibitors (sildenafil, vardenafil, tadalafil) were linked to sudden, usually unilateral, partial SNHL with full recovery in about a third, though causation is unproven. (Cummings 7e, Ch 152, p 2315-2316; Ch 157, p 2377)"
+  "text": "**Opioid and PDE-5 inhibitor hearing loss**: Abuse of hydrocodone-acetaminophen (also reported with propoxyphene, methadone and heroin) can cause rapidly progressive, usually bilateral, severe-to-profound SNHL that does not respond to corticosteroids. These patients do very well with cochlear implants. Acetaminophen itself may be the culprit. After an FDA review of 29 reports, PDE-5 inhibitors (sildenafil, vardenafil, tadalafil) were linked to sudden, usually unilateral, partial SNHL with full recovery in about a third, though causation is unproven. (Cummings 7e, Ch 152, p 2315-2316, Ch 157, p 2377)"
  },
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "pathophysiology",
-  "text": "**Platinum ototoxicity risk factors and drug differences**: Cisplatin risk rises with age under 5 years (and older age), male children, cumulative dose over about 400 mg/m2, noise, other ototoxins, cranial irradiation, renal impairment, anemia and low albumin; loss is bilateral, symmetric, permanent, high frequency first, and can be delayed because platinum is retained in the cochlea. Nearly all patients given 150-225 mg/m2 show loss on extended high-frequency testing, and the 8-kHz shift after two cycles predicts later need for amplification. Cisplatin injures outer hair cells first, while carboplatin preferentially damages inner hair cells and is more ototoxic at high doses (about 80% of children after high-dose regimens) than once thought; oxaliplatin is rarely ototoxic. (Cummings 7e, Ch 157, p 2371-2372, 2376; Ch 152, p 2316)"
+  "text": "**Platinum ototoxicity risk factors and drug differences**: Cisplatin risk rises with age under 5 years (and older age), male children, cumulative dose over about 400 mg/m2, noise, other ototoxins, cranial irradiation, renal impairment, anemia and low albumin. Loss is bilateral, symmetric, permanent, high frequency first, and can be delayed because platinum is retained in the cochlea. Nearly all patients given 150-225 mg/m2 show loss on extended high-frequency testing, and the 8-kHz shift after two cycles predicts later need for amplification. Cisplatin injures outer hair cells first, while carboplatin preferentially damages inner hair cells and is more ototoxic at high doses (about 80% of children after high-dose regimens) than once thought. Oxaliplatin is rarely ototoxic. (Cummings 7e, Ch 157, p 2371-2372, 2376, Ch 152, p 2316)"
  },
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "recognize",
-  "text": "**Loop diuretics, macrolides and deferoxamine**: Furosemide hearing loss (about 6%) is usually temporary, linked to plasma levels above about 50 mg/L, rapid infusion, renal failure and aminoglycosides; bumetanide is less ototoxic and torsemide has no clinical ototoxicity. IV erythromycin loss is dose related (about 16% at 2 g/day versus 53% at 4 g/day in transplant patients) and usually reverses in 1-3 weeks; azithromycin and clarithromycin can rarely cause permanent loss. Deferoxamine causes high-frequency SNHL in over a third of thalassemia patients (worst near 6 kHz), so audiograms every 6 months are recommended, and hearing may recover with dose reduction. (Cummings 7e, Ch 157, p 2376-2379; Ch 152, p 2316)"
+  "text": "**Loop diuretics, macrolides and deferoxamine**: Furosemide hearing loss (about 6%) is usually temporary, linked to plasma levels above about 50 mg/L, rapid infusion, renal failure and aminoglycosides. Bumetanide is less ototoxic and torsemide has no clinical ototoxicity. IV erythromycin loss is dose related (about 16% at 2 g/day versus 53% at 4 g/day in transplant patients) and usually reverses in 1-3 weeks. Azithromycin and clarithromycin can rarely cause permanent loss. Deferoxamine causes high-frequency SNHL in over a third of thalassemia patients (worst near 6 kHz), so audiograms every 6 months are recommended, and hearing may recover with dose reduction. (Cummings 7e, Ch 157, p 2376-2379, Ch 152, p 2316)"
  },
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "recognize",
-  "text": "**Aminoglycoside vestibulotoxicity: course and testing**: Vestibular toxicity typically declares itself over 1-2 days, after which imbalance and oscillopsia are present with any head movement; improvement may begin around 2 months but recovery is rarely complete. On rotary chair testing the low-frequency responses are lost first and most severely, and test improvement (mostly high frequency) often exceeds clinical recovery. Risk rises with bacteremia, fever, liver or renal dysfunction, loop diuretics and mitochondrial 12S rRNA variants; therapeutic peak/trough levels do not guarantee safety. (Cummings 7e, Ch 157, p 2371)"
+  "text": "**Aminoglycoside vestibulotoxicity: course and testing**: Vestibular toxicity typically declares itself over 1-2 days, after which imbalance and oscillopsia are present with any head movement. Improvement may begin around 2 months but recovery is rarely complete. On rotary chair testing the low-frequency responses are lost first and most severely, and test improvement (mostly high frequency) often exceeds clinical recovery. Risk rises with bacteremia, fever, liver or renal dysfunction, loop diuretics and mitochondrial 12S rRNA variants. Therapeutic peak/trough levels do not guarantee safety. (Cummings 7e, Ch 157, p 2371)"
  },
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "workup",
-  "text": "**Ototoxicity monitoring protocol**: Match monitoring to risk: low-risk short aminoglycoside courses can use pre- and post-treatment audiograms with weekly symptom checks, while long high-risk courses (e.g., amikacin) warrant weekly or biweekly conventional plus extended high-frequency audiometry. Because aminoglycoside damage can continue after the drug stops, obtain the final audiogram a few weeks after therapy ends. For cisplatin, test at baseline and before each cycle; DPOAEs detect early cisplatin and deferoxamine injury sooner than pure-tone audiometry. (Cummings 7e, Ch 157, p 2380)"
+  "text": "**Ototoxicity monitoring protocol**: Match monitoring to risk: low-risk short aminoglycoside courses can use pre- and post-treatment audiograms with weekly symptom checks, while long high-risk courses (e.g., amikacin) warrant weekly or biweekly conventional plus extended high-frequency audiometry. Because aminoglycoside damage can continue after the drug stops, obtain the final audiogram a few weeks after therapy ends. For cisplatin, test at baseline and before each cycle. DPOAEs detect early cisplatin and deferoxamine injury sooner than pure-tone audiometry. (Cummings 7e, Ch 157, p 2380)"
  },
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "teach",
-  "text": "**Analgesics and salicylates**: Aspirin causes dose-dependent, reversible SNHL (up to moderate-severe) and tinnitus, which appears reliably around 6-8 g/day and resolves within about 72 hours of stopping; it acts on outer hair cell motility (prestin) without killing hair cells. Large cohort studies link regular (2 or more days a week) acetaminophen and NSAID use to hearing loss, with the strongest effect in men under 50 (about 99% higher risk with acetaminophen, 61% with NSAIDs, 33% with aspirin); in women, ibuprofen and acetaminophen but not aspirin were associated. (Cummings 7e, Ch 152, p 2315; Ch 157, p 2378)"
+  "text": "**Analgesics and salicylates**: Aspirin causes dose-dependent, reversible SNHL (up to moderate-severe) and tinnitus, which appears reliably around 6-8 g/day and resolves within about 72 hours of stopping. It acts on outer hair cell motility (prestin) without killing hair cells. Large cohort studies link regular (2 or more days a week) acetaminophen and NSAID use to hearing loss, with the strongest effect in men under 50 (about 99% higher risk with acetaminophen, 61% with NSAIDs, 33% with aspirin). In women, ibuprofen and acetaminophen but not aspirin were associated. (Cummings 7e, Ch 152, p 2315, Ch 157, p 2378)"
  },
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "physiology",
-  "text": "**NIOSH versus OSHA and sound weighting**: OSHA's permissible limit is 90 dBA for 8 hours with a 5-dB exchange rate, whereas the NIOSH recommended limit is 85 dBA for 8 hours with a 3-dB exchange rate (allowed time halves with every 3-dB rise), which is more protective. A-weighting discounts energy below about 1 kHz to mirror quiet-level hearing and is the US regulatory standard; C-weighting is nearly flat and better reflects loud low-frequency sound. A personal dosimeter integrates level and time for workers who move around, and impulse noise such as gunfire needs a peak-reading meter. (Cummings 7e, Ch 154, p 2343-2344)"
+  "text": "**NIOSH versus OSHA and sound weighting**: OSHA's permissible limit is 90 dBA for 8 hours with a 5-dB exchange rate, whereas the NIOSH recommended limit is 85 dBA for 8 hours with a 3-dB exchange rate (allowed time halves with every 3-dB rise), which is more protective. A-weighting discounts energy below about 1 kHz to mirror quiet-level hearing and is the US regulatory standard. C-weighting is nearly flat and better reflects loud low-frequency sound. A personal dosimeter integrates level and time for workers who move around, and impulse noise such as gunfire needs a peak-reading meter. (Cummings 7e, Ch 154, p 2343-2344)"
  },
  {
   "topic": "Ototoxic / Noise-Induced Hearing Loss",
   "field": "recognize",
-  "text": "**NIHL course and susceptibility**: Occupational NIHL is bilateral and symmetric, starts at 3-6 kHz with the deepest notch at 4 kHz, progresses fastest in the first 10-15 years and almost never becomes profound; about 25% of US adults have a notch (15 dB at 3, 4 or 6 kHz). Acoustic trauma is a single exposure causing permanent shift without a preceding temporary shift and is often asymmetric. Conductive loss protects the cochlea, an absent acoustic reflex predisposes to injury (the reflex protects mainly at 2 kHz and below), and tinnitus after exposure is a warning sign; 50-70% of persistent tinnitus is associated with NIHL. No otoprotective drug is FDA approved for noise. (Cummings 7e, Ch 152, p 2317; Ch 154, pp 2348, 2354; Ch 153, p 2331)"
+  "text": "**NIHL course and susceptibility**: Occupational NIHL is bilateral and symmetric, starts at 3-6 kHz with the deepest notch at 4 kHz, progresses fastest in the first 10-15 years and almost never becomes profound. About 25% of US adults have a notch (15 dB at 3, 4 or 6 kHz). Acoustic trauma is a single exposure causing permanent shift without a preceding temporary shift and is often asymmetric. Conductive loss protects the cochlea, an absent acoustic reflex predisposes to injury (the reflex protects mainly at 2 kHz and below), and tinnitus after exposure is a warning sign. 50-70% of persistent tinnitus is associated with NIHL. No otoprotective drug is FDA approved for noise. (Cummings 7e, Ch 152, p 2317, Ch 154, pp 2348, 2354, Ch 153, p 2331)"
  },
  {
   "topic": "Tinnitus",
   "field": "workup",
-  "text": "**Defining asymmetry and imaging yield**: Definitions of asymmetric SNHL vary (AAO-HNS: 15 dB or more average difference at 0.5-3 kHz); the 'rule 3K' (15 dB or more interaural difference at 3 kHz) captured nearly all vestibular schwannomas while limiting MRIs. Unilateral tinnitus alone has a low MRI yield (only 4 of 542 schwannoma patients with symmetric hearing presented with tinnitus alone), but yield rises as asymmetric loss or cranial neuropathy is added. For pulsatile tinnitus, CTA/CTV is the usual first study and finds a relevant abnormality in about 20-30%. (Cummings 7e, Ch 153, p 2330)"
+  "text": "**Defining asymmetry and imaging yield**: Definitions of asymmetric SNHL vary (AAO-HNS: 15 dB or more average difference at 0.5-3 kHz). The 'rule 3K' (15 dB or more interaural difference at 3 kHz) captured nearly all vestibular schwannomas while limiting MRIs. Unilateral tinnitus alone has a low MRI yield (only 4 of 542 schwannoma patients with symmetric hearing presented with tinnitus alone), but yield rises as asymmetric loss or cranial neuropathy is added. For pulsatile tinnitus, CTA/CTV is the usual first study and finds a relevant abnormality in about 20-30%. (Cummings 7e, Ch 153, p 2330)"
  },
  {
   "topic": "Tinnitus",
   "field": "recognize",
-  "text": "**Somatic and typewriter tinnitus**: Somatic tinnitus is perceived in the ear, modulated by an ipsilateral somatic trigger (jaw, neck, eye or limb movement) and has no new hearing complaint; about a third of TMJ patients can modulate their tinnitus, and treating TMJ or myofascial trigger points may help. Typewriter tinnitus is an intermittent staccato clicking ('popcorn' or Morse code) triggered by movement or sound, attributed to vascular compression of the cochlear nerve; it responds to carbamazepine, whereas tensor tympani/stapedius tenotomy does not help, so distinguish it from middle ear myoclonus. (Cummings 7e, Ch 153, p 2331-2332)"
+  "text": "**Somatic and typewriter tinnitus**: Somatic tinnitus is perceived in the ear, modulated by an ipsilateral somatic trigger (jaw, neck, eye or limb movement) and has no new hearing complaint. About a third of TMJ patients can modulate their tinnitus, and treating TMJ or myofascial trigger points may help. Typewriter tinnitus is an intermittent staccato clicking ('popcorn' or Morse code) triggered by movement or sound, attributed to vascular compression of the cochlear nerve. It responds to carbamazepine, whereas tensor tympani/stapedius tenotomy does not help, so distinguish it from middle ear myoclonus. (Cummings 7e, Ch 153, p 2331-2332)"
  },
  {
   "topic": "Tinnitus",
@@ -717,7 +717,7 @@
  {
   "topic": "Tinnitus",
   "field": "teach",
-  "text": "**Tinnitus numbers**: Tinnitus affects up to 50 million US adults (about 30% of those over 55); about 28% of acute tinnitus (under 6 months) resolves spontaneously, and only about 20% find it bothersome enough to seek care. Subjective nonpulsatile tinnitus is about 90% of referrals, pulsatile about 11% (86% subjective, 14% objective), and objective tinnitus only about 1.5% overall. Severe tinnitus is often accompanied by depression or anxiety, and suicide has been reported, so screen and refer. (Cummings 7e, Ch 153, p 2329, 2336)"
+  "text": "**Tinnitus numbers**: Tinnitus affects up to 50 million US adults (about 30% of those over 55). About 28% of acute tinnitus (under 6 months) resolves spontaneously, and only about 20% find it bothersome enough to seek care. Subjective nonpulsatile tinnitus is about 90% of referrals, pulsatile about 11% (86% subjective, 14% objective), and objective tinnitus only about 1.5% overall. Severe tinnitus is often accompanied by depression or anxiety, and suicide has been reported, so screen and refer. (Cummings 7e, Ch 153, p 2329, 2336)"
  },
  {
   "topic": "Hyperacusis / Decreased Sound Tolerance",
@@ -752,12 +752,12 @@
  {
   "topic": "Ménière Disease",
   "field": "manage",
-  "text": "**Intratympanic gentamicin protocols compared**: In a meta-analysis, titration dosing (daily or weekly until vestibular symptoms or hearing change) gave the best complete vertigo control (about 82%), low-dose one-or-two-injection regimens the worst (about 67%), multiple daily dosing the most hearing loss (about 35%) and weekly dosing the least (about 13%). Because the vestibular deafferentation reaction appears 3-5 days after an injection, space injections at least a week apart; adult 40 mg/mL gentamicin is often buffered to about 30 mg/mL. Severe hearing loss usually shows up within the first month, and poor pretreatment hearing is the main risk factor. (Cummings 7e, Ch 158, p 2390-2391)"
+  "text": "**Intratympanic gentamicin protocols compared**: In a meta-analysis, titration dosing (daily or weekly until vestibular symptoms or hearing change) gave the best complete vertigo control (about 82%), low-dose one-or-two-injection regimens the worst (about 67%), multiple daily dosing the most hearing loss (about 35%) and weekly dosing the least (about 13%). Because the vestibular deafferentation reaction appears 3-5 days after an injection, space injections at least a week apart. Adult 40 mg/mL gentamicin is often buffered to about 30 mg/mL. Severe hearing loss usually shows up within the first month, and poor pretreatment hearing is the main risk factor. (Cummings 7e, Ch 158, p 2390-2391)"
  },
  {
   "topic": "Ménière Disease",
   "field": "manage",
-  "text": "**IT steroids versus gentamicin and spontaneous remission**: In a double-blind trial, intratympanic methylprednisolone cut vertigo attacks by about 90% versus about 87% for gentamicin, so a nonablative steroid series is a reasonable first step when hearing must be preserved, with gentamicin for those who accept hearing risk or cannot return for repeat injections. Interpret all vertigo outcomes against the 60-80% spontaneous remission of Meniere disease over 2-8 years; a single sustained-release dexamethasone dose (OTO-104) also reduced vertigo in an early RCT. (Cummings 7e, Ch 158, p 2386-2387)"
+  "text": "**IT steroids versus gentamicin and spontaneous remission**: In a double-blind trial, intratympanic methylprednisolone cut vertigo attacks by about 90% versus about 87% for gentamicin, so a nonablative steroid series is a reasonable first step when hearing must be preserved, with gentamicin for those who accept hearing risk or cannot return for repeat injections. Interpret all vertigo outcomes against the 60-80% spontaneous remission of Meniere disease over 2-8 years. A single sustained-release dexamethasone dose (OTO-104) also reduced vertigo in an early RCT. (Cummings 7e, Ch 158, p 2386-2387)"
  },
  {
   "topic": "Hearing Aids and Bone-Conduction Devices",
@@ -847,7 +847,7 @@
  {
   "topic": "Cochlear Implant Candidacy",
   "field": "manage",
-  "text": "**Pneumococcal vaccination details**: a 2003 CDC study found pneumococcal meningitis in 0.6% of implanted children, about 30 times the rate in age-matched controls. Risk is highest with labyrinthine dysplasia, prior meningitis and the old positioner arrays. The book schedule is a PCV series plus PPSV23 at age 2 for children; vaccine-naive adults get a conjugate vaccine followed by PPSV23 at least 8 weeks later. CI recipients are not at extra meningococcal risk. Note: ACIP has since replaced PCV13 with newer conjugate vaccines (PCV15/20/21), so follow the current CDC schedule. (Cummings 7e, Ch 161, pp 2427–2428)"
+  "text": "**Pneumococcal vaccination details**: A 2003 CDC study found pneumococcal meningitis in 0.6% of implanted children, about 30 times the rate in age-matched controls. Risk is highest with labyrinthine dysplasia, prior meningitis and the old positioner arrays. The book schedule is a PCV series plus PPSV23 at age 2 for children, and vaccine-naive adults get a conjugate vaccine followed by PPSV23 at least 8 weeks later. CI recipients are not at extra meningococcal risk. Note: ACIP has since replaced PCV13. Children now receive PCV15 or PCV20, and adults receive PCV20 or PCV21 alone or PCV15 followed by PPSV23, so follow the current CDC schedule. (Cummings 7e, Ch 161, pp 2427–2428)"
  },
  {
   "topic": "Cochlear Implant Candidacy",
@@ -902,32 +902,32 @@
  {
   "topic": "Otosclerosis / Stapes Fixation",
   "field": "manage",
-  "text": "**Far-advanced otosclerosis (FAO): stapedotomy or CI?**: FAO means air-conduction thresholds over 85 dB with no measurable bone conduction. Overall, a CI gives better results than stapedotomy plus a hearing aid. Exceptions are ears with good cochlear reserve, where a successful stapedotomy performs about as well. A prior stapedotomy does not harm CI outcomes. In otosclerotic ears, expect facial-nerve stimulation, pain or dizziness from current flowing through spongiotic bone; this is more common with straight than perimodiolar arrays. Expect scalar translocation and gusher as well. Get both CT and MRI, because CT tends to overestimate scalar obstruction. (Cummings 7e, Ch 161, pp 2434–2435)"
+  "text": "**Far-advanced otosclerosis (FAO): stapedotomy or CI?**: FAO means air-conduction thresholds over 85 dB with no measurable bone conduction. Overall, a CI gives better results than stapedotomy plus a hearing aid. Exceptions are ears with good cochlear reserve, where a successful stapedotomy performs about as well. A prior stapedotomy does not harm CI outcomes. In otosclerotic ears, expect facial-nerve stimulation, pain or dizziness from current flowing through spongiotic bone. This is more common with straight than perimodiolar arrays. Expect scalar translocation and gusher as well. Get both CT and MRI, because CT tends to overestimate scalar obstruction. (Cummings 7e, Ch 161, pp 2434–2435)"
  },
  {
   "topic": "Vestibular Schwannoma",
   "field": "manage",
-  "text": "**Hearing rehabilitation in NF2**: if the cochlear nerve is anatomically intact (untreated or radiated tumor, or after hearing-preservation surgery), try a CI first; it gives open-set speech in up to about 70%, which an ABI rarely achieves. Assess nerve status with promontory stimulation no sooner than 6–8 weeks after surgery. An absent response does not rule out CI benefit. About one third of ears develop cochlear ossification after translabyrinthine surgery, which favors a CI placed at the same operation. If the nerve is lost, place an ABI at the first-side resection as a 'sleeper' device. (Cummings 7e, Ch 163, p 2449)"
+  "text": "**Hearing rehabilitation in NF2**: if the cochlear nerve is anatomically intact (untreated or radiated tumor, or after hearing-preservation surgery), try a CI first. It gives open-set speech in up to about 70%, which an ABI rarely achieves. Assess nerve status with promontory stimulation no sooner than 6–8 weeks after surgery. An absent response does not rule out CI benefit. About one third of ears develop cochlear ossification after translabyrinthine surgery, which favors a CI placed at the same operation. If the nerve is lost, place an ABI at the first-side resection as a 'sleeper' device. (Cummings 7e, Ch 163, p 2449)"
  },
  {
   "topic": "Vestibular Schwannoma",
   "field": "recognize",
-  "text": "**Compensation and hyperventilation clues**: slow tumor growth lets the brain compensate gradually, so many patients only notice brief imbalance on quick turns toward the tumor side. Patients whose vestibular function is preserved until surgery often have severe postoperative vertigo and an ocular tilt reaction, with vertical diplopia from skew. Hyperventilation can transiently restore conduction in a demyelinated nerve (schwannoma, vascular compression, MS). The result is an excitatory nystagmus whose fast phase beats toward the affected ear, whereas peripheral hypofunction usually beats away from it. (Cummings 7e, Ch 165, pp 2490, 2493; Ch 166, p 2505)"
+  "text": "**Compensation and hyperventilation clues**: slow tumor growth lets the brain compensate gradually, so many patients only notice brief imbalance on quick turns toward the tumor side. Patients whose vestibular function is preserved until surgery often have severe postoperative vertigo and an ocular tilt reaction, with vertical diplopia from skew. Hyperventilation can transiently restore conduction in a demyelinated nerve (schwannoma, vascular compression, MS). The result is an excitatory nystagmus whose fast phase beats toward the affected ear, whereas peripheral hypofunction usually beats away from it. (Cummings 7e, Ch 165, pp 2490, 2493, Ch 166, p 2505)"
  },
  {
   "topic": "Vestibular Test Battery",
   "field": "workup",
-  "text": "**CONFLICT on caloric cutoffs, plus caloric mechanics**: Cummings counts unilateral weakness over 20% and directional preponderance over 25% (Jongkees formulas) as significant, with each lab setting its own norms. The patient lies with the head up 30 degrees, and convection produces about 75% of the response. Warm water excites the horizontal canal (ampullopetal flow). Directional preponderance usually reflects a spontaneous nystagmus that adds to or subtracts from each irrigation; without one, it may be a central sign. (Cummings 7e, Ch 166, pp 2508–2509)"
+  "text": "**Caloric cutoffs and mechanics**: Cutoffs vary by source and lab (Pasha about 20-25%, K.J. Lee 15-30%). Cummings counts unilateral weakness over 20% and directional preponderance over 25% (Jongkees formulas) as significant, with each lab setting its own norms. The patient lies with the head up 30 degrees, and convection produces about 75% of the response. Warm water excites the horizontal canal (ampullopetal flow). Directional preponderance usually reflects a spontaneous nystagmus that adds to or subtracts from each irrigation. Without one, it may be a central sign. (Cummings 7e, Ch 166, pp 2508–2509)"
  },
  {
   "topic": "Vestibular Test Battery",
   "field": "workup",
-  "text": "**Rotary chair: indications and time constant**: rotary chair is best for suspected bilateral loss, monitoring vestibulotoxic drugs, children who do not tolerate calorics, after meningitis, and genetic hearing-loss workups; it is not affected by the canal or cerumen. The cupula returns with a time constant of about 10 seconds, but velocity storage stretches the VOR time constant to about 20 seconds. Peripheral loss shortens the time constant and causes low-frequency phase lead and reduced gain. Bilateral loss lowers both gain and time constant. A compensated unilateral loss can have normal gain and phase, leaving only an asymmetry. (Cummings 7e, Ch 165, p 2488; Ch 166, pp 2509–2510)"
+  "text": "**Rotary chair: indications and time constant**: rotary chair is best for suspected bilateral loss, monitoring vestibulotoxic drugs, children who do not tolerate calorics, after meningitis, and genetic hearing-loss workups. It is not affected by the canal or cerumen. The cupula returns with a time constant of about 10 seconds, but velocity storage stretches the VOR time constant to about 20 seconds. Peripheral loss shortens the time constant and causes low-frequency phase lead and reduced gain. Bilateral loss lowers both gain and time constant. A compensated unilateral loss can have normal gain and phase, leaving only an asymmetry. (Cummings 7e, Ch 165, p 2488, Ch 166, pp 2509–2510)"
  },
  {
   "topic": "Vestibular Test Battery",
   "field": "workup",
-  "text": "**Posturography and subjective visual vertical**: the sensory organization test has six conditions. In conditions 1–3 the platform is fixed (eyes open; eyes closed; visual surround sway-referenced). In conditions 4–6 the platform is sway-referenced (eyes open; eyes closed; both sway-referenced). Falls on conditions 5 and 6 are the 'vestibular pattern'. A bedside version (CTSIB: foam plus a lantern over the head) correlates with it. After acute loss of utricular function, the subjective visual vertical is tilted about 10–15 degrees toward the lesioned side, but the test does not show which ear is affected unless done during off-axis rotation. (Cummings 7e, Ch 166, pp 2512–2513)"
+  "text": "**Posturography and subjective visual vertical**: the sensory organization test has six conditions. In conditions 1–3 the platform is fixed (eyes open, eyes closed, visual surround sway-referenced). In conditions 4–6 the platform is sway-referenced (eyes open, eyes closed, both sway-referenced). Falls on conditions 5 and 6 are the 'vestibular pattern'. A bedside version (CTSIB: foam plus a lantern over the head) correlates with it. After acute loss of utricular function, the subjective visual vertical is tilted about 10–15 degrees toward the lesioned side, but the test does not show which ear is affected unless done during off-axis rotation. (Cummings 7e, Ch 166, pp 2512–2513)"
  },
  {
   "topic": "Central Vestibular Disorders",
@@ -947,7 +947,7 @@
  {
   "topic": "Vestibular Neuritis",
   "field": "recognize",
-  "text": "**Bedside signs of acute unilateral loss**: spontaneous horizontal-torsional nystagmus beats toward the intact ear and is suppressed by fixation, so look with Frenzel lenses. *First-degree* nystagmus appears only on gaze toward the fast phase, *second-degree* also in primary gaze, and *third-degree* in every direction. After about 30 passive head shakes, the initial nystagmus beats toward the intact side and may then reverse. Mastoid or suboccipital vibration also drives nystagmus toward the intact side. An abnormal head impulse needs a fast thrust of only 10–20 degrees; the corrective saccade appears after thrusts toward the lesion. (Cummings 7e, Ch 165, p 2482; Ch 166, pp 2499, 2503–2504)"
+  "text": "**Bedside signs of acute unilateral loss**: spontaneous horizontal-torsional nystagmus beats toward the intact ear and is suppressed by fixation, so look with Frenzel lenses. *First-degree* nystagmus appears only on gaze toward the fast phase, *second-degree* also in primary gaze, and *third-degree* in every direction. After about 30 passive head shakes, the initial nystagmus beats toward the intact side and may then reverse. Mastoid or suboccipital vibration also drives nystagmus toward the intact side. An abnormal head impulse needs a fast thrust of only 10–20 degrees. The corrective saccade appears after thrusts toward the lesion. (Cummings 7e, Ch 165, p 2482, Ch 166, pp 2499, 2503–2504)"
  },
  {
   "topic": "Vestibular Neuritis",
@@ -957,7 +957,7 @@
  {
   "topic": "Vestibular Rehabilitation",
   "field": "physiology",
-  "text": "**Why compensation works and when it fails**: after unilateral loss, the ipsilateral vestibular nuclei fall silent. Resting activity rebalances over 1–3 weeks, but the dynamic asymmetry (abnormal head impulse) persists. Adaptation needs error signals such as retinal slip; through cerebellar learning (climbing-fiber driven long-term depression) these raise VOR gain. Exercises that provoke visual-vestibular mismatch are therefore essential, and recovery is helped by sensory substitution, cervico-ocular reflex potentiation and preprogrammed saccades. A stable deficit can be compensated but a fluctuating one cannot. This is why ablation (gentamicin, neurectomy, labyrinthectomy) helps intractable Ménière disease when the other ear is stable. New CNS insults can cause decompensation later. (Cummings 7e, Ch 165, pp 2491–2493)"
+  "text": "**Why compensation works and when it fails**: after unilateral loss, the ipsilateral vestibular nuclei fall silent. Resting activity rebalances over 1–3 weeks, but the dynamic asymmetry (abnormal head impulse) persists. Adaptation needs error signals such as retinal slip. Through cerebellar learning (climbing-fiber driven long-term depression) these raise VOR gain. Exercises that provoke visual-vestibular mismatch are therefore essential, and recovery is helped by sensory substitution, cervico-ocular reflex potentiation and preprogrammed saccades. A stable deficit can be compensated but a fluctuating one cannot. This is why ablation (gentamicin, neurectomy, labyrinthectomy) helps intractable Ménière disease when the other ear is stable. New CNS insults can cause decompensation later. (Cummings 7e, Ch 165, pp 2491–2493)"
  },
  {
   "topic": "Central Vestibular Disorders",
@@ -1007,22 +1007,22 @@
  {
   "topic": "Persistent Postural-Perceptual Dizziness (PPPD)",
   "field": "teach",
-  "text": "**Mal de debarquement versus PPPD and motion sickness**: After disembarking, a rocking feeling ('land sickness') is normal: it fades within 6 hours in more than 90% of people and within about 48 hours in most others. Mal de debarquement syndrome is rocking or swaying (not spinning) that lasts at least a month after a cruise, flight or long drive. It mostly affects women in their 40s and can last months to years. Unlike PPPD and motion sickness, symptoms improve while riding in a vehicle and return when motion stops. Meclizine and scopolamine do not help; benzodiazepines (clonazepam), amitriptyline, readaptation to passive motion and repetitive transcranial magnetic stimulation may help. (Cummings 7e, Ch 168, p 2550)"
+  "text": "**Mal de debarquement versus PPPD and motion sickness**: After disembarking, a rocking feeling ('land sickness') is normal: it fades within 6 hours in more than 90% of people and within about 48 hours in most others. Mal de debarquement syndrome is rocking or swaying (not spinning) that lasts at least a month after a cruise, flight or long drive. It mostly affects women in their 40s and can last months to years. Unlike PPPD and motion sickness, symptoms improve while riding in a vehicle and return when motion stops. Meclizine and scopolamine do not help. Benzodiazepines (clonazepam), amitriptyline, readaptation to passive motion and repetitive transcranial magnetic stimulation may help. (Cummings 7e, Ch 168, p 2550)"
  },
  {
   "topic": "Persistent Postural-Perceptual Dizziness (PPPD)",
   "field": "pathophysiology",
-  "text": "**Precipitants and diagnostic stance**: PPPD is diagnosed by positive Barany criteria, not by exclusion. Precipitants are peripheral or central vestibular disorders in about 25%-30%, vestibular migraine attacks in 15%-20%, panic attacks or generalized anxiety with prominent dizziness in about 15% each, concussion or whiplash in 10%-15%, and autonomic disorders in about 7%. Coexisting conditions are common and need treatment alongside the PPPD. The maladaptive mechanism is keeping high-threat postural strategies (stiffening, visual dependence) after the trigger resolves. Treat with a three-part plan: PPPD-specific gentle vestibular therapy, SSRIs or SNRIs, and cognitive behavioral therapy. (Cummings 7e, Ch 168, pp 2541-2542; Ch 170, p 2570)"
+  "text": "**Precipitants and diagnostic stance**: PPPD is diagnosed by positive Barany criteria, not by exclusion. Precipitants are peripheral or central vestibular disorders in about 25%-30%, vestibular migraine attacks in 15%-20%, panic attacks or generalized anxiety with prominent dizziness in about 15% each, concussion or whiplash in 10%-15%, and autonomic disorders in about 7%. Coexisting conditions are common and need treatment alongside the PPPD. The maladaptive mechanism is keeping high-threat postural strategies (stiffening, visual dependence) after the trigger resolves. Treat with a three-part plan: PPPD-specific gentle vestibular therapy, SSRIs or SNRIs, and cognitive behavioral therapy. (Cummings 7e, Ch 168, pp 2541-2542, Ch 170, p 2570)"
  },
  {
   "topic": "Vestibular Migraine",
   "field": "manage",
-  "text": "**Prophylaxis doses and drug-class details**: Start with lifestyle measures (migraine diet, regular sleep, aerobic exercise), and add prophylaxis if symptoms persist after 6-8 weeks. Typical starting and target doses: propranolol 60 mg/day to 120-180 mg/day; nortriptyline 5-10 mg/day up to 50-200 mg/day (less sedating than amitriptyline, which is 10-25 mg at bedtime up to 50-100 mg); venlafaxine 37.5 mg/day to 75-225 mg/day; gabapentin 300 mg/day to 1200-2400 mg/day in divided doses; zonisamide 25 mg/day up to 100-400 mg/day, often better tolerated than topiramate. Only beta-blockers without intrinsic sympathomimetic activity work (acebutolol does not). Verapamil has a modest effect, and diltiazem has none. (Cummings 7e, Ch 168, pp 2538, 2540)"
+  "text": "**Prophylaxis doses and drug-class details**: Start with lifestyle measures (migraine diet, regular sleep, aerobic exercise), and add prophylaxis if symptoms persist after 6-8 weeks. Typical starting and target doses: propranolol 60 mg/day to 120-180 mg/day. Nortriptyline 5-10 mg/day up to 50-200 mg/day (less sedating than amitriptyline, which is 10-25 mg at bedtime up to 50-100 mg). Venlafaxine 37.5 mg/day to 75-225 mg/day. Gabapentin 300 mg/day to 1200-2400 mg/day in divided doses. Zonisamide 25 mg/day up to 100-400 mg/day, often better tolerated than topiramate. Only beta-blockers without intrinsic sympathomimetic activity work (acebutolol does not). Verapamil has a modest effect, and diltiazem has none. (Cummings 7e, Ch 168, pp 2538, 2540)"
  },
  {
   "topic": "Vestibular Migraine",
   "field": "recognize",
-  "text": "**Epidemiology and timing numbers**: Migraine affects about 25% of women, 15% of men and 5% of children, and the female excess in vestibular migraine may reach 4:1, with mean onset in middle age. Vertigo comes before the headache in only about 15%; it occurs during the headache in about 47% and in the headache-free interval in about 36%. Motion sickness is much more common with migraine (about 51% vs 20% with tension headache). The lifetime prevalence of migraine is 56% in Ménière disease versus 25% in controls. At about 9 years of follow-up, the diagnosis was confirmed with a positive predictive value of 85%. (Cummings 7e, Ch 168, pp 2537-2540)"
+  "text": "**Epidemiology and timing numbers**: Migraine affects about 25% of women, 15% of men and 5% of children, and the female excess in vestibular migraine may reach 4:1, with mean onset in middle age. Vertigo comes before the headache in only about 15%. It occurs during the headache in about 47% and in the headache-free interval in about 36%. Motion sickness is much more common with migraine (about 51% vs 20% with tension headache). The lifetime prevalence of migraine is 56% in Ménière disease versus 25% in controls. At about 9 years of follow-up, the diagnosis was confirmed with a positive predictive value of 85%. (Cummings 7e, Ch 168, pp 2537-2540)"
  },
  {
   "topic": "Vestibular Rehabilitation",
@@ -1042,7 +1042,7 @@
  {
   "topic": "Perilymph Fistula / Inner-Ear Window Leak",
   "field": "operate",
-  "text": "**Exploration technique**: When possible, explore under local anesthesia with sedation so that the patient can do a Valsalva maneuver. Remove posterosuperior canal bone until the oval window is fully seen, and take down the round window overhang and mucosal folds. Clear fluid that reaccumulates in a niche is often transudate or pooled local anesthetic, not perilymph, so it does not confirm a fistula. Inspect fissures in front of the oval window and below the round window. Routinely patch the round window niche even when exploration is negative, but be conservative at the oval window to avoid a conductive loss. Explore early for penetrating trauma or suspected stapes subluxation; for suspected chronic fistula with stable hearing, try vestibular rehabilitation first. Beta-2 transferrin testing of middle-ear fluid is not recommended. (Cummings 7e, Ch 169, p 2554)"
+  "text": "**Exploration technique**: When possible, explore under local anesthesia with sedation so that the patient can do a Valsalva maneuver. Remove posterosuperior canal bone until the oval window is fully seen, and take down the round window overhang and mucosal folds. Clear fluid that reaccumulates in a niche is often transudate or pooled local anesthetic, not perilymph, so it does not confirm a fistula. Inspect fissures in front of the oval window and below the round window. Routinely patch the round window niche even when exploration is negative, but be conservative at the oval window to avoid a conductive loss. Explore early for penetrating trauma or suspected stapes subluxation. For suspected chronic fistula with stable hearing, try vestibular rehabilitation first. Beta-2 transferrin testing of middle-ear fluid is not recommended. (Cummings 7e, Ch 169, p 2554)"
  },
  {
   "topic": "Vestibular Rehabilitation",
@@ -1107,7 +1107,7 @@
  {
   "topic": "Ramsay Hunt Syndrome (Herpes Zoster Oticus)",
   "field": "recognize",
-  "text": "**Prognosis and timing numbers**: VZV causes about 4.5%-9% of peripheral facial palsies and is the second most common cause. Incidence rises sharply after age 60 as cell-mediated immunity declines. Complete recovery occurs in only about 16%-22% overall: about 10% after complete paralysis versus about 66% after incomplete paralysis. The rash appears before the palsy in about 25%, and these patients do better, while in about 10% the vesicles appear well after the palsy. Zoster sine herpete shows fourfold-raised anti-VZV IgG and responds better to prednisone plus an antiviral than to prednisone alone. Combined steroid and antiviral therapy is the consensus. (Cummings 7e, Ch 172, pp 2589, 2592)"
+  "text": "**Prognosis and timing numbers**: VZV causes about 4.5%-9% of peripheral facial palsies and is the second most common cause. Incidence rises sharply after age 60 as cell-mediated immunity declines. In older, largely untreated series, complete recovery occurred in only about 16%-22% overall: about 10% after complete paralysis versus about 66% after incomplete paralysis. The rash appears before the palsy in about 25%, and these patients do better, while in about 10% the vesicles appear well after the palsy. Zoster sine herpete shows fourfold-raised anti-VZV IgG and responds better to prednisone plus an antiviral than to prednisone alone. Combined steroid and antiviral therapy is the consensus, and starting it within 3 days gave complete recovery in about 75% in one series. (Cummings 7e, Ch 172, pp 2589, 2592)"
  },
  {
   "topic": "Temporal Bone Fracture",
@@ -1117,7 +1117,7 @@
  {
   "topic": "Neurotologic Intraoperative Cranial-Nerve Monitoring",
   "field": "teach",
-  "text": "**Facial EMG signals, train time and setup**: Bursts are brief, near-instant discharges from direct contact or stimulation. Trains are prolonged irregular discharges (like popcorn) from stretch, heat or irrigation and are potentially more harmful. Total train time over about 10 seconds has been linked to worse immediate and long-term function, though this is disputed. A nerve that responds at the brainstem to 0.05-0.1 mA at the end of the case predicts an excellent outcome. On transcranial facial MEPs, a final-to-baseline amplitude ratio above 50% correlates with good immediate function. Place needles in the orbicularis oculi and oris, drape so the whole face is visible, tape the tube to the opposite side, use the largest diamond burr that fits with constant irrigation near the canal, and use bipolar cautery only. (Cummings 7e, Ch 171, pp 2582, 2585; Ch 173, pp 2599-2600)"
+  "text": "**Facial EMG signals, train time and setup**: Bursts are brief, near-instant discharges (a 'popcorn' sound) from direct contact or stimulation. Trains are prolonged, repetitive discharges from stretch, heat or irrigation and are potentially more harmful. Total train time over about 10 seconds has been linked to worse immediate and long-term function, though this is disputed. A nerve that responds at the brainstem to 0.05-0.1 mA at the end of the case predicts an excellent outcome. On transcranial facial MEPs, a final-to-baseline amplitude ratio above 50% correlates with good immediate function. Place needles in the orbicularis oculi and oris, drape so the whole face is visible, tape the tube to the opposite side, use the largest diamond burr that fits with constant irrigation near the canal, and use bipolar cautery only. (Cummings 7e, Ch 171, pp 2582, 2585, Ch 173, pp 2599-2600)"
  },
  {
   "topic": "Facial Nerve Reanimation",
@@ -1147,7 +1147,7 @@
  {
   "topic": "Temporal Bone Anatomy",
   "field": "physiology",
-  "text": "**IAC and CPA nerve relationships**: The IAC is about 1.2-1.4 cm long. At the fundus the falciform crest and Bill's bar divide it into quadrants: facial nerve anterosuperior, superior vestibular posterosuperior, cochlear anteroinferior and inferior vestibular posteroinferior; the singular nerve exits through its own foramen. Going medially, the cochlear and vestibular fibers rotate about 90 degrees, so at the porus and in the CPA the vestibular fibers lie superior to the cochlear fibers (the plane used in retrosigmoid or retrolabyrinthine vestibular neurectomy). At the brainstem, CN VII lies 1-2 mm anteroinferior to VIII. The labyrinthine segment meets the IAC at about 120 degrees, the first genu turns at about 75 degrees, the tympanic segment is about 11 mm, and the mastoid segment, the longest, is about 13 mm. (Cummings 7e, Ch 175, pp 2631-2632; Ch 173, p 2599)"
+  "text": "**IAC and CPA nerve relationships**: The IAC is about 1.2-1.4 cm long. At the fundus the falciform crest and Bill's bar divide it into quadrants: facial nerve anterosuperior, superior vestibular posterosuperior, cochlear anteroinferior and inferior vestibular posteroinferior. The singular nerve exits through its own foramen. Going medially, the cochlear and vestibular fibers rotate about 90 degrees, so at the porus and in the CPA the vestibular fibers lie superior to the cochlear fibers (the plane used in retrosigmoid or retrolabyrinthine vestibular neurectomy). At the brainstem, CN VII lies 1-2 mm anteroinferior to VIII. The labyrinthine segment meets the IAC at about 120 degrees, the first genu turns at about 75 degrees, the tympanic segment is about 11 mm, and the mastoid segment, the longest, is about 13 mm. (Cummings 7e, Ch 175, pp 2631-2632, Ch 173, p 2599)"
  },
  {
   "topic": "Lateral Skull-Base Tumor Framework",
@@ -1212,7 +1212,7 @@
  {
   "topic": "Vernet Syndrome (Jugular Foramen Syndrome)",
   "field": "manage",
-  "text": "**Jugular foramen schwannoma strategy**: These tumors arise in the pars nervosa, anteromedial to the jugular bulb. Unlike the irregular erosion of a paraganglioma, they cause smooth, well-corticated enlargement of the foramen. A mainly intracranial tumor is removed most easily through a suboccipital (retrosigmoid) approach. Intraforaminal and dumbbell tumors need a Fisch infratemporal approach. Avoid transposing the facial nerve when possible, because of permanent weakness. Stereotactic radiosurgery has controlled more than 94% in several series. In one Gamma Knife series, 20% of affected lower cranial nerves improved and 77% stayed stable. (Cummings 7e, Ch 178, p 2682; Ch 179, p 2707; Ch 181, p 2753)"
+  "text": "**Jugular foramen schwannoma strategy**: These tumors arise in the pars nervosa, anteromedial to the jugular bulb. Unlike the irregular erosion of a paraganglioma, they cause smooth, well-corticated enlargement of the foramen. A mainly intracranial tumor is removed most easily through a suboccipital (retrosigmoid) approach. Intraforaminal and dumbbell tumors need a Fisch infratemporal approach. Avoid transposing the facial nerve when possible, because of permanent weakness. Stereotactic radiosurgery has controlled more than 94% in several series. In one Gamma Knife series, 20% of affected lower cranial nerves improved and 77% stayed stable. (Cummings 7e, Ch 178, p 2682, Ch 179, p 2707, Ch 181, p 2753)"
  },
  {
   "topic": "CSF Otorrhea / Temporal Encephalocele",
@@ -1227,7 +1227,7 @@
  {
   "topic": "Vestibular Schwannoma",
   "field": "recognize",
-  "text": "**Symptom order and the sudden-loss rule**: In descending order, the common symptoms are SNHL, tinnitus, dysequilibrium and facial hypesthesia, with a median duration of about 2 years. About 1% of patients with sudden SNHL turn out to have a vestibular schwannoma, and up to 20% of tumors present with sudden loss, so image every unexplained sudden or asymmetric loss even after full recovery. Patients rarely report imbalance, but on the Fukuda stepping test they often turn more than 90 degrees toward the tumor, and the head impulse test may show catch-up saccades to that side. (Cummings 7e, Ch 179, p 2701)"
+  "text": "**Symptom order and the sudden-loss rule**: In descending order, the common symptoms are SNHL, tinnitus, dysequilibrium and facial hypesthesia, with a median duration of about 2 years. About 1-3% of patients with sudden SNHL turn out to have a vestibular schwannoma (up to 10% in some MRI series), and up to 20% of tumors present with sudden loss, so image every unexplained sudden or asymmetric loss even after full recovery. Patients rarely report imbalance, but on the Fukuda stepping test they often turn more than 90 degrees toward the tumor, and the head impulse test may show catch-up saccades to that side. (Cummings 7e, Ch 179, p 2701)"
  },
  {
   "topic": "Vestibular Schwannoma",
@@ -1277,12 +1277,12 @@
  {
   "topic": "Petrous Apex Lesions",
   "field": "pathophysiology",
-  "text": "**Two theories of cholesterol granuloma**: The classic obstruction-vacuum theory holds that a blocked air cell develops negative pressure, effusion and hemorrhage, followed by a foreign-body reaction to cholesterol. The newer Jackler-Cho theory holds that advancing pneumatization exposes marrow that bleeds into the cells. The second theory better explains why granulomas form in well-pneumatized bones. Either way, the cyst cannot usually be removed completely, so treatment aims at durable drainage. (Cummings 7e, Ch 178, p 2685; Ch 179, p 2710)"
+  "text": "**Two theories of cholesterol granuloma**: The classic obstruction-vacuum theory holds that a blocked air cell develops negative pressure, effusion and hemorrhage, followed by a foreign-body reaction to cholesterol. The newer Jackler-Cho theory holds that advancing pneumatization exposes marrow that bleeds into the cells. The second theory better explains why granulomas form in well-pneumatized bones. Either way, the cyst cannot usually be removed completely, so treatment aims at durable drainage. (Cummings 7e, Ch 178, p 2685, Ch 179, p 2710)"
  },
  {
   "topic": "Petrous Apex Lesions",
   "field": "operate",
-  "text": "**Choosing a drainage route**: The transcanal infracochlear route between the jugular bulb and carotid gives dependent drainage into the middle ear. A blocked tube can be revised through an office myringotomy, but the route needs carotid exposure and slow canal healing. The infralabyrinthine route can be impossible with a high jugular bulb, and revision needs formal reexploration. A middle fossa catheter to the mastoid preserves hearing and stays patent long-term. An endoscopic transsphenoidal approach is the preferred hearing-sparing route when the cyst abuts the posterolateral sphenoid wall with favorable pneumatization. Keep it open with a silicone stent or a small nasoseptal flap. Translabyrinthine drainage is reserved for dead ears. (Cummings 7e, Ch 179, pp 2710, 2725–2726; Ch 177, p 2671; Ch 178, p 2686)"
+  "text": "**Choosing a drainage route**: The transcanal infracochlear route between the jugular bulb and carotid gives dependent drainage into the middle ear. A blocked tube can be revised through an office myringotomy, but the route needs carotid exposure and slow canal healing. The infralabyrinthine route can be impossible with a high jugular bulb, and revision needs formal reexploration. A middle fossa catheter to the mastoid preserves hearing and stays patent long-term. An endoscopic transsphenoidal approach is the preferred hearing-sparing route when the cyst abuts the posterolateral sphenoid wall with favorable pneumatization. Keep it open with a silicone stent or a small nasoseptal flap. Translabyrinthine drainage is reserved for dead ears. (Cummings 7e, Ch 179, pp 2710, 2725–2726, Ch 177, p 2671, Ch 178, p 2686)"
  },
  {
   "topic": "Neurotologic Intraoperative Cranial-Nerve Monitoring",
@@ -1307,7 +1307,7 @@
  {
   "topic": "Neurotologic Intraoperative Cranial-Nerve Monitoring",
   "field": "physiology",
-  "text": "**Corticobulbar MEPs and anesthesia**: Transcranial facial MEPs test the whole corticobulbar-facial pathway continuously without touching the nerve, which is valuable before a large tumor exposes it. A true central response disappears with a single pulse (except in hemifacial spasm) and has a latency of about 14 ms. A final-to-baseline amplitude ratio above about 50% predicts good immediate function. MEPs need TIVA with no volatile agents or muscle relaxants. EMG needs no relaxant and no local anesthetic near the stylomastoid foramen. ABR is unaffected by routine anesthesia but gives only delayed feedback, so direct cochlear nerve action potentials are used for near-real-time hearing monitoring. (Cummings 7e, Ch 180, pp 2732, 2737; Ch 179, p 2727)"
+  "text": "**Corticobulbar MEPs and anesthesia**: Transcranial facial MEPs test the whole corticobulbar-facial pathway continuously without touching the nerve, which is valuable before a large tumor exposes it. A true central response disappears with a single pulse (except in hemifacial spasm) and has a latency of about 14 ms. A final-to-baseline amplitude ratio above about 50% predicts good immediate function. MEPs need TIVA with no volatile agents or muscle relaxants. EMG needs no relaxant and no local anesthetic near the stylomastoid foramen. ABR is unaffected by routine anesthesia but gives only delayed feedback, so direct cochlear nerve action potentials are used for near-real-time hearing monitoring. (Cummings 7e, Ch 180, pp 2732, 2737, Ch 179, p 2727)"
  },
  {
   "topic": "Neurotologic Intraoperative Cranial-Nerve Monitoring",
@@ -1327,7 +1327,7 @@
  {
   "topic": "Pediatric Speech Disorders",
   "field": "workup",
-  "text": "**Do not stop at hearing loss: screen for autism**: Autism affects about 1 in 59 children (4.5 times more often in boys) and can be reliably diagnosed by age 2. About 4% of deaf or hard-of-hearing children also have autism, yet only about a quarter get that diagnosis by age 4. Autism-specific clues are echolalia or pronoun reversal, absent joint attention and pointing, poor imitation of gestures, no pretend play, and language regression. Children with specific language impairment (7–8% at kindergarten) want to communicate and do pretend play. Refer early to a multidisciplinary autism clinic: fewer than 10% stay nonverbal with intervention, and starting before age 5 matters. (Cummings 7e, Ch 183, pp 2769–2770)"
+  "text": "**Do not stop at hearing loss: screen for autism**: Cummings cites the older CDC estimate of about 1 in 59 children with autism. The current CDC surveillance estimate is about 1 in 31 (2022 data), with boys affected roughly 3-4 times as often. Autism can be reliably diagnosed by age 2. About 4% of deaf or hard-of-hearing children also have autism, yet only about a quarter get that diagnosis by age 4. Autism-specific clues are echolalia or pronoun reversal, absent joint attention and pointing, poor imitation of gestures, no pretend play, and language regression. Children with specific language impairment (7–8% at kindergarten) want to communicate and do pretend play. Refer early to a multidisciplinary autism clinic: fewer than 10% stay nonverbal with intervention, and starting before age 5 matters. (Cummings 7e, Ch 183, pp 2769–2770)"
  },
  {
   "topic": "Post-Tonsillectomy Hemorrhage",
@@ -1337,7 +1337,7 @@
  {
   "topic": "Pediatric OSA / Adenotonsillar Disease",
   "field": "manage",
-  "text": "**Perioperative opioid and antiemetic pearls**: Children with OSA had about a 10-fold higher rate of apnea after fentanyl. Children whose oxygen saturation nadir is below 85% need about half the opioid for the same pain relief. Snoring alone has been linked to critical respiratory events under anesthesia, and the 5-item STBUR questionnaire helps predict risk. Codeine is contraindicated after tonsillectomy in anyone under 18 because CYP2D6 ultrarapid metabolism has caused deaths. A single intraoperative IV dexamethasone dose reduces PONV and pain and speeds return to diet. (Cummings 7e, Ch 184, pp 2786, 2789)"
+  "text": "**Perioperative opioid and antiemetic pearls**: Children with OSA had about a 10-fold higher rate of apnea after fentanyl. Children whose oxygen saturation nadir is below 85% need about half the opioid for the same pain relief. Snoring alone has been linked to critical respiratory events under anesthesia, and the 5-item STBUR questionnaire helps predict risk. Codeine and tramadol are contraindicated after tonsillectomy in anyone under 18 because CYP2D6 ultrarapid metabolism has caused deaths. A single intraoperative IV dexamethasone dose reduces PONV and pain and speeds return to diet. (Cummings 7e, Ch 184, pp 2786, 2789)"
  },
  {
   "topic": "Down Syndrome Pediatric HNS",
@@ -1347,12 +1347,12 @@
  {
   "topic": "Velopharyngeal Insufficiency",
   "field": "workup",
-  "text": "**Choosing VPD tests**: Perceptual speech analysis by an experienced speech pathologist is still the gold standard. Nasometry (nasal-to-oral sound energy ratio against normative passages) and pressure-flow testing are indirect measures. Speech endoscopy is the usual first-line direct study; most children over about 3 years tolerate it. Pass the scope through the middle meatus rather than along the floor so it sits high in the nasopharynx, and record audio with the video. Speech videofluoroscopy needs at least two, ideally three, views (lateral, frontal, and en face such as Towne or base view), costs radiation, and can miss small fistulas. Closure during swallowing tells you nothing about closure for speech. More than 40% of children with VPD are also dysphonic, which can hide mild VPD. (Cummings 7e, Ch 189, pp 2853-2854)"
+  "text": "**Choosing VPD tests**: Perceptual speech analysis by an experienced speech pathologist is still the gold standard. Nasometry (nasal-to-oral sound energy ratio against normative passages) and pressure-flow testing are indirect measures. Speech endoscopy is the usual first-line direct study. Most children over about 3 years tolerate it. Pass the scope through the middle meatus rather than along the floor so it sits high in the nasopharynx, and record audio with the video. Speech videofluoroscopy needs at least two, ideally three, views (lateral, frontal, and en face such as Towne or base view), costs radiation, and can miss small fistulas. Closure during swallowing tells you nothing about closure for speech. More than 40% of children with VPD are also dysphonic, which can hide mild VPD. (Cummings 7e, Ch 189, pp 2853-2854)"
  },
  {
   "topic": "Velopharyngeal Insufficiency",
   "field": "recognize",
-  "text": "**Phoneme-specific VPD and other bedside clues**: In phoneme-specific (mislearned) VPD, the child closes the port for most oral sounds but makes /s/, /sh/, /z/ (rarely /f/) as a nasal fricative. It is often mistaken for global VPD, it responds to articulation therapy, and it rarely needs surgery. Hyponasality turns /m/ into /b/, /n/ into /d/ and /ng/ into /g/. Facial grimacing (pinching the nares on oral sounds) is a compensatory sign of VPD. Speech that worsens as a task is repeated over minutes suggests fatigue, as in myasthenia gravis. VPD follows about 1 in 1500 adenoidectomies. Test any child with VPD of unknown cause for 22q11.2 deletion (FISH or chromosomal microarray; FISH can miss deletions under about 40 kb). In one series of VPD after adenotonsillectomy, more than half carried the deletion, 28% without obvious features. (Cummings 7e, Ch 189, pp 2851-2853)"
+  "text": "**Phoneme-specific VPD and other bedside clues**: In phoneme-specific (mislearned) VPD, the child closes the port for most oral sounds but makes /s/, /sh/, /z/ (rarely /f/) as a nasal fricative. It is often mistaken for global VPD, it responds to articulation therapy, and it rarely needs surgery. Hyponasality turns /m/ into /b/, /n/ into /d/ and /ng/ into /g/. Facial grimacing (pinching the nares on oral sounds) is a compensatory sign of VPD. Speech that worsens as a task is repeated over minutes suggests fatigue, as in myasthenia gravis. VPD follows about 1 in 1500 adenoidectomies. Test any child with VPD of unknown cause for 22q11.2 deletion (FISH or chromosomal microarray, FISH can miss deletions under about 40 kb). In one series of VPD after adenotonsillectomy, more than half carried the deletion, 28% without obvious features. (Cummings 7e, Ch 189, pp 2851-2853)"
  },
  {
   "topic": "Velopharyngeal Insufficiency",
@@ -1412,7 +1412,7 @@
  {
   "topic": "Congenital CMV Hearing Loss",
   "field": "workup",
-  "text": "**Getting the CMV test right**: Congenital infection can be proven only with urine or saliva CMV PCR or culture taken in the first 3 weeks of life. Saliva PCR is highly sensitive, but breast milk from a seropositive mother causes false positives (15 of 56 saliva-positive infants were urine-negative in one Finnish study). Collect saliva at least 90 minutes after a feed and confirm any positive result with urine. After 3 weeks, the newborn dried blood spot can be tested. It is only about 34% sensitive but about 99.9% specific, so a positive result confirms congenital CMV while a negative one does not exclude it. Hearing-targeted screening tests every infant who fails the newborn hearing screen, and Utah has mandated it since 2013. About 5% of infants failing an inpatient AABR were CMV-positive in one hospital protocol. Testing for CMV first was the most cost-effective workup for every loss type except ANSD, where imaging came first. (Cummings 7e, Ch 193, pp 2892-2893)"
+  "text": "**Getting the CMV test right**: Congenital infection can be proven only with urine or saliva CMV PCR or culture taken in the first 3 weeks of life. Saliva PCR is highly sensitive, but breast milk from a seropositive mother causes false positives (15 of 56 saliva-positive infants were urine-negative in one Finnish study). Collect saliva at least 90 minutes after a feed and confirm any positive result with urine. After 3 weeks, the newborn dried blood spot can be tested. It is only about 34% sensitive but about 99.9% specific, so a positive result confirms congenital CMV while a negative one does not exclude it. Hearing-targeted screening tests every infant who fails the newborn hearing screen, and Utah has mandated it since 2013. Several states now screen every newborn for cCMV (for example, Minnesota since 2023). About 5% of infants failing an inpatient AABR were CMV-positive in one hospital protocol. Testing for CMV first was the most cost-effective workup for every loss type except ANSD, where imaging came first. (Cummings 7e, Ch 193, pp 2892-2893)"
  },
  {
   "topic": "Congenital Inner-Ear Malformations",
@@ -1422,12 +1422,12 @@
  {
   "topic": "Microtia / Aural Atresia",
   "field": "workup",
-  "text": "**Schuknecht canal types and atresiaplasty vs bone conduction**: Schuknecht type A is isolated meatal stenosis with a near-normal middle ear. Type B is narrowing of the whole canal with more middle ear anomalies; about half have a partial atretic plate. Type C is complete atresia with a favorable middle ear (an atresiaplasty candidate). Type D is complete atresia with poor pneumatization and major ossicular and facial nerve anomalies, and these ears are usually not operated. Canal cholesteatoma occurs in about 1 in 5 stenotic canals and in about 50% by age 20 when the canal is under 4 mm. In a systematic review, atresiaplasty reached a PTA under 30 dB in about 60% (air-bone gap under 30 dB in about 69%) with about 24 dB of gain. Osseointegrated bone conduction devices reached about 96-98% with about 38 dB of gain. (Cummings 7e, Ch 197, pp 2944-2945)"
+  "text": "**Schuknecht canal types and atresiaplasty vs bone conduction**: Schuknecht type A is isolated meatal stenosis with a near-normal middle ear. Type B is narrowing of the whole canal with more middle ear anomalies. About half have a partial atretic plate. Type C is complete atresia with a favorable middle ear (an atresiaplasty candidate). Type D is complete atresia with poor pneumatization and major ossicular and facial nerve anomalies, and these ears are usually not operated. Canal cholesteatoma occurs in about 1 in 5 stenotic canals and in about 50% by age 20 when the canal is under 4 mm. In a systematic review, atresiaplasty reached a PTA under 30 dB in about 60% (air-bone gap under 30 dB in about 69%) with about 24 dB of gain. Osseointegrated bone conduction devices reached about 96-98% with about 38 dB of gain. (Cummings 7e, Ch 197, pp 2944-2945)"
  },
  {
   "topic": "AOM / OME / Tympanostomy Decisions",
   "field": "manage",
-  "text": "**Preventing AOM beyond antibiotics**: PCV7 cut overall AOM episodes by only about 6-7% but reduced tubes for recurrent disease by about 20%. Serotype replacement followed, and PCV13 (2010) added six serotypes, including 19A. AOM complicates up to 67% of influenza infections in young children, and both injected and live influenza vaccines lower seasonal AOM (AAP: vaccinate everyone 6 months and older). Breastfeeding for at least 6 months is protective. Xylitol gum or syrup works only if given five times a day for 2-3 months and is useless once a cold has started, so adherence limits it. Probiotics are unproven. No licensed vaccine yet targets nontypeable H. influenzae or M. catarrhalis. (Cummings 7e, Ch 199, pp 2963-2964)"
+  "text": "**Preventing AOM beyond antibiotics**: PCV7 cut overall AOM episodes by only about 6-7% but reduced tubes for recurrent disease by about 20%. Serotype replacement followed, and PCV13 (2010) added six serotypes, including 19A, and children now receive PCV15 or PCV20 under the current CDC schedule. AOM complicates up to 67% of influenza infections in young children, and both injected and live influenza vaccines lower seasonal AOM (AAP: vaccinate everyone 6 months and older). Breastfeeding for at least 6 months is protective. Xylitol gum or syrup works only if given five times a day for 2-3 months and is useless once a cold has started, so adherence limits it. Probiotics are unproven. No licensed vaccine yet targets nontypeable H. influenzae or M. catarrhalis. (Cummings 7e, Ch 199, pp 2963-2964)"
  },
  {
   "topic": "AOM / OME / Tympanostomy Decisions",
@@ -1457,7 +1457,7 @@
  {
   "topic": "Croup vs Epiglottitis",
   "field": "recognize",
-  "text": "**Pertussis in the differential**: Pertussis (Bordetella pertussis; milder disease with B. parapertussis and others) is the least well-controlled vaccine-preventable disease in the US, and it is rising with waning immunity and vaccine refusal. A 7-10 day catarrhal phase resembling a cold is followed by paroxysmal coughing with an inspiratory whoop, and the cough can last up to 10 weeks. Infants under 1 year carry the highest morbidity. Unvaccinated young infants may show only mild congestion before gasping, apnea, cyanosis or pneumonia (death in about 1%), often without a whoop. Macrolides do not shorten symptoms after the catarrhal phase but do limit spread, and patients can be contagious for about 6 weeks. Boosters are now recommended for older children and adults. (Cummings 7e, Ch 201, p 2988)"
+  "text": "**Pertussis in the differential**: Pertussis (Bordetella pertussis, with milder disease with B. parapertussis and others) is the least well-controlled vaccine-preventable disease in the US, and it is rising with waning immunity and vaccine refusal. A 7-10 day catarrhal phase resembling a cold is followed by paroxysmal coughing with an inspiratory whoop, and the cough can last up to 10 weeks. Infants under 1 year carry the highest morbidity. Unvaccinated young infants may show only mild congestion before gasping, apnea, cyanosis or pneumonia (death in about 1%), often without a whoop. Macrolides do not shorten symptoms after the catarrhal phase but do limit spread, and patients can be contagious for about 6 weeks. Boosters are now recommended for older children and adults, and CDC recommends Tdap during every pregnancy to protect young infants. (Cummings 7e, Ch 201, p 2988)"
  },
  {
   "topic": "Croup vs Epiglottitis",
@@ -1507,17 +1507,17 @@
  {
   "topic": "Vestibular Test Battery",
   "field": "workup",
-  "text": "**Bithermal caloric parameters**: water is delivered at 7°C above and below body temperature (44°C and 30°C) for 30 seconds; air uses ±13°C (50°C and 24°C) for 60 seconds. Unilateral weakness = [(RW+RC)−(LW+LC)]/(sum of all four peak slow-phase velocities); a side difference above roughly 15–30% (lab dependent) is abnormal. Bilateral weakness is suggested when each ear's warm+cool total is under about 12°/s. Directional preponderance over 30% is reportable but of doubtful localizing value. Look in the ear first: remove cerumen, and use air (not water) with a perforation, expecting an exaggerated response on that side. (K.J. Lee 12e, Ch 16, p 322-323)"
+  "text": "**Bithermal caloric parameters**: water is delivered at 7°C above and below body temperature (44°C and 30°C) for 30 seconds. Air uses ±13°C (50°C and 24°C) for 60 seconds. Unilateral weakness = [(RW+RC)−(LW+LC)]/(sum of all four peak slow-phase velocities). A side difference above roughly 15–30% (lab dependent) is abnormal. Bilateral weakness is suggested when each ear's warm+cool total is under about 12°/s. Directional preponderance over 30% is reportable but of doubtful localizing value. Look in the ear first: remove cerumen, and use air (not water) with a perforation, expecting an exaggerated response on that side. (K.J. Lee 12e, Ch 16, p 322-323)"
  },
  {
   "topic": "Vestibular Test Battery",
   "field": "workup",
-  "text": "**Rotary chair, vHIT and scleral coil specifics**: rotary chair tests the horizontal canals of both ears together at about 0.01–2 Hz (peak ~50°/s) and reports phase (often exaggerated in peripheral disease), gain (eye/chair velocity; low bilateral gain = bilateral loss) and symmetry (useful for tracking recovery). It finds residual function when calorics are absent, and off-vertical axis rotation probes the otoliths. vHIT uses a >250 Hz goggle camera; gain of about 1 is normal. Overt (catch-up) saccades after the head stops are typical of an acute loss; covert saccades during the turn suggest a compensated lesion. Goggle slippage limits vHIT above about 150–200°/s. The magnetic scleral search coil remains the gold standard and can record eye movements over 300°/s. (K.J. Lee 12e, Ch 16, p 323-324)"
+  "text": "**Rotary chair, vHIT and scleral coil specifics**: rotary chair tests the horizontal canals of both ears together at about 0.01–2 Hz (peak ~50°/s) and reports phase (often exaggerated in peripheral disease), gain (eye/chair velocity, low bilateral gain = bilateral loss) and symmetry (useful for tracking recovery). It finds residual function when calorics are absent, and off-vertical axis rotation probes the otoliths. vHIT uses a >250 Hz goggle camera. Gain of about 1 is normal. Overt (catch-up) saccades after the head stops are typical of an acute loss. Covert saccades during the turn suggest a compensated lesion. Goggle slippage limits vHIT above about 150–200°/s. The magnetic scleral search coil remains the gold standard and can record eye movements over 300°/s. (K.J. Lee 12e, Ch 16, p 323-324)"
  },
  {
   "topic": "Vestibular Test Battery",
   "field": "workup",
-  "text": "**VEMP and SVV numbers**: VEMPs use a brief, loud (>90 dB SPL) 500 Hz tone burst. cVEMP is an ipsilateral inhibitory potential from the tensed SCM (P13/N23; saccule → inferior vestibular nerve → medial vestibulospinal tract → CN XI). oVEMP is a contralateral excitatory potential under the eye during upgaze (N10; utricle → superior vestibular nerve → MLF → CN III nucleus → inferior oblique). Amplitude asymmetry over 40% (after rectification) is abnormal. Conductive pathology, ossicular problems or age raise thresholds or abolish responses; a third window gives low cVEMP thresholds and oVEMP amplitudes over about 17 µV. VEMPs can be present in a deaf ear. Subjective visual vertical is normally within ±2–3°; tilt is sensitive for acute utricular or brainstem injury, and a bucket test is a cheap version. (K.J. Lee 12e, Ch 16, p 324-325)"
+  "text": "**VEMP and SVV numbers**: VEMPs use a brief, loud (>90 dB SPL) 500 Hz tone burst. cVEMP is an ipsilateral inhibitory potential from the tensed SCM (P13/N23, saccule → inferior vestibular nerve → medial vestibulospinal tract → CN XI). oVEMP is a contralateral excitatory potential under the eye during upgaze (N10, utricle → superior vestibular nerve → MLF → CN III nucleus → inferior oblique). Amplitude asymmetry over 40% (after rectification) is abnormal. Conductive pathology, ossicular problems or age raise thresholds or abolish responses. A third window gives low cVEMP thresholds and oVEMP amplitudes over about 17 µV. VEMPs can be present in a deaf ear. Subjective visual vertical is normally within ±2–3°. Tilt is sensitive for acute utricular or brainstem injury, and a bucket test is a cheap version. (K.J. Lee 12e, Ch 16, p 324-325)"
  },
  {
   "topic": "Vestibular Test Battery",
@@ -1557,7 +1557,7 @@
  {
   "topic": "Ménière Disease",
   "field": "recognize",
-  "text": "**Nystagmus during an attack and ECoG cutoff**: early in a spell, irritative nystagmus beats toward the affected ear. In the paralytic phase it beats toward the healthy ear. In the recovery phase it often reverses toward the affected ear again. The direction therefore depends on timing and does not reliably lateralize. ECoG SP/AP ratio above about 0.35 is considered abnormal. Hydrops can bulge the saccule against the footplate (vestibulofibrosis), producing a positive fistula test with an intact drum; the other causes of that sign are SCDS, otosyphilis and perilymph fistula. (K.J. Lee 12e, Ch 16, p 327-328, 330)"
+  "text": "**Nystagmus during an attack and ECoG cutoff**: early in a spell, irritative nystagmus beats toward the affected ear. In the paralytic phase it beats toward the healthy ear. In the recovery phase it often reverses toward the affected ear again. The direction therefore depends on timing and does not reliably lateralize. ECoG SP/AP ratio above about 0.35 is considered abnormal. Hydrops can bulge the saccule against the footplate (vestibulofibrosis), producing a positive fistula test with an intact drum. The other causes of that sign are SCDS, otosyphilis and perilymph fistula. (K.J. Lee 12e, Ch 16, p 327-328, 330)"
  },
  {
   "topic": "Vestibular Neuritis",
@@ -1567,12 +1567,12 @@
  {
   "topic": "Pediatric Hearing Loss Workup",
   "field": "pathophysiology",
-  "text": "**Non-CMV congenital infections**: *Toxoplasmosis* (about 1/10,000 US births; cat feces/undercooked meat) is mostly silent but classically causes chorioretinitis, hydrocephalus and intracranial calcifications. Pyrimethamine plus sulfadiazine can prevent the hearing loss. *Congenital rubella* causes cataract, heart defects, retinitis, cognitive impairment and SNHL (up to about half of affected newborns, often bilateral, profound and mid-frequency). Pathology shows cochleosaccular degeneration with a rolled tectorial membrane. *Neonatal HSV* is mostly peripartum (85%) and causes SNHL in about 10%. IV acyclovir is given for 14 days for skin/eye/mouth disease and 21 days for CNS or disseminated disease. *Zika* (flavivirus) causes microcephaly with SNHL. (K.J. Lee 12e, Ch 17, p 334-337); (K.J. Lee 12e, Ch 22, pp 437-438)"
+  "text": "**Non-CMV congenital infections**: *Toxoplasmosis* (about 1/10,000 US births, cat feces/undercooked meat) is mostly silent but classically causes chorioretinitis, hydrocephalus and intracranial calcifications. Pyrimethamine plus sulfadiazine can prevent the hearing loss. *Congenital rubella* causes cataract, heart defects, retinitis, cognitive impairment and SNHL (up to about half of affected newborns, often bilateral, profound and mid-frequency). Pathology shows cochleosaccular degeneration with a rolled tectorial membrane. *Neonatal HSV* is mostly peripartum (85%) and causes SNHL in about 10%. IV acyclovir is given for 14 days for skin/eye/mouth disease and 21 days for CNS or disseminated disease. *Zika* (flavivirus) causes microcephaly with SNHL. (K.J. Lee 12e, Ch 17, p 334-337) (K.J. Lee 12e, Ch 22, pp 437-438)"
  },
  {
   "topic": "Pediatric Hearing Loss Workup",
   "field": "pathophysiology",
-  "text": "**Kernicterus and congenital hypothyroidism**: about 20% of children with kernicterus develop severe hearing loss, usually high-frequency, from injury to the dorsal and ventral cochlear nuclei and the colliculi (a retrocochlear/ANSD-type pattern). Exchange transfusion is usually indicated above about 20 mg/dL bilirubin. Cretinism (untreated congenital hypothyroidism) combines growth failure, intellectual disability and mixed hearing loss. (K.J. Lee 12e, Ch 17, p 337)"
+  "text": "**Kernicterus and congenital hypothyroidism**: about 20% of children with kernicterus develop severe hearing loss, usually high-frequency, from injury to the dorsal and ventral cochlear nuclei and the colliculi (a retrocochlear/ANSD-type pattern). K.J. Lee cites exchange transfusion above about 20 mg/dL bilirubin, but the current AAP (2022) guideline sets exchange thresholds by gestational age, hours of age and neurotoxicity risk factors rather than one number. Cretinism (untreated congenital hypothyroidism) combines growth failure, intellectual disability and mixed hearing loss. (K.J. Lee 12e, Ch 17, p 337)"
  },
  {
   "topic": "Congenital Hearing Loss Genetics",
@@ -1592,7 +1592,7 @@
  {
   "topic": "Tinnitus",
   "field": "manage",
-  "text": "**Prognosis and sound-therapy numbers**: over time about 25% of patients have near resolution, 50% improve substantially and 25% stay the same. Tinnitus pitch and loudness matching does not predict distress or outcome; many patients match at only about 5 dB above threshold. Hearing aids are first line when there is hearing loss, and adding a masker raises the rate of tinnitus control from about 25% to 55%. Tinnitus retraining therapy pairs directive counseling with low-level broadband noise for about 16 hours a day, set just below the level that covers the tinnitus. Habituation takes about a year. rTMS remains investigational. (K.J. Lee 12e, Ch 18, p 363-364)"
+  "text": "**Prognosis and sound-therapy numbers**: over time about 25% of patients have near resolution, 50% improve substantially and 25% stay the same. Tinnitus pitch and loudness matching does not predict distress or outcome. Many patients match at only about 5 dB above threshold. Hearing aids are first line when there is hearing loss, and adding a masker raises the rate of tinnitus control from about 25% to 55%. Tinnitus retraining therapy pairs directive counseling with low-level broadband noise for about 16 hours a day, set just below the level that covers the tinnitus. Habituation takes about a year. rTMS remains investigational. (K.J. Lee 12e, Ch 18, p 363-364)"
  },
  {
   "topic": "Tinnitus",
@@ -1617,12 +1617,12 @@
  {
   "topic": "Otosclerosis / Stapes Fixation",
   "field": "operate",
-  "text": "**Patient situations that change the stapes plan**: osteogenesis imperfecta bone is brittle, so take care not to fracture the tympanic ring while curetting or the incus while crimping. Coexisting hydrops (Ménière) puts a distended saccule under the footplate and raises the risk of a dead ear, so consider amplification. A blind patient, or one with contralateral vestibulopathy, may not compensate for even a minor vestibular injury; get calorics if vestibulopathy is suspected and consider a hearing aid. Patients with mixed loss will likely still need aids. Indications: air-bone gap of at least 25–30 dB (negative 512 Hz Rinne), normal otoscopy and absent or biphasic reflexes; operate on the worse ear. A vestigial persistent stapedial artery can be worked around; a large one means aborting. (K.J. Lee 12e, Ch 19, p 371-372)"
+  "text": "**Patient situations that change the stapes plan**: osteogenesis imperfecta bone is brittle, so take care not to fracture the tympanic ring while curetting or the incus while crimping. Coexisting hydrops (Ménière) puts a distended saccule under the footplate and raises the risk of a dead ear, so consider amplification. A blind patient, or one with contralateral vestibulopathy, may not compensate for even a minor vestibular injury. Get calorics if vestibulopathy is suspected and consider a hearing aid. Patients with mixed loss will likely still need aids. Indications: air-bone gap of at least 25–30 dB (negative 512 Hz Rinne), normal otoscopy and absent or biphasic reflexes. Operate on the worse ear. A vestigial persistent stapedial artery can be worked around. A large one means aborting. (K.J. Lee 12e, Ch 19, p 371-372)"
  },
  {
   "topic": "Cochlear Implant Candidacy",
   "field": "workup",
-  "text": "**Textbook audiometric criteria**: adults have bilateral moderate-to-profound SNHL with best-aided sentence scores of 50% or less in the ear to be implanted and 60% or less binaurally. CMS (Medicare) is stricter: 40% or less. Hybrid (electroacoustic) labeling: low-frequency thresholds (500 Hz and below) better than about 60 dB HL with 2–4 kHz PTA of at least 75 dB HL in the implant ear, and aided CNC word scores of 10–60% in that ear. Children: at least 12 months by FDA labeling (earlier is increasingly done), a 3–6 month aid trial (waived for postmeningitic ossification), profound loss at 12–24 months and severe-to-profound loss after 24 months, open-set words of 30% or less (MLNT/LNT). Adult testing uses AzBio, CNC and BKB-SIN. (K.J. Lee 12e, Ch 20, p 377, 380-381)"
+  "text": "**Textbook audiometric criteria**: Adults have bilateral moderate-to-profound SNHL with best-aided sentence scores of 50% or less in the ear to be implanted and 60% or less binaurally. The book says CMS (Medicare) is stricter at 40% or less, but the 2022 CMS coverage update raised the cutoff to 60% or less. Hybrid (electroacoustic) labeling requires low-frequency thresholds (500 Hz and below) better than about 60 dB HL with a 2-4 kHz PTA of at least 75 dB HL in the implant ear, and aided CNC word scores of 10-60% in that ear. For children the book gives at least 12 months by FDA labeling, but current labeling for some devices starts at 9 months, and earlier implantation is done after meningitis. Children also need a 3-6 month aid trial (waived for postmeningitic ossification), profound loss at 12-24 months or severe-to-profound loss after 24 months, and open-set word scores of 30% or less (MLNT/LNT). Adult testing uses AzBio, CNC and BKB-SIN. (K.J. Lee 12e, Ch 20, p 377, 380-381)"
  },
  {
   "topic": "Cochlear Implant Candidacy",
@@ -1667,7 +1667,7 @@
  {
   "topic": "Ramsay Hunt Syndrome (Herpes Zoster Oticus)",
   "field": "manage",
-  "text": "**Textbook regimen and prognosis**: only about 60% regain normal facial function, worse than Bell palsy. Give high-dose steroid (about 1 mg/kg/day for 14 days) when there is facial palsy or SNHL, plus valacyclovir 1 g every 8 hours for 7 days. Decompression is not advised, because degeneration is diffuse rather than confined to the labyrinthine segment and geniculate ganglion. Use gabapentin for postherpetic neuralgia. A Tzanck smear (multinucleated giant cells) or viral titers can support the diagnosis; check for herpetic keratitis. Other cranial nerves (V, IX–XII) can be involved. (K.J. Lee 12e, Ch 22, p 403-404)"
+  "text": "**Textbook regimen and prognosis**: only about 60% regain normal facial function, worse than Bell palsy. Give high-dose steroid (about 1 mg/kg/day for 14 days) when there is facial palsy or SNHL, plus valacyclovir 1 g every 8 hours for 7 days. Decompression is not advised, because degeneration is diffuse rather than confined to the labyrinthine segment and geniculate ganglion. Use gabapentin for postherpetic neuralgia. A Tzanck smear (multinucleated giant cells) or viral titers can support the diagnosis. Check for herpetic keratitis. Other cranial nerves (V, IX–XII) can be involved. (K.J. Lee 12e, Ch 22, p 403-404)"
  },
  {
   "topic": "Facial Nerve Reanimation",
@@ -1742,17 +1742,17 @@
  {
   "topic": "Parapharyngeal Space Tumor",
   "field": "manage",
-  "text": "**Vagal paraganglioma versus schwannoma**: Vagal paragangliomas usually arise from the nodose ganglion. They push the carotids anteromedially without splaying them and separate the IJV from the carotid; sympathetic tumors usually do not. Malignancy is higher than for carotid body tumors (about 16%). Resection almost always causes vagal paralysis, so it is reserved for aggressive or skull-base tumors or a nerve that is already paralyzed. If a vagal paraganglioma is found unexpectedly during planned carotid body surgery, it is reasonable to stop and choose observation or radiation. Schwannomas, by contrast, can often be enucleated with the nerve preserved. (K.J. Lee 12e, Ch 40, p 739-741)"
+  "text": "**Vagal paraganglioma versus schwannoma**: Vagal paragangliomas usually arise from the nodose ganglion. They push the carotids anteromedially without splaying them and separate the IJV from the carotid. Sympathetic tumors usually do not. Malignancy is higher than for carotid body tumors (about 16%). Resection almost always causes vagal paralysis, so it is reserved for aggressive or skull-base tumors or a nerve that is already paralyzed. If a vagal paraganglioma is found unexpectedly during planned carotid body surgery, it is reasonable to stop and choose observation or radiation. Schwannomas, by contrast, can often be enucleated with the nerve preserved. (K.J. Lee 12e, Ch 40, p 739-741)"
  },
  {
   "topic": "Cutaneous Squamous Cell Carcinoma of the Head & Neck",
   "field": "workup",
-  "text": "**Low- vs high-risk features (NCCN-style)**: High-risk features include: H-zone location (central face, eyelids, nose, lips, chin, preauricular/postauricular skin, temple, ear) or a lesion of 10 mm or more on the cheek, forehead, scalp, or neck; poorly defined borders; recurrence; prior radiation; immunosuppression; rapid growth; neurologic symptoms; perineural or lymphovascular invasion; poor differentiation; depth of 2 mm or more or Clark level IV-V; and acantholytic, adenosquamous, desmoplastic, or metaplastic subtypes. Low-risk invasive tumors can be excised with 4-6 mm margins. High-risk tumors need Mohs surgery or complete margin assessment, and SLNB can be considered for clinically N0 high-risk disease. (K.J. Lee 12e, Ch 42, p 761-762)"
+  "text": "**Low- vs high-risk features (NCCN-style)**: K.J. Lee lists these high-risk features: H-zone location (central face, eyelids, nose, lips, chin, preauricular/postauricular skin, temple, ear) or a lesion of 10 mm or more on the cheek, forehead, scalp or neck, poorly defined borders, recurrence, prior radiation, immunosuppression, rapid growth, neurologic symptoms, perineural or lymphovascular invasion, poor differentiation, depth of 2 mm or more or Clark level IV-V, and acantholytic, adenosquamous, desmoplastic or metaplastic subtypes. Current NCCN guidelines are what count: any head and neck location is high risk regardless of size, and a very-high-risk group is added (over 4 cm, poor differentiation, desmoplasia, depth over 6 mm or invasion beyond subcutaneous fat, large-nerve perineural invasion, lymphovascular invasion). Low-risk invasive tumors can be excised with 4-6 mm margins. High-risk tumors need Mohs surgery or complete margin assessment, and SLNB can be considered for clinically N0 high-risk disease. (K.J. Lee 12e, Ch 42, p 761-762)"
  },
  {
   "topic": "Cutaneous Squamous Cell Carcinoma of the Head & Neck",
   "field": "manage",
-  "text": "**Adjuvant radiation and chemoradiation triggers**: Consider adjuvant RT for: a single node without ENE (selectively); two or more positive nodes; any node over 3 cm; ENE; incompletely excised nodes; an unresectable positive margin; or extensive or large-nerve perineural invasion. Consider concurrent systemic therapy (cisplatin, carboplatin, or cetuximab) for ENE, gross residual nodal disease, or an unresectable positive margin, though its benefit is unproven. Radiation is contraindicated in genetic skin-cancer syndromes and connective tissue disease. (K.J. Lee 12e, Ch 42, p 762)"
+  "text": "**Adjuvant radiation and chemoradiation triggers**: Consider adjuvant RT for a single node without ENE (selectively), two or more positive nodes, any node over 3 cm, ENE, incompletely excised nodes, an unresectable positive margin, or extensive or large-nerve perineural invasion. Consider concurrent systemic therapy (cisplatin, carboplatin or cetuximab) for ENE, gross residual nodal disease or an unresectable positive margin, though its benefit is unproven. Radiation is relatively contraindicated in genetic skin-cancer syndromes (such as basal cell nevus syndrome) and connective tissue disease. (K.J. Lee 12e, Ch 42, p 762)"
  },
  {
   "topic": "Cutaneous Squamous Cell Carcinoma of the Head & Neck",
@@ -1772,12 +1772,12 @@
  {
   "topic": "Merkel Cell Carcinoma",
   "field": "workup",
-  "text": "**Immunostain profile**: About 40% of MCC are hard to call on H&E, so immunostains are needed. MCC is CK20-positive in a paranuclear dot pattern and positive for neuroendocrine markers (synaptophysin, chromogranin). It is TTF-1-negative, which separates it from metastatic small cell lung cancer. CONFLICT NOTE: K.J. Lee lists CD117, S-100, and CD45 as positive markers; standard pathology teaches that MCC is S-100- and CD45-negative, which helps exclude melanoma and lymphoma. (K.J. Lee 12e, Ch 42, p 763)"
+  "text": "**Immunostain profile**: About 40% of MCC are hard to call on H&E, so immunostains are needed. MCC is CK20-positive in a paranuclear dot pattern and positive for neuroendocrine markers (synaptophysin, chromogranin). It is TTF-1-negative, which separates it from metastatic small cell lung cancer. CONFLICT NOTE: K.J. Lee lists CD117, S-100, and CD45 as positive markers. Standard pathology teaches that MCC is S-100- and CD45-negative, which helps exclude melanoma and lymphoma. (K.J. Lee 12e, Ch 42, p 763)"
  },
  {
   "topic": "Basal Cell Carcinoma of the Head & Neck",
   "field": "manage",
-  "text": "**Low-risk BCC specifics**: Low-risk BCC (nodular or superficial, well defined, primary, <2 cm, outside the H-zone) can be excised with a 4 mm margin and postoperative margin check. C&E is fast and cheap but gives no margin histology and is unsuitable for hair-bearing scalp, because tumor tracks down follicles. Intralesional interferon works for superficial BCC but is rarely used (three injections a week for 3 weeks). Hedgehog inhibitor side effects are muscle cramps, dysgeusia, alopecia, weight loss, fatigue, and raised CK. (K.J. Lee 12e, Ch 42, p 759-760)"
+  "text": "**Low-risk BCC specifics**: Low-risk BCC (nodular or superficial, well defined, primary, <2 cm, outside the H-zone) can be excised with a 4 mm margin and postoperative margin check. Current NCCN criteria classify any head and neck BCC as high risk by location, so this low-risk pathway applies mainly to trunk and extremity lesions. C&E is fast and cheap but gives no margin histology and is unsuitable for hair-bearing scalp, because tumor tracks down follicles. Intralesional interferon works for superficial BCC but is rarely used (three injections a week for 3 weeks). Hedgehog inhibitor side effects are muscle cramps, dysgeusia, alopecia, weight loss, fatigue, and raised CK. (K.J. Lee 12e, Ch 42, p 759-760)"
  },
  {
   "topic": "Sinonasal Malignancy",
@@ -1850,11 +1850,6 @@
   "text": "**Wolfram syndrome vs WFS1 hearing loss**: CONFLICT NOTE: K.J. Lee calls 'Wolfram' the most common dominant low-frequency SNHL. More precisely, heterozygous dominant WFS1 mutations cause nonsyndromic low-frequency (upsloping) loss (DFNA6/14/38). Recessive WFS1 mutations cause Wolfram syndrome (DIDMOAD: diabetes insipidus, diabetes mellitus, optic atrophy, deafness), a progressive neurodegenerative syndrome. (K.J. Lee 12e, Ch 53, p 971)"
  },
  {
-  "topic": "Pediatric Head & Neck Tumors",
-  "field": "recognize",
-  "text": "**Pilomatrixoma**: A common benign pediatric skin adnexal tumor from hair matrix cells, frequent on the face and neck and more common in girls. It is a firm, superficial, often bluish, sometimes faceted nodule tethered to skin. Ultrasound shows calcification. Treatment is complete excision with the overlying skin if needed, because it does not regress and recurs if incompletely removed. (K.J. Lee 12e, Ch 53, p 963)"
- },
- {
   "topic": "Pediatric Aspiration",
   "field": "manage",
   "text": "**TEF repair outcomes**: About 85-90% are proximal esophageal atresia with distal TEF. The H-type (2-4% of primary TEF) needs a prone pull-back esophagram or bronchoscopy to find. Vocal fold paralysis follows about 11% of repairs (usually left) and about 50% of cervical H-type repairs. Most children compensate clinically within about 8 months, though only about a third recover nerve function. Recurrent fistula (about 20%) can be treated endoscopically by de-epithelialization, with 60-90% success over a mean of two sessions. Screen for VACTERL anomalies. (K.J. Lee 12e, Ch 53, p 1004-1005)"
@@ -1877,7 +1872,7 @@
  {
   "topic": "Pediatric OSA / Adenotonsillar Disease",
   "field": "localize",
-  "text": "**Macroglossia causes**: True anterior macroglossia includes Beckwith-Wiedemann syndrome (11p15 imprinting; macrosomia, neonatal hypoglycemia, omphalocele, ear pits or creases, about 10% embryonal tumors such as Wilms and hepatoblastoma), treated with anterior wedge glossectomy. Other causes are mucopolysaccharidoses (Hurler, Hunter) and congenital hypothyroidism. Down syndrome causes relative macroglossia with a large tongue base. Lymphatic or venous malformations are also in the differential. (K.J. Lee 12e, Ch 53, p 989-990)"
+  "text": "**Macroglossia causes**: True anterior macroglossia includes Beckwith-Wiedemann syndrome (11p15 imprinting, macrosomia, neonatal hypoglycemia, omphalocele, ear pits or creases, about 10% embryonal tumors such as Wilms and hepatoblastoma), treated with anterior wedge glossectomy. Other causes are mucopolysaccharidoses (Hurler, Hunter) and congenital hypothyroidism. Down syndrome causes relative macroglossia with a large tongue base. Lymphatic or venous malformations are also in the differential. (K.J. Lee 12e, Ch 53, p 989-990)"
  },
  {
   "topic": "Aging Face / Injectables / Resurfacing",
@@ -1902,7 +1897,7 @@
  {
   "topic": "Open Rhinoplasty Fundamentals",
   "field": "teach",
-  "text": "**Revision rates and timing**: About 5-10% of open and 10-15% of closed rhinoplasties need revision, and revision usually waits about 1 year for edema and scar to settle. Know the classic deformity-cause pairs: pollybeak (residual anterior septal angle, supratip dead-space scar, or loss of tip support); inverted-V (ULC detachment from the nasal bones or middle-vault collapse); open roof (no lateral osteotomies after hump removal); saddle (over-resected dorsum); alar retraction (over-resected lateral crura or vestibular skin). (K.J. Lee 12e, Ch 54, p 1040-1041)"
+  "text": "**Revision rates and timing**: About 5-10% of open and 10-15% of closed rhinoplasties need revision, and revision usually waits about 1 year for edema and scar to settle. Know the classic deformity-cause pairs: pollybeak (residual anterior septal angle, supratip dead-space scar, or loss of tip support). Inverted-V (ULC detachment from the nasal bones or middle-vault collapse). Open roof (no lateral osteotomies after hump removal). Saddle (over-resected dorsum). Alar retraction (over-resected lateral crura or vestibular skin). (K.J. Lee 12e, Ch 54, p 1040-1041)"
  },
  {
   "topic": "Reconstruction Selection After Head & Neck Ablation",
@@ -1952,12 +1947,12 @@
  {
   "topic": "Lip Cancer",
   "field": "manage",
-  "text": "**Microstomia and commissure rules**: Estlander flaps are for defects that include the commissure; Abbe flaps are for defects that spare it. For lower-lip defects of about one-third to one-half, bilateral advancement flaps through the mental crease work. One-half to two-thirds calls for Karapandzic flaps; beyond two-thirds, use Bernard-von Burow or Gillies fan flaps with or without an Abbe flap, or a free flap. Local lip and cheek flaps for defects over two-thirds commonly cause microstomia that may need stretching devices or commissuroplasty. Free-flap reconstruction avoids microstomia. (K.J. Lee 12e, Ch 55, pp 1071-1072)"
+  "text": "**Microstomia and commissure rules**: Estlander flaps are for defects that include the commissure. Abbe flaps are for defects that spare it. For lower-lip defects of about one-third to one-half, bilateral advancement flaps through the mental crease work. One-half to two-thirds calls for Karapandzic flaps. Beyond two-thirds, use Bernard-von Burow or Gillies fan flaps with or without an Abbe flap, or a free flap. Local lip and cheek flaps for defects over two-thirds commonly cause microstomia that may need stretching devices or commissuroplasty. Free-flap reconstruction avoids microstomia. (K.J. Lee 12e, Ch 55, pp 1071-1072)"
  },
  {
   "topic": "Structured Facial Trauma Examination",
   "field": "workup",
-  "text": "**Choosing the CT plane**: Read facial CT in all three planes; 3-D reconstructions aid understanding but are less precise. Axial images best show vertically oriented structures (medial orbital walls, pterygoid plates). Coronal images best show horizontal structures (orbital floors, roof). Sagittal images, especially when angled along the orbital plane, best show the orbital floor's anteroposterior extent and the optic canal. A panoramic tomogram (orthopantomogram) remains a cheap screen for mandible fractures. (K.J. Lee 12e, Ch 56, pp 1076-1077)"
+  "text": "**Choosing the CT plane**: Read facial CT in all three planes. 3-D reconstructions aid understanding but are less precise. Axial images best show vertically oriented structures (medial orbital walls, pterygoid plates). Coronal images best show horizontal structures (orbital floors, roof). Sagittal images, especially when angled along the orbital plane, best show the orbital floor's anteroposterior extent and the optic canal. A panoramic tomogram (orthopantomogram) remains a cheap screen for mandible fractures. (K.J. Lee 12e, Ch 56, pp 1076-1077)"
  },
  {
   "topic": "Le Fort / Panfacial Trauma",
@@ -1977,12 +1972,12 @@
  {
   "topic": "NOE Fracture",
   "field": "teach",
-  "text": "**Most commonly missed facial fracture**: NOE is the facial fracture most often missed. Telecanthus can be minimal at first and worsen into a deformity that is much harder to fix late, so look for loss of dorsal height and an evolving epicanthal fold. For type 2 and 3 injuries, pull the canthal tendon posteriorly, medially and superiorly, against its natural drift (anterior, lateral, inferior). Bone-graft a deficient anterior medial orbit first, and drill a hole in the graft for the transnasal wire. Have a low threshold for silicone lacrimal stenting. (K.J. Lee 12e, Ch 56, pp 1083, 1087; Ch 57, p 1098)"
+  "text": "**Most commonly missed facial fracture**: NOE is the facial fracture most often missed. Telecanthus can be minimal at first and worsen into a deformity that is much harder to fix late, so look for loss of dorsal height and an evolving epicanthal fold. For type 2 and 3 injuries, pull the canthal tendon posteriorly, medially and superiorly, against its natural drift (anterior, lateral, inferior). Bone-graft a deficient anterior medial orbit first, and drill a hole in the graft for the transnasal wire. Have a low threshold for silicone lacrimal stenting. (K.J. Lee 12e, Ch 56, pp 1083, 1087, Ch 57, p 1098)"
  },
  {
   "topic": "ZMC / Orbital Trauma",
   "field": "manage",
-  "text": "**Dutton indications and timing**: Classic indications for floor repair: persistent diplopia with positive forced ductions and CT entrapment that has not improved after 1-2 weeks; early enophthalmos of 3 mm or more (other sources use 2 mm); significant globe ptosis; a floor defect over 50%; and associated rim or facial fractures. Emergent indications are an oculocardiac reflex and globe herniation into the maxillary sinus. Diplopia that interferes with work (pilots, athletes) is a relative indication. Usually wait 7-10 days for edema to settle and repair within 2 weeks; repairs after 6 weeks are much harder because of fibrosis. (K.J. Lee 12e, Ch 57, pp 1091-1092)"
+  "text": "**Dutton indications and timing**: Classic indications for floor repair: persistent diplopia with positive forced ductions and CT entrapment that has not improved after 1-2 weeks. Early enophthalmos of 3 mm or more (other sources use 2 mm). Significant globe ptosis. A floor defect over 50%. And associated rim or facial fractures. Emergent indications are an oculocardiac reflex and globe herniation into the maxillary sinus. Diplopia that interferes with work (pilots, athletes) is a relative indication. Usually wait 7-10 days for edema to settle and repair within 2 weeks. Repairs after 6 weeks are much harder because of fibrosis. (K.J. Lee 12e, Ch 57, pp 1091-1092)"
  },
  {
   "topic": "ZMC / Orbital Trauma",
@@ -2002,7 +1997,7 @@
  {
   "topic": "ZMC / Orbital Trauma",
   "field": "recognize",
-  "text": "**Associated ocular injuries and repair complications**: Before repair, screen for corneal abrasion, traumatic iritis (photophobia, brow ache), hyphema with pressure problems, lens dislocation (can cause angle-closure glaucoma), retinal detachment (painless vision loss, flashes, field cut) and commotio retinae. A rise in intraocular pressure on upgaze supports inferior rectus entrapment. Repair complications include lower-lid retraction, ectropion after subciliary and entropion after transconjunctival approaches, and hematic cyst around some implants. A Frost suture taped above the brow for 2-5 days helps prevent lid retraction. (K.J. Lee 12e, Ch 57, pp 1090, 1093; Ch 56, p 1087)"
+  "text": "**Associated ocular injuries and repair complications**: Before repair, screen for corneal abrasion, traumatic iritis (photophobia, brow ache), hyphema with pressure problems, lens dislocation (can cause angle-closure glaucoma), retinal detachment (painless vision loss, flashes, field cut) and commotio retinae. A rise in intraocular pressure on upgaze supports inferior rectus entrapment. Repair complications include lower-lid retraction, ectropion after subciliary and entropion after transconjunctival approaches, and hematic cyst around some implants. A Frost suture taped above the brow for 2-5 days helps prevent lid retraction. (K.J. Lee 12e, Ch 57, pp 1090, 1093, Ch 56, p 1087)"
  },
  {
   "topic": "Facial Soft-Tissue Lacerations / Burns",
@@ -2077,7 +2072,7 @@
  {
   "topic": "Subglottic / Tracheal Stenosis",
   "field": "operate",
-  "text": "**Release maneuvers and length gained**: Typical length gained: blunt anterior mobilization of the larynx and trachea, about 3 cm; partial incision of annular ligaments on opposite sides above and below the anastomosis, about 1.5 cm; suprahyoid laryngeal release, about 5 cm. Infrahyoid (thyrohyoid) release gains length but causes more dysphagia and aspiration, so the suprahyoid release is preferred. (K.J. Lee 12e, Ch 60, p 1197)"
+  "text": "**Release maneuvers and length gained**: Typical length gained: blunt anterior mobilization of the larynx and trachea, about 3 cm. Partial incision of annular ligaments on opposite sides above and below the anastomosis, about 1.5 cm. Suprahyoid laryngeal release, about 5 cm in this text (Cummings cites 2-3 cm, closer to most series). Infrahyoid (thyrohyoid) release gains length but causes more dysphagia and aspiration, so the suprahyoid release is preferred. (K.J. Lee 12e, Ch 60, p 1197)"
  },
  {
   "topic": "Glomus Tumor / Paraganglioma",
@@ -2092,7 +2087,7 @@
  {
   "topic": "Medialization Thyroplasty",
   "field": "operate",
-  "text": "**Open Teflon granuloma removal and the empty paraglottic space**: a parasagittal laryngotomy 5-7 mm off midline is the only approach that usually removes a granuloma completely. It suits cases where the vocal ligament and free-edge mucosa are spared; ligament involvement favors endoscopic treatment. The defect is filled with a posteriorly based pedicled fat flap plus arytenoid adduction and, if no mucosal tear, a Silastic implant, slightly overmedialized because the flap atrophies over months to years. The same flap treats the atrophic 'empty paraglottic space' caused by an oversized implant. (Operative Techniques in Laryngology 2024, Ch 50, p 442-446)"
+  "text": "**Open Teflon granuloma removal and the empty paraglottic space**: a parasagittal laryngotomy 5-7 mm off midline is the only approach that usually removes a granuloma completely. It suits cases where the vocal ligament and free-edge mucosa are spared. Ligament involvement favors endoscopic treatment. The defect is filled with a posteriorly based pedicled fat flap plus arytenoid adduction and, if no mucosal tear, a Silastic implant, slightly overmedialized because the flap atrophies over months to years. The same flap treats the atrophic 'empty paraglottic space' caused by an oversized implant. (Operative Techniques in Laryngology 2024, Ch 50, p 442-446)"
  },
  {
   "topic": "Laryngocele",
@@ -2137,7 +2132,7 @@
  {
   "topic": "Spasmodic Dysphonia",
   "field": "teach",
-  "text": "**SLAD-R candidacy and recovery**: the best candidates are young, respond well to botulinum toxin and have little tremor; contraindications are abductor or mixed SD, functional dysphonia or MTD, relative age over 65, and prominent tremor, which does not improve. The voice is breathy for 3-6 months (like a large bilateral TA toxin dose), and thin-liquid dysphagia is common in the first days. Strength improves by 9-12 months, and over 75% end with a normal voice. True recurrence appears within 12 months and responds to toxin, while persistent breathiness is treated with augmentation. (Operative Techniques in Laryngology 2024, Ch 53, p 464, 469-470)"
+  "text": "**SLAD-R candidacy and recovery**: the best candidates are young, respond well to botulinum toxin and have little tremor. Contraindications are abductor or mixed SD, functional dysphonia or MTD, relative age over 65, and prominent tremor, which does not improve. The voice is breathy for 3-6 months (like a large bilateral TA toxin dose), and thin-liquid dysphagia is common in the first days. Strength improves by 9-12 months, and over 75% end with a normal voice. True recurrence appears within 12 months and responds to toxin, while persistent breathiness is treated with augmentation. (Operative Techniques in Laryngology 2024, Ch 53, p 464, 469-470)"
  },
  {
   "topic": "Arytenoid Adduction / Reinnervation",
@@ -2152,7 +2147,7 @@
  {
   "topic": "Unilateral Vocal Fold Paralysis",
   "field": "operate",
-  "text": "**Hypopharyngeal pharyngoplasty for high vagal paralysis**: a static adjunct, usually done with medialization and arytenoid adduction, that removes a posterior block of thyroid cartilage (about 1.5 x 1 cm in men), excises the paralyzed piriform mucosa like a diverticulum (stapler flush with the muscular process), and advances the inferior constrictor-perichondrial flap about 1.5-2 cm forward on the ala. The narrower funnel lets the innervated side generate more bolus pressure, but the cricopharyngeus is not treated, so a myotomy may be added. Best candidates are under 65; contraindications include Chiari malformation, brainstem stroke and diffuse dysmotility. A Valsalva leak test under saline helps prevent pharyngocutaneous fistula. (Operative Techniques in Laryngology 2024, Ch 55, p 479-485)"
+  "text": "**Hypopharyngeal pharyngoplasty for high vagal paralysis**: a static adjunct, usually done with medialization and arytenoid adduction, that removes a posterior block of thyroid cartilage (about 1.5 x 1 cm in men), excises the paralyzed piriform mucosa like a diverticulum (stapler flush with the muscular process), and advances the inferior constrictor-perichondrial flap about 1.5-2 cm forward on the ala. The narrower funnel lets the innervated side generate more bolus pressure, but the cricopharyngeus is not treated, so a myotomy may be added. Best candidates are under 65. Contraindications include Chiari malformation, brainstem stroke and diffuse dysmotility. A Valsalva leak test under saline helps prevent pharyngocutaneous fistula. (Operative Techniques in Laryngology 2024, Ch 55, p 479-485)"
  },
  {
   "topic": "Dysphagia / Aspiration",
@@ -2167,7 +2162,7 @@
  {
   "topic": "Subglottic / Tracheal Stenosis",
   "field": "operate",
-  "text": "**Adult laryngotracheal reconstruction with costal cartilage**: indications are failed endoscopic treatment, cartilage collapse or malacia, and stenosis longer than 2-3 cm; relative contraindications include immunosuppression, steroid dependence, significant lung or heart disease, untreated OSA, renal failure, active GPA and poorly controlled diabetes (follow HbA1c). Harvest the 7th or 8th rib (a thicker diaphragm lowers pneumothorax risk) and carve a beveled boat or hexagon with perichondrium facing the lumen; a septal composite graft can cover defects of about 2 cm. Keep the tracheotomy at least 2 rings below the graft to lower infection and restenosis risk. The Montgomery stent comes out at 3-4 weeks, and a single-stage repair needs at least 24 hours of ICU intubation. (Operative Techniques in Laryngology 2024, Ch 57, p 497-510)"
+  "text": "**Adult laryngotracheal reconstruction with costal cartilage**: indications are failed endoscopic treatment, cartilage collapse or malacia, and stenosis longer than 2-3 cm. Relative contraindications include immunosuppression, steroid dependence, significant lung or heart disease, untreated OSA, renal failure, active GPA and poorly controlled diabetes (follow HbA1c). Harvest the 7th or 8th rib (a thicker diaphragm lowers pneumothorax risk) and carve a beveled boat or hexagon with perichondrium facing the lumen. A septal composite graft can cover defects of about 2 cm. Keep the tracheotomy at least 2 rings below the graft to lower infection and restenosis risk. The Montgomery stent comes out at 3-4 weeks, and a single-stage repair needs at least 24 hours of ICU intubation. (Operative Techniques in Laryngology 2024, Ch 57, p 497-510)"
  },
  {
   "topic": "Subglottic / Tracheal Stenosis",
@@ -2177,27 +2172,27 @@
  {
   "topic": "Subglottic / Tracheal Stenosis",
   "field": "operate",
-  "text": "**Cricotracheal resection selection**: the best candidates have isolated short-segment grade III-IV subglottic stenosis at least 5 mm below the folds, with success over 90%. Operate only on mature scar; rapidly recurring stenosis (under 6 months), active autoimmune inflammation, glottic involvement, long segments and prior low tracheal resection are relative contraindications, and removing the cricoid arch adds about 2 cm to the defect. Cut the lateral cricoid at 45 degrees to spare the cricothyroid joints (RLN entry), thin the posterior plate with a diamond burr, and place internal Grillo detensioning sutures (thyroid to cricoid to trachea). If unsure between LTR and CTR, start with an anterior cricoid split carried into the stoma, which allows either. (Operative Techniques in Laryngology 2024, Ch 58, p 511-517)"
+  "text": "**Cricotracheal resection selection**: the best candidates have isolated short-segment grade III-IV subglottic stenosis at least 5 mm below the folds, with success over 90%. Operate only on mature scar. Rapidly recurring stenosis (under 6 months), active autoimmune inflammation, glottic involvement, long segments and prior low tracheal resection are relative contraindications, and removing the cricoid arch adds about 2 cm to the defect. Cut the lateral cricoid at 45 degrees to spare the cricothyroid joints (RLN entry), thin the posterior plate with a diamond burr, and place internal Grillo detensioning sutures (thyroid to cricoid to trachea). If unsure between LTR and CTR, start with an anterior cricoid split carried into the stoma, which allows either. (Operative Techniques in Laryngology 2024, Ch 58, p 511-517)"
  },
  {
   "topic": "Subglottic / Tracheal Stenosis",
   "field": "manage",
-  "text": "**After cricotracheal resection**: a two-stage repair uses a suprastomal stent or a T-tube, which must be at least 8 mm and is generally avoided under age 4; if a leak is likely, a low temporary tracheotomy at least 3 rings below the anastomosis diverts airflow for 3-4 days. Dehiscence is an emergency: secure the airway by intubating over a rod telescope and revise. Treat early granulation by removal plus ciprofloxacin-dexamethasone drops and early restenosis by balloon dilation; unilateral fold paralysis often recovers. Routine laryngeal release is avoided because it worsens dysphagia. (Operative Techniques in Laryngology 2024, Ch 58, p 512-517)"
+  "text": "**After cricotracheal resection**: a two-stage repair uses a suprastomal stent or a T-tube, which must be at least 8 mm and is generally avoided under age 4. If a leak is likely, a low temporary tracheotomy at least 3 rings below the anastomosis diverts airflow for 3-4 days. Dehiscence is an emergency: secure the airway by intubating over a rod telescope and revise. Treat early granulation by removal plus ciprofloxacin-dexamethasone drops and early restenosis by balloon dilation. Unilateral fold paralysis often recovers. Routine laryngeal release is avoided because it worsens dysphagia. (Operative Techniques in Laryngology 2024, Ch 58, p 512-517)"
  },
  {
   "topic": "Subglottic / Tracheal Stenosis",
   "field": "operate",
-  "text": "**Tracheal resection planning**: CT can underestimate the resection length, so combine it with bronchoscopic identification of normal rings above and below. Post-tracheotomy stenosis usually spares the membranous wall, so a 6.0-7.0 tube often passes despite dyspnea. Up to about 5 cm can be resected without release maneuvers; uncontrolled LPR, GPA or infection, multilevel disease and glottic involvement are contraindications. (Operative Techniques in Laryngology 2024, Ch 59, p 519-520)"
+  "text": "**Tracheal resection planning**: CT can underestimate the resection length, so combine it with bronchoscopic identification of normal rings above and below. Post-tracheotomy stenosis usually spares the membranous wall, so a 6.0-7.0 tube often passes despite dyspnea. Up to about 5 cm can be resected without release maneuvers. Uncontrolled LPR, GPA or infection, multilevel disease and glottic involvement are contraindications. (Operative Techniques in Laryngology 2024, Ch 59, p 519-520)"
  },
  {
   "topic": "Subglottic / Tracheal Stenosis",
   "field": "operate",
-  "text": "**Slide tracheoplasty beyond infants**: it is now a third option alongside grafting and resection, for subglottic, multilevel, short- or long-segment stenosis, A-frame deformity, TEF and revision cases; prior low tracheal surgery, TEF or esophageal atresia repair, prior slide or resection, and laryngotracheoesophageal cleft repair are relative contraindications. Cardiopulmonary bypass is used for complete rings or distal-third disease, while cervical cases are done without it, and circumferential dissection is avoided in older children and adults. A figure-of-8 deformity is usually asymptomatic, though some need a stent for 4-8 weeks. Success is 80-90%, and fold paralysis occurs in about 1-2%. (Operative Techniques in Laryngology 2024, Ch 60, p 525-530)"
+  "text": "**Slide tracheoplasty beyond infants**: it is now a third option alongside grafting and resection, for subglottic, multilevel, short- or long-segment stenosis, A-frame deformity, TEF and revision cases. Prior low tracheal surgery, TEF or esophageal atresia repair, prior slide or resection, and laryngotracheoesophageal cleft repair are relative contraindications. Cardiopulmonary bypass is used for complete rings or distal-third disease, while cervical cases are done without it, and circumferential dissection is avoided in older children and adults. A figure-of-8 deformity is usually asymptomatic, though some need a stent for 4-8 weeks. Success is 80-90%, and fold paralysis occurs in about 1-2%. (Operative Techniques in Laryngology 2024, Ch 60, p 525-530)"
  },
  {
   "topic": "Velopharyngeal Insufficiency",
   "field": "manage",
-  "text": "**Awake posterior pharyngeal wall augmentation in adults**: for partial or unilateral VPI (after stroke, cancer resection or radiation) when open palatal surgery is not appropriate; complete or bilateral palatal weakness is a contraindication. With a transnasal scope, map the gap dynamically, then inject submucosally at the level of Passavant ridge (transnasally, or perorally with a bent needle) as superficially as possible, through as few sites as possible because each adds extrusion risk, slightly overinjecting. Trial a temporary hyaluronic acid or CMC gel first, then calcium hydroxylapatite (about 12 months, repeatable). Aspirate before injecting laterally to avoid the carotid. (Operative Techniques in Laryngology 2024, Ch 63, p 549-552)"
+  "text": "**Awake posterior pharyngeal wall augmentation in adults**: for partial or unilateral VPI (after stroke, cancer resection or radiation) when open palatal surgery is not appropriate. Complete or bilateral palatal weakness is a contraindication. With a transnasal scope, map the gap dynamically, then inject submucosally at the level of Passavant ridge (transnasally, or perorally with a bent needle) as superficially as possible, through as few sites as possible because each adds extrusion risk, slightly overinjecting. Trial a temporary hyaluronic acid or CMC gel first, then calcium hydroxylapatite (about 12 months, repeatable). Aspirate before injecting laterally to avoid the carotid. (Operative Techniques in Laryngology 2024, Ch 63, p 549-552)"
  },
  {
   "topic": "Cricopharyngeal Dysfunction",
@@ -2217,17 +2212,17 @@
  {
   "topic": "Zenker Diverticulum",
   "field": "workup",
-  "text": "**Size classifications and preop checks**: Morton grades pouches as under 2 cm, 2-4 cm or over 4 cm; van Overbeek counts vertebral bodies spanned (1, 1-3, over 3); Lahey stages by shape. Evaluate the entire esophagus, because achalasia, a large hiatal hernia or a distal stricture must be treated first or the patient may worsen, and high-resolution manometry may need fluoroscopic catheter placement. Do flexible laryngoscopy or FEES before surgery to document fold motion, since an unknown contralateral paralysis plus an RLN injury can obstruct the airway. (Operative Techniques in Laryngology 2024, Ch 65, p 561-562)"
+  "text": "**Size classifications and preop checks**: Morton grades pouches as under 2 cm, 2-4 cm or over 4 cm. Van Overbeek counts vertebral bodies spanned (1, 1-3, over 3). Lahey stages by shape. Evaluate the entire esophagus, because achalasia, a large hiatal hernia or a distal stricture must be treated first or the patient may worsen, and high-resolution manometry may need fluoroscopic catheter placement. Do flexible laryngoscopy or FEES before surgery to document fold motion, since an unknown contralateral paralysis plus an RLN injury can obstruct the airway. (Operative Techniques in Laryngology 2024, Ch 65, p 561-562)"
  },
  {
   "topic": "Zenker Diverticulum",
   "field": "operate",
-  "text": "**Endoscopic diverticulostomy pearls**: plan the airway with anesthesia (rapid sequence induction for a large food-filled pouch) and inspect the postcricoid mucosa first, biopsying and stopping if a lesion is found. The Weerda distending diverticuloscope is the only one that fits the commercial endoscopic stapler; put the longer anvil jaw in the esophagus and the cartridge in the pouch, and divide residual distal CP muscle with scissors or laser. With the CO2 laser (about 5-12 W), cut to the pouch floor while keeping the periesophageal/buccopharyngeal fascia intact to prevent mediastinitis. Afterward watch for fever, tachycardia and chest or back pain. (Operative Techniques in Laryngology 2024, Ch 65, p 563-568)"
+  "text": "**Endoscopic diverticulostomy pearls**: plan the airway with anesthesia (rapid sequence induction for a large food-filled pouch) and inspect the postcricoid mucosa first, biopsying and stopping if a lesion is found. The Weerda distending diverticuloscope is the only one that fits the commercial endoscopic stapler. Put the longer anvil jaw in the esophagus and the cartridge in the pouch (Cummings places the cartridge in the esophagus instead, so follow the stapler design and confirm the common wall is centered), and divide residual distal CP muscle with scissors or laser. With the CO2 laser (about 5-12 W), cut to the pouch floor while keeping the periesophageal/buccopharyngeal fascia intact to prevent mediastinitis. Afterward watch for fever, tachycardia and chest or back pain. (Operative Techniques in Laryngology 2024, Ch 65, p 563-568)"
  },
  {
   "topic": "Zenker Diverticulum",
   "field": "operate",
-  "text": "**Choosing open Zenker surgery**: diverticulectomy (most common), diverticulopexy and inversion all require a cricopharyngeal myotomy, and a pouch under 1 cm usually needs only the myotomy. An open approach is favored for younger patients, pouches over 5-6 cm, failed endoscopic exposure and, more controversially, revision; some also favor it for pouches under 2 cm, whose party wall is too short. Approach from the left with a bougie (about 36-40 Fr) in the esophagus and the pouch packed, staple the neck without narrowing the lumen, and extend the myotomy 4-5 cm into the esophagus. Get a barium study on postoperative day 1; morbidity is about 10.5% and mortality about 0.6%. (Operative Techniques in Laryngology 2024, Ch 66, p 569-575)"
+  "text": "**Choosing open Zenker surgery**: diverticulectomy (most common), diverticulopexy and inversion all require a cricopharyngeal myotomy, and a pouch under 1 cm usually needs only the myotomy. An open approach is favored for younger patients, pouches over 5-6 cm, failed endoscopic exposure and, more controversially, revision. Some also favor it for pouches under 2 cm, whose party wall is too short. Approach from the left with a bougie (about 36-40 Fr) in the esophagus and the pouch packed, staple the neck without narrowing the lumen, and extend the myotomy 4-5 cm into the esophagus. Get a barium study on postoperative day 1. Morbidity is about 10.5% and mortality about 0.6%. (Operative Techniques in Laryngology 2024, Ch 66, p 569-575)"
  },
  {
   "topic": "Chronic Cough / Laryngeal Hypersensitivity",
@@ -2252,7 +2247,7 @@
  {
   "topic": "Vocal Fold Sulcus / Scar",
   "field": "operate",
-  "text": "**Gray minithyrotomy grafting and recovery**: implant fat strips (8-15 mm long, about 1-2 mL per fold), and do not undercorrect, since too little fat is the usual cause of failure; fascia, perichondrium and acellular dermis have also been used. Pinhole epithelial perforations are acceptable, but a large tear means stopping and returning after healing. Expect about a week of voice rest and roughly 1 month of phonatory recovery. Late deterioration is blamed on poor fat-graft survival. (Operative Techniques in Laryngology 2024, Ch 56, p 489-492)"
+  "text": "**Gray minithyrotomy grafting and recovery**: implant fat strips (8-15 mm long, about 1-2 mL per fold), and do not undercorrect, since too little fat is the usual cause of failure. Fascia, perichondrium and acellular dermis have also been used. Pinhole epithelial perforations are acceptable, but a large tear means stopping and returning after healing. Expect about a week of voice rest and roughly 1 month of phonatory recovery. Late deterioration is blamed on poor fat-graft survival. (Operative Techniques in Laryngology 2024, Ch 56, p 489-492)"
  },
  {
   "topic": "Subglottic / Tracheal Stenosis",

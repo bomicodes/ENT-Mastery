@@ -13,7 +13,7 @@ TOPIC = {
     "overview": "\n".join([
         "**Scope**: about 95% of laryngeal cancers are conventional SCC. The remaining minority, SCC variants plus neuroendocrine, cartilaginous, salivary-type, hematolymphoid and melanocytic tumors, behave so differently that histology rather than T stage drives treatment (Cummings 7e, Ch 105)",
         "**SCC variants**: verrucous carcinoma (indolent, glottic), basaloid SCC (aggressive, supraglottic/piriform), spindle cell (sarcomatoid) carcinoma (polypoid glottic mass) (Pasha 6e, Ch 6)",
-        "**Neuroendocrine tumors**: the second most common laryngeal malignancy group after SCC. Atypical carcinoid is the most common NET, followed by small cell NEC. Typical carcinoid is rare (Cummings 7e, Ch 105)",
+        "**Neuroendocrine tumors**: the second most common laryngeal malignancy group after SCC. Atypical carcinoid is the most common NET, followed by small cell NEC. Typical carcinoid and large cell NEC are rare. WHO 2022 renames typical and atypical carcinoid as well-differentiated NET grade 1 and grade 2, with small cell and large cell NEC as the poorly differentiated group (Cummings 7e, Ch 105)",
         "**Chondrosarcoma**: the most common nonepithelial laryngeal malignancy, usually from the posterior cricoid lamina in men (about 3:1), mostly low grade (Cummings 7e, Ch 105)",
         "**Salivary-type carcinomas**: adenoid cystic (subglottis about 60%), mucoepidermoid (supraglottis) and adenocarcinoma (about 1%) arise from submucosal seromucinous glands (Cummings 7e, Ch 105)",
         "**Others**: extramedullary plasmacytoma, primary lymphoma, mucosal melanoma, paraganglioma (benign) and metastases (kidney, prostate, breast, lung, melanoma) (Pasha 6e, Ch 6)",

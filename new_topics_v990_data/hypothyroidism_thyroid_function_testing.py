@@ -44,9 +44,9 @@ TOPIC = {
     "**First test**: TSH is the most sensitive screen for primary thyroid disease. Free T4 confirms and grades the deficiency (Pasha 6e, Ch 3, p 130).",
     "**T3**: total or free T3 adds little in hypothyroidism but helps identify T3 toxicosis from toxic nodules (Pasha 6e, Ch 3).",
     "**Antibodies**: anti-TPO supports Hashimoto and predicts progression of subclinical hypothyroidism to overt disease (Jonklaas et al., Thyroid 2014).",
-    "**Assay pitfalls**: high-dose biotin supplements can falsely alter immunoassays. Stop biotin for a few days before testing (Jonklaas et al., Thyroid 2014).",
+    "**Assay pitfalls**: high-dose biotin interferes with streptavidin-biotin immunoassays, typically giving a falsely low TSH and falsely high free T4 that mimic hyperthyroidism. Stop biotin for at least 2 days before testing (Jonklaas et al., Thyroid 2014).",
     "**Surveillance after head and neck radiation or laryngectomy**: check TSH at baseline and periodically, for example every 6 to 12 months, because onset is often delayed and symptoms overlap with treatment effects (Pasha 6e, Ch 3).",
-    "**Newborn screening**: heel-stick TSH and/or T4 in the first days of life, with confirmatory serum testing before treatment (Pasha 6e, Ch 3)."
+    "**Newborn screening**: heel-stick TSH and/or T4 in the first days of life, with confirmatory serum TSH and free T4 drawn before levothyroxine starts, without delaying treatment while results are pending (Pasha 6e, Ch 3)."
   ]),
   "manage": "\n".join([
     "**Levothyroxine (T4) monotherapy**: standard of care. Full replacement is about 1.6 mcg/kg/day, but start low (25 to 50 mcg) in elderly or cardiac patients (Jonklaas et al., Thyroid 2014).",
@@ -54,7 +54,7 @@ TOPIC = {
     "**Absorption**: take on an empty stomach, separated from calcium, iron and bile acid binders. Proton pump inhibitors and malabsorption raise dose needs (Jonklaas et al., Thyroid 2014).",
     "**Liothyronine (T3)**: short half-life. Historically used to bridge after thyroidectomy before planned withdrawal for radioiodine, now largely replaced by recombinant TSH in many centers (Pasha 6e, Ch 3).",
     "**Myxedema coma**: ICU care, IV levothyroxine loading, and stress-dose hydrocortisone given before or with thyroid hormone. Supportive care includes ventilation, passive warming and sodium correction. Mortality remains high (Cummings 7e, Ch 121, Wartofsky, Endocrinol Metab Clin North Am 2006).",
-    "**Subclinical**: treatment is individualized by TSH level, age, symptoms, antibodies and pregnancy plans. Pregnancy raises dose requirements early (Jonklaas et al., Thyroid 2014)."
+    "**Subclinical**: a persistent TSH of 10 mIU/L or higher generally warrants treatment, while TSH between the upper limit and 10 is individualized by age, symptoms, anti-TPO status and pregnancy plans. Mild TSH elevation in the very elderly is often left alone. Pregnancy raises dose requirements early (Jonklaas et al., Thyroid 2014)."
   ]),
   "operate": "\n".join([
     "**Nonsurgical topic**: the surgeon's job is to recognize hypothyroidism before and after operations and to prevent it where possible.",

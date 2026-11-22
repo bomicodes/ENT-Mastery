@@ -20,11 +20,11 @@ TOPIC = {
     "**Guillain-Mollaret triangle**: dentate nucleus, red nucleus and inferior olive. A central tegmental tract lesion causes palatal myoclonus (Cummings 7e, Ch 57)."
   ]),
   "pathophysiology": "\n".join([
-    "**Parkinson disease**: dopaminergic loss causes hypokinetic dysarthria in about 45%, with low volume, monopitch, bowed or adynamic folds and raised jitter and shimmer (Cummings 7e, Ch 57).",
+    "**Parkinson disease**: dopaminergic loss makes speech and voice change nearly universal over the disease course. Hypokinetic dysarthria (reported in about 45%) brings low volume, monopitch, bowed or adynamic folds and raised jitter and shimmer, and a minority have a rigid, strained SD-like voice instead (Cummings 7e, Ch 57).",
     "**Parkinson-plus**: multiple system atrophy (Shy-Drager) can cause bilateral abductor failure, especially at night, leading to stridor and sometimes tracheotomy (Cummings 7e, Ch 57).",
     "**ALS**: upper and lower motor neuron degeneration (1-2 per 100,000). Up to 25% present with bulbar symptoms such as dysarthria, dysphagia and tongue fasciculations (Cummings 7e, Ch 57).",
     "**Myasthenia gravis**: antibodies against the acetylcholine receptor cause fatigable weakness of voice, swallowing and eye muscles (fewer than 10 per 100,000) (Cummings 7e, Ch 57).",
-    "**Multiple sclerosis**: demyelination (about 3 per 100,000) causes scanning speech, tremor and vertigo, and dysphagia occurs in up to 50% (Cummings 7e, Ch 57).",
+    "**Multiple sclerosis**: relapsing-remitting demyelination (incidence about 3 per 100,000 per year in the US). Up to 50% develop otolaryngologic problems, including scanning (ataxic) speech, tremor, vertigo and dysphagia (Cummings 7e, Ch 57).",
     "**Polio**: acute bulbar polio causes pharyngeal and laryngeal paresis but spares the cricopharyngeus. Postpolio syndrome is new weakness decades later in surviving motor units (Cummings 7e, Ch 57).",
     "**Myopathies**: dermatomyositis (linked to malignancy), oculopharyngeal muscular dystrophy, and metabolic and periodic paralyses (Cummings 7e, Ch 57)."
   ]),
@@ -53,8 +53,9 @@ TOPIC = {
     "**MRI brain and brainstem**: for central signs, myoclonus (look for inferior olive hypertrophy) and unexplained paralysis with other cranial nerve findings (Cummings 7e, Ch 57)."
   ]),
   "manage": "\n".join([
-    "**Parkinson disease**: intensive loudness-focused voice therapy (LSVT LOUD) is first-line rather than augmentation, and dopaminergic drugs help voice less than limb symptoms (Ramig 2001, Cummings 7e, Ch 57).",
+    "**Parkinson disease**: intensive loudness-focused voice therapy (LSVT LOUD) is first-line rather than augmentation, and dopaminergic drugs help voice less than limb symptoms. Subthalamic deep brain stimulation improves limb symptoms but can leave speech unchanged or worse, so counsel before DBS (Ramig 2001, Cummings 7e, Ch 57).",
     "**ALS**: supportive care, with a palatal lift for hypernasality, early discussion of enteral feeding, and advance care planning about tracheotomy and ventilation (Cummings 7e, Ch 57).",
+    "**ALS disease-modifying drugs and timing**: riluzole modestly prolongs survival, and tofersen is approved for SOD1-mutation ALS. Place a gastrostomy while forced vital capacity is still above about 50%, because procedural risk rises as respiratory function falls (AAN ALS practice parameter).",
     "**Myasthenia**: diagnosis can be lifesaving because crisis may cause airway and respiratory failure. Treatment includes cholinesterase inhibitors, immunosuppression and thymectomy when indicated (Cummings 7e, Ch 57).",
     "**Palatal myoclonus**: drugs rarely help, but botulinum toxin to the palate (for ear click) or thyroarytenoid (for voice) can reduce symptoms (Cummings 7e, Ch 57).",
     "**MSA nocturnal stridor**: bilateral abductor failure at night may require CPAP or tracheotomy, because stridor in MSA predicts sudden death (Cummings 7e, Ch 57).",
@@ -97,7 +98,7 @@ TOPIC = {
       "Bilateral type I thyroplasty"
     ],
     "answer": 2,
-    "explanation": "This is hypokinetic dysarthria of Parkinson disease, which affects roughly 45% of patients and causes low volume, monopitch and bowed, adynamic folds. Intensive loudness-focused therapy (LSVT LOUD) is first-line and has shown durable gains in loudness. Dopaminergic drugs help limb symptoms more than voice. Augmentation is reserved for selected patients who fail therapy, because the problem is reduced drive and scaling rather than only a fixed gap.",
+    "explanation": "This is hypokinetic dysarthria of Parkinson disease, in which speech change is nearly universal and causes low volume, monopitch and bowed, adynamic folds. Intensive loudness-focused therapy (LSVT LOUD) is first-line and has shown durable gains in loudness. Dopaminergic drugs help limb symptoms more than voice. Augmentation is reserved for selected patients who fail therapy, because the problem is reduced drive and scaling rather than only a fixed gap.",
     "why_wrong": [
       "Augmentation is not first-line because the main deficit is reduced motor drive.",
       "Botulinum toxin weakens closure and would worsen breathiness.",

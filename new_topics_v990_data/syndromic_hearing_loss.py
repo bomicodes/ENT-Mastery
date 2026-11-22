@@ -15,7 +15,7 @@ TOPIC = {
     "**Potassium recycling (KCNQ1/KCNE1)**: the same IKs channel secretes potassium into endolymph from the stria and repolarizes the cardiac myocyte. Biallelic loss gives both deafness and long QT in JLNS (Cummings 7e, Ch 150).",
     "**Collagen in the ear and eye**: type IV collagen lines basement membranes of the cochlea, glomerulus and lens capsule (Alport). Types II and XI build vitreous, cartilage and the inner ear (Stickler) (Bluestone & Stool 5e, Ch 40).",
     "**Shared ciliary and synaptic machinery**: Usher proteins (myosin VIIA, harmonin, cadherin 23, usherin) organize hair-cell stereocilia and photoreceptor connecting cilia, which links deafness to retinitis pigmentosa (Cummings 7e, Ch 150).",
-    "**First and second arch development**: TCOF1 (treacle) controls neural crest survival for the arches, so Treacher Collins produces malar, mandibular and ossicular hypoplasia with conductive loss (Bluestone & Stool 5e, Ch 40)."
+    "**First and second arch development**: TCOF1 (treacle, autosomal dominant, most cases), with POLR1D and POLR1C in a minority, controls neural crest survival for the arches, so Treacher Collins produces malar, mandibular and ossicular hypoplasia with conductive loss (Bluestone & Stool 5e, Ch 40)."
   ]),
   "pathophysiology": "\n".join([
     "**Waardenburg types**: type I PAX3 with dystopia canthorum. Type II (MITF, SNAI2) lacks dystopia but has more frequent SNHL (about 57-85% vs 36-67%). Type III adds upper-limb anomalies (PAX3). Type IV adds Hirschsprung disease (EDN3, EDNRB, SOX10) (Bluestone & Stool 5e, Ch 40).",
@@ -39,11 +39,11 @@ TOPIC = {
     "**Conductive-dominant syndromes**: Treacher Collins (ossicular malformation, atresia), Stickler (eustachian tube dysfunction and cleft), and BOR (ossicular fixation or malformation) (Bluestone & Stool 5e, Ch 40).",
     "**Cochlear and strial syndromes**: Waardenburg (strial melanocytes, often low-frequency predominant and stable), JLNS and Usher (hair cell and stria, congenital profound), and Alport (progressive high-frequency) (Bluestone & Stool 5e, Ch 40).",
     "**Labyrinth malformation syndromes**: Pendred and DFNB4 (EVA and incomplete partition type II), BOR (cochlear hypoplasia, EVA) and CHARGE (semicircular canal aplasia, cochlear nerve deficiency) (Cummings 7e, Ch 150).",
-    "**Retrocochlear syndrome**: NF2 (merlin, chromosome 22q12) produces bilateral vestibular schwannomas, meningiomas and juvenile posterior subcapsular cataract (Bluestone & Stool 5e, Ch 40).",
+    "**Retrocochlear syndrome**: NF2, now termed NF2-related schwannomatosis (merlin, chromosome 22q12), produces bilateral vestibular schwannomas, meningiomas and juvenile posterior subcapsular cataract (Bluestone & Stool 5e, Ch 40).",
     "**Vestibular phenotype helps sort Usher**: absent caloric and rotary-chair responses mean type I, normal function means type II, and variable function means type III (Cummings 7e, Ch 150)."
   ]),
   "workup": "\n".join([
-    "**Genetic testing first-tier**: a comprehensive multigene hearing-loss panel or exome is the first-line etiologic test when no syndrome is obvious. Targeted testing fits a clear syndromic picture (ACMG 2014 guideline, current).",
+    "**Genetic testing first-tier**: a comprehensive multigene hearing-loss panel (including GJB2/GJB6 and STRC copy-number analysis) or exome is the first-line etiologic test when no syndrome is obvious. Targeted testing fits a clear syndromic picture (ACMG 2014 guideline, updated 2022).",
     "**ECG**: obtain one in children with congenital severe to profound SNHL of unknown cause, and urgently with any syncope history, to find the long QT of JLNS (Cummings 7e, Ch 150).",
     "**Ophthalmology for every child with permanent SNHL**: finds early RP (Usher, ERG may be needed), Stickler vitreous anomalies, Alport lenticonus, CHARGE coloboma and Waardenburg heterochromia (IPOG 2016 consensus).",
     "**Imaging**: CT or MRI of the temporal bones for EVA and malformations. MRI is preferred when cochlear implantation is planned, to confirm a cochlear nerve. Waardenburg imaging is usually normal (Cummings 7e, Ch 150).",
@@ -54,7 +54,7 @@ TOPIC = {
   "manage": "\n".join([
     "**Early amplification and language**: fit hearing aids early and refer for early intervention regardless of syndrome. Cochlear implantation follows when aids give inadequate benefit (Cummings 7e, Ch 150).",
     "**Usher type I**: early bilateral cochlear implantation is favored because progressive blindness will remove lipreading and sign as fallback channels (Cummings 7e, Ch 150).",
-    "**JLNS**: cardiology referral and beta-blockade, which lowered mortality from about 71% to about 6% in older series. ICD for high-risk children, and avoid QT-prolonging drugs (Bluestone & Stool 5e, Ch 40).",
+    "**JLNS**: cardiology referral and beta-blockade, which lowered mortality from about 71% to about 6% in older series. Beta-blockers protect less well in JLNS than in other long QT forms (about half still have events in Schwartz 2006), so many children need an ICD. Avoid QT-prolonging drugs and correct potassium and magnesium (Bluestone & Stool 5e, Ch 40).",
     "**Pendred and EVA**: monitor for fluctuating or stepwise loss, counsel to avoid head trauma and barotrauma, and follow thyroid function and goiter size (Bluestone & Stool 5e, Ch 40).",
     "**Conductive syndromes**: Treacher Collins and microtia-atresia patients usually do best with bone-conduction devices because ossicular reconstruction results are poor (Bluestone & Stool 5e, Ch 40).",
     "**Systemic partners**: nephrology for Alport and BOR, retina surveillance for Stickler (detachment in about 50%), biotin for biotinidase deficiency (reverses skin and neurologic signs, not hearing loss), and phytanic acid-restricted diet for Refsum (Bluestone & Stool 5e, Ch 40).",
@@ -84,6 +84,7 @@ TOPIC = {
   ],
   "literature_refs": [
     "Alford RL et al. Genet Med 2014;16(4):347-355 (ACMG guideline: comprehensive genetic testing as part of the etiologic evaluation of hearing loss)",
+    "Li MM et al. Genet Med 2022;24(7):1392-1406 (ACMG clinical practice resource update on etiologic evaluation of hearing loss)",
     "Liming BJ et al. Int J Pediatr Otorhinolaryngol 2016;90:251-258 (IPOG consensus on evaluating pediatric hearing loss, including CMV, imaging and ophthalmology)",
     "Schwartz PJ et al. Circulation 2006;113(6):783-790 (Jervell and Lange-Nielsen natural history: high early cardiac event rate, partial protection with beta-blockers)"
   ],

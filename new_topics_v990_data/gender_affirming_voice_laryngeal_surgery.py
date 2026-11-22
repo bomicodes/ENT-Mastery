@@ -51,7 +51,8 @@ TOPIC = {
     "**Voice quality after glottoplasty**: roughness and dysphonia grade worsened in studies that also removed superior and infraglottic mucosa, but not with medial-only mucosal removal (Laryngology 2024, Ch 61).",
     "**Cricothyroid approximation**: lengthens and tenses the folds. Pitch gains may diminish over time as sutures loosen or cartilage remodels, and long-term data are limited.",
     "**Feminization laryngoplasty**: anterior fold and thyroid cartilage resection with resuspension under tension, similar to an anterior vertical partial laryngectomy, sometimes with thyrohyoid approximation. Long-term multi-surgeon data are lacking (Laryngology 2024, Ch 61).",
-    "**Postoperative therapy**: continued SLP work after surgery speeds voice return and builds on the new range (Laryngology 2024, Ch 61)."
+    "**Postoperative therapy**: continued SLP work after surgery speeds voice return and builds on the new range (Laryngology 2024, Ch 61).",
+    "**Transmasculine voice that stays high**: testosterone lowers F0 over about a year, but a minority are left with a pitch they find too high or unstable. Options are therapy, then relaxation (Isshiki type III) thyroplasty, which shortens and slackens the folds. Surgical evidence is limited."
   ]),
   "operate": "\n".join([
     "**Wendler glottoplasty steps**: suspension microlaryngoscopy exposing commissure to vocal processes, measure membranous fold, incise or ablate medial mucosa of the anterior 40%, place about four 4-0 absorbable sutures with symmetric bites, tie inferior then superior ends to form the web (Laryngology 2024, Ch 61).",

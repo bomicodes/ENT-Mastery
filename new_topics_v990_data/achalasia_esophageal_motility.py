@@ -21,7 +21,7 @@ TOPIC = {
     "**Cause**: mostly idiopathic, likely autoimmune or post-viral ganglionitis. Chagas disease (Trypanosoma cruzi) causes an identical picture in endemic regions (Vaezi et al. Am J Gastroenterol 2020).",
     "**Chicago subtypes**: type I (no pressurization, classic), type II (panesophageal pressurization, best treatment response) and type III (spastic, premature contractions) (Yadlapati et al. Neurogastroenterol Motil 2021).",
     "**Distal esophageal spasm**: premature (short latency) simultaneous contractions with some normal peristalsis and normal LES relaxation, giving a corkscrew esophagram (Cummings 7e, Ch 68).",
-    "**Hypercontractile and ineffective motility**: nutcracker means high-amplitude peristalsis, probably a marker of visceral hypersensitivity. Ineffective motility means low amplitude (under 30 mm Hg) in 30% or more of swallows and is tied to GERD (Cummings 7e, Ch 68).",
+    "**Hypercontractile and ineffective motility**: nutcracker means high-amplitude peristalsis, probably a marker of visceral hypersensitivity. Ineffective motility was classically low amplitude (under 30 mm Hg) in 30% or more of swallows and is tied to GERD. Chicago v4.0 now requires more than 70% ineffective swallows or at least 50% failed swallows (Cummings 7e, Ch 68, Yadlapati et al. Neurogastroenterol Motil 2021).",
     "**Scleroderma esophagus**: smooth-muscle atrophy and fibrosis cause distal aperistalsis with a LOW LES pressure, the opposite of achalasia, producing severe reflux and strictures (Cummings 7e, Ch 68)."
   ]),
   "recognize": "\n".join([
@@ -45,7 +45,8 @@ TOPIC = {
     "**Manometry criteria**: aperistalsis is always present and LES relaxation is always abnormal. Resting LES pressure is high or normal and never low in untreated achalasia (Cummings 7e, Ch 68).",
     "**High-resolution manometry**: elevated median IRP with 100% failed peristalsis or spasm defines achalasia and its subtype under Chicago v4.0 (Yadlapati et al. Neurogastroenterol Motil 2021).",
     "**Further tests if suspicious**: EUS or CT for pseudoachalasia, Chagas serology with endemic exposure, and serology for scleroderma when the LES is hypotensive (Cummings 7e, Ch 68).",
-    "**Functional lumen imaging probe (FLIP)**: measures GEJ distensibility and helps when manometry is equivocal (Vaezi et al. Am J Gastroenterol 2020)."
+    "**Functional lumen imaging probe (FLIP)**: measures GEJ distensibility and helps when manometry is equivocal (Vaezi et al. Am J Gastroenterol 2020).",
+    "**EGJ outflow obstruction**: an elevated IRP with preserved peristalsis. Under Chicago v4.0 it is called clinically relevant only with compatible symptoms plus a supportive timed barium study or FLIP, and opioid use, hiatal hernia or an infiltrating lesion can mimic it (Yadlapati et al. Neurogastroenterol Motil 2021)."
   ]),
   "manage": "\n".join([
     "**Pneumatic dilation**: graded 3, 3.5 and 4 cm balloons tear the LES. Perforation risk is 2-5%, so the patient must be fit for surgery, and a contrast swallow is done afterward (Cummings 7e, Ch 68).",

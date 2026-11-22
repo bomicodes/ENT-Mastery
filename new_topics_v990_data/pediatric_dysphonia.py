@@ -49,7 +49,7 @@ TOPIC = {
     "**Quality of life**: parent-completed tools such as the pediatric voice-related quality of life (PVRQOL) and pediatric voice handicap index (pVHI) document impact and track change (Hartnick 2002, Zur 2007).",
     "**Perceptual, acoustic and aerodynamic measures**: GRBAS or CAPE-V ratings plus acoustic and aerodynamic data give a baseline before therapy (Bluestone & Stool 5e, Ch 118).",
     "**Audiology**: check hearing, because a child who cannot monitor their own voice may speak too loudly or with abnormal resonance (Bluestone & Stool 5e, Ch 118).",
-    "**Targeted extras**: imaging of the recurrent laryngeal nerve course for unexplained paralysis, and genetic testing for an anterior web (Bluestone & Stool 5e, Ch 118)."
+    "**Targeted extras**: for unexplained unilateral paralysis, image the vagus and recurrent nerve course from skull base to aortic arch. For bilateral paralysis, get brain MRI to exclude Chiari II malformation or hydrocephalus. For an anterior web, test for 22q11.2 deletion (Bluestone & Stool 5e, Ch 118)."
   ]),
   "manage": "\n".join([
     "**Voice therapy first**: most pediatric dysphonia, nodules especially, is treated with behavioral voice therapy, vocal hygiene, hydration and reduced phonotrauma (Bluestone & Stool 5e, Ch 118).",

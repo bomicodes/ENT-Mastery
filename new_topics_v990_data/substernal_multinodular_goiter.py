@@ -58,8 +58,8 @@ TOPIC = {
   "operate": "\n".join([
     "**Cervical delivery first**: most substernal goiters come out through a collar incision. Control the superior pole, then ligate the cervical inferior vessels before mobilizing the intrathoracic part (Cummings 7e, Ch 122).",
     "**Delivery maneuvers**: gentle blunt finger dissection along the capsule, isthmus division, and deep traction sutures help lift the gland into the neck. Avoid piecemeal morcellation (Cummings 7e, Ch 122).",
-    "**When to open the chest**: extension to the arch or carina, posterior mediastinal or ectopic goiter, an intrathoracic part wider than the inlet, invasive cancer, or revision surgery. Plan with thoracic surgery (Cummings 7e, Ch 122, Chen et al., Thyroid 2014).",
-    "**Nerve and glands**: identify the recurrent nerve where it is predictable and track it, and remember it may be displaced. Preserve parathyroid blood supply and autotransplant devascularized glands (Cummings 7e, Ch 122).",
+    "**When to open the chest**: extension to the arch or carina, posterior mediastinal or ectopic goiter, an intrathoracic part wider than the inlet, invasive cancer, or revision surgery. Overall only about 2-10% of substernal goiters need sternotomy, so plan with thoracic surgery when these predictors are present (Cummings 7e, Ch 122, White et al., World J Surg 2008).",
+    "**Nerve and glands**: identify the recurrent nerve where it is predictable (often superiorly near the cricothyroid joint, where it enters the larynx, when the inferior field is filled by goiter) and track it, using nerve monitoring, and remember it may be displaced. Preserve parathyroid blood supply and autotransplant devascularized glands (Cummings 7e, Ch 122).",
     "**Airway**: most patients intubate conventionally despite deviation. Have video or fiberoptic options and a reinforced tube ready. Tracheomalacia requiring tracheostomy is rare (White et al., World J Surg 2008).",
     "**Postoperative**: watch for hematoma, hypocalcemia and nerve palsy. Check for pneumothorax if pleura was entered (Chen et al., Thyroid 2014)."
   ]),

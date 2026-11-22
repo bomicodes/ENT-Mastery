@@ -16,7 +16,7 @@ TOPIC = {
     "physiology": "\n".join([
         "**Compensation needs a stable input**: the brain can rebalance a fixed asymmetry over weeks, but repeated fluctuations keep resetting it (Cummings 7e, Ch 169)",
         "**Static recovery**: patients usually walk by day 2-3 and compensate mostly within 2 months, with gradual improvement for up to a year (Cummings 7e, Ch 169)",
-        "**Nerve anatomy in the IAC**: the superior and inferior vestibular nerves occupy the posterior IAC, separated from the facial and cochlear nerves laterally by the vertical crest (Bill bar) and the transverse crest (Cummings 7e, Ch 169)",
+        "**Nerve anatomy in the IAC**: at the fundus the transverse (falciform) crest divides the canal into superior and inferior halves, and the vertical crest (Bill bar) separates the facial nerve (anterosuperior) from the superior vestibular nerve (posterosuperior). The cochlear nerve is anteroinferior and the inferior vestibular nerve posteroinferior (Cummings 7e, Ch 169)",
         "**Fiber rotation**: the nerve bundle rotates about 90 degrees between the IAC and brainstem, so in the CPA the vestibular fibers sit in the superior (rostral) half of CN VIII and the cochlear fibers inferiorly (Cummings 7e, Ch 169)",
         "**Efferents**: olivocochlear efferent fibers travel with the vestibular nerve. Cutting them can cause sound intolerance and poorer hearing in noise after neurectomy (Cummings 7e, Ch 169)",
         "**Cochlear preservation**: labyrinthectomy destroys the vestibular end organs and usually the cochlea, but the cochlear nerve and spiral ganglion survive, allowing cochlear implantation (Cummings 7e, Ch 169)",
@@ -38,13 +38,13 @@ TOPIC = {
     ]),
     "localize": "\n".join([
         "**Transmastoid labyrinthectomy**: the three canals, vestibule, ampullae, utricle and saccule are removed through the mastoid, with the facial nerve as the key boundary (Cummings 7e, Ch 169)",
-        "**Facial nerve landmarks**: the tympanic segment runs just beneath the horizontal canal, and the second genu and mastoid segment lie inferior to the horizontal canal and anterior to the posterior canal ampulla (Cummings 7e, Ch 169)",
+        "**Facial nerve landmarks**: the tympanic segment runs just beneath the horizontal canal, and the second genu and mastoid segment lie inferior to the horizontal canal and lateral to the posterior canal ampulla, which sits deep (medial) to the nerve (Cummings 7e, Ch 169)",
         "**Middle fossa neurectomy**: the superior and inferior vestibular nerves are cleanly separated from the facial and cochlear nerves in the lateral IAC, but the facial nerve lies anterosuperiorly in the surgical path (Cummings 7e, Ch 169)",
         "**Labyrinthine artery**: lies close to the inferior vestibular nerve in the IAC. Injury causes deafness (Cummings 7e, Ch 169)",
         "**CPA neurectomy**: retrolabyrinthine and retrosigmoid approaches section the superior half of CN VIII medial to the IAC, where the cochleovestibular cleavage plane can be indistinct (Cummings 7e, Ch 169)",
     ]),
     "workup": "\n".join([
-        "**Confirm the diagnosis**: definite Meniere disease by history and audiometry, with exclusion of vestibular migraine and central disease (Basura 2020)",
+        "**Confirm the diagnosis**: definite Meniere disease by the 2015 Barany/AAO-HNS criteria (two or more spontaneous vertigo spells of 20 minutes to 12 hours, audiometrically documented low- to mid-frequency SNHL in the affected ear, and fluctuating aural symptoms), with exclusion of vestibular migraine and central disease (Basura 2020)",
         "**Audiometry**: pure tones and word recognition on both sides to judge serviceability and detect early contralateral disease (Cummings 7e, Ch 169)",
         "**Vestibular testing**: calorics, vHIT and VEMPs to confirm laterality and estimate residual function of both ears (Cummings 7e, Ch 169)",
         "**MRI with gadolinium**: excludes vestibular schwannoma and other retrocochlear causes before ablation (Basura 2020)",

@@ -14,7 +14,7 @@ TOPIC = {
     "**Avascular cartilage**: auricular cartilage gets nutrients by diffusion from the overlying perichondrium, so anything that lifts the perichondrium (blood, pus) starves the cartilage (K.J. Lee 12e, Ch 22).",
     "**Lobule has no cartilage**: the lobule is fibrofatty tissue, which explains why cartilage-centered disease spares it (K.J. Lee 12e, Ch 22).",
     "**Thin, tightly adherent skin**: anterior auricular skin is bound to perichondrium with little subcutaneous tissue, so swelling is tense and painful (K.J. Lee 12e, Ch 22).",
-    "**Sensory supply**: great auricular nerve, auriculotemporal nerve (V3), Arnold nerve (X) and a small facial nerve contribution to the concha, which is why zoster can involve several cranial nerves (K.J. Lee 12e, Ch 22)."
+    "**Sensory supply**: great auricular nerve (lower lateral and medial surfaces), lesser occipital nerve (upper medial surface), auriculotemporal nerve (V3, tragus and anterosuperior helix), Arnold nerve (X) and a small facial nerve contribution to the concha, which is why zoster can involve several cranial nerves (K.J. Lee 12e, Ch 22)."
   ]),
   "pathophysiology": "\n".join([
     "**Hematoma to infection**: blunt trauma shears perichondrium off cartilage, the collection becomes infected, and cartilage necrosis and fibrosis follow (K.J. Lee 12e, Ch 22).",
@@ -47,7 +47,8 @@ TOPIC = {
   ]),
   "manage": "\n".join([
     "**Mild cellulitis**: oral antistaphylococcal and antistreptococcal therapy (K.J. Lee 12e, Ch 22).",
-    "**Perichondritis without abscess**: oral antipseudomonal therapy, typically a fluoroquinolone such as ciprofloxacin (K.J. Lee 12e, Ch 22).",
+    "**Perichondritis without abscess**: oral antipseudomonal therapy, typically a fluoroquinolone such as ciprofloxacin, with close follow-up in 24-48 hours to detect abscess (K.J. Lee 12e, Ch 22).",
+    "**Infected cartilage piercing**: remove the jewelry so the tract can drain, because a retained stud keeps a foreign body and seals in pus (Keene 2004).",
     "**Severe infection or immunocompromise**: IV coverage of Staphylococcus, Streptococcus and Pseudomonas (K.J. Lee 12e, Ch 22).",
     "**Abscess**: incision and drainage with debridement of necrotic cartilage, then bolsters. Treat for 2-4 weeks to limit cauliflower deformity (K.J. Lee 12e, Ch 22).",
     "**Ramsay Hunt**: valacyclovir 1000 mg every 8 hours for 7 days plus high-dose steroids (1 mg/kg/day for 14 days) for facial palsy or SNHL. Surgical decompression is not advised (K.J. Lee 12e, Ch 22).",

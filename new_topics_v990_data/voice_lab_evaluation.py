@@ -48,6 +48,7 @@ TOPIC = {
     "**Acoustics**: recorded sustained vowels and connected speech, analyzed for F0, intensity, CPP and spectrographic features (Patel 2018).",
     "**Aerodynamics**: mean airflow, estimated subglottic pressure and PTP. High flow suggests insufficiency, and high PTP suggests stiffness (Cummings 7e, Ch 55).",
     "**MPT**: report the best of 3 coached trials. Classic norms are about 15-25 s in women and 25-35 s in men, but the reported normal range spans 6.6-69.5 s, so interpret cautiously (Cummings 7e, Ch 55).",
+    "**s/z ratio**: a quick bedside screen comparing sustained /s/ (respiratory support) with sustained /z/ (adds phonation). A ratio above about 1.4 suggests glottal air leak from a lesion or incomplete closure, but it is effort-dependent and only a screen (Cummings 7e, Ch 55).",
     "**Imaging**: stroboscopy or high-speed video completes the evaluation, and measures are repeated after treatment (Cummings 7e, Ch 55)."
   ]),
   "manage": "\n".join([

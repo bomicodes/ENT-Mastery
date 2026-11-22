@@ -52,7 +52,7 @@ TOPIC = {
     "**Observation**: many stable tumors with serviceable hearing are watched with MRI and audiometry, since any intervention risks the remaining hearing (Cummings 7e, Ch 179).",
     "**Surgery**: indicated for brainstem compression, hydrocephalus or rapid growth. Often the larger tumor is addressed first while preserving hearing in the better side (Pasha 6e, Ch 7).",
     "**Radiosurgery**: tumor control rates for NF2 VS are lower than for sporadic tumors (about 75% to 80%) and hearing preservation is modest. Malignancy concern favors caution in young patients (Cummings 7e, Ch 181).",
-    "**Bevacizumab**: anti-VEGF therapy shrinks a subset of progressive NF2 vestibular schwannomas and improves hearing in some patients. Watch for hypertension and proteinuria (Plotkin et al., N Engl J Med 2009).",
+    "**Bevacizumab**: anti-VEGF therapy (typically 5-7.5 mg/kg every 2-3 weeks) is first-line medical therapy for a growing tumor threatening the better-hearing ear. In early series roughly half of tumors shrank and about half of evaluable patients gained word recognition, but tumors often regrow when it is stopped. Watch for hypertension, proteinuria and wound-healing problems, and hold it before surgery (Plotkin et al., N Engl J Med 2009).",
     "**Hearing rehabilitation**: amplification and early sign language or lipreading training while hearing is still present. Plan implant strategy before surgery (Cummings 7e, Ch 163)."
   ]),
   "operate": "\n".join([

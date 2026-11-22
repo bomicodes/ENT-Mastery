@@ -11,7 +11,8 @@
   "Oxymetazoline and 4% plain lidocaine (50:50) spray and pledgets for both nasal passages",
   "Flexible endoscope with working channel (preferred) or rigid 0- or 30-degree telescope, with suction available",
   "Augmentation material: temporary hyaluronic acid or carboxymethylcellulose gel, or calcium hydroxylapatite for durable effect",
-  "Long 25-gauge needle bendable 30-45 degrees, curved Abraham cannula, tongue depressor or gauze for peroral access"
+  "Long 25-gauge needle bendable 30-45 degrees, curved Abraham cannula, tongue depressor or gauze for peroral access",
+  "Check for medialized internal carotid arteries before injecting: look for posterior wall pulsation on endoscopy and review CT or MR angiography when available, especially in 22q11.2 deletion syndrome, where retropharyngeal carotids are common"
  ],
  "landmarks": [
   "Middle meatus on the side of the VPI (best endoscopic window)",
@@ -22,7 +23,7 @@
   "Expected course of the internal carotid artery lateral and posterior to the injection sites"
  ],
  "danger": [
-  "Intravascular, especially carotid, injection at lateral sites",
+  "Intravascular, especially carotid, injection at lateral sites, or at the midline when the carotids are medialized (22q11.2 deletion)",
   "Deep injection into the prevertebral space",
   "Multiple puncture sites promoting extrusion",
   "Overcorrection causing obstructive sleep apnea or hyponasality",

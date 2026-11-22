@@ -50,8 +50,9 @@ TOPIC = {'domain': 'General ENT / Emergencies',
                     'but no neutrophils. Thought to be a hyperimmune T-cell response to an '
                     'unidentified trigger, with an association with SLE (Bluestone & Stool 5e, '
                     'Cervical Adenopathy)\n'
-                    '**Rosai-Dorfman**: nonclonal (in most cases) histiocytic proliferation in '
-                    'nodal sinuses. Extranodal disease in about 43%, with the nasal cavity and '
+                    '**Rosai-Dorfman**: histiocytic proliferation in nodal sinuses, long viewed '
+                    'as reactive, though MAPK-pathway mutations (KRAS, MAP2K1) are found in a '
+                    'subset and it is now grouped with the histiocytic neoplasms. Extranodal disease in about 43%, with the nasal cavity and '
                     'sinuses among the most common sites (Bluestone & Stool 5e, Cervical '
                     'Adenopathy)\n'
                     '**Kimura**: Th2-type allergic inflammation with eosinophilic infiltrates, '
@@ -123,7 +124,11 @@ TOPIC = {'domain': 'General ENT / Emergencies',
            'features, ethnicity or family history (Bluestone & Stool 5e, Oral Manifestations of '
            'Systemic Disease)\n'
            '**Castleman**: for multicentric disease, HHV-8 and HIV testing, IL-6, CRP and PET-CT '
-           'to stage',
+           'to stage\n'
+           '**IgG4-related disease mimic**: in an adult with firm bilateral submandibular or '
+           'lacrimal gland swelling plus adenopathy, check serum IgG4 and look for storiform '
+           'fibrosis, obliterative phlebitis and an IgG4 to IgG plasma cell ratio over 40% on '
+           'biopsy. It responds briskly to glucocorticoids',
  'manage': '**Kawasaki**: IVIG 2 g/kg as a single infusion, ideally within 10 days of fever onset, '
            'plus aspirin. Refractory cases may receive a second IVIG dose, steroids or infliximab. '
            'Cardiology follow-up is driven by coronary findings (McCrindle, AHA 2017)\n'
@@ -506,8 +511,9 @@ TOPIC = {'domain': 'General ENT / Emergencies',
                 'curveball': 'Which endocrine finding implies pituitary involvement and '
                              'multisystem risk in this child?',
                 'curveball_answer': 'Central diabetes insipidus, with polyuria and polydipsia, '
-                                    'reflects posterior pituitary or stalk infiltration. It marks '
-                                    'central nervous system risk disease, needs brain MRI and '
+                                    'reflects posterior pituitary or stalk infiltration. Temporal '
+                                    'bone and other craniofacial lesions are CNS-risk sites that '
+                                    'raise its likelihood. It needs brain MRI and '
                                     'endocrine care with desmopressin replacement, and usually '
                                     'does not reverse once established even after successful '
                                     'systemic therapy.',

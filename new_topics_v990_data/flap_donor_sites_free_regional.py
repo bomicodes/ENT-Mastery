@@ -20,7 +20,7 @@ TOPIC = {
   ]),
   "pathophysiology": "\n".join([
     "**Hand ischemia risk**: radial artery harvest depends on an intact palmar arch. An incomplete arch occurs in up to about 12% of people (Cummings 7e, Ch 78).",
-    "**Foot ischemia risk**: some patients have a peronea magna, where the peroneal artery is the dominant supply to the foot. Harvest could devascularize the foot (Pasha 6e, Ch 8, p 456).",
+    "**Foot ischemia risk**: about 5-10% of patients have a peronea magna, where the peroneal artery is the dominant supply to the foot. Harvest could devascularize the foot (Pasha 6e, Ch 8, p 456).",
     "**Radius fracture**: removing more than about 40% of the radius circumference weakens it. Fracture rates up to 66% (mean about 23%) were reported before routine prophylactic plating (Cummings 7e, Ch 78).",
     "**Distal flap necrosis**: pedicled flaps are least perfused at their far tip, and gravity pulls them away from the recipient site (Pasha 6e, Ch 8, p 451).",
     "**Atherosclerosis**: peripheral vascular disease often involves the peroneal and tibial vessels but tends to spare the profunda femoris and subscapular systems, so ALT and scapula remain options (Cummings 7e, Ch 78).",
@@ -62,8 +62,8 @@ TOPIC = {
     "**Radial forearm harvest**: tourniquet, subfascial dissection preserving paratenon over the flexor tendons for graft take, and include the cephalic vein. Plate the radius after osteocutaneous harvest (Cummings 7e, Ch 78).",
     "**Fibula harvest**: preserve about 6-7 cm of bone proximally (peroneal nerve) and distally (ankle stability). Watch for foot drop and tendon exposure at the donor site (Cummings 7e, Ch 78).",
     "**ALT harvest**: mark the line from the anterior superior iliac spine to the lateral patella. Perforators cluster near its midpoint, and the vastus lateralis motor nerve should be spared (Cummings 7e, Ch 78).",
-    "**Pectoralis major harvest**: mark the pedicle on a line from the acromion to the xiphoid, perpendicular to the clavicle midpoint. Divide the humeral insertion for reach and preserve the lateral thoracic artery if possible (Pasha 6e, Ch 8, p 451).",
-    "**Donor morbidity**: radius fracture and tendon exposure (radial forearm), gait change and ankle instability (fibula), shoulder dysfunction and winging (scapula), hernia (iliac crest, rectus below the arcuate line) and seroma (latissimus) (Cummings 7e, Ch 78).",
+    "**Pectoralis major harvest**: the pedicle runs along a line from the acromion to the xiphoid, medial to where it meets a perpendicular dropped from the clavicle midpoint. Divide the humeral insertion for reach and preserve the lateral thoracic artery if possible (Pasha 6e, Ch 8, p 451).",
+    "**Donor morbidity**: radius fracture and tendon exposure (radial forearm), gait change, ankle instability and great toe flexion contracture from FHL scarring (fibula), lateral thigh numbness from the lateral femoral cutaneous nerve (ALT), shoulder dysfunction and winging (scapula), hernia (iliac crest, rectus below the arcuate line) and seroma (latissimus) (Cummings 7e, Ch 78).",
     "**Jejunum specifics**: requires laparotomy or laparoscopy and is contraindicated with ascites, inflammatory bowel disease or severe adhesions. It produces wet, gurgly voice when used for voice restoration (Pasha 6e, Ch 8, p 459)."
   ]),
   "teach": "\n".join([
@@ -104,7 +104,7 @@ TOPIC = {
       "Correct.",
       "Pedicled rib is unreliable and poorly vascularized for an implant-bearing mandible."
     ],
-    "board_pearl": "Confirm three-vessel runoff before fibula harvest, peronea magna is a contraindication.",
+    "board_pearl": "Confirm three-vessel runoff before fibula harvest. Peronea magna is a contraindication.",
     "curveball": "Which preoperative test thresholds flag a leg for vascular imaging before fibula harvest?",
     "curveball_answer": "An ankle-brachial index below about 1.0 or a toe-brachial index below about 0.7, absent pulses or claudication. CTA, MRA or angiography then confirms three-vessel runoff.",
     "learning_stage": "senior_decision",
@@ -235,7 +235,7 @@ TOPIC = {
         "Tubed anterolateral thigh flap",
         "Jejunal free flap",
         "Tubed radial forearm flap",
-        "Supraclavicular flap tubed as a patch"
+        "Tubed supraclavicular artery island flap"
       ],
       "answer": 1,
       "explanation": "The jejunal flap, based on a superior mesenteric arcade, gives native mucosal tube for circumferential defects. It requires an abdominal operation, so ascites, inflammatory bowel disease or dense adhesions are contraindications. Jejunum also tolerates only about 2 hours of warm ischemia. Tubed ALT or radial forearm flaps are the preferred alternatives here and avoid the abdomen.",
@@ -243,7 +243,7 @@ TOPIC = {
         "Tubed ALT is a standard alternative that avoids the abdomen.",
         "Correct.",
         "Tubed radial forearm is a standard alternative that avoids the abdomen.",
-        "A regional patch avoids the abdomen and is not contraindicated here."
+        "A tubed supraclavicular flap avoids the abdomen and is not contraindicated here."
       ],
       "board_pearl": "Jejunum: superior mesenteric arcade, about 2 hours warm ischemia, avoid with ascites or adhesions.",
       "curveball": "What voice drawback follows tracheoesophageal puncture with a jejunal reconstruction?",

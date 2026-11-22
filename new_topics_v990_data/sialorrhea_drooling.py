@@ -6,7 +6,7 @@ TOPIC = {'domain': 'Pediatric Otolaryngology',
              'normal until about age 2 and pathologic after age 4 (Pasha 6e, Ch 9)\n'
              '**Who drools**: about 30-35% of children with cerebral palsy, plus children with '
              'developmental delay, neuromuscular disease and syndromes such as CHARGE, '
-             'Prader-Willi and Moebius (Bluestone & Stool 5e, Management of Drooling)\n'
+             'Angelman and Moebius (Bluestone & Stool 5e, Management of Drooling)\n'
              '**Anterior vs posterior**: anterior drooling is a hygiene, skin and social problem. '
              'Posterior drooling sends saliva into the pharynx and airway and drives aspiration '
              'pneumonia (Pasha 6e, Ch 9)\n'
@@ -86,7 +86,8 @@ TOPIC = {'domain': 'Pediatric Otolaryngology',
            'as scopolamine with fewer systemic effects (Jongerius 2004)\n'
            '**Toxin regulatory status**: Bluestone & Stool describes toxin use as off-label. '
            'IncobotulinumtoxinA has since been FDA-approved for chronic sialorrhea in children 2 '
-           'and older (current)\n'
+           'and older, and incobotulinumtoxinA and rimabotulinumtoxinB are approved for adult '
+           'sialorrhea such as in Parkinson disease and ALS (current)\n'
            '**Timing of surgery**: usually after age 5-6 and failed conservative therapy, unless '
            'aspiration pneumonias force earlier action (Bluestone & Stool 5e, Management of '
            'Drooling)',

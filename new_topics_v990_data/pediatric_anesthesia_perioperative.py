@@ -43,7 +43,7 @@ TOPIC = {
     "**History**: prematurity and postconceptional age, recent URI, asthma, snoring and apnea, family history of anesthesia problems or MH, and any neuromuscular disease (Cummings 7e, Ch 184).",
     "**ASA fasting minimums**: clear liquids 2 h, breast milk 4 h, formula, nonhuman milk or light meal 6 h, fatty food or meat 8 h (Cummings 7e, Ch 184).",
     "**Current clear-fluid update (current)**: several pediatric anesthesia societies now endorse clear fluids up to 1 hour before elective anesthesia, since long fasting causes hypoglycemia, ketosis and hypotension (Thomas 2018).",
-    "**PONV risk (POVOC)**: age 3 or older, surgery over 30 minutes, strabismus or adenotonsillectomy, and personal or family history. Four factors give about 70% incidence (Cummings 7e, Ch 184).",
+    "**PONV risk (POVOC)**: age 3 or older, surgery over 30 minutes, strabismus surgery, and a history of PONV in the child or a first-degree relative (one factor). Risk climbs from about 10% with one factor to about 55% with three and 70% with four. Adenotonsillectomy and ear surgery are also high-risk procedures (Cummings 7e, Ch 184, Eberhart 2004).",
     "**Former preterm infant planning**: under 60 weeks PCA, schedule at a center that can admit for at least 12 apnea-free monitored hours (Cummings 7e, Ch 184)."
   ]),
   "manage": "\n".join([
@@ -80,6 +80,7 @@ TOPIC = {
     "Cote CJ et al. Anesthesiology 1995;82:809-822 (pooled analysis of postoperative apnea in former preterm infants, risk falling below 1% only near 56-60 weeks PCA)",
     "Tait AR et al. Anesthesiology 2001;95:299-306 (risk factors for adverse respiratory events in children with URI)",
     "McCann ME et al. Lancet 2019;393:664-677 (GAS trial: no difference in 5-year full-scale IQ after under 1 hour of sevoflurane vs awake regional anesthesia in infancy)",
+    "Eberhart LH et al. Anesth Analg 2004;99:1630-1637 (POVOC score for postoperative vomiting in children)",
     "Thomas M et al. Paediatr Anaesth 2018;28:411-414 (consensus statement allowing clear fluids up to 1 hour before elective pediatric anesthesia)"
   ],
   "case_label": "Former 30-week preemie, now 3 months old, scheduled for outpatient airway endoscopy",
@@ -227,7 +228,7 @@ TOPIC = {
     },
     {
       "topic": T,
-      "stem": "An 8-year-old girl is having a 2-hour tympanoplasty. She vomited after a prior anesthetic, and her mother has motion sickness. The anesthesiologist asks the surgeon about the plan. Which approach best reduces postoperative vomiting and protects the graft?",
+      "stem": "An 8-year-old girl is having a 2-hour tympanoplasty. She vomited after a prior anesthetic, and her mother also had severe vomiting after surgery. The anesthesiologist asks the surgeon about the plan. Which approach best reduces postoperative vomiting and protects the graft?",
       "choices": [
         "Propofol TIVA without nitrous oxide plus ondansetron and dexamethasone",
         "Nitrous oxide with sevoflurane and no antiemetic",
@@ -235,11 +236,11 @@ TOPIC = {
         "Postpone surgery until she is older"
       ],
       "answer": 0,
-      "explanation": "She has all four POVOC risk factors (age 3 or older, surgery over 30 minutes, personal history, family history), predicting about 70% vomiting risk, and ear surgery adds to it. Combined prophylaxis with ondansetron and dexamethasone plus propofol TIVA lowers risk. Avoiding nitrous oxide also prevents middle ear pressure changes that can displace the graft. Single-agent prophylaxis is inadequate for this risk level.",
+      "explanation": "She has three POVOC factors (age 3 or older, surgery over 30 minutes, and a personal or family history of PONV, which counts once), predicting about 55% vomiting risk, and middle ear surgery adds to it. Combined prophylaxis with ondansetron and dexamethasone plus propofol TIVA lowers risk. Avoiding nitrous oxide also prevents middle ear pressure changes that can displace the graft. Single-agent prophylaxis is inadequate for this risk level.",
       "why_wrong": [
         "Correct.",
         "Nitrous oxide raises middle ear pressure and PONV, and no prophylaxis is unsafe.",
-        "One antiemetic is insufficient for four risk factors, and nitrous oxide remains a problem.",
+        "One antiemetic is insufficient at this risk level, and nitrous oxide remains a problem.",
         "PONV risk is managed, not a reason to delay ear surgery."
       ],
       "board_pearl": "Ear surgery: no nitrous oxide, multimodal PONV prophylaxis, consider propofol TIVA.",

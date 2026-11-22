@@ -16,7 +16,7 @@ TOPIC = {
     "**Middle cranial base compartments**: lines from the medial pterygoid plate to the occipital condyle, following the ICA, divide a central compartment from paired lateral compartments (infratemporal fossa, parapharyngeal space, petrous bone) (Cummings 7e, Ch 176).",
     "**Lateral landmarks**: the lateral pterygoid plate leads to foramen ovale (V3), foramen spinosum lies posterolateral, and the sphenoid spine sits just lateral to the carotid canal and medial to the glenoid fossa (Cummings 7e, Ch 176).",
     "**Pericranial flap blood supply**: supraorbital and supratrochlear vessels, so the flap must be raised before or protected during the frontal craniotomy cuts (Cummings 7e, Ch 176).",
-    "**Frontal branch of VII**: runs in or just deep to the superficial layer of deep temporal fascia over the zygomatic arch. Elevating with the superficial temporal fat pad protects it (Cummings 7e, Ch 176).",
+    "**Frontal branch of VII**: runs on the undersurface of the temporoparietal (superficial temporal) fascia as it crosses the zygomatic arch. Incising the superficial layer of deep temporal fascia about 2 cm above the arch and dissecting deep to it, through the superficial temporal fat pad, keeps the nerve safely in the flap (Cummings 7e, Ch 176).",
     "**Brain relaxation physiology**: removing 25-50 mL CSF, mild hyperventilation and mannitol shrink intracranial volume so the frontal lobes fall away from the floor with less retraction (Cummings 7e, Ch 176)."
   ]),
   "pathophysiology": "\n".join([
@@ -182,15 +182,15 @@ TOPIC = {
       "topic": T,
       "stem": "A 40-year-old woman is undergoing a subtemporal-preauricular approach to the infratemporal fossa. During dissection over the zygomatic arch, the resident asks how to protect the facial nerve branch that is most vulnerable in this plane. Which maneuver best protects the frontal branch?",
       "choices": [
-        "Dissecting superficial to the temporoparietal fascia",
-        "Elevating the branch with the superficial temporal fat pad deep to the superficial layer of deep temporal fascia",
+        "Dissecting in the areolar plane just deep to the temporoparietal fascia",
+        "Incising the superficial layer of deep temporal fascia and dissecting deep to it through the fat pad",
         "Dividing the zygomatic arch before identifying any fascial layer",
         "Retracting the temporalis muscle inferiorly through a scalp incision only"
       ],
       "answer": 1,
-      "explanation": "The frontal branch crosses the zygomatic arch within or just superficial to the temporoparietal fascia. Incising the superficial layer of deep temporal fascia and elevating it with the superficial temporal fat pad keeps the nerve in the flap and out of harm. Arch osteotomy follows only after this plane is established. If the branch is cut and repaired, frontalis function usually returns in about 6-9 months.",
+      "explanation": "The frontal branch crosses the zygomatic arch on the deep surface of the temporoparietal fascia. Incising the superficial layer of deep temporal fascia above the arch and dissecting deep to it, through the superficial temporal fat pad, keeps the nerve in the flap and out of harm. Arch osteotomy follows only after this plane is established. If the branch is cut and repaired, frontalis function usually returns in about 6-9 months.",
       "why_wrong": [
-        "The frontal branch runs at this level, so dissection here injures it.",
+        "The branch lies on the deep surface of the temporoparietal fascia, so this plane exposes it.",
         "Correct.",
         "Osteotomy before defining the fascial plane risks cutting the nerve.",
         "Muscle retraction alone does not address the nerve's course over the arch."
@@ -234,7 +234,7 @@ TOPIC = {
         "Middle fossa approach with preserved hearing"
       ],
       "answer": 0,
-      "explanation": "The Fisch type C approach extends the type B exposure anteriorly to the parasellar region, cavernous sinus, pterygoid plates and nasopharynx. It is used for angiofibroma, nasopharyngeal carcinoma and adenoid cystic carcinoma. Like types A and B, it closes the external canal and eustachian tube, so a permanent conductive loss results. Preoperative embolization is standard for angiofibroma to limit blood loss.",
+      "explanation": "The Fisch type C approach extends the type B exposure anteriorly to the parasellar region, cavernous sinus, pterygoid plates and nasopharynx. It is used for angiofibroma, nasopharyngeal carcinoma and adenoid cystic carcinoma. Like types A and B, it closes the external canal and eustachian tube, so a permanent conductive loss results. Preoperative embolization is standard for angiofibroma, and most angiofibromas are now resected endoscopically, reserving open lateral routes for extensive disease.",
       "why_wrong": [
         "Correct.",
         "Type A targets the jugular foramen and apex, and hearing loss is conductive.",

@@ -5,7 +5,7 @@
  "or_family_v190": "pediatric",
  "linked_topic": "Microtia / Aural Atresia",
  "source_label": "Pasha 6e and Cummings 7e (Evaluation and Management of Congenital Aural Atresia)",
- "indications": "Congenital aural atresia with favorable CT anatomy, typically a Jahrsdoerfer score of 7 or higher (6 is borderline), normal inner ear and cochlear reserve on bone-conduction ABR or audiogram, and a family motivated for canal care and possible revisions. Usually performed at age 6-7 or older and after rib-cartilage microtia reconstruction so the auricular blood supply is not compromised; with porous polyethylene reconstruction, canal surgery may be timed differently by team protocol. Cholesteatoma behind an atretic plate or canal stenosis with trapped skin is an indication regardless of hearing goals. Poor scores, major malformations, or unwillingness for postoperative care favor bone-conduction devices instead, which close the air-bone gap more reliably.",
+ "indications": "Congenital aural atresia with favorable CT anatomy, typically a Jahrsdoerfer score of 7 or higher (6 is borderline), normal inner ear and cochlear reserve on bone-conduction ABR or audiogram, and a family motivated for canal care and possible revisions. Usually performed at age 6-7 or older and after rib-cartilage microtia reconstruction so the auricular blood supply is not compromised; with porous polyethylene reconstruction, canal surgery may be timed differently by team protocol. Cholesteatoma behind an atretic plate or canal stenosis with trapped skin is an indication regardless of hearing goals, and congenital canal stenosis of 2 mm or less carries a high canal cholesteatoma risk, so it needs serial CT or early canaloplasty. Poor scores, major malformations, or unwillingness for postoperative care favor bone-conduction devices instead, which close the air-bone gap more reliably.",
  "setup": [
   "High-resolution CT temporal bone scored by Jahrsdoerfer grade; review facial nerve course, tegmen height, middle ear size, ossicles, oval and round windows",
   "Audiogram or ABR with bone conduction confirming cochlear reserve; counsel on stenosis, graft lateralization and revision rates",
@@ -122,7 +122,7 @@
   ],
   [
    "Hearing outcome compared with bone conduction devices?",
-   "About half to three-quarters of well-selected patients reach 30 dB or better, but results may decline over time; bone-anchored devices close the air-bone gap in roughly 85%."
+   "About half to three-quarters of well-selected patients reach a speech reception threshold of 30 dB or better, but results can decline over time and revisions are common. Bone-conduction devices give a more predictable and durable gain, which is why they are favored for low Jahrsdoerfer scores."
   ]
  ],
  "source_basis": [

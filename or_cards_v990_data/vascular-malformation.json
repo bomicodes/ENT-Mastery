@@ -5,7 +5,7 @@
  "or_family_v190": "pediatric",
  "linked_topic": "Vascular Malformations and Non-Infantile Vascular Tumors",
  "source_label": "Pasha 6e Ch 9 and Cummings 7e Ch 203 (Vascular Anomalies of the Head and Neck)",
- "indications": "Symptomatic cervicofacial lymphatic malformation causing airway compromise, dysphagia, recurrent infection or hemorrhage, functional impairment, or disfigurement. Macrocystic lesions (cysts at least 2 mL) respond best to percutaneous sclerotherapy with doxycycline, bleomycin, ethanol, or sodium tetradecyl sulfate; microcystic and mixed lesions respond poorly to sclerotherapy and are treated with sirolimus, staged conservative excision, or laser and radiofrequency to mucosal vesicles. Localized infrahyoid unilateral lesions (de Serres I) are the best surgical candidates; bilateral suprahyoid disease (stages IV-V) carries high morbidity and recurrence. Small asymptomatic lesions may be observed, and some macrocystic lesions regress spontaneously.",
+ "indications": "Symptomatic cervicofacial lymphatic malformation causing airway compromise, dysphagia, recurrent infection or hemorrhage, functional impairment, or disfigurement. Macrocystic lesions (cysts of about 2 cm or 2 mL or more) respond best to percutaneous sclerotherapy with doxycycline, bleomycin, OK-432 (where available), ethanol, or sodium tetradecyl sulfate; microcystic and mixed lesions respond poorly to sclerotherapy and are treated with sirolimus, staged conservative excision, or laser and radiofrequency to mucosal vesicles. Localized infrahyoid unilateral lesions (de Serres I) are the best surgical candidates; bilateral suprahyoid disease (stages IV-V) carries high morbidity and recurrence. Small asymptomatic lesions may be observed, and some macrocystic lesions regress spontaneously.",
  "setup": [
   "MRI with T2 and contrast to define macro- versus microcystic components, extent, and airway relationship",
   "Interventional radiology suite with ultrasound and fluoroscopy for sclerotherapy, or OR with nerve integrity monitor for excision",
@@ -39,7 +39,7 @@
   ],
   [
    "Sclerotherapy: inject agent",
-   "Inject the chosen sclerosant (doxycycline, bleomycin, ethanol, or sodium tetradecyl sulfate) into each cyst at a volume proportional to the aspirate and within weight-based maximum dose. Leave a catheter for repeat dosing over 1-2 days for large cysts. Expect swelling peaking in 24-72 hours; plan observation for airway lesions."
+   "Inject the chosen sclerosant (doxycycline, bleomycin, OK-432 where available, ethanol, or sodium tetradecyl sulfate) into each cyst at a volume proportional to the aspirate and within the weight-based maximum dose. Leave a catheter for repeat dosing over 1-2 days for large cysts. Expect swelling peaking at 24-72 hours and observe airway lesions."
   ],
   [
    "Excision: plan the incision",
@@ -98,7 +98,7 @@
  "attending_followup": [
   [
    "Which lymphatic malformations respond best to sclerotherapy?",
-   "Macrocystic lesions (cysts of at least 2 mL or 2 cm); microcystic lesions respond poorly and are treated with sirolimus, staged excision, or local ablation."
+   "Macrocystic lesions (cysts of about 2 cm or 2 mL or more); microcystic lesions respond poorly and are treated with sirolimus, staged excision, or local ablation."
   ],
   [
    "Describe the modified de Serres staging.",

@@ -101,7 +101,7 @@ TOPIC = {
     ],
     "board_pearl": "Refer to early intervention at diagnosis, and do not wait for the cause.",
     "curveball": "The CMV test returns positive on a dried blood spot from birth. How does this change follow-up?",
-    "curveball_answer": "Congenital CMV hearing loss can progress or appear late, so closer audiologic monitoring is needed. Antiviral treatment may be discussed with infectious disease specialists for symptomatic infants, ideally started early in infancy. Early intervention continues unchanged."
+    "curveball_answer": "Congenital CMV hearing loss can progress or appear late, so closer audiologic monitoring is needed. Oral valganciclovir for 6 months, started within the first month of life, is offered with infectious disease input for symptomatic infants and is increasingly discussed for isolated hearing loss. Audiology every 3-6 months in early childhood catches progression. Early intervention continues unchanged."
 ,
     "learning_stage": "foundation",
     "focus": "management"
