@@ -5,7 +5,7 @@
  "or_family_v190": "emergency",
  "linked_topic": "Facial Soft-Tissue Lacerations / Burns",
  "source_label": "Pasha 6e (Otology and Head and Neck Trauma chapters)",
- "indications": "Any tense, fluctuant collection between perichondrium and auricular cartilage after blunt or shearing trauma (wrestling, boxing, rugby, falls), most often on the anterior surface where skin is tightly bound to perichondrium. Drain as soon as it is recognized, ideally within the first days, because the cartilage depends on the perichondrium for its blood supply; untreated or reaccumulated blood causes cartilage necrosis, perichondritis and fibrocartilaginous overgrowth (cauliflower ear). Very small, flat collections may be observed only if the patient can be rechecked closely. Needle aspiration may clear a small, fresh, liquid collection seen within the first day or two, but recurrence is higher, and once the blood clots and organizes (within days) incision and evacuation are needed.",
+ "indications": "Any tense, fluctuant collection between perichondrium and auricular cartilage after blunt or shearing trauma (wrestling, boxing, rugby, falls), most often on the anterior surface where skin is tightly bound to perichondrium. Drain as soon as it is recognized, ideally within the first days, because the cartilage depends on the perichondrium for its blood supply; untreated or reaccumulated blood causes cartilage necrosis, perichondritis and fibrocartilaginous overgrowth (cauliflower ear). The standard treatment is incision, drainage and a through-and-through bolster. Needle aspiration alone is not recommended because the collection reaccumulates without compression of the dead space.",
  "setup": [
   "Usually a bedside or clinic procedure; patient supine or seated with the head turned and the ear well lit (headlight or loupes)",
   "Ear ring block with local anesthetic (diamond pattern of about six injection points around the auricle) or targeted local infiltration",
@@ -113,8 +113,8 @@
    "Blood separates the avascular cartilage from its perichondrial blood supply; cartilage necroses and the stimulated perichondrium lays down disorganized fibrous tissue and neocartilage, producing a thickened, deformed auricle."
   ],
   [
-   "Why is needle aspiration alone often inadequate?",
-   "Within days the blood clots and becomes gelatinous, so it does not aspirate fully, and without compression the dead space refills. Aspiration is reasonable only for a small, fresh, liquid collection, whereas incision with evacuation plus a bolster has lower recurrence."
+   "Why incise, drain and bolster rather than aspirate?",
+   "Aspiration alone leaves dead space under the perichondrium, so blood reaccumulates and cartilage necrosis and cauliflower ear follow. Incision with complete evacuation of clot, irrigation, and a through-and-through bolster that holds the perichondrium against the cartilage is the standard of care and has the lowest recurrence."
   ],
   [
    "Which pattern of injection anesthetizes the entire external ear?",

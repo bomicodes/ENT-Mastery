@@ -42,6 +42,13 @@ def load():
                 base.pop(q, None)  # v82: card removed on request
             elif q in base and cs:
                 base[q] = cs
+    # v99: extra fact cards attached to an existing board question (extra_*.py EXTRA = [{qid, front, back}]).
+    # They become qid~N cards, so they appear in the deck and are rescheduled when that question is missed.
+    for path in sorted(glob.glob(os.path.join(HERE, "extra_*.py"))):
+        for f in getattr(_mod(path), "EXTRA", []) or []:
+            q, fr, bk = f.get("qid"), (f.get("front") or "").strip(), (f.get("back") or "").strip()
+            if q and fr and bk:
+                base.setdefault(q, []).append({"front": fr, "back": bk, "hook": ""})
     alias = {}
     dpath = os.path.join(HERE, "dups.py")
     if os.path.exists(dpath):
