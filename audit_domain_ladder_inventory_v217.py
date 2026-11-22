@@ -16,7 +16,7 @@ STAGES = {"foundation", "application", "senior_decision"}
 EXPECTED_COUNTS = {
     "Otology / Neurotology": 63,
     "Rhinology / Allergy / Skull Base": 54,
-    "Head & Neck Oncology": 53,
+    "Head & Neck Oncology": 54,
     "Thyroid / Parathyroid / Salivary": 37,
     "Pediatric Otolaryngology": 55,
     "Laryngology / Voice / Swallowing": 44,
