@@ -1,0 +1,123 @@
+{
+  "expected_ids": [
+    "cc-v112-mgt-facial-plastics-trauma-cervicofacial-flap",
+    "cc-v112-mgt-facial-plastics-trauma-forehead-flap-nasal-reconstruction",
+    "cc-v112-mgt-facial-plastics-trauma-le-fort-panfacial-trauma",
+    "cc-v112-mgt-pediatric-otolaryngology-ankyloglossia-maxillary-frenulum",
+    "cc-v112-rec-facial-plastics-trauma-facial-synkinesis-static-dynamic-rehabilitation",
+    "cc-v112-rec-facial-plastics-trauma-septal-perforation",
+    "cc-v112-rec-facial-plastics-trauma-structured-facial-trauma-examination",
+    "cc-v112-rec-general-ent-emergencies-wound-healing-scar-biology-in-head-neck-surgery",
+    "cc-v112-rec-head-neck-oncology-base-of-tongue-scc",
+    "cc-v112-rec-laryngology-voice-swallowing-injection-laryngoplasty"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-facial-plastics-trauma-facial-synkinesis-static-dynamic-rehabilitation",
+      "cc-v112-rec-general-ent-emergencies-wound-healing-scar-biology-in-head-neck-surgery",
+      "cc-v112-mgt-facial-plastics-trauma-forehead-flap-nasal-reconstruction",
+      "cc-v112-mgt-facial-plastics-trauma-le-fort-panfacial-trauma",
+      "cc-v112-mgt-pediatric-otolaryngology-ankyloglossia-maxillary-frenulum",
+      "cc-v112-rec-facial-plastics-trauma-structured-facial-trauma-examination",
+      "cc-v112-mgt-facial-plastics-trauma-cervicofacial-flap",
+      "cc-v112-rec-facial-plastics-trauma-septal-perforation",
+      "cc-v112-rec-head-neck-oncology-base-of-tongue-scc",
+      "cc-v112-rec-laryngology-voice-swallowing-injection-laryngoplasty"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-mgt-facial-plastics-trauma-cervicofacial-flap",
+      "concept_id": "v6-facial-plastics-trauma-cervicofacial-flap",
+      "resolved_topic": "Cervicofacial Flap",
+      "prompt_words": 51,
+      "answer_words": 159,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-mgt-facial-plastics-trauma-forehead-flap-nasal-reconstruction",
+      "concept_id": "v6-facial-plastics-trauma-forehead-flap-nasal-reconstruction",
+      "resolved_topic": "Forehead Flap / Nasal Reconstruction",
+      "prompt_words": 47,
+      "answer_words": 156,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-mgt-facial-plastics-trauma-le-fort-panfacial-trauma",
+      "concept_id": "v6-facial-plastics-trauma-le-fort-panfacial-trauma",
+      "resolved_topic": "Le Fort / Panfacial Trauma",
+      "prompt_words": 45,
+      "answer_words": 152,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-mgt-pediatric-otolaryngology-ankyloglossia-maxillary-frenulum",
+      "concept_id": "v6-pediatric-otolaryngology-ankyloglossia-maxillary-frenulum",
+      "resolved_topic": "Ankyloglossia / Maxillary Frenulum",
+      "prompt_words": 50,
+      "answer_words": 151,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-facial-plastics-trauma-facial-synkinesis-static-dynamic-rehabilitation",
+      "concept_id": "v6-facial-plastics-trauma-facial-synkinesis-static-dynamic-rehabilitation",
+      "resolved_topic": "Facial Synkinesis / Static-Dynamic Rehabilitation",
+      "prompt_words": 49,
+      "answer_words": 126,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-facial-plastics-trauma-septal-perforation",
+      "concept_id": "v6-facial-plastics-trauma-septal-perforation",
+      "resolved_topic": "Septal Perforation",
+      "prompt_words": 49,
+      "answer_words": 149,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-facial-plastics-trauma-structured-facial-trauma-examination",
+      "concept_id": "v6-facial-plastics-trauma-structured-facial-trauma-examination",
+      "resolved_topic": "Structured Facial Trauma Examination",
+      "prompt_words": 39,
+      "answer_words": 141,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-wound-healing-scar-biology-in-head-neck-surgery",
+      "concept_id": "v6-general-ent-emergencies-wound-healing-scar-biology-in-head-neck-surgery",
+      "resolved_topic": "Wound Healing / Scar Biology in Head & Neck Surgery",
+      "prompt_words": 44,
+      "answer_words": 146,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-base-of-tongue-scc",
+      "concept_id": "v6-head-neck-oncology-base-of-tongue-scc",
+      "resolved_topic": "Base of Tongue SCC",
+      "prompt_words": 51,
+      "answer_words": 180,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-injection-laryngoplasty",
+      "concept_id": "v6-laryngology-voice-swallowing-injection-laryngoplasty",
+      "resolved_topic": "Injection Laryngoplasty",
+      "prompt_words": 46,
+      "answer_words": 152,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

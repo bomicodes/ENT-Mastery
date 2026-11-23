@@ -1,0 +1,154 @@
+{
+  "expected_ids": [
+    "cc-v112-mgt-rhinology-allergy-skull-base-frontal-recess-frontal-sinus",
+    "cc-v112-rec-head-neck-oncology-floor-of-mouth-scc",
+    "cc-v112-rec-head-neck-oncology-glottic-cancer",
+    "cc-v112-rec-head-neck-oncology-parapharyngeal-space-tumor",
+    "cc-v112-rec-head-neck-oncology-total-laryngectomy",
+    "cc-v112-rec-laryngology-voice-swallowing-arytenoid-adduction-reinnervation",
+    "cc-v112-rec-laryngology-voice-swallowing-vocal-fold-polyp-cyst",
+    "cc-v112-rec-otology-neurotology-ototoxic-noise-induced-hearing-loss",
+    "cc-v112-rec-pediatric-otolaryngology-congenital-neck-masses",
+    "cc-v112-rec-pediatric-otolaryngology-pediatric-reflux-eosinophilic-esophagitis"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-head-neck-oncology-floor-of-mouth-scc",
+      "cc-v112-rec-laryngology-voice-swallowing-arytenoid-adduction-reinnervation",
+      "cc-v112-mgt-rhinology-allergy-skull-base-frontal-recess-frontal-sinus",
+      "cc-v112-rec-head-neck-oncology-glottic-cancer",
+      "cc-v112-rec-head-neck-oncology-parapharyngeal-space-tumor",
+      "cc-v112-rec-head-neck-oncology-total-laryngectomy",
+      "cc-v112-rec-laryngology-voice-swallowing-vocal-fold-polyp-cyst",
+      "cc-v112-rec-otology-neurotology-ototoxic-noise-induced-hearing-loss",
+      "cc-v112-rec-pediatric-otolaryngology-congenital-neck-masses",
+      "cc-v112-rec-pediatric-otolaryngology-pediatric-reflux-eosinophilic-esophagitis"
+    ],
+    "missing": [],
+    "expected": [
+      "cc-v112-rec-head-neck-oncology-floor-of-mouth-scc",
+      "cc-v112-rec-laryngology-voice-swallowing-arytenoid-adduction-reinnervation",
+      "cc-v112-mgt-rhinology-allergy-skull-base-frontal-recess-frontal-sinus",
+      "cc-v112-rec-head-neck-oncology-glottic-cancer",
+      "cc-v112-rec-head-neck-oncology-parapharyngeal-space-tumor",
+      "cc-v112-rec-head-neck-oncology-total-laryngectomy",
+      "cc-v112-rec-laryngology-voice-swallowing-vocal-fold-polyp-cyst",
+      "cc-v112-rec-otology-neurotology-ototoxic-noise-induced-hearing-loss",
+      "cc-v112-rec-pediatric-otolaryngology-congenital-neck-masses",
+      "cc-v112-rec-pediatric-otolaryngology-pediatric-reflux-eosinophilic-esophagitis"
+    ]
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-mgt-rhinology-allergy-skull-base-frontal-recess-frontal-sinus",
+      "prompt_words": 63,
+      "answer_words": 114,
+      "required_terms": [
+        "drainage pathway",
+        "skull",
+        "anterior ethmoid"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-floor-of-mouth-scc",
+      "prompt_words": 50,
+      "answer_words": 126,
+      "required_terms": [
+        "mandib",
+        "neck",
+        "reconstruct"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-glottic-cancer",
+      "prompt_words": 52,
+      "answer_words": 128,
+      "required_terms": [
+        "mobility",
+        "subglott",
+        "cartilage"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-parapharyngeal-space-tumor",
+      "prompt_words": 54,
+      "answer_words": 111,
+      "required_terms": [
+        "prestyloid",
+        "poststyloid",
+        "vascular"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-total-laryngectomy",
+      "prompt_words": 45,
+      "answer_words": 133,
+      "required_terms": [
+        "stoma",
+        "communication",
+        "fistula"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-arytenoid-adduction-reinnervation",
+      "prompt_words": 50,
+      "answer_words": 116,
+      "required_terms": [
+        "posterior",
+        "vertical",
+        "reinnervation"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-vocal-fold-polyp-cyst",
+      "prompt_words": 58,
+      "answer_words": 121,
+      "required_terms": [
+        "mucosal wave",
+        "cyst",
+        "scar"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-otology-neurotology-ototoxic-noise-induced-hearing-loss",
+      "prompt_words": 50,
+      "answer_words": 133,
+      "required_terms": [
+        "baseline",
+        "high frequ",
+        "exposure"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-congenital-neck-masses",
+      "prompt_words": 45,
+      "answer_words": 130,
+      "required_terms": [
+        "embryolog",
+        "infection",
+        "tract"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-pediatric-reflux-eosinophilic-esophagitis",
+      "prompt_words": 58,
+      "answer_words": 123,
+      "required_terms": [
+        "solid-food",
+        "atopy",
+        "biopsy"
+      ],
+      "failures": []
+    }
+  ]
+}

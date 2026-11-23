@@ -1,0 +1,57 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-laryngology-voice-swallowing-stroboscopy-interpretation",
+    "cc-v112-rec-pediatric-otolaryngology-cleft-lip-palate-ent-surgical-fundamentals",
+    "cc-v112-rec-pediatric-otolaryngology-congenital-cmv-hearing-loss",
+    "cc-v112-rec-pediatric-otolaryngology-microtia-reconstruction"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-pediatric-otolaryngology-cleft-lip-palate-ent-surgical-fundamentals",
+      "cc-v112-rec-pediatric-otolaryngology-microtia-reconstruction",
+      "cc-v112-rec-pediatric-otolaryngology-congenital-cmv-hearing-loss",
+      "cc-v112-rec-laryngology-voice-swallowing-stroboscopy-interpretation"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-stroboscopy-interpretation",
+      "concept_id": "v6-laryngology-voice-swallowing-stroboscopy-interpretation",
+      "resolved_topic": "Stroboscopy Interpretation",
+      "prompt_words": 85,
+      "answer_words": 245,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-cleft-lip-palate-ent-surgical-fundamentals",
+      "concept_id": "v6-pediatric-otolaryngology-cleft-lip-palate-ent-surgical-fundamentals",
+      "resolved_topic": "Cleft Lip / Palate — ENT Surgical Fundamentals",
+      "prompt_words": 78,
+      "answer_words": 238,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-congenital-cmv-hearing-loss",
+      "concept_id": "v6-pediatric-otolaryngology-congenital-cmv-hearing-loss",
+      "resolved_topic": "Congenital CMV Hearing Loss",
+      "prompt_words": 69,
+      "answer_words": 254,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-microtia-reconstruction",
+      "concept_id": "v6-pediatric-otolaryngology-microtia-reconstruction",
+      "resolved_topic": "Microtia Reconstruction",
+      "prompt_words": 73,
+      "answer_words": 273,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

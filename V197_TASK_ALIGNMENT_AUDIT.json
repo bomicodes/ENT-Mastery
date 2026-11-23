@@ -1,0 +1,24 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-head-neck-oncology-tumor-immunology-immunotherapy-in-hnscc"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-head-neck-oncology-tumor-immunology-immunotherapy-in-hnscc"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-head-neck-oncology-tumor-immunology-immunotherapy-in-hnscc",
+      "concept_id": "v6-head-neck-oncology-tumor-immunology-immunotherapy-in-hnscc",
+      "resolved_topic": "Tumor Immunology / Immunotherapy in HNSCC",
+      "prompt_words": 87,
+      "answer_words": 476,
+      "trap_count": 4,
+      "failures": []
+    }
+  ]
+}

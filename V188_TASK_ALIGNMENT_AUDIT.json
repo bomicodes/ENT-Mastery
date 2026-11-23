@@ -1,0 +1,57 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-laryngology-voice-swallowing-bilateral-vocal-fold-immobility",
+    "cc-v112-rec-laryngology-voice-swallowing-posterior-glottic-stenosis-arytenoid-fixation",
+    "cc-v112-rec-laryngology-voice-swallowing-unilateral-vocal-fold-paralysis",
+    "cc-v112-rec-sleep-surgery-maxillomandibular-advancement"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-laryngology-voice-swallowing-unilateral-vocal-fold-paralysis",
+      "cc-v112-rec-sleep-surgery-maxillomandibular-advancement",
+      "cc-v112-rec-laryngology-voice-swallowing-bilateral-vocal-fold-immobility",
+      "cc-v112-rec-laryngology-voice-swallowing-posterior-glottic-stenosis-arytenoid-fixation"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-bilateral-vocal-fold-immobility",
+      "concept_id": "v6-laryngology-voice-swallowing-bilateral-vocal-fold-immobility",
+      "resolved_topic": "Bilateral Vocal Fold Immobility",
+      "prompt_words": 61,
+      "answer_words": 210,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-posterior-glottic-stenosis-arytenoid-fixation",
+      "concept_id": "v6-laryngology-voice-swallowing-posterior-glottic-stenosis-arytenoid-fixation",
+      "resolved_topic": "Posterior Glottic Stenosis / Arytenoid Fixation",
+      "prompt_words": 57,
+      "answer_words": 222,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-unilateral-vocal-fold-paralysis",
+      "concept_id": "v6-laryngology-voice-swallowing-unilateral-vocal-fold-paralysis",
+      "resolved_topic": "Unilateral Vocal Fold Paralysis",
+      "prompt_words": 61,
+      "answer_words": 203,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-sleep-surgery-maxillomandibular-advancement",
+      "concept_id": "v6-sleep-surgery-maxillomandibular-advancement",
+      "resolved_topic": "Maxillomandibular Advancement",
+      "prompt_words": 68,
+      "answer_words": 207,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-laryngology-voice-swallowing-cricopharyngeal-dysfunction",
+    "cc-v112-rec-laryngology-voice-swallowing-medialization-thyroplasty",
+    "cc-v112-rec-rhinology-allergy-skull-base-fungal-ball",
+    "cc-v112-rec-thyroid-parathyroid-salivary-graves-disease-toxic-goiter"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-thyroid-parathyroid-salivary-graves-disease-toxic-goiter",
+      "cc-v112-rec-laryngology-voice-swallowing-medialization-thyroplasty",
+      "cc-v112-rec-rhinology-allergy-skull-base-fungal-ball",
+      "cc-v112-rec-laryngology-voice-swallowing-cricopharyngeal-dysfunction"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-cricopharyngeal-dysfunction",
+      "concept_id": "v6-laryngology-voice-swallowing-cricopharyngeal-dysfunction",
+      "resolved_topic": "Cricopharyngeal Dysfunction",
+      "prompt_words": 75,
+      "answer_words": 296,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-medialization-thyroplasty",
+      "concept_id": "v6-laryngology-voice-swallowing-medialization-thyroplasty",
+      "resolved_topic": "Medialization Thyroplasty",
+      "prompt_words": 60,
+      "answer_words": 302,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-fungal-ball",
+      "concept_id": "v6-rhinology-allergy-skull-base-fungal-ball",
+      "resolved_topic": "Fungal Ball",
+      "prompt_words": 68,
+      "answer_words": 263,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-thyroid-parathyroid-salivary-graves-disease-toxic-goiter",
+      "concept_id": "v6-thyroid-parathyroid-salivary-graves-disease-toxic-goiter",
+      "resolved_topic": "Graves Disease / Toxic Goiter",
+      "prompt_words": 72,
+      "answer_words": 305,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

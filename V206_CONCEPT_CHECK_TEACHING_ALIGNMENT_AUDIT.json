@@ -1,0 +1,16 @@
+{
+  "audit_version": "v20.6",
+  "concept_check_count": 749,
+  "reviewed_count": 749,
+  "reviewed_free_response_count": 386,
+  "reviewed_mcq_count": 363,
+  "concept_kind_counts": {
+    "condition": 493,
+    "emergency": 61,
+    "foundation": 17,
+    "interpretation": 39,
+    "procedure": 139
+  },
+  "failures": [],
+  "failure_details": []
+}

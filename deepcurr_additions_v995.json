@@ -553,5 +553,20 @@
   "topic": "Facial Soft-Tissue Lacerations / Burns",
   "field": "manage",
   "text": "**Toxin for parotid duct and gland injury**: for a persistent sialocele after aspiration and pressure dressing, consider botulinum toxin injection into the gland. A salivary fistula can be excised with toxin injection and a compression dressing. If the duct cannot be repaired, ligating it and injecting toxin produces a temporary parotitis and then gland atrophy. (Pasha 6e, Ch 10, p 673)"
+ },
+ {
+  "topic": "Subglottic / Tracheal Stenosis",
+  "field": "operate",
+  "text": "**Anastomotic failure risk factors**: in the largest tracheal and laryngotracheal resection series (901 patients), anastomotic complications occurred in about 9%. Independent predictors were reoperation, diabetes, resection length of 4 cm or more, laryngotracheal rather than tracheal resection, age 17 or younger, and a preoperative tracheostomy. Tension, devascularization, prior radiation, systemic steroids and active inflammation also impair healing. (Wright CD et al., J Thorac Cardiovasc Surg 2004)"
+ },
+ {
+  "topic": "Subglottic / Tracheal Stenosis",
+  "field": "manage",
+  "text": "**Optimization before open airway surgery**: wean systemic steroids (ideally off before resection), control diabetes (follow HbA1c), stop smoking, and treat reflux. Wait for GPA or other inflammatory disease to be in remission and for active infection or granulation to settle. Assess lung and heart reserve, sleep apnea, swallowing and vocal fold mobility, plus neck extension and habitus for tension. Confirm endoscopic options were tried or are unsuitable. (Cummings 7e, Ch 67)"
+ },
+ {
+  "topic": "Laryngotracheal Reconstruction",
+  "field": "manage",
+  "text": "**Optimization before pediatric open airway surgery**: control reflux and eosinophilic esophagitis, settle an active larynx, clear airway infection, and review lung disease, aspiration and tracheostomy dependence before reconstruction. Age 17 or younger and a preoperative tracheostomy are independent risk factors for anastomotic complications after resection. (Bluestone & Stool 5e; Wright CD et al., J Thorac Cardiovasc Surg 2004)"
  }
 ]

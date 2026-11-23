@@ -1,0 +1,26 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-rhinology-allergy-skull-base-endoscopic-csf-leak-repair-nasoseptal-flap"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-rhinology-allergy-skull-base-endoscopic-csf-leak-repair-nasoseptal-flap"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-endoscopic-csf-leak-repair-nasoseptal-flap",
+      "concept_id": "v6-rhinology-allergy-skull-base-endoscopic-csf-leak-repair-nasoseptal-flap",
+      "resolved_topic": "Endoscopic CSF Leak Repair / Nasoseptal Flap",
+      "domain": "Rhinology / Allergy / Skull Base",
+      "prompt_words": 69,
+      "answer_words": 1036,
+      "trap_count": 8,
+      "source_count": 7,
+      "failures": []
+    }
+  ]
+}
