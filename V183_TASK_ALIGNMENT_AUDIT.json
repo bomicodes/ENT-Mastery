@@ -1,0 +1,123 @@
+{
+  "expected_ids": [
+    "cc-v112-mgt-facial-plastics-trauma-facial-soft-tissue-lacerations-burns",
+    "cc-v112-mgt-laryngology-voice-swallowing-posterior-cordotomy-arytenoidectomy",
+    "cc-v112-rec-general-ent-emergencies-common-ent-consult-triage-disposition",
+    "cc-v112-rec-general-ent-emergencies-ent-perioperative-anesthesia-difficult-airway-planning",
+    "cc-v112-rec-general-ent-emergencies-postoperative-neck-hematoma",
+    "cc-v112-rec-head-neck-oncology-open-partial-conservation-laryngectomy",
+    "cc-v112-rec-head-neck-oncology-reconstruction-selection-after-head-neck-ablation",
+    "cc-v112-rec-rhinology-allergy-skull-base-frontal-recess-frontal-sinus",
+    "cc-v112-rec-rhinology-allergy-skull-base-sphenoidotomy",
+    "cc-v112-rec-sleep-surgery-central-events-hypoventilation"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-sleep-surgery-central-events-hypoventilation",
+      "cc-v112-rec-rhinology-allergy-skull-base-frontal-recess-frontal-sinus",
+      "cc-v112-mgt-facial-plastics-trauma-facial-soft-tissue-lacerations-burns",
+      "cc-v112-rec-head-neck-oncology-open-partial-conservation-laryngectomy",
+      "cc-v112-rec-general-ent-emergencies-common-ent-consult-triage-disposition",
+      "cc-v112-rec-head-neck-oncology-reconstruction-selection-after-head-neck-ablation",
+      "cc-v112-rec-general-ent-emergencies-ent-perioperative-anesthesia-difficult-airway-planning",
+      "cc-v112-rec-rhinology-allergy-skull-base-sphenoidotomy",
+      "cc-v112-rec-general-ent-emergencies-postoperative-neck-hematoma",
+      "cc-v112-mgt-laryngology-voice-swallowing-posterior-cordotomy-arytenoidectomy"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-mgt-facial-plastics-trauma-facial-soft-tissue-lacerations-burns",
+      "concept_id": "v6-facial-plastics-trauma-facial-soft-tissue-lacerations-burns",
+      "resolved_topic": "Facial Soft-Tissue Lacerations / Burns",
+      "prompt_words": 55,
+      "answer_words": 152,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-mgt-laryngology-voice-swallowing-posterior-cordotomy-arytenoidectomy",
+      "concept_id": "v6-laryngology-voice-swallowing-posterior-cordotomy-arytenoidectomy",
+      "resolved_topic": "Posterior Cordotomy / Arytenoidectomy",
+      "prompt_words": 57,
+      "answer_words": 158,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-common-ent-consult-triage-disposition",
+      "concept_id": "v6-general-ent-emergencies-common-ent-consult-triage-disposition",
+      "resolved_topic": "Common ENT Consult Triage / Disposition",
+      "prompt_words": 63,
+      "answer_words": 151,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-ent-perioperative-anesthesia-difficult-airway-planning",
+      "concept_id": "v6-general-ent-emergencies-ent-perioperative-anesthesia-difficult-airway-planning",
+      "resolved_topic": "ENT Perioperative Anesthesia / Difficult Airway Planning",
+      "prompt_words": 60,
+      "answer_words": 157,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-postoperative-neck-hematoma",
+      "concept_id": "v6-general-ent-emergencies-postoperative-neck-hematoma",
+      "resolved_topic": "Postoperative Neck Hematoma",
+      "prompt_words": 54,
+      "answer_words": 150,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-open-partial-conservation-laryngectomy",
+      "concept_id": "v6-head-neck-oncology-open-partial-conservation-laryngectomy",
+      "resolved_topic": "Open Partial / Conservation Laryngectomy",
+      "prompt_words": 55,
+      "answer_words": 137,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-reconstruction-selection-after-head-neck-ablation",
+      "concept_id": "v6-head-neck-oncology-reconstruction-selection-after-head-neck-ablation",
+      "resolved_topic": "Reconstruction Selection After Head & Neck Ablation",
+      "prompt_words": 55,
+      "answer_words": 149,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-frontal-recess-frontal-sinus",
+      "concept_id": "v6-rhinology-allergy-skull-base-frontal-recess-frontal-sinus",
+      "resolved_topic": "Frontal Recess / Frontal Sinus",
+      "prompt_words": 61,
+      "answer_words": 135,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-sphenoidotomy",
+      "concept_id": "v6-rhinology-allergy-skull-base-sphenoidotomy",
+      "resolved_topic": "Sphenoidotomy",
+      "prompt_words": 66,
+      "answer_words": 149,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-sleep-surgery-central-events-hypoventilation",
+      "concept_id": "v6-sleep-surgery-central-events-hypoventilation",
+      "resolved_topic": "Central Events / Hypoventilation",
+      "prompt_words": 55,
+      "answer_words": 129,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

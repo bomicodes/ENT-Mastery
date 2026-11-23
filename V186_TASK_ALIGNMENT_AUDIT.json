@@ -1,0 +1,101 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-general-ent-emergencies-antimicrobial-stewardship-in-otolaryngology",
+    "cc-v112-rec-general-ent-emergencies-geriatric-otolaryngology-frailty",
+    "cc-v112-rec-general-ent-emergencies-immunocompromised-host-in-otolaryngology",
+    "cc-v112-rec-general-ent-emergencies-laser-energy-safety-in-otolaryngology",
+    "cc-v112-rec-head-neck-oncology-head-neck-cancer-surveillance-second-primaries",
+    "cc-v112-rec-head-neck-oncology-tracheal-malignancy",
+    "cc-v112-rec-pediatric-otolaryngology-pediatric-vocal-fold-immobility",
+    "cc-v112-rec-rhinology-allergy-skull-base-intracranial-complications-of-sinusitis"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-general-ent-emergencies-geriatric-otolaryngology-frailty",
+      "cc-v112-rec-general-ent-emergencies-immunocompromised-host-in-otolaryngology",
+      "cc-v112-rec-head-neck-oncology-head-neck-cancer-surveillance-second-primaries",
+      "cc-v112-rec-head-neck-oncology-tracheal-malignancy",
+      "cc-v112-rec-general-ent-emergencies-laser-energy-safety-in-otolaryngology",
+      "cc-v112-rec-pediatric-otolaryngology-pediatric-vocal-fold-immobility",
+      "cc-v112-rec-general-ent-emergencies-antimicrobial-stewardship-in-otolaryngology",
+      "cc-v112-rec-rhinology-allergy-skull-base-intracranial-complications-of-sinusitis"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-antimicrobial-stewardship-in-otolaryngology",
+      "concept_id": "v6-general-ent-emergencies-antimicrobial-stewardship-in-otolaryngology",
+      "resolved_topic": "Antimicrobial Stewardship in Otolaryngology",
+      "prompt_words": 43,
+      "answer_words": 164,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-geriatric-otolaryngology-frailty",
+      "concept_id": "v6-general-ent-emergencies-geriatric-otolaryngology-frailty",
+      "resolved_topic": "Geriatric Otolaryngology / Frailty",
+      "prompt_words": 43,
+      "answer_words": 151,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-immunocompromised-host-in-otolaryngology",
+      "concept_id": "v6-general-ent-emergencies-immunocompromised-host-in-otolaryngology",
+      "resolved_topic": "Immunocompromised Host in Otolaryngology",
+      "prompt_words": 35,
+      "answer_words": 165,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-laser-energy-safety-in-otolaryngology",
+      "concept_id": "v6-general-ent-emergencies-laser-energy-safety-in-otolaryngology",
+      "resolved_topic": "Laser / Energy Safety in Otolaryngology",
+      "prompt_words": 58,
+      "answer_words": 165,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-head-neck-cancer-surveillance-second-primaries",
+      "concept_id": "v6-head-neck-oncology-head-neck-cancer-surveillance-second-primaries",
+      "resolved_topic": "Head & Neck Cancer Surveillance / Second Primaries",
+      "prompt_words": 50,
+      "answer_words": 156,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-tracheal-malignancy",
+      "concept_id": "v6-head-neck-oncology-tracheal-malignancy",
+      "resolved_topic": "Tracheal Malignancy",
+      "prompt_words": 49,
+      "answer_words": 163,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-pediatric-vocal-fold-immobility",
+      "concept_id": "v6-pediatric-otolaryngology-pediatric-vocal-fold-immobility",
+      "resolved_topic": "Pediatric Vocal Fold Immobility",
+      "prompt_words": 43,
+      "answer_words": 162,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-intracranial-complications-of-sinusitis",
+      "concept_id": "v6-rhinology-allergy-skull-base-intracranial-complications-of-sinusitis",
+      "resolved_topic": "Intracranial Complications of Sinusitis",
+      "prompt_words": 40,
+      "answer_words": 163,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

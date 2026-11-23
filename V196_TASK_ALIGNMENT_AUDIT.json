@@ -1,0 +1,24 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-sleep-surgery-pap-troubleshooting"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-sleep-surgery-pap-troubleshooting"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-sleep-surgery-pap-troubleshooting",
+      "concept_id": "v6-sleep-surgery-pap-troubleshooting",
+      "resolved_topic": "PAP Troubleshooting",
+      "prompt_words": 74,
+      "answer_words": 435,
+      "trap_count": 3,
+      "failures": []
+    }
+  ]
+}

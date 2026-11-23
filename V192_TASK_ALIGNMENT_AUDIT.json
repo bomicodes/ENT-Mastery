@@ -1,0 +1,57 @@
+{
+  "expected_ids": [
+    "cc-v112-mgt-thyroid-parathyroid-salivary-parathyroid-carcinoma",
+    "cc-v112-rec-pediatric-otolaryngology-pediatric-tracheostomy-decannulation",
+    "cc-v112-rec-pediatric-otolaryngology-supraglottoplasty",
+    "cc-v112-rec-thyroid-parathyroid-salivary-indeterminate-thyroid-cytology-molecular-testing"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-pediatric-otolaryngology-supraglottoplasty",
+      "cc-v112-rec-pediatric-otolaryngology-pediatric-tracheostomy-decannulation",
+      "cc-v112-rec-thyroid-parathyroid-salivary-indeterminate-thyroid-cytology-molecular-testing",
+      "cc-v112-mgt-thyroid-parathyroid-salivary-parathyroid-carcinoma"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-mgt-thyroid-parathyroid-salivary-parathyroid-carcinoma",
+      "concept_id": "v6-thyroid-parathyroid-salivary-parathyroid-carcinoma",
+      "resolved_topic": "Parathyroid Carcinoma",
+      "prompt_words": 78,
+      "answer_words": 324,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-pediatric-tracheostomy-decannulation",
+      "concept_id": "v6-pediatric-otolaryngology-pediatric-tracheostomy-decannulation",
+      "resolved_topic": "Pediatric Tracheostomy / Decannulation",
+      "prompt_words": 80,
+      "answer_words": 284,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-supraglottoplasty",
+      "concept_id": "v6-pediatric-otolaryngology-supraglottoplasty",
+      "resolved_topic": "Supraglottoplasty",
+      "prompt_words": 69,
+      "answer_words": 251,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-thyroid-parathyroid-salivary-indeterminate-thyroid-cytology-molecular-testing",
+      "concept_id": "v6-thyroid-parathyroid-salivary-indeterminate-thyroid-cytology-molecular-testing",
+      "resolved_topic": "Indeterminate Thyroid Cytology / Molecular Testing",
+      "prompt_words": 71,
+      "answer_words": 293,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

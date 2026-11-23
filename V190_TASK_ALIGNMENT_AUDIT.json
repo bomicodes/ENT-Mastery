@@ -1,0 +1,68 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-general-ent-emergencies-angioedema",
+    "cc-v112-rec-head-neck-oncology-palliative-goals-of-care-decision-making-in-head-neck-cancer",
+    "cc-v112-rec-pediatric-otolaryngology-pediatric-aspiration",
+    "cc-v112-rec-pediatric-otolaryngology-pediatric-deep-neck-infection",
+    "cc-v112-rec-thyroid-parathyroid-salivary-reoperative-thyroid-surgery"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-head-neck-oncology-palliative-goals-of-care-decision-making-in-head-neck-cancer",
+      "cc-v112-rec-pediatric-otolaryngology-pediatric-deep-neck-infection",
+      "cc-v112-rec-general-ent-emergencies-angioedema",
+      "cc-v112-rec-pediatric-otolaryngology-pediatric-aspiration",
+      "cc-v112-rec-thyroid-parathyroid-salivary-reoperative-thyroid-surgery"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-angioedema",
+      "concept_id": "v6-general-ent-emergencies-angioedema",
+      "resolved_topic": "Angioedema",
+      "prompt_words": 54,
+      "answer_words": 162,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-palliative-goals-of-care-decision-making-in-head-neck-cancer",
+      "concept_id": "v6-head-neck-oncology-palliative-goals-of-care-decision-making-in-head-neck-cancer",
+      "resolved_topic": "Palliative / Goals-of-Care Decision-Making in Head & Neck Cancer",
+      "prompt_words": 73,
+      "answer_words": 181,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-pediatric-aspiration",
+      "concept_id": "v6-pediatric-otolaryngology-pediatric-aspiration",
+      "resolved_topic": "Pediatric Aspiration",
+      "prompt_words": 72,
+      "answer_words": 189,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-pediatric-deep-neck-infection",
+      "concept_id": "v6-pediatric-otolaryngology-pediatric-deep-neck-infection",
+      "resolved_topic": "Pediatric Deep Neck Infection",
+      "prompt_words": 64,
+      "answer_words": 166,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-thyroid-parathyroid-salivary-reoperative-thyroid-surgery",
+      "concept_id": "v6-thyroid-parathyroid-salivary-reoperative-thyroid-surgery",
+      "resolved_topic": "Reoperative Thyroid Surgery",
+      "prompt_words": 68,
+      "answer_words": 197,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-rhinology-allergy-skull-base-epistaxis-surgical-control"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-rhinology-allergy-skull-base-epistaxis-surgical-control"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-epistaxis-surgical-control",
+      "concept_id": "v6-rhinology-allergy-skull-base-epistaxis-surgical-control",
+      "resolved_topic": "Epistaxis Surgical Control",
+      "prompt_words": 77,
+      "answer_words": 701,
+      "trap_count": 6,
+      "failures": []
+    }
+  ]
+}

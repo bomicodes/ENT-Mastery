@@ -19809,5 +19809,4 @@ EXTRA = [
 "qid": "v490-laryngology-1-51",
 "front": "Limits to endoscopic staple diverticulostomy?",
 "back": "Kyphosis, cervical osteophytes, small mouth opening, pouch under 2 cm."
-}
-]
+}, {"qid": "v490-v99r-airway-1", "front": "Tracheal/cricotracheal resection: independent risk factors for anastomotic failure?", "back": "Reoperation, diabetes, resection of 4 cm or more, laryngotracheal resection, age 17 or younger, preoperative tracheostomy (about 9% overall)"}, {"qid": "v490-v99r-airway-2", "front": "Before elective open airway surgery: what must be optimized?", "back": "Wean steroids, control diabetes and reflux, stop smoking, inflammatory disease (GPA) in remission, no active infection or granulation"}]

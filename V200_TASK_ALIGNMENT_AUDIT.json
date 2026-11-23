@@ -1,0 +1,25 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-thyroid-parathyroid-salivary-anaplastic-thyroid-cancer"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-thyroid-parathyroid-salivary-anaplastic-thyroid-cancer"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-thyroid-parathyroid-salivary-anaplastic-thyroid-cancer",
+      "concept_id": "v6-thyroid-parathyroid-salivary-anaplastic-thyroid-cancer",
+      "resolved_topic": "Anaplastic Thyroid Cancer",
+      "prompt_words": 76,
+      "answer_words": 728,
+      "trap_count": 6,
+      "source_count": 6,
+      "failures": []
+    }
+  ]
+}

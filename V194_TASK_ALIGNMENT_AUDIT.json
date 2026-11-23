@@ -1,0 +1,35 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-laryngology-voice-swallowing-esophageal-disease-for-the-otolaryngologist",
+    "cc-v112-rec-laryngology-voice-swallowing-transnasal-esophagoscopy"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-laryngology-voice-swallowing-transnasal-esophagoscopy",
+      "cc-v112-rec-laryngology-voice-swallowing-esophageal-disease-for-the-otolaryngologist"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-esophageal-disease-for-the-otolaryngologist",
+      "concept_id": "v6-laryngology-voice-swallowing-esophageal-disease-for-the-otolaryngologist",
+      "resolved_topic": "Esophageal Disease for the Otolaryngologist",
+      "prompt_words": 67,
+      "answer_words": 283,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-transnasal-esophagoscopy",
+      "concept_id": "v6-laryngology-voice-swallowing-transnasal-esophagoscopy",
+      "resolved_topic": "Transnasal Esophagoscopy",
+      "prompt_words": 74,
+      "answer_words": 294,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-facial-plastics-trauma-alar-retraction-nasal-vestibular-stenosis",
+    "cc-v112-rec-facial-plastics-trauma-functional-septorhinoplasty",
+    "cc-v112-rec-facial-plastics-trauma-nasal-fracture",
+    "cc-v112-rec-general-ent-emergencies-deep-neck-space-infection",
+    "cc-v112-rec-head-neck-oncology-nonfunctional-larynx-chronic-aspiration-after-cancer-therapy"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-facial-plastics-trauma-alar-retraction-nasal-vestibular-stenosis",
+      "cc-v112-rec-facial-plastics-trauma-functional-septorhinoplasty",
+      "cc-v112-rec-facial-plastics-trauma-nasal-fracture",
+      "cc-v112-rec-head-neck-oncology-nonfunctional-larynx-chronic-aspiration-after-cancer-therapy",
+      "cc-v112-rec-general-ent-emergencies-deep-neck-space-infection"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-facial-plastics-trauma-alar-retraction-nasal-vestibular-stenosis",
+      "concept_id": "v6-facial-plastics-trauma-alar-retraction-nasal-vestibular-stenosis",
+      "resolved_topic": "Alar Retraction / Nasal Vestibular Stenosis",
+      "prompt_words": 71,
+      "answer_words": 173,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-facial-plastics-trauma-functional-septorhinoplasty",
+      "concept_id": "v6-facial-plastics-trauma-functional-septorhinoplasty",
+      "resolved_topic": "Functional Septorhinoplasty",
+      "prompt_words": 69,
+      "answer_words": 156,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-facial-plastics-trauma-nasal-fracture",
+      "concept_id": "v6-facial-plastics-trauma-nasal-fracture",
+      "resolved_topic": "Nasal Fracture",
+      "prompt_words": 56,
+      "answer_words": 165,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-deep-neck-space-infection",
+      "concept_id": "v6-general-ent-emergencies-deep-neck-space-infection",
+      "resolved_topic": "Deep Neck Space Infection",
+      "prompt_words": 49,
+      "answer_words": 187,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-nonfunctional-larynx-chronic-aspiration-after-cancer-therapy",
+      "concept_id": "v6-head-neck-oncology-nonfunctional-larynx-chronic-aspiration-after-cancer-therapy",
+      "resolved_topic": "Nonfunctional Larynx / Chronic Aspiration After Cancer Therapy",
+      "prompt_words": 67,
+      "answer_words": 173,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

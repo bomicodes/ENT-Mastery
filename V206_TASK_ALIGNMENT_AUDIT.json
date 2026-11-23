@@ -1,0 +1,26 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-general-ent-emergencies-tracheostomy-emergency"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-general-ent-emergencies-tracheostomy-emergency"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-tracheostomy-emergency",
+      "concept_id": "v6-general-ent-emergencies-tracheostomy-emergency",
+      "resolved_topic": "Tracheostomy Emergency",
+      "domain": "General ENT / Emergencies",
+      "prompt_words": 88,
+      "answer_words": 1085,
+      "trap_count": 8,
+      "source_count": 7,
+      "failures": []
+    }
+  ]
+}

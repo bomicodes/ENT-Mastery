@@ -1,0 +1,154 @@
+{
+  "expected_ids": [
+    "cc-v112-mgt-facial-plastics-trauma-scar-management",
+    "cc-v112-mgt-thyroid-parathyroid-salivary-reoperative-hyperparathyroidism",
+    "cc-v112-rec-facial-plastics-trauma-local-flap-reconstruction",
+    "cc-v112-rec-facial-plastics-trauma-otoplasty",
+    "cc-v112-rec-head-neck-oncology-tep-and-alaryngeal-speech",
+    "cc-v112-rec-laryngology-voice-swallowing-muscle-tension-dysphonia",
+    "cc-v112-rec-laryngology-voice-swallowing-vocal-fold-nodules",
+    "cc-v112-rec-rhinology-allergy-skull-base-endoscopic-maxillary-antrostomy",
+    "cc-v112-rec-rhinology-allergy-skull-base-olfactory-dysfunction",
+    "cc-v112-rec-sleep-surgery-hns-activation-programming"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-rhinology-allergy-skull-base-olfactory-dysfunction",
+      "cc-v112-rec-laryngology-voice-swallowing-vocal-fold-nodules",
+      "cc-v112-rec-facial-plastics-trauma-otoplasty",
+      "cc-v112-rec-sleep-surgery-hns-activation-programming",
+      "cc-v112-rec-head-neck-oncology-tep-and-alaryngeal-speech",
+      "cc-v112-mgt-thyroid-parathyroid-salivary-reoperative-hyperparathyroidism",
+      "cc-v112-rec-laryngology-voice-swallowing-muscle-tension-dysphonia",
+      "cc-v112-mgt-facial-plastics-trauma-scar-management",
+      "cc-v112-rec-facial-plastics-trauma-local-flap-reconstruction",
+      "cc-v112-rec-rhinology-allergy-skull-base-endoscopic-maxillary-antrostomy"
+    ],
+    "missing": [],
+    "expected": [
+      "cc-v112-rec-rhinology-allergy-skull-base-olfactory-dysfunction",
+      "cc-v112-rec-laryngology-voice-swallowing-vocal-fold-nodules",
+      "cc-v112-rec-facial-plastics-trauma-otoplasty",
+      "cc-v112-rec-sleep-surgery-hns-activation-programming",
+      "cc-v112-rec-head-neck-oncology-tep-and-alaryngeal-speech",
+      "cc-v112-mgt-thyroid-parathyroid-salivary-reoperative-hyperparathyroidism",
+      "cc-v112-rec-laryngology-voice-swallowing-muscle-tension-dysphonia",
+      "cc-v112-mgt-facial-plastics-trauma-scar-management",
+      "cc-v112-rec-facial-plastics-trauma-local-flap-reconstruction",
+      "cc-v112-rec-rhinology-allergy-skull-base-endoscopic-maxillary-antrostomy"
+    ]
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-mgt-facial-plastics-trauma-scar-management",
+      "prompt_words": 52,
+      "answer_words": 97,
+      "required_terms": [
+        "maturation",
+        "contracture",
+        "revision"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-mgt-thyroid-parathyroid-salivary-reoperative-hyperparathyroidism",
+      "prompt_words": 45,
+      "answer_words": 99,
+      "required_terms": [
+        "biochemical",
+        "localization",
+        "reoperation"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-facial-plastics-trauma-local-flap-reconstruction",
+      "prompt_words": 80,
+      "answer_words": 1218,
+      "required_terms": [
+        "free margins",
+        "tension",
+        "vascular"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-facial-plastics-trauma-otoplasty",
+      "prompt_words": 55,
+      "answer_words": 87,
+      "required_terms": [
+        "antihelical",
+        "conchal",
+        "hematoma"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-tep-and-alaryngeal-speech",
+      "prompt_words": 52,
+      "answer_words": 89,
+      "required_terms": [
+        "leakage",
+        "prosthesis",
+        "pharyngoesophageal"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-muscle-tension-dysphonia",
+      "prompt_words": 45,
+      "answer_words": 97,
+      "required_terms": [
+        "voice therapy",
+        "compensation",
+        "stroboscopy"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-vocal-fold-nodules",
+      "prompt_words": 65,
+      "answer_words": 77,
+      "required_terms": [
+        "voice therapy",
+        "asymmetry",
+        "mucosal wave"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-endoscopic-maxillary-antrostomy",
+      "prompt_words": 50,
+      "answer_words": 102,
+      "required_terms": [
+        "natural ostium",
+        "recirculation",
+        "orbit"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-olfactory-dysfunction",
+      "prompt_words": 54,
+      "answer_words": 89,
+      "required_terms": [
+        "conductive",
+        "endoscopy",
+        "imaging"
+      ],
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-sleep-surgery-hns-activation-programming",
+      "prompt_words": 58,
+      "answer_words": 101,
+      "required_terms": [
+        "threshold",
+        "programming",
+        "hardware"
+      ],
+      "failures": []
+    }
+  ]
+}

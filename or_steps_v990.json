@@ -1071,7 +1071,32 @@
   "source_label": "the Atlas of Endoscopic Sinus and Skull Base Surgery, 2e, Ch 26, pp 223–231; Ch 29 pp 259–261; Ch 31 pp 285–297"
  },
  "adult-ltr": {
-  "source_label": "Cummings Otolaryngology 7e and Operative Otolaryngology 3e (laryngotracheal reconstruction)"
+  "source_label": "Cummings Otolaryngology 7e and Operative Otolaryngology 3e (laryngotracheal reconstruction)",
+  "fields": {
+   "setup": [
+    "Characterize the stenosis precisely with endoscopy and imaging before the OR: length, grade, location relative to the vocal folds, circumferential extent, and posterior glottic/cricoid plate involvement determine whether expansion (LTR) or resection (CTR) is the better fit, and which graft strategy (anterior only vs anterior and posterior) is needed.",
+    "Confirm airway control planning (existing tracheostomy, anticipated staged vs single-stage approach, stenting strategy) and counsel on realistic decannulation/voice expectations before proceeding.",
+    "Optimize before open reconstruction: wean systemic steroids, control diabetes, reflux (and eosinophilic esophagitis in children), stop smoking, wait for GPA or other inflammatory disease to be in remission, clear active infection and granulation, and assess lung reserve, sleep apnea, swallowing and vocal fold mobility."
+   ],
+   "attending_followup": [
+    [
+     "Why choose LTR over cricotracheal resection (CTR) here?",
+     "Expansion is preferred when stenosis involves the glottis or posterior glottis, reaches too close to the vocal folds for a safe anastomosis, or the patient cannot tolerate resection. Severe isolated subglottic stenosis with an adequate margin below the folds usually does better with CTR."
+    ],
+    [
+     "What determines single-stage versus staged reconstruction?",
+     "The extent of grafting, airway stability, and mucosal coverage achieved -- more extensive circumferential or posterior grafting more often needs staged management with a stent."
+    ],
+    [
+     "What threatens the graft?",
+     "Malposition, infection, mechanical stress from ongoing instrumentation, and inadequate mucosal coverage."
+    ],
+    [
+     "How do you optimize a patient before committing to open airway surgery?",
+     "Make the airway quiet and the patient fit. Wean systemic steroids before elective resection (ideally off them), get diabetes under control (follow HbA1c), and have the patient stop smoking. Treat reflux, and in children treat eosinophilic esophagitis. Wait until GPA or other inflammatory disease is in remission and the airway is free of active infection or granulation. Assess lung and heart reserve, sleep apnea, swallow/aspiration and vocal fold mobility. Check neck extension and body habitus for anastomotic tension, and confirm that endoscopic options have been tried or are unsuitable."
+    ]
+   ]
+  }
  },
  "mma": {
   "source_label": "Cummings Otolaryngology 7e and Pasha 6e (maxillomandibular advancement)"
@@ -2286,6 +2311,80 @@
     [
      "What patient factor is most likely to make TNE technically difficult or unsafe?",
      "Severe nasal obstruction/septal deviation, an overactive gag reflex, or poor patient cooperation can prevent adequate unsedated passage and visualization, in which case escalation to sedated or operative endoscopy is appropriate."
+    ]
+   ]
+  }
+ },
+ "ctr": {
+  "source_label": "Simo, Pracy & Fernandes, Atlas of Head and Neck Surgery (Springer, 2024)",
+  "fields": {
+   "setup": [
+    "Define the stenosis by awake flexible laryngoscopy, operative endoscopy and CT: Myer–Cotton grade, distance from the vocal folds, cranio-caudal length, posterior cricoid plate involvement, any tracheostomy, and vocal fold mobility. Bilateral fold immobility or active inflammation (for example uncontrolled granulomatosis with polyangiitis) changes the plan.",
+    "Decide in advance whether a tension-free anastomosis is achievable: total resection length, prior tracheal surgery or radiation, neck extension, body habitus, and which release maneuvers (pretracheal, suprahyoid) may be needed.",
+    "Optimize healing risks before an elective case: taper systemic steroids when possible, control diabetes and reflux, stop smoking, and treat active airway infection.",
+    "Stratify anastomotic risk before booking: prior tracheal resection, diabetes, planned resection of 4 cm or more, laryngotracheal (subglottic) rather than tracheal resection, young age, existing tracheostomy, prior radiation and steroid dependence each raise the failure rate (about 9% overall in the largest series). Higher risk favors staging with a T-tube or tracheostomy, or a more conservative plan.",
+    "Agree a shared-airway plan with anesthesia before induction: how the stenosis will be passed, cross-field ventilation equipment, low inspired oxygen during airway entry, and a rescue tracheostomy plan.",
+    "Have rigid and flexible bronchoscopes, a sterile cross-field circuit with spare cuffed tubes, airway hooks, and an ICU bed booked."
+   ],
+   "attending_followup": [
+    [
+     "What are the risk factors for anastomotic failure after tracheal or cricotracheal resection?",
+     "In the largest series (Wright, Grillo and colleagues, 901 patients), anastomotic complications occurred in about 9%. Independent risk factors were reoperation (prior tracheal resection), diabetes, resection length of 4 cm or more, laryngotracheal (cricotracheal) rather than tracheal resection, age 17 or younger, and needing a tracheostomy before surgery. Anastomotic tension, devascularization from circumferential stripping, prior radiation, systemic steroids, active inflammation such as GPA, and infection also impair healing."
+    ],
+    [
+     "How do you optimize a patient before committing to open airway surgery?",
+     "Make the airway quiet and the patient fit. Wean systemic steroids before elective resection (ideally off them), get diabetes under control (follow HbA1c), and have the patient stop smoking. Treat reflux, and in children treat eosinophilic esophagitis. Wait until GPA or other inflammatory disease is in remission and the airway is free of active infection or granulation. Assess lung and heart reserve, sleep apnea, swallow/aspiration and vocal fold mobility. Check neck extension and body habitus for anastomotic tension, and confirm that endoscopic options have been tried or are unsuitable."
+    ],
+    [
+     "Why is CTR different from LTR?",
+     "CTR removes the stenotic segment and reconstructs the airway by anastomosis, whereas LTR expands the existing framework with grafting."
+    ],
+    [
+     "Why is CTR reserved for high-grade stenosis rather than used as a first-line option for milder disease?",
+     "CTR carries anastomotic and RLN risk that is not justified when expansion techniques (e.g., LTR with grafting) can achieve an adequate airway with lower risk; resection is reserved for stenosis severe enough that expansion alone is unlikely to succeed."
+    ],
+    [
+     "Where is the recurrent laryngeal nerve most at risk during CTR, and how is it protected?",
+     "It enters the larynx just behind the cricothyroid joint. Remove the anterior cricoid arch only forward of the joints, and work on the posterior plate from inside the lumen in a subperichondrial plane so the nerve and posterior cricoarytenoid muscles stay outside the dissection."
+    ]
+   ]
+  }
+ },
+ "tracheal-resection": {
+  "source_label": "Simo, Pracy & Fernandes, Atlas of Head and Neck Surgery (Springer, 2024)",
+  "fields": {
+   "setup": [
+    "Map the lesion by endoscopy and CT: length, distance from the cricoid and carina, cartilage loss or malacia, extrinsic compression, and vocal fold mobility. For tumors, obtain tissue diagnosis and staging first.",
+    "Confirm a tension-free primary anastomosis is realistic (in adults, up to about half the tracheal length) and decide which release maneuvers or alternative reconstruction you will use if it is not.",
+    "Optimize healing risks: taper systemic steroids when possible, control diabetes, stop smoking, and treat active airway infection. Prior radiation raises dehiscence risk.",
+    "Stratify anastomotic risk before booking: prior tracheal resection, diabetes, planned resection of 4 cm or more, laryngotracheal (subglottic) rather than tracheal resection, young age, existing tracheostomy, prior radiation and steroid dependence each raise the failure rate (about 9% overall in the largest series). Higher risk favors staging with a T-tube or tracheostomy, or a more conservative plan.",
+    "Agree the shared-airway plan with anesthesia: how the lesion will be passed, sterile cross-field circuit and tubes, low inspired oxygen during airway entry, and a rescue plan. If cross-field ventilation fails, stop resecting and restore oxygenation before continuing.",
+    "Have rigid and flexible bronchoscopes, spare cuffed tubes of several sizes, and an ICU bed ready."
+   ],
+   "attending_followup": [
+    [
+     "What limits resection length?",
+     "Anastomotic tension and blood supply; release maneuvers can increase mobility but do not make unlimited resection safe."
+    ],
+    [
+     "What is the catastrophic complication?",
+     "Anastomotic dehiscence, which can cause airway loss and mediastinal contamination."
+    ],
+    [
+     "Why is the innominate artery specifically discussed in the danger list for tracheal surgery?",
+     "The innominate artery crosses the trachea anteriorly at a variable level and is at risk both during dissection and from a low tracheostomy/anastomosis site eroding into it postoperatively (tracheoinnominate fistula), which is catastrophic if unrecognized."
+    ],
+    [
+     "How much trachea can be resected with primary anastomosis in an adult?",
+     "Roughly half the adult trachea (about 4.5 to 6 cm), less in children and in patients with prior radiation, steroids or a short, stiff neck. Pretracheal mobilization, neck flexion and laryngeal release each add length."
+    ],
+    [
+     "What are the risk factors for anastomotic failure after tracheal or cricotracheal resection?",
+     "In the largest series (Wright, Grillo and colleagues, 901 patients), anastomotic complications occurred in about 9%. Independent risk factors were reoperation (prior tracheal resection), diabetes, resection length of 4 cm or more, laryngotracheal (cricotracheal) rather than tracheal resection, age 17 or younger, and needing a tracheostomy before surgery. Anastomotic tension, devascularization from circumferential stripping, prior radiation, systemic steroids, active inflammation such as GPA, and infection also impair healing."
+    ],
+    [
+     "How do you optimize a patient before committing to open airway surgery?",
+     "Make the airway quiet and the patient fit. Wean systemic steroids before elective resection (ideally off them), get diabetes under control (follow HbA1c), and have the patient stop smoking. Treat reflux, and in children treat eosinophilic esophagitis. Wait until GPA or other inflammatory disease is in remission and the airway is free of active infection or granulation. Assess lung and heart reserve, sleep apnea, swallow/aspiration and vocal fold mobility. Check neck extension and body habitus for anastomotic tension, and confirm that endoscopic options have been tried or are unsuitable."
     ]
    ]
   }

@@ -1,0 +1,137 @@
+{
+  "expected_ids": [
+    "cc-v112-mgt-thyroid-parathyroid-salivary-secondary-tertiary-hyperparathyroidism",
+    "cc-v112-mgt-thyroid-parathyroid-salivary-submandibular-gland-excision",
+    "cc-v112-rec-general-ent-emergencies-deep-neck-abscess-drainage",
+    "cc-v112-rec-head-neck-oncology-hypopharyngeal-cancer",
+    "cc-v112-rec-laryngology-voice-swallowing-reinke-edema",
+    "cc-v112-rec-pediatric-otolaryngology-laryngotracheal-reconstruction",
+    "cc-v112-rec-rhinology-allergy-skull-base-ethmoidectomy",
+    "cc-v112-rec-sleep-surgery-tongue-base-surgery",
+    "cc-v112-rec-thyroid-parathyroid-salivary-men2-ret",
+    "cc-v112-rec-thyroid-parathyroid-salivary-sialendoscopy"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-rhinology-allergy-skull-base-ethmoidectomy",
+      "cc-v112-mgt-thyroid-parathyroid-salivary-submandibular-gland-excision",
+      "cc-v112-mgt-thyroid-parathyroid-salivary-secondary-tertiary-hyperparathyroidism",
+      "cc-v112-rec-head-neck-oncology-hypopharyngeal-cancer",
+      "cc-v112-rec-pediatric-otolaryngology-laryngotracheal-reconstruction",
+      "cc-v112-rec-sleep-surgery-tongue-base-surgery",
+      "cc-v112-rec-general-ent-emergencies-deep-neck-abscess-drainage",
+      "cc-v112-rec-laryngology-voice-swallowing-reinke-edema",
+      "cc-v112-rec-thyroid-parathyroid-salivary-men2-ret",
+      "cc-v112-rec-thyroid-parathyroid-salivary-sialendoscopy"
+    ],
+    "missing": [],
+    "expected": [
+      "cc-v112-rec-rhinology-allergy-skull-base-ethmoidectomy",
+      "cc-v112-mgt-thyroid-parathyroid-salivary-submandibular-gland-excision",
+      "cc-v112-mgt-thyroid-parathyroid-salivary-secondary-tertiary-hyperparathyroidism",
+      "cc-v112-rec-head-neck-oncology-hypopharyngeal-cancer",
+      "cc-v112-rec-pediatric-otolaryngology-laryngotracheal-reconstruction",
+      "cc-v112-rec-sleep-surgery-tongue-base-surgery",
+      "cc-v112-rec-general-ent-emergencies-deep-neck-abscess-drainage",
+      "cc-v112-rec-laryngology-voice-swallowing-reinke-edema",
+      "cc-v112-rec-thyroid-parathyroid-salivary-men2-ret",
+      "cc-v112-rec-thyroid-parathyroid-salivary-sialendoscopy"
+    ]
+  },
+  "runtime_post_alignment_reframed_v181": [
+    "cc-v112-rec-laryngology-voice-swallowing-reinke-edema"
+  ],
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-mgt-thyroid-parathyroid-salivary-secondary-tertiary-hyperparathyroidism",
+      "prompt_words": 51,
+      "answer_words": 72,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-mgt-thyroid-parathyroid-salivary-submandibular-gland-excision",
+      "prompt_words": 44,
+      "answer_words": 71,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-deep-neck-abscess-drainage",
+      "prompt_words": 49,
+      "answer_words": 92,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-hypopharyngeal-cancer",
+      "prompt_words": 47,
+      "answer_words": 76,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-reinke-edema",
+      "prompt_words": 56,
+      "answer_words": 74,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-laryngotracheal-reconstruction",
+      "prompt_words": 40,
+      "answer_words": 78,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-ethmoidectomy",
+      "prompt_words": 46,
+      "answer_words": 74,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-sleep-surgery-tongue-base-surgery",
+      "prompt_words": 40,
+      "answer_words": 78,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-thyroid-parathyroid-salivary-men2-ret",
+      "prompt_words": 36,
+      "answer_words": 75,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-thyroid-parathyroid-salivary-sialendoscopy",
+      "prompt_words": 38,
+      "answer_words": 67,
+      "decision_content": true,
+      "task_alignment_v180": true,
+      "post_alignment_clinical_frame_v181": false,
+      "failures": []
+    }
+  ]
+}

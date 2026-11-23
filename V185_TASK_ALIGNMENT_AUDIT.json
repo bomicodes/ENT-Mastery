@@ -1,0 +1,101 @@
+{
+  "expected_ids": [
+    "cc-v112-mgt-general-ent-emergencies-airway-foreign-body",
+    "cc-v112-rec-general-ent-emergencies-post-tonsillectomy-hemorrhage",
+    "cc-v112-rec-head-neck-oncology-carotid-body-paraganglioma",
+    "cc-v112-rec-head-neck-oncology-head-neck-radiation-toxicity-survivorship",
+    "cc-v112-rec-laryngology-voice-swallowing-aspiration-prevention-surgery",
+    "cc-v112-rec-otology-neurotology-temporal-bone-anatomy",
+    "cc-v112-rec-pediatric-otolaryngology-subglottic-hemangioma",
+    "cc-v112-rec-rhinology-allergy-skull-base-juvenile-nasopharyngeal-angiofibroma"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-head-neck-oncology-head-neck-radiation-toxicity-survivorship",
+      "cc-v112-rec-head-neck-oncology-carotid-body-paraganglioma",
+      "cc-v112-rec-pediatric-otolaryngology-subglottic-hemangioma",
+      "cc-v112-mgt-general-ent-emergencies-airway-foreign-body",
+      "cc-v112-rec-otology-neurotology-temporal-bone-anatomy",
+      "cc-v112-rec-rhinology-allergy-skull-base-juvenile-nasopharyngeal-angiofibroma",
+      "cc-v112-rec-laryngology-voice-swallowing-aspiration-prevention-surgery",
+      "cc-v112-rec-general-ent-emergencies-post-tonsillectomy-hemorrhage"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-mgt-general-ent-emergencies-airway-foreign-body",
+      "concept_id": "v6-general-ent-emergencies-airway-foreign-body",
+      "resolved_topic": "Airway Foreign Body",
+      "prompt_words": 48,
+      "answer_words": 165,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-post-tonsillectomy-hemorrhage",
+      "concept_id": "v6-general-ent-emergencies-post-tonsillectomy-hemorrhage",
+      "resolved_topic": "Post-Tonsillectomy Hemorrhage",
+      "prompt_words": 50,
+      "answer_words": 170,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-carotid-body-paraganglioma",
+      "concept_id": "v6-head-neck-oncology-carotid-body-paraganglioma",
+      "resolved_topic": "Carotid Body Paraganglioma",
+      "prompt_words": 47,
+      "answer_words": 150,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-head-neck-oncology-head-neck-radiation-toxicity-survivorship",
+      "concept_id": "v6-head-neck-oncology-head-neck-radiation-toxicity-survivorship",
+      "resolved_topic": "Head & Neck Radiation Toxicity / Survivorship",
+      "prompt_words": 43,
+      "answer_words": 143,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-laryngology-voice-swallowing-aspiration-prevention-surgery",
+      "concept_id": "v6-laryngology-voice-swallowing-aspiration-prevention-surgery",
+      "resolved_topic": "Aspiration-Prevention Surgery",
+      "prompt_words": 54,
+      "answer_words": 158,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-otology-neurotology-temporal-bone-anatomy",
+      "concept_id": "v6-otology-neurotology-temporal-bone-anatomy",
+      "resolved_topic": "Temporal Bone Anatomy",
+      "prompt_words": 55,
+      "answer_words": 146,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-pediatric-otolaryngology-subglottic-hemangioma",
+      "concept_id": "v6-pediatric-otolaryngology-subglottic-hemangioma",
+      "resolved_topic": "Subglottic Hemangioma",
+      "prompt_words": 42,
+      "answer_words": 163,
+      "trap_count": 2,
+      "failures": []
+    },
+    {
+      "id": "cc-v112-rec-rhinology-allergy-skull-base-juvenile-nasopharyngeal-angiofibroma",
+      "concept_id": "v6-rhinology-allergy-skull-base-juvenile-nasopharyngeal-angiofibroma",
+      "resolved_topic": "Juvenile Nasopharyngeal Angiofibroma",
+      "prompt_words": 47,
+      "answer_words": 151,
+      "trap_count": 2,
+      "failures": []
+    }
+  ]
+}

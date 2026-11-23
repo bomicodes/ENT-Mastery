@@ -1,0 +1,26 @@
+{
+  "expected_ids": [
+    "cc-v112-rec-general-ent-emergencies-ludwig-angina"
+  ],
+  "runtime_alignment": {
+    "repaired": [
+      "cc-v112-rec-general-ent-emergencies-ludwig-angina"
+    ],
+    "missing": [],
+    "link_mismatch": []
+  },
+  "failures": [],
+  "items": [
+    {
+      "id": "cc-v112-rec-general-ent-emergencies-ludwig-angina",
+      "concept_id": "v6-general-ent-emergencies-ludwig-angina",
+      "resolved_topic": "Ludwig Angina",
+      "domain": "General ENT / Emergencies",
+      "prompt_words": 67,
+      "answer_words": 906,
+      "trap_count": 7,
+      "source_count": 7,
+      "failures": []
+    }
+  ]
+}
