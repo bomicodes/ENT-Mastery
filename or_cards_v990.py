@@ -24,6 +24,7 @@ SEARCH_ALIASES = {
     "epistaxis-packing-cautery": ["nosebleed", "posterior packing", "nasal packing"],
     "draf-iii-outside-in": ["modified lothrop", "emlp", "draf 3"],
     "t-tube-stent-placement": ["montgomery t tube", "t tube"],
+    "stapedotomy": ["stapedectomy", "stapes surgery", "otosclerosis surgery"],
 }
 
 

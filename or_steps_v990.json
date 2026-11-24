@@ -2388,5 +2388,85 @@
     ]
    ]
   }
+ },
+ "stapedotomy": {
+  "steps": [
+   [
+    "Setup and hand position",
+    "Steady the speculum with the third and fourth fingers of both hands (holder optional); microinstrument in the right hand, suction in the left. Inject lidocaine-epinephrine circumferentially at the bony-cartilaginous junction, using less anteriorly (transient facial palsy risk), and avoid the bony canal except a bleb under the vascular strip with a 27-gauge needle, bevel to bone."
+   ],
+   [
+    "Tympanomeatal flap incision",
+    "Cut a posteriorly based flap about 6 to 7 mm lateral to the annulus, running from just above the short process of the malleus down to the floor of the canal. Make the superior limb longer so the flap will cover the bone you remove from the scutum. Score the line with a round knife first, then complete it."
+   ],
+   [
+    "Enter the middle ear inferiorly",
+    "Elevate to the annulus with suction kept above the knife. Enter inferiorly first to keep away from the ossicles, lifting the annulus from its groove with steady downward-inward pressure on bone; losing bone contact tears flap or drum. Lyse mucosa with a Rosen needle and promptly suction any lidocaine from the round window niche."
+   ],
+   [
+    "Free the flap superiorly and find the chorda",
+    "Lift the annulus superiorly with a Rosen needle until it clears the notch of Rivinus so the flap folds over the manubrium and rests on the umbo, exposing the incus long process. Identify and free the chorda. If the flap sags, look for clot beneath it; a gelatin-epinephrine cube controls inferior-edge bleeding."
+   ],
+   [
+    "Remove the scutum",
+    "Thin it with a ~2.3 mm diamond and finish the shell with a curette (diamond is slower but kinder to chorda, flap, drum). Brace the curette on the speculum and rotate it outward, away from the incus — never push inward, since a sudden release can dislocate the incus. End-point: entire facial nerve visible above and the tendon-pyramid junction visible behind."
+   ],
+   [
+    "Finish the exposure",
+    "A bony bump where the chorda enters often hides the back of the footplate; reduce it with a 1 mm diamond and curette. Cut the mucosal folds between incus and malleus and over the footplate. Make room in front of the incus for the prosthesis, and confirm you can see the footplate from above, behind, and below."
+   ],
+   [
+    "Confirm fixation and decide",
+    "Touch the stapes lightly; heavy pressure can loosen a barely fixed footplate. Push the malleus gently outward to check the lateral chain, which is fixed in about 1 in 200 cases. Look for a facial nerve hanging over the oval window, a persistent stapedial artery, or a thick obliterated footplate, and change plan if the footplate cannot be safely opened."
+   ],
+   [
+    "Measure before disrupting the stapes",
+    "Measure from the lateral surface of the incus to the footplate, targeting the center-to-posterior third; about 4.5 mm in most patients. Use a feather-light touch to avoid perforating a thin footplate."
+   ],
+   [
+    "Separate the incudostapedial joint",
+    "Identify it by slight outward pressure on the incus, then divide it with an anterior \"worming\" motion that lifts the incus outward; avoid pushing the stapes head down and avoid side-to-side motion, which can fracture the footplate transversely."
+   ],
+   [
+    "Divide tendon and down-fracture the arch",
+    "Cut the stapedial tendon with microscissors angled posteriorly (shaft resting on the anterior speculum) to spare the posterior crus. Fracture the superstructure briskly toward the promontory, away from the nerve, using a Rosen needle on both crura with more force on the anterior one; a slow push can mobilize the footplate. Confirm the footplate is still intact and fixed."
+   ],
+   [
+    "Hemostasis on the oval window",
+    "Lay an epinephrine-soaked gelatin sponge on the oval window for about a minute to blanch vessels before opening the footplate."
+   ],
+   [
+    "Make the fenestra",
+    "Use a diamond burr slightly larger than the piston, such as 0.7 mm for a 0.6 mm piston; never a cutting burr. Ask the room to be still and quiet. Get the burr to full speed over the posterior central footplate, touch just to the burr's widest point, and withdraw. Some surgeons make the fenestra before removing the arch."
+   ],
+   [
+    "Laser alternative",
+    "With a laser, overlap small spots in a rosette over the posterior footplate. For KTP or argon lasers, a drop of blood on the white footplate helps it absorb energy. Remove the char, irrigate with cool saline, and use the lowest power that works; repeated high-power shots can heat the inner ear or facial nerve."
+   ],
+   [
+    "Stapedectomy option",
+    "When the footplate is thick and obliterative, fractures unpredictably, or a small fenestra is not feasible, remove part or all of the footplate with picks and a footplate hook instead of drilling a fenestra. Cover the open oval window promptly with a tissue graft (perichondrium, fascia or vein), then place a slightly longer wire or piston prosthesis onto the graft. Stapedotomy is preferred when possible because it has less risk to the inner ear and better high-frequency hearing."
+   ],
+   [
+    "Gusher or floating footplate",
+    "If perilymph gushes, raise the head, wait for flow to slow, and plug the fenestra with tissue before placing the piston; consider a lumbar drain. If the whole footplate comes loose, do not try to remove it through a small hole; stop, or place a tissue graft and prosthesis, and accept a higher risk of hearing loss."
+   ],
+   [
+    "Insert and crimp the prosthesis",
+    "Carry the piston with smooth alligator forceps, hook the loop over the incus long process (missing the incus lets the piston plunge too deep), and center it in the fenestra with a notched guide. Brace the crimper on the speculum, align it with the wire, and close the loop snugly so it does not rotate on the incus but does not crush bone. Loose crimps erode; crushing ones can strangle the blood supply."
+   ],
+   [
+    "Test and seal",
+    "Move the malleus once or twice and check that the piston rides freely in the fenestra. If it lifts out, replace it with one 0.25 mm longer. Seal around the piston with a little tissue from the vascular strip or a blood patch. Never suction over the open vestibule; use a 24-gauge tip at low suction beside it."
+   ],
+   [
+    "Return the flap and check",
+    "Lay the tympanomeatal flap back over the scutum defect and support it with a few pieces of gelatin sponge, without packing against the prosthesis. If the patient is awake, ask about vertigo and test hearing with a tuning fork. Check facial movement before leaving the room."
+   ]
+  ],
+  "source_label": "Jackler, Stanford Otologic & Skull Base Surgery Atlases",
+  "fields": {
+   "title": "Stapedotomy / Stapedectomy"
+  }
  }
 }
