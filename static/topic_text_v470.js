@@ -38,6 +38,8 @@
       segs.forEach(function(s){
         var prev = merged.length ? merged[merged.length-1] : null;
         if(prev && ((prev.match(/\*\*/g)||[]).length % 2 === 1)) merged[merged.length-1] = prev + ' ' + s;
+        // v99: a segment that is only a source tag, e.g. "(Cummings 7e, Ch 67, p 955)", stays with the sentence before it.
+        else if(prev && /^(\([^()]*(\([^()]*\)[^()]*)*\)\s*)+\.?$/.test(s)) merged[merged.length-1] = prev + ' ' + s;
         else merged.push(s);
       });
       out = out.concat(merged);
