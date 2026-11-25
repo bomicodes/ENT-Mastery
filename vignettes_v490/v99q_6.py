@@ -180,7 +180,7 @@ VIGNETTES = [
             "Posterior glottic stenosis",
         ],
         "answer": 3,
-        "explanation": "Posterior glottic stenosis typically appears 4-8 weeks after extubation. Risk rises sharply after about 10 days of intubation, though it has followed only 4 days, and is linked to large tubes in men. It mimics bilateral paralysis, but thyroarytenoid EMG is normal, whereas paralysis shows reduced recruitment, synkinesis and large polyphasic potentials. Confirm with rigid endoscopy and palpation of the arytenoids, since flexible examination alone cannot judge passive mobility.",
+        "explanation": "Posterior glottic stenosis typically appears 4-8 weeks after extubation. Risk rises sharply after about 10 days of intubation, though it has followed only 4 days, and is linked to tubes that are large for the larynx in men and women alike (classically 8.0 or larger in men, 7.5 or larger in women). It mimics bilateral paralysis, but thyroarytenoid EMG is normal, whereas paralysis shows reduced recruitment, synkinesis and large polyphasic potentials. Confirm with rigid endoscopy and palpation of the arytenoids, since flexible examination alone cannot judge passive mobility.",
         "why_wrong": [
             "Paralysis would show reduced recruitment, synkinesis or polyphasic potentials on EMG.",
             "Spasmodic dysphonia causes strained voice breaks, not fixed folds with stridor.",
